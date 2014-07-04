@@ -15,14 +15,15 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class HostTest extends TestCase {
@@ -31,6 +32,7 @@ public class HostTest extends TestCase {
      * The fixture for this Host test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Host fixture = null;
@@ -38,6 +40,7 @@ public class HostTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -48,6 +51,7 @@ public class HostTest extends TestCase {
      * Constructs a new Host test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public HostTest(String name) {
@@ -58,6 +62,7 @@ public class HostTest extends TestCase {
      * Sets the fixture for this Host test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void setFixture(Host fixture) {
@@ -68,6 +73,7 @@ public class HostTest extends TestCase {
      * Returns the fixture for this Host test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Host getFixture() {
@@ -77,6 +83,7 @@ public class HostTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -88,6 +95,7 @@ public class HostTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -100,66 +108,81 @@ public class HostTest extends TestCase {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
      * @generated not
      */
     public void testGetMatrixZustandMax() {
-        fail();
+        assertEquals(-1, getFixture().getMatrixZustandMax());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
      * @generated not
      */
     public void testGetGeraetestufe() {
-         fail();
+        getFixture().setHostRating(1);
+        assertEquals(1, getFixture().getHostRating());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
      * @generated not
      */
     public void testGetFirewall() {
-        fail();
+        getFixture().setHostRating(1);
+        getFixture().setBaseFirewall(2);
+        assertEquals(3, getFixture().getFirewall());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
      * @generated not
      */
     public void testGetDatenverarbeitung() {
-        fail();
+        getFixture().setHostRating(1);
+        getFixture().setBaseDatenverarbeitung(2);
+        assertEquals(3, getFixture().getDatenverarbeitung());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff()
      * @generated not
      */
     public void testGetAngriff() {
-        fail();
+        getFixture().setHostRating(1);
+        getFixture().setBaseAngriff(2);
+        assertEquals(3, getFixture().getAngriff());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher()
      * @generated not
      */
     public void testGetSchleicher() {
-        fail();
+        getFixture().setHostRating(1);
+        getFixture().setBaseSchleicher(2);
+        assertEquals(3, getFixture().getSchleicher());
     }
 
-} //HostTest
+} // HostTest

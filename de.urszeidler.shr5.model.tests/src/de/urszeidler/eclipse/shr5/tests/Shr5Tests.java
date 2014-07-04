@@ -67,6 +67,7 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(MagieFokusTest.class);
         suite.addTestSuite(DrugTest.class);
         suite.addTestSuite(ToxinTest.class);
+        suite.addTestSuite(HostTest.class);
 
         // suite.addTestSuite(HostTest.class);
 
