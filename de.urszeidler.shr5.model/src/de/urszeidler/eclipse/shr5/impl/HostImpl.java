@@ -26,25 +26,25 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getImage <em>Image</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getFirewall <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getCurrentModus <em>Current Modus</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getPan <em>Pan</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getHostRating <em>Host Rating</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseFirewall <em>Base Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseDatenverarbeitung <em>Base Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseAngriff <em>Base Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseSchleicher <em>Base Schleicher</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getImage <em>Image</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getName <em>Name</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getFirewall <em>Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getCurrentModus <em>Current Modus</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getPan <em>Pan</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getHostRating <em>Host Rating</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseFirewall <em>Base Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseDatenverarbeitung <em>Base Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseAngriff <em>Base Angriff</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseSchleicher <em>Base Schleicher</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class HostImpl extends MinimalEObjectImpl.Container implements Host {
@@ -52,6 +52,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -62,6 +63,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -72,6 +74,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -82,6 +85,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -92,6 +96,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -102,6 +107,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -112,6 +118,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMatrixZustandMax()
      * @generated
      * @ordered
@@ -122,6 +129,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getGeraetestufe()
      * @generated
      * @ordered
@@ -132,6 +140,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getFirewall()
      * @generated
      * @ordered
@@ -142,6 +151,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getDatenverarbeitung() <em>Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDatenverarbeitung()
      * @generated
      * @ordered
@@ -152,6 +162,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCurrentModus()
      * @generated
      * @ordered
@@ -162,6 +173,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCurrentModus()
      * @generated
      * @ordered
@@ -172,6 +184,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getPan()
      * @generated
      * @ordered
@@ -182,6 +195,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAngriff()
      * @generated
      * @ordered
@@ -192,6 +206,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getSchleicher() <em>Schleicher</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSchleicher()
      * @generated
      * @ordered
@@ -202,6 +217,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getHostRating() <em>Host Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getHostRating()
      * @generated
      * @ordered
@@ -212,6 +228,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getHostRating() <em>Host Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getHostRating()
      * @generated
      * @ordered
@@ -222,6 +239,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getBaseFirewall() <em>Base Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseFirewall()
      * @generated
      * @ordered
@@ -232,6 +250,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getBaseFirewall() <em>Base Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseFirewall()
      * @generated
      * @ordered
@@ -242,6 +261,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getBaseDatenverarbeitung() <em>Base Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseDatenverarbeitung()
      * @generated
      * @ordered
@@ -252,6 +272,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getBaseDatenverarbeitung() <em>Base Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseDatenverarbeitung()
      * @generated
      * @ordered
@@ -262,6 +283,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getBaseAngriff() <em>Base Angriff</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseAngriff()
      * @generated
      * @ordered
@@ -272,6 +294,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getBaseAngriff() <em>Base Angriff</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseAngriff()
      * @generated
      * @ordered
@@ -282,6 +305,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The default value of the '{@link #getBaseSchleicher() <em>Base Schleicher</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseSchleicher()
      * @generated
      * @ordered
@@ -292,6 +316,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * The cached value of the '{@link #getBaseSchleicher() <em>Base Schleicher</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBaseSchleicher()
      * @generated
      * @ordered
@@ -301,6 +326,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected HostImpl() {
@@ -310,6 +336,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -320,50 +347,47 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getMatrixZustandMax() {
-        // TODO: implement this method to return the 'Matrix Zustand Max' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return -1;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getGeraetestufe() {
-        // TODO: implement this method to return the 'Geraetestufe' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getHostRating();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getFirewall() {
-        // TODO: implement this method to return the 'Firewall' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getBaseFirewall() + getHostRating();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getDatenverarbeitung() {
-        // TODO: implement this method to return the 'Datenverarbeitung' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getBaseDatenverarbeitung() + getHostRating();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public InterfaceModus getCurrentModus() {
@@ -373,6 +397,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCurrentModus(InterfaceModus newCurrentModus) {
@@ -385,6 +410,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public PersonalAreaNetwork getPan() {
@@ -394,6 +420,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
@@ -401,7 +428,10 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         pan = newPan;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__PAN, oldPan, newPan);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -409,6 +439,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setPan(PersonalAreaNetwork newPan) {
@@ -419,37 +450,36 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
             if (newPan != null)
                 msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
             msgs = basicSetPan(newPan, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__PAN, newPan, newPan));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getAngriff() {
-        // TODO: implement this method to return the 'Angriff' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getBaseFirewall() + getHostRating();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getSchleicher() {
-        // TODO: implement this method to return the 'Schleicher' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getBaseSchleicher() + getHostRating();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getHostRating() {
@@ -459,6 +489,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setHostRating(int newHostRating) {
@@ -471,6 +502,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getBaseFirewall() {
@@ -480,6 +512,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBaseFirewall(int newBaseFirewall) {
@@ -492,6 +525,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getBaseDatenverarbeitung() {
@@ -501,18 +535,21 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBaseDatenverarbeitung(int newBaseDatenverarbeitung) {
         int oldBaseDatenverarbeitung = baseDatenverarbeitung;
         baseDatenverarbeitung = newBaseDatenverarbeitung;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_DATENVERARBEITUNG, oldBaseDatenverarbeitung, baseDatenverarbeitung));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_DATENVERARBEITUNG, oldBaseDatenverarbeitung,
+                    baseDatenverarbeitung));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getBaseAngriff() {
@@ -522,6 +559,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBaseAngriff(int newBaseAngriff) {
@@ -534,6 +572,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getBaseSchleicher() {
@@ -543,6 +582,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBaseSchleicher(int newBaseSchleicher) {
@@ -555,6 +595,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getBeschreibung() {
@@ -564,6 +605,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBeschreibung(String newBeschreibung) {
@@ -576,6 +618,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getImage() {
@@ -585,6 +628,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setImage(String newImage) {
@@ -597,6 +641,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getName() {
@@ -606,6 +651,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setName(String newName) {
@@ -618,6 +664,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -634,6 +681,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -648,6 +696,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -692,6 +741,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -734,6 +784,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -776,6 +827,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -820,36 +872,49 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.HOST__MATRIX_ZUSTAND_MAX: return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
-                default: return -1;
+                case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
+                    return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
+                default:
+                    return -1;
             }
         }
         if (baseClass == MatrixAttributes.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.HOST__GERAETESTUFE: return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
-                case Shr5Package.HOST__FIREWALL: return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
-                case Shr5Package.HOST__DATENVERARBEITUNG: return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
-                case Shr5Package.HOST__CURRENT_MODUS: return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
-                default: return -1;
+                case Shr5Package.HOST__GERAETESTUFE:
+                    return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
+                case Shr5Package.HOST__FIREWALL:
+                    return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
+                case Shr5Package.HOST__DATENVERARBEITUNG:
+                    return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
+                case Shr5Package.HOST__CURRENT_MODUS:
+                    return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == MatrixDevice.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.HOST__PAN: return Shr5Package.MATRIX_DEVICE__PAN;
-                default: return -1;
+                case Shr5Package.HOST__PAN:
+                    return Shr5Package.MATRIX_DEVICE__PAN;
+                default:
+                    return -1;
             }
         }
         if (baseClass == ActiveMatixDevice.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.HOST__ANGRIFF: return Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF;
-                case Shr5Package.HOST__SCHLEICHER: return Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER;
-                default: return -1;
+                case Shr5Package.HOST__ANGRIFF:
+                    return Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF;
+                case Shr5Package.HOST__SCHLEICHER:
+                    return Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -858,36 +923,49 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX: return Shr5Package.HOST__MATRIX_ZUSTAND_MAX;
-                default: return -1;
+                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX:
+                    return Shr5Package.HOST__MATRIX_ZUSTAND_MAX;
+                default:
+                    return -1;
             }
         }
         if (baseClass == MatrixAttributes.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE: return Shr5Package.HOST__GERAETESTUFE;
-                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL: return Shr5Package.HOST__FIREWALL;
-                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG: return Shr5Package.HOST__DATENVERARBEITUNG;
-                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS: return Shr5Package.HOST__CURRENT_MODUS;
-                default: return -1;
+                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE:
+                    return Shr5Package.HOST__GERAETESTUFE;
+                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL:
+                    return Shr5Package.HOST__FIREWALL;
+                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG:
+                    return Shr5Package.HOST__DATENVERARBEITUNG;
+                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS:
+                    return Shr5Package.HOST__CURRENT_MODUS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == MatrixDevice.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATRIX_DEVICE__PAN: return Shr5Package.HOST__PAN;
-                default: return -1;
+                case Shr5Package.MATRIX_DEVICE__PAN:
+                    return Shr5Package.HOST__PAN;
+                default:
+                    return -1;
             }
         }
         if (baseClass == ActiveMatixDevice.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF: return Shr5Package.HOST__ANGRIFF;
-                case Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER: return Shr5Package.HOST__SCHLEICHER;
-                default: return -1;
+                case Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF:
+                    return Shr5Package.HOST__ANGRIFF;
+                case Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER:
+                    return Shr5Package.HOST__SCHLEICHER;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -896,11 +974,13 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (beschreibung: ");
@@ -925,4 +1005,4 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         return result.toString();
     }
 
-} //HostImpl
+} // HostImpl
