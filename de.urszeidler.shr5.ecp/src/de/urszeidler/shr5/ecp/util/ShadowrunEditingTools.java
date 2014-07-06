@@ -401,14 +401,26 @@ public class ShadowrunEditingTools {
      * @param selection
      */
     public static void openEditorForFirstSelection(ISelection selection) {
+        EObject eo = null;
+        eo = extractFirstEObject(selection);
+        if (eo != null)
+            openEObject(eo);
+    }
+
+    /**
+     * Extract the first eobject from the selection or null.
+     * @param selection
+     * @return
+     */
+    public static EObject extractFirstEObject(ISelection selection) {
         if (selection instanceof IStructuredSelection) {
             IStructuredSelection is = (IStructuredSelection)selection;
             Object firstElement = is.getFirstElement();
             if (firstElement instanceof EObject) {
-                EObject eo = (EObject)firstElement;
-                openEObject(eo);
+                return (EObject)firstElement;
             }
         }
+        return null;
     }
 
     public static void openEObject(EObject eo) {
