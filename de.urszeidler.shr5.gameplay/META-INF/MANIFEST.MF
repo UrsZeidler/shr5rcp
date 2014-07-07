@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.urszeidler.shr5.gameplay;singleton:=true
+Bundle-Version: 0.1.8.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.urszeidler.shr5.gameplay.calc,
+ de.urszeidler.shr5.gameplay.dice
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

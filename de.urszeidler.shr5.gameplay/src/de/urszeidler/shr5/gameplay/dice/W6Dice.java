@@ -1,15 +1,13 @@
 /**
  * 
  */
-package de.urszeidler.shr5.dice;
+package de.urszeidler.shr5.gameplay.dice;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 /**
- * This is a shadowrun dice, it's an open w6.
- * 
  * @author urs
  */
 public class W6Dice {
@@ -17,7 +15,7 @@ public class W6Dice {
     private Random rnd = new Random();
 
     /**
-     * contains the probe and the success list
+     * contains the probe and the succes list
      * 
      * @author urs
      */
@@ -110,6 +108,14 @@ public class W6Dice {
             list.add(rollW6());
         }
         return list;
+    }
+
+    public int[] probe_(int stufe) {
+        int[] ret = new int[stufe];
+        for (int i = 0; i < stufe; i++) {
+            ret[i] = rollW6();
+        }
+        return ret;
     }
 
     /**

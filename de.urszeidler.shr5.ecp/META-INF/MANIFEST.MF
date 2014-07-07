@@ -83,11 +83,11 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.view.validation;bundle-version="1.2.1",
  org.eclipse.emf.ecp.view.vertical.model;bundle-version="1.2.1",
  org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.1",
- de.urszeidler.shr5.acceleo
+ de.urszeidler.shr5.acceleo,
+ de.urszeidler.shr5.gameplay
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: de.urszeidler.shr5.dice,
- de.urszeidler.shr5.ecp,
+Export-Package: de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.ecp.binding,
  de.urszeidler.shr5.ecp.dialogs,
  de.urszeidler.shr5.ecp.editor,

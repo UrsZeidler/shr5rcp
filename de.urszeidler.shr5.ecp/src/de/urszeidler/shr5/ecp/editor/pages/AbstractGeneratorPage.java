@@ -36,10 +36,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
-import de.urszeidler.shr5.dice.IniDice;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.service.ValidationService;
+import de.urszeidler.shr5.gameplay.dice.IniDice;
 
 /**
  * The basic page for the generators.
