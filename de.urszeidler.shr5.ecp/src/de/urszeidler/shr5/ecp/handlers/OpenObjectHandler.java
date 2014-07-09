@@ -50,13 +50,12 @@ public class OpenObjectHandler extends AbstractHandler {
             }
         };
         try {
-            window.run(true, false, runnable);
+            window.run(false, false, runnable);
         } catch (InvocationTargetException e) {
             Activator.logError(e);
         } catch (InterruptedException e) {
             Activator.logError(e);
         }
-
         return null;
     }
 
