@@ -40,6 +40,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         //configurer.setShowPerspectiveBar(true);
         configurer.setShowCoolBar(false);
         configurer.setShowStatusLine(true);
+        configurer.setShowProgressIndicator(true);
         String version = Activator.getDefault().getBundle().getVersion().toString();
         configurer.setTitle("shr5rcp "+version);
         
