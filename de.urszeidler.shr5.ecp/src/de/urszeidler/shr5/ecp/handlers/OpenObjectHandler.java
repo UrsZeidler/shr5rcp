@@ -46,6 +46,7 @@ public class OpenObjectHandler extends AbstractHandler {
         IRunnableWithProgress runnable = new IRunnableWithProgress() {
             @Override
             public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+                monitor.beginTask("Collecting objects ...", 1);
                 executeAction(parameter, shell, monitor);
             }
         };
@@ -117,6 +118,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 return false;
             }
         });
+        monitor.done();
         openOneObject(shell, filteredObject, titel, message);
     }
 
@@ -133,6 +135,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 return false;
             }
         });
+        monitor.done();
         openOneObject(shell, filteredObject, titel, message);
     }
 
