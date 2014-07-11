@@ -19,6 +19,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import de.urszeidler.commons.functors.Predicate;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
@@ -46,8 +47,7 @@ public class OpenObjectHandler extends AbstractHandler {
         IRunnableWithProgress runnable = new IRunnableWithProgress() {
             @Override
             public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-                monitor.beginTask("Collecting objects ...", 1);
-                executeAction(parameter, shell, monitor);
+                 executeAction(parameter, shell, monitor);
             }
         };
         try {
@@ -81,6 +81,9 @@ public class OpenObjectHandler extends AbstractHandler {
                 case 3:
                     openBeschreibbar(shell, Messages.OpenObjectHandler_open_any_titel, Messages.OpenObjectHandler_open_any_message, monitor);
                     break;
+                case 4:
+                    openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
+                    break;
 
                 default:
                     break;
@@ -91,6 +94,22 @@ public class OpenObjectHandler extends AbstractHandler {
         }
     }
 
+    private void openItem(Shell shell, String titel, String message, IProgressMonitor monitor) {
+        monitor.beginTask("collection items ...", 1);
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (input instanceof AbstraktGegenstand) {
+                    return true;
+                }
+                return false;
+            }
+        });
+        monitor.done();
+        openOneObject(shell, filteredObject, titel, message);
+    }
+    
     private void openBeschreibbar(Shell shell, String titel, String message, IProgressMonitor monitor) {
         monitor.beginTask("collection Objects ...", 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();

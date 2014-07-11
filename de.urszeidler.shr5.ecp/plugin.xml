@@ -305,6 +305,15 @@
                      value="3">
                </parameter>
             </command>
+           <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                  label="%open.Item.Object.command"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="4">
+               </parameter>
+            </command>
             <separator
                   name="de.urszeidler.shr5.ecp.separator2"
                   visible="true">
