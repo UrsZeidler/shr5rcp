@@ -19,8 +19,13 @@
 		<module>../de.urszeidler.shr5.gameplay</module>
 		<module>../de.urszeidler.shr5.feature</module>
 		<module>../de.urszeidler.shr5.updatesite</module>
+		<module>../de.urszeidler.shr5.runtime</module>
+		<module>../de.urszeidler.shr5.runtime.edit</module>
+		
+		
 		<module>../de.urszeidler.shr5.model.tests</module>
 		<module>../de.urszeidler.shr5.management.model.tests</module>
+		<module>../de.urszeidler.shr5.runtime.tests</module>
 		
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
