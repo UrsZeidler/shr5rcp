@@ -92,6 +92,37 @@ public abstract class AbstractExtendetDataAwareTest extends TestCase {
      * @see de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToExtendetData(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object)
      * @generated not
      */
+    public void testExtendetData_Object() {
+
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(getFixture());
+        data.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
+
+        assertFalse(getFixture().hasValue(data));
+        getFixture().addToExtendetData(data, 1);
+        assertEquals(1, getFixture().getIntegerValue(data));
+        getFixture().addToExtendetData(data, 1);
+        assertEquals(2, getFixture().getIntegerValue(data));
+        assertTrue(getFixture().hasValue(data));
+        
+        ExtendetData data1 = RuntimeFactory.eINSTANCE.createExtendetData();
+        data1.setEObject(getFixture());
+        data1.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD);
+        assertFalse(getFixture().hasValue(data1));
+        data1.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
+        assertTrue(getFixture().hasValue(data));
+    }
+
+    /**
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToExtendetData(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object)
+     * <em>Add To Extendet Data</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToExtendetData(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object)
+     * @generated not
+     */
     public void testAddToExtendetData__ExtendetData_Object() {
 
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
