@@ -4,6 +4,8 @@
 package de.urszeidler.shr5.gameplay.dice;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -11,8 +13,49 @@ import java.util.Random;
  * @author urs
  */
 public class W6Dice {
-    private static final int BASE_SHR5_MW = 5;
+
+    public static final int BASE_SHR5_MW = 5;
     private Random rnd = new Random();
+
+    public Shr5ProbeResult shr5ProbeFromString(String probeStr) {
+        Collection<Integer> probe = probeFromString(probeStr);
+        return new Shr5ProbeResult(probe);
+    }
+
+    /**
+     * Split the string with ":" and creates a list of integers.
+     * 
+     * @param probeStr
+     * @return
+     */
+    public static Collection<Integer> probeFromString(String probeStr) {
+        String[] split = probeStr.split(":");
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(split.length);
+        for (int i = 0; i < split.length; i++) {
+            String string = split[i];
+            try {
+                arrayList.add(Integer.parseInt(string));
+            } catch (NumberFormatException e) {
+            }
+        }
+        return arrayList;
+    }
+    
+    /**
+     * Creates a readable string for {@link #probeFromString(String)}.
+     * @param probe
+     * @return
+     */
+    public static String probeToString(Collection<Integer> probe) {
+        StringBuilder builder = new StringBuilder();
+        for (Iterator<Integer> iterator = probe.iterator(); iterator.hasNext();) {
+            Integer integer = iterator.next();
+            builder.append(Integer.toString(integer));
+            if (iterator.hasNext())
+                builder.append(":");
+        }
+        return builder.toString();
+    }
 
     /**
      * contains the probe and the succes list
@@ -20,11 +63,11 @@ public class W6Dice {
      * @author urs
      */
     public class SimpleProbeResult {
-        private final List<Integer> propbe;
-        private final List<Integer> successes;
+        private final Collection<Integer> propbe;
+        private final Collection<Integer> successes;
         private int mw;
 
-        SimpleProbeResult(List<Integer> propbe, List<Integer> successes, int mw) {
+        SimpleProbeResult(Collection<Integer> propbe, Collection<Integer> successes, int mw) {
             super();
             this.propbe = propbe;
             this.successes = successes;
@@ -43,11 +86,11 @@ public class W6Dice {
             return builder.toString();
         }
 
-        public List<Integer> getPropbe() {
+        public Collection<Integer> getPropbe() {
             return propbe;
         }
 
-        public List<Integer> getSuccesses() {
+        public Collection<Integer> getSuccesses() {
             return successes;
         }
 
@@ -65,6 +108,21 @@ public class W6Dice {
     public SimpleProbeResult probeShr5(int dice) {
         List<Integer> probe = probe(dice);
         return new SimpleProbeResult(probe, probe(BASE_SHR5_MW, probe), BASE_SHR5_MW);
+    }
+
+    /**
+     * Calc the glitches in a probe.
+     * 
+     * @param probe
+     * @return
+     */
+    public static int calcGlitchDice(Collection<Integer> probe) {
+        int patzer = 0;
+        for (Integer integer : probe) {
+            if (integer < 2)
+                patzer++;
+        }
+        return patzer;
     }
 
     /**
@@ -86,7 +144,7 @@ public class W6Dice {
      * @param probe
      * @return list of successes
      */
-    public List<Integer> probe(int mw, List<Integer> probe) {
+    public static Collection<Integer> probe(int mw, Collection<Integer> probe) {
         ArrayList<Integer> erfolge = new ArrayList<Integer>();
         for (Integer integer : probe) {
             if (integer >= mw && integer >= 1)
