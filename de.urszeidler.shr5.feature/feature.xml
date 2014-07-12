@@ -80,4 +80,16 @@
          version="0.1.8.qualifier"
          unpack="false"/>
 
+   <plugin
+         id="de.urszeidler.shr5.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.1.8.qualifier"/>
+
+   <plugin
+         id="de.urszeidler.shr5.runtime.edit"
+         download-size="0"
+         install-size="0"
+         version="0.1.8.qualifier"/>
+
 </feature>
