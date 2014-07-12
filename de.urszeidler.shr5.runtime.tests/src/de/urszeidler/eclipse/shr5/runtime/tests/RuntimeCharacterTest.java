@@ -2,9 +2,12 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -78,12 +81,21 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.runtime.PhyicalState#getOverDead()
-     * @generated
+     * @generated not
      */
     public void testGetOverDead() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        
+        ManagedCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+        AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
+        persona.setKonstitutionBasis(4);
+        character.setPersona(persona);
+        getFixture().setCharacter(character);
+        
+        getFixture().setPhysicalDamage(10);
+        assertEquals(0, getFixture().getOverDead());
+        getFixture().setPhysicalDamage(11);
+        assertEquals(1, getFixture().getOverDead());
+        
     }
 
 } //RuntimeCharacterTest
