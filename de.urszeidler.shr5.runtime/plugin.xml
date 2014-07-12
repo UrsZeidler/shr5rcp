@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated runtime -->
+      <package
+            uri="http://urszeidler.de/shr5/runtime/1.0"
+            class="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"
+            genModel="model/runtime.genmodel"/>
+   </extension>
+
+</plugin>
