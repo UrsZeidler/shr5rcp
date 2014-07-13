@@ -250,8 +250,18 @@ public class ScriptItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (ScriptingPackage.Literals.SCRIPT__ALL_TEAMS,
+                 RuntimeFactory.eINSTANCE.createGruntTeam()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (ScriptingPackage.Literals.SCRIPT__PLAYER,
                  RuntimeFactory.eINSTANCE.createTeam()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (ScriptingPackage.Literals.SCRIPT__PLAYER,
+                 RuntimeFactory.eINSTANCE.createGruntTeam()));
 
         newChildDescriptors.add
             (createChildParameter
