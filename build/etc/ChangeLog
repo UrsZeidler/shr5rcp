@@ -3,6 +3,7 @@
 
 2014-07-13 Version 0.1.8-rc
 
+* added scripting and runtime model
 * added discriminator for the generator system
 * added autoupdate for the rcp
 	* snapshot updatesite https://urszeidler.ci.cloudbees.com/job/shr5-maven/updatesite/
