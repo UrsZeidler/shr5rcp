@@ -96,13 +96,15 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setGruntGroup(GruntGroup newGruntGroup) {
         GruntGroup oldGruntGroup = gruntGroup;
         gruntGroup = newGruntGroup;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.GRUNT_TEAM__GRUNT_GROUP, oldGruntGroup, gruntGroup));
+        
+        buildMembers();
     }
 
     /**
@@ -114,7 +116,8 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     public void buildMembers() {
         if (getGruntGroup() == null)
             return;
-
+        getMembers().clear();
+        
         GruntMembers leader = getGruntGroup().getLeader();
         ArrayList<GruntMembers> list = new ArrayList<GruntMembers>(getGruntGroup().getMembers().size() + 1);
         if (leader != null)

@@ -104,8 +104,12 @@ public class GruntTeamTest extends TeamTest {
         
         getFixture().setGruntGroup(grountGroup);
         
+        //getFixture().buildMembers();
+        assertEquals(2,getFixture().getMembers().size());    
+        
         getFixture().buildMembers();
         assertEquals(2,getFixture().getMembers().size());    
+
     }
 
 } //GruntTeamTest
