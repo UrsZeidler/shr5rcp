@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_BlL1YN0CEeOvVYoRsPZlnA" name="all">
+<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_BlL1YN0CEeOvVYoRsPZlnA" name="all">
   <entries xsi:type="shr5:ShrList" xmi:id="_BlMccN0CEeOvVYoRsPZlnA" name="resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_BlMccd0CEeOvVYoRsPZlnA" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="_BlSjEN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Core rule book" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100">
@@ -155,7 +155,7 @@
         <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtdAkN0CEeOvVYoRsPZlnA" cost="30">
           <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
         </priorities>
-		<applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+        <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
       </entries>
       <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain EE." page="354" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
         <instructions xmi:id="_djpB4eJ0EeOht_G61YAQvg" value="Select the categories and the group."/>
@@ -12859,5 +12859,27 @@
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
     </grunts>
+  </entries>
+  <entries xsi:type="scripting:Script" xmi:id="_rKoaUAqoEeSKaO5TLnOM7w" name="A test Script with thugs.">
+    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" name="Instructions" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w">
+      <background>There are thugs which needs to be beaten.</background>
+    </placements>
+    <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." name="get them" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w">
+      <inTheirFace>There they are.</inTheirFace>
+      <inTheirFace>In a dark alley.</inTheirFace>
+      <enviorment xmi:id="_rKpBYgqoEeSKaO5TLnOM7w"/>
+    </placements>
+    <placements xmi:id="_rKpBYwqoEeSKaO5TLnOM7w" name="the rewart"/>
+    <allTeams xsi:type="runtime:GruntTeam" xmi:id="_rKpBZAqoEeSKaO5TLnOM7w" gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IAqoEeSFaKcyfAPimA" character="_B1NOYN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IwqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JAqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JwqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+    </allTeams>
+    <player xmi:id="_rKpBbQqoEeSKaO5TLnOM7w" name="Players"/>
   </entries>
 </shr5:ShrList>
