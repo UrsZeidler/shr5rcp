@@ -2,11 +2,16 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -20,10 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl#getGruntGroup <em>Grunt Group</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl#getGruntGroup <em>Grunt Group</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class GruntTeamImpl extends TeamImpl implements GruntTeam {
@@ -31,6 +36,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
      * The cached value of the '{@link #getGruntGroup() <em>Grunt Group</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getGruntGroup()
      * @generated
      * @ordered
@@ -40,6 +46,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected GruntTeamImpl() {
@@ -49,6 +56,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -59,6 +67,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public GruntGroup getGruntGroup() {
@@ -76,6 +85,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public GruntGroup basicGetGruntGroup() {
@@ -85,6 +95,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setGruntGroup(GruntGroup newGruntGroup) {
@@ -97,24 +108,53 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void buildMembers() {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        if (getGruntGroup() == null)
+            return;
+
+        GruntMembers leader = getGruntGroup().getLeader();
+        ArrayList<GruntMembers> list = new ArrayList<GruntMembers>(getGruntGroup().getMembers().size() + 1);
+        if (leader != null)
+            list.add(leader);
+
+        list.addAll(getGruntGroup().getMembers());
+        for (GruntMembers gruntMembers : list) {
+            createRuntimeCharacters(gruntMembers);
+        }
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.ADD_MANY, RuntimePackage.TEAM__MEMBERS, 1, 2));
+
+    }
+
+    /**
+     * Creates all gruntRuntime Characters for the {@link GruntMembers} object.
+     * @param gruntMembers
+     */
+    private void createRuntimeCharacters(GruntMembers gruntMembers) {
+        int count = gruntMembers.getCount();
+        for (int i = 1; i <= count; i++) {
+            GruntRuntimeCharacter gruntRuntimeCharacter = RuntimeFactory.eINSTANCE.createGruntRuntimeCharacter();
+            gruntRuntimeCharacter.setCharacter(gruntMembers.getNsc());
+            getMembers().add(gruntRuntimeCharacter);
+        }
+        
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case RuntimePackage.GRUNT_TEAM__GRUNT_GROUP:
-                if (resolve) return getGruntGroup();
+                if (resolve)
+                    return getGruntGroup();
                 return basicGetGruntGroup();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -123,6 +163,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -138,6 +179,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -153,6 +195,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -167,6 +210,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -179,4 +223,4 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
         return super.eInvoke(operationID, arguments);
     }
 
-} //GruntTeamImpl
+} // GruntTeamImpl

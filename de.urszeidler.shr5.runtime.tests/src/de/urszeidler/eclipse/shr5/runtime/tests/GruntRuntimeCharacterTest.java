@@ -67,4 +67,16 @@ public class GruntRuntimeCharacterTest extends RuntimeCharacterTest {
         setFixture(null);
     }
 
+    
+    public void testAddPhysicalDamage() throws Exception {
+        getFixture().setPhysicalDamage(2);        
+        assertEquals(2, getFixture().getPhysicalDamage());
+    }
+    
+    public void testAddMentalDamage() throws Exception {
+        getFixture().setMentalDamage(2);        
+        assertEquals(2, getFixture().getPhysicalDamage());
+        getFixture().setPhysicalDamage(getFixture().getPhysicalDamage() +2);        
+        assertEquals(4, getFixture().getPhysicalDamage());
+    }
 } //GruntRuntimeCharacterTest

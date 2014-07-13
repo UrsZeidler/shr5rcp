@@ -2,9 +2,15 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -78,12 +84,28 @@ public class GruntTeamTest extends TeamTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.runtime.GruntTeam#buildMembers()
-     * @generated
+     * @generated not 
      */
     public void testBuildMembers() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+        AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
+        persona.setKonstitutionBasis(4);
+        character.setPersona(persona);
+        
+        getFixture().buildMembers();
+        assertEquals(0,getFixture().getMembers().size());    
+
+        
+        GruntGroup grountGroup = Shr5managementFactory.eINSTANCE.createGruntGroup();
+        GruntMembers gruntMembers = Shr5managementFactory.eINSTANCE.createGruntMembers();
+        gruntMembers.setCount(2);
+        gruntMembers.setNsc(character);
+        grountGroup.setLeader(gruntMembers);
+        
+        getFixture().setGruntGroup(grountGroup);
+        
+        getFixture().buildMembers();
+        assertEquals(2,getFixture().getMembers().size());    
     }
 
 } //GruntTeamTest
