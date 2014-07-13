@@ -23,5 +23,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/debugging"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/enviorment"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="scripting.ecore#//TimeFrame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/actualDate"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

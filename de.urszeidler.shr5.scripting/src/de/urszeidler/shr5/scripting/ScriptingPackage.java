@@ -269,6 +269,62 @@ public interface ScriptingPackage extends EPackage {
 
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.TimeFrame
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getTimeFrame()
+     * @generated
+     */
+    int TIME_FRAME = 2;
+
+    /**
+     * The feature id for the '<em><b>Start Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIME_FRAME__START_DATE = 0;
+
+    /**
+     * The feature id for the '<em><b>End Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIME_FRAME__END_DATE = 1;
+
+    /**
+     * The feature id for the '<em><b>Actual Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIME_FRAME__ACTUAL_DATE = 2;
+
+    /**
+     * The number of structural features of the '<em>Time Frame</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIME_FRAME_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Time Frame</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TIME_FRAME_OPERATION_COUNT = 0;
+
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Script <em>Script</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -410,6 +466,49 @@ public interface ScriptingPackage extends EPackage {
     EReference getPlacement_Enviorment();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Time Frame</em>'.
+     * @see de.urszeidler.shr5.scripting.TimeFrame
+     * @generated
+     */
+    EClass getTimeFrame();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.TimeFrame#getStartDate <em>Start Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Date</em>'.
+     * @see de.urszeidler.shr5.scripting.TimeFrame#getStartDate()
+     * @see #getTimeFrame()
+     * @generated
+     */
+    EAttribute getTimeFrame_StartDate();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.TimeFrame#getEndDate <em>End Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>End Date</em>'.
+     * @see de.urszeidler.shr5.scripting.TimeFrame#getEndDate()
+     * @see #getTimeFrame()
+     * @generated
+     */
+    EAttribute getTimeFrame_EndDate();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.TimeFrame#getActualDate <em>Actual Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Actual Date</em>'.
+     * @see de.urszeidler.shr5.scripting.TimeFrame#getActualDate()
+     * @see #getTimeFrame()
+     * @generated
+     */
+    EAttribute getTimeFrame_ActualDate();
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -539,6 +638,40 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EReference PLACEMENT__ENVIORMENT = eINSTANCE.getPlacement_Enviorment();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.TimeFrame
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getTimeFrame()
+         * @generated
+         */
+        EClass TIME_FRAME = eINSTANCE.getTimeFrame();
+
+        /**
+         * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TIME_FRAME__START_DATE = eINSTANCE.getTimeFrame_StartDate();
+
+        /**
+         * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TIME_FRAME__END_DATE = eINSTANCE.getTimeFrame_EndDate();
+
+        /**
+         * The meta object literal for the '<em><b>Actual Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TIME_FRAME__ACTUAL_DATE = eINSTANCE.getTimeFrame_ActualDate();
 
     }
 

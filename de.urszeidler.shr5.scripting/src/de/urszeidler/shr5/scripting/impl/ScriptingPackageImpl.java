@@ -13,6 +13,7 @@ import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
+import de.urszeidler.shr5.scripting.TimeFrame;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -40,6 +41,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * @generated
      */
     private EClass placementEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass timeFrameEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -227,6 +235,42 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getTimeFrame() {
+        return timeFrameEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTimeFrame_StartDate() {
+        return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTimeFrame_EndDate() {
+        return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTimeFrame_ActualDate() {
+        return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }
@@ -264,6 +308,11 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(placementEClass, PLACEMENT__SCRIPT);
         createEAttribute(placementEClass, PLACEMENT__DEBUGGING);
         createEReference(placementEClass, PLACEMENT__ENVIORMENT);
+
+        timeFrameEClass = createEClass(TIME_FRAME);
+        createEAttribute(timeFrameEClass, TIME_FRAME__START_DATE);
+        createEAttribute(timeFrameEClass, TIME_FRAME__END_DATE);
+        createEAttribute(timeFrameEClass, TIME_FRAME__ACTUAL_DATE);
     }
 
     /**
@@ -317,6 +366,11 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getPlacement_Script(), this.getScript(), this.getScript_Placements(), "script", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getPlacement_Debugging(), ecorePackage.getEString(), "debugging", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Enviorment(), theRuntimePackage.getEnviorment(), null, "enviorment", null, 1, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(timeFrameEClass, TimeFrame.class, "TimeFrame", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTimeFrame_StartDate(), theShr5Package.getShrDate(), "startDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTimeFrame_EndDate(), theShr5Package.getShrDate(), "endDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTimeFrame_ActualDate(), theShr5Package.getShrDate(), "actualDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);

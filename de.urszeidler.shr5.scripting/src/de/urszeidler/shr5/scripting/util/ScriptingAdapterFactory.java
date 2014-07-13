@@ -78,6 +78,10 @@ public class ScriptingAdapterFactory extends AdapterFactoryImpl {
                 return createPlacementAdapter();
             }
             @Override
+            public Adapter caseTimeFrame(TimeFrame object) {
+                return createTimeFrameAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -126,6 +130,20 @@ public class ScriptingAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createPlacementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.shr5.scripting.TimeFrame
+     * @generated
+     */
+    public Adapter createTimeFrameAdapter() {
         return null;
     }
 

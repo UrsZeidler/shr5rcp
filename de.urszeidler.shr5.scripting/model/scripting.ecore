@@ -30,4 +30,9 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Enviorment"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeFrame" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+  </eClassifiers>
 </ecore:EPackage>
