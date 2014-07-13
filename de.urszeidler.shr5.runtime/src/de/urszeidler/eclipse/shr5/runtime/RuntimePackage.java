@@ -798,6 +798,278 @@ public interface RuntimePackage extends EPackage {
     int TEAM_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl <em>Grunt Team</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl
+     * @see de.urszeidler.eclipse.shr5.runtime.impl.RuntimePackageImpl#getGruntTeam()
+     * @generated
+     */
+    int GRUNT_TEAM = 8;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM__BESCHREIBUNG = TEAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM__IMAGE = TEAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM__NAME = TEAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Members</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM__MEMBERS = TEAM__MEMBERS;
+
+    /**
+     * The feature id for the '<em><b>Grunt Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM__GRUNT_GROUP = TEAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Grunt Team</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM_FEATURE_COUNT = TEAM_FEATURE_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Build Members</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM___BUILD_MEMBERS = TEAM_OPERATION_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Grunt Team</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_TEAM_OPERATION_COUNT = TEAM_OPERATION_COUNT + 1;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntRuntimeCharacterImpl <em>Grunt Runtime Character</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.runtime.impl.GruntRuntimeCharacterImpl
+     * @see de.urszeidler.eclipse.shr5.runtime.impl.RuntimePackageImpl#getGruntRuntimeCharacter()
+     * @generated
+     */
+    int GRUNT_RUNTIME_CHARACTER = 9;
+
+    /**
+     * The feature id for the '<em><b>Extendet Data</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__EXTENDET_DATA = RUNTIME_CHARACTER__EXTENDET_DATA;
+
+    /**
+     * The feature id for the '<em><b>Physical Damage</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__PHYSICAL_DAMAGE = RUNTIME_CHARACTER__PHYSICAL_DAMAGE;
+
+    /**
+     * The feature id for the '<em><b>Mental Damage</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__MENTAL_DAMAGE = RUNTIME_CHARACTER__MENTAL_DAMAGE;
+
+    /**
+     * The feature id for the '<em><b>Zustand</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__ZUSTAND = RUNTIME_CHARACTER__ZUSTAND;
+
+    /**
+     * The feature id for the '<em><b>Over Dead</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__OVER_DEAD = RUNTIME_CHARACTER__OVER_DEAD;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__CHARACTER = RUNTIME_CHARACTER__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Right Hand</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__RIGHT_HAND = RUNTIME_CHARACTER__RIGHT_HAND;
+
+    /**
+     * The feature id for the '<em><b>Left Hand</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__LEFT_HAND = RUNTIME_CHARACTER__LEFT_HAND;
+
+    /**
+     * The feature id for the '<em><b>In Use</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__IN_USE = RUNTIME_CHARACTER__IN_USE;
+
+    /**
+     * The feature id for the '<em><b>Armor</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__ARMOR = RUNTIME_CHARACTER__ARMOR;
+
+    /**
+     * The number of structural features of the '<em>Grunt Runtime Character</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER_FEATURE_COUNT = RUNTIME_CHARACTER_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Add To Extendet Data</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___ADD_TO_EXTENDET_DATA__EXTENDETDATA_OBJECT = RUNTIME_CHARACTER___ADD_TO_EXTENDET_DATA__EXTENDETDATA_OBJECT;
+
+    /**
+     * The operation id for the '<em>Get Integer Value</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___GET_INTEGER_VALUE__EXTENDETDATA = RUNTIME_CHARACTER___GET_INTEGER_VALUE__EXTENDETDATA;
+
+    /**
+     * The operation id for the '<em>Increase Value</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___INCREASE_VALUE__EXTENDETDATA_INT = RUNTIME_CHARACTER___INCREASE_VALUE__EXTENDETDATA_INT;
+
+    /**
+     * The operation id for the '<em>Decrease Value</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___DECREASE_VALUE__EXTENDETDATA_INT = RUNTIME_CHARACTER___DECREASE_VALUE__EXTENDETDATA_INT;
+
+    /**
+     * The operation id for the '<em>Has Value</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___HAS_VALUE__EXTENDETDATA = RUNTIME_CHARACTER___HAS_VALUE__EXTENDETDATA;
+
+    /**
+     * The operation id for the '<em>Add To List</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___ADD_TO_LIST__EXTENDETDATA_OBJECT = RUNTIME_CHARACTER___ADD_TO_LIST__EXTENDETDATA_OBJECT;
+
+    /**
+     * The operation id for the '<em>Add Unique To List</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___ADD_UNIQUE_TO_LIST__EXTENDETDATA_OBJECT = RUNTIME_CHARACTER___ADD_UNIQUE_TO_LIST__EXTENDETDATA_OBJECT;
+
+    /**
+     * The operation id for the '<em>Get List Value</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___GET_LIST_VALUE__EXTENDETDATA = RUNTIME_CHARACTER___GET_LIST_VALUE__EXTENDETDATA;
+
+    /**
+     * The number of operations of the '<em>Grunt Runtime Character</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER_OPERATION_COUNT = RUNTIME_CHARACTER_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.runtime.Zustand <em>Zustand</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -805,7 +1077,7 @@ public interface RuntimePackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.runtime.impl.RuntimePackageImpl#getZustand()
      * @generated
      */
-    int ZUSTAND = 8;
+    int ZUSTAND = 10;
 
 
     /**
@@ -1134,6 +1406,47 @@ public interface RuntimePackage extends EPackage {
     EClass getAbstractExtendetDataAware();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.runtime.GruntTeam <em>Grunt Team</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Grunt Team</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntTeam
+     * @generated
+     */
+    EClass getGruntTeam();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.runtime.GruntTeam#getGruntGroup <em>Grunt Group</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Grunt Group</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntTeam#getGruntGroup()
+     * @see #getGruntTeam()
+     * @generated
+     */
+    EReference getGruntTeam_GruntGroup();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.runtime.GruntTeam#buildMembers() <em>Build Members</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Build Members</em>' operation.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntTeam#buildMembers()
+     * @generated
+     */
+    EOperation getGruntTeam__BuildMembers();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter <em>Grunt Runtime Character</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Grunt Runtime Character</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter
+     * @generated
+     */
+    EClass getGruntRuntimeCharacter();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.runtime.Zustand <em>Zustand</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1429,6 +1742,42 @@ public interface RuntimePackage extends EPackage {
          * @generated
          */
         EClass ABSTRACT_EXTENDET_DATA_AWARE = eINSTANCE.getAbstractExtendetDataAware();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl <em>Grunt Team</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl
+         * @see de.urszeidler.eclipse.shr5.runtime.impl.RuntimePackageImpl#getGruntTeam()
+         * @generated
+         */
+        EClass GRUNT_TEAM = eINSTANCE.getGruntTeam();
+
+        /**
+         * The meta object literal for the '<em><b>Grunt Group</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GRUNT_TEAM__GRUNT_GROUP = eINSTANCE.getGruntTeam_GruntGroup();
+
+        /**
+         * The meta object literal for the '<em><b>Build Members</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation GRUNT_TEAM___BUILD_MEMBERS = eINSTANCE.getGruntTeam__BuildMembers();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntRuntimeCharacterImpl <em>Grunt Runtime Character</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.runtime.impl.GruntRuntimeCharacterImpl
+         * @see de.urszeidler.eclipse.shr5.runtime.impl.RuntimePackageImpl#getGruntRuntimeCharacter()
+         * @generated
+         */
+        EClass GRUNT_RUNTIME_CHARACTER = eINSTANCE.getGruntRuntimeCharacter();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.runtime.Zustand <em>Zustand</em>}' enum.

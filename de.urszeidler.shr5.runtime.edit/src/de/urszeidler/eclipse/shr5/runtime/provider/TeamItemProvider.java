@@ -232,6 +232,11 @@ public class TeamItemProvider
             (createChildParameter
                 (RuntimePackage.Literals.TEAM__MEMBERS,
                  RuntimeFactory.eINSTANCE.createRuntimeCharacter()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (RuntimePackage.Literals.TEAM__MEMBERS,
+                 RuntimeFactory.eINSTANCE.createGruntRuntimeCharacter()));
     }
 
     /**

@@ -17,25 +17,16 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>
- * {@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToExtendetData(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object)
- * <em>Add To Extendet Data</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#getIntegerValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Get Integer
- * Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#increaseValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData, int) <em>Increase
- * Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#decreaseValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData, int) <em>Decrease
- * Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#hasValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Has Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToList(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object) <em>
- * Add To List</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addUniqueToList(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object)
- * <em>Add Unique To List</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#getListValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Get List Value
- * </em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToExtendetData(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object) <em>Add To Extendet Data</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#getIntegerValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Get Integer Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#increaseValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData, int) <em>Increase Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#decreaseValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData, int) <em>Decrease Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#hasValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Has Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addToList(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object) <em>Add To List</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#addUniqueToList(de.urszeidler.eclipse.shr5.runtime.ExtendetData, java.lang.Object) <em>Add Unique To List</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#getListValue(de.urszeidler.eclipse.shr5.runtime.ExtendetData) <em>Get List Value</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public abstract class AbstractExtendetDataAwareTest extends TestCase {
@@ -44,7 +35,6 @@ public abstract class AbstractExtendetDataAwareTest extends TestCase {
      * The fixture for this Abstract Extendet Data Aware test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AbstractExtendetDataAware fixture = null;
@@ -53,7 +43,6 @@ public abstract class AbstractExtendetDataAwareTest extends TestCase {
      * Constructs a new Abstract Extendet Data Aware test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstractExtendetDataAwareTest(String name) {
@@ -64,7 +53,6 @@ public abstract class AbstractExtendetDataAwareTest extends TestCase {
      * Sets the fixture for this Abstract Extendet Data Aware test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(AbstractExtendetDataAware fixture) {
@@ -75,7 +63,6 @@ public abstract class AbstractExtendetDataAwareTest extends TestCase {
      * Returns the fixture for this Abstract Extendet Data Aware test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AbstractExtendetDataAware getFixture() {

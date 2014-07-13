@@ -58,6 +58,24 @@ public interface RuntimeFactory extends EFactory {
     Team createTeam();
 
     /**
+     * Returns a new object of class '<em>Grunt Team</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Grunt Team</em>'.
+     * @generated
+     */
+    GruntTeam createGruntTeam();
+
+    /**
+     * Returns a new object of class '<em>Grunt Runtime Character</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Grunt Runtime Character</em>'.
+     * @generated
+     */
+    GruntRuntimeCharacter createGruntRuntimeCharacter();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

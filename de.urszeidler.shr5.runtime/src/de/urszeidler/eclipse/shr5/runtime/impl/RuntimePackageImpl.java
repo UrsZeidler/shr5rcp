@@ -8,6 +8,8 @@ import de.urszeidler.eclipse.shr5.runtime.AbstractExtendetDataAware;
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware;
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
 import de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen;
 import de.urszeidler.eclipse.shr5.runtime.PhyicalState;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -90,6 +92,20 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * @generated
      */
     private EClass abstractExtendetDataAwareEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gruntTeamEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gruntRuntimeCharacterEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -446,6 +462,42 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getGruntTeam() {
+        return gruntTeamEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGruntTeam_GruntGroup() {
+        return (EReference)gruntTeamEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getGruntTeam__BuildMembers() {
+        return gruntTeamEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGruntRuntimeCharacter() {
+        return gruntRuntimeCharacterEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getZustand() {
         return zustandEEnum;
     }
@@ -517,6 +569,12 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
 
         abstractExtendetDataAwareEClass = createEClass(ABSTRACT_EXTENDET_DATA_AWARE);
 
+        gruntTeamEClass = createEClass(GRUNT_TEAM);
+        createEReference(gruntTeamEClass, GRUNT_TEAM__GRUNT_GROUP);
+        createEOperation(gruntTeamEClass, GRUNT_TEAM___BUILD_MEMBERS);
+
+        gruntRuntimeCharacterEClass = createEClass(GRUNT_RUNTIME_CHARACTER);
+
         // Create enums
         zustandEEnum = createEEnum(ZUSTAND);
     }
@@ -558,6 +616,8 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         runtimeCharacterEClass.getESuperTypes().add(this.getPhyicalState());
         teamEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         abstractExtendetDataAwareEClass.getESuperTypes().add(this.getExtendetDataAware());
+        gruntTeamEClass.getESuperTypes().add(this.getTeam());
+        gruntRuntimeCharacterEClass.getESuperTypes().add(this.getRuntimeCharacter());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(extendetDataEClass, ExtendetData.class, "ExtendetData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -628,6 +688,13 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         initEReference(getTeam_Members(), this.getRuntimeCharacter(), null, "members", null, 0, -1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(abstractExtendetDataAwareEClass, AbstractExtendetDataAware.class, "AbstractExtendetDataAware", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(gruntTeamEClass, GruntTeam.class, "GruntTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getGruntTeam_GruntGroup(), theShr5managementPackage.getGruntGroup(), null, "gruntGroup", null, 1, 1, GruntTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEOperation(getGruntTeam__BuildMembers(), null, "buildMembers", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        initEClass(gruntRuntimeCharacterEClass, GruntRuntimeCharacter.class, "GruntRuntimeCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(zustandEEnum, Zustand.class, "Zustand");

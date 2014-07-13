@@ -72,5 +72,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference runtime.ecore#//Team/members"/>
     </genClasses>
     <genClasses image="false" ecoreClass="runtime.ecore#//AbstractExtendetDataAware"/>
+    <genClasses ecoreClass="runtime.ecore#//GruntTeam">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//GruntTeam/gruntGroup"/>
+      <genOperations ecoreOperation="runtime.ecore#//GruntTeam/buildMembers"/>
+    </genClasses>
+    <genClasses ecoreClass="runtime.ecore#//GruntRuntimeCharacter"/>
   </genPackages>
 </genmodel:GenModel>

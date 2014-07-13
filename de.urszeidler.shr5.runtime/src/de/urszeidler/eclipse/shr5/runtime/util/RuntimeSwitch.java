@@ -123,6 +123,24 @@ public class RuntimeSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case RuntimePackage.GRUNT_TEAM: {
+                GruntTeam gruntTeam = (GruntTeam)theEObject;
+                T result = caseGruntTeam(gruntTeam);
+                if (result == null) result = caseTeam(gruntTeam);
+                if (result == null) result = caseBeschreibbar(gruntTeam);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.GRUNT_RUNTIME_CHARACTER: {
+                GruntRuntimeCharacter gruntRuntimeCharacter = (GruntRuntimeCharacter)theEObject;
+                T result = caseGruntRuntimeCharacter(gruntRuntimeCharacter);
+                if (result == null) result = caseRuntimeCharacter(gruntRuntimeCharacter);
+                if (result == null) result = caseAbstractExtendetDataAware(gruntRuntimeCharacter);
+                if (result == null) result = casePhyicalState(gruntRuntimeCharacter);
+                if (result == null) result = caseExtendetDataAware(gruntRuntimeCharacter);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -244,6 +262,36 @@ public class RuntimeSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseAbstractExtendetDataAware(AbstractExtendetDataAware object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Grunt Team</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Grunt Team</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGruntTeam(GruntTeam object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Grunt Runtime Character</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Grunt Runtime Character</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGruntRuntimeCharacter(GruntRuntimeCharacter object) {
         return null;
     }
 

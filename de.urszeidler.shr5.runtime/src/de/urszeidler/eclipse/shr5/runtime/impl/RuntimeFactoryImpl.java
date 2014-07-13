@@ -61,6 +61,8 @@ public class RuntimeFactoryImpl extends EFactoryImpl implements RuntimeFactory {
             case RuntimePackage.ENVIORMENT: return createEnviorment();
             case RuntimePackage.RUNTIME_CHARACTER: return createRuntimeCharacter();
             case RuntimePackage.TEAM: return createTeam();
+            case RuntimePackage.GRUNT_TEAM: return createGruntTeam();
+            case RuntimePackage.GRUNT_RUNTIME_CHARACTER: return createGruntRuntimeCharacter();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -134,6 +136,26 @@ public class RuntimeFactoryImpl extends EFactoryImpl implements RuntimeFactory {
     public Team createTeam() {
         TeamImpl team = new TeamImpl();
         return team;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GruntTeam createGruntTeam() {
+        GruntTeamImpl gruntTeam = new GruntTeamImpl();
+        return gruntTeam;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GruntRuntimeCharacter createGruntRuntimeCharacter() {
+        GruntRuntimeCharacterImpl gruntRuntimeCharacter = new GruntRuntimeCharacterImpl();
+        return gruntRuntimeCharacter;
     }
 
     /**

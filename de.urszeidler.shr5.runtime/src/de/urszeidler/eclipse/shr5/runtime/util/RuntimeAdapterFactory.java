@@ -102,6 +102,14 @@ public class RuntimeAdapterFactory extends AdapterFactoryImpl {
                 return createAbstractExtendetDataAwareAdapter();
             }
             @Override
+            public Adapter caseGruntTeam(GruntTeam object) {
+                return createGruntTeamAdapter();
+            }
+            @Override
+            public Adapter caseGruntRuntimeCharacter(GruntRuntimeCharacter object) {
+                return createGruntRuntimeCharacterAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -234,6 +242,34 @@ public class RuntimeAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createAbstractExtendetDataAwareAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.GruntTeam <em>Grunt Team</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntTeam
+     * @generated
+     */
+    public Adapter createGruntTeamAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter <em>Grunt Runtime Character</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter
+     * @generated
+     */
+    public Adapter createGruntRuntimeCharacterAdapter() {
         return null;
     }
 

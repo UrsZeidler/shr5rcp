@@ -94,4 +94,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractExtendetDataAware" abstract="true"
       eSuperTypes="#//ExtendetDataAware"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GruntTeam" eSuperTypes="#//Team">
+    <eOperations name="buildMembers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gruntGroup" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GruntRuntimeCharacter" eSuperTypes="#//RuntimeCharacter"/>
 </ecore:EPackage>

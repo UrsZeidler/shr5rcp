@@ -164,6 +164,52 @@ public class RuntimeItemProviderAdapterFactory extends RuntimeAdapterFactory imp
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.GruntTeam} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GruntTeamItemProvider gruntTeamItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.GruntTeam}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGruntTeamAdapter() {
+        if (gruntTeamItemProvider == null) {
+            gruntTeamItemProvider = new GruntTeamItemProvider(this);
+        }
+
+        return gruntTeamItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GruntRuntimeCharacterItemProvider gruntRuntimeCharacterItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGruntRuntimeCharacterAdapter() {
+        if (gruntRuntimeCharacterItemProvider == null) {
+            gruntRuntimeCharacterItemProvider = new GruntRuntimeCharacterItemProvider(this);
+        }
+
+        return gruntRuntimeCharacterItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -266,6 +312,8 @@ public class RuntimeItemProviderAdapterFactory extends RuntimeAdapterFactory imp
         if (enviormentItemProvider != null) enviormentItemProvider.dispose();
         if (runtimeCharacterItemProvider != null) runtimeCharacterItemProvider.dispose();
         if (teamItemProvider != null) teamItemProvider.dispose();
+        if (gruntTeamItemProvider != null) gruntTeamItemProvider.dispose();
+        if (gruntRuntimeCharacterItemProvider != null) gruntRuntimeCharacterItemProvider.dispose();
     }
 
 }
