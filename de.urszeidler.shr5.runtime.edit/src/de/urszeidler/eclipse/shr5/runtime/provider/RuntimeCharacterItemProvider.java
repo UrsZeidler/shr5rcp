@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,7 +13,6 @@ import java.util.Map;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -185,11 +185,11 @@ public class RuntimeCharacterItemProvider
      * This adds a property descriptor for the Right Hand feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addRightHandPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_rightHand_feature"),
@@ -200,18 +200,29 @@ public class RuntimeCharacterItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof RuntimeCharacter) {
+                        RuntimeCharacter rc = (RuntimeCharacter)object;
+                        return rc.getInUse();
+                    }
+                    return super.getComboBoxObjects(object);
+                }
+
+            }            
+                    );
     }
 
     /**
      * This adds a property descriptor for the Left Hand feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addLeftHandPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_leftHand_feature"),
@@ -222,18 +233,28 @@ public class RuntimeCharacterItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof RuntimeCharacter) {
+                        RuntimeCharacter rc = (RuntimeCharacter)object;
+                        return rc.getInUse();
+                    }
+                    return super.getComboBoxObjects(object);
+                }
+            });
     }
 
     /**
      * This adds a property descriptor for the In Use feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addInUsePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_inUse_feature"),
@@ -244,18 +265,29 @@ public class RuntimeCharacterItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof RuntimeCharacter) {
+                        RuntimeCharacter rc = (RuntimeCharacter)object;
+                        ManagedCharacter character = rc.getCharacter();
+                        if(character!=null)
+                            return character.getInventar();
+                    }                    
+                    return super.getComboBoxObjects(object);
+                }                
+            });
     }
 
     /**
      * This adds a property descriptor for the Armor feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addArmorPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_armor_feature"),
@@ -266,7 +298,17 @@ public class RuntimeCharacterItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof RuntimeCharacter) {
+                        RuntimeCharacter rc = (RuntimeCharacter)object;
+                        return rc.getInUse();
+                    }
+                    return super.getComboBoxObjects(object);
+                }
+            });
     }
 
     /**
@@ -284,12 +326,12 @@ public class RuntimeCharacterItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Map labelValue = ((RuntimeCharacter)object).getExtendetData();
-        String label = labelValue == null ? null : labelValue.toString();
+        ManagedCharacter labelValue = ((RuntimeCharacter)object).getCharacter();
+        String label = labelValue == null ? null : labelValue.getPersona().getName();
         return label == null || label.length() == 0 ?
             getString("_UI_RuntimeCharacter_type") :
             getString("_UI_RuntimeCharacter_type") + " " + label;
