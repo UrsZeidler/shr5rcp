@@ -2,6 +2,8 @@ shr5rcp
 =====================
 ![logo](de.urszeidler.shr5.product/icons/shrImage_6_128.png)
 
+[![Build Status Snapshot-Build](https://urszeidler.ci.cloudbees.com/buildStatus/icon?job=shr5-maven)](https://urszeidler.ci.cloudbees.com/job/shr5-maven/)
+
 1. Overview
 
  This is a program to manage resources and characters for the rolegame shadowrun 5.0.
