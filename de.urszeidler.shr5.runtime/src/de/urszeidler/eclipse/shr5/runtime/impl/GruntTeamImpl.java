@@ -103,8 +103,9 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
         gruntGroup = newGruntGroup;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.GRUNT_TEAM__GRUNT_GROUP, oldGruntGroup, gruntGroup));
-        
-        buildMembers();
+
+        if (members != null)
+            buildMembers();
     }
 
     /**
@@ -117,7 +118,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
         if (getGruntGroup() == null)
             return;
         getMembers().clear();
-        
+
         GruntMembers leader = getGruntGroup().getLeader();
         ArrayList<GruntMembers> list = new ArrayList<GruntMembers>(getGruntGroup().getMembers().size() + 1);
         if (leader != null)
@@ -128,12 +129,13 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
             createRuntimeCharacters(gruntMembers);
         }
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.ADD_MANY, RuntimePackage.TEAM__MEMBERS, 1, 2));
+            eNotify(new ENotificationImpl(this, Notification.ADD_MANY, RuntimePackage.TEAM__MEMBERS, list, list));
 
     }
 
     /**
      * Creates all gruntRuntime Characters for the {@link GruntMembers} object.
+     * 
      * @param gruntMembers
      */
     private void createRuntimeCharacters(GruntMembers gruntMembers) {
@@ -143,7 +145,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
             gruntRuntimeCharacter.setCharacter(gruntMembers.getNsc());
             getMembers().add(gruntRuntimeCharacter);
         }
-        
+
     }
 
     /**
