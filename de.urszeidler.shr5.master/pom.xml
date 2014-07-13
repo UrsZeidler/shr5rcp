@@ -15,7 +15,7 @@
 		<module>../de.urszeidler.shr5.help</module>
 		<module>../de.urszeidler.shr5.ecp</module>
 		<module>../de.urszeidler.shr5.acceleo</module>
-		<module>../de.urszeidler.shr5.product</module>		
+		<module>../de.urszeidler.shr5.product</module>
 		<module>../de.urszeidler.shr5.gameplay</module>
 		<module>../de.urszeidler.shr5.feature</module>
 		<module>../de.urszeidler.shr5.updatesite</module>
@@ -23,20 +23,20 @@
 		<module>../de.urszeidler.shr5.runtime.edit</module>
 		<module>../de.urszeidler.shr5.scripting</module>
 		<module>../de.urszeidler.shr5.scripting.edit</module>
-		
-		
-		
+
+
+
 		<module>../de.urszeidler.shr5.model.tests</module>
 		<module>../de.urszeidler.shr5.management.model.tests</module>
 		<module>../de.urszeidler.shr5.runtime.tests</module>
-		
+
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.product.site.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.product.build</module> -->
 		<!-- <module>../de.urszeidler.shr5.localization.feature</module> -->
-		
-		
+
+
 	</modules>
 
 
@@ -94,11 +94,59 @@
 					<artifactId>tycho-surefire-plugin</artifactId>
 					<version>${tycho.version}</version>
 				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-extras-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-director-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
 
 			</plugins>
 		</pluginManagement>
 
 		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho.version}</version>
+				 <configuration>
+    <products>
+      <product>
+        <!-- select product with ID product.id; the archives get the classifiers "<os>.<ws>.<arch>" -->
+        <id>de.urszeidler.shr5.rcp.product.id</id>
+      </product>
+      </products>
+  </configuration>
+				
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<source>
+						<!-- source repositories to mirror from -->
+						<repository>
+							<url>http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2</url>
+							<layout>p2</layout>
+							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" 
+								(for joint repositories; default) -->
+						</repository>
+						<repository>
+							<url>https://urszeidler.ci.cloudbees.com/job/shr5-maven/updatesite/</url>
+							<layout>p2</layout>
+							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" 
+								(for joint repositories; default) -->
+						</repository>
+					</source>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -139,37 +187,20 @@
 					</environments>
 				</configuration>
 			</plugin>
+
 		</plugins>
 
 	</build>
 	<!-- -->
 	<reporting>
 		<plugins>
-<!-- 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<targetJdk>1.6</targetJdk>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<configuration>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.1-SNAPSHOT</version>
-			</plugin>
- -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-pmd-plugin</artifactId> 
+				<version>3.1</version> <configuration> <targetJdk>1.6</targetJdk> </configuration> 
+				</plugin> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
+				<configuration> <formats> <format>html</format> <format>xml</format> </formats> 
+				</configuration> </plugin> <plugin> <groupId>org.codehaus.mojo</groupId> 
+				<artifactId>javancss-maven-plugin</artifactId> <version>2.1-SNAPSHOT</version> 
+				</plugin> -->
 		</plugins>
 	</reporting>
 
