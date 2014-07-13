@@ -21,6 +21,9 @@
 		<module>../de.urszeidler.shr5.updatesite</module>
 		<module>../de.urszeidler.shr5.runtime</module>
 		<module>../de.urszeidler.shr5.runtime.edit</module>
+		<module>../de.urszeidler.shr5.scripting</module>
+		<module>../de.urszeidler.shr5.scripting.edit</module>
+		
 		
 		
 		<module>../de.urszeidler.shr5.model.tests</module>
