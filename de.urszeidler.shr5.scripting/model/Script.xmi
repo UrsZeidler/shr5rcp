@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<scripting:Script xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scripting="http://shr.scripting/1.0" xsi:schemaLocation="http://shr.scripting/1.0 scripting.ecore" name="testScript">
+  <placements name="Instructions" teams="//@allTeams.0 //@player">
+    <enviorment/>
+  </placements>
+  <placements beschreibung="" name="" nextPlacements="//@placements.1" teams="//@player"/>
+  <allTeams name="cc"/>
+  <player name="tt">
+    <members/>
+  </player>
+</scripting:Script>

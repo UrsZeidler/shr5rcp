@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scripting" nsURI="http://shr.scripting/1.0" nsPrefix="scripting">
+  <eClassifiers xsi:type="ecore:EClass" name="Script" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="placements" upperBound="-1"
+        eType="#//Placement" containment="true" eOpposite="#//Placement/script"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allTeams" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="management" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GamemasterManagement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Placement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextPlacements" upperBound="-1"
+        eType="#//Placement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teams" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inTheirFace" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="script" eType="#//Script"
+        eOpposite="#//Script/placements"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugging" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enviorment" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Enviorment"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

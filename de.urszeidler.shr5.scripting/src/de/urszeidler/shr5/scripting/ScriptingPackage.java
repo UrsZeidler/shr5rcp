@@ -1,0 +1,545 @@
+/**
+ */
+package de.urszeidler.shr5.scripting;
+
+import de.urszeidler.eclipse.shr5.Shr5Package;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see de.urszeidler.shr5.scripting.ScriptingFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface ScriptingPackage extends EPackage {
+    /**
+     * The package name.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    String eNAME = "scripting";
+
+    /**
+     * The package namespace URI.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    String eNS_URI = "http://shr.scripting/1.0";
+
+    /**
+     * The package namespace name.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    String eNS_PREFIX = "scripting";
+
+    /**
+     * The singleton instance of the package.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    ScriptingPackage eINSTANCE = de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl.init();
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.ScriptImpl <em>Script</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.ScriptImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScript()
+     * @generated
+     */
+    int SCRIPT = 0;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Placements</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__PLACEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>All Teams</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__ALL_TEAMS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Player</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__PLAYER = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Management</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__MANAGEMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of structural features of the '<em>Script</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The number of operations of the '<em>Script</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.PlacementImpl <em>Placement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.PlacementImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacement()
+     * @generated
+     */
+    int PLACEMENT = 1;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Next Placements</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__NEXT_PLACEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Teams</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__TEAMS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Background</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__BACKGROUND = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>In Their Face</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__IN_THEIR_FACE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Script</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__SCRIPT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Debugging</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__DEBUGGING = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Enviorment</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__ENVIORMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The number of structural features of the '<em>Placement</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
+
+    /**
+     * The number of operations of the '<em>Placement</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Script <em>Script</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Script</em>'.
+     * @see de.urszeidler.shr5.scripting.Script
+     * @generated
+     */
+    EClass getScript();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.shr5.scripting.Script#getPlacements <em>Placements</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Placements</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getPlacements()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_Placements();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.shr5.scripting.Script#getAllTeams <em>All Teams</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>All Teams</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getAllTeams()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_AllTeams();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Script#getPlayer <em>Player</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Player</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getPlayer()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_Player();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Script#getManagement <em>Management</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Management</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getManagement()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_Management();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Placement <em>Placement</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Placement</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement
+     * @generated
+     */
+    EClass getPlacement();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.shr5.scripting.Placement#getNextPlacements <em>Next Placements</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Next Placements</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getNextPlacements()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_NextPlacements();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.shr5.scripting.Placement#getTeams <em>Teams</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Teams</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getTeams()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_Teams();
+
+    /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getBackground <em>Background</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Background</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getBackground()
+     * @see #getPlacement()
+     * @generated
+     */
+    EAttribute getPlacement_Background();
+
+    /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getInTheirFace <em>In Their Face</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>In Their Face</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getInTheirFace()
+     * @see #getPlacement()
+     * @generated
+     */
+    EAttribute getPlacement_InTheirFace();
+
+    /**
+     * Returns the meta object for the container reference '{@link de.urszeidler.shr5.scripting.Placement#getScript <em>Script</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the container reference '<em>Script</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getScript()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_Script();
+
+    /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Debugging</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getDebugging()
+     * @see #getPlacement()
+     * @generated
+     */
+    EAttribute getPlacement_Debugging();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Placement#getEnviorment <em>Enviorment</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Enviorment</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getEnviorment()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_Enviorment();
+
+    /**
+     * Returns the factory that creates the instances of the model.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the factory that creates the instances of the model.
+     * @generated
+     */
+    ScriptingFactory getScriptingFactory();
+
+    /**
+     * <!-- begin-user-doc -->
+     * Defines literals for the meta objects that represent
+     * <ul>
+     *   <li>each class,</li>
+     *   <li>each feature of each class,</li>
+     *   <li>each operation of each class,</li>
+     *   <li>each enum,</li>
+     *   <li>and each data type</li>
+     * </ul>
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    interface Literals {
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.ScriptImpl <em>Script</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.ScriptImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScript()
+         * @generated
+         */
+        EClass SCRIPT = eINSTANCE.getScript();
+
+        /**
+         * The meta object literal for the '<em><b>Placements</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__PLACEMENTS = eINSTANCE.getScript_Placements();
+
+        /**
+         * The meta object literal for the '<em><b>All Teams</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__ALL_TEAMS = eINSTANCE.getScript_AllTeams();
+
+        /**
+         * The meta object literal for the '<em><b>Player</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__PLAYER = eINSTANCE.getScript_Player();
+
+        /**
+         * The meta object literal for the '<em><b>Management</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__MANAGEMENT = eINSTANCE.getScript_Management();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.PlacementImpl <em>Placement</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.PlacementImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacement()
+         * @generated
+         */
+        EClass PLACEMENT = eINSTANCE.getPlacement();
+
+        /**
+         * The meta object literal for the '<em><b>Next Placements</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__NEXT_PLACEMENTS = eINSTANCE.getPlacement_NextPlacements();
+
+        /**
+         * The meta object literal for the '<em><b>Teams</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__TEAMS = eINSTANCE.getPlacement_Teams();
+
+        /**
+         * The meta object literal for the '<em><b>Background</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PLACEMENT__BACKGROUND = eINSTANCE.getPlacement_Background();
+
+        /**
+         * The meta object literal for the '<em><b>In Their Face</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PLACEMENT__IN_THEIR_FACE = eINSTANCE.getPlacement_InTheirFace();
+
+        /**
+         * The meta object literal for the '<em><b>Script</b></em>' container reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__SCRIPT = eINSTANCE.getPlacement_Script();
+
+        /**
+         * The meta object literal for the '<em><b>Debugging</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PLACEMENT__DEBUGGING = eINSTANCE.getPlacement_Debugging();
+
+        /**
+         * The meta object literal for the '<em><b>Enviorment</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__ENVIORMENT = eINSTANCE.getPlacement_Enviorment();
+
+    }
+
+} //ScriptingPackage
