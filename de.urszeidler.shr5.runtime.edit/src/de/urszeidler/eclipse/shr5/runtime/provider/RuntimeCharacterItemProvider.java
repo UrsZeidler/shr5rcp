@@ -3,13 +3,8 @@
 package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -22,6 +17,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter} object.
@@ -330,8 +329,16 @@ public class RuntimeCharacterItemProvider
      */
     @Override
     public String getText(Object object) {
-        ManagedCharacter labelValue = ((RuntimeCharacter)object).getCharacter();
-        String label = labelValue == null ? null : labelValue.getPersona().getName();
+        RuntimeCharacter character = (RuntimeCharacter)object;
+        ComposeableAdapterFactory factory = ((RuntimeItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String labelValue = null;
+        if (factory != null && character.getCharacter() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(character.getCharacter(), IItemLabelProvider.class);
+            if (labelprovider != null)
+                labelValue = labelprovider.getText(character.getCharacter());
+        }
+        
+        String label = labelValue == null ? null : character.getCharacter().getGeneratorSrc().getCharacterName();
         return label == null || label.length() == 0 ?
             getString("_UI_RuntimeCharacter_type") :
             getString("_UI_RuntimeCharacter_type") + " " + label;

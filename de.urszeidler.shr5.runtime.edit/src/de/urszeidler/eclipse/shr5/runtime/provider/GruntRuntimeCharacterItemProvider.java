@@ -4,6 +4,7 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.Map;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -73,12 +74,21 @@ public class GruntRuntimeCharacterItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Map labelValue = ((GruntRuntimeCharacter)object).getExtendetData();
-        String label = labelValue == null ? null : labelValue.toString();
+        GruntRuntimeCharacter character = (GruntRuntimeCharacter)object;
+        ComposeableAdapterFactory factory = ((RuntimeItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String labelValue = "";
+        if (factory != null && character.getCharacter() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(character.getCharacter(), IItemLabelProvider.class);
+            if (labelprovider != null)
+                labelValue = labelprovider.getText(character.getCharacter());
+        }
+        
+        String label = labelValue == null ? null : character.getCharacter().getGeneratorSrc().getCharacterName();
+
         return label == null || label.length() == 0 ?
             getString("_UI_GruntRuntimeCharacter_type") :
             getString("_UI_GruntRuntimeCharacter_type") + " " + label;
