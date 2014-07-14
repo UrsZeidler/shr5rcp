@@ -155,6 +155,34 @@ public class W6Dice {
     }
 
     /**
+     * returns successes against mw for a probe
+     * 
+     * @param mw
+     * @param probe
+     * @return list of successes
+     */
+    public static int probeSucsessesShr5(Collection<Integer> probe) {
+        return probeSucsesses(BASE_SHR5_MW, probe);
+    }
+    
+    /**
+     * returns count successes  against mw for a probe
+     * 
+     * @param mw
+     * @param probe
+     * @return list of successes
+     */
+    public static int probeSucsesses(int mw, Collection<Integer> probe) {
+        int erfolge = 0;
+        for (Integer integer : probe) {
+            if (integer >= mw && integer >= 1)
+                erfolge++;
+        }
+
+        return erfolge;
+    }
+
+    /**
      * rolls w open W6 dice
      * 
      * @param w
