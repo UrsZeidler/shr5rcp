@@ -44,6 +44,12 @@ public class ModSetter implements Adapter {
                                 list.addAll(list1);
                             }
                     }
+                }else{
+                    Object ob = persona.eGet(eref);
+                    if (ob instanceof Modifizierbar) {
+                        Modifizierbar m = (Modifizierbar)ob;
+                        list.add(m);
+                    }
                 }
         }
 
