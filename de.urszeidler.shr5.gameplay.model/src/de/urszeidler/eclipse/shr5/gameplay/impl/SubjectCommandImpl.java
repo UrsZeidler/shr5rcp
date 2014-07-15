@@ -6,7 +6,7 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -97,7 +97,7 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
      * @generated not
      * @ordered
      */
-    protected static final ComandCallback CMD_CALLBACK_EDEFAULT = null;//(ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(), "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;//(ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(), "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
@@ -107,7 +107,7 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      * @ordered
      */
-    protected ComandCallback cmdCallback = CMD_CALLBACK_EDEFAULT;
+    protected CommandCallback cmdCallback = CMD_CALLBACK_EDEFAULT;
 
     /**
      * This is true if the Cmd Callback attribute has been set.
@@ -206,7 +206,7 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
-    public ComandCallback getCmdCallback() {
+    public CommandCallback getCmdCallback() {
         return cmdCallback;
     }
 
@@ -215,8 +215,8 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCmdCallback(ComandCallback newCmdCallback) {
-        ComandCallback oldCmdCallback = cmdCallback;
+    public void setCmdCallback(CommandCallback newCmdCallback) {
+        CommandCallback oldCmdCallback = cmdCallback;
         cmdCallback = newCmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
@@ -230,7 +230,7 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      */
     public void unsetCmdCallback() {
-        ComandCallback oldCmdCallback = cmdCallback;
+        CommandCallback oldCmdCallback = cmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
@@ -364,7 +364,7 @@ public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements 
                 setDate((Date)newValue);
                 return;
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
-                setCmdCallback((ComandCallback)newValue);
+                setCmdCallback((CommandCallback)newValue);
                 return;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 setSubject((RuntimeCharacter)newValue);

@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
@@ -110,12 +110,12 @@ public interface Command extends EObject {
      * @return the value of the '<em>Cmd Callback</em>' attribute.
      * @see #isSetCmdCallback()
      * @see #unsetCmdCallback()
-     * @see #setCmdCallback(ComandCallback)
+     * @see #setCmdCallback(CommandCallback)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_CmdCallback()
-     * @model default="" unsettable="true" dataType="de.urszeidler.eclipse.shr5.gameplay.ComandCallback" transient="true" derived="true"
+     * @model default="" unsettable="true" dataType="de.urszeidler.eclipse.shr5.gameplay.CommandCallback" transient="true" derived="true"
      * @generated
      */
-    ComandCallback getCmdCallback();
+    CommandCallback getCmdCallback();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback <em>Cmd Callback</em>}' attribute.
@@ -127,7 +127,7 @@ public interface Command extends EObject {
      * @see #getCmdCallback()
      * @generated
      */
-    void setCmdCallback(ComandCallback value);
+    void setCmdCallback(CommandCallback value);
 
     /**
      * Unsets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback <em>Cmd Callback</em>}' attribute.
@@ -135,7 +135,7 @@ public interface Command extends EObject {
      * <!-- end-user-doc -->
      * @see #isSetCmdCallback()
      * @see #getCmdCallback()
-     * @see #setCmdCallback(ComandCallback)
+     * @see #setCmdCallback(CommandCallback)
      * @generated
      */
     void unsetCmdCallback();
@@ -147,7 +147,7 @@ public interface Command extends EObject {
      * @return whether the value of the '<em>Cmd Callback</em>' attribute is set.
      * @see #unsetCmdCallback()
      * @see #getCmdCallback()
-     * @see #setCmdCallback(ComandCallback)
+     * @see #setCmdCallback(CommandCallback)
      * @generated
      */
     boolean isSetCmdCallback();

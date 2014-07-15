@@ -359,7 +359,7 @@
       <children xmi:type="notation:Node" xmi:id="_j9R9gAxCEeStocVKc3B8yQ" type="4008"/>
       <children xmi:type="notation:Node" xmi:id="_j9R9gQxCEeStocVKc3B8yQ" type="4009"/>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_j9RWcQxCEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-      <element xmi:type="ecore:EDataType" href="gameplay.ecore#//ComandCallback"/>
+      <element xmi:type="ecore:EDataType" href="gameplay.ecore#//CommandCallback"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j9RWcgxCEeStocVKc3B8yQ" x="-190" y="60"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6sTbwY_GEd6SEpVfiQZsGw"/>

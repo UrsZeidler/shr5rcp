@@ -8,7 +8,7 @@
   <foreignModel>gameplay.ecore</foreignModel>
   <genPackages prefix="Gameplay" basePackage="de.urszeidler.eclipse.shr5" disposableProviderFactory="true"
       ecorePackage="gameplay.ecore#/">
-    <genDataTypes ecoreDataType="gameplay.ecore#//ComandCallback"/>
+    <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/executedCommands"/>

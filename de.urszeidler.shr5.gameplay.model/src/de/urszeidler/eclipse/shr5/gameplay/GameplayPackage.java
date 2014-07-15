@@ -1978,15 +1978,14 @@ public interface GameplayPackage extends EPackage {
 
 
     /**
-     * The meta object id for the '<em>Comand Callback</em>' data type.
+     * The meta object id for the '<em>Command Callback</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback
-     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getComandCallback()
+     * @see de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMAND_CALLBACK = 17;
-
+    int COMMAND_CALLBACK = 17;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -2486,15 +2485,15 @@ public interface GameplayPackage extends EPackage {
     EClass getActionPhaseCmd();
 
     /**
-     * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback <em>Comand Callback</em>}'.
+     * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for data type '<em>Comand Callback</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback
-     * @model instanceClass="de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback" serializeable="false"
+     * @return the meta object for data type '<em>Command Callback</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback
+     * @model instanceClass="de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback" serializeable="false"
      * @generated
      */
-    EDataType getComandCallback();
+    EDataType getCommandCallback();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -2930,14 +2929,14 @@ public interface GameplayPackage extends EPackage {
         EClass ACTION_PHASE_CMD = eINSTANCE.getActionPhaseCmd();
 
         /**
-         * The meta object literal for the '<em>Comand Callback</em>' data type.
+         * The meta object literal for the '<em>Command Callback</em>' data type.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback
-         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getComandCallback()
+         * @see de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
          * @generated
          */
-        EDataType COMAND_CALLBACK = eINSTANCE.getComandCallback();
+        EDataType COMMAND_CALLBACK = eINSTANCE.getCommandCallback();
 
     }
 

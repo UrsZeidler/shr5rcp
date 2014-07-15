@@ -11,7 +11,7 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
  * @author urs
  *
  */
-public interface ComandCallback {
+public interface CommandCallback {
     /**
      * Is used to prepare the command.
      * @param cmd

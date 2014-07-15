@@ -25,7 +25,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 
-import de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -168,7 +168,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    private EDataType comandCallbackEDataType = null;
+    private EDataType commandCallbackEDataType = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -662,8 +662,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EDataType getComandCallback() {
-        return comandCallbackEDataType;
+    public EDataType getCommandCallback() {
+        return commandCallbackEDataType;
     }
 
     /**
@@ -759,7 +759,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         actionPhaseCmdEClass = createEClass(ACTION_PHASE_CMD);
 
         // Create data types
-        comandCallbackEDataType = createEDataType(COMAND_CALLBACK);
+        commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
     }
 
     /**
@@ -822,7 +822,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCommand_SubCommands(), this.getCommand(), null, "subCommands", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getCommand_CmdCallback(), this.getComandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_CmdCallback(), this.getCommandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEOperation(getCommand__Redo(), null, "redo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -879,7 +879,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(actionPhaseCmdEClass, ActionPhaseCmd.class, "ActionPhaseCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
-        initEDataType(comandCallbackEDataType, ComandCallback.class, "ComandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource
         createResource(eNS_URI);

@@ -10,7 +10,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
-import de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 import java.lang.reflect.InvocationTargetException;
@@ -109,7 +109,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * @generated not
      * @ordered
      */
-    protected static final ComandCallback CMD_CALLBACK_EDEFAULT = null;//(ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(), "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;//(ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(), "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
@@ -119,7 +119,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * @generated
      * @ordered
      */
-    protected ComandCallback cmdCallback = CMD_CALLBACK_EDEFAULT;
+    protected CommandCallback cmdCallback = CMD_CALLBACK_EDEFAULT;
 
     /**
      * This is true if the Cmd Callback attribute has been set.
@@ -228,7 +228,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * <!-- end-user-doc -->
      * @generated
      */
-    public ComandCallback getCmdCallback() {
+    public CommandCallback getCmdCallback() {
         return cmdCallback;
     }
 
@@ -237,8 +237,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCmdCallback(ComandCallback newCmdCallback) {
-        ComandCallback oldCmdCallback = cmdCallback;
+    public void setCmdCallback(CommandCallback newCmdCallback) {
+        CommandCallback oldCmdCallback = cmdCallback;
         cmdCallback = newCmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
@@ -252,7 +252,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * @generated
      */
     public void unsetCmdCallback() {
-        ComandCallback oldCmdCallback = cmdCallback;
+        CommandCallback oldCmdCallback = cmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
@@ -412,7 +412,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 setDate((Date)newValue);
                 return;
             case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
-                setCmdCallback((ComandCallback)newValue);
+                setCmdCallback((CommandCallback)newValue);
                 return;
             case GameplayPackage.COMBAT_TURN__COMBATANTS:
                 getCombatants().clear();
