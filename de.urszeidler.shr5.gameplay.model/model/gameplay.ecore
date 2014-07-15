@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gameplay" nsURI="http://urszeidler.de/shr5/gameplay/1.0" nsPrefix="gameplay">
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionStack">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentCommand" eType="#//Command"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executedCommands" upperBound="-1"
+        eType="#//Command"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="protocol" lowerBound="1"
+        eType="#//ExecutionProtocol" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DamageTest" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true" interface="true">
+    <eOperations name="redo"/>
+    <eOperations name="undo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subCommands" upperBound="-1"
+        eType="#//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cmdCallback" eType="#//ComandCallback"
+        transient="true" defaultValueLiteral="" unsettable="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubjectCommand" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SkillTestCmd" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpposedSkillTestCmd" eSuperTypes="#//SkillTestCmd">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Initative" eSuperTypes="#//SubjectCommand">
+    <eOperations name="nextPass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="actualPhase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ini" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualIni" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeInitative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionProtocol">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
+        eType="#//Command" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Probe" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="probe" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successes" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glitches" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProbeCommand" abstract="true" eSuperTypes="#//SubjectCommand #//SuccesTest">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mods" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhaseCmd" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CombatTurn" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="combatants" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionPhases" upperBound="-1"
+        eType="#//PhaseCmd" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuccesTest" abstract="true" interface="true"
+      eSuperTypes="#//Probe">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="thresholds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendetSkillTestCmd" eSuperTypes="#//SkillTestCmd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefensTestCmd" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackersHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuccesTestCmd" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dicePool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionPhaseCmd" eSuperTypes="#//SubjectCommand #//PhaseCmd"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ComandCallback" instanceClassName="de.urszeidler.eclipse.shr5.gameplay.util.ComandCallback"
+      serializable="false"/>
+</ecore:EPackage>

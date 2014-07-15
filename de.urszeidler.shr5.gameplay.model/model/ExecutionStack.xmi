@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gameplay:ExecutionStack
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0"
+    xsi:schemaLocation="http://urszeidler.de/shr5/gameplay/1.0 gameplay.ecore">
+  <protocol>
+    <commands
+        xsi:type="gameplay:CombatTurn"/>
+  </protocol>
+</gameplay:ExecutionStack>

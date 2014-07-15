@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="(c) Urs Zeilder" modelDirectory="/de.urszeidler.shr5.gameplay.model/src"
+    modelPluginID="de.urszeidler.shr5.gameplay.model" modelName="Gameplay" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../de.urszeidler.shr5.runtime/model/runtime.genmodel#//runtime ../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5 ../../de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>gameplay.ecore</foreignModel>
+  <genPackages prefix="Gameplay" basePackage="de.urszeidler.eclipse.shr5" disposableProviderFactory="true"
+      ecorePackage="gameplay.ecore#/">
+    <genDataTypes ecoreDataType="gameplay.ecore#//ComandCallback"/>
+    <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/executedCommands"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//DamageTest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/damage"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//Command">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//Command/subCommands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/cmdCallback"/>
+      <genOperations ecoreOperation="gameplay.ecore#//Command/redo"/>
+      <genOperations ecoreOperation="gameplay.ecore#//Command/undo"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//SubjectCommand">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SubjectCommand/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//SkillTestCmd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SkillTestCmd/skill"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//OpposedSkillTestCmd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/object"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//Initative">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Initative/ini"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Initative/actualIni"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Initative/sizeInitative"/>
+      <genOperations ecoreOperation="gameplay.ecore#//Initative/nextPass">
+        <genParameters ecoreParameter="gameplay.ecore#//Initative/nextPass/actualPhase"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//ExecutionProtocol">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionProtocol/commands"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//Probe">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/probe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/successes"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/glitches"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/limit"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//ProbeCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ProbeCommand/mods"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//PhaseCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//PhaseCmd/phase"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//CombatTurn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/combatants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/actionPhases"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//SuccesTest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/netHits"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//ExtendetSkillTestCmd"/>
+    <genClasses ecoreClass="gameplay.ecore#//DefensTestCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DefensTestCmd/attackersHits"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//SuccesTestCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTestCmd/dicePool"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//ActionPhaseCmd"/>
+  </genPackages>
+</genmodel:GenModel>

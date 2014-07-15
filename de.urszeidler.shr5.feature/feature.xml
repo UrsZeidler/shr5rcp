@@ -104,4 +104,10 @@
          install-size="0"
          version="0.1.8.qualifier"/>
 
+   <plugin
+         id="de.urszeidler.shr5.gameplay.model"
+         download-size="0"
+         install-size="0"
+         version="0.1.8.qualifier"/>
+
 </feature>
