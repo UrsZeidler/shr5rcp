@@ -570,4 +570,20 @@ Containts the fragments of the bable project.
          fragment="true"
          unpack="false"/>
 
+   <plugin
+         id="org.eclipse.update.configurator.nl_de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.text.nl_de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
 </feature>
