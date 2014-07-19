@@ -18,8 +18,6 @@ Containts the fragments of the bable project.
       [Enter License Description here.]
    </license>
 
-
-
    <plugin
          id="org.eclipse.emf.ecp.application.e3.nl_de"
          download-size="0"
@@ -438,6 +436,30 @@ Containts the fragments of the bable project.
 
    <plugin
          id="org.eclipse.help.nl_de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.ui.nl_de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.updatechecker.nl_de"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.updatesite.nl_de"
          download-size="0"
          install-size="0"
          version="0.0.0"
