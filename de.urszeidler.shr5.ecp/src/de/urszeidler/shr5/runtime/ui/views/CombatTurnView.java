@@ -309,9 +309,9 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
     private HandlungsContenProvider contentProvider;
 
-    private Tree tree;
-
-    private TreeViewer treeViewer;
+//    private Tree tree;
+//
+//    private TreeViewer treeViewer;
 
     private WritableValue phaseSelection = new WritableValue();
     private WritableValue runtimeCharacterSelection = new WritableValue();
@@ -349,49 +349,49 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
 
         contentProvider = new HandlungsContenProvider(kampfrunde);
-        treeViewer.setContentProvider(contentProvider);
-        treeViewer.setLabelProvider(labelProvider);
-
-        treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-
-            @Override
-            public void selectionChanged(SelectionChangedEvent event) {
-
-                ISelection selection = event.getSelection();
-                if (selection instanceof IStructuredSelection) {
-                    IStructuredSelection ss = (IStructuredSelection)selection;
-                    Object firstElement = ss.getFirstElement();
-                    if (firstElement instanceof InitativePass) {
-                        currentPhase = (InitativePass)firstElement;
-                        RuntimeCharacter subject = currentPhase.getSubject();
-                        if (subject == null)
-                            return;
-
-                        basicActionPanel.setPhase(currentPhase);
-                        setPersonaHandlung(currentPhase);
-                        // phaseSelection.setValue(personaHandlung);
-                        // ManagedCharacter persona = subject.getCharacter();
-                        // runtimePersonSelectionProvider.setSelection(new StructuredSelection(subject));
-                        // runtimeCharacterSelection.setValue(subject);
-                        //
-                        // setPersonaHandlung(personaHandlung);
-                        //
-                        // phaseSelectionProvider.setSelection(new StructuredSelection(persona));
-                        //
-                        // if (subject.getRightHand() == null)
-                        // rhSelectionProvider.setSelection(new EmptySelection());
-                        // else
-                        // rhSelectionProvider.setSelection(new StructuredSelection(subject.getRightHand()));
-                        //
-                        // if (subject.getLeftHand() == null)
-                        // lhSelectionProvider.setSelection(new EmptySelection());
-                        // else
-                        // lhSelectionProvider.setSelection(new StructuredSelection(subject.getLeftHand()));
-
-                    }
-                }
-            }
-        });
+//        treeViewer.setContentProvider(contentProvider);
+//        treeViewer.setLabelProvider(labelProvider);
+//
+//        treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+//
+//            @Override
+//            public void selectionChanged(SelectionChangedEvent event) {
+//
+//                ISelection selection = event.getSelection();
+//                if (selection instanceof IStructuredSelection) {
+//                    IStructuredSelection ss = (IStructuredSelection)selection;
+//                    Object firstElement = ss.getFirstElement();
+//                    if (firstElement instanceof InitativePass) {
+//                        currentPhase = (InitativePass)firstElement;
+//                        RuntimeCharacter subject = currentPhase.getSubject();
+//                        if (subject == null)
+//                            return;
+//
+//                        basicActionPanel.setPhase(currentPhase);
+//                        setPersonaHandlung(currentPhase);
+//                        // phaseSelection.setValue(personaHandlung);
+//                        // ManagedCharacter persona = subject.getCharacter();
+//                        // runtimePersonSelectionProvider.setSelection(new StructuredSelection(subject));
+//                        // runtimeCharacterSelection.setValue(subject);
+//                        //
+//                        // setPersonaHandlung(personaHandlung);
+//                        //
+//                        // phaseSelectionProvider.setSelection(new StructuredSelection(persona));
+//                        //
+//                        // if (subject.getRightHand() == null)
+//                        // rhSelectionProvider.setSelection(new EmptySelection());
+//                        // else
+//                        // rhSelectionProvider.setSelection(new StructuredSelection(subject.getRightHand()));
+//                        //
+//                        // if (subject.getLeftHand() == null)
+//                        // lhSelectionProvider.setSelection(new EmptySelection());
+//                        // else
+//                        // lhSelectionProvider.setSelection(new StructuredSelection(subject.getLeftHand()));
+//
+//                    }
+//                }
+//            }
+//        });
 
         createActions();
     }
@@ -482,14 +482,14 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         scrolledComposite.setContent(combatTurnList);
         // scrolledComposite.setMinSize(20,20);
 
-        tree = new Tree(composite_bottom, SWT.NONE);
-        tree.setLayoutData(gridData1);
-        treeViewer = new TreeViewer(tree);
+//        tree = new Tree(composite_bottom, SWT.NONE);
+//        tree.setLayoutData(gridData1);
+//        treeViewer = new TreeViewer(tree);
     }
 
     @Override
     public void dispose() {
-        tree.dispose();
+//        tree.dispose();
         getSite().getPage().removeSelectionListener(this);
         super.dispose();
     }
@@ -611,6 +611,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
             if (firstElement instanceof CombatTurn) {
                 CombatTurn kr = (CombatTurn)firstElement;
                 setTempCombatTurn(kr);
+                basicActionPanel.setPhase((InitativePass)kr.getCurrentTurn());
             }
             // selectionProvider.setSelection(selection);
         }
@@ -618,7 +619,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
     }
 
     private void setTempCombatTurn(CombatTurn kr) {
-        treeViewer.setInput(kr);
+      //  treeViewer.setInput(kr);
         kampfrunde = kr;
         combatTurnList.setCombatTurn(kr);
     }
