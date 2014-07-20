@@ -107,11 +107,13 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCmdCallback()
      * @generated not
      * @ordered
      */
-    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;//(ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(), "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;// (ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(),
+                                                                        // "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
@@ -387,10 +389,13 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public void redo() {
-        executed = true; 
+        executing = true;
+
+        executed = true;
         getActionPhases().clear();
         getSubCommands().clear();
 
@@ -403,53 +408,57 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         List<InitativePass> phaseCommands = new ArrayList<InitativePass>();
         for (Command command : subCommands) {
             if (command instanceof Initative) {
-                Initative ini = (Initative) command;
+                Initative ini = (Initative)command;
                 int currentIni = ini.getIni();
-                int turn =1;
-                while (currentIni>0) {
+                int turn = 1;
+                while (currentIni > 0) {
                     InitativePass action = GameplayFactory.eINSTANCE.createInitativePass();
                     action.setSubject(ini.getSubject());
                     action.setPhase(currentIni);
                     action.setTurn(turn);
-                    if(turn==1)
+                    if (turn == 1)
                         action.setSizeInitative(ini.isSizeInitative());
                     else
                         action.setSizeInitative(false);
                     turn++;
-                    currentIni=currentIni-10;
-                    
+                    currentIni = currentIni - 10;
+
                     phaseCommands.add(action);
-                }                
-            }           
+                }
+            }
         }
-        Collections.sort(phaseCommands, new Comparator<InitativePass>(){
-              @Override
+        Collections.sort(phaseCommands, new Comparator<InitativePass>() {
+            @Override
             public int compare(InitativePass o1, InitativePass o2) {
-               int turn1 = o1.getTurn() - o2.getTurn();
-                 if(turn1!=0)
-                     return turn1;
-                     
+                int turn1 = o1.getTurn() - o2.getTurn();
+                if (turn1 != 0)
+                    return turn1;
+
                 int val = o1.getPhase() - o2.getPhase();
-                
-                if(val==0){
-                    //TODO : we need to check all the other compare options
+
+                if (val == 0) {
+                    // TODO : we need to check all the other compare options
                 }
                 return val * -1;
             }
-            
+
         });
-        
-        //subCommands.addAll((Collection<? extends Command>) phaseCommands);
+
+        // subCommands.addAll((Collection<? extends Command>) phaseCommands);
         getActionPhases().addAll(phaseCommands);
+        if (getActionPhases().size() > 0)
+            setCurrentTurn(getActionPhases().get(0));
+
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public void undo() {
-        executed = false; 
+        executed = false;
         getActionPhases().clear();
         getSubCommands().clear();
     }
@@ -643,4 +652,4 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         return result.toString();
     }
 
-} //CombatTurnImpl
+} // CombatTurnImpl
