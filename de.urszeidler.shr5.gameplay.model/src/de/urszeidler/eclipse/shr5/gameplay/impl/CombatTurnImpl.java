@@ -395,7 +395,6 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     public void redo() {
         executing = true;
 
-        executed = true;
         getActionPhases().clear();
         getSubCommands().clear();
 
@@ -445,9 +444,11 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         });
 
         // subCommands.addAll((Collection<? extends Command>) phaseCommands);
-        getActionPhases().addAll(phaseCommands);
         if (getActionPhases().size() > 0)
             setCurrentTurn(getActionPhases().get(0));
+        
+        executed = true;
+        getActionPhases().addAll(phaseCommands);
 
     }
 
