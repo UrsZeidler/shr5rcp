@@ -67,6 +67,7 @@ public class SubjectCommandItemProvider
             addExecutedPropertyDescriptor(object);
             addDatePropertyDescriptor(object);
             addCmdCallbackPropertyDescriptor(object);
+            addExecutingPropertyDescriptor(object);
             addSubjectPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -134,6 +135,28 @@ public class SubjectCommandItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Executing feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addExecutingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Command_executing_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Command_executing_feature", "_UI_Command_type"),
+                 GameplayPackage.Literals.COMMAND__EXECUTING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -228,6 +251,7 @@ public class SubjectCommandItemProvider
             case GameplayPackage.SUBJECT_COMMAND__EXECUTED:
             case GameplayPackage.SUBJECT_COMMAND__DATE:
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
+            case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case GameplayPackage.SUBJECT_COMMAND__SUB_COMMANDS:
@@ -291,7 +315,32 @@ public class SubjectCommandItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
-                 GameplayFactory.eINSTANCE.createActionPhaseCmd()));
+                 GameplayFactory.eINSTANCE.createInitativePass()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createComplexAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSimpleAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSimpleActions()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createFreeAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createInterruptAction()));
     }
 
     /**

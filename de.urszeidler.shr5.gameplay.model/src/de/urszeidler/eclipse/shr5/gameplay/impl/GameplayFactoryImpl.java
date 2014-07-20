@@ -68,7 +68,12 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.EXTENDET_SKILL_TEST_CMD: return createExtendetSkillTestCmd();
             case GameplayPackage.DEFENS_TEST_CMD: return createDefensTestCmd();
             case GameplayPackage.SUCCES_TEST_CMD: return createSuccesTestCmd();
-            case GameplayPackage.ACTION_PHASE_CMD: return createActionPhaseCmd();
+            case GameplayPackage.INITATIVE_PASS: return createInitativePass();
+            case GameplayPackage.COMPLEX_ACTION: return createComplexAction();
+            case GameplayPackage.SIMPLE_ACTION: return createSimpleAction();
+            case GameplayPackage.SIMPLE_ACTIONS: return createSimpleActions();
+            case GameplayPackage.FREE_ACTION: return createFreeAction();
+            case GameplayPackage.INTERRUPT_ACTION: return createInterruptAction();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -205,9 +210,59 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
-    public ActionPhaseCmd createActionPhaseCmd() {
-        ActionPhaseCmdImpl actionPhaseCmd = new ActionPhaseCmdImpl();
-        return actionPhaseCmd;
+    public InitativePass createInitativePass() {
+        InitativePassImpl initativePass = new InitativePassImpl();
+        return initativePass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ComplexAction createComplexAction() {
+        ComplexActionImpl complexAction = new ComplexActionImpl();
+        return complexAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SimpleAction createSimpleAction() {
+        SimpleActionImpl simpleAction = new SimpleActionImpl();
+        return simpleAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SimpleActions createSimpleActions() {
+        SimpleActionsImpl simpleActions = new SimpleActionsImpl();
+        return simpleActions;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public FreeAction createFreeAction() {
+        FreeActionImpl freeAction = new FreeActionImpl();
+        return freeAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterruptAction createInterruptAction() {
+        InterruptActionImpl interruptAction = new InterruptActionImpl();
+        return interruptAction;
     }
 
     /**

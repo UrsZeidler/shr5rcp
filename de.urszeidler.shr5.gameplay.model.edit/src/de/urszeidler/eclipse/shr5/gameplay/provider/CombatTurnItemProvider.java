@@ -67,7 +67,9 @@ public class CombatTurnItemProvider
             addExecutedPropertyDescriptor(object);
             addDatePropertyDescriptor(object);
             addCmdCallbackPropertyDescriptor(object);
+            addExecutingPropertyDescriptor(object);
             addCombatantsPropertyDescriptor(object);
+            addCurrentTurnPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -139,6 +141,28 @@ public class CombatTurnItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Executing feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addExecutingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Command_executing_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Command_executing_feature", "_UI_Command_type"),
+                 GameplayPackage.Literals.COMMAND__EXECUTING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Combatants feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -152,6 +176,28 @@ public class CombatTurnItemProvider
                  getString("_UI_CombatTurn_combatants_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_CombatTurn_combatants_feature", "_UI_CombatTurn_type"),
                  GameplayPackage.Literals.COMBAT_TURN__COMBATANTS,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Current Turn feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCurrentTurnPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_CombatTurn_currentTurn_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_CombatTurn_currentTurn_feature", "_UI_CombatTurn_type"),
+                 GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN,
                  true,
                  false,
                  true,
@@ -229,6 +275,7 @@ public class CombatTurnItemProvider
             case GameplayPackage.COMBAT_TURN__EXECUTED:
             case GameplayPackage.COMBAT_TURN__DATE:
             case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
+            case GameplayPackage.COMBAT_TURN__EXECUTING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
@@ -293,12 +340,37 @@ public class CombatTurnItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
-                 GameplayFactory.eINSTANCE.createActionPhaseCmd()));
+                 GameplayFactory.eINSTANCE.createInitativePass()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createComplexAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSimpleAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSimpleActions()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createFreeAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createInterruptAction()));
 
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES,
-                 GameplayFactory.eINSTANCE.createActionPhaseCmd()));
+                 GameplayFactory.eINSTANCE.createInitativePass()));
     }
 
     /**

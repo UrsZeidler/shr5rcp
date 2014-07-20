@@ -14,12 +14,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true" interface="true">
     <eOperations name="redo"/>
     <eOperations name="undo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executed" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subCommands" upperBound="-1"
         eType="#//Command" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cmdCallback" eType="#//CommandCallback"
         transient="true" defaultValueLiteral="" unsettable="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executing" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubjectCommand" abstract="true" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
@@ -65,6 +68,7 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionPhases" upperBound="-1"
         eType="#//PhaseCmd" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentTurn" eType="#//PhaseCmd"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTest" abstract="true" interface="true"
       eSuperTypes="#//Probe">
@@ -79,11 +83,28 @@
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTestCmd" eSuperTypes="#//ProbeCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dicePool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ActionPhaseCmd" eSuperTypes="#//SubjectCommand #//PhaseCmd">
+  <eClassifiers xsi:type="ecore:EClass" name="InitativePass" eSuperTypes="#//SubjectCommand #//PhaseCmd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="turn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeInitative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        eType="#//CommandWrapper" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="freeAction" eType="#//FreeAction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interruptAction" eType="#//InterruptAction"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CommandCallback" instanceClassName="de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback"
       serializable="false"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommandWrapper" abstract="true" eSuperTypes="#//SubjectCommand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexAction" eSuperTypes="#//CommandWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleAction" eSuperTypes="#//CommandWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleActions" eSuperTypes="#//CommandWrapper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action1" lowerBound="1"
+        eType="#//SimpleAction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action2" lowerBound="1"
+        eType="#//SimpleAction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//CommandWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//CommandWrapper"/>
 </ecore:EPackage>

@@ -133,8 +133,32 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
                 return createSuccesTestCmdAdapter();
             }
             @Override
-            public Adapter caseActionPhaseCmd(ActionPhaseCmd object) {
-                return createActionPhaseCmdAdapter();
+            public Adapter caseInitativePass(InitativePass object) {
+                return createInitativePassAdapter();
+            }
+            @Override
+            public Adapter caseCommandWrapper(CommandWrapper object) {
+                return createCommandWrapperAdapter();
+            }
+            @Override
+            public Adapter caseComplexAction(ComplexAction object) {
+                return createComplexActionAdapter();
+            }
+            @Override
+            public Adapter caseSimpleAction(SimpleAction object) {
+                return createSimpleActionAdapter();
+            }
+            @Override
+            public Adapter caseSimpleActions(SimpleActions object) {
+                return createSimpleActionsAdapter();
+            }
+            @Override
+            public Adapter caseFreeAction(FreeAction object) {
+                return createFreeActionAdapter();
+            }
+            @Override
+            public Adapter caseInterruptAction(InterruptAction object) {
+                return createInterruptActionAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -381,16 +405,100 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd <em>Action Phase Cmd</em>}'.
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass <em>Initative Pass</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass
      * @generated
      */
-    public Adapter createActionPhaseCmdAdapter() {
+    public Adapter createInitativePassAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.CommandWrapper <em>Command Wrapper</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CommandWrapper
+     * @generated
+     */
+    public Adapter createCommandWrapperAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.ComplexAction <em>Complex Action</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ComplexAction
+     * @generated
+     */
+    public Adapter createComplexActionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleAction <em>Simple Action</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleAction
+     * @generated
+     */
+    public Adapter createSimpleActionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions <em>Simple Actions</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleActions
+     * @generated
+     */
+    public Adapter createSimpleActionsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.FreeAction <em>Free Action</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.FreeAction
+     * @generated
+     */
+    public Adapter createFreeActionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction <em>Interrupt Action</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptAction
+     * @generated
+     */
+    public Adapter createInterruptActionAdapter() {
         return null;
     }
 

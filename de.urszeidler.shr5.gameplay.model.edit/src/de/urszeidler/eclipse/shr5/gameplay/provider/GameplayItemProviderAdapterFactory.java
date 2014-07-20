@@ -303,26 +303,141 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd} instances.
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.InitativePass} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected ActionPhaseCmdItemProvider actionPhaseCmdItemProvider;
+    protected InitativePassItemProvider initativePassItemProvider;
 
     /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd}.
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.InitativePass}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createActionPhaseCmdAdapter() {
-        if (actionPhaseCmdItemProvider == null) {
-            actionPhaseCmdItemProvider = new ActionPhaseCmdItemProvider(this);
+    public Adapter createInitativePassAdapter() {
+        if (initativePassItemProvider == null) {
+            initativePassItemProvider = new InitativePassItemProvider(this);
         }
 
-        return actionPhaseCmdItemProvider;
+        return initativePassItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.ComplexAction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ComplexActionItemProvider complexActionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ComplexAction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createComplexActionAdapter() {
+        if (complexActionItemProvider == null) {
+            complexActionItemProvider = new ComplexActionItemProvider(this);
+        }
+
+        return complexActionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SimpleAction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SimpleActionItemProvider simpleActionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SimpleAction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSimpleActionAdapter() {
+        if (simpleActionItemProvider == null) {
+            simpleActionItemProvider = new SimpleActionItemProvider(this);
+        }
+
+        return simpleActionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SimpleActionsItemProvider simpleActionsItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSimpleActionsAdapter() {
+        if (simpleActionsItemProvider == null) {
+            simpleActionsItemProvider = new SimpleActionsItemProvider(this);
+        }
+
+        return simpleActionsItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.FreeAction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected FreeActionItemProvider freeActionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.FreeAction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createFreeActionAdapter() {
+        if (freeActionItemProvider == null) {
+            freeActionItemProvider = new FreeActionItemProvider(this);
+        }
+
+        return freeActionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected InterruptActionItemProvider interruptActionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createInterruptActionAdapter() {
+        if (interruptActionItemProvider == null) {
+            interruptActionItemProvider = new InterruptActionItemProvider(this);
+        }
+
+        return interruptActionItemProvider;
     }
 
     /**
@@ -434,7 +549,12 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (extendetSkillTestCmdItemProvider != null) extendetSkillTestCmdItemProvider.dispose();
         if (defensTestCmdItemProvider != null) defensTestCmdItemProvider.dispose();
         if (succesTestCmdItemProvider != null) succesTestCmdItemProvider.dispose();
-        if (actionPhaseCmdItemProvider != null) actionPhaseCmdItemProvider.dispose();
+        if (initativePassItemProvider != null) initativePassItemProvider.dispose();
+        if (complexActionItemProvider != null) complexActionItemProvider.dispose();
+        if (simpleActionItemProvider != null) simpleActionItemProvider.dispose();
+        if (simpleActionsItemProvider != null) simpleActionsItemProvider.dispose();
+        if (freeActionItemProvider != null) freeActionItemProvider.dispose();
+        if (interruptActionItemProvider != null) interruptActionItemProvider.dispose();
     }
 
 }

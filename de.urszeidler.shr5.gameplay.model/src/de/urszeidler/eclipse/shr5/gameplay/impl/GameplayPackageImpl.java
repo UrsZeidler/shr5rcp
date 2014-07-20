@@ -4,37 +4,39 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
-import de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
-
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -161,7 +163,49 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass actionPhaseCmdEClass = null;
+    private EClass initativePassEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass commandWrapperEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass complexActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass simpleActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass simpleActionsEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass freeActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass interruptActionEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -331,6 +375,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      */
     public EAttribute getCommand_CmdCallback() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCommand_Executing() {
+        return (EAttribute)commandEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -581,6 +634,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getCombatTurn_CurrentTurn() {
+        return (EReference)combatTurnEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSuccesTest() {
         return succesTestEClass;
     }
@@ -653,8 +715,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getActionPhaseCmd() {
-        return actionPhaseCmdEClass;
+    public EClass getInitativePass() {
+        return initativePassEClass;
     }
 
     /**
@@ -662,8 +724,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getActionPhaseCmd_Turn() {
-        return (EAttribute)actionPhaseCmdEClass.getEStructuralFeatures().get(0);
+    public EAttribute getInitativePass_Turn() {
+        return (EAttribute)initativePassEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -671,8 +733,107 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getActionPhaseCmd_SizeInitative() {
-        return (EAttribute)actionPhaseCmdEClass.getEStructuralFeatures().get(1);
+    public EAttribute getInitativePass_SizeInitative() {
+        return (EAttribute)initativePassEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getInitativePass_Action() {
+        return (EReference)initativePassEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getInitativePass_FreeAction() {
+        return (EReference)initativePassEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getInitativePass_InterruptAction() {
+        return (EReference)initativePassEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCommandWrapper() {
+        return commandWrapperEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getComplexAction() {
+        return complexActionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSimpleAction() {
+        return simpleActionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSimpleActions() {
+        return simpleActionsEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSimpleActions_Action1() {
+        return (EReference)simpleActionsEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSimpleActions_Action2() {
+        return (EReference)simpleActionsEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getFreeAction() {
+        return freeActionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getInterruptAction() {
+        return interruptActionEClass;
     }
 
     /**
@@ -725,6 +886,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEReference(commandEClass, COMMAND__SUB_COMMANDS);
         createEAttribute(commandEClass, COMMAND__DATE);
         createEAttribute(commandEClass, COMMAND__CMD_CALLBACK);
+        createEAttribute(commandEClass, COMMAND__EXECUTING);
         createEOperation(commandEClass, COMMAND___REDO);
         createEOperation(commandEClass, COMMAND___UNDO);
 
@@ -761,6 +923,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         combatTurnEClass = createEClass(COMBAT_TURN);
         createEReference(combatTurnEClass, COMBAT_TURN__COMBATANTS);
         createEReference(combatTurnEClass, COMBAT_TURN__ACTION_PHASES);
+        createEReference(combatTurnEClass, COMBAT_TURN__CURRENT_TURN);
 
         succesTestEClass = createEClass(SUCCES_TEST);
         createEAttribute(succesTestEClass, SUCCES_TEST__THRESHOLDS);
@@ -774,9 +937,26 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         succesTestCmdEClass = createEClass(SUCCES_TEST_CMD);
         createEAttribute(succesTestCmdEClass, SUCCES_TEST_CMD__DICE_POOL);
 
-        actionPhaseCmdEClass = createEClass(ACTION_PHASE_CMD);
-        createEAttribute(actionPhaseCmdEClass, ACTION_PHASE_CMD__TURN);
-        createEAttribute(actionPhaseCmdEClass, ACTION_PHASE_CMD__SIZE_INITATIVE);
+        initativePassEClass = createEClass(INITATIVE_PASS);
+        createEAttribute(initativePassEClass, INITATIVE_PASS__TURN);
+        createEAttribute(initativePassEClass, INITATIVE_PASS__SIZE_INITATIVE);
+        createEReference(initativePassEClass, INITATIVE_PASS__ACTION);
+        createEReference(initativePassEClass, INITATIVE_PASS__FREE_ACTION);
+        createEReference(initativePassEClass, INITATIVE_PASS__INTERRUPT_ACTION);
+
+        commandWrapperEClass = createEClass(COMMAND_WRAPPER);
+
+        complexActionEClass = createEClass(COMPLEX_ACTION);
+
+        simpleActionEClass = createEClass(SIMPLE_ACTION);
+
+        simpleActionsEClass = createEClass(SIMPLE_ACTIONS);
+        createEReference(simpleActionsEClass, SIMPLE_ACTIONS__ACTION1);
+        createEReference(simpleActionsEClass, SIMPLE_ACTIONS__ACTION2);
+
+        freeActionEClass = createEClass(FREE_ACTION);
+
+        interruptActionEClass = createEClass(INTERRUPT_ACTION);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -826,8 +1006,14 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         extendetSkillTestCmdEClass.getESuperTypes().add(this.getSkillTestCmd());
         defensTestCmdEClass.getESuperTypes().add(this.getProbeCommand());
         succesTestCmdEClass.getESuperTypes().add(this.getProbeCommand());
-        actionPhaseCmdEClass.getESuperTypes().add(this.getSubjectCommand());
-        actionPhaseCmdEClass.getESuperTypes().add(this.getPhaseCmd());
+        initativePassEClass.getESuperTypes().add(this.getSubjectCommand());
+        initativePassEClass.getESuperTypes().add(this.getPhaseCmd());
+        commandWrapperEClass.getESuperTypes().add(this.getSubjectCommand());
+        complexActionEClass.getESuperTypes().add(this.getCommandWrapper());
+        simpleActionEClass.getESuperTypes().add(this.getCommandWrapper());
+        simpleActionsEClass.getESuperTypes().add(this.getCommandWrapper());
+        freeActionEClass.getESuperTypes().add(this.getCommandWrapper());
+        interruptActionEClass.getESuperTypes().add(this.getCommandWrapper());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -839,10 +1025,11 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getDamageTest_Damage(), ecorePackage.getEString(), "damage", null, 0, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(commandEClass, Command.class, "Command", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", null, 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCommand_SubCommands(), this.getCommand(), null, "subCommands", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_CmdCallback(), this.getCommandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_Executing(), ecorePackage.getEBoolean(), "executing", "false", 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEOperation(getCommand__Redo(), null, "redo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -883,6 +1070,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(combatTurnEClass, CombatTurn.class, "CombatTurn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCombatTurn_Combatants(), theRuntimePackage.getRuntimeCharacter(), null, "combatants", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCombatTurn_ActionPhases(), this.getPhaseCmd(), null, "actionPhases", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCombatTurn_CurrentTurn(), this.getPhaseCmd(), null, "currentTurn", null, 0, 1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(succesTestEClass, SuccesTest.class, "SuccesTest", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSuccesTest_Thresholds(), ecorePackage.getEInt(), "thresholds", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -896,9 +1084,26 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(succesTestCmdEClass, SuccesTestCmd.class, "SuccesTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSuccesTestCmd_DicePool(), ecorePackage.getEInt(), "dicePool", null, 0, 1, SuccesTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(actionPhaseCmdEClass, ActionPhaseCmd.class, "ActionPhaseCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getActionPhaseCmd_Turn(), ecorePackage.getEInt(), "turn", null, 0, 1, ActionPhaseCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getActionPhaseCmd_SizeInitative(), ecorePackage.getEBoolean(), "sizeInitative", "false", 0, 1, ActionPhaseCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(initativePassEClass, InitativePass.class, "InitativePass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getInitativePass_Turn(), ecorePackage.getEInt(), "turn", null, 0, 1, InitativePass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getInitativePass_SizeInitative(), ecorePackage.getEBoolean(), "sizeInitative", "false", 0, 1, InitativePass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getInitativePass_Action(), this.getCommandWrapper(), null, "action", null, 1, 1, InitativePass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getInitativePass_FreeAction(), this.getFreeAction(), null, "freeAction", null, 0, 1, InitativePass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getInitativePass_InterruptAction(), this.getInterruptAction(), null, "interruptAction", null, 0, 1, InitativePass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(commandWrapperEClass, CommandWrapper.class, "CommandWrapper", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(complexActionEClass, ComplexAction.class, "ComplexAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(simpleActionEClass, SimpleAction.class, "SimpleAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(simpleActionsEClass, SimpleActions.class, "SimpleActions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSimpleActions_Action1(), this.getSimpleAction(), null, "action1", null, 1, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSimpleActions_Action2(), this.getSimpleAction(), null, "action2", null, 1, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(freeActionEClass, FreeAction.class, "FreeAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(interruptActionEClass, InterruptAction.class, "InterruptAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

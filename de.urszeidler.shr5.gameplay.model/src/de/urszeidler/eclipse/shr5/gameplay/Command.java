@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getSubCommands <em>Sub Commands</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback <em>Cmd Callback</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting <em>Executing</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,7 +42,7 @@ public interface Command extends EObject {
      * @return the value of the '<em>Executed</em>' attribute.
      * @see #setExecuted(boolean)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Executed()
-     * @model
+     * @model required="true"
      * @generated
      */
     boolean isExecuted();
@@ -151,6 +152,33 @@ public interface Command extends EObject {
      * @generated
      */
     boolean isSetCmdCallback();
+
+    /**
+     * Returns the value of the '<em><b>Executing</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Executing</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Executing</em>' attribute.
+     * @see #setExecuting(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Executing()
+     * @model default="false" required="true"
+     * @generated
+     */
+    boolean isExecuting();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting <em>Executing</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Executing</em>' attribute.
+     * @see #isExecuting()
+     * @generated
+     */
+    void setExecuting(boolean value);
 
     /**
      * <!-- begin-user-doc -->

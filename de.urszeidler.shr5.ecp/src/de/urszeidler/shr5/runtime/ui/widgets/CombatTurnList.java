@@ -1,15 +1,20 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
+import org.eclipse.core.databinding.observable.list.IListChangeListener;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.list.ListChangeEvent;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 
@@ -19,7 +24,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-public class CombatTurnList extends Composite implements IValueChangeListener {
+public class CombatTurnList extends Composite implements IValueChangeListener, IListChangeListener {
 
     private WritableValue combatTurn = new WritableValue();
     private Composite composite;
@@ -81,14 +86,16 @@ public class CombatTurnList extends Composite implements IValueChangeListener {
 //                label.setText("uiiugiS");
             }
         }
-        composite1.pack(true);
+        //composite1.pack(true);
+        composite1.setSize(composite1.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         composite1.layout(true, true);
+        composite.setSize(composite1.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 //        composite.layout(true, true);
 //        composite.getParent().layout(true, true);
         composite.getParent().getParent().layout(true, true);
         if (composite.getParent().getParent() instanceof ScrolledComposite) {
             ScrolledComposite sc = (ScrolledComposite)composite.getParent().getParent();
-            sc.setMinSize(50, composite1.getSize().y);
+            sc.setMinSize(composite1.computeSize(SWT.DEFAULT, SWT.DEFAULT));
             
         }
         //scrolledComposite.layout(true,true);
@@ -96,6 +103,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener {
 
     public void setCombatTurn(CombatTurn ct) {
         combatTurn.setValue(ct);
+        IObservableList observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
+        observeList.addListChangeListener(this);
        // updateCombatTurn();
         
     }
@@ -108,6 +117,12 @@ public class CombatTurnList extends Composite implements IValueChangeListener {
     @Override
     public void handleValueChange(ValueChangeEvent event) {
         updateCombatTurn();
+    }
+
+    @Override
+    public void handleListChange(ListChangeEvent event) {
+        updateCombatTurn();
+        
     }
 
 }

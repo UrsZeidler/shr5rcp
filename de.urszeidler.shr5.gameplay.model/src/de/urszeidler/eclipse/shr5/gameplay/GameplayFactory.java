@@ -113,13 +113,58 @@ public interface GameplayFactory extends EFactory {
     SuccesTestCmd createSuccesTestCmd();
 
     /**
-     * Returns a new object of class '<em>Action Phase Cmd</em>'.
+     * Returns a new object of class '<em>Initative Pass</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Action Phase Cmd</em>'.
+     * @return a new object of class '<em>Initative Pass</em>'.
      * @generated
      */
-    ActionPhaseCmd createActionPhaseCmd();
+    InitativePass createInitativePass();
+
+    /**
+     * Returns a new object of class '<em>Complex Action</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Complex Action</em>'.
+     * @generated
+     */
+    ComplexAction createComplexAction();
+
+    /**
+     * Returns a new object of class '<em>Simple Action</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Simple Action</em>'.
+     * @generated
+     */
+    SimpleAction createSimpleAction();
+
+    /**
+     * Returns a new object of class '<em>Simple Actions</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Simple Actions</em>'.
+     * @generated
+     */
+    SimpleActions createSimpleActions();
+
+    /**
+     * Returns a new object of class '<em>Free Action</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Free Action</em>'.
+     * @generated
+     */
+    FreeAction createFreeAction();
+
+    /**
+     * Returns a new object of class '<em>Interrupt Action</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Interrupt Action</em>'.
+     * @generated
+     */
+    InterruptAction createInterruptAction();
 
     /**
      * Returns the package supported by this factory.

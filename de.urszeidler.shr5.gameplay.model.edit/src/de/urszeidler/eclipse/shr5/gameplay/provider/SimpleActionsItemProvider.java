@@ -4,17 +4,15 @@
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
 
-import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
@@ -24,17 +22,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExecutionProtocolItemProvider
-    extends ItemProviderAdapter
+public class SimpleActionsItemProvider
+    extends CommandWrapperItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -47,7 +44,7 @@ public class ExecutionProtocolItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public ExecutionProtocolItemProvider(AdapterFactory adapterFactory) {
+    public SimpleActionsItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -78,7 +75,8 @@ public class ExecutionProtocolItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
+            childrenFeatures.add(GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION1);
+            childrenFeatures.add(GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION2);
         }
         return childrenFeatures;
     }
@@ -97,14 +95,14 @@ public class ExecutionProtocolItemProvider
     }
 
     /**
-     * This returns ExecutionProtocol.gif.
+     * This returns SimpleActions.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/ExecutionProtocol"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleActions"));
     }
 
     /**
@@ -115,7 +113,8 @@ public class ExecutionProtocolItemProvider
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_ExecutionProtocol_type");
+        SimpleActions simpleActions = (SimpleActions)object;
+        return getString("_UI_SimpleActions_type") + " " + simpleActions.isExecuted();
     }
 
     /**
@@ -129,8 +128,9 @@ public class ExecutionProtocolItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(ExecutionProtocol.class)) {
-            case GameplayPackage.EXECUTION_PROTOCOL__COMMANDS:
+        switch (notification.getFeatureID(SimpleActions.class)) {
+            case GameplayPackage.SIMPLE_ACTIONS__ACTION1:
+            case GameplayPackage.SIMPLE_ACTIONS__ACTION2:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -150,84 +150,37 @@ public class ExecutionProtocolItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createDamageTest()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createSkillTestCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createOpposedSkillTestCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createInitative()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createCombatTurn()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createExtendetSkillTestCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createDefensTestCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createSuccesTestCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createInitativePass()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createComplexAction()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                (GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION1,
                  GameplayFactory.eINSTANCE.createSimpleAction()));
 
         newChildDescriptors.add
             (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createSimpleActions()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createFreeAction()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createInterruptAction()));
+                (GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION2,
+                 GameplayFactory.eINSTANCE.createSimpleAction()));
     }
 
     /**
-     * Return the resource locator for this item provider's resources.
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public ResourceLocator getResourceLocator() {
-        return GameplayEditPlugin.INSTANCE;
+    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+        Object childFeature = feature;
+        Object childObject = child;
+
+        boolean qualify =
+            childFeature == GameplayPackage.Literals.COMMAND__SUB_COMMANDS ||
+            childFeature == GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION1 ||
+            childFeature == GameplayPackage.Literals.SIMPLE_ACTIONS__ACTION2;
+
+        if (qualify) {
+            return getString
+                ("_UI_CreateChild_text2",
+                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
     }
 
 }

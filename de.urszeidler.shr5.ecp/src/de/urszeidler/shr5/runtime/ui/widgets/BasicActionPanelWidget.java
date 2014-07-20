@@ -21,8 +21,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage.Literals;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 
 /**
@@ -244,15 +244,15 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     @Override
     public void handleValueChange(ValueChangeEvent event) {
         Object value = event.getObservableValue().getValue();
-        if (value instanceof ActionPhaseCmd) {
-            ActionPhaseCmd apc = (ActionPhaseCmd)value;
+        if (value instanceof InitativePass) {
+            InitativePass apc = (InitativePass)value;
             actionPanel.setCharacter(apc.getSubject());
             character.setValue(apc.getSubject().getCharacter().getPersona());
         }
 
     }
 
-    public void setPhase(ActionPhaseCmd phase1) {
+    public void setPhase(InitativePass phase1) {
         this.phase.setValue(phase1);
     }
 } // @jve:decl-index=0:visual-constraint="10,10"

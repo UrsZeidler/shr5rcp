@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCombatants <em>Combatants</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getActionPhases <em>Action Phases</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,5 +57,31 @@ public interface CombatTurn extends Command {
      * @generated
      */
     EList<PhaseCmd> getActionPhases();
+
+    /**
+     * Returns the value of the '<em><b>Current Turn</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Current Turn</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Current Turn</em>' reference.
+     * @see #setCurrentTurn(PhaseCmd)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCombatTurn_CurrentTurn()
+     * @model
+     * @generated
+     */
+    PhaseCmd getCurrentTurn();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Current Turn</em>' reference.
+     * @see #getCurrentTurn()
+     * @generated
+     */
+    void setCurrentTurn(PhaseCmd value);
 
 } // CombatTurn

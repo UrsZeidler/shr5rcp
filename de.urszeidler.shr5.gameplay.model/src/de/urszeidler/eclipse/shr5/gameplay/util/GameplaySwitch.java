@@ -204,12 +204,65 @@ public class GameplaySwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case GameplayPackage.ACTION_PHASE_CMD: {
-                ActionPhaseCmd actionPhaseCmd = (ActionPhaseCmd)theEObject;
-                T result = caseActionPhaseCmd(actionPhaseCmd);
-                if (result == null) result = caseSubjectCommand(actionPhaseCmd);
-                if (result == null) result = casePhaseCmd(actionPhaseCmd);
-                if (result == null) result = caseCommand(actionPhaseCmd);
+            case GameplayPackage.INITATIVE_PASS: {
+                InitativePass initativePass = (InitativePass)theEObject;
+                T result = caseInitativePass(initativePass);
+                if (result == null) result = caseSubjectCommand(initativePass);
+                if (result == null) result = casePhaseCmd(initativePass);
+                if (result == null) result = caseCommand(initativePass);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.COMMAND_WRAPPER: {
+                CommandWrapper commandWrapper = (CommandWrapper)theEObject;
+                T result = caseCommandWrapper(commandWrapper);
+                if (result == null) result = caseSubjectCommand(commandWrapper);
+                if (result == null) result = caseCommand(commandWrapper);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.COMPLEX_ACTION: {
+                ComplexAction complexAction = (ComplexAction)theEObject;
+                T result = caseComplexAction(complexAction);
+                if (result == null) result = caseCommandWrapper(complexAction);
+                if (result == null) result = caseSubjectCommand(complexAction);
+                if (result == null) result = caseCommand(complexAction);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.SIMPLE_ACTION: {
+                SimpleAction simpleAction = (SimpleAction)theEObject;
+                T result = caseSimpleAction(simpleAction);
+                if (result == null) result = caseCommandWrapper(simpleAction);
+                if (result == null) result = caseSubjectCommand(simpleAction);
+                if (result == null) result = caseCommand(simpleAction);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.SIMPLE_ACTIONS: {
+                SimpleActions simpleActions = (SimpleActions)theEObject;
+                T result = caseSimpleActions(simpleActions);
+                if (result == null) result = caseCommandWrapper(simpleActions);
+                if (result == null) result = caseSubjectCommand(simpleActions);
+                if (result == null) result = caseCommand(simpleActions);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.FREE_ACTION: {
+                FreeAction freeAction = (FreeAction)theEObject;
+                T result = caseFreeAction(freeAction);
+                if (result == null) result = caseCommandWrapper(freeAction);
+                if (result == null) result = caseSubjectCommand(freeAction);
+                if (result == null) result = caseCommand(freeAction);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.INTERRUPT_ACTION: {
+                InterruptAction interruptAction = (InterruptAction)theEObject;
+                T result = caseInterruptAction(interruptAction);
+                if (result == null) result = caseCommandWrapper(interruptAction);
+                if (result == null) result = caseSubjectCommand(interruptAction);
+                if (result == null) result = caseCommand(interruptAction);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -458,17 +511,107 @@ public class GameplaySwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Action Phase Cmd</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Initative Pass</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Action Phase Cmd</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Initative Pass</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseActionPhaseCmd(ActionPhaseCmd object) {
+    public T caseInitativePass(InitativePass object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Command Wrapper</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Command Wrapper</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCommandWrapper(CommandWrapper object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Complex Action</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Complex Action</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseComplexAction(ComplexAction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Simple Action</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Simple Action</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSimpleAction(SimpleAction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Simple Actions</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Simple Actions</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSimpleActions(SimpleActions object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Free Action</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Free Action</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseFreeAction(FreeAction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Interrupt Action</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Interrupt Action</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseInterruptAction(InterruptAction object) {
         return null;
     }
 

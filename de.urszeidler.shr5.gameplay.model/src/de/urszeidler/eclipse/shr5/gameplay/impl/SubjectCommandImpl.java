@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
  * </ul>
  * </p>
@@ -117,6 +118,26 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * @ordered
      */
     protected boolean cmdCallbackESet;
+
+    /**
+     * The default value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isExecuting()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean EXECUTING_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isExecuting()
+     * @generated
+     * @ordered
+     */
+    protected boolean executing = EXECUTING_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getSubject() <em>Subject</em>}' reference.
@@ -252,6 +273,27 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isExecuting() {
+        return executing;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setExecuting(boolean newExecuting) {
+        boolean oldExecuting = executing;
+        executing = newExecuting;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SUBJECT_COMMAND__EXECUTING, oldExecuting, executing));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public RuntimeCharacter getSubject() {
         if (subject != null && subject.eIsProxy()) {
             InternalEObject oldSubject = (InternalEObject)subject;
@@ -337,6 +379,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return getDate();
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
                 return getCmdCallback();
+            case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
+                return isExecuting();
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 if (resolve) return getSubject();
                 return basicGetSubject();
@@ -366,6 +410,9 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
                 setCmdCallback((CommandCallback)newValue);
                 return;
+            case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
+                setExecuting((Boolean)newValue);
+                return;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 setSubject((RuntimeCharacter)newValue);
                 return;
@@ -393,6 +440,9 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
                 unsetCmdCallback();
                 return;
+            case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
+                setExecuting(EXECUTING_EDEFAULT);
+                return;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 setSubject((RuntimeCharacter)null);
                 return;
@@ -416,6 +466,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
                 return isSetCmdCallback();
+            case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
+                return executing != EXECUTING_EDEFAULT;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 return subject != null;
         }
@@ -456,6 +508,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         result.append(date);
         result.append(", cmdCallback: ");
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
+        result.append(", executing: ");
+        result.append(executing);
         result.append(')');
         return result.toString();
     }

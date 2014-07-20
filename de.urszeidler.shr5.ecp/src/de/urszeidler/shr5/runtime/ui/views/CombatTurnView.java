@@ -47,9 +47,9 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
-import de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -57,6 +57,7 @@ import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
+
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -230,7 +231,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
     //
     // private GegenstandsUIToolkit lhGegenstandsUIToolkit;
     // private AbstaktPersona persona;
-    private ActionPhaseCmd currentPhase;
+    private InitativePass currentPhase;
 
     // private GenericUItoolkit genericUItoolkit;
 
@@ -261,8 +262,8 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
             @Override
             public Image getImage(Object object) {
-                if (object instanceof ActionPhaseCmd) {
-                    ActionPhaseCmd phc = (ActionPhaseCmd)object;
+                if (object instanceof InitativePass) {
+                    InitativePass phc = (InitativePass)object;
                     if (phc.getSubject() == null)
                         return null;
 
@@ -347,7 +348,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         basicActionPanel.getActionPanel().getTreeViewer().setContentProvider(new SimpleListContenProvider(actionListContentProvider));
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
 
-
         contentProvider = new HandlungsContenProvider(kampfrunde);
         treeViewer.setContentProvider(contentProvider);
         treeViewer.setLabelProvider(labelProvider);
@@ -361,8 +361,8 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
                 if (selection instanceof IStructuredSelection) {
                     IStructuredSelection ss = (IStructuredSelection)selection;
                     Object firstElement = ss.getFirstElement();
-                    if (firstElement instanceof ActionPhaseCmd) {
-                        currentPhase = (ActionPhaseCmd)firstElement;
+                    if (firstElement instanceof InitativePass) {
+                        currentPhase = (InitativePass)firstElement;
                         RuntimeCharacter subject = currentPhase.getSubject();
                         if (subject == null)
                             return;
@@ -418,7 +418,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
      * 
      * @param personaHandlung2
      */
-    protected void setPersonaHandlung(ActionPhaseCmd personaHandlung2) {
+    protected void setPersonaHandlung(InitativePass personaHandlung2) {
 
         IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider)adapterFactory.adapt(personaHandlung2,
                 IEditingDomainItemProvider.class);
@@ -458,7 +458,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
      */
     @Override
     public void setFocus() {
-     }
+    }
 
     /**
      * This method initializes composite_bottom
@@ -471,18 +471,17 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         gridData1.verticalAlignment = GridData.FILL;
         composite_bottom = new Composite(top, SWT.NONE);
         composite_bottom.setLayout(new GridLayout());
-        
+
         ScrolledComposite scrolledComposite = new ScrolledComposite(composite_bottom, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
         scrolledComposite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
         scrolledComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
         scrolledComposite.setExpandHorizontal(true);
         scrolledComposite.setExpandVertical(true);
-        
+
         combatTurnList = new CombatTurnList(scrolledComposite, SWT.NONE);
         scrolledComposite.setContent(combatTurnList);
-        scrolledComposite.setMinSize(20,20);
+        // scrolledComposite.setMinSize(20,20);
 
-        
         tree = new Tree(composite_bottom, SWT.NONE);
         tree.setLayoutData(gridData1);
         treeViewer = new TreeViewer(tree);

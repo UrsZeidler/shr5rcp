@@ -22,6 +22,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//Command/subCommands"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/date"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/cmdCallback"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executing"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/redo"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/undo"/>
     </genClasses>
@@ -60,6 +61,7 @@
     <genClasses ecoreClass="gameplay.ecore#//CombatTurn">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/combatants"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/actionPhases"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/currentTurn"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//SuccesTest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
@@ -72,9 +74,21 @@
     <genClasses ecoreClass="gameplay.ecore#//SuccesTestCmd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTestCmd/dicePool"/>
     </genClasses>
-    <genClasses ecoreClass="gameplay.ecore#//ActionPhaseCmd">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ActionPhaseCmd/turn"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ActionPhaseCmd/sizeInitative"/>
+    <genClasses ecoreClass="gameplay.ecore#//InitativePass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//InitativePass/turn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//InitativePass/sizeInitative"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//InitativePass/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//InitativePass/freeAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//InitativePass/interruptAction"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//CommandWrapper"/>
+    <genClasses ecoreClass="gameplay.ecore#//ComplexAction"/>
+    <genClasses ecoreClass="gameplay.ecore#//SimpleAction"/>
+    <genClasses ecoreClass="gameplay.ecore#//SimpleActions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//SimpleActions/action1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//SimpleActions/action2"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//FreeAction"/>
+    <genClasses ecoreClass="gameplay.ecore#//InterruptAction"/>
   </genPackages>
 </genmodel:GenModel>

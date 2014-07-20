@@ -161,13 +161,22 @@ public interface GameplayPackage extends EPackage {
     int COMMAND__CMD_CALLBACK = 3;
 
     /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND__EXECUTING = 4;
+
+    /**
      * The number of structural features of the '<em>Command</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMMAND_FEATURE_COUNT = 4;
+    int COMMAND_FEATURE_COUNT = 5;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -241,6 +250,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUBJECT_COMMAND__CMD_CALLBACK = COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBJECT_COMMAND__EXECUTING = COMMAND__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -332,6 +350,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int PROBE_COMMAND__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__EXECUTING = SUBJECT_COMMAND__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -486,6 +513,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__EXECUTING = PROBE_COMMAND__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -651,6 +687,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
 
     /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -812,6 +857,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__CMD_CALLBACK = SKILL_TEST_CMD__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__EXECUTING = SKILL_TEST_CMD__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -984,6 +1038,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int INITATIVE__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE__EXECUTING = SUBJECT_COMMAND__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1251,6 +1314,15 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN__CMD_CALLBACK = COMMAND__CMD_CALLBACK;
 
     /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN__EXECUTING = COMMAND__EXECUTING;
+
+    /**
      * The feature id for the '<em><b>Combatants</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1269,13 +1341,22 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN__ACTION_PHASES = COMMAND_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Current Turn</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN__CURRENT_TURN = COMMAND_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Combat Turn</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMBAT_TURN_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+    int COMBAT_TURN_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -1431,6 +1512,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__CMD_CALLBACK = SKILL_TEST_CMD__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__EXECUTING = SKILL_TEST_CMD__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1596,6 +1686,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
 
     /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1759,6 +1858,15 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST_CMD__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
 
     /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1877,14 +1985,14 @@ public interface GameplayPackage extends EPackage {
 
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ActionPhaseCmdImpl <em>Action Phase Cmd</em>}' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl <em>Initative Pass</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.gameplay.impl.ActionPhaseCmdImpl
-     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getActionPhaseCmd()
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInitativePass()
      * @generated
      */
-    int ACTION_PHASE_CMD = 16;
+    int INITATIVE_PASS = 16;
 
     /**
      * The feature id for the '<em><b>Executed</b></em>' attribute.
@@ -1893,7 +2001,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__EXECUTED = SUBJECT_COMMAND__EXECUTED;
+    int INITATIVE_PASS__EXECUTED = SUBJECT_COMMAND__EXECUTED;
 
     /**
      * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
@@ -1902,7 +2010,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
+    int INITATIVE_PASS__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
 
     /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -1911,7 +2019,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__DATE = SUBJECT_COMMAND__DATE;
+    int INITATIVE_PASS__DATE = SUBJECT_COMMAND__DATE;
 
     /**
      * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
@@ -1920,7 +2028,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+    int INITATIVE_PASS__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS__EXECUTING = SUBJECT_COMMAND__EXECUTING;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1929,7 +2046,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__SUBJECT = SUBJECT_COMMAND__SUBJECT;
+    int INITATIVE_PASS__SUBJECT = SUBJECT_COMMAND__SUBJECT;
 
     /**
      * The feature id for the '<em><b>Phase</b></em>' attribute.
@@ -1938,7 +2055,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__PHASE = SUBJECT_COMMAND_FEATURE_COUNT + 0;
+    int INITATIVE_PASS__PHASE = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Turn</b></em>' attribute.
@@ -1947,7 +2064,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__TURN = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+    int INITATIVE_PASS__TURN = SUBJECT_COMMAND_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Size Initative</b></em>' attribute.
@@ -1956,16 +2073,43 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD__SIZE_INITATIVE = SUBJECT_COMMAND_FEATURE_COUNT + 2;
+    int INITATIVE_PASS__SIZE_INITATIVE = SUBJECT_COMMAND_FEATURE_COUNT + 2;
 
     /**
-     * The number of structural features of the '<em>Action Phase Cmd</em>' class.
+     * The feature id for the '<em><b>Action</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 3;
+    int INITATIVE_PASS__ACTION = SUBJECT_COMMAND_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Free Action</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS__FREE_ACTION = SUBJECT_COMMAND_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Interrupt Action</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS__INTERRUPT_ACTION = SUBJECT_COMMAND_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Initative Pass</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 6;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -1974,7 +2118,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD___REDO = SUBJECT_COMMAND___REDO;
+    int INITATIVE_PASS___REDO = SUBJECT_COMMAND___REDO;
 
     /**
      * The operation id for the '<em>Undo</em>' operation.
@@ -1983,17 +2127,634 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD___UNDO = SUBJECT_COMMAND___UNDO;
+    int INITATIVE_PASS___UNDO = SUBJECT_COMMAND___UNDO;
 
     /**
-     * The number of operations of the '<em>Action Phase Cmd</em>' class.
+     * The number of operations of the '<em>Initative Pass</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
+    int INITATIVE_PASS_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.CommandWrapperImpl <em>Command Wrapper</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.CommandWrapperImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandWrapper()
+     * @generated
+     */
+    int COMMAND_WRAPPER = 17;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__EXECUTED = SUBJECT_COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__DATE = SUBJECT_COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__SUBJECT = SUBJECT_COMMAND__SUBJECT;
+
+    /**
+     * The number of structural features of the '<em>Command Wrapper</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER___REDO = SUBJECT_COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER___UNDO = SUBJECT_COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Command Wrapper</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ComplexActionImpl <em>Complex Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.ComplexActionImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getComplexAction()
+     * @generated
+     */
+    int COMPLEX_ACTION = 18;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__DATE = COMMAND_WRAPPER__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+
+    /**
+     * The number of structural features of the '<em>Complex Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION___REDO = COMMAND_WRAPPER___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+
+    /**
+     * The number of operations of the '<em>Complex Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionImpl <em>Simple Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSimpleAction()
+     * @generated
+     */
+    int SIMPLE_ACTION = 19;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__DATE = COMMAND_WRAPPER__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+
+    /**
+     * The number of structural features of the '<em>Simple Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION___REDO = COMMAND_WRAPPER___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+
+    /**
+     * The number of operations of the '<em>Simple Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl <em>Simple Actions</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSimpleActions()
+     * @generated
+     */
+    int SIMPLE_ACTIONS = 20;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__DATE = COMMAND_WRAPPER__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Action1</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__ACTION1 = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Action2</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__ACTION2 = COMMAND_WRAPPER_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Simple Actions</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 2;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS___REDO = COMMAND_WRAPPER___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS___UNDO = COMMAND_WRAPPER___UNDO;
+
+    /**
+     * The number of operations of the '<em>Simple Actions</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.FreeActionImpl <em>Free Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.FreeActionImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getFreeAction()
+     * @generated
+     */
+    int FREE_ACTION = 21;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__DATE = COMMAND_WRAPPER__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+
+    /**
+     * The number of structural features of the '<em>Free Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION___REDO = COMMAND_WRAPPER___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+
+    /**
+     * The number of operations of the '<em>Free Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl <em>Interrupt Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptAction()
+     * @generated
+     */
+    int INTERRUPT_ACTION = 22;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__DATE = COMMAND_WRAPPER__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+
+    /**
+     * The number of structural features of the '<em>Interrupt Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION___REDO = COMMAND_WRAPPER___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+
+    /**
+     * The number of operations of the '<em>Interrupt Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -2003,7 +2764,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 17;
+    int COMMAND_CALLBACK = 23;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -2122,6 +2883,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getCommand_CmdCallback();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting <em>Executing</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Executing</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting()
+     * @see #getCommand()
+     * @generated
+     */
+    EAttribute getCommand_Executing();
 
     /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
@@ -2409,6 +3181,17 @@ public interface GameplayPackage extends EPackage {
     EReference getCombatTurn_ActionPhases();
 
     /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Current Turn</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn()
+     * @see #getCombatTurn()
+     * @generated
+     */
+    EReference getCombatTurn_CurrentTurn();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest <em>Succes Test</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2493,36 +3276,151 @@ public interface GameplayPackage extends EPackage {
     EAttribute getSuccesTestCmd_DicePool();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd <em>Action Phase Cmd</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass <em>Initative Pass</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Action Phase Cmd</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd
+     * @return the meta object for class '<em>Initative Pass</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass
      * @generated
      */
-    EClass getActionPhaseCmd();
+    EClass getInitativePass();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#getTurn <em>Turn</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass#getTurn <em>Turn</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Turn</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#getTurn()
-     * @see #getActionPhaseCmd()
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass#getTurn()
+     * @see #getInitativePass()
      * @generated
      */
-    EAttribute getActionPhaseCmd_Turn();
+    EAttribute getInitativePass_Turn();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#isSizeInitative <em>Size Initative</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass#isSizeInitative <em>Size Initative</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Size Initative</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#isSizeInitative()
-     * @see #getActionPhaseCmd()
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass#isSizeInitative()
+     * @see #getInitativePass()
      * @generated
      */
-    EAttribute getActionPhaseCmd_SizeInitative();
+    EAttribute getInitativePass_SizeInitative();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass#getAction <em>Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass#getAction()
+     * @see #getInitativePass()
+     * @generated
+     */
+    EReference getInitativePass_Action();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass#getFreeAction <em>Free Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Free Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass#getFreeAction()
+     * @see #getInitativePass()
+     * @generated
+     */
+    EReference getInitativePass_FreeAction();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.InitativePass#getInterruptAction <em>Interrupt Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Interrupt Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InitativePass#getInterruptAction()
+     * @see #getInitativePass()
+     * @generated
+     */
+    EReference getInitativePass_InterruptAction();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.CommandWrapper <em>Command Wrapper</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Command Wrapper</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CommandWrapper
+     * @generated
+     */
+    EClass getCommandWrapper();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ComplexAction <em>Complex Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Complex Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ComplexAction
+     * @generated
+     */
+    EClass getComplexAction();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleAction <em>Simple Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Simple Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleAction
+     * @generated
+     */
+    EClass getSimpleAction();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions <em>Simple Actions</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Simple Actions</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleActions
+     * @generated
+     */
+    EClass getSimpleActions();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction1 <em>Action1</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Action1</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction1()
+     * @see #getSimpleActions()
+     * @generated
+     */
+    EReference getSimpleActions_Action1();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction2 <em>Action2</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Action2</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction2()
+     * @see #getSimpleActions()
+     * @generated
+     */
+    EReference getSimpleActions_Action2();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.FreeAction <em>Free Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Free Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.FreeAction
+     * @generated
+     */
+    EClass getFreeAction();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction <em>Interrupt Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Interrupt Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptAction
+     * @generated
+     */
+    EClass getInterruptAction();
 
     /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
@@ -2651,6 +3549,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute COMMAND__CMD_CALLBACK = eINSTANCE.getCommand_CmdCallback();
+
+        /**
+         * The meta object literal for the '<em><b>Executing</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMMAND__EXECUTING = eINSTANCE.getCommand_Executing();
 
         /**
          * The meta object literal for the '<em><b>Redo</b></em>' operation.
@@ -2887,6 +3793,14 @@ public interface GameplayPackage extends EPackage {
         EReference COMBAT_TURN__ACTION_PHASES = eINSTANCE.getCombatTurn_ActionPhases();
 
         /**
+         * The meta object literal for the '<em><b>Current Turn</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference COMBAT_TURN__CURRENT_TURN = eINSTANCE.getCombatTurn_CurrentTurn();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest <em>Succes Test</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -2959,14 +3873,14 @@ public interface GameplayPackage extends EPackage {
         EAttribute SUCCES_TEST_CMD__DICE_POOL = eINSTANCE.getSuccesTestCmd_DicePool();
 
         /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ActionPhaseCmdImpl <em>Action Phase Cmd</em>}' class.
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl <em>Initative Pass</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.gameplay.impl.ActionPhaseCmdImpl
-         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getActionPhaseCmd()
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInitativePass()
          * @generated
          */
-        EClass ACTION_PHASE_CMD = eINSTANCE.getActionPhaseCmd();
+        EClass INITATIVE_PASS = eINSTANCE.getInitativePass();
 
         /**
          * The meta object literal for the '<em><b>Turn</b></em>' attribute feature.
@@ -2974,7 +3888,7 @@ public interface GameplayPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ACTION_PHASE_CMD__TURN = eINSTANCE.getActionPhaseCmd_Turn();
+        EAttribute INITATIVE_PASS__TURN = eINSTANCE.getInitativePass_Turn();
 
         /**
          * The meta object literal for the '<em><b>Size Initative</b></em>' attribute feature.
@@ -2982,7 +3896,107 @@ public interface GameplayPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ACTION_PHASE_CMD__SIZE_INITATIVE = eINSTANCE.getActionPhaseCmd_SizeInitative();
+        EAttribute INITATIVE_PASS__SIZE_INITATIVE = eINSTANCE.getInitativePass_SizeInitative();
+
+        /**
+         * The meta object literal for the '<em><b>Action</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference INITATIVE_PASS__ACTION = eINSTANCE.getInitativePass_Action();
+
+        /**
+         * The meta object literal for the '<em><b>Free Action</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference INITATIVE_PASS__FREE_ACTION = eINSTANCE.getInitativePass_FreeAction();
+
+        /**
+         * The meta object literal for the '<em><b>Interrupt Action</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference INITATIVE_PASS__INTERRUPT_ACTION = eINSTANCE.getInitativePass_InterruptAction();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.CommandWrapperImpl <em>Command Wrapper</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.CommandWrapperImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandWrapper()
+         * @generated
+         */
+        EClass COMMAND_WRAPPER = eINSTANCE.getCommandWrapper();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ComplexActionImpl <em>Complex Action</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.ComplexActionImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getComplexAction()
+         * @generated
+         */
+        EClass COMPLEX_ACTION = eINSTANCE.getComplexAction();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionImpl <em>Simple Action</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSimpleAction()
+         * @generated
+         */
+        EClass SIMPLE_ACTION = eINSTANCE.getSimpleAction();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl <em>Simple Actions</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSimpleActions()
+         * @generated
+         */
+        EClass SIMPLE_ACTIONS = eINSTANCE.getSimpleActions();
+
+        /**
+         * The meta object literal for the '<em><b>Action1</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SIMPLE_ACTIONS__ACTION1 = eINSTANCE.getSimpleActions_Action1();
+
+        /**
+         * The meta object literal for the '<em><b>Action2</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SIMPLE_ACTIONS__ACTION2 = eINSTANCE.getSimpleActions_Action2();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.FreeActionImpl <em>Free Action</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.FreeActionImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getFreeAction()
+         * @generated
+         */
+        EClass FREE_ACTION = eINSTANCE.getFreeAction();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl <em>Interrupt Action</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptAction()
+         * @generated
+         */
+        EClass INTERRUPT_ACTION = eINSTANCE.getInterruptAction();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.
