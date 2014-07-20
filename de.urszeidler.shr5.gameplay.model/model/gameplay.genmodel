@@ -72,6 +72,9 @@
     <genClasses ecoreClass="gameplay.ecore#//SuccesTestCmd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTestCmd/dicePool"/>
     </genClasses>
-    <genClasses ecoreClass="gameplay.ecore#//ActionPhaseCmd"/>
+    <genClasses ecoreClass="gameplay.ecore#//ActionPhaseCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ActionPhaseCmd/turn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ActionPhaseCmd/sizeInitative"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

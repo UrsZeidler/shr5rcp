@@ -151,11 +151,6 @@ public class ExecutionProtocolItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
-                 GameplayFactory.eINSTANCE.createSubjectCommand()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
                  GameplayFactory.eINSTANCE.createDamageTest()));
 
         newChildDescriptors.add

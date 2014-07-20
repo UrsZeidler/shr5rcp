@@ -309,24 +309,35 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             initative.redo();
             subCommands.add(initative);
         }
-        List<PhaseCmd> phaseCommands = new ArrayList<PhaseCmd>();
+        List<ActionPhaseCmd> phaseCommands = new ArrayList<ActionPhaseCmd>();
         for (Command command : subCommands) {
             if (command instanceof Initative) {
                 Initative ini = (Initative) command;
                 int currentIni = ini.getIni();
+                int turn =1;
                 while (currentIni>0) {
                     ActionPhaseCmd action = GameplayFactory.eINSTANCE.createActionPhaseCmd();
                     action.setSubject(ini.getSubject());
                     action.setPhase(currentIni);
+                    action.setTurn(turn);
+                    if(turn==1)
+                        action.setSizeInitative(ini.isSizeInitative());
+                    else
+                        action.setSizeInitative(false);
+                    turn++;
                     currentIni=currentIni-10;
                     
                     phaseCommands.add(action);
                 }                
             }           
         }
-        Collections.sort(phaseCommands, new Comparator<PhaseCmd>(){
+        Collections.sort(phaseCommands, new Comparator<ActionPhaseCmd>(){
               @Override
-            public int compare(PhaseCmd o1, PhaseCmd o2) {
+            public int compare(ActionPhaseCmd o1, ActionPhaseCmd o2) {
+               int turn1 = o1.getTurn() - o2.getTurn();
+                 if(turn1!=0)
+                     return turn1;
+                     
                 int val = o1.getPhase() - o2.getPhase();
                 
                 if(val==0){

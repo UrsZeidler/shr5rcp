@@ -18,7 +18,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSubjectCommand()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface SubjectCommand extends Command {

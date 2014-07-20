@@ -60,7 +60,6 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
         switch (eClass.getClassifierID()) {
             case GameplayPackage.EXECUTION_STACK: return createExecutionStack();
             case GameplayPackage.DAMAGE_TEST: return createDamageTest();
-            case GameplayPackage.SUBJECT_COMMAND: return createSubjectCommand();
             case GameplayPackage.SKILL_TEST_CMD: return createSkillTestCmd();
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD: return createOpposedSkillTestCmd();
             case GameplayPackage.INITATIVE: return createInitative();
@@ -119,16 +118,6 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public DamageTest createDamageTest() {
         DamageTestImpl damageTest = new DamageTestImpl();
         return damageTest;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public SubjectCommand createSubjectCommand() {
-        SubjectCommandImpl subjectCommand = new SubjectCommandImpl();
-        return subjectCommand;
     }
 
     /**

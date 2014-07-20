@@ -41,15 +41,6 @@ public interface GameplayFactory extends EFactory {
     DamageTest createDamageTest();
 
     /**
-     * Returns a new object of class '<em>Subject Command</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Subject Command</em>'.
-     * @generated
-     */
-    SubjectCommand createSubjectCommand();
-
-    /**
      * Returns a new object of class '<em>Skill Test Cmd</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

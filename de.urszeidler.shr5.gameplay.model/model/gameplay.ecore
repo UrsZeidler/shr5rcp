@@ -21,7 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cmdCallback" eType="#//CommandCallback"
         transient="true" defaultValueLiteral="" unsettable="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SubjectCommand" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="SubjectCommand" abstract="true" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
   </eClassifiers>
@@ -79,7 +79,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTestCmd" eSuperTypes="#//ProbeCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dicePool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ActionPhaseCmd" eSuperTypes="#//SubjectCommand #//PhaseCmd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionPhaseCmd" eSuperTypes="#//SubjectCommand #//PhaseCmd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="turn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeInitative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CommandCallback" instanceClassName="de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback"
       serializable="false"/>
 </ecore:EPackage>

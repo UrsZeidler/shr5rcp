@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SubjectCommandImpl extends MinimalEObjectImpl.Container implements SubjectCommand {
+public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container implements SubjectCommand {
     /**
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->

@@ -253,11 +253,6 @@ public class CombatTurnItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
-                 GameplayFactory.eINSTANCE.createSubjectCommand()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
                  GameplayFactory.eINSTANCE.createDamageTest()));
 
         newChildDescriptors.add

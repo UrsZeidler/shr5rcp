@@ -662,6 +662,24 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getActionPhaseCmd_Turn() {
+        return (EAttribute)actionPhaseCmdEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getActionPhaseCmd_SizeInitative() {
+        return (EAttribute)actionPhaseCmdEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -757,6 +775,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(succesTestCmdEClass, SUCCES_TEST_CMD__DICE_POOL);
 
         actionPhaseCmdEClass = createEClass(ACTION_PHASE_CMD);
+        createEAttribute(actionPhaseCmdEClass, ACTION_PHASE_CMD__TURN);
+        createEAttribute(actionPhaseCmdEClass, ACTION_PHASE_CMD__SIZE_INITATIVE);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -828,7 +848,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEOperation(getCommand__Undo(), null, "undo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        initEClass(subjectCommandEClass, SubjectCommand.class, "SubjectCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(subjectCommandEClass, SubjectCommand.class, "SubjectCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getSubjectCommand_Subject(), theRuntimePackage.getRuntimeCharacter(), null, "subject", null, 1, 1, SubjectCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(skillTestCmdEClass, SkillTestCmd.class, "SkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -877,6 +897,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getSuccesTestCmd_DicePool(), ecorePackage.getEInt(), "dicePool", null, 0, 1, SuccesTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(actionPhaseCmdEClass, ActionPhaseCmd.class, "ActionPhaseCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getActionPhaseCmd_Turn(), ecorePackage.getEInt(), "turn", null, 0, 1, ActionPhaseCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getActionPhaseCmd_SizeInitative(), ecorePackage.getEBoolean(), "sizeInitative", "false", 0, 1, ActionPhaseCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

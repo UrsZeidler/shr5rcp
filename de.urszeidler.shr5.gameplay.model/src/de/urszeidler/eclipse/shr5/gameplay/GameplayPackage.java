@@ -1941,13 +1941,31 @@ public interface GameplayPackage extends EPackage {
     int ACTION_PHASE_CMD__PHASE = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Turn</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTION_PHASE_CMD__TURN = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Size Initative</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTION_PHASE_CMD__SIZE_INITATIVE = SUBJECT_COMMAND_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Action Phase Cmd</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ACTION_PHASE_CMD_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+    int ACTION_PHASE_CMD_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 3;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -2485,6 +2503,28 @@ public interface GameplayPackage extends EPackage {
     EClass getActionPhaseCmd();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#getTurn <em>Turn</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Turn</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#getTurn()
+     * @see #getActionPhaseCmd()
+     * @generated
+     */
+    EAttribute getActionPhaseCmd_Turn();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#isSizeInitative <em>Size Initative</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Size Initative</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ActionPhaseCmd#isSizeInitative()
+     * @see #getActionPhaseCmd()
+     * @generated
+     */
+    EAttribute getActionPhaseCmd_SizeInitative();
+
+    /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2927,6 +2967,22 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EClass ACTION_PHASE_CMD = eINSTANCE.getActionPhaseCmd();
+
+        /**
+         * The meta object literal for the '<em><b>Turn</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ACTION_PHASE_CMD__TURN = eINSTANCE.getActionPhaseCmd_Turn();
+
+        /**
+         * The meta object literal for the '<em><b>Size Initative</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ACTION_PHASE_CMD__SIZE_INITATIVE = eINSTANCE.getActionPhaseCmd_SizeInitative();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.

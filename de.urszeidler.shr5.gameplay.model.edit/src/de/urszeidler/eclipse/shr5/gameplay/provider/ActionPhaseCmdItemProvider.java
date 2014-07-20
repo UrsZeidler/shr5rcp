@@ -59,6 +59,8 @@ public class ActionPhaseCmdItemProvider
             super.getPropertyDescriptors(object);
 
             addPhasePropertyDescriptor(object);
+            addTurnPropertyDescriptor(object);
+            addSizeInitativePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -81,6 +83,50 @@ public class ActionPhaseCmdItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Turn feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addTurnPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ActionPhaseCmd_turn_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ActionPhaseCmd_turn_feature", "_UI_ActionPhaseCmd_type"),
+                 GameplayPackage.Literals.ACTION_PHASE_CMD__TURN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Size Initative feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSizeInitativePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ActionPhaseCmd_sizeInitative_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ActionPhaseCmd_sizeInitative_feature", "_UI_ActionPhaseCmd_type"),
+                 GameplayPackage.Literals.ACTION_PHASE_CMD__SIZE_INITATIVE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -121,6 +167,8 @@ public class ActionPhaseCmdItemProvider
 
         switch (notification.getFeatureID(ActionPhaseCmd.class)) {
             case GameplayPackage.ACTION_PHASE_CMD__PHASE:
+            case GameplayPackage.ACTION_PHASE_CMD__TURN:
+            case GameplayPackage.ACTION_PHASE_CMD__SIZE_INITATIVE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

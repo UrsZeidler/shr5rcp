@@ -119,29 +119,6 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SubjectCommand} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected SubjectCommandItemProvider subjectCommandItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SubjectCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createSubjectCommandAdapter() {
-        if (subjectCommandItemProvider == null) {
-            subjectCommandItemProvider = new SubjectCommandItemProvider(this);
-        }
-
-        return subjectCommandItemProvider;
-    }
-
-    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -449,7 +426,6 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     public void dispose() {
         if (executionStackItemProvider != null) executionStackItemProvider.dispose();
         if (damageTestItemProvider != null) damageTestItemProvider.dispose();
-        if (subjectCommandItemProvider != null) subjectCommandItemProvider.dispose();
         if (skillTestCmdItemProvider != null) skillTestCmdItemProvider.dispose();
         if (opposedSkillTestCmdItemProvider != null) opposedSkillTestCmdItemProvider.dispose();
         if (initativeItemProvider != null) initativeItemProvider.dispose();
