@@ -76,7 +76,7 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
      */
     private void createMainGroup() {
         GridData gridData3 = new GridData();
-        gridData3.widthHint = 91;
+        gridData3.widthHint = 300;
         gridData3.minimumWidth = 20;
         gridData3.verticalAlignment = GridData.CENTER;
         gridData3.grabExcessHorizontalSpace = true;
@@ -88,8 +88,8 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
         gridLayout.marginHeight = 5;
         gridLayout.horizontalSpacing = 0;
         GridData gridData2 = new GridData();
-        gridData2.heightHint = 32;
-        gridData2.widthHint = 32;
+        gridData2.heightHint = 24;
+        gridData2.widthHint = 24;
         GridData gridData = new GridData();
         gridData.widthHint = 193;
         gridData.horizontalAlignment = GridData.FILL;
@@ -156,7 +156,7 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
 
         IConverter converter = null;
 
-        converter = new PathToImageConverter(String.class, Image.class, 32);
+        converter = new PathToImageConverter(String.class, Image.class, 24);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
         UpdateValueStrategy toWidget = new UpdateValueStrategy().setConverter(converter);
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);

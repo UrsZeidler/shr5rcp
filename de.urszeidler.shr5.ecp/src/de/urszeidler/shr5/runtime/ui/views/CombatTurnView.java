@@ -611,7 +611,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
             if (firstElement instanceof CombatTurn) {
                 CombatTurn kr = (CombatTurn)firstElement;
                 setTempCombatTurn(kr);
-                basicActionPanel.setPhase((InitativePass)kr.getCurrentTurn());
+               
             }
             // selectionProvider.setSelection(selection);
         }
@@ -622,6 +622,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
       //  treeViewer.setInput(kr);
         kampfrunde = kr;
         combatTurnList.setCombatTurn(kr);
+        basicActionPanel.setPhase((InitativePass)kr.getCurrentTurn());
     }
 
 }
