@@ -120,9 +120,9 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
             } else {
                 URI modelURI = URI.createFileURI(args[0]);
                 File folder = new File(args[1]);
-
+                
                 List<String> arguments = new ArrayList<String>();
-
+                
                 /*
                  * If you want to change the content of this method, do NOT forget to change the "@generated"
                  * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
@@ -135,23 +135,23 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
                  * If your main template is called on an element of your model and a String, you can
                  * add in "arguments" this "String" attribute.
                  */
-
+                
                 GenerateShr5ManagementMarkdownReport generator = new GenerateShr5ManagementMarkdownReport(modelURI, folder, arguments);
-
+                
                 /*
                  * Add the properties from the launch arguments.
                  * If you want to programmatically add new properties, add them in "propertiesFiles"
                  * You can add the absolute path of a properties files, or even a project relative path.
-                 * If you want to add another "protocol" for your properties files, please override
+                 * If you want to add another "protocol" for your properties files, please override 
                  * "getPropertiesLoaderService(AcceleoService)" in order to return a new property loader.
                  * The behavior of the properties loader service is explained in the Acceleo documentation
                  * (Help -> Help Contents).
                  */
-
+                 
                 for (int i = 2; i < args.length; i++) {
                     generator.addPropertiesFile(args[i]);
                 }
-
+                
                 generator.doGenerate(new BasicMonitor());
             }
         } catch (IOException e) {
@@ -297,33 +297,38 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
         if (!isInWorkspace(org.eclipse.emf.ecore.EcorePackage.class)) {
-            resourceSet.getPackageRegistry().put(org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getNsURI(),
-                    org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
+            resourceSet.getPackageRegistry().put(org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getNsURI(), org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
         }
-
+        
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
-
+        
         /*
          * If you need additional package registrations, you can register them here. The following line
          * (in comment) is an example of the package registration for UML.
-         * You can use the method "isInWorkspace(Class c)" to check if the package that you are about to
+         * 
+         * You can use the method  "isInWorkspace(Class c)" to check if the package that you are about to
          * register is in the workspace.
+         * 
          * To register a package properly, please follow the following conventions:
+         *
          * If the package is located in another plug-in, already installed in Eclipse. The following content should
          * have been generated at the beginning of this method. Do not register the package using this mechanism if
          * the metamodel is located in the workspace.
+         *  
          * if (!isInWorkspace(UMLPackage.class)) {
-         * // The normal package registration if your metamodel is in a plugin.
-         * resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
+         *     // The normal package registration if your metamodel is in a plugin.
+         *     resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
          * }
+         * 
          * If the package is located in another project in your workspace, the plugin containing the package has not
          * been register by EMF and Acceleo should register it automatically. If you want to use the generator in
          * stand alone, the regular registration (seen a couple lines before) is needed.
+         * 
          * To learn more about Package Registration, have a look at the Acceleo documentation (Help -> Help Contents).
          */
     }
