@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * @model
  * @generated
  */
-public interface InterruptAction extends CommandWrapper {
+public interface InterruptAction extends SubjectCommand {
 } // InterruptAction

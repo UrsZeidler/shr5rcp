@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * @model
  * @generated
  */
-public interface SimpleAction extends CommandWrapper {
+public interface SimpleAction extends SubjectCommand {
 } // SimpleAction

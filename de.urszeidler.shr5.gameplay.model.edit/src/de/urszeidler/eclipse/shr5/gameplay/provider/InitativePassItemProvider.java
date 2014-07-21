@@ -234,22 +234,7 @@ public class InitativePassItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (GameplayPackage.Literals.INITATIVE_PASS__ACTION,
-                 GameplayFactory.eINSTANCE.createSimpleAction()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.INITATIVE_PASS__ACTION,
                  GameplayFactory.eINSTANCE.createSimpleActions()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.INITATIVE_PASS__ACTION,
-                 GameplayFactory.eINSTANCE.createFreeAction()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.INITATIVE_PASS__ACTION,
-                 GameplayFactory.eINSTANCE.createInterruptAction()));
 
         newChildDescriptors.add
             (createChildParameter

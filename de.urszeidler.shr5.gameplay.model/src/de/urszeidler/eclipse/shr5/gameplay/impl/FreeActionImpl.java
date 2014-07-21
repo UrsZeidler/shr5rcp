@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FreeActionImpl extends CommandWrapperImpl implements FreeAction {
+public class FreeActionImpl extends SubjectCommandImpl implements FreeAction {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

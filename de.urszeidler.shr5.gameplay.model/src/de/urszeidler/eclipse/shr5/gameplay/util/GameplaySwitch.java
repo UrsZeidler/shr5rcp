@@ -233,7 +233,6 @@ public class GameplaySwitch<T> extends Switch<T> {
             case GameplayPackage.SIMPLE_ACTION: {
                 SimpleAction simpleAction = (SimpleAction)theEObject;
                 T result = caseSimpleAction(simpleAction);
-                if (result == null) result = caseCommandWrapper(simpleAction);
                 if (result == null) result = caseSubjectCommand(simpleAction);
                 if (result == null) result = caseCommand(simpleAction);
                 if (result == null) result = defaultCase(theEObject);
@@ -251,7 +250,6 @@ public class GameplaySwitch<T> extends Switch<T> {
             case GameplayPackage.FREE_ACTION: {
                 FreeAction freeAction = (FreeAction)theEObject;
                 T result = caseFreeAction(freeAction);
-                if (result == null) result = caseCommandWrapper(freeAction);
                 if (result == null) result = caseSubjectCommand(freeAction);
                 if (result == null) result = caseCommand(freeAction);
                 if (result == null) result = defaultCase(theEObject);
@@ -260,7 +258,6 @@ public class GameplaySwitch<T> extends Switch<T> {
             case GameplayPackage.INTERRUPT_ACTION: {
                 InterruptAction interruptAction = (InterruptAction)theEObject;
                 T result = caseInterruptAction(interruptAction);
-                if (result == null) result = caseCommandWrapper(interruptAction);
                 if (result == null) result = caseSubjectCommand(interruptAction);
                 if (result == null) result = caseCommand(interruptAction);
                 if (result == null) result = defaultCase(theEObject);

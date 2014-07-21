@@ -11,18 +11,15 @@ import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 public class CombatTurnList extends Composite implements IValueChangeListener, IListChangeListener {
 
@@ -74,8 +71,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
 
         CombatTurn value = (CombatTurn)combatTurn.getValue();
         if (value != null) {
-            EList<PhaseCmd> actionPhases = value.getActionPhases();
-            for (PhaseCmd phaseCmd : actionPhases) {
+            EList<InitativePass> actionPhases = value.getActionPhases();
+            for (InitativePass phaseCmd : actionPhases) {
                 ActionPhaseComposite actionPhaseComposite = new ActionPhaseComposite(composite1, SWT.NONE, "Phase :" + phaseCmd.getPhase());
                 actionPhaseComposite.setNameable(((SubjectCommand)phaseCmd).getSubject().getCharacter().getPersona());
                 actionPhaseComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));

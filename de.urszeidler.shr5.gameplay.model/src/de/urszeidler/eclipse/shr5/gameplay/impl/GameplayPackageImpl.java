@@ -391,6 +391,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCommand_CanExecute() {
+        return (EAttribute)commandEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EOperation getCommand__Redo() {
         return commandEClass.getEOperations().get(0);
     }
@@ -643,6 +652,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getCombatTurn__DoTurn() {
+        return combatTurnEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSuccesTest() {
         return succesTestEClass;
     }
@@ -887,6 +905,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(commandEClass, COMMAND__DATE);
         createEAttribute(commandEClass, COMMAND__CMD_CALLBACK);
         createEAttribute(commandEClass, COMMAND__EXECUTING);
+        createEAttribute(commandEClass, COMMAND__CAN_EXECUTE);
         createEOperation(commandEClass, COMMAND___REDO);
         createEOperation(commandEClass, COMMAND___UNDO);
 
@@ -924,6 +943,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEReference(combatTurnEClass, COMBAT_TURN__COMBATANTS);
         createEReference(combatTurnEClass, COMBAT_TURN__ACTION_PHASES);
         createEReference(combatTurnEClass, COMBAT_TURN__CURRENT_TURN);
+        createEOperation(combatTurnEClass, COMBAT_TURN___DO_TURN);
 
         succesTestEClass = createEClass(SUCCES_TEST);
         createEAttribute(succesTestEClass, SUCCES_TEST__THRESHOLDS);
@@ -1010,10 +1030,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initativePassEClass.getESuperTypes().add(this.getPhaseCmd());
         commandWrapperEClass.getESuperTypes().add(this.getSubjectCommand());
         complexActionEClass.getESuperTypes().add(this.getCommandWrapper());
-        simpleActionEClass.getESuperTypes().add(this.getCommandWrapper());
+        simpleActionEClass.getESuperTypes().add(this.getSubjectCommand());
         simpleActionsEClass.getESuperTypes().add(this.getCommandWrapper());
-        freeActionEClass.getESuperTypes().add(this.getCommandWrapper());
-        interruptActionEClass.getESuperTypes().add(this.getCommandWrapper());
+        freeActionEClass.getESuperTypes().add(this.getSubjectCommand());
+        interruptActionEClass.getESuperTypes().add(this.getSubjectCommand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1030,6 +1050,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getCommand_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_CmdCallback(), this.getCommandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_Executing(), ecorePackage.getEBoolean(), "executing", "false", 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_CanExecute(), ecorePackage.getEBoolean(), "canExecute", null, 1, 1, Command.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEOperation(getCommand__Redo(), null, "redo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1069,8 +1090,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(combatTurnEClass, CombatTurn.class, "CombatTurn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCombatTurn_Combatants(), theRuntimePackage.getRuntimeCharacter(), null, "combatants", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCombatTurn_ActionPhases(), this.getPhaseCmd(), null, "actionPhases", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCombatTurn_CurrentTurn(), this.getPhaseCmd(), null, "currentTurn", null, 0, 1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCombatTurn_ActionPhases(), this.getInitativePass(), null, "actionPhases", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCombatTurn_CurrentTurn(), this.getInitativePass(), null, "currentTurn", null, 0, 1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEOperation(getCombatTurn__DoTurn(), null, "doTurn", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(succesTestEClass, SuccesTest.class, "SuccesTest", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSuccesTest_Thresholds(), ecorePackage.getEInt(), "thresholds", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

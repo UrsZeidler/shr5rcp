@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class SimpleActionImpl extends CommandWrapperImpl implements SimpleAction {
+public class SimpleActionImpl extends SubjectCommandImpl implements SimpleAction {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

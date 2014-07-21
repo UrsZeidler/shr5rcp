@@ -23,6 +23,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/date"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/cmdCallback"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executing"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/canExecute"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/redo"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/undo"/>
     </genClasses>
@@ -62,6 +63,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/combatants"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/actionPhases"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/currentTurn"/>
+      <genOperations ecoreOperation="gameplay.ecore#//CombatTurn/doTurn"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//SuccesTest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>

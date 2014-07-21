@@ -68,6 +68,7 @@ public class CombatTurnItemProvider
             addDatePropertyDescriptor(object);
             addCmdCallbackPropertyDescriptor(object);
             addExecutingPropertyDescriptor(object);
+            addCanExecutePropertyDescriptor(object);
             addCombatantsPropertyDescriptor(object);
             addCurrentTurnPropertyDescriptor(object);
         }
@@ -155,6 +156,28 @@ public class CombatTurnItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Command_executing_feature", "_UI_Command_type"),
                  GameplayPackage.Literals.COMMAND__EXECUTING,
                  true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Can Execute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCanExecutePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Command_canExecute_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Command_canExecute_feature", "_UI_Command_type"),
+                 GameplayPackage.Literals.COMMAND__CAN_EXECUTE,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
@@ -276,6 +299,7 @@ public class CombatTurnItemProvider
             case GameplayPackage.COMBAT_TURN__DATE:
             case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
             case GameplayPackage.COMBAT_TURN__EXECUTING:
+            case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:

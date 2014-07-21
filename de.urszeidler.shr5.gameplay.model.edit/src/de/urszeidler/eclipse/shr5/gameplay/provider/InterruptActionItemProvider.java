@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class InterruptActionItemProvider
-    extends CommandWrapperItemProvider
+    extends SubjectCommandItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,

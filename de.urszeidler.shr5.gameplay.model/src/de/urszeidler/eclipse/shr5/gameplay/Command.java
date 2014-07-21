@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting <em>Executing</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute <em>Can Execute</em>}</li>
  * </ul>
  * </p>
  *
@@ -179,6 +180,21 @@ public interface Command extends EObject {
      * @generated
      */
     void setExecuting(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Can Execute</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Can Execute</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_CanExecute()
+     * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    boolean isCanExecute();
 
     /**
      * <!-- begin-user-doc -->

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class InterruptActionImpl extends CommandWrapperImpl implements InterruptAction {
+public class InterruptActionImpl extends SubjectCommandImpl implements InterruptAction {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

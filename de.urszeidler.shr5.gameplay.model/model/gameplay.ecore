@@ -23,6 +23,9 @@
         transient="true" defaultValueLiteral="" unsettable="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executing" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canExecute" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
+        volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubjectCommand" abstract="true" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
@@ -64,11 +67,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CombatTurn" eSuperTypes="#//Command">
+    <eOperations name="doTurn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="combatants" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionPhases" upperBound="-1"
-        eType="#//PhaseCmd" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentTurn" eType="#//PhaseCmd"/>
+        eType="#//InitativePass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentTurn" eType="#//InitativePass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTest" abstract="true" interface="true"
       eSuperTypes="#//Probe">
@@ -98,13 +102,13 @@
       serializable="false"/>
   <eClassifiers xsi:type="ecore:EClass" name="CommandWrapper" abstract="true" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComplexAction" eSuperTypes="#//CommandWrapper"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleAction" eSuperTypes="#//CommandWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleAction" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleActions" eSuperTypes="#//CommandWrapper">
     <eStructuralFeatures xsi:type="ecore:EReference" name="action1" lowerBound="1"
         eType="#//SimpleAction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action2" lowerBound="1"
         eType="#//SimpleAction" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//CommandWrapper"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//CommandWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//SubjectCommand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand"/>
 </ecore:EPackage>

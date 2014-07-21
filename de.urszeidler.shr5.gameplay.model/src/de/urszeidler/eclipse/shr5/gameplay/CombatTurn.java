@@ -44,7 +44,7 @@ public interface CombatTurn extends Command {
 
     /**
      * Returns the value of the '<em><b>Action Phases</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.gameplay.PhaseCmd}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.gameplay.InitativePass}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Action Phases</em>' containment reference list isn't clear,
@@ -56,7 +56,7 @@ public interface CombatTurn extends Command {
      * @model containment="true"
      * @generated
      */
-    EList<PhaseCmd> getActionPhases();
+    EList<InitativePass> getActionPhases();
 
     /**
      * Returns the value of the '<em><b>Current Turn</b></em>' reference.
@@ -67,12 +67,12 @@ public interface CombatTurn extends Command {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Current Turn</em>' reference.
-     * @see #setCurrentTurn(PhaseCmd)
+     * @see #setCurrentTurn(InitativePass)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCombatTurn_CurrentTurn()
      * @model
      * @generated
      */
-    PhaseCmd getCurrentTurn();
+    InitativePass getCurrentTurn();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}' reference.
@@ -82,6 +82,14 @@ public interface CombatTurn extends Command {
      * @see #getCurrentTurn()
      * @generated
      */
-    void setCurrentTurn(PhaseCmd value);
+    void setCurrentTurn(InitativePass value);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    void doTurn();
 
 } // CombatTurn

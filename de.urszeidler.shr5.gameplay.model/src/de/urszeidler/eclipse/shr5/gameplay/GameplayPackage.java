@@ -170,13 +170,22 @@ public interface GameplayPackage extends EPackage {
     int COMMAND__EXECUTING = 4;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND__CAN_EXECUTE = 5;
+
+    /**
      * The number of structural features of the '<em>Command</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMMAND_FEATURE_COUNT = 5;
+    int COMMAND_FEATURE_COUNT = 6;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -259,6 +268,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUBJECT_COMMAND__EXECUTING = COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBJECT_COMMAND__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -359,6 +377,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int PROBE_COMMAND__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -522,6 +549,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -696,6 +732,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -866,6 +911,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__EXECUTING = SKILL_TEST_CMD__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE = SKILL_TEST_CMD__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1047,6 +1101,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int INITATIVE__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1323,6 +1386,15 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN__EXECUTING = COMMAND__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Combatants</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1377,13 +1449,22 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN___UNDO = COMMAND___UNDO;
 
     /**
+     * The operation id for the '<em>Do Turn</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN___DO_TURN = COMMAND_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Combat Turn</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMBAT_TURN_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+    int COMBAT_TURN_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest <em>Succes Test</em>}' class.
@@ -1521,6 +1602,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__EXECUTING = SKILL_TEST_CMD__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__CAN_EXECUTE = SKILL_TEST_CMD__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1695,6 +1785,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1865,6 +1964,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2040,6 +2148,15 @@ public interface GameplayPackage extends EPackage {
     int INITATIVE_PASS__EXECUTING = SUBJECT_COMMAND__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2194,6 +2311,15 @@ public interface GameplayPackage extends EPackage {
     int COMMAND_WRAPPER__EXECUTING = SUBJECT_COMMAND__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2294,6 +2420,15 @@ public interface GameplayPackage extends EPackage {
     int COMPLEX_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
 
     /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__CAN_EXECUTE = COMMAND_WRAPPER__CAN_EXECUTE;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2355,7 +2490,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+    int SIMPLE_ACTION__EXECUTED = SUBJECT_COMMAND__EXECUTED;
 
     /**
      * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
@@ -2364,7 +2499,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+    int SIMPLE_ACTION__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
 
     /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -2373,7 +2508,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__DATE = COMMAND_WRAPPER__DATE;
+    int SIMPLE_ACTION__DATE = SUBJECT_COMMAND__DATE;
 
     /**
      * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
@@ -2382,7 +2517,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+    int SIMPLE_ACTION__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
 
     /**
      * The feature id for the '<em><b>Executing</b></em>' attribute.
@@ -2391,7 +2526,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+    int SIMPLE_ACTION__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2400,7 +2544,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+    int SIMPLE_ACTION__SUBJECT = SUBJECT_COMMAND__SUBJECT;
 
     /**
      * The number of structural features of the '<em>Simple Action</em>' class.
@@ -2409,7 +2553,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+    int SIMPLE_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -2418,7 +2562,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION___REDO = COMMAND_WRAPPER___REDO;
+    int SIMPLE_ACTION___REDO = SUBJECT_COMMAND___REDO;
 
     /**
      * The operation id for the '<em>Undo</em>' operation.
@@ -2427,7 +2571,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+    int SIMPLE_ACTION___UNDO = SUBJECT_COMMAND___UNDO;
 
     /**
      * The number of operations of the '<em>Simple Action</em>' class.
@@ -2436,7 +2580,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SIMPLE_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+    int SIMPLE_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl <em>Simple Actions</em>}' class.
@@ -2492,6 +2636,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SIMPLE_ACTIONS__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__CAN_EXECUTE = COMMAND_WRAPPER__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2573,7 +2726,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+    int FREE_ACTION__EXECUTED = SUBJECT_COMMAND__EXECUTED;
 
     /**
      * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
@@ -2582,7 +2735,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+    int FREE_ACTION__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
 
     /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -2591,7 +2744,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__DATE = COMMAND_WRAPPER__DATE;
+    int FREE_ACTION__DATE = SUBJECT_COMMAND__DATE;
 
     /**
      * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
@@ -2600,7 +2753,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+    int FREE_ACTION__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
 
     /**
      * The feature id for the '<em><b>Executing</b></em>' attribute.
@@ -2609,7 +2762,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+    int FREE_ACTION__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2618,7 +2780,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+    int FREE_ACTION__SUBJECT = SUBJECT_COMMAND__SUBJECT;
 
     /**
      * The number of structural features of the '<em>Free Action</em>' class.
@@ -2627,7 +2789,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+    int FREE_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -2636,7 +2798,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION___REDO = COMMAND_WRAPPER___REDO;
+    int FREE_ACTION___REDO = SUBJECT_COMMAND___REDO;
 
     /**
      * The operation id for the '<em>Undo</em>' operation.
@@ -2645,7 +2807,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+    int FREE_ACTION___UNDO = SUBJECT_COMMAND___UNDO;
 
     /**
      * The number of operations of the '<em>Free Action</em>' class.
@@ -2654,7 +2816,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FREE_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+    int FREE_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl <em>Interrupt Action</em>}' class.
@@ -2673,7 +2835,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__EXECUTED = COMMAND_WRAPPER__EXECUTED;
+    int INTERRUPT_ACTION__EXECUTED = SUBJECT_COMMAND__EXECUTED;
 
     /**
      * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
@@ -2682,7 +2844,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__SUB_COMMANDS = COMMAND_WRAPPER__SUB_COMMANDS;
+    int INTERRUPT_ACTION__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
 
     /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -2691,7 +2853,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__DATE = COMMAND_WRAPPER__DATE;
+    int INTERRUPT_ACTION__DATE = SUBJECT_COMMAND__DATE;
 
     /**
      * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
@@ -2700,7 +2862,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__CMD_CALLBACK = COMMAND_WRAPPER__CMD_CALLBACK;
+    int INTERRUPT_ACTION__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
 
     /**
      * The feature id for the '<em><b>Executing</b></em>' attribute.
@@ -2709,7 +2871,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__EXECUTING = COMMAND_WRAPPER__EXECUTING;
+    int INTERRUPT_ACTION__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2718,7 +2889,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION__SUBJECT = COMMAND_WRAPPER__SUBJECT;
+    int INTERRUPT_ACTION__SUBJECT = SUBJECT_COMMAND__SUBJECT;
 
     /**
      * The number of structural features of the '<em>Interrupt Action</em>' class.
@@ -2727,7 +2898,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION_FEATURE_COUNT = COMMAND_WRAPPER_FEATURE_COUNT + 0;
+    int INTERRUPT_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -2736,7 +2907,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION___REDO = COMMAND_WRAPPER___REDO;
+    int INTERRUPT_ACTION___REDO = SUBJECT_COMMAND___REDO;
 
     /**
      * The operation id for the '<em>Undo</em>' operation.
@@ -2745,7 +2916,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION___UNDO = COMMAND_WRAPPER___UNDO;
+    int INTERRUPT_ACTION___UNDO = SUBJECT_COMMAND___UNDO;
 
     /**
      * The number of operations of the '<em>Interrupt Action</em>' class.
@@ -2754,7 +2925,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION_OPERATION_COUNT = COMMAND_WRAPPER_OPERATION_COUNT + 0;
+    int INTERRUPT_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -2894,6 +3065,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getCommand_Executing();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute <em>Can Execute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Can Execute</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @see #getCommand()
+     * @generated
+     */
+    EAttribute getCommand_CanExecute();
 
     /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
@@ -3190,6 +3372,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EReference getCombatTurn_CurrentTurn();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Do Turn</em>' operation.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn()
+     * @generated
+     */
+    EOperation getCombatTurn__DoTurn();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest <em>Succes Test</em>}'.
@@ -3559,6 +3751,14 @@ public interface GameplayPackage extends EPackage {
         EAttribute COMMAND__EXECUTING = eINSTANCE.getCommand_Executing();
 
         /**
+         * The meta object literal for the '<em><b>Can Execute</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMMAND__CAN_EXECUTE = eINSTANCE.getCommand_CanExecute();
+
+        /**
          * The meta object literal for the '<em><b>Redo</b></em>' operation.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -3799,6 +3999,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference COMBAT_TURN__CURRENT_TURN = eINSTANCE.getCombatTurn_CurrentTurn();
+
+        /**
+         * The meta object literal for the '<em><b>Do Turn</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation COMBAT_TURN___DO_TURN = eINSTANCE.getCombatTurn__DoTurn();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest <em>Succes Test</em>}' class.

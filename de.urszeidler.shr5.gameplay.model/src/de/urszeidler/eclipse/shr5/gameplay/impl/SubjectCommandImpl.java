@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuting <em>Executing</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isCanExecute <em>Can Execute</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
  * </ul>
  * </p>
@@ -138,6 +139,16 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * @ordered
      */
     protected boolean executing = EXECUTING_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #isCanExecute() <em>Can Execute</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isCanExecute()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean CAN_EXECUTE_EDEFAULT = false;
 
     /**
      * The cached value of the '{@link #getSubject() <em>Subject</em>}' reference.
@@ -294,6 +305,17 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isCanExecute() {
+        // TODO: implement this method to return the 'Can Execute' attribute
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public RuntimeCharacter getSubject() {
         if (subject != null && subject.eIsProxy()) {
             InternalEObject oldSubject = (InternalEObject)subject;
@@ -381,6 +403,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return getCmdCallback();
             case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
                 return isExecuting();
+            case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
+                return isCanExecute();
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 if (resolve) return getSubject();
                 return basicGetSubject();
@@ -468,6 +492,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return isSetCmdCallback();
             case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
                 return executing != EXECUTING_EDEFAULT;
+            case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
+                return isCanExecute() != CAN_EXECUTE_EDEFAULT;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 return subject != null;
         }

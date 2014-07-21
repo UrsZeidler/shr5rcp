@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * @model
  * @generated
  */
-public interface FreeAction extends CommandWrapper {
+public interface FreeAction extends SubjectCommand {
 } // FreeAction

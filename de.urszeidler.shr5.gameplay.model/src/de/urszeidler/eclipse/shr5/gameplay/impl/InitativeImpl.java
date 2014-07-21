@@ -184,11 +184,16 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
         int mentalDamage = subject.getMentalDamage() / 3;
 
         int ini1 = ini - (physicalDamage + mentalDamage);
-        
-        while (ini1>actualPhase) {
-            ini1 = ini1 -10;
+
+        while (ini1 > actualPhase) {
+            ini1 = ini1 - 10;
         }
         return ini1;
+    }
+
+    @Override
+    public boolean isCanExecute() {
+        return subject != null && subject.getCharacter() != null && subject.getCharacter().getPersona() != null && !executed;
     }
 
     /**
@@ -196,10 +201,13 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      */
     public void redo() {
-        executed = true;
+        if (!isCanExecute())
+            return;
+
         IniDice iniDice = new IniDice();
         AbstraktPersona persona = subject.getCharacter().getPersona();
         ini = iniDice.ini(persona.getInitative(), persona.getInitativWuerfel());
+        executed = true;
     }
 
     /**
