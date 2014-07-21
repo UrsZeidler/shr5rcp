@@ -217,6 +217,21 @@ public class ExecutionProtocolItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
                  GameplayFactory.eINSTANCE.createInterruptAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createSetFeatureCommand()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createMeeleAttackCmd()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createRangedAttackCmd()));
     }
 
     /**

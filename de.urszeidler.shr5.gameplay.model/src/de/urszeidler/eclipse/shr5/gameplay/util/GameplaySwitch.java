@@ -263,6 +263,39 @@ public class GameplaySwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case GameplayPackage.SET_FEATURE_COMMAND: {
+                SetFeatureCommand setFeatureCommand = (SetFeatureCommand)theEObject;
+                T result = caseSetFeatureCommand(setFeatureCommand);
+                if (result == null) result = caseCommand(setFeatureCommand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.MEELE_ATTACK_CMD: {
+                MeeleAttackCmd meeleAttackCmd = (MeeleAttackCmd)theEObject;
+                T result = caseMeeleAttackCmd(meeleAttackCmd);
+                if (result == null) result = caseOpposedSkillTestCmd(meeleAttackCmd);
+                if (result == null) result = caseSkillTestCmd(meeleAttackCmd);
+                if (result == null) result = caseProbeCommand(meeleAttackCmd);
+                if (result == null) result = caseSubjectCommand(meeleAttackCmd);
+                if (result == null) result = caseSuccesTest(meeleAttackCmd);
+                if (result == null) result = caseCommand(meeleAttackCmd);
+                if (result == null) result = caseProbe(meeleAttackCmd);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.RANGED_ATTACK_CMD: {
+                RangedAttackCmd rangedAttackCmd = (RangedAttackCmd)theEObject;
+                T result = caseRangedAttackCmd(rangedAttackCmd);
+                if (result == null) result = caseOpposedSkillTestCmd(rangedAttackCmd);
+                if (result == null) result = caseSkillTestCmd(rangedAttackCmd);
+                if (result == null) result = caseProbeCommand(rangedAttackCmd);
+                if (result == null) result = caseSubjectCommand(rangedAttackCmd);
+                if (result == null) result = caseSuccesTest(rangedAttackCmd);
+                if (result == null) result = caseCommand(rangedAttackCmd);
+                if (result == null) result = caseProbe(rangedAttackCmd);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -609,6 +642,51 @@ public class GameplaySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseInterruptAction(InterruptAction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Set Feature Command</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Set Feature Command</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSetFeatureCommand(SetFeatureCommand object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Meele Attack Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Meele Attack Cmd</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMeeleAttackCmd(MeeleAttackCmd object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Ranged Attack Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Ranged Attack Cmd</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseRangedAttackCmd(RangedAttackCmd object) {
         return null;
     }
 

@@ -3,6 +3,7 @@ package de.urszeidler.shr5.runtime.ui.widgets;
 import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.ListChangeEvent;
+import org.eclipse.core.databinding.observable.list.ListDiffEntry;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
@@ -27,6 +28,7 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
     private Composite composite;
     private Composite composite1;
     private ScrolledComposite scrolledComposite;
+    private ListDiffEntry[] listDiff;
 
     /**
      * Create the composite.
@@ -60,7 +62,18 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
         combatTurn.addValueChangeListener(this);
     }
 
+    
+    @Override
+    public void dispose() {
+        combatTurn.removeValueChangeListener(this);
+        combatTurn.dispose();
+        super.dispose();
+    }
+    
     private void updateCombatTurn() {
+//        if (true)
+//            return;
+
         if (composite1 != null)
             composite1.dispose();
 
@@ -102,6 +115,7 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
         combatTurn.setValue(ct);
         IObservableList observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
         observeList.addListChangeListener(this);
+        // observeList.addChangeListener(this);
         // updateCombatTurn();
 
     }
@@ -118,8 +132,50 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
 
     @Override
     public void handleListChange(ListChangeEvent event) {
-        updateCombatTurn();
-
+       if(this.isDisposed() || ! this.isVisible() )
+           return;
+        Object source = event.getSource();
+        if (source instanceof IObservableList) {
+            IObservableList ol = (IObservableList)source;
+            if (!ol.isEmpty()) {
+                if (!compareDiff(event.diff.getDifferences())) {
+                    updateCombatTurn();
+                    listDiff = event.diff.getDifferences();
+                }
+            }
+        }
     }
+
+    private boolean compareDiff(ListDiffEntry[] listDiff2) {
+        if(listDiff==null)
+            return false;
+        if(listDiff2.length!=listDiff.length)
+            return false;
+
+       for (int i = 0; i < listDiff2.length; i++) {
+        ListDiffEntry listDiffEntry = listDiff[i];
+        ListDiffEntry listDiffEntry2 = listDiff2[i];
+      if (!(listDiffEntry.isAddition()==listDiffEntry2.isAddition() 
+            && listDiffEntry.getPosition()==listDiffEntry2.getPosition()
+            && listDiffEntry.getElement() != null
+            && listDiffEntry.getElement().equals(listDiffEntry2.getElement())
+       ))
+          return false;
+        
+    }
+        
+        return true;
+    }
+//
+//    @Override
+//    public void handleChange(ChangeEvent event) {
+//        Object source = event.getSource();
+//        if (source instanceof IObservableList) {
+//            IObservableList ol = (IObservableList)source;
+//            if (!ol.isEmpty())
+//                updateCombatTurn();
+//        }
+//
+//    }
 
 }

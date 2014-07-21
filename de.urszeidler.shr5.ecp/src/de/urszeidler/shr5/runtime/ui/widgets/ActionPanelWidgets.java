@@ -10,36 +10,22 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
 public class ActionPanelWidgets extends Composite {
 
 	private Composite composite = null;
 	private Composite composite1 = null;
 	private Composite composite_default_Action = null;
-//	private Label label_rh = null;
-//	private Label label_image_rh = null;
-//	private Label label_text_rh = null;
-//	private Button button_use_rh = null;
-//	private Button button_drop_rh = null;
-//	private Button button_change_rh = null;
-//	private Label label_lh = null;
-//	private Label label_image_lh = null;
-//	private Label label_text_lh = null;
-//	private Button button_use_lh = null;
-//	private Button button_drop_lh = null;
-//	private Button button_change_lh = null;
 	private Composite composite_obove = null;
 	private Tree tree_actions = null;
 	private Composite composite_btns = null;
 	private TreeViewer treeViewer = null;
 	private Button button_do = null;
-	private ActionPhaseComposite rechte_Hand;
-	private ActionPhaseComposite linke_Hand;
+	private HandComposite rechte_Hand;
+	private HandComposite linke_Hand;
 	
     private WritableValue character = new WritableValue();
-    //private RuntimeCharacter character = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
-
 
 	public ActionPanelWidgets(Composite parent, int style) {
 		super(parent, style);
@@ -47,7 +33,6 @@ public class ActionPanelWidgets extends Composite {
 	}
 
 	private void initialize() {
-		//this.setSize(new Point(396, 263));
 		GridLayout gridLayout1 = new GridLayout();
 		gridLayout1.numColumns = 1;
 		this.setLayout(gridLayout1);
@@ -58,8 +43,8 @@ public class ActionPanelWidgets extends Composite {
 
 	public void setCharacter(RuntimeCharacter character) {
         this.character.setValue(character);
-        rechte_Hand.setNameable(character.getRightHand());
-        linke_Hand.setNameable(character.getLeftHand());
+        rechte_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND);
+        linke_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
         populateActions();
     }
 	
@@ -128,13 +113,6 @@ public class ActionPanelWidgets extends Composite {
 	 */
 	private void createComposite_default_Action() {
 		
-//		GridData gridData7 = new GridData();
-//		gridData7.horizontalAlignment = GridData.FILL;
-//		gridData7.verticalAlignment = GridData.CENTER;
-//		GridData gridData6 = new GridData();
-//		gridData6.horizontalAlignment = GridData.FILL;
-//		gridData6.grabExcessHorizontalSpace = true;
-//		gridData6.verticalAlignment = GridData.CENTER;
 		GridLayout gridLayout2 = new GridLayout();
 		gridLayout2.horizontalSpacing = 0 ;
 		gridLayout2.verticalSpacing = 0;
@@ -152,58 +130,18 @@ public class ActionPanelWidgets extends Composite {
 		composite_default_Action.setLayout(gridLayout2);
 //		createComposite_obove();	
 		
-		rechte_Hand = new ActionPhaseComposite(composite_default_Action, SWT.NONE,"Rechte Hand");
+		rechte_Hand = new HandComposite(composite_default_Action, SWT.NONE,"Rechte Hand");
 		GridData gridData6 = new GridData();
 		gridData6.horizontalAlignment = GridData.FILL;
 		gridData6.grabExcessHorizontalSpace = true;
 		rechte_Hand.setLayoutData(gridData6);
 		
-		linke_Hand = new ActionPhaseComposite(composite_default_Action, SWT.NONE,"Linke Hand");
+		linke_Hand = new HandComposite(composite_default_Action, SWT.NONE,"Linke Hand");
 		gridData6 = new GridData();
 		gridData6.horizontalAlignment = GridData.FILL;
 		gridData6.grabExcessHorizontalSpace = true;
 		linke_Hand.setLayoutData(gridData6);
 		
-//		label_rh = new Label(composite_default_Action, SWT.NONE);
-//		label_rh.setText("Rechte Hand");
-//		
-//		GridData gridData_rh_img = new GridData();
-//		gridData_rh_img.heightHint = 32;
-//		gridData_rh_img.widthHint = 32;
-//		label_image_rh = new Label(composite_default_Action, SWT.BORDER);
-//		label_image_rh.setText("");
-//		label_image_rh.setLayoutData(gridData_rh_img);
-//		
-//		label_text_rh = new Label(composite_default_Action, SWT.NONE);
-//		label_text_rh.setText("Label");
-//		label_text_rh.setLayoutData(gridData6);
-//		button_use_rh = new Button(composite_default_Action, SWT.NONE);
-//		button_use_rh.setText("use");
-//		button_drop_rh = new Button(composite_default_Action, SWT.NONE);
-//		button_drop_rh.setText("drop");
-//		button_change_rh = new Button(composite_default_Action, SWT.NONE);
-//		button_change_rh.setText("change");
-//		label_lh = new Label(composite_default_Action, SWT.NONE);
-//		label_lh.setText("Linke Hand");
-//		
-//		GridData gridData_lh_img = new GridData();
-//		gridData_lh_img.heightHint = 32;
-//		gridData_lh_img.widthHint = 32;
-//		label_image_lh = new Label(composite_default_Action, SWT.BORDER);
-//		label_image_lh.setText("");
-//		label_image_lh.setLayoutData(gridData_lh_img);
-//		
-//		label_text_lh = new Label(composite_default_Action, SWT.NONE);
-//		label_text_lh.setText("Label");
-//		label_text_lh.setLayoutData(gridData7);
-//		button_use_lh = new Button(composite_default_Action, SWT.NONE);
-//		button_use_lh.setText("use");
-//		button_drop_lh = new Button(composite_default_Action, SWT.NONE);
-//		button_drop_lh.setText("drop");
-//		button_change_lh = new Button(composite_default_Action, SWT.NONE);
-//		button_change_lh.setText("change");
-		
-
 	}
 
 	/**
@@ -244,14 +182,6 @@ public class ActionPanelWidgets extends Composite {
 	public Label getLabel_image_lh() {
 		return linke_Hand.getLabel_image();
 	}
-
-//	public Label getLabel_lh() {
-//		return linke_Hand.getLabel_name();
-//	}
-//
-//	public Label getLabel_rh() {
-//		return rechte_Hand.getLabel_name();
-//	}
 
 	public Label getLabel_text_rh() {
 		return rechte_Hand.getLabel_name();

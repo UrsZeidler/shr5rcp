@@ -4,9 +4,9 @@
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
 
-import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 
 import java.util.Collection;
 import java.util.List;
@@ -30,12 +30,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CombatTurnItemProvider
+public class SetFeatureCommandItemProvider
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -49,7 +49,7 @@ public class CombatTurnItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public CombatTurnItemProvider(AdapterFactory adapterFactory) {
+    public SetFeatureCommandItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -69,8 +69,9 @@ public class CombatTurnItemProvider
             addCmdCallbackPropertyDescriptor(object);
             addExecutingPropertyDescriptor(object);
             addCanExecutePropertyDescriptor(object);
-            addCombatantsPropertyDescriptor(object);
-            addCurrentTurnPropertyDescriptor(object);
+            addValuePropertyDescriptor(object);
+            addObjectPropertyDescriptor(object);
+            addFeaturePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -186,19 +187,41 @@ public class CombatTurnItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Combatants feature.
+     * This adds a property descriptor for the Value feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addCombatantsPropertyDescriptor(Object object) {
+    protected void addValuePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_CombatTurn_combatants_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_CombatTurn_combatants_feature", "_UI_CombatTurn_type"),
-                 GameplayPackage.Literals.COMBAT_TURN__COMBATANTS,
+                 getString("_UI_SetFeatureCommand_value_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_value_feature", "_UI_SetFeatureCommand_type"),
+                 GameplayPackage.Literals.SET_FEATURE_COMMAND__VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Object feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addObjectPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SetFeatureCommand_object_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_object_feature", "_UI_SetFeatureCommand_type"),
+                 GameplayPackage.Literals.SET_FEATURE_COMMAND__OBJECT,
                  true,
                  false,
                  true,
@@ -208,19 +231,19 @@ public class CombatTurnItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Current Turn feature.
+     * This adds a property descriptor for the Feature feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addCurrentTurnPropertyDescriptor(Object object) {
+    protected void addFeaturePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_CombatTurn_currentTurn_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_CombatTurn_currentTurn_feature", "_UI_CombatTurn_type"),
-                 GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN,
+                 getString("_UI_SetFeatureCommand_feature_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_feature_feature", "_UI_SetFeatureCommand_type"),
+                 GameplayPackage.Literals.SET_FEATURE_COMMAND__FEATURE,
                  true,
                  false,
                  true,
@@ -242,7 +265,6 @@ public class CombatTurnItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
-            childrenFeatures.add(GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
         }
         return childrenFeatures;
     }
@@ -261,14 +283,14 @@ public class CombatTurnItemProvider
     }
 
     /**
-     * This returns CombatTurn.gif.
+     * This returns SetFeatureCommand.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/CombatTurn"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/SetFeatureCommand"));
     }
 
     /**
@@ -279,8 +301,8 @@ public class CombatTurnItemProvider
      */
     @Override
     public String getText(Object object) {
-        CombatTurn combatTurn = (CombatTurn)object;
-        return getString("_UI_CombatTurn_type") + " " + combatTurn.isExecuted();
+        SetFeatureCommand setFeatureCommand = (SetFeatureCommand)object;
+        return getString("_UI_SetFeatureCommand_type") + " " + setFeatureCommand.isExecuted();
     }
 
     /**
@@ -294,16 +316,16 @@ public class CombatTurnItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(CombatTurn.class)) {
-            case GameplayPackage.COMBAT_TURN__EXECUTED:
-            case GameplayPackage.COMBAT_TURN__DATE:
-            case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
-            case GameplayPackage.COMBAT_TURN__EXECUTING:
-            case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
+        switch (notification.getFeatureID(SetFeatureCommand.class)) {
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
+            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
+            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
+            case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
+            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -405,34 +427,6 @@ public class CombatTurnItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
                  GameplayFactory.eINSTANCE.createRangedAttackCmd()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES,
-                 GameplayFactory.eINSTANCE.createInitativePass()));
-    }
-
-    /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-        Object childFeature = feature;
-        Object childObject = child;
-
-        boolean qualify =
-            childFeature == GameplayPackage.Literals.COMMAND__SUB_COMMANDS ||
-            childFeature == GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES;
-
-        if (qualify) {
-            return getString
-                ("_UI_CreateChild_text2",
-                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
     }
 
     /**

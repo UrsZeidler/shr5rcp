@@ -42,14 +42,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private ActionPanelWidgets actionPanel = null;
     private Composite composite_name = null;
     private Label label_image = null;
-    // private Label label_name = null;
-    // private Label label1;
     private StateMonitor stateMonitor;
     private Label label = null;
     private Label label_Phase = null;
-    // private ActionPanel actionPanel_1;
-    // private ActionPanel actionPanel_2;
-    // private Composite composite_test = null;
     private WritableValue phase = new WritableValue();
     private WritableValue character = new WritableValue();
 
@@ -62,6 +57,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         initialize();
         m_bindingContext = initDataBindings();
         phase.addValueChangeListener(this);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
      }
 
     private void initialize() {
@@ -92,7 +90,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
 
-        stateMonitor = new StateMonitor(composite_state, SWT.NONE);
+        //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 
     /**
@@ -100,8 +98,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
      */
     private void createComposite_info() {
         GridData gridData6 = new GridData();
-        gridData6.heightHint = 128;
-        gridData6.widthHint = 128;
+        gridData6.heightHint = 32;
+        gridData6.widthHint = 32;
         GridLayout gridLayout2 = new GridLayout();
         gridLayout2.numColumns = 2;
         GridData gridData1 = new GridData();
@@ -117,10 +115,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         label_image = new Label(composite_info, SWT.BORDER);
         label_image.setText("image");
         label_image.setLayoutData(gridData6);
-        // new Label(this, SWT.NONE);
-        // new Label(this, SWT.NONE);
-        // new Label(this, SWT.NONE);
-        // new Label(this, SWT.NONE);
+
     }
 
     /**
@@ -137,7 +132,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_action = new Composite(this, SWT.NONE);
         composite_action.setLayout(new FillLayout(SWT.HORIZONTAL));
         // composite_action.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, true, 1, 1));
-        composite_action.setLayoutData(gridData2);
+        //composite_action.setLayoutData(gridData2);
 
         actionPanel = new ActionPanelWidgets(composite_action, SWT.NONE);
 
@@ -225,7 +220,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
 
         IConverter converter = null;
 
-        converter = new PathToImageConverter(String.class, Image.class, 64);
+        converter = new PathToImageConverter(String.class, Image.class, 32);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
         UpdateValueStrategy toWidget = new UpdateValueStrategy().setConverter(converter);
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);

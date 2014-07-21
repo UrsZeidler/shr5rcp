@@ -74,6 +74,9 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.SIMPLE_ACTIONS: return createSimpleActions();
             case GameplayPackage.FREE_ACTION: return createFreeAction();
             case GameplayPackage.INTERRUPT_ACTION: return createInterruptAction();
+            case GameplayPackage.SET_FEATURE_COMMAND: return createSetFeatureCommand();
+            case GameplayPackage.MEELE_ATTACK_CMD: return createMeeleAttackCmd();
+            case GameplayPackage.RANGED_ATTACK_CMD: return createRangedAttackCmd();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -263,6 +266,36 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public InterruptAction createInterruptAction() {
         InterruptActionImpl interruptAction = new InterruptActionImpl();
         return interruptAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SetFeatureCommand createSetFeatureCommand() {
+        SetFeatureCommandImpl setFeatureCommand = new SetFeatureCommandImpl();
+        return setFeatureCommand;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MeeleAttackCmd createMeeleAttackCmd() {
+        MeeleAttackCmdImpl meeleAttackCmd = new MeeleAttackCmdImpl();
+        return meeleAttackCmd;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public RangedAttackCmd createRangedAttackCmd() {
+        RangedAttackCmdImpl rangedAttackCmd = new RangedAttackCmdImpl();
+        return rangedAttackCmd;
     }
 
     /**

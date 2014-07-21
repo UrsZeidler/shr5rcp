@@ -2928,6 +2928,549 @@ public interface GameplayPackage extends EPackage {
     int INTERRUPT_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl <em>Set Feature Command</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSetFeatureCommand()
+     * @generated
+     */
+    int SET_FEATURE_COMMAND = 23;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__EXECUTED = COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__SUB_COMMANDS = COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__DATE = COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__CMD_CALLBACK = COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__EXECUTING = COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__VALUE = COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Object</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__OBJECT = COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__FEATURE = COMMAND_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Set Feature Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND___REDO = COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND___UNDO = COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Set Feature Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl <em>Meele Attack Cmd</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getMeeleAttackCmd()
+     * @generated
+     */
+    int MEELE_ATTACK_CMD = 24;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__EXECUTED = OPPOSED_SKILL_TEST_CMD__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SUB_COMMANDS = OPPOSED_SKILL_TEST_CMD__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__DATE = OPPOSED_SKILL_TEST_CMD__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__CMD_CALLBACK = OPPOSED_SKILL_TEST_CMD__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__EXECUTING = OPPOSED_SKILL_TEST_CMD__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__CAN_EXECUTE = OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SUBJECT = OPPOSED_SKILL_TEST_CMD__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Probe</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__PROBE = OPPOSED_SKILL_TEST_CMD__PROBE;
+
+    /**
+     * The feature id for the '<em><b>Successes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SUCCESSES = OPPOSED_SKILL_TEST_CMD__SUCCESSES;
+
+    /**
+     * The feature id for the '<em><b>Glitches</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__GLITCHES = OPPOSED_SKILL_TEST_CMD__GLITCHES;
+
+    /**
+     * The feature id for the '<em><b>Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__LIMIT = OPPOSED_SKILL_TEST_CMD__LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Thresholds</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__THRESHOLDS = OPPOSED_SKILL_TEST_CMD__THRESHOLDS;
+
+    /**
+     * The feature id for the '<em><b>Net Hits</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__NET_HITS = OPPOSED_SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__MODS = OPPOSED_SKILL_TEST_CMD__MODS;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SKILL = OPPOSED_SKILL_TEST_CMD__SKILL;
+
+    /**
+     * The feature id for the '<em><b>Object</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__OBJECT = OPPOSED_SKILL_TEST_CMD__OBJECT;
+
+    /**
+     * The feature id for the '<em><b>Weapon</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__WEAPON = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Meele Attack Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD_FEATURE_COUNT = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD___REDO = OPPOSED_SKILL_TEST_CMD___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD___UNDO = OPPOSED_SKILL_TEST_CMD___UNDO;
+
+    /**
+     * The number of operations of the '<em>Meele Attack Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD_OPERATION_COUNT = OPPOSED_SKILL_TEST_CMD_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl <em>Ranged Attack Cmd</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getRangedAttackCmd()
+     * @generated
+     */
+    int RANGED_ATTACK_CMD = 25;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__EXECUTED = OPPOSED_SKILL_TEST_CMD__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SUB_COMMANDS = OPPOSED_SKILL_TEST_CMD__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__DATE = OPPOSED_SKILL_TEST_CMD__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__CMD_CALLBACK = OPPOSED_SKILL_TEST_CMD__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__EXECUTING = OPPOSED_SKILL_TEST_CMD__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__CAN_EXECUTE = OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SUBJECT = OPPOSED_SKILL_TEST_CMD__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Probe</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__PROBE = OPPOSED_SKILL_TEST_CMD__PROBE;
+
+    /**
+     * The feature id for the '<em><b>Successes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SUCCESSES = OPPOSED_SKILL_TEST_CMD__SUCCESSES;
+
+    /**
+     * The feature id for the '<em><b>Glitches</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__GLITCHES = OPPOSED_SKILL_TEST_CMD__GLITCHES;
+
+    /**
+     * The feature id for the '<em><b>Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__LIMIT = OPPOSED_SKILL_TEST_CMD__LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Thresholds</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__THRESHOLDS = OPPOSED_SKILL_TEST_CMD__THRESHOLDS;
+
+    /**
+     * The feature id for the '<em><b>Net Hits</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__NET_HITS = OPPOSED_SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__MODS = OPPOSED_SKILL_TEST_CMD__MODS;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SKILL = OPPOSED_SKILL_TEST_CMD__SKILL;
+
+    /**
+     * The feature id for the '<em><b>Object</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__OBJECT = OPPOSED_SKILL_TEST_CMD__OBJECT;
+
+    /**
+     * The feature id for the '<em><b>Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__MODUS = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Range</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__RANGE = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Weapon</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__WEAPON = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Ranged Attack Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD_FEATURE_COUNT = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 3;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD___REDO = OPPOSED_SKILL_TEST_CMD___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD___UNDO = OPPOSED_SKILL_TEST_CMD___UNDO;
+
+    /**
+     * The number of operations of the '<em>Ranged Attack Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD_OPERATION_COUNT = OPPOSED_SKILL_TEST_CMD_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '<em>Command Callback</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2935,7 +3478,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 23;
+    int COMMAND_CALLBACK = 26;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -3615,6 +4158,113 @@ public interface GameplayPackage extends EPackage {
     EClass getInterruptAction();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand <em>Set Feature Command</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Set Feature Command</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand
+     * @generated
+     */
+    EClass getSetFeatureCommand();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getValue <em>Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getValue()
+     * @see #getSetFeatureCommand()
+     * @generated
+     */
+    EAttribute getSetFeatureCommand_Value();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getObject <em>Object</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Object</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getObject()
+     * @see #getSetFeatureCommand()
+     * @generated
+     */
+    EReference getSetFeatureCommand_Object();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getFeature <em>Feature</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Feature</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getFeature()
+     * @see #getSetFeatureCommand()
+     * @generated
+     */
+    EReference getSetFeatureCommand_Feature();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd <em>Meele Attack Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Meele Attack Cmd</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd
+     * @generated
+     */
+    EClass getMeeleAttackCmd();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd#getWeapon <em>Weapon</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Weapon</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd#getWeapon()
+     * @see #getMeeleAttackCmd()
+     * @generated
+     */
+    EReference getMeeleAttackCmd_Weapon();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd <em>Ranged Attack Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Ranged Attack Cmd</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd
+     * @generated
+     */
+    EClass getRangedAttackCmd();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getModus <em>Modus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Modus</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getModus()
+     * @see #getRangedAttackCmd()
+     * @generated
+     */
+    EAttribute getRangedAttackCmd_Modus();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getRange <em>Range</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Range</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getRange()
+     * @see #getRangedAttackCmd()
+     * @generated
+     */
+    EAttribute getRangedAttackCmd_Range();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getWeapon <em>Weapon</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Weapon</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getWeapon()
+     * @see #getRangedAttackCmd()
+     * @generated
+     */
+    EReference getRangedAttackCmd_Weapon();
+
+    /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4205,6 +4855,92 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EClass INTERRUPT_ACTION = eINSTANCE.getInterruptAction();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl <em>Set Feature Command</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSetFeatureCommand()
+         * @generated
+         */
+        EClass SET_FEATURE_COMMAND = eINSTANCE.getSetFeatureCommand();
+
+        /**
+         * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SET_FEATURE_COMMAND__VALUE = eINSTANCE.getSetFeatureCommand_Value();
+
+        /**
+         * The meta object literal for the '<em><b>Object</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SET_FEATURE_COMMAND__OBJECT = eINSTANCE.getSetFeatureCommand_Object();
+
+        /**
+         * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SET_FEATURE_COMMAND__FEATURE = eINSTANCE.getSetFeatureCommand_Feature();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl <em>Meele Attack Cmd</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getMeeleAttackCmd()
+         * @generated
+         */
+        EClass MEELE_ATTACK_CMD = eINSTANCE.getMeeleAttackCmd();
+
+        /**
+         * The meta object literal for the '<em><b>Weapon</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MEELE_ATTACK_CMD__WEAPON = eINSTANCE.getMeeleAttackCmd_Weapon();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl <em>Ranged Attack Cmd</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getRangedAttackCmd()
+         * @generated
+         */
+        EClass RANGED_ATTACK_CMD = eINSTANCE.getRangedAttackCmd();
+
+        /**
+         * The meta object literal for the '<em><b>Modus</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RANGED_ATTACK_CMD__MODUS = eINSTANCE.getRangedAttackCmd_Modus();
+
+        /**
+         * The meta object literal for the '<em><b>Range</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RANGED_ATTACK_CMD__RANGE = eINSTANCE.getRangedAttackCmd_Range();
+
+        /**
+         * The meta object literal for the '<em><b>Weapon</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference RANGED_ATTACK_CMD__WEAPON = eINSTANCE.getRangedAttackCmd_Weapon();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.

@@ -19,10 +19,13 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
+import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
@@ -206,6 +209,27 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass interruptActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass setFeatureCommandEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass meeleAttackCmdEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass rangedAttackCmdEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -859,6 +883,96 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSetFeatureCommand() {
+        return setFeatureCommandEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSetFeatureCommand_Value() {
+        return (EAttribute)setFeatureCommandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSetFeatureCommand_Object() {
+        return (EReference)setFeatureCommandEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSetFeatureCommand_Feature() {
+        return (EReference)setFeatureCommandEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMeeleAttackCmd() {
+        return meeleAttackCmdEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMeeleAttackCmd_Weapon() {
+        return (EReference)meeleAttackCmdEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getRangedAttackCmd() {
+        return rangedAttackCmdEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRangedAttackCmd_Modus() {
+        return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRangedAttackCmd_Range() {
+        return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getRangedAttackCmd_Weapon() {
+        return (EReference)rangedAttackCmdEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -978,6 +1092,19 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         interruptActionEClass = createEClass(INTERRUPT_ACTION);
 
+        setFeatureCommandEClass = createEClass(SET_FEATURE_COMMAND);
+        createEAttribute(setFeatureCommandEClass, SET_FEATURE_COMMAND__VALUE);
+        createEReference(setFeatureCommandEClass, SET_FEATURE_COMMAND__OBJECT);
+        createEReference(setFeatureCommandEClass, SET_FEATURE_COMMAND__FEATURE);
+
+        meeleAttackCmdEClass = createEClass(MEELE_ATTACK_CMD);
+        createEReference(meeleAttackCmdEClass, MEELE_ATTACK_CMD__WEAPON);
+
+        rangedAttackCmdEClass = createEClass(RANGED_ATTACK_CMD);
+        createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__MODUS);
+        createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__RANGE);
+        createEReference(rangedAttackCmdEClass, RANGED_ATTACK_CMD__WEAPON);
+
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
     }
@@ -1034,6 +1161,9 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         simpleActionsEClass.getESuperTypes().add(this.getCommandWrapper());
         freeActionEClass.getESuperTypes().add(this.getSubjectCommand());
         interruptActionEClass.getESuperTypes().add(this.getSubjectCommand());
+        setFeatureCommandEClass.getESuperTypes().add(this.getCommand());
+        meeleAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
+        rangedAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1127,6 +1257,19 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(freeActionEClass, FreeAction.class, "FreeAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(interruptActionEClass, InterruptAction.class, "InterruptAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(setFeatureCommandEClass, SetFeatureCommand.class, "SetFeatureCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSetFeatureCommand_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetFeatureCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSetFeatureCommand_Object(), ecorePackage.getEObject(), null, "object", null, 0, 1, SetFeatureCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSetFeatureCommand_Feature(), ecorePackage.getEStructuralFeature(), null, "feature", null, 0, 1, SetFeatureCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(meeleAttackCmdEClass, MeeleAttackCmd.class, "MeeleAttackCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getMeeleAttackCmd_Weapon(), theShr5Package.getNahkampfwaffe(), null, "weapon", null, 1, 1, MeeleAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(rangedAttackCmdEClass, RangedAttackCmd.class, "RangedAttackCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRangedAttackCmd_Modus(), theShr5Package.getFeuerModus(), "modus", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRangedAttackCmd_Range(), ecorePackage.getEInt(), "range", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getRangedAttackCmd_Weapon(), theShr5Package.getAbstaktFernKampfwaffe(), null, "weapon", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

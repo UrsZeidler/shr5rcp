@@ -92,5 +92,18 @@
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//FreeAction"/>
     <genClasses ecoreClass="gameplay.ecore#//InterruptAction"/>
+    <genClasses ecoreClass="gameplay.ecore#//SetFeatureCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SetFeatureCommand/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetFeatureCommand/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetFeatureCommand/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//MeeleAttackCmd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//MeeleAttackCmd/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//RangedAttackCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/modus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/range"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//RangedAttackCmd/weapon"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

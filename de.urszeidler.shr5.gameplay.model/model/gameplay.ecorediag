@@ -370,6 +370,104 @@
       <element xmi:type="ecore:EDataType" href="gameplay.ecore#//CommandCallback"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j9RWcgxCEeStocVKc3B8yQ" x="-190" y="60"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_iZ_OgBETEeSOe8bMc8XWug" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_iayfwBETEeSOe8bMc8XWug" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_iayfwRETEeSOe8bMc8XWug" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_6rAiYBETEeSOe8bMc8XWug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//SetFeatureCommand/value"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6rAiYRETEeSOe8bMc8XWug"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_iazG0BETEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_iazG0RETEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_iazG0hETEeSOe8bMc8XWug"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iazG0xETEeSOe8bMc8XWug" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_iazG1BETEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_iazG1RETEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_iazG1hETEeSOe8bMc8XWug"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_iZ_OgRETEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="gameplay.ecore#//SetFeatureCommand"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZ_OghETEeSOe8bMc8XWug" x="265" y="165"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_KhzKABEWEeSOe8bMc8XWug" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_Kh7s4BEWEeSOe8bMc8XWug" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_Kh8T8BEWEeSOe8bMc8XWug" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_Kh8T8REWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Kh8T8hEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Kh8T8xEWEeSOe8bMc8XWug"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Kh8T9BEWEeSOe8bMc8XWug" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_Kh8T9REWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Kh8T9hEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Kh8T9xEWEeSOe8bMc8XWug"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_KhzKAREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="gameplay.ecore#//MeeleAttackCmd"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KhzKAhEWEeSOe8bMc8XWug" x="920" y="865"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_m_G4IBEWEeSOe8bMc8XWug" type="1001">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nAms8BEWEeSOe8bMc8XWug" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nAms8REWEeSOe8bMc8XWug" key="modelID" value="EcoreTools"/>
+      </eAnnotations>
+      <children xmi:type="notation:Node" xmi:id="_m_HfMBEWEeSOe8bMc8XWug" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_m_HfMREWEeSOe8bMc8XWug" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_m_HfMhEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_m_HfMxEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_m_HfNBEWEeSOe8bMc8XWug"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_m_IGQBEWEeSOe8bMc8XWug" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_m_IGQREWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_m_IGQhEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_m_IGQxEWEeSOe8bMc8XWug"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_m_G4IREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Nahkampfwaffe"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_G4IhEWEeSOe8bMc8XWug" x="1120" y="855"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9D16oBEWEeSOe8bMc8XWug" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_9ECu8BEWEeSOe8bMc8XWug" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_9ECu8REWEeSOe8bMc8XWug" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_B8C_sBEXEeSOe8bMc8XWug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//RangedAttackCmd/modus"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_B8C_sREXEeSOe8bMc8XWug"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KCVxYBEXEeSOe8bMc8XWug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//RangedAttackCmd/range"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_KCVxYREXEeSOe8bMc8XWug"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_9ECu8hEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_9ECu8xEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_9ECu9BEWEeSOe8bMc8XWug"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9ECu9REWEeSOe8bMc8XWug" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_9ECu9hEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_9ECu9xEWEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_9ECu-BEWEeSOe8bMc8XWug"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_9D16oREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="gameplay.ecore#//RangedAttackCmd"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9D16ohEWEeSOe8bMc8XWug" x="745" y="865"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_I9rPYBEXEeSOe8bMc8XWug" type="1001">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_I-EQ8BEXEeSOe8bMc8XWug" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_I-EQ8REXEeSOe8bMc8XWug" key="modelID" value="EcoreTools"/>
+      </eAnnotations>
+      <children xmi:type="notation:Node" xmi:id="_I9rPYxEXEeSOe8bMc8XWug" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_I9r2cBEXEeSOe8bMc8XWug" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_I9r2cREXEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_I9r2chEXEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_I9r2cxEXEeSOe8bMc8XWug"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_I9r2dBEXEeSOe8bMc8XWug" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_I9r2dREXEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_I9r2dhEXEeSOe8bMc8XWug"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_I9r2dxEXEeSOe8bMc8XWug"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_I9rPYREXEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9rPYhEXEeSOe8bMc8XWug" x="505" y="855"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6sTbwY_GEd6SEpVfiQZsGw"/>
     <element xmi:type="ecore:EPackage" href="gameplay.ecore#/"/>
     <edges xmi:type="notation:Edge" xmi:id="_wH-r8I_HEd6SEpVfiQZsGw" type="3002" source="_-0TL4I_GEd6SEpVfiQZsGw" target="_rRXiUI_HEd6SEpVfiQZsGw">
@@ -544,18 +642,6 @@
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//CombatTurn/combatants"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IYK8wrREeSXe8h_-hOPdg" points="[50, 0, -493, -68]$[543, 0, 0, -68]$[543, 40, 0, -28]"/>
     </edges>
-    <edges xmi:type="notation:Edge" xmi:id="_5IYyAgrREeSXe8h_-hOPdg" type="3002" source="_5IAXgArREeSXe8h_-hOPdg" target="_ds-GEArOEeSXe8h_-hOPdg">
-      <children xmi:type="notation:Node" xmi:id="_5IZZEArREeSXe8h_-hOPdg" type="4011">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_5IZZEQrREeSXe8h_-hOPdg" x="-10" y="-10"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_5IZZEgrREeSXe8h_-hOPdg" type="4012">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_5IZZEwrREeSXe8h_-hOPdg" x="10" y="10"/>
-      </children>
-      <styles xmi:type="notation:ConnectorStyle" xmi:id="_5IYyAwrREeSXe8h_-hOPdg" lineColor="4210752"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_5IYyBArREeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="gameplay.ecore#//CombatTurn/actionPhases"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IYyBQrREeSXe8h_-hOPdg" points="[0, -20, -255, 62]$[0, -82, -255, 0]$[195, -82, -60, 0]"/>
-    </edges>
     <edges xmi:type="notation:Edge" xmi:id="_5IaAIArREeSXe8h_-hOPdg" type="3003" source="_5IAXgArREeSXe8h_-hOPdg" target="_rRXiUI_HEd6SEpVfiQZsGw">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_5IaAIQrREeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_5IaAIgrREeSXe8h_-hOPdg" fontName="Ubuntu"/>
@@ -582,6 +668,53 @@
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fHTA4wuQEeStocVKc3B8yQ" points="[2, -9, -30, 87]$[-25, -86, -57, 10]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fHWrQAuQEeStocVKc3B8yQ" id="(0.6153846153846154,0.20408163265306123)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_lKCUQBETEeSOe8bMc8XWug" type="3003" source="_iZ_OgBETEeSOe8bMc8XWug" target="_rRXiUI_HEd6SEpVfiQZsGw">
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_lKCUQRETEeSOe8bMc8XWug" routing="Rectilinear" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_lKCUQhETEeSOe8bMc8XWug" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lKCUQxETEeSOe8bMc8XWug" points="[31, -20, -193, 129]$[225, -133, 1, 16]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lKV2QBETEeSOe8bMc8XWug" id="(0.208,0.8888888888888888)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_OCQZABEWEeSOe8bMc8XWug" type="3003" source="_KhzKABEWEeSOe8bMc8XWug" target="_WpfNcI_JEd6SEpVfiQZsGw">
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_OCQZAREWEeSOe8bMc8XWug" routing="Rectilinear" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OCQZAhEWEeSOe8bMc8XWug" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OCQZAxEWEeSOe8bMc8XWug" points="[-1, -4, 23, 70]$[56, -72, 80, 2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OCRnIBEWEeSOe8bMc8XWug" id="(0.4032258064516129,0.11904761904761904)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_oDfGQBEWEeSOe8bMc8XWug" type="3002" source="_KhzKABEWEeSOe8bMc8XWug" target="_m_G4IBEWEeSOe8bMc8XWug">
+      <children xmi:type="notation:Node" xmi:id="_oDg7cBEWEeSOe8bMc8XWug" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oDg7cREWEeSOe8bMc8XWug" x="-10" y="-10"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oDiJkBEWEeSOe8bMc8XWug" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oDiJkREWEeSOe8bMc8XWug" x="10" y="10"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_oDfGQREWEeSOe8bMc8XWug" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_oDfGQhEWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//MeeleAttackCmd/weapon"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDfGQxEWEeSOe8bMc8XWug" points="[18, 7, -192, -7]$[148, 7, -62, -7]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oDnCEBEWEeSOe8bMc8XWug" id="(0.8548387096774194,0.35714285714285715)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_BBHBcBEXEeSOe8bMc8XWug" type="3003" source="_9D16oBEWEeSOe8bMc8XWug" target="_WpfNcI_JEd6SEpVfiQZsGw">
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_BBHBcREXEeSOe8bMc8XWug" routing="Rectilinear" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_BBHBchEXEeSOe8bMc8XWug" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BBHBcxEXEeSOe8bMc8XWug" points="[15, -20, -71, 98]$[15, -60, -71, 58]$[80, -60, -6, 58]$[80, -109, -6, 9]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BBIPkBEXEeSOe8bMc8XWug" id="(0.29012345679012347,0.7906976744186046)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_MgufYBEXEeSOe8bMc8XWug" type="3002" source="_9D16oBEWEeSOe8bMc8XWug" target="_I9rPYBEXEeSOe8bMc8XWug">
+      <children xmi:type="notation:Node" xmi:id="_MgvGcBEXEeSOe8bMc8XWug" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MgvGcREXEeSOe8bMc8XWug" x="-10" y="-10"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_MgvGchEXEeSOe8bMc8XWug" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MgvGcxEXEeSOe8bMc8XWug" x="10" y="10"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_MgufYREXEeSOe8bMc8XWug" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_MgufYhEXEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//RangedAttackCmd/weapon"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MgufYxEXEeSOe8bMc8XWug" points="[-10, 3, 233, 4]$[-236, 27, 7, 28]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MgwUkBEXEeSOe8bMc8XWug" id="(0.07006369426751592,0.38461538461538464)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_kXGUUAuVEeStocVKc3B8yQ" type="EcoreTools" name="diagram_combat_turn" measurementUnit="Pixel">
@@ -611,7 +744,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_l2EzwQuVEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//Initative"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l2EzwguVEeStocVKc3B8yQ" x="1100" y="320"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l2EzwguVEeStocVKc3B8yQ" x="690" y="225"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_mVYl8AuVEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_mVZNAAuVEeStocVKc3B8yQ" type="4001"/>
@@ -631,7 +764,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_mVYl8QuVEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//CombatTurn"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mVYl8guVEeStocVKc3B8yQ" x="538" y="201"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mVYl8guVEeStocVKc3B8yQ" x="128" y="106"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_ougZcAuVEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_ouhAgguVEeStocVKc3B8yQ" type="4001"/>
@@ -647,7 +780,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_ouhAgAuVEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//PhaseCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ouhAgQuVEeStocVKc3B8yQ" x="810" y="170"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ouhAgQuVEeStocVKc3B8yQ" x="400" y="75"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_zowjsAuZEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_zoxKwAuZEeStocVKc3B8yQ" type="4001"/>
@@ -667,7 +800,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_zowjsQuZEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//InitativePass"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zowjsguZEeStocVKc3B8yQ" x="770" y="385"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zowjsguZEeStocVKc3B8yQ" x="360" y="290"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_G1fF8AxYEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_G1ftAgxYEeStocVKc3B8yQ" type="4001"/>
@@ -683,7 +816,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_G1ftAAxYEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SubjectCommand"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G1ftAQxYEeStocVKc3B8yQ" x="1000" y="185"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G1ftAQxYEeStocVKc3B8yQ" x="590" y="90"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_hycegBAwEeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_hyx1sBAwEeSKWqcsw0APfg" type="4001"/>
@@ -699,7 +832,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_hycegRAwEeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//CommandWrapper"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hyceghAwEeSKWqcsw0APfg" x="835" y="505"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hyceghAwEeSKWqcsw0APfg" x="425" y="410"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_2MoRcBA1EeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_2MqGoBA1EeSKWqcsw0APfg" type="4001"/>
@@ -715,7 +848,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_2MoRcRA1EeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//ComplexAction"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2MoRchA1EeSKWqcsw0APfg" x="795" y="610"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2MoRchA1EeSKWqcsw0APfg" x="385" y="515"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_5BQVMBA1EeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_5BQ8QBA1EeSKWqcsw0APfg" type="4001"/>
@@ -731,7 +864,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_5BQVMRA1EeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SimpleAction"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5BQVMhA1EeSKWqcsw0APfg" x="1125" y="610"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5BQVMhA1EeSKWqcsw0APfg" x="715" y="515"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_-aCXwBA1EeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_-aDl4BA1EeSKWqcsw0APfg" type="4001"/>
@@ -747,7 +880,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_-aCXwRA1EeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SimpleActions"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-aCXwhA1EeSKWqcsw0APfg" x="920" y="610"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-aCXwhA1EeSKWqcsw0APfg" x="510" y="515"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_RQNzkBA2EeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_RQOaoBA2EeSKWqcsw0APfg" type="4001"/>
@@ -763,7 +896,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_RQNzkRA2EeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//FreeAction"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RQNzkhA2EeSKWqcsw0APfg" x="1035" y="530"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RQNzkhA2EeSKWqcsw0APfg" x="625" y="435"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_pJG7UBA2EeSKWqcsw0APfg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_pJHiYBA2EeSKWqcsw0APfg" type="4001"/>
@@ -779,7 +912,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_pJG7URA2EeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//InterruptAction"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pJG7UhA2EeSKWqcsw0APfg" x="1170" y="530"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pJG7UhA2EeSKWqcsw0APfg" x="760" y="435"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_kXGUUQuVEeStocVKc3B8yQ"/>
     <element xmi:type="ecore:EPackage" href="gameplay.ecore#/"/>

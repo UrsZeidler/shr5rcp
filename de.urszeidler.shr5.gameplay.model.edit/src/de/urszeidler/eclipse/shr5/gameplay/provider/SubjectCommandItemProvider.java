@@ -365,6 +365,21 @@ public class SubjectCommandItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
                  GameplayFactory.eINSTANCE.createInterruptAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSetFeatureCommand()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createMeeleAttackCmd()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createRangedAttackCmd()));
     }
 
     /**

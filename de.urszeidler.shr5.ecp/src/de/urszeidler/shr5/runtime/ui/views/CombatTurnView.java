@@ -9,7 +9,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.CommandParameter;
@@ -30,8 +29,6 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.custom.ScrolledComposite;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -59,33 +56,33 @@ import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
  * @author urs
  */
 public class CombatTurnView extends ViewPart implements ISelectionListener {
-    public abstract class SelectionListenerImplementation implements SelectionListener {
-
-        @Override
-        public void widgetDefaultSelected(SelectionEvent e) {
-            // TODO Auto-generated method stub
-
-        }
-    }
-
-    public class EmptySelection implements ISelection {
-
-        @Override
-        public boolean isEmpty() {
-            return true;
-        }
-
-    }
-
+    
+//    
+//    public abstract class SelectionListenerImplementation implements SelectionListener {
+//
+//        @Override
+//        public void widgetDefaultSelected(SelectionEvent e) {
+//
+//        }
+//    }
+//
+//    public class EmptySelection implements ISelection {
+//
+//        @Override
+//        public boolean isEmpty() {
+//            return true;
+//        }
+//
+//    }
+//
     public class HandlungsContenProvider implements IContentProvider, ITreeContentProvider {
 
         public HandlungsContenProvider(CombatTurn kampfrunde) {
-            // TODO Auto-generated constructor stub
         }
 
         @Override
         public void dispose() {
-            // TODO Auto-generated method stub
+
 
         }
 
@@ -93,19 +90,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 
             rootContentProvider.inputChanged(viewer, oldInput, newInput);
-
-            // TableItem[] items = table_handlungen.getItems();
-            // for (TableItem tableItem : items) {
-            //
-            //
-            //
-            // GridPanel gridPanel = new GridPanel(table_handlungen, SWT.NONE);
-            //
-            // TableEditor editor = new TableEditor(table_handlungen);
-            // editor.grabHorizontal = editor.grabVertical = true;
-            // editor.minimumHeight = 160;
-            // editor.setEditor(gridPanel, tableItem, 0);
-            // }
 
         }
 
@@ -123,8 +107,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         @Override
         public Object getParent(Object element) {
             if (element instanceof PhaseCmd) {
-                PhaseCmd new_name = (PhaseCmd)element;
-                return kampfrunde;
+                return combatTurn;
             }
             return rootContentProvider.getChildren(element);
         }
@@ -157,8 +140,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
         @Override
         public void dispose() {
-            // TODO Auto-generated method stub
-
         }
 
         @Override
@@ -199,37 +180,11 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
     }
 
-    // private SelectionProvider selectionProvider = new SelectionProvider();
-    //
-    // private SelectionProvider phaseSelectionProvider = new SelectionProvider();
-    // private SelectionProvider rhSelectionProvider = new SelectionProvider();
-    // private SelectionProvider lhSelectionProvider = new SelectionProvider();
-    // private SelectionProvider runtimePersonSelectionProvider = new SelectionProvider();
-    //
-    // private EMFDataBindingContext ctx;
-    //
-    // private EMFUpdateValueStrategy updateStrategie;
-
     private AdapterFactoryItemDelegator itemDelegator;
-
     private LabelProvider labelProvider;
-
-    // private BeschreibungUIToolkit personaToolkit;
-
-    private CombatTurn kampfrunde;
-
+    private CombatTurn combatTurn;
     private ComposedAdapterFactory adapterFactory;
-
-    // private GegenstandsUIToolkit rhGegenstandsUIToolkit;
-    //
-    // private GegenstandsUIToolkit lhGegenstandsUIToolkit;
-    // private AbstaktPersona persona;
-    private InitativePass currentPhase;
-
-    // private GenericUItoolkit genericUItoolkit;
-
     private AdapterFactoryContentProvider rootContentProvider;
-
     private AdapterFactoryContentProvider actionListContentProvider;
 
     public CombatTurnView() {
@@ -267,52 +222,24 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
             }
         };
 
-        // ctx = new EMFDataBindingContext(SWTObservables.getRealm(Display.getCurrent()));
-        // updateStrategie = new EMFUpdateValueStrategy();
-        // itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
-        // labelProvider = AdapterFactoryUtil.getInstance().getLabelProvider();
-
-        // personaToolkit =
-        // new BeschreibungUIToolkit(updateStrategie, new
-        // FormToolkit(Display.getCurrent()), ctx,
-        // runtimePersonSelectionProvider);
-
-        // new PersonaUIToolkit(updateStrategie, new FormToolkit(Display.getCurrent()), ctx, phaseSelectionProvider);
-        // rhGegenstandsUIToolkit = new GegenstandsUIToolkit(updateStrategie, new FormToolkit(Display.getCurrent()), ctx,
-        // rhSelectionProvider);
-        // lhGegenstandsUIToolkit = new GegenstandsUIToolkit(updateStrategie, new FormToolkit(Display.getCurrent()), ctx,
-        // lhSelectionProvider);
-        //
-        // genericUItoolkit = new GenericUItoolkit(updateStrategie, new FormToolkit(Display.getCurrent()), ctx,
-        // runtimePersonSelectionProvider);
 
     }
 
     public static final String ID = "de.urszeidler.test.CombatTurnnView";
 
     private SashForm top = null;
-
     private Composite composite_bottom = null;
-
     private BasicActionPanelWidget basicActionPanel = null;
+    //private HandlungsContenProvider contentProvider;
 
-    // private Table table_handlungen = null;
+    // private Tree tree;
     //
-    // private TableViewer tableViewer = null;
+    // private TreeViewer treeViewer;
 
-    private HandlungsContenProvider contentProvider;
-
-//    private Tree tree;
-//
-//    private TreeViewer treeViewer;
-
-    private WritableValue phaseSelection = new WritableValue();
-    private WritableValue runtimeCharacterSelection = new WritableValue();
+    //private WritableValue phaseSelection = new WritableValue();
+   // private WritableValue runtimeCharacterSelection = new WritableValue();
 
     private CombatTurnList combatTurnList;
-
-    //
-    // private Adapter kampfrundenAdapter = new CombatTurnnAdapter();
 
     /*
      * (non-Javadoc)
@@ -341,50 +268,50 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         basicActionPanel.getActionPanel().getTreeViewer().setContentProvider(new SimpleListContenProvider(actionListContentProvider));
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
 
-        contentProvider = new HandlungsContenProvider(kampfrunde);
-//        treeViewer.setContentProvider(contentProvider);
-//        treeViewer.setLabelProvider(labelProvider);
-//
-//        treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-//
-//            @Override
-//            public void selectionChanged(SelectionChangedEvent event) {
-//
-//                ISelection selection = event.getSelection();
-//                if (selection instanceof IStructuredSelection) {
-//                    IStructuredSelection ss = (IStructuredSelection)selection;
-//                    Object firstElement = ss.getFirstElement();
-//                    if (firstElement instanceof InitativePass) {
-//                        currentPhase = (InitativePass)firstElement;
-//                        RuntimeCharacter subject = currentPhase.getSubject();
-//                        if (subject == null)
-//                            return;
-//
-//                        basicActionPanel.setPhase(currentPhase);
-//                        setPersonaHandlung(currentPhase);
-//                        // phaseSelection.setValue(personaHandlung);
-//                        // ManagedCharacter persona = subject.getCharacter();
-//                        // runtimePersonSelectionProvider.setSelection(new StructuredSelection(subject));
-//                        // runtimeCharacterSelection.setValue(subject);
-//                        //
-//                        // setPersonaHandlung(personaHandlung);
-//                        //
-//                        // phaseSelectionProvider.setSelection(new StructuredSelection(persona));
-//                        //
-//                        // if (subject.getRightHand() == null)
-//                        // rhSelectionProvider.setSelection(new EmptySelection());
-//                        // else
-//                        // rhSelectionProvider.setSelection(new StructuredSelection(subject.getRightHand()));
-//                        //
-//                        // if (subject.getLeftHand() == null)
-//                        // lhSelectionProvider.setSelection(new EmptySelection());
-//                        // else
-//                        // lhSelectionProvider.setSelection(new StructuredSelection(subject.getLeftHand()));
-//
-//                    }
-//                }
-//            }
-//        });
+        //contentProvider = new HandlungsContenProvider(kampfrunde);
+        // treeViewer.setContentProvider(contentProvider);
+        // treeViewer.setLabelProvider(labelProvider);
+        //
+        // treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+        //
+        // @Override
+        // public void selectionChanged(SelectionChangedEvent event) {
+        //
+        // ISelection selection = event.getSelection();
+        // if (selection instanceof IStructuredSelection) {
+        // IStructuredSelection ss = (IStructuredSelection)selection;
+        // Object firstElement = ss.getFirstElement();
+        // if (firstElement instanceof InitativePass) {
+        // currentPhase = (InitativePass)firstElement;
+        // RuntimeCharacter subject = currentPhase.getSubject();
+        // if (subject == null)
+        // return;
+        //
+        // basicActionPanel.setPhase(currentPhase);
+        // setPersonaHandlung(currentPhase);
+        // // phaseSelection.setValue(personaHandlung);
+        // // ManagedCharacter persona = subject.getCharacter();
+        // // runtimePersonSelectionProvider.setSelection(new StructuredSelection(subject));
+        // // runtimeCharacterSelection.setValue(subject);
+        // //
+        // // setPersonaHandlung(personaHandlung);
+        // //
+        // // phaseSelectionProvider.setSelection(new StructuredSelection(persona));
+        // //
+        // // if (subject.getRightHand() == null)
+        // // rhSelectionProvider.setSelection(new EmptySelection());
+        // // else
+        // // rhSelectionProvider.setSelection(new StructuredSelection(subject.getRightHand()));
+        // //
+        // // if (subject.getLeftHand() == null)
+        // // lhSelectionProvider.setSelection(new EmptySelection());
+        // // else
+        // // lhSelectionProvider.setSelection(new StructuredSelection(subject.getLeftHand()));
+        //
+        // }
+        // }
+        // }
+        // });
 
         createActions();
     }
@@ -394,16 +321,32 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
             public void run() {
                 // showMessage("Action 1 executed");
                 // currentPhase.redo();
-                if (kampfrunde != null)
-                    kampfrunde.redo();
+                if (combatTurn != null)
+                    combatTurn.redo();
 
-                setTempCombatTurn(kampfrunde);
+                setTempCombatTurn(combatTurn);
             }
         };
         action1.setText("Sort");
         action1.setToolTipText("sort tooltip");
         action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_ELCL_STOP));
         getViewSite().getActionBars().getToolBarManager().add(action1);
+
+        action1 = new Action() {
+            public void run() {
+                // showMessage("Action 1 executed");
+                // currentPhase.redo();
+                if (combatTurn != null && combatTurn.getCurrentTurn() != null )
+                    combatTurn.getCurrentTurn().redo();
+
+                // setTempCombatTurn(kampfrunde);
+            }
+        };
+        // action1.setText("Sort");
+        action1.setToolTipText("sort tooltip");
+        action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_ELCL_SYNCED));
+        getViewSite().getActionBars().getToolBarManager().add(action1);
+
     }
 
     /**
@@ -432,10 +375,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
         basicActionPanel.getActionPanel().getTreeViewer().setInput(list);
     }
-
-    // protected void setPeronaActions(AbstaktPersona persona2) {
-    //
-    // }
 
     /*
      * (non-Javadoc) Method declared on IViewPart.
@@ -473,16 +412,16 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
 
         combatTurnList = new CombatTurnList(scrolledComposite, SWT.NONE);
         scrolledComposite.setContent(combatTurnList);
-        // scrolledComposite.setMinSize(20,20);
+        
 
-//        tree = new Tree(composite_bottom, SWT.NONE);
-//        tree.setLayoutData(gridData1);
-//        treeViewer = new TreeViewer(tree);
+        // tree = new Tree(composite_bottom, SWT.NONE);
+        // tree.setLayoutData(gridData1);
+        // treeViewer = new TreeViewer(tree);
     }
 
     @Override
     public void dispose() {
-//        tree.dispose();
+        // tree.dispose();
         getSite().getPage().removeSelectionListener(this);
         super.dispose();
     }
@@ -497,104 +436,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
         basicActionPanel = new BasicActionPanelWidget(top, SWT.NONE);
         basicActionPanel.setLayoutData(gridData);
 
-        // EMFObservables.observeDetailValue(ctx.getValidationRealm(), phaseSelection,
-        // GameplayPackage.Literals.PHASE_CMD__PHASE
-        // );
-        // basicActionPanel.getLabel_image() FeaturePath.fromList()
-
-        // ActionPanelBinder.bindBasic(basicActionPanel, personaToolkit);
-        // ActionPanelBinder.bindBasic(basicActionPanel, rhGegenstandsUIToolkit, lhGegenstandsUIToolkit);
-        // ActionPanelBinder.bindRuntimePerson(basicActionPanel.getStateMonitor(), genericUItoolkit);
-        //
-        // basicActionPanel.getActionPanel().getButton_change_rh().addSelectionListener(
-        // new SelectionListenerImplementation() {
-        //
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // // Object choosen = personaToolkit.handleSingleReferenceChoosen(shadowrunPackage.eINSTANCE
-        // // .getAbstaktPersona_RechteHand());
-        // // SetObjectFeatureCommand changeCommand = CommandFactory.createChangeCommand(choosen,
-        // // shadowrunPackage.eINSTANCE.getAbstaktPersona_RechteHand());
-        // // changeCommand.setObject(persona);
-        // // FreieHandlungWrapper handlungWrapper = commandstackFactory.eINSTANCE
-        // // .createFreieHandlungWrapper();
-        // // handlungWrapper.setWrappedCommand(changeCommand);
-        // // handlungWrapper.setSubject(personaHandlung.getSubject());
-        // //
-        // // personaHandlung.setFreie(handlungWrapper);
-        // // handlungWrapper.redo();
-        // }
-        //
-        // });
-        //
-        // basicActionPanel.getActionPanel().getButton_change_lh().addSelectionListener(
-        // new SelectionListenerImplementation() {
-        //
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        //
-        // // Object choosen = personaToolkit.handleSingleReferenceChoosen(shadowrunPackage.eINSTANCE
-        // // .getAbstaktPersona_LinkeHand());
-        // // SetObjectFeatureCommand changeCommand = CommandFactory.createChangeCommand(choosen,
-        // // shadowrunPackage.eINSTANCE.getAbstaktPersona_LinkeHand());
-        // // changeCommand.setObject(persona);
-        // // changeCommand.redo();
-        //
-        // }
-        // });
-        //
-        // basicActionPanel.getActionPanel().getButton_use_rh().addSelectionListener(
-        // new SelectionListenerImplementation() {
-        //
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // // CommandFactory.createDefaultCommand(persona.getRechteHand(), personaHandlung);
-        //
-        // }
-        // });
-        //
-        // basicActionPanel.getActionPanel().getButton_use_lh().addSelectionListener(
-        // new SelectionListenerImplementation() {
-        // @Override
-        // public void widgetSelected(SelectionEvent e) {
-        // // CommandFactory.createDefaultCommand(persona.getLinkeHand(), personaHandlung);
-        //
-        // }
-        //
-        // });
     }
-
-    // public void addPostSelectionChangedListener(ISelectionChangedListener listener) {
-    // selectionProvider.addPostSelectionChangedListener(listener);
-    // }
-    //
-    // public void addSelectionChangedListener(ISelectionChangedListener listener) {
-    // selectionProvider.addSelectionChangedListener(listener);
-    // }
-    //
-    // public ISelection getSelection() {
-    // return selectionProvider.getSelection();
-    // }
-    //
-    // public void postSelectionChanged(SelectionChangedEvent event) {
-    // selectionProvider.postSelectionChanged(event);
-    // }
-    //
-    // public void removePostSelectionChangedListener(ISelectionChangedListener listener) {
-    // selectionProvider.removePostSelectionChangedListener(listener);
-    // }
-    //
-    // public void removeSelectionChangedListener(ISelectionChangedListener listener) {
-    // selectionProvider.removeSelectionChangedListener(listener);
-    // }
-    //
-    // public void selectionChanged(SelectionChangedEvent event) {
-    // selectionProvider.selectionChanged(event);
-    // }
-    //
-    // public void setSelection(ISelection selection) {
-    // selectionProvider.setSelection(selection);
-    // }
 
     @Override
     public void selectionChanged(IWorkbenchPart part, ISelection selection) {
@@ -604,7 +446,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
             if (firstElement instanceof CombatTurn) {
                 CombatTurn kr = (CombatTurn)firstElement;
                 setTempCombatTurn(kr);
-               
             }
             // selectionProvider.setSelection(selection);
         }
@@ -612,10 +453,10 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
     }
 
     private void setTempCombatTurn(CombatTurn kr) {
-      //  treeViewer.setInput(kr);
-        kampfrunde = kr;
+        // treeViewer.setInput(kr);
+        combatTurn = kr;
         combatTurnList.setCombatTurn(kr);
-        basicActionPanel.setPhase((InitativePass)kr.getCurrentTurn());
+        basicActionPanel.setPhase(kr.getCurrentTurn());
     }
 
 }

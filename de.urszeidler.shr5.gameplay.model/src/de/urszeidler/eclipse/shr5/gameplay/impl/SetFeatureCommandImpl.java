@@ -3,54 +3,56 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.Initative;
-import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Combat Turn</b></em>'.
+ * An implementation of the model object '<em><b>Set Feature Command</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getSubCommands <em>Sub Commands</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getDate <em>Date</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCmdCallback <em>Cmd Callback</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuting <em>Executing</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isCanExecute <em>Can Execute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCombatants <em>Combatants</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getActionPhases <em>Action Phases</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCurrentTurn <em>Current Turn</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuted <em>Executed</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuting <em>Executing</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getObject <em>Object</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CombatTurnImpl extends MinimalEObjectImpl.Container implements CombatTurn {
+public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implements SetFeatureCommand {
     /**
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -105,13 +107,11 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCmdCallback()
-     * @generated not
+     * @generated
      * @ordered
      */
-    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;// (ComandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getComandCallback(),
-                                                                        // "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = (CommandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getCommandCallback(), "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
@@ -163,41 +163,51 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     protected static final boolean CAN_EXECUTE_EDEFAULT = false;
 
     /**
-     * The cached value of the '{@link #getCombatants() <em>Combatants</em>}' reference list.
+     * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getCombatants()
+     * @see #getValue()
      * @generated
      * @ordered
      */
-    protected EList<RuntimeCharacter> combatants;
+    protected static final Object VALUE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getActionPhases() <em>Action Phases</em>}' containment reference list.
+     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getActionPhases()
+     * @see #getValue()
      * @generated
      * @ordered
      */
-    protected EList<InitativePass> actionPhases;
+    protected Object value = VALUE_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getCurrentTurn() <em>Current Turn</em>}' reference.
+     * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getCurrentTurn()
+     * @see #getObject()
      * @generated
      * @ordered
      */
-    protected InitativePass currentTurn;
+    protected EObject object;
+
+    /**
+     * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getFeature()
+     * @generated
+     * @ordered
+     */
+    protected EStructuralFeature feature;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected CombatTurnImpl() {
+    protected SetFeatureCommandImpl() {
         super();
     }
 
@@ -208,7 +218,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      */
     @Override
     protected EClass eStaticClass() {
-        return GameplayPackage.Literals.COMBAT_TURN;
+        return GameplayPackage.Literals.SET_FEATURE_COMMAND;
     }
 
     /**
@@ -229,7 +239,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         boolean oldExecuted = executed;
         executed = newExecuted;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__EXECUTED, oldExecuted, executed));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__EXECUTED, oldExecuted, executed));
     }
 
     /**
@@ -239,7 +249,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      */
     public EList<Command> getSubCommands() {
         if (subCommands == null) {
-            subCommands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.COMBAT_TURN__SUB_COMMANDS);
+            subCommands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS);
         }
         return subCommands;
     }
@@ -262,7 +272,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         Date oldDate = date;
         date = newDate;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__DATE, oldDate, date));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__DATE, oldDate, date));
     }
 
     /**
@@ -285,7 +295,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, cmdCallback, !oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback, cmdCallback, !oldCmdCallbackESet));
     }
 
     /**
@@ -299,7 +309,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
     }
 
     /**
@@ -329,17 +339,18 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         boolean oldExecuting = executing;
         executing = newExecuting;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__EXECUTING, oldExecuting, executing));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__EXECUTING, oldExecuting, executing));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated not
+     * @generated
      */
     public boolean isCanExecute() {
-        return !executed && getCombatants().size() > 0;
+        // TODO: implement this method to return the 'Can Execute' attribute
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -347,11 +358,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<RuntimeCharacter> getCombatants() {
-        if (combatants == null) {
-            combatants = new EObjectResolvingEList<RuntimeCharacter>(RuntimeCharacter.class, this, GameplayPackage.COMBAT_TURN__COMBATANTS);
-        }
-        return combatants;
+    public Object getValue() {
+        return value;
     }
 
     /**
@@ -359,156 +367,109 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<InitativePass> getActionPhases() {
-        if (actionPhases == null) {
-            actionPhases = new EObjectContainmentEList<InitativePass>(InitativePass.class, this, GameplayPackage.COMBAT_TURN__ACTION_PHASES);
-        }
-        return actionPhases;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InitativePass getCurrentTurn() {
-        if (currentTurn != null && currentTurn.eIsProxy()) {
-            InternalEObject oldCurrentTurn = (InternalEObject)currentTurn;
-            currentTurn = (InitativePass)eResolveProxy(oldCurrentTurn);
-            if (currentTurn != oldCurrentTurn) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.COMBAT_TURN__CURRENT_TURN, oldCurrentTurn, currentTurn));
-            }
-        }
-        return currentTurn;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InitativePass basicGetCurrentTurn() {
-        return currentTurn;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCurrentTurn(InitativePass newCurrentTurn) {
-        InitativePass oldCurrentTurn = currentTurn;
-        currentTurn = newCurrentTurn;
+    public void setValue(Object newValue) {
+        Object oldValue = value;
+        value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__CURRENT_TURN, oldCurrentTurn, currentTurn));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__VALUE, oldValue, value));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated not
+     * @generated
      */
-    public void doTurn() {
-        if (getCurrentTurn() != null) {
-            InitativePass turn = getCurrentTurn();
-            if (turn instanceof InitativePass) {
-                InitativePass ip = (InitativePass)turn;
-                if (ip.isCanExecute()) {
-                    ip.redo();
-                    int indexOf = getActionPhases().indexOf(ip);
-                    if (indexOf > getActionPhases().size()) {
-                        setCurrentTurn(ip);
-                    } else {
-                        //the combarturn is done
-                        setCurrentTurn(null);
-                        executed = true;
-                        executing = false;
-                    }
-                }
+    public EObject getObject() {
+        if (object != null && object.eIsProxy()) {
+            InternalEObject oldObject = (InternalEObject)object;
+            object = eResolveProxy(oldObject);
+            if (object != oldObject) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.SET_FEATURE_COMMAND__OBJECT, oldObject, object));
             }
-
         }
-
+        return object;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated not
+     * @generated
+     */
+    public EObject basicGetObject() {
+        return object;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setObject(EObject newObject) {
+        EObject oldObject = object;
+        object = newObject;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__OBJECT, oldObject, object));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EStructuralFeature getFeature() {
+        if (feature != null && feature.eIsProxy()) {
+            InternalEObject oldFeature = (InternalEObject)feature;
+            feature = (EStructuralFeature)eResolveProxy(oldFeature);
+            if (feature != oldFeature) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.SET_FEATURE_COMMAND__FEATURE, oldFeature, feature));
+            }
+        }
+        return feature;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EStructuralFeature basicGetFeature() {
+        return feature;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setFeature(EStructuralFeature newFeature) {
+        EStructuralFeature oldFeature = feature;
+        feature = newFeature;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__FEATURE, oldFeature, feature));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
      */
     public void redo() {
-        executing = true;
-
-        getActionPhases().clear();
-        getSubCommands().clear();
-
-        for (RuntimeCharacter abstractNaturalPerson : combatants) {
-            Initative initative = GameplayFactory.eINSTANCE.createInitative();
-            initative.setSubject(abstractNaturalPerson);
-            initative.redo();
-            subCommands.add(initative);
-        }
-        List<InitativePass> phaseCommands = new ArrayList<InitativePass>();
-        for (Command command : subCommands) {
-            if (command instanceof Initative) {
-                Initative ini = (Initative)command;
-                int currentIni = ini.getIni();
-                int turn = 1;
-                while (currentIni > 0) {
-                    InitativePass action = GameplayFactory.eINSTANCE.createInitativePass();
-                    action.setSubject(ini.getSubject());
-                    action.setPhase(currentIni);
-                    action.setTurn(turn);
-                    if (turn == 1)
-                        action.setSizeInitative(ini.isSizeInitative());
-                    else
-                        action.setSizeInitative(false);
-                    turn++;
-                    currentIni = currentIni - 10;
-
-                    phaseCommands.add(action);
-                }
-            }
-        }
-        Collections.sort(phaseCommands, new Comparator<InitativePass>() {
-            @Override
-            public int compare(InitativePass o1, InitativePass o2) {
-                int turn1 = o1.getTurn() - o2.getTurn();
-                if (turn1 != 0)
-                    return turn1;
-
-                int val = o1.getPhase() - o2.getPhase();
-
-                if (val == 0) {
-                    // TODO : we need to check all the other compare options
-                }
-                return val * -1;
-            }
-
-        });
-
-        // subCommands.addAll((Collection<? extends Command>) phaseCommands);
-        if (phaseCommands.size() > 0)
-            setCurrentTurn(phaseCommands.get(0));
-
-        executed = true;
-        getActionPhases().addAll(phaseCommands);
-
+        // TODO: implement this method
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated not
+     * @generated
      */
     public void undo() {
-        executed = false;
-        getActionPhases().clear();
-        getSubCommands().clear();
+        // TODO: implement this method
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -519,10 +480,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 return ((InternalEList<?>)getSubCommands()).basicRemove(otherEnd, msgs);
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
-                return ((InternalEList<?>)getActionPhases()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -535,25 +494,26 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case GameplayPackage.COMBAT_TURN__EXECUTED:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
                 return isExecuted();
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 return getSubCommands();
-            case GameplayPackage.COMBAT_TURN__DATE:
+            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
                 return getDate();
-            case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
+            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
                 return getCmdCallback();
-            case GameplayPackage.COMBAT_TURN__EXECUTING:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 return isExecuting();
-            case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
+            case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
                 return isCanExecute();
-            case GameplayPackage.COMBAT_TURN__COMBATANTS:
-                return getCombatants();
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
-                return getActionPhases();
-            case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
-                if (resolve) return getCurrentTurn();
-                return basicGetCurrentTurn();
+            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
+                return getValue();
+            case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
+                if (resolve) return getObject();
+                return basicGetObject();
+            case GameplayPackage.SET_FEATURE_COMMAND__FEATURE:
+                if (resolve) return getFeature();
+                return basicGetFeature();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -567,32 +527,30 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case GameplayPackage.COMBAT_TURN__EXECUTED:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
                 setExecuted((Boolean)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 getSubCommands().clear();
                 getSubCommands().addAll((Collection<? extends Command>)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__DATE:
+            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
                 setDate((Date)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
+            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
                 setCmdCallback((CommandCallback)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__EXECUTING:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 setExecuting((Boolean)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__COMBATANTS:
-                getCombatants().clear();
-                getCombatants().addAll((Collection<? extends RuntimeCharacter>)newValue);
+            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
+                setValue(newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
-                getActionPhases().clear();
-                getActionPhases().addAll((Collection<? extends InitativePass>)newValue);
+            case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
+                setObject((EObject)newValue);
                 return;
-            case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
-                setCurrentTurn((InitativePass)newValue);
+            case GameplayPackage.SET_FEATURE_COMMAND__FEATURE:
+                setFeature((EStructuralFeature)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -606,29 +564,29 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case GameplayPackage.COMBAT_TURN__EXECUTED:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
                 setExecuted(EXECUTED_EDEFAULT);
                 return;
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 getSubCommands().clear();
                 return;
-            case GameplayPackage.COMBAT_TURN__DATE:
+            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
                 setDate(DATE_EDEFAULT);
                 return;
-            case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
+            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
                 unsetCmdCallback();
                 return;
-            case GameplayPackage.COMBAT_TURN__EXECUTING:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 setExecuting(EXECUTING_EDEFAULT);
                 return;
-            case GameplayPackage.COMBAT_TURN__COMBATANTS:
-                getCombatants().clear();
+            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
+                setValue(VALUE_EDEFAULT);
                 return;
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
-                getActionPhases().clear();
+            case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
+                setObject((EObject)null);
                 return;
-            case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
-                setCurrentTurn((InitativePass)null);
+            case GameplayPackage.SET_FEATURE_COMMAND__FEATURE:
+                setFeature((EStructuralFeature)null);
                 return;
         }
         super.eUnset(featureID);
@@ -642,24 +600,24 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case GameplayPackage.COMBAT_TURN__EXECUTED:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
                 return executed != EXECUTED_EDEFAULT;
-            case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:
+            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
                 return subCommands != null && !subCommands.isEmpty();
-            case GameplayPackage.COMBAT_TURN__DATE:
+            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
                 return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-            case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
+            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
                 return isSetCmdCallback();
-            case GameplayPackage.COMBAT_TURN__EXECUTING:
+            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 return executing != EXECUTING_EDEFAULT;
-            case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
+            case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
                 return isCanExecute() != CAN_EXECUTE_EDEFAULT;
-            case GameplayPackage.COMBAT_TURN__COMBATANTS:
-                return combatants != null && !combatants.isEmpty();
-            case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
-                return actionPhases != null && !actionPhases.isEmpty();
-            case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
-                return currentTurn != null;
+            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
+                return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+            case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
+                return object != null;
+            case GameplayPackage.SET_FEATURE_COMMAND__FEATURE:
+                return feature != null;
         }
         return super.eIsSet(featureID);
     }
@@ -672,13 +630,10 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     @Override
     public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
         switch (operationID) {
-            case GameplayPackage.COMBAT_TURN___DO_TURN:
-                doTurn();
-                return null;
-            case GameplayPackage.COMBAT_TURN___REDO:
+            case GameplayPackage.SET_FEATURE_COMMAND___REDO:
                 redo();
                 return null;
-            case GameplayPackage.COMBAT_TURN___UNDO:
+            case GameplayPackage.SET_FEATURE_COMMAND___UNDO:
                 undo();
                 return null;
         }
@@ -703,8 +658,10 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", value: ");
+        result.append(value);
         result.append(')');
         return result.toString();
     }
 
-} // CombatTurnImpl
+} //SetFeatureCommandImpl

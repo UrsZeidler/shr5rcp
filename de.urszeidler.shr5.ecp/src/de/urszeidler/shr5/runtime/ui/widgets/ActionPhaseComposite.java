@@ -24,7 +24,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.ToolBar;
-import org.eclipse.swt.widgets.ToolItem;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -37,7 +36,7 @@ import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 public class ActionPhaseComposite extends Composite implements IValueChangeListener {
     private DataBindingContext m_bindingContext;
 
-    private WritableValue nameable = new WritableValue();
+    protected WritableValue nameable = new WritableValue();
     // private Beschreibbar character = Shr5Factory.eINSTANCE.createBioWare();
 
     private Group mainGroup = null;
@@ -47,9 +46,10 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
     private Button button_use1 = null;
     private Button button_change = null;
     private String grouname;
-    private ToolBar actionBar;
+    protected ToolBar actionBar;
 
     private GridLayout gridLayout1;
+
 
     public ActionPhaseComposite(Composite parent, int style, String groupName) {
         super(parent, style);
@@ -105,17 +105,17 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
         label_image.setText("");
         label_image.setLayoutData(gridData2);
         label_name = new Label(mainGroup, SWT.NONE);
-        label_name.setAlignment(SWT.RIGHT);
+        label_name.setAlignment(SWT.LEFT);
         label_name.setText("");
         label_name.setLayoutData(gridData3);
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
 
-        ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
-        toolItem.setText("1");
-
-        ToolItem toolItem_1 = new ToolItem(actionBar, SWT.NONE);
-        toolItem_1.setText("2");
+        // ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
+        // toolItem.setText("1");
+        //
+        // ToolItem toolItem_1 = new ToolItem(actionBar, SWT.NONE);
+        // toolItem_1.setText("2");
         m_bindingContext = initDataBindings();
     }
 
@@ -166,12 +166,17 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
     }
 
     @Override
+    public void dispose() {
+        nameable.removeValueChangeListener(this);
+        super.dispose();
+    }
+
+    @Override
     public void handleValueChange(ValueChangeEvent event) {
         updateToolbar();
     }
 
-    private void updateToolbar() {
-        // TODO Auto-generated method stub
+    protected void updateToolbar() {
 
     }
 
@@ -188,4 +193,12 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
             gridLayout1.marginBottom = 0;
         }
     }
+    //
+    // public void setNameable(WritableValue character, EReference references) {
+    // //this.character = character;
+    // this.reference = references;
+    // Object value = EMFObservables.observeDetailValue(Realm.getDefault(), character, references);
+    // nameable.setValue(value);
+    // }
+
 }

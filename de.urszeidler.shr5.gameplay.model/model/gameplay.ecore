@@ -111,4 +111,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetFeatureCommand" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeeleAttackCmd" eSuperTypes="#//OpposedSkillTestCmd">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Nahkampfwaffe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RangedAttackCmd" eSuperTypes="#//OpposedSkillTestCmd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modus" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//FeuerModus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
+  </eClassifiers>
 </ecore:EPackage>

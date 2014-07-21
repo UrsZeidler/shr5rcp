@@ -441,6 +441,75 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SetFeatureCommandItemProvider setFeatureCommandItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSetFeatureCommandAdapter() {
+        if (setFeatureCommandItemProvider == null) {
+            setFeatureCommandItemProvider = new SetFeatureCommandItemProvider(this);
+        }
+
+        return setFeatureCommandItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MeeleAttackCmdItemProvider meeleAttackCmdItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMeeleAttackCmdAdapter() {
+        if (meeleAttackCmdItemProvider == null) {
+            meeleAttackCmdItemProvider = new MeeleAttackCmdItemProvider(this);
+        }
+
+        return meeleAttackCmdItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RangedAttackCmdItemProvider rangedAttackCmdItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createRangedAttackCmdAdapter() {
+        if (rangedAttackCmdItemProvider == null) {
+            rangedAttackCmdItemProvider = new RangedAttackCmdItemProvider(this);
+        }
+
+        return rangedAttackCmdItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -555,6 +624,9 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (simpleActionsItemProvider != null) simpleActionsItemProvider.dispose();
         if (freeActionItemProvider != null) freeActionItemProvider.dispose();
         if (interruptActionItemProvider != null) interruptActionItemProvider.dispose();
+        if (setFeatureCommandItemProvider != null) setFeatureCommandItemProvider.dispose();
+        if (meeleAttackCmdItemProvider != null) meeleAttackCmdItemProvider.dispose();
+        if (rangedAttackCmdItemProvider != null) rangedAttackCmdItemProvider.dispose();
     }
 
 }

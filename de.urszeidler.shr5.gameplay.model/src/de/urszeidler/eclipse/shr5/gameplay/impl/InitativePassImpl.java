@@ -12,10 +12,8 @@ import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -144,6 +142,33 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     @Override
     protected EClass eStaticClass() {
         return GameplayPackage.Literals.INITATIVE_PASS;
+    }
+
+    @Override
+    public boolean isCanExecute() {
+        return subject != null && subject.getCharacter() != null && subject.getCharacter().getPersona() != null
+
+        && !executed;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     */
+    public void redo() {
+        if (!isCanExecute())
+            return;
+
+        if (getFreeAction() != null) {
+            getFreeAction().redo();
+        }
+
+        InterruptAction interruptAction2 = getInterruptAction();
+        if (interruptAction2 != null) {
+            interruptAction2.redo();
+        } else if (getAction() != null) {
+            getAction().redo();
+        }
     }
 
     /**
@@ -516,4 +541,4 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
         return result.toString();
     }
 
-} //InitativePassImpl
+} // InitativePassImpl

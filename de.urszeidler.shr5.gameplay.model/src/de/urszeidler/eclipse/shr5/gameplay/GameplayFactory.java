@@ -167,6 +167,33 @@ public interface GameplayFactory extends EFactory {
     InterruptAction createInterruptAction();
 
     /**
+     * Returns a new object of class '<em>Set Feature Command</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Set Feature Command</em>'.
+     * @generated
+     */
+    SetFeatureCommand createSetFeatureCommand();
+
+    /**
+     * Returns a new object of class '<em>Meele Attack Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Meele Attack Cmd</em>'.
+     * @generated
+     */
+    MeeleAttackCmd createMeeleAttackCmd();
+
+    /**
+     * Returns a new object of class '<em>Ranged Attack Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Ranged Attack Cmd</em>'.
+     * @generated
+     */
+    RangedAttackCmd createRangedAttackCmd();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

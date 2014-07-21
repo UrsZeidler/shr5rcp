@@ -161,6 +161,18 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
                 return createInterruptActionAdapter();
             }
             @Override
+            public Adapter caseSetFeatureCommand(SetFeatureCommand object) {
+                return createSetFeatureCommandAdapter();
+            }
+            @Override
+            public Adapter caseMeeleAttackCmd(MeeleAttackCmd object) {
+                return createMeeleAttackCmdAdapter();
+            }
+            @Override
+            public Adapter caseRangedAttackCmd(RangedAttackCmd object) {
+                return createRangedAttackCmdAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -499,6 +511,48 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createInterruptActionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand <em>Set Feature Command</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand
+     * @generated
+     */
+    public Adapter createSetFeatureCommandAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd <em>Meele Attack Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd
+     * @generated
+     */
+    public Adapter createMeeleAttackCmdAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd <em>Ranged Attack Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd
+     * @generated
+     */
+    public Adapter createRangedAttackCmdAdapter() {
         return null;
     }
 
