@@ -261,16 +261,19 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setAction(CommandWrapper newAction) {
         if (newAction != action) {
             NotificationChain msgs = null;
             if (action != null)
                 msgs = ((InternalEObject)action).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__ACTION, null, msgs);
-            if (newAction != null)
+            if (newAction != null){
                 msgs = ((InternalEObject)newAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__ACTION, null, msgs);
-            msgs = basicSetAction(newAction, msgs);
+            
+                newAction.setCmdCallback(getCmdCallback());
+                newAction.setSubject(getSubject());
+            } msgs = basicSetAction(newAction, msgs);
             if (msgs != null) msgs.dispatch();
         }
         else if (eNotificationRequired())
@@ -304,16 +307,19 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setFreeAction(FreeAction newFreeAction) {
         if (newFreeAction != freeAction) {
             NotificationChain msgs = null;
             if (freeAction != null)
                 msgs = ((InternalEObject)freeAction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__FREE_ACTION, null, msgs);
-            if (newFreeAction != null)
+            if (newFreeAction != null){
                 msgs = ((InternalEObject)newFreeAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__FREE_ACTION, null, msgs);
-            msgs = basicSetFreeAction(newFreeAction, msgs);
+            
+                newFreeAction.setCmdCallback(getCmdCallback());
+                newFreeAction.setSubject(getSubject());
+            } msgs = basicSetFreeAction(newFreeAction, msgs);
             if (msgs != null) msgs.dispatch();
         }
         else if (eNotificationRequired())
@@ -347,16 +353,19 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setInterruptAction(InterruptAction newInterruptAction) {
         if (newInterruptAction != interruptAction) {
             NotificationChain msgs = null;
             if (interruptAction != null)
                 msgs = ((InternalEObject)interruptAction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__INTERRUPT_ACTION, null, msgs);
-            if (newInterruptAction != null)
+            if (newInterruptAction != null){
                 msgs = ((InternalEObject)newInterruptAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.INITATIVE_PASS__INTERRUPT_ACTION, null, msgs);
-            msgs = basicSetInterruptAction(newInterruptAction, msgs);
+            
+                newInterruptAction.setCmdCallback(getCmdCallback());
+                newInterruptAction.setSubject(getSubject());
+            } msgs = basicSetInterruptAction(newInterruptAction, msgs);
             if (msgs != null) msgs.dispatch();
         }
         else if (eNotificationRequired())

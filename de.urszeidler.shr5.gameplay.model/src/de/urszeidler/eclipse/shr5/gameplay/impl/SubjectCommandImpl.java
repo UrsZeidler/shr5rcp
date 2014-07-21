@@ -303,12 +303,10 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
     public boolean isCanExecute() {
-        // TODO: implement this method to return the 'Can Execute' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getSubject()!=null;
     }
 
     /**

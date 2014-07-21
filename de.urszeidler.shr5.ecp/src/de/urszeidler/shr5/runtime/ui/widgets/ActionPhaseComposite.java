@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import org.eclipse.swt.widgets.ToolItem;
 
 /**
  * @author urs
@@ -110,6 +111,9 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
         label_name.setLayoutData(gridData3);
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
+        
+        ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
+        toolItem.setText("1");
 
         // ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
         // toolItem.setText("1");

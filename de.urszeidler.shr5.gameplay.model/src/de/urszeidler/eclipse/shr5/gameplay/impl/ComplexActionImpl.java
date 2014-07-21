@@ -3,10 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,4 +37,5 @@ public class ComplexActionImpl extends CommandWrapperImpl implements ComplexActi
         return GameplayPackage.Literals.COMPLEX_ACTION;
     }
 
+     
 } //ComplexActionImpl

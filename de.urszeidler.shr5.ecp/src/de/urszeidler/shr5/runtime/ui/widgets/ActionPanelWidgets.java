@@ -9,6 +9,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
@@ -41,8 +42,8 @@ public class ActionPanelWidgets extends Composite {
 		
 	}
 
-	public void setCharacter(RuntimeCharacter character) {
-        this.character.setValue(character);
+	public void setCharacter(InitativePass character) {
+        this.character.setValue(character.getSubject());
         rechte_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND);
         linke_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
         populateActions();

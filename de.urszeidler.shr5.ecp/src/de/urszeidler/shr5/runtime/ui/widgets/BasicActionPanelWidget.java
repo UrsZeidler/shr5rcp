@@ -241,7 +241,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         Object value = event.getObservableValue().getValue();
         if (value instanceof InitativePass) {
             InitativePass apc = (InitativePass)value;
-            actionPanel.setCharacter(apc.getSubject());
+            actionPanel.setCharacter(apc);
             character.setValue(apc.getSubject().getCharacter().getPersona());
         }
 

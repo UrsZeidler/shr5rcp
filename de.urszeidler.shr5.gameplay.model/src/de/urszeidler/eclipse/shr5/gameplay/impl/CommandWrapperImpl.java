@@ -3,9 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -37,4 +40,22 @@ public abstract class CommandWrapperImpl extends SubjectCommandImpl implements C
         return GameplayPackage.Literals.COMMAND_WRAPPER;
     }
 
+    @Override
+    public void redo() {
+        setExecuting(true);
+        
+        EList<Command> commands = getSubCommands();
+        for (Command command : commands) {
+            command.setCmdCallback(getCmdCallback());
+            if (command instanceof SubjectCommand) {
+                SubjectCommand sc = (SubjectCommand)command;
+                sc.setSubject(getSubject());
+                sc.setDate(getDate());
+            }
+            command.redo();
+        }        
+        setExecuted(true);
+    }
+
+    
 } //CommandWrapperImpl

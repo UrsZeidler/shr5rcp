@@ -477,6 +477,9 @@ public class ShadowrunTools {
      * @return
      */
     public static PersonaFertigkeit findFertigkeit(Fertigkeit fertigkeit, AbstraktPersona persona) {
+        if(fertigkeit==null || persona==null)
+            return null;
+            
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if (fertigkeit.equals(personaFertigkeit.getFertigkeit()))
