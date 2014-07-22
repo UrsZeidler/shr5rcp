@@ -108,10 +108,10 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getCmdCallback()
-     * @generated
+     * @generated not
      * @ordered
      */
-    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = (CommandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getCommandCallback(), "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;//(CommandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getCommandCallback(), "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
