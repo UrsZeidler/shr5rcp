@@ -5,13 +5,13 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.List;
 
-import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.shr5.gameplay.dice.W6Dice;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +89,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
 
     @Override
     public void redo() {
-        executed = true;
+        executing = true;
 
         getProbe().clear();
         if(isSetCmdCallback())
@@ -107,6 +107,9 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         this.successes = isSetLimit() ? Math.min(limit,  W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
+        
+        executed = true;
+        executing = false;
     }
 
     

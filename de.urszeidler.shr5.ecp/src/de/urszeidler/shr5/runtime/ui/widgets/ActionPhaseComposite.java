@@ -112,9 +112,7 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
         
-        ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
-        toolItem.setText("1");
-
+       updateToolbar();
         // ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
         // toolItem.setText("1");
         //

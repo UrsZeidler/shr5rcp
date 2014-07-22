@@ -55,6 +55,7 @@ public class HandComposite extends ActionPhaseComposite {
                     ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
                     MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
                     meeleAttackCmd.setWeapon(nk);
+                   
                     
                     //complexAction.setSubject((RuntimeCharacter)character.getValue());
                     complexAction.getSubCommands().add(meeleAttackCmd);                   
@@ -67,8 +68,8 @@ public class HandComposite extends ActionPhaseComposite {
                 }
             }
         });
-        toolItem.setText("2");
-actionBar.getParent().layout(true);
+        toolItem.setText("a");
+        actionBar.getParent().layout(true);
         // actionBar = new ToolBar(parent, style)
 
        // super.updateToolbar();
@@ -86,7 +87,7 @@ actionBar.getParent().layout(true);
         character.setValue(character2);
         references = ref;
         setNameable((Beschreibbar)character2.eGet(references));
-        updateToolbar();
+        //updateToolbar();
 
         IObservableValue observeDetailValue = EMFObservables.observeDetailValue(Realm.getDefault(), character, ref);
         observeDetailValue.addChangeListener(new IChangeListener() {
@@ -94,7 +95,7 @@ actionBar.getParent().layout(true);
             @Override
             public void handleChange(ChangeEvent event) {
                 setNameable((Beschreibbar)character2.eGet(references));
-                updateToolbar();
+                //updateToolbar();
             }
         });
     }

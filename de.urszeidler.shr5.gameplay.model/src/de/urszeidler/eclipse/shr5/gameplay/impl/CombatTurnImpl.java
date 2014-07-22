@@ -460,6 +460,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 while (currentIni > 0) {
                     InitativePass action = GameplayFactory.eINSTANCE.createInitativePass();
                     action.setSubject(ini.getSubject());
+                    action.setCmdCallback(getCmdCallback());
+                    action.setDate(getDate());
                     action.setPhase(currentIni);
                     action.setTurn(turn);
                     if (turn == 1)

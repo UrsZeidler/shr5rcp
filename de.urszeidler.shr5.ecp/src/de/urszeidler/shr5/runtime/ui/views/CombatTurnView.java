@@ -11,6 +11,7 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -43,19 +44,23 @@ import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
+import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
+import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
 
 /**
  * @author urs
  */
-public class CombatTurnView extends ViewPart implements ISelectionListener {
+public class CombatTurnView extends ViewPart implements ISelectionListener, CommandCallback {
     
 //    
 //    public abstract class SelectionListenerImplementation implements SelectionListener {
@@ -455,8 +460,16 @@ public class CombatTurnView extends ViewPart implements ISelectionListener {
     private void setTempCombatTurn(CombatTurn kr) {
         // treeViewer.setInput(kr);
         combatTurn = kr;
+        combatTurn.setCmdCallback(this);
         combatTurnList.setCombatTurn(kr);
         basicActionPanel.setPhase(kr.getCurrentTurn());
+    }
+
+    @Override
+    public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+       
+        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider, new DefaultReferenceManager(itemDelegator));
+        genericEObjectDialog.open();
     }
 
 }
