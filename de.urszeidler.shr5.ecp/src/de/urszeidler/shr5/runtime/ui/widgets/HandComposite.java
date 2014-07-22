@@ -21,6 +21,8 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 public class HandComposite extends ActionPhaseComposite {
@@ -64,6 +66,17 @@ public class HandComposite extends ActionPhaseComposite {
 
                 } else if (value instanceof AbstaktFernKampfwaffe) {
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
+                    //Simple action case
+                    SimpleActions simpleAction = GameplayFactory.eINSTANCE.createSimpleActions();
+                    RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
+                    meeleAttackCmd.setWeapon(afk);
+                   
+                    
+                    //complexAction.setSubject((RuntimeCharacter)character.getValue());
+                    simpleAction.getSubCommands().add(meeleAttackCmd);                   
+                    initativePass.setAction(simpleAction);
+                    initativePass.redo();
+
 
                 }
             }
