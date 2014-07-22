@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -26,6 +28,7 @@ import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
@@ -45,6 +48,8 @@ public class ShadowrunTools {
     private static List<EAttribute> orderedAttibutes;
     private static List<EAttribute> orderedBasedAttibutes;
     private static List<EAttribute> orderedCalcedAttibutes;
+    private static Pattern damagePattern = Pattern.compile("(\\d*)(\\D)");
+
 
     // the static initaliser
     static {
@@ -581,4 +586,41 @@ public class ShadowrunTools {
         return string;
     }
 
+    public static DamageCode parseDamageCode(String damage) {
+        if(damage==null)
+            return null;
+        
+        Matcher matcher = damagePattern.matcher(damage);
+        if(matcher.matches()){
+            String p = matcher.group(1);
+            String t = matcher.group(2);
+        
+            try {
+                return new DamageCode(Integer.parseInt(p),SchadensTyp.KOERPERLICH);
+            } catch (Exception e) {
+            }
+        }
+         return null;
+    }
+
+    
+    public static class DamageCode{
+        public DamageCode(int power, SchadensTyp type) {
+            super();
+            this.power = power;
+            this.type = type;
+        }
+        private int power;
+        private SchadensTyp type;
+        public int getPower() {
+            return power;
+        }
+        public SchadensTyp getType() {
+            return type;
+        }
+        @Override
+        public String toString() {
+            return  power + type.toString() ;
+        }
+    }
 }

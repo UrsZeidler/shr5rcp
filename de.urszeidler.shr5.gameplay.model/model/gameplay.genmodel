@@ -16,6 +16,8 @@
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DamageTest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/damage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/dv"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/effectiveDamage"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//Command">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executed"/>

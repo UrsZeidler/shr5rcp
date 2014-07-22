@@ -24,6 +24,14 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//DamageTest/damage"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_G6GOUY_HEd6SEpVfiQZsGw"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_kOwfEBHUEeSUqNCmwM3vIA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//DamageTest/dv"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_kOwfERHUEeSUqNCmwM3vIA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-refYBHdEeSUqNCmwM3vIA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//DamageTest/effectiveDamage"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_-refYRHdEeSUqNCmwM3vIA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_DIYQMo_HEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_DIYQM4_HEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_DIYQNI_HEd6SEpVfiQZsGw"/>
@@ -35,7 +43,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_DIXCEY_HEd6SEpVfiQZsGw" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//DamageTest"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DIXCEo_HEd6SEpVfiQZsGw" x="470" y="635"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DIXCEo_HEd6SEpVfiQZsGw" x="400" y="635"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_rRXiUI_HEd6SEpVfiQZsGw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_rRYwcI_HEd6SEpVfiQZsGw" type="4001"/>

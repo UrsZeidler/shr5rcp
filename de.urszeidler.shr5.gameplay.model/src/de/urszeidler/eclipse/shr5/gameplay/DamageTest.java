@@ -13,6 +13,8 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDamage <em>Damage</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDv <em>Dv</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getEffectiveDamage <em>Effective Damage</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,7 +34,7 @@ public interface DamageTest extends ProbeCommand {
      * @return the value of the '<em>Damage</em>' attribute.
      * @see #setDamage(String)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_Damage()
-     * @model
+     * @model required="true"
      * @generated
      */
     String getDamage();
@@ -46,5 +48,46 @@ public interface DamageTest extends ProbeCommand {
      * @generated
      */
     void setDamage(String value);
+
+    /**
+     * Returns the value of the '<em><b>Dv</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Dv</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Dv</em>' attribute.
+     * @see #setDv(int)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_Dv()
+     * @model required="true"
+     * @generated
+     */
+    int getDv();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDv <em>Dv</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Dv</em>' attribute.
+     * @see #getDv()
+     * @generated
+     */
+    void setDv(int value);
+
+    /**
+     * Returns the value of the '<em><b>Effective Damage</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Effective Damage</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Effective Damage</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_EffectiveDamage()
+     * @model changeable="false"
+     * @generated
+     */
+    String getEffectiveDamage();
 
 } // DamageTest

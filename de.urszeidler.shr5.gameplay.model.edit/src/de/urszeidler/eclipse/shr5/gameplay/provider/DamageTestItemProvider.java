@@ -59,6 +59,8 @@ public class DamageTestItemProvider
             super.getPropertyDescriptors(object);
 
             addDamagePropertyDescriptor(object);
+            addDvPropertyDescriptor(object);
+            addEffectiveDamagePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -78,6 +80,50 @@ public class DamageTestItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_damage_feature", "_UI_DamageTest_type"),
                  GameplayPackage.Literals.DAMAGE_TEST__DAMAGE,
                  true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Dv feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDvPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_DamageTest_dv_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_dv_feature", "_UI_DamageTest_type"),
+                 GameplayPackage.Literals.DAMAGE_TEST__DV,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Effective Damage feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addEffectiveDamagePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_DamageTest_effectiveDamage_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_effectiveDamage_feature", "_UI_DamageTest_type"),
+                 GameplayPackage.Literals.DAMAGE_TEST__EFFECTIVE_DAMAGE,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -121,6 +167,8 @@ public class DamageTestItemProvider
 
         switch (notification.getFeatureID(DamageTest.class)) {
             case GameplayPackage.DAMAGE_TEST__DAMAGE:
+            case GameplayPackage.DAMAGE_TEST__DV:
+            case GameplayPackage.DAMAGE_TEST__EFFECTIVE_DAMAGE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

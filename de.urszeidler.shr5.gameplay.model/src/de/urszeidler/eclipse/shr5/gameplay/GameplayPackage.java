@@ -641,13 +641,31 @@ public interface GameplayPackage extends EPackage {
     int DAMAGE_TEST__DAMAGE = PROBE_COMMAND_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Dv</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__DV = PROBE_COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Effective Damage</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__EFFECTIVE_DAMAGE = PROBE_COMMAND_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Damage Test</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DAMAGE_TEST_FEATURE_COUNT = PROBE_COMMAND_FEATURE_COUNT + 1;
+    int DAMAGE_TEST_FEATURE_COUNT = PROBE_COMMAND_FEATURE_COUNT + 3;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -3545,6 +3563,28 @@ public interface GameplayPackage extends EPackage {
     EAttribute getDamageTest_Damage();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDv <em>Dv</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Dv</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDv()
+     * @see #getDamageTest()
+     * @generated
+     */
+    EAttribute getDamageTest_Dv();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getEffectiveDamage <em>Effective Damage</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Effective Damage</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DamageTest#getEffectiveDamage()
+     * @see #getDamageTest()
+     * @generated
+     */
+    EAttribute getDamageTest_EffectiveDamage();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.Command <em>Command</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4349,6 +4389,22 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute DAMAGE_TEST__DAMAGE = eINSTANCE.getDamageTest_Damage();
+
+        /**
+         * The meta object literal for the '<em><b>Dv</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DAMAGE_TEST__DV = eINSTANCE.getDamageTest_Dv();
+
+        /**
+         * The meta object literal for the '<em><b>Effective Damage</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DAMAGE_TEST__EFFECTIVE_DAMAGE = eINSTANCE.getDamageTest_EffectiveDamage();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.Command <em>Command</em>}' class.
