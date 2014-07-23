@@ -3,33 +3,26 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.gameplay.Command;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
-
-import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,18 +31,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getDate <em>Date</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuting <em>Executing</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isCanExecute <em>Can Execute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getValue <em>Value</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getObject <em>Object</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getFeature <em>Feature</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuted <em>Executed</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getDate <em>Date</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuting <em>Executing</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isCanExecute <em>Can Execute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getValue <em>Value</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getObject <em>Object</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implements SetFeatureCommand {
@@ -57,6 +50,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -67,6 +61,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -77,6 +72,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getSubCommands() <em>Sub Commands</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSubCommands()
      * @generated
      * @ordered
@@ -87,6 +83,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -97,6 +94,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -107,16 +105,19 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCmdCallback()
      * @generated not
      * @ordered
      */
-    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;//(CommandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getCommandCallback(), "");
+    protected static final CommandCallback CMD_CALLBACK_EDEFAULT = null;// (CommandCallback)GameplayFactory.eINSTANCE.createFromString(GameplayPackage.eINSTANCE.getCommandCallback(),
+                                                                        // "");
 
     /**
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCmdCallback()
      * @generated
      * @ordered
@@ -127,6 +128,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * This is true if the Cmd Callback attribute has been set.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -136,6 +138,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -146,6 +149,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -156,6 +160,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #isCanExecute() <em>Can Execute</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isCanExecute()
      * @generated
      * @ordered
@@ -166,6 +171,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -176,6 +182,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -186,6 +193,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getObject()
      * @generated
      * @ordered
@@ -196,6 +204,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getFeature()
      * @generated
      * @ordered
@@ -205,6 +214,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SetFeatureCommandImpl() {
@@ -214,6 +224,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -224,6 +235,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuted() {
@@ -233,6 +245,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuted(boolean newExecuted) {
@@ -245,6 +258,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<Command> getSubCommands() {
@@ -257,6 +271,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Date getDate() {
@@ -266,6 +281,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDate(Date newDate) {
@@ -278,6 +294,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public CommandCallback getCmdCallback() {
@@ -287,6 +304,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCmdCallback(CommandCallback newCmdCallback) {
@@ -295,12 +313,14 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback, cmdCallback, !oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback, cmdCallback,
+                    !oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void unsetCmdCallback() {
@@ -309,12 +329,14 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK, oldCmdCallback,
+                    CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isSetCmdCallback() {
@@ -324,6 +346,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuting() {
@@ -333,6 +356,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuting(boolean newExecuting) {
@@ -345,17 +369,17 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public boolean isCanExecute() {
-        // TODO: implement this method to return the 'Can Execute' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return (getFeature() != null && getObject() != null);
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Object getValue() {
@@ -365,6 +389,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setValue(Object newValue) {
@@ -377,6 +402,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EObject getObject() {
@@ -394,6 +420,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EObject basicGetObject() {
@@ -403,6 +430,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setObject(EObject newObject) {
@@ -415,6 +443,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EStructuralFeature getFeature() {
@@ -432,6 +461,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EStructuralFeature basicGetFeature() {
@@ -441,6 +471,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setFeature(EStructuralFeature newFeature) {
@@ -453,18 +484,26 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void redo() {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        executing = true;
+
+        if (isSetCmdCallback())
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SET_FEATURE_COMMAND__VALUE);
+
+        getObject().eSet(getFeature(), getValue());
+        
+        executed = true;
+        executing = false;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated 
      */
     public void undo() {
         // TODO: implement this method
@@ -475,6 +514,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -489,6 +529,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -509,10 +550,12 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
             case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 return getValue();
             case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
-                if (resolve) return getObject();
+                if (resolve)
+                    return getObject();
                 return basicGetObject();
             case GameplayPackage.SET_FEATURE_COMMAND__FEATURE:
-                if (resolve) return getFeature();
+                if (resolve)
+                    return getFeature();
                 return basicGetFeature();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -521,6 +564,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -559,6 +603,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -595,6 +640,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -625,6 +671,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -643,11 +690,13 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (executed: ");
@@ -655,7 +704,10 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         result.append(", date: ");
         result.append(date);
         result.append(", cmdCallback: ");
-        if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
+        if (cmdCallbackESet)
+            result.append(cmdCallback);
+        else
+            result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
         result.append(", value: ");
@@ -664,4 +716,6 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         return result.toString();
     }
 
-} //SetFeatureCommandImpl
+    
+    
+} // SetFeatureCommandImpl

@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import junit.textui.TestRunner;
@@ -76,9 +77,13 @@ public class SimpleActionsTest extends CommandWrapperTest {
      * @generated not
      */
     public void testIsCanExecute() {
-        assertTrue(getFixture().isCanExecute());
-        getFixture().setSubject(null);
         assertFalse(getFixture().isCanExecute());
+        SimpleAction action1 = GameplayFactory.eINSTANCE.createSimpleAction();
+        getFixture().setAction1(action1);
+        SimpleAction action2 = GameplayFactory.eINSTANCE.createSimpleAction();
+        getFixture().setAction2(action2);
+
+        assertTrue(getFixture().isCanExecute());
     }
 
     /**
@@ -93,10 +98,16 @@ public class SimpleActionsTest extends CommandWrapperTest {
         succesTestCmd.setDicePool(1);
         succesTestCmd.setThresholds(0);
         getFixture().getSubCommands().add(succesTestCmd);
+        SimpleAction action1 = GameplayFactory.eINSTANCE.createSimpleAction();
+        getFixture().setAction1(action1);
+        SimpleAction action2 = GameplayFactory.eINSTANCE.createSimpleAction();
+        getFixture().setAction2(action2);
         
         getFixture().redo();
         assertTrue(getFixture().isExecuted());
-        assertTrue(succesTestCmd.isExecuted());
+        assertFalse(succesTestCmd.isExecuted());
+        assertTrue(action1.isExecuted());
+        assertTrue(action2.isExecuted());
     }
 
     /**
