@@ -263,7 +263,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
         executing = true;
 
         getProbe().clear();
-        if (isSetCmdCallback())
+        if (isSetCmdCallback()&& getCmdCallback() != null)
             cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
 
         AbstraktPersona persona = getSubject().getCharacter().getPersona();

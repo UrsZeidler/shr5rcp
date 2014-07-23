@@ -50,7 +50,6 @@ public class ShadowrunTools {
     private static List<EAttribute> orderedCalcedAttibutes;
     private static Pattern damagePattern = Pattern.compile("(\\d*)(\\D)");
 
-
     // the static initaliser
     static {
         base2SpeciesMin = new HashMap<EAttribute, EAttribute>();
@@ -482,9 +481,9 @@ public class ShadowrunTools {
      * @return
      */
     public static PersonaFertigkeit findFertigkeit(Fertigkeit fertigkeit, AbstraktPersona persona) {
-        if(fertigkeit==null || persona==null)
+        if (fertigkeit == null || persona == null)
             return null;
-            
+
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if (fertigkeit.equals(personaFertigkeit.getFertigkeit()))
@@ -587,40 +586,52 @@ public class ShadowrunTools {
     }
 
     public static DamageCode parseDamageCode(String damage) {
-        if(damage==null)
+        if (damage == null)
             return null;
-        
+
         Matcher matcher = damagePattern.matcher(damage);
-        if(matcher.matches()){
+        if (matcher.matches()) {
             String p = matcher.group(1);
             String t = matcher.group(2);
-        
+
             try {
-                return new DamageCode(Integer.parseInt(p),SchadensTyp.KOERPERLICH);
+                return new DamageCode(Integer.parseInt(p), SchadensTyp.KOERPERLICH);
             } catch (Exception e) {
             }
         }
-         return null;
+        return null;
     }
 
-    
-    public static class DamageCode{
+    public static class DamageCode {
         public DamageCode(int power, SchadensTyp type) {
             super();
             this.power = power;
             this.type = type;
         }
+
         private int power;
         private SchadensTyp type;
+
         public int getPower() {
             return power;
         }
+
         public SchadensTyp getType() {
             return type;
         }
+
         @Override
         public String toString() {
-            return  power + type.toString() ;
+            return power + getTypeCode();
+        }
+
+        private String getTypeCode() {
+            if (type == SchadensTyp.KOERPERLICH)
+                return "P";
+            else if (type == SchadensTyp.GEISTIG)
+                return "M";
+
+            return "U";
         }
     }
 }
