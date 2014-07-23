@@ -158,6 +158,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     public void redo() {
         if (!isCanExecute())
             return;
+        executing = true;
 
         if (getFreeAction() != null) {
             getFreeAction().redo();
@@ -169,6 +170,9 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
         } else if (getAction() != null) {
             getAction().redo();
         }
+        
+        executed = true;
+        executing = false;
     }
 
     /**
