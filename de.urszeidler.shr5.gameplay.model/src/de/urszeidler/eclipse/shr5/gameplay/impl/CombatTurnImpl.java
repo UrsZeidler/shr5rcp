@@ -417,9 +417,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 InitativePass ip = (InitativePass)turn;
                 if (ip.isCanExecute()) {
                     ip.redo();
-                    int indexOf = getActionPhases().indexOf(ip);
-                    if (indexOf > getActionPhases().size()) {
-                        setCurrentTurn(ip);
+                    int indexOf = getActionPhases().indexOf(ip)+1;
+                    if (indexOf < getActionPhases().size()) {
+                        setCurrentTurn(getActionPhases().get(indexOf));
                     } else {
                         //the combarturn is done
                         setCurrentTurn(null);

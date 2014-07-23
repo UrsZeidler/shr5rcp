@@ -10,6 +10,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
@@ -216,6 +217,7 @@ public class CombatTurnTest extends TestCase {
 
         getFixture().setCmdCallback(null);
         assertNull(getFixture().getCmdCallback());
+        getFixture().unsetCmdCallback();
         assertFalse(getFixture().isSetCmdCallback());
     }
 
@@ -251,9 +253,10 @@ public class CombatTurnTest extends TestCase {
      * @generated not
      */
     public void testIsCanExecute() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertTrue(getFixture().isCanExecute());
+        getFixture().getCombatants().clear();
+        assertFalse(getFixture().isCanExecute());
+        
     }
 
     /**
@@ -265,9 +268,22 @@ public class CombatTurnTest extends TestCase {
      * @generated not 
      */
     public void testDoTurn() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+//        assertNull(getFixture().getCurrentTurn());
+//        assertEquals(0,  getFixture().getSubCommands().size());
+//        assertEquals(0,getFixture().getActionPhases().size());
+//        
+//        getFixture().redo();
+//        
+//       assertEquals(2,  getFixture().getSubCommands().size());
+        testRedo();        
+       assertEquals(2,getFixture().getActionPhases().size());
+       assertNotNull(getFixture().getCurrentTurn());
+       InitativePass turn1 = getFixture().getCurrentTurn();
+       getFixture().doTurn();
+       assertNotNull(getFixture().getCurrentTurn());
+       assertNotSame(turn1, getFixture().getCurrentTurn());
+       getFixture().doTurn();
+       assertNull(getFixture().getCurrentTurn());
     }
 
     /**
@@ -276,13 +292,17 @@ public class CombatTurnTest extends TestCase {
      * <!-- end-user-doc -->
      * 
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
-     * @generated
+     * @generated not
      */
     public void testRedo() {
+        assertNull(getFixture().getCurrentTurn());
+        assertEquals(0,  getFixture().getSubCommands().size());
+        assertEquals(0,getFixture().getActionPhases().size());
+        
         getFixture().redo();
         
        assertEquals(2,  getFixture().getSubCommands().size());
-       assertEquals(2,getFixture().getActionPhases());
+       assertEquals(2,getFixture().getActionPhases().size());
         
        assertNotNull(getFixture().getCurrentTurn());
     }
@@ -293,12 +313,10 @@ public class CombatTurnTest extends TestCase {
      * <!-- end-user-doc -->
      * 
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
-     * @generated
+     * @generated not
      */
     public void testUndo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+       
     }
 
 } // CombatTurnTest
