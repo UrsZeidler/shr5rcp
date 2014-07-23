@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import junit.textui.TestRunner;
@@ -96,7 +97,14 @@ public class ComplexActionTest extends CommandWrapperTest {
      * @generated not
      */
     public void testRedo() {
-        fail();
+        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
+        succesTestCmd.setDicePool(1);
+        succesTestCmd.setThresholds(0);
+        getFixture().getSubCommands().add(succesTestCmd);
+        
+        getFixture().redo();
+        assertTrue(getFixture().isExecuted());
+        assertTrue(succesTestCmd.isExecuted());
     }
 
     /**
