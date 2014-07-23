@@ -17,13 +17,14 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class CommandWrapperImpl extends SubjectCommandImpl implements CommandWrapper {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CommandWrapperImpl() {
@@ -33,6 +34,7 @@ public abstract class CommandWrapperImpl extends SubjectCommandImpl implements C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -43,7 +45,7 @@ public abstract class CommandWrapperImpl extends SubjectCommandImpl implements C
     @Override
     public void redo() {
         setExecuting(true);
-        
+
         EList<Command> commands = getSubCommands();
         for (Command command : commands) {
             command.setCmdCallback(getCmdCallback());
@@ -53,9 +55,9 @@ public abstract class CommandWrapperImpl extends SubjectCommandImpl implements C
                 sc.setDate(getDate());
             }
             command.redo();
-        }        
+        }
         setExecuted(true);
+        executing = false;
     }
 
-    
-} //CommandWrapperImpl
+} // CommandWrapperImpl

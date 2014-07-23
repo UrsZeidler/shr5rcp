@@ -5,7 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
-
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import junit.textui.TestRunner;
 
 /**
@@ -68,4 +68,48 @@ public class SimpleActionTest extends SubjectCommandTest {
         setFixture(null);
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @generated not
+     */
+    public void testIsCanExecute() {
+        assertTrue(getFixture().isCanExecute());
+        getFixture().setSubject(null);
+        assertFalse(getFixture().isCanExecute());
+    }
+
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
+        succesTestCmd.setDicePool(1);
+        succesTestCmd.setThresholds(0);
+        getFixture().getSubCommands().add(succesTestCmd);
+        
+        getFixture().redo();
+        assertTrue(getFixture().isExecuted());
+        assertTrue(succesTestCmd.isExecuted());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
+     * @generated not
+     */
+    public void testUndo() {
+        //fail();
+    }
+
+    
 } //SimpleActionTest
