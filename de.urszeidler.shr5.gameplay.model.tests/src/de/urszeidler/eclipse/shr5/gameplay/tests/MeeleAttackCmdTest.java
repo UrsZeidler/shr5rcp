@@ -5,7 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
-
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import junit.textui.TestRunner;
 
 /**
@@ -68,4 +68,40 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
         setFixture(null);
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @generated not
+     */
+    public void testIsCanExecute() {
+        assertFalse(getFixture().isCanExecute());
+        getFixture().setSubject(GameplayTools.createRuntimeCharacter());
+        assertTrue(getFixture().isCanExecute());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        fail();
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
+     * @generated not
+     */
+    public void testUndo() {
+        fail();
+    }
+
+    
 } //MeeleAttackCmdTest
