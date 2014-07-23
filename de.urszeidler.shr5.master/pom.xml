@@ -31,6 +31,8 @@
 		<module>../de.urszeidler.shr5.model.tests</module>
 		<module>../de.urszeidler.shr5.management.model.tests</module>
 		<module>../de.urszeidler.shr5.runtime.tests</module>
+		<module>../de.urszeidler.shr5.gameplay.model.test</module>
+		
 
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
