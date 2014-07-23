@@ -262,7 +262,7 @@ public class CombatTurnTest extends TestCase {
      * <!-- end-user-doc -->
      * 
      * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn()
-     * @generated
+     * @generated not 
      */
     public void testDoTurn() {
         // TODO: implement this operation test method
@@ -279,9 +279,12 @@ public class CombatTurnTest extends TestCase {
      * @generated
      */
     public void testRedo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().redo();
+        
+       assertEquals(2,  getFixture().getSubCommands().size());
+       assertEquals(2,getFixture().getActionPhases());
+        
+       assertNotNull(getFixture().getCurrentTurn());
     }
 
     /**
