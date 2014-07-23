@@ -16,9 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int) <em>Next Pass</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int) <em>Next Pass</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class InitativeTest extends SubjectCommandTest {
@@ -26,6 +27,7 @@ public class InitativeTest extends SubjectCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -36,6 +38,7 @@ public class InitativeTest extends SubjectCommandTest {
      * Constructs a new Initative test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public InitativeTest(String name) {
@@ -46,6 +49,7 @@ public class InitativeTest extends SubjectCommandTest {
      * Returns the fixture for this Initative test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -56,6 +60,7 @@ public class InitativeTest extends SubjectCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated not
      */
@@ -69,6 +74,7 @@ public class InitativeTest extends SubjectCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -81,14 +87,56 @@ public class InitativeTest extends SubjectCommandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int) <em>Next Pass</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int)
-     * @generated not 
+     * @generated not
      */
     public void testNextPass__int() {
         getFixture().redo();
-        
+
         int nextPass = getFixture().nextPass(20);
-        getFixture().getActualIni();
+        assertEquals(nextPass, getFixture().getIni());
     }
 
-} //InitativeTest
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        getFixture().redo();
+
+        int nextPass = getFixture().nextPass(20);
+        assertEquals(nextPass, getFixture().getIni());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @generated not
+     */
+    public void testIsCanExecute() {
+        assertTrue(getFixture().isCanExecute());
+        getFixture().setSubject(null);
+        assertFalse(getFixture().isCanExecute());
+     }
+
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
+     * @generated not
+     */
+    public void testUndo() {
+        //fail();
+    }
+
+} // InitativeTest
