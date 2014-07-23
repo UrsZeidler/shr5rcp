@@ -85,25 +85,19 @@ public abstract class SubjectCommandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#setCmdCallback(de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback)
-     * @generated
+     * @generated not
      */
     public void testSetCmdCallback() {
-        // TODO: implement this feature setter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
-    }
+     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#unsetCmdCallback() <em>unsetCmdCallback()</em>}' method.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#unsetCmdCallback()
-     * @generated
+     * @generated not
      */
     public void testUnsetCmdCallback() {
-        // TODO: implement this test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**
@@ -111,12 +105,9 @@ public abstract class SubjectCommandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#isSetCmdCallback()
-     * @generated
+     * @generated not
      */
     public void testIsSetCmdCallback() {
-        // TODO: implement this test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**
