@@ -5,7 +5,8 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import junit.textui.TestRunner;
 
 /**
@@ -50,11 +51,15 @@ public class ComplexActionTest extends CommandWrapperTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {
         setFixture(GameplayFactory.eINSTANCE.createComplexAction());
+       
+        RuntimeCharacter character1 = GameplayTools.createRuntimeCharacter();
+        getFixture().setSubject(character1);
+
     }
 
     /**
@@ -66,6 +71,43 @@ public class ComplexActionTest extends CommandWrapperTest {
     @Override
     protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @generated not
+     */
+    public void testIsCanExecute() {
+        assertTrue(getFixture().isCanExecute());
+        getFixture().setSubject(null);
+        assertFalse(getFixture().isCanExecute());
+    }
+
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        fail();
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
+     * @generated not
+     */
+    public void testUndo() {
+        //fail();
     }
 
 } //ComplexActionTest
