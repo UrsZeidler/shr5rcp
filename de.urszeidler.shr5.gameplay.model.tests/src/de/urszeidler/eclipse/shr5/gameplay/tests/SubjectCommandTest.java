@@ -3,8 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
-import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
+import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
+import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import junit.framework.TestCase;
 
 /**
@@ -72,12 +75,19 @@ public abstract class SubjectCommandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback()
-     * @generated
+     * @generated not
      */
     public void testGetCmdCallback() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertNull(getFixture().getCmdCallback());
+
+        getFixture().setCmdCallback(new CommandCallback() {
+
+            @Override
+            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+
+            }
+        });
+        assertNotNull(getFixture().getCmdCallback());
     }
 
     /**
@@ -88,6 +98,16 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testSetCmdCallback() {
+        assertNull(getFixture().getCmdCallback());
+
+        getFixture().setCmdCallback(new CommandCallback() {
+
+            @Override
+            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+
+            }
+        });
+        assertNotNull(getFixture().getCmdCallback());
      }
 
     /**
@@ -98,6 +118,21 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testUnsetCmdCallback() {
+        assertNull(getFixture().getCmdCallback());
+
+        getFixture().setCmdCallback(new CommandCallback() {
+
+            @Override
+            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+
+            }
+        });
+        assertNotNull(getFixture().getCmdCallback());
+
+        getFixture().setCmdCallback(null);
+        assertNull(getFixture().getCmdCallback());
+        getFixture().unsetCmdCallback();
+        assertFalse(getFixture().isSetCmdCallback());
     }
 
     /**
@@ -108,18 +143,28 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testIsSetCmdCallback() {
-    }
+        assertNull(getFixture().getCmdCallback());
+        assertFalse(getFixture().isSetCmdCallback());
+
+        getFixture().setCmdCallback(new CommandCallback() {
+
+            @Override
+            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+
+            }
+        });
+        assertNotNull(getFixture().getCmdCallback());
+        assertTrue(getFixture().isSetCmdCallback());
+   }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
-     * @generated
+     * @generated not
      */
     public void testIsCanExecute() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -128,11 +173,9 @@ public abstract class SubjectCommandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
-     * @generated
+     * @generated not
      */
     public void testRedo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -141,11 +184,9 @@ public abstract class SubjectCommandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
-     * @generated
+     * @generated not
      */
     public void testUndo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

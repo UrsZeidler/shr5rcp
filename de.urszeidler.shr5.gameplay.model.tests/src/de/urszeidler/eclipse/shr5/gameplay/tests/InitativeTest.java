@@ -5,7 +5,8 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
-
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import junit.textui.TestRunner;
 
 /**
@@ -56,11 +57,13 @@ public class InitativeTest extends SubjectCommandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {
         setFixture(GameplayFactory.eINSTANCE.createInitative());
+        RuntimeCharacter character1 = GameplayTools.createRuntimeCharacter();
+        getFixture().setSubject(character1);
     }
 
     /**
@@ -79,12 +82,13 @@ public class InitativeTest extends SubjectCommandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int)
-     * @generated
+     * @generated not 
      */
     public void testNextPass__int() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().redo();
+        
+        int nextPass = getFixture().nextPass(20);
+        getFixture().getActualIni();
     }
 
 } //InitativeTest

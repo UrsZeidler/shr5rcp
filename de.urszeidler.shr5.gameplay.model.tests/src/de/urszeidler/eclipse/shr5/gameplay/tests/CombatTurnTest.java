@@ -12,6 +12,7 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -106,8 +107,8 @@ public class CombatTurnTest extends TestCase {
     protected void setUp() throws Exception {
         setFixture(GameplayFactory.eINSTANCE.createCombatTurn());
 
-        RuntimeCharacter character1 = createRuntimeCharacter();
-        RuntimeCharacter character2 = createRuntimeCharacter();
+        RuntimeCharacter character1 = GameplayTools.createRuntimeCharacter();
+        RuntimeCharacter character2 = GameplayTools.createRuntimeCharacter();
 
         // getFixture().setCmdCallback(new CommandCallback() {
         //
@@ -123,22 +124,6 @@ public class CombatTurnTest extends TestCase {
 
     }
 
-    /**
-     * Create a runtime character.
-     * 
-     * @return
-     */
-    protected RuntimeCharacter createRuntimeCharacter() {
-        ManagedCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
-        AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
-        persona.setKonstitutionBasis(4);
-        character.setPersona(persona);
-
-        RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
-        runtimeCharacter.setCharacter(character);
-
-        return runtimeCharacter;
-    }
 
     /**
      * <!-- begin-user-doc -->
