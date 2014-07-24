@@ -15,6 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Command</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The basic command interface.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -40,6 +44,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * If the command is executed the flag is set to true.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Executed</em>' attribute.
      * @see #setExecuted(boolean)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Executed()
@@ -82,6 +89,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The game date the command is executed.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Date</em>' attribute.
      * @see #setDate(Date)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Date()
@@ -109,6 +119,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A callback interface for configuring the command.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Cmd Callback</em>' attribute.
      * @see #isSetCmdCallback()
      * @see #unsetCmdCallback()
@@ -163,6 +176,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This flag is true as long the command is executed.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Executing</em>' attribute.
      * @see #setExecuting(boolean)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Executing()
@@ -189,6 +205,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A flag indication if the command is propper configured.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Can Execute</em>' attribute.
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_CanExecute()
      * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
@@ -199,6 +218,10 @@ public interface Command extends EObject {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The action method.
+     * Executes  it self and the sub commands.
+     * <!-- end-model-doc -->
      * @model
      * @generated
      */

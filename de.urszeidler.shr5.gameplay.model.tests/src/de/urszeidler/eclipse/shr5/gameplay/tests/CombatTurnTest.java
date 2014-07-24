@@ -5,8 +5,6 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -14,9 +12,6 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
@@ -27,19 +22,18 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback() <em>Cmd Callback</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback() <em>Cmd Callback</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class CombatTurnTest extends TestCase {
@@ -48,7 +42,6 @@ public class CombatTurnTest extends TestCase {
      * The fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CombatTurn fixture = null;
@@ -56,7 +49,6 @@ public class CombatTurnTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -67,7 +59,6 @@ public class CombatTurnTest extends TestCase {
      * Constructs a new Combat Turn test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public CombatTurnTest(String name) {
@@ -78,7 +69,6 @@ public class CombatTurnTest extends TestCase {
      * Sets the fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(CombatTurn fixture) {
@@ -89,7 +79,6 @@ public class CombatTurnTest extends TestCase {
      * Returns the fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CombatTurn getFixture() {
@@ -99,9 +88,8 @@ public class CombatTurnTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {
@@ -128,7 +116,6 @@ public class CombatTurnTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

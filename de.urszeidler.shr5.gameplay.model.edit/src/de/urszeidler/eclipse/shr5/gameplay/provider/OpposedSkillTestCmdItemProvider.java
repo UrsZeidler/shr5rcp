@@ -57,6 +57,7 @@ public class OpposedSkillTestCmdItemProvider
             super.getPropertyDescriptors(object);
 
             addObjectPropertyDescriptor(object);
+            addObjectSkillPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -75,6 +76,28 @@ public class OpposedSkillTestCmdItemProvider
                  getString("_UI_OpposedSkillTestCmd_object_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_object_feature", "_UI_OpposedSkillTestCmd_type"),
                  GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Object Skill feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addObjectSkillPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_OpposedSkillTestCmd_objectSkill_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_objectSkill_feature", "_UI_OpposedSkillTestCmd_type"),
+                 GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL,
                  true,
                  false,
                  true,

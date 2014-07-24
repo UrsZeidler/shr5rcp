@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
-import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import junit.textui.TestRunner;
 

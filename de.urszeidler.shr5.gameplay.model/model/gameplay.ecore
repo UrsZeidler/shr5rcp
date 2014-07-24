@@ -73,6 +73,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OpposedSkillTestCmd" eSuperTypes="#//SkillTestCmd">
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectSkill" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Initative" eSuperTypes="#//SubjectCommand">
     <eOperations name="nextPass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -117,7 +119,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExtendetSkillTestCmd" eSuperTypes="#//SkillTestCmd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendetSkillTestCmd" eSuperTypes="#//SkillTestCmd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="1"
+        eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intervall" lowerBound="1"
+        eType="#//Intervall" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DefensTestCmd" eSuperTypes="#//ProbeCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackersHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -147,7 +154,9 @@
         eType="#//SimpleAction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//SubjectCommand"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iniCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetFeatureCommand" eSuperTypes="#//Command">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The the value to the ebject in the feature."/>
@@ -164,5 +173,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modus" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//FeuerModus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Intervall">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantities" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" lowerBound="1" eType="#//TimeUnits"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnits">
+    <eLiterals name="sec"/>
+    <eLiterals name="min" value="1"/>
+    <eLiterals name="hour" value="2"/>
+    <eLiterals name="day" value="3"/>
+    <eLiterals name="week" value="4"/>
+    <eLiterals name="month" value="5"/>
+    <eLiterals name="year" value="6"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -13,7 +13,6 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Defens Test Cmd</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class DefensTestCmdTest extends ProbeCommandTest {
@@ -21,7 +20,6 @@ public class DefensTestCmdTest extends ProbeCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -32,7 +30,6 @@ public class DefensTestCmdTest extends ProbeCommandTest {
      * Constructs a new Defens Test Cmd test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public DefensTestCmdTest(String name) {
@@ -43,7 +40,6 @@ public class DefensTestCmdTest extends ProbeCommandTest {
      * Returns the fixture for this Defens Test Cmd test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -54,7 +50,6 @@ public class DefensTestCmdTest extends ProbeCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -66,7 +61,6 @@ public class DefensTestCmdTest extends ProbeCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

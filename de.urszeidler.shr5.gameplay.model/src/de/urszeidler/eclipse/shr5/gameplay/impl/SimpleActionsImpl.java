@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction1 <em>Action1</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction2 <em>Action2</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction1 <em>Action1</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction2 <em>Action2</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActions {
@@ -34,7 +34,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * The cached value of the '{@link #getAction1() <em>Action1</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAction1()
      * @generated
      * @ordered
@@ -45,7 +44,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * The cached value of the '{@link #getAction2() <em>Action2</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAction2()
      * @generated
      * @ordered
@@ -55,7 +53,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SimpleActionsImpl() {
@@ -65,7 +62,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -76,7 +72,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SimpleAction getAction1() {
@@ -86,19 +81,14 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NotificationChain basicSetAction1(SimpleAction newAction1, NotificationChain msgs) {
         SimpleAction oldAction1 = action1;
         action1 = newAction1;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION1, oldAction1,
-                    newAction1);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION1, oldAction1, newAction1);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
         }
         return msgs;
     }
@@ -106,7 +96,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setAction1(SimpleAction newAction1) {
@@ -117,16 +106,15 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
             if (newAction1 != null)
                 msgs = ((InternalEObject)newAction1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.SIMPLE_ACTIONS__ACTION1, null, msgs);
             msgs = basicSetAction1(newAction1, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION1, newAction1, newAction1));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SimpleAction getAction2() {
@@ -136,19 +124,14 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NotificationChain basicSetAction2(SimpleAction newAction2, NotificationChain msgs) {
         SimpleAction oldAction2 = action2;
         action2 = newAction2;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION2, oldAction2,
-                    newAction2);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION2, oldAction2, newAction2);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
         }
         return msgs;
     }
@@ -156,7 +139,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setAction2(SimpleAction newAction2) {
@@ -167,16 +149,15 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
             if (newAction2 != null)
                 msgs = ((InternalEObject)newAction2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.SIMPLE_ACTIONS__ACTION2, null, msgs);
             msgs = basicSetAction2(newAction2, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SIMPLE_ACTIONS__ACTION2, newAction2, newAction2));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -193,7 +174,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -210,7 +190,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -229,7 +208,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -248,7 +226,6 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
+import de.urszeidler.eclipse.shr5.gameplay.Intervall;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
@@ -32,11 +33,13 @@ import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -230,6 +233,20 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass rangedAttackCmdEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass intervallEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum timeUnitsEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -514,6 +531,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getOpposedSkillTestCmd_ObjectSkill() {
+        return (EReference)opposedSkillTestCmdEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getInitative() {
         return initativeEClass;
     }
@@ -739,6 +765,24 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getExtendetSkillTestCmd_StartDate() {
+        return (EAttribute)extendetSkillTestCmdEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getExtendetSkillTestCmd_Intervall() {
+        return (EReference)extendetSkillTestCmdEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getDefensTestCmd() {
         return defensTestCmdEClass;
     }
@@ -901,6 +945,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getInterruptAction_IniCost() {
+        return (EAttribute)interruptActionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSetFeatureCommand() {
         return setFeatureCommandEClass;
     }
@@ -991,6 +1044,42 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getIntervall() {
+        return intervallEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getIntervall_Quantities() {
+        return (EAttribute)intervallEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getIntervall_Units() {
+        return (EAttribute)intervallEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getTimeUnits() {
+        return timeUnitsEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -1051,6 +1140,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         opposedSkillTestCmdEClass = createEClass(OPPOSED_SKILL_TEST_CMD);
         createEReference(opposedSkillTestCmdEClass, OPPOSED_SKILL_TEST_CMD__OBJECT);
+        createEReference(opposedSkillTestCmdEClass, OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL);
 
         initativeEClass = createEClass(INITATIVE);
         createEAttribute(initativeEClass, INITATIVE__INI);
@@ -1084,6 +1174,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(succesTestEClass, SUCCES_TEST__NET_HITS);
 
         extendetSkillTestCmdEClass = createEClass(EXTENDET_SKILL_TEST_CMD);
+        createEAttribute(extendetSkillTestCmdEClass, EXTENDET_SKILL_TEST_CMD__START_DATE);
+        createEReference(extendetSkillTestCmdEClass, EXTENDET_SKILL_TEST_CMD__INTERVALL);
 
         defensTestCmdEClass = createEClass(DEFENS_TEST_CMD);
         createEAttribute(defensTestCmdEClass, DEFENS_TEST_CMD__ATTACKERS_HITS);
@@ -1111,6 +1203,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         freeActionEClass = createEClass(FREE_ACTION);
 
         interruptActionEClass = createEClass(INTERRUPT_ACTION);
+        createEAttribute(interruptActionEClass, INTERRUPT_ACTION__INI_COST);
 
         setFeatureCommandEClass = createEClass(SET_FEATURE_COMMAND);
         createEAttribute(setFeatureCommandEClass, SET_FEATURE_COMMAND__VALUE);
@@ -1124,6 +1217,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__MODUS);
         createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__RANGE);
         createEReference(rangedAttackCmdEClass, RANGED_ATTACK_CMD__WEAPON);
+
+        intervallEClass = createEClass(INTERVALL);
+        createEAttribute(intervallEClass, INTERVALL__QUANTITIES);
+        createEAttribute(intervallEClass, INTERVALL__UNITS);
+
+        // Create enums
+        timeUnitsEEnum = createEEnum(TIME_UNITS);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -1216,6 +1316,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(opposedSkillTestCmdEClass, OpposedSkillTestCmd.class, "OpposedSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getOpposedSkillTestCmd_Object(), theRuntimePackage.getRuntimeCharacter(), null, "object", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getOpposedSkillTestCmd_ObjectSkill(), theShr5Package.getPersonaFertigkeit(), null, "objectSkill", null, 1, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(initativeEClass, Initative.class, "Initative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getInitative_Ini(), ecorePackage.getEInt(), "ini", null, 0, 1, Initative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1252,6 +1353,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getSuccesTest_NetHits(), ecorePackage.getEInt(), "netHits", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(extendetSkillTestCmdEClass, ExtendetSkillTestCmd.class, "ExtendetSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getExtendetSkillTestCmd_StartDate(), theShr5Package.getShrDate(), "startDate", null, 1, 1, ExtendetSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getExtendetSkillTestCmd_Intervall(), this.getIntervall(), null, "intervall", null, 1, 1, ExtendetSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(defensTestCmdEClass, DefensTestCmd.class, "DefensTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getDefensTestCmd_AttackersHits(), ecorePackage.getEInt(), "attackersHits", null, 0, 1, DefensTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1279,6 +1382,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(freeActionEClass, FreeAction.class, "FreeAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(interruptActionEClass, InterruptAction.class, "InterruptAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getInterruptAction_IniCost(), ecorePackage.getEInt(), "iniCost", null, 0, 1, InterruptAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(setFeatureCommandEClass, SetFeatureCommand.class, "SetFeatureCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSetFeatureCommand_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetFeatureCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1292,6 +1396,20 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getRangedAttackCmd_Modus(), theShr5Package.getFeuerModus(), "modus", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getRangedAttackCmd_Range(), ecorePackage.getEInt(), "range", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRangedAttackCmd_Weapon(), theShr5Package.getAbstaktFernKampfwaffe(), null, "weapon", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getIntervall_Quantities(), ecorePackage.getEInt(), "quantities", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getIntervall_Units(), this.getTimeUnits(), "units", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        // Initialize enums and add enum literals
+        initEEnum(timeUnitsEEnum, TimeUnits.class, "TimeUnits");
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.SEC);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MIN);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.HOUR);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.DAY);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.WEEK);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MONTH);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.YEAR);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

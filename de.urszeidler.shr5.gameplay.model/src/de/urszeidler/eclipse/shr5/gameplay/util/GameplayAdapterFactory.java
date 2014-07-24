@@ -173,6 +173,10 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
                 return createRangedAttackCmdAdapter();
             }
             @Override
+            public Adapter caseIntervall(Intervall object) {
+                return createIntervallAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -553,6 +557,20 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createRangedAttackCmdAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.Intervall <em>Intervall</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Intervall
+     * @generated
+     */
+    public Adapter createIntervallAdapter() {
         return null;
     }
 

@@ -4,17 +4,17 @@
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
 
-import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
-
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Intervall;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -23,16 +23,17 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.Intervall} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtendetSkillTestCmdItemProvider
-    extends SkillTestCmdItemProvider
+public class IntervallItemProvider
+    extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -45,7 +46,7 @@ public class ExtendetSkillTestCmdItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public ExtendetSkillTestCmdItemProvider(AdapterFactory adapterFactory) {
+    public IntervallItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -60,25 +61,48 @@ public class ExtendetSkillTestCmdItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addStartDatePropertyDescriptor(object);
+            addQuantitiesPropertyDescriptor(object);
+            addUnitsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Start Date feature.
+     * This adds a property descriptor for the Quantities feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addStartDatePropertyDescriptor(Object object) {
+    protected void addQuantitiesPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ExtendetSkillTestCmd_startDate_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ExtendetSkillTestCmd_startDate_feature", "_UI_ExtendetSkillTestCmd_type"),
-                 GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD__START_DATE,
+                 getString("_UI_Intervall_quantities_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Intervall_quantities_feature", "_UI_Intervall_type"),
+                 GameplayPackage.Literals.INTERVALL__QUANTITIES,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Units feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addUnitsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Intervall_units_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Intervall_units_feature", "_UI_Intervall_type"),
+                 GameplayPackage.Literals.INTERVALL__UNITS,
                  true,
                  false,
                  false,
@@ -88,44 +112,14 @@ public class ExtendetSkillTestCmdItemProvider
     }
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD__INTERVALL);
-        }
-        return childrenFeatures;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
-    }
-
-    /**
-     * This returns ExtendetSkillTestCmd.gif.
+     * This returns Intervall.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/ExtendetSkillTestCmd"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Intervall"));
     }
 
     /**
@@ -136,8 +130,8 @@ public class ExtendetSkillTestCmdItemProvider
      */
     @Override
     public String getText(Object object) {
-        ExtendetSkillTestCmd extendetSkillTestCmd = (ExtendetSkillTestCmd)object;
-        return getString("_UI_ExtendetSkillTestCmd_type") + " " + extendetSkillTestCmd.isExecuted();
+        Intervall intervall = (Intervall)object;
+        return getString("_UI_Intervall_type") + " " + intervall.getQuantities();
     }
 
     /**
@@ -151,12 +145,10 @@ public class ExtendetSkillTestCmdItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(ExtendetSkillTestCmd.class)) {
-            case GameplayPackage.EXTENDET_SKILL_TEST_CMD__START_DATE:
+        switch (notification.getFeatureID(Intervall.class)) {
+            case GameplayPackage.INTERVALL__QUANTITIES:
+            case GameplayPackage.INTERVALL__UNITS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
@@ -172,11 +164,17 @@ public class ExtendetSkillTestCmdItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
-        newChildDescriptors.add
-            (createChildParameter
-                (GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD__INTERVALL,
-                 GameplayFactory.eINSTANCE.createIntervall()));
+    /**
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ResourceLocator getResourceLocator() {
+        return GameplayEditPlugin.INSTANCE;
     }
 
 }

@@ -510,6 +510,29 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.Intervall} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected IntervallItemProvider intervallItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.Intervall}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createIntervallAdapter() {
+        if (intervallItemProvider == null) {
+            intervallItemProvider = new IntervallItemProvider(this);
+        }
+
+        return intervallItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -627,6 +650,7 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (setFeatureCommandItemProvider != null) setFeatureCommandItemProvider.dispose();
         if (meeleAttackCmdItemProvider != null) meeleAttackCmdItemProvider.dispose();
         if (rangedAttackCmdItemProvider != null) rangedAttackCmdItemProvider.dispose();
+        if (intervallItemProvider != null) intervallItemProvider.dispose();
     }
 
 }

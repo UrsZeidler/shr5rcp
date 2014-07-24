@@ -16,10 +16,9 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int) <em>Next Pass</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Initative#nextPass(int) <em>Next Pass</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class InitativeTest extends SubjectCommandTest {
@@ -27,7 +26,6 @@ public class InitativeTest extends SubjectCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -38,7 +36,6 @@ public class InitativeTest extends SubjectCommandTest {
      * Constructs a new Initative test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public InitativeTest(String name) {
@@ -49,7 +46,6 @@ public class InitativeTest extends SubjectCommandTest {
      * Returns the fixture for this Initative test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -74,7 +70,6 @@ public class InitativeTest extends SubjectCommandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

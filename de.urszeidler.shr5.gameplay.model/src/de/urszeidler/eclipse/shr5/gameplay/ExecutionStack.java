@@ -12,6 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Execution Stack</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The execution stack holds the current command and the execution protokoll.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

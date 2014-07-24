@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObject <em>Object</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObjectSkill <em>Object Skill</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,6 +40,16 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * @ordered
      */
     protected RuntimeCharacter object;
+
+    /**
+     * The cached value of the '{@link #getObjectSkill() <em>Object Skill</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getObjectSkill()
+     * @generated
+     * @ordered
+     */
+    protected PersonaFertigkeit objectSkill;
 
     /**
      * <!-- begin-user-doc -->
@@ -101,12 +113,53 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
+    public PersonaFertigkeit getObjectSkill() {
+        if (objectSkill != null && objectSkill.eIsProxy()) {
+            InternalEObject oldObjectSkill = (InternalEObject)objectSkill;
+            objectSkill = (PersonaFertigkeit)eResolveProxy(oldObjectSkill);
+            if (objectSkill != oldObjectSkill) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill, objectSkill));
+            }
+        }
+        return objectSkill;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonaFertigkeit basicGetObjectSkill() {
+        return objectSkill;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setObjectSkill(PersonaFertigkeit newObjectSkill) {
+        PersonaFertigkeit oldObjectSkill = objectSkill;
+        objectSkill = newObjectSkill;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill, objectSkill));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT:
                 if (resolve) return getObject();
                 return basicGetObject();
+            case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
+                if (resolve) return getObjectSkill();
+                return basicGetObjectSkill();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -121,6 +174,9 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
         switch (featureID) {
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT:
                 setObject((RuntimeCharacter)newValue);
+                return;
+            case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
+                setObjectSkill((PersonaFertigkeit)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -137,6 +193,9 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT:
                 setObject((RuntimeCharacter)null);
                 return;
+            case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
+                setObjectSkill((PersonaFertigkeit)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -151,6 +210,8 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
         switch (featureID) {
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT:
                 return object != null;
+            case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
+                return objectSkill != null;
         }
         return super.eIsSet(featureID);
     }

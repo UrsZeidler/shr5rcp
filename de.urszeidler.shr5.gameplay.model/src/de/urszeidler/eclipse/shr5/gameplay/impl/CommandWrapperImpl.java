@@ -17,14 +17,13 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class CommandWrapperImpl extends SubjectCommandImpl implements CommandWrapper {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CommandWrapperImpl() {
@@ -34,7 +33,6 @@ public abstract class CommandWrapperImpl extends SubjectCommandImpl implements C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

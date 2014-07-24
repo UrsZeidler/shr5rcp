@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
@@ -14,6 +15,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObject <em>Object</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObjectSkill <em>Object Skill</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +49,31 @@ public interface OpposedSkillTestCmd extends SkillTestCmd {
      * @generated
      */
     void setObject(RuntimeCharacter value);
+
+    /**
+     * Returns the value of the '<em><b>Object Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Object Skill</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Object Skill</em>' reference.
+     * @see #setObjectSkill(PersonaFertigkeit)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getOpposedSkillTestCmd_ObjectSkill()
+     * @model required="true"
+     * @generated
+     */
+    PersonaFertigkeit getObjectSkill();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObjectSkill <em>Object Skill</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Object Skill</em>' reference.
+     * @see #getObjectSkill()
+     * @generated
+     */
+    void setObjectSkill(PersonaFertigkeit value);
 
 } // OpposedSkillTestCmd

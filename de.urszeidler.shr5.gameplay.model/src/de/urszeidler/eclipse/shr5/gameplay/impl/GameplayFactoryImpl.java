@@ -77,6 +77,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.SET_FEATURE_COMMAND: return createSetFeatureCommand();
             case GameplayPackage.MEELE_ATTACK_CMD: return createMeeleAttackCmd();
             case GameplayPackage.RANGED_ATTACK_CMD: return createRangedAttackCmd();
+            case GameplayPackage.INTERVALL: return createIntervall();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -90,6 +91,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
+            case GameplayPackage.TIME_UNITS:
+                return createTimeUnitsFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -103,6 +106,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
+            case GameplayPackage.TIME_UNITS:
+                return convertTimeUnitsToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -296,6 +301,36 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public RangedAttackCmd createRangedAttackCmd() {
         RangedAttackCmdImpl rangedAttackCmd = new RangedAttackCmdImpl();
         return rangedAttackCmd;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Intervall createIntervall() {
+        IntervallImpl intervall = new IntervallImpl();
+        return intervall;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TimeUnits createTimeUnitsFromString(EDataType eDataType, String initialValue) {
+        TimeUnits result = TimeUnits.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertTimeUnitsToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**

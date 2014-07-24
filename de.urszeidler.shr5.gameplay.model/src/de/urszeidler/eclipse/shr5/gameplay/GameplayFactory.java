@@ -194,6 +194,15 @@ public interface GameplayFactory extends EFactory {
     RangedAttackCmd createRangedAttackCmd();
 
     /**
+     * Returns a new object of class '<em>Intervall</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Intervall</em>'.
+     * @generated
+     */
+    Intervall createIntervall();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

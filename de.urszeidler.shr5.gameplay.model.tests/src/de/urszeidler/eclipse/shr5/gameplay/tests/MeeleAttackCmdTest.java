@@ -19,7 +19,6 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Meele Attack Cmd</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
@@ -27,7 +26,6 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -38,7 +36,6 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
      * Constructs a new Meele Attack Cmd test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MeeleAttackCmdTest(String name) {
@@ -49,7 +46,6 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
      * Returns the fixture for this Meele Attack Cmd test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -60,7 +56,6 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -72,7 +67,6 @@ public class MeeleAttackCmdTest extends OpposedSkillTestCmdTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

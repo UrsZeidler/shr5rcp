@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * A representation of the model object '<em><b>Set Feature Command</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The the value to the ebject in the feature.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

@@ -8,6 +8,15 @@
   <foreignModel>gameplay.ecore</foreignModel>
   <genPackages prefix="Gameplay" basePackage="de.urszeidler.eclipse.shr5" disposableProviderFactory="true"
       ecorePackage="gameplay.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//TimeUnits">
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/sec"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/min"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/hour"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/day"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/week"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/month"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/year"/>
+    </genEnums>
     <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
@@ -37,6 +46,7 @@
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//OpposedSkillTestCmd">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/objectSkill"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//Initative">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Initative/ini"/>
@@ -71,7 +81,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/netHits"/>
     </genClasses>
-    <genClasses ecoreClass="gameplay.ecore#//ExtendetSkillTestCmd"/>
+    <genClasses ecoreClass="gameplay.ecore#//ExtendetSkillTestCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ExtendetSkillTestCmd/startDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExtendetSkillTestCmd/intervall"/>
+    </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DefensTestCmd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DefensTestCmd/attackersHits"/>
     </genClasses>
@@ -93,7 +106,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//SimpleActions/action2"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//FreeAction"/>
-    <genClasses ecoreClass="gameplay.ecore#//InterruptAction"/>
+    <genClasses ecoreClass="gameplay.ecore#//InterruptAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//InterruptAction/iniCost"/>
+    </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//SetFeatureCommand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SetFeatureCommand/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetFeatureCommand/object"/>
@@ -106,6 +121,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/modus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/range"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//RangedAttackCmd/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//Intervall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Intervall/quantities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Intervall/units"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

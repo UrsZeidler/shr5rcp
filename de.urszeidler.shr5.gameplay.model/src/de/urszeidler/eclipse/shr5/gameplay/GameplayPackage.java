@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.gameplay;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -1030,13 +1031,22 @@ public interface GameplayPackage extends EPackage {
     int OPPOSED_SKILL_TEST_CMD__OBJECT = SKILL_TEST_CMD_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Object Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL = SKILL_TEST_CMD_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Opposed Skill Test Cmd</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT = SKILL_TEST_CMD_FEATURE_COUNT + 1;
+    int OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT = SKILL_TEST_CMD_FEATURE_COUNT + 2;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -1712,13 +1722,31 @@ public interface GameplayPackage extends EPackage {
     int EXTENDET_SKILL_TEST_CMD__SKILL = SKILL_TEST_CMD__SKILL;
 
     /**
+     * The feature id for the '<em><b>Start Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__START_DATE = SKILL_TEST_CMD_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Intervall</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__INTERVALL = SKILL_TEST_CMD_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Extendet Skill Test Cmd</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EXTENDET_SKILL_TEST_CMD_FEATURE_COUNT = SKILL_TEST_CMD_FEATURE_COUNT + 0;
+    int EXTENDET_SKILL_TEST_CMD_FEATURE_COUNT = SKILL_TEST_CMD_FEATURE_COUNT + 2;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -2910,13 +2938,22 @@ public interface GameplayPackage extends EPackage {
     int INTERRUPT_ACTION__SUBJECT = SUBJECT_COMMAND__SUBJECT;
 
     /**
+     * The feature id for the '<em><b>Ini Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__INI_COST = SUBJECT_COMMAND_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Interrupt Action</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 0;
+    int INTERRUPT_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 1;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -3227,6 +3264,15 @@ public interface GameplayPackage extends EPackage {
     int MEELE_ATTACK_CMD__OBJECT = OPPOSED_SKILL_TEST_CMD__OBJECT;
 
     /**
+     * The feature id for the '<em><b>Object Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__OBJECT_SKILL = OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL;
+
+    /**
      * The feature id for the '<em><b>Weapon</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3426,6 +3472,15 @@ public interface GameplayPackage extends EPackage {
     int RANGED_ATTACK_CMD__OBJECT = OPPOSED_SKILL_TEST_CMD__OBJECT;
 
     /**
+     * The feature id for the '<em><b>Object Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__OBJECT_SKILL = OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL;
+
+    /**
      * The feature id for the '<em><b>Modus</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3489,6 +3544,62 @@ public interface GameplayPackage extends EPackage {
     int RANGED_ATTACK_CMD_OPERATION_COUNT = OPPOSED_SKILL_TEST_CMD_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl <em>Intervall</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getIntervall()
+     * @generated
+     */
+    int INTERVALL = 26;
+
+    /**
+     * The feature id for the '<em><b>Quantities</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL__QUANTITIES = 0;
+
+    /**
+     * The feature id for the '<em><b>Units</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL__UNITS = 1;
+
+    /**
+     * The number of structural features of the '<em>Intervall</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Intervall</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
+     * @generated
+     */
+    int TIME_UNITS = 27;
+
+    /**
      * The meta object id for the '<em>Command Callback</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3496,7 +3607,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 26;
+    int COMMAND_CALLBACK = 28;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -3742,6 +3853,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EReference getOpposedSkillTestCmd_Object();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObjectSkill <em>Object Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Object Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObjectSkill()
+     * @see #getOpposedSkillTestCmd()
+     * @generated
+     */
+    EReference getOpposedSkillTestCmd_ObjectSkill();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.Initative <em>Initative</em>}'.
@@ -4009,6 +4131,28 @@ public interface GameplayPackage extends EPackage {
     EClass getExtendetSkillTestCmd();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getStartDate <em>Start Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Date</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getStartDate()
+     * @see #getExtendetSkillTestCmd()
+     * @generated
+     */
+    EAttribute getExtendetSkillTestCmd_StartDate();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getIntervall <em>Intervall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Intervall</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getIntervall()
+     * @see #getExtendetSkillTestCmd()
+     * @generated
+     */
+    EReference getExtendetSkillTestCmd_Intervall();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd <em>Defens Test Cmd</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4198,6 +4342,17 @@ public interface GameplayPackage extends EPackage {
     EClass getInterruptAction();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getIniCost <em>Ini Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Ini Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getIniCost()
+     * @see #getInterruptAction()
+     * @generated
+     */
+    EAttribute getInterruptAction_IniCost();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand <em>Set Feature Command</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4303,6 +4458,48 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EReference getRangedAttackCmd_Weapon();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.Intervall <em>Intervall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Intervall</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Intervall
+     * @generated
+     */
+    EClass getIntervall();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Intervall#getQuantities <em>Quantities</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Quantities</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Intervall#getQuantities()
+     * @see #getIntervall()
+     * @generated
+     */
+    EAttribute getIntervall_Quantities();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Intervall#getUnits <em>Units</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Units</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Intervall#getUnits()
+     * @see #getIntervall()
+     * @generated
+     */
+    EAttribute getIntervall_Units();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Time Units</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
+     * @generated
+     */
+    EEnum getTimeUnits();
 
     /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
@@ -4535,6 +4732,14 @@ public interface GameplayPackage extends EPackage {
         EReference OPPOSED_SKILL_TEST_CMD__OBJECT = eINSTANCE.getOpposedSkillTestCmd_Object();
 
         /**
+         * The meta object literal for the '<em><b>Object Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL = eINSTANCE.getOpposedSkillTestCmd_ObjectSkill();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl <em>Initative</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -4751,6 +4956,22 @@ public interface GameplayPackage extends EPackage {
         EClass EXTENDET_SKILL_TEST_CMD = eINSTANCE.getExtendetSkillTestCmd();
 
         /**
+         * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute EXTENDET_SKILL_TEST_CMD__START_DATE = eINSTANCE.getExtendetSkillTestCmd_StartDate();
+
+        /**
+         * The meta object literal for the '<em><b>Intervall</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference EXTENDET_SKILL_TEST_CMD__INTERVALL = eINSTANCE.getExtendetSkillTestCmd_Intervall();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.DefensTestCmdImpl <em>Defens Test Cmd</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -4913,6 +5134,14 @@ public interface GameplayPackage extends EPackage {
         EClass INTERRUPT_ACTION = eINSTANCE.getInterruptAction();
 
         /**
+         * The meta object literal for the '<em><b>Ini Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERRUPT_ACTION__INI_COST = eINSTANCE.getInterruptAction_IniCost();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl <em>Set Feature Command</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -4997,6 +5226,42 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference RANGED_ATTACK_CMD__WEAPON = eINSTANCE.getRangedAttackCmd_Weapon();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl <em>Intervall</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getIntervall()
+         * @generated
+         */
+        EClass INTERVALL = eINSTANCE.getIntervall();
+
+        /**
+         * The meta object literal for the '<em><b>Quantities</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERVALL__QUANTITIES = eINSTANCE.getIntervall_Quantities();
+
+        /**
+         * The meta object literal for the '<em><b>Units</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERVALL__UNITS = eINSTANCE.getIntervall_Units();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
+         * @generated
+         */
+        EEnum TIME_UNITS = eINSTANCE.getTimeUnits();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.
