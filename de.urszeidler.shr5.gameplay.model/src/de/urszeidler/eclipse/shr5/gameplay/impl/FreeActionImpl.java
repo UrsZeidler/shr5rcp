@@ -3,9 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,6 +38,24 @@ public class FreeActionImpl extends SubjectCommandImpl implements FreeAction {
     @Override
     protected EClass eStaticClass() {
         return GameplayPackage.Literals.FREE_ACTION;
+    }
+
+    @Override
+    public void redo() {
+        setExecuting(true);
+
+        EList<Command> commands = getSubCommands();
+        for (Command command : commands) {
+            command.setCmdCallback(getCmdCallback());
+            if (command instanceof SubjectCommand) {
+                SubjectCommand sc = (SubjectCommand)command;
+                sc.setSubject(getSubject());
+                sc.setDate(getDate());
+            }
+            command.redo();
+        }
+        setExecuted(true);
+        executing = false;
     }
 
 } //FreeActionImpl
