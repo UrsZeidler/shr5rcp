@@ -350,12 +350,23 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void redo() {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        setExecuting(true);
+
+        EList<Command> commands = getSubCommands();
+        for (Command command : commands) {
+            command.setCmdCallback(getCmdCallback());
+            if (command instanceof SubjectCommand) {
+                SubjectCommand sc = (SubjectCommand)command;
+                sc.setSubject(getSubject());
+                sc.setDate(getDate());
+            }
+            command.redo();
+        }
+        setExecuted(true);
+        executing = false;
     }
 
     /**

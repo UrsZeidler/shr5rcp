@@ -264,7 +264,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
 
     @Override
     public boolean isCanExecute() {
-        return (getAction1() != null && getAction1().isCanExecute()) || (getAction2() != null && getAction2().isCanExecute());
+        return (getAction1() != null ) || (getAction2() != null );
     }
 
     @Override

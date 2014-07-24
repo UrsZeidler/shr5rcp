@@ -7,6 +7,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import junit.textui.TestRunner;
 
 /**
@@ -51,11 +52,12 @@ public class SimpleActionsTest extends CommandWrapperTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {
         setFixture(GameplayFactory.eINSTANCE.createSimpleActions());
+        getFixture().setSubject(GameplayTools.createRuntimeCharacter());
     }
 
     /**
