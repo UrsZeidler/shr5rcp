@@ -3,9 +3,16 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
-
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import junit.textui.TestRunner;
 
 /**
@@ -66,6 +73,70 @@ public class OpposedSkillTestCmdTest extends SkillTestCmdTest {
     @Override
     protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
+     * @generated not
+     */
+    public void testIsCanExecute() {
+        assertFalse(getFixture().isCanExecute());
+        getFixture().setSubject(GameplayTools.createRuntimeCharacter());
+        assertTrue(getFixture().isCanExecute());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        RuntimeCharacter runtimeCharacter = GameplayTools.createRuntimeCharacter();
+        RuntimeCharacter object = GameplayTools.createRuntimeCharacter();
+        AbstraktPersona persona = runtimeCharacter.getCharacter().getPersona();
+        persona.setGeschicklichkeitBasis(1);
+
+        Nahkampfwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createNahkampfwaffe();
+        Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+        fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
+
+        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        personaFertigkeit.setFertigkeit(fertigkeit);
+        personaFertigkeit.setStufe(1);
+        persona.getFertigkeiten().add(personaFertigkeit);
+        object.getCharacter().getPersona().getFertigkeiten().add(personaFertigkeit);
+
+        nahkampfwaffe.setFertigkeit(fertigkeit);
+        getFixture().setSubject(runtimeCharacter);
+        //getFixture().setSkill(personaFertigkeit);
+        //getFixture().set
+        //getFixture().setWeapon(nahkampfwaffe);
+        getFixture().setObject(object);
+
+        getFixture().redo();
+
+        assertTrue(getFixture().isExecuted());
+        assertEquals(2, getFixture().getProbe().size());
+    }
+
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
+     * @generated not
+     */
+    public void testUndo() {
+        // fail();
     }
 
 } //OpposedSkillTestCmdTest
