@@ -160,7 +160,10 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         executed = true;
 
         getProbe().clear();
+        if (isSetCmdCallback()&& getCmdCallback() != null)
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
 
+        
         W6Dice w6Dice = new W6Dice();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
         EAttribute attribut = getSkill().getFertigkeit().getAttribut();
