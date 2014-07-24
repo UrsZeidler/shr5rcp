@@ -98,10 +98,6 @@ public class SkillTestCmdTest extends ProbeCommandTest {
     public void testRedo() {
         AbstraktPersona persona = getFixture().getSubject().getCharacter().getPersona();
         persona.setGeschicklichkeitBasis(1);
-
-        Nahkampfwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createNahkampfwaffe();
-        nahkampfwaffe.setPraezision(20);
-        nahkampfwaffe.setSchadenscode("10P");
         Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
 
