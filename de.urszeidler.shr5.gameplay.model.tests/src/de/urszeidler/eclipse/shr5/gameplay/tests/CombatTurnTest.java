@@ -8,10 +8,17 @@ import junit.textui.TestRunner;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -23,18 +30,19 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback() <em>Cmd Callback</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback() <em>Cmd Callback</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute() <em>Can Execute</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#undo() <em>Undo</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class CombatTurnTest extends TestCase {
@@ -43,13 +51,17 @@ public class CombatTurnTest extends TestCase {
      * The fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CombatTurn fixture = null;
+    private RuntimeCharacter character1;
+    private RuntimeCharacter character2;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -60,6 +72,7 @@ public class CombatTurnTest extends TestCase {
      * Constructs a new Combat Turn test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public CombatTurnTest(String name) {
@@ -70,6 +83,7 @@ public class CombatTurnTest extends TestCase {
      * Sets the fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void setFixture(CombatTurn fixture) {
@@ -80,6 +94,7 @@ public class CombatTurnTest extends TestCase {
      * Returns the fixture for this Combat Turn test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CombatTurn getFixture() {
@@ -89,6 +104,7 @@ public class CombatTurnTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated not
      */
@@ -96,8 +112,8 @@ public class CombatTurnTest extends TestCase {
     protected void setUp() throws Exception {
         setFixture(GameplayFactory.eINSTANCE.createCombatTurn());
 
-        RuntimeCharacter character1 = GameplayTools.createRuntimeCharacter();
-        RuntimeCharacter character2 = GameplayTools.createRuntimeCharacter();
+        character1 = GameplayTools.createRuntimeCharacter();
+        character2 = GameplayTools.createRuntimeCharacter();
 
         // getFixture().setCmdCallback(new CommandCallback() {
         //
@@ -113,10 +129,10 @@ public class CombatTurnTest extends TestCase {
 
     }
 
-
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -229,7 +245,7 @@ public class CombatTurnTest extends TestCase {
         assertTrue(getFixture().isCanExecute());
         getFixture().getCombatants().clear();
         assertFalse(getFixture().isCanExecute());
-        
+
     }
 
     /**
@@ -238,25 +254,85 @@ public class CombatTurnTest extends TestCase {
      * <!-- end-user-doc -->
      * 
      * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn()
-     * @generated not 
+     * @generated not
      */
     public void testDoTurn() {
-//        assertNull(getFixture().getCurrentTurn());
-//        assertEquals(0,  getFixture().getSubCommands().size());
-//        assertEquals(0,getFixture().getActionPhases().size());
-//        
-//        getFixture().redo();
-//        
-//       assertEquals(2,  getFixture().getSubCommands().size());
-        testRedo();        
-       assertEquals(2,getFixture().getActionPhases().size());
-       assertNotNull(getFixture().getCurrentTurn());
-       InitativePass turn1 = getFixture().getCurrentTurn();
-       getFixture().doTurn();
-       assertNotNull(getFixture().getCurrentTurn());
-       assertNotSame(turn1, getFixture().getCurrentTurn());
-       getFixture().doTurn();
-       assertNull(getFixture().getCurrentTurn());
+        // assertNull(getFixture().getCurrentTurn());
+        // assertEquals(0, getFixture().getSubCommands().size());
+        // assertEquals(0,getFixture().getActionPhases().size());
+        //
+        // getFixture().redo();
+        //
+        // assertEquals(2, getFixture().getSubCommands().size());
+        testRedo();
+        assertEquals(2, getFixture().getActionPhases().size());
+        assertNotNull(getFixture().getCurrentTurn());
+        InitativePass turn1 = getFixture().getCurrentTurn();
+        getFixture().doTurn();
+        assertNotNull(getFixture().getCurrentTurn());
+        assertNotSame(turn1, getFixture().getCurrentTurn());
+        getFixture().doTurn();
+        assertNull(getFixture().getCurrentTurn());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn()
+     * @generated not
+     */
+    public void testDoTurn_Ini1() {
+        AbstraktPersona persona = character1.getCharacter().getPersona();
+        adjustPersona(persona);
+        AbstraktPersona persona1 = character2.getCharacter().getPersona();
+        adjustPersona(persona1);
+
+        assertNull(getFixture().getCurrentTurn());
+        assertEquals(0, getFixture().getSubCommands().size());
+        assertEquals(0, getFixture().getActionPhases().size());
+
+        getFixture().redo();
+
+        assertEquals(4, getFixture().getActionPhases().size());
+        assertEquals(2, getFixture().getSubCommands().size());
+        //
+        assertNotNull(getFixture().getCurrentTurn());
+
+        InitativePass turn1 = getFixture().getCurrentTurn();
+        assertEquals(11, turn1.getPhase());
+        getFixture().doTurn();
+        assertNotNull(getFixture().getCurrentTurn());
+        assertNotSame(turn1, getFixture().getCurrentTurn());
+        InitativePass turn2 = getFixture().getCurrentTurn();
+        assertEquals(11, turn2.getPhase());
+        getFixture().doTurn();
+
+        InitativePass turn11 = getFixture().getCurrentTurn();
+        assertEquals(1, turn11.getPhase());
+        getFixture().doTurn();
+        assertNotNull(getFixture().getCurrentTurn());
+        assertNotSame(turn11, getFixture().getCurrentTurn());
+        InitativePass turn12 = getFixture().getCurrentTurn();
+        assertEquals(1, turn12.getPhase());
+        getFixture().doTurn();
+
+        assertNull(getFixture().getCurrentTurn());
+    }
+
+    protected void adjustPersona(AbstraktPersona persona) {
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            PersonaEigenschaft personaEigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+            AttributModifikatorWert modifikatorWert = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
+            modifikatorWert.setAttribut(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
+            modifikatorWert.setWert(-1);
+            personaEigenschaft.getMods().add(modifikatorWert);
+            kp.getEigenschaften().add(personaEigenschaft);
+        }
+        persona.setReaktionBasis(5);
+        persona.setIntuitionBasis(6);
     }
 
     /**
@@ -269,15 +345,15 @@ public class CombatTurnTest extends TestCase {
      */
     public void testRedo() {
         assertNull(getFixture().getCurrentTurn());
-        assertEquals(0,  getFixture().getSubCommands().size());
-        assertEquals(0,getFixture().getActionPhases().size());
-        
+        assertEquals(0, getFixture().getSubCommands().size());
+        assertEquals(0, getFixture().getActionPhases().size());
+
         getFixture().redo();
-        
-       assertEquals(2,  getFixture().getSubCommands().size());
-       assertEquals(2,getFixture().getActionPhases().size());
-        
-       assertNotNull(getFixture().getCurrentTurn());
+
+        assertEquals(2, getFixture().getSubCommands().size());
+        assertEquals(2, getFixture().getActionPhases().size());
+
+        assertNotNull(getFixture().getCurrentTurn());
     }
 
     /**
@@ -289,7 +365,54 @@ public class CombatTurnTest extends TestCase {
      * @generated not
      */
     public void testUndo() {
-       
+
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn()
+     * @generated not
+     */
+    public void testDoTurn_InterruptAction() {
+        AbstraktPersona persona = character1.getCharacter().getPersona();
+        adjustPersona(persona);
+        persona.setIntuitionBasis(7);
+        AbstraktPersona persona1 = character2.getCharacter().getPersona();
+        adjustPersona(persona1);
+
+        assertNull(getFixture().getCurrentTurn());
+        assertEquals(0, getFixture().getSubCommands().size());
+        assertEquals(0, getFixture().getActionPhases().size());
+
+        getFixture().redo();
+
+        assertEquals(4, getFixture().getActionPhases().size());
+        assertEquals(2, getFixture().getSubCommands().size());
+        //
+        assertNotNull(getFixture().getCurrentTurn());
+
+        InitativePass turn1 = getFixture().getActionPhases().get(1);
+        InterruptAction ia = GameplayFactory.eINSTANCE.createInterruptAction();
+        ia.setIniCost(-5);
+        turn1.setInterruptAction(ia);
+        ia.redo();
+        assertEquals(6, turn1.getPhase());
+        assertEquals(3, getFixture().getActionPhases().size());
+        getFixture().doTurn();
+        assertNotNull(getFixture().getCurrentTurn());
+        assertSame(turn1, getFixture().getCurrentTurn());
+        InitativePass turn2 = getFixture().getCurrentTurn();
+        assertEquals(6, turn2.getPhase());
+        getFixture().doTurn();
+
+        InitativePass turn11 = getFixture().getCurrentTurn();
+        assertEquals(2, turn11.getPhase());
+        getFixture().doTurn();
+
+        assertNull(getFixture().getCurrentTurn());
     }
 
 } // CombatTurnTest

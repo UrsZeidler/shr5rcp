@@ -51,6 +51,22 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * @generated
  */
 public class CombatTurnImpl extends MinimalEObjectImpl.Container implements CombatTurn {
+    public final static class InitativeComperator implements Comparator<InitativePass> {
+        @Override
+        public int compare(InitativePass o1, InitativePass o2) {
+            int turn1 = o1.getTurn() - o2.getTurn();
+            if (turn1 != 0)
+                return turn1;
+
+            int val = o1.getPhase() - o2.getPhase();
+
+            if (val == 0) {
+                // TODO : we need to check all the other compare options
+            }
+            return val * -1;
+        }
+    }
+
     /**
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -475,29 +491,14 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 }
             }
         }
-        Collections.sort(phaseCommands, new Comparator<InitativePass>() {
-            @Override
-            public int compare(InitativePass o1, InitativePass o2) {
-                int turn1 = o1.getTurn() - o2.getTurn();
-                if (turn1 != 0)
-                    return turn1;
-
-                int val = o1.getPhase() - o2.getPhase();
-
-                if (val == 0) {
-                    // TODO : we need to check all the other compare options
-                }
-                return val * -1;
-            }
-
-        });
+        Collections.sort(phaseCommands, new InitativeComperator());
 
         // subCommands.addAll((Collection<? extends Command>) phaseCommands);
         if (phaseCommands.size() > 0)
             setCurrentTurn(phaseCommands.get(0));
 
-        executed = true;
         getActionPhases().addAll(phaseCommands);
+        executed = true;
 
     }
 
