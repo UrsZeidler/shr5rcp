@@ -3,12 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

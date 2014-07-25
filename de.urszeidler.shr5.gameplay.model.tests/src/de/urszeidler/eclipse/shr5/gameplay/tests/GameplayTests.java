@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-
 import junit.textui.TestRunner;
 
 /**

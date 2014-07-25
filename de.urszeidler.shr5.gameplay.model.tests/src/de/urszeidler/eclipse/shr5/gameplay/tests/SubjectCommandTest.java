@@ -3,12 +3,13 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import junit.framework.TestCase;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->

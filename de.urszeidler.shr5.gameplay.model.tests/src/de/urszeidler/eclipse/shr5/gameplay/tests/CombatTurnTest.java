@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
@@ -12,8 +15,6 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

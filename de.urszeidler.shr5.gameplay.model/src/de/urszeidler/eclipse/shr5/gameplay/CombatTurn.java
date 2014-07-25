@@ -3,9 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-
 import org.eclipse.emf.common.util.EList;
+
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
  * <!-- begin-user-doc -->

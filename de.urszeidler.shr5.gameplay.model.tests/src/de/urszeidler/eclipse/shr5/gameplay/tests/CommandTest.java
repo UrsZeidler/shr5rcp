@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
-import de.urszeidler.eclipse.shr5.gameplay.Command;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import java.util.Date;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -15,7 +16,6 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.Intervall;
 import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

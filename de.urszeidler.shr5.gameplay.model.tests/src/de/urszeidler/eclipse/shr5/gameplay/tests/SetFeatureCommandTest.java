@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -11,8 +14,6 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
