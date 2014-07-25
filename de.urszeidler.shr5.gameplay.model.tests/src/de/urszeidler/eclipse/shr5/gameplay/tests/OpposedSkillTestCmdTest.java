@@ -103,18 +103,19 @@ public class OpposedSkillTestCmdTest extends SkillTestCmdTest {
         AbstraktPersona persona = runtimeCharacter.getCharacter().getPersona();
         persona.setGeschicklichkeitBasis(1);
 
-        Nahkampfwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createNahkampfwaffe();
-        Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+         Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
 
         PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         personaFertigkeit.setFertigkeit(fertigkeit);
-        personaFertigkeit.setStufe(1);
+        personaFertigkeit.setStufe(100);
         persona.getFertigkeiten().add(personaFertigkeit);
         object.getCharacter().getPersona().getFertigkeiten().add(personaFertigkeit);
 
-        nahkampfwaffe.setFertigkeit(fertigkeit);
+        getFixture().setSkill(personaFertigkeit);
         getFixture().setSubject(runtimeCharacter);
+        getFixture().setObjectSkill(personaFertigkeit);
+        getFixture().setLimit(3);
         //getFixture().setSkill(personaFertigkeit);
         //getFixture().set
         //getFixture().setWeapon(nahkampfwaffe);
@@ -123,7 +124,8 @@ public class OpposedSkillTestCmdTest extends SkillTestCmdTest {
         getFixture().redo();
 
         assertTrue(getFixture().isExecuted());
-        assertEquals(2, getFixture().getProbe().size());
+        assertEquals(2, getFixture().getSubCommands().size());
+        assertEquals(0, getFixture().getNetHits());
     }
 
 

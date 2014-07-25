@@ -157,7 +157,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
 
     @Override
     public void redo() {
-        executed = true;
+        executing = true;
 
         getProbe().clear();
         if (isSetCmdCallback()&& getCmdCallback() != null)
@@ -177,6 +177,9 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         this.successes = isSetLimit() ? Math.min(limit,  W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
+        
+        executing = true;
+        executed = true;
     }
 
 } // SkillTestCmdImpl
