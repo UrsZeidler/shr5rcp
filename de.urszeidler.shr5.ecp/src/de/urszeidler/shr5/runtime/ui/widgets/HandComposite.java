@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
@@ -58,24 +59,25 @@ public class HandComposite extends ActionPhaseComposite {
                     MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
                     meeleAttackCmd.setWeapon(nk);
                    
-                    
                     //complexAction.setSubject((RuntimeCharacter)character.getValue());
                     complexAction.getSubCommands().add(meeleAttackCmd);                   
                     initativePass.setAction(complexAction);
-                    initativePass.redo();
+                    //initativePass.redo();
 
                 } else if (value instanceof AbstaktFernKampfwaffe) {
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
                     //Simple action case
-                    SimpleActions simpleAction = GameplayFactory.eINSTANCE.createSimpleActions();
+                    SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
+                    SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
                     RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
                     meeleAttackCmd.setWeapon(afk);
                    
-                    
+                    simpleAction.getSubCommands().add(meeleAttackCmd);
+                    simpleActions.setAction1(simpleAction);
                     //complexAction.setSubject((RuntimeCharacter)character.getValue());
-                    simpleAction.getSubCommands().add(meeleAttackCmd);                   
-                    initativePass.setAction(simpleAction);
-                    initativePass.redo();
+                    //simpleAction.getSubCommands().add(meeleAttackCmd);                   
+                    initativePass.setAction(simpleActions);
+                    //initativePass.redo();
 
 
                 }

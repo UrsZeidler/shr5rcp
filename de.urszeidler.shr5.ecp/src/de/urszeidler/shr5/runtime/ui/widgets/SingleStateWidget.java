@@ -1,7 +1,6 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -12,16 +11,23 @@ import org.eclipse.swt.widgets.Label;
  * (c) urs zeidler
  */
 
-public class SimpleSingleState extends Composite {
+public class SingleStateWidget extends Composite {
 
     private Label Statelabel = null;
-    private Label Suffixlabel = null;
     private boolean markt = false;
+    private int size = 20;
+    private int spacing = size/10;    
     
+    public SingleStateWidget(Composite parent, int style) {
+        super(parent, style);        
+        initialize();
+        setMarkt(false);
+    }
     
-    private String suffixLabel;
-    public SimpleSingleState(Composite parent, int style) {
-        super(parent, style);
+    public SingleStateWidget(Composite parent, int style,int size) {
+        super(parent, style);   
+        this.size = size;
+        this.spacing = size/10;
         initialize();
         setMarkt(false);
     }
@@ -32,38 +38,19 @@ public class SimpleSingleState extends Composite {
         gridData1.grabExcessHorizontalSpace = false;
         gridData1.verticalAlignment = GridData.CENTER;
         GridData gridData = new GridData();
-        gridData.heightHint = 20;
-        gridData.widthHint = 20;
+        gridData.heightHint = size;
+        gridData.widthHint = size;
         GridLayout gridLayout = new GridLayout();
-        gridLayout.numColumns = 3;
-        gridLayout.verticalSpacing = 2;
-        gridLayout.marginWidth = 2;
-        gridLayout.marginHeight = 2;
-        gridLayout.horizontalSpacing = 2;
+        gridLayout.numColumns = 1;
+        gridLayout.verticalSpacing = spacing;
+        gridLayout.marginWidth = spacing;
+        gridLayout.marginHeight = spacing;
+        gridLayout.horizontalSpacing = spacing;
         Statelabel = new Label(this, SWT.BORDER | SWT.SHADOW_IN);
         Statelabel.setText("");
         Statelabel.setLayoutData(gridData);
-        Label filler = new Label(this, SWT.NONE);
-        Suffixlabel = new Label(this, SWT.NONE);
-        Suffixlabel.setText("   ");
-        Suffixlabel.setLayoutData(gridData1);
         this.setLayout(gridLayout);
-        setSize(new Point(300, 200));
-    }
-
-    /**
-     * @return the suffixLabel
-     */
-    public String getSuffixLabel() {
-        return this.suffixLabel;
-    }
-
-    /**
-     * @param suffixLabel the suffixLabel to set
-     */
-    public void setSuffixLabel(String suffixLabel) {
-        this.suffixLabel = suffixLabel;
-        Suffixlabel.setText(suffixLabel);
+//        setSize(new Point(300, 200));
     }
 
     /**

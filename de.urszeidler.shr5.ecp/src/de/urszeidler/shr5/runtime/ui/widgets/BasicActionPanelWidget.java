@@ -42,7 +42,6 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private ActionPanelWidgets actionPanel = null;
     private Composite composite_name = null;
     private Label label_image = null;
-    private StateMonitor stateMonitor;
     private Label label = null;
     private Label label_Phase = null;
     private WritableValue phase = new WritableValue();
@@ -57,9 +56,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         initialize();
         m_bindingContext = initDataBindings();
         phase.addValueChangeListener(this);
-        new Label(this, SWT.NONE);
-        new Label(this, SWT.NONE);
-        new Label(this, SWT.NONE);
+//        new Label(this, SWT.NONE);
+//        new Label(this, SWT.NONE);
+//        new Label(this, SWT.NONE);
      }
 
     private void initialize() {
@@ -90,6 +89,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
 
+        StateMonitorWidget stateMonitorWidget = new StateMonitorWidget(composite_state, SWT.NONE);
+        StateMonitorWidget stateMonitorWidget1 = new StateMonitorWidget(composite_state, SWT.NONE);
         //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 
@@ -197,10 +198,6 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     // public Label getLabel1() {
     // return label1;
     // }
-
-    public StateMonitor getStateMonitor() {
-        return stateMonitor;
-    }
 
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();

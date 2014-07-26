@@ -342,8 +342,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
                 // showMessage("Action 1 executed");
                 // currentPhase.redo();
                 if (combatTurn != null && combatTurn.getCurrentTurn() != null )
-                    combatTurn.getCurrentTurn().redo();
-
+                    combatTurn.doTurn();
                 // setTempCombatTurn(kampfrunde);
             }
         };
