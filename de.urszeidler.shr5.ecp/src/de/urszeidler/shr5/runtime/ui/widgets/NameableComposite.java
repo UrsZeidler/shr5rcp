@@ -68,7 +68,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         gridLayout1 = new GridLayout();
         gridLayout1.marginHeight = 0;
         gridLayout1.marginTop = 0;
-        gridLayout1.marginBottom = 0;
+        gridLayout1.marginBottom = 5;
         gridLayout1.horizontalSpacing = 0;
         gridLayout1.verticalSpacing = 0;
         createMainGroup();

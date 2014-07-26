@@ -10,7 +10,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
 public class ActionPanelWidgets extends Composite {
@@ -23,7 +22,7 @@ public class ActionPanelWidgets extends Composite {
 	private Composite composite_btns = null;
 	private TreeViewer treeViewer = null;
 	private Button button_do = null;
-	private HandComposite rechte_Hand;
+	private HandComposite rechte_Hand; 
 	private HandComposite linke_Hand;
 	
     private WritableValue character = new WritableValue();

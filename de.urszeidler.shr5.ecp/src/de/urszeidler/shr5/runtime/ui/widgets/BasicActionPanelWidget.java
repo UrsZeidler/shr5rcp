@@ -23,6 +23,7 @@ import org.eclipse.swt.widgets.Label;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 
 /**
@@ -46,8 +47,13 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private Label label_Phase = null;
     private WritableValue phase = new WritableValue();
     private WritableValue character = new WritableValue();
+    private WritableValue persona = new WritableValue();
 
     private Label lblName;
+
+    private StateMonitorWidget stateMonitorWidgetMental;
+
+    private StateMonitorWidget stateMonitorWidgetPhysical;
 
     // private ActionPhaseCmd phase1 = GameplayFactory.eINSTANCE.createActionPhaseCmd();
 
@@ -71,6 +77,15 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         createComposite_action();
     }
 
+    @Override
+    public void dispose() {
+       phase.removeValueChangeListener(this);
+       character.removeValueChangeListener(this);
+       persona.removeValueChangeListener(this);
+       
+        super.dispose();
+    }
+    
     /**
      * This method initializes composite_state
      */
@@ -89,8 +104,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
 
-        StateMonitorWidget stateMonitorWidget = new StateMonitorWidget(composite_state, SWT.NONE);
-        StateMonitorWidget stateMonitorWidget1 = new StateMonitorWidget(composite_state, SWT.NONE);
+        Label label2 = new Label(composite_state, SWT.NONE);
+        label2.setText("Mental");
+        stateMonitorWidgetMental = new StateMonitorWidget(composite_state, SWT.NONE);
+        label2 = new Label(composite_state, SWT.NONE);
+        label2.setText("Physical");
+        stateMonitorWidgetPhysical = new StateMonitorWidget(composite_state, SWT.NONE);
         //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 
@@ -212,7 +231,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
 
         IWidgetValueProperty image = WidgetProperties.image();
         ISWTObservableValue observedImage = image.observe(label_image);
-        IObservableValue observeValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
+        IObservableValue observeValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), persona,
                 Shr5Package.Literals.BESCHREIBBAR__IMAGE);
 
         IConverter converter = null;
@@ -224,12 +243,29 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         //
         //
         IObservableValue observeTextLabel_nameObserveWidget_1 = WidgetProperties.text().observe(lblName);
-        IObservableValue characterNameObserveValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
+        IObservableValue characterNameObserveValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), persona,
                 Shr5Package.Literals.BESCHREIBBAR__NAME);
         bindingContext.bindValue(observeTextLabel_nameObserveWidget_1, characterNameObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
+        if(stateMonitorWidgetMental!=null){
+        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
+        IObservableValue observeValue1 = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
+                RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
+        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
 
+        }
+        if(stateMonitorWidgetPhysical!=null){
+        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
+        IObservableValue observeValue1 = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
+                RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
+        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+
+        }
+       
+        
         return bindingContext;
     }
 
@@ -239,7 +275,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         if (value instanceof InitativePass) {
             InitativePass apc = (InitativePass)value;
             actionPanel.setCharacter(apc);
-            character.setValue(apc.getSubject().getCharacter().getPersona());
+            character.setValue(apc.getSubject());
+            persona.setValue(apc.getSubject().getCharacter().getPersona());
         }
 
     }

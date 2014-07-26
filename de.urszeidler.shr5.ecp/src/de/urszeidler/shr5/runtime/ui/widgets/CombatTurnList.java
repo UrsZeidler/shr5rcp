@@ -31,6 +31,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
     private Composite composite1;
     private ScrolledComposite scrolledComposite;
     private ListDiffEntry[] listDiff;
+    private IObservableList observeList;
+    private IObservableValue detailValue;
 
     /**
      * Create the composite.
@@ -69,6 +71,10 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
     public void dispose() {
         combatTurn.removeValueChangeListener(this);
         combatTurn.dispose();
+        observeList.removeListChangeListener(this);
+        observeList.dispose();
+        detailValue.removeValueChangeListener(this);
+        detailValue.dispose();
         super.dispose();
     }
     
@@ -115,10 +121,10 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
 
     public void setCombatTurn(CombatTurn ct) {
         combatTurn.setValue(ct);
-        IObservableList observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
+        observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
         observeList.addListChangeListener(this);
         
-        IObservableValue detailValue = EMFObservables.observeDetailValue(Realm.getDefault(), combatTurn, GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
+        detailValue = EMFObservables.observeDetailValue(Realm.getDefault(), combatTurn, GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
         detailValue.addValueChangeListener(this);
         // observeList.addChangeListener(this);
         // updateCombatTurn();

@@ -63,6 +63,13 @@ public class StateMonitorWidget extends Composite {
         }
     }
 
+    public void setDamage(int damage){
+        for (int i = 0; i < stateMonitors.size(); i++) {
+            SingleStateWidget singleStateWidget = stateMonitors.get(i);
+            singleStateWidget.setMarkt(i<damage);
+        }
+     }
+    
     @Override
     protected void checkSubclass() {
         // Disable the check that prevents subclassing of SWT components
