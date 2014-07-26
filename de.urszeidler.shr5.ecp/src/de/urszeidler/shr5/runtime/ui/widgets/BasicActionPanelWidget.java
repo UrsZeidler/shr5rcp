@@ -20,6 +20,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
@@ -276,7 +278,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
             InitativePass apc = (InitativePass)value;
             actionPanel.setCharacter(apc);
             character.setValue(apc.getSubject());
-            persona.setValue(apc.getSubject().getCharacter().getPersona());
+            AbstraktPersona persona2 = apc.getSubject().getCharacter().getPersona();
+            persona.setValue(persona2);
+            stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
+            stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
         }
 
     }

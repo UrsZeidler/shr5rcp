@@ -18,8 +18,9 @@ import org.eclipse.swt.SWT;
  */
 public class StateMonitorWidget extends Composite {
 
-    private WritableValue damageState = new WritableValue();
-    private WritableValue conditionMonitor = new WritableValue();
+    //private WritableValue damageState = new WritableValue();
+    //private WritableValue conditionMonitor = new WritableValue();
+    private int maxConditions;
     private Composite composite_state;
     private List<SingleStateWidget> stateMonitors;
     private int style;
@@ -32,7 +33,7 @@ public class StateMonitorWidget extends Composite {
      */
     public StateMonitorWidget(Composite parent, int style) {
         super(parent, style);
-        conditionMonitor.setValue(11);
+        maxConditions = 11;
 
         this.style = style;
         setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -49,7 +50,7 @@ public class StateMonitorWidget extends Composite {
         layout.verticalSpacing = 0;
         composite_state.setLayout(layout);
 
-        Integer value = (Integer)conditionMonitor.getValue();
+        int value = maxConditions;
         stateMonitors = new ArrayList<SingleStateWidget>(value);
         for (int i = 1; i <= value; i++) {
             SingleStateWidget stateWidget = new SingleStateWidget(composite_state, style);
@@ -73,6 +74,12 @@ public class StateMonitorWidget extends Composite {
     @Override
     protected void checkSubclass() {
         // Disable the check that prevents subclassing of SWT components
+    }
+
+    public void setMaxConditions(int maxConditions) {
+        this.maxConditions = maxConditions;
+        init();
+        this.layout(true, true);
     }
 
 }

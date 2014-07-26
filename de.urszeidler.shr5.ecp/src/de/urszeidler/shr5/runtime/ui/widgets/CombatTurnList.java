@@ -121,6 +121,15 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
 
     public void setCombatTurn(CombatTurn ct) {
         combatTurn.setValue(ct);
+        if(observeList!=null){
+            observeList.removeListChangeListener(this);
+            observeList.dispose();
+        }
+        if(detailValue!=null){
+            detailValue.removeValueChangeListener(this);
+            detailValue.dispose();                    
+        }
+        
         observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
         observeList.addListChangeListener(this);
         
@@ -139,6 +148,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
 
     @Override
     public void handleValueChange(ValueChangeEvent event) {
+        if(this.isDisposed() || ! this.isVisible() )
+            return;
         updateCombatTurn();
     }
 

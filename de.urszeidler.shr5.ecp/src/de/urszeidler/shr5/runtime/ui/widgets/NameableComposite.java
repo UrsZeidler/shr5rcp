@@ -176,6 +176,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
     @Override
     public void dispose() {
         nameable.removeValueChangeListener(this);
+        nameable.dispose();
         super.dispose();
     }
 

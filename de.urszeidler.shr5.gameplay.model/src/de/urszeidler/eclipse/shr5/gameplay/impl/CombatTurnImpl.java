@@ -498,7 +498,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             setCurrentTurn(phaseCommands.get(0));
 
         getActionPhases().addAll(phaseCommands);
-        executed = true;
+        //executed = true;
 
     }
 

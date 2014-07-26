@@ -31,6 +31,8 @@ public class HandComposite extends NameableComposite {
     private WritableValue character = new WritableValue();
     private EReference references;
     private InitativePass initativePass;
+    private IChangeListener listener;
+    private IObservableValue observeDetailValue;
 
     /**
      * Create the composite.
@@ -45,6 +47,14 @@ public class HandComposite extends NameableComposite {
     }
 
     @Override
+    public void dispose() {
+        character.dispose();
+        observeDetailValue.removeChangeListener(listener);
+        observeDetailValue.dispose();
+        super.dispose();
+    }
+
+    @Override
     protected void updateToolbar() {
 
         ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
@@ -54,31 +64,30 @@ public class HandComposite extends NameableComposite {
                 Object value = nameable.getValue();
                 if (value instanceof Nahkampfwaffe) {
                     Nahkampfwaffe nk = (Nahkampfwaffe)value;
-                    
+
                     ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
                     MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
                     meeleAttackCmd.setWeapon(nk);
-                   
-                    //complexAction.setSubject((RuntimeCharacter)character.getValue());
-                    complexAction.getSubCommands().add(meeleAttackCmd);                   
+
+                    // complexAction.setSubject((RuntimeCharacter)character.getValue());
+                    complexAction.getSubCommands().add(meeleAttackCmd);
                     initativePass.setAction(complexAction);
-                    //initativePass.redo();
+                    // initativePass.redo();
 
                 } else if (value instanceof AbstaktFernKampfwaffe) {
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
-                    //Simple action case
+                    // Simple action case
                     SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
                     SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
                     RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
                     meeleAttackCmd.setWeapon(afk);
-                   
+
                     simpleAction.getSubCommands().add(meeleAttackCmd);
                     simpleActions.setAction1(simpleAction);
-                    //complexAction.setSubject((RuntimeCharacter)character.getValue());
-                    //simpleAction.getSubCommands().add(meeleAttackCmd);                   
+                    // complexAction.setSubject((RuntimeCharacter)character.getValue());
+                    // simpleAction.getSubCommands().add(meeleAttackCmd);
                     initativePass.setAction(simpleActions);
-                    //initativePass.redo();
-
+                    // initativePass.redo();
 
                 }
             }
@@ -87,7 +96,7 @@ public class HandComposite extends NameableComposite {
         actionBar.getParent().layout(true);
         // actionBar = new ToolBar(parent, style)
 
-       // super.updateToolbar();
+        // super.updateToolbar();
     }
 
     @Override
@@ -97,22 +106,27 @@ public class HandComposite extends NameableComposite {
 
     public void setCharacter(InitativePass pass, EReference ref) {
         this.initativePass = pass;
-        
-        final  RuntimeCharacter character2 = pass.getSubject();
+
+        final RuntimeCharacter character2 = pass.getSubject();
         character.setValue(character2);
         references = ref;
         setNameable((Beschreibbar)character2.eGet(references));
-        //updateToolbar();
+        // updateToolbar();
+        if (observeDetailValue != null) {
+            observeDetailValue.removeChangeListener(listener);
+            observeDetailValue.dispose();
+        }
 
-        IObservableValue observeDetailValue = EMFObservables.observeDetailValue(Realm.getDefault(), character, ref);
-        observeDetailValue.addChangeListener(new IChangeListener() {
+        observeDetailValue = EMFObservables.observeDetailValue(Realm.getDefault(), character, ref);
+        listener = new IChangeListener() {
 
             @Override
             public void handleChange(ChangeEvent event) {
                 setNameable((Beschreibbar)character2.eGet(references));
-                //updateToolbar();
+                // updateToolbar();
             }
-        });
+        };
+        observeDetailValue.addChangeListener(listener);
     }
 
 }
