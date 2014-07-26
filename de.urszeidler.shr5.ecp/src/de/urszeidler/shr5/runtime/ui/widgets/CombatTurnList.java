@@ -1,9 +1,11 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
+import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.ListChangeEvent;
 import org.eclipse.core.databinding.observable.list.ListDiffEntry;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
@@ -86,8 +88,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
         if (value != null) {
             EList<InitativePass> actionPhases = value.getActionPhases();
             for (InitativePass phaseCmd : actionPhases) {
-                ActionPhaseComposite actionPhaseComposite = new ActionPhaseComposite(composite1, SWT.NONE, "Phase :" + phaseCmd.getPhase());
-                actionPhaseComposite.setNameable(((SubjectCommand)phaseCmd).getSubject().getCharacter().getPersona());
+                ActionPhaseWidget actionPhaseComposite = new ActionPhaseWidget(composite1, SWT.NONE, "Phase :" + phaseCmd.getPhase());
+                actionPhaseComposite.setCharacter(phaseCmd);//setNameable(((SubjectCommand)phaseCmd).getSubject().getCharacter().getPersona());
                 actionPhaseComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
                 if (phaseCmd.equals(value.getCurrentTurn()))
                     actionPhaseComposite.setActiv(true);
@@ -115,8 +117,12 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
         combatTurn.setValue(ct);
         IObservableList observeList = EMFObservables.observeList(ct, GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
         observeList.addListChangeListener(this);
+        
+        IObservableValue detailValue = EMFObservables.observeDetailValue(Realm.getDefault(), combatTurn, GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
+        detailValue.addValueChangeListener(this);
         // observeList.addChangeListener(this);
         // updateCombatTurn();
+        
 
     }
 

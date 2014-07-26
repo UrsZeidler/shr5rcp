@@ -26,7 +26,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
-public class HandComposite extends ActionPhaseComposite {
+public class HandComposite extends NameableComposite {
 
     private WritableValue character = new WritableValue();
     private EReference references;

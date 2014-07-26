@@ -16,6 +16,8 @@ import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -28,13 +30,16 @@ import org.eclipse.swt.widgets.ToolBar;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+
 import org.eclipse.swt.widgets.ToolItem;
 
 /**
  * @author urs
  */
-public class ActionPhaseComposite extends Composite implements IValueChangeListener {
+public abstract class NameableComposite extends Composite implements IValueChangeListener {
     private DataBindingContext m_bindingContext;
 
     protected WritableValue nameable = new WritableValue();
@@ -52,7 +57,7 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
     private GridLayout gridLayout1;
 
 
-    public ActionPhaseComposite(Composite parent, int style, String groupName) {
+    public NameableComposite(Composite parent, int style, String groupName) {
         super(parent, style);
         this.grouname = groupName;
         nameable.addValueChangeListener(this);
@@ -111,6 +116,7 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
         label_name.setLayoutData(gridData3);
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
+        
         
        updateToolbar();
         // ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
@@ -175,10 +181,42 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
 
     @Override
     public void handleValueChange(ValueChangeEvent event) {
-        updateToolbar();
+        //updateToolbar();
     }
 
     protected void updateToolbar() {
+//        ToolItem tltmI = new ToolItem(actionBar, SWT.NONE);
+//        tltmI.setToolTipText("Intercept");
+//        tltmI.setText("I");
+//        tltmI.addSelectionListener(new SelectionAdapter(){
+//            @Override
+//            public void widgetSelected(SelectionEvent e) {
+//                InterruptAction interruptAction = GameplayFactory.eINSTANCE.createInterruptAction();
+//                interruptAction.setIniCost(-5);
+//                
+//            }
+//            
+//        });
+//        
+//        ToolItem tltmD = new ToolItem(actionBar, SWT.NONE);
+//        tltmD.setToolTipText("Doge");
+//        tltmD.setText("d");
+//        
+//        ToolItem tltmB = new ToolItem(actionBar, SWT.NONE);
+//        tltmB.setToolTipText("Block");
+//        tltmB.setText("b");
+//        
+//        ToolItem tltmP = new ToolItem(actionBar, SWT.NONE);
+//        tltmP.setToolTipText("Parry");
+//        tltmP.setText("p");
+//        
+//        ToolItem tltmFb = new ToolItem(actionBar, SWT.NONE);
+//        tltmFb.setToolTipText("full block");
+//        tltmFb.setText("fb");
+//        
+//        ToolItem tltmFc = new ToolItem(actionBar, SWT.NONE);
+//        tltmFc.setToolTipText("full cover");
+//        tltmFc.setText("fc");
 
     }
 
@@ -189,10 +227,10 @@ public class ActionPhaseComposite extends Composite implements IValueChangeListe
     public void setActiv(boolean active) {
         if (active) {
             gridLayout1.marginTop = 10;
-            gridLayout1.marginBottom = 10;
+            gridLayout1.marginBottom = 15;
         } else {
             gridLayout1.marginTop = 0;
-            gridLayout1.marginBottom = 0;
+            gridLayout1.marginBottom = 5;
         }
     }
     //

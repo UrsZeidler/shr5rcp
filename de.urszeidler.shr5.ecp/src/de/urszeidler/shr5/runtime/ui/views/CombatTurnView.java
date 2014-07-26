@@ -9,7 +9,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.CommandParameter;
@@ -341,8 +344,10 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
             public void run() {
                 // showMessage("Action 1 executed");
                 // currentPhase.redo();
-                if (combatTurn != null && combatTurn.getCurrentTurn() != null )
+                if (combatTurn != null && combatTurn.getCurrentTurn() != null ){
                     combatTurn.doTurn();
+                    basicActionPanel.setPhase(combatTurn.getCurrentTurn());   
+                }
                 // setTempCombatTurn(kampfrunde);
             }
         };
@@ -462,6 +467,10 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
         combatTurn.setCmdCallback(this);
         combatTurnList.setCombatTurn(kr);
         basicActionPanel.setPhase(kr.getCurrentTurn());
+        
+//        IObservableValue detailValue = EMFObservables.observeValue(Realm.getDefault(), combatTurn, GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
+//        detailValue.addValueChangeListener(this);
+
     }
 
     @Override
