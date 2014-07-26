@@ -276,12 +276,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         Object value = event.getObservableValue().getValue();
         if (value instanceof InitativePass) {
             InitativePass apc = (InitativePass)value;
-            actionPanel.setCharacter(apc);
-            character.setValue(apc.getSubject());
             AbstraktPersona persona2 = apc.getSubject().getCharacter().getPersona();
-            persona.setValue(persona2);
             stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
             stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+            actionPanel.setCharacter(apc);
+            character.setValue(apc.getSubject());
+            persona.setValue(persona2);
         }
 
     }

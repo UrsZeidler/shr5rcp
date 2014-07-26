@@ -460,6 +460,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
 
         getActionPhases().clear();
         getSubCommands().clear();
+        setCurrentTurn(null);
 
         for (RuntimeCharacter abstractNaturalPerson : combatants) {
             Initative initative = GameplayFactory.eINSTANCE.createInitative();
@@ -467,6 +468,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             initative.redo();
             subCommands.add(initative);
         }
+        if(getCmdCallback()!=null)
+            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
+        
         List<InitativePass> phaseCommands = new ArrayList<InitativePass>();
         for (Command command : subCommands) {
             if (command instanceof Initative) {

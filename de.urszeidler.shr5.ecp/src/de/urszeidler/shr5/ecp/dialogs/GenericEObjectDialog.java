@@ -70,6 +70,7 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
 	@Override
 	public boolean close() {
 		toolkit.dispose();
+		emfFormBuilder.dispose();
 		return super.close();
 	}
 }
