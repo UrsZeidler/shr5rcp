@@ -129,27 +129,6 @@
 
    <extension
          point="org.eclipse.emf.ecp.ui.modelElementOpener">
-      <modelElementOpener     
-            class="de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener">
-         <staticTester
-               modelElement="de.urszeidler.eclipse.shr5.FertigkeitsGruppe"
-               priority="2">
-         </staticTester>
-      </modelElementOpener>
-      <modelElementOpener     
-            class="de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener">
-         <staticTester
-               modelElement="de.urszeidler.eclipse.shr5.Gegenstand"
-               priority="2">
-         </staticTester>
-      </modelElementOpener>
-      <modelElementOpener     
-            class="de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener">
-         <staticTester
-               modelElement="de.urszeidler.eclipse.shr5.Kleidung"
-               priority="2">
-         </staticTester>
-      </modelElementOpener>
       <modelElementOpener
             class="de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener">
          <dynamicTester
@@ -165,6 +144,13 @@
             id="de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"
             name="%editor.name">
       </editor>
+           <editor
+            class="de.urszeidler.shr5.runtime.ui.editor.RuntimeEditor"
+            default="false"
+            id="de.urszeidler.eclipse.shadowrun.presentation.editors.RuntimeEditorID"
+            name="%runtime.editor.name">
+      </editor>
+      
    </extension>
    <extension
          point="org.eclipse.ui.startup">

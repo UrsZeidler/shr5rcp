@@ -24,6 +24,8 @@ import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.util.RuntimeSwitch;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
@@ -37,6 +39,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
+import de.urszeidler.shr5.runtime.ui.editor.RuntimeEditor;
 
 /**
  * @author urs
@@ -67,9 +70,14 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
      * @param ecpProject
      */
     public static void openEditor(Object element, ECPProject ecpProject) {
-        EObjectEditorInput eObjectEditorInput = new EObjectEditorInput((EObject)element, ecpProject.getEditingDomain());
+        EObject eObject = (EObject)element;
+        String name = eObject.eClass().getEPackage().getName();
+        EObjectEditorInput eObjectEditorInput = new EObjectEditorInput(eObject, ecpProject.getEditingDomain());
         try {
-            PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
+            if ("runtime".equals(name))
+                PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, RuntimeEditor.id, true);
+            else
+                PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
         } catch (PartInitException e) {
             Activator.logError("Error open editor " + ShadowrunEditor.id + "for object :" + element, e);
         }
@@ -77,6 +85,16 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
     @Override
     public int isApplicable(Object eObject) {
+        RuntimeSwitch<Integer> runtimeSwitch = new RuntimeSwitch<Integer>(){
+            @Override
+            public Integer caseRuntimeCharacter(RuntimeCharacter object) {
+                return RET;
+            }
+        };
+        Integer doSwitch = runtimeSwitch.doSwitch((EObject)eObject);
+        if (doSwitch != null)
+            return doSwitch;
+        
         Shr5Switch<Integer> shr5Switch = new Shr5Switch<Integer>() {
             // @Override
             // public Integer caseBeschreibbar(Beschreibbar object) {
@@ -142,18 +160,18 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             public Integer caseFahrzeug(Fahrzeug object) {
                 return RET;
             }
-            
+
             @Override
             public Integer caseToxin(Toxin object) {
                 return RET;
             }
-            
+
             @Override
             public Integer caseDrug(Drug object) {
                 return RET;
             }
         };
-        Integer doSwitch = shr5Switch.doSwitch((EObject)eObject);
+        doSwitch = shr5Switch.doSwitch((EObject)eObject);
         if (doSwitch != null)
             return doSwitch;
 
@@ -193,7 +211,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             public Integer casePlayerManagement(PlayerManagement object) {
                 return RET;
             }
-            
+
             @Override
             public Integer caseShr5System(Shr5System object) {
                 return RET;
