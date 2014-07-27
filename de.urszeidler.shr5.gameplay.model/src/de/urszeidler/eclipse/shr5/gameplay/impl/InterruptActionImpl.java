@@ -6,17 +6,23 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
@@ -248,14 +254,20 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
                 }
                 if (!removelist.isEmpty()) {
                     actionPhases.removeAll(removelist);
-                    ArrayList<InitativePass> list = new ArrayList<InitativePass>(actionPhases);
-                    Collections.sort(list, new CombatTurnImpl.InitativeComperator());
-                    actionPhases.clear();
-                    actionPhases.addAll(list);
                 }
+                ArrayList<InitativePass> list = new ArrayList<InitativePass>(actionPhases);
+                Collections.sort(list, new CombatTurnImpl.InitativeComperator());
+                actionPhases.clear();
+                actionPhases.addAll(list);
             }
         }
-
+        
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(getSubject());
+        data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
+        getSubject().addUniqueToList(data, getInterruptType());
+        
+        executeSubActions();
         setExecuted(true);
         executing = false;
     }

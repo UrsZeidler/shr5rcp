@@ -457,6 +457,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      */
     public void redo() {
         executing = true;
+        executed = false;
 
         getActionPhases().clear();
         getSubCommands().clear();
