@@ -59,7 +59,7 @@ public class StateMonitorWidget extends Composite {
             stateMonitors.add(stateWidget);
             if (i % 3 == 0) {
                 Label label = new Label(composite_state, style);
-                label.setText("dd");
+                label.setText(""+((i/3))*-1);
             }
         }
     }
