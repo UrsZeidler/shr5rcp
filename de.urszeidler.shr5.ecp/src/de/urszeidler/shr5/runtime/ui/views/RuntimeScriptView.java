@@ -68,8 +68,6 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
     private Action startCombatAction;
 
     private Action switchPlacementAction;
-    private TreeViewer treeViewer;
-    private TreeViewer treeViewer_1;
     public RuntimeScriptView() {
     }
 
@@ -187,18 +185,10 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.paintBordersFor(composite_6);
         composite_6.setLayout(new FillLayout(SWT.HORIZONTAL));
         
-        treeViewer = new TreeViewer(composite_6, SWT.BORDER);
-        Tree tree = treeViewer.getTree();
-        formToolkit.paintBordersFor(tree);
-        
          
         Composite composite_7 = formToolkit.createComposite(composite_5, SWT.NONE);
         formToolkit.paintBordersFor(composite_7);
         composite_7.setLayout(new FillLayout(SWT.HORIZONTAL));
-        
-        treeViewer_1 = new TreeViewer(composite_7, SWT.BORDER);
-        Tree tree_1 = treeViewer_1.getTree();
-        formToolkit.paintBordersFor(tree_1);
         
 
    
@@ -286,24 +276,6 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         IObservableValue observeTextStyledText_2ObserveWidget = WidgetProperties.text(SWT.Modify).observe(styledText_2);
         IObservableValue placementDebuggingObserveValue = EMFObservables.observeValue(placement, ScriptingPackage.Literals.PLACEMENT__DEBUGGING);
         bindingContext.bindValue(observeTextStyledText_2ObserveWidget, placementDebuggingObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
-        //
-        EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(Team.class, RuntimePackage.Literals.TEAM__MEMBERS);
-        EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, RuntimePackage.Literals.TEAM__MEMBERS, null);
-        ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, treeAdvisor);
-        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), Literals.BESCHREIBBAR__NAME, null));
-        treeViewer.setContentProvider(treeContentProvider);
-        //
-        IObservableList placementTeamsObserveList = EMFObservables.observeList(Realm.getDefault(), placement, ScriptingPackage.Literals.PLACEMENT__TEAMS);
-        treeViewer.setInput(placementTeamsObserveList);
-        //
-        EMFBeansListObservableFactory treeObservableFactory_1 = new EMFBeansListObservableFactory(Placement.class, ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS);
-        EMFTreeBeanAdvisor treeAdvisor_1 = new EMFTreeBeanAdvisor(null, ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, null);
-        ObservableListTreeContentProvider treeContentProvider_1 = new ObservableListTreeContentProvider(treeObservableFactory_1, treeAdvisor_1);
-        treeViewer_1.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider_1.getKnownElements(), Literals.BESCHREIBBAR__NAME, null));
-        treeViewer_1.setContentProvider(treeContentProvider_1);
-        //
-        IObservableList placementNextPlacementsObserveList = EMFObservables.observeList(Realm.getDefault(), placement, ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS);
-        treeViewer_1.setInput(placementNextPlacementsObserveList);
         //
         return bindingContext;
     }
