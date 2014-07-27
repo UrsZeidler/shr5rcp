@@ -18,36 +18,33 @@ import org.eclipse.core.databinding.observable.masterdetail.IObservableFactory;
  * 
  * @author lobas_av
  */
-/* package */abstract class BeansObservableFactory implements IObservableFactory {
-    private final Class<?> m_beanClass;
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Constructor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public BeansObservableFactory(Class<?> beanClass) {
-        m_beanClass = beanClass;
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // IObservableFactory
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    @Override
-    public IObservable createObservable(Object target) {
-        if (target instanceof IObservable) {
-            return (IObservable)target;
-        }
-        if (Utils.instanceOf(m_beanClass, target)) {
-            return createBeanObservable(target);
-        }
-        return null;
-    }
-
-    /**
-     * Creates an observable for the given target object.
-     */
-    protected abstract IObservable createBeanObservable(Object target);
+/*package*/abstract class BeansObservableFactory implements IObservableFactory {
+	private final Class<?> m_beanClass;
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Constructor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public BeansObservableFactory(Class<?> beanClass) {
+		m_beanClass = beanClass;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// IObservableFactory
+	//
+	////////////////////////////////////////////////////////////////////////////
+	@Override
+	public IObservable createObservable(Object target) {
+		if (target instanceof IObservable) {
+			return (IObservable) target;
+		}
+		if (Utils.instanceOf(m_beanClass, target)) {
+			return createBeanObservable(target);
+		}
+		return null;
+	}
+	/**
+	 * Creates an observable for the given target object.
+	 */
+	protected abstract IObservable createBeanObservable(Object target);
 }

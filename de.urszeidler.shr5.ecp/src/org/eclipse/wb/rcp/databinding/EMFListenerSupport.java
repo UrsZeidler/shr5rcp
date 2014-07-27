@@ -26,81 +26,75 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * 
  * @author lobas_av
  */
-/* package */abstract class EMFListenerSupport {
-    private final List<EStructuralFeature> m_properties;
-    private final Set<IdentityWrapper> m_elementsListenedTo = new HashSet<IdentityWrapper>();
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Constructor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public EMFListenerSupport(List<EStructuralFeature> properties) {
-        m_properties = properties;
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Access
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public void hookListener(Object addedElement) {
-        if (processListener(true, addedElement)) {
-            m_elementsListenedTo.add(new IdentityWrapper(addedElement));
-        }
-    }
-
-    public void unhookListener(Object removedElement) {
-        if (removedElement.getClass() == IdentityWrapper.class) {
-            IdentityWrapper wrapper = (IdentityWrapper)removedElement;
-            removedElement = wrapper.unwrap();
-        }
-        if (processListener(false, removedElement)) {
-            m_elementsListenedTo.remove(new IdentityWrapper(removedElement));
-        }
-    }
-
-    public void dispose() {
-        for (IdentityWrapper wrapper : m_elementsListenedTo) {
-            if (processListener(false, wrapper.unwrap())) {
-                m_elementsListenedTo.remove(wrapper);
-            }
-        }
-        m_elementsListenedTo.clear();
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Listener
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    private boolean processListener(boolean add, Object target) {
-        if (target instanceof EObject) {
-            EObject eObject = (EObject)target;
-            EList<Adapter> eAdapters = eObject.eAdapters();
-            if (add) {
-                eAdapters.add(m_propertyChangeAdapter);
-            } else {
-                eAdapters.remove(m_propertyChangeAdapter);
-            }
-            return true;
-        }
-        return false;
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Properties
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    private Adapter m_propertyChangeAdapter = new AdapterImpl() {
-        @Override
-        public void notifyChanged(Notification notification) {
-            if (notification.getEventType() == Notification.SET && m_properties.contains(notification.getFeature())) {
-                fireLabelPropertyChanged(notification.getNotifier());
-            }
-        }
-    };
-
-    protected abstract void fireLabelPropertyChanged(Object element);
+/*package*/abstract class EMFListenerSupport {
+	private final List<EStructuralFeature> m_properties;
+	private final Set<IdentityWrapper> m_elementsListenedTo = new HashSet<IdentityWrapper>();
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Constructor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public EMFListenerSupport(List<EStructuralFeature> properties) {
+		m_properties = properties;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Access
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public void hookListener(Object addedElement) {
+		if (processListener(true, addedElement)) {
+			m_elementsListenedTo.add(new IdentityWrapper(addedElement));
+		}
+	}
+	public void unhookListener(Object removedElement) {
+		if (removedElement.getClass() == IdentityWrapper.class) {
+			IdentityWrapper wrapper = (IdentityWrapper) removedElement;
+			removedElement = wrapper.unwrap();
+		}
+		if (processListener(false, removedElement)) {
+			m_elementsListenedTo.remove(new IdentityWrapper(removedElement));
+		}
+	}
+	public void dispose() {
+		for (IdentityWrapper wrapper : m_elementsListenedTo) {
+			if (processListener(false, wrapper.unwrap())) {
+				m_elementsListenedTo.remove(wrapper);
+			}
+		}
+		m_elementsListenedTo.clear();
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Listener
+	//
+	////////////////////////////////////////////////////////////////////////////
+	private boolean processListener(boolean add, Object target) {
+		if (target instanceof EObject) {
+			EObject eObject = (EObject) target;
+			EList<Adapter> eAdapters = eObject.eAdapters();
+			if (add) {
+				eAdapters.add(m_propertyChangeAdapter);
+			} else {
+				eAdapters.remove(m_propertyChangeAdapter);
+			}
+			return true;
+		}
+		return false;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Properties
+	//
+	////////////////////////////////////////////////////////////////////////////
+	private Adapter m_propertyChangeAdapter = new AdapterImpl() {
+		@Override
+		public void notifyChanged(Notification notification) {
+			if (notification.getEventType() == Notification.SET
+				&& m_properties.contains(notification.getFeature())) {
+				fireLabelPropertyChanged(notification.getNotifier());
+			}
+		}
+	};
+	protected abstract void fireLabelPropertyChanged(Object element);
 }

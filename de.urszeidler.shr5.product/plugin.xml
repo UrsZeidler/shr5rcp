@@ -65,6 +65,11 @@
             id="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
             name="%generator.perspective.name">
       </perspective>
+      <perspective
+            class="de.urszeidler.shr5.product.application.RuntimePerspective"
+            id="de.urszeidler.shr5.product.application.RuntimePerspective"
+            name="Runtime Perspective">
+      </perspective>
    </extension>
 
 

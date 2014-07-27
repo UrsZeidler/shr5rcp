@@ -28,80 +28,78 @@ import org.eclipse.swt.graphics.Image;
  * @author lobas_av
  */
 public class EMFTreeObservableLabelProvider extends LabelProvider {
-    private final EStructuralFeature m_textProperty;
-    private final EStructuralFeature m_imageProperty;
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Constructor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable, EStructuralFeature textProperty, EStructuralFeature imageProperty) {
-        m_observable = allElementsObservable;
-        m_textProperty = textProperty;
-        m_imageProperty = imageProperty;
-        List<EStructuralFeature> properties = new ArrayList<EStructuralFeature>();
-        if (m_textProperty != null) {
-            properties.add(m_textProperty);
-        }
-        if (m_imageProperty != null) {
-            properties.add(m_imageProperty);
-        }
-        m_listenerSupport = new EMFListenerSupport(properties) {
-            @Override
-            protected void fireLabelPropertyChanged(Object element) {
-                fireLabelProviderChanged(new LabelProviderChangedEvent(EMFTreeObservableLabelProvider.this, element));
-            }
-        };
-        m_observable.addSetChangeListener(m_setListener);
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // LabelProvider
-    //
-    // ///////////////////////////////////////////////////////////////////////////
-    @Override
-    public String getText(Object element) {
-        if (m_textProperty == null) {
-            return null;
-        }
-        EObject eObject = (EObject)element;
-        return (String)eObject.eGet(m_textProperty);
-    }
-
-    @Override
-    public Image getImage(Object element) {
-        if (m_imageProperty == null) {
-            return null;
-        }
-        EObject eObject = (EObject)element;
-        return (Image)eObject.eGet(m_imageProperty);
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Update
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    private final IObservableSet m_observable;
-    private final EMFListenerSupport m_listenerSupport;
-    private final ISetChangeListener m_setListener = new ISetChangeListener() {
-        @Override
-        public void handleSetChange(SetChangeEvent event) {
-            for (Object removedElement : event.diff.getRemovals()) {
-                m_listenerSupport.unhookListener(removedElement);
-            }
-            for (Object addedElement : event.diff.getAdditions()) {
-                m_listenerSupport.hookListener(addedElement);
-            }
-        }
-    };
-
-    @Override
-    public void dispose() {
-        m_observable.removeSetChangeListener(m_setListener);
-        m_listenerSupport.dispose();
-        super.dispose();
-    }
+	private final EStructuralFeature m_textProperty;
+	private final EStructuralFeature m_imageProperty;
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Constructor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable,
+			EStructuralFeature textProperty,
+			EStructuralFeature imageProperty) {
+		m_observable = allElementsObservable;
+		m_textProperty = textProperty;
+		m_imageProperty = imageProperty;
+		List<EStructuralFeature> properties = new ArrayList<EStructuralFeature>();
+		if (m_textProperty != null) {
+			properties.add(m_textProperty);
+		}
+		if (m_imageProperty != null) {
+			properties.add(m_imageProperty);
+		}
+		m_listenerSupport = new EMFListenerSupport(properties) {
+			@Override
+			protected void fireLabelPropertyChanged(Object element) {
+				fireLabelProviderChanged(new LabelProviderChangedEvent(EMFTreeObservableLabelProvider.this,
+					element));
+			}
+		};
+		m_observable.addSetChangeListener(m_setListener);
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// LabelProvider
+	//
+	/////////////////////////////////////////////////////////////////////////////
+	@Override
+	public String getText(Object element) {
+		if (m_textProperty == null) {
+			return null;
+		}
+		EObject eObject = (EObject) element;
+		return (String) eObject.eGet(m_textProperty);
+	}
+	@Override
+	public Image getImage(Object element) {
+		if (m_imageProperty == null) {
+			return null;
+		}
+		EObject eObject = (EObject) element;
+		return (Image) eObject.eGet(m_imageProperty);
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Update
+	//
+	////////////////////////////////////////////////////////////////////////////
+	private final IObservableSet m_observable;
+	private final EMFListenerSupport m_listenerSupport;
+	private final ISetChangeListener m_setListener = new ISetChangeListener() {
+		@Override
+		public void handleSetChange(SetChangeEvent event) {
+			for (Object removedElement : event.diff.getRemovals()) {
+				m_listenerSupport.unhookListener(removedElement);
+			}
+			for (Object addedElement : event.diff.getAdditions()) {
+				m_listenerSupport.hookListener(addedElement);
+			}
+		}
+	};
+	@Override
+	public void dispose() {
+		m_observable.removeSetChangeListener(m_setListener);
+		m_listenerSupport.dispose();
+		super.dispose();
+	}
 }

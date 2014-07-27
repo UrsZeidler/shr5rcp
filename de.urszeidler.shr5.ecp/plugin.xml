@@ -198,6 +198,11 @@
             name="Combat view"
             restorable="true">
       </view>
+      <view
+            class="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
+            id="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
+            name="Runtime Script View">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.services">

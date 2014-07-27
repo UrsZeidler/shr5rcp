@@ -23,56 +23,55 @@ import org.eclipse.jface.databinding.viewers.TreeStructureAdvisor;
  * @author lobas_av
  */
 public final class EMFTreeBeanAdvisor extends TreeStructureAdvisor {
-    private final EStructuralFeature m_parentProperty;
-    private final EStructuralFeature m_childrenProperty;
-    private final EStructuralFeature m_hasChildrenProperty;
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Constructor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public EMFTreeBeanAdvisor(EStructuralFeature parentProperty, EStructuralFeature childrenProperty, EStructuralFeature hasChildrenProperty) {
-        m_parentProperty = parentProperty;
-        m_childrenProperty = childrenProperty;
-        m_hasChildrenProperty = hasChildrenProperty;
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // TreeStructureAdvisor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    @Override
-    public Object getParent(Object element) {
-        if (m_parentProperty != null && element instanceof EObject) {
-            EObject eObject = (EObject)element;
-            return eObject.eGet(m_parentProperty);
-        }
-        return null;
-    }
-
-    @Override
-    public Boolean hasChildren(Object element) {
-        if (element instanceof EObject) {
-            EObject eObject = (EObject)element;
-            if (m_hasChildrenProperty != null) {
-                return (Boolean)eObject.eGet(m_hasChildrenProperty);
-            }
-            if (m_childrenProperty != null) {
-                Object children = eObject.eGet(m_childrenProperty);
-                if (children == null) {
-                    return Boolean.FALSE;
-                }
-                if (children.getClass().isArray()) {
-                    return Array.getLength(children) > 0;
-                }
-                if (children instanceof Collection<?>) {
-                    Collection<?> collection = (Collection<?>)children;
-                    return !collection.isEmpty();
-                }
-            }
-        }
-        return null;
-    }
+	private final EStructuralFeature m_parentProperty;
+	private final EStructuralFeature m_childrenProperty;
+	private final EStructuralFeature m_hasChildrenProperty;
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Constructor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public EMFTreeBeanAdvisor(EStructuralFeature parentProperty,
+			EStructuralFeature childrenProperty,
+			EStructuralFeature hasChildrenProperty) {
+		m_parentProperty = parentProperty;
+		m_childrenProperty = childrenProperty;
+		m_hasChildrenProperty = hasChildrenProperty;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// TreeStructureAdvisor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	@Override
+	public Object getParent(Object element) {
+		if (m_parentProperty != null && element instanceof EObject) {
+			EObject eObject = (EObject) element;
+			return eObject.eGet(m_parentProperty);
+		}
+		return null;
+	}
+	@Override
+	public Boolean hasChildren(Object element) {
+		if (element instanceof EObject) {
+			EObject eObject = (EObject) element;
+			if (m_hasChildrenProperty != null) {
+				return (Boolean) eObject.eGet(m_hasChildrenProperty);
+			}
+			if (m_childrenProperty != null) {
+				Object children = eObject.eGet(m_childrenProperty);
+				if (children == null) {
+					return Boolean.FALSE;
+				}
+				if (children.getClass().isArray()) {
+					return Array.getLength(children) > 0;
+				}
+				if (children instanceof Collection<?>) {
+					Collection<?> collection = (Collection<?>) children;
+					return !collection.isEmpty();
+				}
+			}
+		}
+		return null;
+	}
 }

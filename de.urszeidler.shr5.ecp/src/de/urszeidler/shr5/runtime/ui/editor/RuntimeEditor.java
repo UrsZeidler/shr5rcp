@@ -19,8 +19,10 @@ import de.urszeidler.emf.commons.ui.editor.BasicEditor;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.ShrEditingState;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
+import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
 /**
  * @author urs
@@ -29,7 +31,7 @@ import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
 public class RuntimeEditor extends BasicEditor<EObject> {
 
     private static final String EMPTY = ""; //$NON-NLS-1$
-    //private ShrEditingState editingMode = ShrEditingState.CUSTOM;
+    private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.RuntimeEditorID"; //$NON-NLS-1$
 
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator());
@@ -54,7 +56,7 @@ public class RuntimeEditor extends BasicEditor<EObject> {
 
     @Override
     protected void addPages() {
-        RuntimeSwitch<Object> runtimeSwitch = new RuntimeSwitch<Object>(){
+        RuntimeSwitch<Object> runtimeSwitchEditor = new RuntimeSwitch<Object>(){
             @Override
             public Object caseRuntimeCharacter(RuntimeCharacter object) {
                 try {
@@ -68,7 +70,15 @@ public class RuntimeEditor extends BasicEditor<EObject> {
             
         };
         
-        runtimeSwitch.doSwitch(theEObject);
+//        RuntimeSwitch<Object> runtimeSwitchView = new RuntimeSwitch<Object>(){
+//            
+//            
+//        };
+//        
+//        ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>();
+        
+        if(editingMode==ShrEditingState.EDITABLE)
+            runtimeSwitchEditor.doSwitch(theEObject);
         
         try {
             addPage(new DefaultEmfFormsPage(RuntimeEditor.this, "Default_EMF_Form_Page", "default form", theEObject)); //$NON-NLS-1$
