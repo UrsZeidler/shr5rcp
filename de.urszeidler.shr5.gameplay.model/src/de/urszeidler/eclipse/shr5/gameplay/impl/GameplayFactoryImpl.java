@@ -93,6 +93,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
         switch (eDataType.getClassifierID()) {
             case GameplayPackage.TIME_UNITS:
                 return createTimeUnitsFromString(eDataType, initialValue);
+            case GameplayPackage.INTERRUPT_TYPE:
+                return createInterruptTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -108,6 +110,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
         switch (eDataType.getClassifierID()) {
             case GameplayPackage.TIME_UNITS:
                 return convertTimeUnitsToString(eDataType, instanceValue);
+            case GameplayPackage.INTERRUPT_TYPE:
+                return convertInterruptTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -330,6 +334,26 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * @generated
      */
     public String convertTimeUnitsToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterruptType createInterruptTypeFromString(EDataType eDataType, String initialValue) {
+        InterruptType result = InterruptType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertInterruptTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

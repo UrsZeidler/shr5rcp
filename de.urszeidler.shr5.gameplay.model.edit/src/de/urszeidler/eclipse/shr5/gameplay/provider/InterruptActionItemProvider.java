@@ -59,6 +59,7 @@ public class InterruptActionItemProvider
             super.getPropertyDescriptors(object);
 
             addIniCostPropertyDescriptor(object);
+            addInterruptTypePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -81,6 +82,28 @@ public class InterruptActionItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Interrupt Type feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addInterruptTypePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_InterruptAction_interruptType_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_InterruptAction_interruptType_feature", "_UI_InterruptAction_type"),
+                 GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -121,6 +144,7 @@ public class InterruptActionItemProvider
 
         switch (notification.getFeatureID(InterruptAction.class)) {
             case GameplayPackage.INTERRUPT_ACTION__INI_COST:
+            case GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

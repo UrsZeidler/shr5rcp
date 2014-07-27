@@ -42,6 +42,7 @@ public class ActionPhaseWidget extends NameableComposite {
             public void widgetSelected(SelectionEvent e) {
                 InterruptAction interruptAction = GameplayFactory.eINSTANCE.createInterruptAction();
                 interruptAction.setIniCost(-5);
+                //interruptAction.set
                 initativePass.setInterruptAction(interruptAction);
                 interruptAction.redo();
             }

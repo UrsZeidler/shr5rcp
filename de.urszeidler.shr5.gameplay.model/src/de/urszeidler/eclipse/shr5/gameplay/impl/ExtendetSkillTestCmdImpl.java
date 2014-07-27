@@ -3,20 +3,14 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Intervall;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
-import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-
-import java.util.Calendar;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -28,11 +22,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getStartDate <em>Start Date</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getIntervall <em>Intervall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getIntervall <em>Intervall</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements ExtendetSkillTestCmd {
@@ -40,7 +34,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartDate()
      * @generated
      * @ordered
@@ -50,7 +43,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * The cached value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartDate()
      * @generated
      * @ordered
@@ -60,7 +52,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * The cached value of the '{@link #getIntervall() <em>Intervall</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIntervall()
      * @generated
      * @ordered
@@ -70,7 +61,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ExtendetSkillTestCmdImpl() {
@@ -80,7 +70,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -91,7 +80,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Date getStartDate() {
@@ -101,7 +89,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setStartDate(Date newStartDate) {
@@ -114,7 +101,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Intervall getIntervall() {
@@ -124,19 +110,14 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NotificationChain basicSetIntervall(Intervall newIntervall, NotificationChain msgs) {
         Intervall oldIntervall = intervall;
         intervall = newIntervall;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL,
-                    oldIntervall, newIntervall);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL, oldIntervall, newIntervall);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
         }
         return msgs;
     }
@@ -144,29 +125,25 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setIntervall(Intervall newIntervall) {
         if (newIntervall != intervall) {
             NotificationChain msgs = null;
             if (intervall != null)
-                msgs = ((InternalEObject)intervall).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL,
-                        null, msgs);
+                msgs = ((InternalEObject)intervall).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL, null, msgs);
             if (newIntervall != null)
-                msgs = ((InternalEObject)newIntervall).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL,
-                        null, msgs);
+                msgs = ((InternalEObject)newIntervall).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL, null, msgs);
             msgs = basicSetIntervall(newIntervall, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.EXTENDET_SKILL_TEST_CMD__INTERVALL, newIntervall, newIntervall));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -181,7 +158,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -198,7 +174,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -217,7 +192,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -236,7 +210,6 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -253,13 +226,11 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (startDate: ");

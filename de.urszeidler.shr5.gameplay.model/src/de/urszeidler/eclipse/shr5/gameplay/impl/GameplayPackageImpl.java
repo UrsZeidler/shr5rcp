@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.gameplay.Intervall;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
@@ -253,6 +254,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    private EEnum interruptTypeEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EDataType commandCallbackEDataType = null;
 
     /**
@@ -342,17 +350,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getExecutionStack_ExecutedCommands() {
-        return (EReference)executionStackEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getExecutionStack_Protocol() {
-        return (EReference)executionStackEClass.getEStructuralFeatures().get(2);
+        return (EReference)executionStackEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -954,6 +953,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getInterruptAction_InterruptType() {
+        return (EAttribute)interruptActionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSetFeatureCommand() {
         return setFeatureCommandEClass;
     }
@@ -1080,6 +1088,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EEnum getInterruptType() {
+        return interruptTypeEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -1114,7 +1131,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         // Create classes and their features
         executionStackEClass = createEClass(EXECUTION_STACK);
         createEReference(executionStackEClass, EXECUTION_STACK__CURRENT_COMMAND);
-        createEReference(executionStackEClass, EXECUTION_STACK__EXECUTED_COMMANDS);
         createEReference(executionStackEClass, EXECUTION_STACK__PROTOCOL);
 
         damageTestEClass = createEClass(DAMAGE_TEST);
@@ -1204,6 +1220,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         interruptActionEClass = createEClass(INTERRUPT_ACTION);
         createEAttribute(interruptActionEClass, INTERRUPT_ACTION__INI_COST);
+        createEAttribute(interruptActionEClass, INTERRUPT_ACTION__INTERRUPT_TYPE);
 
         setFeatureCommandEClass = createEClass(SET_FEATURE_COMMAND);
         createEAttribute(setFeatureCommandEClass, SET_FEATURE_COMMAND__VALUE);
@@ -1224,6 +1241,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         // Create enums
         timeUnitsEEnum = createEEnum(TIME_UNITS);
+        interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -1288,7 +1306,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getExecutionStack_CurrentCommand(), this.getCommand(), null, "currentCommand", null, 0, 1, ExecutionStack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getExecutionStack_ExecutedCommands(), this.getCommand(), null, "executedCommands", null, 0, -1, ExecutionStack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getExecutionStack_Protocol(), this.getExecutionProtocol(), null, "protocol", null, 1, 1, ExecutionStack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(damageTestEClass, DamageTest.class, "DamageTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1297,7 +1314,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getDamageTest_EffectiveDamage(), ecorePackage.getEString(), "effectiveDamage", null, 0, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(commandEClass, Command.class, "Command", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", null, 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", "false", 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCommand_SubCommands(), this.getCommand(), null, "subCommands", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_CmdCallback(), this.getCommandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1316,7 +1333,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(opposedSkillTestCmdEClass, OpposedSkillTestCmd.class, "OpposedSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getOpposedSkillTestCmd_Object(), theRuntimePackage.getRuntimeCharacter(), null, "object", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getOpposedSkillTestCmd_ObjectSkill(), theShr5Package.getPersonaFertigkeit(), null, "objectSkill", null, 1, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getOpposedSkillTestCmd_ObjectSkill(), theShr5Package.getPersonaFertigkeit(), null, "objectSkill", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(initativeEClass, Initative.class, "Initative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getInitative_Ini(), ecorePackage.getEInt(), "ini", null, 0, 1, Initative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1383,6 +1400,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(interruptActionEClass, InterruptAction.class, "InterruptAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getInterruptAction_IniCost(), ecorePackage.getEInt(), "iniCost", null, 0, 1, InterruptAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getInterruptAction_InterruptType(), this.getInterruptType(), "interruptType", null, 0, 1, InterruptAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(setFeatureCommandEClass, SetFeatureCommand.class, "SetFeatureCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSetFeatureCommand_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetFeatureCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1410,6 +1428,14 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.WEEK);
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.MONTH);
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.YEAR);
+
+        initEEnum(interruptTypeEEnum, InterruptType.class, "InterruptType");
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.BLOCK);
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.DODGE);
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.HIT_THE_DIRT);
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.INTERCEPT);
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.PARRY);
+        addEEnumLiteral(interruptTypeEEnum, InterruptType.FULL_DEFENSE);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

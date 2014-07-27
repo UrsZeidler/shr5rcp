@@ -6,22 +6,17 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
-import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
-import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl.InitativeComperator;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
@@ -32,10 +27,11 @@ import com.google.common.collect.Collections2;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl#getIniCost <em>Ini Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl#getIniCost <em>Ini Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl#getInterruptType <em>Interrupt Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class InterruptActionImpl extends SubjectCommandImpl implements InterruptAction {
@@ -43,7 +39,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * The default value of the '{@link #getIniCost() <em>Ini Cost</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIniCost()
      * @generated
      * @ordered
@@ -53,7 +48,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * The cached value of the '{@link #getIniCost() <em>Ini Cost</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIniCost()
      * @generated
      * @ordered
@@ -61,9 +55,27 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     protected int iniCost = INI_COST_EDEFAULT;
 
     /**
+     * The default value of the '{@link #getInterruptType() <em>Interrupt Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     * @see #getInterruptType()
+     * @generated
+     * @ordered
+     */
+    protected static final InterruptType INTERRUPT_TYPE_EDEFAULT = InterruptType.BLOCK;
+    /**
+     * The cached value of the '{@link #getInterruptType() <em>Interrupt Type</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInterruptType()
+     * @generated
+     * @ordered
+     */
+    protected InterruptType interruptType = INTERRUPT_TYPE_EDEFAULT;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     protected InterruptActionImpl() {
@@ -73,7 +85,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -84,7 +95,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getIniCost() {
@@ -94,7 +104,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setIniCost(int newIniCost) {
@@ -107,7 +116,27 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     * @generated
+     */
+    public InterruptType getInterruptType() {
+        return interruptType;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setInterruptType(InterruptType newInterruptType) {
+        InterruptType oldInterruptType = interruptType;
+        interruptType = newInterruptType == null ? INTERRUPT_TYPE_EDEFAULT : newInterruptType;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE, oldInterruptType, interruptType));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -115,6 +144,8 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
         switch (featureID) {
             case GameplayPackage.INTERRUPT_ACTION__INI_COST:
                 return getIniCost();
+            case GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE:
+                return getInterruptType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -122,7 +153,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -131,6 +161,9 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
             case GameplayPackage.INTERRUPT_ACTION__INI_COST:
                 setIniCost((Integer)newValue);
                 return;
+            case GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE:
+                setInterruptType((InterruptType)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -138,7 +171,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -147,6 +179,9 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
             case GameplayPackage.INTERRUPT_ACTION__INI_COST:
                 setIniCost(INI_COST_EDEFAULT);
                 return;
+            case GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE:
+                setInterruptType(INTERRUPT_TYPE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -154,7 +189,6 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -162,6 +196,8 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
         switch (featureID) {
             case GameplayPackage.INTERRUPT_ACTION__INI_COST:
                 return iniCost != INI_COST_EDEFAULT;
+            case GameplayPackage.INTERRUPT_ACTION__INTERRUPT_TYPE:
+                return interruptType != INTERRUPT_TYPE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -169,17 +205,17 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (iniCost: ");
         result.append(iniCost);
+        result.append(", interruptType: ");
+        result.append(interruptType);
         result.append(')');
         return result.toString();
     }

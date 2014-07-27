@@ -21,7 +21,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Extendet Skill Test Cmd</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
@@ -29,7 +28,6 @@ public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -40,7 +38,6 @@ public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
      * Constructs a new Extendet Skill Test Cmd test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ExtendetSkillTestCmdTest(String name) {
@@ -51,7 +48,6 @@ public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
      * Returns the fixture for this Extendet Skill Test Cmd test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -75,7 +71,6 @@ public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

@@ -61,7 +61,7 @@ public interface OpposedSkillTestCmd extends SkillTestCmd {
      * @return the value of the '<em>Object Skill</em>' reference.
      * @see #setObjectSkill(PersonaFertigkeit)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getOpposedSkillTestCmd_ObjectSkill()
-     * @model required="true"
+     * @model
      * @generated
      */
     PersonaFertigkeit getObjectSkill();

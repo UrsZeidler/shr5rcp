@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 public interface Command extends EObject {
     /**
      * Returns the value of the '<em><b>Executed</b></em>' attribute.
+     * The default value is <code>"false"</code>.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Executed</em>' attribute isn't clear,
@@ -50,7 +51,7 @@ public interface Command extends EObject {
      * @return the value of the '<em>Executed</em>' attribute.
      * @see #setExecuted(boolean)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Executed()
-     * @model required="true"
+     * @model default="false" required="true"
      * @generated
      */
     boolean isExecuted();

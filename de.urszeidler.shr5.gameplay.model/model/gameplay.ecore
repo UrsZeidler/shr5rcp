@@ -6,8 +6,6 @@
       <details key="documentation" value="The execution stack holds the current command and the execution protokoll."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentCommand" eType="#//Command"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executedCommands" upperBound="-1"
-        eType="#//Command"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="protocol" lowerBound="1"
         eType="#//ExecutionProtocol" containment="true"/>
   </eClassifiers>
@@ -29,7 +27,7 @@
     </eOperations>
     <eOperations name="undo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executed" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="If the command is executed the flag is set to true."/>
       </eAnnotations>
@@ -155,6 +153,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iniCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interruptType" eType="#//InterruptType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetFeatureCommand" eSuperTypes="#//Command">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -186,5 +185,13 @@
     <eLiterals name="week" value="4"/>
     <eLiterals name="month" value="5"/>
     <eLiterals name="year" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="InterruptType">
+    <eLiterals name="block"/>
+    <eLiterals name="dodge" value="1"/>
+    <eLiterals name="hit_the_dirt" value="2"/>
+    <eLiterals name="intercept" value="3"/>
+    <eLiterals name="parry" value="4"/>
+    <eLiterals name="full_defense" value="5"/>
   </eClassifiers>
 </ecore:EPackage>

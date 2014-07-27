@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getCurrentCommand <em>Current Command</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getExecutedCommands <em>Executed Commands</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getProtocol <em>Protocol</em>}</li>
  * </ul>
  * </p>
@@ -54,22 +52,6 @@ public interface ExecutionStack extends EObject {
      * @generated
      */
     void setCurrentCommand(Command value);
-
-    /**
-     * Returns the value of the '<em><b>Executed Commands</b></em>' reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.gameplay.Command}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Executed Commands</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Executed Commands</em>' reference list.
-     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getExecutionStack_ExecutedCommands()
-     * @model
-     * @generated
-     */
-    EList<Command> getExecutedCommands();
 
     /**
      * Returns the value of the '<em><b>Protocol</b></em>' containment reference.

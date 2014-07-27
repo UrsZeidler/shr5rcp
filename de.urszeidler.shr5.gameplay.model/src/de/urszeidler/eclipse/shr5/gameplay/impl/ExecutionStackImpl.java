@@ -7,21 +7,12 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +22,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionStackImpl#getCurrentCommand <em>Current Command</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionStackImpl#getExecutedCommands <em>Executed Commands</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionStackImpl#getProtocol <em>Protocol</em>}</li>
  * </ul>
  * </p>
@@ -48,16 +38,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
      * @ordered
      */
     protected Command currentCommand;
-
-    /**
-     * The cached value of the '{@link #getExecutedCommands() <em>Executed Commands</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getExecutedCommands()
-     * @generated
-     * @ordered
-     */
-    protected EList<Command> executedCommands;
 
     /**
      * The cached value of the '{@link #getProtocol() <em>Protocol</em>}' containment reference.
@@ -131,18 +111,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Command> getExecutedCommands() {
-        if (executedCommands == null) {
-            executedCommands = new EObjectResolvingEList<Command>(Command.class, this, GameplayPackage.EXECUTION_STACK__EXECUTED_COMMANDS);
-        }
-        return executedCommands;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public ExecutionProtocol getProtocol() {
         return protocol;
     }
@@ -206,8 +174,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
             case GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND:
                 if (resolve) return getCurrentCommand();
                 return basicGetCurrentCommand();
-            case GameplayPackage.EXECUTION_STACK__EXECUTED_COMMANDS:
-                return getExecutedCommands();
             case GameplayPackage.EXECUTION_STACK__PROTOCOL:
                 return getProtocol();
         }
@@ -225,10 +191,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
         switch (featureID) {
             case GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND:
                 setCurrentCommand((Command)newValue);
-                return;
-            case GameplayPackage.EXECUTION_STACK__EXECUTED_COMMANDS:
-                getExecutedCommands().clear();
-                getExecutedCommands().addAll((Collection<? extends Command>)newValue);
                 return;
             case GameplayPackage.EXECUTION_STACK__PROTOCOL:
                 setProtocol((ExecutionProtocol)newValue);
@@ -248,9 +210,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
             case GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND:
                 setCurrentCommand((Command)null);
                 return;
-            case GameplayPackage.EXECUTION_STACK__EXECUTED_COMMANDS:
-                getExecutedCommands().clear();
-                return;
             case GameplayPackage.EXECUTION_STACK__PROTOCOL:
                 setProtocol((ExecutionProtocol)null);
                 return;
@@ -268,8 +227,6 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
         switch (featureID) {
             case GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND:
                 return currentCommand != null;
-            case GameplayPackage.EXECUTION_STACK__EXECUTED_COMMANDS:
-                return executedCommands != null && !executedCommands.isEmpty();
             case GameplayPackage.EXECUTION_STACK__PROTOCOL:
                 return protocol != null;
         }

@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObject <em>Object</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObjectSkill <em>Object Skill</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObject <em>Object</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObjectSkill <em>Object Skill</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements OpposedSkillTestCmd {
@@ -34,7 +34,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getObject()
      * @generated
      * @ordered
@@ -45,7 +44,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * The cached value of the '{@link #getObjectSkill() <em>Object Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getObjectSkill()
      * @generated
      * @ordered
@@ -55,7 +53,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected OpposedSkillTestCmdImpl() {
@@ -65,7 +62,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -76,7 +72,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public RuntimeCharacter getObject() {
@@ -94,7 +89,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public RuntimeCharacter basicGetObject() {
@@ -104,7 +98,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setObject(RuntimeCharacter newObject) {
@@ -117,7 +110,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PersonaFertigkeit getObjectSkill() {
@@ -126,8 +118,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
             objectSkill = (PersonaFertigkeit)eResolveProxy(oldObjectSkill);
             if (objectSkill != oldObjectSkill) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill,
-                            objectSkill));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill, objectSkill));
             }
         }
         return objectSkill;
@@ -136,7 +127,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PersonaFertigkeit basicGetObjectSkill() {
@@ -146,7 +136,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setObjectSkill(PersonaFertigkeit newObjectSkill) {
@@ -159,19 +148,16 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT:
-                if (resolve)
-                    return getObject();
+                if (resolve) return getObject();
                 return basicGetObject();
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
-                if (resolve)
-                    return getObjectSkill();
+                if (resolve) return getObjectSkill();
                 return basicGetObjectSkill();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -180,7 +166,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -199,7 +184,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -218,7 +202,6 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

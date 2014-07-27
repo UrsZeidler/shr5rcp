@@ -80,22 +80,13 @@ public interface GameplayPackage extends EPackage {
     int EXECUTION_STACK__CURRENT_COMMAND = 0;
 
     /**
-     * The feature id for the '<em><b>Executed Commands</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EXECUTION_STACK__EXECUTED_COMMANDS = 1;
-
-    /**
      * The feature id for the '<em><b>Protocol</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EXECUTION_STACK__PROTOCOL = 2;
+    int EXECUTION_STACK__PROTOCOL = 1;
 
     /**
      * The number of structural features of the '<em>Execution Stack</em>' class.
@@ -104,7 +95,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EXECUTION_STACK_FEATURE_COUNT = 3;
+    int EXECUTION_STACK_FEATURE_COUNT = 2;
 
     /**
      * The number of operations of the '<em>Execution Stack</em>' class.
@@ -2947,13 +2938,22 @@ public interface GameplayPackage extends EPackage {
     int INTERRUPT_ACTION__INI_COST = SUBJECT_COMMAND_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Interrupt Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__INTERRUPT_TYPE = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Interrupt Action</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int INTERRUPT_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+    int INTERRUPT_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 2;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -3600,6 +3600,16 @@ public interface GameplayPackage extends EPackage {
     int TIME_UNITS = 27;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptType
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
+     * @generated
+     */
+    int INTERRUPT_TYPE = 28;
+
+    /**
      * The meta object id for the '<em>Command Callback</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3607,7 +3617,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 28;
+    int COMMAND_CALLBACK = 29;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -3629,17 +3639,6 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EReference getExecutionStack_CurrentCommand();
-
-    /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getExecutedCommands <em>Executed Commands</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Executed Commands</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getExecutedCommands()
-     * @see #getExecutionStack()
-     * @generated
-     */
-    EReference getExecutionStack_ExecutedCommands();
 
     /**
      * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#getProtocol <em>Protocol</em>}'.
@@ -4353,6 +4352,17 @@ public interface GameplayPackage extends EPackage {
     EAttribute getInterruptAction_IniCost();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getInterruptType <em>Interrupt Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Interrupt Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getInterruptType()
+     * @see #getInterruptAction()
+     * @generated
+     */
+    EAttribute getInterruptAction_InterruptType();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand <em>Set Feature Command</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4502,6 +4512,16 @@ public interface GameplayPackage extends EPackage {
     EEnum getTimeUnits();
 
     /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Interrupt Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptType
+     * @generated
+     */
+    EEnum getInterruptType();
+
+    /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4552,14 +4572,6 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference EXECUTION_STACK__CURRENT_COMMAND = eINSTANCE.getExecutionStack_CurrentCommand();
-
-        /**
-         * The meta object literal for the '<em><b>Executed Commands</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference EXECUTION_STACK__EXECUTED_COMMANDS = eINSTANCE.getExecutionStack_ExecutedCommands();
 
         /**
          * The meta object literal for the '<em><b>Protocol</b></em>' containment reference feature.
@@ -5142,6 +5154,14 @@ public interface GameplayPackage extends EPackage {
         EAttribute INTERRUPT_ACTION__INI_COST = eINSTANCE.getInterruptAction_IniCost();
 
         /**
+         * The meta object literal for the '<em><b>Interrupt Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERRUPT_ACTION__INTERRUPT_TYPE = eINSTANCE.getInterruptAction_InterruptType();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl <em>Set Feature Command</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -5262,6 +5282,16 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EEnum TIME_UNITS = eINSTANCE.getTimeUnits();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.InterruptType
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
+         * @generated
+         */
+        EEnum INTERRUPT_TYPE = eINSTANCE.getInterruptType();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.

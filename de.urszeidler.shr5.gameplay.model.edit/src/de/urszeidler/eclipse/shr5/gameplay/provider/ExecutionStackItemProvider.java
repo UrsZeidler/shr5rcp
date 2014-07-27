@@ -64,7 +64,6 @@ public class ExecutionStackItemProvider
             super.getPropertyDescriptors(object);
 
             addCurrentCommandPropertyDescriptor(object);
-            addExecutedCommandsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -83,28 +82,6 @@ public class ExecutionStackItemProvider
                  getString("_UI_ExecutionStack_currentCommand_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_ExecutionStack_currentCommand_feature", "_UI_ExecutionStack_type"),
                  GameplayPackage.Literals.EXECUTION_STACK__CURRENT_COMMAND,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Executed Commands feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addExecutedCommandsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ExecutionStack_executedCommands_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ExecutionStack_executedCommands_feature", "_UI_ExecutionStack_type"),
-                 GameplayPackage.Literals.EXECUTION_STACK__EXECUTED_COMMANDS,
                  true,
                  false,
                  true,

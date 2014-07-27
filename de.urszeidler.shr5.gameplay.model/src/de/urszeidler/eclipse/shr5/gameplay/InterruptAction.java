@@ -13,6 +13,7 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getIniCost <em>Ini Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getInterruptType <em>Interrupt Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,4 +48,33 @@ public interface InterruptAction extends SubjectCommand {
      * @generated
      */
     void setIniCost(int value);
+
+    /**
+     * Returns the value of the '<em><b>Interrupt Type</b></em>' attribute.
+     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.gameplay.InterruptType}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Interrupt Type</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Interrupt Type</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptType
+     * @see #setInterruptType(InterruptType)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getInterruptAction_InterruptType()
+     * @model
+     * @generated
+     */
+    InterruptType getInterruptType();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getInterruptType <em>Interrupt Type</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Interrupt Type</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.InterruptType
+     * @see #getInterruptType()
+     * @generated
+     */
+    void setInterruptType(InterruptType value);
 } // InterruptAction

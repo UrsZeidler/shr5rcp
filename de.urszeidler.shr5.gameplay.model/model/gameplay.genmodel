@@ -17,10 +17,17 @@
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/month"/>
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/year"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//InterruptType">
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/block"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/dodge"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/hit_the_dirt"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/intercept"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/parry"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/full_defense"/>
+    </genEnums>
     <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/executedCommands"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/protocol"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DamageTest">
@@ -108,6 +115,7 @@
     <genClasses ecoreClass="gameplay.ecore#//FreeAction"/>
     <genClasses ecoreClass="gameplay.ecore#//InterruptAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//InterruptAction/iniCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//InterruptAction/interruptType"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//SetFeatureCommand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SetFeatureCommand/value"/>
