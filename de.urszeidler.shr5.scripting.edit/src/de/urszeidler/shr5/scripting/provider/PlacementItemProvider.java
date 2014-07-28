@@ -69,6 +69,9 @@ public class PlacementItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addStartDatePropertyDescriptor(object);
+            addEndDatePropertyDescriptor(object);
+            addActualDatePropertyDescriptor(object);
             addNextPlacementsPropertyDescriptor(object);
             addTeamsPropertyDescriptor(object);
             addBackgroundPropertyDescriptor(object);
@@ -136,6 +139,72 @@ public class PlacementItemProvider
                  getString("_UI_Beschreibbar_name_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
                  Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Start Date feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addStartDatePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_startDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_startDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__START_DATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the End Date feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addEndDatePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_endDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_endDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__END_DATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Actual Date feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addActualDatePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_actualDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_actualDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE,
                  true,
                  false,
                  false,
@@ -324,6 +393,9 @@ public class PlacementItemProvider
             case ScriptingPackage.PLACEMENT__BESCHREIBUNG:
             case ScriptingPackage.PLACEMENT__IMAGE:
             case ScriptingPackage.PLACEMENT__NAME:
+            case ScriptingPackage.PLACEMENT__START_DATE:
+            case ScriptingPackage.PLACEMENT__END_DATE:
+            case ScriptingPackage.PLACEMENT__ACTUAL_DATE:
             case ScriptingPackage.PLACEMENT__BACKGROUND:
             case ScriptingPackage.PLACEMENT__IN_THEIR_FACE:
             case ScriptingPackage.PLACEMENT__DEBUGGING:

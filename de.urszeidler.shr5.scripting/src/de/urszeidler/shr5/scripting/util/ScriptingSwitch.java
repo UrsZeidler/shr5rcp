@@ -79,6 +79,7 @@ public class ScriptingSwitch<T> extends Switch<T> {
                 Placement placement = (Placement)theEObject;
                 T result = casePlacement(placement);
                 if (result == null) result = caseBeschreibbar(placement);
+                if (result == null) result = caseTimeFrame(placement);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }

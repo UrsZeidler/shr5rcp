@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Placement extends Beschreibbar {
+public interface Placement extends Beschreibbar, TimeFrame {
     /**
      * Returns the value of the '<em><b>Next Placements</b></em>' reference list.
      * The list contents are of type {@link de.urszeidler.shr5.scripting.Placement}.

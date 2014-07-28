@@ -9,8 +9,10 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
+import de.urszeidler.shr5.scripting.TimeFrame;
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -36,6 +38,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getActualDate <em>Actual Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getNextPlacements <em>Next Placements</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getTeams <em>Teams</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getBackground <em>Background</em>}</li>
@@ -108,6 +113,66 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStartDate()
+     * @generated
+     * @ordered
+     */
+    protected static final Date START_DATE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStartDate()
+     * @generated
+     * @ordered
+     */
+    protected Date startDate = START_DATE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getEndDate()
+     * @generated
+     * @ordered
+     */
+    protected static final Date END_DATE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getEndDate()
+     * @generated
+     * @ordered
+     */
+    protected Date endDate = END_DATE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getActualDate() <em>Actual Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getActualDate()
+     * @generated
+     * @ordered
+     */
+    protected static final Date ACTUAL_DATE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getActualDate() <em>Actual Date</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getActualDate()
+     * @generated
+     * @ordered
+     */
+    protected Date actualDate = ACTUAL_DATE_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getNextPlacements() <em>Next Placements</em>}' reference list.
@@ -249,6 +314,69 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__NAME, oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setStartDate(Date newStartDate) {
+        Date oldStartDate = startDate;
+        startDate = newStartDate;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__START_DATE, oldStartDate, startDate));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setEndDate(Date newEndDate) {
+        Date oldEndDate = endDate;
+        endDate = newEndDate;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__END_DATE, oldEndDate, endDate));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Date getActualDate() {
+        return actualDate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setActualDate(Date newActualDate) {
+        Date oldActualDate = actualDate;
+        actualDate = newActualDate;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__ACTUAL_DATE, oldActualDate, actualDate));
     }
 
     /**
@@ -455,6 +583,12 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return getImage();
             case ScriptingPackage.PLACEMENT__NAME:
                 return getName();
+            case ScriptingPackage.PLACEMENT__START_DATE:
+                return getStartDate();
+            case ScriptingPackage.PLACEMENT__END_DATE:
+                return getEndDate();
+            case ScriptingPackage.PLACEMENT__ACTUAL_DATE:
+                return getActualDate();
             case ScriptingPackage.PLACEMENT__NEXT_PLACEMENTS:
                 return getNextPlacements();
             case ScriptingPackage.PLACEMENT__TEAMS:
@@ -490,6 +624,15 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return;
             case ScriptingPackage.PLACEMENT__NAME:
                 setName((String)newValue);
+                return;
+            case ScriptingPackage.PLACEMENT__START_DATE:
+                setStartDate((Date)newValue);
+                return;
+            case ScriptingPackage.PLACEMENT__END_DATE:
+                setEndDate((Date)newValue);
+                return;
+            case ScriptingPackage.PLACEMENT__ACTUAL_DATE:
+                setActualDate((Date)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__NEXT_PLACEMENTS:
                 getNextPlacements().clear();
@@ -538,6 +681,15 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
             case ScriptingPackage.PLACEMENT__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case ScriptingPackage.PLACEMENT__START_DATE:
+                setStartDate(START_DATE_EDEFAULT);
+                return;
+            case ScriptingPackage.PLACEMENT__END_DATE:
+                setEndDate(END_DATE_EDEFAULT);
+                return;
+            case ScriptingPackage.PLACEMENT__ACTUAL_DATE:
+                setActualDate(ACTUAL_DATE_EDEFAULT);
+                return;
             case ScriptingPackage.PLACEMENT__NEXT_PLACEMENTS:
                 getNextPlacements().clear();
                 return;
@@ -577,6 +729,12 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case ScriptingPackage.PLACEMENT__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case ScriptingPackage.PLACEMENT__START_DATE:
+                return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
+            case ScriptingPackage.PLACEMENT__END_DATE:
+                return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
+            case ScriptingPackage.PLACEMENT__ACTUAL_DATE:
+                return ACTUAL_DATE_EDEFAULT == null ? actualDate != null : !ACTUAL_DATE_EDEFAULT.equals(actualDate);
             case ScriptingPackage.PLACEMENT__NEXT_PLACEMENTS:
                 return nextPlacements != null && !nextPlacements.isEmpty();
             case ScriptingPackage.PLACEMENT__TEAMS:
@@ -601,6 +759,42 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * @generated
      */
     @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == TimeFrame.class) {
+            switch (derivedFeatureID) {
+                case ScriptingPackage.PLACEMENT__START_DATE: return ScriptingPackage.TIME_FRAME__START_DATE;
+                case ScriptingPackage.PLACEMENT__END_DATE: return ScriptingPackage.TIME_FRAME__END_DATE;
+                case ScriptingPackage.PLACEMENT__ACTUAL_DATE: return ScriptingPackage.TIME_FRAME__ACTUAL_DATE;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == TimeFrame.class) {
+            switch (baseFeatureID) {
+                case ScriptingPackage.TIME_FRAME__START_DATE: return ScriptingPackage.PLACEMENT__START_DATE;
+                case ScriptingPackage.TIME_FRAME__END_DATE: return ScriptingPackage.PLACEMENT__END_DATE;
+                case ScriptingPackage.TIME_FRAME__ACTUAL_DATE: return ScriptingPackage.PLACEMENT__ACTUAL_DATE;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public String toString() {
         if (eIsProxy()) return super.toString();
 
@@ -611,6 +805,12 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", startDate: ");
+        result.append(startDate);
+        result.append(", endDate: ");
+        result.append(endDate);
+        result.append(", actualDate: ");
+        result.append(actualDate);
         result.append(", background: ");
         result.append(background);
         result.append(", inTheirFace: ");

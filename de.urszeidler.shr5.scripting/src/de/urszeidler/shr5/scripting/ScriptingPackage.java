@@ -187,13 +187,40 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__NAME = Shr5Package.BESCHREIBBAR__NAME;
 
     /**
+     * The feature id for the '<em><b>Start Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__START_DATE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>End Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__END_DATE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Actual Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__ACTUAL_DATE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Next Placements</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLACEMENT__NEXT_PLACEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+    int PLACEMENT__NEXT_PLACEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Teams</b></em>' reference list.
@@ -202,7 +229,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__TEAMS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+    int PLACEMENT__TEAMS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Background</b></em>' attribute list.
@@ -211,7 +238,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__BACKGROUND = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+    int PLACEMENT__BACKGROUND = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>In Their Face</b></em>' attribute list.
@@ -220,7 +247,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__IN_THEIR_FACE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+    int PLACEMENT__IN_THEIR_FACE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Script</b></em>' container reference.
@@ -229,7 +256,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__SCRIPT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+    int PLACEMENT__SCRIPT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Debugging</b></em>' attribute list.
@@ -238,7 +265,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__DEBUGGING = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+    int PLACEMENT__DEBUGGING = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Enviorment</b></em>' containment reference.
@@ -247,7 +274,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT__ENVIORMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+    int PLACEMENT__ENVIORMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The number of structural features of the '<em>Placement</em>' class.
@@ -256,7 +283,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
+    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The number of operations of the '<em>Placement</em>' class.
