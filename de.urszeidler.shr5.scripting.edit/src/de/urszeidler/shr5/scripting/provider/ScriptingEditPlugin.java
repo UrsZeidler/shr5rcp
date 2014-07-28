@@ -2,6 +2,7 @@
  */
 package de.urszeidler.shr5.scripting.provider;
 
+import de.urszeidler.eclipse.shr5.gameplay.provider.GameplayEditPlugin;
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 
 import de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin;
@@ -44,6 +45,7 @@ public final class ScriptingEditPlugin extends EMFPlugin {
     public ScriptingEditPlugin() {
         super
           (new ResourceLocator [] {
+             GameplayEditPlugin.INSTANCE,
              RuntimeEditPlugin.INSTANCE,
              Shr5EditPlugin.INSTANCE,
              Shr5ManagementEditPlugin.INSTANCE,

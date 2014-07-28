@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.urszeidler.shr5.scripting/src" modelPluginID="de.urszeidler.shr5.scripting"
     modelName="Scripting" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    usedGenPackages="../../de.urszeidler.shr5.runtime/model/runtime.genmodel#//runtime ../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5 ../../de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management"
+    usedGenPackages="../../de.urszeidler.shr5.gameplay.model/model/gameplay.genmodel#//gameplay ../../de.urszeidler.shr5.runtime/model/runtime.genmodel#//runtime ../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5 ../../de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management"
     operationReflection="true" importOrganizing="true">
   <foreignModel>scripting.ecore</foreignModel>
   <genPackages prefix="Scripting" basePackage="de.urszeidler.shr5" disposableProviderFactory="true"
@@ -13,6 +13,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/allTeams"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/player"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/management"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/commandStack"/>
     </genClasses>
     <genClasses ecoreClass="scripting.ecore#//Placement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/nextPlacements"/>

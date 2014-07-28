@@ -12,6 +12,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="management" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GamemasterManagement"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commandStack" eType="ecore:EClass ../../de.urszeidler.shr5.gameplay.model/model/gameplay.ecore#//ExecutionStack"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Placement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar #//TimeFrame">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextPlacements" upperBound="-1"

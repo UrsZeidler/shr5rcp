@@ -2,6 +2,7 @@
  */
 package de.urszeidler.shr5.scripting.impl;
 
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getAllTeams <em>All Teams</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getPlayer <em>Player</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getManagement <em>Management</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getCommandStack <em>Command Stack</em>}</li>
  * </ul>
  * </p>
  *
@@ -146,6 +148,16 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * @ordered
      */
     protected GamemasterManagement management;
+
+    /**
+     * The cached value of the '{@link #getCommandStack() <em>Command Stack</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCommandStack()
+     * @generated
+     * @ordered
+     */
+    protected ExecutionStack commandStack;
 
     /**
      * <!-- begin-user-doc -->
@@ -344,6 +356,49 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    public ExecutionStack getCommandStack() {
+        return commandStack;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCommandStack(ExecutionStack newCommandStack, NotificationChain msgs) {
+        ExecutionStack oldCommandStack = commandStack;
+        commandStack = newCommandStack;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ScriptingPackage.SCRIPT__COMMAND_STACK, oldCommandStack, newCommandStack);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCommandStack(ExecutionStack newCommandStack) {
+        if (newCommandStack != commandStack) {
+            NotificationChain msgs = null;
+            if (commandStack != null)
+                msgs = ((InternalEObject)commandStack).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ScriptingPackage.SCRIPT__COMMAND_STACK, null, msgs);
+            if (newCommandStack != null)
+                msgs = ((InternalEObject)newCommandStack).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ScriptingPackage.SCRIPT__COMMAND_STACK, null, msgs);
+            msgs = basicSetCommandStack(newCommandStack, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.SCRIPT__COMMAND_STACK, newCommandStack, newCommandStack));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -370,6 +425,8 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
                 return basicSetPlayer(null, msgs);
             case ScriptingPackage.SCRIPT__MANAGEMENT:
                 return basicSetManagement(null, msgs);
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+                return basicSetCommandStack(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -396,6 +453,8 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
                 return getPlayer();
             case ScriptingPackage.SCRIPT__MANAGEMENT:
                 return getManagement();
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+                return getCommandStack();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -432,6 +491,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
             case ScriptingPackage.SCRIPT__MANAGEMENT:
                 setManagement((GamemasterManagement)newValue);
                 return;
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+                setCommandStack((ExecutionStack)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -465,6 +527,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
             case ScriptingPackage.SCRIPT__MANAGEMENT:
                 setManagement((GamemasterManagement)null);
                 return;
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+                setCommandStack((ExecutionStack)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -491,6 +556,8 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
                 return player != null;
             case ScriptingPackage.SCRIPT__MANAGEMENT:
                 return management != null;
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+                return commandStack != null;
         }
         return super.eIsSet(featureID);
     }

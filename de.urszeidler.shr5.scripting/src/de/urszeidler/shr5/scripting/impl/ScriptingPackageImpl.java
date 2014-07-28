@@ -4,6 +4,7 @@ package de.urszeidler.shr5.scripting.impl;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -96,7 +97,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         isInited = true;
 
         // Initialize simple dependencies
-        RuntimePackage.eINSTANCE.eClass();
+        GameplayPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theScriptingPackage.createPackageContents();
@@ -156,6 +157,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      */
     public EReference getScript_Management() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getScript_CommandStack() {
+        return (EReference)scriptEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -299,6 +309,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(scriptEClass, SCRIPT__ALL_TEAMS);
         createEReference(scriptEClass, SCRIPT__PLAYER);
         createEReference(scriptEClass, SCRIPT__MANAGEMENT);
+        createEReference(scriptEClass, SCRIPT__COMMAND_STACK);
 
         placementEClass = createEClass(PLACEMENT);
         createEReference(placementEClass, PLACEMENT__NEXT_PLACEMENTS);
@@ -342,6 +353,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         Shr5Package theShr5Package = (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
         RuntimePackage theRuntimePackage = (RuntimePackage)EPackage.Registry.INSTANCE.getEPackage(RuntimePackage.eNS_URI);
         Shr5managementPackage theShr5managementPackage = (Shr5managementPackage)EPackage.Registry.INSTANCE.getEPackage(Shr5managementPackage.eNS_URI);
+        GameplayPackage theGameplayPackage = (GameplayPackage)EPackage.Registry.INSTANCE.getEPackage(GameplayPackage.eNS_URI);
 
         // Create type parameters
 
@@ -358,6 +370,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScript_AllTeams(), theRuntimePackage.getTeam(), null, "allTeams", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Player(), theRuntimePackage.getTeam(), null, "player", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Management(), theShr5managementPackage.getGamemasterManagement(), null, "management", null, 1, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getScript_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(placementEClass, Placement.class, "Placement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlacement_NextPlacements(), this.getPlacement(), null, "nextPlacements", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -132,13 +132,22 @@ public interface ScriptingPackage extends EPackage {
     int SCRIPT__MANAGEMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Command Stack</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__COMMAND_STACK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Script</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+    int SCRIPT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Script</em>' class.
@@ -406,6 +415,17 @@ public interface ScriptingPackage extends EPackage {
     EReference getScript_Management();
 
     /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Script#getCommandStack <em>Command Stack</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Command Stack</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getCommandStack()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_CommandStack();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Placement <em>Placement</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -599,6 +619,14 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EReference SCRIPT__MANAGEMENT = eINSTANCE.getScript_Management();
+
+        /**
+         * The meta object literal for the '<em><b>Command Stack</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__COMMAND_STACK = eINSTANCE.getScript_CommandStack();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.PlacementImpl <em>Placement</em>}' class.

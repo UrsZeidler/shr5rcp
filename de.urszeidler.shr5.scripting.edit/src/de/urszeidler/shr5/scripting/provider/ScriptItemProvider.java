@@ -5,6 +5,7 @@ package de.urszeidler.shr5.scripting.provider;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -158,6 +159,7 @@ public class ScriptItemProvider
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__ALL_TEAMS);
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__PLAYER);
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__MANAGEMENT);
+            childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__COMMAND_STACK);
         }
         return childrenFeatures;
     }
@@ -221,6 +223,7 @@ public class ScriptItemProvider
             case ScriptingPackage.SCRIPT__ALL_TEAMS:
             case ScriptingPackage.SCRIPT__PLAYER:
             case ScriptingPackage.SCRIPT__MANAGEMENT:
+            case ScriptingPackage.SCRIPT__COMMAND_STACK:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -267,6 +270,11 @@ public class ScriptItemProvider
             (createChildParameter
                 (ScriptingPackage.Literals.SCRIPT__MANAGEMENT,
                  Shr5managementFactory.eINSTANCE.createGamemasterManagement()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (ScriptingPackage.Literals.SCRIPT__COMMAND_STACK,
+                 GameplayFactory.eINSTANCE.createExecutionStack()));
     }
 
     /**
