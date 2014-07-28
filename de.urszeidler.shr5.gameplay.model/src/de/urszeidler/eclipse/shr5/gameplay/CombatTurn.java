@@ -12,6 +12,10 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * A representation of the model object '<em><b>Combat Turn</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * One combat turn.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

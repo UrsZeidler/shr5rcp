@@ -5,13 +5,22 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Execution Stack</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#redo() <em>Redo</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class ExecutionStackTest extends TestCase {
@@ -83,6 +92,28 @@ public class ExecutionStackTest extends TestCase {
     @Override
     protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#redo()
+     * @generated not
+     */
+    public void testRedo() {
+        RuntimeCharacter character1 = GameplayTools.createRuntimeCharacter();
+        RuntimeCharacter character2 = GameplayTools.createRuntimeCharacter();
+
+        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
+        combatTurn.getCombatants().add(character1);
+        combatTurn.getCombatants().add(character2);
+        
+        assertFalse(combatTurn.isExecuting());  
+        getFixture().setCurrentCommand(combatTurn);
+        getFixture().redo();
+        
+        assertTrue(combatTurn.isExecuting());       
     }
 
 } //ExecutionStackTest

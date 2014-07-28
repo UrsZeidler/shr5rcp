@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Probe</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The basic probe.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -35,6 +39,9 @@ public interface Probe extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * THe dice thrown.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Probe</em>' attribute list.
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_Probe()
      * @model unique="false" changeable="false"
@@ -50,6 +57,9 @@ public interface Probe extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The successes.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Successes</em>' attribute.
      * @see #setSuccesses(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_Successes()

@@ -9,6 +9,10 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_-0VoI4_GEd6SEpVfiQZsGw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_-0VoJI_GEd6SEpVfiQZsGw" type="5002">
+        <children xmi:type="notation:Node" xmi:id="_6YAf4BaPEeSPSa0ce_O4Zg" type="2002">
+          <element xmi:type="ecore:EOperation" href="gameplay.ecore#//ExecutionStack/redo"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6YAf4RaPEeSPSa0ce_O4Zg"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_-0VoJY_GEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_-0VoJo_GEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_-0VoJ4_GEd6SEpVfiQZsGw"/>

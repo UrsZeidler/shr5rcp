@@ -79,4 +79,15 @@ public interface ExecutionStack extends EObject {
      */
     void setProtocol(ExecutionProtocol value);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Will execute the current command if there is any.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    void redo();
+
 } // ExecutionStack

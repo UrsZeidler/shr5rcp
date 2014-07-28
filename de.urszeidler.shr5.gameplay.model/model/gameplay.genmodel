@@ -29,6 +29,7 @@
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/protocol"/>
+      <genOperations ecoreOperation="gameplay.ecore#//ExecutionStack/redo"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DamageTest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/damage"/>

@@ -98,13 +98,22 @@ public interface GameplayPackage extends EPackage {
     int EXECUTION_STACK_FEATURE_COUNT = 2;
 
     /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXECUTION_STACK___REDO = 0;
+
+    /**
      * The number of operations of the '<em>Execution Stack</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EXECUTION_STACK_OPERATION_COUNT = 0;
+    int EXECUTION_STACK_OPERATION_COUNT = 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.Command <em>Command</em>}' class.
@@ -3652,6 +3661,16 @@ public interface GameplayPackage extends EPackage {
     EReference getExecutionStack_Protocol();
 
     /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Redo</em>' operation.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ExecutionStack#redo()
+     * @generated
+     */
+    EOperation getExecutionStack__Redo();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest <em>Damage Test</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4580,6 +4599,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference EXECUTION_STACK__PROTOCOL = eINSTANCE.getExecutionStack_Protocol();
+
+        /**
+         * The meta object literal for the '<em><b>Redo</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation EXECUTION_STACK___REDO = eINSTANCE.getExecutionStack__Redo();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl <em>Damage Test</em>}' class.

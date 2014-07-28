@@ -359,6 +359,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getExecutionStack__Redo() {
+        return executionStackEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getDamageTest() {
         return damageTestEClass;
     }
@@ -1132,6 +1141,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         executionStackEClass = createEClass(EXECUTION_STACK);
         createEReference(executionStackEClass, EXECUTION_STACK__CURRENT_COMMAND);
         createEReference(executionStackEClass, EXECUTION_STACK__PROTOCOL);
+        createEOperation(executionStackEClass, EXECUTION_STACK___REDO);
 
         damageTestEClass = createEClass(DAMAGE_TEST);
         createEAttribute(damageTestEClass, DAMAGE_TEST__DAMAGE);
@@ -1307,6 +1317,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getExecutionStack_CurrentCommand(), this.getCommand(), null, "currentCommand", null, 0, 1, ExecutionStack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getExecutionStack_Protocol(), this.getExecutionProtocol(), null, "protocol", null, 1, 1, ExecutionStack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEOperation(getExecutionStack__Redo(), null, "redo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(damageTestEClass, DamageTest.class, "DamageTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getDamageTest_Damage(), ecorePackage.getEString(), "damage", null, 1, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

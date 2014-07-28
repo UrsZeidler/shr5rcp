@@ -7,8 +7,10 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -97,11 +99,40 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
+     */
+    public NotificationChain basicSetCurrentCommand(Command newCurrentCommand, NotificationChain msgs) {
+        Command oldCurrentCommand = currentCommand;
+        if (oldCurrentCommand != null)
+            if (getProtocol() != null)
+                getProtocol().getCommands().add(oldCurrentCommand);
+
+        currentCommand = newCurrentCommand;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND,
+                    oldCurrentCommand, newCurrentCommand);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
      */
     public void setCurrentCommand(Command newCurrentCommand) {
         Command oldCurrentCommand = currentCommand;
         currentCommand = newCurrentCommand;
+        if (newCurrentCommand != null)
+            if (getProtocol() != null)
+                getProtocol().getCommands().add(newCurrentCommand);
+
+        
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.EXECUTION_STACK__CURRENT_COMMAND, oldCurrentCommand, currentCommand));
     }
@@ -147,6 +178,19 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
         }
         else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.EXECUTION_STACK__PROTOCOL, newProtocol, newProtocol));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public void redo() {
+        if (getCurrentCommand() == null)
+            return;
+
+        getCurrentCommand().redo();
     }
 
     /**
@@ -233,4 +277,19 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
         return super.eIsSet(featureID);
     }
 
-} //ExecutionStackImpl
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+        switch (operationID) {
+            case GameplayPackage.EXECUTION_STACK___REDO:
+                redo();
+                return null;
+        }
+        return super.eInvoke(operationID, arguments);
+    }
+
+} // ExecutionStackImpl

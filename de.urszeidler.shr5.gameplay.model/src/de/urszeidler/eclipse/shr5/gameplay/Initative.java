@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * A representation of the model object '<em><b>Initative</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the initive roll.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

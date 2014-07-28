@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * A representation of the model object '<em><b>Probe Command</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A probe as command.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

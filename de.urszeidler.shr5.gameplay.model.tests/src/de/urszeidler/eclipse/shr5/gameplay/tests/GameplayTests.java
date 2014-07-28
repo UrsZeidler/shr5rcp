@@ -31,6 +31,7 @@ public class GameplayTests extends TestSuite {
      */
     public static Test suite() {
         TestSuite suite = new GameplayTests("gameplay Tests");
+        suite.addTestSuite(ExecutionStackTest.class);
         suite.addTestSuite(DamageTestTest.class);
         suite.addTestSuite(SkillTestCmdTest.class);
         suite.addTestSuite(OpposedSkillTestCmdTest.class);
