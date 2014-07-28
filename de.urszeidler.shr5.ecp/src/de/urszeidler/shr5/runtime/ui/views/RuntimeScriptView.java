@@ -52,6 +52,12 @@ import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.swt.widgets.TabFolder;
+import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.custom.ViewForm;
+import org.eclipse.nebula.widgets.cdatetime.CDateTime;
+import org.eclipse.nebula.widgets.cdatetime.CDT;
+import org.eclipse.swt.widgets.Button;
 
 public class RuntimeScriptView extends ViewPart implements ISelectionListener {
     private DataBindingContext m_bindingContext;
@@ -91,6 +97,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.paintBordersFor(composite);
         {
             TableWrapLayout twl_composite = new TableWrapLayout();
+            twl_composite.makeColumnsEqualWidth = true;
             composite.setLayout(twl_composite);
         }
         
@@ -101,16 +108,41 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         Composite composite_1 = formToolkit.createComposite(composite, SWT.NONE);
  
         formToolkit.paintBordersFor(composite_1);
-        composite_1.setLayout(new GridLayout(2, false));
+        {
+            TableWrapLayout twl_composite_1 = new TableWrapLayout();
+            twl_composite_1.numColumns = 2;
+            composite_1.setLayout(twl_composite_1);
+        }
         
         Label lblImg = formToolkit.createLabel(composite_1, "img", SWT.NONE);
+        lblImg.setLayoutData(new TableWrapData(TableWrapData.LEFT, TableWrapData.MIDDLE, 1, 1));
         lblImg.setBounds(0, 0, 70, 17);
         
         lblName = formToolkit.createLabel(composite_1, "New Label", SWT.NONE);
+        lblName.setLayoutData(new TableWrapData(TableWrapData.LEFT, TableWrapData.MIDDLE, 1, 1));
         lblName.setSize(70, 17);
         
-        Section sctnBackground = formToolkit.createSection(composite, Section.TWISTIE | Section.TITLE_BAR);
-        sctnBackground.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+        Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
+        composite_8.setLayout(new GridLayout(2, false));
+        composite_8.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
+        formToolkit.paintBordersFor(composite_8);
+        
+        Composite composite_9 = formToolkit.createComposite(composite_8, SWT.NONE);
+        {
+            TableWrapLayout twl_composite_9 = new TableWrapLayout();
+            twl_composite_9.topMargin = 0;
+            twl_composite_9.makeColumnsEqualWidth = true;
+            twl_composite_9.numColumns = 1;
+            composite_9.setLayout(twl_composite_9);
+        }
+        GridData gd_composite_9 = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        gd_composite_9.widthHint = 223;
+        composite_9.setLayoutData(gd_composite_9);
+        formToolkit.paintBordersFor(composite_9);
+        
+        Section sctnBackground = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+        sctnBackground.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
+        sctnBackground.setSize(1183, 116);
         formToolkit.paintBordersFor(sctnBackground);
         sctnBackground.setText("Background");
         sctnBackground.setExpanded(true);
@@ -127,7 +159,35 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.adapt(styledText);
         formToolkit.paintBordersFor(styledText);
         
-        Section sctnInTheirFace = formToolkit.createSection(composite, Section.TWISTIE | Section.TITLE_BAR);
+        Composite composite_10 = formToolkit.createComposite(composite_8, SWT.NONE);
+        composite_10.setLayout(new FillLayout(SWT.HORIZONTAL));
+        composite_10.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        formToolkit.paintBordersFor(composite_10);
+        
+        Section sctnActions = formToolkit.createSection(composite_10, Section.TWISTIE | Section.TITLE_BAR);
+
+        formToolkit.paintBordersFor(sctnActions);
+        sctnActions.setText("TimeTracking");
+        sctnActions.setExpanded(true);
+        
+        Composite composite_5 = formToolkit.createComposite(sctnActions, SWT.NONE);
+        formToolkit.paintBordersFor(composite_5);
+        sctnActions.setClient(composite_5);
+        composite_5.setLayout(new GridLayout(2, false));
+        
+        CDateTime dateTime_1 = new CDateTime(composite_5, CDT.BORDER | CDT.SPINNER | CDT.TAB_FIELDS | CDT.CLOCK_24_HOUR | CDT.CLOCK_DISCRETE | CDT.SIMPLE | CDT.DATE_SHORT | CDT.TIME_MEDIUM);
+        dateTime_1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        formToolkit.adapt(dateTime_1);
+        formToolkit.paintBordersFor(dateTime_1);
+        
+        Composite composite_6 = formToolkit.createComposite(composite_5, SWT.NONE);
+        composite_6.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        composite_6.setLayout(new GridLayout(1, false));
+        formToolkit.paintBordersFor(composite_6);
+        
+        Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
+        
+        Section sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
         sctnInTheirFace.setText("In their face");
@@ -148,7 +208,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.adapt(styledText_1);
         formToolkit.paintBordersFor(styledText_1);
        
-        Section sctnDebugging = formToolkit.createSection(composite, Section.TWISTIE | Section.TITLE_BAR);
+        Section sctnDebugging = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnDebugging.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
@@ -169,26 +229,6 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         styledText_2.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
-        
-        Section sctnActions = formToolkit.createSection(composite, Section.TWISTIE | Section.TITLE_BAR);
-        sctnActions.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
-        formToolkit.paintBordersFor(sctnActions);
-        sctnActions.setText("Actions");
-        sctnActions.setExpanded(true);
-        
-        Composite composite_5 = formToolkit.createComposite(sctnActions, SWT.NONE);
-        formToolkit.paintBordersFor(composite_5);
-        sctnActions.setClient(composite_5);
-        composite_5.setLayout(new GridLayout(2, false));
-        
-        Composite composite_6 = formToolkit.createComposite(composite_5, SWT.NONE);
-        formToolkit.paintBordersFor(composite_6);
-        composite_6.setLayout(new FillLayout(SWT.HORIZONTAL));
-        
-         
-        Composite composite_7 = formToolkit.createComposite(composite_5, SWT.NONE);
-        formToolkit.paintBordersFor(composite_7);
-        composite_7.setLayout(new FillLayout(SWT.HORIZONTAL));
         
 
    

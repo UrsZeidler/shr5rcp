@@ -199,6 +199,7 @@
             restorable="true">
       </view>
       <view
+            category="de.urszeidler.shr5.ecp.category.views"
             class="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
             id="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
             name="Runtime Script View">
