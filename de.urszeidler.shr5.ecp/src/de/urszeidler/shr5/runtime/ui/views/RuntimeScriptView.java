@@ -298,7 +298,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
                 CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
                 combatTurn.setDate(placement.getActualDate());
                 List<Object> choiceOfValues = new ArrayList<Object>();
-                choiceOfValues.addAll(placement.getScript().getPlayer().getMembers());
+                
                 EList<Team> teams = placement.getTeams();
                 for (Team team : teams) {
                     choiceOfValues.addAll(team.getMembers());
