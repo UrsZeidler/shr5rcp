@@ -73,6 +73,7 @@ public class ScriptItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addEntryPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -139,6 +140,28 @@ public class ScriptItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Entry feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addEntryPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Script_entry_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Script_entry_feature", "_UI_Script_type"),
+                 ScriptingPackage.Literals.SCRIPT__ENTRY,
+                 true,
+                 false,
+                 true,
+                 null,
                  null,
                  null));
     }

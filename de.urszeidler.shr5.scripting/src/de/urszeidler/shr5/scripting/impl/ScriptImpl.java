@@ -43,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getPlayer <em>Player</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getManagement <em>Management</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getCommandStack <em>Command Stack</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getEntry <em>Entry</em>}</li>
  * </ul>
  * </p>
  *
@@ -158,6 +159,16 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * @ordered
      */
     protected ExecutionStack commandStack;
+
+    /**
+     * The cached value of the '{@link #getEntry() <em>Entry</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getEntry()
+     * @generated
+     * @ordered
+     */
+    protected Placement entry;
 
     /**
      * <!-- begin-user-doc -->
@@ -399,6 +410,44 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    public Placement getEntry() {
+        if (entry != null && entry.eIsProxy()) {
+            InternalEObject oldEntry = (InternalEObject)entry;
+            entry = (Placement)eResolveProxy(oldEntry);
+            if (entry != oldEntry) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ScriptingPackage.SCRIPT__ENTRY, oldEntry, entry));
+            }
+        }
+        return entry;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Placement basicGetEntry() {
+        return entry;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setEntry(Placement newEntry) {
+        Placement oldEntry = entry;
+        entry = newEntry;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.SCRIPT__ENTRY, oldEntry, entry));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -455,6 +504,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
                 return getManagement();
             case ScriptingPackage.SCRIPT__COMMAND_STACK:
                 return getCommandStack();
+            case ScriptingPackage.SCRIPT__ENTRY:
+                if (resolve) return getEntry();
+                return basicGetEntry();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -494,6 +546,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
             case ScriptingPackage.SCRIPT__COMMAND_STACK:
                 setCommandStack((ExecutionStack)newValue);
                 return;
+            case ScriptingPackage.SCRIPT__ENTRY:
+                setEntry((Placement)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -530,6 +585,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
             case ScriptingPackage.SCRIPT__COMMAND_STACK:
                 setCommandStack((ExecutionStack)null);
                 return;
+            case ScriptingPackage.SCRIPT__ENTRY:
+                setEntry((Placement)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -558,6 +616,8 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
                 return management != null;
             case ScriptingPackage.SCRIPT__COMMAND_STACK:
                 return commandStack != null;
+            case ScriptingPackage.SCRIPT__ENTRY:
+                return entry != null;
         }
         return super.eIsSet(featureID);
     }

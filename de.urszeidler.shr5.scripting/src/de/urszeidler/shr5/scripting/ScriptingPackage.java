@@ -141,13 +141,22 @@ public interface ScriptingPackage extends EPackage {
     int SCRIPT__COMMAND_STACK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
+     * The feature id for the '<em><b>Entry</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__ENTRY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
      * The number of structural features of the '<em>Script</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+    int SCRIPT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of operations of the '<em>Script</em>' class.
@@ -426,6 +435,17 @@ public interface ScriptingPackage extends EPackage {
     EReference getScript_CommandStack();
 
     /**
+     * Returns the meta object for the reference '{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Entry</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getEntry()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_Entry();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Placement <em>Placement</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -627,6 +647,14 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EReference SCRIPT__COMMAND_STACK = eINSTANCE.getScript_CommandStack();
+
+        /**
+         * The meta object literal for the '<em><b>Entry</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__ENTRY = eINSTANCE.getScript_Entry();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.PlacementImpl <em>Placement</em>}' class.

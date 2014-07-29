@@ -173,6 +173,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getScript_Entry() {
+        return (EReference)scriptEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getPlacement() {
         return placementEClass;
     }
@@ -310,6 +319,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(scriptEClass, SCRIPT__PLAYER);
         createEReference(scriptEClass, SCRIPT__MANAGEMENT);
         createEReference(scriptEClass, SCRIPT__COMMAND_STACK);
+        createEReference(scriptEClass, SCRIPT__ENTRY);
 
         placementEClass = createEClass(PLACEMENT);
         createEReference(placementEClass, PLACEMENT__NEXT_PLACEMENTS);
@@ -371,6 +381,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScript_Player(), theRuntimePackage.getTeam(), null, "player", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Management(), theShr5managementPackage.getGamemasterManagement(), null, "management", null, 1, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getScript_Entry(), this.getPlacement(), null, "entry", null, 1, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(placementEClass, Placement.class, "Placement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlacement_NextPlacements(), this.getPlacement(), null, "nextPlacements", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

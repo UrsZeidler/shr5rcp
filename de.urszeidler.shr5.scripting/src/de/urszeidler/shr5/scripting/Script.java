@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getPlayer <em>Player</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getManagement <em>Management</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getCommandStack <em>Command Stack</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}</li>
  * </ul>
  * </p>
  *
@@ -143,5 +144,31 @@ public interface Script extends Beschreibbar {
      * @generated
      */
     void setCommandStack(ExecutionStack value);
+
+    /**
+     * Returns the value of the '<em><b>Entry</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Entry</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Entry</em>' reference.
+     * @see #setEntry(Placement)
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_Entry()
+     * @model required="true"
+     * @generated
+     */
+    Placement getEntry();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Entry</em>' reference.
+     * @see #getEntry()
+     * @generated
+     */
+    void setEntry(Placement value);
 
 } // Script
