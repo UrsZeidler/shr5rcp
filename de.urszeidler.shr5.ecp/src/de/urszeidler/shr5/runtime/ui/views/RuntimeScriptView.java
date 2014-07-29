@@ -2,11 +2,16 @@ package de.urszeidler.shr5.runtime.ui.views;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
@@ -23,8 +28,10 @@ import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
+import org.eclipse.nebula.widgets.cdatetime.CDateTimePainter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.layout.FillLayout;
@@ -87,6 +94,10 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
     private AdapterFactoryContentProvider actionListContentProvider;
 
     private LabelProvider labelProvider;
+
+    private CDateTime dateTime_1;
+
+    private CDateTime dateTime;
 
     public RuntimeScriptView() {
 
@@ -225,10 +236,17 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.paintBordersFor(composite_5);
         sctnActions.setClient(composite_5);
         composite_5.setLayout(new GridLayout(2, false));
+        
+        dateTime = new CDateTime(composite_5, CDT.SPINNER | CDT.COMPACT | CDT.DATE_LONG);
+        dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        formToolkit.adapt(dateTime);
+        formToolkit.paintBordersFor(dateTime);
+        new Label(composite_5, SWT.NONE);
 
-        CDateTime dateTime_1 = new CDateTime(composite_5, CDT.BORDER | CDT.SPINNER | CDT.TAB_FIELDS | CDT.CLOCK_24_HOUR | CDT.CLOCK_DISCRETE
-                | CDT.SIMPLE | CDT.DATE_SHORT | CDT.TIME_MEDIUM) {
+        dateTime_1 = new CDateTime(composite_5, CDT.BORDER | CDT.SPINNER | CDT.CLOCK_24_HOUR | CDT.COMPACT | CDT.SIMPLE | CDT.TIME_MEDIUM ) {
+            
         };
+
         dateTime_1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.adapt(dateTime_1);
         formToolkit.paintBordersFor(dateTime_1);
@@ -237,8 +255,10 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         composite_6.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
         composite_6.setLayout(new GridLayout(1, false));
         formToolkit.paintBordersFor(composite_6);
+        new Label(composite_5, SWT.NONE);
+        new Label(composite_5, SWT.NONE);
 
-        Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
+        //Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
 
         Section sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
@@ -294,11 +314,12 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
      */
     private void createActions() {
         startCombatAction = new Action() {
+            @SuppressWarnings("unchecked")
             public void run() {
                 CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
                 combatTurn.setDate(placement.getActualDate());
                 List<Object> choiceOfValues = new ArrayList<Object>();
-                
+
                 EList<Team> teams = placement.getTeams();
                 for (Team team : teams) {
                     choiceOfValues.addAll(team.getMembers());
@@ -329,7 +350,32 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
         startTimetrackingAction = new Action() {
+            private boolean isTimetracking;
+            private Job timeTrackJob;
+
             public void run() {
+                if (isTimetracking) {
+                    isTimetracking = false;
+                } else {
+                    isTimetracking = true;
+                    if (timeTrackJob == null) {
+                        timeTrackJob = new Job("timetrack") {
+
+                            @Override
+                            protected IStatus run(IProgressMonitor monitor) {
+                                if (isTimetracking)
+                                    schedule(1000);
+                                if (placement != null)
+                                    if (placement.getActualDate() != null)
+                                        placement.setActualDate(new Date(placement.getActualDate().getTime() + 1000));
+                                return Status.OK_STATUS;
+                            }
+                        };
+                        timeTrackJob.setSystem(true);
+                    }
+
+                    timeTrackJob.schedule();
+                }
 
             }
         };
@@ -346,6 +392,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
         toolbarManager.add(startCombatAction);
         toolbarManager.add(switchPlacementAction);
+        toolbarManager.add(startTimetrackingAction);
     }
 
     /**
@@ -360,6 +407,13 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
     @Override
     public void setFocus() {
         // Set the focus
+    }
+
+    public void setPlacement(Placement placement) {
+        this.placement = placement;
+        if (placement.getActualDate() == null)
+            placement.setActualDate(placement.getStartDate());
+
     }
 
     @Override
@@ -399,6 +453,19 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         bindingContext.bindValue(observeTextStyledText_2ObserveWidget, placementDebuggingObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
+
+        //
+        IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime_1);
+        IObservableValue currentChangeDateObserveValue = EMFObservables.observeValue(placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
+        bindingContext.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, null, null);
+        //
+        //
+        IObservableValue observeLocationDatewidgetObserveWidget1 = new CDateTimeObservableValue(dateTime);
+        IObservableValue currentChangeDateObserveValue1 = EMFObservables.observeValue(placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
+        bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
+        //
+
+        
         return bindingContext;
     }
 }
