@@ -261,7 +261,7 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 		EList<PersonaFertigkeit> fertigkeiten = context.getPersona().getFertigkeiten();
 		for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
 			if(list.contains(personaFertigkeit.getFertigkeit()))
-				if(personaFertigkeit.getStufe()==getSkillValue() )
+				if(personaFertigkeit.getStufe()>=getSkillValue() )
 					count++;					
 			
 		}		
