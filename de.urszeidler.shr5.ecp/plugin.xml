@@ -212,6 +212,9 @@
          <service
                serviceClass="de.urszeidler.shr5.ecp.service.ValidationService">
          </service>
+         <service
+               serviceClass="de.urszeidler.shr5.ecp.service.ScriptService">
+         </service>
       </serviceFactory>
    </extension>
    <extension
@@ -324,6 +327,18 @@
                               tooltip="%command.import.description">
             </command>
             
+         </menu>
+         <menu
+               label="script">
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                  label="start script"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="5">
+               </parameter>
+            </command>
          </menu>
       </menuContribution>
 

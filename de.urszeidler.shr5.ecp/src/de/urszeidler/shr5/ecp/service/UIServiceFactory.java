@@ -12,6 +12,7 @@ import org.eclipse.ui.services.IServiceLocator;
 public class UIServiceFactory extends AbstractServiceFactory {
 
     private ValidationServiceImpl vService;
+    private ScriptService sService;
 
     /**
      * 
@@ -31,6 +32,11 @@ public class UIServiceFactory extends AbstractServiceFactory {
                 vService = new ValidationServiceImpl(locator);
             }
             return vService;
+        }else  if (serviceInterface.equals(ScriptService.class)) {
+            if (sService == null) {
+                sService = new ScriptServiceImpl(locator);
+            }
+            return sService;
         }
         return null;
     }
