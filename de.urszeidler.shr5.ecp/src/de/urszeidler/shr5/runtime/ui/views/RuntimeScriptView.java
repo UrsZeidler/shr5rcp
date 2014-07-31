@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -25,19 +27,19 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
-import org.eclipse.nebula.widgets.cdatetime.CDateTimePainter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
@@ -55,25 +57,45 @@ import org.eclipse.ui.part.ViewPart;
 
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.service.ScriptService;
+import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
-public class RuntimeScriptView extends ViewPart implements ISelectionListener {
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.layout.TableColumnLayout;
+import org.eclipse.swt.custom.TableTree;
+import org.eclipse.jface.viewers.TableTreeViewer;
+import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.core.databinding.observable.map.IObservableMap;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.jface.viewers.TableViewerColumn;
+
+public class RuntimeScriptView extends ViewPart implements ScriptViewer {
     private DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
-    private Placement placement = ScriptingFactory.eINSTANCE.createPlacement();
+    private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
+    private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
     private Label lblName;
     private StyledText styledText;
     private StyledText styledText_1;
@@ -101,6 +123,14 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
     private CDateTime dateTime;
 
     private ScriptService scriptService;
+    private Table table;
+    private TableViewer tableViewer;
+
+    private Script script;
+
+    private ExecutionStack commandStack;
+
+    private ExecutionProtocol protocol;
 
     public RuntimeScriptView() {
 
@@ -128,11 +158,13 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
      * (non-Javadoc) Method declared on IViewPart.
      */
     public void init(IViewSite site) throws PartInitException {
-        //site.getPage().addSelectionListener(this);
-         scriptService = (ScriptService) site.getService(ScriptService.class);
+        // site.getPage().addSelectionListener(this);
         super.init(site);
-        
-        placement = scriptService.getPlacement();
+        scriptService = (ScriptService)site.getService(ScriptService.class);
+        scriptService.registerScriptViewer(this);
+
+        placement1 = scriptService.getPlacement();
+        placement.setValue(placement1);
     }
 
     /**
@@ -155,6 +187,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         // GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
         Composite composite_1 = formToolkit.createComposite(composite, SWT.NONE);
+        composite_1.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
 
         formToolkit.paintBordersFor(composite_1);
         {
@@ -173,6 +206,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
 
         // ----
         Composite composite_7 = formToolkit.createComposite(composite, SWT.NONE);
+        composite_7.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(composite_7);
         {
             TableWrapLayout twl_composite_7 = new TableWrapLayout();
@@ -192,7 +226,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
-        composite_8.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
+        composite_8.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(composite_8);
 
         Composite composite_9 = formToolkit.createComposite(composite_8, SWT.NONE);
@@ -203,7 +237,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
             twl_composite_9.numColumns = 1;
             composite_9.setLayout(twl_composite_9);
         }
-        GridData gd_composite_9 = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        GridData gd_composite_9 = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
         gd_composite_9.widthHint = 223;
         composite_9.setLayoutData(gd_composite_9);
         formToolkit.paintBordersFor(composite_9);
@@ -242,15 +276,15 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.paintBordersFor(composite_5);
         sctnActions.setClient(composite_5);
         composite_5.setLayout(new GridLayout(2, false));
-        
+
         dateTime = new CDateTime(composite_5, CDT.SPINNER | CDT.COMPACT | CDT.DATE_LONG);
         dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         formToolkit.adapt(dateTime);
         formToolkit.paintBordersFor(dateTime);
         new Label(composite_5, SWT.NONE);
 
-        dateTime_1 = new CDateTime(composite_5, CDT.BORDER | CDT.SPINNER | CDT.CLOCK_24_HOUR | CDT.COMPACT | CDT.SIMPLE | CDT.TIME_MEDIUM ) {
-            
+        dateTime_1 = new CDateTime(composite_5, CDT.BORDER | CDT.SPINNER | CDT.CLOCK_24_HOUR | CDT.COMPACT | CDT.SIMPLE | CDT.TIME_MEDIUM) {
+
         };
 
         dateTime_1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
@@ -264,7 +298,7 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         new Label(composite_5, SWT.NONE);
         new Label(composite_5, SWT.NONE);
 
-        //Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
+        // Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
 
         Section sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
@@ -309,10 +343,38 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
 
+        Composite composite_12 = new Composite(composite, SWT.NONE);
+        formToolkit.adapt(composite_12);
+        formToolkit.paintBordersFor(composite_12);
+        composite_12.setLayout(new FillLayout(SWT.HORIZONTAL));
+
+        tableViewer = new TableViewer(composite_12, SWT.BORDER | SWT.FULL_SELECTION);
+        table = tableViewer.getTable();
+        table.setHeaderVisible(true);
+        table.setLinesVisible(true);
+        formToolkit.paintBordersFor(table);
+
+        TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
+        TableColumn tblclmnDate = tableViewerColumn.getColumn();
+        tblclmnDate.setWidth(100);
+        tblclmnDate.setText("Date");
+
+        TableViewerColumn tableViewerColumn_1 = new TableViewerColumn(tableViewer, SWT.NONE);
+        TableColumn tblclmnName = tableViewerColumn_1.getColumn();
+        tblclmnName.setWidth(100);
+        tblclmnName.setText("name");
+
         createActions();
         initializeToolBar();
         initializeMenu();
+        m_bindingContext = initDataBindings1();
         m_bindingContext = initDataBindings();
+    }
+
+    @Override
+    public void dispose() {
+        placement.dispose();
+        super.dispose();
     }
 
     /**
@@ -323,23 +385,23 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
             @SuppressWarnings("unchecked")
             public void run() {
                 CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
-                combatTurn.setDate(placement.getActualDate());
+                combatTurn.setDate(placement1.getActualDate());
                 List<Object> choiceOfValues = new ArrayList<Object>();
 
-                EList<Team> teams = placement.getTeams();
+                EList<Team> teams = placement1.getTeams();
                 for (Team team : teams) {
                     choiceOfValues.addAll(team.getMembers());
                 }
-                if (placement.getScript() != null)
-                    choiceOfValues.addAll(placement.getScript().getPlayer().getMembers());
+                if (placement1.getScript() != null)
+                    choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
 
                 FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
                         GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
                 if (dialogWert.open() == Dialog.OK)
                     combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
 
-                placement.getScript().getCommandStack().setCurrentCommand(combatTurn);
-                placement.getScript().getCommandStack().redo();
+                placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
+                placement1.getScript().getCommandStack().redo();
             }
         };
         startCombatAction.setText("Start combat");
@@ -348,11 +410,24 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
 
         switchPlacementAction = new Action() {
             public void run() {
+                EList<Placement> nextPlacements = placement1.getNextPlacements();
+
+                OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
+                dialog.setLabelProvider(labelProvider);
+                int open = dialog.open();
+                if (open == Dialog.OK) {
+                    Object[] result = dialog.getResult();
+                    if (result.length > 0) {
+                        Placement eo = (Placement)result[0];
+                        scriptService.setPlacement(eo);
+
+                    }
+                }
 
             }
         };
         switchPlacementAction.setText("switch placement");
-        switchPlacementAction.setToolTipText("sort tooltip");
+        switchPlacementAction.setToolTipText("switch placement");
         switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
         startTimetrackingAction = new Action() {
@@ -371,9 +446,9 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
                             protected IStatus run(IProgressMonitor monitor) {
                                 if (isTimetracking)
                                     schedule(1000);
-                                if (placement != null)
-                                    if (placement.getActualDate() != null)
-                                        placement.setActualDate(new Date(placement.getActualDate().getTime() + 1000));
+                                if (placement1 != null)
+                                    if (placement1.getActualDate() != null)
+                                        placement1.setActualDate(new Date(placement1.getActualDate().getTime() + 1000));
                                 return Status.OK_STATUS;
                             }
                         };
@@ -415,63 +490,102 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
         // Set the focus
     }
 
+    @Override
     public void setPlacement(Placement placement) {
-        this.placement = placement;
-        if (placement.getActualDate() == null)
-            placement.setActualDate(placement.getStartDate());
+        this.placement1 = placement;
+        this.placement.setValue(placement1);
+        if (placement1.getActualDate() == null)
+            placement1.setActualDate(placement1.getStartDate());
 
     }
 
     @Override
-    public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-        if (selection instanceof IStructuredSelection) {
-            IStructuredSelection ss = (IStructuredSelection)selection;
-            Object firstElement = ss.getFirstElement();
-            if (firstElement instanceof Placement) {
-                placement = (Placement)firstElement;
-                initDataBindings();
-            }
-            // selectionProvider.setSelection(selection);
-        }
+    public void setScript(Script script) {
+        this.script = script;
+        commandStack = script.getCommandStack();
+        protocol = commandStack.getProtocol();
     }
 
-    protected DataBindingContext initDataBindings() {
+    // @Override
+    // public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+    // if (selection instanceof IStructuredSelection) {
+    // IStructuredSelection ss = (IStructuredSelection)selection;
+    // Object firstElement = ss.getFirstElement();
+    // if (firstElement instanceof Placement) {
+    // placement1 = (Placement)firstElement;
+    // initDataBindings1();
+    // }
+    // // selectionProvider.setSelection(selection);
+    // }
+    // }
+
+    protected DataBindingContext initDataBindings1() {
         DataBindingContext bindingContext = new DataBindingContext();
+        Realm realm = Realm.getDefault();
         //
         IObservableValue observeTextLblNameObserveWidget = WidgetProperties.text().observe(lblName);
-        IObservableValue placementNameObserveValue = EMFObservables.observeValue(placement, Literals.BESCHREIBBAR__NAME);
+        IObservableValue placementNameObserveValue = EMFObservables.observeDetailValue(realm, placement, Literals.BESCHREIBBAR__NAME);
         bindingContext.bindValue(observeTextLblNameObserveWidget, placementNameObserveValue,
                 new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
         IObservableValue observeTextStyledTextObserveWidget = WidgetProperties.text(SWT.Modify).observe(styledText);
-        IObservableValue placementBackgroundObserveValue = EMFObservables.observeValue(placement, ScriptingPackage.Literals.PLACEMENT__BACKGROUND);
+        IObservableValue placementBackgroundObserveValue = EMFObservables.observeDetailValue(realm, placement,
+                ScriptingPackage.Literals.PLACEMENT__BACKGROUND);
         bindingContext.bindValue(observeTextStyledTextObserveWidget, placementBackgroundObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
         IObservableValue observeTextStyledText_1ObserveWidget = WidgetProperties.text(SWT.Modify).observe(styledText_1);
-        IObservableValue placementInTheirFaceObserveValue = EMFObservables
-                .observeValue(placement, ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE);
+        IObservableValue placementInTheirFaceObserveValue = EMFObservables.observeDetailValue(realm, placement,
+                ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE);
         bindingContext.bindValue(observeTextStyledText_1ObserveWidget, placementInTheirFaceObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
         IObservableValue observeTextStyledText_2ObserveWidget = WidgetProperties.text(SWT.Modify).observe(styledText_2);
-        IObservableValue placementDebuggingObserveValue = EMFObservables.observeValue(placement, ScriptingPackage.Literals.PLACEMENT__DEBUGGING);
+        IObservableValue placementDebuggingObserveValue = EMFObservables.observeDetailValue(realm, placement,
+                ScriptingPackage.Literals.PLACEMENT__DEBUGGING);
         bindingContext.bindValue(observeTextStyledText_2ObserveWidget, placementDebuggingObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
 
         //
         IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime_1);
-        IObservableValue currentChangeDateObserveValue = EMFObservables.observeValue(placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
+        IObservableValue currentChangeDateObserveValue = EMFObservables.observeDetailValue(realm, placement,
+                ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
         bindingContext.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, null, null);
         //
         //
         IObservableValue observeLocationDatewidgetObserveWidget1 = new CDateTimeObservableValue(dateTime);
-        IObservableValue currentChangeDateObserveValue1 = EMFObservables.observeValue(placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
+        IObservableValue currentChangeDateObserveValue1 = EMFObservables.observeDetailValue(realm, placement,
+                ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
         bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
         //
 
-        
+        return bindingContext;
+    }
+
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
+        IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(), new EStructuralFeature[]{
+                GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__DATE });
+        tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
+            @Override
+            public String getColumnText(Object element, int columnIndex) {
+                if (columnIndex == 0) {
+
+                    return labelProvider.getText(element);
+                }
+                return super.getColumnText(element, columnIndex);
+            }
+
+        });
+        tableViewer.setContentProvider(listContentProvider);
+        //
+        IObservableList protocolCommandsObserveList = EMFObservables.observeList(Realm.getDefault(), protocol,
+                GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
+        tableViewer.setInput(protocolCommandsObserveList);
+        //
         return bindingContext;
     }
 }

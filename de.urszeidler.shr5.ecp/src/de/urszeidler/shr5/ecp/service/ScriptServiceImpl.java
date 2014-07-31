@@ -10,13 +10,13 @@ import de.urszeidler.shr5.scripting.Script;
 
 /**
  * @author urs
- *
  */
 public class ScriptServiceImpl implements ScriptService {
 
     private Script script;
     private Placement placement;
     private IServiceLocator locator;
+    private ScriptViewer scriptViewer;
 
     public ScriptServiceImpl(IServiceLocator locator) {
         this.locator = locator;
@@ -26,9 +26,13 @@ public class ScriptServiceImpl implements ScriptService {
     public Script getCurrentScript() {
         return script;
     }
+
     @Override
     public void setScript(Script script) {
         this.script = script;
+        if (scriptViewer != null)
+            scriptViewer.setScript(script);
+
     }
 
     public Placement getPlacement() {
@@ -37,6 +41,13 @@ public class ScriptServiceImpl implements ScriptService {
 
     public void setPlacement(Placement placement) {
         this.placement = placement;
+        if (scriptViewer != null)
+            scriptViewer.setPlacement(placement);
+    }
+
+    @Override
+    public void registerScriptViewer(ScriptViewer viewer) {
+        this.scriptViewer = viewer;
     }
 
 }

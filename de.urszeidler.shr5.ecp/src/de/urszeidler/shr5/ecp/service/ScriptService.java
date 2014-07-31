@@ -18,4 +18,6 @@ public interface ScriptService {
     Placement getPlacement();
 
     void setPlacement(Placement placement);
+    
+    void registerScriptViewer(ScriptViewer viewer);
 }
