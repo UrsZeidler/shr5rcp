@@ -16,23 +16,32 @@ import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.Script;
 
 /**
  * @author urs
  */
 public class OpenObjectHandler extends AbstractHandler {
+
+    private static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective";
+    private ScriptService scriptService;
 
     /*
      * (non-Javadoc)
@@ -44,10 +53,11 @@ public class OpenObjectHandler extends AbstractHandler {
 
         IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
         final Shell shell = window.getShell();
+        scriptService = (ScriptService)window.getService(ScriptService.class);
         IRunnableWithProgress runnable = new IRunnableWithProgress() {
             @Override
             public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-                 executeAction(parameter, shell, monitor);
+                executeAction(parameter, shell, monitor);
             }
         };
         try {
@@ -84,6 +94,9 @@ public class OpenObjectHandler extends AbstractHandler {
                 case 4:
                     openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
                     break;
+                case 5:
+                    openScript(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
+                    break;
 
                 default:
                     break;
@@ -91,6 +104,48 @@ public class OpenObjectHandler extends AbstractHandler {
 
         } catch (Exception e) {
             Activator.logError(e);
+        }
+    }
+
+    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor) {
+        monitor.beginTask("collection scripts ...", 1);
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (input instanceof Script) {
+                    return true;
+                }
+                return false;
+            }
+        });
+        monitor.done();
+
+        OwnChooseDialog dialog = new OwnChooseDialog(shell, filteredObject.toArray(new Object[]{}), titel, message);
+        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+        int open = dialog.open();
+        if (open == Dialog.OK) {
+            Object[] result = dialog.getResult();
+            if (result.length > 0) {
+                Script eo = (Script)result[0];
+                openScript(eo);
+
+            }
+        }
+    }
+
+    protected void openScript(Script eo) {
+        if (eo.getCommandStack() == null) {
+            eo.setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
+            eo.getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
+        }
+        Placement placement = eo.getEntry();
+        scriptService.setScript(eo);
+        scriptService.setPlacement(placement);
+        try {
+            PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+        } catch (WorkbenchException e) {
+            e.printStackTrace();
         }
     }
 
@@ -109,7 +164,7 @@ public class OpenObjectHandler extends AbstractHandler {
         monitor.done();
         openOneObject(shell, filteredObject, titel, message);
     }
-    
+
     private void openBeschreibbar(Shell shell, String titel, String message, IProgressMonitor monitor) {
         monitor.beginTask("collection Objects ...", 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();

@@ -63,6 +63,7 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
@@ -99,6 +100,8 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
 
     private CDateTime dateTime;
 
+    private ScriptService scriptService;
+
     public RuntimeScriptView() {
 
         adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -125,8 +128,11 @@ public class RuntimeScriptView extends ViewPart implements ISelectionListener {
      * (non-Javadoc) Method declared on IViewPart.
      */
     public void init(IViewSite site) throws PartInitException {
-        site.getPage().addSelectionListener(this);
+        //site.getPage().addSelectionListener(this);
+         scriptService = (ScriptService) site.getService(ScriptService.class);
         super.init(site);
+        
+        placement = scriptService.getPlacement();
     }
 
     /**
