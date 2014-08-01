@@ -439,8 +439,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                     } else {
                         //the combarturn is done
                         setCurrentTurn(null);
-                        executed = true;
-                        executing = false;
+                        setExecuted(true);
+                        setExecuting(false);
                     }
                 }
             }
