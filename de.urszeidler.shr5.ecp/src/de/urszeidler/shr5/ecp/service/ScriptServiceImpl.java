@@ -5,6 +5,7 @@ package de.urszeidler.shr5.ecp.service;
 
 import org.eclipse.ui.services.IServiceLocator;
 
+import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 
@@ -17,6 +18,7 @@ public class ScriptServiceImpl implements ScriptService {
     private Placement placement;
     private IServiceLocator locator;
     private ScriptViewer scriptViewer;
+    private CombatViewer combatViewer;
 
     public ScriptServiceImpl(IServiceLocator locator) {
         this.locator = locator;
@@ -48,6 +50,17 @@ public class ScriptServiceImpl implements ScriptService {
     @Override
     public void registerScriptViewer(ScriptViewer viewer) {
         this.scriptViewer = viewer;
+    }
+
+    @Override
+    public void registerCombatViewer(CombatViewer viewer) {
+        this.combatViewer = viewer;        
+    }
+
+    @Override
+    public void setCombatTurn(CombatTurn kr) {
+        if(combatViewer!=null)
+            combatViewer.setCombatTurn(kr);        
     }
 
 }
