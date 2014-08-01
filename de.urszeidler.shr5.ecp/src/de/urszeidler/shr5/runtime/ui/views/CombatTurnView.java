@@ -57,32 +57,17 @@ import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
+import de.urszeidler.shr5.ecp.service.CombatViewer;
+import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
 
 /**
  * @author urs
  */
-public class CombatTurnView extends ViewPart implements ISelectionListener, CommandCallback {
-    
-//    
-//    public abstract class SelectionListenerImplementation implements SelectionListener {
-//
-//        @Override
-//        public void widgetDefaultSelected(SelectionEvent e) {
-//
-//        }
-//    }
-//
-//    public class EmptySelection implements ISelection {
-//
-//        @Override
-//        public boolean isEmpty() {
-//            return true;
-//        }
-//
-//    }
-//
+public class CombatTurnView extends ViewPart implements ISelectionListener, CommandCallback, CombatViewer {
+
+
     public class HandlungsContenProvider implements IContentProvider, ITreeContentProvider {
 
         public HandlungsContenProvider(CombatTurn kampfrunde) {
@@ -90,7 +75,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
 
         @Override
         public void dispose() {
-
 
         }
 
@@ -230,7 +214,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
             }
         };
 
-
     }
 
     public static final String ID = "de.urszeidler.test.CombatTurnnView";
@@ -238,16 +221,17 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
     private SashForm top = null;
     private Composite composite_bottom = null;
     private BasicActionPanelWidget basicActionPanel = null;
-    //private HandlungsContenProvider contentProvider;
+    // private HandlungsContenProvider contentProvider;
 
     // private Tree tree;
     //
     // private TreeViewer treeViewer;
 
-    //private WritableValue phaseSelection = new WritableValue();
-   // private WritableValue runtimeCharacterSelection = new WritableValue();
+    // private WritableValue phaseSelection = new WritableValue();
+    // private WritableValue runtimeCharacterSelection = new WritableValue();
 
     private CombatTurnList combatTurnList;
+    private ScriptService scriptService;
 
     /*
      * (non-Javadoc)
@@ -276,7 +260,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
         basicActionPanel.getActionPanel().getTreeViewer().setContentProvider(new SimpleListContenProvider(actionListContentProvider));
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
 
-        //contentProvider = new HandlungsContenProvider(kampfrunde);
+        // contentProvider = new HandlungsContenProvider(kampfrunde);
         // treeViewer.setContentProvider(contentProvider);
         // treeViewer.setLabelProvider(labelProvider);
         //
@@ -332,7 +316,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
                 if (combatTurn != null)
                     combatTurn.redo();
 
-                setTempCombatTurn(combatTurn);
+                setCombatTurn(combatTurn);
             }
         };
         action1.setText("Sort");
@@ -344,9 +328,9 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
             public void run() {
                 // showMessage("Action 1 executed");
                 // currentPhase.redo();
-                if (combatTurn != null && combatTurn.getCurrentTurn() != null ){
+                if (combatTurn != null && combatTurn.getCurrentTurn() != null) {
                     combatTurn.doTurn();
-                    basicActionPanel.setPhase(combatTurn.getCurrentTurn());   
+                    basicActionPanel.setPhase(combatTurn.getCurrentTurn());
                 }
                 // setTempCombatTurn(kampfrunde);
             }
@@ -389,8 +373,11 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
      * (non-Javadoc) Method declared on IViewPart.
      */
     public void init(IViewSite site) throws PartInitException {
-        site.getPage().addSelectionListener(this);
+        //site.getPage().addSelectionListener(this);
         super.init(site);
+        scriptService = (ScriptService)site.getService(ScriptService.class);
+        scriptService.registerCombatViewer(this);
+
     }
 
     /*
@@ -421,7 +408,6 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
 
         combatTurnList = new CombatTurnList(scrolledComposite, SWT.NONE);
         scrolledComposite.setContent(combatTurnList);
-        
 
         // tree = new Tree(composite_bottom, SWT.NONE);
         // tree.setLayoutData(gridData1);
@@ -454,29 +440,32 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comm
             Object firstElement = ss.getFirstElement();
             if (firstElement instanceof CombatTurn) {
                 CombatTurn kr = (CombatTurn)firstElement;
-                setTempCombatTurn(kr);
+                setCombatTurn(kr);
             }
             // selectionProvider.setSelection(selection);
         }
 
     }
-
-    private void setTempCombatTurn(CombatTurn kr) {
+    
+    @Override
+    public void setCombatTurn(CombatTurn kr) {
         // treeViewer.setInput(kr);
         combatTurn = kr;
         combatTurn.setCmdCallback(this);
         combatTurnList.setCombatTurn(kr);
         basicActionPanel.setPhase(kr.getCurrentTurn());
-        
-//        IObservableValue detailValue = EMFObservables.observeValue(Realm.getDefault(), combatTurn, GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
-//        detailValue.addValueChangeListener(this);
+
+        // IObservableValue detailValue = EMFObservables.observeValue(Realm.getDefault(), combatTurn,
+        // GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN);
+        // detailValue.addValueChangeListener(this);
 
     }
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-       
-        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider, new DefaultReferenceManager(itemDelegator));
+
+        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                new DefaultReferenceManager(itemDelegator));
         genericEObjectDialog.open();
     }
 
