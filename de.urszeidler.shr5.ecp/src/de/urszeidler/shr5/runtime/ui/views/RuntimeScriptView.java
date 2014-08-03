@@ -80,6 +80,7 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+import org.eclipse.swt.custom.StackLayout;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer {
     private DataBindingContext m_bindingContext;
@@ -336,15 +337,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         formToolkit.paintBordersFor(styledText_2);
 
         Composite composite_12 = new Composite(composite, SWT.NONE);
+        composite_12.setLayout(new GridLayout(1, false));
         TableWrapData twd_composite_12 = new TableWrapData(TableWrapData.LEFT, TableWrapData.TOP, 1, 1);
+        twd_composite_12.grabHorizontal = true;
         twd_composite_12.heightHint = 198;
         composite_12.setLayoutData(twd_composite_12);
         formToolkit.adapt(composite_12);
         formToolkit.paintBordersFor(composite_12);
-        composite_12.setLayout(new FillLayout(SWT.HORIZONTAL));
 
         tableViewer = new TableViewer(composite_12, SWT.BORDER | SWT.FULL_SELECTION);
         table = tableViewer.getTable();
+        GridData gd_table = new GridData(SWT.LEFT, SWT.FILL, false, true, 1, 1);
+        gd_table.widthHint = 652;
+        table.setLayoutData(gd_table);
         table.setHeaderVisible(true);
         table.setLinesVisible(true);
         tableViewer.setSorter(new ViewerSorter() {
@@ -360,9 +365,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
                             return 1;
 
                         if (cmd1.getDate().getTime() > cmd.getDate().getTime())
-                            return 1;
-                        else
                             return -1;
+                        else
+                            return 1;
                     }
                 }
                 return super.compare(viewer, e1, e2);
@@ -370,15 +375,20 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
 
         });
         formToolkit.paintBordersFor(table);
-
+        
         TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmnDate = tableViewerColumn.getColumn();
-        tblclmnDate.setWidth(100);
-        tblclmnDate.setText("Date");
-
+        tblclmnDate.setWidth(56);
+        tblclmnDate.setText("done");
+        
         TableViewerColumn tableViewerColumn_1 = new TableViewerColumn(tableViewer, SWT.NONE);
-        TableColumn tblclmnName = tableViewerColumn_1.getColumn();
-        tblclmnName.setWidth(123);
+        TableColumn tblclmnDate_1 = tableViewerColumn_1.getColumn();
+        tblclmnDate_1.setWidth(100);
+        tblclmnDate_1.setText("date");
+        
+        TableViewerColumn tableViewerColumn_2 = new TableViewerColumn(tableViewer, SWT.NONE);
+        TableColumn tblclmnName = tableViewerColumn_2.getColumn();
+        tblclmnName.setWidth(100);
         tblclmnName.setText("name");
 
         createActions();
@@ -586,11 +596,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         //
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(), new EStructuralFeature[]{
-                GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__DATE });
+                GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE,GameplayPackage.Literals.COMMAND__EXECUTED });
         tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
             @Override
             public String getColumnText(Object element, int columnIndex) {
-                if (columnIndex == 1) {
+                if (columnIndex == 2) {
 
                     return labelProvider.getText(element);
                 }
