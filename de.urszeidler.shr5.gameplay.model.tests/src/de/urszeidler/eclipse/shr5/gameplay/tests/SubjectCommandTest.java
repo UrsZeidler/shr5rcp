@@ -87,6 +87,12 @@ public abstract class SubjectCommandTest extends TestCase {
             public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
 
             }
+
+            @Override
+            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+                // TODO Auto-generated method stub
+                
+            }
         });
         assertNotNull(getFixture().getCmdCallback());
     }
@@ -107,6 +113,12 @@ public abstract class SubjectCommandTest extends TestCase {
             public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
 
             }
+
+            @Override
+            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+                // TODO Auto-generated method stub
+                
+            }
         });
         assertNotNull(getFixture().getCmdCallback());
      }
@@ -126,6 +138,12 @@ public abstract class SubjectCommandTest extends TestCase {
             @Override
             public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
 
+            }
+
+            @Override
+            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+                // TODO Auto-generated method stub
+                
             }
         });
         assertNotNull(getFixture().getCmdCallback());
@@ -152,6 +170,12 @@ public abstract class SubjectCommandTest extends TestCase {
             @Override
             public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
 
+            }
+
+            @Override
+            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+                // TODO Auto-generated method stub
+                
             }
         });
         assertNotNull(getFixture().getCmdCallback());
