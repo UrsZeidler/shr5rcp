@@ -18,4 +18,12 @@ public interface CommandCallback {
      * @param eStructuralFeatures
      */
    void prepareCommand(Command cmd,EStructuralFeature ... eStructuralFeatures);
+   
+   /**
+    * Is used to prepare the command.
+    * @param cmd
+    * @param eStructuralFeatures
+    */
+  void afterCommand(Command cmd,EStructuralFeature ... eStructuralFeatures);
+
 }

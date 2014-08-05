@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.ecp.ui.util.ECPModelElementOpenTester;
 import org.eclipse.emf.ecp.ui.util.ECPModelElementOpener;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
@@ -74,9 +75,10 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
         String name = eObject.eClass().getEPackage().getName();
         EObjectEditorInput eObjectEditorInput = new EObjectEditorInput(eObject, ecpProject.getEditingDomain());
         try {
-            if ("runtime".equals(name))
-                PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, RuntimeEditor.id, true);
-            else
+            if ("runtime".equals(name)) {
+                IEditorPart openEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, RuntimeEditor.id, true);
+                openEditor.setFocus();
+            } else
                 PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
         } catch (PartInitException e) {
             Activator.logError("Error open editor " + ShadowrunEditor.id + "for object :" + element, e);

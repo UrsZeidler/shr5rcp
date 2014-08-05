@@ -77,7 +77,7 @@ public class RuntimeEditor extends BasicEditor<EObject> {
 //        
 //        ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>();
         
-        if(editingMode==ShrEditingState.EDITABLE)
+        if(editingMode==ShrEditingState.CUSTOM)
             runtimeSwitchEditor.doSwitch(theEObject);
         
         try {

@@ -37,6 +37,7 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
 				labelprovider, null);
 		emfFormBuilder.setManager(mananger);
 		//emfFormBuilder.setBorderStyle(SWT.NONE);
+	
 
 	}
 
@@ -47,8 +48,8 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
 	 */
 	protected Control createDialogArea(Composite parent) {
 		Composite dialogComposite = (Composite) super.createDialogArea(parent);
-//		toolkit.adapt(dialogComposite);
-//		toolkit.paintBordersFor(dialogComposite);
+		toolkit.adapt(dialogComposite);
+		toolkit.paintBordersFor(dialogComposite);
 
 		dialogComposite.setLayout(new GridLayout(3, false));
 		

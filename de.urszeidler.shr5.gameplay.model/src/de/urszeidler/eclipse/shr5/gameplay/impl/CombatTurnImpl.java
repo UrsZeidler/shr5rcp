@@ -441,6 +441,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                         setCurrentTurn(null);
                         setExecuted(true);
                         setExecuting(false);
+                        if(getCmdCallback()!=null)
+                            getCmdCallback().afterCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
+
                     }
                 }
             }

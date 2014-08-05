@@ -110,6 +110,9 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
 
         executed = true;
         executing = false;
+        if (isSetCmdCallback() && getCmdCallback() != null)
+            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+
     }
 
     /**
