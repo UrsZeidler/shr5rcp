@@ -9,6 +9,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
@@ -32,8 +33,8 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
@@ -69,6 +70,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
@@ -80,15 +82,34 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-import org.eclipse.swt.custom.StackLayout;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer {
+
+    private final class TimeTracker extends Job {
+        private TimeTracker(String name) {
+            super(name);
+        }
+
+        @Override
+        protected IStatus run(IProgressMonitor monitor) {
+            if (!isTimetracking)
+                return Status.OK_STATUS;
+                schedule(1000);
+            if (placement1 != null)
+                if (placement1.getActualDate() != null)
+                    placement1.setActualDate(new Date(placement1.getActualDate().getTime() + 1000));
+            return Status.OK_STATUS;
+        }
+    }
+
     private DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
     private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
     private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
+    private boolean isTimetracking;
+
     private Label lblName;
     private StyledText styledText;
     private StyledText styledText_1;
@@ -124,6 +145,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
     private ExecutionStack commandStack;
 
     private WritableValue protocol = new WritableValue();
+    private WritableList characters = new WritableList();
+    private TableViewer treeViewer;
 
     public RuntimeScriptView() {
 
@@ -216,6 +239,22 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         Composite composite_11 = formToolkit.createComposite(sctnNewSection, SWT.NONE);
         formToolkit.paintBordersFor(composite_11);
         sctnNewSection.setClient(composite_11);
+        composite_11.setLayout(new GridLayout(1, false));
+        
+        Composite composite_13 = new Composite(composite_11, SWT.NONE);
+        GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_composite_13.heightHint = 128;
+        gd_composite_13.widthHint = 371;
+        composite_13.setLayoutData(gd_composite_13);
+        formToolkit.adapt(composite_13);
+        formToolkit.paintBordersFor(composite_13);
+        composite_13.setLayout(new TableColumnLayout());
+        
+        treeViewer = new TableViewer(composite_13, SWT.BORDER);
+        Table tree = treeViewer.getTable();
+//        tree.setHeaderVisible(true);
+//        tree.setLinesVisible(true);
+        formToolkit.paintBordersFor(tree);
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
@@ -365,9 +404,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
                             return 1;
 
                         if (cmd1.getDate().getTime() > cmd.getDate().getTime())
-                            return -1;
-                        else
                             return 1;
+                        else
+                            return -1;
                     }
                 }
                 return super.compare(viewer, e1, e2);
@@ -395,6 +434,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         initializeToolBar();
         initializeMenu();
         m_bindingContext = initDataBindings1();
+        m_bindingContext = initDataBindings2();
         m_bindingContext = initDataBindings();
     }
 
@@ -448,7 +488,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
                     if (result.length > 0) {
                         Placement eo = (Placement)result[0];
                         scriptService.setPlacement(eo);
-
+                        GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                        
                     }
                 }
 
@@ -468,24 +509,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
                 } else {
                     isTimetracking = true;
                     if (timeTrackJob == null) {
-                        timeTrackJob = new Job("timetrack") {
-
-                            @Override
-                            protected IStatus run(IProgressMonitor monitor) {
-                                if (isTimetracking)
-                                    schedule(1000);
-                                if (placement1 != null)
-                                    if (placement1.getActualDate() != null)
-                                        placement1.setActualDate(new Date(placement1.getActualDate().getTime() + 1000));
-                                return Status.OK_STATUS;
-                            }
-                        };
+                        timeTrackJob = new TimeTracker("timetrack");
                         timeTrackJob.setSystem(true);
                     }
-
                     timeTrackJob.schedule();
                 }
-
             }
         };
         startTimetrackingAction.setText("start timetracking");
@@ -521,9 +549,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
     @Override
     public void setPlacement(Placement placement) {
         this.placement1 = placement;
+        Script script2 = placement.getScript();
         this.placement.setValue(placement1);
         if (placement1.getActualDate() == null)
             placement1.setActualDate(placement1.getStartDate());
+        
+        EList<Team> teams = placement.getTeams();
+        Team player = script2.getPlayer();
+        characters.addAll(player.getMembers());
+        for (Team team : teams) {
+            characters.addAll(team.getMembers());
+        }
 
     }
 
@@ -591,7 +627,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         return bindingContext;
     }
 
-    protected DataBindingContext initDataBindings() {
+    protected DataBindingContext initDataBindings2() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
@@ -613,6 +649,34 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer {
         IObservableList protocolCommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
                 GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
         tableViewer.setInput(protocolCommandsObserveList);
+        //
+        return bindingContext;
+    }
+    
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
+        IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(), new EStructuralFeature[]{
+                RuntimePackage.Literals.RUNTIME_CHARACTER__CHARACTER });
+        treeViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
+            @Override
+            public String getColumnText(Object element, int columnIndex) {
+                if (columnIndex == 0) {
+
+                    return labelProvider.getText(element);
+                }
+                return super.getColumnText(element, columnIndex);
+            }
+
+        });
+        treeViewer.setContentProvider(listContentProvider);
+        //
+//        IObservableList protocolCommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
+//                GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
+//        tableViewer.setInput(protocolCommandsObserveList);
+        //
+        treeViewer.setInput(characters);
         //
         return bindingContext;
     }
