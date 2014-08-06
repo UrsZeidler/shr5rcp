@@ -247,9 +247,12 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
         int total = subjectCommand.getNetHits()-objectCommand.getNetHits();
         
         this.netHits = total;
+        if (getCmdCallback() != null)
+            getCmdCallback().afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+
         
         executing = true;
-        executed = true;
+        setExecuted(true);
     }
 
 } // OpposedSkillTestCmdImpl

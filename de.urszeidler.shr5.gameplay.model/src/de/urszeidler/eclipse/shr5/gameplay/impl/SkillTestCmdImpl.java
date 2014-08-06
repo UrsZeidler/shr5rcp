@@ -178,6 +178,9 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
         
+        if (isSetCmdCallback()&& getCmdCallback() != null)
+            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+        
         executing = true;
         executed = true;
     }

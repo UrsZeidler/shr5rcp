@@ -260,7 +260,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
             getAction2().setDate(getDate());
             getAction2().redo();
         }
-        executed = true;
         executing = false;
+        setExecuted(true);
     }
 } // SimpleActionsImpl

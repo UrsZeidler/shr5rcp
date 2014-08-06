@@ -163,12 +163,14 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
 
     @Override
     public void redo() {
-        executed = true;
+        setExecuting(true);
 
         getProbe().clear();
 
         W6Dice w6Dice = new W6Dice();
-        
+        if (isSetCmdCallback()&& getCmdCallback() != null)
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+
 
         int dice = dicePool + mods;
         // AbstaktPersona persona = subject.getPersona();
@@ -178,6 +180,12 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
         this.successes = isSetLimit() ? Math.min(limit,  W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
+        
+        if (isSetCmdCallback()&& getCmdCallback() != null)
+            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+        
+        setExecuted(true);
+        setExecuting(false);
     }
 
 } //SuccesTestCmdImpl

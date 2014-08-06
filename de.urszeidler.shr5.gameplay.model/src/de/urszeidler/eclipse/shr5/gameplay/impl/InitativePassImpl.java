@@ -161,13 +161,16 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
         executing = true;
 
         if (getFreeAction() != null) {
+            getFreeAction().setDate(getDate());
             getFreeAction().redo();
         }
 
         InterruptAction interruptAction2 = getInterruptAction();
         if (interruptAction2 != null) {
+            interruptAction2.setDate(getDate());
             interruptAction2.redo();
         } else if (getAction() != null) {
+            getAction().setDate(getDate());
             getAction().redo();
         }
         

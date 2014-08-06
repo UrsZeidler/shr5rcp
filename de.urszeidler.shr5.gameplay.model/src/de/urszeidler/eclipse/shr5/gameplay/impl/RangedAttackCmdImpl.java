@@ -317,6 +317,11 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
+        
+        if (getCmdCallback() != null)
+            getCmdCallback().afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+
 
         if (netHits > 0) {
             DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
@@ -346,7 +351,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         }
 
         executing = false;
-        executed = true;
+        setExecuted(true);
     }
 
 } //RangedAttackCmdImpl
