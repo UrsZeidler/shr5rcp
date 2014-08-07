@@ -12,7 +12,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -100,12 +99,23 @@ public class SuccesTestCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
     @Override
     public String getText(Object object) {
         SuccesTestCmd succesTestCmd = (SuccesTestCmd)object;
-        return getString("_UI_SuccesTestCmd_type") + " " + succesTestCmd.isExecuted();
+        if(!succesTestCmd.isExecuted())
+            return getString("_UI_SuccesTestCmd_type");
+
+        
+        String label = "";
+        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(succesTestCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null)
+            label = labelprovider.getText(succesTestCmd.getSubject());
+
+        return getString("_UI_SuccesTestCmd_type_text",new Object[]{label,
+                succesTestCmd.getSuccesses(),succesTestCmd.getProbe()});
     }
 
     /**

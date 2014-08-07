@@ -12,7 +12,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -146,12 +145,31 @@ public class RangedAttackCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         RangedAttackCmd rangedAttackCmd = (RangedAttackCmd)object;
-        return getString("_UI_RangedAttackCmd_type") + " " + rangedAttackCmd.isExecuted();
+        if(!rangedAttackCmd.isExecuted())
+            return getString("_UI_RangedAttackCmd_type");
+        
+        String label = "";
+        String label1 = "";
+        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null){
+            label = labelprovider.getText(rangedAttackCmd.getSubject());
+            label1 = labelprovider.getText(rangedAttackCmd.getObject());
+        }
+        String weapon = "";
+        labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getWeapon(), IItemLabelProvider.class);
+        if (labelprovider != null){
+            weapon = labelprovider.getText(rangedAttackCmd.getWeapon());
+        }
+        
+
+        return getString("_UI_RangedAttackCmd_type_text", new Object[]{label,label1,weapon,rangedAttackCmd.getRange(),rangedAttackCmd.getLimit(),
+                rangedAttackCmd.getSuccesses(),rangedAttackCmd.getProbe()});
     }
 
     /**

@@ -12,7 +12,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -146,12 +145,23 @@ public class DamageTestItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         DamageTest damageTest = (DamageTest)object;
-        return getString("_UI_DamageTest_type") + " " + damageTest.isExecuted();
+        if(!damageTest.isExecuted())
+            return getString("_UI_DamageTest_type");
+
+        
+        String label = "";
+        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(damageTest.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null)
+            label = labelprovider.getText(damageTest.getSubject());
+        
+        return getString("_UI_DamageTest_type_text", new Object[]{label,damageTest.getDamage(),
+                damageTest.getSuccesses(),damageTest.getProbe()});
     }
 
     /**

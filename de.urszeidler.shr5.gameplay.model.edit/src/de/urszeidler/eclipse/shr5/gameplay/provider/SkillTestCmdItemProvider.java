@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
-
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 
@@ -12,7 +11,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -25,20 +23,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
-public class SkillTestCmdItemProvider
-    extends ProbeCommandItemProvider
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+public class SkillTestCmdItemProvider extends ProbeCommandItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public SkillTestCmdItemProvider(AdapterFactory adapterFactory) {
@@ -49,6 +43,7 @@ public class SkillTestCmdItemProvider
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -65,28 +60,21 @@ public class SkillTestCmdItemProvider
      * This adds a property descriptor for the Skill feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addSkillPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_SkillTestCmd_skill_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SkillTestCmd_skill_feature", "_UI_SkillTestCmd_type"),
-                 GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_SkillTestCmd_skill_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_SkillTestCmd_skill_feature", "_UI_SkillTestCmd_type"),
+                GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, true, false, true, null, null, null));
     }
 
     /**
      * This returns SkillTestCmd.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -98,12 +86,28 @@ public class SkillTestCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         SkillTestCmd skillTestCmd = (SkillTestCmd)object;
-        return getString("_UI_SkillTestCmd_type") + " " + skillTestCmd.isExecuted();
+        if (!skillTestCmd.isExecuted())
+            return getString("_UI_SkillTestCmd_type");
+
+        String label = "";
+        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(skillTestCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null)
+            label = labelprovider.getText(skillTestCmd.getSubject());
+
+        String label_skill = "";
+        if (skillTestCmd.getSkill() != null) {
+            labelprovider = (IItemLabelProvider)factory.adapt(skillTestCmd.getSkill(), IItemLabelProvider.class);
+            if (labelprovider != null)
+                label_skill = labelprovider.getText(skillTestCmd.getSkill());
+        }
+        return getString("_UI_SkillTestCmd_type_text", new Object[]{ label, label_skill, skillTestCmd.getSuccesses(), skillTestCmd.getProbe() });
     }
 
     /**
@@ -111,6 +115,7 @@ public class SkillTestCmdItemProvider
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -124,6 +129,7 @@ public class SkillTestCmdItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

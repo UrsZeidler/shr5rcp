@@ -12,7 +12,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -100,12 +99,22 @@ public class DefensTestCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         DefensTestCmd defensTestCmd = (DefensTestCmd)object;
-        return getString("_UI_DefensTestCmd_type") + " " + defensTestCmd.isExecuted();
+        if(!defensTestCmd.isExecuted())
+            return getString("_UI_DefensTestCmd_type");
+
+        String label = "";
+        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null)
+            label = labelprovider.getText(defensTestCmd.getSubject());
+
+        return getString("_UI_DefensTestCmd_type_text",new Object[]{label,defensTestCmd.getAttackersHits()
+                ,defensTestCmd.getSuccesses(),defensTestCmd.getProbe()});
     }
 
     /**
