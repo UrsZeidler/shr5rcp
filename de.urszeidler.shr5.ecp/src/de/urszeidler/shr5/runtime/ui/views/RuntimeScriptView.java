@@ -4,7 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -23,9 +25,12 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -40,7 +45,10 @@ import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.TreeStructureAdvisor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.layout.TableColumnLayout;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -77,8 +85,14 @@ import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
+import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -92,10 +106,14 @@ import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+
+import org.eclipse.jface.layout.TreeColumnLayout;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -175,13 +193,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private ScriptService scriptService;
 
     private Script script;
-
+    private WritableValue selectedCharacter = new WritableValue();
     private ExecutionStack commandStack;
     private ExecutionProtocol protocol1;
     private WritableValue protocol = new WritableValue();
     private WritableList characters = new WritableList();
     private TableViewer treeViewer;
     private TreeViewer treeViewer_1;
+
+    private TreeViewer treeViewer_Commands;
+
+    private Action executeAction;
 
     public RuntimeScriptView() {
 
@@ -199,15 +221,28 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         labelProvider = new LabelProvider() {
             @Override
             public Image getImage(Object element) {
-                 return ExtendedImageRegistry.getInstance().getImage(itemDelegator.getImage(element));
+                return ExtendedImageRegistry.getInstance().getImage(itemDelegator.getImage(element));
             }
-            
+
             @Override
             public String getText(Object object) {
                 return itemDelegator.getText(object);
             }
         };
 
+        
+//        
+//        selectedCharacter.addChangeListener(new IChangeListener() {
+//            
+//            @Override
+//            public void handleChange(ChangeEvent event) {
+//                
+//                RuntimeCharacter value = (RuntimeCharacter)selectedCharacter.getValue();
+//                List<EObject> commands = createCharacterCommands(value);
+//                treeViewer_Commands.setInput(commands);                
+//            }
+//        });
+//        
     }
 
     /*
@@ -279,7 +314,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         Composite composite_11 = formToolkit.createComposite(sctnNewSection, SWT.NONE);
         formToolkit.paintBordersFor(composite_11);
         sctnNewSection.setClient(composite_11);
-        composite_11.setLayout(new GridLayout(1, false));
+        composite_11.setLayout(new GridLayout(2, false));
 
         Composite composite_13 = new Composite(composite_11, SWT.NONE);
         GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -291,10 +326,43 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_13.setLayout(new TableColumnLayout());
 
         treeViewer = new TableViewer(composite_13, SWT.BORDER);
+        treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+            
+            @Override
+            public void selectionChanged(SelectionChangedEvent event) {
+                ISelection selection = treeViewer.getSelection();
+                EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
+                
+                RuntimeCharacter value = (RuntimeCharacter)firstEObject;
+                List<SubjectCommand> commands = createCharacterCommands(value);
+                treeViewer_Commands.setInput(commands);                
+
+                
+            }
+        });
         Table tree = treeViewer.getTable();
         // tree.setHeaderVisible(true);
         // tree.setLinesVisible(true);
         formToolkit.paintBordersFor(tree);
+        
+        Composite composite_12 = new Composite(composite_11, SWT.NONE);
+        GridData gd_composite_12 = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
+        gd_composite_12.widthHint = 253;
+        composite_12.setLayoutData(gd_composite_12);
+        formToolkit.adapt(composite_12);
+        formToolkit.paintBordersFor(composite_12);
+        composite_12.setLayout(new TreeColumnLayout());
+        
+        treeViewer_Commands = new TreeViewer(composite_12, SWT.BORDER);
+        Tree tree_2 = treeViewer_Commands.getTree();
+        treeViewer_Commands.setContentProvider(new SimpleListContenProvider(actionListContentProvider));
+        treeViewer_Commands.setLabelProvider(labelProvider);
+        
+        
+        
+        formToolkit.paintBordersFor(tree_2);
+        new Label(composite_11, SWT.NONE);
+        new Label(composite_11, SWT.NONE);
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
@@ -448,8 +516,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         initializeMenu();
         m_bindingContext = initDataBindings1();
 
-        m_bindingContext = initDataBindings12();
-        m_bindingContext = initDataBindings();
+       
     }
 
     @Override
@@ -467,6 +534,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         startCombatAction = new Action() {
             @SuppressWarnings("unchecked")
             public void run() {
+                isTimetracking = false;
                 CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
                 combatTurn.setDate(placement1.getActualDate());
                 combatTurn.setCmdCallback(RuntimeScriptView.this);
@@ -486,6 +554,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 else
                     return;
 
+               
                 placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
                 placement1.getScript().getCommandStack().redo();
                 scriptService.setCombatTurn(combatTurn);
@@ -507,7 +576,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     if (result.length > 0) {
                         Placement eo = (Placement)result[0];
                         scriptService.setPlacement(eo);
-                        GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                        SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                        command.setDate(placement1.getActualDate());
 
                     }
                 }
@@ -539,6 +609,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         startTimetrackingAction.setToolTipText("sort tooltip");
         startTimetrackingAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD));
 
+        executeAction = new Action() {
+            public void run() {
+                ISelection selection = treeViewer_Commands.getSelection();
+                EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
+                scriptService.executeCommand((Command)eObject);
+            }
+        };
+        executeAction.setText("execute");
+        executeAction.setToolTipText("execute");
+        executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
+
     }
 
     /**
@@ -547,6 +628,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private void initializeToolBar() {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
         toolbarManager.add(startCombatAction);
+        toolbarManager.add(executeAction);
         toolbarManager.add(switchPlacementAction);
         toolbarManager.add(startTimetrackingAction);
     }
@@ -557,13 +639,35 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private void initializeMenu() {
         IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
         menuManager.add(startCombatAction);
+        menuManager.add(executeAction);
         menuManager.add(switchPlacementAction);
+        menuManager.add(startTimetrackingAction);
     }
 
     @Override
     public void setFocus() {
         // Set the focus
     }
+    
+    private List<SubjectCommand> createCharacterCommands(RuntimeCharacter persona) {
+        
+        
+        ArrayList<SubjectCommand> list = new ArrayList<SubjectCommand>();
+        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
+        succesTestCmd.setSubject(persona);
+        list.add(succesTestCmd);
+        SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
+        skillTestCmd.setSubject(persona);
+        list.add(skillTestCmd);
+        ExtendetSkillTestCmd extendetSkillTestCmd = GameplayFactory.eINSTANCE.createExtendetSkillTestCmd();
+        extendetSkillTestCmd.setSubject(persona);
+        list.add(extendetSkillTestCmd);
+        
+
+        return list;
+    }
+
+
 
     @Override
     public void setPlacement(Placement placement) {
@@ -572,7 +676,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         this.placement.setValue(placement1);
         if (placement1.getActualDate() == null)
             placement1.setActualDate(placement1.getStartDate());
-        
+
         characters.clear();
         EList<Team> teams = placement.getTeams();
         Team player = script2.getPlayer();
@@ -651,12 +755,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // IObservableList protocolCommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
         // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
         //
-        return bindingContext;
-    }
-
-    protected DataBindingContext initDataBindings12() {
-        DataBindingContext bindingContext = new DataBindingContext();
-        //
+         //
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(),
                 new EStructuralFeature[]{ RuntimePackage.Literals.RUNTIME_CHARACTER__CHARACTER });
@@ -674,11 +773,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         treeViewer.setContentProvider(listContentProvider);
         treeViewer.setInput(characters);
         //
-        return bindingContext;
-    }
-
-    protected DataBindingContext initDataBindings() {
-        DataBindingContext bindingContext = new DataBindingContext();
         //
         // EMFProperties.multiList(GameplayPackage.Literals.COMMAND__SUB_COMMANDS,GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
 
@@ -702,10 +796,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // null));
         // IObservableMap[] observeMaps = EMFObservables.observeMaps(treeContentProvider.getKnownElements(),
         // new EStructuralFeature[]{ GameplayPackage.Literals.COMMAND__SUB_COMMANDS });
-        IObservableMap[] observeMaps = EMFObservables.observeMaps(treeContentProvider.getKnownElements(), new EStructuralFeature[]{
+        IObservableMap[] observeMaps1 = EMFObservables.observeMaps(treeContentProvider.getKnownElements(), new EStructuralFeature[]{
                 GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__EXECUTED });
 
-        treeViewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
+        treeViewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps1) {
             @Override
             public Image getColumnImage(Object element, int columnIndex) {
                 if (columnIndex == 2)

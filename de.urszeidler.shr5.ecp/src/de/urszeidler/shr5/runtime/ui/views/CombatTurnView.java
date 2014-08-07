@@ -223,7 +223,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
                             SubjectCommand sc = (SubjectCommand)firstElement;
 
                             sc.setSubject(currentTurn.getSubject());
-
+                            scriptService.executeCommand(sc);
                         }
 
                     }
@@ -324,6 +324,12 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
 
         if (personaHandlung2 == null)
             return;
+        List<EObject> list = createCharacterCommands(personaHandlung2);
+
+        basicActionPanel.getActionPanel().getTreeViewer().setInput(list);
+    }
+
+    protected List<EObject> createCharacterCommands(InitativePass personaHandlung2) {
         IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider)adapterFactory.adapt(personaHandlung2,
                 IEditingDomainItemProvider.class);
 
@@ -340,8 +346,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
                 }
             }
         }
-
-        basicActionPanel.getActionPanel().getTreeViewer().setInput(list);
+        return list;
     }
 
     /*

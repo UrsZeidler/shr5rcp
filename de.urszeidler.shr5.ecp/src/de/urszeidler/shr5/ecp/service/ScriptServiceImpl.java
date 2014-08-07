@@ -3,9 +3,12 @@
  */
 package de.urszeidler.shr5.ecp.service;
 
+import java.util.Date;
+
 import org.eclipse.ui.services.IServiceLocator;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 
@@ -54,13 +57,26 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void registerCombatViewer(CombatViewer viewer) {
-        this.combatViewer = viewer;        
+        this.combatViewer = viewer;
     }
 
     @Override
     public void setCombatTurn(CombatTurn kr) {
-        if(combatViewer!=null)
-            combatViewer.setCombatTurn(kr);        
+        if (combatViewer != null)
+            combatViewer.setCombatTurn(kr);
     }
 
+    @Override
+    public void executeCommand(Command command) {
+        if (script != null && script.getCommandStack() != null) {
+            if (placement != null) {
+                Date actualDate = placement.getActualDate();
+                if (actualDate != null && command.getDate() == null)
+                    command.setDate(actualDate);
+            }
+
+            script.getCommandStack().setCurrentCommand(command);
+            script.getCommandStack().redo();
+        }
+    }
 }
