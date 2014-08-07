@@ -28,16 +28,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getDate <em>Date</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuting <em>Executing</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isCanExecute <em>Can Execute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuted <em>Executed</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getDate <em>Date</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuting <em>Executing</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isCanExecute <em>Can Execute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container implements SubjectCommand {
@@ -45,6 +45,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -55,6 +56,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -65,6 +67,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #getSubCommands() <em>Sub Commands</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSubCommands()
      * @generated
      * @ordered
@@ -75,6 +78,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -85,6 +89,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -107,6 +112,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCmdCallback()
      * @generated
      * @ordered
@@ -117,6 +123,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * This is true if the Cmd Callback attribute has been set.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -126,6 +133,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The default value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -136,6 +144,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -146,6 +155,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The default value of the '{@link #isCanExecute() <em>Can Execute</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isCanExecute()
      * @generated
      * @ordered
@@ -156,6 +166,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * The cached value of the '{@link #getSubject() <em>Subject</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSubject()
      * @generated
      * @ordered
@@ -165,6 +176,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SubjectCommandImpl() {
@@ -174,6 +186,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -184,6 +197,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuted() {
@@ -193,6 +207,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuted(boolean newExecuted) {
@@ -205,6 +220,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<Command> getSubCommands() {
@@ -217,6 +233,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Date getDate() {
@@ -226,6 +243,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDate(Date newDate) {
@@ -238,6 +256,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public CommandCallback getCmdCallback() {
@@ -247,6 +266,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCmdCallback(CommandCallback newCmdCallback) {
@@ -255,12 +275,14 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK, oldCmdCallback, cmdCallback, !oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK, oldCmdCallback, cmdCallback,
+                    !oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void unsetCmdCallback() {
@@ -269,12 +291,14 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK, oldCmdCallback,
+                    CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isSetCmdCallback() {
@@ -284,6 +308,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuting() {
@@ -293,6 +318,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuting(boolean newExecuting) {
@@ -315,6 +341,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public RuntimeCharacter getSubject() {
@@ -332,6 +359,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public RuntimeCharacter basicGetSubject() {
@@ -341,6 +369,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSubject(RuntimeCharacter newSubject) {
@@ -357,12 +386,33 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * @generated not
      */
     public void redo() {
-        setExecuting(true);
+        prepareRedo();
 
         executeSubActions();
         setExecuted(true);
         executing = false;
     }
+
+    /**
+     * Set the state and call the callback.
+     */
+    protected void prepareRedo() {
+        setExecuting(true);
+        if (isSetCmdCallback() && getCmdCallback() != null)
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+
+    }
+    
+    /**
+     * Set the state and calls the callback.
+     */
+    protected void afterRedo() {
+        setExecuting(false);
+        setExecuted(true);
+        if (isSetCmdCallback() && getCmdCallback() != null)
+            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+    }
+
 
     /**
      * Executes the subactions without changing the state.
@@ -383,6 +433,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void undo() {
@@ -394,6 +445,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -408,6 +460,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -426,7 +479,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
             case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
                 return isCanExecute();
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
-                if (resolve) return getSubject();
+                if (resolve)
+                    return getSubject();
                 return basicGetSubject();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -435,6 +489,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -467,6 +522,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -497,6 +553,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -523,6 +580,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -541,11 +599,13 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (executed: ");
@@ -553,7 +613,10 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         result.append(", date: ");
         result.append(date);
         result.append(", cmdCallback: ");
-        if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
+        if (cmdCallbackESet)
+            result.append(cmdCallback);
+        else
+            result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
         result.append(')');

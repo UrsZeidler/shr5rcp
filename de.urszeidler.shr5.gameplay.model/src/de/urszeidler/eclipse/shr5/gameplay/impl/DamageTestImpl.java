@@ -279,12 +279,9 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
 
     @Override
     public void redo() {
-        setExecuting(true);
-
         getProbe().clear();
-        if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
+        
+        prepareRedo();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
         int armor = 0;
         if (persona instanceof KoerperPersona) {
@@ -327,11 +324,8 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
                 getSubject().setMentalDamage(getSubject().getMentalDamage() + damageLeft);
         }
 
-        setExecuting(false);
-        setExecuted(true);
-        if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
+        afterRedo();
     }
+
 
 } // DamageTestImpl

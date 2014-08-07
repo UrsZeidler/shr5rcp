@@ -290,7 +290,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     
     @Override
     public void redo() {
-        executing = true;
+        prepareRedo();
 
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
         PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, getSubject().getCharacter().getPersona());
@@ -350,8 +350,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             }
         }
 
-        executing = false;
-        setExecuted(true);
+        afterRedo();
     }
 
 } //RangedAttackCmdImpl

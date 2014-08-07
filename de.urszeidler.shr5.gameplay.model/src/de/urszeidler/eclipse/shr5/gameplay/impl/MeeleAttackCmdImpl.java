@@ -177,8 +177,8 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
 
     @Override
     public void redo() {
-        setExecuting(true);
-
+        prepareRedo();
+        
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
         PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, getSubject().getCharacter().getPersona());
         setSkill(personaFertigkeit);
@@ -236,7 +236,6 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
             }
         }
 
-        setExecuting(false);
-        setExecuted(true);
+        afterRedo();
     }
 } // MeeleAttackCmdImpl

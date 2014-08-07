@@ -241,7 +241,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
 
     @Override
     public void redo() {
-        setExecuting(true);
+        prepareRedo();
         startDate = getDate();
 
         int threshold = getThresholds();
@@ -261,8 +261,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
             date = new Date(date.getTime() + (10 * intervall.getQuantities()));
             counter++;
         }
-        setExecuting(false);
-        setExecuted(true);
+        afterRedo();
     }
 
 } // ExtendetSkillTestCmdImpl

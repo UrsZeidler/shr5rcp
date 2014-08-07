@@ -163,9 +163,9 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
 
     @Override
     public void redo() {
-        setExecuting(true);
-
         getProbe().clear();
+        prepareRedo();
+
 
         W6Dice w6Dice = new W6Dice();
         if (isSetCmdCallback()&& getCmdCallback() != null)
@@ -181,11 +181,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
         
-        if (isSetCmdCallback()&& getCmdCallback() != null)
-            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-        
-        setExecuted(true);
-        setExecuting(false);
+        afterRedo();
     }
 
 } //SuccesTestCmdImpl
