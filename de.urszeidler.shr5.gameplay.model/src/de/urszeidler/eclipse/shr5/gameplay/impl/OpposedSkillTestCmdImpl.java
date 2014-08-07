@@ -217,7 +217,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
 
     @Override
     public void redo() {
-        executed = true;
+        setExecuting(true);
 
         SkillTestCmd subjectCommand = GameplayFactory.eINSTANCE.createSkillTestCmd();
         subjectCommand.setSubject(getSubject());
@@ -250,8 +250,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
         if (getCmdCallback() != null)
             getCmdCallback().afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
 
-        
-        executing = true;
+        setExecuting(false);
         setExecuted(true);
     }
 

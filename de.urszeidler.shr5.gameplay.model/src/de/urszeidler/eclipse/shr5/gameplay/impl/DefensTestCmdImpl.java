@@ -89,7 +89,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
 
     @Override
     public void redo() {
-        executing = true;
+        setExecuting(true);
 
         getProbe().clear();
         if (isSetCmdCallback() && getCmdCallback() != null)
@@ -108,8 +108,8 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
 
-        executed = true;
-        executing = false;
+        setExecuting(false);
+        setExecuted(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
             cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
 

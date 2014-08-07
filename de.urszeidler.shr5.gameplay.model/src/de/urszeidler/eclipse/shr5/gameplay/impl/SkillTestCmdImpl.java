@@ -157,7 +157,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
 
     @Override
     public void redo() {
-        executing = true;
+        setExecuting(true);
 
         getProbe().clear();
         if (isSetCmdCallback()&& getCmdCallback() != null)
@@ -181,8 +181,8 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         if (isSetCmdCallback()&& getCmdCallback() != null)
             cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
         
-        executing = true;
-        executed = true;
+        setExecuting(false);
+        setExecuted(true);
     }
 
 } // SkillTestCmdImpl

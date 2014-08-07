@@ -261,8 +261,8 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
             date = new Date(date.getTime() + (10 * intervall.getQuantities()));
             counter++;
         }
+        setExecuting(false);
         setExecuted(true);
-        executing = false;
     }
 
 } // ExtendetSkillTestCmdImpl
