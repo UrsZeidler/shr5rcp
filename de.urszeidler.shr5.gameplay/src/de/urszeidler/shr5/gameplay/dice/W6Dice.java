@@ -209,10 +209,18 @@ public class W6Dice {
      * 
      * @return
      */
-    private int rollW6() {
+    protected int rollW6Open() {
         int val = rnd.nextInt(6) + 1;
         if (val == 6)
             val = val + rollW6();
         return val;
+    }
+    /**
+     * rolls one open W6 dice
+     * 
+     * @return
+     */
+    private int rollW6() {
+        return rnd.nextInt(6) + 1;
     }
 }
