@@ -877,4 +877,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         genericEObjectDialog.open();
 
     }
+
+    @Override
+    public CommandCallback getCmdCallback() {
+         return this;
+    }
 }

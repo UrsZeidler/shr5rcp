@@ -74,6 +74,8 @@ public class ScriptServiceImpl implements ScriptService {
                 if (actualDate != null && command.getDate() == null)
                     command.setDate(actualDate);
             }
+            if(scriptViewer!=null && scriptViewer.getCmdCallback()!=null)
+                command.setCmdCallback(scriptViewer.getCmdCallback());
 
             script.getCommandStack().setCurrentCommand(command);
             script.getCommandStack().redo();
