@@ -227,7 +227,12 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
                 damageTest.setDv(weapon.getDurchschlagsKraft());
                 DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
                 if (damageCode != null) {
-                    int d = damageCode.getPower() - defensTestCmd.getNetHits();
+                    int power = damageCode.getPower();
+                    if(damageCode.getAttribute()!=null){
+                        Integer value = (Integer)getSubject().getCharacter().getPersona().eGet(damageCode.getAttribute());
+                        power = value + power;
+                    }
+                    int d = power - defensTestCmd.getNetHits();
                     // damageTest.setDamage(new DamageCode(d, damageCode.getType()));
                     damageTest.setDamage(damageCode.toString());
                 }

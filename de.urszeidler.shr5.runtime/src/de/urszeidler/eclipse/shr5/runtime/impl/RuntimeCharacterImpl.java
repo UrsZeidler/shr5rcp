@@ -194,11 +194,19 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setPhysicalDamage(int newPhysicalDamage) {
         int oldPhysicalDamage = physicalDamage;
         physicalDamage = newPhysicalDamage;
+        
+        KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
+
+        if(physicalDamage>persona.getZustandKoerperlichMax())
+            setZustand(Zustand.STERBEND);
+        if(physicalDamage>persona.getZustandKoerperlichMax()+persona.getZustandGrenze())
+            setZustand(Zustand.TOT); 
+        
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__PHYSICAL_DAMAGE, oldPhysicalDamage, physicalDamage));
     }
@@ -215,11 +223,20 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setMentalDamage(int newMentalDamage) {
         int oldMentalDamage = mentalDamage;
+//        int diff = newMentalDamage-oldMentalDamage;
         mentalDamage = newMentalDamage;
+        KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
+        if(mentalDamage>persona.getZustandGeistigMax()){
+            int diff1 = mentalDamage- persona.getZustandGeistigMax();
+            mentalDamage=persona.getZustandGeistigMax();
+            setPhysicalDamage(physicalDamage +diff1);
+            setZustand(Zustand.BETAEUBT);
+        }
+            
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__MENTAL_DAMAGE, oldMentalDamage, mentalDamage));
     }

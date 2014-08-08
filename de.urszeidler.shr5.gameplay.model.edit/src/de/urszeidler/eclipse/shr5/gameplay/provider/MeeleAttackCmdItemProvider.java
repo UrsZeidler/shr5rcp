@@ -101,8 +101,12 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null) {
             label = labelprovider.getText(meeleAttackCmd.getSubject());
+        }
+        labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null) {
             label1 = labelprovider.getText(meeleAttackCmd.getObject());
         }
+        
         String weapon = "";
         labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getWeapon(), IItemLabelProvider.class);
         if (labelprovider != null) {
