@@ -588,6 +588,21 @@ public class ShadowrunTools {
         return string;
     }
 
+    public static DamageCode parseDamageCode(String damage,AbstraktPersona persona) {
+        DamageCode damageCode = ShadowrunTools.parseDamageCode(damage);
+        if (damageCode != null) {
+            int power = damageCode.getPower();
+            if(damageCode.getAttribute()!=null){
+                Integer value = (Integer)persona.eGet(damageCode.getAttribute());
+                power = value + power;
+                return new DamageCode(power, damageCode.type);
+            }
+        }
+        
+        return null;
+        
+    }
+    
     public static DamageCode parseDamageCode(String damage) {
         if (damage == null)
             return null;

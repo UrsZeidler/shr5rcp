@@ -225,16 +225,17 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
                 damageTest.setCmdCallback(getCmdCallback());
                 damageTest.setDate(getDate());
                 damageTest.setDv(weapon.getDurchschlagsKraft());
-                DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
+               // DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
+                DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode(),getSubject().getCharacter().getPersona());
                 if (damageCode != null) {
-                    int power = damageCode.getPower();
-                    if(damageCode.getAttribute()!=null){
-                        Integer value = (Integer)getSubject().getCharacter().getPersona().eGet(damageCode.getAttribute());
-                        power = value + power;
-                    }
-                    int d = power - defensTestCmd.getNetHits();
-                    // damageTest.setDamage(new DamageCode(d, damageCode.getType()));
-                    damageTest.setDamage(damageCode.toString());
+//                    int power = damageCode.getPower();
+//                    if(damageCode.getAttribute()!=null){
+//                        Integer value = (Integer)getSubject().getCharacter().getPersona().eGet(damageCode.getAttribute());
+//                        power = value + power;
+//                    }
+                    int d = damageCode.getPower() - defensTestCmd.getNetHits();
+                    damageTest.setDamage(new DamageCode(d, damageCode.getType()).toString());
+                    //damageTest.setDamage(damageCode.toString());
                 }
                 getSubCommands().add(damageTest);
                 damageTest.redo();
