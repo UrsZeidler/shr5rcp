@@ -49,6 +49,9 @@ public class ShadowrunTools {
     private static List<EAttribute> orderedBasedAttibutes;
     private static List<EAttribute> orderedCalcedAttibutes;
     private static Pattern damagePattern = Pattern.compile("(\\d*)(\\D)");
+    private static Pattern damagePattern1 = Pattern.compile("\\(([\\w]{3})\\+([0-9]*)\\)(\\D)");
+
+    ;
 
     // the static initaliser
     static {
@@ -589,7 +592,7 @@ public class ShadowrunTools {
         if (damage == null)
             return null;
 
-        Matcher matcher = damagePattern.matcher(damage);
+        Matcher matcher = damagePattern.matcher(damage.trim());
         if (matcher.matches()) {
             String p = matcher.group(1);
             String t = matcher.group(2);
@@ -598,10 +601,27 @@ public class ShadowrunTools {
                 return new DamageCode(Integer.parseInt(p), SchadensTyp.KOERPERLICH);
             } catch (Exception e) {
             }
+        } else {
+            matcher = damagePattern1.matcher(damage.trim());
+            if (matcher.matches()) {
+                String a = matcher.group(1);
+                String p = matcher.group(2);
+                String t = matcher.group(3);
+                try {
+                    return new DamageCode(Integer.parseInt(p), SchadensTyp.KOERPERLICH, a);
+                } catch (Exception e) {
+                }
+            }
         }
+
         return null;
     }
 
+    /**
+     * Repesent the parsed damage code.
+     * 
+     * @author urs
+     */
     public static class DamageCode {
         public DamageCode(int power, SchadensTyp type) {
             super();
@@ -609,8 +629,14 @@ public class ShadowrunTools {
             this.type = type;
         }
 
+        public DamageCode(int power, SchadensTyp type, String att) {
+            this(power, type);
+            this.attribute = getAttributeFromShortName(att);
+        }
+
         private int power;
         private SchadensTyp type;
+        private EAttribute attribute;
 
         public int getPower() {
             return power;
@@ -622,7 +648,18 @@ public class ShadowrunTools {
 
         @Override
         public String toString() {
-            return power + getTypeCode();
+            if (attribute == null)
+                return power + getTypeCode();
+            else {
+                return "(" + attributeToShortStr(attribute) + "+" + power + ")" + getTypeCode();
+            }
+        }
+
+        private String attributeToShortStr(EAttribute att) {
+            if (Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE.equals(att))
+                return "STR";
+            else
+                return "U";
         }
 
         private String getTypeCode() {
@@ -633,5 +670,23 @@ public class ShadowrunTools {
 
             return "U";
         }
+
+        public EAttribute getAttribute() {
+            return attribute;
+        }
+    }
+
+    /**
+     * Return the attribute from the short name.
+     * 
+     * @param att
+     * @return
+     */
+    public static EAttribute getAttributeFromShortName(String att) {
+        String lower = att.toLowerCase();
+        if ("str".equals(lower))
+            return Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE;
+
+        return null;
     }
 }
