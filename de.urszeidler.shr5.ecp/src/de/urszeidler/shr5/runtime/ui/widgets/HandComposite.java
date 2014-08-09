@@ -18,7 +18,6 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
@@ -93,6 +92,7 @@ public class HandComposite extends NameableComposite {
             }
         });
         toolItem.setText("a");
+        toolItem.setToolTipText("Use item");
         actionBar.getParent().layout(true);
         // actionBar = new ToolBar(parent, style)
 
