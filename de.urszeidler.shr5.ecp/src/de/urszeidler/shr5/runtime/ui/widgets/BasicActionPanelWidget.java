@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 
@@ -124,11 +125,17 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_state.setLayout(gridLayout4);
 
         Label label2 = new Label(composite_state, SWT.NONE);
-        label2.setText("Mental");
-        stateMonitorWidgetMental = new StateMonitorWidget(composite_state, SWT.NONE);
-        label2 = new Label(composite_state, SWT.NONE);
         label2.setText("Physical");
         stateMonitorWidgetPhysical = new StateMonitorWidget(composite_state, SWT.NONE);
+        
+        if (character.getValue() instanceof GruntRuntimeCharacter) {
+            //GruntRuntimeCharacter grc = (GruntRuntimeCharacter)character.getValue();
+            return;
+        }
+        
+        label2 = new Label(composite_state, SWT.NONE);
+        label2.setText("Mental");
+        stateMonitorWidgetMental = new StateMonitorWidget(composite_state, SWT.NONE);
         //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 
@@ -309,6 +316,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
             actionPanel.setCharacter(apc);
             character.setValue(apc.getSubject());
             persona.setValue(persona2);
+            
+            if (apc.getSubject() instanceof GruntRuntimeCharacter) {
+                stateMonitorWidgetMental.setVisible(false);
+            }else
+                stateMonitorWidgetMental.setVisible(true);
+
         }
 
     }
