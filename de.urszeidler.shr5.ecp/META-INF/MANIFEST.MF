@@ -85,12 +85,12 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.1",
  de.urszeidler.shr5.acceleo,
  de.urszeidler.shr5.gameplay,
- de.urszeidler.shr5.gameplay.model;bundle-version="0.1.8",
- de.urszeidler.shr5.gameplay.model.edit;bundle-version="0.1.8",
- de.urszeidler.shr5.runtime;bundle-version="0.1.8",
- de.urszeidler.shr5.runtime.edit;bundle-version="0.1.8",
- de.urszeidler.shr5.scripting;bundle-version="0.1.8",
- de.urszeidler.shr5.scripting.edit;bundle-version="0.1.8"
+ de.urszeidler.shr5.gameplay.model,
+ de.urszeidler.shr5.gameplay.model.edit,
+ de.urszeidler.shr5.runtime,
+ de.urszeidler.shr5.runtime.edit,
+ de.urszeidler.shr5.scripting,
+ de.urszeidler.shr5.scripting.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,
