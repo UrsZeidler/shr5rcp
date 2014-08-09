@@ -275,4 +275,54 @@
          version="0.0.0"
          unpack="false"/>
 
+  <plugin
+         id="org.eclipse.emf.ecp.core"
+         download-size="134"
+         install-size="283"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui"
+         download-size="219"
+         install-size="444"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.explorereditorbridge"
+         download-size="13"
+         install-size="22"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.core.emffilter"
+         download-size="12"
+         install-size="22"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.common"
+         download-size="16"
+         install-size="27"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.validation"
+         download-size="21"
+         install-size="32"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.rcp"
+         download-size="9"
+         install-size="12"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
 </feature>
