@@ -32,7 +32,7 @@
 		<module>../de.urszeidler.shr5.management.model.tests</module>
 		<module>../de.urszeidler.shr5.runtime.tests</module>
 		<module>../de.urszeidler.shr5.gameplay.model.tests</module>
-		
+
 
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
@@ -82,7 +82,10 @@
 
 	<build>
 		<pluginManagement>
+
 			<plugins>
+
+
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
@@ -92,6 +95,9 @@
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-packaging-plugin</artifactId>
 					<version>${tycho.version}</version>
+					<configuration>
+						<format>'b'yyyyMMdd-HHmm</format>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
@@ -113,6 +119,16 @@
 		</pluginManagement>
 
 		<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					
+					<configuration>
+						<format>'b'yyyyMMdd-HHmm</format>
+					</configuration>
+				</plugin>
+
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-director-plugin</artifactId>
