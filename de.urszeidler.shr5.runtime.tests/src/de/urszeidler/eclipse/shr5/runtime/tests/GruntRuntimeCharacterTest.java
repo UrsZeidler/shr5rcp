@@ -2,9 +2,11 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
+import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -49,11 +51,16 @@ public class GruntRuntimeCharacterTest extends RuntimeCharacterTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {
         setFixture(RuntimeFactory.eINSTANCE.createGruntRuntimeCharacter());
+        
+        NonPlayerCharacter nonPlayerCharacter = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+        nonPlayerCharacter.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
+        getFixture().setCharacter(nonPlayerCharacter);
+
     }
 
     /**
@@ -69,6 +76,7 @@ public class GruntRuntimeCharacterTest extends RuntimeCharacterTest {
 
     
     public void testAddPhysicalDamage() throws Exception {
+        
         getFixture().setPhysicalDamage(2);        
         assertEquals(2, getFixture().getPhysicalDamage());
     }
