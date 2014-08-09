@@ -5,6 +5,7 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
@@ -67,7 +68,8 @@ public class ActionPhaseWidget extends NameableComposite {
         ToolItem tltmI = new ToolItem(actionBar, SWT.NONE);
         String literal = interruptType.getLiteral();
         tltmI.setToolTipText(literal);
-        tltmI.setText(literal.substring(0, 1));
+        tltmI.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
+        
         tltmI.addSelectionListener(new SelectionAdapter(){
             @Override
             public void widgetSelected(SelectionEvent e) {

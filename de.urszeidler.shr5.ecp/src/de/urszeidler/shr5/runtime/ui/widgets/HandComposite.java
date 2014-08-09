@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class HandComposite extends NameableComposite {
 
@@ -57,6 +58,7 @@ public class HandComposite extends NameableComposite {
     protected void updateToolbar() {
 
         ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
+        toolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
         toolItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -91,7 +93,7 @@ public class HandComposite extends NameableComposite {
                 }
             }
         });
-        toolItem.setText("a");
+        //toolItem.setText("a");
         toolItem.setToolTipText("Use item");
         actionBar.getParent().layout(true);
         // actionBar = new ToolBar(parent, style)
