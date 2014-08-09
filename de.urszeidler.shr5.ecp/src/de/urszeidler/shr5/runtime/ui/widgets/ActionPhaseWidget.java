@@ -1,6 +1,5 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -11,7 +10,6 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
-import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 
 public class ActionPhaseWidget extends NameableComposite {
 
@@ -89,7 +87,6 @@ public class ActionPhaseWidget extends NameableComposite {
     public void setCharacter(InitativePass pass) {
         this.initativePass = pass;
         this.setNameable(pass.getSubject().getCharacter().getPersona());
-
     }
 
 }
