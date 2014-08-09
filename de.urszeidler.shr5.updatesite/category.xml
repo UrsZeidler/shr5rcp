@@ -3,9 +3,67 @@
    <feature url="features/de.urszeidler.shr5.feature_0.1.8.qualifier.jar" id="de.urszeidler.shr5.feature" version="0.1.8.qualifier">
       <category name="shr5-all"/>
    </feature>
+   <bundle id="de.urszeidler.shr5.acceleo" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.ecp" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.gameplay" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.gameplay.model" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.gameplay.model.edit" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.gameplay.model.tests" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.help" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.management.model" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.management.model.edit" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.management.model.tests" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.model" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.model.edit" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.model.tests" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.product" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.runtime" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.runtime.edit" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.runtime.tests" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.scripting" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <bundle id="de.urszeidler.shr5.scripting.edit" version="0.1.8.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
    <category-def name="shr5-all" label="shr5-all">
       <description>
          The main feature for the shr5 rcp.
       </description>
    </category-def>
+   <category-def name="new_category_1" label="New Category 1"/>
 </site>
