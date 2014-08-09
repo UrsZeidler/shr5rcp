@@ -1,10 +1,14 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.wb.swt.ResourceManager;
 
 /*
@@ -12,16 +16,18 @@ import org.eclipse.wb.swt.ResourceManager;
  */
 
 public class SingleStateWidget extends Composite {
-
-    private Label Statelabel = null;
+    private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+    
+    private Label statelabel = null;
     private boolean markt = false;
     private int size = 20;
     private int spacing = size/10;    
     
     public SingleStateWidget(Composite parent, int style) {
-        super(parent, style);        
+        super(parent, style);     
         initialize();
         setMarkt(false);
+        
     }
     
     public SingleStateWidget(Composite parent, int style,int size) {
@@ -33,6 +39,15 @@ public class SingleStateWidget extends Composite {
     }
 
     private void initialize() {
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+
+        
         GridData gridData1 = new GridData();
         gridData1.horizontalAlignment = GridData.FILL;
         gridData1.grabExcessHorizontalSpace = false;
@@ -46,10 +61,12 @@ public class SingleStateWidget extends Composite {
         gridLayout.marginWidth = spacing;
         gridLayout.marginHeight = spacing;
         gridLayout.horizontalSpacing = spacing;
-        Statelabel = new Label(this, SWT.SHADOW_NONE);
-        Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+        statelabel = toolkit.createLabel(this, "", SWT.SHADOW_NONE);//  new Label(this, SWT.SHADOW_NONE);
+        statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
         //Statelabel.setText("");
-        Statelabel.setLayoutData(gridData);
+        statelabel.setLayoutData(gridData);
+        
+        
         this.setLayout(gridLayout);
 //        setSize(new Point(300, 200));
     }
@@ -67,11 +84,11 @@ public class SingleStateWidget extends Composite {
     public void setMarkt(boolean markt) {
         if(markt){
             //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_RED));
-            Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-1.png"));
+            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-1.png"));
         }
         else{
             //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-            Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
         }            
         this.markt = markt;
     }

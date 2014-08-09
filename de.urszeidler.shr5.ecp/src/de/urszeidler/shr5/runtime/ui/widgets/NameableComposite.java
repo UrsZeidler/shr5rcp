@@ -16,33 +16,32 @@ import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
-
-import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.wb.swt.ResourceManager;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 /**
  * @author urs
  */
 public abstract class NameableComposite extends Composite implements IValueChangeListener {
-    private DataBindingContext m_bindingContext;
+    private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+
+    protected DataBindingContext m_bindingContext;
 
     protected WritableValue nameable = new WritableValue();
     // private Beschreibbar character = Shr5Factory.eINSTANCE.createBioWare();
@@ -67,6 +66,15 @@ public abstract class NameableComposite extends Composite implements IValueChang
     }
 
     private void initialize() {
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+
+        
         gridLayout1 = new GridLayout();
         gridLayout1.marginHeight = 0;
         gridLayout1.marginTop = 0;
@@ -105,6 +113,9 @@ public abstract class NameableComposite extends Composite implements IValueChang
         gridData.grabExcessVerticalSpace = false;
         gridData.verticalAlignment = GridData.FILL;
         mainGroup = new Group(this, SWT.NONE);
+        toolkit.adapt(mainGroup);
+        toolkit.paintBordersFor(mainGroup);
+
 
         mainGroup.setText(grouname);
         mainGroup.setLayout(gridLayout);
@@ -118,6 +129,8 @@ public abstract class NameableComposite extends Composite implements IValueChang
         label_name.setLayoutData(gridData3);
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
+        toolkit.adapt(actionBar);
+        toolkit.paintBordersFor(actionBar);
         
         
        updateToolbar();
@@ -231,7 +244,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         if (active) {
             gridLayout1.marginTop = 10;
             gridLayout1.marginBottom = 15;
-            this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+            this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-bck.png"));
         } else {
             gridLayout1.marginTop = 0;
             gridLayout1.marginBottom = 5;

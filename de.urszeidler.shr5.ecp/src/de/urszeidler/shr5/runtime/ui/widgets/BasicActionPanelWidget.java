@@ -13,12 +13,16 @@ import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
@@ -36,6 +40,8 @@ import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
  * @author urs
  */
 public class BasicActionPanelWidget extends Composite implements IValueChangeListener {
+    private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+
     private DataBindingContext m_bindingContext;
 
     private Composite composite_state = null;
@@ -70,6 +76,14 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
      }
 
     private void initialize() {
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 3;
         this.setLayout(gridLayout);
@@ -103,6 +117,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData.grabExcessVerticalSpace = true;
         gridData.horizontalAlignment = GridData.BEGINNING;
         composite_state = new Composite(this, SWT.NONE);
+        toolkit.adapt(composite_state);
+        toolkit.paintBordersFor(composite_state);
+        
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
 
@@ -132,6 +149,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_info = new Composite(this, SWT.NONE);
         composite_info.setLayoutData(gridData1);
         composite_info.setLayout(gridLayout2);
+        toolkit.adapt(composite_info);
+        toolkit.paintBordersFor(composite_info);
+
+        
         createComposite_name();
 
         label_image = new Label(composite_info, SWT.BORDER);
@@ -152,6 +173,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData2.grabExcessVerticalSpace = true;
         gridData2.verticalAlignment = GridData.FILL;
         composite_action = new Composite(this, SWT.NONE);
+        toolkit.adapt(composite_action);
+        toolkit.paintBordersFor(composite_action);
+
         composite_action.setLayout(new FillLayout(SWT.HORIZONTAL));
         // composite_action.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, true, 1, 1));
         //composite_action.setLayoutData(gridData2);
@@ -185,6 +209,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData5.grabExcessHorizontalSpace = true;
         gridData5.verticalAlignment = GridData.FILL;
         composite_name = new Composite(composite_info, SWT.NONE);
+        toolkit.adapt(composite_name);
+        toolkit.paintBordersFor(composite_name);
+
         composite_name.setLayoutData(gridData5);
         // composite_name.setBackground(new Color(Display.getCurrent(), 85, 235, 231));
 

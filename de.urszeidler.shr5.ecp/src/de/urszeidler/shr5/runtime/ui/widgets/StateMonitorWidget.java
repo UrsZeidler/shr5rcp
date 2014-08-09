@@ -8,7 +8,11 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
 
 /**
  * Defines a state monitor for one damage state.
@@ -17,6 +21,7 @@ import org.eclipse.swt.widgets.Label;
  */
 public class StateMonitorWidget extends Composite {
 
+    private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
     //private WritableValue damageState = new WritableValue();
     //private WritableValue conditionMonitor = new WritableValue();
     private int maxConditions;
@@ -40,6 +45,15 @@ public class StateMonitorWidget extends Composite {
     }
 
     private void init() {
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+
+        
         if (composite_state != null)
             composite_state.dispose();
 
@@ -48,6 +62,9 @@ public class StateMonitorWidget extends Composite {
         layout.horizontalSpacing = 0;
         layout.verticalSpacing = 0;
         composite_state.setLayout(layout);
+        toolkit.adapt(composite_state);
+        toolkit.paintBordersFor(composite_state);
+
 
         int value = maxConditions;
         stateMonitors = new ArrayList<SingleStateWidget>(value);
