@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 
 import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 /**
@@ -230,7 +231,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         if (active) {
             gridLayout1.marginTop = 10;
             gridLayout1.marginBottom = 15;
-            this.setBackgroundImage(SWTResourceManager.getImage("images/btn_1.png"));
+            this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
         } else {
             gridLayout1.marginTop = 0;
             gridLayout1.marginBottom = 5;

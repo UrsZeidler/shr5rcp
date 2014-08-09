@@ -3,13 +3,12 @@ package de.urszeidler.shr5.runtime.ui.widgets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 
 /**
  * Defines a state monitor for one damage state.

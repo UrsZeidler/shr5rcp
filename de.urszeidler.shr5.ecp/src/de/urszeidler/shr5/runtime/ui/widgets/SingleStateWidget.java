@@ -4,8 +4,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.wb.swt.ResourceManager;
 
 /*
  * (c) urs zeidler
@@ -39,15 +39,16 @@ public class SingleStateWidget extends Composite {
         gridData1.verticalAlignment = GridData.CENTER;
         GridData gridData = new GridData();
         gridData.heightHint = size;
-        gridData.widthHint = size;
+        gridData.widthHint = size-1;
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 1;
         gridLayout.verticalSpacing = spacing;
         gridLayout.marginWidth = spacing;
         gridLayout.marginHeight = spacing;
         gridLayout.horizontalSpacing = spacing;
-        Statelabel = new Label(this, SWT.BORDER | SWT.SHADOW_IN);
-        Statelabel.setText("");
+        Statelabel = new Label(this, SWT.SHADOW_NONE);
+        Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+        //Statelabel.setText("");
         Statelabel.setLayoutData(gridData);
         this.setLayout(gridLayout);
 //        setSize(new Point(300, 200));
@@ -64,11 +65,14 @@ public class SingleStateWidget extends Composite {
      * @param markt the markt to set
      */
     public void setMarkt(boolean markt) {
-        if(markt)
-            Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_RED));
-        else
-            Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-                   
+        if(markt){
+            //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_RED));
+            Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-1.png"));
+        }
+        else{
+            //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
+            Statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+        }            
         this.markt = markt;
     }
 
