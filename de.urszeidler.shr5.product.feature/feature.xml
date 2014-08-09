@@ -137,6 +137,10 @@
          id="de.urszeidler.shr5.feature"
          version="0.0.0"/>
 
+   <includes
+         id="de.urszeidler.emf.commons.feature"
+         version="0.0.0"/>
+
    <plugin
          id="javax.servlet"
          download-size="0"
@@ -146,34 +150,6 @@
 
    <plugin
          id="org.apache.commons.codec"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.ecp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.model"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.model.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.product"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -322,28 +298,7 @@
          unpack="false"/>
 
    <plugin
-         id="de.urszeidler.emf.commons.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.ui.views.properties.tabbed"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.management.model"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.management.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -462,13 +417,6 @@
          unpack="false"/>
 
    <plugin
-         id="de.urszeidler.shr5.acceleo"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.ocl.common"
          download-size="0"
          install-size="0"
@@ -575,13 +523,6 @@
 
    <plugin
          id="org.apache.batik.parser"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.urszeidler.shr5.help"
          download-size="0"
          install-size="0"
          version="0.0.0"
