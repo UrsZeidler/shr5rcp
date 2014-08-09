@@ -68,7 +68,7 @@ public class ActionPhaseWidget extends NameableComposite {
         ToolItem tltmI = new ToolItem(actionBar, SWT.NONE);
         String literal = interruptType.getLiteral();
         tltmI.setToolTipText(literal);
-        tltmI.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-"+interruptType.getValue()+1+".png"));
+        tltmI.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-"+(interruptType.getValue()+1)+".png"));
         
         tltmI.addSelectionListener(new SelectionAdapter(){
             @Override
