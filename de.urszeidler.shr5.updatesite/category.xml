@@ -39,9 +39,6 @@
    <bundle id="de.urszeidler.shr5.model.edit" version="0.1.8.qualifier">
       <category name="new_category_1"/>
    </bundle>
-   <bundle id="de.urszeidler.shr5.model.tests" version="0.1.8.qualifier">
-      <category name="new_category_1"/>
-   </bundle>
    <bundle id="de.urszeidler.shr5.product" version="0.1.8.qualifier">
       <category name="new_category_1"/>
    </bundle>
