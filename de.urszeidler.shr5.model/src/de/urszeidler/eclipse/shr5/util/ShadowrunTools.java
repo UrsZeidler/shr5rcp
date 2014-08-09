@@ -596,7 +596,8 @@ public class ShadowrunTools {
                 Integer value = (Integer)persona.eGet(damageCode.getAttribute());
                 power = value + power;
                 return new DamageCode(power, damageCode.type);
-            }
+            }else
+                return damageCode;
         }
         
         return null;
