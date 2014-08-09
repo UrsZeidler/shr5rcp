@@ -155,10 +155,10 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetMental);
 
         
-        m_bindingContext = initDataBindings();
         AbstraktPersona persona2= object.getCharacter().getPersona();
         stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
         stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+        m_bindingContext = initDataBindings();
 
         
         createFormBuilder(managedForm);
@@ -169,8 +169,8 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND, composite_3);
-        
-        
+        //emfFormBuilder.addSeperatorEntry(composite_3);
+        emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, monitor);
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         
         managedForm.reflow(true);
@@ -180,6 +180,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
     protected EditingDomain getEditingDomain() {
         return editingDomain;
     }
+    
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
