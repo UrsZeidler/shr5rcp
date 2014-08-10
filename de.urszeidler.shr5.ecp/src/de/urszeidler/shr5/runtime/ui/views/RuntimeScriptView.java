@@ -10,6 +10,7 @@ import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.Realm;
@@ -38,6 +39,8 @@ import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
+import org.eclipse.jface.databinding.swt.ISWTObservableValue;
+import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
@@ -80,6 +83,7 @@ import org.eclipse.ui.forms.widgets.TableWrapLayout;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.rcp.databinding.EMFBeansListObservableFactory;
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -102,6 +106,7 @@ import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
+import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.service.ScriptService;
@@ -114,6 +119,7 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -204,6 +210,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private TreeViewer treeViewer_Commands;
 
     private Action executeAction;
+    private Label lblDesc;
 
     public RuntimeScriptView() {
 
@@ -277,7 +284,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(composite, SWT.NONE, placement, formToolkit, null);
         // GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-        Composite composite_1 = formToolkit.createComposite(composite, SWT.NONE);
+        Composite composite_1 = formToolkit.createComposite(composite, SWT.BORDER);
         composite_1.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
 
         formToolkit.paintBordersFor(composite_1);
@@ -287,13 +294,20 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             composite_1.setLayout(twl_composite_1);
         }
 
-        Label lblImg = formToolkit.createLabel(composite_1, "img", SWT.NONE);
-        lblImg.setLayoutData(new TableWrapData(TableWrapData.LEFT, TableWrapData.MIDDLE, 1, 1));
+        Label lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE);
+        lblImg.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
+        lblImg.setLayoutData(new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1));
         lblImg.setBounds(0, 0, 70, 17);
 
         lblName = formToolkit.createLabel(composite_1, "New Label", SWT.NONE);
-        lblName.setLayoutData(new TableWrapData(TableWrapData.LEFT, TableWrapData.MIDDLE, 1, 1));
+        lblName.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
         lblName.setSize(70, 17);
+        
+        lblDesc = new Label(composite_1, SWT.NONE);
+        lblDesc.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+        formToolkit.adapt(lblDesc, true, true);
+        lblDesc.setText("desc");
+        //new Label(composite_1, SWT.NONE);
 
         // ----
         Composite composite_7 = formToolkit.createComposite(composite, SWT.NONE);
@@ -711,6 +725,28 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         DataBindingContext bindingContext = new DataBindingContext();
         Realm realm = Realm.getDefault();
         //
+        
+
+        IWidgetValueProperty image = WidgetProperties.image();
+        ISWTObservableValue observedImage = image.observe(lblDesc);
+        IObservableValue observeValue = EMFObservables.observeDetailValue(realm, placement,
+                Shr5Package.Literals.BESCHREIBBAR__IMAGE);
+
+        IConverter converter = null;
+
+        converter = new PathToImageConverter(String.class, Image.class, 24);
+        UpdateValueStrategy toModel = new UpdateValueStrategy();
+        UpdateValueStrategy toWidget = new UpdateValueStrategy().setConverter(converter);
+        bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
+        //
+
+        //
+        IObservableValue observeTextLblDescObserveWidget = WidgetProperties.text().observe(lblDesc);
+        IObservableValue placement1BeschreibungObserveValue = EMFObservables.observeDetailValue(realm,placement, Literals.BESCHREIBBAR__BESCHREIBUNG);
+        bindingContext.bindValue(observeTextLblDescObserveWidget, placement1BeschreibungObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        //
+
+        
         IObservableValue observeTextLblNameObserveWidget = WidgetProperties.text().observe(lblName);
         IObservableValue placementNameObserveValue = EMFObservables.observeDetailValue(realm, placement, Literals.BESCHREIBBAR__NAME);
         bindingContext.bindValue(observeTextLblNameObserveWidget, placementNameObserveValue,
