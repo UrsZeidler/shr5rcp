@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -28,6 +30,7 @@ import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,18 +39,18 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getSubCommands <em>Sub Commands</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getDate <em>Date</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCmdCallback <em>Cmd Callback</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuting <em>Executing</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isCanExecute <em>Can Execute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCombatants <em>Combatants</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getActionPhases <em>Action Phases</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCurrentTurn <em>Current Turn</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuted <em>Executed</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getSubCommands <em>Sub Commands</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getDate <em>Date</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCmdCallback <em>Cmd Callback</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuting <em>Executing</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isCanExecute <em>Can Execute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCombatants <em>Combatants</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getActionPhases <em>Action Phases</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCurrentTurn <em>Current Turn</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class CombatTurnImpl extends MinimalEObjectImpl.Container implements CombatTurn {
@@ -71,6 +74,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -81,6 +85,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuted()
      * @generated
      * @ordered
@@ -91,6 +96,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getSubCommands() <em>Sub Commands</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSubCommands()
      * @generated
      * @ordered
@@ -101,6 +107,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -111,6 +118,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -133,6 +141,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getCmdCallback() <em>Cmd Callback</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCmdCallback()
      * @generated
      * @ordered
@@ -143,6 +152,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * This is true if the Cmd Callback attribute has been set.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -152,6 +162,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -162,6 +173,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #isExecuting() <em>Executing</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isExecuting()
      * @generated
      * @ordered
@@ -172,6 +184,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The default value of the '{@link #isCanExecute() <em>Can Execute</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isCanExecute()
      * @generated
      * @ordered
@@ -182,6 +195,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getCombatants() <em>Combatants</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCombatants()
      * @generated
      * @ordered
@@ -192,6 +206,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getActionPhases() <em>Action Phases</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getActionPhases()
      * @generated
      * @ordered
@@ -202,6 +217,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * The cached value of the '{@link #getCurrentTurn() <em>Current Turn</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCurrentTurn()
      * @generated
      * @ordered
@@ -211,6 +227,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CombatTurnImpl() {
@@ -220,6 +237,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -230,6 +248,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuted() {
@@ -239,6 +258,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuted(boolean newExecuted) {
@@ -251,6 +271,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<Command> getSubCommands() {
@@ -263,6 +284,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Date getDate() {
@@ -272,6 +294,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDate(Date newDate) {
@@ -284,6 +307,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public CommandCallback getCmdCallback() {
@@ -293,6 +317,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCmdCallback(CommandCallback newCmdCallback) {
@@ -301,12 +326,14 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         boolean oldCmdCallbackESet = cmdCallbackESet;
         cmdCallbackESet = true;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, cmdCallback, !oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, cmdCallback,
+                    !oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void unsetCmdCallback() {
@@ -315,12 +342,14 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         cmdCallback = CMD_CALLBACK_EDEFAULT;
         cmdCallbackESet = false;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT, oldCmdCallbackESet));
+            eNotify(new ENotificationImpl(this, Notification.UNSET, GameplayPackage.COMBAT_TURN__CMD_CALLBACK, oldCmdCallback, CMD_CALLBACK_EDEFAULT,
+                    oldCmdCallbackESet));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isSetCmdCallback() {
@@ -330,6 +359,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isExecuting() {
@@ -339,6 +369,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setExecuting(boolean newExecuting) {
@@ -361,6 +392,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<RuntimeCharacter> getCombatants() {
@@ -373,6 +405,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<InitativePass> getActionPhases() {
@@ -385,6 +418,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public InitativePass getCurrentTurn() {
@@ -402,6 +436,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public InitativePass basicGetCurrentTurn() {
@@ -411,6 +446,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCurrentTurn(InitativePass newCurrentTurn) {
@@ -433,15 +469,15 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 InitativePass ip = (InitativePass)turn;
                 if (ip.isCanExecute()) {
                     ip.redo();
-                    int indexOf = getActionPhases().indexOf(ip)+1;
+                    int indexOf = getActionPhases().indexOf(ip) + 1;
                     if (indexOf < getActionPhases().size()) {
                         setCurrentTurn(getActionPhases().get(indexOf));
                     } else {
-                        //the combarturn is done
+                        // the combarturn is done
                         setCurrentTurn(null);
                         setExecuted(true);
                         setExecuting(false);
-                        if(getCmdCallback()!=null)
+                        if (getCmdCallback() != null)
                             getCmdCallback().afterCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
 
                     }
@@ -467,14 +503,16 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         setCurrentTurn(null);
 
         for (RuntimeCharacter abstractNaturalPerson : combatants) {
-            Initative initative = GameplayFactory.eINSTANCE.createInitative();
-            initative.setSubject(abstractNaturalPerson);
-            initative.redo();
-            subCommands.add(initative);
+            if (abstractNaturalPerson.getZustand() == Zustand.OK) {
+                Initative initative = GameplayFactory.eINSTANCE.createInitative();
+                initative.setSubject(abstractNaturalPerson);
+                initative.redo();
+                subCommands.add(initative);
+            }
         }
-        if(getCmdCallback()!=null)
+        if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
-        
+
         List<InitativePass> phaseCommands = new ArrayList<InitativePass>();
         for (Command command : subCommands) {
             if (command instanceof Initative) {
@@ -506,7 +544,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             setCurrentTurn(phaseCommands.get(0));
 
         getActionPhases().addAll(phaseCommands);
-        //executed = true;
+        // executed = true;
 
     }
 
@@ -525,6 +563,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -541,6 +580,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -563,7 +603,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
                 return getActionPhases();
             case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
-                if (resolve) return getCurrentTurn();
+                if (resolve)
+                    return getCurrentTurn();
                 return basicGetCurrentTurn();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -572,6 +613,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -612,6 +654,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -648,6 +691,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -678,6 +722,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -699,11 +744,13 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (executed: ");
@@ -711,7 +758,10 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         result.append(", date: ");
         result.append(date);
         result.append(", cmdCallback: ");
-        if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
+        if (cmdCallbackESet)
+            result.append(cmdCallback);
+        else
+            result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
         result.append(')');

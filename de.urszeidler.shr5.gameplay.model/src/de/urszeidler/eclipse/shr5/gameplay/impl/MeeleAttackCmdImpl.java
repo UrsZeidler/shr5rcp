@@ -190,7 +190,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
 
         getProbe().clear();
-
+ 
         W6Dice w6Dice = new W6Dice();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
         EAttribute attribut = getSkill().getFertigkeit().getAttribut();
