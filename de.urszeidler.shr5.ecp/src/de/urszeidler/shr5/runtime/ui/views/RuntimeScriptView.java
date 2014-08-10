@@ -4,9 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -28,10 +26,8 @@ import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -48,6 +44,7 @@ import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.TreeStructureAdvisor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.layout.TableColumnLayout;
+import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -76,12 +73,14 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
 import org.eclipse.ui.forms.widgets.TableWrapLayout;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.rcp.databinding.EMFBeansListObservableFactory;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
@@ -92,7 +91,6 @@ import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
@@ -116,10 +114,6 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
-import org.eclipse.jface.layout.TreeColumnLayout;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
-import org.eclipse.wb.swt.ResourceManager;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -146,6 +140,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     }
 
     private final class TimeTracker extends Job {
+      private boolean isTimetracking;
+        
         private TimeTracker(String name) {
             super(name);
         }
@@ -155,9 +151,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (!isTimetracking)
                 return Status.OK_STATUS;
             schedule(1000);
-            if (placement1 != null)
-                if (placement1.getActualDate() != null)
-                    placement1.setActualDate(new Date(placement1.getActualDate().getTime() + 1000));
+            Placement plac = (Placement)placement.getValue();
+            
+            if (plac != null)
+                if (plac.getActualDate() != null)
+                    plac.setActualDate(new Date(plac.getActualDate().getTime() + 1000));
             return Status.OK_STATUS;
         }
     }
@@ -165,10 +163,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
+
+    protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective";
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
     private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
     private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
-    private boolean isTimetracking;
+    protected boolean isTimetracking;
 
     private Label lblName;
     private StyledText styledText;
@@ -568,7 +568,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 else
                     return;
 
-               
+                try {
+                    PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+                } catch (WorkbenchException e) {
+                    e.printStackTrace();
+                }
+
                 placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
                 placement1.getScript().getCommandStack().redo();
                 scriptService.setCombatTurn(combatTurn);
@@ -603,8 +608,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
         startTimetrackingAction = new Action() {
-            private boolean isTimetracking;
-            private Job timeTrackJob;
+            //private boolean isTimetracking;
+            private TimeTracker timeTrackJob;
 
             public void run() {
                 if (isTimetracking) {
@@ -615,6 +620,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                         timeTrackJob = new TimeTracker("timetrack");
                         timeTrackJob.setSystem(true);
                     }
+                    timeTrackJob.isTimetracking = true;
                     timeTrackJob.schedule();
                 }
             }
@@ -631,8 +637,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
         };
         executeAction.setText("execute");
-        executeAction.setToolTipText("execute");
-        executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
+        executeAction.setToolTipText("execute the selected command");
+        executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEF_VIEW));
 
     }
 
@@ -906,6 +912,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
+            
+            
         }
 
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
