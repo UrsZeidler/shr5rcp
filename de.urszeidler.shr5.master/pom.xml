@@ -19,12 +19,11 @@
 		<module>../de.urszeidler.shr5.gameplay</module>
 		<module>../de.urszeidler.shr5.gameplay.model</module>
 		<module>../de.urszeidler.shr5.gameplay.model.edit</module>
-		<module>../de.urszeidler.shr5.feature</module>
-		<module>../de.urszeidler.shr5.updatesite</module>
 		<module>../de.urszeidler.shr5.runtime</module>
 		<module>../de.urszeidler.shr5.runtime.edit</module>
 		<module>../de.urszeidler.shr5.scripting</module>
 		<module>../de.urszeidler.shr5.scripting.edit</module>
+		<module>../de.urszeidler.shr5.feature</module>
 
 
 
@@ -33,13 +32,17 @@
 		<module>../de.urszeidler.shr5.runtime.tests</module>
 		<module>../de.urszeidler.shr5.gameplay.model.tests</module>
 
+<!-- 		<module>../../../../../../home/urs/eclipse_workspaces/workspace_E4.3_shr_git/de.urszeidler.shr5.test1.feature</module> -->
 
-		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
-		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
-		<!-- <module>../de.urszeidler.shr5.product.site.feature</module> -->
-		<!-- <module>../de.urszeidler.shr5.product.build</module> -->
-		<!-- <module>../de.urszeidler.shr5.localization.feature</module> -->
 
+<!-- 		<module>../de.urszeidler.shr5.product.feature</module> -->
+<!-- 		<module>../de.urszeidler.shr5.ecp.feature</module> -->
+<!-- 		<module>../de.urszeidler.shr5.product.site.feature</module> -->
+<!-- 		<module>../de.urszeidler.shr5.product.build</module> -->
+<!-- 		<module>../de.urszeidler.shr5.localization.feature</module> -->
+<!-- 		<module>../de.urszeidler.shr5.test.feature</module> -->
+
+		<module>../de.urszeidler.shr5.updatesite</module>
 
 	</modules>
 
@@ -74,6 +77,12 @@
 		<repository>
 			<id>nebular</id>
 			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>babel</id>
+			<url>http://download.eclipse.org/technology/babel/update-site/R0.12.0/kepler</url>
 			<layout>p2</layout>
 		</repository>
 
