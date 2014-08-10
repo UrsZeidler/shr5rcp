@@ -131,10 +131,6 @@
          version="0.0.0"/>
 
    <includes
-         id="de.urszeidler.shr5.feature"
-         version="0.0.0"/>
-
-   <includes
          id="de.urszeidler.emf.commons.feature"
          version="0.0.0"/>
 
