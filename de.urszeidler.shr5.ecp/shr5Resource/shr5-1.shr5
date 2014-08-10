@@ -12936,23 +12936,23 @@
     </grunts>
   </entries>
   <entries xsi:type="scripting:Script" xmi:id="_rKoaUAqoEeSKaO5TLnOM7w" name="A test Script with thugs." entry="_rKpBYAqoEeSKaO5TLnOM7w">
-    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2014-07-31T07:53:29.000+0200" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w">
+    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200"  nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w">
       <background>There are thugs which needs to be beaten.</background>
     </placements>
-    <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" actualDate="2014-08-01T07:12:28.000+0200" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w">
+    <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w">
       <inTheirFace>There they are.</inTheirFace>
       <inTheirFace>In a dark alley.</inTheirFace>
       <enviorment xmi:id="_rKpBYgqoEeSKaO5TLnOM7w"/>
     </placements>
-    <placements xmi:id="_rKpBYwqoEeSKaO5TLnOM7w" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" actualDate="2014-08-01T07:12:18.000+0200"/>
+    <placements xmi:id="_rKpBYwqoEeSKaO5TLnOM7w" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" />
     <allTeams xsi:type="runtime:GruntTeam" xmi:id="_rKpBZAqoEeSKaO5TLnOM7w" gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IAqoEeSFaKcyfAPimA" character="_B1NOYN0CEeOvVYoRsPZlnA" rightHand="_B1N1c90CEeOvVYoRsPZlnA" leftHand="_B1N1ct0CEeOvVYoRsPZlnA" inUse="_B1N1ct0CEeOvVYoRsPZlnA _B1N1c90CEeOvVYoRsPZlnA _B1N1dN0CEeOvVYoRsPZlnA"/>
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IwqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JAqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA _B1KyIN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JgqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9JwqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFd0CEeOvVYoRsPZlnA" leftHand="_B1KLFt0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
     </allTeams>
     <player xmi:id="_rKpBbQqoEeSKaO5TLnOM7w" name="Players">
