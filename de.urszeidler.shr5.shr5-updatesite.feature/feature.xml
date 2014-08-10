@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="de.urszeidler.shr5.test1.feature"
+      id="de.urszeidler.shr5.shr5-updatesite.feature"
       label="www-Feature"
       version="0.1.9.qualifier">
 
@@ -18,14 +18,6 @@
 
    <includes
          id="de.urszeidler.shr5.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.urszeidler.shr5.product.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="de.urszeidler.shr5.product.site.feature"
          version="0.0.0"/>
 
    <plugin
