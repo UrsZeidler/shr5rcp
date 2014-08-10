@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.ecp.feature"
       label="collecting ecp Feature"
-      version="0.1.8.qualifier">
+      version="0.1.9.qualifier">
 
    <description url="http://www.example.com/description">
       A collection of ecp plugins.
@@ -275,7 +275,7 @@
          version="0.0.0"
          unpack="false"/>
 
-  <plugin
+   <plugin
          id="org.eclipse.emf.ecp.core"
          download-size="134"
          install-size="283"
