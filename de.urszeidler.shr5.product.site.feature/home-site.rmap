@@ -53,6 +53,11 @@
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://download.eclipse.org/technology/nebula/snapshot"/>
     </rm:provider>
+   <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/technology/babel/update-site/R0.12.0/kepler"/>
+    </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="subclipse">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" mutable="false">

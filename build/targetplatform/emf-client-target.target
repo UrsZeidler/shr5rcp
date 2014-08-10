@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="35">
+<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="36">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
@@ -41,20 +41,6 @@
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.9.1.v20130902-0605"/>
 <unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.7.0.201306111341"/>
 <repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_tools.mat_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_rt.rap_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_technology.packaging.mpc_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_modeling.emf.compare_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_technology.recommenders_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_tools.tm_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_modeling.tmf.xtext_de.feature.group" version="4.3.0.v20131123020001"/>
-<unit id="org.eclipse.babel.nls_technology.packaging_de.feature.group" version="4.3.0.v20131123020001"/>
-<repository location="file:/home/urs/etc/custombuilding/kepler/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.net4j.sdk.feature.group" version="4.2.1.v20130806-0658"/>
@@ -117,6 +103,152 @@
 <unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201407311802"/>
 <unit id="org.eclipse.nebula.widgets.ganttchart.feature.feature.group" version="1.0.0.201407311802"/>
 <repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_fa.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_da.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ca.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_sq.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_pt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_pt_BR.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_technology.packaging.mpc_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ro.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_uk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_en_AU.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_id.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ru.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_eu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.tmf.xtext_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_da.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_zh_TW.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_datatools_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ar.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ko.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_sl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_sk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ar.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ro.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_da.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_th.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_zh_TW.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_zh.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_en_AA.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_pt_BR.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_nl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ru.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf.compare_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.mdt.xsd_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_hi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ja.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_pt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_lt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_it.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_iw.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_birt_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_pt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ku.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_fi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_fr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_nl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_fi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_en_CA.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_technology.recommenders_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_sr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_sv.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_en_AA.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_es.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_hu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ru.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_hi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_tr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ko.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_mylyn_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_zh_TW.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_cs.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_hu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_zh.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_pl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_lt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_pt_BR.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_et.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_it.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_bg.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ml.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_es.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ku.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_nl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_hu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_sl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_tools.mat_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_sr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_es.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_cs.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_tl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_hi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_no.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_technology.egit_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_cs.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_uk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_sk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_no.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_soa.stardust_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_tr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ja.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_th.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_bg.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_webtools_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_technology.dltk_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_fr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_eu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_id.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_lt.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_sv.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_bg.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_technology.packaging_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ko.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_sv.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ro.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_tl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_el.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_eu.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_tools.tm_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_uk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_mn.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_iw.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_rt.rap_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_th.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_ja.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_en_CA.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_tr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_zh.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_mn.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_tools.cdt_de.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_iw.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_ku.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_ar.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_fa.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_et.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_pl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_fr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_it.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_sr.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_el.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_no.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_fa.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_sl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_el.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_eclipse_et.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_id.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_en_AA.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_en_AU.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_fi.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_pl.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_sk.feature.group" version="4.3.0.v20140623031152"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_mn.feature.group" version="4.3.0.v20140623031152"/>
+<repository location="http://download.eclipse.org/technology/babel/update-site/R0.12.0/kepler"/>
 </location>
 </locations>
 </target>
