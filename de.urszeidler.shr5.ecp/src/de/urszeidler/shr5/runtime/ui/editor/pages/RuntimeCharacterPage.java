@@ -48,9 +48,8 @@ import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
 
 /**
  * @author urs
- *
  */
-public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
+public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private RuntimeCharacter object;
     private EditingDomain editingDomain;
 
@@ -75,13 +74,14 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         this.object = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
     }
 
-    public RuntimeCharacterPage(FormEditor editor, String id, String title, RuntimeCharacter object, EditingDomain editingDomain, ReferenceManager manager) {
+    public RuntimeCharacterPage(FormEditor editor, String id, String title, RuntimeCharacter object, EditingDomain editingDomain,
+            ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
         this.editingDomain = editingDomain;
 
     }
-    
+
     /**
      * Create contents of the form.
      * 
@@ -99,20 +99,20 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         {
             managedForm.getForm().getBody().setLayout(new TableWrapLayout());
         }
-        
+
         Composite composite = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite.setLayout(new GridLayout(2, false));
         composite.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite);
-        
+
         lblImage = managedForm.getToolkit().createLabel(composite, "image", SWT.NONE);
         GridData gd_lblImage = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblImage.heightHint = 32;
         gd_lblImage.widthHint = 32;
         lblImage.setLayoutData(gd_lblImage);
-        
+
         lblName = managedForm.getToolkit().createLabel(composite, "name", SWT.NONE);
-        
+
         Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite_1);
@@ -121,29 +121,28 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
             twl_composite_1.numColumns = 2;
             composite_1.setLayout(twl_composite_1);
         }
-        
+
         Composite composite_3 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
         composite_3.setLayout(new GridLayout(3, false));
         composite_3.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite_3);
-        
+
         Composite monitor = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         monitor.setLayout(new GridLayout(2, false));
         monitor.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().adapt(monitor);
         managedForm.getToolkit().paintBordersFor(monitor);
-        
+
         Group grpPhysical = new Group(monitor, SWT.NONE);
         grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         grpPhysical.setText("Physical");
         managedForm.getToolkit().adapt(grpPhysical);
         managedForm.getToolkit().paintBordersFor(grpPhysical);
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
-        
-        
+
         stateMonitorWidgetPhysical = new StateMonitorWidget(grpPhysical, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetPhysical);
-        
+
         Group grpMental = new Group(monitor, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
@@ -154,25 +153,25 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetMental);
 
-        
-        AbstraktPersona persona2= object.getCharacter().getPersona();
-        stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
-        stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+        if (object != null && object.getCharacter() != null && object.getCharacter().getPersona() != null) {
+            AbstraktPersona persona2 = object.getCharacter().getPersona();
+            stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
+            stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+        }
         m_bindingContext = initDataBindings();
 
-        
         createFormBuilder(managedForm);
 
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE, composite_3);
         emfFormBuilder.addSeperatorEntry(composite_3);
-        
+
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND, composite_3);
-        //emfFormBuilder.addSeperatorEntry(composite_3);
+        // emfFormBuilder.addSeperatorEntry(composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, monitor);
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        
+
         managedForm.reflow(true);
     }
 
@@ -180,21 +179,27 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
     protected EditingDomain getEditingDomain() {
         return editingDomain;
     }
-    
+
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
         IObservableValue observeTextLblNameObserveWidget = WidgetProperties.text().observe(lblName);
-        IObservableValue objectNameObserveValue = EMFEditProperties.value(editingDomain, FeaturePath.fromList(Literals.RUNTIME_CHARACTER__CHARACTER, Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA, Shr5Package.Literals.BESCHREIBBAR__NAME)).observe(object);
-        bindingContext.bindValue(observeTextLblNameObserveWidget, objectNameObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        IObservableValue objectNameObserveValue = EMFEditProperties.value(
+                editingDomain,
+                FeaturePath.fromList(Literals.RUNTIME_CHARACTER__CHARACTER, Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA,
+                        Shr5Package.Literals.BESCHREIBBAR__NAME)).observe(object);
+        bindingContext.bindValue(observeTextLblNameObserveWidget, objectNameObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
+                new EMFUpdateValueStrategy());
         //
-        
+
         //
 
         IWidgetValueProperty image = WidgetProperties.image();
         ISWTObservableValue observedImage = image.observe(lblImage);
-        IObservableValue observeValue = EMFEditProperties.value(editingDomain, FeaturePath.fromList(Literals.RUNTIME_CHARACTER__CHARACTER, Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA, Shr5Package.Literals.BESCHREIBBAR__IMAGE)).observe(object);
-                
+        IObservableValue observeValue = EMFEditProperties.value(
+                editingDomain,
+                FeaturePath.fromList(Literals.RUNTIME_CHARACTER__CHARACTER, Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA,
+                        Shr5Package.Literals.BESCHREIBBAR__IMAGE)).observe(object);
 
         IConverter converter = null;
 
@@ -204,20 +209,18 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter>  {
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
         //
 
-        if(stateMonitorWidgetMental!=null){
-        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
-        IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
-                RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
-        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        if (stateMonitorWidgetMental != null) {
+            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
+            IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
+                    RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
+            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
 
         }
-        if(stateMonitorWidgetPhysical!=null){
-        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
-        IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
-                RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
-        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        if (stateMonitorWidgetPhysical != null) {
+            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
+            IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
+                    RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
+            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
 
         }
 
