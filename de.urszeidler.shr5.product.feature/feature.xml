@@ -19,7 +19,8 @@
 
    <includes
          id="org.eclipse.e4.rcp"
-         version="0.0.0"/>
+         version="0.0.0"
+         search-location="both"/>
 
    <includes
          id="org.eclipse.net4j.util"
