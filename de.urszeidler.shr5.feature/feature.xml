@@ -129,13 +129,6 @@
          unpack="false"/>
 
    <plugin
-         id="de.urszeidler.shr5.help"
-         download-size="0"
-         install-size="0"
-         version="0.1.9.qualifier"
-         unpack="false"/>
-
-   <plugin
          id="de.urszeidler.shr5.management.model"
          download-size="0"
          install-size="0"
