@@ -9,6 +9,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -159,6 +160,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
         if (!isCanExecute())
             return;
         executing = true;
+        GameplayTools.clearDefseMod(getSubject());
 
         if (getFreeAction() != null) {
             getFreeAction().setDate(getDate());

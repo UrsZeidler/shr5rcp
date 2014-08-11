@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
@@ -96,6 +97,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     @Override
     public void redo() {
         getProbe().clear();
+        mods=GameplayTools.getDefenceMod(getSubject());
         prepareRedo();
         
         W6Dice w6Dice = new W6Dice();
@@ -110,7 +112,9 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
-
+        
+        GameplayTools.inreaseDefenceMod(getSubject(),-1);
+        
         afterRedo();
     }
 
