@@ -176,8 +176,8 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
             getAction().redo();
         }
         
-        executed = true;
-        executing = false;
+        setExecuted(true);
+        setExecuting(false);
     }
 
     /**
