@@ -151,7 +151,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (!isTimetracking)
                 return Status.OK_STATUS;
             schedule(1000);
-            Placement plac = (Placement)placement.getValue();
+            Placement plac = (Placement)placement1;//.getValue();
             
             if (plac != null)
                 if (plac.getActualDate() != null)
@@ -614,6 +614,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             public void run() {
                 if (isTimetracking) {
                     isTimetracking = false;
+                    timeTrackJob.isTimetracking = false;
                 } else {
                     isTimetracking = true;
                     if (timeTrackJob == null) {
