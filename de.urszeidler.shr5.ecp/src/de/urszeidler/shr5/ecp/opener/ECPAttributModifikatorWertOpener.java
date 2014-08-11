@@ -41,6 +41,7 @@ import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.runtime.ui.editor.RuntimeEditor;
+import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
@@ -77,8 +78,9 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
         String name = eObject.eClass().getEPackage().getName();
         EObjectEditorInput eObjectEditorInput = new EObjectEditorInput(eObject, ecpProject.getEditingDomain());
         try {
-            if ("runtime".equals(name)||"scripting".equals(name)) {
-                IEditorPart openEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, RuntimeEditor.id, true);
+            if ("runtime".equals(name) || "scripting".equals(name)) {
+                IEditorPart openEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+                        .openEditor(eObjectEditorInput, RuntimeEditor.id, true);
                 openEditor.setFocus();
             } else
                 PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
@@ -89,18 +91,22 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
     @Override
     public int isApplicable(Object eObject) {
-        ScriptingSwitch<Integer> scriptingSwitchView = new ScriptingSwitch<Integer>(){
+        ScriptingSwitch<Integer> scriptingSwitchView = new ScriptingSwitch<Integer>() {
             @Override
             public Integer caseScript(Script object) {
+                return RET;
+            }
+
+            @Override
+            public Integer casePlacement(Placement object) {
                 return RET;
             }
         };
         Integer doSwitch = scriptingSwitchView.doSwitch((EObject)eObject);
         if (doSwitch != null)
             return doSwitch;
-       
-        
-        RuntimeSwitch<Integer> runtimeSwitch = new RuntimeSwitch<Integer>(){
+
+        RuntimeSwitch<Integer> runtimeSwitch = new RuntimeSwitch<Integer>() {
             @Override
             public Integer caseRuntimeCharacter(RuntimeCharacter object) {
                 return RET;
@@ -109,7 +115,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
         doSwitch = runtimeSwitch.doSwitch((EObject)eObject);
         if (doSwitch != null)
             return doSwitch;
-        
+
         Shr5Switch<Integer> shr5Switch = new Shr5Switch<Integer>() {
             // @Override
             // public Integer caseBeschreibbar(Beschreibbar object) {

@@ -21,8 +21,10 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShrEditingState;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
+import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.ScriptPage;
+import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
@@ -88,6 +90,15 @@ public class RuntimeEditor extends BasicEditor<EObject> {
                 return null;
             }
             
+            @Override
+            public Object casePlacement(Placement object) {
+                try {
+                    addPage(new PlacementPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating SpeziesPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
         };
         
         if(editingMode==ShrEditingState.CUSTOM){
