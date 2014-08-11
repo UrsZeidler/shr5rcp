@@ -1,7 +1,11 @@
 package de.urszeidler.shr5.runtime.ui.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -11,6 +15,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -26,22 +31,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
-
 import de.urszeidler.shr5.scripting.ScriptingPackage.Literals;
-
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.ExpandBar;
-import org.eclipse.swt.widgets.ExpandItem;
-import org.eclipse.nebula.widgets.gallery.Gallery;
-import org.eclipse.nebula.widgets.gallery.DefaultGalleryItemRenderer;
-import org.eclipse.nebula.widgets.gallery.DefaultGalleryGroupRenderer;
 
 public class PlacementPage extends AbstractShr5Page<Placement> {
     private Placement object;
