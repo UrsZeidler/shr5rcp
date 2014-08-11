@@ -25,7 +25,9 @@ import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeSwitch;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -109,6 +111,15 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
         RuntimeSwitch<Integer> runtimeSwitch = new RuntimeSwitch<Integer>() {
             @Override
             public Integer caseRuntimeCharacter(RuntimeCharacter object) {
+                return RET;
+            }
+            @Override
+            public Integer caseTeam(Team object) {
+                return RET;
+            }
+            
+            @Override
+            public Integer caseGruntTeam(GruntTeam object) {
                 return RET;
             }
         };

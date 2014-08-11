@@ -11,15 +11,21 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeSwitch;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.emf.commons.ui.editor.BasicEditor;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.editor.ShrEditingState;
+import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
@@ -71,6 +77,27 @@ public class RuntimeEditor extends BasicEditor<EObject> {
                 return null;
             }
             
+            @Override
+            public Object caseGruntTeam(GruntTeam object) {
+                try {
+                    addPage(new BeschreibbarContainterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                           editingDomain, manager, RuntimePackage.Literals.GRUNT_TEAM__GRUNT_GROUP,RuntimePackage.Literals.TEAM__MEMBERS));
+               } catch (PartInitException e) {
+                   logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+               }
+               return this;
+            }
+            
+            @Override
+            public Object caseTeam(Team object) {
+                try {
+                     addPage(new BeschreibbarContainterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager, RuntimePackage.Literals.TEAM__MEMBERS));
+                } catch (PartInitException e) {
+                    logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+                }
+                return this;
+            }
            
         };
         
@@ -80,6 +107,8 @@ public class RuntimeEditor extends BasicEditor<EObject> {
 //        };
 //        
         ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>(){
+            
+            
             @Override
             public Object caseScript(Script object) {
                 try {
