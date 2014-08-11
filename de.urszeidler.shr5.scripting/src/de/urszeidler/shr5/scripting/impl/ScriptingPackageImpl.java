@@ -11,6 +11,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
@@ -49,6 +50,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * @generated
      */
     private EClass timeFrameEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass scriptHistoryEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -164,7 +172,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getScript_CommandStack() {
+    public EReference getScript_Entry() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(4);
     }
 
@@ -173,7 +181,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getScript_Entry() {
+    public EReference getScript_History() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(5);
     }
 
@@ -290,6 +298,42 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getScriptHistory() {
+        return scriptHistoryEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getScriptHistory_CommandStack() {
+        return (EReference)scriptHistoryEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getScriptHistory_CurrentDate() {
+        return (EAttribute)scriptHistoryEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getScriptHistory_CurrentPlacement() {
+        return (EReference)scriptHistoryEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }
@@ -318,8 +362,8 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(scriptEClass, SCRIPT__ALL_TEAMS);
         createEReference(scriptEClass, SCRIPT__PLAYER);
         createEReference(scriptEClass, SCRIPT__MANAGEMENT);
-        createEReference(scriptEClass, SCRIPT__COMMAND_STACK);
         createEReference(scriptEClass, SCRIPT__ENTRY);
+        createEReference(scriptEClass, SCRIPT__HISTORY);
 
         placementEClass = createEClass(PLACEMENT);
         createEReference(placementEClass, PLACEMENT__NEXT_PLACEMENTS);
@@ -334,6 +378,11 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEAttribute(timeFrameEClass, TIME_FRAME__START_DATE);
         createEAttribute(timeFrameEClass, TIME_FRAME__END_DATE);
         createEAttribute(timeFrameEClass, TIME_FRAME__ACTUAL_DATE);
+
+        scriptHistoryEClass = createEClass(SCRIPT_HISTORY);
+        createEReference(scriptHistoryEClass, SCRIPT_HISTORY__COMMAND_STACK);
+        createEAttribute(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_DATE);
+        createEReference(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_PLACEMENT);
     }
 
     /**
@@ -380,22 +429,27 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScript_AllTeams(), theRuntimePackage.getTeam(), null, "allTeams", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Player(), theRuntimePackage.getTeam(), null, "player", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Management(), theShr5managementPackage.getGamemasterManagement(), null, "management", null, 1, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getScript_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScript_Entry(), this.getPlacement(), null, "entry", null, 1, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getScript_History(), this.getScriptHistory(), null, "history", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(placementEClass, Placement.class, "Placement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlacement_NextPlacements(), this.getPlacement(), null, "nextPlacements", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Teams(), theRuntimePackage.getTeam(), null, "teams", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPlacement_Background(), ecorePackage.getEString(), "background", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPlacement_InTheirFace(), ecorePackage.getEString(), "inTheirFace", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPlacement_Background(), ecorePackage.getEString(), "background", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPlacement_InTheirFace(), ecorePackage.getEString(), "inTheirFace", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Script(), this.getScript(), this.getScript_Placements(), "script", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPlacement_Debugging(), ecorePackage.getEString(), "debugging", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPlacement_Debugging(), ecorePackage.getEString(), "debugging", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Enviorment(), theRuntimePackage.getEnviorment(), null, "enviorment", null, 1, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(timeFrameEClass, TimeFrame.class, "TimeFrame", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getTimeFrame_StartDate(), theShr5Package.getShrDate(), "startDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTimeFrame_EndDate(), theShr5Package.getShrDate(), "endDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTimeFrame_ActualDate(), theShr5Package.getShrDate(), "actualDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(scriptHistoryEClass, ScriptHistory.class, "ScriptHistory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getScriptHistory_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getScriptHistory_CurrentDate(), theShr5Package.getShrDate(), "currentDate", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getScriptHistory_CurrentPlacement(), this.getPlacement(), null, "currentPlacement", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);

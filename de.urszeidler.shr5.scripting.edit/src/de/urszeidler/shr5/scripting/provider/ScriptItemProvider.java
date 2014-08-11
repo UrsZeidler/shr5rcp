@@ -4,26 +4,17 @@ package de.urszeidler.shr5.scripting.provider;
 
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -182,7 +173,7 @@ public class ScriptItemProvider
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__ALL_TEAMS);
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__PLAYER);
             childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__MANAGEMENT);
-            childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__COMMAND_STACK);
+            childrenFeatures.add(ScriptingPackage.Literals.SCRIPT__HISTORY);
         }
         return childrenFeatures;
     }
@@ -246,7 +237,7 @@ public class ScriptItemProvider
             case ScriptingPackage.SCRIPT__ALL_TEAMS:
             case ScriptingPackage.SCRIPT__PLAYER:
             case ScriptingPackage.SCRIPT__MANAGEMENT:
-            case ScriptingPackage.SCRIPT__COMMAND_STACK:
+            case ScriptingPackage.SCRIPT__HISTORY:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -296,8 +287,8 @@ public class ScriptItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (ScriptingPackage.Literals.SCRIPT__COMMAND_STACK,
-                 GameplayFactory.eINSTANCE.createExecutionStack()));
+                (ScriptingPackage.Literals.SCRIPT__HISTORY,
+                 ScriptingFactory.eINSTANCE.createScriptHistory()));
     }
 
     /**

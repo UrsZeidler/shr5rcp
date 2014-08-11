@@ -4,27 +4,19 @@ package de.urszeidler.shr5.scripting.impl;
 
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.Team;
-
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
 import de.urszeidler.shr5.scripting.TimeFrame;
 import java.util.Collection;
-
 import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -195,34 +187,64 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
     protected EList<Team> teams;
 
     /**
-     * The cached value of the '{@link #getBackground() <em>Background</em>}' attribute list.
+     * The default value of the '{@link #getBackground() <em>Background</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getBackground()
      * @generated
      * @ordered
      */
-    protected EList<String> background;
+    protected static final String BACKGROUND_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getInTheirFace() <em>In Their Face</em>}' attribute list.
+     * The cached value of the '{@link #getBackground() <em>Background</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBackground()
+     * @generated
+     * @ordered
+     */
+    protected String background = BACKGROUND_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getInTheirFace() <em>In Their Face</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getInTheirFace()
      * @generated
      * @ordered
      */
-    protected EList<String> inTheirFace;
+    protected static final String IN_THEIR_FACE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getDebugging() <em>Debugging</em>}' attribute list.
+     * The cached value of the '{@link #getInTheirFace() <em>In Their Face</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInTheirFace()
+     * @generated
+     * @ordered
+     */
+    protected String inTheirFace = IN_THEIR_FACE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getDebugging() <em>Debugging</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getDebugging()
      * @generated
      * @ordered
      */
-    protected EList<String> debugging;
+    protected static final String DEBUGGING_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getDebugging() <em>Debugging</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDebugging()
+     * @generated
+     * @ordered
+     */
+    protected String debugging = DEBUGGING_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getEnviorment() <em>Enviorment</em>}' containment reference.
@@ -408,10 +430,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getBackground() {
-        if (background == null) {
-            background = new EDataTypeUniqueEList<String>(String.class, this, ScriptingPackage.PLACEMENT__BACKGROUND);
-        }
+    public String getBackground() {
         return background;
     }
 
@@ -420,11 +439,32 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getInTheirFace() {
-        if (inTheirFace == null) {
-            inTheirFace = new EDataTypeUniqueEList<String>(String.class, this, ScriptingPackage.PLACEMENT__IN_THEIR_FACE);
-        }
+    public void setBackground(String newBackground) {
+        String oldBackground = background;
+        background = newBackground;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__BACKGROUND, oldBackground, background));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getInTheirFace() {
         return inTheirFace;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setInTheirFace(String newInTheirFace) {
+        String oldInTheirFace = inTheirFace;
+        inTheirFace = newInTheirFace;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__IN_THEIR_FACE, oldInTheirFace, inTheirFace));
     }
 
     /**
@@ -473,11 +513,20 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getDebugging() {
-        if (debugging == null) {
-            debugging = new EDataTypeUniqueEList<String>(String.class, this, ScriptingPackage.PLACEMENT__DEBUGGING);
-        }
+    public String getDebugging() {
         return debugging;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setDebugging(String newDebugging) {
+        String oldDebugging = debugging;
+        debugging = newDebugging;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.PLACEMENT__DEBUGGING, oldDebugging, debugging));
     }
 
     /**
@@ -643,19 +692,16 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 getTeams().addAll((Collection<? extends Team>)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__BACKGROUND:
-                getBackground().clear();
-                getBackground().addAll((Collection<? extends String>)newValue);
+                setBackground((String)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__IN_THEIR_FACE:
-                getInTheirFace().clear();
-                getInTheirFace().addAll((Collection<? extends String>)newValue);
+                setInTheirFace((String)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__SCRIPT:
                 setScript((Script)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__DEBUGGING:
-                getDebugging().clear();
-                getDebugging().addAll((Collection<? extends String>)newValue);
+                setDebugging((String)newValue);
                 return;
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 setEnviorment((Enviorment)newValue);
@@ -697,16 +743,16 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 getTeams().clear();
                 return;
             case ScriptingPackage.PLACEMENT__BACKGROUND:
-                getBackground().clear();
+                setBackground(BACKGROUND_EDEFAULT);
                 return;
             case ScriptingPackage.PLACEMENT__IN_THEIR_FACE:
-                getInTheirFace().clear();
+                setInTheirFace(IN_THEIR_FACE_EDEFAULT);
                 return;
             case ScriptingPackage.PLACEMENT__SCRIPT:
                 setScript((Script)null);
                 return;
             case ScriptingPackage.PLACEMENT__DEBUGGING:
-                getDebugging().clear();
+                setDebugging(DEBUGGING_EDEFAULT);
                 return;
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 setEnviorment((Enviorment)null);
@@ -740,13 +786,13 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
             case ScriptingPackage.PLACEMENT__TEAMS:
                 return teams != null && !teams.isEmpty();
             case ScriptingPackage.PLACEMENT__BACKGROUND:
-                return background != null && !background.isEmpty();
+                return BACKGROUND_EDEFAULT == null ? background != null : !BACKGROUND_EDEFAULT.equals(background);
             case ScriptingPackage.PLACEMENT__IN_THEIR_FACE:
-                return inTheirFace != null && !inTheirFace.isEmpty();
+                return IN_THEIR_FACE_EDEFAULT == null ? inTheirFace != null : !IN_THEIR_FACE_EDEFAULT.equals(inTheirFace);
             case ScriptingPackage.PLACEMENT__SCRIPT:
                 return getScript() != null;
             case ScriptingPackage.PLACEMENT__DEBUGGING:
-                return debugging != null && !debugging.isEmpty();
+                return DEBUGGING_EDEFAULT == null ? debugging != null : !DEBUGGING_EDEFAULT.equals(debugging);
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 return enviorment != null;
         }

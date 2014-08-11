@@ -14,6 +14,11 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Placement</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A placement is a setting or scene.
+ * Here can a combat happen.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -57,6 +62,9 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The teams in the placement.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Teams</em>' reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Teams()
      * @model
@@ -65,36 +73,56 @@ public interface Placement extends Beschreibbar, TimeFrame {
     EList<Team> getTeams();
 
     /**
-     * Returns the value of the '<em><b>Background</b></em>' attribute list.
-     * The list contents are of type {@link java.lang.String}.
+     * Returns the value of the '<em><b>Background</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Background</em>' attribute list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Background</em>' attribute list.
+     * @return the value of the '<em>Background</em>' attribute.
+     * @see #setBackground(String)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Background()
      * @model
      * @generated
      */
-    EList<String> getBackground();
+    String getBackground();
 
     /**
-     * Returns the value of the '<em><b>In Their Face</b></em>' attribute list.
-     * The list contents are of type {@link java.lang.String}.
+     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Placement#getBackground <em>Background</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Background</em>' attribute.
+     * @see #getBackground()
+     * @generated
+     */
+    void setBackground(String value);
+
+    /**
+     * Returns the value of the '<em><b>In Their Face</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>In Their Face</em>' attribute list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>In Their Face</em>' attribute list.
+     * @return the value of the '<em>In Their Face</em>' attribute.
+     * @see #setInTheirFace(String)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_InTheirFace()
      * @model
      * @generated
      */
-    EList<String> getInTheirFace();
+    String getInTheirFace();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Placement#getInTheirFace <em>In Their Face</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>In Their Face</em>' attribute.
+     * @see #getInTheirFace()
+     * @generated
+     */
+    void setInTheirFace(String value);
 
     /**
      * Returns the value of the '<em><b>Script</b></em>' container reference.
@@ -125,20 +153,30 @@ public interface Placement extends Beschreibbar, TimeFrame {
     void setScript(Script value);
 
     /**
-     * Returns the value of the '<em><b>Debugging</b></em>' attribute list.
-     * The list contents are of type {@link java.lang.String}.
+     * Returns the value of the '<em><b>Debugging</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Debugging</em>' attribute list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Debugging</em>' attribute list.
+     * @return the value of the '<em>Debugging</em>' attribute.
+     * @see #setDebugging(String)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Debugging()
      * @model
      * @generated
      */
-    EList<String> getDebugging();
+    String getDebugging();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Debugging</em>' attribute.
+     * @see #getDebugging()
+     * @generated
+     */
+    void setDebugging(String value);
 
     /**
      * Returns the value of the '<em><b>Enviorment</b></em>' containment reference.

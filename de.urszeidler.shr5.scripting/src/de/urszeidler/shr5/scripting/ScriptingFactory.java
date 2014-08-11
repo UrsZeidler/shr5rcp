@@ -40,6 +40,15 @@ public interface ScriptingFactory extends EFactory {
     Placement createPlacement();
 
     /**
+     * Returns a new object of class '<em>Script History</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Script History</em>'.
+     * @generated
+     */
+    ScriptHistory createScriptHistory();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

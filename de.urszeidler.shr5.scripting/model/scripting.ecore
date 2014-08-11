@@ -2,33 +2,44 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scripting" nsURI="http://shr.scripting/1.0" nsPrefix="scripting">
   <eClassifiers xsi:type="ecore:EClass" name="Script" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The script is made of a set of placements.&#xA;It contains all needed to play an adventure."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="placements" upperBound="-1"
         eType="#//Placement" containment="true" eOpposite="#//Placement/script"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allTeams" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The teams of the complete script."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="management" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GamemasterManagement"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="commandStack" eType="ecore:EClass ../../de.urszeidler.shr5.gameplay.model/model/gameplay.ecore#//ExecutionStack"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Placement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="history" eType="#//ScriptHistory"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Placement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar #//TimeFrame">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A placement is a setting or scene.&#xA;Here can a combat happen."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextPlacements" upperBound="-1"
         eType="#//Placement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teams" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inTheirFace" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The teams in the placement."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inTheirFace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="script" eType="#//Script"
         eOpposite="#//Script/placements"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugging" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugging" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enviorment" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Enviorment"
         containment="true"/>
@@ -37,5 +48,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScriptHistory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Contains the current state."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commandStack" eType="ecore:EClass ../../de.urszeidler.shr5.gameplay.model/model/gameplay.ecore#//ExecutionStack"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentPlacement" eType="#//Placement"/>
   </eClassifiers>
 </ecore:EPackage>

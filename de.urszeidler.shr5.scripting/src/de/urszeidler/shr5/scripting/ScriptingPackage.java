@@ -132,22 +132,22 @@ public interface ScriptingPackage extends EPackage {
     int SCRIPT__MANAGEMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Command Stack</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCRIPT__COMMAND_STACK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
-
-    /**
      * The feature id for the '<em><b>Entry</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT__ENTRY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+    int SCRIPT__ENTRY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>History</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT__HISTORY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of structural features of the '<em>Script</em>' class.
@@ -250,7 +250,7 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__TEAMS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
-     * The feature id for the '<em><b>Background</b></em>' attribute list.
+     * The feature id for the '<em><b>Background</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -259,7 +259,7 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__BACKGROUND = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>In Their Face</b></em>' attribute list.
+     * The feature id for the '<em><b>In Their Face</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -277,7 +277,7 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__SCRIPT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
-     * The feature id for the '<em><b>Debugging</b></em>' attribute list.
+     * The feature id for the '<em><b>Debugging</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -370,6 +370,62 @@ public interface ScriptingPackage extends EPackage {
 
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl <em>Script History</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScriptHistory()
+     * @generated
+     */
+    int SCRIPT_HISTORY = 3;
+
+    /**
+     * The feature id for the '<em><b>Command Stack</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY__COMMAND_STACK = 0;
+
+    /**
+     * The feature id for the '<em><b>Current Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY__CURRENT_DATE = 1;
+
+    /**
+     * The feature id for the '<em><b>Current Placement</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY__CURRENT_PLACEMENT = 2;
+
+    /**
+     * The number of structural features of the '<em>Script History</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Script History</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY_OPERATION_COUNT = 0;
+
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Script <em>Script</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -424,17 +480,6 @@ public interface ScriptingPackage extends EPackage {
     EReference getScript_Management();
 
     /**
-     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Script#getCommandStack <em>Command Stack</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the containment reference '<em>Command Stack</em>'.
-     * @see de.urszeidler.shr5.scripting.Script#getCommandStack()
-     * @see #getScript()
-     * @generated
-     */
-    EReference getScript_CommandStack();
-
-    /**
      * Returns the meta object for the reference '{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -444,6 +489,17 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      */
     EReference getScript_Entry();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.Script#getHistory <em>History</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>History</em>'.
+     * @see de.urszeidler.shr5.scripting.Script#getHistory()
+     * @see #getScript()
+     * @generated
+     */
+    EReference getScript_History();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Placement <em>Placement</em>}'.
@@ -478,10 +534,10 @@ public interface ScriptingPackage extends EPackage {
     EReference getPlacement_Teams();
 
     /**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getBackground <em>Background</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Placement#getBackground <em>Background</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Background</em>'.
+     * @return the meta object for the attribute '<em>Background</em>'.
      * @see de.urszeidler.shr5.scripting.Placement#getBackground()
      * @see #getPlacement()
      * @generated
@@ -489,10 +545,10 @@ public interface ScriptingPackage extends EPackage {
     EAttribute getPlacement_Background();
 
     /**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getInTheirFace <em>In Their Face</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Placement#getInTheirFace <em>In Their Face</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>In Their Face</em>'.
+     * @return the meta object for the attribute '<em>In Their Face</em>'.
      * @see de.urszeidler.shr5.scripting.Placement#getInTheirFace()
      * @see #getPlacement()
      * @generated
@@ -511,10 +567,10 @@ public interface ScriptingPackage extends EPackage {
     EReference getPlacement_Script();
 
     /**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Debugging</em>'.
+     * @return the meta object for the attribute '<em>Debugging</em>'.
      * @see de.urszeidler.shr5.scripting.Placement#getDebugging()
      * @see #getPlacement()
      * @generated
@@ -574,6 +630,49 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      */
     EAttribute getTimeFrame_ActualDate();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.ScriptHistory <em>Script History</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Script History</em>'.
+     * @see de.urszeidler.shr5.scripting.ScriptHistory
+     * @generated
+     */
+    EClass getScriptHistory();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.shr5.scripting.ScriptHistory#getCommandStack <em>Command Stack</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Command Stack</em>'.
+     * @see de.urszeidler.shr5.scripting.ScriptHistory#getCommandStack()
+     * @see #getScriptHistory()
+     * @generated
+     */
+    EReference getScriptHistory_CommandStack();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentDate <em>Current Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Current Date</em>'.
+     * @see de.urszeidler.shr5.scripting.ScriptHistory#getCurrentDate()
+     * @see #getScriptHistory()
+     * @generated
+     */
+    EAttribute getScriptHistory_CurrentDate();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentPlacement <em>Current Placement</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Current Placement</em>'.
+     * @see de.urszeidler.shr5.scripting.ScriptHistory#getCurrentPlacement()
+     * @see #getScriptHistory()
+     * @generated
+     */
+    EReference getScriptHistory_CurrentPlacement();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -641,20 +740,20 @@ public interface ScriptingPackage extends EPackage {
         EReference SCRIPT__MANAGEMENT = eINSTANCE.getScript_Management();
 
         /**
-         * The meta object literal for the '<em><b>Command Stack</b></em>' containment reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCRIPT__COMMAND_STACK = eINSTANCE.getScript_CommandStack();
-
-        /**
          * The meta object literal for the '<em><b>Entry</b></em>' reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
         EReference SCRIPT__ENTRY = eINSTANCE.getScript_Entry();
+
+        /**
+         * The meta object literal for the '<em><b>History</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT__HISTORY = eINSTANCE.getScript_History();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.PlacementImpl <em>Placement</em>}' class.
@@ -683,7 +782,7 @@ public interface ScriptingPackage extends EPackage {
         EReference PLACEMENT__TEAMS = eINSTANCE.getPlacement_Teams();
 
         /**
-         * The meta object literal for the '<em><b>Background</b></em>' attribute list feature.
+         * The meta object literal for the '<em><b>Background</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
@@ -691,7 +790,7 @@ public interface ScriptingPackage extends EPackage {
         EAttribute PLACEMENT__BACKGROUND = eINSTANCE.getPlacement_Background();
 
         /**
-         * The meta object literal for the '<em><b>In Their Face</b></em>' attribute list feature.
+         * The meta object literal for the '<em><b>In Their Face</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
@@ -707,7 +806,7 @@ public interface ScriptingPackage extends EPackage {
         EReference PLACEMENT__SCRIPT = eINSTANCE.getPlacement_Script();
 
         /**
-         * The meta object literal for the '<em><b>Debugging</b></em>' attribute list feature.
+         * The meta object literal for the '<em><b>Debugging</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
@@ -755,6 +854,40 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EAttribute TIME_FRAME__ACTUAL_DATE = eINSTANCE.getTimeFrame_ActualDate();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl <em>Script History</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScriptHistory()
+         * @generated
+         */
+        EClass SCRIPT_HISTORY = eINSTANCE.getScriptHistory();
+
+        /**
+         * The meta object literal for the '<em><b>Command Stack</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT_HISTORY__COMMAND_STACK = eINSTANCE.getScriptHistory_CommandStack();
+
+        /**
+         * The meta object literal for the '<em><b>Current Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SCRIPT_HISTORY__CURRENT_DATE = eINSTANCE.getScriptHistory_CurrentDate();
+
+        /**
+         * The meta object literal for the '<em><b>Current Placement</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPT_HISTORY__CURRENT_PLACEMENT = eINSTANCE.getScriptHistory_CurrentPlacement();
 
     }
 

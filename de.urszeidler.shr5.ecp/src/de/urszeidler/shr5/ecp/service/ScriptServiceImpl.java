@@ -68,17 +68,17 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void executeCommand(Command command) {
-        if (script != null && script.getCommandStack() != null) {
+        if (script != null && script.getHistory() != null && script.getHistory().getCommandStack() != null) {
             if (placement != null) {
                 Date actualDate = placement.getActualDate();
                 if (actualDate != null && command.getDate() == null)
                     command.setDate(actualDate);
             }
-            if(scriptViewer!=null && scriptViewer.getCmdCallback()!=null)
+            if (scriptViewer != null && scriptViewer.getCmdCallback() != null)
                 command.setCmdCallback(scriptViewer.getCmdCallback());
 
-            script.getCommandStack().setCurrentCommand(command);
-            script.getCommandStack().redo();
+            script.getHistory().getCommandStack().setCurrentCommand(command);
+            script.getHistory().getCommandStack().redo();
         }
     }
 }

@@ -118,6 +118,29 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.shr5.scripting.ScriptHistory} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ScriptHistoryItemProvider scriptHistoryItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.shr5.scripting.ScriptHistory}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createScriptHistoryAdapter() {
+        if (scriptHistoryItemProvider == null) {
+            scriptHistoryItemProvider = new ScriptHistoryItemProvider(this);
+        }
+
+        return scriptHistoryItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -218,6 +241,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
     public void dispose() {
         if (scriptItemProvider != null) scriptItemProvider.dispose();
         if (placementItemProvider != null) placementItemProvider.dispose();
+        if (scriptHistoryItemProvider != null) scriptHistoryItemProvider.dispose();
     }
 
 }

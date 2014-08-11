@@ -34,6 +34,7 @@ import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptingFactory;
 
 /**
  * @author urs
@@ -135,18 +136,25 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     protected void openScript(Script eo) {
-        if (eo.getCommandStack() == null) {
-            eo.setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
-            eo.getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
-        }
-        Placement placement = eo.getEntry();
-        scriptService.setScript(eo);
-        scriptService.setPlacement(placement);
+        initalizeScript(eo);
         try {
             PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
             e.printStackTrace();
         }
+    }
+
+    protected void initalizeScript(Script eo) {
+        if(eo.getHistory()==null)
+            eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
+        
+        if (eo.getHistory().getCommandStack() == null) {
+            eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
+            eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
+        }
+        Placement placement = eo.getEntry();
+        scriptService.setScript(eo);
+        scriptService.setPlacement(placement);
     }
 
     private void openItem(Shell shell, String titel, String message, IProgressMonitor monitor) {

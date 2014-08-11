@@ -58,6 +58,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
         switch (eClass.getClassifierID()) {
             case ScriptingPackage.SCRIPT: return createScript();
             case ScriptingPackage.PLACEMENT: return createPlacement();
+            case ScriptingPackage.SCRIPT_HISTORY: return createScriptHistory();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -81,6 +82,16 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
     public Placement createPlacement() {
         PlacementImpl placement = new PlacementImpl();
         return placement;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ScriptHistory createScriptHistory() {
+        ScriptHistoryImpl scriptHistory = new ScriptHistoryImpl();
+        return scriptHistory;
     }
 
     /**

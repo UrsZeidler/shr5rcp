@@ -3,18 +3,19 @@
 package de.urszeidler.shr5.scripting;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-
-import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.runtime.Team;
-
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Script</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * The script is made of a set of placements.
+ * It contains all needed to play an adventure.
+ * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -23,8 +24,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getAllTeams <em>All Teams</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getPlayer <em>Player</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getManagement <em>Management</em>}</li>
- *   <li>{@link de.urszeidler.shr5.scripting.Script#getCommandStack <em>Command Stack</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.Script#getHistory <em>History</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,6 +61,9 @@ public interface Script extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The teams of the complete script.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>All Teams</em>' containment reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_AllTeams()
      * @model containment="true"
@@ -120,32 +124,6 @@ public interface Script extends Beschreibbar {
     void setManagement(GamemasterManagement value);
 
     /**
-     * Returns the value of the '<em><b>Command Stack</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Command Stack</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Command Stack</em>' containment reference.
-     * @see #setCommandStack(ExecutionStack)
-     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_CommandStack()
-     * @model containment="true"
-     * @generated
-     */
-    ExecutionStack getCommandStack();
-
-    /**
-     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Script#getCommandStack <em>Command Stack</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Command Stack</em>' containment reference.
-     * @see #getCommandStack()
-     * @generated
-     */
-    void setCommandStack(ExecutionStack value);
-
-    /**
      * Returns the value of the '<em><b>Entry</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -170,5 +148,31 @@ public interface Script extends Beschreibbar {
      * @generated
      */
     void setEntry(Placement value);
+
+    /**
+     * Returns the value of the '<em><b>History</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>History</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>History</em>' containment reference.
+     * @see #setHistory(ScriptHistory)
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_History()
+     * @model containment="true"
+     * @generated
+     */
+    ScriptHistory getHistory();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.shr5.scripting.Script#getHistory <em>History</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>History</em>' containment reference.
+     * @see #getHistory()
+     * @generated
+     */
+    void setHistory(ScriptHistory value);
 
 } // Script

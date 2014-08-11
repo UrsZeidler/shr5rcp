@@ -86,7 +86,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
-import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -198,10 +197,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private ScriptService scriptService;
 
-    private Script script;
-    private WritableValue selectedCharacter = new WritableValue();
+    //private Script script;
+    //private WritableValue selectedCharacter = new WritableValue();
     private ExecutionStack commandStack;
-    private ExecutionProtocol protocol1;
+   // private ExecutionProtocol protocol1;
     private WritableValue protocol = new WritableValue();
     private WritableList characters = new WritableList();
     private TableViewer treeViewer;
@@ -574,8 +573,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     e.printStackTrace();
                 }
 
-                placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
-                placement1.getScript().getCommandStack().redo();
+//                placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
+//                placement1.getScript().getCommandStack().redo();
+                scriptService.executeCommand(combatTurn);
                 scriptService.setCombatTurn(combatTurn);
             }
         };
@@ -710,8 +710,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void setScript(Script script) {
-        this.script = script;
-        commandStack = script.getCommandStack();
+        //this.script = script;
+        commandStack = script.getHistory().getCommandStack();
         protocol.setValue(commandStack.getProtocol());// = commandStack.getProtocol();
     }
 
