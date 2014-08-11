@@ -37,6 +37,11 @@ import de.urszeidler.shr5.scripting.ScriptingPackage.Literals;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.ExpandBar;
+import org.eclipse.swt.widgets.ExpandItem;
+import org.eclipse.nebula.widgets.gallery.Gallery;
+import org.eclipse.nebula.widgets.gallery.DefaultGalleryItemRenderer;
+import org.eclipse.nebula.widgets.gallery.DefaultGalleryGroupRenderer;
 
 public class PlacementPage extends AbstractShr5Page<Placement> {
     private Placement object;
@@ -128,7 +133,7 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
             composite_1.setLayout(twl_composite_1);
         }
         
-        Label lblStartDate = managedForm.getToolkit().createLabel(composite_1, "start Date", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite_1, "start Date", SWT.NONE);
         
         dateTime = new CDateTime(composite_1, CDT.CLOCK_24_HOUR | CDT.DROP_DOWN | CDT.DATE_SHORT | CDT.TIME_SHORT);
         managedForm.getToolkit().adapt(dateTime);
@@ -140,14 +145,19 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         managedForm.getToolkit().paintBordersFor(composite_5);
         composite_5.setLayout(new GridLayout(1, false));
         
-        Label lblEndDate = managedForm.getToolkit().createLabel(composite_1, "end Date", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite_1, "end Date", SWT.NONE);
         
         dateTime_1 = new CDateTime(composite_1, CDT.CLOCK_24_HOUR | CDT.DROP_DOWN | CDT.DATE_SHORT | CDT.TIME_SHORT);
         managedForm.getToolkit().adapt(dateTime_1);
         managedForm.getToolkit().paintBordersFor(dateTime_1);
         new Label(composite_1, SWT.NONE);
+        new Label(composite_1, SWT.NONE);
 
-        
+      Composite composite_6 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
+      composite_6.setLayout(new GridLayout(1, false));
+      composite_6.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 3));
+      managedForm.getToolkit().paintBordersFor(composite_6);
+       
         
         
         Composite composite_9 = formToolkit.createComposite(managedForm.getForm().getBody(), SWT.NONE);
@@ -231,10 +241,20 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
         
+//        Composite composite_6 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
+//        composite_6.setLayout(new GridLayout(4, false));
+//        composite_6.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 3));
+//        managedForm.getToolkit().paintBordersFor(composite_6);
+//        new Label(composite_1, SWT.NONE);
+//        new Label(composite_1, SWT.NONE);
+//        new Label(composite_1, SWT.NONE);
+
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
 
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, composite_5);
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__TEAMS, composite_5);
+        
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
