@@ -2,6 +2,7 @@ package de.urszeidler.shr5.runtime.ui.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
@@ -24,12 +25,16 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+
 import de.urszeidler.shr5.scripting.ScriptingPackage.Literals;
+
+import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.swt.widgets.Text;
 
@@ -40,7 +45,9 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
     private DataBindingContext m_bindingContext;
     private StyledText styledText_1;
     private StyledText styledText_2;
-    private Text txtNewText;
+    private StyledText txtNewText;
+    private CDateTime dateTime_1;
+    private CDateTime dateTime;
 
     /**
      * Create the form page.
@@ -101,6 +108,44 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         formToolkit.adapt(beschreibbarWidget);
         formToolkit.paintBordersFor(beschreibbarWidget);
+        
+        Composite composite = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
+        composite.setLayout(new FillLayout(SWT.HORIZONTAL));
+        composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(composite);
+        
+        Section sctnData = managedForm.getToolkit().createSection(composite, Section.TWISTIE | Section.TITLE_BAR);
+        managedForm.getToolkit().paintBordersFor(sctnData);
+        sctnData.setText("Data");
+        sctnData.setExpanded(true);
+        
+        Composite composite_1 = managedForm.getToolkit().createComposite(sctnData, SWT.NONE);
+        managedForm.getToolkit().paintBordersFor(composite_1);
+        sctnData.setClient(composite_1);
+        {
+            TableWrapLayout twl_composite_1 = new TableWrapLayout();
+            twl_composite_1.numColumns = 3;
+            composite_1.setLayout(twl_composite_1);
+        }
+        
+        Label lblStartDate = managedForm.getToolkit().createLabel(composite_1, "start Date", SWT.NONE);
+        
+        dateTime = new CDateTime(composite_1, CDT.CLOCK_24_HOUR | CDT.DROP_DOWN | CDT.DATE_SHORT | CDT.TIME_SHORT);
+        managedForm.getToolkit().adapt(dateTime);
+        managedForm.getToolkit().paintBordersFor(dateTime);
+        
+        Composite composite_5 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
+        composite_5.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL, 3, 1));
+        composite_5.setBounds(0, 0, 64, 64);
+        managedForm.getToolkit().paintBordersFor(composite_5);
+        composite_5.setLayout(new GridLayout(1, false));
+        
+        Label lblEndDate = managedForm.getToolkit().createLabel(composite_1, "end Date", SWT.NONE);
+        
+        dateTime_1 = new CDateTime(composite_1, CDT.CLOCK_24_HOUR | CDT.DROP_DOWN | CDT.DATE_SHORT | CDT.TIME_SHORT);
+        managedForm.getToolkit().adapt(dateTime_1);
+        managedForm.getToolkit().paintBordersFor(dateTime_1);
+        new Label(composite_1, SWT.NONE);
 
         
         
@@ -130,10 +175,15 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         sctnBackground.setClient(composite_2);
         composite_2.setLayout(new GridLayout(1, false));
         
-        txtNewText = managedForm.getToolkit().createText(composite_2, "New Text", SWT.WRAP | SWT.MULTI);
-        GridData gd_txtNewText = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
-        gd_txtNewText.heightHint = 71;
-        txtNewText.setLayoutData(gd_txtNewText);
+        txtNewText =  new StyledText(composite_2,  SWT.WRAP);
+        GridData gd_styledText_ = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+        gd_styledText_.minimumHeight = 80;
+        gd_styledText_.widthHint = 120;
+        txtNewText.setLayoutData(gd_styledText_);
+        txtNewText.setEditable(true);
+        txtNewText.setAlwaysShowScrollBars(false);
+        formToolkit.adapt(txtNewText);
+        formToolkit.paintBordersFor(txtNewText);
 
  
         // Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
@@ -149,12 +199,12 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         sctnInTheirFace.setClient(composite_3);
         composite_3.setLayout(new GridLayout(1, false));
 
-        styledText_1 = new StyledText(composite_3, SWT.READ_ONLY | SWT.WRAP);
+        styledText_1 = new StyledText(composite_3,  SWT.WRAP);
         GridData gd_styledText_1 = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
         gd_styledText_1.minimumHeight = 80;
         gd_styledText_1.widthHint = 120;
         styledText_1.setLayoutData(gd_styledText_1);
-        styledText_1.setEditable(false);
+        styledText_1.setEditable(true);
         styledText_1.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_1);
         formToolkit.paintBordersFor(styledText_1);
@@ -171,29 +221,23 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         sctnDebugging.setClient(composite_4);
         composite_4.setLayout(new GridLayout(1, false));
 
-        styledText_2 = new StyledText(composite_4, SWT.READ_ONLY | SWT.WRAP);
+        styledText_2 = new StyledText(composite_4,  SWT.WRAP);
         GridData gd_styledText_2 = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
         gd_styledText_2.minimumHeight = 80;
         gd_styledText_2.widthHint = 120;
         styledText_2.setLayoutData(gd_styledText_2);
-        styledText_2.setEditable(false);
+        styledText_2.setEditable(true);
         styledText_2.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         m_bindingContext = initDataBindings();
+        createFormBuilder(managedForm);
 
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, composite_5);
+
+        emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        managedForm.reflow(true);
     }
 
     @Override
@@ -203,9 +247,21 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
+        IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime);
+        IObservableValue currentChangeDateObserveValue = EMFEditObservables.observeValue(editingDomain,object,
+                ScriptingPackage.Literals.TIME_FRAME__START_DATE);
+        bindingContext.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, null, null);
+
+        //
+        IObservableValue observeLocationDatewidgetObserveWidget1 = new CDateTimeObservableValue(dateTime_1);
+        IObservableValue currentChangeDateObserveValue1 = EMFEditObservables.observeValue(editingDomain,object,
+                ScriptingPackage.Literals.TIME_FRAME__END_DATE);
+        bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
+
+        //
         IObservableValue observeTextStyledText_1ObserveWidget = WidgetProperties.text(SWT.Modify).observeDelayed(200, styledText_1);
         IObservableValue objectInTheirFaceObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.PLACEMENT__IN_THEIR_FACE);
-        bindingContext.bindValue(observeTextStyledText_1ObserveWidget, objectInTheirFaceObserveValue, null, new EMFUpdateValueStrategy());
+        bindingContext.bindValue(observeTextStyledText_1ObserveWidget, objectInTheirFaceObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         //
         IObservableValue observeTextStyledText_2ObserveWidget = WidgetProperties.text(SWT.Modify).observeDelayed(200, styledText_2);
         IObservableValue objectDebuggingObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.PLACEMENT__DEBUGGING);
