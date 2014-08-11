@@ -97,9 +97,9 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     @Override
     public void redo() {
         getProbe().clear();
-        mods=GameplayTools.getDefenceMod(getSubject());
+        mods = GameplayTools.getDefenceMod(getSubject());
         prepareRedo();
-        
+
         W6Dice w6Dice = new W6Dice();
 
         int dicePool = getSubject().getCharacter().getPersona().getAusweichen();
@@ -112,9 +112,9 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
-        
-        GameplayTools.inreaseDefenceMod(getSubject(),-1);
-        
+
+        GameplayTools.inreaseDefenceMod(getSubject(), -1);
+
         afterRedo();
     }
 

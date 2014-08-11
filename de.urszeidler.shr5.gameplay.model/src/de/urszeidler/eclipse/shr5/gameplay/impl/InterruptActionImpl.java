@@ -264,12 +264,12 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
         
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
         data.setEObject(getSubject());
-        data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
+        data.setEFeature(GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE);
         getSubject().addUniqueToList(data, getInterruptType());
         
         executeSubActions();
         setExecuted(true);
-        executing = false;
+        setExecuting(false);
     }
 
 } // InterruptActionImpl
