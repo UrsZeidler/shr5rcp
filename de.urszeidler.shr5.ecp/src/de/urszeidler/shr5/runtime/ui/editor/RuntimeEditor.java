@@ -22,6 +22,8 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShrEditingState;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
+import de.urszeidler.shr5.runtime.ui.editor.pages.ScriptPage;
+import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
 /**
@@ -67,7 +69,7 @@ public class RuntimeEditor extends BasicEditor<EObject> {
                 return null;
             }
             
-            
+           
         };
         
 //        RuntimeSwitch<Object> runtimeSwitchView = new RuntimeSwitch<Object>(){
@@ -75,10 +77,23 @@ public class RuntimeEditor extends BasicEditor<EObject> {
 //            
 //        };
 //        
-//        ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>();
+        ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>(){
+            @Override
+            public Object caseScript(Script object) {
+                try {
+                    addPage(new ScriptPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating SpeziesPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+        };
         
-        if(editingMode==ShrEditingState.CUSTOM)
+        if(editingMode==ShrEditingState.CUSTOM){
             runtimeSwitchEditor.doSwitch(theEObject);
+            scriptingSwitchView.doSwitch(theEObject);            
+        }
         
         try {
             addPage(new DefaultEmfFormsPage(RuntimeEditor.this, "Default_EMF_Form_Page", "default form", theEObject)); //$NON-NLS-1$

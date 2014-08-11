@@ -41,6 +41,8 @@ import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.runtime.ui.editor.RuntimeEditor;
+import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
 /**
  * @author urs
@@ -75,7 +77,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
         String name = eObject.eClass().getEPackage().getName();
         EObjectEditorInput eObjectEditorInput = new EObjectEditorInput(eObject, ecpProject.getEditingDomain());
         try {
-            if ("runtime".equals(name)) {
+            if ("runtime".equals(name)||"scripting".equals(name)) {
                 IEditorPart openEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, RuntimeEditor.id, true);
                 openEditor.setFocus();
             } else
@@ -87,13 +89,24 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
     @Override
     public int isApplicable(Object eObject) {
+        ScriptingSwitch<Integer> scriptingSwitchView = new ScriptingSwitch<Integer>(){
+            @Override
+            public Integer caseScript(Script object) {
+                return RET;
+            }
+        };
+        Integer doSwitch = scriptingSwitchView.doSwitch((EObject)eObject);
+        if (doSwitch != null)
+            return doSwitch;
+       
+        
         RuntimeSwitch<Integer> runtimeSwitch = new RuntimeSwitch<Integer>(){
             @Override
             public Integer caseRuntimeCharacter(RuntimeCharacter object) {
                 return RET;
             }
         };
-        Integer doSwitch = runtimeSwitch.doSwitch((EObject)eObject);
+        doSwitch = runtimeSwitch.doSwitch((EObject)eObject);
         if (doSwitch != null)
             return doSwitch;
         
