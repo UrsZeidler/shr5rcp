@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import org.eclipse.emf.common.util.EList;
 
+import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -133,6 +134,25 @@ public class GameplayTools {
         // int integerValue = subject.getIntegerValue(data);
         subject.increaseValue(data, value);
 
+    }
+
+    /**
+     * Clears all interrupt markers.
+     * @param subject
+     */
+    public static void clearInterruptActions(RuntimeCharacter subject) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE);
+
+        EList<?> listValue = subject.getListValue(data);
+        if(!listValue.isEmpty())
+            listValue.clear();
+    }
+
+    public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }
