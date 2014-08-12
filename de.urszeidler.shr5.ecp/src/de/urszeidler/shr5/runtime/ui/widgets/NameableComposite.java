@@ -120,12 +120,10 @@ public abstract class NameableComposite extends Composite implements IValueChang
         mainGroup.setText(grouname);
         mainGroup.setLayout(gridLayout);
         mainGroup.setLayoutData(gridData);
-        label_image = new Label(mainGroup, SWT.BORDER);
-        label_image.setText("");
+        label_image = toolkit.createLabel(mainGroup, "",SWT.BORDER);
         label_image.setLayoutData(gridData2);
-        label_name = new Label(mainGroup, SWT.NONE);
+        label_name = toolkit.createLabel(mainGroup,"", SWT.NONE);
         label_name.setAlignment(SWT.LEFT);
-        label_name.setText("");
         label_name.setLayoutData(gridData3);
 
         actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);

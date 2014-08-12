@@ -74,7 +74,7 @@ public class StateMonitorWidget extends Composite {
             stateWidget.setLayoutData(gridData);
             stateMonitors.add(stateWidget);
             if (i % 3 == 0) {
-                Label label = new Label(composite_state, style);
+                Label label = toolkit.createLabel(composite_state,"", style);
                 label.setText(""+((i/3))*-1);
             }
         }
