@@ -4,11 +4,14 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.List;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -166,6 +169,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         
         W6Dice w6Dice = new W6Dice();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
+        //ShadowrunTools.fertigkeitDicePoolValue(personaFertigkeit, persona);
         EAttribute attribut = getSkill().getFertigkeit().getAttribut();
         Integer att = (Integer)persona.eGet(attribut);
 

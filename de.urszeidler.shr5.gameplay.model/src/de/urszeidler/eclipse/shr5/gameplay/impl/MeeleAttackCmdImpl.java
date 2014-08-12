@@ -14,6 +14,7 @@ import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools.DamageCode;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
@@ -179,11 +180,13 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     public void redo() {
         prepareRedo();
         
+        AbstraktPersona persona = getSubject().getCharacter().getPersona();
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
-        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, getSubject().getCharacter().getPersona());
+        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
         setSkill(personaFertigkeit);
 
         setLimit(getWeapon().getPraezision());
+        mods = mods + GameplayTools.getWoundMod(getSubject());
 
         if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
@@ -192,7 +195,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         getProbe().clear();
  
         W6Dice w6Dice = new W6Dice();
-        AbstraktPersona persona = getSubject().getCharacter().getPersona();
+        
         EAttribute attribut = getSkill().getFertigkeit().getAttribut();
         Integer att = (Integer)persona.eGet(attribut);
 

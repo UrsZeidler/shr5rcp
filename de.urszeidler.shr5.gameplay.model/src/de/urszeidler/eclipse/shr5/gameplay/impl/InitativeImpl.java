@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.gameplay.dice.IniDice;
 
 import java.lang.reflect.InvocationTargetException;
@@ -206,7 +207,8 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
 
         IniDice iniDice = new IniDice();
         AbstraktPersona persona = subject.getCharacter().getPersona();
-        ini = iniDice.ini(persona.getInitative(), persona.getInitativWuerfel());
+        int initative = persona.getInitative() + GameplayTools.getWoundMod(getSubject());
+        ini = iniDice.ini(initative, persona.getInitativWuerfel());
         executed = true;
     }
 

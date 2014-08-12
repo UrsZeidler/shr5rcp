@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
@@ -166,12 +167,12 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
         getProbe().clear();
         prepareRedo();
 
+        mods = mods + GameplayTools.getWoundMod(getSubject());
+        if (isSetCmdCallback()&& getCmdCallback() != null)
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,GameplayPackage.Literals.SUCCES_TEST_CMD__DICE_POOL);
+
 
         W6Dice w6Dice = new W6Dice();
-        if (isSetCmdCallback()&& getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
-
         int dice = dicePool + mods;
         // AbstaktPersona persona = subject.getPersona();
         List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
