@@ -451,6 +451,31 @@ public class ShadowrunTools {
         return -1;
     }
 
+//    /**
+//     * Returns the dicepool for the fertigkeit.
+//     * 
+//     * @param fertigkeit
+//     * @param persona
+//     * @return
+//     */
+//    public static Integer fertigkeitDicePool(PersonaFertigkeit personaFertigkeit, AbstraktPersona persona) {
+//        if (personaFertigkeit == null || persona == null)
+//            return -1;
+//
+//        Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
+//        if (fertigkeit != null && fertigkeit.getAttribut() != null) {
+//            Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
+//            Integer fertigkeitValue = personaFertigkeit.getStufe();
+//            if (fertigkeitValue == 0)
+//                return value - 1;
+//
+//            value = value + fertigkeitValue;
+//            return value;
+//        }
+//
+//        return -1;
+//    }
+
     /**
      * Returns the stufe or -1.
      * 
