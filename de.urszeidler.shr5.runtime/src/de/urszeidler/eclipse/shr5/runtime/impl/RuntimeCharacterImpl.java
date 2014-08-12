@@ -202,9 +202,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         
         KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
 
-        if(physicalDamage>persona.getZustandKoerperlichMax())
+        if(physicalDamage>=persona.getZustandKoerperlichMax())
             setZustand(Zustand.STERBEND);
-        if(physicalDamage>persona.getZustandKoerperlichMax()+persona.getZustandGrenze())
+        if(physicalDamage>=persona.getZustandKoerperlichMax()+persona.getZustandGrenze())
             setZustand(Zustand.TOT); 
         
         if (eNotificationRequired())
