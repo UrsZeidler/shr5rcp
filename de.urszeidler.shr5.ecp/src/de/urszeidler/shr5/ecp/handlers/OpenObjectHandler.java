@@ -96,7 +96,10 @@ public class OpenObjectHandler extends AbstractHandler {
                     openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
                     break;
                 case 5:
-                    openScript(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
+                    openScript(shell, "Open script for playing", "!", monitor,true);
+                    break;
+                case 6:
+                    openScript(shell, "Open script for editing", "!", monitor,false);
                     break;
 
                 default:
@@ -108,7 +111,7 @@ public class OpenObjectHandler extends AbstractHandler {
         }
     }
 
-    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor) {
+    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor,boolean start) {
         monitor.beginTask("collection scripts ...", 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
@@ -129,30 +132,39 @@ public class OpenObjectHandler extends AbstractHandler {
             Object[] result = dialog.getResult();
             if (result.length > 0) {
                 Script eo = (Script)result[0];
-                openScript(eo);
+                if(start)
+                    startScript(eo,shell);
+                else
+                    openOneObject(shell, filteredObject, titel, message);
 
             }
         }
     }
 
-    protected void openScript(Script eo) {
+    protected void startScript(Script eo, Shell shell) {
         try {
             PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
             e.printStackTrace();
         }
-        initalizeScript(eo);
+        initalizeScript(eo, shell);
     }
 
-    protected void initalizeScript(Script eo) {
-        if(eo.getHistory()==null)
-            eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
-        
-        if (eo.getHistory().getCommandStack() == null) {
-            eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
-            eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
-        }
+    protected void initalizeScript(Script eo, Shell shell) {
         Placement placement = eo.getEntry();
+        if (eo.getHistory() == null) {
+            eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
+
+            if (eo.getHistory().getCommandStack() == null) {
+                eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
+                eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
+            }
+//
+//            FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
+//                    RuntimePackage.Literals.TEAM__MEMBERS, "Select combatans", choiceOfValues);
+        }else
+            placement = eo.getHistory().getCurrentPlacement();
+        
         scriptService.setScript(eo);
         scriptService.setPlacement(placement);
     }
