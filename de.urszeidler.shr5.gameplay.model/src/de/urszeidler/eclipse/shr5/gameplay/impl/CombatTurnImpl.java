@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
 
@@ -470,6 +471,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         setCurrentTurn(null);
 
         for (RuntimeCharacter abstractNaturalPerson : combatants) {
+            GameplayTools.clearInterruptActions(abstractNaturalPerson);
             if (abstractNaturalPerson.getZustand() == Zustand.OK) {
                 Initative initative = GameplayFactory.eINSTANCE.createInitative();
                 initative.setSubject(abstractNaturalPerson);
