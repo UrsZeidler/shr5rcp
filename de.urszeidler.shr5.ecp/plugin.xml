@@ -339,6 +339,15 @@
                      value="5">
                </parameter>
             </command>
+           <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                  label="open script"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="6">
+               </parameter>
+            </command>
          </menu>
       </menuContribution>
 

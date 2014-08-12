@@ -57,6 +57,8 @@ public abstract class NameableComposite extends Composite implements IValueChang
 
     private GridLayout gridLayout1;
 
+    private Image background;
+
 
     public NameableComposite(Composite parent, int style, String groupName) {
         super(parent, style);
@@ -69,6 +71,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         addDisposeListener(new DisposeListener() {
             public void widgetDisposed(DisposeEvent e) {
                 toolkit.dispose();
+               
             }
         });
         toolkit.adapt(this);
@@ -240,12 +243,16 @@ public abstract class NameableComposite extends Composite implements IValueChang
 
     public void setActiv(boolean active) {
         if (active) {
-            gridLayout1.marginTop = 10;
-            gridLayout1.marginBottom = 15;
+            gridLayout1.marginTop = 8;
+            gridLayout1.marginBottom = 8;
+            gridLayout1.marginRight = 4;
+            gridLayout1.marginLeft = 4;
             this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-bck.png"));
         } else {
             gridLayout1.marginTop = 0;
-            gridLayout1.marginBottom = 5;
+            gridLayout1.marginBottom = 0;
+            gridLayout1.marginRight = 0;
+            gridLayout1.marginLeft = 0;
             this.setBackgroundImage(null);
         }
     }

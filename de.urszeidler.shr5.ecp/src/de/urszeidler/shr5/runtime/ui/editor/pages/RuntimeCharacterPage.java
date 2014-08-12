@@ -12,6 +12,11 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -34,17 +39,26 @@ import org.eclipse.ui.forms.widgets.TableWrapLayout;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage.Literals;
+import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
+
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.ui.forms.widgets.FormText;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.layout.TreeColumnLayout;
 
 /**
  * @author urs
@@ -58,7 +72,10 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private Label lblImage;
     private StateMonitorWidget stateMonitorWidgetPhysical;
     private StateMonitorWidget stateMonitorWidgetMental;
-
+    private AdapterFactoryContentProvider actionListContentProvider;
+    private ComposedAdapterFactory adapterFactory;
+    private AdapterFactoryItemDelegator itemDelegator;
+    private FormText formText;
     /**
      * Create the form page.
      * 
@@ -89,6 +106,17 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
      */
     @Override
     protected void createFormContent(IManagedForm managedForm) {
+        adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+        adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
+        adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
+        adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
+        // adapterFactory.addAdapterFactory(new ExtendedShadowrunAdapterFactory());
+        adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
+        adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+        itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
+        actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
+        
+        
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
         Composite body = form.getBody();
@@ -128,7 +156,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().paintBordersFor(composite_3);
 
         Composite monitor = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        monitor.setLayout(new GridLayout(2, false));
+        monitor.setLayout(new GridLayout(3, false));
         monitor.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().adapt(monitor);
         managedForm.getToolkit().paintBordersFor(monitor);
@@ -158,6 +186,14 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
             stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
         }
+        
+        Group grpState = new Group(monitor, SWT.NONE);
+        grpState.setLayout(new GridLayout(1, false));
+        grpState.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        grpState.setText("State");
+        managedForm.getToolkit().adapt(grpState);
+        managedForm.getToolkit().paintBordersFor(grpState);
+
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
@@ -169,8 +205,23 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND, composite_3);
         // emfFormBuilder.addSeperatorEntry(composite_3);
-        emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, monitor);
+        emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, grpState);
+        
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        
+        formText = managedForm.getToolkit().createFormText(managedForm.getForm().getBody(), false);
+        managedForm.getToolkit().paintBordersFor(formText);
+        formText.setText("New FormText", false, false);
+        
+        Composite composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        TableWrapData twd_composite_2 = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 5, 1);
+        twd_composite_2.heightHint = 142;
+        composite_2.setLayoutData(twd_composite_2);
+        managedForm.getToolkit().adapt(composite_2);
+        managedForm.getToolkit().paintBordersFor(composite_2);
+        composite_2.setLayout(new GridLayout(1, false));
+        
+         
 
         managedForm.reflow(true);
     }
