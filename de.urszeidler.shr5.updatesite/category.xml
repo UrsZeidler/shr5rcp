@@ -3,9 +3,6 @@
    <feature url="features/de.urszeidler.shr5.feature_0.1.9.qualifier.jar" id="de.urszeidler.shr5.feature" version="0.1.9.qualifier">
       <category name="shr5-all"/>
    </feature>
-   <feature url="features/de.urszeidler.shr5.product.feature_0.1.9.qualifier.jar" id="de.urszeidler.shr5.product.feature" version="0.1.9.qualifier">
-      <category name="new_category_1"/>
-   </feature>
    <bundle id="de.urszeidler.shr5.acceleo" version="0.1.9.qualifier">
       <category name="new_category_3"/>
    </bundle>
@@ -64,6 +61,5 @@
       <category name="new_category_3"/>
    </bundle>
    <category-def name="shr5-all" label="shr5-all"/>
-   <category-def name="new_category_1" label="New Category 1"/>
    <category-def name="new_category_3" label="New Category 3"/>
 </site>
