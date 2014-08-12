@@ -1379,7 +1379,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(succesTestEClass, SuccesTest.class, "SuccesTest", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSuccesTest_Thresholds(), ecorePackage.getEInt(), "thresholds", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSuccesTest_NetHits(), ecorePackage.getEInt(), "netHits", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSuccesTest_NetHits(), ecorePackage.getEInt(), "netHits", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(extendetSkillTestCmdEClass, ExtendetSkillTestCmd.class, "ExtendetSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getExtendetSkillTestCmd_StartDate(), theShr5Package.getShrDate(), "startDate", null, 1, 1, ExtendetSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

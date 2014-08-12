@@ -331,6 +331,18 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setNetHits(int newNetHits) {
+        int oldNetHits = netHits;
+        netHits = newNetHits;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__NET_HITS, oldNetHits, netHits));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getMods() {
         return mods;
     }
@@ -393,6 +405,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds((Integer)newValue);
                 return;
+            case GameplayPackage.PROBE_COMMAND__NET_HITS:
+                setNetHits((Integer)newValue);
+                return;
             case GameplayPackage.PROBE_COMMAND__MODS:
                 setMods((Integer)newValue);
                 return;
@@ -419,6 +434,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds(THRESHOLDS_EDEFAULT);
+                return;
+            case GameplayPackage.PROBE_COMMAND__NET_HITS:
+                setNetHits(NET_HITS_EDEFAULT);
                 return;
             case GameplayPackage.PROBE_COMMAND__MODS:
                 setMods(MODS_EDEFAULT);

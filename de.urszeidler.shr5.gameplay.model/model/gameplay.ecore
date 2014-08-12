@@ -138,8 +138,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTest" abstract="true" interface="true"
       eSuperTypes="#//Probe">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="thresholds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtendetSkillTestCmd" eSuperTypes="#//SkillTestCmd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="1"

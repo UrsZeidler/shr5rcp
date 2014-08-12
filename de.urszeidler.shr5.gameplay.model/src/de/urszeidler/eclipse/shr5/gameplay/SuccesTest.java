@@ -57,10 +57,21 @@ public interface SuccesTest extends Probe {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Net Hits</em>' attribute.
+     * @see #setNetHits(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTest_NetHits()
-     * @model changeable="false"
+     * @model
      * @generated
      */
     int getNetHits();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getNetHits <em>Net Hits</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Net Hits</em>' attribute.
+     * @see #getNetHits()
+     * @generated
+     */
+    void setNetHits(int value);
 
 } // SuccesTest
