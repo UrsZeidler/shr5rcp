@@ -136,12 +136,12 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     protected void openScript(Script eo) {
-        initalizeScript(eo);
         try {
             PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
             e.printStackTrace();
         }
+        initalizeScript(eo);
     }
 
     protected void initalizeScript(Script eo) {
