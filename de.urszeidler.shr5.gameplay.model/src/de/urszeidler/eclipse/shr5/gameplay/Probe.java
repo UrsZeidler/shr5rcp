@@ -87,11 +87,22 @@ public interface Probe extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Glitches</em>' attribute.
+     * @see #setGlitches(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_Glitches()
-     * @model required="true" changeable="false"
+     * @model required="true"
      * @generated
      */
     int getGlitches();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getGlitches <em>Glitches</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Glitches</em>' attribute.
+     * @see #getGlitches()
+     * @generated
+     */
+    void setGlitches(int value);
 
     /**
      * Returns the value of the '<em><b>Limit</b></em>' attribute.

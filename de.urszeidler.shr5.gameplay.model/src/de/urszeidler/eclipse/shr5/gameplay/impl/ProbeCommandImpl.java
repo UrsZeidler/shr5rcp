@@ -243,6 +243,18 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setGlitches(int newGlitches) {
+        int oldGlitches = glitches;
+        glitches = newGlitches;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__GLITCHES, oldGlitches, glitches));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getLimit() {
         return limit;
     }
@@ -372,6 +384,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
             case GameplayPackage.PROBE_COMMAND__SUCCESSES:
                 setSuccesses((Integer)newValue);
                 return;
+            case GameplayPackage.PROBE_COMMAND__GLITCHES:
+                setGlitches((Integer)newValue);
+                return;
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 setLimit((Integer)newValue);
                 return;
@@ -395,6 +410,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         switch (featureID) {
             case GameplayPackage.PROBE_COMMAND__SUCCESSES:
                 setSuccesses(SUCCESSES_EDEFAULT);
+                return;
+            case GameplayPackage.PROBE_COMMAND__GLITCHES:
+                setGlitches(GLITCHES_EDEFAULT);
                 return;
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 unsetLimit();

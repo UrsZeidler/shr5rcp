@@ -23,7 +23,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider implements IEditingDomainItemProvider,
@@ -32,7 +31,6 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MeeleAttackCmdItemProvider(AdapterFactory adapterFactory) {
@@ -43,7 +41,6 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -60,21 +57,28 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
      * This adds a property descriptor for the Weapon feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addWeaponPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_MeeleAttackCmd_weapon_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_MeeleAttackCmd_weapon_feature", "_UI_MeeleAttackCmd_type"),
-                GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MeeleAttackCmd_weapon_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MeeleAttackCmd_weapon_feature", "_UI_MeeleAttackCmd_type"),
+                 GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
      * This returns MeeleAttackCmd.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -122,7 +126,6 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -136,7 +139,6 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -6,8 +6,6 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-
-import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
@@ -16,13 +14,11 @@ import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
