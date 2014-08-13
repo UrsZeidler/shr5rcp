@@ -58,7 +58,7 @@ public class HandComposite extends NameableComposite {
     protected void updateToolbar() {
 
         ToolItem toolItem = new ToolItem(actionBar, SWT.NONE);
-        toolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
+        toolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
         toolItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
