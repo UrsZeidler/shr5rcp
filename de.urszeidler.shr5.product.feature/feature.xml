@@ -116,13 +116,11 @@
 
    <includes
          id="de.urszeidler.shr5.ecp.feature"
-         version="0.0.0"
-         optional="true"/>
+         version="0.0.0"/>
 
    <includes
          id="de.urszeidler.shr5.localization.feature"
-         version="0.0.0"
-         optional="true"/>
+         version="0.0.0"/>
 
    <includes
          id="org.eclipse.equinox.p2.user.ui"
@@ -139,8 +137,7 @@
 
    <includes
          id="de.urszeidler.shr5.feature"
-         version="0.0.0"
-         optional="true"/>
+         version="0.0.0"/>
 
    <plugin
          id="javax.servlet"
