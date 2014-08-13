@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter} object.
@@ -314,10 +315,20 @@ public class RuntimeCharacterItemProvider
      * This returns RuntimeCharacter.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        RuntimeCharacter character = (RuntimeCharacter)object;
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        if (factory != null && character.getCharacter() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(character.getCharacter(),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                return labelprovider.getImage(character.getCharacter());
+        }
+
+        
         return overlayImage(object, getResourceLocator().getImage("full/obj16/RuntimeCharacter"));
     }
 

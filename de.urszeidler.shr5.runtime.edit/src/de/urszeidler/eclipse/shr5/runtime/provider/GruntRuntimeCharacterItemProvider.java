@@ -4,7 +4,9 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -63,10 +65,21 @@ public class GruntRuntimeCharacterItemProvider
      * This returns GruntRuntimeCharacter.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        
+        GruntRuntimeCharacter character = (GruntRuntimeCharacter)object;
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        if (factory != null && character.getCharacter() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(character.getCharacter(),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                return labelprovider.getImage(character.getCharacter());
+        }
+
+        
         return overlayImage(object, getResourceLocator().getImage("full/obj16/GruntRuntimeCharacter"));
     }
 
