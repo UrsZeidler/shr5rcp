@@ -29,6 +29,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -51,14 +52,8 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
-import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
-
-import org.eclipse.swt.widgets.Tree;
-import org.eclipse.ui.forms.widgets.FormText;
-import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.layout.TreeColumnLayout;
 
 /**
  * @author urs
@@ -75,7 +70,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private AdapterFactoryContentProvider actionListContentProvider;
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryItemDelegator itemDelegator;
-    private FormText formText;
+    private Text formText;
     /**
      * Create the form page.
      * 
@@ -194,6 +189,25 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().adapt(grpState);
         managedForm.getToolkit().paintBordersFor(grpState);
 
+        
+        formText = managedForm.getToolkit().createText(managedForm.getForm().getBody(), "",SWT.MULTI);
+        formText.setEditable(false);
+        TableWrapData twd_formText = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 5, 1);
+        twd_formText.heightHint = 74;
+        formText.setLayoutData(twd_formText);
+
+        
+        Composite composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        TableWrapData twd_composite_2 = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 1, 1);
+        twd_composite_2.heightHint = 142;
+        composite_2.setLayoutData(twd_composite_2);
+        managedForm.getToolkit().adapt(composite_2);
+        managedForm.getToolkit().paintBordersFor(composite_2);
+        composite_2.setLayout(new GridLayout(1, false));
+        
+
+        
+        
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
@@ -208,20 +222,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, grpState);
         
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        
-        formText = managedForm.getToolkit().createFormText(managedForm.getForm().getBody(), false);
-        managedForm.getToolkit().paintBordersFor(formText);
-        formText.setText("New FormText", false, false);
-        
-        Composite composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        TableWrapData twd_composite_2 = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 5, 1);
-        twd_composite_2.heightHint = 142;
-        composite_2.setLayoutData(twd_composite_2);
-        managedForm.getToolkit().adapt(composite_2);
-        managedForm.getToolkit().paintBordersFor(composite_2);
-        composite_2.setLayout(new GridLayout(1, false));
-        
-         
+           
 
         managedForm.reflow(true);
     }
@@ -242,6 +243,19 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         bindingContext.bindValue(observeTextLblNameObserveWidget, objectNameObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
                 new EMFUpdateValueStrategy());
         //
+        IObservableValue observeTextObserveWidget = WidgetProperties.text().observe(formText);
+        IObservableValue objectExtendetObserveValue = EMFEditProperties.value(
+                editingDomain,
+                FeaturePath.fromList(Literals.EXTENDET_DATA_AWARE__EXTENDET_DATA)).observe(object);
+        bindingContext.bindValue(observeTextObserveWidget, objectExtendetObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
+                new EMFUpdateValueStrategy(){
+            @Override
+            public Object convert(Object value) {
+                return value.toString();
+                //return super.convert(value);
+            }
+            
+        });
 
         //
 
