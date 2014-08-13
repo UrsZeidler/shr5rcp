@@ -13,8 +13,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
@@ -38,7 +36,6 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
-import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
@@ -57,6 +54,8 @@ import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
+import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
@@ -118,7 +117,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  * 
  * @author urs
  */
-public class ShadowrunEditor extends BasicEditor<EObject> {
+public class ShadowrunEditor extends AbstractShr5Editor {
     private static final String EMPTY = ""; //$NON-NLS-1$
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
@@ -250,48 +249,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             return defaultCreationDialog(e, object);
         }
 
-        private EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
-
-            Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(object, e.getFeature(), editingDomain);// provideNewClassTypes(object,
-                                                                                                                                    // e.getFeature());
-            if (filteredEClasses.size() == 1) {
-                EClass eClass = filteredEClasses.iterator().next();
-                return eClass.getEPackage().getEFactoryInstance().create(eClass);
-            }
-
-            OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
-                    Messages.ShadowrunEditor_dlg_select_type, Messages.ShadowrunEditor_dlg_select_persona_type);
-            dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-            int open = dialog.open();
-            if (open == Dialog.OK) {
-                Object[] result = dialog.getResult();
-                if (result.length > 0) {
-                    EClass eClass = (EClass)result[0];
-                    return eClass.getEPackage().getEFactoryInstance().create(eClass);
-                }
-            }
-
-            return null;
-        }
     };
-
-    @Override
-    protected void initAdatpterFactory() {
-        adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
-        adapterFactory.insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
-        basicContentProvider = new AdapterFactoryContentProvider(adapterFactory);
-        itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
-        labelProvider = new AdapterFactoryLabelProvider(adapterFactory);
-    }
-
-    @Override
-    protected void logError(String message, Exception exception) {
-        Activator.logError(message, exception);
-    }
-
-    @Override
-    protected void setInputObject(EObject eobject) {
-    }
 
     @Override
     protected void addPages() {
@@ -709,101 +667,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         } catch (PartInitException e) {
             logError("error creating DefaultEmfFormsPage", e);//$NON-NLS-1$
         }
-    }
-
-    @Override
-    public void doSaveAs() {
-    }
-
-    @Override
-    public boolean isSaveAsAllowed() {
-        return false;
-    }
-
-    public AdapterFactoryLabelProvider getLabelProvider() {
-        return labelProvider;
-    }
-
-    @Override
-    public boolean isSaveOnCloseNeeded() {
-        return false;
-    }
-
-    /**
-     * This is for implementing {@link IEditorPart} and simply tests the command
-     * stack.
-     */
-    @Override
-    public boolean isDirty() {
-        return false;
-        // if (getEditingDomain() == null)
-        // return false;
-        //
-        // return ((BasicCommandStack)
-        // getEditingDomain().getCommandStack()).isSaveNeeded();
-    }
-
-    @Override
-    public TabbedPropertySheetPage getTabbedPropertySheetPage() {
-        return null;
-    }
-
-    @Override
-    public String getContributorId() {
-        return null;
-    }
-
-    /**
-     * @param object_ref
-     * @param orgObject
-     * @return
-     */
-    private List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
-        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(getEObject(), object_ref.getEType());
-        ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
-
-        FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + labelProvider.getText(object_ref), new ArrayList<EObject>(collection));
-
-        int result = dialog.open();
-        if (result == Window.OK) {
-            EList<?> list = dialog.getResult();
-            List<EObject> objectList = new ArrayList<EObject>();
-            for (Object object : list) {
-                if (object instanceof EObject) {
-                    EObject eo = (EObject)object;
-                    EObject copy = copyWithParentId(eo);
-                    objectList.add(copy);
-                }
-            }
-
-            return objectList;
-        }
-        return null;
-    }
-
-    /**
-     * Creates a copy of the eobject, when it is an {@link Identifiable} the parent id will be set to the id of the org object when the org object has
-     * no parentId set. So the copied object has the org id as parentId or the parentId.
-     * 
-     * @param eo the org {@link EObject}
-     * @return the copy
-     */
-    private EObject copyWithParentId(EObject eo) {
-        EObject copy = EcoreUtil.copy(eo);
-        if (eo.eResource() instanceof XMLResource) {
-            XMLResource xmlRes = (XMLResource)eo.eResource();
-            String id = xmlRes.getID(eo);
-            if (copy instanceof Identifiable) {
-                String parentId = ((Identifiable)eo).getParentId();
-                if (parentId != null && !parentId.isEmpty())
-                    id = parentId;
-
-                Identifiable iden = (Identifiable)copy;
-                iden.setParentId(id);
-            }
-        }
-        return copy;
     }
 
 }
