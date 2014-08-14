@@ -107,7 +107,7 @@ public class SkillTestCmdTest extends ProbeCommandTest {
 
         getFixture().setThresholds(0);
          
-        getFixture().setSkill(personaFertigkeit);
+        getFixture().setSkill(fertigkeit);
         getFixture().redo();
         assertTrue(getFixture().isExecuted());
        

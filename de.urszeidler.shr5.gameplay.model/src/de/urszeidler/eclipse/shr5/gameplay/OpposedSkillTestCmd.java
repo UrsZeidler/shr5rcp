@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
@@ -59,12 +59,12 @@ public interface OpposedSkillTestCmd extends SkillTestCmd {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Object Skill</em>' reference.
-     * @see #setObjectSkill(PersonaFertigkeit)
+     * @see #setObjectSkill(Fertigkeit)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getOpposedSkillTestCmd_ObjectSkill()
      * @model
      * @generated
      */
-    PersonaFertigkeit getObjectSkill();
+    Fertigkeit getObjectSkill();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd#getObjectSkill <em>Object Skill</em>}' reference.
@@ -74,6 +74,6 @@ public interface OpposedSkillTestCmd extends SkillTestCmd {
      * @see #getObjectSkill()
      * @generated
      */
-    void setObjectSkill(PersonaFertigkeit value);
+    void setObjectSkill(Fertigkeit value);
 
 } // OpposedSkillTestCmd

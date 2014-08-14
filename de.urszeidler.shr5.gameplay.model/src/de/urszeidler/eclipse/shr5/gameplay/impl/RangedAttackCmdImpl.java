@@ -294,9 +294,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         prepareRedo();
 
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
-        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, getSubject().getCharacter().getPersona());
-        setSkill(personaFertigkeit);
-
+        setSkill(fertigkeit);
         setLimit(getWeapon().getPraezision());
         
         mods = mods + GameplayTools.getRangeMod(getSubject(),getWeapon(),getRange());
@@ -304,18 +302,11 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
 
         if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
-
-        
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);        
 
         W6Dice w6Dice = new W6Dice();
-        AbstraktPersona persona = getSubject().getCharacter().getPersona();
-        EAttribute attribut = getSkill().getFertigkeit().getAttribut();
-        Integer att = (Integer)persona.eGet(attribut);
-
-        int dice = getSkill().getStufe() + att + mods;
-        // AbstaktPersona persona = subject.getPersona();
-        List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
+        int dice = GameplayTools.getSkillDicePool(getSkill(),getSubject())+mods;//getSkill().getStufe() + att + mods;
+        List<Integer> probe = w6Dice.probe(dice);
         this.getProbe().addAll(probe);
         // if(isSetLimit())
         this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);

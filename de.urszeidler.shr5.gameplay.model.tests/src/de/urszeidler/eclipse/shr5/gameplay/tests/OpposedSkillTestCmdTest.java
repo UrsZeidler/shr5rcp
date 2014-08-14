@@ -111,9 +111,9 @@ public class OpposedSkillTestCmdTest extends SkillTestCmdTest {
         persona.getFertigkeiten().add(personaFertigkeit);
         object.getCharacter().getPersona().getFertigkeiten().add(personaFertigkeit);
 
-        getFixture().setSkill(personaFertigkeit);
+        getFixture().setSkill(fertigkeit);
         getFixture().setSubject(runtimeCharacter);
-        getFixture().setObjectSkill(personaFertigkeit);
+        getFixture().setObjectSkill(fertigkeit);
         getFixture().setLimit(3);
         //getFixture().setSkill(personaFertigkeit);
         //getFixture().set

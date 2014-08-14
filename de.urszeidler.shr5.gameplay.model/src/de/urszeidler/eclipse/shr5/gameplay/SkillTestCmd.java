@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +31,12 @@ public interface SkillTestCmd extends ProbeCommand {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Skill</em>' reference.
-     * @see #setSkill(PersonaFertigkeit)
+     * @see #setSkill(Fertigkeit)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSkillTestCmd_Skill()
      * @model required="true"
      * @generated
      */
-    PersonaFertigkeit getSkill();
+    Fertigkeit getSkill();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd#getSkill <em>Skill</em>}' reference.
@@ -46,6 +46,6 @@ public interface SkillTestCmd extends ProbeCommand {
      * @see #getSkill()
      * @generated
      */
-    void setSkill(PersonaFertigkeit value);
+    void setSkill(Fertigkeit value);
 
 } // SkillTestCmd

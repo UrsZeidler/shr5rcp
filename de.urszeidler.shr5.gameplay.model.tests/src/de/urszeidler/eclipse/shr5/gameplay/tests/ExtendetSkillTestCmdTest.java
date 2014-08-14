@@ -120,7 +120,7 @@ public class ExtendetSkillTestCmdTest extends SkillTestCmdTest {
         getFixture().setThresholds(10);
         getFixture().setLimit(2);
         getFixture().setIntervall(intervall);
-        getFixture().setSkill(personaFertigkeit);
+        getFixture().setSkill(fertigkeit);
         getFixture().setDate(startDate);
         getFixture().redo();
         assertTrue(getFixture().isExecuted());

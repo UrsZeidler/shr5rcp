@@ -5,10 +5,13 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.List;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -18,12 +21,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools.DamageCode;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -169,10 +166,8 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     public void redo() {
         prepareRedo();
         
-        AbstraktPersona persona = getSubject().getCharacter().getPersona();
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
-        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
-        setSkill(personaFertigkeit);
+        setSkill(fertigkeit);
 
         setLimit(getWeapon().getPraezision());
         mods = mods + GameplayTools.getWoundMod(getSubject());
@@ -184,13 +179,9 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         getProbe().clear();
  
         W6Dice w6Dice = new W6Dice();
-        
-        EAttribute attribut = getSkill().getFertigkeit().getAttribut();
-        Integer att = (Integer)persona.eGet(attribut);
 
-        int dice = getSkill().getStufe() + att + mods;
-        // AbstaktPersona persona = subject.getPersona();
-        List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
+        int dice =  GameplayTools.getSkillDicePool(getSkill(),getSubject())+mods;//  getSkill().getStufe() + att + mods;
+        List<Integer> probe = w6Dice.probe(dice);
         this.getProbe().addAll(probe);
         // if(isSetLimit())
         this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);

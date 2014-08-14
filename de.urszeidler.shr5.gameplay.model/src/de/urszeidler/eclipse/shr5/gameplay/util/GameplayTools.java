@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -67,6 +68,7 @@ public class GameplayTools {
 
     /**
      * Calculates the current defense mod for the given character.
+     * 
      * @param subject
      * @return
      */
@@ -83,7 +85,7 @@ public class GameplayTools {
 
         EList<?> listValue = subject.getListValue(data);
         if (listValue.contains(InterruptType.DODGE)) {
-            
+
             listValue.remove(InterruptType.DODGE);
         } else if (listValue.contains(InterruptType.BLOCK)) {
 
@@ -93,20 +95,20 @@ public class GameplayTools {
             AbstraktGegenstand leftHand = subject.getLeftHand();
             if (leftHand instanceof Nahkampfwaffe) {
                 nw = (Nahkampfwaffe)leftHand;
-                
-            }else{
+
+            } else {
                 AbstraktGegenstand rightHand = subject.getRightHand();
                 if (rightHand instanceof Nahkampfwaffe) {
                     nw = (Nahkampfwaffe)rightHand;
-                    
+
                 }
             }
-            
+
             Fertigkeit fertigkeit = nw.getFertigkeit();
             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
-            if(fertigkeitValue>0)
+            if (fertigkeitValue > 0)
                 mod = mod + fertigkeitValue;
-            
+
             listValue.remove(InterruptType.PARRY);
         } else if (listValue.contains(InterruptType.FULL_DEFENSE)) {
             int willenskraft = persona.getWillenskraft();
@@ -123,6 +125,7 @@ public class GameplayTools {
 
     /**
      * Increases the defense modification.
+     * 
      * @param subject
      * @param value
      */
@@ -140,6 +143,7 @@ public class GameplayTools {
 
     /**
      * Clears all interrupt markers.
+     * 
      * @param subject
      */
     public static void clearInterruptActions(RuntimeCharacter subject) {
@@ -148,7 +152,7 @@ public class GameplayTools {
         data.setEFeature(GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE);
 
         EList<?> listValue = subject.getListValue(data);
-        if(!listValue.isEmpty())
+        if (!listValue.isEmpty())
             listValue.clear();
     }
 
@@ -158,18 +162,33 @@ public class GameplayTools {
     }
 
     public static String printCommand(Command cmd) {
-       
-        
+
         if (cmd instanceof SuccesTest) {
             SuccesTest st = (SuccesTest)cmd;
-            return String.format("%s%s%s|%s", st.getLimit(),st.getProbe().toString(),st.getSuccesses(),st.getGlitches());
+            return String.format("%s%s%s|%s", st.getLimit(), st.getProbe().toString(), st.getSuccesses(), st.getGlitches());
         }
-//            if (cmd instanceof Probe) {
-//                Probe new_name = (Probe)cmd;
-//                
-//            }
-        
+        // if (cmd instanceof Probe) {
+        // Probe new_name = (Probe)cmd;
+        //
+        // }
+
         return "";
     }
-    
+
+    /**
+     * Retuns the skill dice pool for a skill.
+     * @param skill
+     * @param subject
+     * @return
+     */
+    public static int getSkillDicePool(Fertigkeit skill, RuntimeCharacter subject) {
+        AbstraktPersona persona = subject.getCharacter().getPersona();
+        Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(skill, persona);
+
+        EAttribute attribut = skill.getAttribut();
+        Integer att = (Integer)persona.eGet(attribut);
+
+        return fertigkeitValue + att;
+    }
+
 }

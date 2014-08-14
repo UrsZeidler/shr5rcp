@@ -4,16 +4,17 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.List;
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
-import de.urszeidler.shr5.gameplay.dice.W6Dice;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * @generated
      * @ordered
      */
-    protected PersonaFertigkeit skill;
+    protected Fertigkeit skill;
 
     /**
      * <!-- begin-user-doc -->
@@ -63,10 +64,10 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaFertigkeit getSkill() {
+    public Fertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;
-            skill = (PersonaFertigkeit)eResolveProxy(oldSkill);
+            skill = (Fertigkeit)eResolveProxy(oldSkill);
             if (skill != oldSkill) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.SKILL_TEST_CMD__SKILL, oldSkill, skill));
@@ -80,7 +81,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaFertigkeit basicGetSkill() {
+    public Fertigkeit basicGetSkill() {
         return skill;
     }
 
@@ -89,8 +90,8 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setSkill(PersonaFertigkeit newSkill) {
-        PersonaFertigkeit oldSkill = skill;
+    public void setSkill(Fertigkeit newSkill) {
+        Fertigkeit oldSkill = skill;
         skill = newSkill;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SKILL_TEST_CMD__SKILL, oldSkill, skill));
@@ -120,7 +121,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case GameplayPackage.SKILL_TEST_CMD__SKILL:
-                setSkill((PersonaFertigkeit)newValue);
+                setSkill((Fertigkeit)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -135,7 +136,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     public void eUnset(int featureID) {
         switch (featureID) {
             case GameplayPackage.SKILL_TEST_CMD__SKILL:
-                setSkill((PersonaFertigkeit)null);
+                setSkill((Fertigkeit)null);
                 return;
         }
         super.eUnset(featureID);
@@ -162,17 +163,11 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         getProbe().clear();
         if (isSetCmdCallback()&& getCmdCallback() != null)
             cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
-        
+       
         W6Dice w6Dice = new W6Dice();
-        AbstraktPersona persona = getSubject().getCharacter().getPersona();
-        //ShadowrunTools.fertigkeitDicePoolValue(personaFertigkeit, persona);
-        EAttribute attribut = getSkill().getFertigkeit().getAttribut();
-        Integer att = (Integer)persona.eGet(attribut);
 
-        int dice = getSkill().getStufe() + att + mods;
-        // AbstaktPersona persona = subject.getPersona();
-        List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
+        int dice = GameplayTools.getSkillDicePool(getSkill(),getSubject())+mods;//getSkill().getStufe() + att + mods;
+        List<Integer> probe = w6Dice.probe(dice);
         this.getProbe().addAll(probe);
         //if(isSetLimit())
         this.successes = isSetLimit() ? Math.min(limit,  W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);

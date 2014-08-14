@@ -72,11 +72,11 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SkillTestCmd" eSuperTypes="#//ProbeCommand">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OpposedSkillTestCmd" eSuperTypes="#//SkillTestCmd">
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objectSkill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectSkill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Initative" eSuperTypes="#//SubjectCommand">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

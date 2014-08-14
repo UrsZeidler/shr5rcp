@@ -1341,11 +1341,11 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEReference(getSubjectCommand_Subject(), theRuntimePackage.getRuntimeCharacter(), null, "subject", null, 1, 1, SubjectCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(skillTestCmdEClass, SkillTestCmd.class, "SkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getSkillTestCmd_Skill(), theShr5Package.getPersonaFertigkeit(), null, "skill", null, 1, 1, SkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSkillTestCmd_Skill(), theShr5Package.getFertigkeit(), null, "skill", null, 1, 1, SkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(opposedSkillTestCmdEClass, OpposedSkillTestCmd.class, "OpposedSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getOpposedSkillTestCmd_Object(), theRuntimePackage.getRuntimeCharacter(), null, "object", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getOpposedSkillTestCmd_ObjectSkill(), theShr5Package.getPersonaFertigkeit(), null, "objectSkill", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getOpposedSkillTestCmd_ObjectSkill(), theShr5Package.getFertigkeit(), null, "objectSkill", null, 0, 1, OpposedSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(initativeEClass, Initative.class, "Initative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getInitative_Ini(), ecorePackage.getEInt(), "ini", null, 0, 1, Initative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

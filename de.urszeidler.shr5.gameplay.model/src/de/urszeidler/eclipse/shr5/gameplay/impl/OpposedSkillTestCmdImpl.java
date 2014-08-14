@@ -3,13 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -48,7 +47,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * @generated
      * @ordered
      */
-    protected PersonaFertigkeit objectSkill;
+    protected Fertigkeit objectSkill;
 
     /**
      * <!-- begin-user-doc -->
@@ -112,10 +111,10 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaFertigkeit getObjectSkill() {
+    public Fertigkeit getObjectSkill() {
         if (objectSkill != null && objectSkill.eIsProxy()) {
             InternalEObject oldObjectSkill = (InternalEObject)objectSkill;
-            objectSkill = (PersonaFertigkeit)eResolveProxy(oldObjectSkill);
+            objectSkill = (Fertigkeit)eResolveProxy(oldObjectSkill);
             if (objectSkill != oldObjectSkill) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill, objectSkill));
@@ -129,7 +128,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaFertigkeit basicGetObjectSkill() {
+    public Fertigkeit basicGetObjectSkill() {
         return objectSkill;
     }
 
@@ -138,8 +137,8 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setObjectSkill(PersonaFertigkeit newObjectSkill) {
-        PersonaFertigkeit oldObjectSkill = objectSkill;
+    public void setObjectSkill(Fertigkeit newObjectSkill) {
+        Fertigkeit oldObjectSkill = objectSkill;
         objectSkill = newObjectSkill;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, oldObjectSkill, objectSkill));
@@ -175,7 +174,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
                 setObject((RuntimeCharacter)newValue);
                 return;
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
-                setObjectSkill((PersonaFertigkeit)newValue);
+                setObjectSkill((Fertigkeit)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -193,7 +192,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
                 setObject((RuntimeCharacter)null);
                 return;
             case GameplayPackage.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL:
-                setObjectSkill((PersonaFertigkeit)null);
+                setObjectSkill((Fertigkeit)null);
                 return;
         }
         super.eUnset(featureID);
