@@ -109,6 +109,7 @@ import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
@@ -903,7 +904,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        if (cmd instanceof CombatTurn) {
+            CombatTurn ct = (CombatTurn)cmd;
+            new CheckInitaive(getSite().getShell(), ct).open();
+            return;
+        }
 
+        
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                 new DefaultReferenceManager(itemDelegator));
         genericEObjectDialog.open();
@@ -917,7 +924,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             
             
         }
-
+  
         ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd,labelProvider);
         probeFinishedDialog.open();
         
