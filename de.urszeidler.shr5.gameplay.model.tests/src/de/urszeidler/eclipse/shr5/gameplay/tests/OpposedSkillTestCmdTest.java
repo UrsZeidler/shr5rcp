@@ -109,6 +109,9 @@ public class OpposedSkillTestCmdTest extends SkillTestCmdTest {
         personaFertigkeit.setFertigkeit(fertigkeit);
         personaFertigkeit.setStufe(100);
         persona.getFertigkeiten().add(personaFertigkeit);
+        personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        personaFertigkeit.setFertigkeit(fertigkeit);
+        personaFertigkeit.setStufe(100);        
         object.getCharacter().getPersona().getFertigkeiten().add(personaFertigkeit);
 
         getFixture().setSkill(fertigkeit);
