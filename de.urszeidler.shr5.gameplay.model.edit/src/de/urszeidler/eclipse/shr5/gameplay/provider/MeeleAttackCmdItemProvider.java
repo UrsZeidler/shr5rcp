@@ -101,12 +101,12 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
 
         String label = "";
         String label1 = "";
-        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null) {
             label = labelprovider.getText(meeleAttackCmd.getSubject());
         }
-        labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
+        labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getObject(), IItemLabelProvider.class);
         if (labelprovider != null) {
             label1 = labelprovider.getText(meeleAttackCmd.getObject());
         }

@@ -162,7 +162,7 @@ public class GameplayTools {
         
         if (cmd instanceof SuccesTest) {
             SuccesTest st = (SuccesTest)cmd;
-            return String.format("%1%2%3|%4", st.getLimit(),st.getProbe().toString(),st.getSuccesses(),st.getGlitches());
+            return String.format("%s%s%s|%s", st.getLimit(),st.getProbe().toString(),st.getSuccesses(),st.getGlitches());
         }
 //            if (cmd instanceof Probe) {
 //                Probe new_name = (Probe)cmd;

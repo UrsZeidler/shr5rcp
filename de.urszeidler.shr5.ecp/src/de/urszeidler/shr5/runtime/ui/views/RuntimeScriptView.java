@@ -109,6 +109,7 @@ import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
@@ -917,9 +918,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             
         }
 
-        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                new DefaultReferenceManager(itemDelegator));
-        genericEObjectDialog.open();
+        ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd,labelProvider);
+        probeFinishedDialog.open();
+        
+        
+//        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+//                new DefaultReferenceManager(itemDelegator));
+//        genericEObjectDialog.open();
 
     }
 
