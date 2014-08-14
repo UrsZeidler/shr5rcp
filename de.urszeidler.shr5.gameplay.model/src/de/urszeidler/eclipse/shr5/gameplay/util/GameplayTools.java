@@ -12,8 +12,10 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
@@ -155,4 +157,19 @@ public class GameplayTools {
         return 0;
     }
 
+    public static String printCommand(Command cmd) {
+       
+        
+        if (cmd instanceof SuccesTest) {
+            SuccesTest st = (SuccesTest)cmd;
+            return String.format("%1%2%3|%4", st.getLimit(),st.getProbe().toString(),st.getSuccesses(),st.getGlitches());
+        }
+//            if (cmd instanceof Probe) {
+//                Probe new_name = (Probe)cmd;
+//                
+//            }
+        
+        return "";
+    }
+    
 }
