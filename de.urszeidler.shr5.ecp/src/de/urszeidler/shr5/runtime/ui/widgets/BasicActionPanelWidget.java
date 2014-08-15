@@ -66,6 +66,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private StateMonitorWidget stateMonitorWidgetPhysical;
     private Group grpPhysical;
     private Group grpMental;
+    private Group grpExra;
 
     // private ActionPhaseCmd phase1 = GameplayFactory.eINSTANCE.createActionPhaseCmd();
 
@@ -147,6 +148,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.adapt(grpMental);
         toolkit.paintBordersFor(grpMental);
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
+        
+        grpExra = new Group(composite_state, SWT.NONE);
+        grpExra.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+        grpExra.setText("Exra");
+        toolkit.adapt(grpExra);
+        toolkit.paintBordersFor(grpExra);
         //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 

@@ -79,6 +79,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
 
         
         gridLayout1 = new GridLayout();
+        gridLayout1.marginWidth = 1;
         gridLayout1.marginHeight = 0;
         gridLayout1.marginTop = 0;
         gridLayout1.marginBottom = 5;
@@ -101,10 +102,10 @@ public abstract class NameableComposite extends Composite implements IValueChang
         gridData3.grabExcessHorizontalSpace = true;
         gridData3.horizontalAlignment = SWT.LEFT;
         GridLayout gridLayout = new GridLayout();
+        gridLayout.marginHeight = 2;
+        gridLayout.marginWidth = 2;
         gridLayout.numColumns = 3;
         gridLayout.verticalSpacing = 0;
-        gridLayout.marginWidth = 5;
-        gridLayout.marginHeight = 5;
         gridLayout.horizontalSpacing = 0;
         GridData gridData2 = new GridData();
         gridData2.heightHint = 24;

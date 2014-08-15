@@ -213,6 +213,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private Action executeAction;
     private Label lblDesc;
 
+    private Label lblImg;
+
     public RuntimeScriptView() {
 
         adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -295,14 +297,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             composite_1.setLayout(twl_composite_1);
         }
 
-        Label lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE);
+        lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE);
+        TableWrapData layoutData = new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1);
+         lblImg.setLayoutData(layoutData);
+        //lblImg.setBounds(0, 0, 32, 32);
+        lblImg.setSize(96,96);
+        lblImg.setText("         ");
         lblImg.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
-        lblImg.setLayoutData(new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1));
-        lblImg.setBounds(0, 0, 70, 17);
+       
+        
 
         lblName = formToolkit.createLabel(composite_1, "New Label", SWT.NONE);
         lblName.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
-        lblName.setSize(70, 17);
+        lblName.setSize(96, 96);
         
         lblDesc = new Label(composite_1, SWT.NONE);
         lblDesc.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
@@ -500,31 +507,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         Composite composite_14 = formToolkit.createComposite(composite, SWT.NONE);
         composite_14.setLayout(new FillLayout(SWT.HORIZONTAL));
-        TableWrapData twd_composite_14 = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL, 1, 1);
-        twd_composite_14.heightHint = 106;
+        TableWrapData twd_composite_14 = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 1, 1);
+        twd_composite_14.heightHint = 206;
         composite_14.setLayoutData(twd_composite_14);
         formToolkit.paintBordersFor(composite_14);
 
         treeViewer_1 = new TreeViewer(composite_14, SWT.BORDER);
         treeViewer_1.setSorter(new ViewerCommandSorter());
+        treeViewer_1.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         Tree tree_1 = treeViewer_1.getTree();
-        tree_1.setHeaderVisible(true);
+        tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
-
-        TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewer_1, SWT.NONE);
-        TreeColumn trclmnDone = treeViewerColumn.getColumn();
-        trclmnDone.setWidth(100);
-        trclmnDone.setText("done");
-
-        TreeViewerColumn treeViewerColumn_1 = new TreeViewerColumn(treeViewer_1, SWT.NONE);
-        TreeColumn trclmnDate = treeViewerColumn_1.getColumn();
-        trclmnDate.setWidth(100);
-        trclmnDate.setText("date");
-
-        TreeViewerColumn treeViewerColumn_2 = new TreeViewerColumn(treeViewer_1, SWT.NONE);
-        TreeColumn trclmnName = treeViewerColumn_2.getColumn();
-        trclmnName.setWidth(100);
-        trclmnName.setText("name");
 
         createActions();
         initializeToolBar();
@@ -737,13 +730,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         
 
         IWidgetValueProperty image = WidgetProperties.image();
-        ISWTObservableValue observedImage = image.observe(lblDesc);
+        ISWTObservableValue observedImage = image.observe(lblImg);
         IObservableValue observeValue = EMFObservables.observeDetailValue(realm, placement,
                 Shr5Package.Literals.BESCHREIBBAR__IMAGE);
 
         IConverter converter = null;
 
-        converter = new PathToImageConverter(String.class, Image.class, 24);
+        converter = new PathToImageConverter(String.class, Image.class, 64);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
         UpdateValueStrategy toWidget = new UpdateValueStrategy().setConverter(converter);
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
@@ -813,7 +806,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 }
                 return super.getColumnText(element, columnIndex);
             }
-
+            @Override
+            public String getText(Object element) {
+                return labelProvider.getText(element);
+            }
         });
         treeViewer.setContentProvider(listContentProvider);
         treeViewer.setInput(characters);
@@ -874,6 +870,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
 
             @Override
+            public String getText(Object element) {
+                return labelProvider.getText(element);
+            }
+            
+            @Override
             public Image getImage(Object element) {
                 return labelProvider.getImage(element);
             }
@@ -896,6 +897,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 if (treeViewer_1.getTree().isDisposed())
                     return;
                 treeViewer_1.setInput(protocol.getValue());
+               //treeViewer_1.setExpandedElements(event.);
+               
 
             }
         });

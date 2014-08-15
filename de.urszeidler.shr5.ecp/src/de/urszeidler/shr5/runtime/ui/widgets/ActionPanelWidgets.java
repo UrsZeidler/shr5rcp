@@ -23,7 +23,6 @@ public class ActionPanelWidgets extends Composite {
     private Composite composite = null;
     private Composite composite1 = null;
     private Composite composite_default_Action = null;
-    private Composite composite_obove = null;
     private Tree tree_actions = null;
     private Composite composite_btns = null;
     private TreeViewer treeViewer = null;
@@ -147,13 +146,13 @@ public class ActionPanelWidgets extends Composite {
         composite_default_Action.setLayout(gridLayout2);
         // createComposite_obove();
 
-        rechte_Hand = new HandComposite(composite_default_Action, SWT.NONE, "Rechte Hand");
+        rechte_Hand = new HandComposite(composite_default_Action, SWT.NONE, "right Hand");
         GridData gridData6 = new GridData();
         gridData6.horizontalAlignment = GridData.FILL;
         gridData6.grabExcessHorizontalSpace = true;
         rechte_Hand.setLayoutData(gridData6);
 
-        linke_Hand = new HandComposite(composite_default_Action, SWT.NONE, "Linke Hand");
+        linke_Hand = new HandComposite(composite_default_Action, SWT.NONE, "left Hand");
         gridData6 = new GridData();
         gridData6.horizontalAlignment = GridData.FILL;
         gridData6.grabExcessHorizontalSpace = true;
@@ -161,22 +160,7 @@ public class ActionPanelWidgets extends Composite {
 
     }
 
-    /**
-     * This method initializes composite_obove
-     */
-    private void createComposite_obove() {
-        GridData gridData8 = new GridData();
-        gridData8.horizontalSpan = 6;
-        gridData8.grabExcessVerticalSpace = false;
-        gridData8.horizontalAlignment = GridData.FILL;
-        gridData8.verticalAlignment = GridData.FILL;
-        gridData8.grabExcessHorizontalSpace = true;
-        composite_obove = new Composite(composite_default_Action, SWT.NONE);
-        composite_obove.setLayout(new GridLayout());
-        composite_obove.setLayoutData(gridData8);
-    }
-
-    /**
+     /**
      * This method initializes composite_btns
      */
     private void createComposite_btns() {
