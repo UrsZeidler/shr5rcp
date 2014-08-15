@@ -49,7 +49,7 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
         // scrolledComposite.setExpandVertical(true);
 
         composite = new Composite(this, SWT.NONE);
-        composite.setBackground(SWTResourceManager.getColor(SWT.COLOR_YELLOW));
+        composite.setBackground(SWTResourceManager.getColor(SWT.COLOR_GRAY));
         composite.setLayout(new FillLayout());
 
         // Composite composite_1 = new Composite(composite, SWT.NONE);

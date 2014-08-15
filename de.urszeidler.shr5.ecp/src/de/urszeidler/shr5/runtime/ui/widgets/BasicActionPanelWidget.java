@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import org.eclipse.swt.widgets.Group;
 
 /**
  * 
@@ -63,6 +64,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private StateMonitorWidget stateMonitorWidgetMental;
 
     private StateMonitorWidget stateMonitorWidgetPhysical;
+    private Group grpPhysical;
+    private Group grpMental;
 
     // private ActionPhaseCmd phase1 = GameplayFactory.eINSTANCE.createActionPhaseCmd();
 
@@ -71,6 +74,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         initialize();
         m_bindingContext = initDataBindings();
         phase.addValueChangeListener(this);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
 //        new Label(this, SWT.NONE);
 //        new Label(this, SWT.NONE);
 //        new Label(this, SWT.NONE);
@@ -91,7 +98,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         createComposite_state();
         // setSize(new Point(364, 382));
         createComposite_info();
-        createComposite_action();
+        //createComposite_action();
     }
 
     @Override
@@ -100,6 +107,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
        character.removeValueChangeListener(this);
        persona.removeValueChangeListener(this);
        
+       phase.dispose();
+       character.dispose();
+       persona.dispose();
         super.dispose();
     }
     
@@ -123,19 +133,27 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
-
-        Label label2 = new Label(composite_state, SWT.NONE);
-        label2.setText("Physical");
-        stateMonitorWidgetPhysical = new StateMonitorWidget(composite_state, SWT.NONE);
         
         if (character.getValue() instanceof GruntRuntimeCharacter) {
             //GruntRuntimeCharacter grc = (GruntRuntimeCharacter)character.getValue();
             return;
         }
         
-        label2 = new Label(composite_state, SWT.NONE);
-        label2.setText("Mental");
-        stateMonitorWidgetMental = new StateMonitorWidget(composite_state, SWT.NONE);
+        grpPhysical = new Group(composite_state, SWT.NONE);
+        grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
+        grpPhysical.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        grpPhysical.setText("Physical");
+        toolkit.adapt(grpPhysical);
+        toolkit.paintBordersFor(grpPhysical);
+        stateMonitorWidgetPhysical = new StateMonitorWidget(grpPhysical, SWT.NONE);
+        
+        grpMental = new Group(composite_state, SWT.NONE);
+        grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
+        grpMental.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        grpMental.setText("Mental");
+        toolkit.adapt(grpMental);
+        toolkit.paintBordersFor(grpMental);
+        stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
         //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
     }
 
@@ -184,8 +202,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.paintBordersFor(composite_action);
 
         composite_action.setLayout(new FillLayout(SWT.HORIZONTAL));
-        // composite_action.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, true, 1, 1));
-        //composite_action.setLayoutData(gridData2);
+         composite_action.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, true, 1, 1));
+        composite_action.setLayoutData(gridData2);
 
         actionPanel = new ActionPanelWidgets(composite_action, SWT.NONE);
 
