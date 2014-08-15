@@ -215,6 +215,16 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private Label lblImg;
 
+    private Section sctnActionSection;
+
+    private Section sctnBackground;
+
+    private Section sctnTimeTracking;
+
+    private Section sctnInTheirFace;
+
+    private Section sctnDebugging;
+
     public RuntimeScriptView() {
 
         adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -327,15 +337,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             composite_7.setLayout(twl_composite_7);
         }
 
-        Section sctnNewSection = formToolkit.createSection(composite_7, Section.TWISTIE | Section.TITLE_BAR);
-        sctnNewSection.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
-        formToolkit.paintBordersFor(sctnNewSection);
-        sctnNewSection.setText("Actions");
-        sctnNewSection.setExpanded(true);
+        sctnActionSection = formToolkit.createSection(composite_7, Section.TWISTIE | Section.TITLE_BAR);
+        sctnActionSection.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+        formToolkit.paintBordersFor(sctnActionSection);
+        sctnActionSection.setText("Actions");
+        sctnActionSection.setExpanded(true);
 
-        Composite composite_11 = formToolkit.createComposite(sctnNewSection, SWT.NONE);
+        Composite composite_11 = formToolkit.createComposite(sctnActionSection, SWT.NONE);
         formToolkit.paintBordersFor(composite_11);
-        sctnNewSection.setClient(composite_11);
+        sctnActionSection.setClient(composite_11);
         composite_11.setLayout(new GridLayout(2, false));
 
         Composite composite_13 = new Composite(composite_11, SWT.NONE);
@@ -404,7 +414,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_9.setLayoutData(gd_composite_9);
         formToolkit.paintBordersFor(composite_9);
 
-        Section sctnBackground = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+        sctnBackground = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnBackground.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
         sctnBackground.setSize(1183, 116);
         formToolkit.paintBordersFor(sctnBackground);
@@ -428,15 +438,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_10.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.paintBordersFor(composite_10);
 
-        Section sctnActions = formToolkit.createSection(composite_10, Section.TWISTIE | Section.TITLE_BAR);
+        sctnTimeTracking = formToolkit.createSection(composite_10, Section.TWISTIE | Section.TITLE_BAR);
 
-        formToolkit.paintBordersFor(sctnActions);
-        sctnActions.setText("TimeTracking");
-        sctnActions.setExpanded(true);
+        formToolkit.paintBordersFor(sctnTimeTracking);
+        sctnTimeTracking.setText("TimeTracking");
+        sctnTimeTracking.setExpanded(true);
 
-        Composite composite_5 = formToolkit.createComposite(sctnActions, SWT.NONE);
+        Composite composite_5 = formToolkit.createComposite(sctnTimeTracking, SWT.NONE);
         formToolkit.paintBordersFor(composite_5);
-        sctnActions.setClient(composite_5);
+        sctnTimeTracking.setClient(composite_5);
         composite_5.setLayout(new GridLayout(2, false));
 
         dateTime = new CDateTime(composite_5, CDT.SPINNER | CDT.COMPACT | CDT.DATE_LONG);
@@ -462,7 +472,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         // Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
 
-        Section sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+        sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
         sctnInTheirFace.setText("In their face");
@@ -483,7 +493,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.adapt(styledText_1);
         formToolkit.paintBordersFor(styledText_1);
 
-        Section sctnDebugging = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+        sctnDebugging = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnDebugging.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
@@ -700,7 +710,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         for (Team team : teams) {
             characters.addAll(team.getMembers());
         }
-
+        sctnActionSection.setExpanded(false);
+        sctnBackground.setExpanded(true);
+        sctnDebugging.setExpanded(false);
+        sctnInTheirFace.setExpanded(false);
+        sctnTimeTracking.setEnabled(true);
     }
 
     @Override
@@ -736,7 +750,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         IConverter converter = null;
 
-        converter = new PathToImageConverter(String.class, Image.class, 64);
+        converter = new PathToImageConverter(String.class, Image.class, 48);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
         UpdateValueStrategy toWidget = new UpdateValueStrategy().setConverter(converter);
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
