@@ -74,13 +74,6 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         initialize();
         m_bindingContext = initDataBindings();
         phase.addValueChangeListener(this);
-        new Label(this, SWT.NONE);
-        new Label(this, SWT.NONE);
-        new Label(this, SWT.NONE);
-        new Label(this, SWT.NONE);
-//        new Label(this, SWT.NONE);
-//        new Label(this, SWT.NONE);
-//        new Label(this, SWT.NONE);
      }
 
     private void initialize() {
@@ -98,7 +91,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         createComposite_state();
         // setSize(new Point(364, 382));
         createComposite_info();
-        //createComposite_action();
+        createComposite_action();
     }
 
     @Override
@@ -195,18 +188,16 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData2.horizontalSpan = 2;
         gridData2.verticalSpan = 2;
         gridData2.grabExcessHorizontalSpace = true;
-        gridData2.grabExcessVerticalSpace = true;
-        gridData2.verticalAlignment = GridData.FILL;
+        gridData2.grabExcessVerticalSpace = false;
+        gridData2.verticalAlignment = GridData.BEGINNING;
         composite_action = new Composite(this, SWT.NONE);
         toolkit.adapt(composite_action);
         toolkit.paintBordersFor(composite_action);
 
         composite_action.setLayout(new FillLayout(SWT.HORIZONTAL));
-         composite_action.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, true, true, 1, 1));
         composite_action.setLayoutData(gridData2);
 
         actionPanel = new ActionPanelWidgets(composite_action, SWT.NONE);
-
     }
 
     // /**
