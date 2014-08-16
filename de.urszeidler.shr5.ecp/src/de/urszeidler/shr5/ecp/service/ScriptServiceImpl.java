@@ -8,14 +8,20 @@ import java.util.Date;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.ecp.core.ECPProject;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.ui.services.IServiceLocator;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 /**
  * @author urs
@@ -23,11 +29,11 @@ import de.urszeidler.shr5.scripting.Script;
 public class ScriptServiceImpl implements ScriptService {
 
     private Adapter adapter = new EContentAdapter() {
-        
+
         public void notifyChanged(Notification notification) {
             super.notifyChanged(notification);
             notification.getFeature();
-            if(GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())){
+            if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())) {
                 System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
             }
         }
@@ -49,15 +55,14 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setScript(Script script) {
-//        if(this.script!=null)
-//            this.script.eAdapters().remove(adapter);
-        
-     
+        // if(this.script!=null)
+        // this.script.eAdapters().remove(adapter);
+
         this.script = script;
         if (scriptViewer != null)
             scriptViewer.setScript(script);
-        
-//        this.script.eAdapters().add(adapter);
+
+        // this.script.eAdapters().add(adapter);
 
     }
 
@@ -67,8 +72,14 @@ public class ScriptServiceImpl implements ScriptService {
 
     public void setPlacement(Placement placement) {
         this.placement = placement;
-        if(script!=null)
-            script.getHistory().setCurrentPlacement(placement);
+        if (script != null) {
+            ECPProject defaultEcpProject = Activator.getDefault().getDefaultEcpProject();
+            EditingDomain editingDomain = defaultEcpProject.getEditingDomain();
+            org.eclipse.emf.common.command.Command createCommand = editingDomain.createCommand(SetCommand.class, new CommandParameter(script.getHistory(),
+                    ScriptingPackage.Literals.SCRIPT_HISTORY__CURRENT_PLACEMENT, placement));
+            editingDomain.getCommandStack().execute(createCommand);
+            //script.getHistory().setCurrentPlacement(placement);
+        }
         if (scriptViewer != null)
             scriptViewer.setPlacement(placement);
     }
@@ -94,9 +105,9 @@ public class ScriptServiceImpl implements ScriptService {
         if (script != null && script.getHistory() != null && script.getHistory().getCommandStack() != null) {
             if (placement != null) {
                 Date actualDate = placement.getActualDate();
-                if (actualDate != null && command.getDate() == null){
+                if (actualDate != null && command.getDate() == null) {
                     command.setDate(actualDate);
-                    script.getHistory().setCurrentDate(actualDate);   
+                    script.getHistory().setCurrentDate(actualDate);
                 }
             }
             if (scriptViewer != null && scriptViewer.getCmdCallback() != null)
@@ -104,7 +115,7 @@ public class ScriptServiceImpl implements ScriptService {
 
             script.getHistory().getCommandStack().setCurrentCommand(command);
             script.getHistory().getCommandStack().redo();
-            
+
         }
     }
 }

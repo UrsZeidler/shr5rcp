@@ -41,27 +41,6 @@ public class ActionPhaseWidget extends NameableComposite {
             createInterruptedAction(interruptType);
         }
         
-//        
-//        ToolItem tltmD = new ToolItem(actionBar, SWT.NONE);
-//        tltmD.setToolTipText("Doge");
-//        tltmD.setText("d");
-//        
-//        ToolItem tltmB = new ToolItem(actionBar, SWT.NONE);
-//        tltmB.setToolTipText("Block");
-//        tltmB.setText("b");
-//        
-//        ToolItem tltmP = new ToolItem(actionBar, SWT.NONE);
-//        tltmP.setToolTipText("Parry");
-//        tltmP.setText("p");
-//        
-//        ToolItem tltmFb = new ToolItem(actionBar, SWT.NONE);
-//        tltmFb.setToolTipText("full block");
-//        tltmFb.setText("fb");
-//        
-//        ToolItem tltmFc = new ToolItem(actionBar, SWT.NONE);
-//        tltmFc.setToolTipText("full cover");
-//        tltmFc.setText("fc");
-
     }
 
     private void createInterruptedAction(final InterruptType interruptType) {

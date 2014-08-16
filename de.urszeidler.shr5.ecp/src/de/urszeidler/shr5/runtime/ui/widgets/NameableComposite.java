@@ -82,7 +82,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         gridLayout1.marginWidth = 1;
         gridLayout1.marginHeight = 0;
         gridLayout1.marginTop = 0;
-        gridLayout1.marginBottom = 5;
+        gridLayout1.marginBottom = 2;
         gridLayout1.horizontalSpacing = 0;
         gridLayout1.verticalSpacing = 0;
         createMainGroup();
@@ -249,12 +249,14 @@ public abstract class NameableComposite extends Composite implements IValueChang
             gridLayout1.marginRight = 4;
             gridLayout1.marginLeft = 4;
             this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-bck.png"));
+            actionBar.setEnabled(false);
         } else {
             gridLayout1.marginTop = 0;
             gridLayout1.marginBottom = 0;
             gridLayout1.marginRight = 0;
             gridLayout1.marginLeft = 0;
             this.setBackgroundImage(null);
+            actionBar.setEnabled(true);
         }
     }
     //

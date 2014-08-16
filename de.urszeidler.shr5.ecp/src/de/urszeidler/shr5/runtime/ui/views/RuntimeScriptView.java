@@ -1,6 +1,5 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -10,10 +9,7 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.IConverter;
-import org.eclipse.core.databinding.observable.ChangeEvent;
-import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.Realm;
-import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -44,9 +40,7 @@ import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
-import org.eclipse.jface.databinding.viewers.TreeStructureAdvisor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.layout.TreeColumnLayout;
@@ -56,14 +50,13 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.viewers.TreeViewerColumn;
-import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -72,8 +65,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
@@ -84,7 +79,6 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
 import org.eclipse.ui.forms.widgets.TableWrapLayout;
 import org.eclipse.ui.part.ViewPart;
-import org.eclipse.wb.rcp.databinding.EMFBeansListObservableFactory;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -124,41 +118,32 @@ import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.ToolBar;
-import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.swt.widgets.CoolBar;
-import org.eclipse.swt.widgets.CoolItem;
-import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.widgets.ExpandBar;
-import org.eclipse.swt.widgets.ExpandItem;
-import org.eclipse.wb.swt.SWTResourceManager;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.MouseAdapter;
+import org.eclipse.swt.events.MouseEvent;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
-    private final class ViewerCommandSorter extends ViewerSorter {
-        @Override
-        public int compare(Viewer viewer, Object e1, Object e2) {
-            if (e1 instanceof Command) {
-                Command cmd = (Command)e1;
-                if (e2 instanceof Command) {
-                    Command cmd1 = (Command)e2;
-                    if (cmd.getDate() == null)
-                        return 1;
-                    if (cmd1.getDate() == null)
-                        return -1;
-
-                    if (cmd1.getDate().getTime() > cmd.getDate().getTime())
-                        return 1;
-                    else
-                        return -1;
-                }
-            }
-            return super.compare(viewer, e1, e2);
-        }
-    }
+    // private final class ViewerCommandSorter extends ViewerSorter {
+    // @Override
+    // public int compare(Viewer viewer, Object e1, Object e2) {
+    // if (e1 instanceof Command) {
+    // Command cmd = (Command)e1;
+    // if (e2 instanceof Command) {
+    // Command cmd1 = (Command)e2;
+    // if (cmd.getDate() == null)
+    // return 1;
+    // if (cmd1.getDate() == null)
+    // return -1;
+    //
+    // if (cmd1.getDate().getTime() > cmd.getDate().getTime())
+    // return 1;
+    // else
+    // return -1;
+    // }
+    // }
+    // return super.compare(viewer, e1, e2);
+    // }
+    // }
 
     private final class TimeTracker extends Job {
         private boolean isTimetracking;
@@ -189,6 +174,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             Object feature = notification.getFeature();
             if (notifier instanceof CombatTurn) {
                 CombatTurn ct = (CombatTurn)notifier;
+                if(GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)){
+                    if(ct.getCurrentTurn()==null)
+                        return;
+                    printedProtocol.add(0,
+                            String.format("%s has %s %d turn at %d phase", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct.getCurrentTurn().getSubject()
+                                    .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ct.getCurrentTurn().getTurn(),ct.getCurrentTurn().getPhase()));
+
+                }else
                 if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuting())
                         printedProtocol.add(0, "The combatround has started.");
@@ -197,6 +190,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 InitativePass ip = (InitativePass)notifier;
                 if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature))
                     if (ip.isExecuted()) {
+                        @SuppressWarnings("unused")
                         TreeIterator<EObject> eAllContents = ip.eAllContents();
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
@@ -209,8 +203,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                         return;
                     } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                         if (ip.isExecuting()) {
-                            printedProtocol.add(0, String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject().getCharacter()
-                                    .getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
+                            printedProtocol.add(
+                                    0,
+                                    String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
+                                            .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
                         }
             }
 
@@ -253,7 +249,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private AdapterFactoryItemDelegator itemDelegator;
 
-    private AdapterFactoryContentProvider rootContentProvider;
+    // private AdapterFactoryContentProvider rootContentProvider;
 
     private AdapterFactoryContentProvider actionListContentProvider;
 
@@ -293,6 +289,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private Section sctnDebugging;
 
+    private Label lblDatetimelong;
+
     public RuntimeScriptView() {
 
         adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -304,7 +302,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
 
-        rootContentProvider = new AdapterFactoryContentProvider(adapterFactory);
+        // rootContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         labelProvider = new LabelProvider() {
             @Override
@@ -320,18 +318,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         timeTrackJob = new TimeTracker("timetrack");
         timeTrackJob.setSystem(true);
-        //
-        // selectedCharacter.addChangeListener(new IChangeListener() {
-        //
-        // @Override
-        // public void handleChange(ChangeEvent event) {
-        //
-        // RuntimeCharacter value = (RuntimeCharacter)selectedCharacter.getValue();
-        // List<EObject> commands = createCharacterCommands(value);
-        // treeViewer_Commands.setInput(commands);
-        // }
-        // });
-        //
     }
 
     /*
@@ -362,9 +348,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             twl_composite.makeColumnsEqualWidth = true;
             composite.setLayout(twl_composite);
         }
-
-        // BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(composite, SWT.NONE, placement, formToolkit, null);
-        // GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
         Composite composite_1 = formToolkit.createComposite(composite, SWT.BORDER);
         composite_1.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
@@ -404,6 +387,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
 
         sctnActionSection = formToolkit.createSection(composite_7, Section.TWISTIE | Section.TITLE_BAR);
+        sctnActionSection.setDescription("The available actions in this placement.");
         sctnActionSection.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnActionSection);
         sctnActionSection.setText("Actions");
@@ -437,7 +421,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
             }
         });
-        Table tree = treeViewer.getTable();
+        final Table tree = treeViewer.getTable();
+        tree.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseDoubleClick(MouseEvent e) {
+//                TableItem[] selection = tree.getSelection();
+//                if (selection.length == 1)
+//                    ShadowrunEditingTools.openEObject();
+            }
+        });
         // tree.setHeaderVisible(true);
         // tree.setLinesVisible(true);
         formToolkit.paintBordersFor(tree);
@@ -503,7 +495,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         });
         tltmExecuteaction.setText("executeAction");
 
-        new Label(composite_11, SWT.NONE);
+        lblDatetimelong = formToolkit.createLabel(composite_11, "dateTimeLong", SWT.NONE);
         new Label(composite_11, SWT.NONE);
         new Label(composite_11, SWT.NONE);
 
@@ -550,6 +542,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.paintBordersFor(composite_10);
 
         sctnTimeTracking = formToolkit.createSection(composite_10, Section.TWISTIE | Section.TITLE_BAR);
+        sctnTimeTracking.setDescription("The current time.");
 
         formToolkit.paintBordersFor(sctnTimeTracking);
         sctnTimeTracking.setText("TimeTracking");
@@ -578,8 +571,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_6.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
         composite_6.setLayout(new GridLayout(1, false));
         formToolkit.paintBordersFor(composite_6);
-        new Label(composite_5, SWT.NONE);
-        new Label(composite_5, SWT.NONE);
 
         // Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
 
@@ -637,6 +628,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // treeViewer_commandProtokoll.setSorter(new ViewerCommandSorter());
         // treeViewer_commandProtokoll.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         Table tree_1 = treeViewer_commandProtokoll.getTable();
+        tree_1.setEnabled(false);
         tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
         // treeViewer_commandProtokoll.setContentProvider();
@@ -660,15 +652,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      * Create the actions.
      */
     private void createActions() {
-        // startCombatAction = new Action() {
-        // @SuppressWarnings("unchecked")
-        // public void run() {
-        // startCombatTurn();
-        // }
-        // };
-        // startCombatAction.setText("Start combat");
-        // startCombatAction.setToolTipText("start the combat");
-        // startCombatAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_FORWARD));
 
         switchPlacementAction = new Action() {
             public void run() {
@@ -694,40 +677,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         switchPlacementAction.setToolTipText("switch placement");
         switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
-        // startTimetrackingAction = new Action() {
-        // //private boolean isTimetracking;
-        // private TimeTracker timeTrackJob;
-        //
-        // public void run() {
-        // if (isTimetracking) {
-        // isTimetracking = false;
-        // timeTrackJob.isTimetracking = false;
-        // } else {
-        // isTimetracking = true;
-        // if (timeTrackJob == null) {
-        // timeTrackJob = new TimeTracker("timetrack");
-        // timeTrackJob.setSystem(true);
-        // }
-        // timeTrackJob.isTimetracking = true;
-        // timeTrackJob.schedule();
-        // }
-        // }
-        // };
-        // startTimetrackingAction.setText("start timetracking");
-        // startTimetrackingAction.setToolTipText("sort tooltip");
-        // startTimetrackingAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD));
-
-        // executeAction = new Action() {
-        // public void run() {
-        // ISelection selection = treeViewer_Commands.getSelection();
-        // EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
-        // scriptService.executeCommand((Command)eObject);
-        // }
-        // };
-        // executeAction.setText("execute");
-        // executeAction.setToolTipText("execute the selected command");
-        // executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEF_VIEW));
-        //
     }
 
     /**
@@ -735,10 +684,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeToolBar() {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-        // toolbarManager.add(startCombatAction);
-        // toolbarManager.add(executeAction);
         toolbarManager.add(switchPlacementAction);
-        // toolbarManager.add(startTimetrackingAction);
+
     }
 
     /**
@@ -746,8 +693,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeMenu() {
         IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-        // menuManager.add(startCombatAction);
-        // menuManager.add(executeAction);
         menuManager.add(switchPlacementAction);
         // menuManager.add(startTimetrackingAction);
     }
@@ -855,6 +800,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         bindingContext.bindValue(observeTextStyledText_2ObserveWidget, placementDebuggingObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
+        IObservableValue observeDateTimeObserveWidget = WidgetProperties.text().observe(lblDatetimelong);
+        IObservableValue observeDetailValue = EMFObservables.observeDetailValue(realm, placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
+        bindingContext.bindValue(observeDateTimeObserveWidget, observeDetailValue, null, new EMFUpdateValueStrategy());
 
         //
         IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime_1);
@@ -873,14 +821,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         treeViewer_commandProtokoll.setInput(printedProtocol);
         treeViewer_commandProtokoll.setLabelProvider(labelProvider);
 
-        // //
-        // ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
-        // IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(), new EStructuralFeature[]{
-        // GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__EXECUTED });
-        // //
-        // IObservableList protocolCommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
-        // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
-        //
         //
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(),
@@ -916,94 +856,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         treeViewer.setContentProvider(listContentProvider);
         treeViewer.setInput(characters);
         //
-        //
-        // EMFProperties.multiList(GameplayPackage.Literals.COMMAND__SUB_COMMANDS,GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES);
-
-        EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(Command.class,
-                GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
-        // EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, GameplayPackage.Literals.COMMAND__SUB_COMMANDS, null);
-
-        TreeStructureAdvisor treeAdvisor = new TreeStructureAdvisor() {
-            @Override
-            public Object getParent(Object element) {
-                return rootContentProvider.getParent(element);
-            }
-
-            @Override
-            public Boolean hasChildren(Object element) {
-                return rootContentProvider.hasChildren(element);
-            }
-        };
-        // ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, treeAdvisor);
-        // // treeViewer_1.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), Literals.BESCHREIBBAR__NAME,
-        // // null));
-        // // IObservableMap[] observeMaps = EMFObservables.observeMaps(treeContentProvider.getKnownElements(),
-        // // new EStructuralFeature[]{ GameplayPackage.Literals.COMMAND__SUB_COMMANDS });
-        // IObservableMap[] observeMaps1 = EMFObservables.observeMaps(treeContentProvider.getKnownElements(), new EStructuralFeature[]{
-        // GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__EXECUTED });
-        //
-        // treeViewer_commandProtokoll.setLabelProvider(new ObservableMapLabelProvider(observeMaps1) {
-        // @Override
-        // public Image getColumnImage(Object element, int columnIndex) {
-        // if (columnIndex == 2)
-        // return labelProvider.getImage(element);
-        //
-        // return super.getColumnImage(element, columnIndex);
-        // }
-        //
-        // @Override
-        // public String getColumnText(Object element, int columnIndex) {
-        // Command cmd = (Command)element;
-        // switch (columnIndex) {
-        // case 0:
-        // return cmd.isExecuted() + "";
-        // case 1:
-        // if (cmd.getDate() != null)
-        // return SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.MEDIUM).format(cmd.getDate());
-        //
-        // default:
-        // break;
-        // }
-        //
-        // if (columnIndex == 2) {
-        // return labelProvider.getText(element);
-        // }
-        // return super.getColumnText(element, columnIndex);
-        // }
-        //
-        // @Override
-        // public String getText(Object element) {
-        // return labelProvider.getText(element);
-        // }
-        //
-        // @Override
-        // public Image getImage(Object element) {
-        // return labelProvider.getImage(element);
-        // }
-        //
-        // });
-        //
-        // treeViewer_commandProtokoll.setContentProvider(rootContentProvider);
-        // // treeViewer_1.setContentProvider(treeContentProvider);
-        // //
-        // // IObservableList protocol1CommandsObserveList = EMFObservables.observeList(Realm.getDefault(), protocol1,
-        // // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
-        // IObservableList protocol1CommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
-        // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
-        // treeViewer_commandProtokoll.setInput(protocol.getValue());
-        // //
-        // protocol.addChangeListener(new IChangeListener() {
-        //
-        // @Override
-        // public void handleChange(ChangeEvent event) {
-        // if (treeViewer_commandProtokoll.getTree().isDisposed())
-        // return;
-        // treeViewer_commandProtokoll.setInput(protocol.getValue());
-        // //treeViewer_1.setExpandedElements(event.);
-        //
-        //
-        // }
-        // });
         return bindingContext;
     }
 
@@ -1070,14 +922,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             e.printStackTrace();
         }
 
-        // placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
-        // placement1.getScript().getCommandStack().redo();
         scriptService.executeCommand(combatTurn);
         scriptService.setCombatTurn(combatTurn);
     }
 
     protected String printCommand(Command notifier) {
         String text = labelProvider.getText(notifier);
-        return String.format("%tT > %s", notifier.getDate(), text);
+        return String.format("%tT >> %s", notifier.getDate(), text);
     }
 }
