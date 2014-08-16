@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
-
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 
@@ -26,20 +25,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.DamageTest} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
-public class DamageTestItemProvider
-    extends ProbeCommandItemProvider
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+public class DamageTestItemProvider extends ProbeCommandItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public DamageTestItemProvider(AdapterFactory adapterFactory) {
@@ -50,6 +45,7 @@ public class DamageTestItemProvider
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -68,72 +64,49 @@ public class DamageTestItemProvider
      * This adds a property descriptor for the Damage feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addDamagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_DamageTest_damage_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_damage_feature", "_UI_DamageTest_type"),
-                 GameplayPackage.Literals.DAMAGE_TEST__DAMAGE,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_DamageTest_damage_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_damage_feature", "_UI_DamageTest_type"),
+                GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Dv feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addDvPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_DamageTest_dv_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_dv_feature", "_UI_DamageTest_type"),
-                 GameplayPackage.Literals.DAMAGE_TEST__DV,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_DamageTest_dv_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_dv_feature", "_UI_DamageTest_type"),
+                GameplayPackage.Literals.DAMAGE_TEST__DV, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Effective Damage feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addEffectiveDamagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_DamageTest_effectiveDamage_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_effectiveDamage_feature", "_UI_DamageTest_type"),
-                 GameplayPackage.Literals.DAMAGE_TEST__EFFECTIVE_DAMAGE,
-                 false,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_DamageTest_effectiveDamage_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_DamageTest_effectiveDamage_feature", "_UI_DamageTest_type"),
+                GameplayPackage.Literals.DAMAGE_TEST__EFFECTIVE_DAMAGE, false, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns DamageTest.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -145,23 +118,23 @@ public class DamageTestItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     @Override
     public String getText(Object object) {
         DamageTest damageTest = (DamageTest)object;
-        if(!damageTest.isExecuted())
+        if (!damageTest.isExecuted())
             return getString("_UI_DamageTest_type");
 
-        
         String label = "";
         ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(damageTest.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null)
             label = labelprovider.getText(damageTest.getSubject());
-        
-        return getString("_UI_DamageTest_type_text", new Object[]{label,damageTest.getDamage(),damageTest.getEffectiveDamage(),
-                damageTest.getSuccesses(),damageTest.getProbe()});
+
+        return getString("_UI_DamageTest_type_text",
+                new Object[]{ label, damageTest.getDamage(), damageTest.getEffectiveDamage(), damageTest.getSuccesses(), damageTest.getProbe().toString() });
     }
 
     /**
@@ -169,6 +142,7 @@ public class DamageTestItemProvider
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -190,6 +164,7 @@ public class DamageTestItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
