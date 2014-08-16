@@ -5,10 +5,15 @@ package de.urszeidler.shr5.ecp.service;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.ui.services.IServiceLocator;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 
@@ -17,6 +22,16 @@ import de.urszeidler.shr5.scripting.Script;
  */
 public class ScriptServiceImpl implements ScriptService {
 
+    private Adapter adapter = new EContentAdapter() {
+        
+        public void notifyChanged(Notification notification) {
+            super.notifyChanged(notification);
+            notification.getFeature();
+            if(GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())){
+                System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
+            }
+        }
+    };
     private Script script;
     private Placement placement;
     private IServiceLocator locator;
@@ -34,9 +49,15 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setScript(Script script) {
+//        if(this.script!=null)
+//            this.script.eAdapters().remove(adapter);
+        
+     
         this.script = script;
         if (scriptViewer != null)
             scriptViewer.setScript(script);
+        
+//        this.script.eAdapters().add(adapter);
 
     }
 

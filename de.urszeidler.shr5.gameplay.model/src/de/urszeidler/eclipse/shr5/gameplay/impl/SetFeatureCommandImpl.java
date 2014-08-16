@@ -449,15 +449,15 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * @generated not
      */
     public void redo() {
-        executing = true;
+        setExecuting(true);
 
         if (isSetCmdCallback())
             cmdCallback.prepareCommand(this, GameplayPackage.Literals.SET_FEATURE_COMMAND__VALUE);
 
         getObject().eSet(getFeature(), getValue());
         
-        executed = true;
-        executing = false;
+        setExecuted(true);
+        setExecuting(false);
     }
 
     /**

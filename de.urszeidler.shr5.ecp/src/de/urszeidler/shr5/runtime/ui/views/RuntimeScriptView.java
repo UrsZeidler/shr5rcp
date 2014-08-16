@@ -21,11 +21,14 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
@@ -96,6 +99,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Team;
@@ -115,6 +119,18 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.swt.widgets.CoolBar;
+import org.eclipse.swt.widgets.CoolItem;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.widgets.ExpandBar;
+import org.eclipse.swt.widgets.ExpandItem;
+import org.eclipse.wb.swt.SWTResourceManager;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -161,6 +177,21 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
     }
 
+   private Adapter adapter = new EContentAdapter() {
+        
+        public void notifyChanged(Notification notification) {
+            super.notifyChanged(notification);
+            notification.getFeature();
+            if(GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())){
+                System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
+                
+                String text = labelProvider.getText((Command)notification.getNotifier());
+                printedProtocol.add(text);
+            }
+        }
+    };
+
+    
     protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
@@ -169,7 +200,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
     private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
     private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
-    protected boolean isTimetracking;
+    //protected boolean isTimetracking;
+    private TimeTracker timeTrackJob;
 
     private Label lblName;
     private StyledText styledText;
@@ -177,11 +209,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private StyledText styledText_2;
 
-    private Action startCombatAction;
+//    private Action startCombatAction;
 
     private Action switchPlacementAction;
 
-    private Action startTimetrackingAction;
+//    private Action startTimetrackingAction;
 
     private ComposedAdapterFactory adapterFactory;
 
@@ -205,12 +237,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
    // private ExecutionProtocol protocol1;
     private WritableValue protocol = new WritableValue();
     private WritableList characters = new WritableList();
+    private WritableList printedProtocol = new WritableList();
+
     private TableViewer treeViewer;
-    private TreeViewer treeViewer_1;
+    private TableViewer treeViewer_commandProtokoll;
 
     private TreeViewer treeViewer_Commands;
 
-    private Action executeAction;
+//    private Action executeAction;
     private Label lblDesc;
 
     private Label lblImg;
@@ -250,7 +284,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
         };
 
-        
+        timeTrackJob = new TimeTracker("timetrack");
+        timeTrackJob.setSystem(true);
 //        
 //        selectedCharacter.addChangeListener(new IChangeListener() {
 //            
@@ -308,8 +343,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
 
         lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE);
-        TableWrapData layoutData = new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1);
-         lblImg.setLayoutData(layoutData);
+         lblImg.setLayoutData(new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1));
         //lblImg.setBounds(0, 0, 32, 32);
         lblImg.setSize(96,96);
         lblImg.setText("         ");
@@ -346,12 +380,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         Composite composite_11 = formToolkit.createComposite(sctnActionSection, SWT.NONE);
         formToolkit.paintBordersFor(composite_11);
         sctnActionSection.setClient(composite_11);
-        composite_11.setLayout(new GridLayout(2, false));
+        composite_11.setLayout(new GridLayout(3, false));
 
         Composite composite_13 = new Composite(composite_11, SWT.NONE);
         GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_composite_13.heightHint = 128;
-        gd_composite_13.widthHint = 371;
+        gd_composite_13.widthHint = 298;
         composite_13.setLayoutData(gd_composite_13);
         formToolkit.adapt(composite_13);
         formToolkit.paintBordersFor(composite_13);
@@ -379,7 +413,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         
         Composite composite_12 = new Composite(composite_11, SWT.NONE);
         GridData gd_composite_12 = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
-        gd_composite_12.widthHint = 253;
+        gd_composite_12.widthHint = 196;
         composite_12.setLayoutData(gd_composite_12);
         formToolkit.adapt(composite_12);
         formToolkit.paintBordersFor(composite_12);
@@ -393,6 +427,54 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         
         
         formToolkit.paintBordersFor(tree_2);
+        
+        Composite composite_15 = formToolkit.createComposite(composite_11, SWT.NONE);
+        composite_15.setLayout(new FillLayout(SWT.HORIZONTAL));
+        composite_15.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        formToolkit.paintBordersFor(composite_15);
+        
+        ToolBar toolBar = new ToolBar(composite_15, SWT.BORDER | SWT.FLAT | SWT.RIGHT | SWT.VERTICAL);
+        formToolkit.adapt(toolBar);
+        formToolkit.paintBordersFor(toolBar);
+        
+        final ToolItem tltmTimeTrackingItem = new ToolItem(toolBar, SWT.NONE);
+        tltmTimeTrackingItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (timeTrackJob.isTimetracking) {
+                    timeTrackJob.isTimetracking = false;
+                    tltmTimeTrackingItem.setText("start time tracking");
+                } else {
+                    timeTrackJob.isTimetracking = true;
+                     timeTrackJob.schedule();
+                     tltmTimeTrackingItem.setText("stop time tracking");
+                }
+            }
+        });
+        tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
+        tltmTimeTrackingItem.setText("start time tracking");
+
+        ToolItem tltmStartcombatturn = new ToolItem(toolBar, SWT.NONE);
+        tltmStartcombatturn.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                startCombatTurn();
+            }
+        });
+        tltmStartcombatturn.setText("startCombatTurn");
+        
+        ToolItem tltmExecuteaction = new ToolItem(toolBar, SWT.NONE);
+        tltmExecuteaction.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                ISelection selection = treeViewer_Commands.getSelection();
+                EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
+                scriptService.executeCommand((Command)eObject);
+            }
+        });
+        tltmExecuteaction.setText("executeAction");
+        
+        new Label(composite_11, SWT.NONE);
         new Label(composite_11, SWT.NONE);
         new Label(composite_11, SWT.NONE);
 
@@ -522,12 +604,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_14.setLayoutData(twd_composite_14);
         formToolkit.paintBordersFor(composite_14);
 
-        treeViewer_1 = new TreeViewer(composite_14, SWT.BORDER);
-        treeViewer_1.setSorter(new ViewerCommandSorter());
-        treeViewer_1.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
-        Tree tree_1 = treeViewer_1.getTree();
+        treeViewer_commandProtokoll = new TableViewer(composite_14, SWT.BORDER);
+        treeViewer_commandProtokoll.setSorter(new ViewerCommandSorter());
+        //treeViewer_commandProtokoll.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
+        Table tree_1 = treeViewer_commandProtokoll.getTable();
         tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
+       // treeViewer_commandProtokoll.setContentProvider();
 
         createActions();
         initializeToolBar();
@@ -549,44 +632,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      * Create the actions.
      */
     private void createActions() {
-        startCombatAction = new Action() {
-            @SuppressWarnings("unchecked")
-            public void run() {
-                isTimetracking = false;
-                CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
-                combatTurn.setDate(placement1.getActualDate());
-                combatTurn.setCmdCallback(RuntimeScriptView.this);
-                List<Object> choiceOfValues = new ArrayList<Object>();
-
-                EList<Team> teams = placement1.getTeams();
-                for (Team team : teams) {
-                    choiceOfValues.addAll(team.getMembers());
-                }
-                if (placement1.getScript() != null)
-                    choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
-
-                FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                        GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
-                if (dialogWert.open() == Dialog.OK)
-                    combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
-                else
-                    return;
-
-                try {
-                    PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
-                } catch (WorkbenchException e) {
-                    e.printStackTrace();
-                }
-
-//                placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
-//                placement1.getScript().getCommandStack().redo();
-                scriptService.executeCommand(combatTurn);
-                scriptService.setCombatTurn(combatTurn);
-            }
-        };
-        startCombatAction.setText("Start combat");
-        startCombatAction.setToolTipText("start the combat");
-        startCombatAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_FORWARD));
+//        startCombatAction = new Action() {
+//            @SuppressWarnings("unchecked")
+//            public void run() {
+//                startCombatTurn();
+//            }
+//        };
+//        startCombatAction.setText("Start combat");
+//        startCombatAction.setToolTipText("start the combat");
+//        startCombatAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_FORWARD));
 
         switchPlacementAction = new Action() {
             public void run() {
@@ -612,40 +666,40 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         switchPlacementAction.setToolTipText("switch placement");
         switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
-        startTimetrackingAction = new Action() {
-            //private boolean isTimetracking;
-            private TimeTracker timeTrackJob;
+//        startTimetrackingAction = new Action() {
+//            //private boolean isTimetracking;
+//            private TimeTracker timeTrackJob;
+//
+//            public void run() {
+//                if (isTimetracking) {
+//                    isTimetracking = false;
+//                    timeTrackJob.isTimetracking = false;
+//                } else {
+//                    isTimetracking = true;
+//                    if (timeTrackJob == null) {
+//                        timeTrackJob = new TimeTracker("timetrack");
+//                        timeTrackJob.setSystem(true);
+//                    }
+//                    timeTrackJob.isTimetracking = true;
+//                    timeTrackJob.schedule();
+//                }
+//            }
+//        };
+//        startTimetrackingAction.setText("start timetracking");
+//        startTimetrackingAction.setToolTipText("sort tooltip");
+//        startTimetrackingAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD));
 
-            public void run() {
-                if (isTimetracking) {
-                    isTimetracking = false;
-                    timeTrackJob.isTimetracking = false;
-                } else {
-                    isTimetracking = true;
-                    if (timeTrackJob == null) {
-                        timeTrackJob = new TimeTracker("timetrack");
-                        timeTrackJob.setSystem(true);
-                    }
-                    timeTrackJob.isTimetracking = true;
-                    timeTrackJob.schedule();
-                }
-            }
-        };
-        startTimetrackingAction.setText("start timetracking");
-        startTimetrackingAction.setToolTipText("sort tooltip");
-        startTimetrackingAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD));
-
-        executeAction = new Action() {
-            public void run() {
-                ISelection selection = treeViewer_Commands.getSelection();
-                EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
-                scriptService.executeCommand((Command)eObject);
-            }
-        };
-        executeAction.setText("execute");
-        executeAction.setToolTipText("execute the selected command");
-        executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEF_VIEW));
-
+//        executeAction = new Action() {
+//            public void run() {
+//                ISelection selection = treeViewer_Commands.getSelection();
+//                EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
+//                scriptService.executeCommand((Command)eObject);
+//            }
+//        };
+//        executeAction.setText("execute");
+//        executeAction.setToolTipText("execute the selected command");
+//        executeAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_DEF_VIEW));
+//
     }
 
     /**
@@ -653,10 +707,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeToolBar() {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-        toolbarManager.add(startCombatAction);
-        toolbarManager.add(executeAction);
+//        toolbarManager.add(startCombatAction);
+//        toolbarManager.add(executeAction);
         toolbarManager.add(switchPlacementAction);
-        toolbarManager.add(startTimetrackingAction);
+//        toolbarManager.add(startTimetrackingAction);
     }
 
     /**
@@ -664,10 +718,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeMenu() {
         IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-        menuManager.add(startCombatAction);
-        menuManager.add(executeAction);
+//        menuManager.add(startCombatAction);
+//        menuManager.add(executeAction);
         menuManager.add(switchPlacementAction);
-        menuManager.add(startTimetrackingAction);
+//        menuManager.add(startTimetrackingAction);
     }
 
     @Override
@@ -710,7 +764,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         for (Team team : teams) {
             characters.addAll(team.getMembers());
         }
-        sctnActionSection.setExpanded(false);
+        sctnActionSection.setExpanded(true);
         sctnBackground.setExpanded(true);
         sctnDebugging.setExpanded(false);
         sctnInTheirFace.setExpanded(false);
@@ -722,22 +776,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         //this.script = script;
         commandStack = script.getHistory().getCommandStack();
         protocol.setValue(commandStack.getProtocol());// = commandStack.getProtocol();
+//TODO : remove the adapter
+//            script.eAdapters().remove(adapter);
+        
+            script.eAdapters().add(adapter);
+
     }
 
-    // @Override
-    // public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-    // if (selection instanceof IStructuredSelection) {
-    // IStructuredSelection ss = (IStructuredSelection)selection;
-    // Object firstElement = ss.getFirstElement();
-    // if (firstElement instanceof Placement) {
-    // placement1 = (Placement)firstElement;
-    // initDataBindings1();
-    // }
-    // // selectionProvider.setSelection(selection);
-    // }
-    // }
-
-    protected DataBindingContext initDataBindings1() {
+     protected DataBindingContext initDataBindings1() {
         DataBindingContext bindingContext = new DataBindingContext();
         Realm realm = Realm.getDefault();
         //
@@ -799,6 +845,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
         bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
         //
+        ObservableListContentProvider listProtocolProvider = new ObservableListContentProvider();
+        treeViewer_commandProtokoll.setContentProvider(listProtocolProvider);
+        treeViewer_commandProtokoll.setInput(printedProtocol);
+        treeViewer_commandProtokoll.setLabelProvider(labelProvider);
+        
         // //
         // ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         // IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(), new EStructuralFeature[]{
@@ -819,6 +870,18 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     return labelProvider.getText(element);
                 }
                 return super.getColumnText(element, columnIndex);
+            }
+            @Override
+            public Image getColumnImage(Object element, int columnIndex) {
+                if (columnIndex == 0) {
+                    return labelProvider.getImage(element);
+                }
+                return super.getColumnImage(element, columnIndex);
+            }
+            
+            @Override
+            public Image getImage(Object element) {
+                return labelProvider.getImage(element);
             }
             @Override
             public String getText(Object element) {
@@ -846,76 +909,76 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return rootContentProvider.hasChildren(element);
             }
         };
-        ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, treeAdvisor);
-        // treeViewer_1.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), Literals.BESCHREIBBAR__NAME,
-        // null));
-        // IObservableMap[] observeMaps = EMFObservables.observeMaps(treeContentProvider.getKnownElements(),
-        // new EStructuralFeature[]{ GameplayPackage.Literals.COMMAND__SUB_COMMANDS });
-        IObservableMap[] observeMaps1 = EMFObservables.observeMaps(treeContentProvider.getKnownElements(), new EStructuralFeature[]{
-                GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__EXECUTED });
-
-        treeViewer_1.setLabelProvider(new ObservableMapLabelProvider(observeMaps1) {
-            @Override
-            public Image getColumnImage(Object element, int columnIndex) {
-                if (columnIndex == 2)
-                    return labelProvider.getImage(element);
-
-                return super.getColumnImage(element, columnIndex);
-            }
-
-            @Override
-            public String getColumnText(Object element, int columnIndex) {
-                Command cmd = (Command)element;
-                switch (columnIndex) {
-                    case 0:
-                        return cmd.isExecuted() + "";
-                    case 1:
-                        if (cmd.getDate() != null)
-                            return SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.MEDIUM).format(cmd.getDate());
-
-                    default:
-                        break;
-                }
-
-                if (columnIndex == 2) {
-                    return labelProvider.getText(element);
-                }
-                return super.getColumnText(element, columnIndex);
-            }
-
-            @Override
-            public String getText(Object element) {
-                return labelProvider.getText(element);
-            }
-            
-            @Override
-            public Image getImage(Object element) {
-                return labelProvider.getImage(element);
-            }
-
-        });
-
-        treeViewer_1.setContentProvider(rootContentProvider);
-        // treeViewer_1.setContentProvider(treeContentProvider);
-        //
-        // IObservableList protocol1CommandsObserveList = EMFObservables.observeList(Realm.getDefault(), protocol1,
-        // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
-        IObservableList protocol1CommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
-                GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
-        treeViewer_1.setInput(protocol.getValue());
-        //
-        protocol.addChangeListener(new IChangeListener() {
-
-            @Override
-            public void handleChange(ChangeEvent event) {
-                if (treeViewer_1.getTree().isDisposed())
-                    return;
-                treeViewer_1.setInput(protocol.getValue());
-               //treeViewer_1.setExpandedElements(event.);
-               
-
-            }
-        });
+//        ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, treeAdvisor);
+//        // treeViewer_1.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), Literals.BESCHREIBBAR__NAME,
+//        // null));
+//        // IObservableMap[] observeMaps = EMFObservables.observeMaps(treeContentProvider.getKnownElements(),
+//        // new EStructuralFeature[]{ GameplayPackage.Literals.COMMAND__SUB_COMMANDS });
+//        IObservableMap[] observeMaps1 = EMFObservables.observeMaps(treeContentProvider.getKnownElements(), new EStructuralFeature[]{
+//                GameplayPackage.Literals.COMMAND__EXECUTED, GameplayPackage.Literals.COMMAND__DATE, GameplayPackage.Literals.COMMAND__EXECUTED });
+//
+//        treeViewer_commandProtokoll.setLabelProvider(new ObservableMapLabelProvider(observeMaps1) {
+//            @Override
+//            public Image getColumnImage(Object element, int columnIndex) {
+//                if (columnIndex == 2)
+//                    return labelProvider.getImage(element);
+//
+//                return super.getColumnImage(element, columnIndex);
+//            }
+//
+//            @Override
+//            public String getColumnText(Object element, int columnIndex) {
+//                Command cmd = (Command)element;
+//                switch (columnIndex) {
+//                    case 0:
+//                        return cmd.isExecuted() + "";
+//                    case 1:
+//                        if (cmd.getDate() != null)
+//                            return SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.MEDIUM).format(cmd.getDate());
+//
+//                    default:
+//                        break;
+//                }
+//
+//                if (columnIndex == 2) {
+//                    return labelProvider.getText(element);
+//                }
+//                return super.getColumnText(element, columnIndex);
+//            }
+//
+//            @Override
+//            public String getText(Object element) {
+//                return labelProvider.getText(element);
+//            }
+//            
+//            @Override
+//            public Image getImage(Object element) {
+//                return labelProvider.getImage(element);
+//            }
+//
+//        });
+//
+//        treeViewer_commandProtokoll.setContentProvider(rootContentProvider);
+//        // treeViewer_1.setContentProvider(treeContentProvider);
+//        //
+//        // IObservableList protocol1CommandsObserveList = EMFObservables.observeList(Realm.getDefault(), protocol1,
+//        // GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
+//        IObservableList protocol1CommandsObserveList = EMFObservables.observeDetailList(Realm.getDefault(), protocol,
+//                GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS);
+//        treeViewer_commandProtokoll.setInput(protocol.getValue());
+//        //
+//        protocol.addChangeListener(new IChangeListener() {
+//
+//            @Override
+//            public void handleChange(ChangeEvent event) {
+//                if (treeViewer_commandProtokoll.getTree().isDisposed())
+//                    return;
+//                treeViewer_commandProtokoll.setInput(protocol.getValue());
+//               //treeViewer_1.setExpandedElements(event.);
+//               
+//
+//            }
+//        });
         return bindingContext;
     }
 
@@ -955,5 +1018,39 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public CommandCallback getCmdCallback() {
          return this;
+    }
+
+    @SuppressWarnings("unchecked")
+    protected void startCombatTurn() {
+        timeTrackJob.isTimetracking = false;
+        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
+        combatTurn.setDate(placement1.getActualDate());
+        combatTurn.setCmdCallback(RuntimeScriptView.this);
+        List<Object> choiceOfValues = new ArrayList<Object>();
+
+        EList<Team> teams = placement1.getTeams();
+        for (Team team : teams) {
+            choiceOfValues.addAll(team.getMembers());
+        }
+        if (placement1.getScript() != null)
+            choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
+
+        FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
+        if (dialogWert.open() == Dialog.OK)
+            combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
+        else
+            return;
+
+        try {
+            PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+        } catch (WorkbenchException e) {
+            e.printStackTrace();
+        }
+
+//                placement1.getScript().getCommandStack().setCurrentCommand(combatTurn);
+//                placement1.getScript().getCommandStack().redo();
+        scriptService.executeCommand(combatTurn);
+        scriptService.setCombatTurn(combatTurn);
     }
 }

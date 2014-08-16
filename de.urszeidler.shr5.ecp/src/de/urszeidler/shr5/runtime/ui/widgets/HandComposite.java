@@ -17,13 +17,16 @@ import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
+import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+
 import org.eclipse.wb.swt.ResourceManager;
 
 public class HandComposite extends NameableComposite {
@@ -78,6 +81,7 @@ public class HandComposite extends NameableComposite {
                 } else if (value instanceof AbstaktFernKampfwaffe) {
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
                     // Simple action case
+                    //if(initativePass.getAction()==null)
                     SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
                     SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
                     RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
@@ -97,7 +101,23 @@ public class HandComposite extends NameableComposite {
         toolItem.setToolTipText("Use item");
         actionBar.getParent().layout(true);
         // actionBar = new ToolBar(parent, style)
-
+        ToolItem toolItem1 = new ToolItem(actionBar, SWT.NONE);
+        toolItem1.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItem1.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+              if(initativePass.getFreeAction()==null){
+                  FreeAction action = GameplayFactory.eINSTANCE.createFreeAction();
+                  SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                  action.getSubCommands().add(setFeatureCommand);
+                  setFeatureCommand.setObject(initativePass.getSubject());
+                  setFeatureCommand.setFeature(references);
+                  setFeatureCommand.setObject(null);
+                  initativePass.setFreeAction(action);
+              }
+            }
+        });
+        toolItem1.setToolTipText("drop item");
         // super.updateToolbar();
     }
 
