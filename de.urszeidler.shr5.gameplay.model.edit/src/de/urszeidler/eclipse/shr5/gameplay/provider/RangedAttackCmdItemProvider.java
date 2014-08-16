@@ -157,9 +157,10 @@ public class RangedAttackCmdItemProvider
         String label1 = "";
         ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getSubject(), IItemLabelProvider.class);
+        IItemLabelProvider labelprovider1 = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getObject(), IItemLabelProvider.class);
         if (labelprovider != null){
             label = labelprovider.getText(rangedAttackCmd.getSubject());
-            label1 = labelprovider.getText(rangedAttackCmd.getObject());
+            label1 = labelprovider1.getText(rangedAttackCmd.getObject());
         }
         String weapon = "";
         labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getWeapon(), IItemLabelProvider.class);
