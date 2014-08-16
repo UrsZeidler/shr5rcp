@@ -1,3 +1,14 @@
+2014-08-16 Version 0.1.9
+
+* fixed the product build and the updatesite
+
+2014-08-09 Version 0.1.19-rc
+
+* added script model
+* added runtime model
+* added command model
+* minor fixes
+
 2014-07-20 Version 0.1.8
 
 * added the basic update site for the releases  : http://urszeidler.github.io/shr5rcp/shr5updatesite/ 
