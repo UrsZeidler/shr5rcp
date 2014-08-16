@@ -119,7 +119,7 @@ public class GameplayTools {
         data.setEObject(subject);
         data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 
-        mod = mod - subject.getIntegerValue(data);
+        mod = mod + subject.getIntegerValue(data);
         return mod;
     }
 

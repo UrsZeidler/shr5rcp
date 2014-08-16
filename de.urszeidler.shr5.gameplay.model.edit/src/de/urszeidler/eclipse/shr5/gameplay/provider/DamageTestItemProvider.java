@@ -160,7 +160,7 @@ public class DamageTestItemProvider
         if (labelprovider != null)
             label = labelprovider.getText(damageTest.getSubject());
         
-        return getString("_UI_DamageTest_type_text", new Object[]{label,damageTest.getDamage(),
+        return getString("_UI_DamageTest_type_text", new Object[]{label,damageTest.getDamage(),damageTest.getEffectiveDamage(),
                 damageTest.getSuccesses(),damageTest.getProbe()});
     }
 
