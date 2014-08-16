@@ -122,6 +122,7 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.custom.ScrolledComposite;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -341,8 +342,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     @Override
     public void createPartControl(Composite parent) {
+        
+        ScrolledComposite scrolledComposite = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+        formToolkit.adapt(scrolledComposite);
+        formToolkit.paintBordersFor(scrolledComposite);
+        scrolledComposite.setExpandHorizontal(true);
+        scrolledComposite.setExpandVertical(true);
 
-        Composite composite = formToolkit.createComposite(parent, SWT.NONE);
+        Composite composite = formToolkit.createComposite(scrolledComposite, SWT.NONE);
         formToolkit.paintBordersFor(composite);
         {
             TableWrapLayout twl_composite = new TableWrapLayout();
@@ -621,7 +628,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         Composite composite_14 = formToolkit.createComposite(composite, SWT.NONE);
         composite_14.setLayout(new FillLayout(SWT.HORIZONTAL));
         TableWrapData twd_composite_14 = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 1, 1);
-        twd_composite_14.heightHint = 206;
+        twd_composite_14.heightHint = 239;
         composite_14.setLayoutData(twd_composite_14);
         formToolkit.paintBordersFor(composite_14);
 
@@ -632,6 +639,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tree_1.setEnabled(false);
         tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
+        scrolledComposite.setContent(composite);
+        scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         // treeViewer_commandProtokoll.setContentProvider();
 
         createActions();
