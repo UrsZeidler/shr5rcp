@@ -90,6 +90,8 @@ import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
@@ -174,15 +176,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             Object feature = notification.getFeature();
             if (notifier instanceof CombatTurn) {
                 CombatTurn ct = (CombatTurn)notifier;
-                if(GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)){
-                    if(ct.getCurrentTurn()==null)
+                if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
+                    if (ct.getCurrentTurn() == null)
                         return;
-                    printedProtocol.add(0,
-                            String.format("%s has %s %d turn at %d phase", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct.getCurrentTurn().getSubject()
-                                    .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ct.getCurrentTurn().getTurn(),ct.getCurrentTurn().getPhase()));
+                    printedProtocol.add(0, String.format("%s has %s %d turn at %d phase", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
+                            .getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ct.getCurrentTurn().getTurn(), ct
+                            .getCurrentTurn().getPhase()));
 
-                }else
-                if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
+                } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuting())
                         printedProtocol.add(0, "The combatround has started.");
                 return;
@@ -425,9 +426,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tree.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseDoubleClick(MouseEvent e) {
-//                TableItem[] selection = tree.getSelection();
-//                if (selection.length == 1)
-//                    ShadowrunEditingTools.openEObject();
+                // TableItem[] selection = tree.getSelection();
+                // if (selection.length == 1)
+                // ShadowrunEditingTools.openEObject();
             }
         });
         // tree.setHeaderVisible(true);
@@ -865,6 +866,32 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             CombatTurn ct = (CombatTurn)cmd;
             new CheckInitaive(getSite().getShell(), ct).open();
             return;
+        } else if (cmd instanceof MeeleAttackCmd) {
+            MeeleAttackCmd mc = (MeeleAttackCmd)cmd;
+            if (mc.getSubject() != null && mc.getWeapon() != null && mc.getSkill() != null && mc.getObject() != null)
+                return;
+            
+            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT
+                    ,GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON
+                    ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT
+                    ,GameplayPackage.Literals.PROBE_COMMAND__MODS
+                    );
+            genericEObjectDialog.open();
+
+        } else if (cmd instanceof RangedAttackCmd) {
+            RangedAttackCmd rc = (RangedAttackCmd)cmd;
+            if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
+                return;
+        
+            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT
+                    ,GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON,GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE
+                    ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT
+                    ,GameplayPackage.Literals.PROBE_COMMAND__MODS
+                    );
+            genericEObjectDialog.open();
+            return;
         }
 
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -877,7 +904,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
-
+            return;
         }
 
         ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
