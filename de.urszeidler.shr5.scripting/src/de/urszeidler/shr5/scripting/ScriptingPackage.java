@@ -407,13 +407,22 @@ public interface ScriptingPackage extends EPackage {
     int SCRIPT_HISTORY__CURRENT_PLACEMENT = 2;
 
     /**
+     * The feature id for the '<em><b>Written Protokol</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPT_HISTORY__WRITTEN_PROTOKOL = 3;
+
+    /**
      * The number of structural features of the '<em>Script History</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCRIPT_HISTORY_FEATURE_COUNT = 3;
+    int SCRIPT_HISTORY_FEATURE_COUNT = 4;
 
     /**
      * The number of operations of the '<em>Script History</em>' class.
@@ -675,6 +684,17 @@ public interface ScriptingPackage extends EPackage {
     EReference getScriptHistory_CurrentPlacement();
 
     /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.ScriptHistory#getWrittenProtokol <em>Written Protokol</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Written Protokol</em>'.
+     * @see de.urszeidler.shr5.scripting.ScriptHistory#getWrittenProtokol()
+     * @see #getScriptHistory()
+     * @generated
+     */
+    EAttribute getScriptHistory_WrittenProtokol();
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -888,6 +908,14 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EReference SCRIPT_HISTORY__CURRENT_PLACEMENT = eINSTANCE.getScriptHistory_CurrentPlacement();
+
+        /**
+         * The meta object literal for the '<em><b>Written Protokol</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SCRIPT_HISTORY__WRITTEN_PROTOKOL = eINSTANCE.getScriptHistory_WrittenProtokol();
 
     }
 

@@ -162,6 +162,10 @@
         <element xmi:type="ecore:EAttribute" href="scripting.ecore#//ScriptHistory/currentDate"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Y1_wASGLEeSB6uHPQ9NG6g"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_GmC3QCYsEeSIMvdKIF-9Cg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="scripting.ecore#//ScriptHistory/writtenProtokol"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GmC3QSYsEeSIMvdKIF-9Cg"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_o3lZwSGKEeSB6uHPQ9NG6g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_o3lZwiGKEeSB6uHPQ9NG6g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_o3lZwyGKEeSB6uHPQ9NG6g"/>
@@ -173,7 +177,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_o3kLoSGKEeSB6uHPQ9NG6g" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="scripting.ecore#//ScriptHistory"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o3kLoiGKEeSB6uHPQ9NG6g" x="140" y="100"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o3kLoiGKEeSB6uHPQ9NG6g" x="130" y="80"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Jw2hYI-5Ed6SEpVfiQZsGw"/>
   <element xmi:type="ecore:EPackage" href="scripting.ecore#/"/>
@@ -345,7 +349,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_v53JsSGKEeSB6uHPQ9NG6g" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_v53JsiGKEeSB6uHPQ9NG6g" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="scripting.ecore#//Script/history"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v53JsyGKEeSB6uHPQ9NG6g" points="[-32, 4, 30, 90]$[-39, 4, 23, 90]$[-62, 4, 0, 90]$[-62, -79, 0, 7]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v53JsyGKEeSB6uHPQ9NG6g" points="[-32, 2, 28, 94]$[-38, 2, 22, 94]$[-60, 2, 0, 94]$[-60, -83, 0, 9]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v56NACGKEeSB6uHPQ9NG6g" id="(0.3235294117647059,0.19047619047619047)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_elkh8CGLEeSB6uHPQ9NG6g" id="(0.6296296296296297,0.8571428571428571)"/>
   </edges>

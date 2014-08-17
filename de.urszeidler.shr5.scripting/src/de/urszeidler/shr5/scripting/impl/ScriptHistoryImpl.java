@@ -8,16 +8,19 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCommandStack <em>Command Stack</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCurrentDate <em>Current Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCurrentPlacement <em>Current Placement</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getWrittenProtokol <em>Written Protokol</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,6 +78,16 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * @ordered
      */
     protected Placement currentPlacement;
+
+    /**
+     * The cached value of the '{@link #getWrittenProtokol() <em>Written Protokol</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWrittenProtokol()
+     * @generated
+     * @ordered
+     */
+    protected EList<String> writtenProtokol;
 
     /**
      * <!-- begin-user-doc -->
@@ -201,6 +215,18 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<String> getWrittenProtokol() {
+        if (writtenProtokol == null) {
+            writtenProtokol = new EDataTypeUniqueEList<String>(String.class, this, ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+        }
+        return writtenProtokol;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -225,6 +251,8 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
             case ScriptingPackage.SCRIPT_HISTORY__CURRENT_PLACEMENT:
                 if (resolve) return getCurrentPlacement();
                 return basicGetCurrentPlacement();
+            case ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL:
+                return getWrittenProtokol();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -234,6 +262,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -245,6 +274,10 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
                 return;
             case ScriptingPackage.SCRIPT_HISTORY__CURRENT_PLACEMENT:
                 setCurrentPlacement((Placement)newValue);
+                return;
+            case ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL:
+                getWrittenProtokol().clear();
+                getWrittenProtokol().addAll((Collection<? extends String>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -267,6 +300,9 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
             case ScriptingPackage.SCRIPT_HISTORY__CURRENT_PLACEMENT:
                 setCurrentPlacement((Placement)null);
                 return;
+            case ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL:
+                getWrittenProtokol().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -285,6 +321,8 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
                 return CURRENT_DATE_EDEFAULT == null ? currentDate != null : !CURRENT_DATE_EDEFAULT.equals(currentDate);
             case ScriptingPackage.SCRIPT_HISTORY__CURRENT_PLACEMENT:
                 return currentPlacement != null;
+            case ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL:
+                return writtenProtokol != null && !writtenProtokol.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -301,6 +339,8 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (currentDate: ");
         result.append(currentDate);
+        result.append(", writtenProtokol: ");
+        result.append(writtenProtokol);
         result.append(')');
         return result.toString();
     }

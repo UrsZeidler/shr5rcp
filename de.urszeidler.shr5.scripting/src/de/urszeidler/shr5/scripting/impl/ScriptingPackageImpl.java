@@ -334,6 +334,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getScriptHistory_WrittenProtokol() {
+        return (EAttribute)scriptHistoryEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }
@@ -383,6 +392,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(scriptHistoryEClass, SCRIPT_HISTORY__COMMAND_STACK);
         createEAttribute(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_DATE);
         createEReference(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_PLACEMENT);
+        createEAttribute(scriptHistoryEClass, SCRIPT_HISTORY__WRITTEN_PROTOKOL);
     }
 
     /**
@@ -450,6 +460,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScriptHistory_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getScriptHistory_CurrentDate(), theShr5Package.getShrDate(), "currentDate", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScriptHistory_CurrentPlacement(), this.getPlacement(), null, "currentPlacement", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getScriptHistory_WrittenProtokol(), ecorePackage.getEString(), "writtenProtokol", null, 0, -1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);

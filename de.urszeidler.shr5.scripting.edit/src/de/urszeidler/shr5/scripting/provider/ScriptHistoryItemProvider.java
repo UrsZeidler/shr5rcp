@@ -67,6 +67,7 @@ public class ScriptHistoryItemProvider
 
             addCurrentDatePropertyDescriptor(object);
             addCurrentPlacementPropertyDescriptor(object);
+            addWrittenProtokolPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -111,6 +112,28 @@ public class ScriptHistoryItemProvider
                  false,
                  true,
                  null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Written Protokol feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWrittenProtokolPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ScriptHistory_writtenProtokol_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ScriptHistory_writtenProtokol_feature", "_UI_ScriptHistory_type"),
+                 ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -184,6 +207,7 @@ public class ScriptHistoryItemProvider
 
         switch (notification.getFeatureID(ScriptHistory.class)) {
             case ScriptingPackage.SCRIPT_HISTORY__CURRENT_DATE:
+            case ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case ScriptingPackage.SCRIPT_HISTORY__COMMAND_STACK:

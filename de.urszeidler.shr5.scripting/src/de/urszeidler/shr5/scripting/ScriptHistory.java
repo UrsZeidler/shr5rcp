@@ -6,6 +6,7 @@ import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCommandStack <em>Command Stack</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentDate <em>Current Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentPlacement <em>Current Placement</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getWrittenProtokol <em>Written Protokol</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +67,9 @@ public interface ScriptHistory extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The current date.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Current Date</em>' attribute.
      * @see #setCurrentDate(Date)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScriptHistory_CurrentDate()
@@ -108,5 +113,20 @@ public interface ScriptHistory extends EObject {
      * @generated
      */
     void setCurrentPlacement(Placement value);
+
+    /**
+     * Returns the value of the '<em><b>Written Protokol</b></em>' attribute list.
+     * The list contents are of type {@link java.lang.String}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The protocoll.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Written Protokol</em>' attribute list.
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScriptHistory_WrittenProtokol()
+     * @model
+     * @generated
+     */
+    EList<String> getWrittenProtokol();
 
 } // ScriptHistory

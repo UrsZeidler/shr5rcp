@@ -18,10 +18,18 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="management" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GamemasterManagement"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Here the characters only in the scrip exist, can be stored."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Placement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="history" eType="#//ScriptHistory"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The basic history when playing the script."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Placement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar #//TimeFrame">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -55,7 +63,17 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="commandStack" eType="ecore:EClass ../../de.urszeidler.shr5.gameplay.model/model/gameplay.ecore#//ExecutionStack"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current date."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentPlacement" eType="#//Placement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writtenProtokol" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The protocoll."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

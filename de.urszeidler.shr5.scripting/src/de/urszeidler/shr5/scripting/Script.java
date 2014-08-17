@@ -105,6 +105,9 @@ public interface Script extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Here the characters only in the scrip exist, can be stored.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Management</em>' containment reference.
      * @see #setManagement(GamemasterManagement)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_Management()
@@ -157,6 +160,9 @@ public interface Script extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The basic history when playing the script.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>History</em>' containment reference.
      * @see #setHistory(ScriptHistory)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_History()
