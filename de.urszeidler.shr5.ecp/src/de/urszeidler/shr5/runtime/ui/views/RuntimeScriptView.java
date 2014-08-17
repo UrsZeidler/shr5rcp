@@ -121,6 +121,7 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
+import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialogTitel;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -905,9 +906,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return;
 
             GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+//            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+//                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+//                    GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+//                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof RangedAttackCmd) {
@@ -926,6 +932,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                 new DefaultReferenceManager(itemDelegator));
+//        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+//                new DefaultReferenceManager(itemDelegator));
         genericEObjectDialog.open();
     }
 

@@ -30,15 +30,19 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
     private EmfFormBuilder emfFormBuilder;
     private FormToolkit toolkit;
     private List<EStructuralFeature> eAllStructuralFeatures;
+    private String messagestr;
 
     public GenericEObjectDialog(Shell parentShell, EObject eObject, AdapterFactoryItemDelegator itemDelegator, ILabelProvider labelprovider,
             ReferenceManager mananger) {
         super(parentShell, eObject);
-
+        
         toolkit = new FormToolkit(Display.getCurrent());
         emfFormBuilder = new EmfFormBuilder(toolkit, itemDelegator, labelprovider, null);
         emfFormBuilder.setManager(mananger);
         eAllStructuralFeatures = eObject.eClass().getEAllStructuralFeatures();
+        
+        message = labelprovider.getText(eObject.eClass());
+        
     }
 
     public GenericEObjectDialog(Shell parentShell, EObject eObject, AdapterFactoryItemDelegator itemDelegator, ILabelProvider labelprovider,
@@ -58,7 +62,10 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
         toolkit.paintBordersFor(dialogComposite);
 
         dialogComposite.setLayout(new GridLayout(3, false));
-
+        toolkit.createLabel(dialogComposite, messagestr);
+        toolkit.createLabel(dialogComposite, "");
+        toolkit.createLabel(dialogComposite, "");
+        
         emfFormBuilder.addAllEntries(eAllStructuralFeatures, null);
         emfFormBuilder.buildinComposite(ctx, dialogComposite, eObject);
 
