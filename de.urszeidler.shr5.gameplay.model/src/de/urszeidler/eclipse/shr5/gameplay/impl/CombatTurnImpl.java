@@ -11,6 +11,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -18,9 +19,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -31,6 +36,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
 
 /**
@@ -233,6 +239,37 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      */
     protected int sequence = SEQUENCE_EDEFAULT;
 
+    
+    private        Adapter adapter = new EContentAdapter() {
+
+        public void notifyChanged(Notification notification) {
+            super.notifyChanged(notification);
+            Object notifier = notification.getNotifier();
+            Object feature = notification.getFeature();
+            if (notifier instanceof RuntimeCharacter) {
+                final RuntimeCharacter rc = (RuntimeCharacter)notifier;
+                if(RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE.equals(feature)){
+                    int oldIntValue = notification.getOldIntValue();
+                    int newIntValue = notification.getNewIntValue();
+                    int rest = oldIntValue%3;
+                    int diffMod = (newIntValue-oldIntValue)+rest;
+                    int mod = diffMod/3;
+                    
+                    changeInitatives(rc, mod);
+                }else if(RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE.equals(feature)){
+                    int oldIntValue = notification.getOldIntValue();
+                    int newIntValue = notification.getNewIntValue();
+                    int rest = oldIntValue%3;
+                    int diffMod = (newIntValue-oldIntValue)+rest;
+                    int mod = diffMod/3;
+                    
+                    changeInitatives(rc, mod);
+                }
+            }
+        }
+    };
+
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -487,6 +524,10 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                         setCurrentTurn(null);
                         setExecuted(true);
                         setExecuting(false);
+                        for (RuntimeCharacter abstractNaturalPerson : combatants) {
+                            abstractNaturalPerson.eAdapters().remove(adapter);            
+                        }
+                        
                         if (getCmdCallback() != null)
                             getCmdCallback().afterCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
 
@@ -507,7 +548,11 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     public void redo() {
         setExecuted(false);
         setExecuting(true);
-
+        for (RuntimeCharacter abstractNaturalPerson : combatants) {
+            abstractNaturalPerson.eAdapters().add(adapter);            
+        }
+        
+        
         getActionPhases().clear();
         getSubCommands().clear();
         setCurrentTurn(null);
@@ -777,6 +822,34 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         result.append(sequence);
         result.append(')');
         return result.toString();
+    }
+
+    protected void changeInitatives(final RuntimeCharacter rc, int mod) {
+        EList<InitativePass> actionPhases = getActionPhases();
+
+        Collection<InitativePass> filter = Collections2.filter(actionPhases, new Predicate<InitativePass>() {
+
+            @Override
+            public boolean apply(InitativePass input) {
+                return rc.equals(input.getSubject()) && !input.isExecuted();
+            }
+        });
+        ArrayList<InitativePass> removelist = new ArrayList<InitativePass>();
+        for (InitativePass initativePass : filter) {
+            if(rc.getZustand()!=Zustand.OK)
+                initativePass.setPhase(-1);
+            else
+                initativePass.setPhase(initativePass.getPhase() - mod);
+            if (initativePass.getPhase() < 0)
+                removelist.add(initativePass);
+        }
+        if (!removelist.isEmpty()) {
+            actionPhases.removeAll(removelist);
+        }
+        ArrayList<InitativePass> list = new ArrayList<InitativePass>(actionPhases);
+        Collections.sort(list, new CombatTurnImpl.InitativeComperator());
+        actionPhases.clear();
+        actionPhases.addAll(list);
     }
 
 } // CombatTurnImpl
