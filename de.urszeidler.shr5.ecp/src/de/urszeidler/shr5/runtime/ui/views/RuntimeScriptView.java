@@ -73,6 +73,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
@@ -196,9 +197,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuted())
-                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has ended.",ct.getDate(), ct.getSequence()));
+                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has ended.", ct.getDate(), ct.getSequence()));
                     else
-                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has started.",ct.getDate(), ct.getSequence()));
+                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has started.", ct.getDate(), ct.getSequence()));
                 return;
             } else if (notifier instanceof InitativePass) {
                 InitativePass ip = (InitativePass)notifier;
@@ -216,21 +217,22 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                         }
                         return;
                     } // else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
-                    // if (ip.isExecuting()) {
-                    // printedProtocol.add(
-                    // 0,
-                    // String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
-                    // .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
-                    // }
+                      // if (ip.isExecuting()) {
+                      // printedProtocol.add(
+                      // 0,
+                      // String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
+                      // .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
+                      // }
             }
 
             if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature)) {
-                Command notifier1 = (Command)notifier;
-                System.out.println(GameplayTools.printCommand(notifier1));
-                if (notifier1.isExecuted()) {
-                    String text = printCommand(notifier1);
-                    System.out.println(text);
-                    // printedProtocol.add(text);
+                if (notifier.equals(commandStack.getCurrentCommand())) {
+                    Command notifier1 = (Command)notifier;
+                    System.out.println(GameplayTools.printCommand(notifier1));
+                    if (notifier1.isExecuted()) {
+                        String text = printCommand(notifier1);
+                        printedProtocol.add(0, text);
+                    }
                 }
             }
         }
@@ -282,7 +284,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private WritableValue history = new WritableValue();
     private WritableValue protocol = new WritableValue();
     private WritableList characters = new WritableList();
-   // private WritableList printedProtocol = new WritableList();
+    // private WritableList printedProtocol = new WritableList();
 
     private TableViewer treeViewer;
     private TableViewer treeViewer_commandProtokoll;
@@ -447,9 +449,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tree.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseDoubleClick(MouseEvent e) {
-                // TableItem[] selection = tree.getSelection();
-                // if (selection.length == 1)
-                // ShadowrunEditingTools.openEObject();
+                ISelection selection = treeViewer.getSelection();
+                ShadowrunEditingTools.openEditorForFirstSelection(selection);;
             }
         });
         // tree.setHeaderVisible(true);
@@ -771,9 +772,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         history.setValue(script.getHistory());
         // TODO : remove the adapter
         // script.eAdapters().remove(adapter);
-        //writtenProtocol = script.getHistory();
+        // writtenProtocol = script.getHistory();
         script.eAdapters().add(adapter);
-
     }
 
     protected DataBindingContext initDataBindings1() {
@@ -844,13 +844,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
         //
 
-        
-         printedProtocol = EMFEditObservables.observeDetailList(realm,editingDomain ,history, ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
-//        IEMFEditListProperty list = EMFEditProperties.list(editingDomain, ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
-//        printedProtocol = list.observe(observeDetailValue2);
-//        
-        
-        
+        printedProtocol = EMFEditObservables.observeDetailList(realm, editingDomain, history,
+                ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+        // IEMFEditListProperty list = EMFEditProperties.list(editingDomain, ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+        // printedProtocol = list.observe(observeDetailValue2);
+        //
+
         ObservableListContentProvider listProtocolProvider = new ObservableListContentProvider();
         treeViewer_commandProtokoll.setContentProvider(listProtocolProvider);
         treeViewer_commandProtokoll.setInput(printedProtocol);
