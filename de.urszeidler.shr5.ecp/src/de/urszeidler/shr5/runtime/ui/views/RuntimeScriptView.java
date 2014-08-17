@@ -10,6 +10,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -24,9 +25,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.ecp.core.ECPProject;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
@@ -112,6 +116,7 @@ import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
@@ -172,6 +177,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private Adapter adapter = new EContentAdapter() {
 
+        @SuppressWarnings("unchecked")
         public void notifyChanged(Notification notification) {
             super.notifyChanged(notification);
             Object notifier = notification.getNotifier();
@@ -273,9 +279,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     // private WritableValue selectedCharacter = new WritableValue();
     private ExecutionStack commandStack;
     // private ExecutionProtocol protocol1;
+    private WritableValue history = new WritableValue();
     private WritableValue protocol = new WritableValue();
     private WritableList characters = new WritableList();
-    private WritableList printedProtocol = new WritableList();
+   // private WritableList printedProtocol = new WritableList();
 
     private TableViewer treeViewer;
     private TableViewer treeViewer_commandProtokoll;
@@ -299,13 +306,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     private Label lblDatetimelong;
 
+    private IObservableList printedProtocol;
+
     public RuntimeScriptView() {
 
         adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
         adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
         adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
         adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        // adapterFactory.addAdapterFactory(new ExtendedShadowrunAdapterFactory());
         adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
         adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
@@ -760,9 +768,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // this.script = script;
         commandStack = script.getHistory().getCommandStack();
         protocol.setValue(commandStack.getProtocol());// = commandStack.getProtocol();
+        history.setValue(script.getHistory());
         // TODO : remove the adapter
         // script.eAdapters().remove(adapter);
-
+        //writtenProtocol = script.getHistory();
         script.eAdapters().add(adapter);
 
     }
@@ -770,6 +779,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     protected DataBindingContext initDataBindings1() {
         DataBindingContext bindingContext = new DataBindingContext();
         Realm realm = Realm.getDefault();
+        ECPProject defaultEcpProject = Activator.getDefault().getDefaultEcpProject();
+        EditingDomain editingDomain = defaultEcpProject.getEditingDomain();
+
         //
 
         IWidgetValueProperty image = WidgetProperties.image();
@@ -831,6 +843,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
         bindingContext.bindValue(observeLocationDatewidgetObserveWidget1, currentChangeDateObserveValue1, null, null);
         //
+
+        
+         printedProtocol = EMFEditObservables.observeDetailList(realm,editingDomain ,history, ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+//        IEMFEditListProperty list = EMFEditProperties.list(editingDomain, ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+//        printedProtocol = list.observe(observeDetailValue2);
+//        
+        
+        
         ObservableListContentProvider listProtocolProvider = new ObservableListContentProvider();
         treeViewer_commandProtokoll.setContentProvider(listProtocolProvider);
         treeViewer_commandProtokoll.setInput(printedProtocol);
