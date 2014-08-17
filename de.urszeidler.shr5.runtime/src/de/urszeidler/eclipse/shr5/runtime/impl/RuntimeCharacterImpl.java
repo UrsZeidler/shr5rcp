@@ -200,6 +200,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         int oldPhysicalDamage = physicalDamage;
         physicalDamage = newPhysicalDamage;
         
+        if(getCharacter()==null || getCharacter().getPersona()==null)
+            return;
+        
         KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
 
         if(physicalDamage>=persona.getZustandKoerperlichMax())
@@ -230,6 +233,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
 //        int diff = newMentalDamage-oldMentalDamage;
         mentalDamage = newMentalDamage;
         KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
+        if(getCharacter()==null || getCharacter().getPersona()==null)
+            return;
+        
         if(mentalDamage>persona.getZustandGeistigMax()){
             int diff1 = mentalDamage- persona.getZustandGeistigMax();
             mentalDamage=persona.getZustandGeistigMax();
