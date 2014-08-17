@@ -54,7 +54,10 @@ import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.events.MouseAdapter;
+import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
@@ -65,7 +68,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
@@ -85,6 +87,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -93,6 +97,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
@@ -119,10 +124,6 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
-import org.eclipse.swt.events.MouseAdapter;
-import org.eclipse.swt.events.MouseEvent;
-import org.eclipse.swt.custom.ScrolledComposite;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -175,12 +176,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             super.notifyChanged(notification);
             Object notifier = notification.getNotifier();
             Object feature = notification.getFeature();
+            if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction)
+                return;
+
             if (notifier instanceof CombatTurn) {
                 CombatTurn ct = (CombatTurn)notifier;
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
                     if (ct.getCurrentTurn() == null)
                         return;
-                    printedProtocol.add(0, String.format("%s has %s %d turn at %d phase", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
+                    printedProtocol.add(0, String.format("%s has %s %d turn at phase %d", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
                             .getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ct.getCurrentTurn().getTurn(), ct
                             .getCurrentTurn().getPhase()));
 
@@ -203,13 +207,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                             }
                         }
                         return;
-                    } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
-                        if (ip.isExecuting()) {
-                            printedProtocol.add(
-                                    0,
-                                    String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
-                                            .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
-                        }
+                    } //else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
+//                        if (ip.isExecuting()) {
+//                            printedProtocol.add(
+//                                    0,
+//                                    String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
+//                                            .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
+//                        }
             }
 
             if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature)) {
@@ -342,7 +346,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     @Override
     public void createPartControl(Composite parent) {
-        
+
         ScrolledComposite scrolledComposite = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
         formToolkit.adapt(scrolledComposite);
         formToolkit.paintBordersFor(scrolledComposite);
@@ -636,7 +640,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // treeViewer_commandProtokoll.setSorter(new ViewerCommandSorter());
         // treeViewer_commandProtokoll.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         Table tree_1 = treeViewer_commandProtokoll.getTable();
-        tree_1.setEnabled(false);
         tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
         scrolledComposite.setContent(composite);
@@ -879,26 +882,23 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             MeeleAttackCmd mc = (MeeleAttackCmd)cmd;
             if (mc.getSubject() != null && mc.getWeapon() != null && mc.getSkill() != null && mc.getObject() != null)
                 return;
-            
-            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT
-                    ,GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON
-                    ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT
-                    ,GameplayPackage.Literals.PROBE_COMMAND__MODS
-                    );
-            genericEObjectDialog.open();
 
+            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            genericEObjectDialog.open();
+            return;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
             if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
                 return;
-        
+
             GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT
-                    ,GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON,GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE
-                    ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT
-                    ,GameplayPackage.Literals.PROBE_COMMAND__MODS
-                    );
+                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
+                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         }

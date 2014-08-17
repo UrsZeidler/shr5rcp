@@ -14,9 +14,14 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
+import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -158,8 +163,8 @@ public class GameplayTools {
     }
 
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
-        // TODO calculate the range mod 
-        
+        // TODO calculate the range mod
+
         return 0;
     }
 
@@ -171,8 +176,8 @@ public class GameplayTools {
                     .getProbe().size(), st.getProbe().toString());
         } else if (cmd instanceof Probe) {
             Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
-            return String.format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe()
-                    .toString());
+            return String
+                    .format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe().toString());
         }
 
         return "";
@@ -198,5 +203,38 @@ public class GameplayTools {
 
         }
         return -1;
+    }
+
+    /**
+     * Creates and returns the first simple action which free.
+     * @param initativePass
+     * @return
+     */
+    public static SimpleAction getSimpleAction(InitativePass initativePass) {
+        CommandWrapper action = initativePass.getAction();
+        if (action instanceof SimpleActions) {
+            SimpleActions sa = (SimpleActions)action;
+            if (sa.getAction1() == null) {
+                SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
+                sa.setAction1(simpleAction);
+                return simpleAction;
+            }else  if (sa.getAction2() == null) {
+                SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
+                sa.setAction2(simpleAction);
+                return simpleAction;
+                
+            }
+            return null;
+//        }
+//        else if (action instanceof ComplexAction) {
+//            ComplexAction ca = (ComplexAction)action;
+            
+        } else {
+            SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
+            SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
+            simpleActions.setAction1(simpleAction);
+            initativePass.setAction(simpleActions);
+            return simpleAction;
+        }
     }
 }

@@ -1,12 +1,18 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
+import java.util.List;
+
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.databinding.EMFObservables;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -25,7 +31,11 @@ import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 import org.eclipse.wb.swt.ResourceManager;
 
@@ -82,16 +92,18 @@ public class HandComposite extends NameableComposite {
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
                     // Simple action case
                     //if(initativePass.getAction()==null)
-                    SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
-                    SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
+                    SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+                    if(simpleAction==null)
+                        return;
+
                     RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
                     meeleAttackCmd.setWeapon(afk);
 
                     simpleAction.getSubCommands().add(meeleAttackCmd);
-                    simpleActions.setAction1(simpleAction);
-                    // complexAction.setSubject((RuntimeCharacter)character.getValue());
-                    // simpleAction.getSubCommands().add(meeleAttackCmd);
-                    initativePass.setAction(simpleActions);
+//                    simpleActions.setAction1(simpleAction);
+//                    // complexAction.setSubject((RuntimeCharacter)character.getValue());
+//                    // simpleAction.getSubCommands().add(meeleAttackCmd);
+//                    initativePass.setAction(simpleActions);
                     // initativePass.redo();
 
                 }
@@ -118,6 +130,43 @@ public class HandComposite extends NameableComposite {
             }
         });
         toolItem1.setToolTipText("drop item");
+        
+        ToolItem tltmNewItem = new ToolItem(actionBar, SWT.NONE);
+        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        tltmNewItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+                if(simpleAction==null)
+                    return;
+                EObject object = null;
+                IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(initativePass.getSubject(), references);
+                List<?> values = (List<?>) propertyDescriptor.getChoiceOfValues(initativePass.getSubject());
+                OwnChooseDialog dialog = new OwnChooseDialog(getShell(), values.toArray(new Object[]{}),
+                        "Change item", "Select the item you want to choose.");
+                
+                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                int open = dialog.open();
+                if (open == Dialog.OK) {
+                    Object[] result = dialog.getResult();
+                    if (result.length > 0) {
+                        object = (EObject)result[0];
+                     }
+                    else
+                        return;
+                }
+                
+                SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                simpleAction.getSubCommands().add(setFeatureCommand);
+                setFeatureCommand.setObject(initativePass.getSubject());
+                setFeatureCommand.setFeature(references);
+                setFeatureCommand.setObject(object);
+                //initativePass.setFreeAction(action);
+
+                
+            }
+        });
+        tltmNewItem.setToolTipText("change item");
         // super.updateToolbar();
     }
 
