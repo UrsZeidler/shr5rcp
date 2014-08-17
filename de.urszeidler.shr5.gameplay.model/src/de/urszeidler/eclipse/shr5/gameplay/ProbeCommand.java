@@ -33,6 +33,9 @@ public interface ProbeCommand extends SubjectCommand, SuccesTest {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The dicepool modifer.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Mods</em>' attribute.
      * @see #setMods(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbeCommand_Mods()

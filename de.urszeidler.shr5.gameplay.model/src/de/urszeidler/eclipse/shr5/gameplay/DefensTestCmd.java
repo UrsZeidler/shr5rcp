@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * A representation of the model object '<em><b>Defens Test Cmd</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The defense test.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -29,6 +33,9 @@ public interface DefensTestCmd extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The hits to defend against.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Attackers Hits</em>' attribute.
      * @see #setAttackersHits(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDefensTestCmd_AttackersHits()

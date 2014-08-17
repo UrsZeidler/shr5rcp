@@ -1389,7 +1389,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(damageTestEClass, DamageTest.class, "DamageTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getDamageTest_Damage(), ecorePackage.getEString(), "damage", null, 1, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getDamageTest_Dv(), ecorePackage.getEInt(), "dv", null, 1, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getDamageTest_EffectiveDamage(), ecorePackage.getEString(), "effectiveDamage", null, 0, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDamageTest_EffectiveDamage(), ecorePackage.getEString(), "effectiveDamage", null, 0, 1, DamageTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(commandEClass, Command.class, "Command", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCommand_Executed(), ecorePackage.getEBoolean(), "executed", "false", 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

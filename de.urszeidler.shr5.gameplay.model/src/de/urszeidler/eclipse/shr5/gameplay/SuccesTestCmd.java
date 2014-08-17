@@ -33,6 +33,9 @@ public interface SuccesTestCmd extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The dice pool.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Dice Pool</em>' attribute.
      * @see #setDicePool(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTestCmd_DicePool()

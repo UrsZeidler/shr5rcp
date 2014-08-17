@@ -88,6 +88,9 @@ public interface Initative extends SubjectCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Si
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Size Initative</em>' attribute.
      * @see #setSizeInitative(boolean)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getInitative_SizeInitative()

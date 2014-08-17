@@ -171,6 +171,18 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setEffectiveDamage(String newEffectiveDamage) {
+        String oldEffectiveDamage = effectiveDamage;
+        effectiveDamage = newEffectiveDamage;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.DAMAGE_TEST__EFFECTIVE_DAMAGE, oldEffectiveDamage, effectiveDamage));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -198,6 +210,9 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
             case GameplayPackage.DAMAGE_TEST__DV:
                 setDv((Integer)newValue);
                 return;
+            case GameplayPackage.DAMAGE_TEST__EFFECTIVE_DAMAGE:
+                setEffectiveDamage((String)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -215,6 +230,9 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
                 return;
             case GameplayPackage.DAMAGE_TEST__DV:
                 setDv(DV_EDEFAULT);
+                return;
+            case GameplayPackage.DAMAGE_TEST__EFFECTIVE_DAMAGE:
+                setEffectiveDamage(EFFECTIVE_DAMAGE_EDEFAULT);
                 return;
         }
         super.eUnset(featureID);

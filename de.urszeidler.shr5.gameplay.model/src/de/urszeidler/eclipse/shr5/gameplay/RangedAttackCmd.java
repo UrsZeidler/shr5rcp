@@ -11,6 +11,10 @@ import de.urszeidler.eclipse.shr5.FeuerModus;
  * A representation of the model object '<em><b>Ranged Attack Cmd</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The ranged attack.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

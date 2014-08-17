@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * A representation of the model object '<em><b>Damage Test</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the damage test.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -31,6 +35,9 @@ public interface DamageTest extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This is the damage the subject has to test agaist.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Damage</em>' attribute.
      * @see #setDamage(String)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_Damage()
@@ -57,6 +64,9 @@ public interface DamageTest extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This is the armor piercing of the attack.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Dv</em>' attribute.
      * @see #setDv(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_Dv()
@@ -83,11 +93,25 @@ public interface DamageTest extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This is thedamage the subject suffers. 
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Effective Damage</em>' attribute.
+     * @see #setEffectiveDamage(String)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest_EffectiveDamage()
-     * @model changeable="false"
+     * @model
      * @generated
      */
     String getEffectiveDamage();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getEffectiveDamage <em>Effective Damage</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Effective Damage</em>' attribute.
+     * @see #getEffectiveDamage()
+     * @generated
+     */
+    void setEffectiveDamage(String value);
 
 } // DamageTest

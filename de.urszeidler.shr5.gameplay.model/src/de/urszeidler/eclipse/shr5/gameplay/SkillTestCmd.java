@@ -10,6 +10,10 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
  * A representation of the model object '<em><b>Skill Test Cmd</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A skill test.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -30,6 +34,9 @@ public interface SkillTestCmd extends ProbeCommand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The skill beeing tested.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Skill</em>' reference.
      * @see #setSkill(Fertigkeit)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSkillTestCmd_Skill()

@@ -10,6 +10,10 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
  * A representation of the model object '<em><b>Meele Attack Cmd</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The meele attack.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

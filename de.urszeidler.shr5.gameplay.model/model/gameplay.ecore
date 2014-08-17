@@ -15,11 +15,25 @@
         eType="#//ExecutionProtocol" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DamageTest" eSuperTypes="#//ProbeCommand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the damage test."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="damage" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dv" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="effectiveDamage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the damage the subject has to test agaist."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dv" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the armor piercing of the attack."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="effectiveDamage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is thedamage the subject suffers. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -72,9 +86,19 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SkillTestCmd" eSuperTypes="#//ProbeCommand">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A skill test."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The skill beeing tested."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OpposedSkillTestCmd" eSuperTypes="#//SkillTestCmd">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An oppesd test where the object can use the same or another skill."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//RuntimeCharacter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objectSkill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
   </eClassifiers>
@@ -88,7 +112,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ini" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualIni" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeInitative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Si"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExecutionProtocol">
     <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
@@ -126,7 +154,11 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A probe as command."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mods" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mods" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The dicepool modifer."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PhaseCmd" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -168,13 +200,24 @@
         eType="#//Intervall" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DefensTestCmd" eSuperTypes="#//ProbeCommand">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackersHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The defense test."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackersHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The hits to defend against."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTestCmd" eSuperTypes="#//ProbeCommand">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A basic succes test."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dicePool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dicePool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The dice pool."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitativePass" eSuperTypes="#//SubjectCommand #//PhaseCmd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="turn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -212,10 +255,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeeleAttackCmd" eSuperTypes="#//OpposedSkillTestCmd">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The meele attack."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Nahkampfwaffe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RangedAttackCmd" eSuperTypes="#//OpposedSkillTestCmd">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The ranged attack."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modus" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//FeuerModus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
