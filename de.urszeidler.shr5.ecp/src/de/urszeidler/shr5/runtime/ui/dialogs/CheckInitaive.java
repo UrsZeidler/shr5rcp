@@ -15,6 +15,10 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.shr5.runtime.ui.widgets.EditableInitativeComposite;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.layout.FillLayout;
 
 public class CheckInitaive extends TitleAreaDialog {
     private CombatTurn ct;
@@ -28,6 +32,7 @@ public class CheckInitaive extends TitleAreaDialog {
      */
     public CheckInitaive(Shell parentShell) {
         super(parentShell);
+        setShellStyle(SWT.RESIZE);
         setHelpAvailable(false);
     }
 
@@ -46,15 +51,29 @@ public class CheckInitaive extends TitleAreaDialog {
         setMessage("In the current combat turn the ini is :");
         setTitle("Initative");
         Composite area = (Composite)super.createDialogArea(parent);
-        Composite container = new Composite(area, SWT.NONE);
-        container.setLayout(new GridLayout(1, false));
-        container.setLayoutData(new GridData(GridData.FILL_BOTH));
+        
+
+        Group container = new Group(area, SWT.H_SCROLL);
+        container.setLayout(new FillLayout(SWT.HORIZONTAL));
+        container.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
+        container.setText("Ini");
+        
+        ScrolledComposite scrolledComposite = new ScrolledComposite(container, SWT.H_SCROLL | SWT.V_SCROLL);
+        scrolledComposite.setExpandHorizontal(true);
+        scrolledComposite.setExpandVertical(true);
+        
+        Composite composite = new Composite(scrolledComposite, SWT.NONE);
+        composite.setLayout(new GridLayout(1, false));
+        scrolledComposite.setContent(composite);
+
+        //scrolledComposite.setMinSize(new Point(450, 200));
         
          EList<Command> subCommands = ct.getSubCommands();
         for (Command command : subCommands) {
-            EditableInitativeComposite editableInitativeComposite = new EditableInitativeComposite(container,SWT.NONE,(Initative)command);
+            EditableInitativeComposite editableInitativeComposite = new EditableInitativeComposite(composite,SWT.NONE,(Initative)command);
             editableInitativeComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         }
+        scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         return area;
     }
 
@@ -66,7 +85,7 @@ public class CheckInitaive extends TitleAreaDialog {
     @Override
     protected void createButtonsForButtonBar(Composite parent) {
         createButton(parent, IDialogConstants.OK_ID, IDialogConstants.OK_LABEL, true);
-        createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
+        //createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
     }
 
     /**
@@ -74,7 +93,7 @@ public class CheckInitaive extends TitleAreaDialog {
      */
     @Override
     protected Point getInitialSize() {
-        return new Point(450, 200+31*ct.getSubCommands().size());
+        return new Point(450, 380);
     }
 
 }
