@@ -12176,7 +12176,7 @@
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0Xg4t0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T22:59:36.856+0100" from="1" to="2" changeable="_B0VEpt0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0YH8N0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:00:12.990+0100" from="1" to="2" changeable="_B0VEpd0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0YvAN0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:14:29.584+0100" from="2" to="3" changeable="_B0Vrsd0CEeOvVYoRsPZlnA"/>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B0YvAd0CEeOvVYoRsPZlnA" page="428" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_BlW0gN0CEeOvVYoRsPZlnA">
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B0YvAd0CEeOvVYoRsPZlnA" page="428" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" fertigkeit="a54bb1c7-9920-4276-ad18-311e390ca96c" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_BlW0gN0CEeOvVYoRsPZlnA">
           <modie>HM</modie>
           <modie>SM</modie>
           <modie>AM</modie>
@@ -12202,7 +12202,7 @@
           <erweiterung>Oben</erweiterung>
           <einbau xmi:id="_B0ZWEt0CEeOvVYoRsPZlnA" name="Smartgun System, Internal" page="433" srcBook="_BlSjEN0CEeOvVYoRsPZlnA"/>
         </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_B0ZWE90CEeOvVYoRsPZlnA" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9R" wertValue="1000" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_B0ZWE90CEeOvVYoRsPZlnA" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9R" wertValue="1000" name="Katana" fertigkeit="fdaa958a-7097-4280-bf26-995298fec618" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_B0ZWFN0CEeOvVYoRsPZlnA" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="100" name="Knucks" schadenscode="(STR+1)P"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_B0ZWFd0CEeOvVYoRsPZlnA" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="2000" name="Armor Jacket" ruestung="12"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0ZWFt0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1400" name="Contacts" kategorie="Optical &amp; Imaging Devices"/>
@@ -12936,7 +12936,7 @@
     </grunts>
   </entries>
   <entries xsi:type="scripting:Script" xmi:id="_rKoaUAqoEeSKaO5TLnOM7w" name="A test Script with thugs." entry="_rKpBYAqoEeSKaO5TLnOM7w">
-    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w" background="There are thugs which needs to be beaten."/>
+    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w" background="There are thugs which needs to be beaten."/>
     <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" actualDate="2014-08-12T07:26:39.000+0200" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w" inTheirFace="In a dark alley.">
       <enviorment xmi:id="_rKpBYgqoEeSKaO5TLnOM7w"/>
     </placements>
@@ -12953,6 +12953,12 @@
     </allTeams>
     <player xmi:id="_rKpBbQqoEeSKaO5TLnOM7w" name="Players">
       <members xmi:id="_cyfwEBzQEeSFAoTsdVLSNA" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_Bz1VYd0CEeOvVYoRsPZlnA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VYd0CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18cN0CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18dN0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
+      <members xmi:id="_eHf-YCWHEeSbBJPpPv7N_Q" character="_B0TPcd0CEeOvVYoRsPZlnA" rightHand="_B0ZWE90CEeOvVYoRsPZlnA" leftHand="_B0YvAd0CEeOvVYoRsPZlnA" inUse="_B0ZWEd0CEeOvVYoRsPZlnA _B0ZWE90CEeOvVYoRsPZlnA _B0ZWFd0CEeOvVYoRsPZlnA _B0YvAd0CEeOvVYoRsPZlnA" armor="_B0ZWFd0CEeOvVYoRsPZlnA"/>
     </player>
+    <history xmi:id="_PPoyQCWHEeSbBJPpPv7N_Q" currentPlacement="_rKpBYQqoEeSKaO5TLnOM7w">
+      <commandStack xmi:id="_PPyjQCWHEeSbBJPpPv7N_Q">
+        <protocol xmi:id="_PP4C0CWHEeSbBJPpPv7N_Q"/>
+      </commandStack>
+    </history>
   </entries>
 </shr5:ShrList>
