@@ -10,6 +10,12 @@ import de.urszeidler.eclipse.shr5.gameplay.Probe;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Probe</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState() <em>Probe State</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public abstract class ProbeTest extends TestCase {
@@ -50,6 +56,19 @@ public abstract class ProbeTest extends TestCase {
      */
     protected Probe getFixture() {
         return fixture;
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState() <em>Probe State</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState()
+     * @generated
+     */
+    public void testGetProbeState() {
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
 } //ProbeTest

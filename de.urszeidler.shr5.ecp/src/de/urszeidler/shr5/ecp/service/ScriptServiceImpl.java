@@ -96,6 +96,15 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setCombatTurn(CombatTurn kr) {
+        if(script.getHistory().getCommandStack().getCurrentCommand() instanceof CombatTurn){
+            CombatTurn ct = (CombatTurn)script.getHistory().getCommandStack().getCurrentCommand();
+            kr.setSequence(ct.getSequence()+1);
+        }else
+            kr.setSequence(1);
+           
+            
+        executeCommand(kr);
+        
         if (combatViewer != null)
             combatViewer.setCombatTurn(kr);
     }

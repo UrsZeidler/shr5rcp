@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCombatants <em>Combatants</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getActionPhases <em>Action Phases</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getSequence <em>Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +88,32 @@ public interface CombatTurn extends Command {
      * @generated
      */
     void setCurrentTurn(InitativePass value);
+
+    /**
+     * Returns the value of the '<em><b>Sequence</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Sequence</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Sequence</em>' attribute.
+     * @see #setSequence(int)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCombatTurn_Sequence()
+     * @model
+     * @generated
+     */
+    int getSequence();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getSequence <em>Sequence</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Sequence</em>' attribute.
+     * @see #getSequence()
+     * @generated
+     */
+    void setSequence(int value);
 
     /**
      * <!-- begin-user-doc -->

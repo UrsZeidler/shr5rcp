@@ -62,8 +62,10 @@ public class ProbeCommandItemProvider
             addSuccessesPropertyDescriptor(object);
             addGlitchesPropertyDescriptor(object);
             addLimitPropertyDescriptor(object);
+            addProbeStatePropertyDescriptor(object);
             addThresholdsPropertyDescriptor(object);
             addNetHitsPropertyDescriptor(object);
+            addTestStatePropertyDescriptor(object);
             addModsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -158,6 +160,28 @@ public class ProbeCommandItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Probe State feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addProbeStatePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Probe_probeState_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Probe_probeState_feature", "_UI_Probe_type"),
+                 GameplayPackage.Literals.PROBE__PROBE_STATE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Thresholds feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -197,6 +221,28 @@ public class ProbeCommandItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Test State feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addTestStatePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SuccesTest_testState_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SuccesTest_testState_feature", "_UI_SuccesTest_type"),
+                 GameplayPackage.Literals.SUCCES_TEST__TEST_STATE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -251,8 +297,10 @@ public class ProbeCommandItemProvider
             case GameplayPackage.PROBE_COMMAND__SUCCESSES:
             case GameplayPackage.PROBE_COMMAND__GLITCHES:
             case GameplayPackage.PROBE_COMMAND__LIMIT:
+            case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
+            case GameplayPackage.PROBE_COMMAND__TEST_STATE:
             case GameplayPackage.PROBE_COMMAND__MODS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

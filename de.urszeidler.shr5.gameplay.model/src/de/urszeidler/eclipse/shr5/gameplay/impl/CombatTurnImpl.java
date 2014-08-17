@@ -49,6 +49,7 @@ import de.urszeidler.eclipse.shr5.runtime.Zustand;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCombatants <em>Combatants</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getActionPhases <em>Action Phases</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCurrentTurn <em>Current Turn</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getSequence <em>Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -211,6 +212,26 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * @ordered
      */
     protected InitativePass currentTurn;
+
+    /**
+     * The default value of the '{@link #getSequence() <em>Sequence</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSequence()
+     * @generated
+     * @ordered
+     */
+    protected static final int SEQUENCE_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getSequence() <em>Sequence</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSequence()
+     * @generated
+     * @ordered
+     */
+    protected int sequence = SEQUENCE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -427,6 +448,27 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getSequence() {
+        return sequence;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSequence(int newSequence) {
+        int oldSequence = sequence;
+        sequence = newSequence;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__SEQUENCE, oldSequence, sequence));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * 
      * @generated not
      */
@@ -572,6 +614,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
                 if (resolve) return getCurrentTurn();
                 return basicGetCurrentTurn();
+            case GameplayPackage.COMBAT_TURN__SEQUENCE:
+                return getSequence();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -612,6 +656,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
                 setCurrentTurn((InitativePass)newValue);
                 return;
+            case GameplayPackage.COMBAT_TURN__SEQUENCE:
+                setSequence((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -648,6 +695,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
                 setCurrentTurn((InitativePass)null);
                 return;
+            case GameplayPackage.COMBAT_TURN__SEQUENCE:
+                setSequence(SEQUENCE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -678,6 +728,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 return actionPhases != null && !actionPhases.isEmpty();
             case GameplayPackage.COMBAT_TURN__CURRENT_TURN:
                 return currentTurn != null;
+            case GameplayPackage.COMBAT_TURN__SEQUENCE:
+                return sequence != SEQUENCE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -721,6 +773,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", sequence: ");
+        result.append(sequence);
         result.append(')');
         return result.toString();
     }

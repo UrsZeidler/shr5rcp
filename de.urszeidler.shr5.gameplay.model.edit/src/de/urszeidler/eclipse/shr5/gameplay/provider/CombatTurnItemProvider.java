@@ -71,6 +71,7 @@ public class CombatTurnItemProvider
             addCanExecutePropertyDescriptor(object);
             addCombatantsPropertyDescriptor(object);
             addCurrentTurnPropertyDescriptor(object);
+            addSequencePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -230,6 +231,28 @@ public class CombatTurnItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Sequence feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSequencePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_CombatTurn_sequence_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_CombatTurn_sequence_feature", "_UI_CombatTurn_type"),
+                 GameplayPackage.Literals.COMBAT_TURN__SEQUENCE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -300,6 +323,7 @@ public class CombatTurnItemProvider
             case GameplayPackage.COMBAT_TURN__CMD_CALLBACK:
             case GameplayPackage.COMBAT_TURN__EXECUTING:
             case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
+            case GameplayPackage.COMBAT_TURN__SEQUENCE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case GameplayPackage.COMBAT_TURN__SUB_COMMANDS:

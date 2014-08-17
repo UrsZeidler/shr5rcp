@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getSuccesses <em>Successes</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getGlitches <em>Glitches</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getLimit <em>Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState <em>Probe State</em>}</li>
  * </ul>
  * </p>
  *
@@ -112,6 +113,9 @@ public interface Probe extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The maximum hits counting for the probe.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Limit</em>' attribute.
      * @see #isSetLimit()
      * @see #unsetLimit()
@@ -156,5 +160,22 @@ public interface Probe extends EObject {
      * @generated
      */
     boolean isSetLimit();
+
+    /**
+     * Returns the value of the '<em><b>Probe State</b></em>' attribute.
+     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.gameplay.ProbeState}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Probe State</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Probe State</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeState
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_ProbeState()
+     * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    ProbeState getProbeState();
 
 } // Probe

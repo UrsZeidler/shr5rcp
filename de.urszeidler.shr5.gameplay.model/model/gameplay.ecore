@@ -113,7 +113,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="glitches" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        unsettable="true"/>
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The maximum hits counting for the probe."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="probeState" lowerBound="1"
+        eType="#//ProbeState" changeable="false" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProbeCommand" abstract="true" eSuperTypes="#//SubjectCommand #//SuccesTest">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -134,11 +141,25 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionPhases" upperBound="-1"
         eType="#//InitativePass" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentTurn" eType="#//InitativePass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SuccesTest" abstract="true" interface="true"
       eSuperTypes="#//Probe">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="thresholds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is a succes test having a threshold."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="thresholds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of hit needed to pass the test."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="netHits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of hits remains after the threshold."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testState" eType="#//SuccesTestState"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtendetSkillTestCmd" eSuperTypes="#//SkillTestCmd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="1"
@@ -220,5 +241,14 @@
     <eLiterals name="intercept" value="3"/>
     <eLiterals name="parry" value="4"/>
     <eLiterals name="full_defense" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ProbeState">
+    <eLiterals name="noGlitch"/>
+    <eLiterals name="glitch" value="1"/>
+    <eLiterals name="criticalGlitch" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SuccesTestState">
+    <eLiterals name="succes" literal="succes"/>
+    <eLiterals name="failure" value="1" literal="failure"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -6,8 +6,10 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -25,16 +27,18 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbe <em>Probe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getSuccesses <em>Successes</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getGlitches <em>Glitches</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getLimit <em>Limit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getThresholds <em>Thresholds</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getNetHits <em>Net Hits</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getMods <em>Mods</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbe <em>Probe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getSuccesses <em>Successes</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getGlitches <em>Glitches</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getLimit <em>Limit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeState <em>Probe State</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getThresholds <em>Thresholds</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getNetHits <em>Net Hits</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getTestState <em>Test State</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getMods <em>Mods</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class ProbeCommandImpl extends SubjectCommandImpl implements ProbeCommand {
@@ -42,6 +46,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getProbe() <em>Probe</em>}' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getProbe()
      * @generated
      * @ordered
@@ -52,6 +57,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The default value of the '{@link #getSuccesses() <em>Successes</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSuccesses()
      * @generated
      * @ordered
@@ -62,6 +68,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getSuccesses() <em>Successes</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSuccesses()
      * @generated
      * @ordered
@@ -72,6 +79,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The default value of the '{@link #getGlitches() <em>Glitches</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getGlitches()
      * @generated
      * @ordered
@@ -82,6 +90,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getGlitches() <em>Glitches</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getGlitches()
      * @generated
      * @ordered
@@ -92,6 +101,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The default value of the '{@link #getLimit() <em>Limit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getLimit()
      * @generated
      * @ordered
@@ -102,6 +112,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getLimit() <em>Limit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getLimit()
      * @generated
      * @ordered
@@ -112,15 +123,28 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * This is true if the Limit attribute has been set.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     protected boolean limitESet;
 
     /**
+     * The default value of the '{@link #getProbeState() <em>Probe State</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getProbeState()
+     * @generated
+     * @ordered
+     */
+    protected static final ProbeState PROBE_STATE_EDEFAULT = ProbeState.NO_GLITCH;
+
+    /**
      * The default value of the '{@link #getThresholds() <em>Thresholds</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getThresholds()
      * @generated
      * @ordered
@@ -131,6 +155,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getThresholds() <em>Thresholds</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getThresholds()
      * @generated
      * @ordered
@@ -141,6 +166,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The default value of the '{@link #getNetHits() <em>Net Hits</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getNetHits()
      * @generated
      * @ordered
@@ -151,6 +177,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getNetHits() <em>Net Hits</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getNetHits()
      * @generated
      * @ordered
@@ -158,9 +185,21 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     protected int netHits = NET_HITS_EDEFAULT;
 
     /**
+     * The default value of the '{@link #getTestState() <em>Test State</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getTestState()
+     * @generated
+     * @ordered
+     */
+    protected static final SuccesTestState TEST_STATE_EDEFAULT = SuccesTestState.SUCCES;
+
+    /**
      * The default value of the '{@link #getMods() <em>Mods</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMods()
      * @generated
      * @ordered
@@ -171,6 +210,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * The cached value of the '{@link #getMods() <em>Mods</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMods()
      * @generated
      * @ordered
@@ -180,6 +220,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected ProbeCommandImpl() {
@@ -189,6 +230,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -199,6 +241,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<Integer> getProbe() {
@@ -211,6 +254,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getSuccesses() {
@@ -220,6 +264,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSuccesses(int newSuccesses) {
@@ -232,6 +277,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getGlitches() {
@@ -241,6 +287,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setGlitches(int newGlitches) {
@@ -253,6 +300,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getLimit() {
@@ -262,6 +310,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setLimit(int newLimit) {
@@ -276,6 +325,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void unsetLimit() {
@@ -290,6 +340,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isSetLimit() {
@@ -299,6 +350,27 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public ProbeState getProbeState() {
+        if (!isExecuted())
+            return ProbeState.NO_GLITCH;
+
+        double half = probe.size() / 2.0;
+        if (getGlitches() > half)
+            if (getSuccesses() == 0)
+                return ProbeState.CRITICAL_GLITCH;
+            else
+                return ProbeState.GLITCH;
+
+        return ProbeState.NO_GLITCH;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getThresholds() {
@@ -308,6 +380,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setThresholds(int newThresholds) {
@@ -320,6 +393,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getNetHits() {
@@ -329,6 +403,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setNetHits(int newNetHits) {
@@ -341,6 +416,20 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public SuccesTestState getTestState() {
+        if (getNetHits() < 0)
+            return SuccesTestState.FAILURE;
+        else
+            return SuccesTestState.SUCCES;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getMods() {
@@ -350,6 +439,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setMods(int newMods) {
@@ -362,6 +452,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -375,10 +466,14 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return getGlitches();
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 return getLimit();
+            case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
+                return getProbeState();
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return getThresholds();
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
                 return getNetHits();
+            case GameplayPackage.PROBE_COMMAND__TEST_STATE:
+                return getTestState();
             case GameplayPackage.PROBE_COMMAND__MODS:
                 return getMods();
         }
@@ -388,6 +483,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -418,6 +514,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -448,6 +545,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -461,10 +559,14 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return glitches != GLITCHES_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 return isSetLimit();
+            case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
+                return getProbeState() != PROBE_STATE_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return thresholds != THRESHOLDS_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
                 return netHits != NET_HITS_EDEFAULT;
+            case GameplayPackage.PROBE_COMMAND__TEST_STATE:
+                return getTestState() != TEST_STATE_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__MODS:
                 return mods != MODS_EDEFAULT;
         }
@@ -474,24 +576,37 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Probe.class) {
             switch (derivedFeatureID) {
-                case GameplayPackage.PROBE_COMMAND__PROBE: return GameplayPackage.PROBE__PROBE;
-                case GameplayPackage.PROBE_COMMAND__SUCCESSES: return GameplayPackage.PROBE__SUCCESSES;
-                case GameplayPackage.PROBE_COMMAND__GLITCHES: return GameplayPackage.PROBE__GLITCHES;
-                case GameplayPackage.PROBE_COMMAND__LIMIT: return GameplayPackage.PROBE__LIMIT;
-                default: return -1;
+                case GameplayPackage.PROBE_COMMAND__PROBE:
+                    return GameplayPackage.PROBE__PROBE;
+                case GameplayPackage.PROBE_COMMAND__SUCCESSES:
+                    return GameplayPackage.PROBE__SUCCESSES;
+                case GameplayPackage.PROBE_COMMAND__GLITCHES:
+                    return GameplayPackage.PROBE__GLITCHES;
+                case GameplayPackage.PROBE_COMMAND__LIMIT:
+                    return GameplayPackage.PROBE__LIMIT;
+                case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
+                    return GameplayPackage.PROBE__PROBE_STATE;
+                default:
+                    return -1;
             }
         }
         if (baseClass == SuccesTest.class) {
             switch (derivedFeatureID) {
-                case GameplayPackage.PROBE_COMMAND__THRESHOLDS: return GameplayPackage.SUCCES_TEST__THRESHOLDS;
-                case GameplayPackage.PROBE_COMMAND__NET_HITS: return GameplayPackage.SUCCES_TEST__NET_HITS;
-                default: return -1;
+                case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
+                    return GameplayPackage.SUCCES_TEST__THRESHOLDS;
+                case GameplayPackage.PROBE_COMMAND__NET_HITS:
+                    return GameplayPackage.SUCCES_TEST__NET_HITS;
+                case GameplayPackage.PROBE_COMMAND__TEST_STATE:
+                    return GameplayPackage.SUCCES_TEST__TEST_STATE;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -500,24 +615,37 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Probe.class) {
             switch (baseFeatureID) {
-                case GameplayPackage.PROBE__PROBE: return GameplayPackage.PROBE_COMMAND__PROBE;
-                case GameplayPackage.PROBE__SUCCESSES: return GameplayPackage.PROBE_COMMAND__SUCCESSES;
-                case GameplayPackage.PROBE__GLITCHES: return GameplayPackage.PROBE_COMMAND__GLITCHES;
-                case GameplayPackage.PROBE__LIMIT: return GameplayPackage.PROBE_COMMAND__LIMIT;
-                default: return -1;
+                case GameplayPackage.PROBE__PROBE:
+                    return GameplayPackage.PROBE_COMMAND__PROBE;
+                case GameplayPackage.PROBE__SUCCESSES:
+                    return GameplayPackage.PROBE_COMMAND__SUCCESSES;
+                case GameplayPackage.PROBE__GLITCHES:
+                    return GameplayPackage.PROBE_COMMAND__GLITCHES;
+                case GameplayPackage.PROBE__LIMIT:
+                    return GameplayPackage.PROBE_COMMAND__LIMIT;
+                case GameplayPackage.PROBE__PROBE_STATE:
+                    return GameplayPackage.PROBE_COMMAND__PROBE_STATE;
+                default:
+                    return -1;
             }
         }
         if (baseClass == SuccesTest.class) {
             switch (baseFeatureID) {
-                case GameplayPackage.SUCCES_TEST__THRESHOLDS: return GameplayPackage.PROBE_COMMAND__THRESHOLDS;
-                case GameplayPackage.SUCCES_TEST__NET_HITS: return GameplayPackage.PROBE_COMMAND__NET_HITS;
-                default: return -1;
+                case GameplayPackage.SUCCES_TEST__THRESHOLDS:
+                    return GameplayPackage.PROBE_COMMAND__THRESHOLDS;
+                case GameplayPackage.SUCCES_TEST__NET_HITS:
+                    return GameplayPackage.PROBE_COMMAND__NET_HITS;
+                case GameplayPackage.SUCCES_TEST__TEST_STATE:
+                    return GameplayPackage.PROBE_COMMAND__TEST_STATE;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -526,11 +654,13 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (probe: ");
@@ -540,7 +670,10 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         result.append(", glitches: ");
         result.append(glitches);
         result.append(", limit: ");
-        if (limitESet) result.append(limit); else result.append("<unset>");
+        if (limitESet)
+            result.append(limit);
+        else
+            result.append("<unset>");
         result.append(", thresholds: ");
         result.append(thresholds);
         result.append(", netHits: ");
@@ -551,4 +684,4 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         return result.toString();
     }
 
-} //ProbeCommandImpl
+} // ProbeCommandImpl

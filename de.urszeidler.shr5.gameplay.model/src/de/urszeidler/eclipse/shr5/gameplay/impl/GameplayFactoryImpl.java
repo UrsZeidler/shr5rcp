@@ -95,6 +95,10 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
                 return createTimeUnitsFromString(eDataType, initialValue);
             case GameplayPackage.INTERRUPT_TYPE:
                 return createInterruptTypeFromString(eDataType, initialValue);
+            case GameplayPackage.PROBE_STATE:
+                return createProbeStateFromString(eDataType, initialValue);
+            case GameplayPackage.SUCCES_TEST_STATE:
+                return createSuccesTestStateFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -112,6 +116,10 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
                 return convertTimeUnitsToString(eDataType, instanceValue);
             case GameplayPackage.INTERRUPT_TYPE:
                 return convertInterruptTypeToString(eDataType, instanceValue);
+            case GameplayPackage.PROBE_STATE:
+                return convertProbeStateToString(eDataType, instanceValue);
+            case GameplayPackage.SUCCES_TEST_STATE:
+                return convertSuccesTestStateToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -354,6 +362,46 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * @generated
      */
     public String convertInterruptTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ProbeState createProbeStateFromString(EDataType eDataType, String initialValue) {
+        ProbeState result = ProbeState.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertProbeStateToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SuccesTestState createSuccesTestStateFromString(EDataType eDataType, String initialValue) {
+        SuccesTestState result = SuccesTestState.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertSuccesTestStateToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

@@ -189,8 +189,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                             .getCurrentTurn().getPhase()));
 
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
-                    if (ct.isExecuting())
-                        printedProtocol.add(0, "The combatround has started.");
+                    if (ct.isExecuted())
+                        printedProtocol.add(0, String.format("Combat turn %s has ended.",ct.getSequence()));
                 return;
             } else if (notifier instanceof InitativePass) {
                 InitativePass ip = (InitativePass)notifier;
@@ -958,7 +958,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             e.printStackTrace();
         }
 
-        scriptService.executeCommand(combatTurn);
+        //scriptService.executeCommand(combatTurn);
         scriptService.setCombatTurn(combatTurn);
     }
 

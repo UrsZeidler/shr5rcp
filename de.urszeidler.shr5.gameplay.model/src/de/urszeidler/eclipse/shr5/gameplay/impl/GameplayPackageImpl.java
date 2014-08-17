@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
@@ -34,6 +35,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
 import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
@@ -255,6 +257,20 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EEnum interruptTypeEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum probeStateEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum succesTestStateEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -656,6 +672,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getProbe_ProbeState() {
+        return (EAttribute)probeEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getProbeCommand() {
         return probeCommandEClass;
     }
@@ -728,6 +753,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCombatTurn_Sequence() {
+        return (EAttribute)combatTurnEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EOperation getCombatTurn__DoTurn() {
         return combatTurnEClass.getEOperations().get(0);
     }
@@ -757,6 +791,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      */
     public EAttribute getSuccesTest_NetHits() {
         return (EAttribute)succesTestEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSuccesTest_TestState() {
+        return (EAttribute)succesTestEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -1106,6 +1149,24 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EEnum getProbeState() {
+        return probeStateEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getSuccesTestState() {
+        return succesTestStateEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -1182,6 +1243,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(probeEClass, PROBE__SUCCESSES);
         createEAttribute(probeEClass, PROBE__GLITCHES);
         createEAttribute(probeEClass, PROBE__LIMIT);
+        createEAttribute(probeEClass, PROBE__PROBE_STATE);
 
         probeCommandEClass = createEClass(PROBE_COMMAND);
         createEAttribute(probeCommandEClass, PROBE_COMMAND__MODS);
@@ -1193,11 +1255,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEReference(combatTurnEClass, COMBAT_TURN__COMBATANTS);
         createEReference(combatTurnEClass, COMBAT_TURN__ACTION_PHASES);
         createEReference(combatTurnEClass, COMBAT_TURN__CURRENT_TURN);
+        createEAttribute(combatTurnEClass, COMBAT_TURN__SEQUENCE);
         createEOperation(combatTurnEClass, COMBAT_TURN___DO_TURN);
 
         succesTestEClass = createEClass(SUCCES_TEST);
         createEAttribute(succesTestEClass, SUCCES_TEST__THRESHOLDS);
         createEAttribute(succesTestEClass, SUCCES_TEST__NET_HITS);
+        createEAttribute(succesTestEClass, SUCCES_TEST__TEST_STATE);
 
         extendetSkillTestCmdEClass = createEClass(EXTENDET_SKILL_TEST_CMD);
         createEAttribute(extendetSkillTestCmdEClass, EXTENDET_SKILL_TEST_CMD__START_DATE);
@@ -1252,6 +1316,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         // Create enums
         timeUnitsEEnum = createEEnum(TIME_UNITS);
         interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
+        probeStateEEnum = createEEnum(PROBE_STATE);
+        succesTestStateEEnum = createEEnum(SUCCES_TEST_STATE);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -1363,6 +1429,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getProbe_Successes(), ecorePackage.getEInt(), "successes", null, 1, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_Glitches(), ecorePackage.getEInt(), "glitches", null, 1, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_Limit(), ecorePackage.getEInt(), "limit", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProbe_ProbeState(), this.getProbeState(), "probeState", null, 1, 1, Probe.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(probeCommandEClass, ProbeCommand.class, "ProbeCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeCommand_Mods(), ecorePackage.getEInt(), "mods", null, 0, 1, ProbeCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1374,12 +1441,14 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEReference(getCombatTurn_Combatants(), theRuntimePackage.getRuntimeCharacter(), null, "combatants", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCombatTurn_ActionPhases(), this.getInitativePass(), null, "actionPhases", null, 0, -1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCombatTurn_CurrentTurn(), this.getInitativePass(), null, "currentTurn", null, 0, 1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCombatTurn_Sequence(), ecorePackage.getEInt(), "sequence", null, 0, 1, CombatTurn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEOperation(getCombatTurn__DoTurn(), null, "doTurn", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(succesTestEClass, SuccesTest.class, "SuccesTest", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSuccesTest_Thresholds(), ecorePackage.getEInt(), "thresholds", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSuccesTest_NetHits(), ecorePackage.getEInt(), "netHits", null, 0, 1, SuccesTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSuccesTest_TestState(), this.getSuccesTestState(), "testState", null, 0, 1, SuccesTest.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(extendetSkillTestCmdEClass, ExtendetSkillTestCmd.class, "ExtendetSkillTestCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getExtendetSkillTestCmd_StartDate(), theShr5Package.getShrDate(), "startDate", null, 1, 1, ExtendetSkillTestCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1448,6 +1517,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         addEEnumLiteral(interruptTypeEEnum, InterruptType.INTERCEPT);
         addEEnumLiteral(interruptTypeEEnum, InterruptType.PARRY);
         addEEnumLiteral(interruptTypeEEnum, InterruptType.FULL_DEFENSE);
+
+        initEEnum(probeStateEEnum, ProbeState.class, "ProbeState");
+        addEEnumLiteral(probeStateEEnum, ProbeState.NO_GLITCH);
+        addEEnumLiteral(probeStateEEnum, ProbeState.GLITCH);
+        addEEnumLiteral(probeStateEEnum, ProbeState.CRITICAL_GLITCH);
+
+        initEEnum(succesTestStateEEnum, SuccesTestState.class, "SuccesTestState");
+        addEEnumLiteral(succesTestStateEEnum, SuccesTestState.SUCCES);
+        addEEnumLiteral(succesTestStateEEnum, SuccesTestState.FAILURE);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

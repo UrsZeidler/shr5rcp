@@ -25,6 +25,15 @@
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/parry"/>
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/full_defense"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//ProbeState">
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//ProbeState/noGlitch"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//ProbeState/glitch"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//ProbeState/criticalGlitch"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//SuccesTestState">
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SuccesTestState/succes"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SuccesTestState/failure"/>
+    </genEnums>
     <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExecutionStack/currentCommand"/>
@@ -72,6 +81,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/successes"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/glitches"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/limit"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/probeState"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//ProbeCommand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ProbeCommand/mods"/>
@@ -83,11 +93,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/combatants"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/actionPhases"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//CombatTurn/currentTurn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//CombatTurn/sequence"/>
       <genOperations ecoreOperation="gameplay.ecore#//CombatTurn/doTurn"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//SuccesTest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/netHits"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/testState"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//ExtendetSkillTestCmd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ExtendetSkillTestCmd/startDate"/>

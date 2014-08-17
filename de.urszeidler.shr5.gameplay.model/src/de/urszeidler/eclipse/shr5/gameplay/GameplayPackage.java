@@ -434,13 +434,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE_COMMAND__LIMIT = SUBJECT_COMMAND_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__PROBE_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 4;
+    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Net Hits</b></em>' attribute.
@@ -449,7 +458,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 5;
+    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -458,7 +476,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 6;
+    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 8;
 
     /**
      * The number of structural features of the '<em>Probe Command</em>' class.
@@ -467,7 +485,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 7;
+    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 9;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -606,6 +624,15 @@ public interface GameplayPackage extends EPackage {
     int DAMAGE_TEST__LIMIT = PROBE_COMMAND__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -622,6 +649,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__TEST_STATE = PROBE_COMMAND__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -805,6 +841,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__LIMIT = PROBE_COMMAND__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -821,6 +866,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SKILL_TEST_CMD__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__TEST_STATE = PROBE_COMMAND__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -986,6 +1040,15 @@ public interface GameplayPackage extends EPackage {
     int OPPOSED_SKILL_TEST_CMD__LIMIT = SKILL_TEST_CMD__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__PROBE_STATE = SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1002,6 +1065,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__NET_HITS = SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__TEST_STATE = SKILL_TEST_CMD__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -1304,13 +1376,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE__LIMIT = 3;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__PROBE_STATE = 4;
+
+    /**
      * The number of structural features of the '<em>Probe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_FEATURE_COUNT = 4;
+    int PROBE_FEATURE_COUNT = 5;
 
     /**
      * The number of operations of the '<em>Probe</em>' class.
@@ -1450,13 +1531,22 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN__CURRENT_TURN = COMMAND_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Sequence</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN__SEQUENCE = COMMAND_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Combat Turn</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMBAT_TURN_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+    int COMBAT_TURN_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 4;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -1541,6 +1631,15 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST__LIMIT = PROBE__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__PROBE_STATE = PROBE__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1559,13 +1658,22 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST__NET_HITS = PROBE_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__TEST_STATE = PROBE_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Succes Test</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUCCES_TEST_FEATURE_COUNT = PROBE_FEATURE_COUNT + 2;
+    int SUCCES_TEST_FEATURE_COUNT = PROBE_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>Succes Test</em>' class.
@@ -1686,6 +1794,15 @@ public interface GameplayPackage extends EPackage {
     int EXTENDET_SKILL_TEST_CMD__LIMIT = SKILL_TEST_CMD__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__PROBE_STATE = SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1702,6 +1819,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__NET_HITS = SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__TEST_STATE = SKILL_TEST_CMD__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -1885,6 +2011,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__LIMIT = PROBE_COMMAND__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1901,6 +2036,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DEFENS_TEST_CMD__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__TEST_STATE = PROBE_COMMAND__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -2066,6 +2210,15 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST_CMD__LIMIT = PROBE_COMMAND__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2082,6 +2235,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__TEST_STATE = PROBE_COMMAND__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -3228,6 +3390,15 @@ public interface GameplayPackage extends EPackage {
     int MEELE_ATTACK_CMD__LIMIT = OPPOSED_SKILL_TEST_CMD__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__PROBE_STATE = OPPOSED_SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3244,6 +3415,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int MEELE_ATTACK_CMD__NET_HITS = OPPOSED_SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__TEST_STATE = OPPOSED_SKILL_TEST_CMD__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -3436,6 +3616,15 @@ public interface GameplayPackage extends EPackage {
     int RANGED_ATTACK_CMD__LIMIT = OPPOSED_SKILL_TEST_CMD__LIMIT;
 
     /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__PROBE_STATE = OPPOSED_SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3452,6 +3641,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int RANGED_ATTACK_CMD__NET_HITS = OPPOSED_SKILL_TEST_CMD__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__TEST_STATE = OPPOSED_SKILL_TEST_CMD__TEST_STATE;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -3619,6 +3817,26 @@ public interface GameplayPackage extends EPackage {
     int INTERRUPT_TYPE = 28;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeState
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
+     * @generated
+     */
+    int PROBE_STATE = 29;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.SuccesTestState
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
+     * @generated
+     */
+    int SUCCES_TEST_STATE = 30;
+
+    /**
      * The meta object id for the '<em>Command Callback</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3626,7 +3844,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 29;
+    int COMMAND_CALLBACK = 31;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -4012,6 +4230,17 @@ public interface GameplayPackage extends EPackage {
     EAttribute getProbe_Limit();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState <em>Probe State</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Probe State</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState()
+     * @see #getProbe()
+     * @generated
+     */
+    EAttribute getProbe_ProbeState();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeCommand <em>Probe Command</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4097,6 +4326,17 @@ public interface GameplayPackage extends EPackage {
     EReference getCombatTurn_CurrentTurn();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getSequence <em>Sequence</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Sequence</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getSequence()
+     * @see #getCombatTurn()
+     * @generated
+     */
+    EAttribute getCombatTurn_Sequence();
+
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#doTurn() <em>Do Turn</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4137,6 +4377,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getSuccesTest_NetHits();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getTestState <em>Test State</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Test State</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getTestState()
+     * @see #getSuccesTest()
+     * @generated
+     */
+    EAttribute getSuccesTest_TestState();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd <em>Extendet Skill Test Cmd</em>}'.
@@ -4541,6 +4792,26 @@ public interface GameplayPackage extends EPackage {
     EEnum getInterruptType();
 
     /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Probe State</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeState
+     * @generated
+     */
+    EEnum getProbeState();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Succes Test State</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SuccesTestState
+     * @generated
+     */
+    EEnum getSuccesTestState();
+
+    /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4881,6 +5152,14 @@ public interface GameplayPackage extends EPackage {
         EAttribute PROBE__LIMIT = eINSTANCE.getProbe_Limit();
 
         /**
+         * The meta object literal for the '<em><b>Probe State</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE__PROBE_STATE = eINSTANCE.getProbe_ProbeState();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl <em>Probe Command</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -4951,6 +5230,14 @@ public interface GameplayPackage extends EPackage {
         EReference COMBAT_TURN__CURRENT_TURN = eINSTANCE.getCombatTurn_CurrentTurn();
 
         /**
+         * The meta object literal for the '<em><b>Sequence</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMBAT_TURN__SEQUENCE = eINSTANCE.getCombatTurn_Sequence();
+
+        /**
          * The meta object literal for the '<em><b>Do Turn</b></em>' operation.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -4983,6 +5270,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute SUCCES_TEST__NET_HITS = eINSTANCE.getSuccesTest_NetHits();
+
+        /**
+         * The meta object literal for the '<em><b>Test State</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SUCCES_TEST__TEST_STATE = eINSTANCE.getSuccesTest_TestState();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl <em>Extendet Skill Test Cmd</em>}' class.
@@ -5319,6 +5614,26 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EEnum INTERRUPT_TYPE = eINSTANCE.getInterruptType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.ProbeState
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
+         * @generated
+         */
+        EEnum PROBE_STATE = eINSTANCE.getProbeState();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.SuccesTestState
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
+         * @generated
+         */
+        EEnum SUCCES_TEST_STATE = eINSTANCE.getSuccesTestState();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.

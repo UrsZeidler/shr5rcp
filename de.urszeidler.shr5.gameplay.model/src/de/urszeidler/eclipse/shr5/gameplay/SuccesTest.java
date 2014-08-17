@@ -9,11 +9,16 @@ package de.urszeidler.eclipse.shr5.gameplay;
  * A representation of the model object '<em><b>Succes Test</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is a succes test having a threshold.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getThresholds <em>Thresholds</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getNetHits <em>Net Hits</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getTestState <em>Test State</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,6 +35,9 @@ public interface SuccesTest extends Probe {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of hit needed to pass the test.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Thresholds</em>' attribute.
      * @see #setThresholds(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTest_Thresholds()
@@ -56,6 +64,9 @@ public interface SuccesTest extends Probe {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of hits remains after the threshold.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Net Hits</em>' attribute.
      * @see #setNetHits(int)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTest_NetHits()
@@ -73,5 +84,22 @@ public interface SuccesTest extends Probe {
      * @generated
      */
     void setNetHits(int value);
+
+    /**
+     * Returns the value of the '<em><b>Test State</b></em>' attribute.
+     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Test State</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Test State</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SuccesTestState
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTest_TestState()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    SuccesTestState getTestState();
 
 } // SuccesTest

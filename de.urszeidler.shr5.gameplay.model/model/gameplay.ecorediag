@@ -211,6 +211,10 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/limit"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_XwkHIQrQEeSXe8h_-hOPdg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_jVw0wCYQEeSIMvdKIF-9Cg" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/probeState"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_jVw0wSYQEeSIMvdKIF-9Cg"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_rGYMogrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_rGYMowrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_rGYMpArNEeSXe8h_-hOPdg"/>
@@ -222,7 +226,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_rGVJUQrNEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//Probe"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rGVJUgrNEeSXe8h_-hOPdg" x="825" y="245"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rGVJUgrNEeSXe8h_-hOPdg" x="820" y="225"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_tg_08ArNEeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_thAcAArNEeSXe8h_-hOPdg" type="4001"/>
@@ -271,6 +275,10 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//SuccesTest/netHits"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_tEEhAQrQEeSXe8h_-hOPdg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_PNYUwCYREeSIMvdKIF-9Cg" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//SuccesTest/testState"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_PNYUwSYREeSIMvdKIF-9Cg"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_FMo48grQEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_FMo48wrQEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_FMo49ArQEeSXe8h_-hOPdg"/>
@@ -282,11 +290,15 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_FMnq0QrQEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SuccesTest"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMnq0grQEeSXe8h_-hOPdg" x="790" y="385"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMnq0grQEeSXe8h_-hOPdg" x="790" y="375"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_5IAXgArREeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_5IA-kArREeSXe8h_-hOPdg" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_5IA-kQrREeSXe8h_-hOPdg" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_NNVP8CYOEeSIMvdKIF-9Cg" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//CombatTurn/sequence"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_NNVP8SYOEeSIMvdKIF-9Cg"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_5IA-kgrREeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_5IA-kwrREeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_5IA-lArREeSXe8h_-hOPdg"/>
@@ -547,6 +559,40 @@
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hi6NsiPzEeS3c462UKKLWQ" x="1015" y="610"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_kx4C4CYPEeSIMvdKIF-9Cg" type="1005">
+      <children xmi:type="notation:Node" xmi:id="_kx54ECYPEeSIMvdKIF-9Cg" type="4010"/>
+      <children xmi:type="notation:Node" xmi:id="_kx6fICYPEeSIMvdKIF-9Cg" type="5008">
+        <children xmi:type="notation:Node" xmi:id="_agMiQCYQEeSIMvdKIF-9Cg" type="2006">
+          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//ProbeState/noGlitch"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_agMiQSYQEeSIMvdKIF-9Cg"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_b065gCYQEeSIMvdKIF-9Cg" type="2006">
+          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//ProbeState/glitch"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_b07gkCYQEeSIMvdKIF-9Cg"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_dGl8wCYQEeSIMvdKIF-9Cg" type="2006">
+          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//ProbeState/criticalGlitch"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_dGl8wSYQEeSIMvdKIF-9Cg"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_kx6fISYPEeSIMvdKIF-9Cg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_kx6fIiYPEeSIMvdKIF-9Cg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_kx6fIyYPEeSIMvdKIF-9Cg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_kx4C4SYPEeSIMvdKIF-9Cg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EEnum" href="gameplay.ecore#//ProbeState"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kx4C4iYPEeSIMvdKIF-9Cg" x="1010" y="225"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9Sk8ECYQEeSIMvdKIF-9Cg" type="1005">
+      <children xmi:type="notation:Node" xmi:id="_9SljICYQEeSIMvdKIF-9Cg" type="4010"/>
+      <children xmi:type="notation:Node" xmi:id="_9SmKMCYQEeSIMvdKIF-9Cg" type="5008">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_9SmKMSYQEeSIMvdKIF-9Cg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_9SmKMiYQEeSIMvdKIF-9Cg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_9SmKMyYQEeSIMvdKIF-9Cg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_9Sk8ESYQEeSIMvdKIF-9Cg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EEnum" href="gameplay.ecore#//SuccesTestState"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Sk8EiYQEeSIMvdKIF-9Cg" x="1000" y="375"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6sTbwY_GEd6SEpVfiQZsGw"/>
     <element xmi:type="ecore:EPackage" href="gameplay.ecore#/"/>
     <edges xmi:type="notation:Edge" xmi:id="_wH-r8I_HEd6SEpVfiQZsGw" type="3002" source="_-0TL4I_GEd6SEpVfiQZsGw" target="_rRXiUI_HEd6SEpVfiQZsGw">
@@ -693,13 +739,14 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_5IYK8QrREeSXe8h_-hOPdg" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_5IYK8grREeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//CombatTurn/combatants"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IYK8wrREeSXe8h_-hOPdg" points="[50, 0, -493, -68]$[543, 0, 0, -68]$[543, 40, 0, -28]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IYK8wrREeSXe8h_-hOPdg" points="[5, 0, -480, -58]$[485, 0, 0, -58]$[485, 30, 0, -28]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oAaJgCYREeSIMvdKIF-9Cg" id="(0.9590163934426229,0.2857142857142857)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_5IaAIArREeSXe8h_-hOPdg" type="3003" source="_5IAXgArREeSXe8h_-hOPdg" target="_rRXiUI_HEd6SEpVfiQZsGw">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_5IaAIQrREeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_5IaAIgrREeSXe8h_-hOPdg" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IaAIwrREeSXe8h_-hOPdg" points="[-30, -20, 179, 124]$[-30, -55, 179, 89]$[-163, -55, 46, 89]$[-163, -107, 46, 37]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IaAIwrREeSXe8h_-hOPdg" points="[-24, -23, 165, 129]$[-24, -53, 165, 99]$[-150, -53, 39, 99]$[-150, -81, 39, 71]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_6KboYArSEeSXe8h_-hOPdg" type="3003" source="_1lQNAArSEeSXe8h_-hOPdg" target="_Q1ENMI_IEd6SEpVfiQZsGw">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_6KboYQrSEeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>
@@ -1060,7 +1107,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_outNwQuVEeStocVKc3B8yQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_outNwguVEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//CombatTurn/actionPhases"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_outNwwuVEeStocVKc3B8yQ" points="[-6, 3, -259, -141]$[-6, 55, -259, -89]$[253, 55, 0, -89]$[253, 140, 0, -4]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_outNwwuVEeStocVKc3B8yQ" points="[0, 4, -241, -134]$[0, 51, -241, -87]$[245, 51, 4, -87]$[245, 134, 4, -4]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jSMh8BCcEeSgxOJ4dL8Esg" id="(0.5882352941176471,0.9387755102040817)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jw-vsBCcEeSgxOJ4dL8Esg" id="(0.47058823529411764,0.07692307692307693)"/>
     </edges>
@@ -1092,7 +1139,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="__fwqsRAqEeSKWqcsw0APfg" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="__fwqshAqEeSKWqcsw0APfg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//CombatTurn/currentTurn"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__fwqsxAqEeSKWqcsw0APfg" points="[0, 11, -256, -141]$[0, 88, -256, -64]$[266, 88, 10, -64]$[266, 148, 10, -4]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__fwqsxAqEeSKWqcsw0APfg" points="[-1, 13, -253, -134]$[-1, 87, -253, -60]$[252, 87, 0, -60]$[252, 143, 0, -4]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mb6E4BCcEeSgxOJ4dL8Esg" id="(0.21568627450980393,0.7755102040816326)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__gAiUBAqEeSKWqcsw0APfg" id="(0.27058823529411763,0.07692307692307693)"/>
     </edges>
