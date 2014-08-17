@@ -12935,12 +12935,12 @@
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
     </grunts>
   </entries>
-  <entries xsi:type="scripting:Script" xmi:id="_rKoaUAqoEeSKaO5TLnOM7w" name="A test Script with thugs." entry="_rKpBYAqoEeSKaO5TLnOM7w">
-    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w" background="There are thugs which needs to be beaten."/>
-    <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" actualDate="2014-08-12T07:26:39.000+0200" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w" inTheirFace="In a dark alley.">
+  <entries xsi:type="scripting:Script" xmi:id="_rKoaUAqoEeSKaO5TLnOM7w" beschreibung="Just some thugs at the corner." name="A test Script with thugs." entry="_rKpBYAqoEeSKaO5TLnOM7w">
+    <placements xmi:id="_rKpBYAqoEeSKaO5TLnOM7w" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" nextPlacements="_rKpBYQqoEeSKaO5TLnOM7w" background="There are thugs which needs to be beaten." inTheirFace="This is you Job. Beat the thugs over there." debugging="Nothing can go wrong."/>
+    <placements xmi:id="_rKpBYQqoEeSKaO5TLnOM7w" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_rKpBYwqoEeSKaO5TLnOM7w" teams="_rKpBZAqoEeSKaO5TLnOM7w" background="The fighting start now." inTheirFace="In a dark alley. The thugs are.&#xA;Beat them up.&#xA;">
       <enviorment xmi:id="_rKpBYgqoEeSKaO5TLnOM7w"/>
     </placements>
-    <placements xmi:id="_rKpBYwqoEeSKaO5TLnOM7w" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200"/>
+    <placements xmi:id="_rKpBYwqoEeSKaO5TLnOM7w" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" background="After beating get the reward."/>
     <allTeams xsi:type="runtime:GruntTeam" xmi:id="_rKpBZAqoEeSKaO5TLnOM7w" name="The bad guys." gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IAqoEeSFaKcyfAPimA" character="_B1NOYN0CEeOvVYoRsPZlnA" rightHand="_B1N1c90CEeOvVYoRsPZlnA" leftHand="_B1N1ct0CEeOvVYoRsPZlnA" inUse="_B1N1ct0CEeOvVYoRsPZlnA _B1N1c90CEeOvVYoRsPZlnA _B1N1dN0CEeOvVYoRsPZlnA"/>
       <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_xLH9IQqoEeSFaKcyfAPimA" character="_B1JkAN0CEeOvVYoRsPZlnA" rightHand="_B1KLFt0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
@@ -12955,10 +12955,5 @@
       <members xmi:id="_cyfwEBzQEeSFAoTsdVLSNA" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_Bz1VYd0CEeOvVYoRsPZlnA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VYd0CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18cN0CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18dN0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
       <members xmi:id="_eHf-YCWHEeSbBJPpPv7N_Q" character="_B0TPcd0CEeOvVYoRsPZlnA" rightHand="_B0ZWE90CEeOvVYoRsPZlnA" leftHand="_B0YvAd0CEeOvVYoRsPZlnA" inUse="_B0ZWEd0CEeOvVYoRsPZlnA _B0ZWE90CEeOvVYoRsPZlnA _B0ZWFd0CEeOvVYoRsPZlnA _B0YvAd0CEeOvVYoRsPZlnA" armor="_B0ZWFd0CEeOvVYoRsPZlnA"/>
     </player>
-    <history xmi:id="_PPoyQCWHEeSbBJPpPv7N_Q" currentPlacement="_rKpBYQqoEeSKaO5TLnOM7w">
-      <commandStack xmi:id="_PPyjQCWHEeSbBJPpPv7N_Q">
-        <protocol xmi:id="_PP4C0CWHEeSbBJPpPv7N_Q"/>
-      </commandStack>
-    </history>
   </entries>
 </shr5:ShrList>
