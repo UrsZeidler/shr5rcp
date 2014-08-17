@@ -73,7 +73,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
@@ -121,12 +120,12 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
-import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialogTitel;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
+import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
@@ -172,7 +171,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
             if (plac != null)
                 if (plac.getActualDate() != null)
-                    plac.setActualDate(new Date(plac.getActualDate().getTime() + 1000));
+                    plac.setActualDate(new Date(plac.getActualDate().getTime() + (1000*timeTrackFactor)));
             return Status.OK_STATUS;
         }
     }
@@ -250,6 +249,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     // protected boolean isTimetracking;
     private TimeTracker timeTrackJob;
 
+    private int timeTrackFactor = 1;
     private Label lblName;
     private StyledText styledText;
     private StyledText styledText_1;
@@ -490,6 +490,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     timeTrackJob.isTimetracking = false;
                     tltmTimeTrackingItem.setText("start time tracking");
                 } else {
+                    TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell());
+                    if(timetrackingDialog.open()==Dialog.CANCEL)
+                        return;
+                    timeTrackFactor = timetrackingDialog.getFactor();
                     timeTrackJob.isTimetracking = true;
                     timeTrackJob.schedule();
                     tltmTimeTrackingItem.setText("stop time tracking");
