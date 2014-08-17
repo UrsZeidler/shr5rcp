@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -157,26 +158,29 @@ public class GameplayTools {
     }
 
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
-        // TODO Auto-generated method stub
+        // TODO calculate the range mod 
+        
         return 0;
     }
 
     public static String printCommand(Command cmd) {
 
         if (cmd instanceof SuccesTest) {
-            SuccesTest st = (SuccesTest)cmd;
-            return String.format("%s%s%s|%s", st.getLimit(), st.getProbe().toString(), st.getSuccesses(), st.getGlitches());
+            SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
+            return String.format("(%s|%s)%s(%s/%s)%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getNetHits(), st.getThresholds(), st
+                    .getProbe().size(), st.getProbe().toString());
+        } else if (cmd instanceof Probe) {
+            Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
+            return String.format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe()
+                    .toString());
         }
-        // if (cmd instanceof Probe) {
-        // Probe new_name = (Probe)cmd;
-        //
-        // }
 
         return "";
     }
 
     /**
      * Retuns the skill dice pool for a skill.
+     * 
      * @param skill
      * @param subject
      * @return
@@ -185,10 +189,14 @@ public class GameplayTools {
         AbstraktPersona persona = subject.getCharacter().getPersona();
         Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(skill, persona);
 
-        EAttribute attribut = skill.getAttribut();
-        Integer att = (Integer)persona.eGet(attribut);
+        try {
+            EAttribute attribut = skill.getAttribut();
+            Integer att = (Integer)persona.eGet(attribut);
+            return fertigkeitValue + att;
 
-        return fertigkeitValue + att;
+        } catch (Exception e) {
+
+        }
+        return -1;
     }
-
 }

@@ -40,6 +40,9 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -425,6 +428,18 @@ public class ShadowrunEditingTools {
 
     public static void openEObject(EObject eo) {
         ECPAttributModifikatorWertOpener.openEditor(eo, Activator.getDefault().getDefaultEcpProject());
+    }
+
+    public static Transformer<ManagedCharacter, RuntimeCharacter> managedCharacter2RuntimeTransformer() {
+        
+        return new Transformer<ManagedCharacter, RuntimeCharacter>(){
+            @Override
+            public RuntimeCharacter transform(ManagedCharacter input) {
+                RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
+                runtimeCharacter.setCharacter(input);
+                return runtimeCharacter;
+            }            
+        };
     }
 
 }
