@@ -5,19 +5,16 @@ package de.urszeidler.shr5.ecp.service;
 
 import java.util.Date;
 
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.services.IServiceLocator;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
@@ -27,17 +24,18 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  * @author urs
  */
 public class ScriptServiceImpl implements ScriptService {
+    protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective";
 
-    private Adapter adapter = new EContentAdapter() {
-
-        public void notifyChanged(Notification notification) {
-            super.notifyChanged(notification);
-            notification.getFeature();
-            if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())) {
-                System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
-            }
-        }
-    };
+//    private Adapter adapter = new EContentAdapter() {
+//
+//        public void notifyChanged(Notification notification) {
+//            super.notifyChanged(notification);
+//            notification.getFeature();
+//            if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())) {
+//                System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
+//            }
+//        }
+//    };
     private Script script;
     private Placement placement;
     private IServiceLocator locator;
@@ -96,6 +94,12 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setCombatTurn(CombatTurn kr) {
+        try {
+            PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+        } catch (WorkbenchException e) {
+            e.printStackTrace();
+        }
+        
         if(script.getHistory().getCommandStack().getCurrentCommand() instanceof CombatTurn){
             CombatTurn ct = (CombatTurn)script.getHistory().getCommandStack().getCurrentCommand();
             kr.setSequence(ct.getSequence()+1);

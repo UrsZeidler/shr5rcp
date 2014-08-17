@@ -42,6 +42,7 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.ISelection;
@@ -75,7 +76,6 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
@@ -190,7 +190,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuted())
-                        printedProtocol.add(0, String.format("Combat turn %s has ended.",ct.getSequence()));
+                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has ended.",ct.getDate(), ct.getSequence()));
+                    else
+                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has started.",ct.getDate(), ct.getSequence()));
                 return;
             } else if (notifier instanceof InitativePass) {
                 InitativePass ip = (InitativePass)notifier;
@@ -207,13 +209,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                             }
                         }
                         return;
-                    } //else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
-//                        if (ip.isExecuting()) {
-//                            printedProtocol.add(
-//                                    0,
-//                                    String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
-//                                            .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
-//                        }
+                    } // else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
+                    // if (ip.isExecuting()) {
+                    // printedProtocol.add(
+                    // 0,
+                    // String.format("%s has %s %d turn at %d phase", labelProvider.getText(ip.getSubject()), ip.getSubject()
+                    // .getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ip.getPhase(), ip.getTurn()));
+                    // }
             }
 
             if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature)) {
@@ -913,6 +915,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
+
+            if (MessageDialog.openQuestion(getSite().getShell(), "Continue combat sequence ?", "Continue the combat with the current combatants.")) {
+                EList<RuntimeCharacter> combatants = ct.getCombatants();
+                contiueCombatTurn(combatants);
+            }
+
             return;
         }
 
@@ -952,13 +960,22 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         else
             return;
 
-        try {
-            PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
-        } catch (WorkbenchException e) {
-            e.printStackTrace();
-        }
+        // scriptService.executeCommand(combatTurn);
+        scriptService.setCombatTurn(combatTurn);
+    }
 
-        //scriptService.executeCommand(combatTurn);
+    /**
+     * Start a new combat turn with the given characters.
+     * 
+     * @param combatants
+     */
+    protected void contiueCombatTurn(Collection<? extends RuntimeCharacter> combatants) {
+        timeTrackJob.isTimetracking = false;
+        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
+        combatTurn.setDate(placement1.getActualDate());
+        combatTurn.setCmdCallback(RuntimeScriptView.this);
+
+        combatTurn.getCombatants().addAll(combatants);
         scriptService.setCombatTurn(combatTurn);
     }
 
