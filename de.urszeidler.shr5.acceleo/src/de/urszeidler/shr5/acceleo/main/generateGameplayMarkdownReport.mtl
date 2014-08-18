@@ -1,0 +1,42 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateEcoreReport.
+ */]
+[module generateGameplayMarkdownReport('http://www.eclipse.org/emf/2002/Ecore')]
+[import de::urszeidler::shr5::acceleo::main::ecoreToMarkdown /]
+
+[**
+ * The documentation of the template generateElement.
+ * @param anEPackage
+ */]
+[template public generateElement(anEPackage : EPackage){
+basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.model.edit' ;
+}]
+[comment @main/]
+[file (anEPackage.name+'-model.md', false, 'UTF-8')]
+# concret classes in the model [anEPackage.name/]
+
+
+[comment][printAllSubClassesAndTitel(anEPackage, 'AbstraktPersona')/]
+These are all the character types you can create.
+
+[printAllSubClassesAndTitel(anEPackage, 'Erlernbar')/]
+All the things a character can learn.
+
+[printAllSubClassesAndTitel(anEPackage, 'GeldWert')/]
+All you can buy.
+
+[printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
+All the things that can modify the character.
+
+[printAllSubClassesAndTitel(anEPackage, 'Software')/]
+All the software.[/comment]
+
+# all classes
+
+The complete list of all EClasses in this package.
+
+[printAllEClasses(anEPackage,basePath)/]
+
+[/file]
+[/template]
