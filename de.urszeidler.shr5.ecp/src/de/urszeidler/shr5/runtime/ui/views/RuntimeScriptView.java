@@ -522,6 +522,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
         });
         tltmExecuteaction.setText("executeAction");
+        
+        ToolItem tltmSwitchplacement = new ToolItem(toolBar, SWT.NONE);
+        tltmSwitchplacement.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                switchPlacement();
+            }
+        });
+        tltmSwitchplacement.setText("switchPlacement");
 
         lblDatetimelong = formToolkit.createLabel(composite_11, "dateTimeLong", SWT.NONE);
         new Label(composite_11, SWT.NONE);
@@ -682,29 +691,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void createActions() {
 
-        switchPlacementAction = new Action() {
-            public void run() {
-                EList<Placement> nextPlacements = placement1.getNextPlacements();
-
-                OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
-                dialog.setLabelProvider(labelProvider);
-                int open = dialog.open();
-                if (open == Dialog.OK) {
-                    Object[] result = dialog.getResult();
-                    if (result.length > 0) {
-                        Placement eo = (Placement)result[0];
-                        scriptService.setPlacement(eo);
-                        SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
-                        command.setDate(placement1.getActualDate());
-
-                    }
-                }
-
-            }
-        };
-        switchPlacementAction.setText("switch placement");
-        switchPlacementAction.setToolTipText("switch placement");
-        switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
+//        switchPlacementAction = new Action() {
+//            public void run() {
+//                switchPlacement();
+//            }
+//        };
+//        switchPlacementAction.setText("switch placement");
+//        switchPlacementAction.setToolTipText("switch placement");
+//        switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
     }
 
@@ -713,7 +707,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeToolBar() {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-        toolbarManager.add(switchPlacementAction);
+//        toolbarManager.add(switchPlacementAction);
 
     }
 
@@ -722,7 +716,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void initializeMenu() {
         IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-        menuManager.add(switchPlacementAction);
+//        menuManager.add(switchPlacementAction);
         // menuManager.add(startTimetrackingAction);
     }
 
@@ -1013,5 +1007,22 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     protected String printCommand(Command notifier) {
         String text = labelProvider.getText(notifier);
         return String.format("%tT >> %s", notifier.getDate(), text);
+    }
+
+    protected void switchPlacement() {
+        EList<Placement> nextPlacements = placement1.getNextPlacements();
+
+        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
+        dialog.setLabelProvider(labelProvider);
+        int open = dialog.open();
+        if (open == Dialog.OK) {
+            Object[] result = dialog.getResult();
+            if (result.length > 0) {
+                Placement eo = (Placement)result[0];
+                scriptService.setPlacement(eo);
+                SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                command.setDate(placement1.getActualDate());
+            }
+        }
     }
 }
