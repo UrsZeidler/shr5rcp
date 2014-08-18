@@ -68,6 +68,8 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     private Group grpMental;
     private Group grpExra;
 
+    private StateMonitorWidget stateMonitorOverdead;
+
     // private ActionPhaseCmd phase1 = GameplayFactory.eINSTANCE.createActionPhaseCmd();
 
     public BasicActionPanelWidget(Composite parent, int style) {
@@ -90,7 +92,6 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridLayout.numColumns = 3;
         this.setLayout(gridLayout);
         createComposite_state();
-        // setSize(new Point(364, 382));
         createComposite_info();
         createComposite_action();
     }
@@ -128,10 +129,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         composite_state.setLayoutData(gridData);
         composite_state.setLayout(gridLayout4);
         
-        if (character.getValue() instanceof GruntRuntimeCharacter) {
-            //GruntRuntimeCharacter grc = (GruntRuntimeCharacter)character.getValue();
-            return;
-        }
+//        if (character.getValue() instanceof GruntRuntimeCharacter) {
+//            //GruntRuntimeCharacter grc = (GruntRuntimeCharacter)character.getValue();
+//            return;
+//        }
         
         grpPhysical = new Group(composite_state, SWT.NONE);
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -150,11 +151,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
         
         grpExra = new Group(composite_state, SWT.NONE);
+        grpExra.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpExra.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
         grpExra.setText("Exra");
         toolkit.adapt(grpExra);
         toolkit.paintBordersFor(grpExra);
-        //stateMonitor = new StateMonitor(composite_state, SWT.NONE);
+        stateMonitorOverdead = new StateMonitorWidget(grpExra, SWT.NONE,3,false);
     }
 
     /**
@@ -196,7 +198,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData2.verticalSpan = 2;
         gridData2.grabExcessHorizontalSpace = true;
         gridData2.grabExcessVerticalSpace = false;
-        gridData2.verticalAlignment = GridData.BEGINNING;
+        gridData2.verticalAlignment = SWT.FILL;
         composite_action = new Composite(this, SWT.NONE);
         toolkit.adapt(composite_action);
         toolkit.paintBordersFor(composite_action);
@@ -249,7 +251,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         // new Label(composite_name, SWT.NONE);
 
         lblName = new Label(composite_name, SWT.NONE);
-        lblName.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 2, 1));
+        lblName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
         lblName.setText("Name");
   
     }
@@ -327,8 +329,14 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         if (value instanceof InitativePass) {
             InitativePass apc = (InitativePass)value;
             AbstraktPersona persona2 = apc.getSubject().getCharacter().getPersona();
-            stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
-            stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+            KoerperPersona koerperPersona = (KoerperPersona)persona2;
+            stateMonitorWidgetMental.setMaxConditions(koerperPersona.getZustandGeistigMax());
+            stateMonitorWidgetPhysical.setMaxConditions(koerperPersona.getZustandKoerperlichMax());
+            stateMonitorOverdead.setMaxConditions(koerperPersona.getZustandGrenze());
+            grpPhysical.layout(true);
+            grpMental.layout(true);
+            grpExra.layout(true);
+            composite_state.layout(true);
             actionPanel.setCharacter(apc);
             character.setValue(apc.getSubject());
             persona.setValue(persona2);

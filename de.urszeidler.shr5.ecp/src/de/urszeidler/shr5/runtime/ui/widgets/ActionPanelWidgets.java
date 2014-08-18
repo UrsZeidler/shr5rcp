@@ -175,6 +175,11 @@ public class ActionPanelWidgets extends Composite {
         composite_btns.setLayoutData(gridData9);
         button_do = new Button(composite_btns, SWT.NONE);
         button_do.setText("do");
+        
+        Button btnCl = new Button(composite_btns, SWT.NONE);
+        btnCl.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.adapt(btnCl, true, true);
+        btnCl.setText("cl");
     }
 
     public Label getLabel_image_rh() {

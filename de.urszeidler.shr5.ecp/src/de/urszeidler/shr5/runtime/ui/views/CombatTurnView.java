@@ -60,7 +60,7 @@ import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
 /**
  * @author urs
  */
-public class CombatTurnView extends ViewPart implements ISelectionListener, CombatViewer {
+public class CombatTurnView extends ViewPart implements  CombatViewer {
 
     public class HandlungsContenProvider implements IContentProvider, ITreeContentProvider {
 
@@ -207,21 +207,22 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
         basicActionPanel.getActionPanel().getButton_do().addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                ISelection selection = basicActionPanel.getActionPanel().getTreeViewer().getSelection();
-                if (!selection.isEmpty()) {
-                    InitativePass currentTurn = combatTurn.getCurrentTurn();
-                    if (selection instanceof IStructuredSelection) {
-                        IStructuredSelection is = (IStructuredSelection)selection;
-                        Object firstElement = is.getFirstElement();
-                        if (firstElement instanceof SubjectCommand) {
-                            SubjectCommand sc = (SubjectCommand)firstElement;
-
-                            sc.setSubject(currentTurn.getSubject());
-                            scriptService.executeCommand(sc);
-                        }
-
-                    }
-                }
+                executeCurrentCommand();
+//                ISelection selection = basicActionPanel.getActionPanel().getTreeViewer().getSelection();
+//                if (!selection.isEmpty()) {
+//                    InitativePass currentTurn = combatTurn.getCurrentTurn();
+//                    if (selection instanceof IStructuredSelection) {
+//                        IStructuredSelection is = (IStructuredSelection)selection;
+//                        Object firstElement = is.getFirstElement();
+//                        if (firstElement instanceof SubjectCommand) {
+//                            SubjectCommand sc = (SubjectCommand)firstElement;
+//
+//                            sc.setSubject(currentTurn.getSubject());
+//                            scriptService.executeCommand(sc);
+//                        }
+//
+//                    }
+//                }
             }
         });
 
@@ -291,23 +292,25 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
 
         Action action1 = new Action() {
             public void run() {
-                // showMessage("Action 1 executed");
-                // currentPhase.redo();
-                if (combatTurn != null && combatTurn.getCurrentTurn() != null) {
-                    combatTurn.doTurn();
-                    setInitativePass(combatTurn.getCurrentTurn());
-                    // basicActionPanel.setPhase(combatTurn.getCurrentTurn());
-                }
-                // setTempCombatTurn(kampfrunde);
+                executeCurrentCommand();
             }
+
         };
         // action1.setText("Sort");
         action1.setToolTipText("sort tooltip");
         action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_ELCL_SYNCED));
-        getViewSite().getActionBars().getToolBarManager().add(action1);
+//        getViewSite().getActionBars().getToolBarManager().add(action1);
 
     }
 
+    protected void executeCurrentCommand() {
+        if (combatTurn != null && combatTurn.getCurrentTurn() != null) {
+            combatTurn.doTurn();
+            setInitativePass(combatTurn.getCurrentTurn());
+        }
+    }
+
+    
     /**
      * initalise the actionTreeviewer
      * 
@@ -318,30 +321,30 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
 
         if (personaHandlung2 == null)
             return;
-        List<EObject> list = createCharacterCommands(personaHandlung2);
+//        List<EObject> list = createCharacterCommands(personaHandlung2);
 
-        basicActionPanel.getActionPanel().getTreeViewer().setInput(list);
+        basicActionPanel.getActionPanel().getTreeViewer().setInput(personaHandlung2);
     }
 
-    protected List<EObject> createCharacterCommands(InitativePass personaHandlung2) {
-        IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider)adapterFactory.adapt(personaHandlung2,
-                IEditingDomainItemProvider.class);
-
-        Collection<?> newChildDescriptors = editingDomainItemProvider.getNewChildDescriptors(personaHandlung2, null, null);
-        List<EObject> list = new ArrayList<EObject>();
-        Set<Class<?>> set = new HashSet<Class<?>>();
-        for (Object object : newChildDescriptors) {
-            if (object instanceof CommandParameter) {
-                CommandParameter cp = (CommandParameter)object;
-                if (GameplayPackage.eINSTANCE.getCommand_SubCommands().equals(cp.feature)) {
-                    // list.add(cp.getEValue());
-                    if (set.add(cp.getEValue().getClass()))
-                        list.add(cp.getEValue());
-                }
-            }
-        }
-        return list;
-    }
+//    private List<EObject> createCharacterCommands(InitativePass personaHandlung2) {
+//        IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider)adapterFactory.adapt(personaHandlung2,
+//                IEditingDomainItemProvider.class);
+//
+//        Collection<?> newChildDescriptors = editingDomainItemProvider.getNewChildDescriptors(personaHandlung2, null, null);
+//        List<EObject> list = new ArrayList<EObject>();
+//        Set<Class<?>> set = new HashSet<Class<?>>();
+//        for (Object object : newChildDescriptors) {
+//            if (object instanceof CommandParameter) {
+//                CommandParameter cp = (CommandParameter)object;
+//                if (GameplayPackage.eINSTANCE.getCommand_SubCommands().equals(cp.feature)) {
+//                    // list.add(cp.getEValue());
+//                    if (set.add(cp.getEValue().getClass()))
+//                        list.add(cp.getEValue());
+//                }
+//            }
+//        }
+//        return list;
+//    }
 
     /*
      * (non-Javadoc) Method declared on IViewPart.
@@ -391,7 +394,7 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
     @Override
     public void dispose() {
         // tree.dispose();
-        getSite().getPage().removeSelectionListener(this);
+//        getSite().getPage().removeSelectionListener(this);
         super.dispose();
     }
 
@@ -407,19 +410,19 @@ public class CombatTurnView extends ViewPart implements ISelectionListener, Comb
 
     }
 
-    @Override
-    public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-        if (selection instanceof IStructuredSelection) {
-            IStructuredSelection ss = (IStructuredSelection)selection;
-            Object firstElement = ss.getFirstElement();
-            if (firstElement instanceof CombatTurn) {
-                CombatTurn kr = (CombatTurn)firstElement;
-                setCombatTurn(kr);
-            }
-            // selectionProvider.setSelection(selection);
-        }
 
-    }
+//    private void selectionChanged(IWorkbenchPart part, ISelection selection) {
+//        if (selection instanceof IStructuredSelection) {
+//            IStructuredSelection ss = (IStructuredSelection)selection;
+//            Object firstElement = ss.getFirstElement();
+//            if (firstElement instanceof CombatTurn) {
+//                CombatTurn kr = (CombatTurn)firstElement;
+//                setCombatTurn(kr);
+//            }
+//            // selectionProvider.setSelection(selection);
+//        }
+//
+//    }
 
     @Override
     public void setCombatTurn(CombatTurn kr) {

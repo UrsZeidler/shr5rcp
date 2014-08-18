@@ -22,12 +22,12 @@ import org.eclipse.swt.events.DisposeListener;
 public class StateMonitorWidget extends Composite {
 
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
-    //private WritableValue damageState = new WritableValue();
-    //private WritableValue conditionMonitor = new WritableValue();
     private int maxConditions;
     private Composite composite_state;
     private List<SingleStateWidget> stateMonitors;
     private int style;
+    private int column = 3;
+    private boolean showLable = true;
 
     /**
      * Create the composite.
@@ -41,10 +41,7 @@ public class StateMonitorWidget extends Composite {
 
         this.style = style;
         setLayout(new FillLayout(SWT.HORIZONTAL));
-        init();
-    }
 
-    private void init() {
         addDisposeListener(new DisposeListener() {
             public void widgetDisposed(DisposeEvent e) {
                 toolkit.dispose();
@@ -52,19 +49,48 @@ public class StateMonitorWidget extends Composite {
         });
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
+        init();
+    }
 
-        
+    /**
+     * Create the composite.
+     * 
+     * @param parent
+     * @param style
+     */
+    public StateMonitorWidget(Composite parent, int style, int column, boolean showlable) {
+        super(parent, style);
+        maxConditions = 11;
+        this.column = column;
+        this.showLable = showlable;
+
+        this.style = style;
+        setLayout(new FillLayout(SWT.HORIZONTAL));
+
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        init();
+    }
+
+    private void init() {
+
         if (composite_state != null)
             composite_state.dispose();
 
         composite_state = new Composite(this, SWT.NONE);
-        GridLayout layout = new GridLayout(4, false);
+        GridLayout layout = new GridLayout(column + 1, false);
+        layout.marginWidth = 2;
+        layout.marginHeight = 2;
         layout.horizontalSpacing = 0;
         layout.verticalSpacing = 0;
         composite_state.setLayout(layout);
         toolkit.adapt(composite_state);
         toolkit.paintBordersFor(composite_state);
-
 
         int value = maxConditions;
         stateMonitors = new ArrayList<SingleStateWidget>(value);
@@ -73,20 +99,21 @@ public class StateMonitorWidget extends Composite {
             GridData gridData = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             stateWidget.setLayoutData(gridData);
             stateMonitors.add(stateWidget);
-            if (i % 3 == 0) {
-                Label label = toolkit.createLabel(composite_state,"", style);
-                label.setText(""+((i/3))*-1);
-            }
+            if (showLable)
+                if (i % column == 0) {
+                    Label label = toolkit.createLabel(composite_state, "", style);
+                    label.setText("" + ((i / column)) * -1);
+                }
         }
     }
 
-    public void setDamage(int damage){
+    public void setDamage(int damage) {
         for (int i = 0; i < stateMonitors.size(); i++) {
             SingleStateWidget singleStateWidget = stateMonitors.get(i);
-            singleStateWidget.setMarkt(i<damage);
+            singleStateWidget.setMarkt(i < damage);
         }
-     }
-    
+    }
+
     @Override
     protected void checkSubclass() {
         // Disable the check that prevents subclassing of SWT components
