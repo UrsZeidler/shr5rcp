@@ -5,6 +5,8 @@ package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -13,12 +15,14 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
@@ -207,6 +211,7 @@ public class GameplayTools {
 
     /**
      * Creates and returns the first simple action which free.
+     * 
      * @param initativePass
      * @return
      */
@@ -218,17 +223,17 @@ public class GameplayTools {
                 SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
                 sa.setAction1(simpleAction);
                 return simpleAction;
-            }else  if (sa.getAction2() == null) {
+            } else if (sa.getAction2() == null) {
                 SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
                 sa.setAction2(simpleAction);
                 return simpleAction;
-                
+
             }
             return null;
-//        }
-//        else if (action instanceof ComplexAction) {
-//            ComplexAction ca = (ComplexAction)action;
-            
+            // }
+            // else if (action instanceof ComplexAction) {
+            // ComplexAction ca = (ComplexAction)action;
+
         } else {
             SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
             SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
@@ -236,5 +241,27 @@ public class GameplayTools {
             initativePass.setAction(simpleActions);
             return simpleAction;
         }
+    }
+
+    /**
+     * Returns the combat turn the command is executed in.
+     * @param cmd
+     * @return
+     */
+    public static CombatTurn getCombatTurn(Command cmd) {
+        return (CombatTurn)findParentByType(cmd, GameplayPackage.Literals.COMBAT_TURN);
+    }
+
+    /**
+     * Finds the parent by the eContainer per eClass.
+     * @param eObject
+     * @param eClass
+     * @return
+     */
+    private static EObject findParentByType(EObject eObject, EClass eClass) {
+        if (eObject != null && eClass.equals(eObject.eClass()))
+            return eObject;
+        eObject = findParentByType(eObject.eContainer(), eClass);
+        return eObject;
     }
 }
