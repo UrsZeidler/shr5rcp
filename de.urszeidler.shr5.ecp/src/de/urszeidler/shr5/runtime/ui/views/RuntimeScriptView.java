@@ -37,9 +37,6 @@ import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
-import org.eclipse.jface.action.Action;
-import org.eclipse.jface.action.IMenuManager;
-import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -256,7 +253,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     // private Action startCombatAction;
 
-    private Action switchPlacementAction;
+//    private Action switchPlacementAction;
 
     // private Action startTimetrackingAction;
 
@@ -439,7 +436,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
 
                 RuntimeCharacter value = (RuntimeCharacter)firstEObject;
-                List<SubjectCommand> commands = createCharacterCommands(value);
+                List<SubjectCommand> commands = GameplayTools.createCharacterCommands(value);//createCharacterCommands(value);
                 treeViewer_Commands.setInput(commands);
 
             }
@@ -670,8 +667,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // treeViewer_commandProtokoll.setContentProvider();
 
         createActions();
-        initializeToolBar();
-        initializeMenu();
+//        initializeToolBar();
+//        initializeMenu();
         m_bindingContext = initDataBindings1();
 
     }
@@ -700,43 +697,27 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     }
 
-    /**
-     * Initialize the toolbar.
-     */
-    private void initializeToolBar() {
-        IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-//        toolbarManager.add(switchPlacementAction);
-
-    }
-
-    /**
-     * Initialize the menu.
-     */
-    private void initializeMenu() {
-        IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-//        menuManager.add(switchPlacementAction);
-        // menuManager.add(startTimetrackingAction);
-    }
+//    /**
+//     * Initialize the toolbar.
+//     */
+//    private void initializeToolBar() {
+//        IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+////        toolbarManager.add(switchPlacementAction);
+//
+//    }
+//
+//    /**
+//     * Initialize the menu.
+//     */
+//    private void initializeMenu() {
+//        IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
+////        menuManager.add(switchPlacementAction);
+//        // menuManager.add(startTimetrackingAction);
+//    }
 
     @Override
     public void setFocus() {
         // Set the focus
-    }
-
-    private List<SubjectCommand> createCharacterCommands(RuntimeCharacter persona) {
-
-        ArrayList<SubjectCommand> list = new ArrayList<SubjectCommand>();
-        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
-        succesTestCmd.setSubject(persona);
-        list.add(succesTestCmd);
-        SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
-        skillTestCmd.setSubject(persona);
-        list.add(skillTestCmd);
-        ExtendetSkillTestCmd extendetSkillTestCmd = GameplayFactory.eINSTANCE.createExtendetSkillTestCmd();
-        extendetSkillTestCmd.setSubject(persona);
-        list.add(extendetSkillTestCmd);
-
-        return list;
     }
 
     @Override

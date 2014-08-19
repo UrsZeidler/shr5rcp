@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -18,14 +21,19 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
@@ -263,4 +271,24 @@ public class GameplayTools {
         eObject = findParentByType(eObject.eContainer(), eClass);
         return eObject;
     }
+    
+    
+    public static List<SubjectCommand> createCharacterCommands(RuntimeCharacter persona) {
+        ArrayList<SubjectCommand> list = new ArrayList<SubjectCommand>(5);
+        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
+        succesTestCmd.setSubject(persona);
+        list.add(succesTestCmd);
+        SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
+        skillTestCmd.setSubject(persona);
+        list.add(skillTestCmd);
+        ExtendetSkillTestCmd extendetSkillTestCmd = GameplayFactory.eINSTANCE.createExtendetSkillTestCmd();
+        extendetSkillTestCmd.setSubject(persona);
+        list.add(extendetSkillTestCmd);
+        OpposedSkillTestCmd opposedSkillTestCmd = GameplayFactory.eINSTANCE.createOpposedSkillTestCmd();
+        opposedSkillTestCmd.setSubject(persona);
+        list.add(opposedSkillTestCmd);
+
+        return list;
+    }
+
 }
