@@ -3,9 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
-import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -20,6 +17,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.DamageTest} object.

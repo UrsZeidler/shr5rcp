@@ -3,17 +3,19 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.Intervall;
-import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Intervall;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 
 /**
  * <!-- begin-user-doc -->

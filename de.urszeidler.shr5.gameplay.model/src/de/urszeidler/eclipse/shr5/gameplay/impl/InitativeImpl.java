@@ -3,18 +3,18 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.Initative;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
-import de.urszeidler.shr5.gameplay.dice.IniDice;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Initative;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.shr5.gameplay.dice.IniDice;
 
 /**
  * <!-- begin-user-doc -->

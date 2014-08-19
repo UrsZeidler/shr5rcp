@@ -3,10 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

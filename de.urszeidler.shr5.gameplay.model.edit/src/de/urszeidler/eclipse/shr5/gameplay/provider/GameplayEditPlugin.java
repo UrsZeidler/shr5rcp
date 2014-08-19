@@ -3,15 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
-import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
-
-import de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin;
-
-import de.urszeidler.eclipse.shr5Management.provider.Shr5ManagementEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
+import de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin;
+import de.urszeidler.eclipse.shr5Management.provider.Shr5ManagementEditPlugin;
 
 /**
  * This is the central singleton for the Gameplay edit plugin.
