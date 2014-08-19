@@ -76,10 +76,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
@@ -894,6 +892,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction)
+            return;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             new CheckInitaive(getSite().getShell(), ct).open();
@@ -937,6 +937,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        if (cmd instanceof CommandWrapper)
+            return;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
