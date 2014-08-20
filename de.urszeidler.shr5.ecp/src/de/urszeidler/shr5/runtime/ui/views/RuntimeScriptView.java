@@ -141,7 +141,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
             if (plac != null)
                 if (plac.getActualDate() != null)
-                    plac.setActualDate(new Date(plac.getActualDate().getTime() + (1000*timeTrackFactor)));
+                    plac.setActualDate(new Date(plac.getActualDate().getTime() + (1000 * timeTrackFactor)));
             return Status.OK_STATUS;
         }
     }
@@ -228,7 +228,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     // private Action startCombatAction;
 
-//    private Action switchPlacementAction;
+    // private Action switchPlacementAction;
 
     // private Action startTimetrackingAction;
 
@@ -411,7 +411,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
 
                 RuntimeCharacter value = (RuntimeCharacter)firstEObject;
-                List<SubjectCommand> commands = GameplayTools.createCharacterCommands(value);//createCharacterCommands(value);
+                List<SubjectCommand> commands = GameplayTools.createCharacterCommands(value);// createCharacterCommands(value);
                 treeViewer_Commands.setInput(commands);
 
             }
@@ -462,7 +462,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     tltmTimeTrackingItem.setText("start time tracking");
                 } else {
                     TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell());
-                    if(timetrackingDialog.open()==Dialog.CANCEL)
+                    if (timetrackingDialog.open() == Dialog.CANCEL)
                         return;
                     timeTrackFactor = timetrackingDialog.getFactor();
                     timeTrackJob.isTimetracking = true;
@@ -492,11 +492,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             public void widgetSelected(SelectionEvent e) {
                 ISelection selection = treeViewer_Commands.getSelection();
                 EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
-                scriptService.executeCommand((Command)eObject);
+                if (eObject != null)
+                    scriptService.executeCommand((Command)eObject);
             }
         });
         tltmExecuteaction.setText("executeAction");
-        
+
         ToolItem tltmSwitchplacement = new ToolItem(toolBar, SWT.NONE);
         tltmSwitchplacement.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/switch-placement.png"));
         tltmSwitchplacement.addSelectionListener(new SelectionAdapter() {
@@ -647,8 +648,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // treeViewer_commandProtokoll.setContentProvider();
 
         createActions();
-//        initializeToolBar();
-//        initializeMenu();
+        // initializeToolBar();
+        // initializeMenu();
         m_bindingContext = initDataBindings1();
 
     }
@@ -666,34 +667,34 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      */
     private void createActions() {
 
-//        switchPlacementAction = new Action() {
-//            public void run() {
-//                switchPlacement();
-//            }
-//        };
-//        switchPlacementAction.setText("switch placement");
-//        switchPlacementAction.setToolTipText("switch placement");
-//        switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
+        // switchPlacementAction = new Action() {
+        // public void run() {
+        // switchPlacement();
+        // }
+        // };
+        // switchPlacementAction.setText("switch placement");
+        // switchPlacementAction.setToolTipText("switch placement");
+        // switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
 
     }
 
-//    /**
-//     * Initialize the toolbar.
-//     */
-//    private void initializeToolBar() {
-//        IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-////        toolbarManager.add(switchPlacementAction);
-//
-//    }
-//
-//    /**
-//     * Initialize the menu.
-//     */
-//    private void initializeMenu() {
-//        IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-////        menuManager.add(switchPlacementAction);
-//        // menuManager.add(startTimetrackingAction);
-//    }
+    // /**
+    // * Initialize the toolbar.
+    // */
+    // private void initializeToolBar() {
+    // IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+    // // toolbarManager.add(switchPlacementAction);
+    //
+    // }
+    //
+    // /**
+    // * Initialize the menu.
+    // */
+    // private void initializeMenu() {
+    // IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
+    // // menuManager.add(switchPlacementAction);
+    // // menuManager.add(startTimetrackingAction);
+    // }
 
     @Override
     public void setFocus() {
@@ -865,14 +866,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return;
 
             GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator),GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-//            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-//                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-//                    GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-//                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-            
+            // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+            // new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            // GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            // GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof RangedAttackCmd) {
@@ -891,8 +892,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                 new DefaultReferenceManager(itemDelegator));
-//        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-//                new DefaultReferenceManager(itemDelegator));
+        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+        // new DefaultReferenceManager(itemDelegator));
         genericEObjectDialog.open();
     }
 

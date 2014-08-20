@@ -21,7 +21,7 @@ public class OpenCharacterByRuntimeEditorAction extends Action implements IActio
     public OpenCharacterByRuntimeEditorAction(RuntimeCharacter object) {
         this.theObject = object;
         setToolTipText("open character");
-        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/print_edit.gif"));
+        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/open-character.png"));
     }
 
     @Override
