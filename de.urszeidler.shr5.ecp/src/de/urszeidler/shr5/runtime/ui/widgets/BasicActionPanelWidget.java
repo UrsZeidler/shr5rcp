@@ -89,6 +89,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.paintBordersFor(this);
 
         GridLayout gridLayout = new GridLayout();
+        gridLayout.horizontalSpacing = 2;
+        gridLayout.verticalSpacing = 2;
+        gridLayout.marginWidth = 2;
+        gridLayout.marginHeight = 2;
         gridLayout.numColumns = 3;
         this.setLayout(gridLayout);
         createComposite_state();

@@ -38,6 +38,8 @@ import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
+import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.wb.swt.ResourceManager;
 
 /**
  * @author urs
@@ -142,11 +144,12 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
     public static final String ID = "de.urszeidler.test.CombatTurnnView";
 
-    private SashForm top = null;
+    private SashForm top_1;
     private Composite composite_bottom = null;
     private BasicActionPanelWidget basicActionPanel = null;
     private CombatTurnList combatTurnList;
     private ScriptService scriptService;
+    private ToolItem tltmD;
 
     /*
      * (non-Javadoc)
@@ -158,15 +161,15 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     public void createPartControl(Composite arg0) {
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 1;
-        top = new SashForm(arg0, SWT.NONE);
-        top.setLayout(gridLayout);
+        top_1 = new SashForm(arg0, SWT.NONE);
+        top_1.setLayout(gridLayout);
 
         GridData gridData = new GridData();
         gridData.horizontalAlignment = GridData.FILL;
         gridData.grabExcessHorizontalSpace = true;
         gridData.grabExcessVerticalSpace = true;
         gridData.verticalAlignment = GridData.FILL;
-        top.setOrientation(SWT.VERTICAL);
+        top_1.setOrientation(SWT.VERTICAL);
 
         createBasicActionPanel();
         createComposite_bottom();
@@ -174,12 +177,12 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         basicActionPanel.getActionPanel().getTreeViewer().setContentProvider(new SimpleListContenProvider(actionListContentProvider));
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
 
-        basicActionPanel.getActionPanel().getButton_do().addSelectionListener(new SelectionAdapter() {
-            @Override
-            public void widgetSelected(SelectionEvent e) {
-                executeCurrentCommand();
-            }
-        });
+//        basicActionPanel.getActionPanel().getButton_do().addSelectionListener(new SelectionAdapter() {
+//            @Override
+//            public void widgetSelected(SelectionEvent e) {
+//                executeCurrentCommand();
+//            }
+//        });
     }
 
     protected void executeCurrentCommand() {
@@ -229,7 +232,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         gridData1.grabExcessHorizontalSpace = true;
         gridData1.grabExcessVerticalSpace = true;
         gridData1.verticalAlignment = GridData.FILL;
-        composite_bottom = new Composite(top, SWT.NONE);
+        composite_bottom = new Composite(top_1, SWT.NONE);
         composite_bottom.setLayout(new GridLayout());
 
         ScrolledComposite scrolledComposite = new ScrolledComposite(composite_bottom, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
@@ -240,6 +243,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
         combatTurnList = new CombatTurnList(scrolledComposite, SWT.NONE);
         scrolledComposite.setContent(combatTurnList);
+        top_1.setWeights(new int[] {283, 169});
     }
 
     @Override
@@ -254,8 +258,17 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         GridData gridData = new GridData();
         gridData.horizontalAlignment = GridData.FILL;
         gridData.verticalAlignment = GridData.CENTER;
-        basicActionPanel = new BasicActionPanelWidget(top, SWT.NONE);
+        basicActionPanel = new BasicActionPanelWidget(top_1, SWT.NONE);
         basicActionPanel.setLayoutData(gridData);
+        
+        tltmD = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
+        tltmD.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                executeCurrentCommand();
+            }
+        });
+        tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
     }
 
     @Override

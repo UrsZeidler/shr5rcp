@@ -16,21 +16,21 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 
 public class ActionPanelWidgets extends Composite {
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
     private Composite composite = null;
-    private Composite composite1 = null;
-    private Composite composite_default_Action = null;
     private Tree tree_actions = null;
-    private Composite composite_btns = null;
     private TreeViewer treeViewer = null;
-    private Button button_do = null;
     private HandComposite rechte_Hand;
     private HandComposite linke_Hand;
 
     private WritableValue character = new WritableValue();
+    private ToolBar toolBar;
+    private ToolItem tltmN;
 
     public ActionPanelWidgets(Composite parent, int style) {
         super(parent, style);
@@ -47,9 +47,26 @@ public class ActionPanelWidgets extends Composite {
         toolkit.paintBordersFor(this);
 
         GridLayout gridLayout1 = new GridLayout();
-        gridLayout1.numColumns = 1;
+        gridLayout1.numColumns = 2;
+        gridLayout1.marginWidth = 2;
+        gridLayout1.marginHeight = 2;
+        gridLayout1.verticalSpacing = 2;
+        gridLayout1.horizontalSpacing = 2;
         this.setLayout(gridLayout1);
-        createComposite1();
+        
+        rechte_Hand = new HandComposite(this, SWT.NONE, "right Hand");
+        GridData gridData6 = new GridData();
+        gridData6.horizontalAlignment = GridData.FILL;
+        gridData6.grabExcessHorizontalSpace = true;
+        rechte_Hand.setLayoutData(gridData6);
+        new Label(this, SWT.NONE);
+
+        linke_Hand = new HandComposite(this, SWT.NONE, "left Hand");
+        gridData6 = new GridData();
+        gridData6.horizontalAlignment = GridData.FILL;
+        gridData6.grabExcessHorizontalSpace = true;
+        linke_Hand.setLayoutData(gridData6);
+
         createComposite();
 
     }
@@ -58,18 +75,13 @@ public class ActionPanelWidgets extends Composite {
         this.character.setValue(character.getSubject());
         rechte_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND);
         linke_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
-        populateActions();
-    }
-
-    private void populateActions() {
-        // TODO Auto-generated method stub
-
     }
 
     /**
      * This method initializes composite
      */
     private void createComposite() {
+        new Label(this, SWT.NONE);
         GridData gridData10 = new GridData();
         gridData10.horizontalSpan = 3;
         gridData10.verticalAlignment = GridData.FILL;
@@ -77,7 +89,7 @@ public class ActionPanelWidgets extends Composite {
         gridData10.grabExcessVerticalSpace = true;
         gridData10.grabExcessHorizontalSpace = true;
         GridLayout gridLayout3 = new GridLayout();
-        gridLayout3.numColumns = 4;
+        gridLayout3.numColumns = 3;
         gridLayout3.verticalSpacing = 0;
         gridLayout3.marginWidth = 0;
         gridLayout3.marginHeight = 0;
@@ -92,95 +104,16 @@ public class ActionPanelWidgets extends Composite {
         composite = new Composite(this, SWT.NONE);
         composite.setLayoutData(gridData3);
         composite.setLayout(gridLayout3);
+         
+        toolBar = new ToolBar(composite, SWT.BORDER | SWT.FLAT | SWT.RIGHT | SWT.VERTICAL);
+        toolkit.adapt(toolBar);
+        toolkit.paintBordersFor(toolBar);
+        
         tree_actions = new Tree(composite, SWT.NONE);
         tree_actions.setLayoutData(gridData10);
         treeViewer = new TreeViewer(tree_actions);
-        createComposite_btns();
     }
 
-    /**
-     * This method initializes composite1
-     */
-    private void createComposite1() {
-        GridData gridData2 = new GridData();
-        gridData2.horizontalAlignment = GridData.FILL;
-        gridData2.grabExcessHorizontalSpace = true;
-        gridData2.verticalAlignment = GridData.CENTER;
-        GridLayout gridLayout = new GridLayout();
-        gridLayout.numColumns = 1;
-        gridLayout.verticalSpacing = 0;
-        gridLayout.marginWidth = 0;
-        gridLayout.marginHeight = 0;
-        gridLayout.horizontalSpacing = 0;
-        composite1 = new Composite(this, SWT.NONE);
-        composite1.setLayout(gridLayout);
-        composite1.setLayoutData(gridData2);
-        toolkit.adapt(composite1);
-        toolkit.paintBordersFor(composite1);
-
-        createComposite_default_Action();
-    }
-
-    /**
-     * This method initializes composite_default_Action
-     */
-    private void createComposite_default_Action() {
-
-        GridLayout gridLayout2 = new GridLayout();
-        gridLayout2.horizontalSpacing = 0;
-        gridLayout2.verticalSpacing = 0;
-        gridLayout2.marginWidth = 0;
-        gridLayout2.marginHeight = 0;
-        gridLayout2.numColumns = 1;
-        GridData gridData5 = new GridData();
-        gridData5.verticalSpan = 3;
-        gridData5.horizontalAlignment = GridData.FILL;
-        gridData5.verticalAlignment = GridData.FILL;
-        gridData5.grabExcessVerticalSpace = true;
-        gridData5.grabExcessHorizontalSpace = true;
-        composite_default_Action = new Composite(composite1, SWT.NONE);
-        toolkit.adapt(composite_default_Action);
-        toolkit.paintBordersFor(composite_default_Action);
-
-        composite_default_Action.setLayoutData(gridData5);
-        composite_default_Action.setLayout(gridLayout2);
-        // createComposite_obove();
-
-        rechte_Hand = new HandComposite(composite_default_Action, SWT.NONE, "right Hand");
-        GridData gridData6 = new GridData();
-        gridData6.horizontalAlignment = GridData.FILL;
-        gridData6.grabExcessHorizontalSpace = true;
-        rechte_Hand.setLayoutData(gridData6);
-
-        linke_Hand = new HandComposite(composite_default_Action, SWT.NONE, "left Hand");
-        gridData6 = new GridData();
-        gridData6.horizontalAlignment = GridData.FILL;
-        gridData6.grabExcessHorizontalSpace = true;
-        linke_Hand.setLayoutData(gridData6);
-
-    }
-
-     /**
-     * This method initializes composite_btns
-     */
-    private void createComposite_btns() {
-        GridData gridData9 = new GridData();
-        gridData9.horizontalAlignment = GridData.BEGINNING;
-        gridData9.verticalAlignment = GridData.FILL;
-        composite_btns = new Composite(composite, SWT.NONE);
-        toolkit.adapt(composite_btns);
-        toolkit.paintBordersFor(composite_btns);
-
-        composite_btns.setLayout(new GridLayout());
-        composite_btns.setLayoutData(gridData9);
-        button_do = new Button(composite_btns, SWT.NONE);
-        button_do.setText("do");
-        
-        Button btnCl = new Button(composite_btns, SWT.NONE);
-        btnCl.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        toolkit.adapt(btnCl, true, true);
-        btnCl.setText("cl");
-    }
 
     public Label getLabel_image_rh() {
         return rechte_Hand.getLabel_image();
@@ -214,10 +147,6 @@ public class ActionPanelWidgets extends Composite {
         return linke_Hand.getButton_change();
     }
 
-    public Button getButton_do() {
-        return button_do;
-    }
-
     public Button getButton_drop_rh() {
         return rechte_Hand.getButton_use1();
     }
@@ -233,5 +162,7 @@ public class ActionPanelWidgets extends Composite {
     public Button getButton_use_lh() {
         return linke_Hand.getButton_use();
     }
-
-} // @jve:decl-index=0:visual-constraint="0,0"
+    public ToolBar getToolBar() {
+        return toolBar;
+    }
+} 
