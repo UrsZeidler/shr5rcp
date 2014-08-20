@@ -89,7 +89,6 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
-import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
@@ -97,9 +96,7 @@ import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
-import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
@@ -127,28 +124,6 @@ import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
-
-    // private final class ViewerCommandSorter extends ViewerSorter {
-    // @Override
-    // public int compare(Viewer viewer, Object e1, Object e2) {
-    // if (e1 instanceof Command) {
-    // Command cmd = (Command)e1;
-    // if (e2 instanceof Command) {
-    // Command cmd1 = (Command)e2;
-    // if (cmd.getDate() == null)
-    // return 1;
-    // if (cmd1.getDate() == null)
-    // return -1;
-    //
-    // if (cmd1.getDate().getTime() > cmd.getDate().getTime())
-    // return 1;
-    // else
-    // return -1;
-    // }
-    // }
-    // return super.compare(viewer, e1, e2);
-    // }
-    // }
 
     private final class TimeTracker extends Job {
         private boolean isTimetracking;
@@ -483,6 +458,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             public void widgetSelected(SelectionEvent e) {
                 if (timeTrackJob.isTimetracking) {
                     timeTrackJob.isTimetracking = false;
+                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
                     tltmTimeTrackingItem.setText("start time tracking");
                 } else {
                     TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell());
@@ -492,6 +468,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     timeTrackJob.isTimetracking = true;
                     timeTrackJob.schedule();
                     tltmTimeTrackingItem.setText("stop time tracking");
+                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking-off.png"));
                 }
             }
         });
@@ -499,6 +476,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tltmTimeTrackingItem.setText("start time tracking");
 
         ToolItem tltmStartcombatturn = new ToolItem(toolBar, SWT.NONE);
+        tltmStartcombatturn.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/start-combat.png"));
         tltmStartcombatturn.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -508,6 +486,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tltmStartcombatturn.setText("startCombatTurn");
 
         ToolItem tltmExecuteaction = new ToolItem(toolBar, SWT.NONE);
+        tltmExecuteaction.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
         tltmExecuteaction.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -519,6 +498,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tltmExecuteaction.setText("executeAction");
         
         ToolItem tltmSwitchplacement = new ToolItem(toolBar, SWT.NONE);
+        tltmSwitchplacement.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/switch-placement.png"));
         tltmSwitchplacement.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {

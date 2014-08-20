@@ -175,7 +175,10 @@ public class GameplayTools {
 
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
         // TODO calculate the range mod
-
+//        Reichweite reichweite = weapon.getReichweite();
+//        if(reichweite!=null){
+//            reichweite.getMin()
+//        }
         return 0;
     }
 

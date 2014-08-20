@@ -51,6 +51,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.ecp.editor.actions.OpenCharacterByRuntimeEditorAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
@@ -115,8 +116,13 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
         Composite body = form.getBody();
+        
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        form.getToolBarManager().add(new OpenCharacterByRuntimeEditorAction(object));
+        form.getToolBarManager().update(true);
+        
+        
         LabelProvider labelProvider = AdapterFactoryUtil.getInstance().getLabelProvider();
         form.setText(labelProvider.getText(object));
         {
