@@ -171,6 +171,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         gridData6.heightHint = 32;
         gridData6.widthHint = 32;
         GridLayout gridLayout2 = new GridLayout();
+        gridLayout2.verticalSpacing = 0;
+        gridLayout2.marginWidth = 0;
+        gridLayout2.marginHeight = 0;
+        gridLayout2.horizontalSpacing = 0;
         gridLayout2.numColumns = 2;
         GridData gridData1 = new GridData();
         gridData1.horizontalSpan = 2;
@@ -232,6 +236,10 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
      */
     private void createComposite_name() {
         GridLayout gridLayout3 = new GridLayout();
+        gridLayout3.verticalSpacing = 2;
+        gridLayout3.marginWidth = 2;
+        gridLayout3.marginHeight = 2;
+        gridLayout3.horizontalSpacing = 2;
         gridLayout3.numColumns = 2;
         GridData gridData5 = new GridData();
         gridData5.horizontalAlignment = GridData.FILL;

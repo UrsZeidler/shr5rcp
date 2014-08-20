@@ -150,6 +150,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     private CombatTurnList combatTurnList;
     private ScriptService scriptService;
     private ToolItem tltmD;
+    private ToolItem toolItem;
 
     /*
      * (non-Javadoc)
@@ -269,6 +270,10 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             }
         });
         tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
+        tltmD.setToolTipText("execute");
+        {
+            toolItem = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.SEPARATOR);
+        }
     }
 
     @Override

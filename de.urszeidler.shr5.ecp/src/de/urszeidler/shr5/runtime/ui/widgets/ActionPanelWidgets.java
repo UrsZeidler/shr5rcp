@@ -11,13 +11,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import org.eclipse.swt.widgets.ToolBar;
-import org.eclipse.swt.widgets.ToolItem;
 
 public class ActionPanelWidgets extends Composite {
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -30,7 +29,6 @@ public class ActionPanelWidgets extends Composite {
 
     private WritableValue character = new WritableValue();
     private ToolBar toolBar;
-    private ToolItem tltmN;
 
     public ActionPanelWidgets(Composite parent, int style) {
         super(parent, style);
@@ -48,10 +46,10 @@ public class ActionPanelWidgets extends Composite {
 
         GridLayout gridLayout1 = new GridLayout();
         gridLayout1.numColumns = 2;
-        gridLayout1.marginWidth = 2;
-        gridLayout1.marginHeight = 2;
-        gridLayout1.verticalSpacing = 2;
-        gridLayout1.horizontalSpacing = 2;
+        gridLayout1.marginWidth = 1;
+        gridLayout1.marginHeight = 1;
+        gridLayout1.verticalSpacing = 1;
+        gridLayout1.horizontalSpacing = 1;
         this.setLayout(gridLayout1);
         
         rechte_Hand = new HandComposite(this, SWT.NONE, "right Hand");
@@ -77,6 +75,12 @@ public class ActionPanelWidgets extends Composite {
         linke_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
     }
 
+    @Override
+    public void dispose() {
+        character.dispose();
+        super.dispose();
+    }
+    
     /**
      * This method initializes composite
      */
@@ -105,9 +109,11 @@ public class ActionPanelWidgets extends Composite {
         composite.setLayoutData(gridData3);
         composite.setLayout(gridLayout3);
          
-        toolBar = new ToolBar(composite, SWT.BORDER | SWT.FLAT | SWT.RIGHT | SWT.VERTICAL);
+        toolBar = new ToolBar(composite, SWT.BORDER | SWT.FLAT | SWT.RIGHT);
         toolkit.adapt(toolBar);
         toolkit.paintBordersFor(toolBar);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
         
         tree_actions = new Tree(composite, SWT.NONE);
         tree_actions.setLayoutData(gridData10);
