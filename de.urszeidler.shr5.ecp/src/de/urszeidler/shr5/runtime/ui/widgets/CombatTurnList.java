@@ -22,7 +22,6 @@ import org.eclipse.wb.swt.SWTResourceManager;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
-import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 
 public class CombatTurnList extends Composite implements IValueChangeListener, IListChangeListener {
 
