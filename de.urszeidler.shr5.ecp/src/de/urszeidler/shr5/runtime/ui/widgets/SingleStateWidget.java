@@ -20,7 +20,7 @@ public class SingleStateWidget extends Composite {
     
     private Label statelabel = null;
     private boolean markt = false;
-    private int size = 20;
+    private int size = 12;
     private int spacing = size/10;    
     
     public SingleStateWidget(Composite parent, int style) {
