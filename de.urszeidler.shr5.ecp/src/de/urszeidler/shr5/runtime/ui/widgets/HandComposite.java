@@ -120,7 +120,7 @@ public class HandComposite extends NameableComposite {
                   action.getSubCommands().add(setFeatureCommand);
                   setFeatureCommand.setObject(initativePass.getSubject());
                   setFeatureCommand.setFeature(references);
-                  setFeatureCommand.setObject(null);
+                  setFeatureCommand.setValue(null);
                   initativePass.setFreeAction(action);
               }
             }
@@ -156,10 +156,7 @@ public class HandComposite extends NameableComposite {
                 simpleAction.getSubCommands().add(setFeatureCommand);
                 setFeatureCommand.setObject(initativePass.getSubject());
                 setFeatureCommand.setFeature(references);
-                setFeatureCommand.setObject(object);
-                //initativePass.setFreeAction(action);
-
-                
+                setFeatureCommand.setValue(object);
             }
         });
         tltmNewItem.setToolTipText("change item");

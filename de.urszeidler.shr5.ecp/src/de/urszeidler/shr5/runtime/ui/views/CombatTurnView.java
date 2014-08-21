@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -23,14 +24,18 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
+import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
@@ -38,6 +43,7 @@ import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
+
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.wb.swt.ResourceManager;
 
@@ -151,6 +157,9 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     private ScriptService scriptService;
     private ToolItem tltmD;
     private ToolItem toolItem;
+    private ToolItem tltmSkill;
+    private ToolItem tltmOpposed;
+    private ToolItem tltmSuccesTest;
 
     /*
      * (non-Javadoc)
@@ -260,6 +269,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         gridData.horizontalAlignment = GridData.FILL;
         gridData.verticalAlignment = GridData.CENTER;
         basicActionPanel = new BasicActionPanelWidget(top_1, SWT.NONE);
+        basicActionPanel.getActionPanel().getTreeViewer().setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         basicActionPanel.setLayoutData(gridData);
         
         tltmD = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
@@ -273,6 +283,31 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         tltmD.setToolTipText("execute");
         {
             toolItem = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.SEPARATOR);
+        }
+        {
+            tltmSkill = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
+            tltmSkill.addSelectionListener(new SelectionAdapter() {
+                @Override
+                public void widgetSelected(SelectionEvent e) {
+                    InitativePass initativePass = combatTurn.getCurrentTurn();
+                    SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
+                    skillTestCmd.setSubject(initativePass.getSubject());
+                    ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
+                    complexAction.getSubCommands().add(skillTestCmd);
+                    initativePass.setAction(complexAction);                    
+                }
+            });
+            tltmSkill.setText("s");
+            tltmSkill.setToolTipText("skill probe");
+        }
+        {
+            tltmOpposed = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
+            tltmOpposed.setText("o");
+            tltmOpposed.setToolTipText("o");
+        }
+        {
+            tltmSuccesTest = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
+            tltmSuccesTest.setText("x");
         }
     }
 

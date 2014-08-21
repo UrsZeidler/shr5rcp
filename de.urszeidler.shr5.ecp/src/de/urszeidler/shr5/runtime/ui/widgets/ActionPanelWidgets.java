@@ -115,7 +115,7 @@ public class ActionPanelWidgets extends Composite {
         new Label(composite, SWT.NONE);
         new Label(composite, SWT.NONE);
         
-        tree_actions = new Tree(composite, SWT.NONE);
+        tree_actions = new Tree(composite, SWT.BORDER);
         tree_actions.setLayoutData(gridData10);
         treeViewer = new TreeViewer(tree_actions);
     }

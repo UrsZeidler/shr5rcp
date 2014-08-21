@@ -585,8 +585,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_6.setLayout(new GridLayout(1, false));
         formToolkit.paintBordersFor(composite_6);
 
-        // Button btnNewButton = formToolkit.createButton(composite_6, "New Button", SWT.NONE);
-
         sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
@@ -638,18 +636,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.paintBordersFor(composite_14);
 
         treeViewer_commandProtokoll = new TableViewer(composite_14, SWT.BORDER);
-        // treeViewer_commandProtokoll.setSorter(new ViewerCommandSorter());
-        // treeViewer_commandProtokoll.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         Table tree_1 = treeViewer_commandProtokoll.getTable();
         tree_1.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree_1);
         scrolledComposite.setContent(composite);
         scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
-        // treeViewer_commandProtokoll.setContentProvider();
 
-        createActions();
-        // initializeToolBar();
-        // initializeMenu();
         m_bindingContext = initDataBindings1();
 
     }
@@ -662,39 +654,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         super.dispose();
     }
 
-    /**
-     * Create the actions.
-     */
-    private void createActions() {
-
-        // switchPlacementAction = new Action() {
-        // public void run() {
-        // switchPlacement();
-        // }
-        // };
-        // switchPlacementAction.setText("switch placement");
-        // switchPlacementAction.setToolTipText("switch placement");
-        // switchPlacementAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ELEMENT));
-
-    }
-
-    // /**
-    // * Initialize the toolbar.
-    // */
-    // private void initializeToolBar() {
-    // IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
-    // // toolbarManager.add(switchPlacementAction);
-    //
-    // }
-    //
-    // /**
-    // * Initialize the menu.
-    // */
-    // private void initializeMenu() {
-    // IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
-    // // menuManager.add(switchPlacementAction);
-    // // menuManager.add(startTimetrackingAction);
-    // }
 
     @Override
     public void setFocus() {
