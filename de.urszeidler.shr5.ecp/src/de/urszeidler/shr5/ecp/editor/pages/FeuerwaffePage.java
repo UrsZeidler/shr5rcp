@@ -12,6 +12,7 @@ import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -131,6 +132,15 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
         compositefw2.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
         managedForm.getToolkit().adapt(compositefw2);
         managedForm.getToolkit().paintBordersFor(compositefw2);
+        Section sctnRuntime = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnRuntime);
+        sctnRuntime.setText(Messages.GegenstandPage_sctnRuntime_text);
+        
+        Composite composite_runtime = managedForm.getToolkit().createComposite(sctnRuntime, SWT.NONE);
+        managedForm.getToolkit().paintBordersFor(composite_runtime);
+        sctnRuntime.setClient(composite_runtime);
+        composite_runtime.setLayout(new GridLayout(6, false));
 
         m_bindingContext = initDataBindings();
 
@@ -156,6 +166,10 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FEUERWAFFE__ERWEITERUNG, compositefw2);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FEUERWAFFE__EINBAU, compositefw2);
+        
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FEUERWAFFE__MAGAZIN, composite_runtime);
+
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 

@@ -30,6 +30,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.swt.widgets.Label;
 
 /**
  * Manages {@link Gegenstand} and {@link Kleidung}, {@link Credstick} and {@link Munition}.
@@ -91,9 +93,8 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
-        GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-        beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
+        beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
@@ -126,6 +127,17 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         managedForm.getToolkit().adapt(grpQuelle);
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
+        
+        Section sctnRuntime = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnRuntime);
+        sctnRuntime.setText(Messages.GegenstandPage_sctnRuntime_text);
+        
+        Composite composite_runtime = managedForm.getToolkit().createComposite(sctnRuntime, SWT.NONE);
+        managedForm.getToolkit().paintBordersFor(composite_runtime);
+        sctnRuntime.setClient(composite_runtime);
+        composite_runtime.setLayout(new GridLayout(6, false));
+
 
         m_bindingContext = initDataBindings();
 
@@ -183,9 +195,12 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+        
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        managedForm.reflow(true);
+        
+          managedForm.reflow(true);
     }
 
     protected DataBindingContext initDataBindings() {

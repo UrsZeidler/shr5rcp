@@ -157,6 +157,7 @@ public class Messages extends NLS {
     public static String CharacterAdvancementPage_titel;
     public static String BeschreibbarWidget_sctnNewSection_text;
     public static String SubstancePage_attributes;
+    public static String GegenstandPage_sctnRuntime_text;
 
     static {
         // initialize resource bundle
