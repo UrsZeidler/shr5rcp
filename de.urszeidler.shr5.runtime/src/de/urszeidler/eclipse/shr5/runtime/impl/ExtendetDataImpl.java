@@ -245,4 +245,21 @@ public class ExtendetDataImpl extends MinimalEObjectImpl.Container implements Ex
             return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("ExtendetDataImpl [");
+        if (eObject != null) {
+            builder.append("eObject=");
+            builder.append(eObject.eClass().getName());
+            builder.append(", ");
+        }
+        if (eFeature != null) {
+            builder.append("eFeature=");
+            builder.append(eFeature.getName());
+        }
+        builder.append("]");
+        return builder.toString();
+    }
 } //ExtendetDataImpl
