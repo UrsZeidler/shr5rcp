@@ -186,13 +186,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
         basicActionPanel.getActionPanel().getTreeViewer().setContentProvider(new SimpleListContenProvider(actionListContentProvider));
         basicActionPanel.getActionPanel().getTreeViewer().setLabelProvider(labelProvider);
-
-//        basicActionPanel.getActionPanel().getButton_do().addSelectionListener(new SelectionAdapter() {
-//            @Override
-//            public void widgetSelected(SelectionEvent e) {
-//                executeCurrentCommand();
-//            }
-//        });
     }
 
     protected void executeCurrentCommand() {
@@ -212,7 +205,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
         if (personaHandlung2 == null)
             return;
- 
+
         basicActionPanel.getActionPanel().getTreeViewer().setInput(personaHandlung2);
     }
 
@@ -253,7 +246,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
         combatTurnList = new CombatTurnList(scrolledComposite, SWT.NONE);
         scrolledComposite.setContent(combatTurnList);
-        top_1.setWeights(new int[] {283, 169});
+        top_1.setWeights(new int[]{ 242, 210 });
     }
 
     @Override
@@ -271,7 +264,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         basicActionPanel = new BasicActionPanelWidget(top_1, SWT.NONE);
         basicActionPanel.getActionPanel().getTreeViewer().setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         basicActionPanel.setLayoutData(gridData);
-        
+
         tltmD = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
         tltmD.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -294,7 +287,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
                     skillTestCmd.setSubject(initativePass.getSubject());
                     ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
                     complexAction.getSubCommands().add(skillTestCmd);
-                    initativePass.setAction(complexAction);                    
+                    initativePass.setAction(complexAction);
                 }
             });
             tltmSkill.setText("s");
