@@ -54,11 +54,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
     private Button button_change = null;
     private String grouname;
     protected ToolBar actionBar;
-
-    private GridLayout gridLayout1;
-
-    private Image background;
-
+    protected GridLayout gridLayout1;
 
     public NameableComposite(Composite parent, int style, String groupName) {
         super(parent, style);
@@ -242,23 +238,6 @@ public abstract class NameableComposite extends Composite implements IValueChang
         this.nameable.setValue(nameable);
     }
 
-    public void setActiv(boolean active) {
-        if (active) {
-            gridLayout1.marginTop = 8;
-            gridLayout1.marginBottom = 8;
-            gridLayout1.marginRight = 4;
-            gridLayout1.marginLeft = 4;
-            this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-bck.png"));
-            actionBar.setEnabled(false);
-        } else {
-            gridLayout1.marginTop = 0;
-            gridLayout1.marginBottom = 0;
-            gridLayout1.marginRight = 0;
-            gridLayout1.marginLeft = 0;
-            this.setBackgroundImage(null);
-            actionBar.setEnabled(true);
-        }
-    }
     //
     // public void setNameable(WritableValue character, EReference references) {
     // //this.character = character;

@@ -98,6 +98,8 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
                 actionPhaseComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
                 if (phaseCmd.equals(value.getCurrentTurn()))
                     actionPhaseComposite.setActiv(true);
+                else
+                    actionPhaseComposite.setActiv(false);
                 // actionPhaseComposite.layout(true, true);
                 // Label label = new Label(composite1, SWT.BORDER);
                 // label.setText("uiiugiS");

@@ -70,4 +70,23 @@ public class ActionPhaseWidget extends NameableComposite {
         this.setNameable(pass.getSubject().getCharacter().getPersona());
     }
 
+    
+    public void setActiv(boolean active) {
+        if (active) {
+            gridLayout1.marginTop = 8;
+            gridLayout1.marginBottom = 8;
+            gridLayout1.marginRight = 4;
+            gridLayout1.marginLeft = 4;
+            this.setBackgroundImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-bck.png"));
+            actionBar.setEnabled(false);
+        } else {
+            gridLayout1.marginTop = 0;
+            gridLayout1.marginBottom = 0;
+            gridLayout1.marginRight = 0;
+            gridLayout1.marginLeft = 0;
+            this.setBackgroundImage(null);
+            actionBar.setEnabled(!initativePass.isExecuted());
+        }
+    }
+
 }
