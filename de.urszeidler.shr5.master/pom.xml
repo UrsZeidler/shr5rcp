@@ -32,8 +32,6 @@
 		<module>../de.urszeidler.shr5.runtime.tests</module>
 		<module>../de.urszeidler.shr5.gameplay.model.tests</module>
 
-<!-- 		<module>../../../../../../home/urs/eclipse_workspaces/workspace_E4.3_shr_git/de.urszeidler.shr5.test1.feature</module> -->
-
 
 <!-- 		<module>../de.urszeidler.shr5.product.feature</module> -->
 <!-- 		<module>../de.urszeidler.shr5.ecp.feature</module> -->
