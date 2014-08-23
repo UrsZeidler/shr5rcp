@@ -962,6 +962,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         return String.format("%tT >> %s", notifier.getDate(), text);
     }
 
+    @SuppressWarnings("unchecked")
     private void switchPlacement() {
         EList<Placement> nextPlacements = placement1.getNextPlacements();
 
