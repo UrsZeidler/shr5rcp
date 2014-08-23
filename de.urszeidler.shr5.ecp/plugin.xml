@@ -194,6 +194,7 @@
       <view
             category="de.urszeidler.shr5.ecp.category.views"
             class="de.urszeidler.shr5.runtime.ui.views.CombatTurnView"
+            icon="images/start-combat-on.png"
             id="de.urszeidler.shr5.ecp.CombatTurnView"
             name="Combat view"
             restorable="true">

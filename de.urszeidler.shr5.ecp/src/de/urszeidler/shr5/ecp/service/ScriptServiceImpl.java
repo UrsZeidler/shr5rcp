@@ -97,7 +97,7 @@ public class ScriptServiceImpl implements ScriptService {
         try {
             PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
-            e.printStackTrace();
+            Activator.logError(e);
         }
         
         if(script.getHistory().getCommandStack().getCurrentCommand() instanceof CombatTurn){

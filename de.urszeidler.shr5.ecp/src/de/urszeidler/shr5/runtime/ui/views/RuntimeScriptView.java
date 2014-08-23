@@ -75,6 +75,8 @@ import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
@@ -88,6 +90,8 @@ import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
+import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
+import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
@@ -175,8 +179,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 InitativePass ip = (InitativePass)notifier;
                 if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature))
                     if (ip.isExecuted()) {
-                        @SuppressWarnings("unused")
+
                         TreeIterator<EObject> eAllContents = ip.eAllContents();
+                        if(!eAllContents.hasNext())
+                            printedProtocol.add(0, String.format("%tT >> %s pass", ip.getDate(), labelProvider.getText(ip.getSubject())));
+                        
+                            
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
                             if (eo instanceof Command) {
@@ -213,6 +221,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
 
     protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective";
+    protected static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective";
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
     private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
     private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
@@ -847,6 +856,20 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
+        }else if (cmd instanceof DamageTest) {
+            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            genericEObjectDialog.open();
+            return;
+        }else if (cmd instanceof DefensTestCmd) {
+            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, 
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            genericEObjectDialog.open();
+            return;
         }
 
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -867,8 +890,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (MessageDialog.openQuestion(getSite().getShell(), "Continue combat sequence ?", "Continue the combat with the current combatants.")) {
                 EList<RuntimeCharacter> combatants = ct.getCombatants();
                 contiueCombatTurn(combatants);
+            }else{
+                try {
+                    PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+                } catch (WorkbenchException e) {
+                   Activator.logError(e);
+                }
             }
-
+            
             return;
         }
 
@@ -932,7 +961,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         return String.format("%tT >> %s", notifier.getDate(), text);
     }
 
-    protected void switchPlacement() {
+    private void switchPlacement() {
         EList<Placement> nextPlacements = placement1.getNextPlacements();
 
         OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
@@ -942,9 +971,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             Object[] result = dialog.getResult();
             if (result.length > 0) {
                 Placement eo = (Placement)result[0];
-                scriptService.setPlacement(eo);
                 SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
                 command.setDate(placement1.getActualDate());
+                scriptService.setPlacement(eo);
+                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));  
             }
         }
     }
