@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-import com.google.common.collect.Lists;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -188,21 +186,23 @@ public class GameplayTools {
         return 0;
     }
 
-    public static String printCommand(Command cmd) {
+//    public static String printCommand(Command cmd) {
+//
+//        if (cmd instanceof SuccesTest) {
+//            SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
+//            return String.format("(%s|%s)%s(%s/%s)%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getNetHits(), st.getThresholds(), st
+//                    .getProbe().size(), st.getProbe().toString());
+//        } else if (cmd instanceof Probe) {
+//            Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
+//            return String
+//                    .format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe().toString());
+//        }
+//
+//        return "";
+//    }
 
-        if (cmd instanceof SuccesTest) {
-            SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
-            return String.format("(%s|%s)%s(%s/%s)%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getNetHits(), st.getThresholds(), st
-                    .getProbe().size(), st.getProbe().toString());
-        } else if (cmd instanceof Probe) {
-            Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
-            return String
-                    .format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe().toString());
-        }
-
-        return "";
-    }
-
+ 
+    
     /**
      * Retuns the skill dice pool for a skill.
      * 

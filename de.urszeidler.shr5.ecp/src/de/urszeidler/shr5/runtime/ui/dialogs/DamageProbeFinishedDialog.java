@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
 
@@ -120,7 +121,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
 
         lblProberesult = new Label(container, SWT.NONE);
         lblProberesult.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
-        lblProberesult.setText(GameplayTools.printCommand(probe));
+        lblProberesult.setText(ShadowrunEditingTools.command2String(probe));
 
         composite = new Composite(container, SWT.NONE);
         composite.setLayout(new GridLayout(4, false));

@@ -206,7 +206,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature)) {
                 if (notifier.equals(commandStack.getCurrentCommand())) {
                     Command notifier1 = (Command)notifier;
-                    System.out.println(GameplayTools.printCommand(notifier1));
+                    System.out.println(ShadowrunEditingTools.command2String(notifier1));
                     if (notifier1.isExecuted()) {
                         String text = printCommand(notifier1);
                         printedProtocol.add(0, text);

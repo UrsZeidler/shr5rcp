@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 
@@ -348,6 +349,11 @@ public class RuntimeCharacterItemProvider
             if (labelprovider != null)
                 labelValue = labelprovider.getText(character.getCharacter());
         }
+        
+//        String state = "";
+//        if(character.getZustand()!=Zustand.OK)
+//            state = " "+character.getZustand().getName();
+//            
         
         String label = labelValue == null ? null : character.getCharacter().getGeneratorSrc().getCharacterName();
         return label == null || label.length() == 0 ?

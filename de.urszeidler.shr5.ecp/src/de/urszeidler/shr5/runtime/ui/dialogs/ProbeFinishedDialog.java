@@ -28,8 +28,8 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class ProbeFinishedDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -102,7 +102,7 @@ public class ProbeFinishedDialog extends TitleAreaDialog {
         
         lblProberesult = new Label(container, SWT.NONE);
         lblProberesult.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
-        lblProberesult.setText(GameplayTools.printCommand(probe));
+        lblProberesult.setText(ShadowrunEditingTools.command2String(probe));
         new Label(container, SWT.NONE);
         new Label(container, SWT.NONE);
 

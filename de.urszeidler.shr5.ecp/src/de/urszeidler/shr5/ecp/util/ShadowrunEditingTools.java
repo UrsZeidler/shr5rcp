@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
@@ -40,6 +41,11 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Probe;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -411,6 +417,7 @@ public class ShadowrunEditingTools {
 
     /**
      * Extract the first eobject from the selection or null.
+     * 
      * @param selection
      * @return
      */
@@ -430,15 +437,53 @@ public class ShadowrunEditingTools {
     }
 
     public static Transformer<ManagedCharacter, RuntimeCharacter> managedCharacter2RuntimeTransformer() {
-        
-        return new Transformer<ManagedCharacter, RuntimeCharacter>(){
+
+        return new Transformer<ManagedCharacter, RuntimeCharacter>() {
             @Override
             public RuntimeCharacter transform(ManagedCharacter input) {
                 RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
                 runtimeCharacter.setCharacter(input);
                 return runtimeCharacter;
-            }            
+            }
         };
+    }
+
+    public static String command2String(Command cmd) {
+
+        if (cmd instanceof SuccesTest) {
+            SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
+            String state = "";
+            if (st.getProbeState() != ProbeState.CRITICAL_GLITCH)
+                state = toEEnumName(st.getTestState(), st, GameplayPackage.Literals.SUCCES_TEST__TEST_STATE) + "|"
+                        + toEEnumName(st.getProbeState(), st, GameplayPackage.Literals.PROBE__PROBE_STATE);
+            else
+                state = toEEnumName(st.getProbeState(), st, GameplayPackage.Literals.PROBE__PROBE_STATE);
+
+            return String.format("[%s](%s/%s|%s)(%s/%s)%s%s", state, st.getSuccesses(), st.getLimit(), st.getGlitches(), st.getNetHits(),
+                    st.getThresholds(), st.getProbe().size(), st.getProbe().toString());
+        } else if (cmd instanceof Probe) {
+            String state = "";
+            Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
+            state = toEEnumName(st.getProbeState(), st, GameplayPackage.Literals.PROBE__PROBE_STATE);
+
+            return String.format("[%s](%s/%s|%s)%s%s", state, st.getSuccesses(), st.getLimit(), st.getGlitches(), st.getProbe().size(), st
+                    .getProbe().toString());
+        }
+
+        return "";
+    }
+
+    public static String toEEnumName(Object literal, EObject eobject, EAttribute feature) {
+        if (literal == null)
+            return "";
+
+        String text2 = literal.toString();
+        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(eobject, feature);
+        if (propertyDescriptor != null)
+            text2 = propertyDescriptor.getLabelProvider(eobject).getText(literal);
+
+        return text2;
+
     }
 
 }
