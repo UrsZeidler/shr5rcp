@@ -4,12 +4,17 @@
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Lists;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -37,6 +42,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -292,6 +298,15 @@ public class GameplayTools {
         list.add(opposedSkillTestCmd);
 
         return list;
+    }
+
+    public static List<RuntimeCharacter> getActiveCharacters(List<RuntimeCharacter> combatants) {
+       return new ArrayList<RuntimeCharacter>( Collections2.filter(combatants, new Predicate<RuntimeCharacter>() {
+            @Override
+            public boolean apply(RuntimeCharacter input) {                
+                return input.getZustand()==Zustand.OK;
+            }
+        }));
     }
 
 }

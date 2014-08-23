@@ -90,7 +90,7 @@ public class OpposedSkillTestCmdItemProvider
                         OpposedSkillTestCmd os = (OpposedSkillTestCmd)object;
                         CombatTurn   ct = GameplayTools.getCombatTurn(os);
                         if(ct!=null)
-                            return ct.getCombatants();                        
+                            return  GameplayTools.getActiveCharacters(ct.getCombatants());                        
                     }
                     return super.getComboBoxObjects(object);
                 }                
