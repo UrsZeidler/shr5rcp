@@ -161,7 +161,7 @@ public class OpenObjectHandler extends AbstractHandler {
         if (eo.getHistory() == null) {
             initalizeScript(eo, shell);
         } else {
-            if (MessageDialog.open(MessageDialog.CONFIRM, shell, "", "Continue the script ?", SWT.NONE))
+            if (MessageDialog.open(MessageDialog.QUESTION, shell, "", "Continue the script ?", SWT.NONE))
                 placement = eo.getHistory().getCurrentPlacement();
             else {
                 eo.getPlayer().getMembers().clear();
