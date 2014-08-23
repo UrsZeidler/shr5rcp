@@ -48,8 +48,8 @@
 
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tycho.version>0.20.0</tycho.version>
-
 		<kepler-repo.url>http://download.eclipse.org/releases/kepler</kepler-repo.url>
 	</properties>
 
