@@ -129,6 +129,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         formToolkit.paintBordersFor(composite);
 
         ExpandableComposite xpndblcmpstPhysical = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
+        xpndblcmpstPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.paintBordersFor(xpndblcmpstPhysical);
         xpndblcmpstPhysical.setText("physical");
         xpndblcmpstPhysical.setExpanded(true);
@@ -138,6 +139,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         xpndblcmpstPhysical.setClient(stateMonitorWidgetPhysical);
 
         ExpandableComposite xpndblcmpstMental = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
+        xpndblcmpstMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         xpndblcmpstMental.setText("mental");
         xpndblcmpstMental.setExpanded(true);
 
@@ -145,6 +147,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         xpndblcmpstMental.setClient(stateMonitorWidgetMental);
 
         ExpandableComposite xpndblcmpstOverdead = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
+        xpndblcmpstOverdead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.paintBordersFor(xpndblcmpstOverdead);
         xpndblcmpstOverdead.setText("overdead");
         xpndblcmpstOverdead.setExpanded(true);
