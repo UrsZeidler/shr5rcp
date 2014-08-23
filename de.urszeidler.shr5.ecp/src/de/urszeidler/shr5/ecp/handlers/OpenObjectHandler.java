@@ -4,32 +4,46 @@
 package de.urszeidler.shr5.ecp.handlers;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.jface.window.Window;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.handlers.HandlerUtil;
 
+import com.google.common.collect.Collections2;
+
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
@@ -96,10 +110,10 @@ public class OpenObjectHandler extends AbstractHandler {
                     openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
                     break;
                 case 5:
-                    openScript(shell, "Open script for playing", "!", monitor,true);
+                    openScript(shell, "Open script for playing", "!", monitor, true);
                     break;
                 case 6:
-                    openScript(shell, "Open script for editing", "!", monitor,false);
+                    openScript(shell, "Open script for editing", "!", monitor, false);
                     break;
 
                 default:
@@ -111,7 +125,7 @@ public class OpenObjectHandler extends AbstractHandler {
         }
     }
 
-    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor,boolean start) {
+    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor, boolean start) {
         monitor.beginTask("collection scripts ...", 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
@@ -132,8 +146,8 @@ public class OpenObjectHandler extends AbstractHandler {
             Object[] result = dialog.getResult();
             if (result.length > 0) {
                 Script eo = (Script)result[0];
-                if(start)
-                    startScript(eo,shell);
+                if (start)
+                    startScript(eo, shell);
                 else
                     openOneObject(shell, filteredObject, titel, message);
 
@@ -142,31 +156,58 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     protected void startScript(Script eo, Shell shell) {
+
+        Placement placement = eo.getEntry();
+        if (eo.getHistory() == null) {
+            initalizeScript(eo, shell);
+        } else {
+            if (MessageDialog.open(MessageDialog.CONFIRM, shell, "", "Continue the script ?", SWT.NONE))
+                placement = eo.getHistory().getCurrentPlacement();
+            else {
+                eo.getPlayer().getMembers().clear();
+                initalizeScript(eo, shell);
+            }
+        }
         try {
             PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
-            e.printStackTrace();
+            Activator.logError(e);
         }
-        initalizeScript(eo, shell);
+
+        scriptService.setScript(eo);
+        scriptService.setPlacement(placement);
     }
 
     protected void initalizeScript(Script eo, Shell shell) {
-        Placement placement = eo.getEntry();
-        if (eo.getHistory() == null) {
-            eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
+        eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
 
-            if (eo.getHistory().getCommandStack() == null) {
-                eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
-                eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
-            }
-//
-//            FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
-//                    RuntimePackage.Literals.TEAM__MEMBERS, "Select combatans", choiceOfValues);
-        }else
-            placement = eo.getHistory().getCurrentPlacement();
-        
-        scriptService.setScript(eo);
-        scriptService.setPlacement(placement);
+        if (eo.getHistory().getCommandStack() == null) {
+            eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
+            eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
+        }
+        fillPayerGoup(eo, shell);
+    }
+
+    @SuppressWarnings("unchecked")
+    protected void fillPayerGoup(Script eo, Shell shell) {
+        Collection<? extends EObject> choiceOfValues = ItemPropertyDescriptor.getReachableObjectsOfType(eo,
+                Shr5managementPackage.Literals.PLAYER_CHARACTER);
+
+        FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
+                RuntimePackage.Literals.TEAM__MEMBERS, "Select combatans", new ArrayList<EObject>(Collections2.filter(
+                        (Collection<ManagedCharacter>)choiceOfValues,
+                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))));
+
+        int result = dialog.open();
+        if (result == Window.OK) {
+            EList<?> list = dialog.getResult();
+            Team player = eo.getPlayer();
+            if (player == null)
+                player = RuntimeFactory.eINSTANCE.createTeam();
+
+            player.getMembers().addAll(
+                    Collections2.transform((Collection<ManagedCharacter>)list, ShadowrunEditingTools.managedCharacter2RuntimeFunction()));
+        }
     }
 
     private void openItem(Shell shell, String titel, String message, IProgressMonitor monitor) {

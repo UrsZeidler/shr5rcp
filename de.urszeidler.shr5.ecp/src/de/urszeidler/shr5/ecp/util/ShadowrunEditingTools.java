@@ -26,6 +26,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
+import com.google.common.base.Function;
+
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -441,6 +443,17 @@ public class ShadowrunEditingTools {
         return new Transformer<ManagedCharacter, RuntimeCharacter>() {
             @Override
             public RuntimeCharacter transform(ManagedCharacter input) {
+                RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
+                runtimeCharacter.setCharacter(input);
+                return runtimeCharacter;
+            }
+        };
+    }
+    public static Function<ManagedCharacter, RuntimeCharacter> managedCharacter2RuntimeFunction() {
+
+        return new Function<ManagedCharacter, RuntimeCharacter>() {
+            @Override
+            public RuntimeCharacter apply(ManagedCharacter input) {
                 RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
                 runtimeCharacter.setCharacter(input);
                 return runtimeCharacter;

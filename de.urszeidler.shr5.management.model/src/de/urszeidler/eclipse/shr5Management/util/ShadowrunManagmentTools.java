@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import com.google.common.base.Predicate;
+
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -894,6 +896,21 @@ public class ShadowrunManagmentTools {
             character.getChanges().remove(advancements);
         }
 
+    }
+    
+    /**
+     * Returns a {@link Predicate} to filter the managed character by its {@link GeneratorState}.
+     * @param state
+     * @return
+     */
+    public static com.google.common.base.Predicate<ManagedCharacter> characterGeneratorStatePredicate(final GeneratorState state) {
+        return new Predicate<ManagedCharacter>() {
+            
+            @Override
+            public boolean apply(ManagedCharacter input) {
+                return input.getChracterSource()!=null && input.getChracterSource().getState()==state;
+            }
+        };
     }
 
 }
