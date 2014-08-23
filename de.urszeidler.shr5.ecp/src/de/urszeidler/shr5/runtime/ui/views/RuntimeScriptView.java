@@ -120,6 +120,7 @@ import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
+import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
 import de.urszeidler.shr5.scripting.Placement;
@@ -181,10 +182,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     if (ip.isExecuted()) {
 
                         TreeIterator<EObject> eAllContents = ip.eAllContents();
-                        if(!eAllContents.hasNext())
+                        if (!eAllContents.hasNext())
                             printedProtocol.add(0, String.format("%tT >> %s pass", ip.getDate(), labelProvider.getText(ip.getSubject())));
-                        
-                            
+
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
                             if (eo instanceof Command) {
@@ -663,7 +663,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         super.dispose();
     }
 
-
     @Override
     public void setFocus() {
         // Set the focus
@@ -856,18 +855,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
-        }else if (cmd instanceof DamageTest) {
+        } else if (cmd instanceof DamageTest) {
             GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                     new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
-        }else if (cmd instanceof DefensTestCmd) {
+        } else if (cmd instanceof DefensTestCmd) {
             GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                     new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                    GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, 
-                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
+                    GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         }
@@ -890,14 +888,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (MessageDialog.openQuestion(getSite().getShell(), "Continue combat sequence ?", "Continue the combat with the current combatants.")) {
                 EList<RuntimeCharacter> combatants = ct.getCombatants();
                 contiueCombatTurn(combatants);
-            }else{
+            } else {
                 try {
                     PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
                 } catch (WorkbenchException e) {
-                   Activator.logError(e);
+                    Activator.logError(e);
                 }
             }
-            
+
+            return;
+        } else if (cmd instanceof DamageTest) {
+            new DamageProbeFinishedDialog(getSite().getShell(), cmd, labelProvider).open();
             return;
         }
 
@@ -974,7 +975,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
                 command.setDate(placement1.getActualDate());
                 scriptService.setPlacement(eo);
-                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));  
+                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));
             }
         }
     }
