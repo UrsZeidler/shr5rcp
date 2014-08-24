@@ -192,7 +192,7 @@ public class OpenObjectHandler extends AbstractHandler {
     protected void fillPayerGoup(Script eo, Shell shell) {
         Collection<? extends EObject> choiceOfValues = ItemPropertyDescriptor.getReachableObjectsOfType(eo,
                 Shr5managementPackage.Literals.PLAYER_CHARACTER);
-
+        eo.getPlayer().getMembers().clear();
         FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
                 RuntimePackage.Literals.TEAM__MEMBERS, "Select combatans", new ArrayList<EObject>(Collections2.filter(
                         (Collection<ManagedCharacter>)choiceOfValues,
