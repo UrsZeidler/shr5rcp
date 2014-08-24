@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction} object.
@@ -122,12 +123,23 @@ public class InterruptActionItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         InterruptAction interruptAction = (InterruptAction)object;
-        return getString("_UI_InterruptAction_type") + " " + interruptAction.isExecuted();
+        
+        
+        if(interruptAction.getSubject()==null)
+            return getString("_UI_SkillTestCmd_type");
+
+        String label = getString("_UI_unset");
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(interruptAction.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null)
+            label = labelprovider.getText(interruptAction.getSubject());
+
+        return getString("_UI_InterruptAction_type_text", new Object[]{ label, interruptAction.getInterruptType().getLiteral() });
     }
 
     /**

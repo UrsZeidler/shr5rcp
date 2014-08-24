@@ -966,9 +966,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         scriptService.setCombatTurn(combatTurn);
     }
 
-    protected String printCommand(Command notifier) {
-        String text = labelProvider.getText(notifier);
-        return String.format("%tT >> %s", notifier.getDate(), text);
+    /**
+     * Returns a formated history line.
+     * @param cmd
+     * @return
+     */
+    private String printCommand(Command cmd) {
+        return String.format("%tT >> %s %s", cmd.getDate(), labelProvider.getText(cmd),ShadowrunEditingTools.command2String(cmd));
     }
 
     @SuppressWarnings("unchecked")

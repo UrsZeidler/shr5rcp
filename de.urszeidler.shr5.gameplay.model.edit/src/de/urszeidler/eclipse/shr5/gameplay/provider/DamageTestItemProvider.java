@@ -124,18 +124,15 @@ public class DamageTestItemProvider extends ProbeCommandItemProvider implements 
     @Override
     public String getText(Object object) {
         DamageTest damageTest = (DamageTest)object;
-        if (!damageTest.isExecuted())
-            return getString("_UI_DamageTest_type");
 
-        String label = "";
+        String label = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(damageTest.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null)
             label = labelprovider.getText(damageTest.getSubject());
 
         return getString("_UI_DamageTest_type_text", new Object[]{ label, damageTest.getDamage(),
-                damageTest.getEffectiveDamage() == null ? "none" : damageTest.getEffectiveDamage(), damageTest.getSuccesses(),
-                        damageTest.getProbe().size(), damageTest.getProbe().toString() });
+                damageTest.getEffectiveDamage() == null ? getString("_UI_none"): damageTest.getEffectiveDamage() });
     }
 
     /**

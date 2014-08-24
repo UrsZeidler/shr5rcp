@@ -134,12 +134,31 @@ public class OpposedSkillTestCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         OpposedSkillTestCmd opposedSkillTestCmd = (OpposedSkillTestCmd)object;
-        return getString("_UI_OpposedSkillTestCmd_type") + " " + opposedSkillTestCmd.isExecuted();
+        
+        String label = getString("_UI_unset");;
+        String label1 = getString("_UI_unset");;
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getSubject(), IItemLabelProvider.class);
+        if (labelprovider != null) {
+            label = labelprovider.getText(opposedSkillTestCmd.getSubject());
+        }
+        labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getObject(), IItemLabelProvider.class);
+        if (labelprovider != null) {
+            label1 = labelprovider.getText(opposedSkillTestCmd.getObject());
+        }
+        String label_skill = getString("_UI_unset");
+        if (opposedSkillTestCmd.getSkill() != null) {
+            labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getSkill(), IItemLabelProvider.class);
+            if (labelprovider != null)
+                label_skill = labelprovider.getText(opposedSkillTestCmd.getSkill());
+        }
+        
+        return getString("_UI_OpposedSkillTestCmd_type_text", new Object[]{ label, label1,label_skill });
     }
 
     /**

@@ -96,11 +96,9 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
     @Override
     public String getText(Object object) {
         MeeleAttackCmd meeleAttackCmd = (MeeleAttackCmd)object;
-        if(!meeleAttackCmd.isExecuted())
-            return getString("_UI_MeeleAttackCmd_type");
 
-        String label = "";
-        String label1 = "";
+        String label = getString("_UI_unset");;
+        String label1 = getString("_UI_unset");;
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null) {
@@ -111,14 +109,14 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
             label1 = labelprovider.getText(meeleAttackCmd.getObject());
         }
         
-        String weapon = "";
+        String weapon = getString("_UI_unset");;
         labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getWeapon(), IItemLabelProvider.class);
         if (labelprovider != null) {
             weapon = labelprovider.getText(meeleAttackCmd.getWeapon());
         }
 
         return getString("_UI_MeeleAttackCmd_type_text",
-                new Object[]{ label, label1, weapon, meeleAttackCmd.getLimit(), meeleAttackCmd.getSuccesses(), meeleAttackCmd.getProbe() });
+                new Object[]{ label, label1, weapon});
     }
 
     /**

@@ -18,6 +18,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd} object.
@@ -96,22 +97,22 @@ public class SkillTestCmdItemProvider extends ProbeCommandItemProvider implement
     @Override
     public String getText(Object object) {
         SkillTestCmd skillTestCmd = (SkillTestCmd)object;
-        if (!skillTestCmd.isExecuted())
+        if(skillTestCmd.getSubject()==null)
             return getString("_UI_SkillTestCmd_type");
 
-        String label = "";
-        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String label = getString("_UI_unset");
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(skillTestCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null)
             label = labelprovider.getText(skillTestCmd.getSubject());
 
-        String label_skill = "";
+        String label_skill = getString("_UI_unset");
         if (skillTestCmd.getSkill() != null) {
             labelprovider = (IItemLabelProvider)factory.adapt(skillTestCmd.getSkill(), IItemLabelProvider.class);
             if (labelprovider != null)
                 label_skill = labelprovider.getText(skillTestCmd.getSkill());
         }
-        return getString("_UI_SkillTestCmd_type_text", new Object[]{ label, label_skill, skillTestCmd.getSuccesses(), skillTestCmd.getProbe() });
+        return getString("_UI_SkillTestCmd_type_text", new Object[]{ label, label_skill });
     }
 
     /**

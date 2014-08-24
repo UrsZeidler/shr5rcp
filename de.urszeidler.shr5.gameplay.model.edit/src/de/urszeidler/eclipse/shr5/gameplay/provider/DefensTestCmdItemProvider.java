@@ -104,17 +104,15 @@ public class DefensTestCmdItemProvider
     @Override
     public String getText(Object object) {
         DefensTestCmd defensTestCmd = (DefensTestCmd)object;
-        if(!defensTestCmd.isExecuted())
-            return getString("_UI_DefensTestCmd_type");
 
-        String label = "";
+        String label = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null)
             label = labelprovider.getText(defensTestCmd.getSubject());
 
         return getString("_UI_DefensTestCmd_type_text",new Object[]{label,defensTestCmd.getAttackersHits()
-                ,defensTestCmd.getSuccesses(),defensTestCmd.getProbe()});
+                ,defensTestCmd.getSuccesses()});
     }
 
     /**
