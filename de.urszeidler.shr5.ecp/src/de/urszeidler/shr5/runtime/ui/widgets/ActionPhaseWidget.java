@@ -58,6 +58,8 @@ public class ActionPhaseWidget extends NameableComposite {
                 else    
                     interruptAction.setIniCost(-5);
                 interruptAction.setInterruptType(interruptType);
+                interruptAction.setSubject(initativePass.getSubject());
+                interruptAction.setDate(initativePass.getDate());
                 initativePass.setInterruptAction(interruptAction);
                 interruptAction.redo();
             }

@@ -96,6 +96,7 @@ import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
@@ -204,6 +205,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
 
             if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(feature)) {
+                if (notifier instanceof InterruptAction) {
+                    InterruptAction ia = (InterruptAction)notifier;
+                    if (ia.isExecuted()) {
+                        String text = printCommand(ia);
+                        printedProtocol.add(0, text);
+                        return;
+                    }
+                }
                 if (notifier.equals(commandStack.getCurrentCommand())) {
                     Command notifier1 = (Command)notifier;
                     System.out.println(ShadowrunEditingTools.command2String(notifier1));

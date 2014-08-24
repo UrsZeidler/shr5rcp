@@ -24,10 +24,11 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
+import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
@@ -43,9 +44,6 @@ import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
-
-import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.wb.swt.ResourceManager;
 
 /**
  * @author urs
@@ -156,7 +154,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     private CombatTurnList combatTurnList;
     private ScriptService scriptService;
     private ToolItem tltmD;
-    private ToolItem toolItem;
     private ToolItem tltmSkill;
     private ToolItem tltmOpposed;
     private ToolItem tltmSuccesTest;
@@ -275,7 +272,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
         tltmD.setToolTipText("execute");
         {
-            toolItem = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.SEPARATOR);
+            ToolItem toolItem = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.SEPARATOR);
         }
         {
             tltmSkill = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
