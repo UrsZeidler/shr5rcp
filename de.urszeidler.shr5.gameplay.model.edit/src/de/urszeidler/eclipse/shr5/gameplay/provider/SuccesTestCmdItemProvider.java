@@ -114,8 +114,7 @@ public class SuccesTestCmdItemProvider
         if (labelprovider != null)
             label = labelprovider.getText(succesTestCmd.getSubject());
 
-        return getString("_UI_SuccesTestCmd_type_text",new Object[]{label,
-                succesTestCmd.getSuccesses(),succesTestCmd.getProbe()});
+        return getString("_UI_SuccesTestCmd_type_text",new Object[]{label});
     }
 
     /**

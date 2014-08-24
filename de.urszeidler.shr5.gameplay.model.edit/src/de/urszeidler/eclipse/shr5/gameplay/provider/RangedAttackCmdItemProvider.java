@@ -151,8 +151,8 @@ public class RangedAttackCmdItemProvider
     public String getText(Object object) {
         RangedAttackCmd rangedAttackCmd = (RangedAttackCmd)object;
         
-        String label = getString("_UI_unset");;
-        String label1 = getString("_UI_unset");;
+        String label = getString("_UI_unset");
+        String label1 = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getSubject(), IItemLabelProvider.class);
         IItemLabelProvider labelprovider1 = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getObject(), IItemLabelProvider.class);

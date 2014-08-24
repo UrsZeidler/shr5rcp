@@ -97,8 +97,8 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
     public String getText(Object object) {
         MeeleAttackCmd meeleAttackCmd = (MeeleAttackCmd)object;
 
-        String label = getString("_UI_unset");;
-        String label1 = getString("_UI_unset");;
+        String label = getString("_UI_unset");
+        String label1 = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null) {

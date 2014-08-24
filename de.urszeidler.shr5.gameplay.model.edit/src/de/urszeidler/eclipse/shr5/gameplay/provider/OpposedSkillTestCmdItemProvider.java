@@ -140,8 +140,8 @@ public class OpposedSkillTestCmdItemProvider
     public String getText(Object object) {
         OpposedSkillTestCmd opposedSkillTestCmd = (OpposedSkillTestCmd)object;
         
-        String label = getString("_UI_unset");;
-        String label1 = getString("_UI_unset");;
+        String label = getString("_UI_unset");
+        String label1 = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getSubject(), IItemLabelProvider.class);
         if (labelprovider != null) {

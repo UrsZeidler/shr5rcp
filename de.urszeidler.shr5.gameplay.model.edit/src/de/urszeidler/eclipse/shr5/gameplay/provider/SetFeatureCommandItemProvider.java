@@ -294,12 +294,20 @@ public class SetFeatureCommandItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
     @Override
     public String getText(Object object) {
         SetFeatureCommand setFeatureCommand = (SetFeatureCommand)object;
-        return getString("_UI_SetFeatureCommand_type") + " " + setFeatureCommand.isExecuted();
+//        String label = getString("_UI_unset");
+//        String label1 = getString("_UI_unset");
+//        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+//        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(setFeatureCommand.getObject(), IItemLabelProvider.class);
+//        if (labelprovider != null) {
+//            label = labelprovider.getText(setFeatureCommand.getObject());
+//        }
+
+        return getString("_UI_SetFeatureCommand_type_text");// + " " + setFeatureCommand.isExecuted();
     }
 
     /**
