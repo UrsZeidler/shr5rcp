@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
-
 import java.util.Collection;
 import java.util.List;
 
@@ -27,20 +26,16 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
-public class OpposedSkillTestCmdItemProvider
-    extends SkillTestCmdItemProvider
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public OpposedSkillTestCmdItemProvider(AdapterFactory adapterFactory) {
@@ -51,6 +46,7 @@ public class OpposedSkillTestCmdItemProvider
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -68,61 +64,47 @@ public class OpposedSkillTestCmdItemProvider
      * This adds a property descriptor for the Object feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     protected void addObjectPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (new ItemPropertyDescriptor//createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_OpposedSkillTestCmd_object_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_object_feature", "_UI_OpposedSkillTestCmd_type"),
-                 GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null){
-                @Override
-                protected Collection<?> getComboBoxObjects(Object object) {
-                    if (object instanceof OpposedSkillTestCmd) {
-                        OpposedSkillTestCmd os = (OpposedSkillTestCmd)object;
-                        CombatTurn   ct = GameplayTools.getCombatTurn(os);
-                        if(ct!=null)
-                            return  GameplayTools.getActiveCharacters(ct.getCombatants());                        
+        itemPropertyDescriptors.add(new ItemPropertyDescriptor// createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                        getString("_UI_OpposedSkillTestCmd_object_feature"), getString("_UI_PropertyDescriptor_description",
+                                "_UI_OpposedSkillTestCmd_object_feature", "_UI_OpposedSkillTestCmd_type"),
+                        GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, true, false, true, null, null, null) {
+                    @Override
+                    protected Collection<?> getComboBoxObjects(Object object) {
+                        if (object instanceof OpposedSkillTestCmd) {
+                            OpposedSkillTestCmd os = (OpposedSkillTestCmd)object;
+                            CombatTurn ct = GameplayTools.getCombatTurn(os);
+                            if (ct != null)
+                                return GameplayTools.getActiveCharacters(ct.getCombatants());
+                        }
+                        return super.getComboBoxObjects(object);
                     }
-                    return super.getComboBoxObjects(object);
-                }                
-            });
+                });
     }
 
     /**
      * This adds a property descriptor for the Object Skill feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addObjectSkillPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_OpposedSkillTestCmd_objectSkill_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_objectSkill_feature", "_UI_OpposedSkillTestCmd_type"),
-                 GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_OpposedSkillTestCmd_objectSkill_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_objectSkill_feature", "_UI_OpposedSkillTestCmd_type"),
+                GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, true, false, true, null, null, null));
     }
 
     /**
      * This returns OpposedSkillTestCmd.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -134,31 +116,20 @@ public class OpposedSkillTestCmdItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     @Override
     public String getText(Object object) {
         OpposedSkillTestCmd opposedSkillTestCmd = (OpposedSkillTestCmd)object;
-        
-        String label = getString("_UI_unset");
-        String label1 = getString("_UI_unset");
+
+        String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getSubject(), IItemLabelProvider.class);
-        if (labelprovider != null) {
-            label = labelprovider.getText(opposedSkillTestCmd.getSubject());
-        }
-        labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getObject(), IItemLabelProvider.class);
-        if (labelprovider != null) {
-            label1 = labelprovider.getText(opposedSkillTestCmd.getObject());
-        }
-        String label_skill = getString("_UI_unset");
-        if (opposedSkillTestCmd.getSkill() != null) {
-            labelprovider = (IItemLabelProvider)factory.adapt(opposedSkillTestCmd.getSkill(), IItemLabelProvider.class);
-            if (labelprovider != null)
-                label_skill = labelprovider.getText(opposedSkillTestCmd.getSkill());
-        }
-        
-        return getString("_UI_OpposedSkillTestCmd_type_text", new Object[]{ label, label1,label_skill });
+        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSubject());
+        String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getObject());
+        String label_skill = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSkill());
+
+        return getString("_UI_OpposedSkillTestCmd_type_text", new Object[]{ label_subject, label_opponent, label_skill });
     }
 
     /**
@@ -166,6 +137,7 @@ public class OpposedSkillTestCmdItemProvider
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -179,6 +151,7 @@ public class OpposedSkillTestCmdItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

@@ -151,25 +151,13 @@ public class RangedAttackCmdItemProvider
     public String getText(Object object) {
         RangedAttackCmd rangedAttackCmd = (RangedAttackCmd)object;
         
-        String label = getString("_UI_unset");
-        String label1 = getString("_UI_unset");
-        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getSubject(), IItemLabelProvider.class);
-        IItemLabelProvider labelprovider1 = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getObject(), IItemLabelProvider.class);
-        if (labelprovider != null){
-            label = labelprovider.getText(rangedAttackCmd.getSubject());            
-        }
-        if(labelprovider1!=null)
-            label1 = labelprovider1.getText(rangedAttackCmd.getObject());
-        
-        String weapon = getString("_UI_unset");
-        labelprovider = (IItemLabelProvider)factory.adapt(rangedAttackCmd.getWeapon(), IItemLabelProvider.class);
-        if (labelprovider != null){
-            weapon = labelprovider.getText(rangedAttackCmd.getWeapon());
-        }
-        
+        String defaultVaule = getString("_UI_unset");
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getSubject());
+        String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getObject());
+        String weapon =  GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getWeapon());
 
-        return getString("_UI_RangedAttackCmd_type_text", new Object[]{label,label1,weapon,rangedAttackCmd.getRange()});
+        return getString("_UI_RangedAttackCmd_type_text", new Object[]{label_subject,label_opponent,weapon,rangedAttackCmd.getRange()});
     }
 
     /**

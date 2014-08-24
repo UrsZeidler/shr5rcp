@@ -97,26 +97,14 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
     public String getText(Object object) {
         MeeleAttackCmd meeleAttackCmd = (MeeleAttackCmd)object;
 
-        String label = getString("_UI_unset");
-        String label1 = getString("_UI_unset");
+        String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getSubject(), IItemLabelProvider.class);
-        if (labelprovider != null) {
-            label = labelprovider.getText(meeleAttackCmd.getSubject());
-        }
-        labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getObject(), IItemLabelProvider.class);
-        if (labelprovider != null) {
-            label1 = labelprovider.getText(meeleAttackCmd.getObject());
-        }
-        
-        String weapon = getString("_UI_unset");;
-        labelprovider = (IItemLabelProvider)factory.adapt(meeleAttackCmd.getWeapon(), IItemLabelProvider.class);
-        if (labelprovider != null) {
-            weapon = labelprovider.getText(meeleAttackCmd.getWeapon());
-        }
+        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getSubject());
+        String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getObject());
+        String weapon =  GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getWeapon());
 
         return getString("_UI_MeeleAttackCmd_type_text",
-                new Object[]{ label, label1, weapon});
+                new Object[]{ label_subject, label_opponent, weapon});
     }
 
     /**
