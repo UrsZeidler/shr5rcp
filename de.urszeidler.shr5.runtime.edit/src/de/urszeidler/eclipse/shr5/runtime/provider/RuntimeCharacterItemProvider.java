@@ -3,11 +3,13 @@
 package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -18,6 +20,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
+
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
@@ -301,11 +307,18 @@ public class RuntimeCharacterItemProvider
                  null,
                  null){
                 
+                @SuppressWarnings({ "rawtypes", "unchecked" })
                 @Override
                 protected Collection<?> getComboBoxObjects(Object object) {
                     if (object instanceof RuntimeCharacter) {
                         RuntimeCharacter rc = (RuntimeCharacter)object;
-                        return rc.getInUse();
+                        return new ArrayList( Collections2.filter( rc.getInUse(),new Predicate<EObject>() {
+
+                            @Override
+                            public boolean apply(EObject input) {
+                                return Shr5Package.Literals.KLEIDUNG.equals(input.eClass());
+                            }
+                        }));
                     }
                     return super.getComboBoxObjects(object);
                 }
