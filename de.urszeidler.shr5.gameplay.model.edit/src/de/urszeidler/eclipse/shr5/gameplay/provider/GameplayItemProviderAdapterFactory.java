@@ -532,6 +532,29 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ProbeModItemProvider probeModItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createProbeModAdapter() {
+        if (probeModItemProvider == null) {
+            probeModItemProvider = new ProbeModItemProvider(this);
+        }
+
+        return probeModItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -650,6 +673,7 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (meeleAttackCmdItemProvider != null) meeleAttackCmdItemProvider.dispose();
         if (rangedAttackCmdItemProvider != null) rangedAttackCmdItemProvider.dispose();
         if (intervallItemProvider != null) intervallItemProvider.dispose();
+        if (probeModItemProvider != null) probeModItemProvider.dispose();
     }
 
 }

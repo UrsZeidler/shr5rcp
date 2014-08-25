@@ -26,7 +26,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -35,7 +34,6 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider im
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public OpposedSkillTestCmdItemProvider(AdapterFactory adapterFactory) {
@@ -46,7 +44,6 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider im
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -90,21 +87,28 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider im
      * This adds a property descriptor for the Object Skill feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addObjectSkillPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_OpposedSkillTestCmd_objectSkill_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_objectSkill_feature", "_UI_OpposedSkillTestCmd_type"),
-                GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_OpposedSkillTestCmd_objectSkill_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_OpposedSkillTestCmd_objectSkill_feature", "_UI_OpposedSkillTestCmd_type"),
+                 GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT_SKILL,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
      * This returns OpposedSkillTestCmd.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -137,7 +141,6 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider im
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -151,7 +154,6 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider im
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

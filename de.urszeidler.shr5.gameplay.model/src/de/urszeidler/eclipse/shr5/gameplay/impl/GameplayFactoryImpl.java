@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -101,6 +102,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.MEELE_ATTACK_CMD: return createMeeleAttackCmd();
             case GameplayPackage.RANGED_ATTACK_CMD: return createRangedAttackCmd();
             case GameplayPackage.INTERVALL: return createIntervall();
+            case GameplayPackage.PROBE_MOD: return createProbeMod();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -346,6 +348,16 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public Intervall createIntervall() {
         IntervallImpl intervall = new IntervallImpl();
         return intervall;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ProbeMod createProbeMod() {
+        ProbeModImpl probeMod = new ProbeModImpl();
+        return probeMod;
     }
 
     /**

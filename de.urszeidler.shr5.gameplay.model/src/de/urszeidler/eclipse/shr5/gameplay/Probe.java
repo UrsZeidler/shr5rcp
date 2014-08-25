@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getGlitches <em>Glitches</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getLimit <em>Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState <em>Probe State</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeMods <em>Probe Mods</em>}</li>
  * </ul>
  * </p>
  *
@@ -177,5 +178,20 @@ public interface Probe extends EObject {
      * @generated
      */
     ProbeState getProbeState();
+
+    /**
+     * Returns the value of the '<em><b>Probe Mods</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Collects the probe modifactions.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Probe Mods</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_ProbeMods()
+     * @model containment="true"
+     * @generated
+     */
+    EList<ProbeMod> getProbeMods();
 
 } // Probe

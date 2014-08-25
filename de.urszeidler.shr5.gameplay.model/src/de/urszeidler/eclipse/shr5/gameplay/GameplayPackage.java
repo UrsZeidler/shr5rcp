@@ -443,13 +443,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE_COMMAND__PROBE_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 4;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__PROBE_MODS = SUBJECT_COMMAND_FEATURE_COUNT + 5;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 5;
+    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Net Hits</b></em>' attribute.
@@ -458,7 +467,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 6;
+    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Test State</b></em>' attribute.
@@ -467,7 +476,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 7;
+    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -476,7 +485,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 8;
+    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 9;
 
     /**
      * The number of structural features of the '<em>Probe Command</em>' class.
@@ -485,7 +494,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 9;
+    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 10;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -631,6 +640,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -850,6 +868,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1047,6 +1074,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__PROBE_STATE = SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__PROBE_MODS = SKILL_TEST_CMD__PROBE_MODS;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -1385,13 +1421,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE__PROBE_STATE = 4;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__PROBE_MODS = 5;
+
+    /**
      * The number of structural features of the '<em>Probe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_FEATURE_COUNT = 5;
+    int PROBE_FEATURE_COUNT = 6;
 
     /**
      * The number of operations of the '<em>Probe</em>' class.
@@ -1640,6 +1685,15 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST__PROBE_STATE = PROBE__PROBE_STATE;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__PROBE_MODS = PROBE__PROBE_MODS;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1801,6 +1855,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__PROBE_STATE = SKILL_TEST_CMD__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__PROBE_MODS = SKILL_TEST_CMD__PROBE_MODS;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -2020,6 +2083,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2217,6 +2289,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -3399,6 +3480,15 @@ public interface GameplayPackage extends EPackage {
     int MEELE_ATTACK_CMD__PROBE_STATE = OPPOSED_SKILL_TEST_CMD__PROBE_STATE;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__PROBE_MODS = OPPOSED_SKILL_TEST_CMD__PROBE_MODS;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3625,6 +3715,15 @@ public interface GameplayPackage extends EPackage {
     int RANGED_ATTACK_CMD__PROBE_STATE = OPPOSED_SKILL_TEST_CMD__PROBE_STATE;
 
     /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__PROBE_MODS = OPPOSED_SKILL_TEST_CMD__PROBE_MODS;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3797,6 +3896,52 @@ public interface GameplayPackage extends EPackage {
     int INTERVALL_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl <em>Probe Mod</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeMod()
+     * @generated
+     */
+    int PROBE_MOD = 27;
+
+    /**
+     * The feature id for the '<em><b>Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_MOD__VALUE = 0;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_MOD__TYPE = 1;
+
+    /**
+     * The number of structural features of the '<em>Probe Mod</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_MOD_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Probe Mod</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_MOD_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3804,7 +3949,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 27;
+    int TIME_UNITS = 28;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
@@ -3814,7 +3959,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
      * @generated
      */
-    int INTERRUPT_TYPE = 28;
+    int INTERRUPT_TYPE = 29;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
@@ -3824,7 +3969,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
      * @generated
      */
-    int PROBE_STATE = 29;
+    int PROBE_STATE = 30;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
@@ -3834,7 +3979,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
      * @generated
      */
-    int SUCCES_TEST_STATE = 30;
+    int SUCCES_TEST_STATE = 31;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -3844,7 +3989,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 31;
+    int COMMAND_CALLBACK = 32;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -4239,6 +4384,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getProbe_ProbeState();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeMods <em>Probe Mods</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Probe Mods</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeMods()
+     * @see #getProbe()
+     * @generated
+     */
+    EReference getProbe_ProbeMods();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeCommand <em>Probe Command</em>}'.
@@ -4772,6 +4928,38 @@ public interface GameplayPackage extends EPackage {
     EAttribute getIntervall_Units();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod <em>Probe Mod</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Probe Mod</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeMod
+     * @generated
+     */
+    EClass getProbeMod();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getValue <em>Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getValue()
+     * @see #getProbeMod()
+     * @generated
+     */
+    EAttribute getProbeMod_Value();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getType()
+     * @see #getProbeMod()
+     * @generated
+     */
+    EReference getProbeMod_Type();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5158,6 +5346,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute PROBE__PROBE_STATE = eINSTANCE.getProbe_ProbeState();
+
+        /**
+         * The meta object literal for the '<em><b>Probe Mods</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PROBE__PROBE_MODS = eINSTANCE.getProbe_ProbeMods();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl <em>Probe Command</em>}' class.
@@ -5594,6 +5790,32 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute INTERVALL__UNITS = eINSTANCE.getIntervall_Units();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl <em>Probe Mod</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeMod()
+         * @generated
+         */
+        EClass PROBE_MOD = eINSTANCE.getProbeMod();
+
+        /**
+         * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE_MOD__VALUE = eINSTANCE.getProbeMod_Value();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PROBE_MOD__TYPE = eINSTANCE.getProbeMod_Type();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.

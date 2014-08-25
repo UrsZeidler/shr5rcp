@@ -580,7 +580,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_kx4C4SYPEeSIMvdKIF-9Cg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EEnum" href="gameplay.ecore#//ProbeState"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kx4C4iYPEeSIMvdKIF-9Cg" x="1010" y="225"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kx4C4iYPEeSIMvdKIF-9Cg" x="670" y="225"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_9Sk8ECYQEeSIMvdKIF-9Cg" type="1005">
       <children xmi:type="notation:Node" xmi:id="_9SljICYQEeSIMvdKIF-9Cg" type="4010"/>
@@ -591,7 +591,46 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_9Sk8ESYQEeSIMvdKIF-9Cg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EEnum" href="gameplay.ecore#//SuccesTestState"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Sk8EiYQEeSIMvdKIF-9Cg" x="1000" y="375"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Sk8EiYQEeSIMvdKIF-9Cg" x="990" y="395"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_BNdxQCyIEeSKO6QkbmakNg" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_BNfmcCyIEeSKO6QkbmakNg" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_BNgNgCyIEeSKO6QkbmakNg" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_iepBkCyJEeSKO6QkbmakNg" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//ProbeMod/value"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_iepBkSyJEeSKO6QkbmakNg"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_BNgNgSyIEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_BNgNgiyIEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_BNgNgyyIEeSKO6QkbmakNg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BNg0kCyIEeSKO6QkbmakNg" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_BNg0kSyIEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_BNg0kiyIEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_BNg0kyyIEeSKO6QkbmakNg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_BNdxQSyIEeSKO6QkbmakNg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="gameplay.ecore#//ProbeMod"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BNdxQiyIEeSKO6QkbmakNg" x="1065" y="225"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_o6pbsCyJEeSKO6QkbmakNg" type="1001">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o7kowCyJEeSKO6QkbmakNg" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o7kowSyJEeSKO6QkbmakNg" key="modelID" value="EcoreTools"/>
+      </eAnnotations>
+      <children xmi:type="notation:Node" xmi:id="_o6qCwCyJEeSKO6QkbmakNg" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_o6qCwSyJEeSKO6QkbmakNg" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_o6qCwiyJEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_o6qCwyyJEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_o6qCxCyJEeSKO6QkbmakNg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_o6qCxSyJEeSKO6QkbmakNg" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_o6qCxiyJEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_o6qCxyyJEeSKO6QkbmakNg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_o6qCyCyJEeSKO6QkbmakNg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_o6pbsSyJEeSKO6QkbmakNg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.runtime/model/runtime.ecore#//ExtendetData"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o6pbsiyJEeSKO6QkbmakNg" x="1075" y="315"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6sTbwY_GEd6SEpVfiQZsGw"/>
     <element xmi:type="ecore:EPackage" href="gameplay.ecore#/"/>
@@ -660,10 +699,10 @@
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_qK8UkArMEeSXe8h_-hOPdg" type="3002" source="_6Cbi4I_HEd6SEpVfiQZsGw" target="_qJ0TMArMEeSXe8h_-hOPdg">
       <children xmi:type="notation:Node" xmi:id="_qK9isArMEeSXe8h_-hOPdg" type="4011">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_qK9isQrMEeSXe8h_-hOPdg" x="-10" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qK9isQrMEeSXe8h_-hOPdg" x="42" y="-10"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_qK9isgrMEeSXe8h_-hOPdg" type="4012">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_qK9iswrMEeSXe8h_-hOPdg" x="10" y="10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qK9iswrMEeSXe8h_-hOPdg" x="70" y="5"/>
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_qK8UkQrMEeSXe8h_-hOPdg" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_qK8UkgrMEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
@@ -853,6 +892,32 @@
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//OpposedSkillTestCmd/objectSkill"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HkStwyPzEeS3c462UKKLWQ" points="[8, 0, -88, 92]$[103, 0, 7, 92]$[103, -52, 7, 40]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lja1wCPzEeS3c462UKKLWQ" id="(0.9506172839506173,0.16279069767441862)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_X8TEMCyJEeSKO6QkbmakNg" type="3002" source="_rGVJUArNEeSXe8h_-hOPdg" target="_BNdxQCyIEeSKO6QkbmakNg">
+      <children xmi:type="notation:Node" xmi:id="_X8USUCyJEeSKO6QkbmakNg" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_X8USUSyJEeSKO6QkbmakNg" x="-19" y="-10"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_X8USUiyJEeSKO6QkbmakNg" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_X8USUyyJEeSKO6QkbmakNg" x="-4" y="11"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_X8TEMSyJEeSKO6QkbmakNg" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_X8TEMiyJEeSKO6QkbmakNg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//Probe/probeMods"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_X8TEMyyJEeSKO6QkbmakNg" points="[12, 3, -126, 1]$[140, -5, 2, -7]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X8WukCyJEeSKO6QkbmakNg" id="(0.9310344827586207,0.09734513274336283)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X8WukSyJEeSKO6QkbmakNg" id="(0.5392156862745098,0.19047619047619047)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_s4w3ECyJEeSKO6QkbmakNg" type="3002" source="_BNdxQCyIEeSKO6QkbmakNg" target="_o6pbsCyJEeSKO6QkbmakNg">
+      <children xmi:type="notation:Node" xmi:id="_s4xeICyJEeSKO6QkbmakNg" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_s4xeISyJEeSKO6QkbmakNg" x="-16" y="-21"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_s4xeIiyJEeSKO6QkbmakNg" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_s4xeIyyJEeSKO6QkbmakNg" x="-1" y="11"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_s4w3ESyJEeSKO6QkbmakNg" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_s4w3EiyJEeSKO6QkbmakNg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//ProbeMod/type"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_s4w3EyyJEeSKO6QkbmakNg" points="[7, 24, -4, -71]$[7, 67, -4, -28]"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_kXGUUAuVEeStocVKc3B8yQ" type="EcoreTools" name="diagram_combat_turn" measurementUnit="Pixel">

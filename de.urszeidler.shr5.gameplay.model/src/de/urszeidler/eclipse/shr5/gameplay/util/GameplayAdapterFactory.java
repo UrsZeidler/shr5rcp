@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
+import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -200,6 +201,10 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseIntervall(Intervall object) {
                 return createIntervallAdapter();
+            }
+            @Override
+            public Adapter caseProbeMod(ProbeMod object) {
+                return createProbeModAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -596,6 +601,20 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createIntervallAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod <em>Probe Mod</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.ProbeMod
+     * @generated
+     */
+    public Adapter createProbeModAdapter() {
         return null;
     }
 

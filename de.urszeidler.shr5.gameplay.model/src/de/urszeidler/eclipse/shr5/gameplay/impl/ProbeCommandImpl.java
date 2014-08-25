@@ -4,17 +4,23 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +34,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getGlitches <em>Glitches</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getLimit <em>Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeState <em>Probe State</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeMods <em>Probe Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getThresholds <em>Thresholds</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getNetHits <em>Net Hits</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getTestState <em>Test State</em>}</li>
@@ -126,6 +133,16 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * @ordered
      */
     protected static final ProbeState PROBE_STATE_EDEFAULT = ProbeState.NO_GLITCH;
+
+    /**
+     * The cached value of the '{@link #getProbeMods() <em>Probe Mods</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getProbeMods()
+     * @generated
+     * @ordered
+     */
+    protected EList<ProbeMod> probeMods;
 
     /**
      * The default value of the '{@link #getThresholds() <em>Thresholds</em>}' attribute.
@@ -341,6 +358,18 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<ProbeMod> getProbeMods() {
+        if (probeMods == null) {
+            probeMods = new EObjectContainmentEList<ProbeMod>(ProbeMod.class, this, GameplayPackage.PROBE_COMMAND__PROBE_MODS);
+        }
+        return probeMods;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getThresholds() {
         return thresholds;
     }
@@ -418,6 +447,20 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * @generated
      */
     @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
+                return ((InternalEList<?>)getProbeMods()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.PROBE_COMMAND__PROBE:
@@ -430,6 +473,8 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return getLimit();
             case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
                 return getProbeState();
+            case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
+                return getProbeMods();
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return getThresholds();
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -447,6 +492,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -458,6 +504,10 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return;
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 setLimit((Integer)newValue);
+                return;
+            case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
+                getProbeMods().clear();
+                getProbeMods().addAll((Collection<? extends ProbeMod>)newValue);
                 return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds((Integer)newValue);
@@ -488,6 +538,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return;
             case GameplayPackage.PROBE_COMMAND__LIMIT:
                 unsetLimit();
+                return;
+            case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
+                getProbeMods().clear();
                 return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds(THRESHOLDS_EDEFAULT);
@@ -520,6 +573,8 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return isSetLimit();
             case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
                 return getProbeState() != PROBE_STATE_EDEFAULT;
+            case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
+                return probeMods != null && !probeMods.isEmpty();
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return thresholds != THRESHOLDS_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -546,6 +601,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE_COMMAND__GLITCHES: return GameplayPackage.PROBE__GLITCHES;
                 case GameplayPackage.PROBE_COMMAND__LIMIT: return GameplayPackage.PROBE__LIMIT;
                 case GameplayPackage.PROBE_COMMAND__PROBE_STATE: return GameplayPackage.PROBE__PROBE_STATE;
+                case GameplayPackage.PROBE_COMMAND__PROBE_MODS: return GameplayPackage.PROBE__PROBE_MODS;
                 default: return -1;
             }
         }
@@ -574,6 +630,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE__GLITCHES: return GameplayPackage.PROBE_COMMAND__GLITCHES;
                 case GameplayPackage.PROBE__LIMIT: return GameplayPackage.PROBE_COMMAND__LIMIT;
                 case GameplayPackage.PROBE__PROBE_STATE: return GameplayPackage.PROBE_COMMAND__PROBE_STATE;
+                case GameplayPackage.PROBE__PROBE_MODS: return GameplayPackage.PROBE_COMMAND__PROBE_MODS;
                 default: return -1;
             }
         }

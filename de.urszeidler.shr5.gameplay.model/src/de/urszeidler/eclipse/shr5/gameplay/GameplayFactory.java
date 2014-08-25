@@ -203,6 +203,15 @@ public interface GameplayFactory extends EFactory {
     Intervall createIntervall();
 
     /**
+     * Returns a new object of class '<em>Probe Mod</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Probe Mod</em>'.
+     * @generated
+     */
+    ProbeMod createProbeMod();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

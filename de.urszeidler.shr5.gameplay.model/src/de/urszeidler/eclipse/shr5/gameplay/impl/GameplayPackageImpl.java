@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
@@ -244,6 +245,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass intervallEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass probeModEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -675,6 +683,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      */
     public EAttribute getProbe_ProbeState() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getProbe_ProbeMods() {
+        return (EReference)probeEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -1132,6 +1149,33 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getProbeMod() {
+        return probeModEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getProbeMod_Value() {
+        return (EAttribute)probeModEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getProbeMod_Type() {
+        return (EReference)probeModEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getTimeUnits() {
         return timeUnitsEEnum;
     }
@@ -1245,6 +1289,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(probeEClass, PROBE__GLITCHES);
         createEAttribute(probeEClass, PROBE__LIMIT);
         createEAttribute(probeEClass, PROBE__PROBE_STATE);
+        createEReference(probeEClass, PROBE__PROBE_MODS);
 
         probeCommandEClass = createEClass(PROBE_COMMAND);
         createEAttribute(probeCommandEClass, PROBE_COMMAND__MODS);
@@ -1313,6 +1358,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         intervallEClass = createEClass(INTERVALL);
         createEAttribute(intervallEClass, INTERVALL__QUANTITIES);
         createEAttribute(intervallEClass, INTERVALL__UNITS);
+
+        probeModEClass = createEClass(PROBE_MOD);
+        createEAttribute(probeModEClass, PROBE_MOD__VALUE);
+        createEReference(probeModEClass, PROBE_MOD__TYPE);
 
         // Create enums
         timeUnitsEEnum = createEEnum(TIME_UNITS);
@@ -1431,6 +1480,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getProbe_Glitches(), ecorePackage.getEInt(), "glitches", null, 1, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_Limit(), ecorePackage.getEInt(), "limit", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_ProbeState(), this.getProbeState(), "probeState", null, 1, 1, Probe.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getProbe_ProbeMods(), this.getProbeMod(), null, "probeMods", null, 0, -1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(probeCommandEClass, ProbeCommand.class, "ProbeCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeCommand_Mods(), ecorePackage.getEInt(), "mods", null, 0, 1, ProbeCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1500,6 +1550,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIntervall_Quantities(), ecorePackage.getEInt(), "quantities", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getIntervall_Units(), this.getTimeUnits(), "units", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(probeModEClass, ProbeMod.class, "ProbeMod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getProbeMod_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ProbeMod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getProbeMod_Type(), theRuntimePackage.getExtendetData(), null, "type", null, 1, 1, ProbeMod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(timeUnitsEEnum, TimeUnits.class, "TimeUnits");
