@@ -295,7 +295,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         setLimit(getWeapon().getPraezision());
         
         mods = mods + GameplayTools.getRangeMod(getSubject(),getWeapon(),getRange());
-        mods = mods + GameplayTools.getWoundMod(getSubject());
+        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
 
         if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,

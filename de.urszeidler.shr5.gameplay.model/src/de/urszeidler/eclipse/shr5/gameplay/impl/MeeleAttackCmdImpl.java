@@ -170,7 +170,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         setSkill(fertigkeit);
 
         setLimit(getWeapon().getPraezision());
-        mods = mods + GameplayTools.getWoundMod(getSubject());
+        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
 
         if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,

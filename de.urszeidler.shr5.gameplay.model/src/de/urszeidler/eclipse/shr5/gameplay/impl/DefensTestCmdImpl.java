@@ -96,7 +96,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
 
         W6Dice w6Dice = new W6Dice();
 
-        mods = mods + GameplayTools.getWoundMod(getSubject());
+        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
         
         if (getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS);

@@ -207,7 +207,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
 
         IniDice iniDice = new IniDice();
         AbstraktPersona persona = subject.getCharacter().getPersona();
-        int initative = persona.getInitative() + GameplayTools.getWoundMod(getSubject());
+        int initative = persona.getInitative() + GameplayTools.getWoundMod(getSubject(),null);
         ini = iniDice.ini(initative, persona.getInitativWuerfel());
         executed = true;
     }

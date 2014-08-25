@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
@@ -38,6 +39,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -74,15 +76,24 @@ public class GameplayTools {
         subject.getExtendetData().remove(data);
     }
 
-    public static int getWoundMod(RuntimeCharacter subject) {
+    public static int getWoundMod(RuntimeCharacter subject, List<ProbeMod> mods) {
         if (subject == null)
             return 0;
 
         int pDamage = subject.getPhysicalDamage() / 3;
         int mDamage = subject.getMentalDamage() / 3;
 
-        return -pDamage - mDamage;
-
+        int val = -pDamage - mDamage;
+        if (mods != null) {
+            ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+            data.setEObject(subject);
+            data.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND);
+            ProbeMod probeMod = GameplayFactory.eINSTANCE.createProbeMod();
+            probeMod.setType(data);
+            probeMod.setValue(val);
+            mods.add(probeMod);
+        }
+        return val;
     }
 
     /**
@@ -157,7 +168,6 @@ public class GameplayTools {
         data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
         // int integerValue = subject.getIntegerValue(data);
         subject.increaseValue(data, value);
-
     }
 
     /**
@@ -177,30 +187,28 @@ public class GameplayTools {
 
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
         // TODO calculate the range mod
-//        Reichweite reichweite = weapon.getReichweite();
-//        if(reichweite!=null){
-//            reichweite.getMin()
-//        }
+        // Reichweite reichweite = weapon.getReichweite();
+        // if(reichweite!=null){
+        // reichweite.getMin()
+        // }
         return 0;
     }
 
-//    public static String printCommand(Command cmd) {
-//
-//        if (cmd instanceof SuccesTest) {
-//            SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
-//            return String.format("(%s|%s)%s(%s/%s)%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getNetHits(), st.getThresholds(), st
-//                    .getProbe().size(), st.getProbe().toString());
-//        } else if (cmd instanceof Probe) {
-//            Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
-//            return String
-//                    .format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe().toString());
-//        }
-//
-//        return "";
-//    }
+    // public static String printCommand(Command cmd) {
+    //
+    // if (cmd instanceof SuccesTest) {
+    // SuccesTest st = (SuccesTest)cmd;// ([su]|[gl])/[lim]([nh]/[th])[dp][probe]x
+    // return String.format("(%s|%s)%s(%s/%s)%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getNetHits(), st.getThresholds(), st
+    // .getProbe().size(), st.getProbe().toString());
+    // } else if (cmd instanceof Probe) {
+    // Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
+    // return String
+    // .format("(%s|%s)%s|%s%s", st.getSuccesses(), st.getGlitches(), st.getLimit(), st.getProbe().size(), st.getProbe().toString());
+    // }
+    //
+    // return "";
+    // }
 
- 
-    
     /**
      * Retuns the skill dice pool for a skill.
      * 
@@ -259,6 +267,7 @@ public class GameplayTools {
 
     /**
      * Returns the combat turn the command is executed in.
+     * 
      * @param cmd
      * @return
      */
@@ -268,6 +277,7 @@ public class GameplayTools {
 
     /**
      * Finds the parent by the eContainer per eClass.
+     * 
      * @param eObject
      * @param eClass
      * @return
@@ -278,8 +288,7 @@ public class GameplayTools {
         eObject = findParentByType(eObject.eContainer(), eClass);
         return eObject;
     }
-    
-    
+
     public static List<SubjectCommand> createCharacterCommands(RuntimeCharacter persona) {
         ArrayList<SubjectCommand> list = new ArrayList<SubjectCommand>(5);
         SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
@@ -299,10 +308,10 @@ public class GameplayTools {
     }
 
     public static List<RuntimeCharacter> getActiveCharacters(List<RuntimeCharacter> combatants) {
-       return new ArrayList<RuntimeCharacter>( Collections2.filter(combatants, new Predicate<RuntimeCharacter>() {
+        return new ArrayList<RuntimeCharacter>(Collections2.filter(combatants, new Predicate<RuntimeCharacter>() {
             @Override
-            public boolean apply(RuntimeCharacter input) {                
-                return input.getZustand()==Zustand.OK;
+            public boolean apply(RuntimeCharacter input) {
+                return input.getZustand() == Zustand.OK;
             }
         }));
     }
