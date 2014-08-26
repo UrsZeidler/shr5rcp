@@ -161,6 +161,8 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         setExecuting(true);
 
         getProbe().clear();
+        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
+
         if (isSetCmdCallback()&& getCmdCallback() != null)
             cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
        
