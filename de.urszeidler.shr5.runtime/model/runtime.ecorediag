@@ -406,7 +406,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_m08ecQniEeSYIbxuiugXBw" routing="Rectilinear" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_m08ecgniEeSYIbxuiugXBw" fontName="Ubuntu"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m08ecwniEeSYIbxuiugXBw" points="[-60, -28, 442, 443]$[-60, -63, 442, 408]$[-674, -63, -172, 408]$[-674, -383, -172, 88]$[-564, -383, -62, 88]$[-564, -423, -62, 48]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m08ecwniEeSYIbxuiugXBw" points="[-59, -28, 475, 462]$[-59, -71, 475, 419]$[-694, -71, -160, 419]$[-694, -399, -160, 91]$[-552, -399, -18, 91]$[-552, -462, -18, 28]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_m1Kg4AniEeSYIbxuiugXBw" type="3002" source="_jX22oPlGEeOd_uHjzgWVkA" target="_mzRqgAniEeSYIbxuiugXBw">
     <children xmi:type="notation:Node" xmi:id="_m1LH8AniEeSYIbxuiugXBw" type="4011">
@@ -507,7 +507,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_FqQSkQqPEeSg8Yw_QIe6bA" routing="Rectilinear" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_FqQSkgqPEeSg8Yw_QIe6bA" fontName="Ubuntu"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FqQSkwqPEeSg8Yw_QIe6bA" points="[77, -31, -52, 258]$[77, -186, -52, 103]$[67, -186, -62, 103]$[67, -241, -62, 48]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FqQSkwqPEeSg8Yw_QIe6bA" points="[47, -28, 0, 282]$[47, -282, 0, 28]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_RKOV0AqPEeSg8Yw_QIe6bA" type="3002" source="_iEpFAAqOEeSg8Yw_QIe6bA" target="_FpwjUAqPEeSg8Yw_QIe6bA">
     <children xmi:type="notation:Node" xmi:id="_RKQLAAqPEeSg8Yw_QIe6bA" type="4011">
