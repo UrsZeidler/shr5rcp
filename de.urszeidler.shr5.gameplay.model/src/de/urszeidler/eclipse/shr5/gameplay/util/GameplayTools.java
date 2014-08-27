@@ -84,7 +84,7 @@ public class GameplayTools {
         int mDamage = subject.getMentalDamage() / 3;
 
         int val = -pDamage - mDamage;
-        if (mods != null) {
+        if (mods != null && val != 0) {
             ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
             data.setEObject(subject);
             data.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND);
@@ -102,7 +102,7 @@ public class GameplayTools {
      * @param subject
      * @return
      */
-    public static int getDefenceMod(RuntimeCharacter subject) {
+    public static int getDefenceMod(RuntimeCharacter subject, List<ProbeMod> mods) {
         if (subject == null)
             return 0;
 
@@ -149,7 +149,19 @@ public class GameplayTools {
         data.setEObject(subject);
         data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 
-        mod = mod + subject.getIntegerValue(data);
+        int defenceValue = subject.getIntegerValue(data);
+        if (mods != null && defenceValue != 0) {
+            data = RuntimeFactory.eINSTANCE.createExtendetData();
+            data.setEObject(subject);
+            data.setEFeature(GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE);
+            ProbeMod probeMod = GameplayFactory.eINSTANCE.createProbeMod();
+            probeMod.setType(data);
+            probeMod.setValue(defenceValue);
+            mods.add(probeMod);
+        }
+
+        
+        mod = mod + defenceValue;
         return mod;
     }
 
