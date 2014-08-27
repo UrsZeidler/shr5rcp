@@ -10,6 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
@@ -19,6 +20,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
+import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
@@ -85,15 +87,21 @@ public class GameplayTools {
 
         int val = -pDamage - mDamage;
         if (mods != null && val != 0) {
-            ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
-            data.setEObject(subject);
-            data.setEFeature(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND);
-            ProbeMod probeMod = GameplayFactory.eINSTANCE.createProbeMod();
-            probeMod.setType(data);
-            probeMod.setValue(val);
+            EAttribute eAttribute = RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND;
+            ProbeMod probeMod = createProbeMod(subject, val, eAttribute);
             mods.add(probeMod);
         }
         return val;
+    }
+
+    protected static ProbeMod createProbeMod(EObject subject, int val, EStructuralFeature feature) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(feature);
+        ProbeMod probeMod = GameplayFactory.eINSTANCE.createProbeMod();
+        probeMod.setType(data);
+        probeMod.setValue(val);
+        return probeMod;
     }
 
     /**
@@ -160,7 +168,6 @@ public class GameplayTools {
             mods.add(probeMod);
         }
 
-        
         mod = mod + defenceValue;
         return mod;
     }
@@ -197,13 +204,27 @@ public class GameplayTools {
             listValue.clear();
     }
 
-    public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range) {
-        // TODO calculate the range mod
-        // Reichweite reichweite = weapon.getReichweite();
-        // if(reichweite!=null){
-        // reichweite.getMin()
-        // }
-        return 0;
+    public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range, List<ProbeMod> mods) {
+        int mod = 0;
+        Reichweite reichweite = weapon.getReichweite();
+        if (reichweite != null) {
+            if (reichweite.getMin() <= range && reichweite.getKurz() > range) {
+                return 0;
+            }else if (reichweite.getKurz() <= range && reichweite.getMittel() > range) {
+                mod = -1;
+            }else if (reichweite.getMittel() <= range && reichweite.getWeit() > range) {
+                mod = -3;
+            }else if (reichweite.getWeit() <= range && reichweite.getExtrem() > range) {
+                mod = -6;
+            }else
+                mod = Integer.MIN_VALUE;
+            
+            if(mods!=null){
+                ProbeMod probeMod = createProbeMod(weapon, mod, Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE);
+                mods.add(probeMod);
+            }
+        }
+        return mod;
     }
 
     // public static String printCommand(Command cmd) {

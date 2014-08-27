@@ -154,7 +154,7 @@ public class CombatTurnTest extends TestCase {
 
             @Override
             public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
+               
                 
             }
         });
@@ -182,7 +182,7 @@ public class CombatTurnTest extends TestCase {
 
             @Override
             public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
+               
                 
             }
         });
@@ -209,7 +209,7 @@ public class CombatTurnTest extends TestCase {
 
             @Override
             public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
+               
                 
             }
         });
@@ -242,7 +242,7 @@ public class CombatTurnTest extends TestCase {
 
             @Override
             public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
+                
                 
             }
         });

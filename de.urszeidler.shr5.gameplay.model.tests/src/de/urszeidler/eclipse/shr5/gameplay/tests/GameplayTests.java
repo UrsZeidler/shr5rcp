@@ -27,7 +27,7 @@ public class GameplayTests extends TestSuite {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public static Test suite() {
         TestSuite suite = new GameplayTests("gameplay Tests");
@@ -49,6 +49,8 @@ public class GameplayTests extends TestSuite {
         suite.addTestSuite(SetFeatureCommandTest.class);
         suite.addTestSuite(MeeleAttackCmdTest.class);
         suite.addTestSuite(RangedAttackCmdTest.class);
+        
+        suite.addTestSuite(GameplayToolsTest.class);
         return suite;
     }
 
