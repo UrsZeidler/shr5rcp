@@ -1,3 +1,11 @@
+2014-09-07 Version 0.2.0-rc
+
+* update script editing
+* update script runtime
+	* initiative tracking
+	* skill and success tests
+	* damage management 
+
 2014-08-16 Version 0.1.9
 
 * fixed the product build and the updatesite
