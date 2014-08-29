@@ -95,7 +95,7 @@ public class ProbeDialog extends TitleAreaDialog {
 
         setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
-        if (state == ProbeExecutionState.afterExecute) {
+        if (state == ProbeExecutionState.afterExecute|| state==ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
             txtProbe.setEnabled(false);
             txtProbe.setText(ShadowrunEditingTools.command2String(probe));
@@ -148,7 +148,7 @@ public class ProbeDialog extends TitleAreaDialog {
     @Override
     protected Point getInitialSize() {
         //return super.getInitialSize();
-         return new Point(450, 300);
+         return new Point(450, 500);
     }
 
 }

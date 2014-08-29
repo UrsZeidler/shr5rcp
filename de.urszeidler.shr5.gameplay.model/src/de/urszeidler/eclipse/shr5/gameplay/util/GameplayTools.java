@@ -159,12 +159,7 @@ public class GameplayTools {
 
         int defenceValue = subject.getIntegerValue(data);
         if (mods != null && defenceValue != 0) {
-            data = RuntimeFactory.eINSTANCE.createExtendetData();
-            data.setEObject(subject);
-            data.setEFeature(GameplayPackage.Literals.INTERRUPT_ACTION__INTERRUPT_TYPE);
-            ProbeMod probeMod = GameplayFactory.eINSTANCE.createProbeMod();
-            probeMod.setType(data);
-            probeMod.setValue(defenceValue);
+            ProbeMod probeMod = createProbeMod(subject, defenceValue, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
             mods.add(probeMod);
         }
 

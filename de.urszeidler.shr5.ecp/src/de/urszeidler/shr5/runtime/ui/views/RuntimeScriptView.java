@@ -906,13 +906,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
-        // TODO Auto-generated method stub
+        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                "before sub", ProbeExecutionState.beforeExecute,eStructuralFeatures);
+        d.open();
         
     }
 
     @Override
     public void beforeSubcommands(Command cmd, EStructuralFeature... eStructuralFeatures) {
-        // TODO Auto-generated method stub
+        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                "before sub", ProbeExecutionState.beforeSubcommands,eStructuralFeatures);
+        d.open();
         
     }
     

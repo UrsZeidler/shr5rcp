@@ -189,7 +189,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         this.netHits = getSuccesses() - thresholds;
 
         if (getCmdCallback() != null)
-            getCmdCallback().afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.SUCCES_TEST__NET_HITS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
 
         if (netHits > 0) {
