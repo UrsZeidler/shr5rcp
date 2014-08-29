@@ -3,14 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
-import org.eclipse.emf.ecore.xml.type.internal.RegEx.REUtil;
-
+import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import junit.framework.TestCase;
 
 /**
  * @author urs

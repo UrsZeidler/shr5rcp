@@ -36,6 +36,26 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  * @generated
  */
 public class SetFeatureCommandTest extends TestCase {
+    public final class CommandCallbackImplementation implements CommandCallback {
+        @Override
+        public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+
+        }
+
+        @Override
+        public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+           
+            
+        }
+
+        @Override
+        public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        }
+
+        @Override
+        public void beforeSubcommands(Command cmd, EStructuralFeature... eStructuralFeatures) {
+         }
+    }
 
     /**
      * The fixture for this Set Feature Command test case.
@@ -116,19 +136,7 @@ public class SetFeatureCommandTest extends TestCase {
     public void testGetCmdCallback() {
         assertNull(getFixture().getCmdCallback());
 
-        getFixture().setCmdCallback(new CommandCallback() {
-
-            @Override
-            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
-            }
-
-            @Override
-            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
-                
-            }
-        });
+        getFixture().setCmdCallback(new CommandCallbackImplementation());
         assertNotNull(getFixture().getCmdCallback());
     }
 
@@ -142,19 +150,7 @@ public class SetFeatureCommandTest extends TestCase {
     public void testSetCmdCallback() {
         assertNull(getFixture().getCmdCallback());
 
-        getFixture().setCmdCallback(new CommandCallback() {
-
-            @Override
-            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
-            }
-
-            @Override
-            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
-                
-            }
-        });
+        getFixture().setCmdCallback(new CommandCallbackImplementation());
         assertNotNull(getFixture().getCmdCallback());
      }
 
@@ -168,19 +164,7 @@ public class SetFeatureCommandTest extends TestCase {
     public void testUnsetCmdCallback() {
         assertNull(getFixture().getCmdCallback());
 
-        getFixture().setCmdCallback(new CommandCallback() {
-
-            @Override
-            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
-            }
-
-            @Override
-            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
-                
-            }
-        });
+        getFixture().setCmdCallback(new CommandCallbackImplementation());
         assertNotNull(getFixture().getCmdCallback());
 
         getFixture().setCmdCallback(null);
@@ -200,19 +184,7 @@ public class SetFeatureCommandTest extends TestCase {
         assertNull(getFixture().getCmdCallback());
         assertFalse(getFixture().isSetCmdCallback());
 
-        getFixture().setCmdCallback(new CommandCallback() {
-
-            @Override
-            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
-            }
-
-            @Override
-            public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                // TODO Auto-generated method stub
-                
-            }
-        });
+        getFixture().setCmdCallback(new CommandCallbackImplementation());
         assertNotNull(getFixture().getCmdCallback());
         assertTrue(getFixture().isSetCmdCallback());
    }

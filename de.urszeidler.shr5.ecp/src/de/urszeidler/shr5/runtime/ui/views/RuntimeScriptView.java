@@ -122,6 +122,8 @@ import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
 import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
+import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog;
+import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog.ProbeExecutionState;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
 import de.urszeidler.shr5.scripting.Placement;
@@ -827,6 +829,93 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         //
         return bindingContext;
     }
+    @Override
+    public CommandCallback getCmdCallback() {
+        return this;
+    }
+
+    @SuppressWarnings("unchecked")
+    protected void startCombatTurn() {
+        timeTrackJob.isTimetracking = false;
+        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
+        combatTurn.setDate(placement1.getActualDate());
+        combatTurn.setCmdCallback(RuntimeScriptView.this);
+        List<Object> choiceOfValues = new ArrayList<Object>();
+
+        EList<Team> teams = placement1.getTeams();
+        for (Team team : teams) {
+            choiceOfValues.addAll(team.getMembers());
+        }
+        if (placement1.getScript() != null)
+            choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
+
+        FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
+        if (dialogWert.open() == Dialog.OK)
+            combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
+        else
+            return;
+
+        // scriptService.executeCommand(combatTurn);
+        scriptService.setCombatTurn(combatTurn);
+    }
+
+    /**
+     * Start a new combat turn with the given characters.
+     * 
+     * @param combatants
+     */
+    protected void contiueCombatTurn(Collection<? extends RuntimeCharacter> combatants) {
+        timeTrackJob.isTimetracking = false;
+        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
+        combatTurn.setDate(placement1.getActualDate());
+        combatTurn.setCmdCallback(RuntimeScriptView.this);
+
+        combatTurn.getCombatants().addAll(combatants);
+        scriptService.setCombatTurn(combatTurn);
+    }
+
+    /**
+     * Returns a formated history line.
+     * 
+     * @param cmd
+     * @return
+     */
+    private String printCommand(Command cmd) {
+        return String.format("%tT >> %s %s", cmd.getDate(), labelProvider.getText(cmd), ShadowrunEditingTools.command2String(cmd));
+    }
+
+    @SuppressWarnings("unchecked")
+    private void switchPlacement() {
+        EList<Placement> nextPlacements = placement1.getNextPlacements();
+
+        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
+        dialog.setLabelProvider(labelProvider);
+        int open = dialog.open();
+        if (open == Dialog.OK) {
+            Object[] result = dialog.getResult();
+            if (result.length > 0) {
+                Placement eo = (Placement)result[0];
+                SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                command.setDate(placement1.getActualDate());
+                scriptService.setPlacement(eo);
+                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));
+            }
+        }
+    }
+
+    @Override
+    public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void beforeSubcommands(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        // TODO Auto-generated method stub
+        
+    }
+    
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
@@ -879,6 +968,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         }
 
+        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                "prepare", ProbeExecutionState.prepare,GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.PROBE__LIMIT,
+                GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+        d.open();
+
         GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
                 new DefaultReferenceManager(itemDelegator));
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -911,8 +1005,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         }
 
-        ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
-        probeFinishedDialog.open();
+//        ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
+//        probeFinishedDialog.open();
+
+        
+        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                "finished", ProbeExecutionState.afterExecute);
+        d.open();
 
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
         // new DefaultReferenceManager(itemDelegator));
@@ -920,77 +1019,5 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     }
 
-    @Override
-    public CommandCallback getCmdCallback() {
-        return this;
-    }
 
-    @SuppressWarnings("unchecked")
-    protected void startCombatTurn() {
-        timeTrackJob.isTimetracking = false;
-        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
-        combatTurn.setDate(placement1.getActualDate());
-        combatTurn.setCmdCallback(RuntimeScriptView.this);
-        List<Object> choiceOfValues = new ArrayList<Object>();
-
-        EList<Team> teams = placement1.getTeams();
-        for (Team team : teams) {
-            choiceOfValues.addAll(team.getMembers());
-        }
-        if (placement1.getScript() != null)
-            choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
-
-        FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
-        if (dialogWert.open() == Dialog.OK)
-            combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
-        else
-            return;
-
-        // scriptService.executeCommand(combatTurn);
-        scriptService.setCombatTurn(combatTurn);
-    }
-
-    /**
-     * Start a new combat turn with the given characters.
-     * 
-     * @param combatants
-     */
-    protected void contiueCombatTurn(Collection<? extends RuntimeCharacter> combatants) {
-        timeTrackJob.isTimetracking = false;
-        CombatTurn combatTurn = GameplayFactory.eINSTANCE.createCombatTurn();
-        combatTurn.setDate(placement1.getActualDate());
-        combatTurn.setCmdCallback(RuntimeScriptView.this);
-
-        combatTurn.getCombatants().addAll(combatants);
-        scriptService.setCombatTurn(combatTurn);
-    }
-
-    /**
-     * Returns a formated history line.
-     * @param cmd
-     * @return
-     */
-    private String printCommand(Command cmd) {
-        return String.format("%tT >> %s %s", cmd.getDate(), labelProvider.getText(cmd),ShadowrunEditingTools.command2String(cmd));
-    }
-
-    @SuppressWarnings("unchecked")
-    private void switchPlacement() {
-        EList<Placement> nextPlacements = placement1.getNextPlacements();
-
-        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
-        dialog.setLabelProvider(labelProvider);
-        int open = dialog.open();
-        if (open == Dialog.OK) {
-            Object[] result = dialog.getResult();
-            if (result.length > 0) {
-                Placement eo = (Placement)result[0];
-                SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
-                command.setDate(placement1.getActualDate());
-                scriptService.setPlacement(eo);
-                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));
-            }
-        }
-    }
 }
