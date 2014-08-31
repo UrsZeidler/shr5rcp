@@ -24,6 +24,7 @@ import org.eclipse.swt.widgets.Tree;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
@@ -98,8 +99,8 @@ public class ProbeDialog extends TitleAreaDialog {
         Composite container = new Composite(area, SWT.NONE);
         container.setLayout(new GridLayout(1, false));
         container.setLayoutData(new GridData(GridData.FILL_BOTH));
-
-        setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
+        if (desc != null)
+            setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);

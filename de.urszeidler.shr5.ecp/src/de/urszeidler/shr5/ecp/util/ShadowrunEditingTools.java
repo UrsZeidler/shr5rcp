@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -23,8 +24,10 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 
 import com.google.common.base.Function;
 
@@ -44,9 +47,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
@@ -58,6 +63,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
 
@@ -449,6 +455,7 @@ public class ShadowrunEditingTools {
             }
         };
     }
+
     public static Function<ManagedCharacter, RuntimeCharacter> managedCharacter2RuntimeFunction() {
 
         return new Function<ManagedCharacter, RuntimeCharacter>() {
@@ -479,8 +486,8 @@ public class ShadowrunEditingTools {
             Probe st = (Probe)cmd;// ([su]|[gl])/[lim]|[dp][probe]
             state = toEEnumName(st.getProbeState(), st, GameplayPackage.Literals.PROBE__PROBE_STATE);
 
-            return String.format("[%s](%s/%s|%s)%s%s", state, st.getSuccesses(), st.getLimit(), st.getGlitches(), st.getProbe().size(), st
-                    .getProbe().toString());
+            return String.format("[%s](%s/%s|%s)%s%s", state, st.getSuccesses(), st.getLimit(), st.getGlitches(), st.getProbe().size(), st.getProbe()
+                    .toString());
         }
 
         return "";
@@ -497,6 +504,31 @@ public class ShadowrunEditingTools {
 
         return text2;
 
+    }
+
+    public static SetFeatureCommand changeItem(RuntimeCharacter subject, EReference references, Shell shell) {
+        EObject object = null;
+
+        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(subject, references);
+        List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(subject);
+        OwnChooseDialog dialog = new OwnChooseDialog(shell, values.toArray(new Object[]{}), "Change item", "Select the item you want to choose.");
+
+        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+        int open = dialog.open();
+        if (open == Dialog.OK) {
+            Object[] result = dialog.getResult();
+            if (result.length > 0) {
+                object = (EObject)result[0];
+            }
+
+        }
+        if (object == null)
+            return null;
+        SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+        setFeatureCommand.setObject(subject);
+        setFeatureCommand.setFeature(references);
+        setFeatureCommand.setValue(object);
+        return setFeatureCommand;
     }
 
 }

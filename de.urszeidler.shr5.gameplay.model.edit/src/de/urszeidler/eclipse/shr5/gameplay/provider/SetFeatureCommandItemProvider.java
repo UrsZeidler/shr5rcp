@@ -307,7 +307,7 @@ public class SetFeatureCommandItemProvider
 //            label = labelprovider.getText(setFeatureCommand.getObject());
 //        }
 
-        return getString("_UI_SetFeatureCommand_type_text");// + " " + setFeatureCommand.isExecuted();
+        return getString("_UI_SetFeatureCommand_type");// + " " + setFeatureCommand.isExecuted();
     }
 
     /**

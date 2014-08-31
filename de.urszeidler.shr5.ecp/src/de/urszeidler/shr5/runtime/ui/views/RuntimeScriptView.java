@@ -969,13 +969,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
+        }else if (cmd instanceof SetFeatureCommand) {
+//            SetFeatureCommand sf = (SetFeatureCommand)cmd;
+//            ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+//                    "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
+//            d.open();
+            return;
         }
 
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 "prepare", ProbeExecutionState.prepare,GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.PROBE__LIMIT,
                 GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
         d.open();
-
+        
 //        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
 //                new DefaultReferenceManager(itemDelegator));
 //        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -1006,7 +1012,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         } else if (cmd instanceof DamageTest) {
             new DamageProbeFinishedDialog(getSite().getShell(), cmd, labelProvider).open();
             return;
+        }else if (cmd instanceof SetFeatureCommand) {
+            SetFeatureCommand sf = (SetFeatureCommand)cmd;
+            ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                    "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
+            d.open();
         }
+
 
 //        ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
 //        probeFinishedDialog.open();

@@ -452,7 +452,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         setExecuting(true);
 
         if (isSetCmdCallback())
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SET_FEATURE_COMMAND__VALUE);
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SET_FEATURE_COMMAND__OBJECT,GameplayPackage.Literals.SET_FEATURE_COMMAND__FEATURE);
 
         getObject().eSet(getFeature(), getValue());
         
