@@ -124,7 +124,6 @@ import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
 import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog.ProbeExecutionState;
-import de.urszeidler.shr5.runtime.ui.dialogs.ProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
@@ -144,12 +143,16 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         protected IStatus run(IProgressMonitor monitor) {
             if (!isTimetracking)
                 return Status.OK_STATUS;
-            schedule(1000);
+            int delay = 1000;
+            if(timeTrackFactor>1)
+                delay = (int)((1/timeTrackFactor)*1000L);
+                
+            schedule(delay);
             Placement plac = (Placement)placement1;// .getValue();
 
             if (plac != null)
                 if (plac.getActualDate() != null)
-                    plac.setActualDate(new Date(plac.getActualDate().getTime() + (1000 * timeTrackFactor)));
+                    plac.setActualDate(new Date((long)(plac.getActualDate().getTime() + (delay * timeTrackFactor))));
             return Status.OK_STATUS;
         }
     }
@@ -239,7 +242,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     // protected boolean isTimetracking;
     private TimeTracker timeTrackJob;
 
-    private int timeTrackFactor = 1;
+    private double timeTrackFactor = 1;
     private Label lblName;
     private StyledText styledText;
     private StyledText styledText_1;
@@ -481,7 +484,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
                     tltmTimeTrackingItem.setText("start time tracking");
                 } else {
-                    TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell());
+                    TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell(),timeTrackFactor);
                     if (timetrackingDialog.open() == Dialog.CANCEL)
                         return;
                     timeTrackFactor = timetrackingDialog.getFactor();
