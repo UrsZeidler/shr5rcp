@@ -27,12 +27,12 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDamage <em>Damage</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDv <em>Dv</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getEffectiveDamage <em>Effective Damage</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDamage <em>Damage</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDv <em>Dv</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getEffectiveDamage <em>Effective Damage</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
@@ -40,6 +40,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The default value of the '{@link #getDamage() <em>Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamage()
      * @generated
      * @ordered
@@ -50,6 +51,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The cached value of the '{@link #getDamage() <em>Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamage()
      * @generated
      * @ordered
@@ -60,6 +62,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The default value of the '{@link #getDv() <em>Dv</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDv()
      * @generated
      * @ordered
@@ -70,6 +73,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The cached value of the '{@link #getDv() <em>Dv</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDv()
      * @generated
      * @ordered
@@ -80,6 +84,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The default value of the '{@link #getEffectiveDamage() <em>Effective Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getEffectiveDamage()
      * @generated
      * @ordered
@@ -90,6 +95,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * The cached value of the '{@link #getEffectiveDamage() <em>Effective Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getEffectiveDamage()
      * @generated
      * @ordered
@@ -99,6 +105,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected DamageTestImpl() {
@@ -108,6 +115,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -118,6 +126,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getDamage() {
@@ -127,6 +136,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDamage(String newDamage) {
@@ -139,6 +149,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getDv() {
@@ -148,6 +159,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDv(int newDv) {
@@ -160,6 +172,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getEffectiveDamage() {
@@ -169,6 +182,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setEffectiveDamage(String newEffectiveDamage) {
@@ -181,6 +195,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -199,6 +214,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -220,6 +236,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -241,6 +258,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -259,11 +277,13 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (damage: ");
@@ -279,7 +299,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     @Override
     public void redo() {
         getProbe().clear();
-        
+
         prepareRedo();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
         int armor = 0;
@@ -312,6 +332,9 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
         this.successes = W6Dice.probeSucsessesShr5(probe);
         this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses();
+        if (getCmdCallback() != null)
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SUCCESSES);
+
 
         int damageLeft = damageCode.getPower() - getSuccesses();
         if (damageLeft > 0) {
@@ -325,6 +348,5 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
 
         afterRedo();
     }
-
 
 } // DamageTestImpl

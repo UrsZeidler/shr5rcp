@@ -73,11 +73,17 @@ public class ProbeDialog extends TitleAreaDialog {
             String titel, ProbeExecutionState pstate, EStructuralFeature... features) {
         this(shell, cmd);
         this.labelProvider = labelProvider;
-        this.newTitle = titel;
+        this.newTitle = titel + " " + labelProvider.getText(cmd.eClass());
         this.state = pstate;
         emfFormBuilder = new EmfFormBuilder(null, itemDelegator, labelProvider, null);
         emfFormBuilder.setManager(mananger);
         eAllStructuralFeatures = Arrays.asList(features);
+    }
+
+    @Override
+    public boolean close() {
+        emfFormBuilder.dispose();
+        return super.close();
     }
 
     /**
@@ -95,7 +101,7 @@ public class ProbeDialog extends TitleAreaDialog {
 
         setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
-        if (state == ProbeExecutionState.afterExecute|| state==ProbeExecutionState.beforeSubcommands) {
+        if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
             txtProbe.setEnabled(false);
             txtProbe.setText(ShadowrunEditingTools.command2String(probe));
@@ -147,8 +153,8 @@ public class ProbeDialog extends TitleAreaDialog {
      */
     @Override
     protected Point getInitialSize() {
-        //return super.getInitialSize();
-         return new Point(450, 500);
+        // return super.getInitialSize();
+        return new Point(450, 500);
     }
 
 }

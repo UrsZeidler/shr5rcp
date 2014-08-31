@@ -33,8 +33,6 @@ import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
-import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
@@ -103,20 +101,17 @@ import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Team;
-import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Sex;
-import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
-import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -306,12 +301,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     public RuntimeScriptView() {
 
-        adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-        adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
-        adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
-        adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
-        adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+        adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
+//                new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+//        adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
+//        adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
+//        adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
+//        adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
+//        adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
 
         // rootContentProvider = new AdapterFactoryContentProvider(adapterFactory);
@@ -910,7 +906,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "before sub", ProbeExecutionState.beforeExecute,eStructuralFeatures);
+                "before execute", ProbeExecutionState.beforeExecute,eStructuralFeatures);
         d.open();
         
     }
@@ -937,8 +933,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (mc.getSubject() != null && mc.getWeapon() != null && mc.getSkill() != null && mc.getObject() != null)
                 return;
 
-            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
+                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -953,23 +949,23 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
                 return;
 
-            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
+                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
                     GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DamageTest) {
-            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
+                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DefensTestCmd) {
-            GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                    new DefaultReferenceManager(itemDelegator), GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd,  labelProvider,itemDelegator,
+                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
@@ -980,11 +976,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
         d.open();
 
-        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-                new DefaultReferenceManager(itemDelegator));
-        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-        // new DefaultReferenceManager(itemDelegator));
-        genericEObjectDialog.open();
+//        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+//                new DefaultReferenceManager(itemDelegator));
+//        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+//        // new DefaultReferenceManager(itemDelegator));
+//        genericEObjectDialog.open();
     }
 
     @Override

@@ -106,10 +106,11 @@ public class DefensTestCmdItemProvider
         DefensTestCmd defensTestCmd = (DefensTestCmd)object;
 
         String label = getString("_UI_unset");
-        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
-        if (labelprovider != null)
-            label = labelprovider.getText(defensTestCmd.getSubject());
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        label = GamplayEditingTools.getLabelForEObject(factory, label, defensTestCmd.getSubject());
+//        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
+//        if (labelprovider != null)
+//            label = labelprovider.getText(defensTestCmd.getSubject());
 
         return getString("_UI_DefensTestCmd_type_text",new Object[]{label,defensTestCmd.getAttackersHits()
                 ,defensTestCmd.getSuccesses()});
