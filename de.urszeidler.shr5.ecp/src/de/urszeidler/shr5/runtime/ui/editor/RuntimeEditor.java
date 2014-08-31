@@ -35,9 +35,13 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.editor.AbstractShr5Editor;
+import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.editor.ShrEditingState;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
+import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
+import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
@@ -101,7 +105,12 @@ public class RuntimeEditor extends AbstractShr5Editor {
             public Object caseRuntimeCharacter(RuntimeCharacter object) {
                 try {
                     addPage(new RuntimeCharacterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
-                            manager));
+                            manager));                    
+                    addPage(new ManagedCharacterPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
+                            Messages.ShadowrunEditor_page_character, object.getCharacter(), editingDomain, manager));
+                    addPage(new AbstraktPersonaPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
+                            object.getCharacter().getPersona(), editingDomain, manager));
+
                 } catch (PartInitException e) {
                     logError("error creating SpeziesPage", e);//$NON-NLS-1$
                 }

@@ -68,6 +68,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private Label lblImage;
     private StateMonitorWidget stateMonitorWidgetPhysical;
     private StateMonitorWidget stateMonitorWidgetMental;
+    private StateMonitorWidget stateMonitorWidgetOverDead;
     private AdapterFactoryContentProvider actionListContentProvider;
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryItemDelegator itemDelegator;
@@ -157,7 +158,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().paintBordersFor(composite_3);
 
         Composite monitor = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        monitor.setLayout(new GridLayout(3, false));
+        monitor.setLayout(new GridLayout(4, false));
         monitor.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().adapt(monitor);
         managedForm.getToolkit().paintBordersFor(monitor);
@@ -181,11 +182,23 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
 
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetMental);
+        
+        
+        Group grpOverDead = new Group(monitor, SWT.NONE);
+        grpOverDead.setLayout(new FillLayout(SWT.HORIZONTAL));
+        grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpOverDead.setText("Overdead");
+        managedForm.getToolkit().adapt(grpOverDead);
+        managedForm.getToolkit().paintBordersFor(grpOverDead);
+
+        stateMonitorWidgetOverDead = new StateMonitorWidget(grpOverDead, SWT.NONE,3,false);
 
         if (object != null && object.getCharacter() != null && object.getCharacter().getPersona() != null) {
             AbstraktPersona persona2 = object.getCharacter().getPersona();
-            stateMonitorWidgetMental.setMaxConditions(((KoerperPersona)persona2).getZustandGeistigMax());
-            stateMonitorWidgetPhysical.setMaxConditions(((KoerperPersona)persona2).getZustandKoerperlichMax());
+            KoerperPersona koerperPersona = (KoerperPersona)persona2;
+            stateMonitorWidgetMental.setMaxConditions(koerperPersona.getZustandGeistigMax());
+            stateMonitorWidgetPhysical.setMaxConditions(koerperPersona.getZustandKoerperlichMax());
+            stateMonitorWidgetOverDead.setMaxConditions(koerperPersona.getZustandGrenze());
         }
         
         Group grpState = new Group(monitor, SWT.NONE);
@@ -285,14 +298,18 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
                     RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
             bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
-
         }
         if (stateMonitorWidgetPhysical != null) {
             ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
                     RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
             bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
-
+        }
+        if (stateMonitorWidgetOverDead != null) {
+            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetOverDead);
+            IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
+                    RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD);
+            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         }
 
         return bindingContext;
