@@ -946,14 +946,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
-            if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
-                return;
+//            if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
+//                return;
 
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
-                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                    GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
-                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
-                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
+                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare,eStructuralFeatures);
+//                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+//                    GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
+//                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
+//                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DamageTest) {

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -306,20 +307,44 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         return result.toString();
     }
 
-    @Override
-    public void redo() {
-        prepareRedo();
-
+    /**
+     * Set the state and call the callback.
+     */
+    protected void prepareRedo() {
+        getProbe().clear();
+        getProbeMods().clear();
+        setExecuting(true);
+        mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
+         if (getWeapon() instanceof Feuerwaffe) {
+            FeuerModus fireArmModus = GameplayTools.getFireArmModus(getSubject(), (Feuerwaffe)getWeapon());
+            setModus(fireArmModus);
+        }
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
         setSkill(fertigkeit);
         setLimit(getWeapon().getPraezision());
 
-        mods = mods + GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
-        mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
-
-        if (getCmdCallback() != null)
+        if (isSetCmdCallback() && getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
+                    GameplayPackage.Literals.RANGED_ATTACK_CMD__MODUS);
+        
+        mods = mods + GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
+    }
+
+    @Override
+    public void redo() {
+        prepareRedo();
+
+        // Fertigkeit fertigkeit = getWeapon().getFertigkeit();
+        // setSkill(fertigkeit);
+        // setLimit(getWeapon().getPraezision());
+        //
+        // mods = mods + GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
+        // mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
+        //
+        // if (getCmdCallback() != null)
+        // getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+        // GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
 
         W6Dice w6Dice = new W6Dice();
         int dice = GameplayTools.getSkillDicePool(getSkill(), getSubject()) + mods;// getSkill().getStufe() + att + mods;

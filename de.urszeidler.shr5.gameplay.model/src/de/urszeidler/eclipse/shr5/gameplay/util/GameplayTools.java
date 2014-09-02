@@ -239,6 +239,15 @@ public class GameplayTools {
             listValue.clear();
     }
 
+    /**
+     * Return the range mod for a given distance and the weapon.
+     * 
+     * @param subject
+     * @param weapon
+     * @param range
+     * @param mods
+     * @return
+     */
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range, List<ProbeMod> mods) {
         int mod = 0;
         Reichweite reichweite = weapon.getReichweite();

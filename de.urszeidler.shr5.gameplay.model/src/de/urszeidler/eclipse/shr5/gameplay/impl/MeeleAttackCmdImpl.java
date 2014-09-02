@@ -162,21 +162,31 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         return super.eIsSet(featureID);
     }
 
+    /**
+     * Set the state and call the callback.
+     */
+    protected void prepareRedo() {
+        getProbe().clear();
+        getProbeMods().clear();
+        setExecuting(true);
+        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
+
+        Fertigkeit fertigkeit = getWeapon().getFertigkeit();
+        setSkill(fertigkeit);
+        setLimit(getWeapon().getPraezision());
+
+        if (isSetCmdCallback() && getCmdCallback() != null)
+            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+
+    }
+
+    
     @Override
     public void redo() {
         prepareRedo();
         
-        Fertigkeit fertigkeit = getWeapon().getFertigkeit();
-        setSkill(fertigkeit);
 
-        setLimit(getWeapon().getPraezision());
-        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
-
-        if (getCmdCallback() != null)
-            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
-
-        getProbe().clear();
  
         W6Dice w6Dice = new W6Dice();
 
