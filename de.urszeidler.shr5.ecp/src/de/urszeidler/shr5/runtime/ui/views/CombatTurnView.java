@@ -38,15 +38,12 @@ import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
-import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
-import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
 
@@ -110,24 +107,32 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     }
 
     public class SimpleActionDropdownSelectionListener extends ComplexActionDropdownSelectionListener {
-
         public SimpleActionDropdownSelectionListener(ToolItem dropdown) {
             super(dropdown);
+           
+//            menuManager.setRemoveAllWhenShown(true);
         }
 
-        public void add(String item, final String complexAction) {
+        
+         
+        public void add(String item, final SimpleAction simpleAction) {
             MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
-                    if (complexAction.equals(SET_LEFT_HAND)) {
-                        InitativePass initativePass = combatTurn.getCurrentTurn();
-                        SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
-                                RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
-                        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
-                        simpleAction.getSubCommands().add(featureCommand);
-                    }
+                    InitativePass initativePass = combatTurn.getCurrentTurn();
+                    simpleAction.setSubject(initativePass.getSubject());
+                    GameplayTools.insertSimpleAction(initativePass, simpleAction);
+                    
+                    
+//                    if (complexAction.equals(SET_LEFT_HAND)) {
+//                        InitativePass initativePass = combatTurn.getCurrentTurn();
+//                        SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
+//                                RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
+//                        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+//                        simpleAction.getSubCommands().add(featureCommand);
+//                    }
                 }
             });
         }
@@ -147,7 +152,9 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         public void add(String item, final ComplexAction complexAction) {
             MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
-
+            if(complexAction==null)
+                menuItem.setEnabled(false);
+            
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
                     // MenuItem selected = (MenuItem) event.widget;
@@ -170,25 +177,33 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
                 System.out.println(dropdown.getText() + " Pressed");
             }
         }
-    }
 
+     }
+
+
+    
     private AdapterFactoryItemDelegator itemDelegator;
     private LabelProvider labelProvider;
     private CombatTurn combatTurn;
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryContentProvider rootContentProvider;
     private AdapterFactoryContentProvider actionListContentProvider;
+    public static final String ID = "de.urszeidler.test.CombatTurnnView";
+
+    private SashForm top_1;
+    private Composite composite_bottom = null;
+    private BasicActionPanelWidget basicActionPanel = null;
+    private CombatTurnList combatTurnList;
+    private ScriptService scriptService;
+    private ToolItem tltmD;
+    private ToolItem tltmSimple;
+    private ToolItem tltmS;
+
 
     public CombatTurnView() {
         super();
 
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
-        // new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-        // adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
-        // adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
-        // adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        // adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
-        // adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
 
         rootContentProvider = new AdapterFactoryContentProvider(adapterFactory);
@@ -214,20 +229,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         };
 
     }
-
-    public static final String ID = "de.urszeidler.test.CombatTurnnView";
-    private static final String SET_LEFT_HAND = "SET_LEFT_HAND";
-
-    private SashForm top_1;
-    private Composite composite_bottom = null;
-    private BasicActionPanelWidget basicActionPanel = null;
-    private CombatTurnList combatTurnList;
-    private ScriptService scriptService;
-    private ToolItem tltmD;
-    private ToolItem tltmSimple;
-    private ToolItem tltmOpposed;
-    private ToolItem tltmSuccesTest;
-    private ToolItem tltmS;
 
     /*
      * (non-Javadoc)
@@ -294,6 +295,30 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     public void setFocus() {
     }
 
+//    private void createMenuManager(){
+//        
+//        menuManager = new MenuManager();
+//        
+//        
+//        MenuManager menuManagerSimpleActions = new MenuManager();
+//        menuManagerSimpleActions.add(new Action("change") {
+//            @Override
+//            public void run() {
+//                InitativePass initativePass = combatTurn.getCurrentTurn();
+//                SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
+//                        RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
+//                SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+//                simpleAction.getSubCommands().add(featureCommand);
+//            }
+//            @Override
+//            public boolean isEnabled() {
+//                return super.isEnabled();
+//            }
+//        });
+//
+//    }
+    
+    
     /**
      * This method initializes composite_bottom
      */
@@ -343,9 +368,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
         tltmD.setToolTipText("execute");
         {
-            ToolItem toolItem = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.SEPARATOR);
-        }
-        {
             tltmS = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.DROP_DOWN);
             tltmS.setText("c");
             ComplexActionDropdownSelectionListener listenerOne = new ComplexActionDropdownSelectionListener(tltmS);
@@ -359,6 +381,10 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             ComplexAction complexAction1 = GameplayFactory.eINSTANCE.createComplexAction();
             complexAction1.getSubCommands().add(skillTestCmd1);
             listenerOne.add("opposed skill", complexAction1);
+//            listenerOne.add("Cast Spell", null);
+//            listenerOne.add("Charge Attack", null);
+//            listenerOne.add("Astral Projection", null);
+
             // listenerOne.add("oppsed");
 
             tltmS.addSelectionListener(listenerOne);
@@ -369,28 +395,11 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             tltmSimple = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.DROP_DOWN);
             tltmSimple.setText("s");
             SimpleActionDropdownSelectionListener listenerOne = new SimpleActionDropdownSelectionListener(tltmSimple);
-
-            listenerOne.add("pick up/down", SET_LEFT_HAND);
-
-            //
-            // SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
-            // //simpleAction.getSubCommands().add(setFeatureCommand);
-            // //setFeatureCommand.setObject(initativePass.getSubject());
-            // setFeatureCommand.setFeature(references);
-            // setFeatureCommand.setValue(object);
-
+ 
             tltmSimple.addSelectionListener(listenerOne);
 
         }
-        {
-            tltmOpposed = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
-            tltmOpposed.setText("o");
-            tltmOpposed.setToolTipText("o");
-        }
-        {
-            tltmSuccesTest = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
-            tltmSuccesTest.setText("x");
-        }
+
     }
 
     @Override
