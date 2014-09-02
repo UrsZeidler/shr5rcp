@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -103,7 +104,8 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         AbstraktPersona persona = runtimeCharacter.getCharacter().getPersona();
         persona.setGeschicklichkeitBasis(1);
 
-        Feuerwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        Feuerwaffe fw = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        fw.getModie().add(FeuerModus.EM);
         Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
 
@@ -112,9 +114,9 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         personaFertigkeit.setStufe(1);
         persona.getFertigkeiten().add(personaFertigkeit);
 
-        nahkampfwaffe.setFertigkeit(fertigkeit);
+        fw.setFertigkeit(fertigkeit);
         getFixture().setSubject(runtimeCharacter);
-        getFixture().setWeapon(nahkampfwaffe);
+        getFixture().setWeapon(fw);
         getFixture().setObject(object);
 
         getFixture().redo();
@@ -137,9 +139,10 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         AbstraktPersona persona = runtimeCharacter.getCharacter().getPersona();
         persona.setGeschicklichkeitBasis(1);
 
-        Feuerwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createFeuerwaffe();
-        nahkampfwaffe.setPraezision(20);
-        nahkampfwaffe.setSchadenscode("10P");
+        Feuerwaffe fw = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        fw.setPraezision(20);
+        fw.getModie().add(FeuerModus.EM);
+        fw.setSchadenscode("10P");
         Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
 
@@ -148,9 +151,9 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         personaFertigkeit.setStufe(100);
         persona.getFertigkeiten().add(personaFertigkeit);
 
-        nahkampfwaffe.setFertigkeit(fertigkeit);
+        fw.setFertigkeit(fertigkeit);
         getFixture().setSubject(runtimeCharacter);
-        getFixture().setWeapon(nahkampfwaffe);
+        getFixture().setWeapon(fw);
         getFixture().setObject(object);
 
         getFixture().redo();
