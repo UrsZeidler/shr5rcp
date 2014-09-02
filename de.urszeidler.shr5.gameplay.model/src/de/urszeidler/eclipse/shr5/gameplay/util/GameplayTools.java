@@ -19,6 +19,8 @@ import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FeuerModus;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -76,6 +78,44 @@ public class GameplayTools {
         data.setEObject(subject);
         data.setEFeature(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
         subject.getExtendetData().remove(data);
+    }
+
+    /**
+     * Get the firearm modus.
+     * 
+     * @param subject
+     * @param waffe
+     * @return
+     */
+    public static FeuerModus getFireArmModus(RuntimeCharacter subject, Feuerwaffe waffe) {
+        EList<FeuerModus> modie = waffe.getModie();
+        FeuerModus value = modie.get(0);
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(waffe);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
+        FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
+        if (fm != null)
+            return fm;
+
+        subject.getExtendetData().put(data, value);
+        return value;
+    }
+
+    /**
+     * Changes the fire mode of a weapon.
+     * 
+     * @param subject
+     * @param waffe
+     * @param value
+     */
+    public static void setFireModus(RuntimeCharacter subject, Feuerwaffe waffe, FeuerModus value) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(waffe);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
+        FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
+        if (fm == null) {
+            subject.getExtendetData().put(data, value);
+        }
     }
 
     public static int getWoundMod(RuntimeCharacter subject, List<ProbeMod> mods) {
@@ -205,16 +245,16 @@ public class GameplayTools {
         if (reichweite != null) {
             if (reichweite.getMin() <= range && reichweite.getKurz() > range) {
                 return 0;
-            }else if (reichweite.getKurz() <= range && reichweite.getMittel() > range) {
+            } else if (reichweite.getKurz() <= range && reichweite.getMittel() > range) {
                 mod = -1;
-            }else if (reichweite.getMittel() <= range && reichweite.getWeit() > range) {
+            } else if (reichweite.getMittel() <= range && reichweite.getWeit() > range) {
                 mod = -3;
-            }else if (reichweite.getWeit() <= range && reichweite.getExtrem() > range) {
+            } else if (reichweite.getWeit() <= range && reichweite.getExtrem() > range) {
                 mod = -6;
-            }else
+            } else
                 mod = Integer.MIN_VALUE;
-            
-            if(mods!=null){
+
+            if (mods != null) {
                 ProbeMod probeMod = createProbeMod(weapon, mod, Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE);
                 mods.add(probeMod);
             }
@@ -257,6 +297,28 @@ public class GameplayTools {
 
         }
         return -1;
+    }
+
+    /**
+     * Creates and returns the first simple action which free.
+     * 
+     * @param initativePass
+     * @return
+     */
+    public static void insertSimpleAction(InitativePass initativePass, SimpleAction simpleAction) {
+        CommandWrapper action = initativePass.getAction();
+        if (action instanceof SimpleActions) {
+            SimpleActions sa = (SimpleActions)action;
+            if (sa.getAction1() == null) {
+                sa.setAction1(simpleAction);
+            } else if (sa.getAction2() == null) {
+                sa.setAction2(simpleAction);
+            }
+        } else {
+            SimpleActions simpleActions = GameplayFactory.eINSTANCE.createSimpleActions();
+            simpleActions.setAction1(simpleAction);
+            initativePass.setAction(simpleActions);
+        }
     }
 
     /**
