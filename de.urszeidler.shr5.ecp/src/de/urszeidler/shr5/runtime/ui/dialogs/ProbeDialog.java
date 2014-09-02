@@ -3,6 +3,9 @@ package de.urszeidler.shr5.runtime.ui.dialogs;
 import java.util.Arrays;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
@@ -24,14 +27,13 @@ import org.eclipse.swt.widgets.Tree;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
-import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
-public class ProbeDialog extends TitleAreaDialog {
+public class ProbeDialog extends TitleAreaDialog implements Adapter {
 
     public enum ProbeExecutionState {
         prepare, beforeExecute, beforeSubcommands, afterExecute
@@ -84,6 +86,7 @@ public class ProbeDialog extends TitleAreaDialog {
     @Override
     public boolean close() {
         emfFormBuilder.dispose();
+        probe.eAdapters().remove(this);
         return super.close();
     }
 
@@ -102,6 +105,7 @@ public class ProbeDialog extends TitleAreaDialog {
         if (desc != null)
             setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
+        probe.eAdapters().add(this);
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
             txtProbe.setEnabled(false);
@@ -124,7 +128,9 @@ public class ProbeDialog extends TitleAreaDialog {
         }
         TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
         Tree tree = treeViewer.getTree();
-        tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+        GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
+        layoutData.heightHint = 40;
+        tree.setLayoutData(layoutData);
 
         treeViewer.setLabelProvider(labelProvider);
         treeViewer.setContentProvider(new AdapterFactoryContentProvider(AdapterFactoryUtil.getInstance().getAdapterFactory()));
@@ -156,6 +162,27 @@ public class ProbeDialog extends TitleAreaDialog {
     protected Point getInitialSize() {
         // return super.getInitialSize();
         return new Point(450, 500);
+    }
+
+    
+    @Override
+    public void notifyChanged(Notification notification) {
+        setMessage(labelProvider.getText(probe));
+     }
+
+    @Override
+    public Notifier getTarget() {
+         return null;
+    }
+
+    @Override
+    public void setTarget(Notifier newTarget) {
+         
+    }
+
+    @Override
+    public boolean isAdapterForType(Object type) {
+        return false;
     }
 
 }
