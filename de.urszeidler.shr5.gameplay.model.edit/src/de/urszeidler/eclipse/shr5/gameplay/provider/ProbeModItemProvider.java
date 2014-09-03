@@ -30,7 +30,6 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ProbeModItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -39,7 +38,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ProbeModItemProvider(AdapterFactory adapterFactory) {
@@ -50,7 +48,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -67,14 +64,22 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * This adds a property descriptor for the Value feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_ProbeMod_value_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_ProbeMod_value_feature", "_UI_ProbeMod_type"),
-                GameplayPackage.Literals.PROBE_MOD__VALUE, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ProbeMod_value_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ProbeMod_value_feature", "_UI_ProbeMod_type"),
+                 GameplayPackage.Literals.PROBE_MOD__VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -83,7 +88,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -98,7 +102,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -113,7 +116,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * This returns ProbeMod.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -148,7 +150,6 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -171,21 +172,22 @@ public class ProbeModItemProvider extends ItemProviderAdapter implements IEditin
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(GameplayPackage.Literals.PROBE_MOD__TYPE, RuntimeFactory.eINSTANCE.createExtendetData()));
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.PROBE_MOD__TYPE,
+                 RuntimeFactory.eINSTANCE.createExtendetData()));
     }
 
     /**
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

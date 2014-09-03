@@ -699,6 +699,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getProbe_SkipTest() {
+        return (EAttribute)probeEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getProbeCommand() {
         return probeCommandEClass;
     }
@@ -1290,6 +1299,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(probeEClass, PROBE__LIMIT);
         createEAttribute(probeEClass, PROBE__PROBE_STATE);
         createEReference(probeEClass, PROBE__PROBE_MODS);
+        createEAttribute(probeEClass, PROBE__SKIP_TEST);
 
         probeCommandEClass = createEClass(PROBE_COMMAND);
         createEAttribute(probeCommandEClass, PROBE_COMMAND__MODS);
@@ -1481,6 +1491,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getProbe_Limit(), ecorePackage.getEInt(), "limit", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_ProbeState(), this.getProbeState(), "probeState", null, 1, 1, Probe.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEReference(getProbe_ProbeMods(), this.getProbeMod(), null, "probeMods", null, 0, -1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProbe_SkipTest(), ecorePackage.getEBoolean(), "skipTest", null, 1, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(probeCommandEClass, ProbeCommand.class, "ProbeCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeCommand_Mods(), ecorePackage.getEInt(), "mods", null, 0, 1, ProbeCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

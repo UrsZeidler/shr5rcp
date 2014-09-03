@@ -155,6 +155,12 @@
         <details key="documentation" value="Collects the probe modifactions."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skipTest" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skips the probe and uses the vaules raw."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProbeCommand" abstract="true" eSuperTypes="#//SubjectCommand #//SuccesTest">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

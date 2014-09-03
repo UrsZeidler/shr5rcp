@@ -452,13 +452,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE_COMMAND__PROBE_MODS = SUBJECT_COMMAND_FEATURE_COUNT + 5;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__SKIP_TEST = SUBJECT_COMMAND_FEATURE_COUNT + 6;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 6;
+    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Net Hits</b></em>' attribute.
@@ -467,7 +476,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 7;
+    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Test State</b></em>' attribute.
@@ -476,7 +485,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 8;
+    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -485,7 +494,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 9;
+    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 10;
 
     /**
      * The number of structural features of the '<em>Probe Command</em>' class.
@@ -494,7 +503,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 10;
+    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 11;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -649,6 +658,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -877,6 +895,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1083,6 +1110,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__PROBE_MODS = SKILL_TEST_CMD__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__SKIP_TEST = SKILL_TEST_CMD__SKIP_TEST;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -1430,13 +1466,22 @@ public interface GameplayPackage extends EPackage {
     int PROBE__PROBE_MODS = 5;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__SKIP_TEST = 6;
+
+    /**
      * The number of structural features of the '<em>Probe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_FEATURE_COUNT = 6;
+    int PROBE_FEATURE_COUNT = 7;
 
     /**
      * The number of operations of the '<em>Probe</em>' class.
@@ -1694,6 +1739,15 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST__PROBE_MODS = PROBE__PROBE_MODS;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__SKIP_TEST = PROBE__SKIP_TEST;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1864,6 +1918,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__PROBE_MODS = SKILL_TEST_CMD__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__SKIP_TEST = SKILL_TEST_CMD__SKIP_TEST;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -2092,6 +2155,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2298,6 +2370,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -3489,6 +3570,15 @@ public interface GameplayPackage extends EPackage {
     int MEELE_ATTACK_CMD__PROBE_MODS = OPPOSED_SKILL_TEST_CMD__PROBE_MODS;
 
     /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SKIP_TEST = OPPOSED_SKILL_TEST_CMD__SKIP_TEST;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3722,6 +3812,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int RANGED_ATTACK_CMD__PROBE_MODS = OPPOSED_SKILL_TEST_CMD__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SKIP_TEST = OPPOSED_SKILL_TEST_CMD__SKIP_TEST;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -4395,6 +4494,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EReference getProbe_ProbeMods();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSkipTest <em>Skip Test</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Skip Test</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#isSkipTest()
+     * @see #getProbe()
+     * @generated
+     */
+    EAttribute getProbe_SkipTest();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeCommand <em>Probe Command</em>}'.
@@ -5354,6 +5464,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference PROBE__PROBE_MODS = eINSTANCE.getProbe_ProbeMods();
+
+        /**
+         * The meta object literal for the '<em><b>Skip Test</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE__SKIP_TEST = eINSTANCE.getProbe_SkipTest();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl <em>Probe Command</em>}' class.

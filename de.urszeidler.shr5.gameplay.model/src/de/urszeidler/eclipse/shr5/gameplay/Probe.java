@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getLimit <em>Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState <em>Probe State</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeMods <em>Probe Mods</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSkipTest <em>Skip Test</em>}</li>
  * </ul>
  * </p>
  *
@@ -193,5 +194,30 @@ public interface Probe extends EObject {
      * @generated
      */
     EList<ProbeMod> getProbeMods();
+
+    /**
+     * Returns the value of the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Skips the probe and uses the vaules raw.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Skip Test</em>' attribute.
+     * @see #setSkipTest(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_SkipTest()
+     * @model required="true"
+     * @generated
+     */
+    boolean isSkipTest();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSkipTest <em>Skip Test</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Skip Test</em>' attribute.
+     * @see #isSkipTest()
+     * @generated
+     */
+    void setSkipTest(boolean value);
 
 } // Probe

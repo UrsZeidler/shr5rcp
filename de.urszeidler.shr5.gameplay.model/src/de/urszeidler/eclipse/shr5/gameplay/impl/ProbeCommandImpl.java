@@ -35,6 +35,7 @@ import java.util.Collection;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getLimit <em>Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeState <em>Probe State</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeMods <em>Probe Mods</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#isSkipTest <em>Skip Test</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getThresholds <em>Thresholds</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getNetHits <em>Net Hits</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getTestState <em>Test State</em>}</li>
@@ -143,6 +144,26 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * @ordered
      */
     protected EList<ProbeMod> probeMods;
+
+    /**
+     * The default value of the '{@link #isSkipTest() <em>Skip Test</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSkipTest()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean SKIP_TEST_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isSkipTest() <em>Skip Test</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSkipTest()
+     * @generated
+     * @ordered
+     */
+    protected boolean skipTest = SKIP_TEST_EDEFAULT;
 
     /**
      * The default value of the '{@link #getThresholds() <em>Thresholds</em>}' attribute.
@@ -370,6 +391,27 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isSkipTest() {
+        return skipTest;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSkipTest(boolean newSkipTest) {
+        boolean oldSkipTest = skipTest;
+        skipTest = newSkipTest;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__SKIP_TEST, oldSkipTest, skipTest));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getThresholds() {
         return thresholds;
     }
@@ -475,6 +517,8 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return getProbeState();
             case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
                 return getProbeMods();
+            case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
+                return isSkipTest();
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return getThresholds();
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -509,6 +553,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 getProbeMods().clear();
                 getProbeMods().addAll((Collection<? extends ProbeMod>)newValue);
                 return;
+            case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
+                setSkipTest((Boolean)newValue);
+                return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds((Integer)newValue);
                 return;
@@ -541,6 +588,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return;
             case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
                 getProbeMods().clear();
+                return;
+            case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
+                setSkipTest(SKIP_TEST_EDEFAULT);
                 return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds(THRESHOLDS_EDEFAULT);
@@ -575,6 +625,8 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return getProbeState() != PROBE_STATE_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__PROBE_MODS:
                 return probeMods != null && !probeMods.isEmpty();
+            case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
+                return skipTest != SKIP_TEST_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return thresholds != THRESHOLDS_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -602,6 +654,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE_COMMAND__LIMIT: return GameplayPackage.PROBE__LIMIT;
                 case GameplayPackage.PROBE_COMMAND__PROBE_STATE: return GameplayPackage.PROBE__PROBE_STATE;
                 case GameplayPackage.PROBE_COMMAND__PROBE_MODS: return GameplayPackage.PROBE__PROBE_MODS;
+                case GameplayPackage.PROBE_COMMAND__SKIP_TEST: return GameplayPackage.PROBE__SKIP_TEST;
                 default: return -1;
             }
         }
@@ -631,6 +684,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE__LIMIT: return GameplayPackage.PROBE_COMMAND__LIMIT;
                 case GameplayPackage.PROBE__PROBE_STATE: return GameplayPackage.PROBE_COMMAND__PROBE_STATE;
                 case GameplayPackage.PROBE__PROBE_MODS: return GameplayPackage.PROBE_COMMAND__PROBE_MODS;
+                case GameplayPackage.PROBE__SKIP_TEST: return GameplayPackage.PROBE_COMMAND__SKIP_TEST;
                 default: return -1;
             }
         }
@@ -663,6 +717,8 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         result.append(glitches);
         result.append(", limit: ");
         if (limitESet) result.append(limit); else result.append("<unset>");
+        result.append(", skipTest: ");
+        result.append(skipTest);
         result.append(", thresholds: ");
         result.append(thresholds);
         result.append(", netHits: ");

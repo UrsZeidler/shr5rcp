@@ -215,6 +215,10 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/probeState"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_jVw0wSYQEeSIMvdKIF-9Cg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_eNmeQDOcEeS4YZKwsF3Lyw" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/skipTest"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_eNmeQTOcEeS4YZKwsF3Lyw"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_rGYMogrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_rGYMowrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_rGYMpArNEeSXe8h_-hOPdg"/>
