@@ -132,6 +132,7 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
         compositefw2.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
         managedForm.getToolkit().adapt(compositefw2);
         managedForm.getToolkit().paintBordersFor(compositefw2);
+        
         Section sctnRuntime = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnRuntime);

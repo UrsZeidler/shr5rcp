@@ -12,6 +12,7 @@ import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
@@ -104,6 +105,17 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         managedForm.getToolkit().adapt(grpQuelle);
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
+        
+        Section sctnRuntime = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnRuntime);
+        sctnRuntime.setText(Messages.GegenstandPage_sctnRuntime_text);
+        
+        Composite composite_runtime = managedForm.getToolkit().createComposite(sctnRuntime, SWT.NONE);
+        managedForm.getToolkit().paintBordersFor(composite_runtime);
+        sctnRuntime.setClient(composite_runtime);
+        composite_runtime.setLayout(new GridLayout(6, false));
+
 
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
@@ -120,6 +132,8 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
+        
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
 
         if (object instanceof Fokus) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe);
@@ -127,6 +141,8 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        
+ 
         managedForm.reflow(true);
     }
 
