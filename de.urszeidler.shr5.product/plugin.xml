@@ -72,6 +72,7 @@
       </perspective>
       <perspective
             class="de.urszeidler.shr5.product.application.CombatPerspective"
+            icon="icons/start-combat-on.png"
             id="de.urszeidler.shr5.product.application.CombatPerspective"
             name="Combat Perspective">
       </perspective>
