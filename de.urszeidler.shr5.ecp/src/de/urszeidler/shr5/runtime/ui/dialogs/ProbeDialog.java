@@ -129,7 +129,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
         Tree tree = treeViewer.getTree();
         GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
-        layoutData.heightHint = 40;
+        layoutData.heightHint = 80;
         tree.setLayoutData(layoutData);
 
         treeViewer.setLabelProvider(labelProvider);
