@@ -1,12 +1,78 @@
 package de.urszeidler.shr5.runtime.ui.dialogs;
 
+import java.awt.Button;
+import java.awt.Canvas;
+import java.awt.Checkbox;
+import java.awt.CheckboxMenuItem;
+import java.awt.Choice;
+import java.awt.Desktop;
+import java.awt.Dialog;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.FileDialog;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Frame;
+import java.awt.HeadlessException;
+import java.awt.Image;
+import java.awt.Label;
+import java.awt.Menu;
+import java.awt.MenuBar;
+import java.awt.MenuItem;
+import java.awt.Panel;
+import java.awt.PopupMenu;
+import java.awt.PrintJob;
+import java.awt.ScrollPane;
+import java.awt.Scrollbar;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.Toolkit;
+import java.awt.Window;
+import java.awt.Dialog.ModalExclusionType;
+import java.awt.Dialog.ModalityType;
+import java.awt.datatransfer.Clipboard;
+import java.awt.dnd.DragGestureEvent;
+import java.awt.dnd.InvalidDnDOperationException;
+import java.awt.dnd.peer.DragSourceContextPeer;
+import java.awt.font.TextAttribute;
+import java.awt.im.InputMethodHighlight;
+import java.awt.image.ColorModel;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+import java.awt.peer.ButtonPeer;
+import java.awt.peer.CanvasPeer;
+import java.awt.peer.CheckboxMenuItemPeer;
+import java.awt.peer.CheckboxPeer;
+import java.awt.peer.ChoicePeer;
+import java.awt.peer.DesktopPeer;
+import java.awt.peer.DialogPeer;
+import java.awt.peer.FileDialogPeer;
+import java.awt.peer.FontPeer;
+import java.awt.peer.FramePeer;
+import java.awt.peer.LabelPeer;
+import java.awt.peer.ListPeer;
+import java.awt.peer.MenuBarPeer;
+import java.awt.peer.MenuItemPeer;
+import java.awt.peer.MenuPeer;
+import java.awt.peer.PanelPeer;
+import java.awt.peer.PopupMenuPeer;
+import java.awt.peer.ScrollPanePeer;
+import java.awt.peer.ScrollbarPeer;
+import java.awt.peer.TextAreaPeer;
+import java.awt.peer.TextFieldPeer;
+import java.awt.peer.WindowPeer;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.databinding.EMFDataBindingContext;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -24,10 +90,14 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
+import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -40,6 +110,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
     }
 
     private EmfFormBuilder emfFormBuilder;
+    private EmfFormBuilder emfFormBuilder_skip;
     // private FormToolkit toolkit;
     private List<EStructuralFeature> eAllStructuralFeatures;
     protected EMFDataBindingContext ctx = new EMFDataBindingContext();
@@ -78,13 +149,19 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         this.labelProvider = labelProvider;
         this.newTitle = titel + " " + labelProvider.getText(cmd.eClass());
         this.state = pstate;
+
+        FormToolkit formToolkit = new FormToolkit(shell.getDisplay());
+
         emfFormBuilder = new EmfFormBuilder(null, itemDelegator, labelProvider, null);
         emfFormBuilder.setManager(mananger);
+        emfFormBuilder_skip = new EmfFormBuilder(null, itemDelegator, labelProvider, null);
+        emfFormBuilder_skip.setManager(mananger);
         eAllStructuralFeatures = Arrays.asList(features);
     }
 
     @Override
     public boolean close() {
+        emfFormBuilder_skip.dispose();
         emfFormBuilder.dispose();
         probe.eAdapters().remove(this);
         return super.close();
@@ -118,14 +195,31 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         if (eAllStructuralFeatures != null && state != ProbeExecutionState.afterExecute) {
             Group grpData = new Group(container, SWT.NONE);
             grpData.setLayout(new GridLayout(3, false));
-            grpData.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+            grpData.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, eAllStructuralFeatures.size()));
             grpData.setText("probe data");
 
             emfFormBuilder.addAllEntries(eAllStructuralFeatures, null);
             emfFormBuilder.buildinComposite(ctx, grpData, probe);
             grpData.setSize(grpData.computeSize(SWT.DEFAULT, SWT.DEFAULT));
-
         }
+        if (state == ProbeExecutionState.prepare) {
+            List<EStructuralFeature> eAllStructuralFeatures_1 = new ArrayList<EStructuralFeature>();
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SUCCESSES);
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__GLITCHES);
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__LIMIT);
+            if (probe instanceof SuccesTest) {
+                eAllStructuralFeatures_1.add(GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS);
+            }
+            Group grpData = new Group(container, SWT.NONE);
+            grpData.setLayout(new GridLayout(3, false));
+            grpData.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, eAllStructuralFeatures_1.size()));
+            grpData.setText("skip probe");
+            emfFormBuilder_skip.addAllEntries(eAllStructuralFeatures_1, null);
+            emfFormBuilder_skip.buildinComposite(ctx, grpData, probe);
+            grpData.setSize(grpData.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+        }
+
         TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
         Tree tree = treeViewer.getTree();
         GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
@@ -135,11 +229,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         treeViewer.setLabelProvider(labelProvider);
         treeViewer.setContentProvider(new AdapterFactoryContentProvider(AdapterFactoryUtil.getInstance().getAdapterFactory()));
         treeViewer.setInput(probe);
-        // lblProbetext = new Label(container, SWT.WRAP);
-        // GridData gd_lblProbetext = new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 2);
-        // gd_lblProbetext.heightHint = 27;
-        // lblProbetext.setLayoutData(gd_lblProbetext);
-        // lblProbetext.setText(labelProvider.getText(probe));
+
         area.setSize(area.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         return area;
     }
@@ -160,24 +250,23 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
      */
     @Override
     protected Point getInitialSize() {
-        // return super.getInitialSize();
-        return new Point(450, 500);
+         Point initialSize = super.getInitialSize();
+        return new Point(450, Math.max(initialSize.y, 500) );
     }
 
-    
     @Override
     public void notifyChanged(Notification notification) {
         setMessage(labelProvider.getText(probe));
-     }
+    }
 
     @Override
     public Notifier getTarget() {
-         return null;
+        return null;
     }
 
     @Override
     public void setTarget(Notifier newTarget) {
-         
+
     }
 
     @Override
