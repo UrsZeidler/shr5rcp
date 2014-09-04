@@ -29,10 +29,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements MeeleAttackCmd {
@@ -40,6 +40,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
      * The cached value of the '{@link #getWeapon() <em>Weapon</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getWeapon()
      * @generated
      * @ordered
@@ -49,6 +50,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MeeleAttackCmdImpl() {
@@ -58,6 +60,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -68,6 +71,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Nahkampfwaffe getWeapon() {
@@ -85,6 +89,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Nahkampfwaffe basicGetWeapon() {
@@ -94,6 +99,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setWeapon(Nahkampfwaffe newWeapon) {
@@ -106,13 +112,15 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.MEELE_ATTACK_CMD__WEAPON:
-                if (resolve) return getWeapon();
+                if (resolve)
+                    return getWeapon();
                 return basicGetWeapon();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -121,6 +129,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -136,6 +145,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -151,6 +161,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -169,7 +180,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
-        mods = mods + GameplayTools.getWoundMod(getSubject(),getProbeMods());
+        mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
 
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
         setSkill(fertigkeit);
@@ -181,21 +192,20 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
 
     }
 
-    
     @Override
     public void redo() {
         prepareRedo();
-        
 
- 
-        W6Dice w6Dice = new W6Dice();
+        if (!isSkipTest()) {
+            W6Dice w6Dice = new W6Dice();
 
-        int dice =  GameplayTools.getSkillDicePool(getSkill(),getSubject())+mods;//  getSkill().getStufe() + att + mods;
-        List<Integer> probe = w6Dice.probe(dice);
-        this.getProbe().addAll(probe);
-        // if(isSetLimit())
-        this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
-        this.glitches = W6Dice.calcGlitchDice(probe);
+            int dice = GameplayTools.getSkillDicePool(getSkill(), getSubject()) + mods;// getSkill().getStufe() + att + mods;
+            List<Integer> probe = w6Dice.probe(dice);
+            this.getProbe().addAll(probe);
+            // if(isSetLimit())
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.glitches = W6Dice.calcGlitchDice(probe);
+        }
         this.netHits = getSuccesses() - thresholds;
 
         if (getCmdCallback() != null)
@@ -218,17 +228,17 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
                 damageTest.setCmdCallback(getCmdCallback());
                 damageTest.setDate(getDate());
                 damageTest.setDv(weapon.getDurchschlagsKraft());
-               // DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
-                DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode(),getSubject().getCharacter().getPersona());
+                // DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
+                DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode(), getSubject().getCharacter().getPersona());
                 if (damageCode != null) {
-//                    int power = damageCode.getPower();
-//                    if(damageCode.getAttribute()!=null){
-//                        Integer value = (Integer)getSubject().getCharacter().getPersona().eGet(damageCode.getAttribute());
-//                        power = value + power;
-//                    }
+                    // int power = damageCode.getPower();
+                    // if(damageCode.getAttribute()!=null){
+                    // Integer value = (Integer)getSubject().getCharacter().getPersona().eGet(damageCode.getAttribute());
+                    // power = value + power;
+                    // }
                     int d = damageCode.getPower() - defensTestCmd.getNetHits();
                     damageTest.setDamage(new DamageCode(d, damageCode.getType()).toString());
-                    //damageTest.setDamage(damageCode.toString());
+                    // damageTest.setDamage(damageCode.toString());
                 }
                 getSubCommands().add(damageTest);
                 damageTest.redo();

@@ -21,10 +21,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DefensTestCmdImpl#getAttackersHits <em>Attackers Hits</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DefensTestCmdImpl#getAttackersHits <em>Attackers Hits</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd {
@@ -32,6 +32,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
      * The default value of the '{@link #getAttackersHits() <em>Attackers Hits</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttackersHits()
      * @generated
      * @ordered
@@ -42,6 +43,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
      * The cached value of the '{@link #getAttackersHits() <em>Attackers Hits</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttackersHits()
      * @generated
      * @ordered
@@ -51,6 +53,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected DefensTestCmdImpl() {
@@ -60,6 +63,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -70,6 +74,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getAttackersHits() {
@@ -79,6 +84,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setAttackersHits(int newAttackersHits) {
@@ -96,22 +102,17 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
         prepareRedo();
 
-        W6Dice w6Dice = new W6Dice();
+        if (!isSkipTest()) {
+            W6Dice w6Dice = new W6Dice();
 
-
-//        if (getCmdCallback() != null)
-//            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,
-//                    GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS);
-
-        int dicePool = getSubject().getCharacter().getPersona().getAusweichen();
-        int dice = dicePool + mods;
+            int dicePool = getSubject().getCharacter().getPersona().getAusweichen();
+            int dice = dicePool + mods;
+            List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
+            this.getProbe().addAll(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.glitches = W6Dice.calcGlitchDice(probe);
+        }
         this.thresholds = attackersHits;
-        // AbstaktPersona persona = subject.getPersona();
-        List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
-        this.getProbe().addAll(probe);
-        // if(isSetLimit())
-        this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
-        this.glitches = W6Dice.calcGlitchDice(probe);
         this.netHits = getSuccesses() - thresholds;
 
         GameplayTools.inreaseDefenceMod(getSubject(), -1);
@@ -122,6 +123,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -136,6 +138,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -151,6 +154,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -166,6 +170,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -180,11 +185,13 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (attackersHits: ");
