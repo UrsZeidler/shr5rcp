@@ -855,6 +855,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         else
             return;
 
+        sctnActionSection.setExpanded(false);
         // scriptService.executeCommand(combatTurn);
         scriptService.setCombatTurn(combatTurn);
     }
