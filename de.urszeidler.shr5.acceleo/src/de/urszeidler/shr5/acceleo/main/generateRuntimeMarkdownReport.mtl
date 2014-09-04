@@ -2,7 +2,7 @@
 [**
  * The documentation of the module generateEcoreReport.
  */]
-[module generateScriptMarkdownReport('http://www.eclipse.org/emf/2002/Ecore')]
+[module generateRuntimeMarkdownReport('http://www.eclipse.org/emf/2002/Ecore')]
 [import de::urszeidler::shr5::acceleo::main::ecoreToMarkdown /]
 
 [**
@@ -10,7 +10,7 @@
  * @param anEPackage
  */]
 [template public generateElement(anEPackage : EPackage){
-basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.scripting.edit' ;
+basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.runtime.edit' ;
 }]
 [comment @main/]
 [file (anEPackage.name+'-model.md', false, 'UTF-8')]

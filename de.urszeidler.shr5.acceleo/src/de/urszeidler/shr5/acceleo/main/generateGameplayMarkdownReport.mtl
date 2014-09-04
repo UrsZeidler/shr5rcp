@@ -10,16 +10,17 @@
  * @param anEPackage
  */]
 [template public generateElement(anEPackage : EPackage){
-basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.model.edit' ;
+basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.gameplay.model.edit' ;
 }]
 [comment @main/]
 [file (anEPackage.name+'-model.md', false, 'UTF-8')]
 # concret classes in the model [anEPackage.name/]
 
 
-[comment][printAllSubClassesAndTitel(anEPackage, 'AbstraktPersona')/]
-These are all the character types you can create.
+[printAllSubClassesAndTitel(anEPackage, 'Probe')/]
+These are all the Probes.
 
+[comment]
 [printAllSubClassesAndTitel(anEPackage, 'Erlernbar')/]
 All the things a character can learn.
 
