@@ -212,6 +212,15 @@ public interface GameplayFactory extends EFactory {
     ProbeMod createProbeMod();
 
     /**
+     * Returns a new object of class '<em>Set Extendet Data</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Set Extendet Data</em>'.
+     * @generated
+     */
+    SetExtendetData createSetExtendetData();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

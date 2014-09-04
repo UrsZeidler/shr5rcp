@@ -153,5 +153,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ProbeMod/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ProbeMod/type"/>
     </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//SetExtendetData">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetExtendetData/dataAware"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetExtendetData/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SetExtendetData/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

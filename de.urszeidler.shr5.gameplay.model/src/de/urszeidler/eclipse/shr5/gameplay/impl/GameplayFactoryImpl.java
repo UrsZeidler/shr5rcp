@@ -103,6 +103,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.RANGED_ATTACK_CMD: return createRangedAttackCmd();
             case GameplayPackage.INTERVALL: return createIntervall();
             case GameplayPackage.PROBE_MOD: return createProbeMod();
+            case GameplayPackage.SET_EXTENDET_DATA: return createSetExtendetData();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -358,6 +359,16 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public ProbeMod createProbeMod() {
         ProbeModImpl probeMod = new ProbeModImpl();
         return probeMod;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SetExtendetData createSetExtendetData() {
+        SetExtendetDataImpl setExtendetData = new SetExtendetDataImpl();
+        return setExtendetData;
     }
 
     /**

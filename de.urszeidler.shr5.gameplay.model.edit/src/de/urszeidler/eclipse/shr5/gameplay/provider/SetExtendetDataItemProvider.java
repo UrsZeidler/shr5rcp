@@ -4,13 +4,20 @@
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
 
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,17 +29,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
-
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SetFeatureCommandItemProvider
+public class SetExtendetDataItemProvider
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -46,7 +49,7 @@ public class SetFeatureCommandItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public SetFeatureCommandItemProvider(AdapterFactory adapterFactory) {
+    public SetExtendetDataItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -66,9 +69,9 @@ public class SetFeatureCommandItemProvider
             addCmdCallbackPropertyDescriptor(object);
             addExecutingPropertyDescriptor(object);
             addCanExecutePropertyDescriptor(object);
+            addDataAwarePropertyDescriptor(object);
+            addDataPropertyDescriptor(object);
             addValuePropertyDescriptor(object);
-            addObjectPropertyDescriptor(object);
-            addFeaturePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -184,6 +187,50 @@ public class SetFeatureCommandItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Data Aware feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDataAwarePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SetExtendetData_dataAware_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetExtendetData_dataAware_feature", "_UI_SetExtendetData_type"),
+                 GameplayPackage.Literals.SET_EXTENDET_DATA__DATA_AWARE,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Data feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDataPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SetExtendetData_data_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetExtendetData_data_feature", "_UI_SetExtendetData_type"),
+                 GameplayPackage.Literals.SET_EXTENDET_DATA__DATA,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Value feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -194,57 +241,13 @@ public class SetFeatureCommandItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_SetFeatureCommand_value_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_value_feature", "_UI_SetFeatureCommand_type"),
-                 GameplayPackage.Literals.SET_FEATURE_COMMAND__VALUE,
+                 getString("_UI_SetExtendetData_value_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SetExtendetData_value_feature", "_UI_SetExtendetData_type"),
+                 GameplayPackage.Literals.SET_EXTENDET_DATA__VALUE,
                  true,
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Object feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addObjectPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_SetFeatureCommand_object_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_object_feature", "_UI_SetFeatureCommand_type"),
-                 GameplayPackage.Literals.SET_FEATURE_COMMAND__OBJECT,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Feature feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addFeaturePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_SetFeatureCommand_feature_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SetFeatureCommand_feature_feature", "_UI_SetFeatureCommand_type"),
-                 GameplayPackage.Literals.SET_FEATURE_COMMAND__FEATURE,
-                 true,
-                 false,
-                 true,
-                 null,
                  null,
                  null));
     }
@@ -280,34 +283,26 @@ public class SetFeatureCommandItemProvider
     }
 
     /**
-     * This returns SetFeatureCommand.gif.
+     * This returns SetExtendetData.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/SetFeatureCommand"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/SetExtendetData"));
     }
 
     /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated not 
+     * @generated
      */
     @Override
     public String getText(Object object) {
-        SetFeatureCommand setFeatureCommand = (SetFeatureCommand)object;
-//        String label = getString("_UI_unset");
-//        String label1 = getString("_UI_unset");
-//        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-//        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(setFeatureCommand.getObject(), IItemLabelProvider.class);
-//        if (labelprovider != null) {
-//            label = labelprovider.getText(setFeatureCommand.getObject());
-//        }
-
-        return getString("_UI_SetFeatureCommand_type");// + " " + setFeatureCommand.isExecuted();
+        SetExtendetData setExtendetData = (SetExtendetData)object;
+        return getString("_UI_SetExtendetData_type") + " " + setExtendetData.isExecuted();
     }
 
     /**
@@ -321,16 +316,16 @@ public class SetFeatureCommandItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(SetFeatureCommand.class)) {
-            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTED:
-            case GameplayPackage.SET_FEATURE_COMMAND__DATE:
-            case GameplayPackage.SET_FEATURE_COMMAND__CMD_CALLBACK:
-            case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
-            case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
-            case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
+        switch (notification.getFeatureID(SetExtendetData.class)) {
+            case GameplayPackage.SET_EXTENDET_DATA__EXECUTED:
+            case GameplayPackage.SET_EXTENDET_DATA__DATE:
+            case GameplayPackage.SET_EXTENDET_DATA__CMD_CALLBACK:
+            case GameplayPackage.SET_EXTENDET_DATA__EXECUTING:
+            case GameplayPackage.SET_EXTENDET_DATA__CAN_EXECUTE:
+            case GameplayPackage.SET_EXTENDET_DATA__VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS:
+            case GameplayPackage.SET_EXTENDET_DATA__SUB_COMMANDS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }

@@ -555,6 +555,29 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SetExtendetDataItemProvider setExtendetDataItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSetExtendetDataAdapter() {
+        if (setExtendetDataItemProvider == null) {
+            setExtendetDataItemProvider = new SetExtendetDataItemProvider(this);
+        }
+
+        return setExtendetDataItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -674,6 +697,7 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (rangedAttackCmdItemProvider != null) rangedAttackCmdItemProvider.dispose();
         if (intervallItemProvider != null) intervallItemProvider.dispose();
         if (probeModItemProvider != null) probeModItemProvider.dispose();
+        if (setExtendetDataItemProvider != null) setExtendetDataItemProvider.dispose();
     }
 
 }

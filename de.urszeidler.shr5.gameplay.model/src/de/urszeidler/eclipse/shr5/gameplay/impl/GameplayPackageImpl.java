@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
@@ -252,6 +253,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass probeModEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass setExtendetDataEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1185,6 +1193,42 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSetExtendetData() {
+        return setExtendetDataEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSetExtendetData_DataAware() {
+        return (EReference)setExtendetDataEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSetExtendetData_Data() {
+        return (EReference)setExtendetDataEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSetExtendetData_Value() {
+        return (EAttribute)setExtendetDataEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getTimeUnits() {
         return timeUnitsEEnum;
     }
@@ -1373,6 +1417,11 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(probeModEClass, PROBE_MOD__VALUE);
         createEReference(probeModEClass, PROBE_MOD__TYPE);
 
+        setExtendetDataEClass = createEClass(SET_EXTENDET_DATA);
+        createEReference(setExtendetDataEClass, SET_EXTENDET_DATA__DATA_AWARE);
+        createEReference(setExtendetDataEClass, SET_EXTENDET_DATA__DATA);
+        createEAttribute(setExtendetDataEClass, SET_EXTENDET_DATA__VALUE);
+
         // Create enums
         timeUnitsEEnum = createEEnum(TIME_UNITS);
         interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
@@ -1438,6 +1487,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         setFeatureCommandEClass.getESuperTypes().add(this.getCommand());
         meeleAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
         rangedAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
+        setExtendetDataEClass.getESuperTypes().add(this.getCommand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1565,6 +1615,11 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(probeModEClass, ProbeMod.class, "ProbeMod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeMod_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ProbeMod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getProbeMod_Type(), theRuntimePackage.getExtendetData(), null, "type", null, 1, 1, ProbeMod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(setExtendetDataEClass, SetExtendetData.class, "SetExtendetData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSetExtendetData_DataAware(), theRuntimePackage.getAbstractExtendetDataAware(), null, "dataAware", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSetExtendetData_Data(), theRuntimePackage.getExtendetData(), null, "data", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSetExtendetData_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(timeUnitsEEnum, TimeUnits.class, "TimeUnits");

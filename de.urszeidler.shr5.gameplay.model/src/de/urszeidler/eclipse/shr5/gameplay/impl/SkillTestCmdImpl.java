@@ -23,10 +23,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SkillTestCmdImpl#getSkill <em>Skill</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SkillTestCmdImpl#getSkill <em>Skill</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
@@ -34,7 +34,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * The cached value of the '{@link #getSkill() <em>Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSkill()
      * @generated
      * @ordered
@@ -44,7 +43,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SkillTestCmdImpl() {
@@ -54,7 +52,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -65,7 +62,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit getSkill() {
@@ -83,7 +79,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit basicGetSkill() {
@@ -93,7 +88,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSkill(Fertigkeit newSkill) {
@@ -106,15 +100,13 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.SKILL_TEST_CMD__SKILL:
-                if (resolve)
-                    return getSkill();
+                if (resolve) return getSkill();
                 return basicGetSkill();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -123,7 +115,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -139,7 +130,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -155,7 +145,6 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -49,7 +49,7 @@ public class GameplayTests extends TestSuite {
         suite.addTestSuite(SetFeatureCommandTest.class);
         suite.addTestSuite(MeeleAttackCmdTest.class);
         suite.addTestSuite(RangedAttackCmdTest.class);
-        
+        suite.addTestSuite(SetExtendetDataTest.class);
         suite.addTestSuite(GameplayToolsTest.class);
         return suite;
     }

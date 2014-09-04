@@ -4041,6 +4041,133 @@ public interface GameplayPackage extends EPackage {
     int PROBE_MOD_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl <em>Set Extendet Data</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSetExtendetData()
+     * @generated
+     */
+    int SET_EXTENDET_DATA = 28;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__EXECUTED = COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__SUB_COMMANDS = COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__DATE = COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__CMD_CALLBACK = COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__EXECUTING = COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Data Aware</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__DATA_AWARE = COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Data</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__DATA = COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__VALUE = COMMAND_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Set Extendet Data</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA___REDO = COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA___UNDO = COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Set Extendet Data</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4048,7 +4175,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 28;
+    int TIME_UNITS = 29;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
@@ -4058,7 +4185,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
      * @generated
      */
-    int INTERRUPT_TYPE = 29;
+    int INTERRUPT_TYPE = 30;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
@@ -4068,7 +4195,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
      * @generated
      */
-    int PROBE_STATE = 30;
+    int PROBE_STATE = 31;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
@@ -4078,7 +4205,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
      * @generated
      */
-    int SUCCES_TEST_STATE = 31;
+    int SUCCES_TEST_STATE = 32;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -4088,7 +4215,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 32;
+    int COMMAND_CALLBACK = 33;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -5070,6 +5197,49 @@ public interface GameplayPackage extends EPackage {
     EReference getProbeMod_Type();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData <em>Set Extendet Data</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Set Extendet Data</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData
+     * @generated
+     */
+    EClass getSetExtendetData();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getDataAware <em>Data Aware</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Data Aware</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getDataAware()
+     * @see #getSetExtendetData()
+     * @generated
+     */
+    EReference getSetExtendetData_DataAware();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Data</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData()
+     * @see #getSetExtendetData()
+     * @generated
+     */
+    EReference getSetExtendetData_Data();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getValue <em>Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getValue()
+     * @see #getSetExtendetData()
+     * @generated
+     */
+    EAttribute getSetExtendetData_Value();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5934,6 +6104,40 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference PROBE_MOD__TYPE = eINSTANCE.getProbeMod_Type();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl <em>Set Extendet Data</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSetExtendetData()
+         * @generated
+         */
+        EClass SET_EXTENDET_DATA = eINSTANCE.getSetExtendetData();
+
+        /**
+         * The meta object literal for the '<em><b>Data Aware</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SET_EXTENDET_DATA__DATA_AWARE = eINSTANCE.getSetExtendetData_DataAware();
+
+        /**
+         * The meta object literal for the '<em><b>Data</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SET_EXTENDET_DATA__DATA = eINSTANCE.getSetExtendetData_Data();
+
+        /**
+         * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SET_EXTENDET_DATA__VALUE = eINSTANCE.getSetExtendetData_Value();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.

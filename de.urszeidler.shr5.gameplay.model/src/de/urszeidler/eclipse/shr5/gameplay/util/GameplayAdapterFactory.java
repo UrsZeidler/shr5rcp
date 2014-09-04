@@ -207,6 +207,10 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
                 return createProbeModAdapter();
             }
             @Override
+            public Adapter caseSetExtendetData(SetExtendetData object) {
+                return createSetExtendetDataAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -615,6 +619,20 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createProbeModAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData <em>Set Extendet Data</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData
+     * @generated
+     */
+    public Adapter createSetExtendetDataAdapter() {
         return null;
     }
 

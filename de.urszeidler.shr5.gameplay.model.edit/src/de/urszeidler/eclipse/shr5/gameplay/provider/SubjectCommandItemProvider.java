@@ -377,6 +377,11 @@ public class SubjectCommandItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
                  GameplayFactory.eINSTANCE.createRangedAttackCmd()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSetExtendetData()));
     }
 
     /**

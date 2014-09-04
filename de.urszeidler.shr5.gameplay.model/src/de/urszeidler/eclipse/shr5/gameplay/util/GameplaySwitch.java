@@ -335,6 +335,13 @@ public class GameplaySwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case GameplayPackage.SET_EXTENDET_DATA: {
+                SetExtendetData setExtendetData = (SetExtendetData)theEObject;
+                T result = caseSetExtendetData(setExtendetData);
+                if (result == null) result = caseCommand(setExtendetData);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -756,6 +763,21 @@ public class GameplaySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseProbeMod(ProbeMod object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Set Extendet Data</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Set Extendet Data</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSetExtendetData(SetExtendetData object) {
         return null;
     }
 

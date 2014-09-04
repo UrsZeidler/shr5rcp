@@ -229,6 +229,11 @@ public class ExecutionProtocolItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
                  GameplayFactory.eINSTANCE.createRangedAttackCmd()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createSetExtendetData()));
     }
 
     /**

@@ -266,7 +266,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_ds-GEQrOEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//PhaseCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ds-GEgrOEeSXe8h_-hOPdg" x="920" y="35"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ds-GEgrOEeSXe8h_-hOPdg" x="650" y="-140"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_FMnq0ArQEeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_FMo48ArQEeSXe8h_-hOPdg" type="4001"/>
@@ -636,6 +636,64 @@
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.runtime/model/runtime.ecore#//ExtendetData"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o6pbsiyJEeSKO6QkbmakNg" x="1075" y="315"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_felLoDRlEeS4YZKwsF3Lyw" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_feu8oDRlEeS4YZKwsF3Lyw" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_fewKwDRlEeS4YZKwsF3Lyw" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_KaNvEDRnEeS4YZKwsF3Lyw" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//SetExtendetData/value"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_KaNvETRnEeS4YZKwsF3Lyw"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_fewKwTRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_fewKwjRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_fewKwzRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_fex_8DRlEeS4YZKwsF3Lyw" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_fex_8TRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_fex_8jRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_fex_8zRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_felLoTRlEeS4YZKwsF3Lyw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="gameplay.ecore#//SetExtendetData"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_felLojRlEeS4YZKwsF3Lyw" x="870" y="45"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_lkjEUDRlEeS4YZKwsF3Lyw" type="1001">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ll7kYDRlEeS4YZKwsF3Lyw" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ll7kYTRlEeS4YZKwsF3Lyw" key="modelID" value="EcoreTools"/>
+      </eAnnotations>
+      <children xmi:type="notation:Node" xmi:id="_lkjrYDRlEeS4YZKwsF3Lyw" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_lkjrYTRlEeS4YZKwsF3Lyw" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_lkjrYjRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_lkjrYzRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_lkjrZDRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_lkjrZTRlEeS4YZKwsF3Lyw" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_lkjrZjRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_lkjrZzRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_lkjraDRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_lkjEUTRlEeS4YZKwsF3Lyw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.runtime/model/runtime.ecore#//AbstractExtendetDataAware"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lkjEUjRlEeS4YZKwsF3Lyw" x="1205" y="55"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wyI-IDRlEeS4YZKwsF3Lyw" type="1001">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wylDADRlEeS4YZKwsF3Lyw" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wylDATRlEeS4YZKwsF3Lyw" key="modelID" value="EcoreTools"/>
+      </eAnnotations>
+      <children xmi:type="notation:Node" xmi:id="_wyJlMDRlEeS4YZKwsF3Lyw" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_wyJlMTRlEeS4YZKwsF3Lyw" type="5001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_wyJlMjRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_wyJlMzRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_wyJlNDRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wyJlNTRlEeS4YZKwsF3Lyw" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_wyJlNjRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_wyJlNzRlEeS4YZKwsF3Lyw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_wyJlODRlEeS4YZKwsF3Lyw"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_wyI-ITRlEeS4YZKwsF3Lyw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.runtime/model/runtime.ecore#//ExtendetData"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyI-IjRlEeS4YZKwsF3Lyw" x="1205" y="-5"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6sTbwY_GEd6SEpVfiQZsGw"/>
     <element xmi:type="ecore:EPackage" href="gameplay.ecore#/"/>
     <edges xmi:type="notation:Edge" xmi:id="_wH-r8I_HEd6SEpVfiQZsGw" type="3002" source="_-0TL4I_GEd6SEpVfiQZsGw" target="_rRXiUI_HEd6SEpVfiQZsGw">
@@ -922,6 +980,46 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_s4w3EiyJEeSKO6QkbmakNg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//ProbeMod/type"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_s4w3EyyJEeSKO6QkbmakNg" points="[7, 24, -4, -71]$[7, 67, -4, -28]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_llgGkDRlEeS4YZKwsF3Lyw" type="3003" source="_qJ0TMArMEeSXe8h_-hOPdg" target="_lkjEUDRlEeS4YZKwsF3Lyw">
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_llgGkTRlEeS4YZKwsF3Lyw" routing="Rectilinear" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_llgGkjRlEeS4YZKwsF3Lyw" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_llgGkzRlEeS4YZKwsF3Lyw" points="[-63, -13, 1297, 2]$[-1267, -13, 93, 2]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_zXFnIDRlEeS4YZKwsF3Lyw" type="3002" source="_felLoDRlEeS4YZKwsF3Lyw" target="_lkjEUDRlEeS4YZKwsF3Lyw">
+      <children xmi:type="notation:Node" xmi:id="_zXGOMDRlEeS4YZKwsF3Lyw" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zXGOMTRlEeS4YZKwsF3Lyw" x="-10" y="-10"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zXG1QDRlEeS4YZKwsF3Lyw" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zXG1QTRlEeS4YZKwsF3Lyw" x="10" y="10"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_zXFnITRlEeS4YZKwsF3Lyw" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zXFnIjRlEeS4YZKwsF3Lyw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//SetExtendetData/dataAware"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zXFnIzRlEeS4YZKwsF3Lyw" points="[61, -6, -236, 21]$[204, -25, -93, 2]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_5mNb0DRlEeS4YZKwsF3Lyw" type="3002" source="_felLoDRlEeS4YZKwsF3Lyw" target="_wyI-IDRlEeS4YZKwsF3Lyw">
+      <children xmi:type="notation:Node" xmi:id="_5mNb1DRlEeS4YZKwsF3Lyw" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5mNb1TRlEeS4YZKwsF3Lyw" x="-10" y="-10"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_5mNb1jRlEeS4YZKwsF3Lyw" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5mNb1zRlEeS4YZKwsF3Lyw" x="10" y="10"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_5mNb0TRlEeS4YZKwsF3Lyw" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_5mNb0jRlEeS4YZKwsF3Lyw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="gameplay.ecore#//SetExtendetData/data"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5mNb0zRlEeS4YZKwsF3Lyw" points="[2, 0, -198, 96]$[201, -68, 1, 28]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5mPRADRlEeS4YZKwsF3Lyw" id="(0.8225806451612904,0.023809523809523808)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5mPRATRlEeS4YZKwsF3Lyw" id="(0.09523809523809523,0.5)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_9N-zwDRlEeS4YZKwsF3Lyw" type="3003" source="_felLoDRlEeS4YZKwsF3Lyw" target="_rRXiUI_HEd6SEpVfiQZsGw">
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_9N-zwTRlEeS4YZKwsF3Lyw" routing="Rectilinear" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_9N-zwjRlEeS4YZKwsF3Lyw" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9N-zwzRlEeS4YZKwsF3Lyw" points="[-31, -9, 209, 63]$[-210, -9, 30, 63]$[-210, -32, 30, 40]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9OCeIDRlEeS4YZKwsF3Lyw" id="(0.21774193548387097,0.40476190476190477)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9ODFMDRlEeS4YZKwsF3Lyw" id="(0.752,0.7222222222222222)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_kXGUUAuVEeStocVKc3B8yQ" type="EcoreTools" name="diagram_combat_turn" measurementUnit="Pixel">
