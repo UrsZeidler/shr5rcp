@@ -3,15 +3,19 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
-import de.urszeidler.eclipse.shr5.gameplay.tests.SetFeatureCommandTest.CommandCallbackImplementation;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -176,7 +180,7 @@ public class SetExtendetDataTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#isSetCmdCallback()
-     * @generated
+     * @generated not
      */
     public void testIsSetCmdCallback() {
         assertNull(getFixture().getCmdCallback());
@@ -192,12 +196,18 @@ public class SetExtendetDataTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute()
-     * @generated
+     * @generated not
      */
     public void testIsCanExecute() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertFalse(getFixture().isCanExecute());
+        
+        RuntimeCharacter runtimeCharacter = GameplayTools.createRuntimeCharacter();
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        getFixture().setDataAware(runtimeCharacter);
+        getFixture().setData(data);
+        getFixture().setValue(1);
+
+        assertTrue(getFixture().isCanExecute());
     }
 
     /**
@@ -205,12 +215,16 @@ public class SetExtendetDataTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
-     * @generated
+     * @generated not
      */
     public void testRedo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        RuntimeCharacter runtimeCharacter = GameplayTools.createRuntimeCharacter();
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        getFixture().setDataAware(runtimeCharacter);
+        getFixture().setData(data);
+        getFixture().setValue(1);
+        getFixture().redo();
+        assertEquals(1, runtimeCharacter.getIntegerValue(data));        
     }
 
     /**
@@ -218,12 +232,10 @@ public class SetExtendetDataTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#undo()
-     * @generated
+     * @generated not
      */
     public void testUndo() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+     
     }
 
 } //SetExtendetDataTest

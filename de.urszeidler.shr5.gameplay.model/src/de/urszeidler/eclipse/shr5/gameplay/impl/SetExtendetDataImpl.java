@@ -346,12 +346,10 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public boolean isCanExecute() {
-        // TODO: implement this method to return the 'Can Execute' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return (getDataAware() != null && getData() != null);
     }
 
     /**
@@ -454,12 +452,19 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void redo() {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        setExecuting(true);
+
+        if (isSetCmdCallback())
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SET_EXTENDET_DATA__DATA_AWARE);
+
+        getDataAware().getExtendetData().put(getData(), getValue());
+        
+        setExecuted(true);
+        setExecuting(false);
+
     }
 
     /**
