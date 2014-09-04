@@ -462,13 +462,31 @@ public interface RuntimePackage extends EPackage {
     int NAHKAMP_MODIFIKATIONEN__ENEMY_CLOSE_COMBAT = 1;
 
     /**
+     * The feature id for the '<em><b>Character Running</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMP_MODIFIKATIONEN__CHARACTER_RUNNING = 2;
+
+    /**
+     * The feature id for the '<em><b>Character Prone</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE = 3;
+
+    /**
      * The number of structural features of the '<em>Nahkamp Modifikationen</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int NAHKAMP_MODIFIKATIONEN_FEATURE_COUNT = 2;
+    int NAHKAMP_MODIFIKATIONEN_FEATURE_COUNT = 4;
 
     /**
      * The number of operations of the '<em>Nahkamp Modifikationen</em>' class.
@@ -1155,6 +1173,28 @@ public interface RuntimePackage extends EPackage {
     EAttribute getNahkampModifikationen_EnemyCloseCombat();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterRunning <em>Character Running</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Character Running</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterRunning()
+     * @see #getNahkampModifikationen()
+     * @generated
+     */
+    EAttribute getNahkampModifikationen_CharacterRunning();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterProne <em>Character Prone</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Character Prone</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterProne()
+     * @see #getNahkampModifikationen()
+     * @generated
+     */
+    EAttribute getNahkampModifikationen_CharacterProne();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware <em>Extendet Data Aware</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1540,6 +1580,22 @@ public interface RuntimePackage extends EPackage {
          * @generated
          */
         EAttribute NAHKAMP_MODIFIKATIONEN__ENEMY_CLOSE_COMBAT = eINSTANCE.getNahkampModifikationen_EnemyCloseCombat();
+
+        /**
+         * The meta object literal for the '<em><b>Character Running</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute NAHKAMP_MODIFIKATIONEN__CHARACTER_RUNNING = eINSTANCE.getNahkampModifikationen_CharacterRunning();
+
+        /**
+         * The meta object literal for the '<em><b>Character Prone</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE = eINSTANCE.getNahkampModifikationen_CharacterProne();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware <em>Extendet Data Aware</em>}' class.

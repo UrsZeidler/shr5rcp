@@ -22,6 +22,8 @@
     <genClasses image="false" ecoreClass="runtime.ecore#//NahkampModifikationen">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//NahkampModifikationen/chracterIsDown"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//NahkampModifikationen/enemyCloseCombat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//NahkampModifikationen/characterRunning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//NahkampModifikationen/characterProne"/>
     </genClasses>
     <genClasses image="false" ecoreClass="runtime.ecore#//ExtendetDataAware">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//ExtendetDataAware/extendetData"/>

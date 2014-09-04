@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -19,16 +18,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter} object.

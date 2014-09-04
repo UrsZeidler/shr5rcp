@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isChracterIsDown <em>Chracter Is Down</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#getEnemyCloseCombat <em>Enemy Close Combat</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterRunning <em>Character Running</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterProne <em>Character Prone</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,5 +79,57 @@ public interface NahkampModifikationen extends EObject {
      * @generated
      */
     void setEnemyCloseCombat(int value);
+
+    /**
+     * Returns the value of the '<em><b>Character Running</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Character Running</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Character Running</em>' attribute.
+     * @see #setCharacterRunning(boolean)
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getNahkampModifikationen_CharacterRunning()
+     * @model
+     * @generated
+     */
+    boolean isCharacterRunning();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterRunning <em>Character Running</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Character Running</em>' attribute.
+     * @see #isCharacterRunning()
+     * @generated
+     */
+    void setCharacterRunning(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Character Prone</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Character Prone</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Character Prone</em>' attribute.
+     * @see #setCharacterProne(boolean)
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getNahkampModifikationen_CharacterProne()
+     * @model
+     * @generated
+     */
+    boolean isCharacterProne();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen#isCharacterProne <em>Character Prone</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Character Prone</em>' attribute.
+     * @see #isCharacterProne()
+     * @generated
+     */
+    void setCharacterProne(boolean value);
 
 } // NahkampModifikationen

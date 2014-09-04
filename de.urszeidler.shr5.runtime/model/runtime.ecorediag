@@ -70,6 +70,14 @@
         <element xmi:type="ecore:EAttribute" href="runtime.ecore#//NahkampModifikationen/enemyCloseCombat"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_4j7CsbHjEd6BfdyDhCCV2A"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_cMK7gDRsEeS4YZKwsF3Lyw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="runtime.ecore#//NahkampModifikationen/characterRunning"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cMK7gTRsEeS4YZKwsF3Lyw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_F2IRIDRtEeS4YZKwsF3Lyw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="runtime.ecore#//NahkampModifikationen/characterProne"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_F2IRITRtEeS4YZKwsF3Lyw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_Xdd_MbHjEd6BfdyDhCCV2A"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_Xdd_MrHjEd6BfdyDhCCV2A"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Xdd_M7HjEd6BfdyDhCCV2A"/>
@@ -81,7 +89,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_XdaU0LHjEd6BfdyDhCCV2A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="runtime.ecore#//NahkampModifikationen"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XdaU0bHjEd6BfdyDhCCV2A" x="60" y="-155"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XdaU0bHjEd6BfdyDhCCV2A" x="50" y="-235"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_Wf-mwLHkEd6BfdyDhCCV2A" type="1001">
     <children xmi:type="notation:Node" xmi:id="_WgEtYLHkEd6BfdyDhCCV2A" type="4001"/>

@@ -4,15 +4,8 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.Zustand;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
-
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;

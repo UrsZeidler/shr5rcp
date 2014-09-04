@@ -25,10 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl#getGruntGroup <em>Grunt Group</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl#getGruntGroup <em>Grunt Group</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class GruntTeamImpl extends TeamImpl implements GruntTeam {
@@ -36,7 +36,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
      * The cached value of the '{@link #getGruntGroup() <em>Grunt Group</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGruntGroup()
      * @generated
      * @ordered
@@ -46,7 +45,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GruntTeamImpl() {
@@ -56,7 +54,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -67,7 +64,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GruntGroup getGruntGroup() {
@@ -85,7 +81,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GruntGroup basicGetGruntGroup() {
@@ -151,15 +146,13 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case RuntimePackage.GRUNT_TEAM__GRUNT_GROUP:
-                if (resolve)
-                    return getGruntGroup();
+                if (resolve) return getGruntGroup();
                 return basicGetGruntGroup();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -168,7 +161,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -184,7 +176,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -200,7 +191,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -215,7 +205,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

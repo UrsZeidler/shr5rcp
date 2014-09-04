@@ -246,6 +246,24 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getNahkampModifikationen_CharacterRunning() {
+        return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getNahkampModifikationen_CharacterProne() {
+        return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getExtendetDataAware() {
         return extendetDataAwareEClass;
     }
@@ -539,6 +557,8 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         nahkampModifikationenEClass = createEClass(NAHKAMP_MODIFIKATIONEN);
         createEAttribute(nahkampModifikationenEClass, NAHKAMP_MODIFIKATIONEN__CHRACTER_IS_DOWN);
         createEAttribute(nahkampModifikationenEClass, NAHKAMP_MODIFIKATIONEN__ENEMY_CLOSE_COMBAT);
+        createEAttribute(nahkampModifikationenEClass, NAHKAMP_MODIFIKATIONEN__CHARACTER_RUNNING);
+        createEAttribute(nahkampModifikationenEClass, NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE);
 
         extendetDataAwareEClass = createEClass(EXTENDET_DATA_AWARE);
         createEAttribute(extendetDataAwareEClass, EXTENDET_DATA_AWARE__EXTENDET_DATA);
@@ -629,6 +649,8 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         initEClass(nahkampModifikationenEClass, NahkampModifikationen.class, "NahkampModifikationen", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getNahkampModifikationen_ChracterIsDown(), ecorePackage.getEBoolean(), "chracterIsDown", null, 0, 1, NahkampModifikationen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getNahkampModifikationen_EnemyCloseCombat(), ecorePackage.getEInt(), "enemyCloseCombat", null, 0, 1, NahkampModifikationen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getNahkampModifikationen_CharacterRunning(), ecorePackage.getEBoolean(), "characterRunning", null, 0, 1, NahkampModifikationen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getNahkampModifikationen_CharacterProne(), ecorePackage.getEBoolean(), "characterProne", null, 0, 1, NahkampModifikationen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(extendetDataAwareEClass, ExtendetDataAware.class, "ExtendetDataAware", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         EGenericType g1 = createEGenericType(ecorePackage.getEMap());
