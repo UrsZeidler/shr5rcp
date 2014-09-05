@@ -161,6 +161,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
             return;
         executing = true;
         GameplayTools.clearDefseMod(getSubject());
+        GameplayTools.clearRecoilMod(getSubject());
 
         if (getFreeAction() != null) {
             getFreeAction().setDate(getDate());

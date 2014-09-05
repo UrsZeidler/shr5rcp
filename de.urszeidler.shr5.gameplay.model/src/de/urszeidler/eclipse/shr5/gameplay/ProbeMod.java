@@ -3,9 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
-
 import org.eclipse.emf.ecore.EObject;
+
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 
 /**
  * <!-- begin-user-doc -->

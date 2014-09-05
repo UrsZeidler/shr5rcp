@@ -415,4 +415,67 @@ public class GameplayTools {
         }));
     }
 
+    /**
+     * Get the recoile modification.
+     * 
+     * @param subject
+     * @param feuerwaffe
+     * @param probeMods
+     * @return
+     */
+    public static int getRecoilMod(RuntimeCharacter subject, Feuerwaffe feuerwaffe, EList<ProbeMod> probeMods) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(feuerwaffe);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+        int rc = 1 + (subject.getCharacter().getPersona().getStaerke() / 3) + feuerwaffe.getRueckstoss();
+        int recoil = Math.min(0, rc - subject.getIntegerValue(data));
+        if (probeMods != null && recoil != 0) {
+            ProbeMod probeMod = createProbeMod(feuerwaffe, recoil, Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+            probeMods.add(probeMod);
+        }
+
+        return recoil;
+    }
+
+    /**
+     * Inceases the recoile mod by the value.
+     * 
+     * @param subject
+     * @param weapon
+     * @param value
+     */
+    public static void inceaseRecoilMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int value) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+        subject.increaseValue(data, value);
+        data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(null);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+        subject.getExtendetData().put(data, Boolean.TRUE);
+    }
+
+    /**
+     * Removes the recoil mod if the last turn was no increase.
+     * 
+     * @param subject
+     * @param weapon
+     * @param value
+     */
+    public static void clearRecoilMod(RuntimeCharacter subject) {
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(null);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+        Object object = subject.getExtendetData().get(data);
+        if (object != null) {
+            subject.getExtendetData().remove(data);
+            return;
+        }
+
+        data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+        subject.getExtendetData().remove(data);
+    }
+
 }
