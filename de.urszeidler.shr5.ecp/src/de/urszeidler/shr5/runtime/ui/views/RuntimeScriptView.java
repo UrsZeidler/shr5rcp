@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -33,7 +34,6 @@ import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
@@ -43,13 +43,12 @@ import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.TableColumnLayout;
-import org.eclipse.jface.layout.TreeColumnLayout;
+import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -70,7 +69,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
@@ -139,9 +137,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (!isTimetracking)
                 return Status.OK_STATUS;
             int delay = 1000;
-            if(timeTrackFactor>1)
-                delay = (int)((1/timeTrackFactor)*1000L);
-                
+            if (timeTrackFactor > 1)
+                delay = (int)((1 / timeTrackFactor) * 1000L);
+
             schedule(delay);
             Placement plac = (Placement)placement1;// .getValue();
 
@@ -256,7 +254,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     // private AdapterFactoryContentProvider rootContentProvider;
 
-    private AdapterFactoryContentProvider actionListContentProvider;
+    // private AdapterFactoryContentProvider actionListContentProvider;
 
     private LabelProvider labelProvider;
 
@@ -275,10 +273,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private WritableList characters = new WritableList();
     // private WritableList printedProtocol = new WritableList();
 
-    private TableViewer treeViewer;
+    private TableViewer characterViewer;
     private TableViewer treeViewer_commandProtokoll;
 
-    private TreeViewer treeViewer_Commands;
+    private TableViewer treeViewer_Commands;
 
     // private Action executeAction;
     private Label lblDesc;
@@ -304,7 +302,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
 
-        actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
+        // actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         labelProvider = new LabelProvider() {
             @Override
             public Image getImage(Object element) {
@@ -405,52 +403,59 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_11.setLayout(new GridLayout(3, false));
 
         Composite composite_13 = new Composite(composite_11, SWT.NONE);
-        GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
         gd_composite_13.heightHint = 128;
-        gd_composite_13.widthHint = 298;
+        gd_composite_13.widthHint = 200;
         composite_13.setLayoutData(gd_composite_13);
         formToolkit.adapt(composite_13);
         formToolkit.paintBordersFor(composite_13);
         composite_13.setLayout(new TableColumnLayout());
 
-        treeViewer = new TableViewer(composite_13, SWT.BORDER);
-        treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-
-            @Override
-            public void selectionChanged(SelectionChangedEvent event) {
-                ISelection selection = treeViewer.getSelection();
-                EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
-
-                RuntimeCharacter value = (RuntimeCharacter)firstEObject;
-                List<SubjectCommand> commands = GameplayTools.createCharacterCommands(value);// createCharacterCommands(value);
-                treeViewer_Commands.setInput(commands);
-
-            }
-        });
-        final Table tree = treeViewer.getTable();
-        tree.addMouseListener(new MouseAdapter() {
+        characterViewer = new TableViewer(composite_13, SWT.BORDER);
+//        characterViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+//
+//            @Override
+//            public void selectionChanged(SelectionChangedEvent event) {
+//                // ISelection selection = treeViewer.getSelection();
+//                // EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
+//
+//                // RuntimeCharacter value = (RuntimeCharacter)firstEObject;
+//                // List<EClass> commands = GameplayTools.getCharacterCommands();// createCharacterCommands(value);
+//                // treeViewer_Commands.setInput(commands);
+//
+//            }
+//        });
+        final Table characterTable = characterViewer.getTable();
+        characterTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseDoubleClick(MouseEvent e) {
-                ISelection selection = treeViewer.getSelection();
+                ISelection selection = characterViewer.getSelection();
                 ShadowrunEditingTools.openEditorForFirstSelection(selection);;
             }
         });
-        // tree.setHeaderVisible(true);
-        // tree.setLinesVisible(true);
-        formToolkit.paintBordersFor(tree);
+        formToolkit.paintBordersFor(characterTable);
 
         Composite composite_12 = new Composite(composite_11, SWT.NONE);
-        GridData gd_composite_12 = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
-        gd_composite_12.widthHint = 196;
+        GridData gd_composite_12 = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+        gd_composite_12.heightHint = 128;
+        gd_composite_12.widthHint = 150;
         composite_12.setLayoutData(gd_composite_12);
+        composite_12.setLayout(new TableColumnLayout());
+//        gd_composite_12.widthHint = 196;
+//        composite_12.setLayoutData(gd_composite_12);
         formToolkit.adapt(composite_12);
         formToolkit.paintBordersFor(composite_12);
-        composite_12.setLayout(new TreeColumnLayout());
 
-        treeViewer_Commands = new TreeViewer(composite_12, SWT.BORDER);
-        Tree tree_2 = treeViewer_Commands.getTree();
-        treeViewer_Commands.setContentProvider(new SimpleListContenProvider(actionListContentProvider));
+        treeViewer_Commands = new TableViewer(composite_12, SWT.BORDER | SWT.FULL_SELECTION);
+        Table tree_2 = treeViewer_Commands.getTable();
+        GridData gd_tree_2 = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
+        gd_tree_2.heightHint = 128;
+//        gd_tree_2.widthHint = 196;
+        tree_2.setLayoutData(gd_tree_2);
+        treeViewer_Commands.setContentProvider(ArrayContentProvider.getInstance());// new SimpleListContenProvider(actionListContentProvider));
         treeViewer_Commands.setLabelProvider(labelProvider);
+        List<EClass> commands = GameplayTools.getCharacterCommands();// createCharacterCommands(value);
+        treeViewer_Commands.setInput(commands);
 
         formToolkit.paintBordersFor(tree_2);
 
@@ -472,7 +477,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
                     tltmTimeTrackingItem.setText("start time tracking");
                 } else {
-                    TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell(),timeTrackFactor);
+                    TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell(), timeTrackFactor);
                     if (timetrackingDialog.open() == Dialog.CANCEL)
                         return;
                     timeTrackFactor = timetrackingDialog.getFactor();
@@ -502,9 +507,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             @Override
             public void widgetSelected(SelectionEvent e) {
                 ISelection selection = treeViewer_Commands.getSelection();
-                EObject eObject = ShadowrunEditingTools.extractFirstEObject(selection);
-                if (eObject != null)
-                    scriptService.executeCommand((Command)eObject);
+                EClass eObject = (EClass)ShadowrunEditingTools.extractFirstEObject(selection);
+                if (eObject != null){
+                    SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
+                    command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
+                    scriptService.executeCommand(command);// (Command)eObject);
+                }
             }
         });
         tltmExecuteaction.setText("executeAction");
@@ -787,7 +795,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         IObservableMap[] observeMaps = EMFObservables.observeMaps(listContentProvider.getKnownElements(),
                 new EStructuralFeature[]{ RuntimePackage.Literals.RUNTIME_CHARACTER__CHARACTER });
-        treeViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
+        characterViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps) {
             @Override
             public String getColumnText(Object element, int columnIndex) {
                 if (columnIndex == 0) {
@@ -815,11 +823,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return labelProvider.getText(element);
             }
         });
-        treeViewer.setContentProvider(listContentProvider);
-        treeViewer.setInput(characters);
+        characterViewer.setContentProvider(listContentProvider);
+        characterViewer.setInput(characters);
         //
         return bindingContext;
     }
+
     @Override
     public CommandCallback getCmdCallback() {
         return this;
@@ -899,19 +908,18 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "before execute", ProbeExecutionState.beforeExecute,eStructuralFeatures);
+                "before execute", ProbeExecutionState.beforeExecute, eStructuralFeatures);
         d.open();
-        
+
     }
 
     @Override
     public void beforeSubcommands(Command cmd, EStructuralFeature... eStructuralFeatures) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "before sub", ProbeExecutionState.beforeSubcommands,eStructuralFeatures);
+                "before sub", ProbeExecutionState.beforeSubcommands, eStructuralFeatures);
         d.open();
-        
+
     }
-    
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
@@ -926,8 +934,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             if (mc.getSubject() != null && mc.getWeapon() != null && mc.getSkill() != null && mc.getObject() != null)
                 return;
 
-            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
-                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
+                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -939,48 +947,49 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
-//            if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
-//                return;
+            // if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
+            // return;
 
-            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
-                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare,eStructuralFeatures);
-//                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-//                    GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
-//                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
-//                    GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
+                    itemDelegator), "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
+            // GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            // GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
+            // GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
+            // GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DamageTest) {
-            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider,itemDelegator,
-                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
+                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DefensTestCmd) {
-            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd,  labelProvider,itemDelegator,
-                    new DefaultReferenceManager(itemDelegator),"prepare",ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
+                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
             return;
-        }else if (cmd instanceof SetFeatureCommand) {
-//            SetFeatureCommand sf = (SetFeatureCommand)cmd;
-//            ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-//                    "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
-//            d.open();
+        } else if (cmd instanceof SetFeatureCommand) {
+            // SetFeatureCommand sf = (SetFeatureCommand)cmd;
+            // ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+            // "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
+            // d.open();
             return;
         }
 
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "prepare", ProbeExecutionState.prepare,GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.PROBE__LIMIT,
+                "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.PROBE__LIMIT,
                 GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
         d.open();
-        
-//        GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-//                new DefaultReferenceManager(itemDelegator));
-//        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
-//        // new DefaultReferenceManager(itemDelegator));
-//        genericEObjectDialog.open();
+
+        // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+        // new DefaultReferenceManager(itemDelegator));
+        // // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
+        // // new DefaultReferenceManager(itemDelegator));
+        // genericEObjectDialog.open();
     }
 
     @Override
@@ -1006,18 +1015,16 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         } else if (cmd instanceof DamageTest) {
             new DamageProbeFinishedDialog(getSite().getShell(), cmd, labelProvider).open();
             return;
-        }else if (cmd instanceof SetFeatureCommand) {
+        } else if (cmd instanceof SetFeatureCommand) {
             SetFeatureCommand sf = (SetFeatureCommand)cmd;
             ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                    "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
+                    "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
             d.open();
         }
 
+        // ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
+        // probeFinishedDialog.open();
 
-//        ProbeFinishedDialog probeFinishedDialog = new ProbeFinishedDialog(getSite().getShell(), cmd, labelProvider);
-//        probeFinishedDialog.open();
-
-        
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 "finished", ProbeExecutionState.afterExecute);
         d.open();
@@ -1027,6 +1034,5 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // genericEObjectDialog.open();
 
     }
-
 
 }

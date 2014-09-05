@@ -28,6 +28,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
+import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
@@ -402,7 +404,23 @@ public class GameplayTools {
         OpposedSkillTestCmd opposedSkillTestCmd = GameplayFactory.eINSTANCE.createOpposedSkillTestCmd();
         opposedSkillTestCmd.setSubject(persona);
         list.add(opposedSkillTestCmd);
-
+        DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
+        defensTestCmd.setSubject(persona);
+        list.add(defensTestCmd);
+        DamageTest damageTest = GameplayFactory.eINSTANCE.createDamageTest();
+        damageTest.setSubject(persona);
+        list.add(damageTest);
+        return list;
+    }
+    
+    public static List<EClass> getCharacterCommands() {
+        ArrayList<EClass> list = new ArrayList<EClass>(7);
+        list.add(GameplayPackage.Literals.SKILL_TEST_CMD);
+        list.add(GameplayPackage.Literals.SUCCES_TEST);
+        list.add(GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD);
+        list.add(GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD);
+        list.add(GameplayPackage.Literals.DEFENS_TEST_CMD);
+        list.add(GameplayPackage.Literals.DAMAGE_TEST);
         return list;
     }
 
