@@ -21,6 +21,8 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.FeuerModus;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
@@ -85,10 +87,9 @@ public class HandComposite extends NameableComposite {
                     initativePass.setAction(complexAction);
                     // initativePass.redo();
 
-                } else if (value instanceof AbstaktFernKampfwaffe) {
+                } else if (value instanceof AbstaktFernKampfwaffe) {                     
                     AbstaktFernKampfwaffe afk = (AbstaktFernKampfwaffe)value;
-                    // Simple action case
-                    // if(initativePass.getAction()==null)
+                     
                     SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
                     if (simpleAction == null)
                         return;
@@ -97,12 +98,6 @@ public class HandComposite extends NameableComposite {
                     meeleAttackCmd.setWeapon(afk);
 
                     simpleAction.getSubCommands().add(meeleAttackCmd);
-                    // simpleActions.setAction1(simpleAction);
-                    // // complexAction.setSubject((RuntimeCharacter)character.getValue());
-                    // // simpleAction.getSubCommands().add(meeleAttackCmd);
-                    // initativePass.setAction(simpleActions);
-                    // initativePass.redo();
-
                 }
             }
         });

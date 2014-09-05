@@ -302,15 +302,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     public RuntimeScriptView() {
 
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
-//                new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-//        adapterFactory.addAdapterFactory(new GameplayAdapterFactory());
-//        adapterFactory.addAdapterFactory(new RuntimeAdapterFactory());
-//        adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-//        adapterFactory.addAdapterFactory(new Shr5managementAdapterFactory());
-//        adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
 
-        // rootContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         labelProvider = new LabelProvider() {
             @Override
@@ -332,7 +325,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      * (non-Javadoc) Method declared on IViewPart.
      */
     public void init(IViewSite site) throws PartInitException {
-        // site.getPage().addSelectionListener(this);
         super.init(site);
         scriptService = (ScriptService)site.getService(ScriptService.class);
         scriptService.registerScriptViewer(this);
