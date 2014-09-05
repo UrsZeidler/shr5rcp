@@ -354,9 +354,9 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
             persona.setValue(persona2);
             
             if (apc.getSubject() instanceof GruntRuntimeCharacter) {
-                stateMonitorWidgetMental.setVisible(false);
+                grpMental.setVisible(false); //stateMonitorWidgetMental.setVisible(false);
             }else
-                stateMonitorWidgetMental.setVisible(true);
+                grpMental.setVisible(true); //stateMonitorWidgetMental.setVisible(true);
 
         }
 
