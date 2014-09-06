@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -100,7 +101,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
                                 EObject eContainer = eo.eContainer();
                                 EReference eContainmentFeature = eo.eContainmentFeature();
                                 List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
-                                return Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION));
+                                return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)));
 
                             } catch (Exception e) {
                             }
