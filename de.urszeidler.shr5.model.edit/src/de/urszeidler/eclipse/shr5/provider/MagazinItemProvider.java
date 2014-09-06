@@ -80,6 +80,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
                 getResourceLocator(), getString("_UI_Magazin_type_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Magazin_type_feature", "_UI_Magazin_type"), Shr5Package.Literals.MAGAZIN__TYPE,
                 true, false, true, null, null, null){
+            @SuppressWarnings("unchecked")
             @Override
             protected Collection<?> getComboBoxObjects(Object object) {
                 if (object instanceof EObject) {
@@ -111,6 +112,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Magazin_bullets_feature"),
                         getString("_UI_PropertyDescriptor_description", "_UI_Magazin_bullets_feature", "_UI_Magazin_type"),
                         Shr5Package.Literals.MAGAZIN__BULLETS, true, false, true, null, null, null) {
+                    @SuppressWarnings("unchecked")
                     @Override
                     protected Collection<?> getComboBoxObjects(Object object) {
                         if (object instanceof EObject) {
