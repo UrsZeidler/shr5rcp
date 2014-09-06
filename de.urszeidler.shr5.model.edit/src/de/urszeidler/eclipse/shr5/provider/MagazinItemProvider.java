@@ -72,13 +72,31 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     protected void addTypePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+        itemPropertyDescriptors.add(new ItemPropertyDescriptor//createItemPropertyDescriptor//
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                 getResourceLocator(), getString("_UI_Magazin_type_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Magazin_type_feature", "_UI_Magazin_type"), Shr5Package.Literals.MAGAZIN__TYPE,
-                true, false, true, null, null, null));
+                true, false, true, null, null, null){
+            @Override
+            protected Collection<?> getComboBoxObjects(Object object) {
+                if (object instanceof EObject) {
+                    EObject eo = (EObject)object;
+                    try {
+                        EObject eContainer = eo.eContainer();
+                        EReference eContainmentFeature = eo.eContainmentFeature();
+                        List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
+                        return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)));
+
+                    } catch (Exception e) {
+                    }
+                }
+                return super.getComboBoxObjects(object);
+            }
+            
+        });
     }
 
     /**
