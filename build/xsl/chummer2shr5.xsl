@@ -6,7 +6,7 @@
 	<xsl:strip-space elements="*" />
 	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
 	<xsl:param name="loc_path"
-		select="'/home/urs/chummer2/Chummer2/lang/de_data.xml'" />
+		select="'/home/urs/eclipse_workspaces/workspace_E4.3_shr_git/chummer-data/lang/de_data.xml'" />
 	<xsl:param name="do_localization" select="true" />
 	<xsl:variable name="loc_data" select="document($loc_path,/)" />
 	<xsl:variable name="powers"
@@ -42,6 +42,10 @@
 		select="document(concat($path,'/critters.xml'),/)" />
 	<xsl:variable name="critter-powers"
 		select="document(concat($path,'/critterpowers.xml'),/)" />
+	<xsl:variable name="complexforms"
+		select="document(concat($path,'/complexforms.xml'),/)" />
+	<xsl:variable name="books"
+		select="document(concat($path,'/books.xml'),/)" />
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -50,9 +54,17 @@
 				<entries xsi:type="shr5:ShrList" name="Sourcebooks">
 					<entries xsi:type="shr5:SourceBook" name="Core rule book"
 						image="/shr5Resource/images/SR5_Cover_CRBook.jpg" startShrTime="2072-12-13T17:51:44.000+0100"
-						endShrTime="2075-12-13T17:51:44.000+0100" >
-						<localizations local="de" name="Shadowrun 5 Grundregelwerk"/>
-						</entries>
+						endShrTime="2075-12-13T17:51:44.000+0100">
+						<localizations local="de" name="Shadowrun 5 Grundregelwerk" />
+					</entries>
+					<xsl:for-each select="$books">
+					<xsl:for-each select="chummer/books/*">
+					<entries xsi:type="shr5:SourceBook">
+					<xsl:call-template name="set_id" />
+					<xsl:call-template name="beschreibbar" />
+					</entries>
+					</xsl:for-each>
+				</xsl:for-each>
 				</entries>
 				<xsl:for-each select="$ranges">
 					<xsl:apply-templates select="node()" />
@@ -93,9 +105,9 @@
 				<xsl:for-each select="$lifestyle">
 					<xsl:apply-templates mode="lifestyle" select="node()" />
 				</xsl:for-each>
-				<xsl:for-each select="$shr5CharacterBuilder">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
+<!-- 				<xsl:for-each select="$shr5CharacterBuilder"> -->
+<!-- 					<xsl:apply-templates select="node()" /> -->
+<!-- 				</xsl:for-each> -->
 				<xsl:for-each select="$critter-species">
 					<entries xsi:type="shr5:ShrList" name="Critters species">
 						<xsl:apply-templates mode="critter" select="node()" />
@@ -237,12 +249,12 @@
 
 				</entries>
 			</entries>
-			<xsl:call-template name="examples" />
+<!-- 			<xsl:call-template name="examples" /> -->
 
 		</shr5:ShrList>
 	</xsl:template>
 	<xsl:template match="categories|version" mode="critter" />
-	<xsl:template match="categories|version|accessories|grades|modcategories" />
+	<xsl:template match="categories|version|accessories|grades|modcategories|enhancements|enhancement" />
 	<xsl:template match="priority|mods|limits" />
 	<xsl:template mode="lifestyle"
 		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
@@ -1422,7 +1434,7 @@
 						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 					</generatorSrc>
 				</members>
- 
+
 			</groups>
 			<grunts name="Thugs">
 				<members count="7" nsc="//@entries.2/@groups.0/@members.0" />
@@ -1495,6 +1507,18 @@
 			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
 		</xsl:if>
 	</xsl:template>
+	<!-- find the source book -->
+	<xsl:template name="findSourceBook">
+		<xsl:param name="aid" />
+		<xsl:for-each select="$books">
+			<xsl:for-each select="chummer/books/*">			
+				<xsl:if test="code/text()=$aid">
+					<xsl:variable name="id_name" select="id/text()" />					
+					<xsl:value-of select="$id_name" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
 	<!-- find the locaized name -->
 	<xsl:template name="findLocalizedName">
 		<xsl:param name="aid" />
@@ -1509,49 +1533,57 @@
 			</xsl:for-each>
 		</xsl:for-each>
 	</xsl:template>
+	
 	<xsl:template name="findLocalizedPage">
 		<xsl:param name="aid" />
 		<xsl:for-each select="$loc_data">
 			<xsl:for-each select="chummer/chummer/*/*">
 				<xsl:if test="id/text()=$aid">
+				<xsl:if test="number(page/text())= page/text()">
 					<xsl:variable name="loc_name" select="page/text()" />
 					<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
 						/></xsl:attribute> -->
 					<xsl:value-of select="$loc_name" />
 				</xsl:if>
+				</xsl:if>
 			</xsl:for-each>
 		</xsl:for-each>
 	</xsl:template>
 
-	<xsl:template name="set_id" >
+	<xsl:template name="set_id">
 		<xsl:variable name="aid" select="id/text()" />
 		<xsl:if test="$aid!=''">
 			<xsl:attribute name="xmi:id"><xsl:value-of select="$aid" /></xsl:attribute>
 		</xsl:if>
-	
-	
 	</xsl:template>
 
 
 	<xsl:template name="quelle">
-		<xsl:call-template name="set_id"/>
-		<xsl:call-template name="simple_quelle"/>
+		<xsl:call-template name="set_id" />
+		<xsl:call-template name="simple_quelle" />
 	</xsl:template>
-	
-	<xsl:template name="simple_quelle" >
-			<xsl:if test="number(page/text())">
+
+	<xsl:template name="simple_quelle">
+		<xsl:if test="number(page/text())">
 			<xsl:attribute name="page">
-				<xsl:value-of
-								select="number(page/text())" />
+				<xsl:value-of select="number(page/text())" />
 			</xsl:attribute>
 		</xsl:if>
-		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
-	
-	
+<!-- 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
+		<xsl:variable name="sid1" select="source/text()" />
+		<xsl:variable name="srcBookId">
+			<xsl:call-template name="findSourceBook">
+				<xsl:with-param name="aid" select="$sid1" />
+			</xsl:call-template>
+			<!-- ee -->
+		</xsl:variable>
+			<xsl:attribute name="srcBook">
+			<xsl:value-of select="$srcBookId" />
+			</xsl:attribute>
 	</xsl:template>
-	
-	
-	<xsl:template name="localization" >
+
+
+	<xsl:template name="localization">
 		<xsl:variable name="aid1" select="id/text()" />
 		<xsl:variable name="loc_name">
 			<xsl:call-template name="findLocalizedName">
@@ -1570,16 +1602,18 @@
 					</xsl:variable>
 					<xsl:choose>
 						<xsl:when test="$loc_page=''">
+						<xsl:if test="number(page/text())= page/text()">
 							<xsl:attribute name="page"><xsl:value-of
 								select="number(page/text())" /></xsl:attribute>
+						</xsl:if>
 						</xsl:when>
 					</xsl:choose>
 				</localizations>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
-	
-	
+
+
 	<xsl:template name="gegenstand-basis">
 		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
 		<xsl:if test="number(cost/text())">
@@ -1705,7 +1739,7 @@
 		<!-- </attribut> -->
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
-		<xsl:call-template name="localization"/>
+		<xsl:call-template name="localization" />
 		<xsl:for-each select="specs/*">
 			<spezialisierungen>
 				<xsl:attribute name="name">
@@ -1774,14 +1808,14 @@
 	<xsl:template match="//lifestyle" mode="lifestyle">
 		<entries xsi:type="shr5:Lifestyle">
 			<xsl:call-template name="gegenstand-basis" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
 	<!-- metatype and critter -->
 	<xsl:template match="//metatype">
 		<entries xsi:type="shr5:Spezies">
 			<xsl:call-template name="species-data" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
 	<xsl:template match="//metatype" mode="critter">
@@ -1794,19 +1828,20 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<entries xsi:type="shr5:Critter">
-				<xsl:variable name="aid" select="id/text()" />
-						<xsl:if test="$aid!=''">
-							<xsl:attribute name="xmi:id"><xsl:value-of select="$aid" />
+					<xsl:variable name="aid" select="id/text()" />
+					<xsl:if test="$aid!=''">
+						<xsl:attribute name="xmi:id"><xsl:value-of
+							select="$aid" />
 						</xsl:attribute>
-				</xsl:if>
-				
-				
+					</xsl:if>
+
+
 					<xsl:call-template name="species-data" />
 					<xsl:call-template name="critter-power">
 						<xsl:with-param name="tagName" select="'powers'" />
 						<xsl:with-param name="path" select="powers/*" />
 					</xsl:call-template>
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -1815,11 +1850,11 @@
 	<xsl:template name="geist">
 		<entries xsi:type="shr5:Geist">
 			<xsl:call-template name="beschreibbar" />
-			<xsl:call-template name="set_id"/>
+			<xsl:call-template name="set_id" />
 			<xsl:call-template name="quelle" />
-			
+
 			<xsl:call-template name="geist-species" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 			<xsl:call-template name="critter-power">
 				<xsl:with-param name="tagName" select="'powers'" />
 				<xsl:with-param name="path" select="powers/*" />
@@ -1902,9 +1937,9 @@
 								</xsl:when>
 							</xsl:choose>
 							<xsl:call-template name="beschreibbar" />
-<!-- 							<xsl:call-template name="quelle" /> -->
-<xsl:call-template name="simple_quelle"/>
-							<xsl:call-template name="localization"/>
+							<!-- <xsl:call-template name="quelle" /> -->
+							<xsl:call-template name="simple_quelle" />
+							<xsl:call-template name="localization" />
 						</xsl:element>
 					</xsl:if>
 				</xsl:for-each>
@@ -2055,7 +2090,7 @@
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 		<xsl:call-template name="mods" />
-<!-- 		<xsl:call-template name="localization"/>		 -->
+		<!-- <xsl:call-template name="localization"/> -->
 		<angriff name="unarmed" schadenscode="(STR)P" />
 
 	</xsl:template>
@@ -2071,7 +2106,7 @@
 			<xsl:call-template name="zauber-types" />
 			<xsl:call-template name="beschreibbar" />
 			<xsl:call-template name="quelle" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 		</entries>
 
 	</xsl:template>
@@ -2122,7 +2157,7 @@
 				<xsl:call-template name="beschreibbar" />
 				<xsl:call-template name="quelle" />
 				<xsl:call-template name="mods" />
-				<xsl:call-template name="localization"/>
+				<xsl:call-template name="localization" />
 			</entries>
 		</xsl:if>
 	</xsl:template>
@@ -2137,7 +2172,7 @@
 			<xsl:call-template name="beschreibbar" />
 			<xsl:call-template name="quelle" />
 			<xsl:call-template name="mods" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
 	<!-- skill -->
@@ -2145,15 +2180,15 @@
 		<xsl:if test="string-length(skillgroup/text())=0">
 			<xsl:choose>
 				<xsl:when test="category/text()='Language'">
-					<entries xsi:type="shr5:Sprachfertigkeit">					
-					<xsl:call-template name="set_id" />
-					<xsl:call-template name="skill" />
+					<entries xsi:type="shr5:Sprachfertigkeit">
+						<xsl:call-template name="set_id" />
+						<xsl:call-template name="skill" />
 					</entries>
 				</xsl:when>
 				<xsl:when
 					test="category/text()!='Language' and name(..)='knowledgeskills' ">
 					<entries xsi:type="shr5:Wissensfertigkeit">
-					<xsl:call-template name="set_id" />
+						<xsl:call-template name="set_id" />
 						<xsl:call-template name="skill" />
 					</entries>
 				</xsl:when>
@@ -2200,12 +2235,12 @@
 			<xsl:if test="number(extreme/text())">
 				<xsl:attribute name="extrem"><xsl:value-of select="extreme/text()" /></xsl:attribute>
 			</xsl:if>
-<!-- 			<xsl:call-template name="localization"/> -->
+			<!-- <xsl:call-template name="localization"/> -->
 		</entries>
 	</xsl:template>
 	<xsl:template match="//cyberware">
 		<entries xsi:type="shr5:Cyberware">
-			<xsl:call-template name="gegenstand-basis" />	
+			<xsl:call-template name="gegenstand-basis" />
 			<xsl:call-template name="mods" />
 			<mods>
 				<xsl:if test="number(ess/text())">
@@ -2220,7 +2255,7 @@
 					</xsl:attribute>
 				<!-- </attribut> -->
 			</mods>
-			<xsl:call-template name="localization"/>		
+			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
 	<xsl:template match="//bioware">
@@ -2240,8 +2275,8 @@
 					</xsl:attribute>
 				<!-- </attribut> -->
 			</mods>
-			<xsl:call-template name="localization"/>
-			
+			<xsl:call-template name="localization" />
+
 		</entries>
 	</xsl:template>
 	<xsl:template match="//program">
@@ -2267,7 +2302,7 @@
 			</xsl:choose>
 			<xsl:call-template name="beschreibbar" />
 			<xsl:call-template name="quelle" />
-			<xsl:call-template name="localization"/>
+			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
 
@@ -2296,7 +2331,85 @@
 					</xsl:attribute>
 					</xsl:if>
 					<xsl:call-template name="gegenstand-basis" />
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Rigger Command Consoles'">
+				<entries xsi:type="shr5:RiggerCommandConsole">
+					<xsl:if test="number(devicerating/text())">
+						<xsl:attribute name="deviceRating">
+						<xsl:value-of select="devicerating/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(firewall/text())">
+						<xsl:attribute name="firewallBasis">
+						<xsl:value-of select="firewall/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(dataprocessing/text())">
+						<xsl:attribute name="datenverarbeitungBasis">
+						<xsl:value-of select="dataprocessing/text()" />
+						</xsl:attribute>
+					</xsl:if>
+
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+					<mods wert="1">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+					</mods>
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Cyberdecks'">
+				<entries xsi:type="shr5:Cyberdeck">
+					<xsl:if test="number(devicerating/text())">
+						<xsl:attribute name="deviceRating">
+						<xsl:value-of select="devicerating/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(programs/text())">
+						<xsl:attribute name="programSlots">
+						<xsl:value-of select="programs/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(attack/text())">
+						<xsl:attribute name="attribute1">
+						<xsl:value-of select="attack/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(sleaze/text())">
+						<xsl:attribute name="attribute2">
+						<xsl:value-of select="sleaze/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(dataprocessing/text())">
+						<xsl:attribute name="attribute3">
+						<xsl:value-of select="dataprocessing/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(firewall/text())">
+						<xsl:attribute name="attribute4">
+						<xsl:value-of select="firewall/text()" />
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+					<configuration
+						href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute1" />
+					<configuration
+						href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute2" />
+					<configuration
+						href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute3" />
+					<configuration
+						href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute4" />
+					<mods wert="1">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+					</mods>
+					<mods wert="1">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig" />
+					</mods>
 				</entries>
 			</xsl:when>
 			<xsl:when test="category/text()='Commlink'">
@@ -2307,23 +2420,32 @@
 					</xsl:attribute>
 					</xsl:if>
 					<xsl:call-template name="gegenstand-basis" />
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Common Programs'">
+				<entries xsi:type="shr5:CommonProgram">
+<!-- 					<xsl:attribute name="programType"> -->
+<!-- 					<xsl:value-of select="category/text()" /> -->
+<!-- 					</xsl:attribute> -->
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
 			<xsl:when test="category/text()='Software'">
 				<xsl:choose>
 					<xsl:when test="name/text()='Datasoft'">
 						<entries xsi:type="shr5:Datasoft">
-<!-- 							<xsl:attribute name="type"> -->
-<!-- 								<xsl:value-of select="'dataSoft'" /> -->
-<!-- 									</xsl:attribute> -->
+							<!-- <xsl:attribute name="type"> -->
+							<!-- <xsl:value-of select="'dataSoft'" /> -->
+							<!-- </xsl:attribute> -->
 							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
 								select="'4'" /></xsl:attribute>
 							<xsl:attribute name="wertValue"><xsl:value-of
 								select="120" /></xsl:attribute>
 							<xsl:call-template name="beschreibbar" />
 							<xsl:call-template name="quelle" />
-							<xsl:call-template name="localization"/>
+							<xsl:call-template name="localization" />
 						</entries>
 					</xsl:when>
 					<xsl:when test="name/text()='Mapsoft'">
@@ -2337,7 +2459,7 @@
 								select="150" /></xsl:attribute>
 							<xsl:call-template name="beschreibbar" />
 							<xsl:call-template name="quelle" />
-							<xsl:call-template name="localization"/>
+							<xsl:call-template name="localization" />
 						</entries>
 					</xsl:when>
 					<xsl:when test="name/text()='Shopsoft'">
@@ -2351,18 +2473,18 @@
 								select="150" /></xsl:attribute>
 							<xsl:call-template name="beschreibbar" />
 							<xsl:call-template name="quelle" />
-							<xsl:call-template name="localization"/>
+							<xsl:call-template name="localization" />
 						</entries>
 					</xsl:when>
 
 					<xsl:otherwise>
-<!-- 						<xsl:attribute name="type"> -->
-<!-- 					<xsl:value-of select="'defaultSoft'" /> -->
-<!-- 									</xsl:attribute> -->
+						<!-- <xsl:attribute name="type"> -->
+						<!-- <xsl:value-of select="'defaultSoft'" /> -->
+						<!-- </xsl:attribute> -->
 
-<!-- 						<xsl:attribute name="wertValue"><xsl:value-of -->
-<!-- 							select="80" /></xsl:attribute> -->
-<!-- 					<xsl:call-template name="localization"/> -->
+						<!-- <xsl:attribute name="wertValue"><xsl:value-of -->
+						<!-- select="80" /></xsl:attribute> -->
+						<!-- <xsl:call-template name="localization"/> -->
 					</xsl:otherwise>
 				</xsl:choose>
 
@@ -2375,7 +2497,7 @@
 					<xsl:attribute name="kategorie"><xsl:value-of
 						select="category/text()" /></xsl:attribute>
 					<xsl:call-template name="gegenstand-basis" />
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -2404,14 +2526,14 @@
 	</xsl:template>
 	<xsl:template match="armor">
 		<xsl:choose>
-			<xsl:when test="category/text()='Armor'">
+			<xsl:when test="category/text()='Armor' or category/text()='High-Fashion Armor Clothing' or category/text()='Specialty Armor' or category/text()='Clothing'">
 				<entries xsi:type="shr5:Kleidung">
 					<xsl:if test="number(armorvalue/text())">
 						<xsl:attribute name="ruestung"><xsl:value-of
 							select="number(armorvalue/text())" /></xsl:attribute>
 					</xsl:if>
 					<xsl:call-template name="gegenstand-basis" />
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
 			<xsl:when test="category/text()='Helmets and Shields'">
@@ -2430,7 +2552,7 @@
 					</xsl:attribute>
 						<!-- </attribut> -->
 					</mods>
-					<xsl:call-template name="localization"/>
+					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
 
@@ -2443,7 +2565,7 @@
 			<entries xsi:type="shr5:Nahkampfwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 				<xsl:call-template name="waffe" />
-				<xsl:call-template name="localization"/>
+				<xsl:call-template name="localization" />
 				<!-- <xsl:variable name="sname" select="useskill/text()" /> <xsl:for-each 
 					select="$skills"> <xsl:for-each select="chummer/skills/*"> <xsl:if test="name/text()=$sname"> 
 					<xsl:variable name="pos" select="position()-1" /> <xsl:attribute name="fertigkeit"><xsl:value-of 
@@ -2466,7 +2588,7 @@
 					</xsl:for-each>
 				</xsl:for-each>
 				<xsl:call-template name="waffe" />
-				<xsl:call-template name="localization"/>
+				<xsl:call-template name="localization" />
 			</entries>
 		</xsl:if>
 		<xsl:if
@@ -2503,7 +2625,7 @@
 						select="number(rc/text())" /></xsl:attribute>
 				</xsl:if>
 
-				<xsl:variable name="rname" select="category/text()" />
+				<xsl:variable name="rname" select="range/text()" />
 				<xsl:for-each select="$ranges">
 					<xsl:for-each select="chummer/ranges/*">
 						<xsl:if test="category/text()=$rname">
@@ -2538,13 +2660,13 @@
 								<einbau>
 									<xsl:call-template name="beschreibbar" />
 									<xsl:call-template name="simple_quelle" />
-									<xsl:call-template name="localization"/>
+									<xsl:call-template name="localization" />
 								</einbau>
 							</xsl:if>
 						</xsl:for-each>
 					</xsl:for-each>
 				</xsl:for-each>
-				<xsl:call-template name="localization"/>
+				<xsl:call-template name="localization" />
 			</entries>
 		</xsl:if>
 	</xsl:template>
