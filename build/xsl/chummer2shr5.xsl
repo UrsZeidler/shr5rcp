@@ -58,13 +58,13 @@
 						<localizations local="de" name="Shadowrun 5 Grundregelwerk" />
 					</entries>
 					<xsl:for-each select="$books">
-					<xsl:for-each select="chummer/books/*">
-					<entries xsi:type="shr5:SourceBook">
-					<xsl:call-template name="set_id" />
-					<xsl:call-template name="beschreibbar" />
-					</entries>
+						<xsl:for-each select="chummer/books/*">
+							<entries xsi:type="shr5:SourceBook">
+								<xsl:call-template name="set_id" />
+								<xsl:call-template name="beschreibbar" />
+							</entries>
+						</xsl:for-each>
 					</xsl:for-each>
-				</xsl:for-each>
 				</entries>
 				<xsl:for-each select="$ranges">
 					<xsl:apply-templates select="node()" />
@@ -105,9 +105,9 @@
 				<xsl:for-each select="$lifestyle">
 					<xsl:apply-templates mode="lifestyle" select="node()" />
 				</xsl:for-each>
-<!-- 				<xsl:for-each select="$shr5CharacterBuilder"> -->
-<!-- 					<xsl:apply-templates select="node()" /> -->
-<!-- 				</xsl:for-each> -->
+				<!-- <xsl:for-each select="$shr5CharacterBuilder"> -->
+				<!-- <xsl:apply-templates select="node()" /> -->
+				<!-- </xsl:for-each> -->
 				<xsl:for-each select="$critter-species">
 					<entries xsi:type="shr5:ShrList" name="Critters species">
 						<xsl:apply-templates mode="critter" select="node()" />
@@ -249,12 +249,13 @@
 
 				</entries>
 			</entries>
-<!-- 			<xsl:call-template name="examples" /> -->
+			<!-- <xsl:call-template name="examples" /> -->
 
 		</shr5:ShrList>
 	</xsl:template>
 	<xsl:template match="categories|version" mode="critter" />
-	<xsl:template match="categories|version|accessories|grades|modcategories|enhancements|enhancement" />
+	<xsl:template
+		match="categories|version|accessories|grades|modcategories|enhancements|enhancement" />
 	<xsl:template match="priority|mods|limits" />
 	<xsl:template mode="lifestyle"
 		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
@@ -1491,14 +1492,34 @@
 
 	</xsl:template>
 	<xsl:template name="vehicle">
-		<xsl:param name="typeName" />
-		<entries>
-			<xsl:attribute name="xsi:type"><xsl:value-of
-				select="concat('shr5:',$typeName)" /></xsl:attribute>
+		<xsl:attribute name="fahrzeugTyp"><xsl:value-of select="category/text()" /></xsl:attribute>
+		<xsl:if test="number(accel/text())">
+			<xsl:attribute name="beschleunigung"><xsl:value-of
+				select="number(accel/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(speed/text())">
+			<xsl:attribute name="geschwindigkeit"><xsl:value-of
+				select="number(speed/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(body/text())">
+			<xsl:attribute name="rumpf"><xsl:value-of select="number(body/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(armor/text())">
+			<xsl:attribute name="panzer"><xsl:value-of
+				select="number(armor/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(pilot/text())">
+			<xsl:attribute name="pilot"><xsl:value-of
+				select="number(pilot/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(sensor/text())">
+			<xsl:attribute name="sensor"><xsl:value-of
+				select="number(sensor/text())" /></xsl:attribute>
+		</xsl:if>
 
-			<xsl:attribute name="fahrzeugTyp"><xsl:value-of select="category/text()" /></xsl:attribute>
-			<xsl:call-template name="gegenstand-basis" />
-		</entries>
+
+		<xsl:call-template name="gegenstand-basis" />
+
 	</xsl:template>
 	<!-- basic named templates -->
 	<xsl:template name="beschreibbar">
@@ -1511,9 +1532,9 @@
 	<xsl:template name="findSourceBook">
 		<xsl:param name="aid" />
 		<xsl:for-each select="$books">
-			<xsl:for-each select="chummer/books/*">			
+			<xsl:for-each select="chummer/books/*">
 				<xsl:if test="code/text()=$aid">
-					<xsl:variable name="id_name" select="id/text()" />					
+					<xsl:variable name="id_name" select="id/text()" />
 					<xsl:value-of select="$id_name" />
 				</xsl:if>
 			</xsl:for-each>
@@ -1533,18 +1554,18 @@
 			</xsl:for-each>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<xsl:template name="findLocalizedPage">
 		<xsl:param name="aid" />
 		<xsl:for-each select="$loc_data">
 			<xsl:for-each select="chummer/chummer/*/*">
 				<xsl:if test="id/text()=$aid">
-				<xsl:if test="number(page/text())= page/text()">
-					<xsl:variable name="loc_name" select="page/text()" />
-					<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
-						/></xsl:attribute> -->
-					<xsl:value-of select="$loc_name" />
-				</xsl:if>
+					<xsl:if test="number(page/text())= page/text()">
+						<xsl:variable name="loc_name" select="page/text()" />
+						<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
+							/></xsl:attribute> -->
+						<xsl:value-of select="$loc_name" />
+					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:for-each>
@@ -1569,7 +1590,7 @@
 				<xsl:value-of select="number(page/text())" />
 			</xsl:attribute>
 		</xsl:if>
-<!-- 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
+		<!-- <xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
 		<xsl:variable name="sid1" select="source/text()" />
 		<xsl:variable name="srcBookId">
 			<xsl:call-template name="findSourceBook">
@@ -1577,7 +1598,7 @@
 			</xsl:call-template>
 			<!-- ee -->
 		</xsl:variable>
-			<xsl:attribute name="srcBook">
+		<xsl:attribute name="srcBook">
 			<xsl:value-of select="$srcBookId" />
 			</xsl:attribute>
 	</xsl:template>
@@ -1602,10 +1623,10 @@
 					</xsl:variable>
 					<xsl:choose>
 						<xsl:when test="$loc_page=''">
-						<xsl:if test="number(page/text())= page/text()">
-							<xsl:attribute name="page"><xsl:value-of
-								select="number(page/text())" /></xsl:attribute>
-						</xsl:if>
+							<xsl:if test="number(page/text())= page/text()">
+								<xsl:attribute name="page"><xsl:value-of
+									select="number(page/text())" /></xsl:attribute>
+							</xsl:if>
 						</xsl:when>
 					</xsl:choose>
 				</localizations>
@@ -2425,9 +2446,9 @@
 			</xsl:when>
 			<xsl:when test="category/text()='Common Programs'">
 				<entries xsi:type="shr5:CommonProgram">
-<!-- 					<xsl:attribute name="programType"> -->
-<!-- 					<xsl:value-of select="category/text()" /> -->
-<!-- 					</xsl:attribute> -->
+					<!-- <xsl:attribute name="programType"> -->
+					<!-- <xsl:value-of select="category/text()" /> -->
+					<!-- </xsl:attribute> -->
 					<xsl:call-template name="gegenstand-basis" />
 					<xsl:call-template name="localization" />
 				</entries>
@@ -2505,44 +2526,70 @@
 	</xsl:template>
 	<xsl:template match="//vehicle">
 		<xsl:choose>
-			<xsl:when test="starts-with(category/text(),'Drone:')">
-				<xsl:call-template name="vehicle">
-					<xsl:with-param name="typeName" select="'Drohne'" />
-				</xsl:call-template>
+			<xsl:when test="starts-with(category/text(),'Drones:')">
+				<entries xsi:type="Drohne">
+					<xsl:if test="number(handling/text())">
+						<xsl:attribute name="handling"><xsl:value-of
+							select="number(handling/text())" /></xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="vehicle" />
+				</entries>
 			</xsl:when>
 			<xsl:when
-				test="category/text()='Bike' or category/text()='Car' or category/text()='Truck'">
-				<xsl:call-template name="vehicle">
-					<xsl:with-param name="typeName" select="'Bodenfahrzeug'" />
-				</xsl:call-template>
-			</xsl:when>
+				test="category/text()='Bikes' or category/text()='Cars' or category/text()='Trucks'">
+				<entries xsi:type="Bodenfahrzeug">
+					<xsl:if test="number(seats/text())">
+						<xsl:attribute name="sitze"><xsl:value-of
+							select="number(seats/text())" /></xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(substring-before(handling/text(),'/'))">
+						<xsl:attribute name="handling"><xsl:value-of
+							select="number(substring-before(handling/text(),'/'))" /></xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(substring-after(handling/text(),'/'))">
+						<xsl:attribute name="handlingGelaende"><xsl:value-of
+							select="number(substring-after(handling/text(),'/'))" /></xsl:attribute>
+					</xsl:if>
 
+
+					<xsl:call-template name="vehicle" />
+				</entries>
+			</xsl:when>
 			<xsl:otherwise>
-				<xsl:call-template name="vehicle">
-					<xsl:with-param name="typeName" select="'PassagierFahrzeug'" />
-				</xsl:call-template>
+				<entries xsi:type="PassagierFahrzeug">
+					<xsl:if test="number(seats/text())">
+						<xsl:attribute name="sitze"><xsl:value-of
+							select="number(seats/text())" /></xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(handling/text())">
+						<xsl:attribute name="handling"><xsl:value-of
+							select="number(handling/text())" /></xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="vehicle" />
+				</entries>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="armor">
 		<xsl:choose>
-			<xsl:when test="category/text()='Armor' or category/text()='High-Fashion Armor Clothing' or category/text()='Specialty Armor' or category/text()='Clothing'">
+			<xsl:when
+				test="not(starts-with(armor/text(),'+'))and(   category/text()='Armor' or category/text()='High-Fashion Armor Clothing' or category/text()='Specialty Armor' or category/text()='Clothing')">
 				<entries xsi:type="shr5:Kleidung">
-					<xsl:if test="number(armorvalue/text())">
+					<xsl:if test="number(armor/text())">
 						<xsl:attribute name="ruestung"><xsl:value-of
-							select="number(armorvalue/text())" /></xsl:attribute>
+							select="number(armor/text())" /></xsl:attribute>
 					</xsl:if>
 					<xsl:call-template name="gegenstand-basis" />
 					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
-			<xsl:when test="category/text()='Helmets and Shields'">
+			<xsl:when test="starts-with(armor/text(),'+' )">
 				<entries xsi:type="shr5:Gegenstand">
 					<xsl:call-template name="gegenstand-basis" />
 					<mods>
-						<xsl:if test="number(armorvalue/text())">
+						<xsl:if test="number(armor/text())">
 							<xsl:attribute name="wert">
-				<xsl:value-of select="number(armorvalue/text())" />
+				<xsl:value-of select="number(armor/text())" />
 				</xsl:attribute>
 						</xsl:if>
 						<!-- <attribut> -->
