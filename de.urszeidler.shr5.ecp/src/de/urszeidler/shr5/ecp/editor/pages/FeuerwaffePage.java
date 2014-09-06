@@ -170,6 +170,7 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
         
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FEUERWAFFE__MAGAZIN, composite_runtime);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
 
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

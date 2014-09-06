@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.QiFokus;
@@ -30,6 +31,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.swt.widgets.Label;
 
@@ -187,6 +189,9 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             } else if (object instanceof MagieFokus) {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpGegenstand);
             }
+        }else if (object instanceof Magazin) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__TYPE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
@@ -197,6 +202,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
         
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         
