@@ -69,6 +69,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/leftHand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/inUse"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/armor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//RuntimeCharacter/usedEdge"/>
+      <genOperations ecoreOperation="runtime.ecore#//RuntimeCharacter/canUseEdge"/>
     </genClasses>
     <genClasses ecoreClass="runtime.ecore#//Team">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference runtime.ecore#//Team/members"/>

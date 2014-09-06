@@ -12,6 +12,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getLeftHand <em>Left Hand</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getInUse <em>In Use</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getArmor <em>Armor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getUsedEdge <em>Used Edge</em>}</li>
  * </ul>
  * </p>
  *
@@ -162,6 +164,26 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * @ordered
      */
     protected Kleidung armor;
+
+    /**
+     * The default value of the '{@link #getUsedEdge() <em>Used Edge</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getUsedEdge()
+     * @generated
+     * @ordered
+     */
+    protected static final int USED_EDGE_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getUsedEdge() <em>Used Edge</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getUsedEdge()
+     * @generated
+     * @ordered
+     */
+    protected int usedEdge = USED_EDGE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -458,6 +480,39 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getUsedEdge() {
+        return usedEdge;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setUsedEdge(int newUsedEdge) {
+        int oldUsedEdge = usedEdge;
+        usedEdge = newUsedEdge;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__USED_EDGE, oldUsedEdge, usedEdge));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean canUseEdge() {
+        AbstraktPersona persona = getCharacter().getPersona();
+        int edge = persona.getEdge();        
+        
+        return (edge - getUsedEdge())>0;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -483,6 +538,8 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
             case RuntimePackage.RUNTIME_CHARACTER__ARMOR:
                 if (resolve) return getArmor();
                 return basicGetArmor();
+            case RuntimePackage.RUNTIME_CHARACTER__USED_EDGE:
+                return getUsedEdge();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -521,6 +578,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
             case RuntimePackage.RUNTIME_CHARACTER__ARMOR:
                 setArmor((Kleidung)newValue);
                 return;
+            case RuntimePackage.RUNTIME_CHARACTER__USED_EDGE:
+                setUsedEdge((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -557,6 +617,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
             case RuntimePackage.RUNTIME_CHARACTER__ARMOR:
                 setArmor((Kleidung)null);
                 return;
+            case RuntimePackage.RUNTIME_CHARACTER__USED_EDGE:
+                setUsedEdge(USED_EDGE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -587,6 +650,8 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
                 return inUse != null && !inUse.isEmpty();
             case RuntimePackage.RUNTIME_CHARACTER__ARMOR:
                 return armor != null;
+            case RuntimePackage.RUNTIME_CHARACTER__USED_EDGE:
+                return usedEdge != USED_EDGE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -635,6 +700,20 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * @generated
      */
     @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+        switch (operationID) {
+            case RuntimePackage.RUNTIME_CHARACTER___CAN_USE_EDGE:
+                return canUseEdge();
+        }
+        return super.eInvoke(operationID, arguments);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public String toString() {
         if (eIsProxy()) return super.toString();
 
@@ -645,6 +724,8 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         result.append(mentalDamage);
         result.append(", zustand: ");
         result.append(zustand);
+        result.append(", usedEdge: ");
+        result.append(usedEdge);
         result.append(')');
         return result.toString();
     }

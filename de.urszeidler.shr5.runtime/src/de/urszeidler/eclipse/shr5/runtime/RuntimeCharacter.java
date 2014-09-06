@@ -20,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getLeftHand <em>Left Hand</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getInUse <em>In Use</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getArmor <em>Armor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getUsedEdge <em>Used Edge</em>}</li>
  * </ul>
  * </p>
  *
@@ -147,5 +148,41 @@ public interface RuntimeCharacter extends AbstractExtendetDataAware, PhyicalStat
      * @generated
      */
     void setArmor(Kleidung value);
+
+    /**
+     * Returns the value of the '<em><b>Used Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Counts the edge used.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Used Edge</em>' attribute.
+     * @see #setUsedEdge(int)
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter_UsedEdge()
+     * @model
+     * @generated
+     */
+    int getUsedEdge();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getUsedEdge <em>Used Edge</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Used Edge</em>' attribute.
+     * @see #getUsedEdge()
+     * @generated
+     */
+    void setUsedEdge(int value);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Simple method to decide if the character has edge left.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean canUseEdge();
 
 } // RuntimeCharacter

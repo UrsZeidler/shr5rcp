@@ -662,13 +662,22 @@ public interface RuntimePackage extends EPackage {
     int RUNTIME_CHARACTER__ARMOR = ABSTRACT_EXTENDET_DATA_AWARE_FEATURE_COUNT + 8;
 
     /**
+     * The feature id for the '<em><b>Used Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RUNTIME_CHARACTER__USED_EDGE = ABSTRACT_EXTENDET_DATA_AWARE_FEATURE_COUNT + 9;
+
+    /**
      * The number of structural features of the '<em>Character</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RUNTIME_CHARACTER_FEATURE_COUNT = ABSTRACT_EXTENDET_DATA_AWARE_FEATURE_COUNT + 9;
+    int RUNTIME_CHARACTER_FEATURE_COUNT = ABSTRACT_EXTENDET_DATA_AWARE_FEATURE_COUNT + 10;
 
     /**
      * The operation id for the '<em>Add To Extendet Data</em>' operation.
@@ -743,13 +752,22 @@ public interface RuntimePackage extends EPackage {
     int RUNTIME_CHARACTER___GET_LIST_VALUE__EXTENDETDATA = ABSTRACT_EXTENDET_DATA_AWARE___GET_LIST_VALUE__EXTENDETDATA;
 
     /**
+     * The operation id for the '<em>Can Use Edge</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RUNTIME_CHARACTER___CAN_USE_EDGE = ABSTRACT_EXTENDET_DATA_AWARE_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Character</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RUNTIME_CHARACTER_OPERATION_COUNT = ABSTRACT_EXTENDET_DATA_AWARE_OPERATION_COUNT + 0;
+    int RUNTIME_CHARACTER_OPERATION_COUNT = ABSTRACT_EXTENDET_DATA_AWARE_OPERATION_COUNT + 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl <em>Team</em>}' class.
@@ -998,6 +1016,15 @@ public interface RuntimePackage extends EPackage {
     int GRUNT_RUNTIME_CHARACTER__ARMOR = RUNTIME_CHARACTER__ARMOR;
 
     /**
+     * The feature id for the '<em><b>Used Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER__USED_EDGE = RUNTIME_CHARACTER__USED_EDGE;
+
+    /**
      * The number of structural features of the '<em>Grunt Runtime Character</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1077,6 +1104,15 @@ public interface RuntimePackage extends EPackage {
      * @ordered
      */
     int GRUNT_RUNTIME_CHARACTER___GET_LIST_VALUE__EXTENDETDATA = RUNTIME_CHARACTER___GET_LIST_VALUE__EXTENDETDATA;
+
+    /**
+     * The operation id for the '<em>Can Use Edge</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_RUNTIME_CHARACTER___CAN_USE_EDGE = RUNTIME_CHARACTER___CAN_USE_EDGE;
 
     /**
      * The number of operations of the '<em>Grunt Runtime Character</em>' class.
@@ -1413,6 +1449,27 @@ public interface RuntimePackage extends EPackage {
      * @generated
      */
     EReference getRuntimeCharacter_Armor();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getUsedEdge <em>Used Edge</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Used Edge</em>'.
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getUsedEdge()
+     * @see #getRuntimeCharacter()
+     * @generated
+     */
+    EAttribute getRuntimeCharacter_UsedEdge();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#canUseEdge() <em>Can Use Edge</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Can Use Edge</em>' operation.
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#canUseEdge()
+     * @generated
+     */
+    EOperation getRuntimeCharacter__CanUseEdge();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.runtime.Team <em>Team</em>}'.
@@ -1770,6 +1827,22 @@ public interface RuntimePackage extends EPackage {
          * @generated
          */
         EReference RUNTIME_CHARACTER__ARMOR = eINSTANCE.getRuntimeCharacter_Armor();
+
+        /**
+         * The meta object literal for the '<em><b>Used Edge</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RUNTIME_CHARACTER__USED_EDGE = eINSTANCE.getRuntimeCharacter_UsedEdge();
+
+        /**
+         * The meta object literal for the '<em><b>Can Use Edge</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation RUNTIME_CHARACTER___CAN_USE_EDGE = eINSTANCE.getRuntimeCharacter__CanUseEdge();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl <em>Team</em>}' class.

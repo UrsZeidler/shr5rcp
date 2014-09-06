@@ -69,6 +69,7 @@ public class RuntimeCharacterItemProvider
             addLeftHandPropertyDescriptor(object);
             addInUsePropertyDescriptor(object);
             addArmorPropertyDescriptor(object);
+            addUsedEdgePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -321,6 +322,28 @@ public class RuntimeCharacterItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Used Edge feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addUsedEdgePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_RuntimeCharacter_usedEdge_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_usedEdge_feature", "_UI_RuntimeCharacter_type"),
+                 RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns RuntimeCharacter.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -385,6 +408,7 @@ public class RuntimeCharacterItemProvider
             case RuntimePackage.RUNTIME_CHARACTER__MENTAL_DAMAGE:
             case RuntimePackage.RUNTIME_CHARACTER__ZUSTAND:
             case RuntimePackage.RUNTIME_CHARACTER__OVER_DEAD:
+            case RuntimePackage.RUNTIME_CHARACTER__USED_EDGE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

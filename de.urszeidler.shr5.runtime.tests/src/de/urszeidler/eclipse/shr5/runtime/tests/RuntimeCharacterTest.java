@@ -17,9 +17,16 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.runtime.PhyicalState#getOverDead() <em>Over Dead</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.runtime.PhyicalState#getOverDead() <em>Over Dead</em>}</li>
  * </ul>
  * </p>
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ * <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#canUseEdge() <em>Can Use Edge</em>}</li>
+ * </ul>
+ * </p>
+ * 
  * @generated
  */
 public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
@@ -27,6 +34,7 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -37,6 +45,7 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
      * Constructs a new Character test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public RuntimeCharacterTest(String name) {
@@ -47,6 +56,7 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
      * Returns the fixture for this Character test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -57,6 +67,7 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -68,6 +79,7 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -80,22 +92,44 @@ public class RuntimeCharacterTest extends AbstractExtendetDataAwareTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.runtime.PhyicalState#getOverDead() <em>Over Dead</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.runtime.PhyicalState#getOverDead()
      * @generated not
      */
     public void testGetOverDead() {
-        
+
         ManagedCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
         persona.setKonstitutionBasis(4);
         character.setPersona(persona);
         getFixture().setCharacter(character);
-        
+
         getFixture().setPhysicalDamage(10);
         assertEquals(0, getFixture().getOverDead());
         getFixture().setPhysicalDamage(11);
         assertEquals(1, getFixture().getOverDead());
-        
+
     }
 
-} //RuntimeCharacterTest
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#canUseEdge() <em>Can Use Edge</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#canUseEdge()
+     * @generated not
+     */
+    public void testCanUseEdge() {
+        ManagedCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+        AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
+        persona.setKonstitutionBasis(4);
+        character.setPersona(persona);
+        getFixture().setCharacter(character);
+
+        persona.setEdgeBasis(2);
+        assertTrue(getFixture().canUseEdge());
+        getFixture().setUsedEdge(2);
+        assertFalse(getFixture().canUseEdge());
+    }
+
+} // RuntimeCharacterTest

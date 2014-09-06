@@ -453,6 +453,24 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getRuntimeCharacter_UsedEdge() {
+        return (EAttribute)runtimeCharacterEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getRuntimeCharacter__CanUseEdge() {
+        return runtimeCharacterEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getTeam() {
         return teamEClass;
     }
@@ -583,6 +601,8 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         createEReference(runtimeCharacterEClass, RUNTIME_CHARACTER__LEFT_HAND);
         createEReference(runtimeCharacterEClass, RUNTIME_CHARACTER__IN_USE);
         createEReference(runtimeCharacterEClass, RUNTIME_CHARACTER__ARMOR);
+        createEAttribute(runtimeCharacterEClass, RUNTIME_CHARACTER__USED_EDGE);
+        createEOperation(runtimeCharacterEClass, RUNTIME_CHARACTER___CAN_USE_EDGE);
 
         teamEClass = createEClass(TEAM);
         createEReference(teamEClass, TEAM__MEMBERS);
@@ -705,6 +725,9 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         initEReference(getRuntimeCharacter_LeftHand(), theShr5Package.getAbstraktGegenstand(), null, "leftHand", null, 0, 1, RuntimeCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRuntimeCharacter_InUse(), theShr5Package.getAbstraktGegenstand(), null, "inUse", null, 0, -1, RuntimeCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRuntimeCharacter_Armor(), theShr5Package.getKleidung(), null, "armor", null, 0, 1, RuntimeCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRuntimeCharacter_UsedEdge(), ecorePackage.getEInt(), "usedEdge", null, 0, 1, RuntimeCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEOperation(getRuntimeCharacter__CanUseEdge(), ecorePackage.getEBoolean(), "canUseEdge", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(teamEClass, Team.class, "Team", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getTeam_Members(), this.getRuntimeCharacter(), null, "members", null, 0, -1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
