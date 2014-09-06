@@ -602,6 +602,16 @@ public class ShrListItemProvider
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createDrug()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createMagazin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createDefaultWifi()));
     }
 
 	/**

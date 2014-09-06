@@ -11,6 +11,10 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Rigger Command Console</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Defines rigger consoles.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

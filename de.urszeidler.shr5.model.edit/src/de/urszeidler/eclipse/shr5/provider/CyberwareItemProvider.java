@@ -322,6 +322,16 @@ public class CyberwareItemProvider
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
                  Shr5Factory.eINSTANCE.createMagieFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                 Shr5Factory.eINSTANCE.createMagazin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                 Shr5Factory.eINSTANCE.createDefaultWifi()));
     }
 
 }

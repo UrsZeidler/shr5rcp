@@ -180,7 +180,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/edgeBasis"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/edge"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktGegenstand"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktGegenstand">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktGegenstand/wifi"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//AbstaktFernKampfwaffe">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstaktFernKampfwaffe/reichweite"/>
     </genClasses>
@@ -320,6 +322,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Anwendbar">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Anwendbar/fertigkeit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Anwendbar/spezialisierung"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaEigenschaft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaEigenschaft/karmaKosten"/>
@@ -653,5 +656,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drug/duration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drug/addictionType"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Magazin">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/bullets"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//DefaultWifi"/>
   </genPackages>
 </genmodel:GenModel>

@@ -1569,13 +1569,31 @@ public interface Shr5Package extends EPackage {
 	int ABSTRAKT_GEGENSTAND__FERTIGKEIT = QUELLE_FEATURE_COUNT + 7;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG = QUELLE_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_GEGENSTAND__WIFI = QUELLE_FEATURE_COUNT + 9;
+
+    /**
      * The number of structural features of the '<em>Abstrakt Gegenstand</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 8;
+	int ABSTRAKT_GEGENSTAND_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 10;
 
     /**
      * The number of operations of the '<em>Abstrakt Gegenstand</em>' class.
@@ -1693,6 +1711,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int GEGENSTAND__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEGENSTAND__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEGENSTAND__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
 
     /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
@@ -2208,6 +2244,24 @@ public interface Shr5Package extends EPackage {
 	int ABSTAKT_WAFFE__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_WAFFE__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_WAFFE__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2368,6 +2422,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT = ABSTAKT_WAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_FERN_KAMPFWAFFE__SPEZIALISIERUNG = ABSTAKT_WAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_FERN_KAMPFWAFFE__WIFI = ABSTAKT_WAFFE__WIFI;
 
     /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
@@ -2541,6 +2613,24 @@ public interface Shr5Package extends EPackage {
 	int NAHKAMPFWAFFE__FERTIGKEIT = ABSTAKT_WAFFE__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMPFWAFFE__SPEZIALISIERUNG = ABSTAKT_WAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMPFWAFFE__WIFI = ABSTAKT_WAFFE__WIFI;
+
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2712,6 +2802,24 @@ public interface Shr5Package extends EPackage {
 	int FEUERWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FEUERWAFFE__SPEZIALISIERUNG = ABSTAKT_FERN_KAMPFWAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FEUERWAFFE__WIFI = ABSTAKT_FERN_KAMPFWAFFE__WIFI;
+
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2811,7 +2919,7 @@ public interface Shr5Package extends EPackage {
 	int FEUERWAFFE__EINBAU = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>Magazin</b></em>' reference list.
+     * The feature id for the '<em><b>Magazin</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -2944,6 +3052,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int WURFWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__SPEZIALISIERUNG = ABSTAKT_FERN_KAMPFWAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__WIFI = ABSTAKT_FERN_KAMPFWAFFE__WIFI;
 
     /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
@@ -3169,6 +3295,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int PROJEKTILWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROJEKTILWAFFE__SPEZIALISIERUNG = ABSTAKT_FERN_KAMPFWAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROJEKTILWAFFE__WIFI = ABSTAKT_FERN_KAMPFWAFFE__WIFI;
 
     /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
@@ -6663,6 +6807,24 @@ public interface Shr5Package extends EPackage {
 	int KLEIDUNG__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KLEIDUNG__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KLEIDUNG__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
      * The feature id for the '<em><b>Ruestung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6798,13 +6960,22 @@ public interface Shr5Package extends EPackage {
 	int ANWENDBAR__FERTIGKEIT = 0;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ANWENDBAR__SPEZIALISIERUNG = 1;
+
+    /**
      * The number of structural features of the '<em>Anwendbar</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ANWENDBAR_FEATURE_COUNT = 1;
+	int ANWENDBAR_FEATURE_COUNT = 2;
 
     /**
      * The number of operations of the '<em>Anwendbar</em>' class.
@@ -9381,13 +9552,22 @@ public interface Shr5Package extends EPackage {
 	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__SPEZIALISIERUNG = BESCHREIBBAR_FEATURE_COUNT + 8;
+
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int FAHRZEUG__MODS = BESCHREIBBAR_FEATURE_COUNT + 8;
+    int FAHRZEUG__MODS = BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Zustand Max</b></em>' attribute.
@@ -9396,7 +9576,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 9;
+    int FAHRZEUG__ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -9405,7 +9585,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
@@ -9414,7 +9594,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
@@ -9423,7 +9603,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
@@ -9432,7 +9612,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
@@ -9441,7 +9621,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 15;
 
     /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -9450,7 +9630,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 16;
 
     /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
@@ -9459,7 +9639,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 16;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 17;
 
     /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
@@ -9468,7 +9648,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 17;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 18;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -9477,7 +9657,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 18;
+    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 19;
 
     /**
      * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
@@ -9486,7 +9666,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 19;
+    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 20;
 
     /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
@@ -9495,7 +9675,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 20;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 21;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -9604,6 +9784,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int PASSAGIER_FAHRZEUG__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__SPEZIALISIERUNG = FAHRZEUG__SPEZIALISIERUNG;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -9838,6 +10027,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int BODENFAHRZEUG__FERTIGKEIT = PASSAGIER_FAHRZEUG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__SPEZIALISIERUNG = PASSAGIER_FAHRZEUG__SPEZIALISIERUNG;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -10090,6 +10288,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int DROHNE__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__SPEZIALISIERUNG = FAHRZEUG__SPEZIALISIERUNG;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -13166,6 +13373,24 @@ public interface Shr5Package extends EPackage {
     int CREDSTICK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
      * The feature id for the '<em><b>Max Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13353,6 +13578,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MUNITION__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
 
     /**
      * The feature id for the '<em><b>Anzahl</b></em>' attribute.
@@ -14429,6 +14672,24 @@ public interface Shr5Package extends EPackage {
     int ABSTRACT_MATRIX_DEVICE__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14626,6 +14887,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int COMMLINK__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMLINK__SPEZIALISIERUNG = ABSTRACT_MATRIX_DEVICE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMLINK__WIFI = ABSTRACT_MATRIX_DEVICE__WIFI;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -14834,6 +15113,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CYBERDECK__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__SPEZIALISIERUNG = ABSTRACT_MATRIX_DEVICE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__WIFI = ABSTRACT_MATRIX_DEVICE__WIFI;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -15741,6 +16038,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int RIGGER_COMMAND_CONSOLE__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_COMMAND_CONSOLE__SPEZIALISIERUNG = ABSTRACT_MATRIX_DEVICE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_COMMAND_CONSOLE__WIFI = ABSTRACT_MATRIX_DEVICE__WIFI;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -17766,13 +18081,31 @@ public interface Shr5Package extends EPackage {
     int ABSTRAKT_FOKUS__FERTIGKEIT = FOKUS_FEATURE_COUNT + 11;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__SPEZIALISIERUNG = FOKUS_FEATURE_COUNT + 12;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__WIFI = FOKUS_FEATURE_COUNT + 13;
+
+    /**
      * The number of structural features of the '<em>Abstrakt Fokus</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ABSTRAKT_FOKUS_FEATURE_COUNT = FOKUS_FEATURE_COUNT + 12;
+    int ABSTRAKT_FOKUS_FEATURE_COUNT = FOKUS_FEATURE_COUNT + 14;
 
     /**
      * The number of operations of the '<em>Abstrakt Fokus</em>' class.
@@ -17920,6 +18253,24 @@ public interface Shr5Package extends EPackage {
     int QI_FOKUS__FERTIGKEIT = ABSTRAKT_FOKUS__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__SPEZIALISIERUNG = ABSTRAKT_FOKUS__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__WIFI = ABSTRAKT_FOKUS__WIFI;
+
+    /**
      * The feature id for the '<em><b>Power</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -18063,6 +18414,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int WAFFEN_FOKUS__FERTIGKEIT = NAHKAMPFWAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__SPEZIALISIERUNG = NAHKAMPFWAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__WIFI = NAHKAMPFWAFFE__WIFI;
 
     /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
@@ -18280,6 +18649,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MAGIE_FOKUS__FERTIGKEIT = ABSTRAKT_FOKUS__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__SPEZIALISIERUNG = ABSTRAKT_FOKUS__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__WIFI = ABSTRAKT_FOKUS__WIFI;
 
     /**
      * The feature id for the '<em><b>Bindungs Faktor</b></em>' attribute.
@@ -18871,6 +19258,395 @@ public interface Shr5Package extends EPackage {
     int DRUG_OPERATION_COUNT = SUBSTANCE_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl <em>Magazin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MagazinImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazin()
+     * @generated
+     */
+    int MAGAZIN = 128;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__TYPE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Bullets</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__BULLETS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Magazin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Magazin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl <em>Default Wifi</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDefaultWifi()
+     * @generated
+     */
+    int DEFAULT_WIFI = 129;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__LOCALIZATIONS = ABSTRACT_MATRIX_DEVICE__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__PAGE = ABSTRACT_MATRIX_DEVICE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__SRC_BOOK = ABSTRACT_MATRIX_DEVICE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__WERT = ABSTRACT_MATRIX_DEVICE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__VERFUEGBARKEIT = ABSTRACT_MATRIX_DEVICE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__WERT_VALUE = ABSTRACT_MATRIX_DEVICE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__BESCHREIBUNG = ABSTRACT_MATRIX_DEVICE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__IMAGE = ABSTRACT_MATRIX_DEVICE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__NAME = ABSTRACT_MATRIX_DEVICE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__MODS = ABSTRACT_MATRIX_DEVICE__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__SPEZIALISIERUNG = ABSTRACT_MATRIX_DEVICE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__WIFI = ABSTRACT_MATRIX_DEVICE__WIFI;
+
+    /**
+     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__MATRIX_ZUSTAND_MAX = ABSTRACT_MATRIX_DEVICE__MATRIX_ZUSTAND_MAX;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__GERAETESTUFE = ABSTRACT_MATRIX_DEVICE__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__FIREWALL = ABSTRACT_MATRIX_DEVICE__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__DATENVERARBEITUNG = ABSTRACT_MATRIX_DEVICE__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__CURRENT_MODUS = ABSTRACT_MATRIX_DEVICE__CURRENT_MODUS;
+
+    /**
+     * The feature id for the '<em><b>Pan</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__PAN = ABSTRACT_MATRIX_DEVICE__PAN;
+
+    /**
+     * The feature id for the '<em><b>Device Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI__DEVICE_RATING = ABSTRACT_MATRIX_DEVICE__DEVICE_RATING;
+
+    /**
+     * The number of structural features of the '<em>Default Wifi</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Default Wifi</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFAULT_WIFI_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18878,7 +19654,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 128;
+	int FEUER_MODUS = 130;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -18888,7 +19664,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 129;
+	int SCHADENS_TYP = 131;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -18898,7 +19674,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 130;
+	int MAGAZIN_TYP = 132;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -18908,7 +19684,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 131;
+	int FEUWERWAFFEN_ERWEITERUNG = 133;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -18918,7 +19694,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 132;
+	int MODIFIKATOR_TYPE = 134;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -18928,7 +19704,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 133;
+	int SMARTGUN_TYPE = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -18938,7 +19714,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 134;
+	int ZAUBER_ART = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -18948,7 +19724,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 135;
+	int ZAUBER_REICHWEITE = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -18958,7 +19734,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 136;
+	int ZAUBER_DAUER = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -18968,7 +19744,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 137;
+	int MAGISCHE_TRADITION = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -18978,7 +19754,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 138;
+	int CRITTER_HANDLUNG = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -18988,7 +19764,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 139;
+	int CRITTER_REICHWEITE = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -18998,7 +19774,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 140;
+	int CRITTER_DAUER = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -19008,7 +19784,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 141;
+	int RESONANZ_ZIEL = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -19018,7 +19794,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 142;
+    int INTERFACE_MODUS = 144;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -19028,7 +19804,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 143;
+    int PROGRAM_TYPE = 145;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -19038,7 +19814,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 144;
+    int MATRIX_PROGRAM_TYPE = 146;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -19048,7 +19824,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 145;
+    int SUBSTANCE_VECTOR = 147;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -19058,7 +19834,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 146;
+    int SUBSTANCE_EFFECT = 148;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -19068,7 +19844,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 147;
+    int ADDICTION_TYPE = 149;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -19078,7 +19854,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 148;
+	int SHR_DATE = 150;
 
 
 	/**
@@ -19089,7 +19865,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 149;
+	int MODIFICATION_MANAGER = 151;
 
 
 	/**
@@ -19686,6 +20462,17 @@ public interface Shr5Package extends EPackage {
 	EClass getAbstraktGegenstand();
 
 	/**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.AbstraktGegenstand#getWifi <em>Wifi</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Wifi</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbstraktGegenstand#getWifi()
+     * @see #getAbstraktGegenstand()
+     * @generated
+     */
+    EReference getAbstraktGegenstand_Wifi();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe <em>Abstakt Fern Kampfwaffe</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19858,10 +20645,10 @@ public interface Shr5Package extends EPackage {
 	EReference getFeuerwaffe_Einbau();
 
 	/**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}'.
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Magazin</em>'.
+     * @return the meta object for the reference '<em>Magazin</em>'.
      * @see de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin()
      * @see #getFeuerwaffe()
      * @generated
@@ -20932,6 +21719,17 @@ public interface Shr5Package extends EPackage {
 	EReference getAnwendbar_Fertigkeit();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Anwendbar#getSpezialisierung <em>Spezialisierung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Spezialisierung</em>'.
+     * @see de.urszeidler.eclipse.shr5.Anwendbar#getSpezialisierung()
+     * @see #getAnwendbar()
+     * @generated
+     */
+    EReference getAnwendbar_Spezialisierung();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaEigenschaft <em>Persona Eigenschaft</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -23077,6 +23875,48 @@ public interface Shr5Package extends EPackage {
     EAttribute getDrug_AddictionType();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Magazin <em>Magazin</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Magazin</em>'.
+     * @see de.urszeidler.eclipse.shr5.Magazin
+     * @generated
+     */
+    EClass getMagazin();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Magazin#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.Magazin#getType()
+     * @see #getMagazin()
+     * @generated
+     */
+    EReference getMagazin_Type();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Magazin#getBullets <em>Bullets</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Bullets</em>'.
+     * @see de.urszeidler.eclipse.shr5.Magazin#getBullets()
+     * @see #getMagazin()
+     * @generated
+     */
+    EReference getMagazin_Bullets();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.DefaultWifi <em>Default Wifi</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Default Wifi</em>'.
+     * @see de.urszeidler.eclipse.shr5.DefaultWifi
+     * @generated
+     */
+    EClass getDefaultWifi();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -24481,6 +25321,14 @@ public interface Shr5Package extends EPackage {
 		EClass ABSTRAKT_GEGENSTAND = eINSTANCE.getAbstraktGegenstand();
 
 		/**
+         * The meta object literal for the '<em><b>Wifi</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ABSTRAKT_GEGENSTAND__WIFI = eINSTANCE.getAbstraktGegenstand_Wifi();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl <em>Abstakt Fern Kampfwaffe</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24617,7 +25465,7 @@ public interface Shr5Package extends EPackage {
 		EReference FEUERWAFFE__EINBAU = eINSTANCE.getFeuerwaffe_Einbau();
 
 		/**
-         * The meta object literal for the '<em><b>Magazin</b></em>' reference list feature.
+         * The meta object literal for the '<em><b>Magazin</b></em>' reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
@@ -25469,6 +26317,14 @@ public interface Shr5Package extends EPackage {
 		EReference ANWENDBAR__FERTIGKEIT = eINSTANCE.getAnwendbar_Fertigkeit();
 
 		/**
+         * The meta object literal for the '<em><b>Spezialisierung</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ANWENDBAR__SPEZIALISIERUNG = eINSTANCE.getAnwendbar_Spezialisierung();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl <em>Persona Eigenschaft</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -27207,6 +28063,42 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute DRUG__ADDICTION_TYPE = eINSTANCE.getDrug_AddictionType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl <em>Magazin</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MagazinImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazin()
+         * @generated
+         */
+        EClass MAGAZIN = eINSTANCE.getMagazin();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MAGAZIN__TYPE = eINSTANCE.getMagazin_Type();
+
+        /**
+         * The meta object literal for the '<em><b>Bullets</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MAGAZIN__BULLETS = eINSTANCE.getMagazin_Bullets();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl <em>Default Wifi</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDefaultWifi()
+         * @generated
+         */
+        EClass DEFAULT_WIFI = eINSTANCE.getDefaultWifi();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.

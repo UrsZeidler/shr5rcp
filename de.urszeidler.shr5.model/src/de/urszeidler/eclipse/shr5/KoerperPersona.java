@@ -9,6 +9,10 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Koerper Persona</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * We will remove this and store the properties in the abstractPersona.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

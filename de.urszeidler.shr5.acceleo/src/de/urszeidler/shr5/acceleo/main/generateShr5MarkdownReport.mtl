@@ -28,8 +28,14 @@ All you can buy.
 [printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
 All the things that can modify the character.
 
+[printAllSubClassesAndTitel(anEPackage, 'MatrixDevice')/]
+All the Matix devices.
+
 [printAllSubClassesAndTitel(anEPackage, 'Software')/]
 All the software.
+
+[printAllSubClassesAndTitel(anEPackage, 'Substance')/]
+All the substances.
 
 # all classes
 

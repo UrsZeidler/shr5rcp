@@ -8,6 +8,10 @@ package de.urszeidler.eclipse.shr5;
  * A representation of the model object '<em><b>Kleidung</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Defines the clothes and armor.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

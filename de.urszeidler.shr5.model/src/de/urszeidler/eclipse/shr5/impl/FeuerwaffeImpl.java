@@ -3,7 +3,6 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -12,15 +11,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
+import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
-import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -134,14 +131,14 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	protected EList<FernkampfwaffeModifikator> einbau;
 
 	/**
-     * The cached value of the '{@link #getMagazin() <em>Magazin</em>}' reference list.
+     * The cached value of the '{@link #getMagazin() <em>Magazin</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getMagazin()
      * @generated
      * @ordered
      */
-    protected EList<Munition> magazin;
+    protected Magazin magazin;
 
     /**
      * <!-- begin-user-doc -->
@@ -266,15 +263,41 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Munition> getMagazin() {
-        if (magazin == null) {
-            magazin = new EObjectResolvingEList<Munition>(Munition.class, this, Shr5Package.FEUERWAFFE__MAGAZIN);
+    public Magazin getMagazin() {
+        if (magazin != null && magazin.eIsProxy()) {
+            InternalEObject oldMagazin = (InternalEObject)magazin;
+            magazin = (Magazin)eResolveProxy(oldMagazin);
+            if (magazin != oldMagazin) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.FEUERWAFFE__MAGAZIN, oldMagazin, magazin));
+            }
         }
         return magazin;
     }
 
     
-//    /**
+/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Magazin basicGetMagazin() {
+        return magazin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMagazin(Magazin newMagazin) {
+        Magazin oldMagazin = magazin;
+        magazin = newMagazin;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FEUERWAFFE__MAGAZIN, oldMagazin, magazin));
+    }
+
+    //    /**
 //     * <!-- begin-user-doc -->
 //     * <!-- end-user-doc -->
 //     * @generated not
@@ -319,7 +342,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return getEinbau();
             case Shr5Package.FEUERWAFFE__MAGAZIN:
-                return getMagazin();
+                if (resolve) return getMagazin();
+                return basicGetMagazin();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -355,8 +379,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
                 getEinbau().addAll((Collection<? extends FernkampfwaffeModifikator>)newValue);
                 return;
             case Shr5Package.FEUERWAFFE__MAGAZIN:
-                getMagazin().clear();
-                getMagazin().addAll((Collection<? extends Munition>)newValue);
+                setMagazin((Magazin)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -389,7 +412,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
                 getEinbau().clear();
                 return;
             case Shr5Package.FEUERWAFFE__MAGAZIN:
-                getMagazin().clear();
+                setMagazin((Magazin)null);
                 return;
         }
         super.eUnset(featureID);
@@ -416,7 +439,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return einbau != null && !einbau.isEmpty();
             case Shr5Package.FEUERWAFFE__MAGAZIN:
-                return magazin != null && !magazin.isEmpty();
+                return magazin != null;
         }
         return super.eIsSet(featureID);
     }

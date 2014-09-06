@@ -70,6 +70,7 @@ public class FahrzeugItemProvider
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
+            addSpezialisierungPropertyDescriptor(object);
             addZustandMaxPropertyDescriptor(object);
             addHandlingPropertyDescriptor(object);
             addGeschwindigkeitPropertyDescriptor(object);
@@ -305,6 +306,28 @@ public class FahrzeugItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Spezialisierung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpezialisierungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Anwendbar_spezialisierung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_spezialisierung_feature", "_UI_Anwendbar_type"),
+                 Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Zustand Max feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

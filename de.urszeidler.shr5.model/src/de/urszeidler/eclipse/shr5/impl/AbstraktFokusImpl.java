@@ -27,10 +27,12 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,6 +55,8 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getSpezialisierung <em>Spezialisierung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
  * </p>
  *
@@ -278,6 +282,26 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * @ordered
      */
     protected Fertigkeit fertigkeit;
+
+    /**
+     * The cached value of the '{@link #getSpezialisierung() <em>Spezialisierung</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSpezialisierung()
+     * @generated
+     * @ordered
+     */
+    protected Spezialisierung spezialisierung;
+
+    /**
+     * The cached value of the '{@link #getWifi() <em>Wifi</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWifi()
+     * @generated
+     * @ordered
+     */
+    protected MatrixDevice wifi;
 
     /**
      * <!-- begin-user-doc -->
@@ -592,6 +616,87 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    public Spezialisierung getSpezialisierung() {
+        if (spezialisierung != null && spezialisierung.eIsProxy()) {
+            InternalEObject oldSpezialisierung = (InternalEObject)spezialisierung;
+            spezialisierung = (Spezialisierung)eResolveProxy(oldSpezialisierung);
+            if (spezialisierung != oldSpezialisierung) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG, oldSpezialisierung, spezialisierung));
+            }
+        }
+        return spezialisierung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Spezialisierung basicGetSpezialisierung() {
+        return spezialisierung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSpezialisierung(Spezialisierung newSpezialisierung) {
+        Spezialisierung oldSpezialisierung = spezialisierung;
+        spezialisierung = newSpezialisierung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG, oldSpezialisierung, spezialisierung));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MatrixDevice getWifi() {
+        return wifi;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetWifi(MatrixDevice newWifi, NotificationChain msgs) {
+        MatrixDevice oldWifi = wifi;
+        wifi = newWifi;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__WIFI, oldWifi, newWifi);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWifi(MatrixDevice newWifi) {
+        if (newWifi != wifi) {
+            NotificationChain msgs = null;
+            if (wifi != null)
+                msgs = ((InternalEObject)wifi).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.ABSTRAKT_FOKUS__WIFI, null, msgs);
+            if (newWifi != null)
+                msgs = ((InternalEObject)newWifi).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.ABSTRAKT_FOKUS__WIFI, null, msgs);
+            msgs = basicSetWifi(newWifi, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__WIFI, newWifi, newWifi));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -614,6 +719,8 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.ABSTRAKT_FOKUS__MODS:
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
+                return basicSetWifi(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -656,6 +763,11 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
             case Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
+            case Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG:
+                if (resolve) return getSpezialisierung();
+                return basicGetSpezialisierung();
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
+                return getWifi();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -707,6 +819,12 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
             case Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)newValue);
                 return;
+            case Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG:
+                setSpezialisierung((Spezialisierung)newValue);
+                return;
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
+                setWifi((MatrixDevice)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -755,6 +873,12 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
             case Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)null);
                 return;
+            case Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG:
+                setSpezialisierung((Spezialisierung)null);
+                return;
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
+                setWifi((MatrixDevice)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -795,6 +919,10 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
                 return mods != null && !mods.isEmpty();
             case Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT:
                 return fertigkeit != null;
+            case Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG:
+                return spezialisierung != null;
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
+                return wifi != null;
         }
         return super.eIsSet(featureID);
     }
@@ -850,11 +978,13 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
         if (baseClass == Anwendbar.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT: return Shr5Package.ANWENDBAR__FERTIGKEIT;
+                case Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG: return Shr5Package.ANWENDBAR__SPEZIALISIERUNG;
                 default: return -1;
             }
         }
         if (baseClass == AbstraktGegenstand.class) {
             switch (derivedFeatureID) {
+                case Shr5Package.ABSTRAKT_FOKUS__WIFI: return Shr5Package.ABSTRAKT_GEGENSTAND__WIFI;
                 default: return -1;
             }
         }
@@ -912,11 +1042,13 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
         if (baseClass == Anwendbar.class) {
             switch (baseFeatureID) {
                 case Shr5Package.ANWENDBAR__FERTIGKEIT: return Shr5Package.ABSTRAKT_FOKUS__FERTIGKEIT;
+                case Shr5Package.ANWENDBAR__SPEZIALISIERUNG: return Shr5Package.ABSTRAKT_FOKUS__SPEZIALISIERUNG;
                 default: return -1;
             }
         }
         if (baseClass == AbstraktGegenstand.class) {
             switch (baseFeatureID) {
+                case Shr5Package.ABSTRAKT_GEGENSTAND__WIFI: return Shr5Package.ABSTRAKT_FOKUS__WIFI;
                 default: return -1;
             }
         }

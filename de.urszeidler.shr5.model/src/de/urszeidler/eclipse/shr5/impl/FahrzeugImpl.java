@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
@@ -50,6 +51,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSpezialisierung <em>Spezialisierung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
@@ -247,6 +249,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected Fertigkeit fertigkeit;
+
+    /**
+     * The cached value of the '{@link #getSpezialisierung() <em>Spezialisierung</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSpezialisierung()
+     * @generated
+     * @ordered
+     */
+    protected Spezialisierung spezialisierung;
 
     /**
      * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
@@ -741,6 +753,44 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public Spezialisierung getSpezialisierung() {
+        if (spezialisierung != null && spezialisierung.eIsProxy()) {
+            InternalEObject oldSpezialisierung = (InternalEObject)spezialisierung;
+            spezialisierung = (Spezialisierung)eResolveProxy(oldSpezialisierung);
+            if (spezialisierung != oldSpezialisierung) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.FAHRZEUG__SPEZIALISIERUNG, oldSpezialisierung, spezialisierung));
+            }
+        }
+        return spezialisierung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Spezialisierung basicGetSpezialisierung() {
+        return spezialisierung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSpezialisierung(Spezialisierung newSpezialisierung) {
+        Spezialisierung oldSpezialisierung = spezialisierung;
+        spezialisierung = newSpezialisierung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__SPEZIALISIERUNG, oldSpezialisierung, spezialisierung));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
@@ -1013,6 +1063,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
+            case Shr5Package.FAHRZEUG__SPEZIALISIERUNG:
+                if (resolve) return getSpezialisierung();
+                return basicGetSpezialisierung();
             case Shr5Package.FAHRZEUG__MODS:
                 return getMods();
             case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
@@ -1080,6 +1133,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)newValue);
+                return;
+            case Shr5Package.FAHRZEUG__SPEZIALISIERUNG:
+                setSpezialisierung((Spezialisierung)newValue);
                 return;
             case Shr5Package.FAHRZEUG__MODS:
                 getMods().clear();
@@ -1155,6 +1211,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)null);
                 return;
+            case Shr5Package.FAHRZEUG__SPEZIALISIERUNG:
+                setSpezialisierung((Spezialisierung)null);
+                return;
             case Shr5Package.FAHRZEUG__MODS:
                 getMods().clear();
                 return;
@@ -1219,6 +1278,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 return fertigkeit != null;
+            case Shr5Package.FAHRZEUG__SPEZIALISIERUNG:
+                return spezialisierung != null;
             case Shr5Package.FAHRZEUG__MODS:
                 return mods != null && !mods.isEmpty();
             case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
@@ -1279,6 +1340,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Anwendbar.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FAHRZEUG__FERTIGKEIT: return Shr5Package.ANWENDBAR__FERTIGKEIT;
+                case Shr5Package.FAHRZEUG__SPEZIALISIERUNG: return Shr5Package.ANWENDBAR__SPEZIALISIERUNG;
                 default: return -1;
             }
         }
@@ -1329,6 +1391,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Anwendbar.class) {
             switch (baseFeatureID) {
                 case Shr5Package.ANWENDBAR__FERTIGKEIT: return Shr5Package.FAHRZEUG__FERTIGKEIT;
+                case Shr5Package.ANWENDBAR__SPEZIALISIERUNG: return Shr5Package.FAHRZEUG__SPEZIALISIERUNG;
                 default: return -1;
             }
         }

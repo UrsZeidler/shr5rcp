@@ -223,6 +223,9 @@
   </xsd:complexType>
   <xsd:element name="AbstraktPersona" type="shr5:AbstraktPersona"/>
   <xsd:complexType name="Gegenstand">
+    <xsd:annotation>
+      <xsd:documentation>A basic item.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:attribute name="kategorie" type="xsd:string"/>
@@ -230,7 +233,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Gegenstand" type="shr5:Gegenstand"/>
+  <xsd:element name="Gegenstand" type="shr5:Gegenstand">
+    <xsd:annotation>
+      <xsd:documentation>A basic item.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="GeldWert">
     <xsd:annotation>
       <xsd:documentation>This defines any object having a money value.</xsd:documentation>
@@ -257,6 +264,9 @@
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="Reichweite">
+    <xsd:annotation>
+      <xsd:documentation>The range.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -271,7 +281,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Reichweite" type="shr5:Reichweite"/>
+  <xsd:element name="Reichweite" type="shr5:Reichweite">
+    <xsd:annotation>
+      <xsd:documentation>The range.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="AttributModifikatorWert">
     <xsd:annotation>
       <xsd:documentation>die Modifikation
@@ -320,11 +334,28 @@
   </xsd:complexType>
   <xsd:element name="SpezielleAttribute" type="shr5:SpezielleAttribute"/>
   <xsd:complexType abstract="true" name="AbstraktGegenstand">
+    <xsd:annotation>
+      <xsd:documentation>The basic item class.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Quelle">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
-          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>Defines the skill.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="spezialisierung" type="shr5:Spezialisierung">
+            <xsd:annotation>
+              <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="wifi" type="shr5:MatrixDevice">
+            <xsd:annotation>
+              <xsd:documentation>The optional wifi component of the item.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
           <xsd:annotation>
@@ -339,11 +370,24 @@
         <xsd:attribute name="beschreibung" type="xsd:string"/>
         <xsd:attribute name="image" type="xsd:string"/>
         <xsd:attribute name="name" type="xsd:string" use="required"/>
-        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines the skill.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="spezialisierung" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="AbstraktGegenstand" type="shr5:AbstraktGegenstand"/>
+  <xsd:element name="AbstraktGegenstand" type="shr5:AbstraktGegenstand">
+    <xsd:annotation>
+      <xsd:documentation>The basic item class.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="AbstaktFernKampfwaffe">
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstaktWaffe">
@@ -381,9 +425,9 @@
           <xsd:element name="modie" type="shr5:FeuerModus"/>
           <xsd:element name="erweiterung" type="shr5:FeuwerwaffenErweiterung"/>
           <xsd:element name="einbau" type="shr5:FernkampfwaffeModifikator"/>
-          <xsd:element name="magazin" type="shr5:Munition">
+          <xsd:element name="magazin" type="shr5:Magazin">
             <xsd:annotation>
-              <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+              <xsd:documentation>This reference holds the current insert magazine.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
@@ -392,7 +436,7 @@
         <xsd:attribute name="rueckstoss" type="xsd:int"/>
         <xsd:attribute name="magazin" type="xsd:string">
           <xsd:annotation>
-            <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+            <xsd:documentation>This reference holds the current insert magazine.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -556,6 +600,9 @@
   </xsd:complexType>
   <xsd:element name="MudanPersona" type="shr5:MudanPersona"/>
   <xsd:complexType abstract="true" name="KoerperPersona">
+    <xsd:annotation>
+      <xsd:documentation>We will remove this and store the properties in the abstractPersona.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -567,7 +614,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="KoerperPersona" type="shr5:KoerperPersona"/>
+  <xsd:element name="KoerperPersona" type="shr5:KoerperPersona">
+    <xsd:annotation>
+      <xsd:documentation>We will remove this and store the properties in the abstractPersona.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="MagischeMods">
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktModifikatoren"/>
@@ -704,13 +755,20 @@
   </xsd:complexType>
   <xsd:element name="KiAdept" type="shr5:KiAdept"/>
   <xsd:complexType name="Kleidung">
+    <xsd:annotation>
+      <xsd:documentation>Defines the clothes and armor.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:attribute name="ruestung" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Kleidung" type="shr5:Kleidung"/>
+  <xsd:element name="Kleidung" type="shr5:Kleidung">
+    <xsd:annotation>
+      <xsd:documentation>Defines the clothes and armor.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="FernkampfwaffeModifikator">
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktModifikatoren">
@@ -720,15 +778,40 @@
   </xsd:complexType>
   <xsd:element name="FernkampfwaffeModifikator" type="shr5:FernkampfwaffeModifikator"/>
   <xsd:complexType abstract="true" name="Anwendbar">
+    <xsd:annotation>
+      <xsd:documentation>Link the item with the skill when using.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+      <xsd:element name="fertigkeit" type="shr5:Fertigkeit">
+        <xsd:annotation>
+          <xsd:documentation>Defines the skill.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="spezialisierung" type="shr5:Spezialisierung">
+        <xsd:annotation>
+          <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="fertigkeit" type="xsd:string"/>
+    <xsd:attribute name="fertigkeit" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Defines the skill.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="spezialisierung" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
-  <xsd:element name="Anwendbar" type="shr5:Anwendbar"/>
+  <xsd:element name="Anwendbar" type="shr5:Anwendbar">
+    <xsd:annotation>
+      <xsd:documentation>Link the item with the skill when using.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="PersonaEigenschaft">
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktModifikatoren">
@@ -879,13 +962,20 @@
   </xsd:complexType>
   <xsd:element name="AspektMagier" type="shr5:AspektMagier"/>
   <xsd:complexType abstract="true" name="AstraleProjektion">
+    <xsd:annotation>
+      <xsd:documentation>An astral projection.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
   </xsd:complexType>
-  <xsd:element name="AstraleProjektion" type="shr5:AstraleProjektion"/>
+  <xsd:element name="AstraleProjektion" type="shr5:AstraleProjektion">
+    <xsd:annotation>
+      <xsd:documentation>An astral projection.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Schutzgeist">
     <xsd:complexContent>
       <xsd:extension base="shr5:MagischeMods">
@@ -932,12 +1022,24 @@
   </xsd:complexType>
   <xsd:element name="CritterKraft" type="shr5:CritterKraft"/>
   <xsd:complexType abstract="true" name="Fahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>The basic vehicle type.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
-          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>Defines the skill.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="spezialisierung" type="shr5:Spezialisierung">
+            <xsd:annotation>
+              <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
           <xsd:element name="modifizierungen" type="shr5:FahrzeugModifikation"/>
         </xsd:choice>
@@ -954,7 +1056,16 @@
             <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines the skill.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="spezialisierung" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <xsd:attribute name="handling" type="xsd:int"/>
         <xsd:attribute name="geschwindigkeit" type="xsd:int"/>
         <xsd:attribute name="beschleunigung" type="xsd:int"/>
@@ -966,8 +1077,15 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Fahrzeug" type="shr5:Fahrzeug"/>
+  <xsd:element name="Fahrzeug" type="shr5:Fahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>The basic vehicle type.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Bodenfahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>A ground vehicle.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:PassagierFahrzeug">
         <xsd:attribute name="handlingGelaende" type="xsd:int"/>
@@ -975,15 +1093,26 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Bodenfahrzeug" type="shr5:Bodenfahrzeug"/>
+  <xsd:element name="Bodenfahrzeug" type="shr5:Bodenfahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>A ground vehicle.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="PassagierFahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>A vehicle that can carries passengers.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Fahrzeug">
         <xsd:attribute name="sitze" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="PassagierFahrzeug" type="shr5:PassagierFahrzeug"/>
+  <xsd:element name="PassagierFahrzeug" type="shr5:PassagierFahrzeug">
+    <xsd:annotation>
+      <xsd:documentation>A vehicle that can carries passengers.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Drohne">
     <xsd:complexContent>
       <xsd:extension base="shr5:Fahrzeug">
@@ -1578,6 +1707,9 @@
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="RiggerCommandConsole">
+    <xsd:annotation>
+      <xsd:documentation>Defines rigger consoles.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstractMatrixDevice">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -1595,7 +1727,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="RiggerCommandConsole" type="shr5:RiggerCommandConsole"/>
+  <xsd:element name="RiggerCommandConsole" type="shr5:RiggerCommandConsole">
+    <xsd:annotation>
+      <xsd:documentation>Defines rigger consoles.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="AutoSoft">
     <xsd:annotation>
       <xsd:documentation>Defines the software for drones.</xsd:documentation>
@@ -1856,7 +1992,21 @@
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
-          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>Defines the skill.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="spezialisierung" type="shr5:Spezialisierung">
+            <xsd:annotation>
+              <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="wifi" type="shr5:MatrixDevice">
+            <xsd:annotation>
+              <xsd:documentation>The optional wifi component of the item.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
@@ -1874,7 +2024,16 @@
         <xsd:attribute name="beschreibung" type="xsd:string"/>
         <xsd:attribute name="image" type="xsd:string"/>
         <xsd:attribute name="name" type="xsd:string" use="required"/>
-        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines the skill.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="spezialisierung" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Defines a specalism of the skill, for examples for weapons.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1983,4 +2142,46 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Drug" type="shr5:Drug"/>
+  <xsd:complexType name="Magazin">
+    <xsd:annotation>
+      <xsd:documentation>This is the bullet container (clip) for a fw.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="type" type="shr5:Feuerwaffe">
+            <xsd:annotation>
+              <xsd:documentation>The type defines which weapon this magazin can be used with.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="bullets" type="shr5:Munition">
+            <xsd:annotation>
+              <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="type" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The type defines which weapon this magazin can be used with.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="bullets" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Magazin" type="shr5:Magazin">
+    <xsd:annotation>
+      <xsd:documentation>This is the bullet container (clip) for a fw.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DefaultWifi">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstractMatrixDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DefaultWifi" type="shr5:DefaultWifi"/>
 </xsd:schema>

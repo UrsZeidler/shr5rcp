@@ -688,6 +688,24 @@ public interface Shr5Factory extends EFactory {
     Drug createDrug();
 
     /**
+     * Returns a new object of class '<em>Magazin</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Magazin</em>'.
+     * @generated
+     */
+    Magazin createMagazin();
+
+    /**
+     * Returns a new object of class '<em>Default Wifi</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Default Wifi</em>'.
+     * @generated
+     */
+    DefaultWifi createDefaultWifi();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -181,7 +181,9 @@
       <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDComplexTypeDefinition=10/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//SpezielleAttribute" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDElementDeclaration=10"/>
-    <nested inputs="shr5.ecore#//AbstraktGegenstand" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11"/>
+    <nested inputs="shr5.ecore#//AbstraktGegenstand" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11">
+      <nested inputs="shr5.ecore#//AbstraktGegenstand/wifi" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    </nested>
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDAttributeUse=2"/>
@@ -190,6 +192,8 @@
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDAttributeUse=5"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDAttributeUse=6"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     <nested inputs="shr5.ecore#//AbstraktGegenstand" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDElementDeclaration=11"/>
     <nested inputs="shr5.ecore#//AbstaktFernKampfwaffe" outputs="Shr5XMI.xsd#//AbstaktFernKampfwaffe;XSDComplexTypeDefinition=12">
       <nested inputs="shr5.ecore#//AbstaktFernKampfwaffe/reichweite" outputs="Shr5XMI.xsd#//AbstaktFernKampfwaffe;XSDComplexTypeDefinition=12/XSDAttributeUse"/>
@@ -393,6 +397,8 @@
     <nested inputs="shr5.ecore#//Anwendbar" outputs="Shr5XMI.xsd#//Anwendbar;XSDComplexTypeDefinition=41">
       <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Anwendbar;XSDComplexTypeDefinition=41/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Anwendbar;XSDComplexTypeDefinition=41/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//Anwendbar;XSDComplexTypeDefinition=41/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//Anwendbar;XSDComplexTypeDefinition=41/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Anwendbar" outputs="Shr5XMI.xsd#//Anwendbar;XSDElementDeclaration=41"/>
     <nested inputs="shr5.ecore#//PersonaEigenschaft" outputs="Shr5XMI.xsd#//PersonaEigenschaft;XSDComplexTypeDefinition=42">
@@ -484,15 +490,15 @@
     </nested>
     <nested inputs="shr5.ecore#//CritterKraft" outputs="Shr5XMI.xsd#//CritterKraft;XSDElementDeclaration=56"/>
     <nested inputs="shr5.ecore#//Fahrzeug" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57">
-      <nested inputs="shr5.ecore#//Fahrzeug/handling" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=6"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/geschwindigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=7"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/beschleunigung" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=8"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/rumpf" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=9"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/pilot" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=10"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/sensor" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=11"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=12"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/panzer" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=13"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/handling" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=7"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/geschwindigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=8"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/beschleunigung" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=9"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/rumpf" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=10"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/pilot" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=11"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/sensor" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=12"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=13"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/panzer" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=14"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=5"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle"/>
@@ -503,7 +509,9 @@
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=5"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=2"/>
-    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=6"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=4"/>
     <nested inputs="shr5.ecore#//Fahrzeug" outputs="Shr5XMI.xsd#//Fahrzeug;XSDElementDeclaration=57"/>
     <nested inputs="shr5.ecore#//Bodenfahrzeug" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58">
       <nested inputs="shr5.ecore#//Bodenfahrzeug/handlingGelaende" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse"/>
@@ -863,6 +871,9 @@
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=8"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=9"/>
+    <nested inputs="shr5.ecore#//Anwendbar/spezialisierung" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+    <nested inputs="shr5.ecore#//AbstraktGegenstand/wifi" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=5"/>
     <nested inputs="shr5.ecore#//AbstraktFokus" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDElementDeclaration=120"/>
     <nested inputs="shr5.ecore#//QiFokus" outputs="Shr5XMI.xsd#//QiFokus;XSDComplexTypeDefinition=121">
       <nested inputs="shr5.ecore#//QiFokus/power" outputs="Shr5XMI.xsd#//QiFokus;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle"/>
@@ -907,5 +918,14 @@
     </nested>
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Drug;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Drug" outputs="Shr5XMI.xsd#//Drug;XSDElementDeclaration=127"/>
+    <nested inputs="shr5.ecore#//Magazin" outputs="Shr5XMI.xsd#//Magazin;XSDComplexTypeDefinition=128">
+      <nested inputs="shr5.ecore#//Magazin/type" outputs="Shr5XMI.xsd#//Magazin;XSDComplexTypeDefinition=128/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Magazin/type" outputs="Shr5XMI.xsd#//Magazin;XSDComplexTypeDefinition=128/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Magazin/bullets" outputs="Shr5XMI.xsd#//Magazin;XSDComplexTypeDefinition=128/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Magazin/bullets" outputs="Shr5XMI.xsd#//Magazin;XSDComplexTypeDefinition=128/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Magazin" outputs="Shr5XMI.xsd#//Magazin;XSDElementDeclaration=128"/>
+    <nested inputs="shr5.ecore#//DefaultWifi" outputs="Shr5XMI.xsd#//DefaultWifi;XSDComplexTypeDefinition=129"/>
+    <nested inputs="shr5.ecore#//DefaultWifi" outputs="Shr5XMI.xsd#//DefaultWifi;XSDElementDeclaration=129"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

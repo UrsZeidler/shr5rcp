@@ -3,14 +3,14 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
-import de.urszeidler.eclipse.shr5.Host;
+import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Host</b></em>'.
+ * A test case for the model object '<em><b>Default Wifi</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
@@ -19,21 +19,11 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class HostTest extends TestCase {
-
-    /**
-     * The fixture for this Host test case.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected Host fixture = null;
+public class DefaultWifiTest extends AbstraktGegenstandTest {
 
     /**
      * <!-- begin-user-doc -->
@@ -41,37 +31,28 @@ public class HostTest extends TestCase {
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(HostTest.class);
+        TestRunner.run(DefaultWifiTest.class);
     }
 
     /**
-     * Constructs a new Host test case with the given name.
+     * Constructs a new Default Wifi test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public HostTest(String name) {
+    public DefaultWifiTest(String name) {
         super(name);
     }
 
     /**
-     * Sets the fixture for this Host test case.
+     * Returns the fixture for this Default Wifi test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void setFixture(Host fixture) {
-        this.fixture = fixture;
-    }
-
-    /**
-     * Returns the fixture for this Host test case.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected Host getFixture() {
-        return fixture;
+    @Override
+    protected DefaultWifi getFixture() {
+        return (DefaultWifi)fixture;
     }
 
     /**
@@ -82,7 +63,7 @@ public class HostTest extends TestCase {
      */
     @Override
     protected void setUp() throws Exception {
-        setFixture(Shr5Factory.eINSTANCE.createHost());
+        setFixture(Shr5Factory.eINSTANCE.createDefaultWifi());
     }
 
     /**
@@ -100,81 +81,52 @@ public class HostTest extends TestCase {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated not
+     * @generated
      */
     public void testGetMatrixZustandMax() {
-        assertEquals(-1, getFixture().getMatrixZustandMax());
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
-     * @generated not
+     * @generated
      */
     public void testGetGeraetestufe() {
-        getFixture().setHostRating(1);
-        assertEquals(1, getFixture().getHostRating());
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
-     * @generated not
+     * @generated
      */
     public void testGetFirewall() {
-        getFixture().setHostRating(1);
-        getFixture().setBaseFirewall(2);
-        assertEquals(3, getFixture().getFirewall());
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
-     * @generated not
+     * @generated
      */
     public void testGetDatenverarbeitung() {
-        getFixture().setHostRating(1);
-        getFixture().setBaseDatenverarbeitung(2);
-        assertEquals(3, getFixture().getDatenverarbeitung());
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
-    /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}' feature getter.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff()
-     * @generated not
-     */
-    public void testGetAngriff() {
-        getFixture().setHostRating(1);
-        getFixture().setBaseAngriff(2);
-        assertEquals(3, getFixture().getAngriff());
-    }
-
-    /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}' feature getter.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher()
-     * @generated not
-     */
-    public void testGetSchleicher() {
-        getFixture().setHostRating(1);
-        getFixture().setBaseSchleicher(2);
-        assertEquals(3, getFixture().getSchleicher());
-    }
-
-} // HostTest
+} //DefaultWifiTest

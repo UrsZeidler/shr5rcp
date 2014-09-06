@@ -1445,6 +1445,36 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.MAGAZIN: {
+                Magazin magazin = (Magazin)theEObject;
+                T result = caseMagazin(magazin);
+                if (result == null) result = caseAbstraktGegenstand(magazin);
+                if (result == null) result = caseQuelle(magazin);
+                if (result == null) result = caseGeldWert(magazin);
+                if (result == null) result = caseBeschreibbar(magazin);
+                if (result == null) result = caseModifizierbar(magazin);
+                if (result == null) result = caseAnwendbar(magazin);
+                if (result == null) result = caseIdentifiable(magazin);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.DEFAULT_WIFI: {
+                DefaultWifi defaultWifi = (DefaultWifi)theEObject;
+                T result = caseDefaultWifi(defaultWifi);
+                if (result == null) result = caseAbstractMatrixDevice(defaultWifi);
+                if (result == null) result = caseAbstraktGegenstand(defaultWifi);
+                if (result == null) result = caseMatrixDevice(defaultWifi);
+                if (result == null) result = caseQuelle(defaultWifi);
+                if (result == null) result = caseGeldWert(defaultWifi);
+                if (result == null) result = caseBeschreibbar(defaultWifi);
+                if (result == null) result = caseModifizierbar(defaultWifi);
+                if (result == null) result = caseAnwendbar(defaultWifi);
+                if (result == null) result = caseMatrixAttributes(defaultWifi);
+                if (result == null) result = caseIdentifiable(defaultWifi);
+                if (result == null) result = caseMatixConditionMonitor(defaultWifi);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -3066,6 +3096,36 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseDrug(Drug object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Magazin</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magazin</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMagazin(Magazin object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Default Wifi</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Default Wifi</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDefaultWifi(DefaultWifi object) {
         return null;
     }
 

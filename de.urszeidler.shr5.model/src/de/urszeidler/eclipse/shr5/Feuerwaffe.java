@@ -161,18 +161,28 @@ public interface Feuerwaffe extends AbstaktFernKampfwaffe {
 	EList<FernkampfwaffeModifikator> getEinbau();
 
     /**
-     * Returns the value of the '<em><b>Magazin</b></em>' reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Munition}.
+     * Returns the value of the '<em><b>Magazin</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * This reference holds the current loaded amuntition, when used the first element should be removed.
+     * This reference holds the current insert magazine.
      * <!-- end-model-doc -->
-     * @return the value of the '<em>Magazin</em>' reference list.
+     * @return the value of the '<em>Magazin</em>' reference.
+     * @see #setMagazin(Magazin)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getFeuerwaffe_Magazin()
      * @model
      * @generated
      */
-    EList<Munition> getMagazin();
+    Magazin getMagazin();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Magazin</em>' reference.
+     * @see #getMagazin()
+     * @generated
+     */
+    void setMagazin(Magazin value);
 
 } // Feuerwaffe

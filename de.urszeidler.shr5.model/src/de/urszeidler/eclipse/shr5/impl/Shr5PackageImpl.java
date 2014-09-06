@@ -782,6 +782,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass magazinEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass defaultWifiEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1628,6 +1642,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAbstraktGegenstand_Wifi() {
+        return (EReference)abstraktGegenstandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -2672,6 +2695,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAnwendbar_Spezialisierung() {
+        return (EReference)anwendbarEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4485,6 +4517,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getMagazin() {
+        return magazinEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMagazin_Type() {
+        return (EReference)magazinEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMagazin_Bullets() {
+        return (EReference)magazinEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getDefaultWifi() {
+        return defaultWifiEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5357,6 +5425,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(spezielleAttributeEClass, SPEZIELLE_ATTRIBUTE__EDGE);
 
         abstraktGegenstandEClass = createEClass(ABSTRAKT_GEGENSTAND);
+        createEReference(abstraktGegenstandEClass, ABSTRAKT_GEGENSTAND__WIFI);
 
         abstaktFernKampfwaffeEClass = createEClass(ABSTAKT_FERN_KAMPFWAFFE);
         createEReference(abstaktFernKampfwaffeEClass, ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE);
@@ -5503,6 +5572,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         anwendbarEClass = createEClass(ANWENDBAR);
         createEReference(anwendbarEClass, ANWENDBAR__FERTIGKEIT);
+        createEReference(anwendbarEClass, ANWENDBAR__SPEZIALISIERUNG);
 
         personaEigenschaftEClass = createEClass(PERSONA_EIGENSCHAFT);
         createEAttribute(personaEigenschaftEClass, PERSONA_EIGENSCHAFT__KARMA_KOSTEN);
@@ -5856,6 +5926,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(drugEClass, DRUG__DURATION);
         createEAttribute(drugEClass, DRUG__ADDICTION_TYPE);
 
+        magazinEClass = createEClass(MAGAZIN);
+        createEReference(magazinEClass, MAGAZIN__TYPE);
+        createEReference(magazinEClass, MAGAZIN__BULLETS);
+
+        defaultWifiEClass = createEClass(DEFAULT_WIFI);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6086,6 +6162,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         toxinEClass.getESuperTypes().add(this.getSubstance());
         drugEClass.getESuperTypes().add(this.getSubstance());
         drugEClass.getESuperTypes().add(this.getModifizierbar());
+        magazinEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        defaultWifiEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6154,6 +6232,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSpezielleAttribute_Edge(), ecorePackage.getEInt(), "edge", null, 0, 1, SpezielleAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(abstraktGegenstandEClass, AbstraktGegenstand.class, "AbstraktGegenstand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getAbstraktGegenstand_Wifi(), this.getMatrixDevice(), null, "wifi", null, 0, 1, AbstraktGegenstand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(abstaktFernKampfwaffeEClass, AbstaktFernKampfwaffe.class, "AbstaktFernKampfwaffe", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getAbstaktFernKampfwaffe_Reichweite(), this.getReichweite(), null, "reichweite", null, 1, 1, AbstaktFernKampfwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6174,7 +6253,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFeuerwaffe_Erweiterung(), this.getFeuwerwaffenErweiterung(), "erweiterung", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFeuerwaffe_Rueckstoss(), ecorePackage.getEInt(), "rueckstoss", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFeuerwaffe_Einbau(), this.getFernkampfwaffeModifikator(), null, "einbau", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getFeuerwaffe_Magazin(), this.getMunition(), null, "magazin", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFeuerwaffe_Magazin(), this.getMagazin(), null, "magazin", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(wurfwaffeEClass, Wurfwaffe.class, "Wurfwaffe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -6300,6 +6379,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(anwendbarEClass, Anwendbar.class, "Anwendbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getAnwendbar_Fertigkeit(), this.getFertigkeit(), null, "fertigkeit", null, 0, 1, Anwendbar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAnwendbar_Spezialisierung(), this.getSpezialisierung(), null, "spezialisierung", null, 0, 1, Anwendbar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaEigenschaftEClass, PersonaEigenschaft.class, "PersonaEigenschaft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getPersonaEigenschaft_KarmaKosten(), ecorePackage.getEInt(), "karmaKosten", null, 0, 1, PersonaEigenschaft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6652,6 +6732,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(drugEClass, Drug.class, "Drug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getDrug_Duration(), ecorePackage.getEString(), "duration", null, 0, 1, Drug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getDrug_AddictionType(), this.getAddictionType(), "addictionType", null, 0, 1, Drug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(magazinEClass, Magazin.class, "Magazin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getMagazin_Type(), this.getFeuerwaffe(), null, "type", null, 1, 1, Magazin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getMagazin_Bullets(), this.getMunition(), null, "bullets", null, 0, -1, Magazin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(defaultWifiEClass, DefaultWifi.class, "DefaultWifi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -70,6 +70,7 @@ public class AbstraktGegenstandItemProvider
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
+            addSpezialisierungPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -295,6 +296,28 @@ public class AbstraktGegenstandItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Spezialisierung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpezialisierungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Anwendbar_spezialisierung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_spezialisierung_feature", "_UI_Anwendbar_type"),
+                 Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -308,6 +331,7 @@ public class AbstraktGegenstandItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
+            childrenFeatures.add(Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI);
         }
         return childrenFeatures;
     }
@@ -363,6 +387,7 @@ public class AbstraktGegenstandItemProvider
                 return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__LOCALIZATIONS:
             case Shr5Package.ABSTRAKT_GEGENSTAND__MODS:
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WIFI:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -389,6 +414,31 @@ public class AbstraktGegenstandItemProvider
             (createChildParameter
                 (Shr5Package.Literals.MODIFIZIERBAR__MODS,
                  Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createCommlink()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createCyberdeck()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createHost()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createRiggerCommandConsole()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createDefaultWifi()));
     }
 
 	/**

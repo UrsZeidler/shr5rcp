@@ -222,6 +222,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.FOKUS_BINDING: return createFokusBinding();
             case Shr5Package.TOXIN: return createToxin();
             case Shr5Package.DRUG: return createDrug();
+            case Shr5Package.MAGAZIN: return createMagazin();
+            case Shr5Package.DEFAULT_WIFI: return createDefaultWifi();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1075,6 +1077,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Drug createDrug() {
         DrugImpl drug = new DrugImpl();
         return drug;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Magazin createMagazin() {
+        MagazinImpl magazin = new MagazinImpl();
+        return magazin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DefaultWifi createDefaultWifi() {
+        DefaultWifiImpl defaultWifi = new DefaultWifiImpl();
+        return defaultWifi;
     }
 
     /**

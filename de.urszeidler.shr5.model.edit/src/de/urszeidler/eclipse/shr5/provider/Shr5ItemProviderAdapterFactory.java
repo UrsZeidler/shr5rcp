@@ -1822,6 +1822,52 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Magazin} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MagazinItemProvider magazinItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Magazin}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMagazinAdapter() {
+        if (magazinItemProvider == null) {
+            magazinItemProvider = new MagazinItemProvider(this);
+        }
+
+        return magazinItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.DefaultWifi} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DefaultWifiItemProvider defaultWifiItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.DefaultWifi}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDefaultWifiAdapter() {
+        if (defaultWifiItemProvider == null) {
+            defaultWifiItemProvider = new DefaultWifiItemProvider(this);
+        }
+
+        return defaultWifiItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1994,6 +2040,8 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (fokusBindingItemProvider != null) fokusBindingItemProvider.dispose();
         if (toxinItemProvider != null) toxinItemProvider.dispose();
         if (drugItemProvider != null) drugItemProvider.dispose();
+        if (magazinItemProvider != null) magazinItemProvider.dispose();
+        if (defaultWifiItemProvider != null) defaultWifiItemProvider.dispose();
     }
 
     @Override

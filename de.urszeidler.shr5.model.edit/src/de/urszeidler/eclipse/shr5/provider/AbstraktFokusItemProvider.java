@@ -73,6 +73,7 @@ public class AbstraktFokusItemProvider
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
+            addSpezialisierungPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -179,6 +180,28 @@ public class AbstraktFokusItemProvider
                  getString("_UI_Anwendbar_fertigkeit_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_fertigkeit_feature", "_UI_Anwendbar_type"),
                  Shr5Package.Literals.ANWENDBAR__FERTIGKEIT,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Spezialisierung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpezialisierungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Anwendbar_spezialisierung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_spezialisierung_feature", "_UI_Anwendbar_type"),
+                 Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG,
                  true,
                  false,
                  true,
@@ -355,6 +378,7 @@ public class AbstraktFokusItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
+            childrenFeatures.add(Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI);
         }
         return childrenFeatures;
     }
@@ -412,6 +436,7 @@ public class AbstraktFokusItemProvider
                 return;
             case Shr5Package.ABSTRAKT_FOKUS__LOCALIZATIONS:
             case Shr5Package.ABSTRAKT_FOKUS__MODS:
+            case Shr5Package.ABSTRAKT_FOKUS__WIFI:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -438,6 +463,31 @@ public class AbstraktFokusItemProvider
             (createChildParameter
                 (Shr5Package.Literals.MODIFIZIERBAR__MODS,
                  Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createCommlink()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createCyberdeck()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createHost()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createRiggerCommandConsole()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_GEGENSTAND__WIFI,
+                 Shr5Factory.eINSTANCE.createDefaultWifi()));
     }
 
     /**
