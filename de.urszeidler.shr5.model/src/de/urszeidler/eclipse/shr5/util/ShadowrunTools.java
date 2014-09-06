@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
+import com.google.common.base.Predicate;
+
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
@@ -729,5 +731,19 @@ public class ShadowrunTools {
             return Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE;
 
         return null;
+    }
+
+    /**
+     * Create a predicate to filter for the eclass.
+     * @param eClass
+     * @return
+     */
+    public static Predicate<? super EObject> eclassPredicate(final EClass eClass) {
+       return new Predicate<EObject>() {
+            @Override
+            public boolean apply(EObject input) {
+                return eClass.equals(input.eClass());
+            }
+        };
     }
 }
