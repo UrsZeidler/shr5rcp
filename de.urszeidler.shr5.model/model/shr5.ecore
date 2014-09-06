@@ -52,6 +52,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gegenstand" eSuperTypes="#//AbstraktGegenstand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A basic item."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -83,6 +86,9 @@
     <eLiterals name="AM" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reichweite" eSuperTypes="#//Beschreibbar #//Identifiable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The range."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kurz" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mittel" lowerBound="1"
@@ -134,7 +140,17 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstraktGegenstand" abstract="true"
-      eSuperTypes="#//Quelle #//GeldWert #//Beschreibbar #//Modifizierbar #//Anwendbar"/>
+      eSuperTypes="#//Quelle #//GeldWert #//Beschreibbar #//Modifizierbar #//Anwendbar">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The basic item class."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wifi" eType="#//MatrixDevice"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The optional wifi component of the item."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SchadensTyp">
     <eLiterals name="koerperlich"/>
     <eLiterals name="geistig" value="1"/>
@@ -165,9 +181,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
         eType="#//FernkampfwaffeModifikator" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="magazin" unique="false"
-        upperBound="-1" eType="#//Munition">
+        eType="#//Magazin">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This reference holds the current loaded amuntition, when used the first element should be removed."/>
+        <details key="documentation" value="This reference holds the current insert magazine."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -231,6 +247,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MudanPersona" eSuperTypes="#//KoerperPersona"/>
   <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung #//PersonaZustand #//BerechneteAttribute">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="We will remove this and store the properties in the abstractPersona."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="koerperMods" upperBound="-1"
         eType="#//Koerpermods" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eigenschaften" upperBound="-1"
@@ -330,13 +349,28 @@
         eType="#//KiKraft" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Kleidung" eSuperTypes="#//AbstraktGegenstand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the clothes and armor."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruestung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffeModifikator" eSuperTypes="#//AbstraktModifikatoren">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ep" eType="#//FeuwerwaffenErweiterung"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anwendbar" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Link the item with the skill when using."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the skill."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spezialisierung" eType="#//Spezialisierung">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines a specalism of the skill, for examples for weapons."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaEigenschaft" eSuperTypes="#//AbstraktModifikatoren #//Erlernbar">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaKosten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -426,6 +460,9 @@
         eType="#//FertigkeitsGruppe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AstraleProjektion" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An astral projection."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="astralesLimit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleKonstitution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -477,6 +514,9 @@
     <eLiterals name="speziell" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar #//FahrzeugZustand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The basic vehicle type."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschleunigung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -491,11 +531,17 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug" eSuperTypes="#//PassagierFahrzeug">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ground vehicle."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlingGelaende" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeitGelaende"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PassagierFahrzeug" eSuperTypes="#//Fahrzeug">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A vehicle that can carries passengers."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sitze" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug #//MatrixAttributes">
@@ -802,6 +848,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="riggerInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RiggerCommandConsole" eSuperTypes="#//AbstractMatrixDevice">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines rigger consoles."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rauschunterdrueckung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zugriff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -996,4 +1045,21 @@
     <eLiterals name="physiological" value="1"/>
     <eLiterals name="both" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Magazin" eSuperTypes="#//AbstraktGegenstand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the bullet container (clip) for a fw."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Feuerwaffe">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type defines which weapon this magazin can be used with."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bullets" unique="false"
+        upperBound="-1" eType="#//Munition">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This reference holds the current loaded amuntition, when used the first element should be removed."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultWifi" eSuperTypes="#//AbstractMatrixDevice"/>
 </ecore:EPackage>
