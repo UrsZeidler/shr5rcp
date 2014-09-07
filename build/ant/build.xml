@@ -16,7 +16,7 @@
 	<property name="do.localization" value="false"/>
 
 	<property name="chummer2shr5xsl" value="xsl/chummer2shr5.xsl" />
-	<property name="path.to.chummer.data" value="/home/urs/chummer2/Chummer2/data" />
+	<property name="path.to.chummer.data" value="/home/urs/eclipse_workspaces/workspace_E4.3_shr_git/chummer-data/data" />
 	<property name="git.repo.path" value="UrsZeidler/shr5rcp"/>
 
 	
