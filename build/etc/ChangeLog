@@ -2,9 +2,15 @@
 
 * update script editing
 * update script runtime
+	* added a skip test option
 	* initiative tracking
 	* skill and success tests
 	* damage management 
+* resources
+	* update the xsl to resources to the new working chummer5 project https://code.google.com/p/chummer5/
+	* added complex forms
+	* added mentors
+	* added drugs and toxins
 
 2014-08-16 Version 0.1.9
 
