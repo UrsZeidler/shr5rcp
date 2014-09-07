@@ -46,6 +46,8 @@
 		select="document(concat($path,'/complexforms.xml'),/)" />	
 	<xsl:variable name="mentors"
 		select="document(concat($path,'/mentors.xml'),/)" />
+	<xsl:variable name="metamagic"
+		select="document(concat($path,'/metamagic.xml'),/)" />
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
 	<xsl:template match="/">
@@ -108,6 +110,9 @@
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
 				<xsl:for-each select="$mentors">
+					<xsl:apply-templates select="node()" />
+				</xsl:for-each>
+				<xsl:for-each select="$metamagic">
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
 				
@@ -265,7 +270,7 @@
 	<xsl:template match="categories|version" mode="critter" />
 	<xsl:template
 		match="categories|version|accessories|grades|modcategories|enhancements|enhancement" />
-	<xsl:template match="priority|mods|limits" />
+	<xsl:template match="priority|mods|limits|arts|art" />
 	<xsl:template mode="lifestyle"
 		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
 	<xsl:template mode="lifestyle" match="lifestyles">
@@ -285,7 +290,7 @@
 		</entries>
 	</xsl:template>
 	<xsl:template
-		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors">
+		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors|metamagics">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
@@ -2162,7 +2167,15 @@
 			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
-	<!-- zauber -->
+	<!-- metamagic -->
+	<xsl:template match="//metamagic">
+		<entries xsi:type="shr5:MetaMagie">
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="localization" />
+		</entries>
+	</xsl:template>
+	<!-- mentors -->
 	<xsl:template match="//mentor">
 		<entries xsi:type="shr5:Schutzgeist">
 			<xsl:attribute name="vorteile"><xsl:value-of select="advantage/text()" /></xsl:attribute>
