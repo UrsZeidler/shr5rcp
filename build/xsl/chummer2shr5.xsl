@@ -43,7 +43,9 @@
 	<xsl:variable name="critter-powers"
 		select="document(concat($path,'/critterpowers.xml'),/)" />
 	<xsl:variable name="complexforms"
-		select="document(concat($path,'/complexforms.xml'),/)" />
+		select="document(concat($path,'/complexforms.xml'),/)" />	
+	<xsl:variable name="mentors"
+		select="document(concat($path,'/mentors.xml'),/)" />
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
 	<xsl:template match="/">
@@ -102,6 +104,13 @@
 				<xsl:for-each select="$vehicles">
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
+				<xsl:for-each select="$complexforms">
+					<xsl:apply-templates select="node()" />
+				</xsl:for-each>
+				<xsl:for-each select="$mentors">
+					<xsl:apply-templates select="node()" />
+				</xsl:for-each>
+				
 				<xsl:for-each select="$lifestyle">
 					<xsl:apply-templates mode="lifestyle" select="node()" />
 				</xsl:for-each>
@@ -276,7 +285,7 @@
 		</entries>
 	</xsl:template>
 	<xsl:template
-		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles">
+		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
@@ -2116,6 +2125,54 @@
 
 	</xsl:template>
 
+	<xsl:template match="//complexform">
+		<entries xsi:type="shr5:KomplexeForm">
+
+			<xsl:attribute name="schwund"><xsl:value-of select="fv/text()" /></xsl:attribute>
+			<xsl:choose>
+				<xsl:when test="duration/text()='I'">
+					<xsl:attribute name="dauer">Sofort</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="duration/text()='S'">
+					<xsl:attribute name="dauer">Aufrechterhalten</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="duration/text()='P'">
+					<xsl:attribute name="dauer">Permanent</xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:choose>
+				<xsl:when test="target/text()='File'">
+					<xsl:attribute name="ziel">datei</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="target/text()='Device'">
+					<xsl:attribute name="ziel">geraet</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="target/text()='Self'">
+					<xsl:attribute name="ziel">selbst</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="target/text()='Persona'">
+					<xsl:attribute name="ziel">persona</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="target/text()='Sprite'">
+					<xsl:attribute name="ziel">sprite</xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="localization" />
+		</entries>
+	</xsl:template>
+	<!-- zauber -->
+	<xsl:template match="//mentor">
+		<entries xsi:type="shr5:Schutzgeist">
+			<xsl:attribute name="vorteile"><xsl:value-of select="advantage/text()" /></xsl:attribute>
+			<xsl:attribute name="nachteile"><xsl:value-of select="disadvantage/text()" /></xsl:attribute>
+
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="localization" />
+		</entries>
+	</xsl:template>
 	<!-- zauber -->
 	<xsl:template match="//spell">
 		<entries xsi:type="shr5:Zauber">
@@ -2129,8 +2186,8 @@
 			<xsl:call-template name="quelle" />
 			<xsl:call-template name="localization" />
 		</entries>
-
 	</xsl:template>
+	
 	<xsl:template name="zauber-types">
 		<xsl:choose>
 			<xsl:when test="range/text()='LOS'">
@@ -2527,7 +2584,7 @@
 	<xsl:template match="//vehicle">
 		<xsl:choose>
 			<xsl:when test="starts-with(category/text(),'Drones:')">
-				<entries xsi:type="Drohne">
+				<entries xsi:type="shr5:Drohne">
 					<xsl:if test="number(handling/text())">
 						<xsl:attribute name="handling"><xsl:value-of
 							select="number(handling/text())" /></xsl:attribute>
@@ -2537,7 +2594,7 @@
 			</xsl:when>
 			<xsl:when
 				test="category/text()='Bikes' or category/text()='Cars' or category/text()='Trucks'">
-				<entries xsi:type="Bodenfahrzeug">
+				<entries xsi:type="shr5:Bodenfahrzeug">
 					<xsl:if test="number(seats/text())">
 						<xsl:attribute name="sitze"><xsl:value-of
 							select="number(seats/text())" /></xsl:attribute>
@@ -2550,13 +2607,11 @@
 						<xsl:attribute name="handlingGelaende"><xsl:value-of
 							select="number(substring-after(handling/text(),'/'))" /></xsl:attribute>
 					</xsl:if>
-
-
 					<xsl:call-template name="vehicle" />
 				</entries>
 			</xsl:when>
 			<xsl:otherwise>
-				<entries xsi:type="PassagierFahrzeug">
+				<entries xsi:type="shr5:PassagierFahrzeug">
 					<xsl:if test="number(seats/text())">
 						<xsl:attribute name="sitze"><xsl:value-of
 							select="number(seats/text())" /></xsl:attribute>
