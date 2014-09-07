@@ -1541,6 +1541,19 @@
 			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
 		</xsl:if>
 	</xsl:template>
+	<!-- find the range -->
+	<xsl:template name="findRange">
+		<xsl:param name="rname" />
+		<xsl:for-each select="$ranges">
+			<xsl:for-each select="chummer/ranges/*">
+				<xsl:if test="category/text()=$rname">
+					<xsl:variable name="pos" select="position()-1" />
+					<xsl:value-of
+						select="concat('//@entries.0/@entries.1/@entries.',$pos)" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
 	<!-- find the source book -->
 	<xsl:template name="findSourceBook">
 		<xsl:param name="aid" />
