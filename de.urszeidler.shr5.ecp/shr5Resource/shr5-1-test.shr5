@@ -1683,49 +1683,49 @@
 </entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="weapons">
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="26000" name="Ares Thuderstruck Gauss Rifle" xmi:id="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-8" kapazitaet="10">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="26000" name="Ares Thuderstruck Gauss Rifle" xmi:id="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-8" kapazitaet="10" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares Thuderstruck Gauss Rifle" page="45"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="24500" name="Ares Vigorous Assault Cannon" xmi:id="944dfbc8-5972-44f7-810e-039d9f7d98b7" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="12" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="24500" name="Ares Vigorous Assault Cannon" xmi:id="944dfbc8-5972-44f7-810e-039d9f7d98b7" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares Vigorous Sturmkanone"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="23000" name="Krime Bomb" xmi:id="4a4810ca-4d11-49ee-8705-0411edc4d523" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="16P" praezision="6" durchschlagsKraft="-6" kapazitaet="4" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="23000" name="Krime Bomb" xmi:id="4a4810ca-4d11-49ee-8705-0411edc4d523" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="16P" praezision="6" durchschlagsKraft="-6" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krime Bomb" page="35"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="21000" name="Krime Cannon" xmi:id="3320c670-23ae-4cce-9c2c-e59d2554ddd7" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="6" munitionstyp="Clip" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="21000" name="Krime Cannon" xmi:id="3320c670-23ae-4cce-9c2c-e59d2554ddd7" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="6" munitionstyp="Clip" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krime Cannon"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="32000" name="Ogre Hammer SWS Assault Cannon" xmi:id="b59116dd-eeba-4091-ad87-a1216e7e52fe" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="6" durchschlagsKraft="-4" kapazitaet="6" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="32000" name="Ogre Hammer SWS Assault Cannon" xmi:id="b59116dd-eeba-4091-ad87-a1216e7e52fe" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="6" durchschlagsKraft="-4" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ogre Hammer SWS Assault Cannon" page="46"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="43000" name="Panther XXL" xmi:id="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="17P" praezision="5" durchschlagsKraft="-6" kapazitaet="15" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="43000" name="Panther XXL" xmi:id="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="17P" praezision="5" durchschlagsKraft="-6" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Panther XXL"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="950" name="AK-97" xmi:id="b625833a-88bc-4047-b3fc-bc432d96744b" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="950" name="AK-97" xmi:id="b625833a-88bc-4047-b3fc-bc432d96744b" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1734,7 +1734,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="AK-97"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="1250" name="AK-98" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="1250" name="AK-98" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1743,7 +1743,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="AK-98"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="42" munitionstyp="Streifen" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="42" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1752,7 +1752,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares Alpha"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2400" name="Ares HVAR" xmi:id="413200d1-fbd4-485f-8a18-152b60cfb290" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="50" munitionstyp="Streifen" rueckstoss="3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2400" name="Ares HVAR" xmi:id="413200d1-fbd4-485f-8a18-152b60cfb290" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="50" munitionstyp="Streifen" rueckstoss="3" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1761,7 +1761,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares HVAR" page="428"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="2250" name="Colt Inception" xmi:id="6d99b7b6-7610-4ba0-833b-ecda09d83366" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="7" durchschlagsKraft="-1" kapazitaet="36" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="2250" name="Colt Inception" xmi:id="6d99b7b6-7610-4ba0-833b-ecda09d83366" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="7" durchschlagsKraft="-1" kapazitaet="36" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -1769,7 +1769,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Colt Inception" page="14"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="550" name="Colt M23" xmi:id="e27e14ac-01bb-46e0-8d63-62994052d92c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="4" durchschlagsKraft="-2" kapazitaet="40" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="550" name="Colt M23" xmi:id="e27e14ac-01bb-46e0-8d63-62994052d92c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="4" durchschlagsKraft="-2" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1778,7 +1778,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Colt M23"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" xmi:id="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="35" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" xmi:id="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1787,7 +1787,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="FN HAR"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="15F" wertValue="4500" name="HK XM30" xmi:id="5f512bfb-c620-491a-bef4-d7c1b1601035" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="6" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="15F" wertValue="4500" name="HK XM30" xmi:id="5f512bfb-c620-491a-bef4-d7c1b1601035" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="6" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1827,7 +1827,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="HK XM30 Scharfschützengewehr"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="1300" name="Krupp Arms Kriegfaust" xmi:id="2abf6c76-fe19-4678-b6a3-f0b8750ee61c" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="9P" praezision="8" durchschlagsKraft="-1" kapazitaet="25" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="1300" name="Krupp Arms Kriegfaust" xmi:id="2abf6c76-fe19-4678-b6a3-f0b8750ee61c" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="9P" praezision="8" durchschlagsKraft="-1" kapazitaet="25" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -1835,7 +1835,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krupp Arms Kriegfaust" page="15"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="2300" name="Nissan Optimum II" xmi:id="fd7f400f-c8d5-4e8c-94aa-001109635f19" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="2300" name="Nissan Optimum II" xmi:id="fd7f400f-c8d5-4e8c-94aa-001109635f19" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1844,7 +1844,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Nissan Optimum II" page="38"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="500" name="SBd-44" xmi:id="89396ad6-c605-4577-ad5b-6a18cf58d167" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="3" durchschlagsKraft="-1" kapazitaet="32" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="500" name="SBd-44" xmi:id="89396ad6-c605-4577-ad5b-6a18cf58d167" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="3" durchschlagsKraft="-1" kapazitaet="32" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -1853,7 +1853,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="SBd-44" page="16"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="1900" name="Shiawase Arms Monsoon" xmi:id="23141cfc-e7c9-4af9-b4e0-a7f0443f1170" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-1" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="1900" name="Shiawase Arms Monsoon" xmi:id="23141cfc-e7c9-4af9-b4e0-a7f0443f1170" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -1861,7 +1861,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Shiawase Arms Monsoon" page="13"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="2800" name="Ultimax Rain Forest Carbine" xmi:id="40bf3eed-b239-4521-ac1d-80a4e472451e" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="18" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="2800" name="Ultimax Rain Forest Carbine" xmi:id="40bf3eed-b239-4521-ac1d-80a4e472451e" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="18" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -1869,7 +1869,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ultimax Rain Forest Carbine" page="32"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="2600" name="Yamaha Raiden" xmi:id="01e0eee7-452b-4fd5-abe1-29145da4a5e6" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-2" kapazitaet="60" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="2600" name="Yamaha Raiden" xmi:id="01e0eee7-452b-4fd5-abe1-29145da4a5e6" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-2" kapazitaet="60" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2115,95 +2115,95 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ultamax HMG-2" page="44"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" xmi:id="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" xmi:id="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Predator V"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="380" name="Ares Viper Slivergun" xmi:id="b6078372-786c-4aa0-9d16-38541b403730" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="380" name="Ares Viper Slivergun" xmi:id="b6078372-786c-4aa0-9d16-38541b403730" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Viper Slivergun"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" xmi:id="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" xmi:id="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Browning Ultra-Power"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="225" name="Cavalier Deputy" xmi:id="4fcefd61-567a-4f26-a041-d000a07c96d1" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="225" name="Cavalier Deputy" xmi:id="4fcefd61-567a-4f26-a041-d000a07c96d1" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Cavalier Deputy"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="500" name="Colt Future Frontier" xmi:id="36957626-3c6f-4e15-a3ee-dce8c82e2c94" page="6" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="500" name="Colt Future Frontier" xmi:id="36957626-3c6f-4e15-a3ee-dce8c82e2c94" page="6" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt Future Frontier" page="6"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="425" name="Colt Government 2066" xmi:id="6366691e-c1e0-4d5e-b7a6-1c0371708714" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="14" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="425" name="Colt Government 2066" xmi:id="6366691e-c1e0-4d5e-b7a6-1c0371708714" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt Government 2066"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Heavy Cyber Pistol" xmi:id="158224db-e409-407f-b2f0-4617886ad80f" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Heavy Cyber Pistol" xmi:id="158224db-e409-407f-b2f0-4617886ad80f" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <localizations local="de" name="schwere Cyber Pistole"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="550" name="Onotari Arms Violator" xmi:id="0158c348-b0e0-41e1-a171-1a34af39f0e5" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="550" name="Onotari Arms Violator" xmi:id="0158c348-b0e0-41e1-a171-1a34af39f0e5" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Onotari Arms Violator"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="1050" name="PSK-3 Collapsible Heavy Pistol" xmi:id="43103267-c408-4499-92da-602f70ccb24e" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="1050" name="PSK-3 Collapsible Heavy Pistol" xmi:id="43103267-c408-4499-92da-602f70ccb24e" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="PSK-3 Collapsible Heavy Pistol" page="32"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="250" name="Remington Roomsweeper" xmi:id="c6c02391-12b5-4361-bc24-e1b5afc1ec6e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="250" name="Remington Roomsweeper" xmi:id="c6c02391-12b5-4361-bc24-e1b5afc1ec6e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Remington Roomsweeper"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" xmi:id="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="6" munitionstyp="Trommel">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" xmi:id="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ruger Super Warhawk"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="870" name="Savalette Guardian" xmi:id="54a29917-7a30-4e21-b577-e0324b860501" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="12" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="870" name="Savalette Guardian" xmi:id="54a29917-7a30-4e21-b577-e0324b860501" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="12" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Savalette Guardian"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Hold-Out" xmi:id="c87b03f7-403d-4db9-987a-022ab525b4be" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Hold-Out" xmi:id="c87b03f7-403d-4db9-987a-022ab525b4be" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 <localizations local="de" name="Cyber Hold-Out Pisole"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1000" name="Fichetti Tiffani Needler" xmi:id="71655ecf-6cb5-4adb-ac96-583b57fa6e9a" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" kapazitaet="4" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1000" name="Fichetti Tiffani Needler" xmi:id="71655ecf-6cb5-4adb-ac96-583b57fa6e9a" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 <localizations local="de" name="Fichetti Tiffani Needler"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="350" name="Fichetti Tiffani Self-Defender" xmi:id="1f122193-a0f5-4f4d-b4bf-6cfc7455ce3b" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="4" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="350" name="Fichetti Tiffani Self-Defender" xmi:id="1f122193-a0f5-4f4d-b4bf-6cfc7455ce3b" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>EM</modie>
 <localizations local="de" name="Fichetti Tiffani Self-Defender"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" xmi:id="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="6" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" xmi:id="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 <localizations local="de" name="Streetline Special"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Walther Palm Pistol" xmi:id="0b4c00be-d7bb-4480-b9f4-6300abde27c4" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Walther Palm Pistol" xmi:id="0b4c00be-d7bb-4480-b9f4-6300abde27c4" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>EM</modie>
 <modie>SM</modie>
 <localizations local="de" name="Walther Palm-Pistole"/>
@@ -2259,14 +2259,14 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares Redline"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="6000" name="GE Vindicator Mini-Gun" xmi:id="df19a07f-cc04-44b6-b9b2-6d4fe73062e4" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="4" durchschlagsKraft="-4" kapazitaet="200" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="6000" name="GE Vindicator Mini-Gun" xmi:id="df19a07f-cc04-44b6-b9b2-6d4fe73062e4" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="4" durchschlagsKraft="-4" kapazitaet="200" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="GE Vindicator Mini-Gun" page="42"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="5800" name="Ingram Valiant" xmi:id="cb04b4c1-97ff-4984-9bc8-943e5f3ac557" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="5800" name="Ingram Valiant" xmi:id="cb04b4c1-97ff-4984-9bc8-943e5f3ac557" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2274,14 +2274,14 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ingram Valiant"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2000" name="Krime Wave" xmi:id="ba34be4c-2dff-439a-8b7e-942f71bb4942" page="34" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="50">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2000" name="Krime Wave" xmi:id="ba34be4c-2dff-439a-8b7e-942f71bb4942" page="34" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krime Wave" page="34"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="6500" name="Shiawase Armaments Nemesis" xmi:id="b2b51722-5c37-43ce-9b08-646b8f1a51eb" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="6500" name="Shiawase Armaments Nemesis" xmi:id="b2b51722-5c37-43ce-9b08-646b8f1a51eb" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2289,19 +2289,19 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Shiawase Armaments Nemesis" page="43"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="200" name="Ares Light Fire 70" xmi:id="67474de7-d29b-4b31-a6ae-1e2e981fa5d2" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="7" kapazitaet="16" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="200" name="Ares Light Fire 70" xmi:id="67474de7-d29b-4b31-a6ae-1e2e981fa5d2" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="7" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Light Fire 70"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" wertValue="1250" name="Ares Light Fire 75" xmi:id="93722378-dcb6-4988-ba4e-54ce545644fe" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="16" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" wertValue="1250" name="Ares Light Fire 75" xmi:id="93722378-dcb6-4988-ba4e-54ce545644fe" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Light Fire 75"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="210" name="Beretta 201T" xmi:id="cbff618e-6a12-4bab-aaeb-2453706bf42e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="21" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="210" name="Beretta 201T" xmi:id="cbff618e-6a12-4bab-aaeb-2453706bf42e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="21" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2314,81 +2314,81 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt Agent Special" page="5"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="320" name="Colt America L36" xmi:id="676660a2-3320-4b4a-acaf-f645f2ba6cd7" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="7" kapazitaet="11" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="320" name="Colt America L36" xmi:id="676660a2-3320-4b4a-acaf-f645f2ba6cd7" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="7" kapazitaet="11" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt America L36"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Colt New Model Revolver" xmi:id="305a23ec-098f-47c9-898f-ca28016846d1" page="4" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="5P" praezision="6" durchschlagsKraft="1" kapazitaet="5" munitionstyp="Trommel">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Colt New Model Revolver" xmi:id="305a23ec-098f-47c9-898f-ca28016846d1" page="4" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="5P" praezision="6" durchschlagsKraft="1" kapazitaet="5" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt New Model Revolver" page="4"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Fichetti Executive Action" xmi:id="35f168ec-cc4d-4dd5-bc3e-e1e3f8376dc4" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="18" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Fichetti Executive Action" xmi:id="35f168ec-cc4d-4dd5-bc3e-e1e3f8376dc4" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="18" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Fichetti Executive Action"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="350" name="Fichetti Security 600" xmi:id="7dff8ab0-c659-4901-ac3b-cb8b4f3839bf" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="350" name="Fichetti Security 600" xmi:id="7dff8ab0-c659-4901-ac3b-cb8b4f3839bf" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Fichetti Security 600"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Light Cyber Pistol" xmi:id="261165ce-6111-4a51-9519-46c41edac9b0" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="10">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Light Cyber Pistol" xmi:id="261165ce-6111-4a51-9519-46c41edac9b0" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="10" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <localizations local="de" name="Leichte Cyber Pistole"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Nitama Sporter" xmi:id="8a6d3d73-2091-4bc1-9a16-b42aa9b159e6" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="6" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Nitama Sporter" xmi:id="8a6d3d73-2091-4bc1-9a16-b42aa9b159e6" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="6" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Nitama Sporter"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14R" wertValue="900" name="Shiawase Armaments Puzzler" xmi:id="274585e0-7e3c-44fd-88f3-287c12c90173" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="12" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14R" wertValue="900" name="Shiawase Armaments Puzzler" xmi:id="274585e0-7e3c-44fd-88f3-287c12c90173" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Shiawase Armaments Puzzler" page="31"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Taurus Omni-6" xmi:id="66955e6e-0b77-4ce0-9e24-6bb637a36541" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="6" munitionstyp="Trommel">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Taurus Omni-6" xmi:id="66955e6e-0b77-4ce0-9e24-6bb637a36541" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Taurus Omni-6"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="830" name="Ares Crusader II" xmi:id="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="40" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="830" name="Ares Crusader II" xmi:id="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Crusader II"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="775" name="Cavalier Evanator" xmi:id="a68fe409-bebb-4c72-941c-0fce94048fec" page="8" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="775" name="Cavalier Evanator" xmi:id="a68fe409-bebb-4c72-941c-0fce94048fec" page="8" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Cavalier Evanator" page="8"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="270" name="Ceska Black Scorpion" xmi:id="0c8076a9-97e3-4583-8385-c32266c25190" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="35" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="270" name="Ceska Black Scorpion" xmi:id="0c8076a9-97e3-4583-8385-c32266c25190" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ceska Black Scorpion"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Machine Pistol" xmi:id="496e4b81-8437-41fb-adf5-2e4709df656e" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="18" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Machine Pistol" xmi:id="496e4b81-8437-41fb-adf5-2e4709df656e" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="18" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <localizations local="de" name="Cyber Automatik Pistole"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="850" name="Fianchetti Military 100" xmi:id="5563a612-bf02-4fd9-b942-2400bbd1eb70" page="7" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="850" name="Fianchetti Military 100" xmi:id="5563a612-bf02-4fd9-b942-2400bbd1eb70" page="7" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2396,26 +2396,26 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Fianchetti Military 100" page="7"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="750" name="Onotari Arms Equalizer" xmi:id="404c20aa-8c02-4fcd-a37e-ba63b3e3553f" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="4" kapazitaet="12" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="750" name="Onotari Arms Equalizer" xmi:id="404c20aa-8c02-4fcd-a37e-ba63b3e3553f" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="4" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Onotari Arms Equalizer" page="34"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="17F" wertValue="2800" name="PPSK-4 Collapsible Machine Pistol" xmi:id="38e9682d-d679-47a4-97a1-7161cba07cd2" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="17F" wertValue="2800" name="PPSK-4 Collapsible Machine Pistol" xmi:id="38e9682d-d679-47a4-97a1-7161cba07cd2" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <localizations local="de" name="PPSK-4 Klapp-MP"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="700" name="Remington Suppressor" xmi:id="6596b05e-d51b-4388-b57a-950d9b5a96ac" page="9" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="700" name="Remington Suppressor" xmi:id="6596b05e-d51b-4388-b57a-950d9b5a96ac" page="9" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Remington Suppressor" page="9"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="350" name="Steyr TMP" xmi:id="c8e3d921-45df-4850-8619-7fcca279d774" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="350" name="Steyr TMP" xmi:id="c8e3d921-45df-4850-8619-7fcca279d774" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2423,7 +2423,7 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Steyr TMP"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="800" name="Ultimax 70" xmi:id="060cbbd5-3413-4e57-8c7a-5ee3d2e94945" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="15" munitionstyp="Streifen" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="800" name="Ultimax 70" xmi:id="060cbbd5-3413-4e57-8c7a-5ee3d2e94945" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="15" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2468,7 +2468,7 @@
 <modie>EM</modie>
 <localizations local="de" name="Onotari Interceptor"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="1800" name="Auto-Assault 16" xmi:id="923ba564-7883-49e8-82a2-415cbfa96685" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="1800" name="Auto-Assault 16" xmi:id="923ba564-7883-49e8-82a2-415cbfa96685" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2477,15 +2477,15 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Auto-Assault 16"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1200" name="Cavalier Falchion" xmi:id="31269939-24bb-405a-aa5e-a1b77458a1df" page="22" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1200" name="Cavalier Falchion" xmi:id="31269939-24bb-405a-aa5e-a1b77458a1df" page="22" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <localizations local="de" name="Cavalier Falchion" page="22"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Shotgun" xmi:id="97cab27f-620b-45d7-8da4-3136c1e69f2b" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Shotgun" xmi:id="97cab27f-620b-45d7-8da4-3136c1e69f2b" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="4" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <localizations local="de" name="Cyber Shrotflinte"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Defiance T-250" xmi:id="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Defiance T-250" xmi:id="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2501,7 +2501,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Defiance T-250, Short-Barrel"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1100" name="Enfield AS-7" xmi:id="622bd915-0e0c-431b-9da5-e0c0c31e2122" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1100" name="Enfield AS-7" xmi:id="622bd915-0e0c-431b-9da5-e0c0c31e2122" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2509,7 +2509,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Enfield AS-7"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1050" name="Franchi SPAS-24" xmi:id="76e0ae30-a3cf-4d4f-b278-ad49a10df4d2" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1050" name="Franchi SPAS-24" xmi:id="76e0ae30-a3cf-4d4f-b278-ad49a10df4d2" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2517,14 +2517,14 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Franchi SPAS-24" page="41"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="600" name="Krime Boss" xmi:id="8818b584-e084-4fcb-94b8-632728015c6f" page="17" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="3" durchschlagsKraft="-1" kapazitaet="15" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="600" name="Krime Boss" xmi:id="8818b584-e084-4fcb-94b8-632728015c6f" page="17" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="3" durchschlagsKraft="-1" kapazitaet="15" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krime Boss" page="17"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1400" name="Mossberg AM-CMDT" xmi:id="228a2a5d-01e5-4f58-90bf-1d61602ad1c5" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1400" name="Mossberg AM-CMDT" xmi:id="228a2a5d-01e5-4f58-90bf-1d61602ad1c5" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2533,63 +2533,63 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Mossberg AM-CMDT"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1000" name="PJSS Model 55" xmi:id="62221199-7958-4a76-a538-0c8e0a516608" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-1" kapazitaet="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1000" name="PJSS Model 55" xmi:id="62221199-7958-4a76-a538-0c8e0a516608" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-1" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="PJSS Model 55"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="950" name="Remington 990" xmi:id="67f18a4a-e516-4946-984a-5254b3ba850f" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="950" name="Remington 990" xmi:id="67f18a4a-e516-4946-984a-5254b3ba850f" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Remington 990"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Shiawase Arms Rain" xmi:id="3af9c1f7-8582-4849-8b1e-b49dd14c207f" page="21" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Shiawase Arms Rain" xmi:id="3af9c1f7-8582-4849-8b1e-b49dd14c207f" page="21" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Shiawase Arms Rain" page="21"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1300" name="Winchester Model 201" xmi:id="eaef40ea-c1ff-4f64-a4fe-31720b250860" page="18" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="8" durchschlagsKraft="-1" kapazitaet="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1300" name="Winchester Model 201" xmi:id="eaef40ea-c1ff-4f64-a4fe-31720b250860" page="18" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="8" durchschlagsKraft="-1" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Winchester Model 201" page="18"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="900" name="Winchester Model 2054" xmi:id="93869598-2945-412f-8b42-90764ddc1e59" page="20" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="900" name="Winchester Model 2054" xmi:id="93869598-2945-412f-8b42-90764ddc1e59" page="20" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Winchester Model 2054" page="20"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1000" name="Winchester Model 2066" xmi:id="afee8d53-f1da-4500-ab6c-8e22b9c57c3e" page="19" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1000" name="Winchester Model 2066" xmi:id="afee8d53-f1da-4500-ab6c-8e22b9c57c3e" page="19" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Winchester Model 2066" page="19"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="17500" name="Ares Desert Strike" xmi:id="50cec60d-a421-4edd-9baa-d10bfbc08e70" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="7" durchschlagsKraft="-4" kapazitaet="14" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="17500" name="Ares Desert Strike" xmi:id="50cec60d-a421-4edd-9baa-d10bfbc08e70" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="7" durchschlagsKraft="-4" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares Desert Strike"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="38500" name="Barret Model 122" xmi:id="ffc2ae2b-fbaa-4d65-9456-c6433f3d53e8" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="14P" praezision="7" durchschlagsKraft="-6" kapazitaet="14" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="38500" name="Barret Model 122" xmi:id="ffc2ae2b-fbaa-4d65-9456-c6433f3d53e8" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="14P" praezision="7" durchschlagsKraft="-6" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Barret Model 122" page="40"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="10300" name="Cavalier Arms Crockett EBR" xmi:id="8c22582e-56ff-4a44-9358-487d8a594833" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="6" durchschlagsKraft="-3" kapazitaet="20" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="10300" name="Cavalier Arms Crockett EBR" xmi:id="8c22582e-56ff-4a44-9358-487d8a594833" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="6" durchschlagsKraft="-3" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2597,7 +2597,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Cavalier Arms Crockett EBR"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="13F" wertValue="12500" name="Onotari Arms JP-K50" xmi:id="8524048e-6c2c-414c-91e8-5d4bca711957" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="7" durchschlagsKraft="-3" kapazitaet="25" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="13F" wertValue="12500" name="Onotari Arms JP-K50" xmi:id="8524048e-6c2c-414c-91e8-5d4bca711957" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="7" durchschlagsKraft="-3" kapazitaet="25" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2605,41 +2605,41 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Onotari Arms JP-K50" page="39"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2R" wertValue="500" name="Pioneer 60" xmi:id="cf9d0938-73e5-4e40-9a50-003ded439586" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2R" wertValue="500" name="Pioneer 60" xmi:id="cf9d0938-73e5-4e40-9a50-003ded439586" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Pioneer 60" page="39"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="28000" name="Ranger Arms SM-5" xmi:id="e2649ef2-c9a8-43ac-9f6c-9279e7be2f67" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="14P" praezision="8" durchschlagsKraft="-5" kapazitaet="15" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="28000" name="Ranger Arms SM-5" xmi:id="e2649ef2-c9a8-43ac-9f6c-9279e7be2f67" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="14P" praezision="8" durchschlagsKraft="-5" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ranger Arms SM-5"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="2100" name="Remington 950" xmi:id="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="7" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="2100" name="Remington 950" xmi:id="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="7" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Remington 950"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1300" name="Ruger 101" xmi:id="6098fea5-3069-42b8-9405-80d07578b660" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-3" kapazitaet="8" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1300" name="Ruger 101" xmi:id="6098fea5-3069-42b8-9405-80d07578b660" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-3" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ruger 101"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="SVD" xmi:id="e238d380-5e5f-499c-9d33-548d02b50076" page="11" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" schadenscode="10P" praezision="6" durchschlagsKraft="-2" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="SVD" xmi:id="e238d380-5e5f-499c-9d33-548d02b50076" page="11" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" schadenscode="10P" praezision="6" durchschlagsKraft="-2" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="SVD" page="11"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="35000" name="Terracotta Arms AM-47" xmi:id="8d2c12e7-e08d-4c7a-907a-b5bc178ce9e3" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-4" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="35000" name="Terracotta Arms AM-47" xmi:id="8d2c12e7-e08d-4c7a-907a-b5bc178ce9e3" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-4" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -2711,63 +2711,63 @@
 <modie>EM</modie>
 <localizations local="de" name="Tiffani Elegance Shooting Bracers" page="28"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="1100" name="M1 Garand" xmi:id="b312c6dd-56db-4569-b96d-32a9e290e78b" page="27" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="1100" name="M1 Garand" xmi:id="b312c6dd-56db-4569-b96d-32a9e290e78b" page="27" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="M1 Garand" page="27"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1100" name="Marlin 3041 BL" xmi:id="1a1a3b5f-064a-4626-8ddb-efc015187236" page="29" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-3" kapazitaet="6" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1100" name="Marlin 3041 BL" xmi:id="1a1a3b5f-064a-4626-8ddb-efc015187236" page="29" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-3" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Marlin 3041 BL" page="29"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1000" name="Marlin 3468SS" xmi:id="afbb08e1-9362-46c6-b890-9dbd3cd26d2d" page="25" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="4" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1000" name="Marlin 3468SS" xmi:id="afbb08e1-9362-46c6-b890-9dbd3cd26d2d" page="25" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Marlin 3468SS" page="25"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Marlin 79S" xmi:id="c4cb38e3-3748-41ad-82e9-56abc111fafe" page="31" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="4" kapazitaet="10" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Marlin 79S" xmi:id="c4cb38e3-3748-41ad-82e9-56abc111fafe" page="31" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="4" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Marlin 79S" page="31"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1500" name="Marlin X71" xmi:id="2082a58b-e94d-4911-a486-1ad33ac8e3b8" page="30" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1500" name="Marlin X71" xmi:id="2082a58b-e94d-4911-a486-1ad33ac8e3b8" page="30" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Marlin X71" page="30"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="3600" name="Springfield 2003" xmi:id="c571ea1e-dfd8-4c4e-84d8-9355f24874b0" page="23" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="9" durchschlagsKraft="-2" kapazitaet="5" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="3600" name="Springfield 2003" xmi:id="c571ea1e-dfd8-4c4e-84d8-9355f24874b0" page="23" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="9" durchschlagsKraft="-2" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Springfield 2003" page="23"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1700" name="Springfield M1A" xmi:id="72659b65-56ab-4629-be63-d82549edb0b4" page="26" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" durchschlagsKraft="-1" kapazitaet="20" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1700" name="Springfield M1A" xmi:id="72659b65-56ab-4629-be63-d82549edb0b4" page="26" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" durchschlagsKraft="-1" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Springfield M1A" page="26"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="850" name="Springfield Model 1855 Reproduction" xmi:id="c154d964-599f-41bd-9b20-3b63dcbb213d" page="28" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="2" kapazitaet="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="850" name="Springfield Model 1855 Reproduction" xmi:id="c154d964-599f-41bd-9b20-3b63dcbb213d" page="28" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="2" kapazitaet="1" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Springfield Model 1855 Reproduction" page="28"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1800" name="Winchester Model 2024" xmi:id="a6afb306-df84-4d99-8f62-1b9a988bea07" page="24" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" kapazitaet="7" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1800" name="Winchester Model 2024" xmi:id="a6afb306-df84-4d99-8f62-1b9a988bea07" page="24" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" kapazitaet="7" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -2781,7 +2781,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Winchester Model 2067" page="33"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="1000" name="Ares Executioner" xmi:id="c9ae9813-cf66-4435-82c5-a5f28c441d5d" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="1000" name="Ares Executioner" xmi:id="c9ae9813-cf66-4435-82c5-a5f28c441d5d" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2789,7 +2789,7 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ares Executioner" page="35"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="1000" name="Ares SIGMA 3" xmi:id="53393829-2f6d-445d-b3d4-325aabec7cba" page="11" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="4" kapazitaet="50" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="1000" name="Ares SIGMA 3" xmi:id="53393829-2f6d-445d-b3d4-325aabec7cba" page="11" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="4" kapazitaet="50" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2798,7 +2798,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Ares SIGMA 3" page="11"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="400" name="Cavalier Arms Gladius" xmi:id="1603b758-f59c-4288-937a-8d7467b9ed33" page="12" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="3" kapazitaet="32" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="400" name="Cavalier Arms Gladius" xmi:id="1603b758-f59c-4288-937a-8d7467b9ed33" page="12" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="3" kapazitaet="32" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2806,7 +2806,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Cavalier Arms Gladius" page="12"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="660" name="Colt Cobra TZ-120" xmi:id="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="660" name="Colt Cobra TZ-120" xmi:id="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2814,12 +2814,12 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Colt Cobra TZ-120"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Submachine Gun" xmi:id="95295a59-46b3-4cc0-8a1d-ac869cf9912c" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="18" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Submachine Gun" xmi:id="95295a59-46b3-4cc0-8a1d-ac869cf9912c" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="18" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <localizations local="de" name="Cyber Maschinenpistole"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="900" name="FN P93 Praetor" xmi:id="de333a81-b997-4b17-ae0d-c221d22a28c7" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="6" kapazitaet="50" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="900" name="FN P93 Praetor" xmi:id="de333a81-b997-4b17-ae0d-c221d22a28c7" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="6" kapazitaet="50" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2827,7 +2827,7 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="FN P93 Praetor"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="730" name="HK 227" xmi:id="f9ff7bf6-3ed4-41bd-b934-34e751ecf266" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="28" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="730" name="HK 227" xmi:id="f9ff7bf6-3ed4-41bd-b934-34e751ecf266" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="28" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2835,7 +2835,7 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="HK 227"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="2300" name="HK Urban Combat" xmi:id="7bf032e5-7e53-4dbd-b5c8-8c57d6c4c9ba" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="7" kapazitaet="36" munitionstyp="Streifen" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="2300" name="HK Urban Combat" xmi:id="7bf032e5-7e53-4dbd-b5c8-8c57d6c4c9ba" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="7" kapazitaet="36" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -2843,49 +2843,49 @@
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="HK Urban Combat"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="Ingram Smartgun X" xmi:id="017d8327-3bce-420a-af24-a2bed3ab0e83" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="Ingram Smartgun X" xmi:id="017d8327-3bce-420a-af24-a2bed3ab0e83" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Ingram Smartgun X"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="425" name="Krime Spree" xmi:id="980bc771-06f2-41b5-8879-c609bd80254f" page="10" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="425" name="Krime Spree" xmi:id="980bc771-06f2-41b5-8879-c609bd80254f" page="10" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Krime Spree" page="10"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="875" name="SCK Model 100" xmi:id="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="30" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="875" name="SCK Model 100" xmi:id="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="SCK Model 100"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" xmi:id="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="24" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" xmi:id="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="24" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Uzi IV"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="275" name="Cavalier Safeguard" xmi:id="74475182-fc21-4583-b9b9-84db8af29328" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="6" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="275" name="Cavalier Safeguard" xmi:id="74475182-fc21-4583-b9b9-84db8af29328" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Cavalier Safeguard" page="29"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="250" name="Defiance EX Shocker" xmi:id="7d5bcc0b-9ec2-4c87-aaa7-a4d531d7974e" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="250" name="Defiance EX Shocker" xmi:id="7d5bcc0b-9ec2-4c87-aaa7-a4d531d7974e" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Defiance EX Shocker"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="300" name="Tiffani-Defiance Protector" xmi:id="3540d227-3288-410f-aa11-5048179ab322" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="3" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="300" name="Tiffani-Defiance Protector" xmi:id="3540d227-3288-410f-aa11-5048179ab322" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="3" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Tiffani-Defiance Protector" page="29"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="180" name="Yamaha Pulsar" xmi:id="21628e04-95d0-4ba4-bc66-fcbed5a1bf8e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="180" name="Yamaha Pulsar" xmi:id="21628e04-95d0-4ba4-bc66-fcbed5a1bf8e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <localizations local="de" name="Yamaha Pulsar"/>
@@ -2930,7 +2930,7 @@
 <erweiterung>Unten</erweiterung>
 <localizations local="de" name="Nissan Optiumum II Shotgun" page="38"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="600" name="Ares Predator III" xmi:id="3a91672e-0588-45a6-b225-149624e813ac" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="600" name="Ares Predator III" xmi:id="3a91672e-0588-45a6-b225-149624e813ac" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>

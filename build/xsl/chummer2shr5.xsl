@@ -1542,17 +1542,33 @@
 		</xsl:if>
 	</xsl:template>
 	<!-- find the range -->
-	<xsl:template name="findRange">
-		<xsl:param name="rname" />
-		<xsl:for-each select="$ranges">
-			<xsl:for-each select="chummer/ranges/*">
-				<xsl:if test="category/text()=$rname">
-					<xsl:variable name="pos" select="position()-1" />
-					<xsl:value-of
-						select="concat('//@entries.0/@entries.1/@entries.',$pos)" />
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:for-each>
+	<xsl:template name="setRange">
+		<xsl:choose>
+			<xsl:when test="range/text()">
+				<xsl:variable name="rname" select="range/text()" />
+				<xsl:for-each select="$ranges">
+					<xsl:for-each select="chummer/ranges/*">
+						<xsl:if test="category/text()=$rname">
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="reichweite"><xsl:value-of
+								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:variable name="rname" select="category/text()" />
+				<xsl:for-each select="$ranges">
+					<xsl:for-each select="chummer/ranges/*">
+						<xsl:if test="category/text()=$rname">
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="reichweite"><xsl:value-of
+								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<!-- find the source book -->
 	<xsl:template name="findSourceBook">
@@ -2727,16 +2743,17 @@
 			<entries xsi:type="shr5:Projektilwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 
-				<xsl:variable name="rname" select="category/text()" />
-				<xsl:for-each select="$ranges">
-					<xsl:for-each select="chummer/ranges/*">
-						<xsl:if test="category/text()=$rname">
-							<xsl:variable name="pos" select="position()-1" />
-							<xsl:attribute name="reichweite"><xsl:value-of
-								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
-						</xsl:if>
-					</xsl:for-each>
-				</xsl:for-each>
+				<xsl:call-template name="setRange"/>
+<!-- 				<xsl:variable name="rname" select="category/text()" /> -->
+<!-- 				<xsl:for-each select="$ranges"> -->
+<!-- 					<xsl:for-each select="chummer/ranges/*"> -->
+<!-- 						<xsl:if test="category/text()=$rname"> -->
+<!-- 							<xsl:variable name="pos" select="position()-1" /> -->
+<!-- 							<xsl:attribute name="reichweite"><xsl:value-of -->
+<!-- 								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
+<!-- 						</xsl:if> -->
+<!-- 					</xsl:for-each> -->
+<!-- 				</xsl:for-each> -->
 				<xsl:call-template name="waffe" />
 				<xsl:call-template name="localization" />
 			</entries>
@@ -2775,16 +2792,35 @@
 						select="number(rc/text())" /></xsl:attribute>
 				</xsl:if>
 
-				<xsl:variable name="rname" select="range/text()" />
-				<xsl:for-each select="$ranges">
-					<xsl:for-each select="chummer/ranges/*">
-						<xsl:if test="category/text()=$rname">
-							<xsl:variable name="pos" select="position()-1" />
-							<xsl:attribute name="reichweite"><xsl:value-of
-								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
-						</xsl:if>
-					</xsl:for-each>
-				</xsl:for-each>
+				<!-- <xsl:call-template name="findRange"> <xsl:with-param name="rname" 
+					select="category/text()"/> </xsl:call-template> -->
+				<xsl:choose>
+					<xsl:when test="range/text()">
+						<xsl:variable name="rname" select="range/text()" />
+						<xsl:for-each select="$ranges">
+							<xsl:for-each select="chummer/ranges/*">
+								<xsl:if test="category/text()=$rname">
+									<xsl:variable name="pos" select="position()-1" />
+									<xsl:attribute name="reichweite"><xsl:value-of
+										select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:for-each>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:variable name="rname" select="category/text()" />
+						<xsl:for-each select="$ranges">
+							<xsl:for-each select="chummer/ranges/*">
+								<xsl:if test="category/text()=$rname">
+									<xsl:variable name="pos" select="position()-1" />
+									<xsl:attribute name="reichweite"><xsl:value-of
+										select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+
 				<xsl:call-template name="fw-mode">
 					<xsl:with-param name="list"
 						select="concat(normalize-space(mode/text()), '/')" />
