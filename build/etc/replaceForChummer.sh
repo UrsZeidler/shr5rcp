@@ -6,11 +6,12 @@
 
 while IFS=, read col1 col2
 do   
-	INPUT="platform:/resource/shr5Resource/shr5-1.shr5#$col2"
-	SED_CMD="${SED_CMD}s@$INPUT@$col1@;" 
+	INPUT="$col2"
+	OUT="$col1"
+	SED_CMD="${SED_CMD}s@$INPUT@$OUT@;" 
 #echo "s@$INPUT@$col1@"
 done < replace.txt
 
-sed "${SED_CMD}" mm-test.xmi >test.xmi
+sed "${SED_CMD}" test.xml >test-3.xml
 
 
