@@ -466,6 +466,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
 
         if (skill != null) {
             Fertigkeit fertigkeit = skill.getFertigkeit();
+            if(fertigkeit==null)
+                return 0;
             EClass eClass = fertigkeit.eClass();
 
             IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
