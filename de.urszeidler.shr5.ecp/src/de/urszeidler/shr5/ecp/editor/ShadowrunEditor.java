@@ -45,6 +45,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
@@ -97,6 +98,7 @@ import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5KarmaGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
+import de.urszeidler.shr5.ecp.editor.pages.SourceBookPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.editor.pages.SubstancePage;
 import de.urszeidler.shr5.ecp.editor.pages.VehiclePage;
@@ -247,7 +249,15 @@ public class ShadowrunEditor extends AbstractShr5Editor {
 
         // the switch creates all the pages
         Shr5Switch<Object> shadowrunSwitch = new Shr5Switch<Object>() {
-
+            @Override
+            public Object caseSourceBook(SourceBook object) {
+                try {
+                    addPage(new SourceBookPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating SourceBookPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
             @Override
             public Object caseSpezies(Spezies object) {
                 try {

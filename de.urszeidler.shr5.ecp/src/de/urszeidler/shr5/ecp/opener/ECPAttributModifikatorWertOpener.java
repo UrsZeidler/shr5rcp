@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
@@ -132,7 +133,10 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             // public Integer caseBeschreibbar(Beschreibbar object) {
             // return 0;
             // }
-
+            @Override
+            public Integer caseSourceBook(SourceBook object) {
+                return RET;
+            }
             @Override
             public Integer caseSpezies(Spezies object) {
                 return RET;
