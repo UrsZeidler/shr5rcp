@@ -69,80 +69,89 @@
 						</xsl:for-each>
 					</xsl:for-each>
 				</entries>
-				<xsl:for-each select="$ranges">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$metatypes">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$skills">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$weapons">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$gears">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$cyberwares">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$powers">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$armors">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$spells">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$qualities">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$biowares">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$vehicles">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$complexforms">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$mentors">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-				<xsl:for-each select="$metamagic">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
+				<entries xsi:type="shr5:ShrList" name="Gear">
+					<xsl:for-each select="$weapons">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$gears">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$cyberwares">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$biowares">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
 
-				<xsl:for-each select="$lifestyle">
-					<xsl:apply-templates mode="lifestyle" select="node()" />
-				</xsl:for-each>
+					<xsl:for-each select="$armors">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$vehicles">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<entries xsi:type="shr5:ShrList" name="Credsticks">
+						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
+							verfuegbarkeit="0" wertValue="5" page="443" name="Standard"
+							maxValue="5000" />
+						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
+							verfuegbarkeit="0" wertValue="20" page="443" name="Silver"
+							maxValue="20000" />
+						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
+							verfuegbarkeit="5" wertValue="20" page="443" name="Gold"
+							maxValue="100000" />
+						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
+							verfuegbarkeit="10" wertValue="500" page="443" name="Platinum"
+							maxValue="500000" />
+						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
+							verfuegbarkeit="10" wertValue="1000" page="443" name="Ebony"
+							maxValue="1000000" />
+					</entries>
+				</entries>
+				<entries xsi:type="shr5:ShrList" name="Skills">
+					<xsl:for-each select="$skills">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+				</entries>
+				<entries xsi:type="shr5:ShrList" name="Definitions">
+					<xsl:for-each select="$ranges">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$metatypes">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$qualities">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$lifestyle">
+						<xsl:apply-templates mode="lifestyle" select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$critter-species">
+						<entries xsi:type="shr5:ShrList" name="Critters species">
+							<xsl:apply-templates mode="critter" select="node()" />
+						</entries>
+					</xsl:for-each>
+				</entries>
+				<entries xsi:type="shr5:ShrList" name="Magic">
+					<xsl:for-each select="$powers">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$spells">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$complexforms">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$mentors">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$metamagic">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+				</entries>
 				<!-- <xsl:for-each select="$shr5CharacterBuilder"> -->
 				<!-- <xsl:apply-templates select="node()" /> -->
 				<!-- </xsl:for-each> -->
-				<xsl:for-each select="$critter-species">
-					<entries xsi:type="shr5:ShrList" name="Critters species">
-						<xsl:apply-templates mode="critter" select="node()" />
-					</entries>
-				</xsl:for-each>
 
-				<entries xsi:type="shr5:ShrList" name="Credsticks">
-					<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
-						verfuegbarkeit="0" wertValue="5" page="443" name="Standard"
-						maxValue="5000" />
-					<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
-						verfuegbarkeit="0" wertValue="20" page="443" name="Silver"
-						maxValue="20000" />
-					<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
-						verfuegbarkeit="5" wertValue="20" page="443" name="Gold" maxValue="100000" />
-					<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
-						verfuegbarkeit="10" wertValue="500" page="443" name="Platinum"
-						maxValue="500000" />
-					<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
-						verfuegbarkeit="10" wertValue="1000" page="443" name="Ebony"
-						maxValue="1000000" />
-				</entries>
 				<entries xsi:type="shr5:ShrList" name="additional stuff">
 					<entries xsi:type="shr5:Wissensfertigkeit" name="Streetgangs Berlin">
 						<attribut
@@ -2743,17 +2752,17 @@
 			<entries xsi:type="shr5:Projektilwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 
-				<xsl:call-template name="setRange"/>
-<!-- 				<xsl:variable name="rname" select="category/text()" /> -->
-<!-- 				<xsl:for-each select="$ranges"> -->
-<!-- 					<xsl:for-each select="chummer/ranges/*"> -->
-<!-- 						<xsl:if test="category/text()=$rname"> -->
-<!-- 							<xsl:variable name="pos" select="position()-1" /> -->
-<!-- 							<xsl:attribute name="reichweite"><xsl:value-of -->
-<!-- 								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-<!-- 						</xsl:if> -->
-<!-- 					</xsl:for-each> -->
-<!-- 				</xsl:for-each> -->
+				<xsl:call-template name="setRange" />
+				<!-- <xsl:variable name="rname" select="category/text()" /> -->
+				<!-- <xsl:for-each select="$ranges"> -->
+				<!-- <xsl:for-each select="chummer/ranges/*"> -->
+				<!-- <xsl:if test="category/text()=$rname"> -->
+				<!-- <xsl:variable name="pos" select="position()-1" /> -->
+				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
+				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
+				<!-- </xsl:if> -->
+				<!-- </xsl:for-each> -->
+				<!-- </xsl:for-each> -->
 				<xsl:call-template name="waffe" />
 				<xsl:call-template name="localization" />
 			</entries>
