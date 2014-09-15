@@ -114,10 +114,10 @@ public class GameplayTools {
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
         data.setEObject(waffe);
         data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
-        FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
-        if (fm == null) {
+//        FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
+//        if (fm == null) {
             subject.getExtendetData().put(data, value);
-        }
+//        }
     }
 
     public static int getWoundMod(RuntimeCharacter subject, List<ProbeMod> mods) {
@@ -441,14 +441,14 @@ public class GameplayTools {
      * @param probeMods
      * @return
      */
-    public static int getRecoilMod(RuntimeCharacter subject, Feuerwaffe feuerwaffe, EList<ProbeMod> probeMods) {
+    public static int getRecoilMod(RuntimeCharacter subject, Feuerwaffe feuerwaffe, List<ProbeMod> probeMods) {
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
-        data.setEObject(feuerwaffe);
+        data.setEObject(subject);
         data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
         int rc = 1 + (subject.getCharacter().getPersona().getStaerke() / 3) + feuerwaffe.getRueckstoss();
         int recoil = Math.min(0, rc - subject.getIntegerValue(data));
         if (probeMods != null && recoil != 0) {
-            ProbeMod probeMod = createProbeMod(feuerwaffe, recoil, Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
+            ProbeMod probeMod = createProbeMod(subject, recoil, Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
             probeMods.add(probeMod);
         }
 
