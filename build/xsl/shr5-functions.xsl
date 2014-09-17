@@ -129,14 +129,24 @@
 
 		<xsl:variable name="costFactor">
 			<xsl:call-template name="extractFactor">
+				<xsl:with-param name="index" select="$rating" />
 				<xsl:with-param name="expression" select="cost/text()"></xsl:with-param>
 			</xsl:call-template>
 		</xsl:variable>
 
-		<xsl:attribute name="wertValue"><xsl:value-of
-			select="$costFactor * $rating" />
-	
-		</xsl:attribute>
+		<xsl:choose>
+			<xsl:when test="starts-with(cost/text(),'FixedValues' )">
+				<xsl:attribute name="wertValue"><xsl:value-of select="$costFactor" />
+				</xsl:attribute>
+
+
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:attribute name="wertValue"><xsl:value-of
+					select="$costFactor * $rating" />
+				</xsl:attribute>
+			</xsl:otherwise>
+		</xsl:choose>
 		<!-- <xsl:if test="number(cost/text())"> -->
 		<!-- <xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" 
 			/></xsl:attribute> -->
@@ -150,14 +160,46 @@
 	<!-- -->
 	<xsl:template name="extractFactor">
 		<xsl:param name="expression" />
+		<xsl:param name="index" />
 		<xsl:choose>
 			<xsl:when test="starts-with($expression,'Rating' )">
 				<xsl:value-of select="substring-after($expression, '*')  " />
+			</xsl:when>
+			<xsl:when test="starts-with($expression,'FixedValues' )">
+
+				<xsl:call-template name="extractFixedValue">
+					<xsl:with-param name="text"
+						select="concat(substring-before(substring-after($expression, 'FixedValues('),')'),',')" />
+					<xsl:with-param name="index" select="$index" />
+				</xsl:call-template>
 			</xsl:when>
 
 		</xsl:choose>
 
 
+	</xsl:template>
+
+	<!-- -->
+	<xsl:template name="extractFixedValue">
+		<xsl:param name="text" />
+		<xsl:param name="index" />
+		<xsl:param name="pos" select="1" />
+		<xsl:param name="separator" select="','" />
+		<xsl:choose>
+			<xsl:when
+				test="$pos=$index or $text='' or  not(contains($text,$separator )) ">
+				<xsl:value-of select="normalize-space(substring-before($text,$separator))" />
+			</xsl:when>
+			<xsl:otherwise>
+				<!-- <xsl:value-of select="normalize-space(substring-before($text, $separator))"/> -->
+				<xsl:call-template name="extractFixedValue">
+					<xsl:with-param name="text"
+						select="substring-after($text, $separator)" />
+					<xsl:with-param name="index" select="$index" />
+					<xsl:with-param name="pos" select="$pos+1" />
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 
@@ -175,7 +217,6 @@
 		<xsl:param name="expression" />
 
 		<xsl:attribute name="wert">
-
 				<xsl:choose>
 					<xsl:when test="number($expression)">
 						<xsl:value-of select="number($expression)" />
@@ -188,60 +229,97 @@
 				</xsl:attribute>
 	</xsl:template>
 	<!-- -->
+	<xsl:template name="essenceMod">
+		<xsl:param name="rating" />
+		<mods>
+			<xsl:variable name="essFactor">
+				<xsl:call-template name="extractFactor">
+					<xsl:with-param name="expression" select="ess/text()"></xsl:with-param>
+					<xsl:with-param name="index" select="$rating" />
+				</xsl:call-template>
+			</xsl:variable>
+			<xsl:attribute name="wert">
+				<xsl:choose>
+						<xsl:when test="starts-with(ess/text(),'FixedValues' )">
+								<xsl:value-of select="round($essFactor *-100)" />		
+						</xsl:when>
+					<xsl:when test="number(ess/text())">
+						<xsl:value-of select="number(ess/text())*-100" />
+					</xsl:when>
+					<xsl:when test="number($essFactor)">
+						<xsl:value-of select="round($essFactor * $rating * -100)" />
+					</xsl:when>
+					
+					<xsl:otherwise>
+						<xsl:value-of select="0" />
+					</xsl:otherwise>
+				</xsl:choose>
+				</xsl:attribute>
+			<!-- <attribut> -->
+			<xsl:attribute name="attribut">
+							<xsl:value-of
+				select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					</xsl:attribute>
+			<!-- </attribut> -->
+		</mods>
+	</xsl:template>
+	<!-- -->
 	<xsl:template name="mods">
-	<xsl:param name="rating" />
+		<xsl:param name="rating" />
 		<xsl:for-each select="bonus/*">
 			<xsl:choose>
 				<xsl:when test="name()='initiativedice' or name()='initiativepass'">
 					<mods>
-
-					<xsl:call-template name="setRatingWert">
-						<xsl:with-param name="rating" select="$rating"/>
-						<xsl:with-param name="expression" select="text()"/>
-					</xsl:call-template>
-
-<!-- 						<xsl:if test="number(text())"> -->
-<!-- 							<xsl:attribute name="wert"> -->
-<!-- 				<xsl:value-of select="number(text())" /> -->
-<!-- 				</xsl:attribute> -->
-<!-- 						</xsl:if> -->
-						<!-- <attribut> -->
 						<xsl:attribute name="attribut">
 							<xsl:value-of
 							select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel'" />
 					</xsl:attribute>
-						<!-- </attribut> -->
+						<xsl:call-template name="setRatingWert">
+							<xsl:with-param name="rating" select="$rating" />
+							<xsl:with-param name="expression" select="text()" />
+						</xsl:call-template>
 					</mods>
 				</xsl:when>
 				<xsl:when test="name()='armor' or  name()='armorvalue' ">
 					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-				<xsl:value-of select="number(text())" />
-				</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
 						<xsl:attribute name="attribut">
 							<xsl:value-of
 							select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
 					</xsl:attribute>
 						<!-- </attribut> -->
+						<xsl:call-template name="setRatingWert">
+							<xsl:with-param name="rating" select="$rating" />
+							<xsl:with-param name="expression" select="text()" />
+						</xsl:call-template>
 					</mods>
 				</xsl:when>
-				<xsl:when test="name()='specificattribute'">
+				<xsl:when test="name()='damageresistance'">
 					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-						<xsl:value-of select="number(val/text())" />
-					</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
 						<xsl:attribute name="attribut">
-			<xsl:call-template name="MATCH">
-         <xsl:with-param name="matchingName" select="name/text()" />
-      </xsl:call-template>
+							<xsl:value-of
+							select="'http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand'" />
 					</xsl:attribute>
 						<!-- </attribut> -->
+						<xsl:call-template name="setRatingWert">
+							<xsl:with-param name="rating" select="$rating" />
+							<xsl:with-param name="expression" select="text()" />
+						</xsl:call-template>
+					</mods>
+				</xsl:when>
+				
+				
+				<xsl:when test="name()='specificattribute'">
+					<mods>
+						<xsl:attribute name="attribut">
+							<xsl:call-template name="MATCH">
+         					<xsl:with-param name="matchingName" select="name/text()" />
+      						</xsl:call-template>
+						</xsl:attribute>
+						<!-- </attribut> -->
+						<xsl:call-template name="setRatingWert">
+							<xsl:with-param name="rating" select="$rating" />
+							<xsl:with-param name="expression" select="val/text()" />
+						</xsl:call-template>
 					</mods>
 				</xsl:when>
 			</xsl:choose>
