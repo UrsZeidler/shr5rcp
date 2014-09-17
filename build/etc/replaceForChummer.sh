@@ -12,6 +12,6 @@ do
 #echo "s@$INPUT@$col1@"
 done < replace.txt
 
-sed "${SED_CMD}" test.xml >test-3.xml
+sed "${SED_CMD}" kira.xml >kira-1.xml
 
 
