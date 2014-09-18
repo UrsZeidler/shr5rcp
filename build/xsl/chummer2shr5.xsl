@@ -2292,9 +2292,9 @@
 	<!-- quallity -->
 	<xsl:template match="//quality">
 		<entries xsi:type="shr5:PersonaEigenschaft">
-			<xsl:if test="number(cost/text())">
+			<xsl:if test="number(karma/text())">
 				<xsl:attribute name="karmaKosten">
-				<xsl:value-of select="number(cost/text())" />
+				<xsl:value-of select="number(karma/text())" />
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:call-template name="beschreibbar" />
@@ -2540,7 +2540,7 @@
 					</mods>
 				</entries>
 			</xsl:when>
-			<xsl:when test="category/text()='Commlink'">
+			<xsl:when test="category/text()='Commlinks'">
 				<entries xsi:type="shr5:Commlink">
 					<xsl:if test="number(devicerating/text())">
 						<xsl:attribute name="deviceRating">

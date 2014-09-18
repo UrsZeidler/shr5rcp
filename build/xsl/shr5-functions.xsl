@@ -41,6 +41,37 @@
 			</xsl:attribute>
 	</xsl:template>
 
+	<xsl:template name="localization_rating">
+	<xsl:param name="rating" />
+		<xsl:variable name="aid1" select="id/text()" />
+		<xsl:variable name="loc_name">
+			<xsl:call-template name="findLocalizedName">
+				<xsl:with-param name="aid" select="$aid1" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="not ($loc_name='')">
+				<localizations local="de">
+					<xsl:attribute name="name"><xsl:value-of
+						select="concat($loc_name,' ',$rating)" /></xsl:attribute>
+					<xsl:variable name="loc_page">
+						<xsl:call-template name="findLocalizedPage">
+							<xsl:with-param name="aid" select="$aid1" />
+						</xsl:call-template>
+					</xsl:variable>
+					<xsl:choose>
+						<xsl:when test="$loc_page=''">
+							<xsl:if test="number(page/text())= page/text()">
+								<xsl:attribute name="page"><xsl:value-of
+									select="number(page/text())" /></xsl:attribute>
+							</xsl:if>
+						</xsl:when>
+					</xsl:choose>
+				</localizations>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:template name="localization">
 		<xsl:variable name="aid1" select="id/text()" />
 		<xsl:variable name="loc_name">

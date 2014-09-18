@@ -70,9 +70,9 @@
 			<xsl:call-template name="essenceMod">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
-
-
-			<xsl:call-template name="localization" />
+			<xsl:call-template name="localization_rating">
+				<xsl:with-param name="rating" select="$rating" />
+			</xsl:call-template>
 		</entries>
 
 	</xsl:template>
@@ -185,6 +185,10 @@
 			<xsl:call-template name="essenceMod">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
+			<xsl:call-template name="localization_rating">
+				<xsl:with-param name="rating" select="$rating" />
+			</xsl:call-template>
+
 		</entries>
 	</xsl:template>
 </xsl:stylesheet>
