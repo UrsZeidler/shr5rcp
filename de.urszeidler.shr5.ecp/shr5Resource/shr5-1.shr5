@@ -4,17 +4,17 @@
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Gun Heaven 3" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Run and Gun" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="5d6626a2-2400-44b5-b777-d7dac6cb512f" image="/shr5Resource/images/CAT27003_RunGun_Cover.jpg" name="Run and Gun" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="b3c5ea18-56dc-42f4-b567-50ead12fab1f" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition (German)" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="3976dc50-f7db-481d-9372-fc2a5c1178ce" name="Street Grimoire" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" name="Bullets &amp; Bandages" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="7c37e671-9d0c-48f6-aa61-891a38be18d8" name="Sail Away, Sweet Sister" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" name="Stolen Souls" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" image="/shr5Resource/images/CAT27200_Stolen-Souls_Cover_.jpg" name="Stolen Souls" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" name="Shadowrun Forum Post 1" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsbF1N0CEeOvVYoRsPZlnA" name="generators">
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" name="The basic character generator system." characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
         <instructions xmi:id="_BtO-IN0CEeOvVYoRsPZlnA" value="Select the categories and the group."/>
         <instructions xmi:id="_BtO-Id0CEeOvVYoRsPZlnA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_BtO-It0CEeOvVYoRsPZlnA" key="personaCreated" value="The character is created spend all the values."/>
@@ -7075,7 +7075,7 @@
           <localizations xmi:id="_ENJVITnTEeSe6_w6Jrbqxg" local="de" name="Mensch"/>
           <angriff xmi:id="_ENJVIDnTEeSe6_w6Jrbqxg" name="unarmed" schadenscode="(STR)P"/>
         </entries>
-        <entries xsi:type="shr5:Spezies" xmi:id="b3259991-b315-4dbe-ae3c-51f71a1116e2" name="Elf" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="3" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="8" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6">
+        <entries xsi:type="shr5:Spezies" xmi:id="b3259991-b315-4dbe-ae3c-51f71a1116e2" image="/shr5Resource/images/elf.png" name="Elf" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="3" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="8" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6">
           <localizations xmi:id="_ENJVIznTEeSe6_w6Jrbqxg" local="de" name="Elf"/>
           <angriff xmi:id="_ENJVIjnTEeSe6_w6Jrbqxg" name="unarmed" schadenscode="(STR)P"/>
         </entries>
@@ -7083,11 +7083,11 @@
           <localizations xmi:id="_ENJ8MTnTEeSe6_w6Jrbqxg" local="de" name="Zwerg"/>
           <angriff xmi:id="_ENJ8MDnTEeSe6_w6Jrbqxg" name="unarmed" schadenscode="(STR)P"/>
         </entries>
-        <entries xsi:type="shr5:Spezies" xmi:id="8ed6892f-88e6-42d0-a704-b805778ec13e" name="Ork" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="3" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="8" charismaMax="5" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6">
+        <entries xsi:type="shr5:Spezies" xmi:id="8ed6892f-88e6-42d0-a704-b805778ec13e" image="/shr5Resource/images/orc.png" name="Ork" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="3" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="8" charismaMax="5" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6">
           <localizations xmi:id="_ENKjQTnTEeSe6_w6Jrbqxg" local="de" name="Ork"/>
           <angriff xmi:id="_ENKjQDnTEeSe6_w6Jrbqxg" name="unarmed" schadenscode="(STR)P"/>
         </entries>
-        <entries xsi:type="shr5:Spezies" xmi:id="77fa1ed8-f4e6-4763-9f0b-f125318b9782" name="Troll" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="4" willenskraftMax="6" intuitionMax="5" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6">
+        <entries xsi:type="shr5:Spezies" xmi:id="77fa1ed8-f4e6-4763-9f0b-f125318b9782" image="/shr5Resource/images/rob.png" name="Troll" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="4" willenskraftMax="6" intuitionMax="5" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6">
           <mods xmi:id="_ENKjQjnTEeSe6_w6Jrbqxg" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
@@ -18850,7 +18850,7 @@
           <fertigkeiten xmi:id="__Mnp4D5ZEeSl7-MUHQ63Ow" stufe="3" fertigkeit="7041437e-b98b-4605-a95a-c93ed45f1de5"/>
           <fertigkeiten xmi:id="__tgJYD5ZEeSl7-MUHQ63Ow" fertigkeit="8337e83f-af9a-4396-9cbe-0e6679e15b4e"/>
           <fertigkeiten xmi:id="_AY_WYD5aEeSl7-MUHQ63Ow" stufe="5" fertigkeit="7e942ac9-8c2c-4f7c-91d5-cfaf5d0e9262"/>
-          <fertigkeitsGruppen xmi:id="_jTauYD5ZEeSl7-MUHQ63Ow" stufe="2" gruppe="_EL-3hjnTEeSe6_w6Jrbqxg"/>
+          <fertigkeitsGruppen xmi:id="_jTauYD5ZEeSl7-MUHQ63Ow" stufe="3" gruppe="_EL-3hjnTEeSe6_w6Jrbqxg"/>
           <koerperMods xsi:type="shr5:Cyberware" xmi:id="_hA42AD6kEeSnhdazldEq5w" name="Muscle Replacement 2" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="50000">
             <mods xmi:id="_hA42AT6kEeSnhdazldEq5w" wert="2">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
@@ -18924,11 +18924,19 @@
             <localizations xmi:id="_iShScT6jEeSnhdazldEq5w" local="de" name="SIN-Mensch (Konzernbürger)" page="85"/>
           </eigenschaften>
         </persona>
+        <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_L8G3wD9sEeSvTpiLfhu1Ng" changeApplied="true" dateApplied="2014-09-18T21:44:33.417+0200" from="2" to="3" changeable="_jTauYD5ZEeSl7-MUHQ63Ow"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_UCWtkD6lEeSnhdazldEq5w" parentId="d8d9154d-c8d3-4593-a408-9f5b259f0363" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="650" name="Urban Explorer Jumpsuit" ruestung="9">
           <localizations xmi:id="_UCWtkT6lEeSnhdazldEq5w" local="de" name="Urban Explorer Overall"/>
         </inventar>
         <inventar xsi:type="shr5:Commlink" xmi:id="_mMMV4D6nEeSMot2hWTXLvQ" parentId="6de5a1b0-30e2-4c74-8646-971f698cb231" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="3000" name="Hermes Ikon" deviceRating="5">
           <localizations xmi:id="_mMMV4T6nEeSMot2hWTXLvQ" local="de" name="Hermes Ikon"/>
+          <storedPrograms xsi:type="shr5:Tutorsoft" xmi:id="__5tc4D9rEeSvTpiLfhu1Ng" wertValue="400" name="Tutorsoft" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+          <storedPrograms xsi:type="shr5:Datasoft" xmi:id="__6-BID9rEeSvTpiLfhu1Ng" verfuegbarkeit="4" wertValue="120" name="Datasoft" parentId="1a55fbe3-b3c1-4568-882f-abe4dedb8572" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="__6-BIT9rEeSvTpiLfhu1Ng" local="de" name="Datensoft"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:ConsumerSoft" xmi:id="__8OlYD9rEeSvTpiLfhu1Ng" verfuegbarkeit="4" wertValue="150" name="Mapsoft" parentId="2f30c3cc-a62e-4ac1-8e1f-5fa217cadae4" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="__8OlYT9rEeSvTpiLfhu1Ng" local="de" name="Kartensoft"/>
+          </storedPrograms>
         </inventar>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_qvKx0D6nEeSMot2hWTXLvQ" parentId="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
           <localizations xmi:id="_qvKx0T6nEeSMot2hWTXLvQ" local="de" name="Ares Alpha"/>
@@ -18955,20 +18963,48 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_vL8fID6nEeSMot2hWTXLvQ" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwTnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_vL8fIT6nEeSMot2hWTXLvQ" local="de" name="Munition: Standardmunition"/>
         </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_FbXusD6oEeSMot2hWTXLvQ" parentId="d0eb5971-03d6-4822-9fb5-c524bf16bf62" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="450" name="Tag Eraser" kategorie="Communications and Countermeasures">
-          <localizations xmi:id="_FbXusT6oEeSMot2hWTXLvQ" local="de" name="RFID-Löscher"/>
-        </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_FcODQD6oEeSMot2hWTXLvQ" parentId="2633cf38-90a6-4843-b475-e3ee1132fb5f" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="200" name="Gas Mask" kategorie="Survival Gear">
           <localizations xmi:id="_FcODQT6oEeSMot2hWTXLvQ" local="de" name="Gasmaske"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_9M0_4D9rEeSvTpiLfhu1Ng" parentId="5ec246dc-c129-4e61-a27a-c4d82b223bea" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Hand Blade" schadenscode="(STR+2)P" durchschlagsKraft="-2">
+          <localizations xmi:id="_9M0_4T9rEeSvTpiLfhu1Ng" local="de" name="Handklinge"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_9NThAD9rEeSvTpiLfhu1Ng" parentId="3a91672e-0588-45a6-b225-149624e813ac" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="6R" wertValue="600" name="Ares Predator III" schadenscode="7P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
+          <localizations xmi:id="_9NThAT9rEeSvTpiLfhu1Ng" local="de" name="Ares Predator III" page="31"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_9OLqwD9rEeSvTpiLfhu1Ng" parentId="74284124-57a0-479b-9ab1-3433bdb9e3b7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Gas" kategorie="Ammunition">
+          <localizations xmi:id="_9OLqwT9rEeSvTpiLfhu1Ng" local="de" name="Minigranate: Gas"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_9PDNcD9rEeSvTpiLfhu1Ng" parentId="b6381691-1a96-4299-b9df-129ffee64c45" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Smoke" kategorie="Ammunition">
+          <localizations xmi:id="_9PDNcT9rEeSvTpiLfhu1Ng" local="de" name="Minigranate: Rauch"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_9P8lUD9rEeSvTpiLfhu1Ng" parentId="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Minigrenade: Thermal Smoke" kategorie="Ammunition">
+          <localizations xmi:id="_9P8lUT9rEeSvTpiLfhu1Ng" local="de" name="Minigranate: IR-Rauch"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_ccrHED9sEeSvTpiLfhu1Ng" parentId="f12794c9-3600-4fc6-aeae-748eb3b324a0" page="58" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="1000" name="Vashon Island: Ace of Clubs" ruestung="7">
+          <localizations xmi:id="_ccrHET9sEeSvTpiLfhu1Ng" local="de" name="Vashon Island: Ace of Clubs"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_cdp-gD9sEeSvTpiLfhu1Ng" parentId="31675672-3476-4a2f-8acf-605702ae4c66" page="72" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="12R" wertValue="5000" name="Murder Armor" ruestung="13">
+          <localizations xmi:id="_cdp-gT9sEeSvTpiLfhu1Ng" local="de" name="Murder Armor"/>
         </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_E8vOYD5aEeSl7-MUHQ63Ow" name="High" parentId="619be8b8-52a0-46b0-9566-a4102bd2040a" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="10000">
           <localizations xmi:id="_E8vOYT5aEeSl7-MUHQ63Ow" local="de" name="Oberschicht"/>
         </contracts>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_EBJzYD9sEeSvTpiLfhu1Ng" name="Middle" parentId="90f6f4c2-9968-42e1-ba79-e2bf530de32e" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000">
+          <localizations xmi:id="_EBJzYT9sEeSvTpiLfhu1Ng" local="de" name="Mittelschicht"/>
+        </contracts>
+        <connections xmi:id="_bq_n8D9rEeSvTpiLfhu1Ng" influence="4" loyality="4"/>
+        <connections xmi:id="_dgYcQD9rEeSvTpiLfhu1Ng" influence="4" loyality="4"/>
+        <connections xmi:id="_RlYNYD9sEeSvTpiLfhu1Ng" influence="2" loyality="2"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_Ihn1UD6lEeSnhdazldEq5w" name="GMC Bulldog Step-Van (Van)" parentId="3ce7af9c-104c-4b74-be1b-f0b512ebea4b" page="463" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="35000" handling="3" geschwindigkeit="3" beschleunigung="1" rumpf="16" pilot="1" sensor="2" fahrzeugTyp="Trucks" panzer="12" sitze="6" handlingGelaende="3"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_WAJvkD9sEeSvTpiLfhu1Ng" name="Rover 2072 (SUV)" parentId="30de4139-368b-4569-94c1-f65c1cd2dc26" page="464" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="68000" handling="5" geschwindigkeit="4" beschleunigung="2" rumpf="15" pilot="2" sensor="4" fahrzeugTyp="Trucks" panzer="12" sitze="6" handlingGelaende="5"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAN0CEeOvVYoRsPZlnA" character="_oQndoD5YEeSl7-MUHQ63Ow" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Ex-Firewatch Concept" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startKarma="7" startResources="11260"/>
       </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAN0CEeOvVYoRsPZlnA" character="_oQndoD5YEeSl7-MUHQ63Ow" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Ex-Firewatch Concept" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Test-Aspekt-1" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwt0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5KarmaGenerator" xmi:id="_B1BoMN0CEeOvVYoRsPZlnA" generator="_Btbyct0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" metaType="_BtcZgN0CEeOvVYoRsPZlnA" characterConcept="_BtdAkN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_DGnu0CChEeSgjNA6JlqktQ" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="&quot;Nowak&quot; Drews" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ks90CEeOvVYoRsPZlnA" magic="_BtCJ0d0CEeOvVYoRsPZlnA"/>
