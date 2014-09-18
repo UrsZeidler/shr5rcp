@@ -224,9 +224,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      */
     @SuppressWarnings("unchecked")
     public void testHasNoAttributesOverSpeciesAtt__DiagnosticChain_Map() {
-        int max = 10;
-        getFixture().getShr5Generator().setSkillMax(max);
-        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
         Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
         character.getPersona().setSpezies(spezies);

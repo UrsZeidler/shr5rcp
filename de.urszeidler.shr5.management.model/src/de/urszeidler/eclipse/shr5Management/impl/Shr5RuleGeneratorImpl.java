@@ -253,7 +253,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (spezies == null)
             return true;
 
-        getShr5Generator().getNumberOfMaxAttributes();
+//        getShr5Generator().getNumberOfMaxAttributes();
         // int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
