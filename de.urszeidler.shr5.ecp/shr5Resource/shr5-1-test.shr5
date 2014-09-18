@@ -1576,25 +1576,25 @@
 <entries xsi:type="shr5:Gegenstand" kategorie="Disguises" verfuegbarkeit="16F" name="Uniforms" xmi:id="1ecebb15-6ced-464e-9e36-2cd217e4bc63" page="178" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d">
 <localizations local="de" name="Uniforms"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="2" wertValue="100" name="Meta Link" xmi:id="89a0f3c9-5ef6-41cd-981f-4ac690ee2ab3" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="1" verfuegbarkeit="2" wertValue="100" name="Meta Link" xmi:id="89a0f3c9-5ef6-41cd-981f-4ac690ee2ab3" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Meta Link"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="4" wertValue="700" name="Sony Emperor" xmi:id="d808ba12-db93-4a7b-85a1-9e9f6229087f" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="2" verfuegbarkeit="4" wertValue="700" name="Sony Emperor" xmi:id="d808ba12-db93-4a7b-85a1-9e9f6229087f" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Sony Emperor"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="6" wertValue="1000" name="Renraku Sensei" xmi:id="15a6c42b-12a4-494e-8ca5-e6c3a1052314" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="3" verfuegbarkeit="6" wertValue="1000" name="Renraku Sensei" xmi:id="15a6c42b-12a4-494e-8ca5-e6c3a1052314" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Renraku Sensei"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" xmi:id="72d1ca07-71b1-4085-8a4d-bd720a6b1908" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="4" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" xmi:id="72d1ca07-71b1-4085-8a4d-bd720a6b1908" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erika Elite"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="10" wertValue="3000" name="Hermes Ikon" xmi:id="6de5a1b0-30e2-4c74-8646-971f698cb231" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="5" verfuegbarkeit="10" wertValue="3000" name="Hermes Ikon" xmi:id="6de5a1b0-30e2-4c74-8646-971f698cb231" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Hermes Ikon"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="12" wertValue="5000" name="Transys Avalon" xmi:id="01077e2d-4f67-428a-850d-250faad2007c" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="6" verfuegbarkeit="12" wertValue="5000" name="Transys Avalon" xmi:id="01077e2d-4f67-428a-850d-250faad2007c" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Transys Avalon"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlinks" verfuegbarkeit="14" wertValue="8000" name="Fairlight Caliban" xmi:id="1522dd91-99d9-42f9-ab19-b43e8e3c7322" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:Commlink" deviceRating="7" verfuegbarkeit="14" wertValue="8000" name="Fairlight Caliban" xmi:id="1522dd91-99d9-42f9-ab19-b43e8e3c7322" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Fairlight Caliban"/>
 </entries>
 <entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" verfuegbarkeit="0" wertValue="100" name="Sim Module" xmi:id="d589142e-a71f-4cd9-b916-967168721eea" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
@@ -5334,194 +5334,194 @@
 </entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="qualities">
-<entries xsi:type="shr5:PersonaEigenschaft" name="Ambidextrous" xmi:id="68cfe94a-fa7e-4129-a9b9-b5d73e3ced99" page="71" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Ambidextrous" xmi:id="68cfe94a-fa7e-4129-a9b9-b5d73e3ced99" page="71" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Beidhändigkeit"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Analytical Mind" xmi:id="5b19dbcd-fb69-4a02-a25a-7ac5342ca576" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Analytical Mind" xmi:id="5b19dbcd-fb69-4a02-a25a-7ac5342ca576" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Analytischer Geist"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Aptitude" xmi:id="58e3d62a-2073-4af5-b8e0-00c446b3a5ab" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="Aptitude" xmi:id="58e3d62a-2073-4af5-b8e0-00c446b3a5ab" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Talentiert"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Astral Chameleon" xmi:id="7d81f676-e523-4ec6-ae98-8d801f90b031" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Astral Chameleon" xmi:id="7d81f676-e523-4ec6-ae98-8d801f90b031" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Astrales Chamäleon"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Bilingual" xmi:id="c734e46a-d391-45a6-b022-6f18db5019f1" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Bilingual" xmi:id="c734e46a-d391-45a6-b022-6f18db5019f1" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zweisprachig"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Blandness" xmi:id="9cffd452-8489-48d5-888c-ac35459d9174" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Blandness" xmi:id="9cffd452-8489-48d5-888c-ac35459d9174" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Unauffälligkeit"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Catlike" xmi:id="84305e09-f8d5-4a82-8257-0119b8c3f926" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Catlike" xmi:id="84305e09-f8d5-4a82-8257-0119b8c3f926" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Katzenhaft"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Codeslinger" xmi:id="41cc3e26-ae55-4e28-bd6a-b08866c21424" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Codeslinger" xmi:id="41cc3e26-ae55-4e28-bd6a-b08866c21424" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Programmier-Genie"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Double Jointed" xmi:id="db579224-99c7-48e0-84ab-77a987a84f4a" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Double Jointed" xmi:id="db579224-99c7-48e0-84ab-77a987a84f4a" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gummigelenke"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Exceptional Attribute" xmi:id="2ac8a95a-a4d0-4bef-a2f2-dcde020258cf" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="Exceptional Attribute" xmi:id="2ac8a95a-a4d0-4bef-a2f2-dcde020258cf" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Außergewöhnliches Attribut"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="First Impression" xmi:id="9f25cc0a-c47c-49dd-953c-8fe60628bae8" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="11" name="First Impression" xmi:id="9f25cc0a-c47c-49dd-953c-8fe60628bae8" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Soziales Chamäleon"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 1)" xmi:id="4d5c22b9-4908-493d-a6f7-4ccc3066888c" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Focused Concentration (Rating 1)" xmi:id="4d5c22b9-4908-493d-a6f7-4ccc3066888c" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 1)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 2)" xmi:id="082d7513-1539-4e79-ac3e-91c6f2ea32ed" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Focused Concentration (Rating 2)" xmi:id="082d7513-1539-4e79-ac3e-91c6f2ea32ed" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 2)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 3)" xmi:id="c6939a14-58c0-4168-b936-8124fd09ffe6" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Focused Concentration (Rating 3)" xmi:id="c6939a14-58c0-4168-b936-8124fd09ffe6" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 3)" page="74"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 4)" xmi:id="79979e99-6776-4c93-b202-b630fabf3b30" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="16" name="Focused Concentration (Rating 4)" xmi:id="79979e99-6776-4c93-b202-b630fabf3b30" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 4)" page="74"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 5)" xmi:id="0e911cb1-da5c-4117-ae20-ffbf7f607c7d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="Focused Concentration (Rating 5)" xmi:id="0e911cb1-da5c-4117-ae20-ffbf7f607c7d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 5)" page="74"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Focused Concentration (Rating 6)" xmi:id="90ce7689-1dd8-437b-98ad-f10207380684" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="24" name="Focused Concentration (Rating 6)" xmi:id="90ce7689-1dd8-437b-98ad-f10207380684" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Erhöhte Konzentrationsfähigkeit (Stufe 6)" page="74"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gearhead" xmi:id="5c18a150-8e38-4f6d-b4f5-b1b674a3581e" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="11" name="Gearhead" xmi:id="5c18a150-8e38-4f6d-b4f5-b1b674a3581e" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Rennpilot" page="74"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Guts" xmi:id="0d0cb0fc-c79d-418e-9216-8a197369e52d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Guts" xmi:id="0d0cb0fc-c79d-418e-9216-8a197369e52d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Mut"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="High Pain Tolerance (Rating 1)" xmi:id="b7866fb4-3747-4caf-9240-69cbdd79ce78" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="High Pain Tolerance (Rating 1)" xmi:id="b7866fb4-3747-4caf-9240-69cbdd79ce78" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Hohe Schmerztoleranz (Stufe 1)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="High Pain Tolerance (Rating 2)" xmi:id="4c2804b5-2934-46f1-992c-87a943ce044b" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="High Pain Tolerance (Rating 2)" xmi:id="4c2804b5-2934-46f1-992c-87a943ce044b" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Hohe Schmerztoleranz (Stufe 2)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="High Pain Tolerance (Rating 3)" xmi:id="c1f41d1f-6345-4d4b-9041-ef93aad61948" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="21" name="High Pain Tolerance (Rating 3)" xmi:id="c1f41d1f-6345-4d4b-9041-ef93aad61948" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Hohe Schmerztoleranz (Stufe 3)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Home Ground" xmi:id="823eb204-c155-45a9-bb9a-98dcbe17a707" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground" xmi:id="823eb204-c155-45a9-bb9a-98dcbe17a707" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vertrautes Terrain"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Human-Looking" xmi:id="2844e64e-f271-4ca7-bd58-0860b2db56c9" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Human-Looking" xmi:id="2844e64e-f271-4ca7-bd58-0860b2db56c9" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Menschliches Aussehen"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Indomitable (Mental)" xmi:id="0f3a0971-1cc5-47d6-a32d-d098ecdfb4d9" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Indomitable (Mental)" xmi:id="0f3a0971-1cc5-47d6-a32d-d098ecdfb4d9" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Durchsetzungskraft (Mental)" page="75"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Indomitable (Physical)" xmi:id="58e6a651-cdd7-4144-a2cc-4cee24526e92" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Indomitable (Physical)" xmi:id="58e6a651-cdd7-4144-a2cc-4cee24526e92" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Durchsetzungskraft (Physisch)" page="75"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Indomitable (Social)" xmi:id="b9f1dbeb-1728-4250-a066-4773f758fe6a" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Indomitable (Social)" xmi:id="b9f1dbeb-1728-4250-a066-4773f758fe6a" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Durchsetzungskraft (Sozial)" page="75"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Juryrigger" xmi:id="27c7ea84-bfe4-47e1-8382-38d9a5c8e680" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Juryrigger" xmi:id="27c7ea84-bfe4-47e1-8382-38d9a5c8e680" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Technisches Improvisationstalent"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Lucky" xmi:id="78f7456d-78b8-461e-a2b2-bd0d63c48712" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Lucky" xmi:id="78f7456d-78b8-461e-a2b2-bd0d63c48712" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <mods attribut=""/>
 <localizations local="de" name="Glück"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Magic Resistance (Rating 1)" xmi:id="f80ef6fc-e844-441c-81e3-b1264b34a4e7" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Magic Resistance (Rating 1)" xmi:id="f80ef6fc-e844-441c-81e3-b1264b34a4e7" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Magieresistenz (Stufe 1)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Magic Resistance (Rating 2)" xmi:id="4779f545-b27d-42d9-8664-269253e2f901" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Magic Resistance (Rating 2)" xmi:id="4779f545-b27d-42d9-8664-269253e2f901" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Magieresistenz (Stufe 2)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Magic Resistance (Rating 3)" xmi:id="c55ac86e-212e-4e18-a9c2-68304b6bea89" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="18" name="Magic Resistance (Rating 3)" xmi:id="c55ac86e-212e-4e18-a9c2-68304b6bea89" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Magieresistenz (Stufe 3)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Magic Resistance (Rating 4)" xmi:id="2f239f68-c93f-4ab9-b9a0-44386b4ea190" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="24" name="Magic Resistance (Rating 4)" xmi:id="2f239f68-c93f-4ab9-b9a0-44386b4ea190" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Magieresistenz (Stufe 4)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Mentor Spirit" xmi:id="ced3fecf-2277-4b20-b1e0-894162ca9ae2" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Mentor Spirit" xmi:id="ced3fecf-2277-4b20-b1e0-894162ca9ae2" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schutzgeist"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Natural Athlete" xmi:id="225f0d31-8c03-4283-9a22-558ab01a6c47" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Natural Athlete" xmi:id="225f0d31-8c03-4283-9a22-558ab01a6c47" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Natürlicher Athlet" page="76"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Natural Hardening" xmi:id="52648a83-1d2a-4b04-b7fc-ee5a62bce4f7" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Natural Hardening" xmi:id="52648a83-1d2a-4b04-b7fc-ee5a62bce4f7" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Resistenz gegen Signalspitzen" page="76"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Natural Immunity (Natural)" xmi:id="8d558134-210d-4c96-b487-021a44409075" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Natural Immunity (Natural)" xmi:id="8d558134-210d-4c96-b487-021a44409075" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Natürliche Immunität (natürlich)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Natural Immunity (Synthetic)" xmi:id="ce7634aa-0729-423d-bc38-d6f56416b904" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Natural Immunity (Synthetic)" xmi:id="ce7634aa-0729-423d-bc38-d6f56416b904" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Natürliche Immunität (synthetisch)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Photographic Memory" xmi:id="9d3be1d9-1309-45e7-8bd9-1f5a3ede3522" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Photographic Memory" xmi:id="9d3be1d9-1309-45e7-8bd9-1f5a3ede3522" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Fotografisches Gedächtnis"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Quick Healer" xmi:id="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Quick Healer" xmi:id="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schnellheilung"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Resistance to Pathogens" xmi:id="e160111a-5fe3-4154-9d5a-82330c9b32fc" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Resistance to Pathogens" xmi:id="e160111a-5fe3-4154-9d5a-82330c9b32fc" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Pathogenresistenz"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Resistance to Toxins" xmi:id="c74c9ed8-a917-4809-9e8a-5717dd16619b" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Resistance to Toxins" xmi:id="c74c9ed8-a917-4809-9e8a-5717dd16619b" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Toxinresistenz"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Resistance to Pathogens and Toxins" xmi:id="5a21137b-dc82-4141-9151-84718e7485f9" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Resistance to Pathogens and Toxins" xmi:id="5a21137b-dc82-4141-9151-84718e7485f9" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Pathogen- und Toxinresistenz"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Spirit Affinity" xmi:id="c067baa6-0dfa-4783-a0c8-0873564f0308" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Spirit Affinity" xmi:id="c067baa6-0dfa-4783-a0c8-0873564f0308" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Freundliche Geister"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Toughness" xmi:id="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="9" name="Toughness" xmi:id="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zähigkeit"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Will to Live (Rating 1)" xmi:id="18d2a522-6460-4654-916b-a96631f11323" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Will to Live (Rating 1)" xmi:id="18d2a522-6460-4654-916b-a96631f11323" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Überlebenswille (Stufe 1)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Will to Live (Rating 2)" xmi:id="5b785abd-91b7-4a94-8856-e98e71a32118" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Will to Live (Rating 2)" xmi:id="5b785abd-91b7-4a94-8856-e98e71a32118" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Überlebenswille (Stufe 2)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Will to Live (Rating 3)" xmi:id="2916b7de-7265-4e31-b872-074863c5aff3" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="9" name="Will to Live (Rating 3)" xmi:id="2916b7de-7265-4e31-b872-074863c5aff3" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Überlebenswille (Stufe 3)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Deus Vult!" xmi:id="fb9eab85-ae9a-4d03-8c3f-70b6a32d5e17" page="16" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Deus Vult!" xmi:id="fb9eab85-ae9a-4d03-8c3f-70b6a32d5e17" page="16" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
 <localizations local="de" name="Deus Vult!" page="16"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="My Country, Right or Wrong" xmi:id="204d2317-77cd-448c-9506-091269d1e58a" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="My Country, Right or Wrong" xmi:id="204d2317-77cd-448c-9506-091269d1e58a" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
 <localizations local="de" name="My Country, Right or Wrong" page="17"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Out For Myself" xmi:id="3e175d5e-3935-4273-ac08-7e99fecd7fae" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Out For Myself" xmi:id="3e175d5e-3935-4273-ac08-7e99fecd7fae" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
 <localizations local="de" name="Out For Myself" page="17"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Strive For Perfection" xmi:id="03d5c621-7883-492e-988b-5aafdebc855d" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Strive For Perfection" xmi:id="03d5c621-7883-492e-988b-5aafdebc855d" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
 <localizations local="de" name="Strive For Perfection" page="17"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Acrobatic Defender" xmi:id="5150f4f0-5193-4f02-8914-d70e831e3567" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Acrobatic Defender" xmi:id="5150f4f0-5193-4f02-8914-d70e831e3567" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Acrobatic Defender" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Agile Defender" xmi:id="1d0c4278-501d-456f-ab63-69afee6fbf95" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Agile Defender" xmi:id="1d0c4278-501d-456f-ab63-69afee6fbf95" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Agile Defender" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Brand Loyalty (Manufacturer)" xmi:id="31108c89-a67c-47d4-a757-db4e22e2f607" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Brand Loyalty (Manufacturer)" xmi:id="31108c89-a67c-47d4-a757-db4e22e2f607" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Brand Loyalty (Manufacturer)" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Brand Loyalty (Product)" xmi:id="348d7043-7a1c-498f-85eb-3339be9941d1" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Brand Loyalty (Product)" xmi:id="348d7043-7a1c-498f-85eb-3339be9941d1" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Brand Loyalty (Product)" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="One Trick Pony" xmi:id="98644894-e3a4-41f2-9b7e-91feb74d0334" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="One Trick Pony" xmi:id="98644894-e3a4-41f2-9b7e-91feb74d0334" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="One Trick Pony" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Perceptive Defender" xmi:id="b5f6d958-2563-431b-a7a4-a9028a9f0277" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Perceptive Defender" xmi:id="b5f6d958-2563-431b-a7a4-a9028a9f0277" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Perceptive Defender" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Sharpshooter" xmi:id="1675810d-0f77-42f9-848a-eaa929cb3a20" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Sharpshooter" xmi:id="1675810d-0f77-42f9-848a-eaa929cb3a20" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Scharfschütze"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Too Pretty To Hit" xmi:id="0c23861e-36d1-4454-b327-0d8118d02d60" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Too Pretty To Hit" xmi:id="0c23861e-36d1-4454-b327-0d8118d02d60" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Too Pretty To Hit" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Radiation Sponge" xmi:id="da4f7e4a-0e7e-45e6-a872-643bdecb183e" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Radiation Sponge" xmi:id="da4f7e4a-0e7e-45e6-a872-643bdecb183e" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Radiation Sponge" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Rad-Tolerant" xmi:id="01bba489-52a2-4a80-845e-61905a970626" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Rad-Tolerant" xmi:id="01bba489-52a2-4a80-845e-61905a970626" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Rad-Tolerant" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Spacer" xmi:id="8826405e-a995-4687-b7c8-4e1e51fef3f0" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Spacer" xmi:id="8826405e-a995-4687-b7c8-4e1e51fef3f0" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Spacer" page="169"/>
 </entries>
 <entries xsi:type="shr5:PersonaEigenschaft" name="Low-Light Vision" xmi:id="8ec5c9bb-aeb9-42f2-a436-a60f764adfe4" page="66" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
@@ -5545,256 +5545,256 @@
 <entries xsi:type="shr5:PersonaEigenschaft" name="Aspected Magician" xmi:id="4adeb2d4-e42e-4b7a-9a5d-3df325ae59a5" page="69" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Aspekten Magier" page="69"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Addiction (Mild)" xmi:id="ea7cced4-a201-44a2-9a1b-e10180b1df81" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-4" name="Addiction (Mild)" xmi:id="ea7cced4-a201-44a2-9a1b-e10180b1df81" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Abhängigkeit (Leicht)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Addiction (Moderate)" xmi:id="9a52a300-4d90-4b1f-a113-d0e40a410063" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Addiction (Moderate)" xmi:id="9a52a300-4d90-4b1f-a113-d0e40a410063" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Abhängigkeit (Mittel)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Addiction (Severe)" xmi:id="b5fa94e6-03fb-4d00-b368-86c318f79c09" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Addiction (Severe)" xmi:id="b5fa94e6-03fb-4d00-b368-86c318f79c09" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Abhängigkeit (Schwer)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Addiction (Burnout)" xmi:id="0886bbb3-f5a9-4583-bcea-d6723889c80d" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="Addiction (Burnout)" xmi:id="0886bbb3-f5a9-4583-bcea-d6723889c80d" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Abhängigkeit (Ausgebrannt)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Uncommon, Mild)" xmi:id="b7841930-0c7b-4be4-b1cf-86debc41aa95" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Allergy (Uncommon, Mild)" xmi:id="b7841930-0c7b-4be4-b1cf-86debc41aa95" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (selten, leicht)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Uncommon, Moderate)" xmi:id="f3ad08be-a7a4-4965-bb38-f8db9016c94e" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Allergy (Uncommon, Moderate)" xmi:id="f3ad08be-a7a4-4965-bb38-f8db9016c94e" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (selten, mittel)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Uncommon, Severe)" xmi:id="84a43000-9ae4-4391-b156-d5fbc9a092de" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Allergy (Uncommon, Severe)" xmi:id="84a43000-9ae4-4391-b156-d5fbc9a092de" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (selten, schwer)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Uncommon, Extreme)" xmi:id="cfdc255a-bb46-4d9c-8960-e4181455f4e3" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Allergy (Uncommon, Extreme)" xmi:id="cfdc255a-bb46-4d9c-8960-e4181455f4e3" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (Selten, Extrem)" page="78"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Common, Mild)" xmi:id="e89db285-8db9-4a9c-80cb-94d87b86a80b" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Allergy (Common, Mild)" xmi:id="e89db285-8db9-4a9c-80cb-94d87b86a80b" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (häufig, leicht)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Common, Moderate)" xmi:id="90188ca7-0ccb-4198-b199-dcf33e029d74" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Allergy (Common, Moderate)" xmi:id="90188ca7-0ccb-4198-b199-dcf33e029d74" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (häufig, mittel)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Common, Severe)" xmi:id="df14fb6e-456d-4d24-83e8-b1c97576dce2" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Allergy (Common, Severe)" xmi:id="df14fb6e-456d-4d24-83e8-b1c97576dce2" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (häufig, schwer)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Allergy (Common, Extreme)" xmi:id="8a40007a-9876-4998-a7c9-047248cfbc52" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="Allergy (Common, Extreme)" xmi:id="8a40007a-9876-4998-a7c9-047248cfbc52" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Allergie (Häufig, Extrem)" page="78"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Astral Beacon" xmi:id="94a09a8d-d582-44f0-9f2c-71f7ba94e767" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Astral Beacon" xmi:id="94a09a8d-d582-44f0-9f2c-71f7ba94e767" page="78" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Astrales Leuchtfeuer"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Bad Luck" xmi:id="bc5f41ca-1549-4367-9c12-afa403182f8c" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Bad Luck" xmi:id="bc5f41ca-1549-4367-9c12-afa403182f8c" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Unglück"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Bad Rep" xmi:id="25356bae-efcc-46c6-9c4f-66909b9b7233" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Bad Rep" xmi:id="25356bae-efcc-46c6-9c4f-66909b9b7233" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Berüchtigt"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Code of Honor" xmi:id="dda02333-10e3-4295-9392-691ff3a7bd4a" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Code of Honor" xmi:id="dda02333-10e3-4295-9392-691ff3a7bd4a" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Ehrenkodex" page="79"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Codeblock" xmi:id="86b259fd-17c8-4ae5-b246-49782e7c5047" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Codeblock" xmi:id="86b259fd-17c8-4ae5-b246-49782e7c5047" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Programmier-Niete"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Combat Paralysis" xmi:id="62c7ed8f-b534-41e3-84ac-29534826d476" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Combat Paralysis" xmi:id="62c7ed8f-b534-41e3-84ac-29534826d476" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Kampflähmung"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Dependent (Nuisance)" xmi:id="2b9a495d-b735-416b-a000-f648c3b4191a" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Dependent (Nuisance)" xmi:id="2b9a495d-b735-416b-a000-f648c3b4191a" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Verpflichtung (störend)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Dependent (Inconvenience)" xmi:id="cc857826-3bb2-466d-987b-7d56a337bc08" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Dependent (Inconvenience)" xmi:id="cc857826-3bb2-466d-987b-7d56a337bc08" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Verpflichtung (unangenehm)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Dependent (Demanding)" xmi:id="066a2de9-1717-44ca-a8c6-90366890574a" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Dependent (Demanding)" xmi:id="066a2de9-1717-44ca-a8c6-90366890574a" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Verpflichtung (anspruchsvoll)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Distinctive Style" xmi:id="a030d7e2-755b-4f71-b848-ad9772fba242" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Distinctive Style" xmi:id="a030d7e2-755b-4f71-b848-ad9772fba242" page="80" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Auffälliger Stil"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Elf Poser" xmi:id="7036225b-d0f0-4c86-85b7-cc4d46943113" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Elf Poser" xmi:id="7036225b-d0f0-4c86-85b7-cc4d46943113" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Elfenposer"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gremlins (Rating 1)" xmi:id="de12b672-f60a-486d-85f6-b94a80a058da" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-4" name="Gremlins (Rating 1)" xmi:id="de12b672-f60a-486d-85f6-b94a80a058da" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gremlins (Stufe 1)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gremlins (Rating 2)" xmi:id="b71cecd5-7197-4372-bcf8-d55bf1c5d328" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Gremlins (Rating 2)" xmi:id="b71cecd5-7197-4372-bcf8-d55bf1c5d328" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gremlins (Stufe 2)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gremlins (Rating 3)" xmi:id="1e819d6e-0ddb-441e-9025-f286fecf93e3" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Gremlins (Rating 3)" xmi:id="1e819d6e-0ddb-441e-9025-f286fecf93e3" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gremlins (Stufe 3)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gremlins (Rating 4)" xmi:id="564284b5-da31-4915-bc69-a893ab25b519" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-16" name="Gremlins (Rating 4)" xmi:id="564284b5-da31-4915-bc69-a893ab25b519" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gremlins (Stufe 4)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Incompetent" xmi:id="216290b9-053d-4f6d-81c9-d1fe8ae346be" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Incompetent" xmi:id="216290b9-053d-4f6d-81c9-d1fe8ae346be" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Inkompetenz"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Insomnia (Basic)" xmi:id="0cf25fda-725b-49fd-a8cf-de589e938065" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Insomnia (Basic)" xmi:id="0cf25fda-725b-49fd-a8cf-de589e938065" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schlaflosigkeit (einfach)" page="81"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Insomnia (Full)" xmi:id="149e6bf7-a6b4-4893-b755-4d983372079c" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Insomnia (Full)" xmi:id="149e6bf7-a6b4-4893-b755-4d983372079c" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schlaflosigkeit (voll)" page="81"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Loss of Confidence" xmi:id="c9cd05ad-cd3c-451e-8285-e0fb1d95ebc1" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Loss of Confidence" xmi:id="c9cd05ad-cd3c-451e-8285-e0fb1d95ebc1" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Verunsichert" page="82"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Low Pain Tolerance" xmi:id="9ba327d2-38c5-4a25-ae44-25e98f0bbf03" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Low Pain Tolerance" xmi:id="9ba327d2-38c5-4a25-ae44-25e98f0bbf03" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Niedrige Schmerztoleranz"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Ork Poser" xmi:id="075447a2-5730-4750-a19f-1a5c6086903d" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Ork Poser" xmi:id="075447a2-5730-4750-a19f-1a5c6086903d" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Orkposer"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Common, Biased)" xmi:id="d6843e67-0837-4353-a5db-f4c320560ddb" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Prejudiced (Common, Biased)" xmi:id="d6843e67-0837-4353-a5db-f4c320560ddb" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Allgemein, Voreingenommen)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Common, Outspoken)" xmi:id="9a76f104-a472-4b6a-b5b7-a8f5248f65a9" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Prejudiced (Common, Outspoken)" xmi:id="9a76f104-a472-4b6a-b5b7-a8f5248f65a9" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Allgemein, Offen)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Common, Radical)" xmi:id="1dc88694-8519-4fb0-b8c9-c5a823084730" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Prejudiced (Common, Radical)" xmi:id="1dc88694-8519-4fb0-b8c9-c5a823084730" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Allgemein, Radikal)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Specific, Biased)" xmi:id="b0640207-7965-4f1a-a28c-0dd5e24d2d8c" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Prejudiced (Specific, Biased)" xmi:id="b0640207-7965-4f1a-a28c-0dd5e24d2d8c" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Speziell, Voreingenommen)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Specific, Outspoken)" xmi:id="53ddd66b-ad89-43eb-9174-cbff6ed2a9c3" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Prejudiced (Specific, Outspoken)" xmi:id="53ddd66b-ad89-43eb-9174-cbff6ed2a9c3" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Speziell, Offen)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Prejudiced (Specific, Radical)" xmi:id="100cf04a-51e5-477a-a57c-2dae699f7f04" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Prejudiced (Specific, Radical)" xmi:id="100cf04a-51e5-477a-a57c-2dae699f7f04" page="82" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Vorurteil (Speziell, Radikal)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Scorched" xmi:id="69984296-4057-4a0f-964e-a0efb4bfc7ce" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Scorched" xmi:id="69984296-4057-4a0f-964e-a0efb4bfc7ce" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gezeichnet"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Sensitive System" xmi:id="13fd45c3-e031-4452-8bf8-31829d2401f9" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Sensitive System" xmi:id="13fd45c3-e031-4452-8bf8-31829d2401f9" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Immunabstoßung"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Simsense Vertigo" xmi:id="b2210e9a-ab8a-45f9-b5db-13f6923c2d22" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Simsense Vertigo" xmi:id="b2210e9a-ab8a-45f9-b5db-13f6923c2d22" page="83" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="SimSinn-Desorientierung"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="SINner (Corporate)" xmi:id="e00623e1-54b0-4a91-b234-3c7e141deef4" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="SINner (Corporate)" xmi:id="e00623e1-54b0-4a91-b234-3c7e141deef4" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="SIN-Mensch (Konzernbürger)" page="85"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="SINner (National)" xmi:id="9ac85feb-ae1e-4996-8514-3570d411e1d5" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="SINner (National)" xmi:id="9ac85feb-ae1e-4996-8514-3570d411e1d5" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="SIN-Mensch (Staatlich)" page="84"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="SINner (Corporate Limited)" xmi:id="318d2edd-833b-48c5-a3e1-343bf03848a5" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="SINner (Corporate Limited)" xmi:id="318d2edd-833b-48c5-a3e1-343bf03848a5" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="SIN-Mensch (Eingeschrenkt Konzern)" page="84"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="SINner (Criminal)" xmi:id="d9479e5c-d44a-45b9-8fb4-d1e08a9487b2" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="SINner (Criminal)" xmi:id="d9479e5c-d44a-45b9-8fb4-d1e08a9487b2" page="84" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="SIN-Mensch (kriminell)"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Social Stress" xmi:id="8ba2830a-3f10-4877-9752-93be051b205b" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Social Stress" xmi:id="8ba2830a-3f10-4877-9752-93be051b205b" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Sozialstress" page="85"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Spirit Bane" xmi:id="40c06974-a85b-4f2b-9558-51c140c16d87" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Spirit Bane" xmi:id="40c06974-a85b-4f2b-9558-51c140c16d87" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Feindliche Geister"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Uncouth" xmi:id="f0873c37-4f09-41cd-be81-88e8df5b42ae" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-14" name="Uncouth" xmi:id="f0873c37-4f09-41cd-be81-88e8df5b42ae" page="85" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Ungehobelt"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Consummate Professional" xmi:id="c6a2aa0f-76fd-432b-85bb-3ef2c2857525" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Consummate Professional" xmi:id="c6a2aa0f-76fd-432b-85bb-3ef2c2857525" page="17" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac">
 <localizations local="de" name="Consummate Professional" page="17"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Combat Junkie" xmi:id="8d2b32ec-2ddf-40dd-a29b-bf2e85a3d8ca" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Combat Junkie" xmi:id="8d2b32ec-2ddf-40dd-a29b-bf2e85a3d8ca" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Combat Junkie" page="127"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Blighted (6 Months)" xmi:id="f810fb60-8e1f-4111-a4f3-b652e91693ca" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Blighted (6 Months)" xmi:id="f810fb60-8e1f-4111-a4f3-b652e91693ca" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Blighted (6 Months)" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Blighted (12 Months)" xmi:id="94cbe9bc-fabc-4126-81f8-3e31c7ed85f8" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Blighted (12 Months)" xmi:id="94cbe9bc-fabc-4126-81f8-3e31c7ed85f8" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Blighted (12 Months)" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Blighted (24 Months)" xmi:id="6be0022f-f8c8-4c51-808c-d339d3e8fecb" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Blighted (24 Months)" xmi:id="6be0022f-f8c8-4c51-808c-d339d3e8fecb" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Blighted (24 Months)" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Earther" xmi:id="e7c16580-6705-4a93-a9be-dbea90efd2eb" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Earther" xmi:id="e7c16580-6705-4a93-a9be-dbea90efd2eb" page="169" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Earther" page="169"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Uneducated" xmi:id="d8362a78-54e9-4dbe-8388-6ba0a7b9df31" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Uneducated" xmi:id="d8362a78-54e9-4dbe-8388-6ba0a7b9df31" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Ungebildet"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Unsteady Hands" xmi:id="e96c7280-b9b0-4112-8b65-a3568c7ca13e" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Unsteady Hands" xmi:id="e96c7280-b9b0-4112-8b65-a3568c7ca13e" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Händezittern" page="87"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Weak Immune System" xmi:id="0a7bcb95-dd9c-4e3e-ab0a-291a352ac1d4" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Weak Immune System" xmi:id="0a7bcb95-dd9c-4e3e-ab0a-291a352ac1d4" page="87" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schwaches Immunsystem"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Artisan's Way" xmi:id="15b8fbbd-9d6f-43e4-acf3-97badf073ac4" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Artisan's Way" xmi:id="15b8fbbd-9d6f-43e4-acf3-97badf073ac4" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Handwerkers"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Artist's Way" xmi:id="a61e2873-fe15-40f5-9ce3-07caa1f824d2" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Artist's Way" xmi:id="a61e2873-fe15-40f5-9ce3-07caa1f824d2" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Künstlers"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Athlete's Way" xmi:id="3f536570-2f0c-40b1-a056-d310e29e983d" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Athlete's Way" xmi:id="3f536570-2f0c-40b1-a056-d310e29e983d" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Athleten"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Beast's Way" xmi:id="2e7424d3-5d11-4c9d-ba92-f0431bb86786" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Beast's Way" xmi:id="2e7424d3-5d11-4c9d-ba92-f0431bb86786" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="The Beast's Way" page="176"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Burnout's Way" xmi:id="7da60a93-aa53-478c-8d08-18b5638d9b87" page="177" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="15" name="The Burnout's Way" xmi:id="7da60a93-aa53-478c-8d08-18b5638d9b87" page="177" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="The Burnout's Way" page="177"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Invisible Way" xmi:id="01181bb0-2a94-43f1-8a97-41347eac3843" page="177" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Invisible Way" xmi:id="01181bb0-2a94-43f1-8a97-41347eac3843" page="177" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Unsichtbare Weg"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Magician's Way" xmi:id="64165b48-d67e-4bb8-b662-ca45fbf5b3c0" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Magician's Way" xmi:id="64165b48-d67e-4bb8-b662-ca45fbf5b3c0" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Zauberers"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Speaker's Way" xmi:id="88dd98ab-2f09-4ba9-b5c1-ff788c31fbac" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Speaker's Way" xmi:id="88dd98ab-2f09-4ba9-b5c1-ff788c31fbac" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Sprechers"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Spiritual Way" xmi:id="1a530492-7036-49fe-9ff1-ff84c9ed5d0a" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Spiritual Way" xmi:id="1a530492-7036-49fe-9ff1-ff84c9ed5d0a" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="The Spiritual Way" page="178"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="The Warrior's Way" xmi:id="32d0d753-9dad-4074-ab38-2d1ff5069a6a" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="The Warrior's Way" xmi:id="32d0d753-9dad-4074-ab38-2d1ff5069a6a" page="178" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Der Weg des Kriegers"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Gifted Healer" xmi:id="a8747e12-08b1-4665-8e48-23c30c047be6" page="11" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="2" name="Gifted Healer" xmi:id="a8747e12-08b1-4665-8e48-23c30c047be6" page="11" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Gifted Healer" page="11"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Aged (Rating 1)" xmi:id="97e9b186-8924-4885-a948-3c781244a5cb" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Aged (Rating 1)" xmi:id="97e9b186-8924-4885-a948-3c781244a5cb" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 <localizations local="de" name="Aged (Rating 1)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Aged (Rating 2)" xmi:id="dd0b1ba0-6262-4eb9-9784-c4d29d6b7771" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-14" name="Aged (Rating 2)" xmi:id="dd0b1ba0-6262-4eb9-9784-c4d29d6b7771" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 <localizations local="de" name="Aged (Rating 2)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Aged (Rating 3)" xmi:id="d93fdb8e-c8ca-4699-a610-75cad195b50d" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-21" name="Aged (Rating 3)" xmi:id="d93fdb8e-c8ca-4699-a610-75cad195b50d" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 <localizations local="de" name="Aged (Rating 3)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Illness (Rating 1)" xmi:id="d537536d-893d-4bd6-89c6-03b7dd5bd24c" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Illness (Rating 1)" xmi:id="d537536d-893d-4bd6-89c6-03b7dd5bd24c" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Illness (Rating 1)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Illness (Rating 2)" xmi:id="16c8e91c-0d65-42bb-bc85-4af17c681714" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Illness (Rating 2)" xmi:id="16c8e91c-0d65-42bb-bc85-4af17c681714" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Illness (Rating 2)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Illness (Rating 3)" xmi:id="cea9bcde-4cbf-475e-b641-b6385d518543" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Illness (Rating 3)" xmi:id="cea9bcde-4cbf-475e-b641-b6385d518543" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Illness (Rating 3)" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Pregnant" xmi:id="08cceb0d-4fbe-44c8-97ca-e9ec24b692df" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Pregnant" xmi:id="08cceb0d-4fbe-44c8-97ca-e9ec24b692df" page="12" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Pregnant" page="12"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Spirit Champion" xmi:id="34d7e834-4fbe-49b1-86e8-a9ff354fd972" page="199" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="Spirit Champion" xmi:id="34d7e834-4fbe-49b1-86e8-a9ff354fd972" page="199" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Spirit Champion" page="199"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Spirit Pariah" xmi:id="94a4cc04-d856-418f-ac60-165f327433d5" page="199" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-14" name="Spirit Pariah" xmi:id="94a4cc04-d856-418f-ac60-165f327433d5" page="199" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce">
 <localizations local="de" name="Spirit Pariah" page="199"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="College Education" xmi:id="4e2ddf3d-802f-4206-85ce-81f1defa528f" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="2" name="College Education" xmi:id="4e2ddf3d-802f-4206-85ce-81f1defa528f" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8">
 <localizations local="de" name="College-Abschluss"/>
 </entries>
-<entries xsi:type="shr5:PersonaEigenschaft" name="Inspired" xmi:id="fd9b9b6d-c969-40f1-8dc7-61f8e5d9cd4d" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Inspired" xmi:id="fd9b9b6d-c969-40f1-8dc7-61f8e5d9cd4d" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8">
 <localizations local="de" name="Inspiriert"/>
 </entries>
 </entries>
