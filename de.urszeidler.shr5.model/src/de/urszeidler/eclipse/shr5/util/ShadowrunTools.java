@@ -533,6 +533,8 @@ public class ShadowrunTools {
         if (persona == null)
             return -1;
 
+        //TODO :  this is the wrong method it calcs the overRaceMax need to add the right  method also
+        
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
             return -1;
