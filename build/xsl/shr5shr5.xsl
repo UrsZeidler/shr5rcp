@@ -64,7 +64,7 @@
 			<xsl:call-template name="gegenstand-basis-rating">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
-			<xsl:call-template name="mods">
+			<xsl:call-template name="mods_rating">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
 			<xsl:call-template name="essenceMod">
@@ -97,7 +97,7 @@
 
 			<entries xsi:type="shr5:Cyberware">
 				<xsl:call-template name="gegenstand-basis" />
-				<xsl:call-template name="mods">
+				<xsl:call-template name="mods_rating">
 					<xsl:with-param name="rating" select="1" />
 				</xsl:call-template>
 				<mods>
@@ -150,7 +150,9 @@
 	<xsl:template name="bioware">
 		<entries xsi:type="shr5:BioWare">
 			<xsl:call-template name="gegenstand-basis" />
-			<xsl:call-template name="mods" />
+			<xsl:call-template name="mods_rating">
+				<xsl:with-param name="rating" select="1" />
+			</xsl:call-template>
 			<mods>
 				<xsl:if test="number(ess/text())">
 					<xsl:attribute name="wert">
@@ -179,7 +181,7 @@
 			<xsl:call-template name="gegenstand-basis-rating">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
-			<xsl:call-template name="mods">
+			<xsl:call-template name="mods_rating">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
 			<xsl:call-template name="essenceMod">

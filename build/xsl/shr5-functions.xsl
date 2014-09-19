@@ -42,7 +42,7 @@
 	</xsl:template>
 
 	<xsl:template name="localization_rating">
-	<xsl:param name="rating" />
+		<xsl:param name="rating" />
 		<xsl:variable name="aid1" select="id/text()" />
 		<xsl:variable name="loc_name">
 			<xsl:call-template name="findLocalizedName">
@@ -100,6 +100,18 @@
 				</localizations>
 			</xsl:when>
 		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template name="findSkill">
+		<xsl:param name="skillname" />
+		<xsl:for-each select="$skills">
+			<xsl:for-each select="chummer/skills/*">
+				<xsl:if test="name/text()=$skillname">
+					<xsl:variable name="id_name" select="id/text()" />
+					<xsl:value-of select="$id_name" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
 	</xsl:template>
 
 	<!-- find the source book -->
@@ -295,7 +307,7 @@
 		</mods>
 	</xsl:template>
 	<!-- -->
-	<xsl:template name="mods">
+	<xsl:template name="mods_rating">
 		<xsl:param name="rating" />
 		<xsl:for-each select="bonus/*">
 			<xsl:choose>
@@ -337,13 +349,14 @@
 						</xsl:call-template>
 					</mods>
 				</xsl:when>
-				
-				
+
+
 				<xsl:when test="name()='specificattribute'">
 					<mods>
 						<xsl:attribute name="attribut">
 							<xsl:call-template name="MATCH">
-         					<xsl:with-param name="matchingName" select="name/text()" />
+         					<xsl:with-param name="matchingName"
+							select="name/text()" />
       						</xsl:call-template>
 						</xsl:attribute>
 						<!-- </attribut> -->

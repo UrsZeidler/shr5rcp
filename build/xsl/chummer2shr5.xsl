@@ -50,6 +50,7 @@
 		select="document(concat($path,'/metamagic.xml'),/)" />
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
+	<xsl:include href="shr5-functions.xsl" />
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -1544,12 +1545,13 @@
 
 	</xsl:template>
 	<!-- basic named templates -->
-	<xsl:template name="beschreibbar">
-		<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
-		<xsl:if test="string-length(doc/text())!=0">
-			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
-		</xsl:if>
-	</xsl:template>
+	<!-- <xsl:template name="beschreibbar"> -->
+	<!-- <xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute> -->
+	<!-- <xsl:if test="string-length(doc/text())!=0"> -->
+	<!-- <xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" 
+		/></xsl:attribute> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:template> -->
 	<!-- find the range -->
 	<xsl:template name="setRange">
 		<xsl:choose>
@@ -1579,121 +1581,122 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	<!-- find the source book -->
-	<xsl:template name="findSourceBook">
-		<xsl:param name="aid" />
-		<xsl:for-each select="$books">
-			<xsl:for-each select="chummer/books/*">
-				<xsl:if test="code/text()=$aid">
-					<xsl:variable name="id_name" select="id/text()" />
-					<xsl:value-of select="$id_name" />
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:for-each>
-	</xsl:template>
+	<!-- find the source book <xsl:template name="findSourceBook"> <xsl:param 
+		name="aid" /> <xsl:for-each select="$books"> <xsl:for-each select="chummer/books/*"> 
+		<xsl:if test="code/text()=$aid"> <xsl:variable name="id_name" select="id/text()" 
+		/> <xsl:value-of select="$id_name" /> </xsl:if> </xsl:for-each> </xsl:for-each> 
+		</xsl:template> -->
 	<!-- find the locaized name -->
-	<xsl:template name="findLocalizedName">
-		<xsl:param name="aid" />
-		<xsl:for-each select="$loc_data">
-			<xsl:for-each select="chummer/chummer/*/*">
-				<xsl:if test="id/text()=$aid">
-					<xsl:variable name="loc_name" select="translate/text()" />
-					<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
-						/></xsl:attribute> -->
-					<xsl:value-of select="$loc_name" />
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:for-each>
-	</xsl:template>
+	<!-- <xsl:template name="findLocalizedName"> -->
+	<!-- <xsl:param name="aid" /> -->
+	<!-- <xsl:for-each select="$loc_data"> -->
+	<!-- <xsl:for-each select="chummer/chummer/*/*"> -->
+	<!-- <xsl:if test="id/text()=$aid"> -->
+	<!-- <xsl:variable name="loc_name" select="translate/text()" /> -->
+	<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" -->
+	<!-- /></xsl:attribute> -->
 
-	<xsl:template name="findLocalizedPage">
-		<xsl:param name="aid" />
-		<xsl:for-each select="$loc_data">
-			<xsl:for-each select="chummer/chummer/*/*">
-				<xsl:if test="id/text()=$aid">
-					<xsl:if test="number(page/text())= page/text()">
-						<xsl:variable name="loc_name" select="page/text()" />
-						<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
-							/></xsl:attribute> -->
-						<xsl:value-of select="$loc_name" />
-					</xsl:if>
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:for-each>
-	</xsl:template>
+	<!-- <xsl:value-of select="$loc_name" /> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:for-each> -->
+	<!-- </xsl:for-each> -->
+	<!-- </xsl:template> -->
 
-	<xsl:template name="set_id">
-		<xsl:variable name="aid" select="id/text()" />
-		<xsl:if test="$aid!=''">
-			<xsl:attribute name="xmi:id"><xsl:value-of select="$aid" /></xsl:attribute>
-		</xsl:if>
-	</xsl:template>
+	<!-- <xsl:template name="findLocalizedPage"> -->
+	<!-- <xsl:param name="aid" /> -->
+	<!-- <xsl:for-each select="$loc_data"> -->
+	<!-- <xsl:for-each select="chummer/chummer/*/*"> -->
+	<!-- <xsl:if test="id/text()=$aid"> -->
+	<!-- <xsl:if test="number(page/text())= page/text()"> -->
+	<!-- <xsl:variable name="loc_name" select="page/text()" /> -->
+	<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" -->
+	<!-- /></xsl:attribute> -->
 
+	<!-- <xsl:value-of select="$loc_name" /> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:for-each> -->
+	<!-- </xsl:for-each> -->
+	<!-- </xsl:template> -->
 
-	<xsl:template name="quelle">
-		<xsl:call-template name="set_id" />
-		<xsl:call-template name="simple_quelle" />
-	</xsl:template>
-
-	<xsl:template name="simple_quelle">
-		<xsl:if test="number(page/text())">
-			<xsl:attribute name="page">
-				<xsl:value-of select="number(page/text())" />
-			</xsl:attribute>
-		</xsl:if>
-		<!-- <xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
-		<xsl:variable name="sid1" select="source/text()" />
-		<xsl:variable name="srcBookId">
-			<xsl:call-template name="findSourceBook">
-				<xsl:with-param name="aid" select="$sid1" />
-			</xsl:call-template>
-			<!-- ee -->
-		</xsl:variable>
-		<xsl:attribute name="srcBook">
-			<xsl:value-of select="$srcBookId" />
-			</xsl:attribute>
-	</xsl:template>
+	<!-- <xsl:template name="set_id"> -->
+	<!-- <xsl:variable name="aid" select="id/text()" /> -->
+	<!-- <xsl:if test="$aid!=''"> -->
+	<!-- <xsl:attribute name="xmi:id"><xsl:value-of select="$aid" /></xsl:attribute> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:template> -->
 
 
-	<xsl:template name="localization">
-		<xsl:variable name="aid1" select="id/text()" />
-		<xsl:variable name="loc_name">
-			<xsl:call-template name="findLocalizedName">
-				<xsl:with-param name="aid" select="$aid1" />
-			</xsl:call-template>
-		</xsl:variable>
-		<xsl:choose>
-			<xsl:when test="not ($loc_name='')">
-				<localizations local="de">
-					<xsl:attribute name="name"><xsl:value-of
-						select="$loc_name" /></xsl:attribute>
-					<xsl:variable name="loc_page">
-						<xsl:call-template name="findLocalizedPage">
-							<xsl:with-param name="aid" select="$aid1" />
-						</xsl:call-template>
-					</xsl:variable>
-					<xsl:choose>
-						<xsl:when test="$loc_page=''">
-							<xsl:if test="number(page/text())= page/text()">
-								<xsl:attribute name="page"><xsl:value-of
-									select="number(page/text())" /></xsl:attribute>
-							</xsl:if>
-						</xsl:when>
-					</xsl:choose>
-				</localizations>
-			</xsl:when>
-		</xsl:choose>
-	</xsl:template>
+	<!-- <xsl:template name="quelle"> -->
+	<!-- <xsl:call-template name="set_id" /> -->
+	<!-- <xsl:call-template name="simple_quelle" /> -->
+	<!-- </xsl:template> -->
+
+	<!-- <xsl:template name="simple_quelle"> -->
+	<!-- <xsl:if test="number(page/text())"> -->
+	<!-- <xsl:attribute name="page"> -->
+	<!-- <xsl:value-of select="number(page/text())" /> -->
+	<!-- </xsl:attribute> -->
+	<!-- </xsl:if> -->
+	<!-- <xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
+
+	<!-- <xsl:variable name="sid1" select="source/text()" /> -->
+	<!-- <xsl:variable name="srcBookId"> -->
+	<!-- <xsl:call-template name="findSourceBook"> -->
+	<!-- <xsl:with-param name="aid" select="$sid1" /> -->
+	<!-- </xsl:call-template> -->
+	<!-- ee -->
+
+	<!-- </xsl:variable> -->
+	<!-- <xsl:attribute name="srcBook"> -->
+	<!-- <xsl:value-of select="$srcBookId" /> -->
+	<!-- </xsl:attribute> -->
+	<!-- </xsl:template> -->
 
 
-	<xsl:template name="gegenstand-basis">
-		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
-		<xsl:if test="number(cost/text())">
-			<xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
-		</xsl:if>
-		<xsl:call-template name="beschreibbar" />
-		<xsl:call-template name="quelle" />
-	</xsl:template>
+	<!-- <xsl:template name="localization"> -->
+	<!-- <xsl:variable name="aid1" select="id/text()" /> -->
+	<!-- <xsl:variable name="loc_name"> -->
+	<!-- <xsl:call-template name="findLocalizedName"> -->
+	<!-- <xsl:with-param name="aid" select="$aid1" /> -->
+	<!-- </xsl:call-template> -->
+	<!-- </xsl:variable> -->
+	<!-- <xsl:choose> -->
+	<!-- <xsl:when test="not ($loc_name='')"> -->
+	<!-- <localizations local="de"> -->
+	<!-- <xsl:attribute name="name"><xsl:value-of -->
+	<!-- select="$loc_name" /></xsl:attribute> -->
+	<!-- <xsl:variable name="loc_page"> -->
+	<!-- <xsl:call-template name="findLocalizedPage"> -->
+	<!-- <xsl:with-param name="aid" select="$aid1" /> -->
+	<!-- </xsl:call-template> -->
+	<!-- </xsl:variable> -->
+	<!-- <xsl:choose> -->
+	<!-- <xsl:when test="$loc_page=''"> -->
+	<!-- <xsl:if test="number(page/text())= page/text()"> -->
+	<!-- <xsl:attribute name="page"><xsl:value-of -->
+	<!-- select="number(page/text())" /></xsl:attribute> -->
+	<!-- </xsl:if> -->
+	<!-- </xsl:when> -->
+	<!-- </xsl:choose> -->
+	<!-- </localizations> -->
+	<!-- </xsl:when> -->
+	<!-- </xsl:choose> -->
+	<!-- </xsl:template> -->
+
+
+	<!-- <xsl:template name="gegenstand-basis"> -->
+	<!-- <xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" 
+		/></xsl:attribute> -->
+	<!-- <xsl:if test="number(cost/text())"> -->
+	<!-- <xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" 
+		/></xsl:attribute> -->
+	<!-- </xsl:if> -->
+	<!-- <xsl:call-template name="beschreibbar" /> -->
+	<!-- <xsl:call-template name="quelle" /> -->
+	<!-- </xsl:template> -->
+
+
 	<xsl:template name="skill-options">
 		<xsl:if test="number(skills/qty/text())">
 			<xsl:attribute name="skillNumber"><xsl:value-of select="skills/qty/text()" /></xsl:attribute>
@@ -1738,6 +1741,7 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
+
 	<xsl:template name="mods">
 		<xsl:for-each select="bonus/*">
 			<xsl:choose>
@@ -1831,51 +1835,61 @@
 	</xsl:template>
 
 	<!-- matcher for the references of the modificators -->
-	<xsl:template name="MATCH">
-		<xsl:param name="matchingName" />
-		<xsl:choose>
-			<xsl:when test="$matchingName='AGI'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='BOD'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='STR'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='REA'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='INT'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='CHA'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='WIL'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='LOG'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='MAG'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie'" />
-			</xsl:when>
-			<xsl:when test="$matchingName='RES'">
-				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz'" />
-			</xsl:when>
-		</xsl:choose>
-	</xsl:template>
+	<!-- <xsl:template name="MATCH"> -->
+	<!-- <xsl:param name="matchingName" /> -->
+	<!-- <xsl:choose> -->
+	<!-- <xsl:when test="$matchingName='AGI'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='BOD'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='STR'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='REA'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='INT'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='CHA'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='WIL'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='LOG'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='MAG'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- <xsl:when test="$matchingName='RES'"> -->
+	<!-- <xsl:value-of -->
+	<!-- select="'http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz'" 
+		/> -->
+	<!-- </xsl:when> -->
+	<!-- </xsl:choose> -->
+	<!-- </xsl:template> -->
 	<!-- lifestyle -->
 	<xsl:template match="//lifestyle" mode="lifestyle">
 		<entries xsi:type="shr5:Lifestyle">
@@ -2738,14 +2752,24 @@
 	<xsl:template match="weapon">
 		<xsl:if test="type/text()='Melee'">
 			<entries xsi:type="shr5:Nahkampfwaffe">
+				<xsl:if test="number(reach/text())">
+					<xsl:attribute name="reichweite"><xsl:value-of
+						select="number(reach/text())" /></xsl:attribute>
+				</xsl:if>
+
+				<xsl:variable name="fert-id">
+					<xsl:call-template name="findSkill">
+					<xsl:with-param name="skillname" select="category/text()" />
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:if test="$fert-id!=''">
+					<xsl:attribute name="fertigkeit" >
+						<xsl:value-of select="$fert-id"></xsl:value-of>
+					</xsl:attribute>
+				</xsl:if>
 				<xsl:call-template name="gegenstand-basis" />
 				<xsl:call-template name="waffe" />
 				<xsl:call-template name="localization" />
-				<!-- <xsl:variable name="sname" select="useskill/text()" /> <xsl:for-each 
-					select="$skills"> <xsl:for-each select="chummer/skills/*"> <xsl:if test="name/text()=$sname"> 
-					<xsl:variable name="pos" select="position()-1" /> <xsl:attribute name="fertigkeit"><xsl:value-of 
-					select="concat('//@entries.3/@entries.',$pos)" /></xsl:attribute> </xsl:if> 
-					</xsl:for-each> </xsl:for-each> -->
 			</entries>
 		</xsl:if>
 		<xsl:if test="type/text()='Ranged' and category/text()='Bows'">
@@ -2753,16 +2777,6 @@
 				<xsl:call-template name="gegenstand-basis" />
 
 				<xsl:call-template name="setRange" />
-				<!-- <xsl:variable name="rname" select="category/text()" /> -->
-				<!-- <xsl:for-each select="$ranges"> -->
-				<!-- <xsl:for-each select="chummer/ranges/*"> -->
-				<!-- <xsl:if test="category/text()=$rname"> -->
-				<!-- <xsl:variable name="pos" select="position()-1" /> -->
-				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
-				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-				<!-- </xsl:if> -->
-				<!-- </xsl:for-each> -->
-				<!-- </xsl:for-each> -->
 				<xsl:call-template name="waffe" />
 				<xsl:call-template name="localization" />
 			</entries>
@@ -2771,6 +2785,7 @@
 			test="type/text()='Ranged' and category/text()!='Gear' and category/text()!='Bows'">
 			<entries xsi:type="shr5:Feuerwaffe">
 				<xsl:call-template name="gegenstand-basis" />
+
 				<xsl:call-template name="waffe" />
 				<xsl:if test="number(substring-before(ammo/text(),'('))">
 					<xsl:attribute name="kapazitaet">
@@ -2800,35 +2815,35 @@
 					<xsl:attribute name="rueckstoss"><xsl:value-of
 						select="number(rc/text())" /></xsl:attribute>
 				</xsl:if>
-<xsl:call-template name="setRange" />
+				<xsl:call-template name="setRange" />
 				<!-- <xsl:call-template name="findRange"> <xsl:with-param name="rname" 
 					select="category/text()"/> </xsl:call-template> -->
-<!-- 				<xsl:choose> -->
-<!-- 					<xsl:when test="range/text()"> -->
-<!-- 						<xsl:variable name="rname" select="range/text()" /> -->
-<!-- 						<xsl:for-each select="$ranges"> -->
-<!-- 							<xsl:for-each select="chummer/ranges/*"> -->
-<!-- 								<xsl:if test="category/text()=$rname"> -->
-<!-- 									<xsl:variable name="pos" select="position()-1" /> -->
-<!-- 									<xsl:attribute name="reichweite"><xsl:value-of -->
-<!-- 										select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-<!-- 								</xsl:if> -->
-<!-- 							</xsl:for-each> -->
-<!-- 						</xsl:for-each> -->
-<!-- 					</xsl:when> -->
-<!-- 					<xsl:otherwise> -->
-<!-- 						<xsl:variable name="rname" select="category/text()" /> -->
-<!-- 						<xsl:for-each select="$ranges"> -->
-<!-- 							<xsl:for-each select="chummer/ranges/*"> -->
-<!-- 								<xsl:if test="category/text()=$rname"> -->
-<!-- 									<xsl:variable name="pos" select="position()-1" /> -->
-<!-- 									<xsl:attribute name="reichweite"><xsl:value-of -->
-<!-- 										select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-<!-- 								</xsl:if> -->
-<!-- 							</xsl:for-each> -->
-<!-- 						</xsl:for-each> -->
-<!-- 					</xsl:otherwise> -->
-<!-- 				</xsl:choose> -->
+				<!-- <xsl:choose> -->
+				<!-- <xsl:when test="range/text()"> -->
+				<!-- <xsl:variable name="rname" select="range/text()" /> -->
+				<!-- <xsl:for-each select="$ranges"> -->
+				<!-- <xsl:for-each select="chummer/ranges/*"> -->
+				<!-- <xsl:if test="category/text()=$rname"> -->
+				<!-- <xsl:variable name="pos" select="position()-1" /> -->
+				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
+				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
+				<!-- </xsl:if> -->
+				<!-- </xsl:for-each> -->
+				<!-- </xsl:for-each> -->
+				<!-- </xsl:when> -->
+				<!-- <xsl:otherwise> -->
+				<!-- <xsl:variable name="rname" select="category/text()" /> -->
+				<!-- <xsl:for-each select="$ranges"> -->
+				<!-- <xsl:for-each select="chummer/ranges/*"> -->
+				<!-- <xsl:if test="category/text()=$rname"> -->
+				<!-- <xsl:variable name="pos" select="position()-1" /> -->
+				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
+				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
+				<!-- </xsl:if> -->
+				<!-- </xsl:for-each> -->
+				<!-- </xsl:for-each> -->
+				<!-- </xsl:otherwise> -->
+				<!-- </xsl:choose> -->
 
 				<xsl:call-template name="fw-mode">
 					<xsl:with-param name="list"
