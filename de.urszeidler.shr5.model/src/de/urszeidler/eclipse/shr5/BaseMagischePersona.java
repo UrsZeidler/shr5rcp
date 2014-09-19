@@ -93,7 +93,7 @@ public interface BaseMagischePersona extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Bound Foki</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_BoundFoki()
-     * @model containment="true" required="true"
+     * @model containment="true"
      * @generated
      */
     EList<FokusBinding> getBoundFoki();

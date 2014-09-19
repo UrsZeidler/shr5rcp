@@ -272,8 +272,8 @@
         eType="#//Initation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="magieBasis" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="boundFoki" lowerBound="1"
-        upperBound="-1" eType="#//FokusBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundFoki" upperBound="-1"
+        eType="#//FokusBinding" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffenModifikatoren" abstract="true"
       interface="true" eSuperTypes="#//ModifikatorAttribute">
