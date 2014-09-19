@@ -49,6 +49,15 @@ public interface ScriptingFactory extends EFactory {
     ScriptHistory createScriptHistory();
 
     /**
+     * Returns a new object of class '<em>Scripts</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Scripts</em>'.
+     * @generated
+     */
+    Scripts createScripts();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

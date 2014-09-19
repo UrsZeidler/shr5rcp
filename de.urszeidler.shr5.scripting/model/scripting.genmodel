@@ -36,5 +36,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//ScriptHistory/currentPlacement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//ScriptHistory/writtenProtokol"/>
     </genClasses>
+    <genClasses ecoreClass="scripting.ecore#//Scripts">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Scripts/stories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Scripts/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

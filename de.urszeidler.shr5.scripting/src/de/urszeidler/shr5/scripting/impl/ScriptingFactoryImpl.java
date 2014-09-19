@@ -59,6 +59,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
             case ScriptingPackage.SCRIPT: return createScript();
             case ScriptingPackage.PLACEMENT: return createPlacement();
             case ScriptingPackage.SCRIPT_HISTORY: return createScriptHistory();
+            case ScriptingPackage.SCRIPTS: return createScripts();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -92,6 +93,16 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
     public ScriptHistory createScriptHistory() {
         ScriptHistoryImpl scriptHistory = new ScriptHistoryImpl();
         return scriptHistory;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Scripts createScripts() {
+        ScriptsImpl scripts = new ScriptsImpl();
+        return scripts;
     }
 
     /**

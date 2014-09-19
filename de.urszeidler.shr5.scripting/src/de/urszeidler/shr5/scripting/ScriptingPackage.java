@@ -435,6 +435,53 @@ public interface ScriptingPackage extends EPackage {
 
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.ScriptsImpl <em>Scripts</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.ScriptsImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScripts()
+     * @generated
+     */
+    int SCRIPTS = 4;
+
+    /**
+     * The feature id for the '<em><b>Stories</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPTS__STORIES = 0;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPTS__NAME = 1;
+
+    /**
+     * The number of structural features of the '<em>Scripts</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPTS_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Scripts</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCRIPTS_OPERATION_COUNT = 0;
+
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Script <em>Script</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -695,6 +742,38 @@ public interface ScriptingPackage extends EPackage {
     EAttribute getScriptHistory_WrittenProtokol();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Scripts <em>Scripts</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Scripts</em>'.
+     * @see de.urszeidler.shr5.scripting.Scripts
+     * @generated
+     */
+    EClass getScripts();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.shr5.scripting.Scripts#getStories <em>Stories</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Stories</em>'.
+     * @see de.urszeidler.shr5.scripting.Scripts#getStories()
+     * @see #getScripts()
+     * @generated
+     */
+    EReference getScripts_Stories();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Scripts#getName <em>Name</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Name</em>'.
+     * @see de.urszeidler.shr5.scripting.Scripts#getName()
+     * @see #getScripts()
+     * @generated
+     */
+    EAttribute getScripts_Name();
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -916,6 +995,32 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EAttribute SCRIPT_HISTORY__WRITTEN_PROTOKOL = eINSTANCE.getScriptHistory_WrittenProtokol();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.ScriptsImpl <em>Scripts</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.ScriptsImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getScripts()
+         * @generated
+         */
+        EClass SCRIPTS = eINSTANCE.getScripts();
+
+        /**
+         * The meta object literal for the '<em><b>Stories</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SCRIPTS__STORIES = eINSTANCE.getScripts_Stories();
+
+        /**
+         * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SCRIPTS__NAME = eINSTANCE.getScripts_Name();
 
     }
 

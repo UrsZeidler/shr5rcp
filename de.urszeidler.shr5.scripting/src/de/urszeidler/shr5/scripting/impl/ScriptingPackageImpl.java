@@ -15,6 +15,7 @@ import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
+import de.urszeidler.shr5.scripting.Scripts;
 import de.urszeidler.shr5.scripting.TimeFrame;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -57,6 +58,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * @generated
      */
     private EClass scriptHistoryEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass scriptsEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -343,6 +351,33 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getScripts() {
+        return scriptsEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getScripts_Stories() {
+        return (EReference)scriptsEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getScripts_Name() {
+        return (EAttribute)scriptsEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }
@@ -393,6 +428,10 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEAttribute(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_DATE);
         createEReference(scriptHistoryEClass, SCRIPT_HISTORY__CURRENT_PLACEMENT);
         createEAttribute(scriptHistoryEClass, SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+
+        scriptsEClass = createEClass(SCRIPTS);
+        createEReference(scriptsEClass, SCRIPTS__STORIES);
+        createEAttribute(scriptsEClass, SCRIPTS__NAME);
     }
 
     /**
@@ -461,6 +500,10 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEAttribute(getScriptHistory_CurrentDate(), theShr5Package.getShrDate(), "currentDate", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScriptHistory_CurrentPlacement(), this.getPlacement(), null, "currentPlacement", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getScriptHistory_WrittenProtokol(), ecorePackage.getEString(), "writtenProtokol", null, 0, -1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(scriptsEClass, Scripts.class, "Scripts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getScripts_Stories(), this.getScript(), null, "stories", null, 0, -1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getScripts_Name(), ecorePackage.getEString(), "name", null, 1, 1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         createResource(eNS_URI);
