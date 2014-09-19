@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.2.0.rc" useFeatures="true" includeLaunchers="true">
+<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.2.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/de.urszeidler.shr5.product/icons/shrImage_6_250.png"/>
