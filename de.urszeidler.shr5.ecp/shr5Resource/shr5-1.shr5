@@ -25,7 +25,8 @@
         <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
         <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
-        <additionalConstrains xmi:id="_MbFTcD5TEeSxr-Xv_VgZiA" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3"/>
+        <additionalConstrains xmi:id="_MbFTcD5TEeSxr-Xv_VgZiA" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+        <additionalConstrains xmi:id="_8152kD_MEeSdXvk3e0TcZw" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
@@ -328,7 +329,7 @@
           <erweiterung>Oben</erweiterung>
           <erweiterung>Unten</erweiterung>
         </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8F" wertValue="1250" name="AK-98" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38">
+        <entries xsi:type="shr5:Feuerwaffe" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8F" wertValue="1250" name="AK-98" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" spezialisierung="_EL-QcTnTEeSe6_w6Jrbqxg" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38">
           <localizations xmi:id="_EIznsTnTEeSe6_w6Jrbqxg" local="de" name="AK-98"/>
           <modie>HM</modie>
           <modie>SM</modie>
@@ -337,7 +338,7 @@
           <erweiterung>Oben</erweiterung>
           <erweiterung>Unten</erweiterung>
         </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
+        <entries xsi:type="shr5:Feuerwaffe" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" spezialisierung="_EL-QcTnTEeSe6_w6Jrbqxg" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
           <localizations xmi:id="_EI0OwDnTEeSe6_w6Jrbqxg" local="de" name="Ares Alpha"/>
           <modie>HM</modie>
           <modie>SM</modie>
@@ -501,7 +502,7 @@
         <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="2ac6ad2e-1252-4204-943e-7b65ffbe803f" page="18" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="9R" wertValue="500" name="Horizon-Flynn Rapier" schadenscode="(STR+2)P" praezision="7" durchschlagsKraft="-3">
           <localizations xmi:id="_EJAcADnTEeSe6_w6Jrbqxg" local="de" name="Horizon-Flynn Rapier" page="18"/>
         </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="8f266b4c-4035-4ba3-aa89-3289d0f42ce1" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3">
+        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="8f266b4c-4035-4ba3-aa89-3289d0f42ce1" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3">
           <localizations xmi:id="_EJAcATnTEeSe6_w6Jrbqxg" local="de" name="Katana"/>
         </entries>
         <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="eb16de72-e646-4880-aa5b-21a5a0a2b342" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="10" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
@@ -1530,10 +1531,10 @@
           <erweiterung>Lauf</erweiterung>
           <erweiterung>Oben</erweiterung>
         </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="793034c5-61b9-4a91-beea-eb7c671ee956" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="6R" wertValue="1000" name="Vibro Knife" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-2">
+        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="793034c5-61b9-4a91-beea-eb7c671ee956" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="6R" wertValue="1000" name="Vibro Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-2">
           <localizations xmi:id="_EJ2JgjnTEeSe6_w6Jrbqxg" local="de" name="Vibromesser"/>
         </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="a5a300fd-d9fa-41dc-a792-2f96015cbe8a" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="8F" wertValue="2000" name="Vibro Sword" schadenscode="(STR+4)P" praezision="6" durchschlagsKraft="-2">
+        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="a5a300fd-d9fa-41dc-a792-2f96015cbe8a" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="8F" wertValue="2000" name="Vibro Sword" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+4)P" praezision="6" durchschlagsKraft="-2">
           <localizations xmi:id="_EJ2wkDnTEeSe6_w6Jrbqxg" local="de" name="Vibroschwert"/>
         </entries>
       </entries>
@@ -18536,7 +18537,7 @@
       <entries xsi:type="shr5:CommonProgram" xmi:id="7f490b43-639f-4692-a363-315844cd829e" wertValue="80" name="PI-Tac Level III (ComPac-Esprit General)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
         <localizations xmi:id="_EWF1xTnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level III (ComPac-Esprit General)" page="105"/>
       </entries>
-      <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
       <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
     </entries>
   </entries>
@@ -19002,6 +19003,138 @@
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_Ihn1UD6lEeSnhdazldEq5w" name="GMC Bulldog Step-Van (Van)" parentId="3ce7af9c-104c-4b74-be1b-f0b512ebea4b" page="463" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="35000" handling="3" geschwindigkeit="3" beschleunigung="1" rumpf="16" pilot="1" sensor="2" fahrzeugTyp="Trucks" panzer="12" sitze="6" handlingGelaende="3"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_WAJvkD9sEeSvTpiLfhu1Ng" name="Rover 2072 (SUV)" parentId="30de4139-368b-4569-94c1-f65c1cd2dc26" page="464" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="68000" handling="5" geschwindigkeit="4" beschleunigung="2" rumpf="15" pilot="2" sensor="4" fahrzeugTyp="Trucks" panzer="12" sitze="6" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAN0CEeOvVYoRsPZlnA" character="_oQndoD5YEeSl7-MUHQ63Ow" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Ex-Firewatch Concept" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startKarma="7" startResources="11260"/>
+      </members>
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_uFDVkD_FEeSlOsHYyoPYOQ" chracterSource="_89dwwD_EEeSlOsHYyoPYOQ" choosenLifestyle="_zxgFkD_GEeSlOsHYyoPYOQ" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_uFDVkT_FEeSlOsHYyoPYOQ" name="Orc Sam 1" edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="5" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="8ed6892f-88e6-42d0-a704-b805778ec13e">
+          <fertigkeiten xmi:id="_VcyJ4D_GEeSlOsHYyoPYOQ" stufe="6" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <fertigkeiten xmi:id="_WKzGcD_GEeSlOsHYyoPYOQ" stufe="4" fertigkeit="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+          <fertigkeiten xmi:id="_WoyC8D_GEeSlOsHYyoPYOQ" stufe="5" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <fertigkeiten xmi:id="_YhU48D_GEeSlOsHYyoPYOQ" stufe="6" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>
+          <fertigkeiten xmi:id="_ZLrdgD_GEeSlOsHYyoPYOQ" stufe="5" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af"/>
+          <fertigkeiten xmi:id="_Zr8R8D_GEeSlOsHYyoPYOQ" stufe="5" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_fM4yAD_GEeSlOsHYyoPYOQ" stufe="6" fertigkeit="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+          <fertigkeiten xmi:id="_hiuA8D_GEeSlOsHYyoPYOQ" stufe="6" fertigkeit="64841e6e-9487-4b63-80a1-dcad6eb78179"/>
+          <fertigkeiten xmi:id="_klWEcD_GEeSlOsHYyoPYOQ" stufe="3" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_kfEA0D_HEeSlOsHYyoPYOQ" stufe="4" fertigkeit="0af06344-3637-4160-813b-a33dda2d16aa"/>
+          <fertigkeiten xmi:id="_lPqXUD_HEeSlOsHYyoPYOQ" stufe="3" fertigkeit="19a3925e-7ae7-4037-9d59-de63a7ab7a92"/>
+          <fertigkeiten xmi:id="_mnUt0D_HEeSlOsHYyoPYOQ" fertigkeit="a72084f6-3a4c-4c23-82aa-4697e543ee0b"/>
+          <fertigkeiten xmi:id="_m7xT0D_HEeSlOsHYyoPYOQ" stufe="2" fertigkeit="026062e0-9bdd-4a06-9cca-c3640c634cfd"/>
+          <fertigkeiten xmi:id="_oQOlUD_HEeSlOsHYyoPYOQ" stufe="2" fertigkeit="907a3a8f-2c40-4543-a5a9-891bcde41f6b"/>
+          <fertigkeiten xmi:id="_m6cBoD_IEeSlOsHYyoPYOQ" stufe="1" fertigkeit="cbb44acf-10cd-4b67-afc6-bf28efe74ea4"/>
+          <fertigkeitsGruppen xmi:id="_bjDkkD_GEeSlOsHYyoPYOQ" stufe="5" gruppe="_EL-3hjnTEeSe6_w6Jrbqxg"/>
+          <fertigkeitsGruppen xmi:id="_my9LgD_GEeSlOsHYyoPYOQ" stufe="5" gruppe="_EL27tTnTEeSe6_w6Jrbqxg"/>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_GrI6gD_GEeSlOsHYyoPYOQ" name="Orthoskin 4" parentId="96e4809a-71e6-4b98-9740-c6c44bc33aa9" page="459" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="24000">
+            <mods xmi:id="_GrI6gT_GEeSlOsHYyoPYOQ" wert="4">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <mods xmi:id="_GrI6gj_GEeSlOsHYyoPYOQ" wert="-100">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_GrI6gz_GEeSlOsHYyoPYOQ" local="de" name="Orthoskin 4"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_GssZsD_GEeSlOsHYyoPYOQ" name="Muscle Replacement 2" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="50000">
+            <mods xmi:id="_GssZsT_GEeSlOsHYyoPYOQ" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </mods>
+            <mods xmi:id="_GssZsj_GEeSlOsHYyoPYOQ" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </mods>
+            <mods xmi:id="_GssZsz_GEeSlOsHYyoPYOQ" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_GssZtD_GEeSlOsHYyoPYOQ" local="de" name="Kunstmuskeln 2"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_GueiYD_GEeSlOsHYyoPYOQ" name="Wired Reflexes 1" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="39000">
+            <mods xmi:id="_GueiYT_GEeSlOsHYyoPYOQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+            </mods>
+            <mods xmi:id="_GueiYj_GEeSlOsHYyoPYOQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <mods xmi:id="_GueiYz_GEeSlOsHYyoPYOQ" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_GueiZD_GEeSlOsHYyoPYOQ" local="de" name="Reflexbooster 1"/>
+          </koerperMods>
+          <eigenschaften xmi:id="_bCvBkD_NEeSdXvk3e0TcZw" name="Guts" parentId="0d0cb0fc-c79d-418e-9216-8a197369e52d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
+            <localizations xmi:id="_bCvBkT_NEeSdXvk3e0TcZw" local="de" name="Mut"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_bD44ID_NEeSdXvk3e0TcZw" name="Quick Healer" parentId="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
+            <localizations xmi:id="_bD44IT_NEeSdXvk3e0TcZw" local="de" name="Schnellheilung"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_bFDVwD_NEeSdXvk3e0TcZw" name="Toughness" parentId="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+            <localizations xmi:id="_bFDVwT_NEeSdXvk3e0TcZw" local="de" name="Zähigkeit"/>
+          </eigenschaften>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_N7shkD_HEeSlOsHYyoPYOQ" parentId="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8F" wertValue="1250" name="AK-98" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38">
+          <localizations xmi:id="_N7shkT_HEeSlOsHYyoPYOQ" local="de" name="AK-98"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_N8nHkD_HEeSlOsHYyoPYOQ" parentId="656906d8-b6a4-47a2-9554-de365097eba0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="300" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
+          <localizations xmi:id="_N8nHkT_HEeSlOsHYyoPYOQ" local="de" name="Kampfmesser"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_N9bm8D_HEeSlOsHYyoPYOQ" parentId="7c59cf2f-87ea-4dca-95e7-ad17008386a0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="4000" name="Combat Axe" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4">
+          <localizations xmi:id="_N9bm8T_HEeSlOsHYyoPYOQ" local="de" name="Kampfaxt"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_N-R7gD_HEeSlOsHYyoPYOQ" parentId="8f266b4c-4035-4ba3-aa89-3289d0f42ce1" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3">
+          <localizations xmi:id="_N-R7gT_HEeSlOsHYyoPYOQ" local="de" name="Katana"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_N_DXkD_HEeSlOsHYyoPYOQ" parentId="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Trommel" kapazitaet="6">
+          <localizations xmi:id="_N_DXkT_HEeSlOsHYyoPYOQ" local="de" name="Ruger Super Warhawk"/>
+          <modie>EM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_N_2BwD_HEeSlOsHYyoPYOQ" parentId="0b4c00be-d7bb-4480-b9f4-6300abde27c4" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="180" name="Walther Palm Pistol" schadenscode="7P" praezision="4" reichweite="_ENFDsTnTEeSe6_w6Jrbqxg" kapazitaet="2">
+          <localizations xmi:id="_N_2BwT_HEeSlOsHYyoPYOQ" local="de" name="Walther Palm-Pistole"/>
+          <modie>EM</modie>
+          <modie>SM</modie>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_OAlooD_HEeSlOsHYyoPYOQ" parentId="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="2100" name="Remington 950" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="_ENFqxTnTEeSe6_w6Jrbqxg" kapazitaet="5">
+          <localizations xmi:id="_OAlooT_HEeSlOsHYyoPYOQ" local="de" name="Remington 950"/>
+          <modie>EM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_OBZg8D_HEeSlOsHYyoPYOQ" parentId="e789ce47-f1bf-4c08-88b8-3295dddd03b1" page="423" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="550" name="Shock Gloves" schadenscode="8S(e)" durchschlagsKraft="-5">
+          <localizations xmi:id="_OBZg8T_HEeSlOsHYyoPYOQ" local="de" name="Schockhandschuhe"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_OCOnYD_HEeSlOsHYyoPYOQ" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+          <localizations xmi:id="_OCOnYT_HEeSlOsHYyoPYOQ" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_ODCfsD_HEeSlOsHYyoPYOQ" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <localizations xmi:id="_ODCfsT_HEeSlOsHYyoPYOQ" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_OEAwED_HEeSlOsHYyoPYOQ" parentId="72d1ca07-71b1-4085-8a4d-bd720a6b1908" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" deviceRating="4">
+          <localizations xmi:id="_OEAwET_HEeSlOsHYyoPYOQ" local="de" name="Erika Elite"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_OE_ngD_HEeSlOsHYyoPYOQ" parentId="_B0ZWFd0CEeOvVYoRsPZlnA" page="437" verfuegbarkeit="2" wertValue="2000" name="Armor Jacket" ruestung="12"/>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_OFxDkD_HEeSlOsHYyoPYOQ" parentId="8f0c06ee-9915-415f-bf5b-26a4e3e517ea" page="68" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="500" name="Bike Racing Armor" ruestung="8">
+          <localizations xmi:id="_OFxDkT_HEeSlOsHYyoPYOQ" local="de" name="Bikerpanzerung"/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_Q-EtcD_HEeSlOsHYyoPYOQ" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000">
+          <transactionlog xmi:id="_26wRUD_NEeSdXvk3e0TcZw" amount="1960" date="2014-09-19T09:23:51.000+0200" description="Inital transaction of 1960."/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_yeN0kD_NEeSdXvk3e0TcZw" parentId="90b0ab96-661b-417c-9933-8113ab6d52d2" page="63" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="10" wertValue="1300" name="Ares Victory: Globetrotter Jacket" ruestung="12">
+          <localizations xmi:id="_yeN0kT_NEeSdXvk3e0TcZw" local="de" name="Ares Victory: Globetrotter Jacket"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_yfgOAD_NEeSdXvk3e0TcZw" parentId="7270c272-fef6-4b93-ae78-aa4906d9dbd5" page="67" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="5000" name="Security Armor: Helmet">
+          <localizations xmi:id="_yfgOAT_NEeSdXvk3e0TcZw" local="de" name="Security Armor: Helmet"/>
+          <mods xmi:id="_yfgOAj_NEeSdXvk3e0TcZw" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_zxgFkD_GEeSlOsHYyoPYOQ" name="Middle" parentId="90f6f4c2-9968-42e1-ba79-e2bf530de32e" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000">
+          <localizations xmi:id="_zxgFkT_GEeSlOsHYyoPYOQ" local="de" name="Mittelschicht"/>
+        </contracts>
+        <connections xmi:id="_TODMAD_HEeSlOsHYyoPYOQ" influence="2" loyality="2"/>
+        <connections xmi:id="_tFiHYD_HEeSlOsHYyoPYOQ" influence="3" loyality="2"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_89dwwD_EEeSlOsHYyoPYOQ" character="_uFDVkD_FEeSlOsHYyoPYOQ" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Orc Sam 1" resourcen="_BtMh4d0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KsN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startResources="1960"/>
       </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
