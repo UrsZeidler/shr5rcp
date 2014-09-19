@@ -131,14 +131,14 @@ public class Activator extends AbstractUIPlugin {
             project.open();
         }
 
-         ecpProperties = ECPUtil.createProperties();
-         ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-test.shr5");
-         ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-chummer-test");
-         if (ecpProject == null) {
-         logInfo("creating ECP project.... chummer-test");
-         ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-chummer-test", ecpProperties);
-         project.open();
-         }
+//         ecpProperties = ECPUtil.createProperties();
+//         ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-test.shr5");
+//         ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-chummer-test");
+//         if (ecpProject == null) {
+//         logInfo("creating ECP project.... chummer-test");
+//         ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-chummer-test", ecpProperties);
+//         project.open();
+//         }
     }
 
     public void createDefaultWorkspace() {
