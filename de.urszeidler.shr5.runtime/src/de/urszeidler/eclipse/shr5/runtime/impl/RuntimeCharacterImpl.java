@@ -254,9 +254,9 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         int oldMentalDamage = mentalDamage;
 //        int diff = newMentalDamage-oldMentalDamage;
         mentalDamage = newMentalDamage;
-        KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
         if(getCharacter()==null || getCharacter().getPersona()==null)
             return;
+        KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
         
         if(mentalDamage>persona.getZustandGeistigMax()){
             int diff1 = mentalDamage- persona.getZustandGeistigMax();
