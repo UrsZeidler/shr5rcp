@@ -18539,6 +18539,10 @@
       </entries>
       <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
       <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+      <entries xsi:type="shr5:Magazin" xmi:id="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip"/>
+      <entries xsi:type="shr5:QiFokus" xmi:id="_ik5OoD_REeSRYrHAmMULWA" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="QiFocus"/>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
+      <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -19060,9 +19064,15 @@
             <localizations xmi:id="_bCvBkT_NEeSdXvk3e0TcZw" local="de" name="Mut"/>
           </eigenschaften>
           <eigenschaften xmi:id="_bD44ID_NEeSdXvk3e0TcZw" name="Quick Healer" parentId="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
+            <mods xmi:id="_HIy-gD_UEeSvrplghE2fMA" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
+            </mods>
             <localizations xmi:id="_bD44IT_NEeSdXvk3e0TcZw" local="de" name="Schnellheilung"/>
           </eigenschaften>
           <eigenschaften xmi:id="_bFDVwD_NEeSdXvk3e0TcZw" name="Toughness" parentId="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+            <mods xmi:id="_L78kcD_UEeSvrplghE2fMA" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+            </mods>
             <localizations xmi:id="_bFDVwT_NEeSdXvk3e0TcZw" local="de" name="Zähigkeit"/>
           </eigenschaften>
         </persona>
