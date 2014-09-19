@@ -532,6 +532,27 @@ public class ShadowrunTools {
     public static int calcRaceMaximum(AbstraktPersona persona, EAttribute attribute) {
         if (persona == null)
             return -1;
+        
+        Spezies spezies = persona.getSpezies();
+        if (spezies == null)
+            return -1;
+
+        int value = (Integer)spezies.eGet(attribute);
+        int wert = persona.getModManager().getmodWert(attribute);
+
+        return value + wert;
+    }
+
+    /**
+     * Calcs the race maximum for the given persona and the max feature.
+     * 
+     * @param persona
+     * @param attribute
+     * @return
+     */
+    public static int calcRaceMaximum_(AbstraktPersona persona, EAttribute attribute) {
+        if (persona == null)
+            return -1;
 
         //TODO :  this is the wrong method it calcs the overRaceMax need to add the right  method also
         

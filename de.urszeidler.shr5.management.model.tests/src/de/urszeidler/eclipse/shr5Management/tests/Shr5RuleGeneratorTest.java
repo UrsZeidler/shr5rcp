@@ -224,25 +224,25 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      */
     @SuppressWarnings("unchecked")
     public void testHasNoAttributesOverSpeciesAtt__DiagnosticChain_Map() {
-         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
         Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
         character.getPersona().setSpezies(spezies);
-        spezies.setKonstitutionMax(4);
-        spezies.setStaerkeMax(5);
-        spezies.setReaktionMax(5);
-        spezies.setGeschicklichkeitMax(5);
-        spezies.setCharismaMax(5);
-        spezies.setIntuitionMax(5);
-        spezies.setWillenskraftMax(5);
-        spezies.setLogikMax(5);
+        spezies.setKonstitutionMax(6);
+        spezies.setStaerkeMax(6);
+        spezies.setReaktionMax(6);
+        spezies.setGeschicklichkeitMax(6);
+        spezies.setCharismaMax(6);
+        spezies.setIntuitionMax(6);
+        spezies.setWillenskraftMax(6);
+        spezies.setLogikMax(6);
 
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
 
         AbstraktPersona persona = character.getPersona();
         persona.setKonstitutionBasis(7);
         assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
-        spezies.setKonstitutionMax(5);
+        spezies.setKonstitutionMax(7);
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
         persona.setKonstitutionBasis(8);
         assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
@@ -250,11 +250,34 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         AttributModifikatorWert modifikatorWert = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
         modifikatorWert.setAttribut(Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX);
-        modifikatorWert.setWert(2);
+        modifikatorWert.setWert(1);
         eigenschaft.getMods().add(modifikatorWert);
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
 
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+        persona.setKonstitutionBasis(9);
+        assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+        persona.setKonstitutionBasis(6);
+        assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+
+        persona.setGeschicklichkeitBasis(7);
+        assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+        spezies.setGeschicklichkeitMax(7);
+        assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+        persona.setGeschicklichkeitBasis(8);
+        assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+
+        eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        modifikatorWert = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
+        modifikatorWert.setAttribut(Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX);
+        modifikatorWert.setWert(1);
+        eigenschaft.getMods().add(modifikatorWert);
+        ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
+
+        assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+        persona.setGeschicklichkeitBasis(9);
+        assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+
     }
 
     /**

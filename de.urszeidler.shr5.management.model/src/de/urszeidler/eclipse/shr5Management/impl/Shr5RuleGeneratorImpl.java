@@ -256,22 +256,22 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
 //        getShr5Generator().getNumberOfMaxAttributes();
         // int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
-        if (persona.getKonstitutionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
+        if (persona.getKonstitutionBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
-        if (persona.getGeschicklichkeitBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX))
+        if (persona.getGeschicklichkeitBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX))
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
-        if (persona.getReaktionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__REAKTION_MAX))
+        if (persona.getReaktionBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__REAKTION_MAX))
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__REAKTION);
-        if (persona.getStaerkeBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__STAERKE_MAX))
+        if (persona.getStaerkeBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__STAERKE_MAX))
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE);
 
-        if (persona.getCharismaBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__CHARISMA_MAX))
+        if (persona.getCharismaBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__CHARISMA_MAX))
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__CHARISMA);
-        if (persona.getLogikBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__LOGIK_MAX))
+        if (persona.getLogikBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__LOGIK_MAX))
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK);
-        if (persona.getWillenskraftBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX))
+        if (persona.getWillenskraftBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX))
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT);
-        if (persona.getIntuitionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__INTUITION_MAX))
+        if (persona.getIntuitionBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__INTUITION_MAX))
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION);
 
         String attributesString = toAttributeString(list, context);
