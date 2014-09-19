@@ -70,6 +70,8 @@
 						</xsl:for-each>
 					</xsl:for-each>
 				</entries>
+				<entries xsi:type="shr5:ShrList" name="generators">
+				</entries>
 				<entries xsi:type="shr5:ShrList" name="Gear">
 					<xsl:for-each select="$weapons">
 						<xsl:apply-templates select="node()" />
@@ -1562,7 +1564,7 @@
 						<xsl:if test="category/text()=$rname">
 							<xsl:variable name="pos" select="position()-1" />
 							<xsl:attribute name="reichweite"><xsl:value-of
-								select="concat('//@entries.0/@entries.3/@entries.0/@entries.',$pos)" /></xsl:attribute>
+								select="concat('//@entries.0/@entries.4/@entries.0/@entries.',$pos)" /></xsl:attribute>
 						</xsl:if>
 					</xsl:for-each>
 				</xsl:for-each>
@@ -1574,7 +1576,7 @@
 						<xsl:if test="category/text()=$rname">
 							<xsl:variable name="pos" select="position()-1" />
 							<xsl:attribute name="reichweite"><xsl:value-of
-								select="concat('//@entries.0/@entries.3/@entries.0/@entries.',$pos)" /></xsl:attribute>
+								select="concat('//@entries.0/@entries.4/@entries.0/@entries.',$pos)" /></xsl:attribute>
 						</xsl:if>
 					</xsl:for-each>
 				</xsl:for-each>
@@ -2759,11 +2761,11 @@
 
 				<xsl:variable name="fert-id">
 					<xsl:call-template name="findSkill">
-					<xsl:with-param name="skillname" select="category/text()" />
+						<xsl:with-param name="skillname" select="category/text()" />
 					</xsl:call-template>
 				</xsl:variable>
 				<xsl:if test="$fert-id!=''">
-					<xsl:attribute name="fertigkeit" >
+					<xsl:attribute name="fertigkeit">
 						<xsl:value-of select="$fert-id"></xsl:value-of>
 					</xsl:attribute>
 				</xsl:if>
@@ -2866,8 +2868,21 @@
 					<xsl:variable name="aid" select="text()" />
 					<xsl:for-each select="$weapons">
 						<xsl:for-each select="chummer/accessories/*">
-							<xsl:if test="id/text()=$aid">
+							<xsl:if test="name/text()=$aid">
 								<einbau>
+									<xsl:choose>
+										<xsl:when test="mount/text()='Barrel'">
+											<xsl:attribute name="ep"><xsl:value-of select="'Lauf'" /></xsl:attribute>
+										</xsl:when>
+										<xsl:when test="mount/text()='Top'">
+											<xsl:attribute name="ep"><xsl:value-of select="'Oben'" /></xsl:attribute>
+										</xsl:when>
+										<xsl:when test="mount/text()='Under'">
+											<xsl:attribute name="ep"><xsl:value-of select="'Unten'" /></xsl:attribute>
+										</xsl:when>
+									</xsl:choose>
+									
+									<xsl:call-template name="set_parentid" />
 									<xsl:call-template name="beschreibbar" />
 									<xsl:call-template name="simple_quelle" />
 									<xsl:call-template name="localization" />

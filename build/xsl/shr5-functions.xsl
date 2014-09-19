@@ -28,13 +28,11 @@
 				<xsl:value-of select="number(page/text())" />
 			</xsl:attribute>
 		</xsl:if>
-		<!-- <xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute> -->
 		<xsl:variable name="sid1" select="source/text()" />
 		<xsl:variable name="srcBookId">
 			<xsl:call-template name="findSourceBook">
 				<xsl:with-param name="aid" select="$sid1" />
 			</xsl:call-template>
-			<!-- ee -->
 		</xsl:variable>
 		<xsl:attribute name="srcBook">
 			<xsl:value-of select="$srcBookId" />
