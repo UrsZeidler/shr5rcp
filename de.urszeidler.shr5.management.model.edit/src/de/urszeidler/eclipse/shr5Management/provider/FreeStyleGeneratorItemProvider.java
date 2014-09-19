@@ -161,7 +161,7 @@ public class FreeStyleGeneratorItemProvider
 	public Object getImage(Object object) {
 	       FreeStyleGenerator pc = (FreeStyleGenerator) object;
 
-	        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+	        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory();
 	        if (factory != null && pc.getCharacter() != null) {
 	            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(pc.getCharacter(),
 	                    IItemLabelProvider.class);
