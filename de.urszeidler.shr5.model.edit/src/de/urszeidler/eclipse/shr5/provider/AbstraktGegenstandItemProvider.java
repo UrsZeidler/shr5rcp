@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
@@ -299,11 +300,11 @@ public class AbstraktGegenstandItemProvider
      * This adds a property descriptor for the Spezialisierung feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addSpezialisierungPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Anwendbar_spezialisierung_feature"),
@@ -314,7 +315,18 @@ public class AbstraktGegenstandItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                        if (object instanceof AbstraktGegenstand) {
+                            AbstraktGegenstand ag = (AbstraktGegenstand)object;
+                            Fertigkeit fertigkeit = ag.getFertigkeit();
+                            if (fertigkeit != null)
+                                return fertigkeit.getSpezialisierungen();
+                        }
+                        return super.getComboBoxObjects(object);
+                    }                
+            });
     }
 
     /**
