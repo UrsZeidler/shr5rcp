@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
+<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
   <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
@@ -27,6 +27,8 @@
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
         <additionalConstrains xmi:id="_MbFTcD5TEeSxr-Xv_VgZiA" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
         <additionalConstrains xmi:id="_8152kD_MEeSdXvk3e0TcZw" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+        <additionalConstrains xmi:id="_9411ED_eEeSK2ZzxE2z74g" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+        <additionalConstrains xmi:id="_aEz7kD_fEeSK2ZzxE2z74g" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
@@ -176,6 +178,10 @@
         <lifestyleToStartMoney xmi:id="_djpB6OJ0EeOht_G61YAQvg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
         <lifestyleToStartMoney xmi:id="_djpB6eJ0EeOht_G61YAQvg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
         <lifestyleToStartMoney xmi:id="_djpB6uJ0EeOht_G61YAQvg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+        <additionalConstrains xmi:id="_MbFTcD5TEeSxr-Xv_VgZiA" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+        <additionalConstrains xmi:id="_8152kD_MEeSdXvk3e0TcZw" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+        <additionalConstrains xmi:id="_9411ED_eEeSK2ZzxE2z74g" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+        <additionalConstrains xmi:id="_aEz7kD_fEeSK2ZzxE2z74g" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8eJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8uJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8-J0EeOht_G61YAQvg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
@@ -7216,6 +7222,9 @@
           <localizations xmi:id="_a2Pw8D5dEeSnhdazldEq5w" local="de" name="Fotografisches Gedächtnis"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" name="Quick Healer" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
+          <mods xmi:id="_HIy-gD_UEeSvrplghE2fMA" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
+          </mods>
           <localizations xmi:id="_a2Pw8T5dEeSnhdazldEq5w" local="de" name="Schnellheilung"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="e160111a-5fe3-4154-9d5a-82330c9b32fc" name="Resistance to Pathogens" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="4">
@@ -7231,6 +7240,9 @@
           <localizations xmi:id="_a2Pw9T5dEeSnhdazldEq5w" local="de" name="Freundliche Geister"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="00cc6499-db13-447e-8116-278d317a9e31" name="Toughness" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+          <mods xmi:id="_V23jMD_ZEeSK2ZzxE2z74g" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+          </mods>
           <localizations xmi:id="_a2QYAD5dEeSnhdazldEq5w" local="de" name="Zähigkeit"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="18d2a522-6460-4654-916b-a96631f11323" name="Will to Live (Rating 1)" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
@@ -18651,7 +18663,7 @@
           </mods>
         </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" verfuegbarkeit="" wertValue="2000"/>
-        <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2"/>
+        <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
       </members>
@@ -19021,7 +19033,6 @@
           <fertigkeiten xmi:id="_klWEcD_GEeSlOsHYyoPYOQ" stufe="3" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
           <fertigkeiten xmi:id="_kfEA0D_HEeSlOsHYyoPYOQ" stufe="4" fertigkeit="0af06344-3637-4160-813b-a33dda2d16aa"/>
           <fertigkeiten xmi:id="_lPqXUD_HEeSlOsHYyoPYOQ" stufe="3" fertigkeit="19a3925e-7ae7-4037-9d59-de63a7ab7a92"/>
-          <fertigkeiten xmi:id="_mnUt0D_HEeSlOsHYyoPYOQ" fertigkeit="a72084f6-3a4c-4c23-82aa-4697e543ee0b"/>
           <fertigkeiten xmi:id="_m7xT0D_HEeSlOsHYyoPYOQ" stufe="2" fertigkeit="026062e0-9bdd-4a06-9cca-c3640c634cfd"/>
           <fertigkeiten xmi:id="_oQOlUD_HEeSlOsHYyoPYOQ" stufe="2" fertigkeit="907a3a8f-2c40-4543-a5a9-891bcde41f6b"/>
           <fertigkeiten xmi:id="_m6cBoD_IEeSlOsHYyoPYOQ" stufe="1" fertigkeit="cbb44acf-10cd-4b67-afc6-bf28efe74ea4"/>
@@ -19146,6 +19157,214 @@
         <connections xmi:id="_tFiHYD_HEeSlOsHYyoPYOQ" influence="3" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_89dwwD_EEeSlOsHYyoPYOQ" character="_uFDVkD_FEeSlOsHYyoPYOQ" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Orc Sam 1" resourcen="_BtMh4d0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KsN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startResources="1960"/>
       </members>
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_keD2ED_ZEeSK2ZzxE2z74g" chracterSource="_cl8qUD_ZEeSK2ZzxE2z74g" choosenLifestyle="_ivX0wD_bEeSK2ZzxE2z74g" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_keD2ET_ZEeSK2ZzxE2z74g" name="Orc Tank" edgeBasis="1" konstitutionBasis="8" geschicklichkeitBasis="5" reaktionBasis="5" staerkeBasis="7" charismaBasis="2" willenskraftBasis="3" intuitionBasis="4" logikBasis="3" spezies="8ed6892f-88e6-42d0-a704-b805778ec13e">
+          <fertigkeiten xmi:id="_zXNboD_ZEeSK2ZzxE2z74g" stufe="2" fertigkeit="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <fertigkeiten xmi:id="_0Qo-AD_ZEeSK2ZzxE2z74g" stufe="4" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <fertigkeiten xmi:id="_1Y0HAD_ZEeSK2ZzxE2z74g" stufe="4" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <fertigkeiten xmi:id="_2x_gcD_ZEeSK2ZzxE2z74g" stufe="4" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>
+          <fertigkeiten xmi:id="_3o23AD_ZEeSK2ZzxE2z74g" stufe="2" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <fertigkeiten xmi:id="_5w9zAD_ZEeSK2ZzxE2z74g" stufe="4" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_6km2cD_ZEeSK2ZzxE2z74g" stufe="2" fertigkeit="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
+          <fertigkeiten xmi:id="_MAU0gD_cEeSK2ZzxE2z74g" stufe="4" fertigkeit="_EV_vJDnTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_MjXQID_cEeSK2ZzxE2z74g" stufe="3" fertigkeit="_EV_vJTnTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_OcbqkD_cEeSK2ZzxE2z74g" stufe="4" fertigkeit="a1c95207-1864-4723-b26f-b0a8c5b6290d"/>
+          <fertigkeiten xmi:id="_PmqpED_cEeSK2ZzxE2z74g" fertigkeit="ee36423c-21c7-4af3-81da-93778da83a45"/>
+          <fertigkeiten xmi:id="_P12UkD_cEeSK2ZzxE2z74g" stufe="3" fertigkeit="5ea73805-1e96-4770-afef-647322f1eeff"/>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_KrCugD_aEeSK2ZzxE2z74g" name="Orthoskin 3" parentId="96e4809a-71e6-4b98-9740-c6c44bc33aa9" page="459" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="18000">
+            <mods xmi:id="_KrCugT_aEeSK2ZzxE2z74g" wert="3">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <mods xmi:id="_KrCugj_aEeSK2ZzxE2z74g" wert="-75">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_KrCugz_aEeSK2ZzxE2z74g" local="de" name="Orthoskin 3"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_NDFj8D_aEeSK2ZzxE2z74g" name="Bone Lacing (Aluminum)" parentId="76523da7-271d-459a-9502-3f7c8d54be6a" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="18000">
+            <mods xmi:id="_NDFj8T_aEeSK2ZzxE2z74g" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <mods xmi:id="_NDFj8j_aEeSK2ZzxE2z74g" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+            </mods>
+            <mods xmi:id="_NDFj8z_aEeSK2ZzxE2z74g" wert="-100">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_NDFj9D_aEeSK2ZzxE2z74g" local="de" name="Kompositknochen (Aluminium)"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_iLLYAD_aEeSK2ZzxE2z74g" name="Muscle Toner 3" parentId="69ab0255-a76b-4190-a8be-0473fed231ef" page="459" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="96000">
+            <mods xmi:id="_iLLYAT_aEeSK2ZzxE2z74g" wert="3">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </mods>
+            <mods xmi:id="_iLLYAj_aEeSK2ZzxE2z74g" wert="-60">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_iLLYAz_aEeSK2ZzxE2z74g" local="de" name="Muskelstraffung 3"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_wcMmkD_aEeSK2ZzxE2z74g" name="Muscle Augmentation 2" parentId="841572d6-0785-4a8d-acd3-e106fb464781" page="459" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="62000">
+            <mods xmi:id="_wcMmkT_aEeSK2ZzxE2z74g" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </mods>
+            <mods xmi:id="_wcMmkj_aEeSK2ZzxE2z74g" wert="-40">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_wcMmkz_aEeSK2ZzxE2z74g" local="de" name="Muskelverstärkung 2"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_OsbD0D_bEeSK2ZzxE2z74g" name="Wired Reflexes 1" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="39000">
+            <mods xmi:id="_OsbD0T_bEeSK2ZzxE2z74g" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+            </mods>
+            <mods xmi:id="_OsbD0j_bEeSK2ZzxE2z74g" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <mods xmi:id="_OsbD0z_bEeSK2ZzxE2z74g" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_OsbD1D_bEeSK2ZzxE2z74g" local="de" name="Reflexbooster 1"/>
+          </koerperMods>
+          <eigenschaften xmi:id="_pBTiUD_aEeSK2ZzxE2z74g" name="Toughness" parentId="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+            <mods xmi:id="_pBTiUT_aEeSK2ZzxE2z74g" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+            </mods>
+            <localizations xmi:id="_pBTiUj_aEeSK2ZzxE2z74g" local="de" name="Zähigkeit"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_W7sLUD_bEeSK2ZzxE2z74g" name="Quick Healer" parentId="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
+            <mods xmi:id="_W7sLUT_bEeSK2ZzxE2z74g" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
+            </mods>
+            <localizations xmi:id="_W7sLUj_bEeSK2ZzxE2z74g" local="de" name="Schnellheilung"/>
+          </eigenschaften>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_GxjCgD_cEeSK2ZzxE2z74g" parentId="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8F" wertValue="1250" name="AK-98" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" spezialisierung="_EL-QcTnTEeSe6_w6Jrbqxg" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38" magazin="_PErXUD_REeSRYrHAmMULWA">
+          <localizations xmi:id="_GxjCgT_cEeSK2ZzxE2z74g" local="de" name="AK-98"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_GyZ-ID_cEeSK2ZzxE2z74g" parentId="7c59cf2f-87ea-4dca-95e7-ad17008386a0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="4000" name="Combat Axe" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4">
+          <localizations xmi:id="_GyZ-IT_cEeSK2ZzxE2z74g" local="de" name="Kampfaxt"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_GzTWAD_cEeSK2ZzxE2z74g" parentId="656906d8-b6a4-47a2-9554-de365097eba0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="300" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
+          <localizations xmi:id="_GzTWAT_cEeSK2ZzxE2z74g" local="de" name="Kampfmesser"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_G0KRoD_cEeSK2ZzxE2z74g" parentId="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" schadenscode="7P" praezision="4" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="24">
+          <localizations xmi:id="_G0KRoT_cEeSK2ZzxE2z74g" local="de" name="Uzi IV"/>
+          <modie>SM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_G0-J8D_cEeSK2ZzxE2z74g" parentId="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="875" name="SCK Model 100" schadenscode="8P" praezision="5" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="30">
+          <localizations xmi:id="_G0-J8T_cEeSK2ZzxE2z74g" local="de" name="SCK Model 100"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_G17zQD_cEeSK2ZzxE2z74g" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+          <localizations xmi:id="_G17zQT_cEeSK2ZzxE2z74g" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_G2_jMD_cEeSK2ZzxE2z74g" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <localizations xmi:id="_G2_jMT_cEeSK2ZzxE2z74g" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_G4AP0D_cEeSK2ZzxE2z74g" parentId="01077e2d-4f67-428a-850d-250faad2007c" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="5000" name="Transys Avalon" deviceRating="6">
+          <localizations xmi:id="_G4AP0T_cEeSK2ZzxE2z74g" local="de" name="Transys Avalon"/>
+          <storedPrograms xsi:type="shr5:Datasoft" xmi:id="_ryLnID_dEeSK2ZzxE2z74g" verfuegbarkeit="4" wertValue="120" name="Datasoft" parentId="1a55fbe3-b3c1-4568-882f-abe4dedb8572" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" skill="bee29957-affb-4593-a4fe-002f6dd5be9c">
+            <localizations xmi:id="_ryLnIT_dEeSK2ZzxE2z74g" local="de" name="Datensoft"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:ConsumerSoft" xmi:id="_rzVdsD_dEeSK2ZzxE2z74g" verfuegbarkeit="4" wertValue="150" name="Mapsoft" parentId="2f30c3cc-a62e-4ac1-8e1f-5fa217cadae4" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_rzVdsT_dEeSK2ZzxE2z74g" local="de" name="Kartensoft"/>
+          </storedPrograms>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_G5BjgD_cEeSK2ZzxE2z74g" parentId="0fdeb240-743c-4a9d-9cf1-fef0990575bb" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Lockpick Set" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_G5BjgT_cEeSK2ZzxE2z74g" local="de" name="Dietrich-Set"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_G5_M0D_cEeSK2ZzxE2z74g" parentId="a210be88-be16-4d66-afcb-7d58b8e1397f" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="250" name="Miniwelder" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_G5_M0T_cEeSK2ZzxE2z74g" local="de" name="Mini-Schweißgerät"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_G639oD_cEeSK2ZzxE2z74g" parentId="aacafde3-ff9a-4de0-85ac-3870645a9197" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10R" wertValue="1700" name="Chameleon Suit" ruestung="9">
+          <localizations xmi:id="_G639oT_cEeSK2ZzxE2z74g" local="de" name="Chamäleonanzug"/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_G7r18D_cEeSK2ZzxE2z74g" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000">
+          <transactionlog xmi:id="_RBk18D_eEeSK2ZzxE2z74g" amount="4595" description="Inital transaction of 4595."/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_G8gVUD_cEeSK2ZzxE2z74g" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold" maxValue="100000"/>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_G9U0sD_cEeSK2ZzxE2z74g" parentId="fd6e194b-89ea-4030-9203-87341442eadb" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="100" name="Helmet">
+          <localizations xmi:id="_G9U0sT_cEeSK2ZzxE2z74g" local="de" name="Helm"/>
+          <mods xmi:id="_G9U0sj_cEeSK2ZzxE2z74g" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_G-J7ID_cEeSK2ZzxE2z74g" parentId="40826eaa-c22a-43da-8730-bc1867ea65a1" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="450" name="Armor Clothing" ruestung="6">
+          <localizations xmi:id="_G-J7IT_cEeSK2ZzxE2z74g" local="de" name="Panzerkleidung"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_G_L14D_cEeSK2ZzxE2z74g" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
+          <localizations xmi:id="_G_L14T_cEeSK2ZzxE2z74g" local="de" name="Panzerweste"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_HANJkD_cEeSK2ZzxE2z74g" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+          <localizations xmi:id="_HANJkT_cEeSK2ZzxE2z74g" local="de" name="Panzerjacke"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_HBEFMD_cEeSK2ZzxE2z74g" parentId="5a650844-8f24-48e7-829f-0443d9ff5cf7" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="1500" name="Actioneer Business Clothes" ruestung="8">
+          <localizations xmi:id="_HBEFMT_cEeSK2ZzxE2z74g" local="de" name="Actioneer Geschäftsanzug"/>
+        </inventar>
+        <inventar xsi:type="shr5:Magazin" xmi:id="_tV6gMD_cEeSK2ZzxE2z74g" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_GxjCgD_cEeSK2ZzxE2z74g" bullets="_G17zQD_cEeSK2ZzxE2z74g"/>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tW5XoD_cEeSK2ZzxE2z74g" parentId="ae9c37df-6d82-44c1-aa21-6c87e45e2dc1" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" name="Medkit" kategorie="Biotech">
+          <localizations xmi:id="_tW5XoT_cEeSK2ZzxE2z74g" local="de" name="Medkit"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tXOu0D_cEeSK2ZzxE2z74g" parentId="76890101-9f90-41db-a6f0-6f5fd4802896" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="85" name="Stealth Rope (100m)" kategorie="Grapple Gun">
+          <localizations xmi:id="_tXOu0T_cEeSK2ZzxE2z74g" local="de" name="Camouflageseil (100m)"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tYBZAD_cEeSK2ZzxE2z74g" parentId="27f9775d-cd14-4900-827f-ba00d26e0c67" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="200" name="Survival Kit" kategorie="Survival Gear">
+          <localizations xmi:id="_tYBZAT_cEeSK2ZzxE2z74g" local="de" name="Suvival-Kiste" page="449"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tYxm8D_cEeSK2ZzxE2z74g" parentId="241e831d-230a-403b-a4a1-1e601b1afdc3" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Respirator" kategorie="Survival Gear">
+          <localizations xmi:id="_tYxm8T_cEeSK2ZzxE2z74g" local="de" name="Atemgerät"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tZG-ID_cEeSK2ZzxE2z74g" parentId="2633cf38-90a6-4843-b475-e3ee1132fb5f" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="200" name="Gas Mask" kategorie="Survival Gear">
+          <localizations xmi:id="_tZG-IT_cEeSK2ZzxE2z74g" local="de" name="Gasmaske"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tZ2lAD_cEeSK2ZzxE2z74g" parentId="fe4ea7f4-df9b-4bda-a0ca-26347ca85738" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)F" name="Sequencer" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_tZ2lAT_cEeSK2ZzxE2z74g" local="de" name="Sequencer"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_taL8MD_cEeSK2ZzxE2z74g" parentId="53c0b4cc-b209-4db4-bb0d-6710b3f4349a" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5" name="Restraint, Plastic" kategorie="Security Devices">
+          <localizations xmi:id="_taL8MT_cEeSK2ZzxE2z74g" local="de" name="Handschellen, Plastik"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_ta8KID_cEeSK2ZzxE2z74g" parentId="af829cba-8d5e-40fd-b37b-e5266c29c55a" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" name="Autopicker" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_ta8KIT_cEeSK2ZzxE2z74g" local="de" name="Automatischer Dietrich"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_tbQTMD_cEeSK2ZzxE2z74g" parentId="ffc069af-d3ec-4201-887c-0178dcdfeef9" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Camera" kategorie="Sensor Functions"/>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_UWD68D_dEeSK2ZzxE2z74g" parentId="7abaa077-48ee-4a28-9a10-6dff788ccb1d" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="50" name="Restraint, Plasteel" kategorie="Security Devices">
+          <localizations xmi:id="_UWD68T_dEeSK2ZzxE2z74g" local="de" name="Handschellen, Plasstahl"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_UW3MMD_dEeSK2ZzxE2z74g" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4" type="_ENFqwTnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_UW3MMT_dEeSK2ZzxE2z74g" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_UXnaID_dEeSK2ZzxE2z74g" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <localizations xmi:id="_UXnaIT_dEeSK2ZzxE2z74g" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_Wh9KwD_dEeSK2ZzxE2z74g" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+          <localizations xmi:id="_Wh9KwT_dEeSK2ZzxE2z74g" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_Wi0tcD_dEeSK2ZzxE2z74g" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
+          <localizations xmi:id="_Wi0tcT_dEeSK2ZzxE2z74g" local="de" name="Munition: Gelgeschosse"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_WjhRAD_dEeSK2ZzxE2z74g" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <localizations xmi:id="_WjhRAT_dEeSK2ZzxE2z74g" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_WkhWkD_dEeSK2ZzxE2z74g" parentId="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
+          <localizations xmi:id="_WkhWkT_dEeSK2ZzxE2z74g" local="de" name="Munition: Explosivgeschosse"/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_ivX0wD_bEeSK2ZzxE2z74g" name="Middle" parentId="90f6f4c2-9968-42e1-ba79-e2bf530de32e" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000">
+          <localizations xmi:id="_ivX0wT_bEeSK2ZzxE2z74g" local="de" name="Mittelschicht"/>
+        </contracts>
+        <contracts xsi:type="shr5:Sin" xmi:id="_6ohJQD_dEeSK2ZzxE2z74g" name="Sin Stufe 4" parentId="_B0h48N0CEeOvVYoRsPZlnA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="10000" stufe="4" gefaelscht="true"/>
+        <connections xmi:id="_mHsbcD_bEeSK2ZzxE2z74g" influence="3" loyality="3"/>
+        <connections xmi:id="_JbwJgD_dEeSK2ZzxE2z74g" influence="3" loyality="3"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_JGEC0D_cEeSK2ZzxE2z74g" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_cl8qUD_ZEeSK2ZzxE2z74g" character="_keD2ED_ZEeSK2ZzxE2z74g" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Tank" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ktd0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startKarma="7" startResources="4595"/>
+      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Test-Aspekt-1" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwt0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA"/>
@@ -19226,38 +19445,492 @@
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
     </grunts>
   </entries>
-  <entries xsi:type="scripting:Script" xmi:id="_CCbIADnpEeSb-uPPMR9TEw" beschreibung="Just some thugs at the corner." name="A test Script with thugs." entry="_CCbIATnpEeSb-uPPMR9TEw">
-    <placements xmi:id="_CCbIATnpEeSb-uPPMR9TEw" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_CCbvEDnpEeSb-uPPMR9TEw" background="There are thugs which needs to be beaten." inTheirFace="This is you Job. Beat the thugs over there." debugging="Nothing can go wrong.">
-      <enviorment xmi:id="_RHGysDnqEeSZlrJ9CDZaLA"/>
-    </placements>
-    <placements xmi:id="_CCbvEDnpEeSb-uPPMR9TEw" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_CCbvEjnpEeSb-uPPMR9TEw" teams="_CCbvEznpEeSb-uPPMR9TEw" background="The fighting start now." inTheirFace="In a dark alley. The thugs are.&#xA;Beat them up.&#xA;">
-      <enviorment xmi:id="_CCbvETnpEeSb-uPPMR9TEw"/>
-    </placements>
-    <placements xmi:id="_CCbvEjnpEeSb-uPPMR9TEw" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" background="After beating get the reward.">
-      <enviorment xmi:id="_TKOhADnqEeSZlrJ9CDZaLA"/>
-    </placements>
-    <allTeams xsi:type="runtime:GruntTeam" xmi:id="_CCbvEznpEeSb-uPPMR9TEw" name="The bad guys." gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsDnqEeSZlrJ9CDZaLA" character="_B1NOYN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttDnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-      <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
-    </allTeams>
-    <player xmi:id="_CCbvHDnpEeSb-uPPMR9TEw" name="Players">
-      <members xmi:id="_z0RVUDnqEeS_lYhXLDoiow" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_Bz1VYd0CEeOvVYoRsPZlnA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VYd0CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18eN0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
-    </player>
-    <history xmi:id="_y9bM4DnqEeS_lYhXLDoiow" currentDate="2074-07-31T07:53:29.000+0200" currentPlacement="_CCbIATnpEeSb-uPPMR9TEw">
-      <commandStack xmi:id="_y9jIsDnqEeS_lYhXLDoiow" currentCommand="_2V0FADnqEeS_lYhXLDoiow">
-        <protocol xmi:id="_y9qdcDnqEeS_lYhXLDoiow">
-          <commands xsi:type="gameplay:SkillTestCmd" xmi:id="_2V0FADnqEeS_lYhXLDoiow" executed="true" date="2074-07-31T07:53:29.000+0200" subject="_z0RVUDnqEeS_lYhXLDoiow" glitches="1" limit="1" thresholds="1" netHits="-1" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3">
-            <probe>1</probe>
-          </commands>
-        </protocol>
-      </commandStack>
-      <writtenProtokol>07:53:29 >> Character Gu uses Skill Arcana. [criticalGlitch](0/1|1)(-1/1)1[1]</writtenProtokol>
-    </history>
+  <entries xsi:type="scripting:Scripts" xmi:id="_5ulUwD_WEeSQWIeEm8LnkA" name="Own scripts">
+    <stories xmi:id="_CCbIADnpEeSb-uPPMR9TEw" beschreibung="Just some thugs at the corner." name="A test Script with thugs." entry="_CCbIATnpEeSb-uPPMR9TEw">
+      <placements xmi:id="_CCbIATnpEeSb-uPPMR9TEw" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_CCbvEDnpEeSb-uPPMR9TEw" background="There are thugs which needs to be beaten." inTheirFace="This is you Job. Beat the thugs over there." debugging="Nothing can go wrong.">
+        <enviorment xmi:id="_RHGysDnqEeSZlrJ9CDZaLA"/>
+      </placements>
+      <placements xmi:id="_CCbvEDnpEeSb-uPPMR9TEw" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_CCbvEjnpEeSb-uPPMR9TEw" teams="_CCbvEznpEeSb-uPPMR9TEw" background="The fighting start now." inTheirFace="In a dark alley. The thugs are.&#xA;Beat them up.&#xA;">
+        <enviorment xmi:id="_CCbvETnpEeSb-uPPMR9TEw"/>
+      </placements>
+      <placements xmi:id="_CCbvEjnpEeSb-uPPMR9TEw" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" background="After beating get the reward.">
+        <enviorment xmi:id="_TKOhADnqEeSZlrJ9CDZaLA"/>
+      </placements>
+      <allTeams xsi:type="runtime:GruntTeam" xmi:id="_CCbvEznpEeSb-uPPMR9TEw" name="The bad guys." gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsDnqEeSZlrJ9CDZaLA" character="_B1NOYN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttDnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA"/>
+      </allTeams>
+      <player xmi:id="_CCbvHDnpEeSb-uPPMR9TEw" name="Players">
+        <members xmi:id="_z0RVUDnqEeS_lYhXLDoiow" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_Bz1VYd0CEeOvVYoRsPZlnA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VYd0CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18eN0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
+      </player>
+      <history xmi:id="_y9bM4DnqEeS_lYhXLDoiow" currentDate="2074-07-31T07:53:29.000+0200" currentPlacement="_CCbIATnpEeSb-uPPMR9TEw">
+        <commandStack xmi:id="_y9jIsDnqEeS_lYhXLDoiow" currentCommand="_2V0FADnqEeS_lYhXLDoiow">
+          <protocol xmi:id="_y9qdcDnqEeS_lYhXLDoiow">
+            <commands xsi:type="gameplay:SkillTestCmd" xmi:id="_2V0FADnqEeS_lYhXLDoiow" executed="true" date="2074-07-31T07:53:29.000+0200" subject="_z0RVUDnqEeS_lYhXLDoiow" glitches="1" limit="1" thresholds="1" netHits="-1" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3">
+              <probe>1</probe>
+            </commands>
+          </protocol>
+        </commandStack>
+        <writtenProtokol>07:53:29 >> Character Gu uses Skill Arcana. [criticalGlitch](0/1|1)(-1/1)1[1]</writtenProtokol>
+      </history>
+    </stories>
+    <stories xmi:id="_7blpID_WEeSQWIeEm8LnkA" name="Quick fight." entry="_9PjhID_WEeSQWIeEm8LnkA">
+      <placements xmi:id="_9PjhID_WEeSQWIeEm8LnkA" beschreibung="Used as combat management." name="Quick fight" startDate="2074-09-04T10:28:42.814+0200" endDate="2074-12-12T10:28:42.844+0100" actualDate="2074-09-04T10:28:45.814+0200" teams="_MsvA0D_XEeSQWIeEm8LnkA"/>
+      <allTeams xmi:id="_MsvA0D_XEeSQWIeEm8LnkA" name="enemies">
+        <members xmi:id="_dugUMD_hEeSuOvfh9dLK7w" mentalDamage="3" character="_uFDVkD_FEeSlOsHYyoPYOQ" leftHand="_N7shkD_HEeSlOsHYyoPYOQ" inUse="_N7shkD_HEeSlOsHYyoPYOQ _N8nHkD_HEeSlOsHYyoPYOQ _N9bm8D_HEeSlOsHYyoPYOQ _OE_ngD_HEeSlOsHYyoPYOQ _yfgOAD_NEeSdXvk3e0TcZw _N_DXkD_HEeSlOsHYyoPYOQ" armor="_OE_ngD_HEeSlOsHYyoPYOQ"/>
+      </allTeams>
+      <player xmi:id="_lP63MD_hEeSuOvfh9dLK7w" name="player">
+        <members xmi:id="_zuahED_hEeSuOvfh9dLK7w" physicalDamage="18" zustand="tot" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_Bz1VYd0CEeOvVYoRsPZlnA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VYd0CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18cN0CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18dN0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
+      </player>
+      <history xmi:id="_yNoDwD_hEeSuOvfh9dLK7w" currentPlacement="_9PjhID_WEeSQWIeEm8LnkA">
+        <commandStack xmi:id="_yNs8QD_hEeSuOvfh9dLK7w" currentCommand="_drj4cD_iEeSuOvfh9dLK7w">
+          <protocol xmi:id="_yNvYgD_hEeSuOvfh9dLK7w">
+            <commands xsi:type="gameplay:CombatTurn" xmi:id="__dk24D_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" combatants="_dugUMD_hEeSuOvfh9dLK7w _zuahED_hEeSuOvfh9dLK7w" sequence="1">
+              <subCommands xsi:type="gameplay:Initative" xmi:id="__eA7wD_hEeSuOvfh9dLK7w" executed="true" subject="_dugUMD_hEeSuOvfh9dLK7w" ini="16"/>
+              <subCommands xsi:type="gameplay:Initative" xmi:id="__eEmID_hEeSuOvfh9dLK7w" executed="true" subject="_zuahED_hEeSuOvfh9dLK7w" ini="29"/>
+              <actionPhases xmi:id="__5ldcD_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" phase="29" turn="1">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_D35tID_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_D35tIT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_D4EFMD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="5" glitches="1" limit="5" netHits="5" mods="-1" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1" object="_dugUMD_hEeSuOvfh9dLK7w" modus="HM" range="5" weapon="_Bz1VYd0CEeOvVYoRsPZlnA">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_GONdMD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="3" thresholds="5" netHits="-2" attackersHits="5">
+                        <probe>2</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>4</probe>
+                        <probe>4</probe>
+                        <probe>5</probe>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_H2fCkD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="8" glitches="4" netHits="8" damage="10P" dv="-1" effectiveDamage="2M">
+                        <probe>1</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>5</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>1</probe>
+                        <probe>4</probe>
+                        <probe>4</probe>
+                        <probe>2</probe>
+                        <probe>4</probe>
+                        <probe>4</probe>
+                        <probe>2</probe>
+                        <probe>4</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>4</probe>
+                        <probe>5</probe>
+                      </subCommands>
+                      <probe>2</probe>
+                      <probe>3</probe>
+                      <probe>3</probe>
+                      <probe>1</probe>
+                      <probe>6</probe>
+                      <probe>3</probe>
+                      <probe>6</probe>
+                      <probe>6</probe>
+                      <probe>3</probe>
+                      <probe>5</probe>
+                      <probe>4</probe>
+                      <probe>5</probe>
+                      <probeMods xmi:id="_FlLuUD_iEeSuOvfh9dLK7w" value="-1">
+                        <type xmi:id="_ccdoED_iEeSuOvfh9dLK7w" eObject="_Bz1VYd0CEeOvVYoRsPZlnA">
+                          <eFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+                        </type>
+                      </probeMods>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="__5ldcT_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" phase="16" turn="1">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_Ns6qcD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_Ns6qcT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_Ns-74D_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="5" glitches="2" limit="5" netHits="5" skill="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" object="_zuahED_hEeSuOvfh9dLK7w" modus="HM" range="10" weapon="_N7shkD_HEeSlOsHYyoPYOQ">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_Qx7TkD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="4" glitches="2" thresholds="5" netHits="-1" attackersHits="5">
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>4</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>4</probe>
+                        <probe>4</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>4</probe>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_RxAK8D_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="5" glitches="2" netHits="5" damage="11P" dv="-2" effectiveDamage="6P">
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>3</probe>
+                        <probe>2</probe>
+                        <probe>3</probe>
+                        <probe>4</probe>
+                        <probe>4</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                      </subCommands>
+                      <probe>5</probe>
+                      <probe>5</probe>
+                      <probe>3</probe>
+                      <probe>5</probe>
+                      <probe>5</probe>
+                      <probe>6</probe>
+                      <probe>3</probe>
+                      <probe>2</probe>
+                      <probe>1</probe>
+                      <probe>6</probe>
+                      <probe>1</probe>
+                      <probe>5</probe>
+                      <probe>4</probe>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="__5ldcj_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" phase="17" turn="2">
+                <action xsi:type="gameplay:ComplexAction" xmi:id="_TuOFkD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                  <subCommands xsi:type="gameplay:MeeleAttackCmd" xmi:id="_TuOFkT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="4" glitches="3" limit="7" netHits="4" mods="-2" skill="48763fa5-4b89-48c7-80ff-d0a2761de4c0" object="_dugUMD_hEeSuOvfh9dLK7w" weapon="_Bz1VY90CEeOvVYoRsPZlnA">
+                    <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_VGRdoD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="5" glitches="1" thresholds="4" netHits="1" attackersHits="4">
+                      <probe>5</probe>
+                      <probe>4</probe>
+                      <probe>5</probe>
+                      <probe>6</probe>
+                      <probe>2</probe>
+                      <probe>5</probe>
+                      <probe>1</probe>
+                      <probe>6</probe>
+                    </subCommands>
+                    <probe>1</probe>
+                    <probe>1</probe>
+                    <probe>5</probe>
+                    <probe>2</probe>
+                    <probe>6</probe>
+                    <probe>4</probe>
+                    <probe>6</probe>
+                    <probe>5</probe>
+                    <probe>2</probe>
+                    <probe>3</probe>
+                    <probe>1</probe>
+                    <probeMods xmi:id="_T5dFMD_iEeSuOvfh9dLK7w" value="-2">
+                      <type xmi:id="_ykKfAT_iEeSuOvfh9dLK7w" eObject="_zuahED_hEeSuOvfh9dLK7w">
+                        <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                      </type>
+                    </probeMods>
+                  </subCommands>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="__5ldcz_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" phase="6" turn="2">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_Wm6xAD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_Wm6xAT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_WnCFwD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="2" glitches="1" limit="5" netHits="2" skill="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" object="_zuahED_hEeSuOvfh9dLK7w" modus="HM" range="10" weapon="_N7shkD_HEeSlOsHYyoPYOQ">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_Yyt6MD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="1" glitches="4" thresholds="2" netHits="-1" mods="-2" attackersHits="2">
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>4</probe>
+                        <probe>3</probe>
+                        <probe>3</probe>
+                        <probe>2</probe>
+                        <probe>1</probe>
+                        <probe>1</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probeMods xmi:id="_Yy45UD_iEeSuOvfh9dLK7w" value="-2">
+                          <type xmi:id="_ykKfAT_iEeSuOvfh9dLK7w" eObject="_zuahED_hEeSuOvfh9dLK7w">
+                            <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                          </type>
+                        </probeMods>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_ZM8YED_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="8" glitches="2" netHits="8" damage="11P" dv="-2" effectiveDamage="3P">
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>5</probe>
+                        <probe>1</probe>
+                        <probe>1</probe>
+                        <probe>3</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>6</probe>
+                        <probe>4</probe>
+                        <probe>3</probe>
+                      </subCommands>
+                      <probe>2</probe>
+                      <probe>1</probe>
+                      <probe>3</probe>
+                      <probe>3</probe>
+                      <probe>3</probe>
+                      <probe>6</probe>
+                      <probe>2</probe>
+                      <probe>4</probe>
+                      <probe>3</probe>
+                      <probe>2</probe>
+                      <probe>4</probe>
+                      <probe>4</probe>
+                      <probe>5</probe>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="__5lddD_hEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" phase="6" turn="3">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_aWZ6gD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_aWZ6gT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_aWeL8D_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="5" glitches="1" limit="5" netHits="5" mods="-4" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1" object="_dugUMD_hEeSuOvfh9dLK7w" modus="HM" range="5" weapon="_Bz1VYd0CEeOvVYoRsPZlnA">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_b1l1UD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="3" glitches="1" thresholds="5" netHits="-2" attackersHits="5">
+                        <probe>4</probe>
+                        <probe>5</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>5</probe>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_cPyeAD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:42.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="9" glitches="6" netHits="9" damage="10P" dv="-1" effectiveDamage="1M">
+                        <probe>1</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>1</probe>
+                        <probe>4</probe>
+                        <probe>3</probe>
+                        <probe>4</probe>
+                        <probe>1</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                      </subCommands>
+                      <probe>6</probe>
+                      <probe>6</probe>
+                      <probe>1</probe>
+                      <probe>5</probe>
+                      <probe>3</probe>
+                      <probe>5</probe>
+                      <probe>4</probe>
+                      <probe>3</probe>
+                      <probe>6</probe>
+                      <probeMods xmi:id="_ajIu8D_iEeSuOvfh9dLK7w" value="-3">
+                        <type xmi:id="_ykKfAT_iEeSuOvfh9dLK7w" eObject="_zuahED_hEeSuOvfh9dLK7w">
+                          <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                        </type>
+                      </probeMods>
+                      <probeMods xmi:id="_binO8D_iEeSuOvfh9dLK7w" value="-1">
+                        <type xmi:id="_ccdoED_iEeSuOvfh9dLK7w" eObject="_Bz1VYd0CEeOvVYoRsPZlnA">
+                          <eFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+                        </type>
+                      </probeMods>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+            </commands>
+            <commands xsi:type="gameplay:CombatTurn" xmi:id="_drj4cD_iEeSuOvfh9dLK7w" date="2074-09-04T10:28:45.814+0200" executing="true" combatants="_dugUMD_hEeSuOvfh9dLK7w _zuahED_hEeSuOvfh9dLK7w" currentTurn="_d5uQQz_iEeSuOvfh9dLK7w" sequence="2">
+              <subCommands xsi:type="gameplay:Initative" xmi:id="_drx64D_iEeSuOvfh9dLK7w" executed="true" subject="_dugUMD_hEeSuOvfh9dLK7w" ini="17"/>
+              <subCommands xsi:type="gameplay:Initative" xmi:id="_dr2MUD_iEeSuOvfh9dLK7w" executed="true" subject="_zuahED_hEeSuOvfh9dLK7w" ini="27"/>
+              <actionPhases xmi:id="_d5uQQD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" phase="27" turn="1">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_n5tHcD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_n5tHcT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_n5zOED_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="4" glitches="1" limit="5" netHits="4" mods="-4" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1" object="_dugUMD_hEeSuOvfh9dLK7w" modus="HM" range="5" weapon="_Bz1VYd0CEeOvVYoRsPZlnA">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_qQjDAD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="3" thresholds="4" netHits="-1" mods="-2" attackersHits="4">
+                        <probe>4</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>5</probe>
+                        <probe>3</probe>
+                        <probeMods xmi:id="_qQuCID_iEeSuOvfh9dLK7w" value="-1">
+                          <type xmi:id="_qQuCIT_iEeSuOvfh9dLK7w" eObject="_dugUMD_hEeSuOvfh9dLK7w">
+                            <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+                          </type>
+                        </probeMods>
+                        <probeMods xmi:id="_qQ0v0D_iEeSuOvfh9dLK7w" value="-1">
+                          <type xmi:id="_ykKfAD_iEeSuOvfh9dLK7w" eObject="_dugUMD_hEeSuOvfh9dLK7w">
+                            <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                          </type>
+                        </probeMods>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_sRoJ8D_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="14" glitches="2" netHits="14" damage="9P" dv="-1">
+                        <probe>5</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>3</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>5</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>3</probe>
+                        <probe>5</probe>
+                        <probe>1</probe>
+                        <probe>6</probe>
+                        <probe>6</probe>
+                        <probe>5</probe>
+                      </subCommands>
+                      <probe>6</probe>
+                      <probe>4</probe>
+                      <probe>6</probe>
+                      <probe>1</probe>
+                      <probe>2</probe>
+                      <probe>6</probe>
+                      <probe>3</probe>
+                      <probe>4</probe>
+                      <probe>6</probe>
+                      <probeMods xmi:id="_oEn-AD_iEeSuOvfh9dLK7w" value="-3">
+                        <type xmi:id="_ykKfAT_iEeSuOvfh9dLK7w" eObject="_zuahED_hEeSuOvfh9dLK7w">
+                          <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                        </type>
+                      </probeMods>
+                      <probeMods xmi:id="_pvRh8D_iEeSuOvfh9dLK7w" value="-1">
+                        <type xmi:id="_ccdoED_iEeSuOvfh9dLK7w" eObject="_Bz1VYd0CEeOvVYoRsPZlnA">
+                          <eFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+                        </type>
+                      </probeMods>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="_d5uQQT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" phase="17" turn="1">
+                <action xsi:type="gameplay:SimpleActions" xmi:id="_utCccD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                  <action1 xmi:id="_utCccT_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w">
+                    <subCommands xsi:type="gameplay:RangedAttackCmd" xmi:id="_utIjED_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" successes="5" glitches="2" limit="5" netHits="5" mods="-1" skill="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" object="_zuahED_hEeSuOvfh9dLK7w" modus="HM" weapon="_N7shkD_HEeSlOsHYyoPYOQ">
+                      <subCommands xsi:type="gameplay:DefensTestCmd" xmi:id="_xsKgAD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="3" glitches="3" thresholds="5" netHits="-2" mods="-3" attackersHits="5">
+                        <probe>4</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>2</probe>
+                        <probe>1</probe>
+                        <probe>5</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>1</probe>
+                        <probeMods xmi:id="_xsWtQD_iEeSuOvfh9dLK7w" value="-3">
+                          <type xmi:id="_ykKfAT_iEeSuOvfh9dLK7w" eObject="_zuahED_hEeSuOvfh9dLK7w">
+                            <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                          </type>
+                        </probeMods>
+                      </subCommands>
+                      <subCommands xsi:type="gameplay:DamageTest" xmi:id="_ySKJAD_iEeSuOvfh9dLK7w" executed="true" date="2074-09-04T10:28:45.814+0200" subject="_zuahED_hEeSuOvfh9dLK7w" successes="3" glitches="5" netHits="3" damage="12P" dv="-2" effectiveDamage="9P">
+                        <probe>3</probe>
+                        <probe>4</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>1</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>5</probe>
+                        <probe>2</probe>
+                        <probe>6</probe>
+                        <probe>1</probe>
+                        <probe>2</probe>
+                        <probe>3</probe>
+                        <probe>1</probe>
+                        <probe>4</probe>
+                        <probe>6</probe>
+                      </subCommands>
+                      <probe>6</probe>
+                      <probe>5</probe>
+                      <probe>3</probe>
+                      <probe>3</probe>
+                      <probe>2</probe>
+                      <probe>1</probe>
+                      <probe>1</probe>
+                      <probe>3</probe>
+                      <probe>3</probe>
+                      <probe>5</probe>
+                      <probe>5</probe>
+                      <probe>5</probe>
+                      <probeMods xmi:id="_u6LgkD_iEeSuOvfh9dLK7w" value="-1">
+                        <type xmi:id="_ykKfAD_iEeSuOvfh9dLK7w" eObject="_dugUMD_hEeSuOvfh9dLK7w">
+                          <eFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/runtime/1.0#//PhyicalState/zustand"/>
+                        </type>
+                      </probeMods>
+                    </subCommands>
+                  </action1>
+                </action>
+              </actionPhases>
+              <actionPhases xmi:id="_d5uQQz_iEeSuOvfh9dLK7w" date="2074-09-04T10:28:45.814+0200" subject="_dugUMD_hEeSuOvfh9dLK7w" phase="7" turn="2"/>
+            </commands>
+          </protocol>
+        </commandStack>
+        <writtenProtokol>Character Orc Sam 1 has his 2 turn at phase 7</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Gu defeneding against 12P damage taking effecive 9P. [success|noGlitch](3/0|5)(3/0)17[3, 4, 1, 2, 1, 3, 1, 2, 5, 2, 6, 1, 2, 3, 1, 4, 6]</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Gu defending against 5 hits with 3. [failure|noGlitch](3/0|3)(-2/5)10[4, 5, 2, 6, 2, 1, 5, 3, 1, 1]</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Orc Sam 1 shoot at Character Gu with Firearm AK-98 at 0m. [success|noGlitch](5/5|2)(5/0)12[6, 5, 3, 3, 2, 1, 1, 3, 3, 5, 5, 5]</writtenProtokol>
+        <writtenProtokol>Character Orc Sam 1 has his 1 turn at phase 17</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Orc Sam 1 defeneding against 9P damage taking effecive none. [success|noGlitch](14/0|2)(14/0)21[5, 6, 3, 6, 5, 6, 3, 1, 3, 6, 6, 3, 5, 6, 6, 3, 5, 1, 6, 6, 5]</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Orc Sam 1 defending against 4 hits with 3. [failure|noGlitch](3/0|0)(-1/4)6[4, 6, 6, 2, 5, 3]</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Character Gu shoot at Character Orc Sam 1 with Firearm Ares Predator V at 5m. [success|noGlitch](4/5|1)(4/0)9[6, 4, 6, 1, 2, 6, 3, 4, 6]</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Simple Action true </writtenProtokol>
+        <writtenProtokol>10:28:45 >> Simple Actions true </writtenProtokol>
+        <writtenProtokol>Character Gu has his 1 turn at phase 27</writtenProtokol>
+        <writtenProtokol>10:28:45 >> Combat turn 2 has started.</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Combat turn 1 has ended.</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 defeneding against 10P damage taking effecive 1M. [success|noGlitch](9/0|6)(9/0)21[1, 6, 5, 1, 4, 3, 4, 1, 3, 6, 1, 2, 6, 6, 5, 1, 5, 3, 6, 6, 1]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 defending against 5 hits with 3. [failure|noGlitch](3/0|1)(-2/5)8[4, 5, 1, 2, 3, 6, 2, 5]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu shoot at Character Orc Sam 1 with Firearm Ares Predator V at 5m. [success|noGlitch](5/5|1)(5/0)9[6, 6, 1, 5, 3, 5, 4, 3, 6]</writtenProtokol>
+        <writtenProtokol>Character Gu has his 3 turn at phase 6</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu defeneding against 11P damage taking effecive 3P. [success|noGlitch](8/0|2)(8/0)17[6, 5, 2, 5, 2, 5, 1, 1, 3, 2, 6, 3, 6, 5, 6, 4, 3]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu defending against 2 hits with 1. [failure|noGlitch](1/0|4)(-1/2)11[6, 3, 1, 4, 3, 3, 2, 1, 1, 1, 2]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 shoot at Character Gu with Firearm AK-98 at 10m. [success|noGlitch](2/5|1)(2/0)13[2, 1, 3, 3, 3, 6, 2, 4, 3, 2, 4, 4, 5]</writtenProtokol>
+        <writtenProtokol>Character Orc Sam 1 has his 2 turn at phase 6</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 defending against 4 hits with 5. [success|noGlitch](5/0|1)(1/4)8[5, 4, 5, 6, 2, 5, 1, 6]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu attack Character Orc Sam 1 with Melee weapon Katana. [success|noGlitch](4/7|3)(4/0)11[1, 1, 5, 2, 6, 4, 6, 5, 2, 3, 1]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Complex Action true </writtenProtokol>
+        <writtenProtokol>Character Gu has his 2 turn at phase 17</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu defeneding against 11P damage taking effecive 6P. [success|noGlitch](5/0|2)(5/0)17[6, 2, 6, 3, 3, 6, 1, 2, 3, 2, 3, 4, 4, 5, 2, 6, 1]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu defending against 5 hits with 4. [failure|noGlitch](4/0|2)(-1/5)13[6, 3, 1, 5, 4, 2, 6, 2, 4, 4, 1, 5, 4]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 shoot at Character Gu with Firearm AK-98 at 10m. [success|noGlitch](5/5|2)(5/0)13[5, 5, 3, 5, 5, 6, 3, 2, 1, 6, 1, 5, 4]</writtenProtokol>
+        <writtenProtokol>Character Orc Sam 1 has his 1 turn at phase 16</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 defeneding against 10P damage taking effecive 2M. [success|noGlitch](8/0|4)(8/0)21[1, 1, 5, 5, 6, 1, 5, 5, 2, 1, 4, 4, 2, 4, 4, 2, 4, 6, 5, 4, 5]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Orc Sam 1 defending against 5 hits with 3. [failure|noGlitch](3/0|0)(-2/5)8[2, 3, 6, 2, 6, 4, 4, 5]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Character Gu shoot at Character Orc Sam 1 with Firearm Ares Predator V at 5m. [success|noGlitch](5/5|1)(5/0)12[2, 3, 3, 1, 6, 3, 6, 6, 3, 5, 4, 5]</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Simple Action true </writtenProtokol>
+        <writtenProtokol>10:28:42 >> Simple Actions true </writtenProtokol>
+        <writtenProtokol>Character Gu has his 1 turn at phase 29</writtenProtokol>
+        <writtenProtokol>10:28:42 >> Combat turn 1 has started.</writtenProtokol>
+      </history>
+    </stories>
   </entries>
 </shr5:ShrList>
