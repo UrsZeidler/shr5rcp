@@ -18,7 +18,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Image;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -364,10 +367,17 @@ public class Shr5SystemItemProvider
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
 	@Override
 	public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar) object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/Shr5System"));
     }
 
