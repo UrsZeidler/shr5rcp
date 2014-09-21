@@ -93,6 +93,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
@@ -974,6 +975,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
             // "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
             // d.open();
+            return;
+        }else if (cmd instanceof SetExtendetData) {
+//            SetExtendetData new_name = (SetExtendetData)cmd;
             return;
         }
 
