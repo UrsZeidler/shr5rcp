@@ -60,6 +60,7 @@ public class RangedAttackCmdItemProvider
             addModusPropertyDescriptor(object);
             addRangePropertyDescriptor(object);
             addWeaponPropertyDescriptor(object);
+            addNumberOfShootsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -131,6 +132,28 @@ public class RangedAttackCmdItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Number Of Shoots feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addNumberOfShootsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_RangedAttackCmd_numberOfShoots_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_RangedAttackCmd_numberOfShoots_feature", "_UI_RangedAttackCmd_type"),
+                 GameplayPackage.Literals.RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns RangedAttackCmd.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -174,6 +197,7 @@ public class RangedAttackCmdItemProvider
         switch (notification.getFeatureID(RangedAttackCmd.class)) {
             case GameplayPackage.RANGED_ATTACK_CMD__MODUS:
             case GameplayPackage.RANGED_ATTACK_CMD__RANGE:
+            case GameplayPackage.RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

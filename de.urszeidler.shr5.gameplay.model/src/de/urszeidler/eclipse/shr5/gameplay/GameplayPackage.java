@@ -3913,13 +3913,22 @@ public interface GameplayPackage extends EPackage {
     int RANGED_ATTACK_CMD__WEAPON = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Number Of Shoots</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Ranged Attack Cmd</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int RANGED_ATTACK_CMD_FEATURE_COUNT = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 3;
+    int RANGED_ATTACK_CMD_FEATURE_COUNT = OPPOSED_SKILL_TEST_CMD_FEATURE_COUNT + 4;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -5133,6 +5142,17 @@ public interface GameplayPackage extends EPackage {
     EReference getRangedAttackCmd_Weapon();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getNumberOfShoots <em>Number Of Shoots</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Number Of Shoots</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getNumberOfShoots()
+     * @see #getRangedAttackCmd()
+     * @generated
+     */
+    EAttribute getRangedAttackCmd_NumberOfShoots();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.Intervall <em>Intervall</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6052,6 +6072,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EReference RANGED_ATTACK_CMD__WEAPON = eINSTANCE.getRangedAttackCmd_Weapon();
+
+        /**
+         * The meta object literal for the '<em><b>Number Of Shoots</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS = eINSTANCE.getRangedAttackCmd_NumberOfShoots();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl <em>Intervall</em>}' class.

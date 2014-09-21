@@ -33,7 +33,7 @@ public interface SimpleActions extends CommandWrapper {
      * @return the value of the '<em>Action1</em>' containment reference.
      * @see #setAction1(SimpleAction)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSimpleActions_Action1()
-     * @model containment="true" required="true"
+     * @model containment="true"
      * @generated
      */
     SimpleAction getAction1();
@@ -59,7 +59,7 @@ public interface SimpleActions extends CommandWrapper {
      * @return the value of the '<em>Action2</em>' containment reference.
      * @see #setAction2(SimpleAction)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSimpleActions_Action2()
-     * @model containment="true" required="true"
+     * @model containment="true"
      * @generated
      */
     SimpleAction getAction2();

@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.FeuerModus;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getModus <em>Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getRange <em>Range</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getWeapon <em>Weapon</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getNumberOfShoots <em>Number Of Shoots</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,5 +110,30 @@ public interface RangedAttackCmd extends OpposedSkillTestCmd {
      * @generated
      */
     void setWeapon(AbstaktFernKampfwaffe value);
+
+    /**
+     * Returns the value of the '<em><b>Number Of Shoots</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of shoots beeing fired.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Number Of Shoots</em>' attribute.
+     * @see #setNumberOfShoots(int)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getRangedAttackCmd_NumberOfShoots()
+     * @model
+     * @generated
+     */
+    int getNumberOfShoots();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getNumberOfShoots <em>Number Of Shoots</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Number Of Shoots</em>' attribute.
+     * @see #getNumberOfShoots()
+     * @generated
+     */
+    void setNumberOfShoots(int value);
 
 } // RangedAttackCmd

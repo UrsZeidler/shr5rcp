@@ -449,6 +449,10 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//RangedAttackCmd/range"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_KCVxYREXEeSOe8bMc8XWug"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_Y9AaUEFxEeSB6blvLnefUA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//RangedAttackCmd/numberOfShoots"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Y9AaUUFxEeSB6blvLnefUA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_9ECu8hEWEeSOe8bMc8XWug"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_9ECu8xEWEeSOe8bMc8XWug"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_9ECu9BEWEeSOe8bMc8XWug"/>
@@ -460,7 +464,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_9D16oREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//RangedAttackCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9D16ohEWEeSOe8bMc8XWug" x="745" y="865"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9D16ohEWEeSOe8bMc8XWug" x="715" y="865"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_I9rPYBEXEeSOe8bMc8XWug" type="1001">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_I-EQ8BEXEeSOe8bMc8XWug" source="Shortcut">
@@ -479,7 +483,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_I9rPYREXEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9rPYhEXEeSOe8bMc8XWug" x="505" y="855"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9rPYhEXEeSOe8bMc8XWug" x="480" y="876"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_hR5-MBNaEeS_0uLHotCLhw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_hR7MUBNaEeS_0uLHotCLhw" type="4001"/>

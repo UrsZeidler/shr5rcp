@@ -248,10 +248,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComplexAction" eSuperTypes="#//CommandWrapper"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleAction" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleActions" eSuperTypes="#//CommandWrapper">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action1" lowerBound="1"
-        eType="#//SimpleAction" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action2" lowerBound="1"
-        eType="#//SimpleAction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action1" eType="#//SimpleAction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action2" eType="#//SimpleAction"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//SubjectCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterruptAction" eSuperTypes="#//SubjectCommand">
@@ -280,6 +280,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modus" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//FeuerModus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShoots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of shoots beeing fired."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Intervall">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantities" lowerBound="1"

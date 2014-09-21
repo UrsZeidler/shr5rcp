@@ -1139,6 +1139,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getRangedAttackCmd_NumberOfShoots() {
+        return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getIntervall() {
         return intervallEClass;
     }
@@ -1408,6 +1417,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__MODUS);
         createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__RANGE);
         createEReference(rangedAttackCmdEClass, RANGED_ATTACK_CMD__WEAPON);
+        createEAttribute(rangedAttackCmdEClass, RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS);
 
         intervallEClass = createEClass(INTERVALL);
         createEAttribute(intervallEClass, INTERVALL__QUANTITIES);
@@ -1586,8 +1596,8 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(simpleActionEClass, SimpleAction.class, "SimpleAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(simpleActionsEClass, SimpleActions.class, "SimpleActions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getSimpleActions_Action1(), this.getSimpleAction(), null, "action1", null, 1, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getSimpleActions_Action2(), this.getSimpleAction(), null, "action2", null, 1, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSimpleActions_Action1(), this.getSimpleAction(), null, "action1", null, 0, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSimpleActions_Action2(), this.getSimpleAction(), null, "action2", null, 0, 1, SimpleActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(freeActionEClass, FreeAction.class, "FreeAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1607,6 +1617,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getRangedAttackCmd_Modus(), theShr5Package.getFeuerModus(), "modus", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getRangedAttackCmd_Range(), ecorePackage.getEInt(), "range", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRangedAttackCmd_Weapon(), theShr5Package.getAbstaktFernKampfwaffe(), null, "weapon", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRangedAttackCmd_NumberOfShoots(), ecorePackage.getEInt(), "numberOfShoots", null, 0, 1, RangedAttackCmd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIntervall_Quantities(), ecorePackage.getEInt(), "quantities", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
