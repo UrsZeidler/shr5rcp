@@ -84,20 +84,24 @@ public class HandComposite extends NameableComposite {
                 FeuerModus modus = GameplayTools.getFireArmModus(rChar, object);
                 switch (modus) {
                     case EM:
-                        createUseFwSimpleAction(object, modus);
+                        createUseFwSimpleAction(object, modus,1);
                         createChangeFwModeAction(object);
-
                         break;
                     case HM:
-                        createUseFwSimpleAction(object, modus);
+                        createUseFwSimpleAction(object, modus,1);
+                        createUseFwComplexAction(object, modus,3);
                         createChangeFwModeAction(object);
-
                         break;
 
                     case AM:
+                        createUseFwSimpleAction(object, modus,6);
+                        createUseFwComplexAction(object, modus,10);
+                        createUseFwComplexAction(object, modus,20);
                         createChangeFwModeAction(object);
                         break;
                     case SM:
+                        createUseFwSimpleAction(object, modus,3);
+                        createUseFwComplexAction(object, modus,6);
                         createChangeFwModeAction(object);
                         break;
                     default:
@@ -268,7 +272,7 @@ public class HandComposite extends NameableComposite {
     /**
      * 
      */
-    protected void createUseFwSimpleAction(final Feuerwaffe object, FeuerModus modus) {
+    protected void createUseFwSimpleAction(final Feuerwaffe object,final FeuerModus modus,final int numberOfShoots) {
         ToolItem toolItemUseItem = new ToolItem(actionBar, SWT.NONE);
         toolItemUseItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
         toolItemUseItem.addSelectionListener(new SelectionAdapter() {
@@ -278,10 +282,36 @@ public class HandComposite extends NameableComposite {
                 if (simpleAction == null)
                     return;
 
-                RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
-                meeleAttackCmd.setWeapon(object);
+                RangedAttackCmd rangedAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
 
-                simpleAction.getSubCommands().add(meeleAttackCmd);
+                rangedAttackCmd.setNumberOfShoots(numberOfShoots);
+                rangedAttackCmd.setWeapon(object);
+                rangedAttackCmd.setModus(modus);
+
+                simpleAction.getSubCommands().add(rangedAttackCmd);
+            }
+        });
+        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.");
+    }
+    
+    /**
+     * 
+     */
+    protected void createUseFwComplexAction(final Feuerwaffe object,final FeuerModus modus,final int numberOfShoots) {
+        ToolItem toolItemUseItem = new ToolItem(actionBar, SWT.NONE);
+        toolItemUseItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItemUseItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
+                RangedAttackCmd rangedAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
+                complexAction.getSubCommands().add(rangedAttackCmd);
+
+                rangedAttackCmd.setNumberOfShoots(numberOfShoots);
+                rangedAttackCmd.setWeapon(object);
+                rangedAttackCmd.setModus(modus);
+
+                initativePass.setAction(complexAction);
             }
         });
         toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.");
