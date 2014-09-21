@@ -126,9 +126,7 @@ public abstract class NameableComposite extends Composite implements IValueChang
         label_name.setAlignment(SWT.LEFT);
         label_name.setLayoutData(gridData3);
 
-        actionBar = new ToolBar(mainGroup, SWT.FLAT | SWT.LEFT);
-        toolkit.adapt(actionBar);
-        toolkit.paintBordersFor(actionBar);
+        createActionbar();
         
         
        updateToolbar();
@@ -138,6 +136,13 @@ public abstract class NameableComposite extends Composite implements IValueChang
         // ToolItem toolItem_1 = new ToolItem(actionBar, SWT.NONE);
         // toolItem_1.setText("2");
         m_bindingContext = initDataBindings();
+    }
+
+    protected void createActionbar() {
+        actionBar = new ToolBar(mainGroup, SWT.BORDER | SWT.FLAT);
+        toolkit.adapt(actionBar);
+        toolkit.paintBordersFor(actionBar);
+//        mainGroup.layout(true);
     }
 
     public Button getButton_change() {
