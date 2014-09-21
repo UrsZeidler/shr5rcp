@@ -6805,7 +6805,7 @@
           <spezialisierungen xmi:id="_EMfN2DnTEeSe6_w6Jrbqxg" name="Mechanical"/>
           <spezialisierungen xmi:id="_EMfN2TnTEeSe6_w6Jrbqxg" name="Nuclear"/>
         </entries>
-        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="907a3a8f-2c40-4543-a5a9-891bcde41f6b" name="English">
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="907a3a8f-2c40-4543-a5a9-891bcde41f6b" image="/shr5Resource/images/eng.png" name="English">
           <localizations xmi:id="_EMf04DnTEeSe6_w6Jrbqxg" local="de" name="Englisch"/>
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
           <spezialisierungen xmi:id="_EMf04TnTEeSe6_w6Jrbqxg" name="Read/Write"/>
@@ -6912,7 +6912,7 @@
           <spezialisierungen xmi:id="_EMktYjnTEeSe6_w6Jrbqxg" name="Tsimshian Protectorate"/>
           <spezialisierungen xmi:id="_EMktYznTEeSe6_w6Jrbqxg" name="Yukutan"/>
         </entries>
-        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="a72084f6-3a4c-4c23-82aa-4697e543ee0b" name="German">
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="a72084f6-3a4c-4c23-82aa-4697e543ee0b" image="/shr5Resource/images/german.png" name="German">
           <localizations xmi:id="_EMktZDnTEeSe6_w6Jrbqxg" local="de" name="Deutsch"/>
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
           <spezialisierungen xmi:id="_EMktZTnTEeSe6_w6Jrbqxg" name="Read/Write"/>
