@@ -291,7 +291,7 @@ public class HandComposite extends NameableComposite {
                 simpleAction.getSubCommands().add(rangedAttackCmd);
             }
         });
-        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.");
+        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.("+numberOfShoots+")");
     }
     
     /**
@@ -314,7 +314,7 @@ public class HandComposite extends NameableComposite {
                 initativePass.setAction(complexAction);
             }
         });
-        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.");
+        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.("+numberOfShoots+")");
     }
 
     /**
