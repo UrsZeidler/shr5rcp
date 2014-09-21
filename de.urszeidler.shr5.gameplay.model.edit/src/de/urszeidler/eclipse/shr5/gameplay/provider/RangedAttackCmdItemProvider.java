@@ -173,14 +173,15 @@ public class RangedAttackCmdItemProvider
     @Override
     public String getText(Object object) {
         RangedAttackCmd rangedAttackCmd = (RangedAttackCmd)object;
-        
+
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getSubject());
         String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getObject());
-        String weapon =  GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getWeapon());
+        String weapon = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, rangedAttackCmd.getWeapon());
 
-        return getString("_UI_RangedAttackCmd_type_text", new Object[]{label_subject,label_opponent,weapon,rangedAttackCmd.getRange()});
+        return getString("_UI_RangedAttackCmd_type_text", new Object[]{ label_subject, label_opponent, weapon, rangedAttackCmd.getRange(),
+                rangedAttackCmd.getNumberOfShoots() });
     }
 
     /**
