@@ -19,7 +19,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.wb.swt.ResourceManager;
 
-import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -51,7 +50,6 @@ public class HandComposite extends NameableComposite {
     private InitativePass initativePass;
     private IChangeListener listener;
     private IObservableValue observeDetailValue;
-    private ToolItem toolItemUseItem;
 
     /**
      * Create the composite.
@@ -75,10 +73,6 @@ public class HandComposite extends NameableComposite {
 
     @Override
     protected void updateToolbar() {
-        // ToolItem[] items = actionBar.getItems();
-        // for (ToolItem toolItem : items) {
-        // toolItem.dispose();
-        // }
         actionBar.dispose();
         createActionbar();
 
@@ -90,98 +84,32 @@ public class HandComposite extends NameableComposite {
                 FeuerModus modus = GameplayTools.getFireArmModus(rChar, object);
                 switch (modus) {
                     case EM:
+                        createUseFwSimpleAction(object, modus);
+                        createChangeFwModeAction(object);
+
                         break;
                     case HM:
+                        createUseFwSimpleAction(object, modus);
+                        createChangeFwModeAction(object);
 
                         break;
 
                     case AM:
-
+                        createChangeFwModeAction(object);
                         break;
                     case SM:
-
+                        createChangeFwModeAction(object);
                         break;
                     default:
                         break;
                 }
-
-                ToolItem toolItemUseItem = new ToolItem(actionBar, SWT.NONE);
-                toolItemUseItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
-                toolItemUseItem.addSelectionListener(new SelectionAdapter() {
-                    @Override
-                    public void widgetSelected(SelectionEvent e) {
-                        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
-                        if (simpleAction == null)
-                            return;
-
-                        RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
-                        meeleAttackCmd.setWeapon(object);
-
-                        simpleAction.getSubCommands().add(meeleAttackCmd);
-                    }
-                });
-                toolItemUseItem.setToolTipText("Use " + object.getName() + "in " + modus + " modus.");
-
-                ToolItem toolItemChangeFwMode = new ToolItem(actionBar, SWT.NONE);
-                toolItemChangeFwMode.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
-                toolItemChangeFwMode.addSelectionListener(new SelectionAdapter() {
-                    @Override
-                    public void widgetSelected(SelectionEvent e) {
-                        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
-                        if (simpleAction == null)
-                            return;
-                        OwnChooseDialog dialog = new OwnChooseDialog(getShell(), object.getModie().toArray(new Object[]{}), "Change item",
-                                "Select the item you want to choose.");
-
-                        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-                        int open = dialog.open();
-                        FeuerModus fm = null;
-                        if (open == Dialog.OK) {
-                            Object[] result = dialog.getResult();
-                            if (result.length > 0) {
-                                fm = (FeuerModus)result[0];
-                            }
-
-                        }
-                        if (fm == null)
-                            return;
-
-                        SetExtendetData cmd = GameplayFactory.eINSTANCE.createSetExtendetData();
-                        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
-                        data.setEObject(object);
-                        data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
-
-                        cmd.setDataAware((AbstractExtendetDataAware)character.getValue());
-                        cmd.setData(data);
-                        cmd.setValue(fm);
-
-                        simpleAction.getSubCommands().add(cmd);
-
-                    }
-                });
-                toolItemChangeFwMode.setToolTipText("change mode");
 
                 return object;
             };
 
             @Override
             public Object caseNahkampfwaffe(final Nahkampfwaffe object) {
-
-                ToolItem toolItemUseItem = new ToolItem(actionBar, SWT.NONE);
-                toolItemUseItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
-                toolItemUseItem.addSelectionListener(new SelectionAdapter() {
-                    @Override
-                    public void widgetSelected(SelectionEvent e) {
-                        ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
-                        MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
-                        meeleAttackCmd.setWeapon(object);
-
-                        complexAction.getSubCommands().add(meeleAttackCmd);
-                        initativePass.setAction(complexAction);
-                    }
-                });
-                toolItemUseItem.setToolTipText("Use " + object.getName());
-
+                createMeeleComplexAction(object);
                 return object;
             }
 
@@ -225,28 +153,30 @@ public class HandComposite extends NameableComposite {
         // toolItemUseItem.setToolTipText("Use item");
 
         if (value != null) {
-            ToolItem toolItem1 = new ToolItem(actionBar, SWT.NONE);
-            toolItem1.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
-            toolItem1.addSelectionListener(new SelectionAdapter() {
-                @Override
-                public void widgetSelected(SelectionEvent e) {
-                    if (initativePass.getFreeAction() == null) {
-                        FreeAction action = GameplayFactory.eINSTANCE.createFreeAction();
-                        SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
-                        action.getSubCommands().add(setFeatureCommand);
-                        setFeatureCommand.setObject(initativePass.getSubject());
-                        setFeatureCommand.setFeature(references);
-                        setFeatureCommand.setValue(null);
-                        initativePass.setFreeAction(action);
-                    }
+            createDropItemFreeAction();
+        } else {
+            if (character != null) {
+                final RuntimeCharacter rChar = (RuntimeCharacter)character.getValue();
+                if (rChar != null && rChar.getCharacter() != null && rChar.getCharacter().getPersona() != null
+                        && rChar.getCharacter().getPersona().getSpezies() != null) {
+                    Nahkampfwaffe angriff = rChar.getCharacter().getPersona().getSpezies().getAngriff();
+                    angriff.setPraezision(rChar.getCharacter().getPersona().getKoerperlich());
+                    createMeeleComplexAction(angriff);
                 }
-            });
-            toolItem1.setToolTipText("drop item");
+            }
         }
+        createChangeItemSimpleAction();
 
-        ToolItem tltmNewItem = new ToolItem(actionBar, SWT.NONE);
-        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
-        tltmNewItem.addSelectionListener(new SelectionAdapter() {
+        actionBar.getParent().layout(true);
+    }
+
+    /**
+     * 
+     */
+    protected void createChangeItemSimpleAction() {
+        ToolItem changeItem = new ToolItem(actionBar, SWT.NONE);
+        changeItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        changeItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
@@ -257,16 +187,32 @@ public class HandComposite extends NameableComposite {
                 simpleAction.getSubCommands().add(setFeatureCommand);
             }
         });
-        tltmNewItem.setToolTipText("change item");
- 
-        actionBar.getParent().layout(true);
+        changeItem.setToolTipText("change item");
     }
 
-    @Override
-    protected void checkSubclass() {
-        // toolItemUseItem.set
+    protected void createDropItemFreeAction() {
+        ToolItem toolItem1 = new ToolItem(actionBar, SWT.NONE);
+        toolItem1.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItem1.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (initativePass.getFreeAction() == null) {
+                    FreeAction action = GameplayFactory.eINSTANCE.createFreeAction();
+                    SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+                    action.getSubCommands().add(setFeatureCommand);
+                    setFeatureCommand.setObject(initativePass.getSubject());
+                    setFeatureCommand.setFeature(references);
+                    setFeatureCommand.setValue(null);
+                    initativePass.setFreeAction(action);
+                }
+            }
+        });
+        toolItem1.setToolTipText("drop item");
     }
 
+    /**
+     * 
+     */
     public void setCharacter(InitativePass pass, EReference ref) {
         this.initativePass = pass;
 
@@ -294,11 +240,6 @@ public class HandComposite extends NameableComposite {
         updateToolbar();
     }
 
-    protected void updateToolbarView() {
-        // TODO Auto-generated method stub
-
-    }
-
     protected SetFeatureCommand changeItem(RuntimeCharacter subject, EReference references2) {
         EObject object = null;
 
@@ -322,6 +263,91 @@ public class HandComposite extends NameableComposite {
         setFeatureCommand.setFeature(references2);
         setFeatureCommand.setValue(object);
         return setFeatureCommand;
+    }
+
+    /**
+     * 
+     */
+    protected void createUseFwSimpleAction(final Feuerwaffe object, FeuerModus modus) {
+        ToolItem toolItemUseItem = new ToolItem(actionBar, SWT.NONE);
+        toolItemUseItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItemUseItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+                if (simpleAction == null)
+                    return;
+
+                RangedAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
+                meeleAttackCmd.setWeapon(object);
+
+                simpleAction.getSubCommands().add(meeleAttackCmd);
+            }
+        });
+        toolItemUseItem.setToolTipText("Use " + object.getName() + " in " + modus + " modus.");
+    }
+
+    /**
+     * @param object
+     */
+    protected void createChangeFwModeAction(final Feuerwaffe object) {
+        ToolItem toolItemChangeFwMode = new ToolItem(actionBar, SWT.NONE);
+        toolItemChangeFwMode.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItemChangeFwMode.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+                if (simpleAction == null)
+                    return;
+                OwnChooseDialog dialog = new OwnChooseDialog(getShell(), object.getModie().toArray(new Object[]{}), "Change item",
+                        "Select the item you want to choose.");
+
+                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                int open = dialog.open();
+                FeuerModus fm = null;
+                if (open == Dialog.OK) {
+                    Object[] result = dialog.getResult();
+                    if (result.length > 0) {
+                        fm = (FeuerModus)result[0];
+                    }
+
+                }
+                if (fm == null)
+                    return;
+
+                SetExtendetData cmd = GameplayFactory.eINSTANCE.createSetExtendetData();
+                ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+                data.setEObject(object);
+                data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
+
+                cmd.setDataAware((AbstractExtendetDataAware)character.getValue());
+                cmd.setData(data);
+                cmd.setValue(fm);
+
+                simpleAction.getSubCommands().add(cmd);
+            }
+        });
+        toolItemChangeFwMode.setToolTipText("change mode");
+    }
+
+    /**
+     * @param object
+     */
+    protected void createMeeleComplexAction(final Nahkampfwaffe object) {
+        ToolItem toolItemMeeleItem = new ToolItem(actionBar, SWT.NONE);
+        toolItemMeeleItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/use.png"));
+        toolItemMeeleItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
+                MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
+                meeleAttackCmd.setWeapon(object);
+
+                complexAction.getSubCommands().add(meeleAttackCmd);
+                initativePass.setAction(complexAction);
+            }
+        });
+        toolItemMeeleItem.setToolTipText("Use " + object.getName());
     }
 
 }
