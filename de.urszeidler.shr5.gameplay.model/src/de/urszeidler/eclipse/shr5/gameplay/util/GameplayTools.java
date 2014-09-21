@@ -499,6 +499,7 @@ public class GameplayTools {
 
     /**
      * Return the defce mod for a modus and a number of shoots
+     * 
      * @param rangedAttackCmd
      * @param probeMods
      * @return
@@ -522,8 +523,8 @@ public class GameplayTools {
                 break;
             case AM:
                 if (numberOfShoots > 19)
-                    mod=0;
-                else  if (numberOfShoots > 9)
+                    mod = 0;
+                else if (numberOfShoots > 9)
                     mod = -9;
                 else
                     mod = -5;
@@ -535,6 +536,17 @@ public class GameplayTools {
             probeMods.add(probeMod);
         }
         return mod;
+    }
+
+    /**
+     * Removes the number of rounds from the clip of the weapon.
+     * 
+     * @param weapon
+     * @param numberOfShoots
+     */
+    public static void reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
+        // TODO Auto-generated method stub
+
     }
 
 }

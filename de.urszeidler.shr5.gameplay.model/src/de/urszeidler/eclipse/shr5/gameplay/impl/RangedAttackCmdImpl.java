@@ -440,6 +440,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         }
         if (getModus() != FeuerModus.EM)// TODO : not getNumberOfShoots() when suppessing fire
             GameplayTools.inceaseRecoilMod(getSubject(), getWeapon(), getNumberOfShoots());
+        GameplayTools.reduceRounds(getWeapon(), getNumberOfShoots());
         afterRedo();
     }
 
