@@ -91,8 +91,8 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     @Override
     public void redo() {
         getProbe().clear();
-        getProbeMods().clear();
-        mods = GameplayTools.getDefenceMod(getSubject(), getProbeMods());
+//        getProbeMods().clear();
+        mods = mods + GameplayTools.getDefenceMod(getSubject(), getProbeMods());
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
         prepareRedo();
 

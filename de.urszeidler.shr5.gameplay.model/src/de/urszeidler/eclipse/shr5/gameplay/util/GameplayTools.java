@@ -37,6 +37,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
+import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
@@ -114,10 +115,10 @@ public class GameplayTools {
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
         data.setEObject(waffe);
         data.setEFeature(Shr5Package.Literals.FEUERWAFFE__MODIE);
-//        FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
-//        if (fm == null) {
-            subject.getExtendetData().put(data, value);
-//        }
+        // FeuerModus fm = (FeuerModus)subject.getExtendetData().get(data);
+        // if (fm == null) {
+        subject.getExtendetData().put(data, value);
+        // }
     }
 
     public static int getWoundMod(RuntimeCharacter subject, List<ProbeMod> mods) {
@@ -412,11 +413,11 @@ public class GameplayTools {
         list.add(damageTest);
         return list;
     }
-    
+
     public static List<EClass> getCharacterCommands() {
         ArrayList<EClass> list = new ArrayList<EClass>(7);
         list.add(GameplayPackage.Literals.SKILL_TEST_CMD);
-//        list.add(GameplayPackage.Literals.SUCCES_TEST);
+        // list.add(GameplayPackage.Literals.SUCCES_TEST);
         list.add(GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD);
         list.add(GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD);
         list.add(GameplayPackage.Literals.DEFENS_TEST_CMD);
@@ -494,6 +495,46 @@ public class GameplayTools {
         data.setEObject(subject);
         data.setEFeature(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS);
         subject.getExtendetData().remove(data);
+    }
+
+    /**
+     * Return the defce mod for a modus and a number of shoots
+     * @param rangedAttackCmd
+     * @param probeMods
+     * @return
+     */
+    public static int getFwDefenceMod(RangedAttackCmd rangedAttackCmd, EList<ProbeMod> probeMods) {
+        FeuerModus modus = rangedAttackCmd.getModus();
+        int numberOfShoots = rangedAttackCmd.getNumberOfShoots();
+        if (numberOfShoots < 3)
+            return 0;
+
+        int mod = 0;
+        switch (modus) {
+            case HM:
+                mod = -2;
+                break;
+            case SM:
+                if (numberOfShoots > 5)
+                    mod = -5;
+                else
+                    mod = -2;
+                break;
+            case AM:
+                if (numberOfShoots > 19)
+                    mod=0;
+                else  if (numberOfShoots > 9)
+                    mod = -9;
+                else
+                    mod = -5;
+            default:
+                break;
+        }
+        if (probeMods != null && mod != 0) {
+            ProbeMod probeMod = createProbeMod(rangedAttackCmd.getObject(), mod, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
+            probeMods.add(probeMod);
+        }
+        return mod;
     }
 
 }
