@@ -7578,14 +7578,14 @@
       <entries xsi:type="shr5:ShrList" xmi:id="_END1mDnTEeSe6_w6Jrbqxg" name="ranges">
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsDnTEeSe6_w6Jrbqxg" name="Tasers" kurz="5" mittel="10" weit="15" extrem="20"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsTnTEeSe6_w6Jrbqxg" name="Holdouts" kurz="5" mittel="15" weit="30" extrem="50"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsjnTEeSe6_w6Jrbqxg" name="Light Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsznTEeSe6_w6Jrbqxg" name="Heavy Pistols" kurz="5" mittel="20" weit="40" extrem="60"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwDnTEeSe6_w6Jrbqxg" name="Machine Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsjnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/pistol.png" name="Light Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsznTEeSe6_w6Jrbqxg" image="/shr5Resource/images/pistol.png" name="Heavy Pistols" kurz="5" mittel="20" weit="40" extrem="60"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwDnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/mp.png" name="Machine Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwTnTEeSe6_w6Jrbqxg" name="Submachine Guns" kurz="10" mittel="40" weit="80" extrem="150"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwjnTEeSe6_w6Jrbqxg" name="Assault Rifles" kurz="25" mittel="150" weit="350" extrem="550"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwjnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/assault.png" name="Assault Rifles" kurz="25" mittel="150" weit="350" extrem="550"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwznTEeSe6_w6Jrbqxg" name="Shotguns" kurz="15" mittel="30" weit="45" extrem="60"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqxDnTEeSe6_w6Jrbqxg" name="Shotguns (slug)" kurz="10" mittel="40" weit="80" extrem="150"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqxTnTEeSe6_w6Jrbqxg" name="Sniper Rifles" kurz="50" mittel="350" weit="800" extrem="1500"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqxTnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/sniper.png" name="Sniper Rifles" kurz="50" mittel="350" weit="800" extrem="1500"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqxjnTEeSe6_w6Jrbqxg" name="Sporting Rifles" kurz="50" mittel="250" weit="500" extrem="750"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENGR0DnTEeSe6_w6Jrbqxg" name="Light Machine Guns" kurz="25" mittel="200" weit="400" extrem="800"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENGR0TnTEeSe6_w6Jrbqxg" name="Medium/Heavy Machinegun" kurz="40" mittel="250" weit="750" extrem="1200"/>
