@@ -295,6 +295,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     private Label lblDatetimelong;
 
     private IObservableList printedProtocol;
+    private Table tree;
 
     public RuntimeScriptView() {
 
@@ -381,7 +382,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         // ----
         Composite composite_7 = formToolkit.createComposite(composite, SWT.NONE);
-        composite_7.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+        composite_7.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 3, 1));
         formToolkit.paintBordersFor(composite_7);
         {
             TableWrapLayout twl_composite_7 = new TableWrapLayout();
@@ -411,19 +412,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_13.setLayout(new TableColumnLayout());
 
         characterViewer = new TableViewer(composite_13, SWT.BORDER);
-//        characterViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-//
-//            @Override
-//            public void selectionChanged(SelectionChangedEvent event) {
-//                // ISelection selection = treeViewer.getSelection();
-//                // EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
-//
-//                // RuntimeCharacter value = (RuntimeCharacter)firstEObject;
-//                // List<EClass> commands = GameplayTools.getCharacterCommands();// createCharacterCommands(value);
-//                // treeViewer_Commands.setInput(commands);
-//
-//            }
-//        });
+        // characterViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+        //
+        // @Override
+        // public void selectionChanged(SelectionChangedEvent event) {
+        // // ISelection selection = treeViewer.getSelection();
+        // // EObject firstEObject = ShadowrunEditingTools.extractFirstEObject(selection);
+        //
+        // // RuntimeCharacter value = (RuntimeCharacter)firstEObject;
+        // // List<EClass> commands = GameplayTools.getCharacterCommands();// createCharacterCommands(value);
+        // // treeViewer_Commands.setInput(commands);
+        //
+        // }
+        // });
         final Table characterTable = characterViewer.getTable();
         characterTable.addMouseListener(new MouseAdapter() {
             @Override
@@ -440,8 +441,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         gd_composite_12.widthHint = 150;
         composite_12.setLayoutData(gd_composite_12);
         composite_12.setLayout(new TableColumnLayout());
-//        gd_composite_12.widthHint = 196;
-//        composite_12.setLayoutData(gd_composite_12);
+        // gd_composite_12.widthHint = 196;
+        // composite_12.setLayoutData(gd_composite_12);
         formToolkit.adapt(composite_12);
         formToolkit.paintBordersFor(composite_12);
 
@@ -449,7 +450,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         Table tree_2 = treeViewer_Commands.getTable();
         GridData gd_tree_2 = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
         gd_tree_2.heightHint = 128;
-//        gd_tree_2.widthHint = 196;
+        // gd_tree_2.widthHint = 196;
         tree_2.setLayoutData(gd_tree_2);
         treeViewer_Commands.setContentProvider(ArrayContentProvider.getInstance());// new SimpleListContenProvider(actionListContentProvider));
         treeViewer_Commands.setLabelProvider(labelProvider);
@@ -507,7 +508,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             public void widgetSelected(SelectionEvent e) {
                 ISelection selection = treeViewer_Commands.getSelection();
                 EClass eObject = (EClass)ShadowrunEditingTools.extractFirstEObject(selection);
-                if (eObject != null){
+                if (eObject != null) {
                     SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
                     command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
                     scriptService.executeCommand(command);// (Command)eObject);
@@ -532,7 +533,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
-        composite_8.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
+        composite_8.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 4, 1));
         formToolkit.paintBordersFor(composite_8);
 
         Composite composite_9 = formToolkit.createComposite(composite_8, SWT.NONE);
@@ -646,17 +647,33 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
 
-        Composite composite_14 = formToolkit.createComposite(composite, SWT.NONE);
-        composite_14.setLayout(new FillLayout(SWT.HORIZONTAL));
-        TableWrapData twd_composite_14 = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 1, 1);
-        twd_composite_14.heightHint = 239;
-        composite_14.setLayoutData(twd_composite_14);
+        Section sctnProtocol = formToolkit.createSection(composite, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
+        TableWrapData twd_sctnProtocol = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 1, 1);
+        twd_sctnProtocol.heightHint = 218;
+        sctnProtocol.setLayoutData(twd_sctnProtocol);
+        formToolkit.paintBordersFor(sctnProtocol);
+        sctnProtocol.setText("protocol");
+
+        Composite composite_14 = new Composite(sctnProtocol, SWT.NONE);
+        sctnProtocol.setClient(composite_14);
+        formToolkit.adapt(composite_14);
         formToolkit.paintBordersFor(composite_14);
+        composite_14.setLayout(new FillLayout(SWT.HORIZONTAL));
+
+        // Composite composite_14 = formToolkit.createComposite(composite, SWT.NONE);
+        // composite_14.setLayout(new FillLayout(SWT.HORIZONTAL));
+        // TableWrapData twd_composite_14 = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL, 1, 1);
+        // twd_composite_14.heightHint = 239;
+        // composite_14.setLayoutData(twd_composite_14);
+        // formToolkit.paintBordersFor(composite_14);
 
         treeViewer_commandProtokoll = new TableViewer(composite_14, SWT.BORDER);
-        Table tree_1 = treeViewer_commandProtokoll.getTable();
-        tree_1.setHeaderVisible(false);
-        formToolkit.paintBordersFor(tree_1);
+        tree = treeViewer_commandProtokoll.getTable();
+        tree.setHeaderVisible(false);
+        formToolkit.paintBordersFor(tree);
+
+
+        composite.pack(true);
         scrolledComposite.setContent(composite);
         scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 
@@ -976,8 +993,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
             // d.open();
             return;
-        }else if (cmd instanceof SetExtendetData) {
-//            SetExtendetData new_name = (SetExtendetData)cmd;
+        } else if (cmd instanceof SetExtendetData) {
+            // SetExtendetData new_name = (SetExtendetData)cmd;
             return;
         }
 
