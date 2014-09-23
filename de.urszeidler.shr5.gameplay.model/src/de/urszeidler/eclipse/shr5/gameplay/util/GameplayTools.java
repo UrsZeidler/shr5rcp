@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
@@ -498,7 +499,7 @@ public class GameplayTools {
     }
 
     /**
-     * Return the defce mod for a modus and a number of shoots
+     * Return the defence mod for a modus and a number of shoots
      * 
      * @param rangedAttackCmd
      * @param probeMods
@@ -547,6 +548,44 @@ public class GameplayTools {
     public static void reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
         // TODO Auto-generated method stub
 
+    }
+
+    /**
+     * Returns the reach mod for the subject. It compares the reaches between subject and object.
+     * 
+     * @param nahkampfwaffe
+     * @param defender
+     * @param probeMods
+     * @return
+     */
+    public static int getMeleeReachMod( Nahkampfwaffe nahkampfwaffe, RuntimeCharacter defender, EList<ProbeMod> probeMods) {
+        Nahkampfwaffe meleeWeapon = getMeleeWeapon(defender);
+        int mod = meleeWeapon.getReichweite() -  nahkampfwaffe.getReichweite();
+        if (probeMods != null && mod != 0) {
+            ProbeMod probeMod = createProbeMod(defender, mod, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
+            probeMods.add(probeMod);
+        }
+
+        return mod;
+    }
+
+    /**
+     * Returns from left to right the first melee weapon or the angriff of the {@link Spezies}.
+     * 
+     * @param object
+     * @return
+     */
+    public static Nahkampfwaffe getMeleeWeapon(RuntimeCharacter object) {
+        AbstraktGegenstand leftHand = object.getLeftHand();
+        if (leftHand instanceof Nahkampfwaffe) {
+            return (Nahkampfwaffe)leftHand;
+        }
+        AbstraktGegenstand rightHand = object.getRightHand();
+        if (rightHand instanceof Nahkampfwaffe) {
+            return (Nahkampfwaffe)rightHand;
+        }
+        AbstraktPersona persona = object.getCharacter().getPersona();
+        return persona.getSpezies().getAngriff();
     }
 
 }
