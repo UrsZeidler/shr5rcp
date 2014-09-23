@@ -638,6 +638,12 @@ public class ShadowrunTools {
         return string;
     }
 
+    /**
+     * Parse a damage code to an effective one. f.e. STR+1, where the strength is taken from the persona.
+     * @param damage
+     * @param persona
+     * @return
+     */
     public static DamageCode parseDamageCode(String damage,AbstraktPersona persona) {
         DamageCode damageCode = ShadowrunTools.parseDamageCode(damage);
         if (damageCode != null) {
@@ -650,8 +656,7 @@ public class ShadowrunTools {
                 return damageCode;
         }
         
-        return null;
-        
+        return null;        
     }
     
     public static DamageCode parseDamageCode(String damage) {
