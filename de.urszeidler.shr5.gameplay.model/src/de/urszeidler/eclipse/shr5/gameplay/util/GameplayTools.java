@@ -67,6 +67,11 @@ public class GameplayTools {
         ManagedCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         AbstraktPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
         persona.setKonstitutionBasis(4);
+        Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
+        Nahkampfwaffe nahkampfwaffe = Shr5Factory.eINSTANCE.createNahkampfwaffe();
+        nahkampfwaffe.setSchadenscode("STR+0P");
+        spezies.setAngriff(nahkampfwaffe);
+        persona.setSpezies(spezies);
         character.setPersona(persona);
 
         RuntimeCharacter runtimeCharacter = RuntimeFactory.eINSTANCE.createRuntimeCharacter();
