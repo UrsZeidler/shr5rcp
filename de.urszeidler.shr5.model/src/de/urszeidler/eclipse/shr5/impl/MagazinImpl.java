@@ -116,11 +116,17 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * workaround for Bug 89325
+     * @generated not
      */
     public EList<Munition> getBullets() {
         if (bullets == null) {
-            bullets = new EObjectResolvingEList<Munition>(Munition.class, this, Shr5Package.MAGAZIN__BULLETS);
+            bullets = new EObjectResolvingEList<Munition>(Munition.class, this, Shr5Package.MAGAZIN__BULLETS){
+                @Override
+                protected boolean isUnique() {
+                    return false;
+                }
+            };
         }
         return bullets;
     }
