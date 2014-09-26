@@ -557,15 +557,19 @@ public class GameplayTools {
 
     /**
      * Returns the reach mod for the subject. It compares the reaches between subject and object.
+     * @param attacker 
      * 
-     * @param nahkampfwaffe
+     * @param attackerWeapon
      * @param defender
      * @param probeMods
      * @return
      */
-    public static int getMeleeReachMod( Nahkampfwaffe nahkampfwaffe, RuntimeCharacter defender, EList<ProbeMod> probeMods) {
-        Nahkampfwaffe meleeWeapon = getMeleeWeapon(defender);
-        int mod = meleeWeapon.getReichweite() -  nahkampfwaffe.getReichweite();
+    public static int getMeleeReachMod( RuntimeCharacter attacker, Nahkampfwaffe attackerWeapon, RuntimeCharacter defender, EList<ProbeMod> probeMods) {
+        Nahkampfwaffe defenderWeapon = getMeleeWeapon(defender);
+        int attackerMod = attackerWeapon.getReichweite()+ attacker.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
+        int defenderMod = defenderWeapon.getReichweite()+ defender.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
+        
+        int mod = defenderMod -  attackerMod;
         if (probeMods != null && mod != 0) {
             ProbeMod probeMod = createProbeMod(defender, mod, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
             probeMods.add(probeMod);

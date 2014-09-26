@@ -133,6 +133,44 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
      * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
      * @generated not
      */
+    public void testRedo_skip() {
+        RuntimeCharacter runtimeCharacter = GameplayTools.createRuntimeCharacter();
+        RuntimeCharacter object = GameplayTools.createRuntimeCharacter();
+        AbstraktPersona persona = runtimeCharacter.getCharacter().getPersona();
+        persona.setGeschicklichkeitBasis(1);
+
+        Feuerwaffe fw = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        fw.getModie().add(FeuerModus.EM);
+        Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+        fertigkeit.setAttribut(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
+
+        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        personaFertigkeit.setFertigkeit(fertigkeit);
+        personaFertigkeit.setStufe(1);
+        persona.getFertigkeiten().add(personaFertigkeit);
+
+        fw.setFertigkeit(fertigkeit);
+        getFixture().setSubject(runtimeCharacter);
+        getFixture().setWeapon(fw);
+        getFixture().setObject(object);
+        
+        getFixture().setSkipTest(true);
+        getFixture().setSuccesses(0);
+        getFixture().redo();
+
+        assertTrue(getFixture().isExecuted());
+//        assertEquals(2, getFixture().getProbe().size());
+        
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#redo()
+     * @generated not
+     */
     public void testRedo_Damage() {
         RuntimeCharacter runtimeCharacter = GameplayTools.createRuntimeCharacter();
         RuntimeCharacter object = GameplayTools.createRuntimeCharacter();

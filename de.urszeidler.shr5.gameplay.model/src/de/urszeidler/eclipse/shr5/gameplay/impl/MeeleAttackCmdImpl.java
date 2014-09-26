@@ -207,7 +207,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
             defensTestCmd.setCmdCallback(getCmdCallback());
             defensTestCmd.setDate(getDate());
             defensTestCmd.setAttackersHits(netHits);
-            defensTestCmd.setMods(defensTestCmd.getMods() + GameplayTools.getMeleeReachMod(getWeapon(),getObject(), defensTestCmd.getProbeMods()));
+            defensTestCmd.setMods(defensTestCmd.getMods() + GameplayTools.getMeleeReachMod(getSubject(), getWeapon(),getObject(), defensTestCmd.getProbeMods()));
             getSubCommands().add(defensTestCmd);
             defensTestCmd.redo();
 
