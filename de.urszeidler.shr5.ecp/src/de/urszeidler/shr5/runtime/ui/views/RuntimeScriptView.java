@@ -438,7 +438,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         Composite composite_12 = new Composite(composite_11, SWT.NONE);
         GridData gd_composite_12 = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
         gd_composite_12.heightHint = 128;
-        gd_composite_12.widthHint = 150;
+        gd_composite_12.widthHint = 200;
         composite_12.setLayoutData(gd_composite_12);
         composite_12.setLayout(new TableColumnLayout());
         // gd_composite_12.widthHint = 196;
