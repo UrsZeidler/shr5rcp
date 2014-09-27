@@ -6723,7 +6723,7 @@
           <spezialisierungen xmi:id="_EMbjeDnTEeSe6_w6Jrbqxg" name="Dialect"/>
           <spezialisierungen xmi:id="_EMbjeTnTEeSe6_w6Jrbqxg" name="Lingo"/>
         </entries>
-        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="878181d4-2f54-4993-ae30-06c9bf1ee11b" name="Danish">
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="878181d4-2f54-4993-ae30-06c9bf1ee11b" image="/shr5Resource/images/dk.png" name="Danish">
           <localizations xmi:id="_EMcKgDnTEeSe6_w6Jrbqxg" local="de" name="Dänisch"/>
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
           <spezialisierungen xmi:id="_EMcKgTnTEeSe6_w6Jrbqxg" name="Read/Write"/>
@@ -6834,7 +6834,7 @@
           <spezialisierungen xmi:id="_EMhDATnTEeSe6_w6Jrbqxg" name="Modification"/>
           <spezialisierungen xmi:id="_EMhDAjnTEeSe6_w6Jrbqxg" name="Pistols"/>
         </entries>
-        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="026062e0-9bdd-4a06-9cca-c3640c634cfd" name="French">
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="026062e0-9bdd-4a06-9cca-c3640c634cfd" image="/shr5Resource/images/fr.png" name="French">
           <localizations xmi:id="_EMhDAznTEeSe6_w6Jrbqxg" local="de" name="Französisch"/>
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
           <spezialisierungen xmi:id="_EMhDBDnTEeSe6_w6Jrbqxg" name="Read/Write"/>
@@ -7013,7 +7013,7 @@
           <spezialisierungen xmi:id="_EMo-2DnTEeSe6_w6Jrbqxg" name="Dialect"/>
           <spezialisierungen xmi:id="_EMo-2TnTEeSe6_w6Jrbqxg" name="Lingo"/>
         </entries>
-        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="f876953e-a14e-4ca5-b454-b0090907da28" name="Japanese">
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="f876953e-a14e-4ca5-b454-b0090907da28" image="/shr5Resource/images/jp.png" name="Japanese">
           <localizations xmi:id="_EMpl4DnTEeSe6_w6Jrbqxg" local="de" name="Japanisch"/>
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
           <spezialisierungen xmi:id="_EMpl4TnTEeSe6_w6Jrbqxg" name="Read/Write"/>
