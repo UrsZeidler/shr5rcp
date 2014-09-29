@@ -9,6 +9,7 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -21,16 +22,10 @@ import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
-import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.shr5.runtime.ui.views.CombatTurnView.ComplexActionDropdownSelectionListener;
-import de.urszeidler.shr5.runtime.ui.views.CombatTurnView.SimpleActionDropdownSelectionListener;
-import org.eclipse.swt.layout.FillLayout;
 
 public class ActionPanelWidgets extends Composite {
 
