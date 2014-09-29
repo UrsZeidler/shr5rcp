@@ -58,6 +58,8 @@ public class IntervallVertragItemProvider
             super.getPropertyDescriptors(object);
 
             addFaelligkeitsIntervallPropertyDescriptor(object);
+            addUnitPropertyDescriptor(object);
+            addBeginPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -80,6 +82,50 @@ public class IntervallVertragItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Unit feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addUnitPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_IntervallVertrag_unit_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_IntervallVertrag_unit_feature", "_UI_IntervallVertrag_type"),
+                 Shr5Package.Literals.INTERVALL_VERTRAG__UNIT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Begin feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBeginPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_IntervallVertrag_begin_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_IntervallVertrag_begin_feature", "_UI_IntervallVertrag_type"),
+                 Shr5Package.Literals.INTERVALL_VERTRAG__BEGIN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
@@ -111,6 +157,8 @@ public class IntervallVertragItemProvider
 
         switch (notification.getFeatureID(IntervallVertrag.class)) {
             case Shr5Package.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL:
+            case Shr5Package.INTERVALL_VERTRAG__UNIT:
+            case Shr5Package.INTERVALL_VERTRAG__BEGIN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

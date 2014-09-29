@@ -436,6 +436,11 @@ public class ShrListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createIntervallVertrag()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createLifestyle()));
 
         newChildDescriptors.add

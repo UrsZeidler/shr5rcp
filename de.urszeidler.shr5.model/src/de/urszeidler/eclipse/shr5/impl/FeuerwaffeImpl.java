@@ -131,7 +131,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	protected EList<FernkampfwaffeModifikator> einbau;
 
 	/**
-     * The cached value of the '{@link #getMagazin() <em>Magazin</em>}' reference.
+     * The cached value of the '{@link #getMagazin() <em>Magazin</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getMagazin()
@@ -264,14 +264,6 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      * @generated
      */
     public Magazin getMagazin() {
-        if (magazin != null && magazin.eIsProxy()) {
-            InternalEObject oldMagazin = (InternalEObject)magazin;
-            magazin = (Magazin)eResolveProxy(oldMagazin);
-            if (magazin != oldMagazin) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.FEUERWAFFE__MAGAZIN, oldMagazin, magazin));
-            }
-        }
         return magazin;
     }
 
@@ -281,20 +273,33 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      * <!-- end-user-doc -->
      * @generated
      */
-    public Magazin basicGetMagazin() {
-        return magazin;
+    public NotificationChain basicSetMagazin(Magazin newMagazin, NotificationChain msgs) {
+        Magazin oldMagazin = magazin;
+        magazin = newMagazin;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.FEUERWAFFE__MAGAZIN, oldMagazin, newMagazin);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
     }
 
-    /**
+/**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     public void setMagazin(Magazin newMagazin) {
-        Magazin oldMagazin = magazin;
-        magazin = newMagazin;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FEUERWAFFE__MAGAZIN, oldMagazin, magazin));
+        if (newMagazin != magazin) {
+            NotificationChain msgs = null;
+            if (magazin != null)
+                msgs = ((InternalEObject)magazin).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.FEUERWAFFE__MAGAZIN, null, msgs);
+            if (newMagazin != null)
+                msgs = ((InternalEObject)newMagazin).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.FEUERWAFFE__MAGAZIN, null, msgs);
+            msgs = basicSetMagazin(newMagazin, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FEUERWAFFE__MAGAZIN, newMagazin, newMagazin));
     }
 
     //    /**
@@ -317,6 +322,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
         switch (featureID) {
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return ((InternalEList<?>)getEinbau()).basicRemove(otherEnd, msgs);
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
+                return basicSetMagazin(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -342,8 +349,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return getEinbau();
             case Shr5Package.FEUERWAFFE__MAGAZIN:
-                if (resolve) return getMagazin();
-                return basicGetMagazin();
+                return getMagazin();
         }
         return super.eGet(featureID, resolve, coreType);
     }

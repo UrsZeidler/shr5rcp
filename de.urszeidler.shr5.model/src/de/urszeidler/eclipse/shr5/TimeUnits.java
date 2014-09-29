@@ -1,7 +1,7 @@
 /**
- * (c) Urs Zeilder
+ * 2014 Urs Zeidler
  */
-package de.urszeidler.eclipse.shr5.gameplay;
+package de.urszeidler.eclipse.shr5;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Time Units</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getTimeUnits()
+ * <!-- begin-model-doc -->
+ * Defines time units.
+ * <!-- end-model-doc -->
+ * @see de.urszeidler.eclipse.shr5.Shr5Package#getTimeUnits()
  * @model
  * @generated
  */

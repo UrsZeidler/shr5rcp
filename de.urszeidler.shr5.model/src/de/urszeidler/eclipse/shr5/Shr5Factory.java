@@ -418,6 +418,15 @@ public interface Shr5Factory extends EFactory {
     Critter createCritter();
 
     /**
+     * Returns a new object of class '<em>Intervall Vertrag</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Intervall Vertrag</em>'.
+     * @generated
+     */
+    IntervallVertrag createIntervallVertrag();
+
+    /**
      * Returns a new object of class '<em>Sin</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

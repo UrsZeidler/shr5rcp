@@ -108,6 +108,15 @@
       <nested inputs="shr5.ecore#//AddictionType/physiological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=1"/>
       <nested inputs="shr5.ecore#//AddictionType/both" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=2"/>
     </nested>
+    <nested inputs="shr5.ecore#//TimeUnits" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20">
+      <nested inputs="shr5.ecore#//TimeUnits/sec" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//TimeUnits/min" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//TimeUnits/hour" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//TimeUnits/day" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//TimeUnits/week" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=4"/>
+      <nested inputs="shr5.ecore#//TimeUnits/month" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=5"/>
+      <nested inputs="shr5.ecore#//TimeUnits/year" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=6"/>
+    </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -218,7 +227,6 @@
       <nested inputs="shr5.ecore#//Feuerwaffe/erweiterung" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=1"/>
       <nested inputs="shr5.ecore#//Feuerwaffe/rueckstoss" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//Feuerwaffe/einbau" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=2"/>
-      <nested inputs="shr5.ecore#//Feuerwaffe/magazin" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDAttributeUse=3"/>
       <nested inputs="shr5.ecore#//Feuerwaffe/magazin" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Feuerwaffe" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDElementDeclaration=15"/>
@@ -609,6 +617,8 @@
     <nested inputs="shr5.ecore#//Critter" outputs="Shr5XMI.xsd#//Critter;XSDElementDeclaration=73"/>
     <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74">
       <nested inputs="shr5.ecore#//IntervallVertrag/faelligkeitsIntervall" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//IntervallVertrag/unit" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//IntervallVertrag/begin" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDElementDeclaration=74"/>
     <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75"/>

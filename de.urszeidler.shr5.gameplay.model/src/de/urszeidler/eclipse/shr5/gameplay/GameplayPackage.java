@@ -4177,16 +4177,6 @@ public interface GameplayPackage extends EPackage {
     int SET_EXTENDET_DATA_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
-     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
-     * @generated
-     */
-    int TIME_UNITS = 29;
-
-    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4194,7 +4184,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
      * @generated
      */
-    int INTERRUPT_TYPE = 30;
+    int INTERRUPT_TYPE = 29;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
@@ -4204,7 +4194,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
      * @generated
      */
-    int PROBE_STATE = 31;
+    int PROBE_STATE = 30;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
@@ -4214,7 +4204,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
      * @generated
      */
-    int SUCCES_TEST_STATE = 32;
+    int SUCCES_TEST_STATE = 31;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -4224,7 +4214,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 33;
+    int COMMAND_CALLBACK = 32;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -5260,16 +5250,6 @@ public interface GameplayPackage extends EPackage {
     EAttribute getSetExtendetData_Value();
 
     /**
-     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Time Units</em>'.
-     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
-     * @generated
-     */
-    EEnum getTimeUnits();
-
-    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6166,16 +6146,6 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute SET_EXTENDET_DATA__VALUE = eINSTANCE.getSetExtendetData_Value();
-
-        /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits <em>Time Units</em>}' enum.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
-         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getTimeUnits()
-         * @generated
-         */
-        EEnum TIME_UNITS = eINSTANCE.getTimeUnits();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.

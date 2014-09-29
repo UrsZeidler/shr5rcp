@@ -148,6 +148,20 @@
       <xsd:enumeration value="both"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="TimeUnits">
+    <xsd:annotation>
+      <xsd:documentation>Defines time units.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="sec"/>
+      <xsd:enumeration value="min"/>
+      <xsd:enumeration value="hour"/>
+      <xsd:enumeration value="day"/>
+      <xsd:enumeration value="week"/>
+      <xsd:enumeration value="month"/>
+      <xsd:enumeration value="year"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -434,11 +448,6 @@
         <xsd:attribute name="munitionstyp" type="shr5:MagazinTyp"/>
         <xsd:attribute name="kapazitaet" type="xsd:int"/>
         <xsd:attribute name="rueckstoss" type="xsd:int"/>
-        <xsd:attribute name="magazin" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>This reference holds the current insert magazine.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1302,14 +1311,27 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Critter" type="shr5:Critter"/>
-  <xsd:complexType abstract="true" name="IntervallVertrag">
+  <xsd:complexType name="IntervallVertrag">
+    <xsd:annotation>
+      <xsd:documentation>Intervall conctract. The cost have to be paid in the given period. Defined by the intervall and the unit and a start date.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Vertrag">
         <xsd:attribute name="faelligkeitsIntervall" type="xsd:int"/>
+        <xsd:attribute name="unit" type="shr5:TimeUnits"/>
+        <xsd:attribute name="begin" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The start of the contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="IntervallVertrag" type="shr5:IntervallVertrag"/>
+  <xsd:element name="IntervallVertrag" type="shr5:IntervallVertrag">
+    <xsd:annotation>
+      <xsd:documentation>Intervall conctract. The cost have to be paid in the given period. Defined by the intervall and the unit and a start date.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Sin">
     <xsd:complexContent>
       <xsd:extension base="shr5:Fakeable"/>
@@ -1329,6 +1351,9 @@
   </xsd:complexType>
   <xsd:element name="Lizenz" type="shr5:Lizenz"/>
   <xsd:complexType abstract="true" name="Fakeable">
+    <xsd:annotation>
+      <xsd:documentation>A contact like a sin can be faked.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Vertrag">
         <xsd:attribute name="stufe" type="xsd:int"/>
@@ -1336,7 +1361,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Fakeable" type="shr5:Fakeable"/>
+  <xsd:element name="Fakeable" type="shr5:Fakeable">
+    <xsd:annotation>
+      <xsd:documentation>A contact like a sin can be faked.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="Steigerbar">
     <xsd:complexContent>
       <xsd:extension base="shr5:Erlernbar">
@@ -1408,6 +1437,9 @@
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="Munition">
+    <xsd:annotation>
+      <xsd:documentation>The ammunition defines the damage modifcation the ammunition does. </xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -1430,7 +1462,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Munition" type="shr5:Munition"/>
+  <xsd:element name="Munition" type="shr5:Munition">
+    <xsd:annotation>
+      <xsd:documentation>The ammunition defines the damage modifcation the ammunition does. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="ModifikatorAttribute">
     <xsd:annotation>
       <xsd:documentation>Modificator attributes are used to define additional aspects.</xsd:documentation>
@@ -1866,6 +1902,9 @@
   </xsd:complexType>
   <xsd:element name="RiggerProgram" type="shr5:RiggerProgram"/>
   <xsd:complexType abstract="true" name="MatrixDevice">
+    <xsd:annotation>
+      <xsd:documentation>The basic matic device.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:MatrixAttributes">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -1874,7 +1913,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="MatrixDevice" type="shr5:MatrixDevice"/>
+  <xsd:element name="MatrixDevice" type="shr5:MatrixDevice">
+    <xsd:annotation>
+      <xsd:documentation>The basic matic device.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="CommonProgram">
     <xsd:complexContent>
       <xsd:extension base="shr5:MatrixProgram">
@@ -2179,9 +2222,16 @@
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="DefaultWifi">
+    <xsd:annotation>
+      <xsd:documentation>A default wifi device to provide access.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstractMatrixDevice"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="DefaultWifi" type="shr5:DefaultWifi"/>
+  <xsd:element name="DefaultWifi" type="shr5:DefaultWifi">
+    <xsd:annotation>
+      <xsd:documentation>A default wifi device to provide access.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

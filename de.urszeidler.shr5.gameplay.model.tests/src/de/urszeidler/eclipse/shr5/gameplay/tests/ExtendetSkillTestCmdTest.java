@@ -11,10 +11,10 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.Intervall;
-import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 
 /**

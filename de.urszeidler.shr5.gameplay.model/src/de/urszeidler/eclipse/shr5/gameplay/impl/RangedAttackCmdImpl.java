@@ -31,13 +31,13 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getModus <em>Modus</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getRange <em>Range</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getNumberOfShoots <em>Number Of Shoots</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getModus <em>Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getRange <em>Range</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getNumberOfShoots <em>Number Of Shoots</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements RangedAttackCmd {
@@ -45,7 +45,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The default value of the '{@link #getModus() <em>Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getModus()
      * @generated
      * @ordered
@@ -56,7 +55,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The cached value of the '{@link #getModus() <em>Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getModus()
      * @generated
      * @ordered
@@ -67,7 +65,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The default value of the '{@link #getRange() <em>Range</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRange()
      * @generated
      * @ordered
@@ -78,7 +75,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The cached value of the '{@link #getRange() <em>Range</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRange()
      * @generated
      * @ordered
@@ -89,7 +85,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The cached value of the '{@link #getWeapon() <em>Weapon</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWeapon()
      * @generated
      * @ordered
@@ -100,7 +95,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The default value of the '{@link #getNumberOfShoots() <em>Number Of Shoots</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getNumberOfShoots()
      * @generated
      * @ordered
@@ -111,7 +105,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * The cached value of the '{@link #getNumberOfShoots() <em>Number Of Shoots</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getNumberOfShoots()
      * @generated
      * @ordered
@@ -121,7 +114,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected RangedAttackCmdImpl() {
@@ -131,7 +123,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -142,7 +133,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public FeuerModus getModus() {
@@ -152,7 +142,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setModus(FeuerModus newModus) {
@@ -165,7 +154,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getRange() {
@@ -175,7 +163,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setRange(int newRange) {
@@ -188,7 +175,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstaktFernKampfwaffe getWeapon() {
@@ -206,7 +192,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstaktFernKampfwaffe basicGetWeapon() {
@@ -216,7 +201,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setWeapon(AbstaktFernKampfwaffe newWeapon) {
@@ -229,7 +213,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getNumberOfShoots() {
@@ -239,21 +222,18 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setNumberOfShoots(int newNumberOfShoots) {
         int oldNumberOfShoots = numberOfShoots;
         numberOfShoots = newNumberOfShoots;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS, oldNumberOfShoots,
-                    numberOfShoots));
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS, oldNumberOfShoots, numberOfShoots));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -264,8 +244,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             case GameplayPackage.RANGED_ATTACK_CMD__RANGE:
                 return getRange();
             case GameplayPackage.RANGED_ATTACK_CMD__WEAPON:
-                if (resolve)
-                    return getWeapon();
+                if (resolve) return getWeapon();
                 return basicGetWeapon();
             case GameplayPackage.RANGED_ATTACK_CMD__NUMBER_OF_SHOOTS:
                 return getNumberOfShoots();
@@ -276,7 +255,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -301,7 +279,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -326,7 +303,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -347,13 +323,11 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (modus: ");

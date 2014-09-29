@@ -1132,6 +1132,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.IntervallVertrag} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected IntervallVertragItemProvider intervallVertragItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.IntervallVertrag}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createIntervallVertragAdapter() {
+        if (intervallVertragItemProvider == null) {
+            intervallVertragItemProvider = new IntervallVertragItemProvider(this);
+        }
+
+        return intervallVertragItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sin} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2010,6 +2033,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
         if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
         if (critterItemProvider != null) critterItemProvider.dispose();
+        if (intervallVertragItemProvider != null) intervallVertragItemProvider.dispose();
         if (sinItemProvider != null) sinItemProvider.dispose();
         if (lizenzItemProvider != null) lizenzItemProvider.dispose();
         if (credstickItemProvider != null) credstickItemProvider.dispose();

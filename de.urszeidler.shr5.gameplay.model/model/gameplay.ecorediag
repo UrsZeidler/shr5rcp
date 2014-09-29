@@ -509,45 +509,6 @@
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//Intervall"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hR5-MhNaEeS_0uLHotCLhw" x="460" y="735"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_vJCGEBNaEeS_0uLHotCLhw" type="1005">
-      <children xmi:type="notation:Node" xmi:id="_vJCtIBNaEeS_0uLHotCLhw" type="4010"/>
-      <children xmi:type="notation:Node" xmi:id="_vJCtIRNaEeS_0uLHotCLhw" type="5008">
-        <children xmi:type="notation:Node" xmi:id="_xo9sMBNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/sec"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_xo9sMRNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_zMHhABNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/min"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_zMHhARNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_0HQTkBNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/hour"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_0HQTkRNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_1xOiEBNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/day"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_1xOiERNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_38wlgBNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/week"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_38wlgRNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_42b_gBNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/month"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_42b_gRNaEeS_0uLHotCLhw"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_6DuSABNaEeS_0uLHotCLhw" type="2006">
-          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//TimeUnits/year"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_6Du5EBNaEeS_0uLHotCLhw"/>
-        </children>
-        <styles xmi:type="notation:DrawerStyle" xmi:id="_vJCtIhNaEeS_0uLHotCLhw"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_vJCtIxNaEeS_0uLHotCLhw"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_vJCtJBNaEeS_0uLHotCLhw"/>
-      </children>
-      <styles xmi:type="notation:ShapeStyle" xmi:id="_vJCGERNaEeS_0uLHotCLhw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-      <element xmi:type="ecore:EEnum" href="gameplay.ecore#//TimeUnits"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vJCGEhNaEeS_0uLHotCLhw" x="315" y="735"/>
-    </children>
     <children xmi:type="notation:Node" xmi:id="_Hi6NsCPzEeS3c462UKKLWQ" type="1001">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hk-qQCPzEeS3c462UKKLWQ" source="Shortcut">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Hk-qQSPzEeS3c462UKKLWQ" key="modelID" value="EcoreTools"/>

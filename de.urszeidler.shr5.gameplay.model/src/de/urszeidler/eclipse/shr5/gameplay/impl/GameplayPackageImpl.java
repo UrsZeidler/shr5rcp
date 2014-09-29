@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -47,7 +46,6 @@ import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
-import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
@@ -260,13 +258,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass setExtendetDataEClass = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    private EEnum timeUnitsEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1238,15 +1229,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    public EEnum getTimeUnits() {
-        return timeUnitsEEnum;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EEnum getInterruptType() {
         return interruptTypeEEnum;
     }
@@ -1433,7 +1415,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(setExtendetDataEClass, SET_EXTENDET_DATA__VALUE);
 
         // Create enums
-        timeUnitsEEnum = createEEnum(TIME_UNITS);
         interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
         probeStateEEnum = createEEnum(PROBE_STATE);
         succesTestStateEEnum = createEEnum(SUCCES_TEST_STATE);
@@ -1621,7 +1602,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIntervall_Quantities(), ecorePackage.getEInt(), "quantities", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getIntervall_Units(), this.getTimeUnits(), "units", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getIntervall_Units(), theShr5Package.getTimeUnits(), "units", null, 1, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(probeModEClass, ProbeMod.class, "ProbeMod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeMod_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ProbeMod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1633,15 +1614,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getSetExtendetData_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
-        initEEnum(timeUnitsEEnum, TimeUnits.class, "TimeUnits");
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.SEC);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MIN);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.HOUR);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.DAY);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.WEEK);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MONTH);
-        addEEnumLiteral(timeUnitsEEnum, TimeUnits.YEAR);
-
         initEEnum(interruptTypeEEnum, InterruptType.class, "InterruptType");
         addEEnumLiteral(interruptTypeEEnum, InterruptType.BLOCK);
         addEEnumLiteral(interruptTypeEEnum, InterruptType.DODGE);

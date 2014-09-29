@@ -192,6 +192,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.WISSENSFERTIGKEIT: return createWissensfertigkeit();
             case Shr5Package.SPRACHFERTIGKEIT: return createSprachfertigkeit();
             case Shr5Package.CRITTER: return createCritter();
+            case Shr5Package.INTERVALL_VERTRAG: return createIntervallVertrag();
             case Shr5Package.SIN: return createSin();
             case Shr5Package.LIZENZ: return createLizenz();
             case Shr5Package.CREDSTICK: return createCredstick();
@@ -277,6 +278,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createSubstanceEffectFromString(eDataType, initialValue);
             case Shr5Package.ADDICTION_TYPE:
                 return createAddictionTypeFromString(eDataType, initialValue);
+            case Shr5Package.TIME_UNITS:
+                return createTimeUnitsFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -332,6 +335,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertSubstanceEffectToString(eDataType, instanceValue);
             case Shr5Package.ADDICTION_TYPE:
                 return convertAddictionTypeToString(eDataType, instanceValue);
+            case Shr5Package.TIME_UNITS:
+                return convertTimeUnitsToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -777,6 +782,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Critter createCritter() {
         CritterImpl critter = new CritterImpl();
         return critter;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public IntervallVertrag createIntervallVertrag() {
+        IntervallVertragImpl intervallVertrag = new IntervallVertragImpl();
+        return intervallVertrag;
     }
 
     /**
@@ -1496,6 +1511,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertAddictionTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TimeUnits createTimeUnitsFromString(EDataType eDataType, String initialValue) {
+        TimeUnits result = TimeUnits.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertTimeUnitsToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

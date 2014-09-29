@@ -8,15 +8,6 @@
   <foreignModel>gameplay.ecore</foreignModel>
   <genPackages prefix="Gameplay" basePackage="de.urszeidler.eclipse.shr5" disposableProviderFactory="true"
       ecorePackage="gameplay.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//TimeUnits">
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/sec"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/min"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/hour"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/day"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/week"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/month"/>
-      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//TimeUnits/year"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//InterruptType">
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/block"/>
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//InterruptType/dodge"/>

@@ -36,7 +36,6 @@ import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
-import de.urszeidler.eclipse.shr5.gameplay.TimeUnits;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,8 +116,6 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-            case GameplayPackage.TIME_UNITS:
-                return createTimeUnitsFromString(eDataType, initialValue);
             case GameplayPackage.INTERRUPT_TYPE:
                 return createInterruptTypeFromString(eDataType, initialValue);
             case GameplayPackage.PROBE_STATE:
@@ -138,8 +135,6 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-            case GameplayPackage.TIME_UNITS:
-                return convertTimeUnitsToString(eDataType, instanceValue);
             case GameplayPackage.INTERRUPT_TYPE:
                 return convertInterruptTypeToString(eDataType, instanceValue);
             case GameplayPackage.PROBE_STATE:
@@ -369,26 +364,6 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public SetExtendetData createSetExtendetData() {
         SetExtendetDataImpl setExtendetData = new SetExtendetDataImpl();
         return setExtendetData;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public TimeUnits createTimeUnitsFromString(EDataType eDataType, String initialValue) {
-        TimeUnits result = TimeUnits.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String convertTimeUnitsToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**

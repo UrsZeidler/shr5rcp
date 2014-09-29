@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5;
  * A representation of the model object '<em><b>Munition</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The ammunition defines the damage modifcation the ammunition does. 
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

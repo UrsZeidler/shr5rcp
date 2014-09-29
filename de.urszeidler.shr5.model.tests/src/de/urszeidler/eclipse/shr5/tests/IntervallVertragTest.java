@@ -4,6 +4,8 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +13,16 @@ import de.urszeidler.eclipse.shr5.IntervallVertrag;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class IntervallVertragTest extends VertragTest {
+public class IntervallVertragTest extends VertragTest {
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static void main(String[] args) {
+        TestRunner.run(IntervallVertragTest.class);
+    }
 
     /**
      * Constructs a new Intervall Vertrag test case with the given name.
@@ -32,6 +43,28 @@ public abstract class IntervallVertragTest extends VertragTest {
     @Override
     protected IntervallVertrag getFixture() {
         return (IntervallVertrag)fixture;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
+    @Override
+    protected void setUp() throws Exception {
+        setFixture(Shr5Factory.eINSTANCE.createIntervallVertrag());
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
+    @Override
+    protected void tearDown() throws Exception {
+        setFixture(null);
     }
 
 } //IntervallVertragTest

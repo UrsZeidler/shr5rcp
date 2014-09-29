@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
+import de.urszeidler.eclipse.shr5.TimeUnits;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -51,7 +52,7 @@ public interface Intervall extends EObject {
 
     /**
      * Returns the value of the '<em><b>Units</b></em>' attribute.
-     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.gameplay.TimeUnits}.
+     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.TimeUnits}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Units</em>' attribute isn't clear,
@@ -59,7 +60,7 @@ public interface Intervall extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Units</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
+     * @see de.urszeidler.eclipse.shr5.TimeUnits
      * @see #setUnits(TimeUnits)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getIntervall_Units()
      * @model required="true"
@@ -72,7 +73,7 @@ public interface Intervall extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param value the new value of the '<em>Units</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.gameplay.TimeUnits
+     * @see de.urszeidler.eclipse.shr5.TimeUnits
      * @see #getUnits()
      * @generated
      */

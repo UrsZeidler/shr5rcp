@@ -12,7 +12,6 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
-import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;

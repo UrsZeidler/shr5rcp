@@ -1073,6 +1073,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum timeUnitsEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3680,6 +3687,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getIntervallVertrag_Unit() {
+        return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getIntervallVertrag_Begin() {
+        return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSin() {
         return sinEClass;
     }
@@ -5315,6 +5340,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getTimeUnits() {
+        return timeUnitsEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5714,6 +5748,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         intervallVertragEClass = createEClass(INTERVALL_VERTRAG);
         createEAttribute(intervallVertragEClass, INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL);
+        createEAttribute(intervallVertragEClass, INTERVALL_VERTRAG__UNIT);
+        createEAttribute(intervallVertragEClass, INTERVALL_VERTRAG__BEGIN);
 
         sinEClass = createEClass(SIN);
 
@@ -5953,6 +5989,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         substanceVectorEEnum = createEEnum(SUBSTANCE_VECTOR);
         substanceEffectEEnum = createEEnum(SUBSTANCE_EFFECT);
         addictionTypeEEnum = createEEnum(ADDICTION_TYPE);
+        timeUnitsEEnum = createEEnum(TIME_UNITS);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -6253,7 +6290,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFeuerwaffe_Erweiterung(), this.getFeuwerwaffenErweiterung(), "erweiterung", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFeuerwaffe_Rueckstoss(), ecorePackage.getEInt(), "rueckstoss", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFeuerwaffe_Einbau(), this.getFernkampfwaffeModifikator(), null, "einbau", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getFeuerwaffe_Magazin(), this.getMagazin(), null, "magazin", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFeuerwaffe_Magazin(), this.getMagazin(), null, "magazin", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(wurfwaffeEClass, Wurfwaffe.class, "Wurfwaffe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -6519,8 +6556,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(critterEClass, Critter.class, "Critter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCritter_Powers(), this.getCritterKraft(), null, "powers", null, 0, -1, Critter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(intervallVertragEClass, IntervallVertrag.class, "IntervallVertrag", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(intervallVertragEClass, IntervallVertrag.class, "IntervallVertrag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIntervallVertrag_FaelligkeitsIntervall(), ecorePackage.getEInt(), "faelligkeitsIntervall", null, 0, 1, IntervallVertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getIntervallVertrag_Unit(), this.getTimeUnits(), "unit", null, 0, 1, IntervallVertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getIntervallVertrag_Begin(), this.getShrDate(), "begin", null, 0, 1, IntervallVertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(sinEClass, Sin.class, "Sin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -6845,6 +6884,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(addictionTypeEEnum, AddictionType.PSYCHOLOGICAL);
         addEEnumLiteral(addictionTypeEEnum, AddictionType.PHYSIOLOGICAL);
         addEEnumLiteral(addictionTypeEEnum, AddictionType.BOTH);
+
+        initEEnum(timeUnitsEEnum, TimeUnits.class, "TimeUnits");
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.SEC);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MIN);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.HOUR);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.DAY);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.WEEK);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.MONTH);
+        addEEnumLiteral(timeUnitsEEnum, TimeUnits.YEAR);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

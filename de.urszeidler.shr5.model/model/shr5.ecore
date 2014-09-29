@@ -181,7 +181,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
         eType="#//FernkampfwaffeModifikator" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="magazin" unique="false"
-        eType="#//Magazin">
+        eType="#//Magazin" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This reference holds the current insert magazine."/>
       </eAnnotations>
@@ -620,9 +620,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="powers" upperBound="-1"
         eType="#//CritterKraft" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntervallVertrag" abstract="true" eSuperTypes="#//Vertrag">
+  <eClassifiers xsi:type="ecore:EClass" name="IntervallVertrag" eSuperTypes="#//Vertrag">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Intervall conctract. The cost have to be paid in the given period. Defined by the intervall and the unit and a start date."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="faelligkeitsIntervall"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TimeUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="begin" eType="#//ShrDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The start of the contract."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sin" eSuperTypes="#//Fakeable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Lizenz" eSuperTypes="#//Fakeable">
@@ -631,6 +640,9 @@
         eType="#//Sin"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fakeable" abstract="true" eSuperTypes="#//Vertrag">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A contact like a sin can be faked."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gefaelscht" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -674,6 +686,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Munition" eSuperTypes="#//AbstraktGegenstand #//Menge">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The ammunition defines the damage modifcation the ammunition does. "/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageType" eType="#//SchadensTyp"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="armorMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -926,6 +941,9 @@
       eSuperTypes="#//Software"/>
   <eClassifiers xsi:type="ecore:EClass" name="MatrixDevice" abstract="true" interface="true"
       eSuperTypes="#//MatrixAttributes">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The basic matic device."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pan" eType="#//PersonalAreaNetwork"
         containment="true" eOpposite="#//PersonalAreaNetwork/master"/>
   </eClassifiers>
@@ -1061,5 +1079,21 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DefaultWifi" eSuperTypes="#//AbstractMatrixDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultWifi" eSuperTypes="#//AbstractMatrixDevice">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A default wifi device to provide access."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnits">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines time units."/>
+    </eAnnotations>
+    <eLiterals name="sec"/>
+    <eLiterals name="min" value="1"/>
+    <eLiterals name="hour" value="2"/>
+    <eLiterals name="day" value="3"/>
+    <eLiterals name="week" value="4"/>
+    <eLiterals name="month" value="5"/>
+    <eLiterals name="year" value="6"/>
+  </eClassifiers>
 </ecore:EPackage>

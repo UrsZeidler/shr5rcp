@@ -289,16 +289,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Intervall">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantities" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" lowerBound="1" eType="#//TimeUnits"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnits">
-    <eLiterals name="sec"/>
-    <eLiterals name="min" value="1"/>
-    <eLiterals name="hour" value="2"/>
-    <eLiterals name="day" value="3"/>
-    <eLiterals name="week" value="4"/>
-    <eLiterals name="month" value="5"/>
-    <eLiterals name="year" value="6"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" lowerBound="1" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//TimeUnits"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InterruptType">
     <eLiterals name="block"/>

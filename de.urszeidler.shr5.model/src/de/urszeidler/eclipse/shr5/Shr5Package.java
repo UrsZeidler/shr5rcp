@@ -2919,7 +2919,7 @@ public interface Shr5Package extends EPackage {
 	int FEUERWAFFE__EINBAU = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>Magazin</b></em>' reference.
+     * The feature id for the '<em><b>Magazin</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -12086,13 +12086,31 @@ public interface Shr5Package extends EPackage {
     int INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL = VERTRAG_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Unit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__UNIT = VERTRAG_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Begin</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__BEGIN = VERTRAG_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Intervall Vertrag</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int INTERVALL_VERTRAG_FEATURE_COUNT = VERTRAG_FEATURE_COUNT + 1;
+    int INTERVALL_VERTRAG_FEATURE_COUNT = VERTRAG_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>Intervall Vertrag</em>' class.
@@ -12201,6 +12219,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int LIFESTYLE__FAELLIGKEITS_INTERVALL = INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL;
+
+    /**
+     * The feature id for the '<em><b>Unit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__UNIT = INTERVALL_VERTRAG__UNIT;
+
+    /**
+     * The feature id for the '<em><b>Begin</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__BEGIN = INTERVALL_VERTRAG__BEGIN;
 
     /**
      * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -19847,6 +19883,16 @@ public interface Shr5Package extends EPackage {
     int ADDICTION_TYPE = 149;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.TimeUnits
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
+     * @generated
+     */
+    int TIME_UNITS = 150;
+
+    /**
      * The meta object id for the '<em>Shr Date</em>' data type.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19854,7 +19900,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 150;
+	int SHR_DATE = 151;
 
 
 	/**
@@ -19865,7 +19911,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 151;
+	int MODIFICATION_MANAGER = 152;
 
 
 	/**
@@ -20645,10 +20691,10 @@ public interface Shr5Package extends EPackage {
 	EReference getFeuerwaffe_Einbau();
 
 	/**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}'.
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Magazin</em>'.
+     * @return the meta object for the containment reference '<em>Magazin</em>'.
      * @see de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin()
      * @see #getFeuerwaffe()
      * @generated
@@ -22885,6 +22931,28 @@ public interface Shr5Package extends EPackage {
     EAttribute getIntervallVertrag_FaelligkeitsIntervall();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getUnit <em>Unit</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Unit</em>'.
+     * @see de.urszeidler.eclipse.shr5.IntervallVertrag#getUnit()
+     * @see #getIntervallVertrag()
+     * @generated
+     */
+    EAttribute getIntervallVertrag_Unit();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getBegin <em>Begin</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Begin</em>'.
+     * @see de.urszeidler.eclipse.shr5.IntervallVertrag#getBegin()
+     * @see #getIntervallVertrag()
+     * @generated
+     */
+    EAttribute getIntervallVertrag_Begin();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Sin <em>Sin</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -24812,6 +24880,16 @@ public interface Shr5Package extends EPackage {
     EEnum getAddictionType();
 
     /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Time Units</em>'.
+     * @see de.urszeidler.eclipse.shr5.TimeUnits
+     * @generated
+     */
+    EEnum getTimeUnits();
+
+    /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25465,7 +25543,7 @@ public interface Shr5Package extends EPackage {
 		EReference FEUERWAFFE__EINBAU = eINSTANCE.getFeuerwaffe_Einbau();
 
 		/**
-         * The meta object literal for the '<em><b>Magazin</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Magazin</b></em>' containment reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
@@ -27255,6 +27333,22 @@ public interface Shr5Package extends EPackage {
         EAttribute INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL = eINSTANCE.getIntervallVertrag_FaelligkeitsIntervall();
 
         /**
+         * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERVALL_VERTRAG__UNIT = eINSTANCE.getIntervallVertrag_Unit();
+
+        /**
+         * The meta object literal for the '<em><b>Begin</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERVALL_VERTRAG__BEGIN = eINSTANCE.getIntervallVertrag_Begin();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SinImpl <em>Sin</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -28859,6 +28953,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum ADDICTION_TYPE = eINSTANCE.getAddictionType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.TimeUnits
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
+         * @generated
+         */
+        EEnum TIME_UNITS = eINSTANCE.getTimeUnits();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

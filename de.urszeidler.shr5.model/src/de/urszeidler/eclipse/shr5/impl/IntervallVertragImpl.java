@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.TimeUnits;
+import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +20,14 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getBegin <em>Begin</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class IntervallVertragImpl extends VertragImpl implements IntervallVertrag {
+public class IntervallVertragImpl extends VertragImpl implements IntervallVertrag {
     /**
      * The default value of the '{@link #getFaelligkeitsIntervall() <em>Faelligkeits Intervall</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -43,6 +47,46 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
      * @ordered
      */
     protected int faelligkeitsIntervall = FAELLIGKEITS_INTERVALL_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getUnit()
+     * @generated
+     * @ordered
+     */
+    protected static final TimeUnits UNIT_EDEFAULT = TimeUnits.SEC;
+
+    /**
+     * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getUnit()
+     * @generated
+     * @ordered
+     */
+    protected TimeUnits unit = UNIT_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBegin() <em>Begin</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBegin()
+     * @generated
+     * @ordered
+     */
+    protected static final Date BEGIN_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getBegin() <em>Begin</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBegin()
+     * @generated
+     * @ordered
+     */
+    protected Date begin = BEGIN_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -89,11 +133,57 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
      * <!-- end-user-doc -->
      * @generated
      */
+    public TimeUnits getUnit() {
+        return unit;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setUnit(TimeUnits newUnit) {
+        TimeUnits oldUnit = unit;
+        unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INTERVALL_VERTRAG__UNIT, oldUnit, unit));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Date getBegin() {
+        return begin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBegin(Date newBegin) {
+        Date oldBegin = begin;
+        begin = newBegin;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INTERVALL_VERTRAG__BEGIN, oldBegin, begin));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL:
                 return getFaelligkeitsIntervall();
+            case Shr5Package.INTERVALL_VERTRAG__UNIT:
+                return getUnit();
+            case Shr5Package.INTERVALL_VERTRAG__BEGIN:
+                return getBegin();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -108,6 +198,12 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
         switch (featureID) {
             case Shr5Package.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL:
                 setFaelligkeitsIntervall((Integer)newValue);
+                return;
+            case Shr5Package.INTERVALL_VERTRAG__UNIT:
+                setUnit((TimeUnits)newValue);
+                return;
+            case Shr5Package.INTERVALL_VERTRAG__BEGIN:
+                setBegin((Date)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -124,6 +220,12 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
             case Shr5Package.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL:
                 setFaelligkeitsIntervall(FAELLIGKEITS_INTERVALL_EDEFAULT);
                 return;
+            case Shr5Package.INTERVALL_VERTRAG__UNIT:
+                setUnit(UNIT_EDEFAULT);
+                return;
+            case Shr5Package.INTERVALL_VERTRAG__BEGIN:
+                setBegin(BEGIN_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -138,6 +240,10 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
         switch (featureID) {
             case Shr5Package.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL:
                 return faelligkeitsIntervall != FAELLIGKEITS_INTERVALL_EDEFAULT;
+            case Shr5Package.INTERVALL_VERTRAG__UNIT:
+                return unit != UNIT_EDEFAULT;
+            case Shr5Package.INTERVALL_VERTRAG__BEGIN:
+                return BEGIN_EDEFAULT == null ? begin != null : !BEGIN_EDEFAULT.equals(begin);
         }
         return super.eIsSet(featureID);
     }
@@ -154,6 +260,10 @@ public abstract class IntervallVertragImpl extends VertragImpl implements Interv
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (faelligkeitsIntervall: ");
         result.append(faelligkeitsIntervall);
+        result.append(", unit: ");
+        result.append(unit);
+        result.append(", begin: ");
+        result.append(begin);
         result.append(')');
         return result.toString();
     }

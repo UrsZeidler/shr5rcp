@@ -113,6 +113,15 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//AddictionType/physiological"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//AddictionType/both"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//TimeUnits">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/sec"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/min"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/hour"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/day"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/week"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/month"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//TimeUnits/year"/>
+    </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
@@ -456,6 +465,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//IntervallVertrag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//IntervallVertrag/faelligkeitsIntervall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//IntervallVertrag/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//IntervallVertrag/begin"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Sin"/>
     <genClasses ecoreClass="shr5.ecore#//Lizenz">
