@@ -26,6 +26,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
+import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
@@ -35,6 +36,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
+import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
@@ -106,64 +108,45 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
     }
 
-    public class SimpleActionDropdownSelectionListener extends ComplexActionDropdownSelectionListener {
-        public SimpleActionDropdownSelectionListener(ToolItem dropdown) {
+    public class SimpleActionDropdownSelectionListener extends DropdownSelectionListener<SimpleAction> {
+        private InitativePass iniPass;
+
+        public SimpleActionDropdownSelectionListener(ToolItem dropdown, InitativePass iniPass) {
             super(dropdown);
-           
-//            menuManager.setRemoveAllWhenShown(true);
+            this.iniPass = iniPass;
+            // menuManager.setRemoveAllWhenShown(true);
         }
 
-        
-         
         public void add(String item, final SimpleAction simpleAction) {
             MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
-                    InitativePass initativePass = combatTurn.getCurrentTurn();
-                    simpleAction.setSubject(initativePass.getSubject());
-                    GameplayTools.insertSimpleAction(initativePass, simpleAction);
-                    
-                    
-//                    if (complexAction.equals(SET_LEFT_HAND)) {
-//                        InitativePass initativePass = combatTurn.getCurrentTurn();
-//                        SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
-//                                RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
-//                        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
-//                        simpleAction.getSubCommands().add(featureCommand);
-//                    }
+                    // InitativePass initativePass = combatTurn.getCurrentTurn();
+                    simpleAction.setSubject(iniPass.getSubject());
+                    GameplayTools.insertSimpleAction(iniPass, simpleAction);
+
+                    // if (complexAction.equals(SET_LEFT_HAND)) {
+                    // InitativePass initativePass = combatTurn.getCurrentTurn();
+                    // SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
+                    // RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
+                    // SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+                    // simpleAction.getSubCommands().add(featureCommand);
+                    // }
                 }
             });
         }
 
     }
 
-    public class ComplexActionDropdownSelectionListener extends SelectionAdapter {
+    public abstract class DropdownSelectionListener<A> extends SelectionAdapter {
         protected ToolItem dropdown;
-
         protected Menu menu;
 
-        public ComplexActionDropdownSelectionListener(ToolItem dropdown) {
+        public DropdownSelectionListener(ToolItem dropdown) {
             this.dropdown = dropdown;
             menu = new Menu(dropdown.getParent().getShell());
-        }
-
-        public void add(String item, final ComplexAction complexAction) {
-            MenuItem menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText(item);
-            if(complexAction==null)
-                menuItem.setEnabled(false);
-            
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    // MenuItem selected = (MenuItem) event.widget;
-                    InitativePass initativePass = combatTurn.getCurrentTurn();
-                    complexAction.setSubject(initativePass.getSubject());
-                    initativePass.setAction(complexAction);
-                    // dropdown.setText(selected.getText());
-                }
-            });
         }
 
         public void widgetSelected(SelectionEvent event) {
@@ -178,10 +161,72 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             }
         }
 
-     }
+        public abstract void add(String item, final A action);
+    }
 
+    public class FreeActionDropdownSelectionListner extends DropdownSelectionListener<FreeAction> {
 
-    
+        public FreeActionDropdownSelectionListner(ToolItem dropdown) {
+            super(dropdown);
+        }
+
+        @Override
+        public void add(String item, final FreeAction action) {
+            MenuItem menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText(item);
+            if (action == null)
+                menuItem.setEnabled(false);
+
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    // MenuItem selected = (MenuItem) event.widget;
+                    InitativePass initativePass = combatTurn.getCurrentTurn();
+                    action.setSubject(initativePass.getSubject());
+                    initativePass.setFreeAction(action);
+                    // dropdown.setText(selected.getText());
+                }
+            });
+        }
+    }
+
+    public class ComplexActionDropdownSelectionListener extends DropdownSelectionListener<ComplexAction> {
+
+        public ComplexActionDropdownSelectionListener(ToolItem dropdown) {
+            super(dropdown);
+        }
+
+        @Override
+        public void add(String item, final ComplexAction complexAction) {
+            MenuItem menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText(item);
+            if (complexAction == null)
+                menuItem.setEnabled(false);
+
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    // MenuItem selected = (MenuItem) event.widget;
+                    InitativePass initativePass = combatTurn.getCurrentTurn();
+                    complexAction.setSubject(initativePass.getSubject());
+                    initativePass.setAction(complexAction);
+                    // dropdown.setText(selected.getText());
+                }
+            });
+        }
+
+        // public void widgetSelected(SelectionEvent event) {
+        // if (event.detail == SWT.ARROW) {
+        // ToolItem item = (ToolItem)event.widget;
+        // Rectangle rect = item.getBounds();
+        // Point pt = item.getParent().toDisplay(new Point(rect.x, rect.y));
+        // menu.setLocation(pt.x, pt.y + rect.height);
+        // menu.setVisible(true);
+        // } else {
+        // System.out.println(dropdown.getText() + " Pressed");
+        // }
+        // }
+
+    }
+
     private AdapterFactoryItemDelegator itemDelegator;
     private LabelProvider labelProvider;
     private CombatTurn combatTurn;
@@ -198,7 +243,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     private ToolItem tltmD;
     private ToolItem tltmSimple;
     private ToolItem tltmS;
-
 
     public CombatTurnView() {
         super();
@@ -276,6 +320,10 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             return;
 
         basicActionPanel.getActionPanel().getTreeViewer().setInput(personaHandlung2);
+        basicActionPanel.getActionPanel().refreshToolbar();
+        ToolBar toolBar = basicActionPanel.getActionPanel().getToolBar();
+        createToolbarItems(toolBar, personaHandlung2);
+        toolBar.getParent().layout(true);
     }
 
     /*
@@ -295,30 +343,29 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     public void setFocus() {
     }
 
-//    private void createMenuManager(){
-//        
-//        menuManager = new MenuManager();
-//        
-//        
-//        MenuManager menuManagerSimpleActions = new MenuManager();
-//        menuManagerSimpleActions.add(new Action("change") {
-//            @Override
-//            public void run() {
-//                InitativePass initativePass = combatTurn.getCurrentTurn();
-//                SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
-//                        RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
-//                SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
-//                simpleAction.getSubCommands().add(featureCommand);
-//            }
-//            @Override
-//            public boolean isEnabled() {
-//                return super.isEnabled();
-//            }
-//        });
-//
-//    }
-    
-    
+    // private void createMenuManager(){
+    //
+    // menuManager = new MenuManager();
+    //
+    //
+    // MenuManager menuManagerSimpleActions = new MenuManager();
+    // menuManagerSimpleActions.add(new Action("change") {
+    // @Override
+    // public void run() {
+    // InitativePass initativePass = combatTurn.getCurrentTurn();
+    // SetFeatureCommand featureCommand = ShadowrunEditingTools.changeItem(initativePass.getSubject(),
+    // RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, getSite().getShell());
+    // SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+    // simpleAction.getSubCommands().add(featureCommand);
+    // }
+    // @Override
+    // public boolean isEnabled() {
+    // return super.isEnabled();
+    // }
+    // });
+    //
+    // }
+
     /**
      * This method initializes composite_bottom
      */
@@ -358,7 +405,16 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         basicActionPanel.getActionPanel().getTreeViewer().setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         basicActionPanel.setLayoutData(gridData);
 
-        tltmD = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.NONE);
+        ToolBar toolBar = basicActionPanel.getActionPanel().getToolBar();
+        createToolbarItems(toolBar, null);
+    }
+
+    /**
+     * @param toolBar
+     * @param iniPass
+     */
+    protected void createToolbarItems(ToolBar toolBar, final InitativePass iniPass) {
+        tltmD = new ToolItem(toolBar, SWT.NONE);
         tltmD.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -368,7 +424,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
         tltmD.setToolTipText("execute");
         {
-            tltmS = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.DROP_DOWN);
+            tltmS = new ToolItem(toolBar, SWT.DROP_DOWN);
             tltmS.setText("c");
             ComplexActionDropdownSelectionListener listenerOne = new ComplexActionDropdownSelectionListener(tltmS);
             SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
@@ -381,9 +437,9 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             ComplexAction complexAction1 = GameplayFactory.eINSTANCE.createComplexAction();
             complexAction1.getSubCommands().add(skillTestCmd1);
             listenerOne.add("opposed skill", complexAction1);
-//            listenerOne.add("Cast Spell", null);
-//            listenerOne.add("Charge Attack", null);
-//            listenerOne.add("Astral Projection", null);
+            // listenerOne.add("Cast Spell", null);
+            // listenerOne.add("Charge Attack", null);
+            // listenerOne.add("Astral Projection", null);
 
             // listenerOne.add("oppsed");
 
@@ -392,11 +448,28 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
         }
 
         {
-            tltmSimple = new ToolItem(basicActionPanel.getActionPanel().getToolBar(), SWT.DROP_DOWN);
+            tltmSimple = new ToolItem(toolBar, SWT.DROP_DOWN);
             tltmSimple.setText("s");
-            SimpleActionDropdownSelectionListener listenerOne = new SimpleActionDropdownSelectionListener(tltmSimple);
- 
+            SimpleActionDropdownSelectionListener listenerOne = new SimpleActionDropdownSelectionListener(tltmSimple, iniPass);
+            SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
+            listenerOne.add("1", simpleAction);
             tltmSimple.addSelectionListener(listenerOne);
+
+        }
+        {
+            ToolItem tltmFree = new ToolItem(toolBar, SWT.DROP_DOWN);
+            tltmFree.setText("f");
+            FreeActionDropdownSelectionListner listenerOne = new FreeActionDropdownSelectionListner(tltmFree);
+            FreeAction freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            listenerOne.add("say", freeAction);
+            freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            listenerOne.add("Gesture", freeAction);
+            tltmFree.addSelectionListener(listenerOne);
+            freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            listenerOne.add("Drop Prone", freeAction);
+            freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            listenerOne.add("Kneel", freeAction);
+            tltmFree.addSelectionListener(listenerOne);
 
         }
 

@@ -5,20 +5,78 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.wb.swt.ResourceManager;
 
+import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.shr5.runtime.ui.views.CombatTurnView.ComplexActionDropdownSelectionListener;
+import de.urszeidler.shr5.runtime.ui.views.CombatTurnView.SimpleActionDropdownSelectionListener;
+import org.eclipse.swt.layout.FillLayout;
 
 public class ActionPanelWidgets extends Composite {
+
+    
+    public class ComplexActionDropdownSelectionListener extends SelectionAdapter {
+        protected ToolItem dropdown;
+
+        protected Menu menu;
+
+        public ComplexActionDropdownSelectionListener(ToolItem dropdown) {
+            this.dropdown = dropdown;
+            menu = new Menu(dropdown.getParent().getShell());
+        }
+
+        public void add(String item, final ComplexAction complexAction) {
+            MenuItem menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText(item);
+            if(complexAction==null)
+                menuItem.setEnabled(false);
+            
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    // MenuItem selected = (MenuItem) event.widget;
+//                    InitativePass initativePass = combatTurn.getCurrentTurn();
+                    complexAction.setSubject(initativPass.getSubject());
+                    initativPass.setAction(complexAction);
+                    // dropdown.setText(selected.getText());
+                }
+            });
+        }
+
+        public void widgetSelected(SelectionEvent event) {
+            if (event.detail == SWT.ARROW) {
+                ToolItem item = (ToolItem)event.widget;
+                Rectangle rect = item.getBounds();
+                Point pt = item.getParent().toDisplay(new Point(rect.x, rect.y));
+                menu.setLocation(pt.x, pt.y + rect.height);
+                menu.setVisible(true);
+            } else {
+                System.out.println(dropdown.getText() + " Pressed");
+            }
+        }
+
+     }
+
+
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
     private Composite composite = null;
@@ -29,6 +87,9 @@ public class ActionPanelWidgets extends Composite {
 
     private WritableValue character = new WritableValue();
     private ToolBar toolBar;
+
+    private InitativePass initativPass;
+    private Composite composite_toolbar;
 
     public ActionPanelWidgets(Composite parent, int style) {
         super(parent, style);
@@ -69,11 +130,17 @@ public class ActionPanelWidgets extends Composite {
 
     }
 
-    public void setCharacter(InitativePass character) {
-        this.character.setValue(character.getSubject());
-        rechte_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND);
-        linke_Hand.setCharacter(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
-    }
+    public void setCharacter(InitativePass initativePass) {
+        this.character.setValue(initativePass.getSubject());
+        this.initativPass = initativePass;
+        rechte_Hand.setCharacter(initativePass, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND);
+        linke_Hand.setCharacter(initativePass, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND);
+        //TODO : add the dynamic menu here 
+//        if(toolBar!=null)
+//            toolBar.dispose();
+//        
+//        createToolbar();
+     }
 
     @Override
     public void dispose() {
@@ -86,6 +153,16 @@ public class ActionPanelWidgets extends Composite {
      */
     private void createComposite() {
         new Label(this, SWT.NONE);
+        
+        composite_toolbar = new Composite(this, SWT.NONE);
+        composite_toolbar.setLayout(new FillLayout(SWT.HORIZONTAL));
+        composite_toolbar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        toolkit.adapt(composite_toolbar);
+        toolkit.paintBordersFor(composite_toolbar);
+//        toolBar = new ToolBar(composite_toolbar, SWT.BORDER | SWT.FLAT | SWT.RIGHT);
+//        toolkit.adapt(toolBar);
+//        toolkit.paintBordersFor(toolBar);
+//        new Label(this, SWT.NONE);
         GridData gridData10 = new GridData();
         gridData10.horizontalSpan = 3;
         gridData10.verticalAlignment = GridData.FILL;
@@ -109,15 +186,23 @@ public class ActionPanelWidgets extends Composite {
         composite.setLayoutData(gridData3);
         composite.setLayout(gridLayout3);
          
-        toolBar = new ToolBar(composite, SWT.BORDER | SWT.FLAT | SWT.RIGHT);
-        toolkit.adapt(toolBar);
-        toolkit.paintBordersFor(toolBar);
-        new Label(composite, SWT.NONE);
-        new Label(composite, SWT.NONE);
+        createToolbar();
+//        new Label(composite, SWT.NONE);
+//        new Label(composite, SWT.NONE);
         
         tree_actions = new Tree(composite, SWT.BORDER);
         tree_actions.setLayoutData(gridData10);
         treeViewer = new TreeViewer(tree_actions);
+    }
+
+    /**
+     * 
+     */
+    protected void createToolbar() {
+        toolBar = new ToolBar(composite_toolbar, SWT.BORDER | SWT.FLAT | SWT.RIGHT);
+        toolkit.adapt(toolBar);
+        toolkit.paintBordersFor(toolBar);
+
     }
 
 
@@ -170,5 +255,12 @@ public class ActionPanelWidgets extends Composite {
     }
     public ToolBar getToolBar() {
         return toolBar;
+    }
+
+    public void refreshToolbar() {
+        if(toolBar!=null)
+            toolBar.dispose();
+        
+        createToolbar();        
     }
 } 
