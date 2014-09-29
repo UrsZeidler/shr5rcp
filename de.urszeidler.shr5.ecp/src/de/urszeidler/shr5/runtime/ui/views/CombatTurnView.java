@@ -40,9 +40,14 @@ import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
@@ -414,6 +419,10 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
      * @param iniPass
      */
     protected void createToolbarItems(ToolBar toolBar, final InitativePass iniPass) {
+        RuntimeCharacter character = null;
+        if(iniPass!=null)
+            character = iniPass.getSubject();
+        
         tltmD = new ToolItem(toolBar, SWT.NONE);
         tltmD.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -464,9 +473,20 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             listenerOne.add("say", freeAction);
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
             listenerOne.add("Gesture", freeAction);
-            tltmFree.addSelectionListener(listenerOne);
+            tltmFree.addSelectionListener(listenerOne);            
+            
+            
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            SetExtendetData setExtendetData = GameplayFactory.eINSTANCE.createSetExtendetData();
+            setExtendetData.setDataAware(character);
+            ExtendetData  data = RuntimeFactory.eINSTANCE.createExtendetData();
+            data.setEObject(character);
+            data.setEFeature(RuntimePackage.Literals.NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE);
+            setExtendetData.setData(data);
+            setExtendetData.setValue(true);
+            freeAction.getSubCommands().add(setExtendetData);
             listenerOne.add("Drop Prone", freeAction);
+            
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
             listenerOne.add("Kneel", freeAction);
             tltmFree.addSelectionListener(listenerOne);
