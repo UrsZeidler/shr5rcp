@@ -19080,6 +19080,18 @@
       <entries xsi:type="shr5:QiFokus" xmi:id="_ik5OoD_REeSRYrHAmMULWA" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="QiFocus"/>
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
+      <entries xsi:type="shr5:IntervallVertrag" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" name="DocWagon Contract, Basic" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" faelligkeitsIntervall="1" unit="year">
+        <localizations xmi:id="_1A4dUEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Standard"/>
+      </entries>
+      <entries xsi:type="shr5:IntervallVertrag" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" name="DocWagon Contract, Gold" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="25000" faelligkeitsIntervall="1" unit="year">
+        <localizations xmi:id="_1A5EYEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Gold"/>
+      </entries>
+      <entries xsi:type="shr5:IntervallVertrag" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" name="DocWagon Contract, Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50000" faelligkeitsIntervall="1" unit="year">
+        <localizations xmi:id="_1A5EYUjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Platin"/>
+      </entries>
+      <entries xsi:type="shr5:IntervallVertrag" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" name="DocWagon Contract, Super-Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" faelligkeitsIntervall="1" unit="year">
+        <localizations xmi:id="_1A5EYkjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Superplatin"/>
+      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
