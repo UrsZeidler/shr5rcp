@@ -112,7 +112,7 @@ import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
-import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitaive;
+import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitative;
 import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog.ProbeExecutionState;
@@ -943,7 +943,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
-            new CheckInitaive(getSite().getShell(), ct).open();
+            new CheckInitative(getSite().getShell(), ct).open();
             return;
         } else if (cmd instanceof MeeleAttackCmd) {
             MeeleAttackCmd mc = (MeeleAttackCmd)cmd;
