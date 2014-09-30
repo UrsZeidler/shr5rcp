@@ -19,7 +19,7 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
 import de.urszeidler.shr5.runtime.ui.widgets.EditableInitativeComposite;
 
-public class CheckInitaive extends TitleAreaDialog {
+public class CheckInitative extends TitleAreaDialog {
     private CombatTurn ct;
 
 
@@ -29,13 +29,13 @@ public class CheckInitaive extends TitleAreaDialog {
      * @param parentShell
      * @wbp.parser.constructor
      */
-    public CheckInitaive(Shell parentShell) {
+    public CheckInitative(Shell parentShell) {
         super(parentShell);
         setShellStyle(SWT.RESIZE);
         setHelpAvailable(false);
     }
 
-    public CheckInitaive(Shell shell, CombatTurn ct) {
+    public CheckInitative(Shell shell, CombatTurn ct) {
        this(shell);
        this.ct = ct;
     }
