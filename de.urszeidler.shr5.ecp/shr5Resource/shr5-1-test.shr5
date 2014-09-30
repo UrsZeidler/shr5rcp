@@ -17,16 +17,6 @@
 <entries xsi:type="shr5:ShrList" name="Gear">
 
 
-
-
-
-
-
-
-
-
-
-
 <entries xsi:type="shr5:ShrList" name="weapons">
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="26000" name="Ares Thuderstruck Gauss Rifle" xmi:id="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-8" kapazitaet="10" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
 <modie>HM</modie>
@@ -39,6 +29,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="Ares Thuderstruck Gauss Rifle ammunition" type="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Thuderstruck Gauss Rifle" page="45"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="24500" name="Ares Vigorous Assault Cannon" xmi:id="944dfbc8-5972-44f7-810e-039d9f7d98b7" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
@@ -46,6 +37,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares Vigorous Assault Cannon ammunition" type="944dfbc8-5972-44f7-810e-039d9f7d98b7" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Vigorous Sturmkanone"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="23000" name="Krime Bomb" xmi:id="4a4810ca-4d11-49ee-8705-0411edc4d523" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="16P" praezision="6" durchschlagsKraft="-6" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
@@ -59,6 +51,7 @@
 <einbau parentId="de62b79f-2864-4023-a286-6c1f270aade3" name="Slide Mount" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Slide Mount" page="52"/>
 </einbau>
+<magazin name="Krime Bomb ammunition" type="4a4810ca-4d11-49ee-8705-0411edc4d523" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Krime Bomb" page="35"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="21000" name="Krime Cannon" xmi:id="3320c670-23ae-4cce-9c2c-e59d2554ddd7" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="6" munitionstyp="Clip" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
@@ -66,6 +59,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Krime Cannon ammunition" type="3320c670-23ae-4cce-9c2c-e59d2554ddd7" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Krime Cannon"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="32000" name="Ogre Hammer SWS Assault Cannon" xmi:id="b59116dd-eeba-4091-ad87-a1216e7e52fe" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="16P" praezision="6" durchschlagsKraft="-4" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
@@ -82,6 +76,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Ogre Hammer SWS Assault Cannon ammunition" type="b59116dd-eeba-4091-ad87-a1216e7e52fe" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ogre Hammer SWS Assault Cannon" page="46"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="43000" name="Panther XXL" xmi:id="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="17P" praezision="5" durchschlagsKraft="-6" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.13">
@@ -92,6 +87,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Panther XXL ammunition" type="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Panther XXL"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="950" name="AK-97" xmi:id="b625833a-88bc-4047-b3fc-bc432d96744b" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -101,6 +97,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="AK-97 ammunition" type="b625833a-88bc-4047-b3fc-bc432d96744b" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="AK-97"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="1250" name="AK-98" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -110,6 +107,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="AK-98 ammunition" type="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="AK-98"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="42" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -122,6 +120,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Ares Alpha ammunition" type="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Alpha"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2400" name="Ares HVAR" xmi:id="413200d1-fbd4-485f-8a18-152b60cfb290" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="50" munitionstyp="Streifen" rueckstoss="3" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -137,6 +136,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Ares HVAR ammunition" type="413200d1-fbd4-485f-8a18-152b60cfb290" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares HVAR" page="428"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="2250" name="Colt Inception" xmi:id="6d99b7b6-7610-4ba0-833b-ecda09d83366" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="7" durchschlagsKraft="-1" kapazitaet="36" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -151,6 +151,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Colt Inception ammunition" type="6d99b7b6-7610-4ba0-833b-ecda09d83366" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Colt Inception" page="14"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="550" name="Colt M23" xmi:id="e27e14ac-01bb-46e0-8d63-62994052d92c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="4" durchschlagsKraft="-2" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -160,6 +161,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Colt M23 ammunition" type="e27e14ac-01bb-46e0-8d63-62994052d92c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Colt M23"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" xmi:id="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -175,6 +177,7 @@
 <einbau ep="Lauf" parentId="b3827611-f631-461e-8660-e744593ba2d2" name="Gas-Vent 2 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gasventilsystem 2"/>
 </einbau>
+<magazin name="FN HAR ammunition" type="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="FN HAR"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="15F" wertValue="4500" name="HK XM30" xmi:id="5f512bfb-c620-491a-bef4-d7c1b1601035" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="6" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -193,6 +196,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 ammunition" type="5f512bfb-c620-491a-bef4-d7c1b1601035" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="HK XM30 Carbine" xmi:id="cc446f64-1dbd-42dd-8fc4-ca17dc6bcf42" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="6" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -211,6 +215,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 Carbine ammunition" type="cc446f64-1dbd-42dd-8fc4-ca17dc6bcf42" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30 Karabiner"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="HK XM30 LMG" xmi:id="1bdda305-3448-4419-871d-42bcd971751b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="6" durchschlagsKraft="-2" kapazitaet="100" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.11">
@@ -228,6 +233,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 LMG ammunition" type="1bdda305-3448-4419-871d-42bcd971751b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30 LMG"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="HK XM30 Shotgun" xmi:id="146d58e4-d705-41a0-bd92-c1901b71ffc0" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="3" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen">
@@ -244,6 +250,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 Shotgun ammunition" type="146d58e4-d705-41a0-bd92-c1901b71ffc0" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30 Unterlauf-Schrotflinte"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="HK XM30 Sniper" xmi:id="5d366d23-c0cd-4613-a035-f5a5378dcfa9" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="7" durchschlagsKraft="-2" kapazitaet="10" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -260,6 +267,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 Sniper ammunition" type="5d366d23-c0cd-4613-a035-f5a5378dcfa9" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30 Scharfschützengewehr"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="1300" name="Krupp Arms Kriegfaust" xmi:id="2abf6c76-fe19-4678-b6a3-f0b8750ee61c" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="9P" praezision="8" durchschlagsKraft="-1" kapazitaet="25" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -271,6 +279,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Krupp Arms Kriegfaust ammunition" type="2abf6c76-fe19-4678-b6a3-f0b8750ee61c" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Krupp Arms Kriegfaust" page="15"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="2300" name="Nissan Optimum II" xmi:id="fd7f400f-c8d5-4e8c-94aa-001109635f19" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -286,6 +295,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Nissan Optimum II ammunition" type="fd7f400f-c8d5-4e8c-94aa-001109635f19" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Nissan Optimum II" page="38"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="500" name="SBd-44" xmi:id="89396ad6-c605-4577-ad5b-6a18cf58d167" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="3" durchschlagsKraft="-1" kapazitaet="32" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -298,6 +308,7 @@
 <einbau parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
 <localizations local="de" name="Vintage" page="53"/>
 </einbau>
+<magazin name="SBd-44 ammunition" type="89396ad6-c605-4577-ad5b-6a18cf58d167" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="SBd-44" page="16"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="1900" name="Shiawase Arms Monsoon" xmi:id="23141cfc-e7c9-4af9-b4e0-a7f0443f1170" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -309,6 +320,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Shiawase Arms Monsoon ammunition" type="23141cfc-e7c9-4af9-b4e0-a7f0443f1170" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Shiawase Arms Monsoon" page="13"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="2800" name="Ultimax Rain Forest Carbine" xmi:id="40bf3eed-b239-4521-ac1d-80a4e472451e" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="18" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -323,6 +335,7 @@
 <einbau parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" name="Folding Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Folding Stock" page="51"/>
 </einbau>
+<magazin name="Ultimax Rain Forest Carbine ammunition" type="40bf3eed-b239-4521-ac1d-80a4e472451e" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Ultimax Rain Forest Carbine" page="32"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="2600" name="Yamaha Raiden" xmi:id="01e0eee7-452b-4fd5-abe1-29145da4a5e6" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-2" kapazitaet="60" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
@@ -337,6 +350,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Yamaha Raiden ammunition" type="01e0eee7-452b-4fd5-abe1-29145da4a5e6" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Yamaha Raiden"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" reichweite="1" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" verfuegbarkeit="8R" wertValue="950" name="Ares 'One' Monosword" xmi:id="ad4a06e3-7f8e-4f05-a42e-5be2c875bb72" page="19" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-3">
@@ -446,30 +460,37 @@
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="800" name="Aquadyne Shark-XS Harpoon Gun" xmi:id="a20f44a1-ced0-4018-9522-8a0e7234c29d" page="22" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.17">
 <modie>EM</modie>
+<magazin name="Aquadyne Shark-XS Harpoon Gun ammunition" type="a20f44a1-ced0-4018-9522-8a0e7234c29d" page="22" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Aquadyne Shark-XS Harpoon Gun" page="22"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="50" name="Ares Giantslayer Slingshot" xmi:id="437c30e5-580a-401a-8097-e9fab0dc2b57" page="23" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="2P" praezision="7" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.22">
 <modie>EM</modie>
+<magazin name="Ares Giantslayer Slingshot ammunition" type="437c30e5-580a-401a-8097-e9fab0dc2b57" page="23" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Giantslayer Slingshot" page="23"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1000" name="Heavy Crossbow" xmi:id="db213a06-0430-4711-81a3-5790d5152ba3" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.4/@entries.0/@entries.19">
 <modie>EM</modie>
+<magazin name="Heavy Crossbow ammunition" type="db213a06-0430-4711-81a3-5790d5152ba3" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Schwere Armbrust"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2" wertValue="300" name="Light Crossbow" xmi:id="bc9db3ec-6fa2-407d-ad76-e49daac3c06f" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="5P" praezision="7" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.17">
 <modie>EM</modie>
+<magazin name="Light Crossbow ammunition" type="bc9db3ec-6fa2-407d-ad76-e49daac3c06f" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Leichte Armbrust"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="500" name="Medium Crossbow" xmi:id="0df17331-7631-4f78-b857-0f3929678db2" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.18">
 <modie>EM</modie>
+<magazin name="Medium Crossbow ammunition" type="0df17331-7631-4f78-b857-0f3929678db2" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Mittlere Armbrust"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="300" name="Ranger Silver Pistol Crossbow" xmi:id="28072a3f-5153-444e-83e3-46129b9ff572" page="23" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="4P" praezision="7" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>EM</modie>
+<magazin name="Ranger Silver Pistol Crossbow ammunition" type="28072a3f-5153-444e-83e3-46129b9ff572" page="23" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ranger Silver Pistol Crossbow" page="23"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="200" name="Standard Harpoon Gun" xmi:id="d50f0212-490b-44ca-8365-09e62ea69697" page="22" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.17">
 <modie>EM</modie>
+<magazin name="Standard Harpoon Gun ammunition" type="d50f0212-490b-44ca-8365-09e62ea69697" page="22" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Standard Harpoon Gun" page="22"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="12R" wertValue="1200" name="Ballistic Shield" xmi:id="a47e8191-869a-456e-b376-ed04ba7a59f0" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="(STR+2)S" praezision="4">
@@ -516,14 +537,17 @@
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Grapple Gun" xmi:id="9c267b03-103e-43f4-bfe8-986c69dc17d2" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7S" praezision="3" durchschlagsKraft="-2" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.17">
 <modie>EM</modie>
+<magazin name="Grapple Gun ammunition" type="9c267b03-103e-43f4-bfe8-986c69dc17d2" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Enterhakenkanone"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Hold-Fast Sprayer" xmi:id="87a94632-b229-44b7-a150-9808388cfa20" page="104" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="Special" praezision="2" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>EM</modie>
+<magazin name="Hold-Fast Sprayer ammunition" type="87a94632-b229-44b7-a150-9808388cfa20" page="104" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Hold-Fast Sprayer" page="104"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Micro Flare Launcher" xmi:id="fac9d052-4f7d-43cd-a649-8703b4c0b9c2" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="5P(fire)" praezision="3" durchschlagsKraft="-5" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>EM</modie>
+<magazin name="Micro Flare Launcher ammunition" type="fac9d052-4f7d-43cd-a649-8703b4c0b9c2" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Mini-Signalraketenkanone"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="10000" name="Shiawase Arms Incinerator" xmi:id="dd4a69d9-6861-41de-9557-83617a3fa904" page="36" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="4" durchschlagsKraft="-6" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -531,6 +555,7 @@
 <einbau parentId="de62b79f-2864-4023-a286-6c1f270aade3" name="Slide Mount" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Slide Mount" page="52"/>
 </einbau>
+<magazin name="Shiawase Arms Incinerator ammunition" type="dd4a69d9-6861-41de-9557-83617a3fa904" page="36" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Shiawase Arms Incinerator" page="36"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="2200" name="Shiawase Blazer" xmi:id="a9a07174-a498-4e91-95c9-b6604e03a02c" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="6" durchschlagsKraft="-6" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
@@ -539,6 +564,7 @@
 <modie>AM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Shiawase Blazer ammunition" type="a9a07174-a498-4e91-95c9-b6604e03a02c" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Shiawase Blazer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="3200" name="Ares Antioch-2" xmi:id="504cba24-2141-4879-8062-782332e83386" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Grenade" praezision="4" kapazitaet="8" munitionstyp="Clip">
@@ -549,6 +575,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Ares Antioch-2 ammunition" type="504cba24-2141-4879-8062-782332e83386" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Antioch-2"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="5000" name="ArmTech MGL-12" xmi:id="5b98b55d-c87c-453a-ad87-9b34c8cbf04b" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Grenade" praezision="4" kapazitaet="12" munitionstyp="Streifen">
@@ -556,6 +583,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="ArmTech MGL-12 ammunition" type="5b98b55d-c87c-453a-ad87-9b34c8cbf04b" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="ArmTech MGL-12"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Microgrenade Launcher" xmi:id="5fe3a884-8213-4fe3-a538-750eba3bda27" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="As Grenade" praezision="4" kapazitaet="2">
@@ -563,6 +591,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cyber Microgrenade Launcher ammunition" type="5fe3a884-8213-4fe3-a538-750eba3bda27" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cyber Granatwerfer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="16300" name="RPK HMG" xmi:id="bcaa065e-3a38-4c14-9839-a24d3aef2cc3" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="40" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -573,6 +602,7 @@
 <einbau ep="Unten" parentId="28936368-9e16-498f-b028-92ec31e89a00" name="Tripod" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Dreibein"/>
 </einbau>
+<magazin name="RPK HMG ammunition" type="bcaa065e-3a38-4c14-9839-a24d3aef2cc3" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="RPK SMG"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="19600" name="Ruhrmetall SF-20" xmi:id="d13da888-212b-4eff-9d1d-7d02419250e9" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="50" rueckstoss="4" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -586,6 +616,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Ruhrmetall SF-20 ammunition" type="d13da888-212b-4eff-9d1d-7d02419250e9" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ruhrmetall SF-20" page="44"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="16000" name="Ultamax HMG-2" xmi:id="c0857027-d3b2-4677-bc97-3f98bcc6f80f" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="11P" praezision="4" durchschlagsKraft="-4" kapazitaet="50" rueckstoss="6" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -599,6 +630,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Ultamax HMG-2 ammunition" type="c0857027-d3b2-4677-bc97-3f98bcc6f80f" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ultamax HMG-2" page="44"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" xmi:id="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -608,6 +640,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Predator V"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" wertValue="380" name="Ares Viper Slivergun" xmi:id="b6078372-786c-4aa0-9d16-38541b403730" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -618,6 +651,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="Ares Viper Slivergun ammunition" type="b6078372-786c-4aa0-9d16-38541b403730" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Viper Slivergun"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" xmi:id="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -627,24 +661,28 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Browning Ultra-Power ammunition" type="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Browning Ultra-Power"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="225" name="Cavalier Deputy" xmi:id="4fcefd61-567a-4f26-a041-d000a07c96d1" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Cavalier Deputy ammunition" type="4fcefd61-567a-4f26-a041-d000a07c96d1" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Cavalier Deputy"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="500" name="Colt Future Frontier" xmi:id="36957626-3c6f-4e15-a3ee-dce8c82e2c94" page="6" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Trommel" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Colt Future Frontier ammunition" type="36957626-3c6f-4e15-a3ee-dce8c82e2c94" page="6" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Colt Future Frontier" page="6"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="425" name="Colt Government 2066" xmi:id="6366691e-c1e0-4d5e-b7a6-1c0371708714" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Colt Government 2066 ammunition" type="6366691e-c1e0-4d5e-b7a6-1c0371708714" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Colt Government 2066"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Heavy Cyber Pistol" xmi:id="158224db-e409-407f-b2f0-4617886ad80f" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -652,6 +690,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Heavy Cyber Pistol ammunition" type="158224db-e409-407f-b2f0-4617886ad80f" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="schwere Cyber Pistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="550" name="Onotari Arms Violator" xmi:id="0158c348-b0e0-41e1-a171-1a34af39f0e5" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -667,24 +706,28 @@
 <einbau parentId="06e128ee-00fd-4992-8bf5-4be35815fd11" name="Advanced Safety System, Basic" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Advanced Safety System, Basic" page="50"/>
 </einbau>
+<magazin name="Onotari Arms Violator ammunition" type="0158c348-b0e0-41e1-a171-1a34af39f0e5" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Onotari Arms Violator"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="1050" name="PSK-3 Collapsible Heavy Pistol" xmi:id="43103267-c408-4499-92da-602f70ccb24e" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="PSK-3 Collapsible Heavy Pistol ammunition" type="43103267-c408-4499-92da-602f70ccb24e" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="PSK-3 Collapsible Heavy Pistol" page="32"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="250" name="Remington Roomsweeper" xmi:id="c6c02391-12b5-4361-bc24-e1b5afc1ec6e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Remington Roomsweeper ammunition" type="c6c02391-12b5-4361-bc24-e1b5afc1ec6e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Remington Roomsweeper"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" xmi:id="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Ruger Super Warhawk ammunition" type="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ruger Super Warhawk"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="870" name="Savalette Guardian" xmi:id="54a29917-7a30-4e21-b577-e0324b860501" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="12" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -695,6 +738,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Savalette Guardian ammunition" type="54a29917-7a30-4e21-b577-e0324b860501" page="33" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Savalette Guardian"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Hold-Out" xmi:id="c87b03f7-403d-4db9-987a-022ab525b4be" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.1">
@@ -702,23 +746,28 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cyber Hold-Out ammunition" type="c87b03f7-403d-4db9-987a-022ab525b4be" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cyber Hold-Out Pisole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1000" name="Fichetti Tiffani Needler" xmi:id="71655ecf-6cb5-4adb-ac96-583b57fa6e9a" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.1">
 <modie>HM</modie>
+<magazin name="Fichetti Tiffani Needler ammunition" type="71655ecf-6cb5-4adb-ac96-583b57fa6e9a" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Fichetti Tiffani Needler"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="350" name="Fichetti Tiffani Self-Defender" xmi:id="1f122193-a0f5-4f4d-b4bf-6cfc7455ce3b" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.1">
 <modie>EM</modie>
+<magazin name="Fichetti Tiffani Self-Defender ammunition" type="1f122193-a0f5-4f4d-b4bf-6cfc7455ce3b" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Fichetti Tiffani Self-Defender"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" xmi:id="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.1">
 <modie>HM</modie>
+<magazin name="Streetline Special ammunition" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Streetline Special"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Walther Palm Pistol" xmi:id="0b4c00be-d7bb-4480-b9f4-6300abde27c4" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.1">
 <modie>EM</modie>
 <modie>SM</modie>
+<magazin name="Walther Palm Pistol ammunition" type="0b4c00be-d7bb-4480-b9f4-6300abde27c4" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Walther Palm-Pistole"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Bottle (broken, after first hit)" xmi:id="07ce89c6-7c69-45a4-91a9-3375847c878a" page="22" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="(STR)P" praezision="3">
@@ -761,18 +810,21 @@
 <einbau ep="Unten" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" name="Bipod" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zweibein"/>
 </einbau>
+<magazin name="Ares Archon Heavy MP Laser ammunition" type="df5d5c83-ddf8-4ec2-8a6f-28c61ec7325a" page="49" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Archon Heavy MP Laser" page="49"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="16000" name="Ares Lancer MP Laser" xmi:id="d6c4ff4a-5fbb-4885-9220-a784e2bff4f4" page="48" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="7" durchschlagsKraft="-10" reichweite="//@entries.0/@entries.4/@entries.0/@entries.6">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares Lancer MP Laser ammunition" type="d6c4ff4a-5fbb-4885-9220-a784e2bff4f4" page="48" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Lancer MP Laser" page="48"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="7500" name="Ares Redline" xmi:id="78293136-5bd0-49ac-aa9b-7c291f94c7a4" page="48" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="5P" praezision="9" durchschlagsKraft="-10" kapazitaet="10" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares Redline ammunition" type="78293136-5bd0-49ac-aa9b-7c291f94c7a4" page="48" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Redline"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="24F" wertValue="6000" name="GE Vindicator Mini-Gun" xmi:id="df19a07f-cc04-44b6-b9b2-6d4fe73062e4" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="4" durchschlagsKraft="-4" kapazitaet="200" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.11">
@@ -789,6 +841,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="GE Vindicator Mini-Gun ammunition" type="df19a07f-cc04-44b6-b9b2-6d4fe73062e4" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="GE Vindicator Mini-Gun" page="42"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="5800" name="Ingram Valiant" xmi:id="cb04b4c1-97ff-4984-9bc8-943e5f3ac557" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.11">
@@ -809,6 +862,7 @@
 <einbau ep="Lauf" parentId="b3827611-f631-461e-8660-e744593ba2d2" name="Gas-Vent 2 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gasventilsystem 2"/>
 </einbau>
+<magazin name="Ingram Valiant ammunition" type="cb04b4c1-97ff-4984-9bc8-943e5f3ac557" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ingram Valiant"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="2000" name="Krime Wave" xmi:id="ba34be4c-2dff-439a-8b7e-942f71bb4942" page="34" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" reichweite="//@entries.0/@entries.4/@entries.0/@entries.11">
@@ -819,6 +873,7 @@
 <einbau ep="Unten" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" name="Bipod" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zweibein"/>
 </einbau>
+<magazin name="Krime Wave ammunition" type="ba34be4c-2dff-439a-8b7e-942f71bb4942" page="34" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Krime Wave" page="34"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="6500" name="Shiawase Armaments Nemesis" xmi:id="b2b51722-5c37-43ce-9b08-646b8f1a51eb" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.11">
@@ -836,12 +891,14 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Shiawase Armaments Nemesis ammunition" type="b2b51722-5c37-43ce-9b08-646b8f1a51eb" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Shiawase Armaments Nemesis" page="43"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="200" name="Ares Light Fire 70" xmi:id="67474de7-d29b-4b31-a6ae-1e2e981fa5d2" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="7" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Ares Light Fire 70 ammunition" type="67474de7-d29b-4b31-a6ae-1e2e981fa5d2" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Light Fire 70"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" wertValue="1250" name="Ares Light Fire 75" xmi:id="93722378-dcb6-4988-ba4e-54ce545644fe" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -854,6 +911,7 @@
 <einbau ep="Lauf" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" name="Silencer, Ares Light Fire 70" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schalldämpfer, Ares Light Fire 70"/>
 </einbau>
+<magazin name="Ares Light Fire 75 ammunition" type="93722378-dcb6-4988-ba4e-54ce545644fe" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Light Fire 75"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="210" name="Beretta 201T" xmi:id="cbff618e-6a12-4bab-aaeb-2453706bf42e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="6" kapazitaet="21" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -864,24 +922,28 @@
 <einbau parentId="27de824f-d5e4-43fd-abaa-e42da6023569" name="Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Schulterstütze"/>
 </einbau>
+<magazin name="Beretta 201T ammunition" type="cbff618e-6a12-4bab-aaeb-2453706bf42e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Beretta 201T"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="250" name="Colt Agent Special" xmi:id="21ddd00b-0e30-4fc0-97c0-14db61af24ad" page="5" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="5" kapazitaet="8" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Colt Agent Special ammunition" type="21ddd00b-0e30-4fc0-97c0-14db61af24ad" page="5" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Colt Agent Special" page="5"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="320" name="Colt America L36" xmi:id="676660a2-3320-4b4a-acaf-f645f2ba6cd7" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="7" kapazitaet="11" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Colt America L36 ammunition" type="676660a2-3320-4b4a-acaf-f645f2ba6cd7" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Colt America L36"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="180" name="Colt New Model Revolver" xmi:id="305a23ec-098f-47c9-898f-ca28016846d1" page="4" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="5P" praezision="6" durchschlagsKraft="1" kapazitaet="5" munitionstyp="Trommel" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Colt New Model Revolver ammunition" type="305a23ec-098f-47c9-898f-ca28016846d1" page="4" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Colt New Model Revolver" page="4"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Fichetti Executive Action" xmi:id="35f168ec-cc4d-4dd5-bc3e-e1e3f8376dc4" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="18" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -889,6 +951,7 @@
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Fichetti Executive Action ammunition" type="35f168ec-cc4d-4dd5-bc3e-e1e3f8376dc4" page="30" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Fichetti Executive Action"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="350" name="Fichetti Security 600" xmi:id="7dff8ab0-c659-4901-ac3b-cb8b4f3839bf" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -901,6 +964,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Fichetti Security 600 ammunition" type="7dff8ab0-c659-4901-ac3b-cb8b4f3839bf" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Fichetti Security 600"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Light Cyber Pistol" xmi:id="261165ce-6111-4a51-9519-46c41edac9b0" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="6" kapazitaet="10" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -908,6 +972,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Light Cyber Pistol ammunition" type="261165ce-6111-4a51-9519-46c41edac9b0" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Leichte Cyber Pistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="300" name="Nitama Sporter" xmi:id="8a6d3d73-2091-4bc1-9a16-b42aa9b159e6" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="6" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -917,12 +982,14 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Nitama Sporter ammunition" type="8a6d3d73-2091-4bc1-9a16-b42aa9b159e6" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Nitama Sporter"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14R" wertValue="900" name="Shiawase Armaments Puzzler" xmi:id="274585e0-7e3c-44fd-88f3-287c12c90173" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="4" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Shiawase Armaments Puzzler ammunition" type="274585e0-7e3c-44fd-88f3-287c12c90173" page="31" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Shiawase Armaments Puzzler" page="31"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Taurus Omni-6" xmi:id="66955e6e-0b77-4ce0-9e24-6bb637a36541" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
@@ -933,6 +1000,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Taurus Omni-6 ammunition" type="66955e6e-0b77-4ce0-9e24-6bb637a36541" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Taurus Omni-6"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="830" name="Ares Crusader II" xmi:id="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -946,6 +1014,7 @@
 <einbau ep="Lauf" parentId="b3827611-f631-461e-8660-e744593ba2d2" name="Gas-Vent 2 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Gasventilsystem 2"/>
 </einbau>
+<magazin name="Ares Crusader II ammunition" type="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Crusader II"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="775" name="Cavalier Evanator" xmi:id="a68fe409-bebb-4c72-941c-0fce94048fec" page="8" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -959,6 +1028,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Cavalier Evanator ammunition" type="a68fe409-bebb-4c72-941c-0fce94048fec" page="8" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Cavalier Evanator" page="8"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="270" name="Ceska Black Scorpion" xmi:id="0c8076a9-97e3-4583-8385-c32266c25190" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="5" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -969,6 +1039,7 @@
 <einbau parentId="27de824f-d5e4-43fd-abaa-e42da6023569" name="Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Schulterstütze"/>
 </einbau>
+<magazin name="Ceska Black Scorpion ammunition" type="0c8076a9-97e3-4583-8385-c32266c25190" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ceska Black Scorpion"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Machine Pistol" xmi:id="496e4b81-8437-41fb-adf5-2e4709df656e" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="6P" praezision="4" kapazitaet="18" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -977,6 +1048,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cyber Machine Pistol ammunition" type="496e4b81-8437-41fb-adf5-2e4709df656e" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cyber Automatik Pistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="850" name="Fianchetti Military 100" xmi:id="5563a612-bf02-4fd9-b942-2400bbd1eb70" page="7" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="5" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -988,6 +1060,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Fianchetti Military 100 ammunition" type="5563a612-bf02-4fd9-b942-2400bbd1eb70" page="7" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Fianchetti Military 100" page="7"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="750" name="Onotari Arms Equalizer" xmi:id="404c20aa-8c02-4fcd-a37e-ba63b3e3553f" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="4" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -1001,6 +1074,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Onotari Arms Equalizer ammunition" type="404c20aa-8c02-4fcd-a37e-ba63b3e3553f" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Onotari Arms Equalizer" page="34"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="17F" wertValue="2800" name="PPSK-4 Collapsible Machine Pistol" xmi:id="38e9682d-d679-47a4-97a1-7161cba07cd2" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -1012,6 +1086,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="PPSK-4 Collapsible Machine Pistol ammunition" type="38e9682d-d679-47a4-97a1-7161cba07cd2" page="34" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="PPSK-4 Klapp-MP"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="700" name="Remington Suppressor" xmi:id="6596b05e-d51b-4388-b57a-950d9b5a96ac" page="9" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -1022,6 +1097,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="Remington Suppressor ammunition" type="6596b05e-d51b-4388-b57a-950d9b5a96ac" page="9" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Remington Suppressor" page="9"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="350" name="Steyr TMP" xmi:id="c8e3d921-45df-4850-8619-7fcca279d774" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -1033,6 +1109,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Steyr TMP ammunition" type="c8e3d921-45df-4850-8619-7fcca279d774" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Steyr TMP"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="800" name="Ultimax 70" xmi:id="060cbbd5-3413-4e57-8c7a-5ee3d2e94945" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6P" praezision="5" kapazitaet="15" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.4">
@@ -1043,6 +1120,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Ultimax 70 ammunition" type="060cbbd5-3413-4e57-8c7a-5ee3d2e94945" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ultimax 70" page="35"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="8500" name="FN MAG-5" xmi:id="091c2e28-94fb-4357-9eb9-bcfa2ca5d8ed" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="11P" praezision="4" durchschlagsKraft="-3" kapazitaet="50" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -1056,6 +1134,7 @@
 <einbau ep="Unten" parentId="28936368-9e16-498f-b028-92ec31e89a00" name="Tripod" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Dreibein"/>
 </einbau>
+<magazin name="FN MAG-5 ammunition" type="091c2e28-94fb-4357-9eb9-bcfa2ca5d8ed" page="43" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="FN MAG-5"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="7000" name="Stoner-Ares M202" xmi:id="a95df82f-4c48-43b1-8cfe-58d9aedb0b07" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="5" durchschlagsKraft="-3" kapazitaet="50" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -1063,6 +1142,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Stoner-Ares M202 ammunition" type="a95df82f-4c48-43b1-8cfe-58d9aedb0b07" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Stoner-Ares M202"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="7600" name="Ultimax MMG" xmi:id="08e04ae5-ee6f-451d-8dc9-7873b6f9d3a5" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.12">
@@ -1079,19 +1159,23 @@
 <einbau ep="Unten" parentId="28936368-9e16-498f-b028-92ec31e89a00" name="Tripod" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Dreibein"/>
 </einbau>
+<magazin name="Ultimax MMG ammunition" type="08e04ae5-ee6f-451d-8dc9-7873b6f9d3a5" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ultimax MMG"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="1200" name="Aztechnology Striker" xmi:id="c6410d5f-def3-4dc6-b5d6-68fff704f7f2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Missile" praezision="5" kapazitaet="1">
 <modie>EM</modie>
+<magazin name="Aztechnology Striker ammunition" type="c6410d5f-def3-4dc6-b5d6-68fff704f7f2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Aztechnology Striker"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="14000" name="Mitsubishi Yakusoku MRL" xmi:id="41eb651e-3efc-4978-9318-7ece7f151eef" page="47" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="Missile">
 <modie>HM</modie>
 <modie>SM</modie>
+<magazin name="Mitsubishi Yakusoku MRL ammunition" type="41eb651e-3efc-4978-9318-7ece7f151eef" page="47" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Mitsubishi Yakusoku MRL"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="19F" wertValue="7500" name="Onotari Arms Ballista MML" xmi:id="b4e80557-89cc-40ef-ab2d-8970b818fae9" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="Missile" kapazitaet="4" munitionstyp="Clip">
 <modie>EM</modie>
+<magazin name="Onotari Arms Ballista MML ammunition" type="b4e80557-89cc-40ef-ab2d-8970b818fae9" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Onotari Arms Ballista MML" page="46"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="14000" name="Onotari Interceptor" xmi:id="6753f5f1-72c5-41fb-beb6-6c1a37b82f5e" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Missile" praezision="4" kapazitaet="2">
@@ -1099,6 +1183,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Onotari Interceptor ammunition" type="6753f5f1-72c5-41fb-beb6-6c1a37b82f5e" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Onotari Interceptor"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="1800" name="Auto-Assault 16" xmi:id="923ba564-7883-49e8-82a2-415cbfa96685" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1108,6 +1193,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Auto-Assault 16 ammunition" type="923ba564-7883-49e8-82a2-415cbfa96685" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Auto-Assault 16"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1200" name="Cavalier Falchion" xmi:id="31269939-24bb-405a-aa5e-a1b77458a1df" page="22" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1118,6 +1204,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cavalier Falchion ammunition" type="31269939-24bb-405a-aa5e-a1b77458a1df" page="22" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Cavalier Falchion" page="22"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Shotgun" xmi:id="97cab27f-620b-45d7-8da4-3136c1e69f2b" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="4" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1125,6 +1212,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cyber Shotgun ammunition" type="97cab27f-620b-45d7-8da4-3136c1e69f2b" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cyber Shrotflinte"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Defiance T-250" xmi:id="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1133,6 +1221,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Defiance T-250 ammunition" type="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Defiance T-250"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="475" name="Defiance T-250, Short-Barrel" xmi:id="5011b79e-8594-4dbe-9768-0db4d11ead2b" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
@@ -1141,6 +1230,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Defiance T-250, Short-Barrel ammunition" type="5011b79e-8594-4dbe-9768-0db4d11ead2b" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Defiance T-250, Short-Barrel"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1100" name="Enfield AS-7" xmi:id="622bd915-0e0c-431b-9da5-e0c0c31e2122" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1152,6 +1242,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Enfield AS-7 ammunition" type="622bd915-0e0c-431b-9da5-e0c0c31e2122" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Enfield AS-7"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1050" name="Franchi SPAS-24" xmi:id="76e0ae30-a3cf-4d4f-b278-ad49a10df4d2" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1166,6 +1257,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Franchi SPAS-24 ammunition" type="76e0ae30-a3cf-4d4f-b278-ad49a10df4d2" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Franchi SPAS-24" page="41"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="600" name="Krime Boss" xmi:id="8818b584-e084-4fcb-94b8-632728015c6f" page="17" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="3" durchschlagsKraft="-1" kapazitaet="15" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1173,6 +1265,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Krime Boss ammunition" type="8818b584-e084-4fcb-94b8-632728015c6f" page="17" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Krime Boss" page="17"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="1400" name="Mossberg AM-CMDT" xmi:id="228a2a5d-01e5-4f58-90bf-1d61602ad1c5" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1185,6 +1278,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Mossberg AM-CMDT ammunition" type="228a2a5d-01e5-4f58-90bf-1d61602ad1c5" page="41" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Mossberg AM-CMDT"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="1000" name="PJSS Model 55" xmi:id="62221199-7958-4a76-a538-0c8e0a516608" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-1" kapazitaet="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1198,6 +1292,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="PJSS Model 55 ammunition" type="62221199-7958-4a76-a538-0c8e0a516608" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="PJSS Model 55"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="950" name="Remington 990" xmi:id="67f18a4a-e516-4946-984a-5254b3ba850f" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1211,6 +1306,7 @@
 <einbau parentId="de62b79f-2864-4023-a286-6c1f270aade3" name="Slide Mount" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Slide Mount" page="52"/>
 </einbau>
+<magazin name="Remington 990 ammunition" type="67f18a4a-e516-4946-984a-5254b3ba850f" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Remington 990"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Shiawase Arms Rain" xmi:id="3af9c1f7-8582-4849-8b1e-b49dd14c207f" page="21" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1221,6 +1317,7 @@
 <einbau parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" name="Folding Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Folding Stock" page="51"/>
 </einbau>
+<magazin name="Shiawase Arms Rain ammunition" type="3af9c1f7-8582-4849-8b1e-b49dd14c207f" page="21" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Shiawase Arms Rain" page="21"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="1300" name="Winchester Model 201" xmi:id="eaef40ea-c1ff-4f64-a4fe-31720b250860" page="18" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="8" durchschlagsKraft="-1" kapazitaet="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1228,6 +1325,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Winchester Model 201 ammunition" type="eaef40ea-c1ff-4f64-a4fe-31720b250860" page="18" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Winchester Model 201" page="18"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="900" name="Winchester Model 2054" xmi:id="93869598-2945-412f-8b42-90764ddc1e59" page="20" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="7" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1241,6 +1339,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Winchester Model 2054 ammunition" type="93869598-2945-412f-8b42-90764ddc1e59" page="20" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Winchester Model 2054" page="20"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1000" name="Winchester Model 2066" xmi:id="afee8d53-f1da-4500-ab6c-8e22b9c57c3e" page="19" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="11P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1248,6 +1347,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Winchester Model 2066 ammunition" type="afee8d53-f1da-4500-ab6c-8e22b9c57c3e" page="19" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Winchester Model 2066" page="19"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" wertValue="17500" name="Ares Desert Strike" xmi:id="50cec60d-a421-4edd-9baa-d10bfbc08e70" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="13P" praezision="7" durchschlagsKraft="-4" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1264,6 +1364,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Ares Desert Strike ammunition" type="50cec60d-a421-4edd-9baa-d10bfbc08e70" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Desert Strike"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" wertValue="38500" name="Barret Model 122" xmi:id="ffc2ae2b-fbaa-4d65-9456-c6433f3d53e8" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="14P" praezision="7" durchschlagsKraft="-6" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1277,6 +1378,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Barret Model 122 ammunition" type="ffc2ae2b-fbaa-4d65-9456-c6433f3d53e8" page="40" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Barret Model 122" page="40"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="10300" name="Cavalier Arms Crockett EBR" xmi:id="8c22582e-56ff-4a44-9358-487d8a594833" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="6" durchschlagsKraft="-3" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1294,6 +1396,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Cavalier Arms Crockett EBR ammunition" type="8c22582e-56ff-4a44-9358-487d8a594833" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cavalier Arms Crockett EBR"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="13F" wertValue="12500" name="Onotari Arms JP-K50" xmi:id="8524048e-6c2c-414c-91e8-5d4bca711957" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="12P" praezision="7" durchschlagsKraft="-3" kapazitaet="25" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1305,6 +1408,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="Onotari Arms JP-K50 ammunition" type="8524048e-6c2c-414c-91e8-5d4bca711957" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Onotari Arms JP-K50" page="39"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2R" wertValue="500" name="Pioneer 60" xmi:id="cf9d0938-73e5-4e40-9a50-003ded439586" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1315,6 +1419,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="Pioneer 60 ammunition" type="cf9d0938-73e5-4e40-9a50-003ded439586" page="39" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Pioneer 60" page="39"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="28000" name="Ranger Arms SM-5" xmi:id="e2649ef2-c9a8-43ac-9f6c-9279e7be2f67" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="14P" praezision="8" durchschlagsKraft="-5" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1334,6 +1439,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="Ranger Arms SM-5 ammunition" type="e2649ef2-c9a8-43ac-9f6c-9279e7be2f67" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ranger Arms SM-5"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="2100" name="Remington 950" xmi:id="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="12P" praezision="7" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1343,6 +1449,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Remington 950 ammunition" type="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Remington 950"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1300" name="Ruger 101" xmi:id="6098fea5-3069-42b8-9405-80d07578b660" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="11P" praezision="6" durchschlagsKraft="-3" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1359,6 +1466,7 @@
 <einbau parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schockpolster"/>
 </einbau>
+<magazin name="Ruger 101 ammunition" type="6098fea5-3069-42b8-9405-80d07578b660" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ruger 101"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="SVD" xmi:id="e238d380-5e5f-499c-9d33-548d02b50076" page="11" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" schadenscode="10P" praezision="6" durchschlagsKraft="-2" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1366,6 +1474,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="SVD ammunition" type="e238d380-5e5f-499c-9d33-548d02b50076" page="11" srcBook="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac"/>
 <localizations local="de" name="SVD" page="11"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="35000" name="Terracotta Arms AM-47" xmi:id="8d2c12e7-e08d-4c7a-907a-b5bc178ce9e3" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="15P" praezision="7" durchschlagsKraft="-4" kapazitaet="18" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
@@ -1391,71 +1500,86 @@
 <einbau parentId="51740a3d-4464-4a38-8e2e-8858b3c1481e" name="Safe Target System, Base" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Safe Target System, Base" page="52"/>
 </einbau>
+<magazin name="Terracotta Arms AM-47 ammunition" type="8d2c12e7-e08d-4c7a-907a-b5bc178ce9e3" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Terracotta Arms AM-47"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="950" name="Ares S-III Super Squirt" xmi:id="15ec7fbb-4c22-4cae-a7cd-d2c580a6b447" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Chemical" praezision="3" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares S-III Super Squirt ammunition" type="15ec7fbb-4c22-4cae-a7cd-d2c580a6b447" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares S-III Super Squirt"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16R" wertValue="8000" name="Ares Screech Sonic Rifle" xmi:id="e85d55b3-06f1-48e0-bbe1-14b833ac4181" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7S" praezision="6" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares Screech Sonic Rifle ammunition" type="e85d55b3-06f1-48e0-bbe1-14b833ac4181" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Screech Schallgewehr"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4" wertValue="15" name="Blowgun" xmi:id="92b11d6e-8dbb-448a-95a9-e72d11527fe5" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="1P" praezision="8" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.22">
 <modie>EM</modie>
+<magazin name="Blowgun ammunition" type="92b11d6e-8dbb-448a-95a9-e72d11527fe5" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Blasrohr"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6" wertValue="75" name="Bola" xmi:id="07200c8e-d3f3-4ec1-8911-11be322c6d5f" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="(STR+3)S" durchschlagsKraft="4" reichweite="//@entries.0/@entries.4/@entries.0/@entries.22">
 <modie>EM</modie>
+<magazin name="Bola ammunition" type="07200c8e-d3f3-4ec1-8911-11be322c6d5f" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Bola" page="26"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" wertValue="2000" name="FN-AAL Gyrojet Pistol" xmi:id="a836fc0b-a1e1-491d-ad8d-7f803c88acdc" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
+<magazin name="FN-AAL Gyrojet Pistol ammunition" type="a836fc0b-a1e1-491d-ad8d-7f803c88acdc" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="FN-AAL Gyrojetpistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" wertValue="5000" name="Fichetti Pain Inducer" xmi:id="c884cf55-9a96-459d-a764-f223e1853149" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Special" praezision="3" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Fichetti Pain Inducer ammunition" type="c884cf55-9a96-459d-a764-f223e1853149" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Fichetti Pain Inducer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="150" name="Knockoff Gun Cane" xmi:id="da91e16e-df0f-475e-9a41-c342c59540ab" page="27" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="9P" praezision="5" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>EM</modie>
+<magazin name="Knockoff Gun Cane ammunition" type="da91e16e-df0f-475e-9a41-c342c59540ab" page="27" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Knockoff Gun Cane" page="27"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" wertValue="4000" name="Monofilament Bola" xmi:id="04fd6c88-6d3c-4e5e-8490-4cf422f3e02e" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="(STR+3)S/12P" reichweite="//@entries.0/@entries.4/@entries.0/@entries.22">
 <modie>EM</modie>
+<magazin name="Monofilament Bola ammunition" type="04fd6c88-6d3c-4e5e-8490-4cf422f3e02e" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Monofilament Bola" page="26"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" wertValue="750" name="Mortimer of London 'Trafalger' Gun Cane" xmi:id="eb9c657d-d98d-476e-8a86-40d83d8cb821" page="27" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>EM</modie>
+<magazin name="Mortimer of London 'Trafalger' Gun Cane ammunition" type="eb9c657d-d98d-476e-8a86-40d83d8cb821" page="27" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Mortimer of London 'Trafalger' Gun Cane" page="27"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="600" name="Parashield Dart Pistol" xmi:id="9c3d9b2e-336e-4c37-b05d-07bea9ae9c3f" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="As Drug/Toxin" praezision="5" kapazitaet="5" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
+<magazin name="Parashield Dart Pistol ammunition" type="9c3d9b2e-336e-4c37-b05d-07bea9ae9c3f" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Parashield Pfeilpistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1200" name="Parashield Dart Rifle" xmi:id="8432b006-0496-4930-b966-25ab56feb7e2" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="As Drug/Toxin" praezision="6" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.9">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Parashield Dart Rifle ammunition" type="8432b006-0496-4930-b966-25ab56feb7e2" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Parashield Pfeilgewehr"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9" wertValue="750" name="SA Retarius Net Gun" xmi:id="61555ac9-9925-4252-bc25-92c948eb9dfd" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="0" praezision="5" kapazitaet="4" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
+<magazin name="SA Retarius Net Gun ammunition" type="61555ac9-9925-4252-bc25-92c948eb9dfd" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="SA Retarius Net Gun" page="28"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9" wertValue="1000" name="SA Retarius Net Gun XL" xmi:id="a4dda50f-fec2-4142-bc19-49bcc3a13516" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="0" praezision="5" kapazitaet="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.2">
 <modie>HM</modie>
+<magazin name="SA Retarius Net Gun XL ammunition" type="a4dda50f-fec2-4142-bc19-49bcc3a13516" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="SA Retarius Net Gun XL" page="28"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10R" wertValue="1250" name="Tiffani Elegance Shooting Bracers" xmi:id="a130db89-380f-49f8-b9f4-6cfd66cbc4fe" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>EM</modie>
+<magazin name="Tiffani Elegance Shooting Bracers ammunition" type="a130db89-380f-49f8-b9f4-6cfd66cbc4fe" page="28" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Tiffani Elegance Shooting Bracers" page="28"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="1100" name="M1 Garand" xmi:id="b312c6dd-56db-4569-b96d-32a9e290e78b" page="27" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1466,6 +1590,7 @@
 <einbau parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
 <localizations local="de" name="Vintage" page="53"/>
 </einbau>
+<magazin name="M1 Garand ammunition" type="b312c6dd-56db-4569-b96d-32a9e290e78b" page="27" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="M1 Garand" page="27"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="1100" name="Marlin 3041 BL" xmi:id="1a1a3b5f-064a-4626-8ddb-efc015187236" page="29" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="5" durchschlagsKraft="-3" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1476,6 +1601,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Marlin 3041 BL ammunition" type="1a1a3b5f-064a-4626-8ddb-efc015187236" page="29" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Marlin 3041 BL" page="29"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1000" name="Marlin 3468SS" xmi:id="afbb08e1-9362-46c6-b890-9dbd3cd26d2d" page="25" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1483,6 +1609,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Marlin 3468SS ammunition" type="afbb08e1-9362-46c6-b890-9dbd3cd26d2d" page="25" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Marlin 3468SS" page="25"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" wertValue="300" name="Marlin 79S" xmi:id="c4cb38e3-3748-41ad-82e9-56abc111fafe" page="31" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="6P" praezision="4" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1490,6 +1617,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Marlin 79S ammunition" type="c4cb38e3-3748-41ad-82e9-56abc111fafe" page="31" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Marlin 79S" page="31"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1500" name="Marlin X71" xmi:id="2082a58b-e94d-4911-a486-1ad33ac8e3b8" page="30" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1503,6 +1631,7 @@
 <einbau parentId="381dd922-19af-46fd-9999-0202c85574de" name="Extreme Environment Modification, Level 1" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Extreme Environment Modification, Level 1" page="51"/>
 </einbau>
+<magazin name="Marlin X71 ammunition" type="2082a58b-e94d-4911-a486-1ad33ac8e3b8" page="30" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Marlin X71" page="30"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="3600" name="Springfield 2003" xmi:id="c571ea1e-dfd8-4c4e-84d8-9355f24874b0" page="23" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="9" durchschlagsKraft="-2" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1513,6 +1642,7 @@
 <einbau parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
 <localizations local="de" name="Vintage" page="53"/>
 </einbau>
+<magazin name="Springfield 2003 ammunition" type="c571ea1e-dfd8-4c4e-84d8-9355f24874b0" page="23" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Springfield 2003" page="23"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="1700" name="Springfield M1A" xmi:id="72659b65-56ab-4629-be63-d82549edb0b4" page="26" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" durchschlagsKraft="-1" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1523,6 +1653,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Springfield M1A ammunition" type="72659b65-56ab-4629-be63-d82549edb0b4" page="26" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Springfield M1A" page="26"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="850" name="Springfield Model 1855 Reproduction" xmi:id="c154d964-599f-41bd-9b20-3b63dcbb213d" page="28" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="10P" praezision="2" kapazitaet="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1533,6 +1664,7 @@
 <einbau parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
 <localizations local="de" name="Vintage" page="53"/>
 </einbau>
+<magazin name="Springfield Model 1855 Reproduction ammunition" type="c154d964-599f-41bd-9b20-3b63dcbb213d" page="28" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Springfield Model 1855 Reproduction" page="28"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="1800" name="Winchester Model 2024" xmi:id="a6afb306-df84-4d99-8f62-1b9a988bea07" page="24" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="12P" praezision="6" kapazitaet="7" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.10">
@@ -1543,6 +1675,7 @@
 <einbau ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Zielfernrohr"/>
 </einbau>
+<magazin name="Winchester Model 2024 ammunition" type="a6afb306-df84-4d99-8f62-1b9a988bea07" page="24" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Winchester Model 2024" page="24"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="650" name="Winchester Model 2067" xmi:id="7aa7ed5d-b094-45c9-9275-974e8aeb4de8" page="33" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1553,6 +1686,7 @@
 <einbau parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
 <localizations local="de" name="Vintage" page="53"/>
 </einbau>
+<magazin name="Winchester Model 2067 ammunition" type="7aa7ed5d-b094-45c9-9275-974e8aeb4de8" page="33" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Winchester Model 2067" page="33"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" wertValue="1000" name="Ares Executioner" xmi:id="c9ae9813-cf66-4435-82c5-a5f28c441d5d" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1567,6 +1701,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="Ares Executioner ammunition" type="c9ae9813-cf66-4435-82c5-a5f28c441d5d" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Ares Executioner" page="35"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" wertValue="1000" name="Ares SIGMA 3" xmi:id="53393829-2f6d-445d-b3d4-325aabec7cba" page="11" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="8P" praezision="4" kapazitaet="50" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1588,6 +1723,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Ares SIGMA 3 ammunition" type="53393829-2f6d-445d-b3d4-325aabec7cba" page="11" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Ares SIGMA 3" page="11"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="400" name="Cavalier Arms Gladius" xmi:id="1603b758-f59c-4288-937a-8d7467b9ed33" page="12" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="3" kapazitaet="32" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1602,6 +1738,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Cavalier Arms Gladius ammunition" type="1603b758-f59c-4288-937a-8d7467b9ed33" page="12" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Cavalier Arms Gladius" page="12"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" wertValue="660" name="Colt Cobra TZ-120" xmi:id="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1616,6 +1753,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Colt Cobra TZ-120 ammunition" type="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Colt Cobra TZ-120"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Cyber Submachine Gun" xmi:id="95295a59-46b3-4cc0-8a1d-ac869cf9912c" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="18" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1624,6 +1762,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Cyber Submachine Gun ammunition" type="95295a59-46b3-4cc0-8a1d-ac869cf9912c" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Cyber Maschinenpistole"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" wertValue="900" name="FN P93 Praetor" xmi:id="de333a81-b997-4b17-ae0d-c221d22a28c7" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="6" kapazitaet="50" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1638,6 +1777,7 @@
 <einbau parentId="41ca17be-6fe4-469f-9a66-7345263c4733" name="Flashlight, Standard" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Lampe, Standard"/>
 </einbau>
+<magazin name="FN P93 Praetor ammunition" type="de333a81-b997-4b17-ae0d-c221d22a28c7" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="FN P93 Praetor"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" wertValue="730" name="HK 227" xmi:id="f9ff7bf6-3ed4-41bd-b934-34e751ecf266" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="5" kapazitaet="28" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1655,6 +1795,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="HK 227 ammunition" type="f9ff7bf6-3ed4-41bd-b934-34e751ecf266" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="HK 227"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" wertValue="2300" name="HK Urban Combat" xmi:id="7bf032e5-7e53-4dbd-b5c8-8c57d6c4c9ba" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="8P" praezision="7" kapazitaet="36" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1669,6 +1810,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="HK Urban Combat ammunition" type="7bf032e5-7e53-4dbd-b5c8-8c57d6c4c9ba" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK Urban Combat"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="800" name="Ingram Smartgun X" xmi:id="017d8327-3bce-420a-af24-a2bed3ab0e83" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="4" kapazitaet="32" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1682,6 +1824,7 @@
 <einbau ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Schallunterdrücker" page="432"/>
 </einbau>
+<magazin name="Ingram Smartgun X ammunition" type="017d8327-3bce-420a-af24-a2bed3ab0e83" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ingram Smartgun X"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="425" name="Krime Spree" xmi:id="980bc771-06f2-41b5-8879-c609bd80254f" page="10" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1689,6 +1832,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Krime Spree ammunition" type="980bc771-06f2-41b5-8879-c609bd80254f" page="10" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d"/>
 <localizations local="de" name="Krime Spree" page="10"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="875" name="SCK Model 100" xmi:id="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="8P" praezision="5" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1702,6 +1846,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="SCK Model 100 ammunition" type="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="SCK Model 100"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" xmi:id="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7P" praezision="4" kapazitaet="24" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.5">
@@ -1714,6 +1859,7 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Uzi IV ammunition" type="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Uzi IV"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="275" name="Cavalier Safeguard" xmi:id="74475182-fc21-4583-b9b9-84db8af29328" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="6S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
@@ -1722,11 +1868,13 @@
 <einbau parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Lasermarkierer"/>
 </einbau>
+<magazin name="Cavalier Safeguard ammunition" type="74475182-fc21-4583-b9b9-84db8af29328" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Cavalier Safeguard" page="29"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="250" name="Defiance EX Shocker" xmi:id="7d5bcc0b-9ec2-4c87-aaa7-a4d531d7974e" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
+<magazin name="Defiance EX Shocker ammunition" type="7d5bcc0b-9ec2-4c87-aaa7-a4d531d7974e" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Defiance EX Shocker"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="300" name="Tiffani-Defiance Protector" xmi:id="3540d227-3288-410f-aa11-5048179ab322" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="3" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
@@ -1738,11 +1886,13 @@
 <einbau parentId="627f212a-ac15-4739-afbc-f44676dfe508" name="Gecko Grip" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
 <localizations local="de" name="Gecko Grip" page="52"/>
 </einbau>
+<magazin name="Tiffani-Defiance Protector ammunition" type="3540d227-3288-410f-aa11-5048179ab322" page="29" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Tiffani-Defiance Protector" page="29"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" wertValue="180" name="Yamaha Pulsar" xmi:id="21628e04-95d0-4ba4-bc66-fcbed5a1bf8e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.4/@entries.0/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
+<magazin name="Yamaha Pulsar ammunition" type="21628e04-95d0-4ba4-bc66-fcbed5a1bf8e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Yamaha Pulsar"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="2R" wertValue="100" name="Knucks" xmi:id="168c2aa5-c4d9-4fd7-a629-fc70c6720d03" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="(STR+1)P">
@@ -1762,6 +1912,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="AK-98 Grenade Launcher ammunition" type="ae58f859-37ee-4fac-befa-365acd3c7da7" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="AK-98 Unterlauf-Granatwerfer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" xmi:id="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schadenscode="Grenade" praezision="6" kapazitaet="6" munitionstyp="Streifen">
@@ -1769,6 +1920,7 @@
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
+<magazin name="Ares Alpha Grenade Launcher ammunition" type="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
 <localizations local="de" name="Ares Alpha Unterlauf-Granatwerfer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="HK XM30 Grenade Launcher" xmi:id="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="Grenade" praezision="4" kapazitaet="6" munitionstyp="Streifen">
@@ -1785,6 +1937,7 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="HK XM30 Grenade Launcher ammunition" type="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="HK XM30 Unterlauf-Granatwerfer"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Nissan Optiumum II Shotgun" xmi:id="232dfc49-21ad-4b90-b05f-e5523b3ee142" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" rueckstoss="1" reichweite="//@entries.0/@entries.4/@entries.0/@entries.7">
@@ -1798,12 +1951,14 @@
 <einbau parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Smartgunsystem, Internal"/>
 </einbau>
+<magazin name="Nissan Optiumum II Shotgun ammunition" type="232dfc49-21ad-4b90-b05f-e5523b3ee142" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
 <localizations local="de" name="Nissan Optiumum II Shotgun" page="38"/>
 </entries>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" wertValue="600" name="Ares Predator III" xmi:id="3a91672e-0588-45a6-b225-149624e813ac" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.4/@entries.0/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
+<magazin name="Ares Predator III ammunition" type="3a91672e-0588-45a6-b225-149624e813ac" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8"/>
 <localizations local="de" name="Ares Predator III" page="31"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" verfuegbarkeit="6R" wertValue="1000" name="Vibro Knife" xmi:id="793034c5-61b9-4a91-beea-eb7c671ee956" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-2">
@@ -1815,26 +1970,110 @@
 </entries>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<entries xsi:type="shr5:ShrList" name="accessories">
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" name="Silencer, Ares Light Fire 70" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Schalldämpfer, Ares Light Fire 70"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="4026650e-ecd3-4514-b2c6-d03dc1d466b5" name="Silencer, Ares Light Fire 75" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Silencer, Ares Light Fire 75"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="7898e7dc-3ee6-46a9-83d7-d3ec54a456fb" name="Silencer, PSK-3 Collapsible Heavy Pistol" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Silencer, PSK-3 Collapsible Heavy Pistol" page="32"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" name="Bipod" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Zweibein"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="f46b623b-75b5-4947-a3e4-baa2930749bf" name="Gas-Vent 1 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Gasventilsystem 1"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="b3827611-f631-461e-8660-e744593ba2d2" name="Gas-Vent 2 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Gasventilsystem 2"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="6b06cf52-04fa-4034-bb10-2bcdd58c4bfb" name="Gas-Vent 3 System" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Gasventilsystem 3"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="baecb236-6b4a-4f7d-b9c4-25212f115d4a" name="Gyro Mount" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Gyrostabilisator"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Oben" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Zielfernrohr"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Lasermarkierer"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Oben" parentId="12e3bb7f-0058-4c9f-ba36-3a865d52b5a0" name="Periscope" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Periskop"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="0da6149e-982f-4051-825b-52c1b79c7e52" name="Silencer" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Schalldämpfer"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Schallunterdrücker" page="432"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="7e25eb59-3ce1-44d8-8367-527fd8c8bc1d" name="Smart Firing Platform" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Smart-Feuerplattform"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="b3562903-b1c6-4300-9f6e-25e0102aa69b" name="Smartgun System, External" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Smartgunsystem, External"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="28936368-9e16-498f-b028-92ec31e89a00" name="Tripod" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<localizations local="de" name="Dreibein"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="dc859601-1271-4f5d-ac37-e389c95f052a" name="Bayonet" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Bajonett"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="41ca17be-6fe4-469f-9a66-7345263c4733" name="Flashlight, Standard" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Lampe, Standard"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="487ae8d8-f45b-4133-a79f-c831a6b6a651" name="Flashlight, Low Light" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Flashlight, Low Light" page="51"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="fa873465-a678-4077-888f-f7a1fb792d47" name="Flashlight, Infrared" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Lampe, Infrarot"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" name="Folding Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Folding Stock" page="51"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="27de824f-d5e4-43fd-abaa-e42da6023569" name="Stock" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Schulterstütze"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Lauf" parentId="8eec5df1-88e2-4822-b156-9c2340a33efc" name="Foregrip" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Vordergriff"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="9a27efa9-f3f4-4e47-9165-76e8adbad4ba" name="Guncam" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Waffenkamera"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="71a37dd2-d162-4829-a233-5afdd954691d" name="Hip Pad Bracing System" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Hüftpolstersystem"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="21bc8b85-3fd7-4bde-ac8d-35e1fa099f21" name="Improved Range Finder" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Improved Range Finder" page="52"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="51740a3d-4464-4a38-8e2e-8858b3c1481e" name="Safe Target System, Base" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Safe Target System, Base" page="52"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" parentId="de62b79f-2864-4023-a286-6c1f270aade3" name="Slide Mount" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Slide Mount" page="52"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="dd786d50-9f42-406e-82d6-359213c086cc" name="Underbarrel Bola Launcher" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Unterlauf Bolawerfer"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="2ce42c74-5129-4b33-b829-aa392c8eb392" name="Underbarrel Chainsaw" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Underbarrel Chainsaw" page="53"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="c0191eaa-058c-437c-9e10-141785fc7bc8" name="Underbarrel Flamethrower" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Unterlauf Flammenwerfer"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="b479bb05-3b39-4d1f-a4b2-65da27335f18" name="Underbarrel Grapple Gun" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Unterlauf Enterhakenkanone"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="25691076-94be-4869-a067-34e7657285b7" name="Underbarrel Grenade Launcher" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Underbarrel Grenade Launcher" page="53"/>
+</entries>
+<entries xsi:type="shr5:FernkampfwaffeModifikator" ep="Unten" parentId="9dc660bb-a0b2-4b14-8c43-f5893b174265" name="Underbarrel Weight" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+<localizations local="de" name="Unterlaufgewicht"/>
+</entries>
+</entries>
 <entries xsi:type="shr5:ShrList" name="gears">
 <entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" armorMod="-4" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" xmi:id="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="Munition: APDS"/>
@@ -2849,16 +3088,16 @@
 <entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="6" name="Advanced Medkit" xmi:id="2efb1c56-4100-4dd5-83e0-d0cbbf5e7854" page="17" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a">
 <localizations local="de" name="Advanced Medkit"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" wertValue="5000" name="DocWagon Contract, Basic" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:IntervallVertrag" unit="year" faelligkeitsIntervall="1" verfuegbarkeit="0" wertValue="5000" name="DocWagon Contract, Basic" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="DocWagon Vertrag, Standard"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" wertValue="25000" name="DocWagon Contract, Gold" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:IntervallVertrag" unit="year" faelligkeitsIntervall="1" verfuegbarkeit="0" wertValue="25000" name="DocWagon Contract, Gold" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="DocWagon Vertrag, Gold"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" wertValue="50000" name="DocWagon Contract, Platinum" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:IntervallVertrag" unit="year" faelligkeitsIntervall="1" verfuegbarkeit="0" wertValue="50000" name="DocWagon Contract, Platinum" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="DocWagon Vertrag, Platin"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" wertValue="100000" name="DocWagon Contract, Super-Platinum" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+<entries xsi:type="shr5:IntervallVertrag" unit="year" faelligkeitsIntervall="1" verfuegbarkeit="0" wertValue="100000" name="DocWagon Contract, Super-Platinum" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
 <localizations local="de" name="DocWagon Vertrag, Superplatin"/>
 </entries>
 <entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="Rating" name="Slap Patch, Antidote Patch" xmi:id="47e12d78-cb99-4e20-aff5-11cbed1e715e" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
