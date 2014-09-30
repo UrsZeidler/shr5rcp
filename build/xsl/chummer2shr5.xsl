@@ -301,7 +301,7 @@
 		</entries>
 	</xsl:template>
 	<xsl:template
-		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors|metamagics">
+		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors|metamagics|accessories">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
@@ -2658,6 +2658,16 @@
 					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
+			<xsl:when test="category/text()='DocWagon Contract'">
+				<entries xsi:type="shr5:IntervallVertrag" unit="year"
+					faelligkeitsIntervall="1">
+					<!-- <xsl:attribute name="programType"> -->
+					<!-- <xsl:value-of select="category/text()" /> -->
+					<!-- </xsl:attribute> -->
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
 
 			<xsl:otherwise>
 				<entries xsi:type="shr5:Gegenstand">
@@ -2750,6 +2760,32 @@
 		</xsl:choose>
 	</xsl:template>
 
+	<xsl:template match="//accessory">
+		<xsl:if test="mount/text()!=''">
+			<entries xsi:type="shr5:FernkampfwaffeModifikator">
+				<xsl:choose>
+					<xsl:when test="mount/text()='Barrel'">
+						<xsl:attribute name="ep"><xsl:value-of
+							select="'Lauf'" /></xsl:attribute>
+					</xsl:when>
+					<xsl:when test="mount/text()='Top'">
+						<xsl:attribute name="ep"><xsl:value-of
+							select="'Oben'" /></xsl:attribute>
+					</xsl:when>
+					<xsl:when test="mount/text()='Under'">
+						<xsl:attribute name="ep"><xsl:value-of
+							select="'Unten'" /></xsl:attribute>
+					</xsl:when>
+				</xsl:choose>
+
+				<xsl:call-template name="set_parentid" />
+				<xsl:call-template name="beschreibbar" />
+				<xsl:call-template name="simple_quelle" />
+				<xsl:call-template name="localization" />
+			</entries>
+
+		</xsl:if>
+	</xsl:template>
 	<!-- weapon -->
 	<xsl:template match="weapon">
 		<xsl:if test="type/text()='Melee'">
@@ -2818,34 +2854,6 @@
 						select="number(rc/text())" /></xsl:attribute>
 				</xsl:if>
 				<xsl:call-template name="setRange" />
-				<!-- <xsl:call-template name="findRange"> <xsl:with-param name="rname" 
-					select="category/text()"/> </xsl:call-template> -->
-				<!-- <xsl:choose> -->
-				<!-- <xsl:when test="range/text()"> -->
-				<!-- <xsl:variable name="rname" select="range/text()" /> -->
-				<!-- <xsl:for-each select="$ranges"> -->
-				<!-- <xsl:for-each select="chummer/ranges/*"> -->
-				<!-- <xsl:if test="category/text()=$rname"> -->
-				<!-- <xsl:variable name="pos" select="position()-1" /> -->
-				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
-				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-				<!-- </xsl:if> -->
-				<!-- </xsl:for-each> -->
-				<!-- </xsl:for-each> -->
-				<!-- </xsl:when> -->
-				<!-- <xsl:otherwise> -->
-				<!-- <xsl:variable name="rname" select="category/text()" /> -->
-				<!-- <xsl:for-each select="$ranges"> -->
-				<!-- <xsl:for-each select="chummer/ranges/*"> -->
-				<!-- <xsl:if test="category/text()=$rname"> -->
-				<!-- <xsl:variable name="pos" select="position()-1" /> -->
-				<!-- <xsl:attribute name="reichweite"><xsl:value-of -->
-				<!-- select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute> -->
-				<!-- </xsl:if> -->
-				<!-- </xsl:for-each> -->
-				<!-- </xsl:for-each> -->
-				<!-- </xsl:otherwise> -->
-				<!-- </xsl:choose> -->
 
 				<xsl:call-template name="fw-mode">
 					<xsl:with-param name="list"
@@ -2872,16 +2880,19 @@
 								<einbau>
 									<xsl:choose>
 										<xsl:when test="mount/text()='Barrel'">
-											<xsl:attribute name="ep"><xsl:value-of select="'Lauf'" /></xsl:attribute>
+											<xsl:attribute name="ep"><xsl:value-of
+												select="'Lauf'" /></xsl:attribute>
 										</xsl:when>
 										<xsl:when test="mount/text()='Top'">
-											<xsl:attribute name="ep"><xsl:value-of select="'Oben'" /></xsl:attribute>
+											<xsl:attribute name="ep"><xsl:value-of
+												select="'Oben'" /></xsl:attribute>
 										</xsl:when>
 										<xsl:when test="mount/text()='Under'">
-											<xsl:attribute name="ep"><xsl:value-of select="'Unten'" /></xsl:attribute>
+											<xsl:attribute name="ep"><xsl:value-of
+												select="'Unten'" /></xsl:attribute>
 										</xsl:when>
 									</xsl:choose>
-									
+
 									<xsl:call-template name="set_parentid" />
 									<xsl:call-template name="beschreibbar" />
 									<xsl:call-template name="simple_quelle" />
@@ -2891,6 +2902,13 @@
 						</xsl:for-each>
 					</xsl:for-each>
 				</xsl:for-each>
+				<magazin>
+					<xsl:attribute name="name"><xsl:value-of
+						select="concat(name/text(),' ','ammunition')" /></xsl:attribute>
+					<xsl:attribute name="type"><xsl:value-of
+						select="id/text()" /></xsl:attribute>
+					<xsl:call-template name="simple_quelle" />
+				</magazin>
 				<xsl:call-template name="localization" />
 			</entries>
 		</xsl:if>
