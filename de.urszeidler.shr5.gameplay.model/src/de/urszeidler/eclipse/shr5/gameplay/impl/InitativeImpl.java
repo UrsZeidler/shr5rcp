@@ -23,12 +23,12 @@ import de.urszeidler.shr5.gameplay.dice.IniDice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getIni <em>Ini</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getActualIni <em>Actual Ini</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#isSizeInitative <em>Size Initative</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getIni <em>Ini</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getActualIni <em>Actual Ini</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#isSizeInitative <em>Size Initative</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class InitativeImpl extends SubjectCommandImpl implements Initative {
@@ -36,6 +36,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The default value of the '{@link #getIni() <em>Ini</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getIni()
      * @generated
      * @ordered
@@ -46,6 +47,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The cached value of the '{@link #getIni() <em>Ini</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getIni()
      * @generated
      * @ordered
@@ -56,6 +58,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The default value of the '{@link #getActualIni() <em>Actual Ini</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getActualIni()
      * @generated
      * @ordered
@@ -66,6 +69,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The cached value of the '{@link #getActualIni() <em>Actual Ini</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getActualIni()
      * @generated
      * @ordered
@@ -76,6 +80,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The default value of the '{@link #isSizeInitative() <em>Size Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isSizeInitative()
      * @generated
      * @ordered
@@ -86,6 +91,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * The cached value of the '{@link #isSizeInitative() <em>Size Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isSizeInitative()
      * @generated
      * @ordered
@@ -95,6 +101,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected InitativeImpl() {
@@ -104,6 +111,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -114,6 +122,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getIni() {
@@ -123,6 +132,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setIni(int newIni) {
@@ -135,6 +145,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getActualIni() {
@@ -144,6 +155,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setActualIni(int newActualIni) {
@@ -156,6 +168,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isSizeInitative() {
@@ -165,6 +178,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSizeInitative(boolean newSizeInitative) {
@@ -207,7 +221,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
 
         IniDice iniDice = new IniDice();
         AbstraktPersona persona = subject.getCharacter().getPersona();
-        int initative = persona.getInitative() + GameplayTools.getWoundMod(getSubject(),null);
+        int initative = persona.getInitative() + GameplayTools.getWoundMod(getSubject(), null);
         ini = iniDice.ini(initative, persona.getInitativWuerfel());
         executed = true;
     }
@@ -215,6 +229,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -233,6 +248,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -254,6 +270,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -275,6 +292,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -293,6 +311,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -307,11 +326,13 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (ini: ");

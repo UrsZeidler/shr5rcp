@@ -121,7 +121,7 @@ public class EditableInitativeComposite extends Composite implements IValueChang
         btnCheckButton = new Button(this, SWT.CHECK);
         btnCheckButton.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
         btnCheckButton.setText("seize");
-       
+        btnCheckButton.setEnabled(ini.getSubject().canUseEdge());
 
         m_bindingContext = initDataBindings();
     }
@@ -144,8 +144,7 @@ public class EditableInitativeComposite extends Composite implements IValueChang
 
     @Override
     public void handleValueChange(ValueChangeEvent event) {
-        System.err.println("----");
-        //updateToolbar();
+         //updateToolbar();
     }
 //
 //    public void setNameable(Initative ini) {

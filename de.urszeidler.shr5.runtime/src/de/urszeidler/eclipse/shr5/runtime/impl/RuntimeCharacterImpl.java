@@ -505,7 +505,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         AbstraktPersona persona = getCharacter().getPersona();
         int edge = persona.getEdge();        
         
-        return (edge - getUsedEdge())>0;
+        return (edge - getUsedEdge())>=1;
     }
 
     /**

@@ -65,6 +65,11 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
     public final static class InitativeComperator implements Comparator<InitativePass> {
         @Override
         public int compare(InitativePass o1, InitativePass o2) {
+            if(o1.isSizeInitative())
+                return -1;
+            if(o2.isSizeInitative())
+                return 1;
+            
             int turn1 = o1.getTurn() - o2.getTurn();
             if (turn1 != 0)
                 return turn1;
@@ -573,6 +578,11 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         for (Command command : subCommands) {
             if (command instanceof Initative) {
                 Initative ini = (Initative)command;
+                if (ini.isSizeInitative()) {
+                    int usedEdge = ini.getSubject().getUsedEdge();
+                    ini.getSubject().setUsedEdge(usedEdge + 1);
+                }
+
                 int currentIni = ini.getIni();
                 int turn = 1;
                 while (currentIni > 0) {
