@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -15,6 +16,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
@@ -347,6 +350,9 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (state == GeneratorState.COMMITED)
+            return true;
+
         if (!hasSpendAllKarmaPoints(null, null)) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
@@ -366,6 +372,8 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      */
     public boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getShr5Generator() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         int karmaPoints = getShr5Generator().getKarmaPoints();

@@ -687,6 +687,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasCategoryOnlyOnce(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         HashSet<String> set = new HashSet<String>();
         if (getMetaType() != null)
