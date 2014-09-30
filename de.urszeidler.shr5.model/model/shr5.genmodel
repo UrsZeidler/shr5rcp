@@ -211,7 +211,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/erweiterung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/rueckstoss"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/einbau"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/magazin"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/magazin"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Wurfwaffe"/>
     <genClasses ecoreClass="shr5.ecore#//ShrList">

@@ -216,6 +216,7 @@ public class FeuerwaffeItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.FEUERWAFFE__EINBAU);
+            childrenFeatures.add(Shr5Package.Literals.FEUERWAFFE__MAGAZIN);
         }
         return childrenFeatures;
     }
@@ -285,6 +286,7 @@ public class FeuerwaffeItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.FEUERWAFFE__EINBAU:
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -306,6 +308,11 @@ public class FeuerwaffeItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FEUERWAFFE__EINBAU,
                  Shr5Factory.eINSTANCE.createFernkampfwaffeModifikator()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FEUERWAFFE__MAGAZIN,
+                 Shr5Factory.eINSTANCE.createMagazin()));
     }
 
 }
