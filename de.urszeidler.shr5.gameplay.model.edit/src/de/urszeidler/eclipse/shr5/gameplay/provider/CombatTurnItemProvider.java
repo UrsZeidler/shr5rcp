@@ -434,6 +434,11 @@ public class CombatTurnItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSemanticAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (GameplayPackage.Literals.COMBAT_TURN__ACTION_PHASES,
                  GameplayFactory.eINSTANCE.createInitativePass()));
     }

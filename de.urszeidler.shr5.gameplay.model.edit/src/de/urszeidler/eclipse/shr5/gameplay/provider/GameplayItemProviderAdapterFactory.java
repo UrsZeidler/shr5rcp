@@ -578,6 +578,29 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SemanticActionItemProvider semanticActionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSemanticActionAdapter() {
+        if (semanticActionItemProvider == null) {
+            semanticActionItemProvider = new SemanticActionItemProvider(this);
+        }
+
+        return semanticActionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -698,6 +721,7 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (intervallItemProvider != null) intervallItemProvider.dispose();
         if (probeModItemProvider != null) probeModItemProvider.dispose();
         if (setExtendetDataItemProvider != null) setExtendetDataItemProvider.dispose();
+        if (semanticActionItemProvider != null) semanticActionItemProvider.dispose();
     }
 
 }

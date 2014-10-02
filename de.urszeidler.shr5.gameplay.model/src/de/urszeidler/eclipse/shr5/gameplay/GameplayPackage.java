@@ -4177,6 +4177,133 @@ public interface GameplayPackage extends EPackage {
     int SET_EXTENDET_DATA_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl <em>Semantic Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSemanticAction()
+     * @generated
+     */
+    int SEMANTIC_ACTION = 29;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__EXECUTED = SUBJECT_COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__SUB_COMMANDS = SUBJECT_COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__DATE = SUBJECT_COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__CMD_CALLBACK = SUBJECT_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__EXECUTING = SUBJECT_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__SUBJECT = SUBJECT_COMMAND__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__TYPE = SUBJECT_COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Message</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__MESSAGE = SUBJECT_COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Semantic Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 2;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION___REDO = SUBJECT_COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION___UNDO = SUBJECT_COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Semantic Action</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4184,7 +4311,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
      * @generated
      */
-    int INTERRUPT_TYPE = 29;
+    int INTERRUPT_TYPE = 30;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
@@ -4194,7 +4321,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
      * @generated
      */
-    int PROBE_STATE = 30;
+    int PROBE_STATE = 31;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
@@ -4204,7 +4331,17 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
      * @generated
      */
-    int SUCCES_TEST_STATE = 31;
+    int SUCCES_TEST_STATE = 32;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticType <em>Semantic Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticType
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSemanticType()
+     * @generated
+     */
+    int SEMANTIC_TYPE = 33;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -4214,7 +4351,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 32;
+    int COMMAND_CALLBACK = 34;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -5250,6 +5387,38 @@ public interface GameplayPackage extends EPackage {
     EAttribute getSetExtendetData_Value();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction <em>Semantic Action</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Semantic Action</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticAction
+     * @generated
+     */
+    EClass getSemanticAction();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticAction#getType()
+     * @see #getSemanticAction()
+     * @generated
+     */
+    EAttribute getSemanticAction_Type();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction#getMessage <em>Message</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Message</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticAction#getMessage()
+     * @see #getSemanticAction()
+     * @generated
+     */
+    EAttribute getSemanticAction_Message();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5278,6 +5447,16 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EEnum getSuccesTestState();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticType <em>Semantic Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Semantic Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticType
+     * @generated
+     */
+    EEnum getSemanticType();
 
     /**
      * Returns the meta object for data type '{@link de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback <em>Command Callback</em>}'.
@@ -6148,6 +6327,32 @@ public interface GameplayPackage extends EPackage {
         EAttribute SET_EXTENDET_DATA__VALUE = eINSTANCE.getSetExtendetData_Value();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl <em>Semantic Action</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSemanticAction()
+         * @generated
+         */
+        EClass SEMANTIC_ACTION = eINSTANCE.getSemanticAction();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SEMANTIC_ACTION__TYPE = eINSTANCE.getSemanticAction_Type();
+
+        /**
+         * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SEMANTIC_ACTION__MESSAGE = eINSTANCE.getSemanticAction_Message();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -6176,6 +6381,16 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EEnum SUCCES_TEST_STATE = eINSTANCE.getSuccesTestState();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticType <em>Semantic Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.SemanticType
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSemanticType()
+         * @generated
+         */
+        EEnum SEMANTIC_TYPE = eINSTANCE.getSemanticType();
 
         /**
          * The meta object literal for the '<em>Command Callback</em>' data type.

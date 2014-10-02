@@ -37,6 +37,8 @@ import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
@@ -264,6 +266,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass semanticActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EEnum interruptTypeEEnum = null;
 
     /**
@@ -279,6 +288,13 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EEnum succesTestStateEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum semanticTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1229,6 +1245,33 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSemanticAction() {
+        return semanticActionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSemanticAction_Type() {
+        return (EAttribute)semanticActionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSemanticAction_Message() {
+        return (EAttribute)semanticActionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getInterruptType() {
         return interruptTypeEEnum;
     }
@@ -1249,6 +1292,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      */
     public EEnum getSuccesTestState() {
         return succesTestStateEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getSemanticType() {
+        return semanticTypeEEnum;
     }
 
     /**
@@ -1414,10 +1466,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEReference(setExtendetDataEClass, SET_EXTENDET_DATA__DATA);
         createEAttribute(setExtendetDataEClass, SET_EXTENDET_DATA__VALUE);
 
+        semanticActionEClass = createEClass(SEMANTIC_ACTION);
+        createEAttribute(semanticActionEClass, SEMANTIC_ACTION__TYPE);
+        createEAttribute(semanticActionEClass, SEMANTIC_ACTION__MESSAGE);
+
         // Create enums
         interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
         probeStateEEnum = createEEnum(PROBE_STATE);
         succesTestStateEEnum = createEEnum(SUCCES_TEST_STATE);
+        semanticTypeEEnum = createEEnum(SEMANTIC_TYPE);
 
         // Create data types
         commandCallbackEDataType = createEDataType(COMMAND_CALLBACK);
@@ -1479,6 +1536,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         meeleAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
         rangedAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
         setExtendetDataEClass.getESuperTypes().add(this.getCommand());
+        semanticActionEClass.getESuperTypes().add(this.getSubjectCommand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1613,6 +1671,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEReference(getSetExtendetData_Data(), theRuntimePackage.getExtendetData(), null, "data", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSetExtendetData_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        initEClass(semanticActionEClass, SemanticAction.class, "SemanticAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSemanticAction_Type(), this.getSemanticType(), "type", null, 0, 1, SemanticAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSemanticAction_Message(), ecorePackage.getEString(), "message", null, 0, 1, SemanticAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(interruptTypeEEnum, InterruptType.class, "InterruptType");
         addEEnumLiteral(interruptTypeEEnum, InterruptType.BLOCK);
@@ -1630,6 +1692,10 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEEnum(succesTestStateEEnum, SuccesTestState.class, "SuccesTestState");
         addEEnumLiteral(succesTestStateEEnum, SuccesTestState.SUCCES);
         addEEnumLiteral(succesTestStateEEnum, SuccesTestState.FAILURE);
+
+        initEEnum(semanticTypeEEnum, SemanticType.class, "SemanticType");
+        addEEnumLiteral(semanticTypeEEnum, SemanticType.TALK);
+        addEEnumLiteral(semanticTypeEEnum, SemanticType.GESTURE);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

@@ -429,6 +429,11 @@ public class SetExtendetDataItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
                  GameplayFactory.eINSTANCE.createSetExtendetData()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.COMMAND__SUB_COMMANDS,
+                 GameplayFactory.eINSTANCE.createSemanticAction()));
     }
 
     /**

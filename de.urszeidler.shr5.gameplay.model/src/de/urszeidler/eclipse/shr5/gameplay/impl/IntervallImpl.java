@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.TimeUnits;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -53,7 +54,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * @generated
      * @ordered
      */
-    protected static final de.urszeidler.eclipse.shr5.TimeUnits UNITS_EDEFAULT = de.urszeidler.eclipse.shr5.TimeUnits.SEC;
+    protected static final TimeUnits UNITS_EDEFAULT = TimeUnits.SEC;
 
     /**
      * The cached value of the '{@link #getUnits() <em>Units</em>}' attribute.
@@ -63,7 +64,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * @generated
      * @ordered
      */
-    protected de.urszeidler.eclipse.shr5.TimeUnits units = UNITS_EDEFAULT;
+    protected TimeUnits units = UNITS_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -110,7 +111,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
-    public de.urszeidler.eclipse.shr5.TimeUnits getUnits() {
+    public TimeUnits getUnits() {
         return units;
     }
 
@@ -119,8 +120,8 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setUnits(de.urszeidler.eclipse.shr5.TimeUnits newUnits) {
-        de.urszeidler.eclipse.shr5.TimeUnits oldUnits = units;
+    public void setUnits(TimeUnits newUnits) {
+        TimeUnits oldUnits = units;
         units = newUnits == null ? UNITS_EDEFAULT : newUnits;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.INTERVALL__UNITS, oldUnits, units));
@@ -154,7 +155,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
                 setQuantities((Integer)newValue);
                 return;
             case GameplayPackage.INTERVALL__UNITS:
-                setUnits((de.urszeidler.eclipse.shr5.TimeUnits)newValue);
+                setUnits((TimeUnits)newValue);
                 return;
         }
         super.eSet(featureID, newValue);

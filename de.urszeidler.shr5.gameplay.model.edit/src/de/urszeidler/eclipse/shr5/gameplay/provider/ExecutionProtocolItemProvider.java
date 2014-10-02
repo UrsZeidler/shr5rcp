@@ -234,6 +234,11 @@ public class ExecutionProtocolItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
                  GameplayFactory.eINSTANCE.createSetExtendetData()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createSemanticAction()));
     }
 
     /**

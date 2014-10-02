@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
+import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -339,6 +340,14 @@ public class GameplaySwitch<T> extends Switch<T> {
                 SetExtendetData setExtendetData = (SetExtendetData)theEObject;
                 T result = caseSetExtendetData(setExtendetData);
                 if (result == null) result = caseCommand(setExtendetData);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.SEMANTIC_ACTION: {
+                SemanticAction semanticAction = (SemanticAction)theEObject;
+                T result = caseSemanticAction(semanticAction);
+                if (result == null) result = caseSubjectCommand(semanticAction);
+                if (result == null) result = caseCommand(semanticAction);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -778,6 +787,21 @@ public class GameplaySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseSetExtendetData(SetExtendetData object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Semantic Action</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Semantic Action</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSemanticAction(SemanticAction object) {
         return null;
     }
 

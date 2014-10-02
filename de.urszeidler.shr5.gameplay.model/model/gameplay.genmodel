@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="(c) Urs Zeilder" modelDirectory="/de.urszeidler.shr5.gameplay.model/src"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="(c) Urs Zeidler" modelDirectory="/de.urszeidler.shr5.gameplay.model/src"
     modelPluginID="de.urszeidler.shr5.gameplay.model" modelName="Gameplay" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     usedGenPackages="../../de.urszeidler.shr5.runtime/model/runtime.genmodel#//runtime ../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5 ../../de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management"
@@ -24,6 +24,10 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//SuccesTestState">
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SuccesTestState/succes"/>
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SuccesTestState/failure"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//SemanticType">
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SemanticType/talk"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SemanticType/gesture"/>
     </genEnums>
     <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">
@@ -149,6 +153,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetExtendetData/dataAware"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetExtendetData/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SetExtendetData/value"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//SemanticAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SemanticAction/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SemanticAction/message"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -221,6 +221,15 @@ public interface GameplayFactory extends EFactory {
     SetExtendetData createSetExtendetData();
 
     /**
+     * Returns a new object of class '<em>Semantic Action</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Semantic Action</em>'.
+     * @generated
+     */
+    SemanticAction createSemanticAction();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

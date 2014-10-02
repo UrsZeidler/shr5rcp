@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
+import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -209,6 +210,10 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseSetExtendetData(SetExtendetData object) {
                 return createSetExtendetDataAdapter();
+            }
+            @Override
+            public Adapter caseSemanticAction(SemanticAction object) {
+                return createSemanticActionAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -633,6 +638,20 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSetExtendetDataAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction <em>Semantic Action</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SemanticAction
+     * @generated
+     */
+    public Adapter createSemanticActionAdapter() {
         return null;
     }
 

@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
+import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -103,6 +104,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.INTERVALL: return createIntervall();
             case GameplayPackage.PROBE_MOD: return createProbeMod();
             case GameplayPackage.SET_EXTENDET_DATA: return createSetExtendetData();
+            case GameplayPackage.SEMANTIC_ACTION: return createSemanticAction();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -122,6 +124,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
                 return createProbeStateFromString(eDataType, initialValue);
             case GameplayPackage.SUCCES_TEST_STATE:
                 return createSuccesTestStateFromString(eDataType, initialValue);
+            case GameplayPackage.SEMANTIC_TYPE:
+                return createSemanticTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -141,6 +145,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
                 return convertProbeStateToString(eDataType, instanceValue);
             case GameplayPackage.SUCCES_TEST_STATE:
                 return convertSuccesTestStateToString(eDataType, instanceValue);
+            case GameplayPackage.SEMANTIC_TYPE:
+                return convertSemanticTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -371,6 +377,16 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    public SemanticAction createSemanticAction() {
+        SemanticActionImpl semanticAction = new SemanticActionImpl();
+        return semanticAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public InterruptType createInterruptTypeFromString(EDataType eDataType, String initialValue) {
         InterruptType result = InterruptType.get(initialValue);
         if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -423,6 +439,26 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * @generated
      */
     public String convertSuccesTestStateToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SemanticType createSemanticTypeFromString(EDataType eDataType, String initialValue) {
+        SemanticType result = SemanticType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertSemanticTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
