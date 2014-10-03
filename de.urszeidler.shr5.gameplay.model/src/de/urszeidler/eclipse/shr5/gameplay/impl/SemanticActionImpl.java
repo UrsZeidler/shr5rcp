@@ -206,7 +206,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
         setExecuting(true);
 
         if (isSetCmdCallback())
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SEMANTIC_ACTION__TYPE,GameplayPackage.Literals.SEMANTIC_ACTION__MESSAGE);
+            cmdCallback.beforeExecute(this, GameplayPackage.Literals.SEMANTIC_ACTION__TYPE,GameplayPackage.Literals.SEMANTIC_ACTION__MESSAGE);
         
         setExecuted(true);
         setExecuting(false);

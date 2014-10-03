@@ -40,6 +40,8 @@ import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.PhaseCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
@@ -469,11 +471,20 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             ToolItem tltmFree = new ToolItem(toolBar, SWT.DROP_DOWN);
             tltmFree.setText("f");
             FreeActionDropdownSelectionListner listenerOne = new FreeActionDropdownSelectionListner(tltmFree);
+            
             FreeAction freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            SemanticAction semanticAction = GameplayFactory.eINSTANCE.createSemanticAction();
+            semanticAction.setType(SemanticType.TALK);
+            freeAction.getSubCommands().add(semanticAction);
             listenerOne.add("say", freeAction);
+            
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
+            semanticAction = GameplayFactory.eINSTANCE.createSemanticAction();
+            semanticAction.setType(SemanticType.TALK);
+            freeAction.getSubCommands().add(semanticAction);
             listenerOne.add("Gesture", freeAction);
-            tltmFree.addSelectionListener(listenerOne);            
+            
+//            tltmFree.addSelectionListener(listenerOne);            
             
             
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();

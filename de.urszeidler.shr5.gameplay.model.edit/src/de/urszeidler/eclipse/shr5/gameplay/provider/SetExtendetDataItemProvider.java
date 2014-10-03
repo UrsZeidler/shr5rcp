@@ -294,12 +294,16 @@ public class SetExtendetDataItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         SetExtendetData setExtendetData = (SetExtendetData)object;
-        return getString("_UI_SetExtendetData_type") + " " + setExtendetData.isExecuted();
+        String defaultVaule = getString("_UI_unset");
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setExtendetData.getDataAware());
+
+        return getString("_UI_SetExtendetData_type_text",new Object[]{ label_subject, setExtendetData.getData(), setExtendetData.getValue() });
     }
 
     /**

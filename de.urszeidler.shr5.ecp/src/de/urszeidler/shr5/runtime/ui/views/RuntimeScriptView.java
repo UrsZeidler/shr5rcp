@@ -87,6 +87,7 @@ import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
+import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
@@ -96,6 +97,7 @@ import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
+import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
@@ -156,7 +158,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             super.notifyChanged(notification);
             Object notifier = notification.getNotifier();
             Object feature = notification.getFeature();
-            if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction)
+            if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction|| notifier instanceof FreeAction)
                 return;
 
             if (notifier instanceof CombatTurn) {
@@ -997,13 +999,18 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // SetExtendetData new_name = (SetExtendetData)cmd;
             return;
         }
-
+        else if (cmd instanceof SkillTestCmd) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                 GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.PROBE__LIMIT,
                 GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS);
         d.open();
-
+        return;
+        }
+        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
+        d.open();
+        return ;
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
         // new DefaultReferenceManager(itemDelegator));
         // // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,

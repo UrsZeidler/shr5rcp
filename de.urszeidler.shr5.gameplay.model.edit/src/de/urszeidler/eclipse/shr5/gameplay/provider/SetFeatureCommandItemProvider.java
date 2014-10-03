@@ -299,15 +299,13 @@ public class SetFeatureCommandItemProvider
     @Override
     public String getText(Object object) {
         SetFeatureCommand setFeatureCommand = (SetFeatureCommand)object;
-//        String label = getString("_UI_unset");
-//        String label1 = getString("_UI_unset");
-//        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-//        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(setFeatureCommand.getObject(), IItemLabelProvider.class);
-//        if (labelprovider != null) {
-//            label = labelprovider.getText(setFeatureCommand.getObject());
-//        }
+        
+        String defaultVaule = getString("_UI_unset");
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getObject());
+        String label_feature = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getFeature());
 
-        return getString("_UI_SetFeatureCommand_type");// + " " + setFeatureCommand.isExecuted();
+        return getString("_UI_SetFeatureCommand_type_text",new Object[]{ label_subject,label_feature });// + " " + setFeatureCommand.isExecuted();
     }
 
     /**
