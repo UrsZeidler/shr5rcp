@@ -10,6 +10,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -302,8 +303,11 @@ public class SetExtendetDataItemProvider
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setExtendetData.getDataAware());
-
-        return getString("_UI_SetExtendetData_type_text",new Object[]{ label_subject, setExtendetData.getData(), setExtendetData.getValue() });
+        String label_object = setExtendetData.getValue().toString();
+        if (setExtendetData.getValue() instanceof EObject) 
+         label_object = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setExtendetData.getValue());
+            
+        return getString("_UI_SetExtendetData_type_text",new Object[]{ label_subject, setExtendetData.getData(), label_object });
     }
 
     /**

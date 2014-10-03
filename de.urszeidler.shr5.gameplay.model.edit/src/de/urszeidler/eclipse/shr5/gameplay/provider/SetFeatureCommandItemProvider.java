@@ -10,6 +10,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -304,8 +305,11 @@ public class SetFeatureCommandItemProvider
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getObject());
         String label_feature = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getFeature());
+        String label_object = setFeatureCommand.getValue().toString();
+        if (setFeatureCommand.getValue() instanceof EObject) 
+         label_object = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setFeatureCommand.getValue());
 
-        return getString("_UI_SetFeatureCommand_type_text",new Object[]{ label_subject,label_feature });// + " " + setFeatureCommand.isExecuted();
+        return getString("_UI_SetFeatureCommand_type_text",new Object[]{ label_subject,label_feature,label_object });// + " " + setFeatureCommand.isExecuted();
     }
 
     /**
