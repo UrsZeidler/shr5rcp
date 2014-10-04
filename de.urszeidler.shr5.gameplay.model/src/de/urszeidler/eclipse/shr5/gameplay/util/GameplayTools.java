@@ -178,18 +178,7 @@ public class GameplayTools {
 
             listValue.remove(InterruptType.BLOCK);
         } else if (listValue.contains(InterruptType.PARRY)) {
-            Nahkampfwaffe nw = null;
-            AbstraktGegenstand leftHand = subject.getLeftHand();
-            if (leftHand instanceof Nahkampfwaffe) {
-                nw = (Nahkampfwaffe)leftHand;
-
-            } else {
-                AbstraktGegenstand rightHand = subject.getRightHand();
-                if (rightHand instanceof Nahkampfwaffe) {
-                    nw = (Nahkampfwaffe)rightHand;
-
-                }
-            }
+            Nahkampfwaffe nw = GameplayTools.getMeleeWeapon(subject);// null;
 
             Fertigkeit fertigkeit = nw.getFertigkeit();
             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
