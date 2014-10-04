@@ -79,7 +79,6 @@
          version="0.0.0"
          unpack="false"/>
 
-
    <plugin
          id="org.eclipse.emf.ecp.view.template.service"
          download-size="11"
@@ -245,13 +244,6 @@
          id="org.eclipse.emf.ecp.core"
          download-size="134"
          install-size="283"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecp.ui"
-         download-size="219"
-         install-size="444"
          version="0.0.0"
          unpack="false"/>
 

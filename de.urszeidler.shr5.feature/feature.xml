@@ -21,54 +21,6 @@
       <update label="test" url="http://valis:8080/job/shr5-maven/ws/de.urszeidler.shr5.updatesite/target/repository/"/>
    </url>
 
-   <requires>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.ocl"/>
-      <import plugin="org.eclipse.ocl.ecore"/>
-      <import plugin="org.eclipse.acceleo.common" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.model" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.profiler" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.engine" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="com.google.guava"/>
-      <import plugin="org.apache.batik.transcoder"/>
-      <import plugin="org.apache.batik.util"/>
-      <import plugin="org.apache.batik.pdf"/>
-      <import plugin="org.apache.xerces"/>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.emf.ecp.edit" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.ui.view" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.view.model.provider.xmi" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.editor.e3" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.edit.swt" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.ui.view.swt" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.ui" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.ui.e3" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.application.e3" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.common" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.core.emffilter" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.validation" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.workspace.core" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.workspace.ui" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.databinding.beans" version="1.2.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.databinding.property" version="1.4.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jface.databinding" version="1.6.200" match="greaterOrEqual"/>
-      <import plugin="de.urszeidler.emf.commons.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.filesystem" version="1.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.paperclips.core" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.paperclips.widgets" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.widgets.cdatetime" version="0.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.jface.cdatetime" version="0.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.validation.connector" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.view.context.locale" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecp.view.core.swt" version="1.2.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.ui.intro" version="3.4.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.ui.ide"/>
-   </requires>
-
    <plugin
          id="de.urszeidler.shr5.acceleo"
          download-size="0"
