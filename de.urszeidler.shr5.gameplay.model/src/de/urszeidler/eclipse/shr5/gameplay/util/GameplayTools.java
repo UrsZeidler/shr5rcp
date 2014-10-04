@@ -423,7 +423,7 @@ public class GameplayTools {
     public static List<EClass> getCharacterCommands() {
         ArrayList<EClass> list = new ArrayList<EClass>(7);
         list.add(GameplayPackage.Literals.SKILL_TEST_CMD);
-        // list.add(GameplayPackage.Literals.SUCCES_TEST);
+        list.add(GameplayPackage.Literals.SUCCES_TEST_CMD);
         list.add(GameplayPackage.Literals.EXTENDET_SKILL_TEST_CMD);
         list.add(GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD);
         list.add(GameplayPackage.Literals.DEFENS_TEST_CMD);
