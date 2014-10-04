@@ -3,20 +3,15 @@
  */
 package de.urszeidler.shr5.runtime.ui.widgets;
 
-import java.util.Map.Entry;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.window.DefaultToolTip;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
@@ -33,24 +28,9 @@ import org.eclipse.swt.widgets.Shell;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
-import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
-
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.jface.viewers.BaseLabelProvider;
-import org.eclipse.jface.viewers.CellLabelProvider;
-import org.eclipse.jface.viewers.IContentProvider;
-import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.jface.viewers.ViewerCell;
-
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-
-import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.jface.viewers.TableViewerColumn;
 
 /**
  * @author urs
@@ -66,8 +46,8 @@ public class RuntimeCharacterTooltip extends ToolTip {
     private Label label_image;
 
     private RuntimeCharacter runtimeCharacter;
-    private Table table;
-
+//    private Table table;
+    
  
     /**
      */
