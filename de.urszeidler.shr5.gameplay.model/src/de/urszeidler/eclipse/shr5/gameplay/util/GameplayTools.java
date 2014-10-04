@@ -21,6 +21,8 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -386,7 +388,6 @@ public class GameplayTools {
         return eObject;
     }
 
-
     public static List<EClass> getCharacterCommands() {
         ArrayList<EClass> list = new ArrayList<EClass>(7);
         list.add(GameplayPackage.Literals.SKILL_TEST_CMD);
@@ -519,24 +520,44 @@ public class GameplayTools {
      */
     public static void reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
         // TODO Auto-generated method stub
+        try {
+            if (weapon instanceof Feuerwaffe) {
+                Feuerwaffe fw = (Feuerwaffe)weapon;
+                Magazin magazin = fw.getMagazin();
+                if (magazin != null) {
+                    for (int i = 0; i < numberOfShoots; i++) {
+                        if (magazin.getBullets().size() > 0) {
+                            Munition munition = magazin.getBullets().get(0);
+                            munition.setAnzahl(munition.getAnzahl() - 1);
+                            magazin.getBullets().remove(0);
+                        }
+                    }
 
+                }
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     /**
      * Returns the reach mod for the subject. It compares the reaches between subject and object.
-     * @param attacker 
      * 
+     * @param attacker
      * @param attackerWeapon
      * @param defender
      * @param probeMods
      * @return
      */
-    public static int getMeleeReachMod( RuntimeCharacter attacker, Nahkampfwaffe attackerWeapon, RuntimeCharacter defender, EList<ProbeMod> probeMods) {
+    public static int getMeleeReachMod(RuntimeCharacter attacker, Nahkampfwaffe attackerWeapon, RuntimeCharacter defender, EList<ProbeMod> probeMods) {
         Nahkampfwaffe defenderWeapon = getMeleeWeapon(defender);
-        int attackerMod = attackerWeapon.getReichweite()+ attacker.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
-        int defenderMod = defenderWeapon.getReichweite()+ defender.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
-        
-        int mod = defenderMod -  attackerMod;
+        int attackerMod = attackerWeapon.getReichweite()
+                + attacker.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
+        int defenderMod = defenderWeapon.getReichweite()
+                + defender.getCharacter().getPersona().getModManager().getmodWert(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
+
+        int mod = defenderMod - attackerMod;
         if (probeMods != null && mod != 0) {
             ProbeMod probeMod = createProbeMod(defender, mod, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE);
             probeMods.add(probeMod);
