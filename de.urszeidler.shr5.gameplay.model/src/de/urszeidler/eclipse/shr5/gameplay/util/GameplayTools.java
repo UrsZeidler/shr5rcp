@@ -397,28 +397,6 @@ public class GameplayTools {
         return eObject;
     }
 
-    public static List<SubjectCommand> createCharacterCommands(RuntimeCharacter persona) {
-        ArrayList<SubjectCommand> list = new ArrayList<SubjectCommand>(5);
-        SuccesTestCmd succesTestCmd = GameplayFactory.eINSTANCE.createSuccesTestCmd();
-        succesTestCmd.setSubject(persona);
-        list.add(succesTestCmd);
-        SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
-        skillTestCmd.setSubject(persona);
-        list.add(skillTestCmd);
-        ExtendetSkillTestCmd extendetSkillTestCmd = GameplayFactory.eINSTANCE.createExtendetSkillTestCmd();
-        extendetSkillTestCmd.setSubject(persona);
-        list.add(extendetSkillTestCmd);
-        OpposedSkillTestCmd opposedSkillTestCmd = GameplayFactory.eINSTANCE.createOpposedSkillTestCmd();
-        opposedSkillTestCmd.setSubject(persona);
-        list.add(opposedSkillTestCmd);
-        DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
-        defensTestCmd.setSubject(persona);
-        list.add(defensTestCmd);
-        DamageTest damageTest = GameplayFactory.eINSTANCE.createDamageTest();
-        damageTest.setSubject(persona);
-        list.add(damageTest);
-        return list;
-    }
 
     public static List<EClass> getCharacterCommands() {
         ArrayList<EClass> list = new ArrayList<EClass>(7);
