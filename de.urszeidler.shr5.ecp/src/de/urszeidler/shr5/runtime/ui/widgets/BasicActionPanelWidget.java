@@ -61,14 +61,14 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
 
     private Label lblName;
 
-    private StateMonitorWidget stateMonitorWidgetMental;
-
     private StateMonitorWidget stateMonitorWidgetPhysical;
+    private StateMonitorWidget stateMonitorWidgetMental;
+    private StateMonitorWidget stateMonitorOverdead;
+
     private Group grpPhysical;
     private Group grpMental;
     private Group grpExra;
 
-    private StateMonitorWidget stateMonitorOverdead;
 
     // private ActionPhaseCmd phase1 = GameplayFactory.eINSTANCE.createActionPhaseCmd();
 
