@@ -81,6 +81,9 @@ public class CombatTurnList extends Composite implements IValueChangeListener, I
                     actionPhaseComposite.setActiv(true);
                 else
                     actionPhaseComposite.setActiv(false);
+                
+                RuntimeCharacterTooltip testTooltip = new RuntimeCharacterTooltip(actionPhaseComposite.getLabel_image(),phaseCmd.getSubject());
+//                testTooltip.set
             }
         }
         composite1.setSize(composite1.computeSize(SWT.DEFAULT, SWT.DEFAULT));
