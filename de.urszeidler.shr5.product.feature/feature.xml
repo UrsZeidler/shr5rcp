@@ -31,27 +31,7 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.group.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.rule.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.table.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.validation.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.core.runtime.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.workspace.feature"
          version="0.0.0"/>
 
    <includes
@@ -91,18 +71,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.model.controls.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.model.editor.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.unset.feature"
-         version="0.0.0"/>
-
-   <includes
          id="de.urszeidler.shr5.ecp.feature"
          version="0.0.0"
          optional="true"/>
@@ -129,10 +97,6 @@
          id="de.urszeidler.shr5.feature"
          version="0.0.0"
          optional="true"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.emfforms.runtime.feature"
-         version="0.0.0"/>
 
    <plugin
          id="javax.servlet"

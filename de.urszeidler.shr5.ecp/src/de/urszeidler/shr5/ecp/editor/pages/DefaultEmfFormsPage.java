@@ -80,7 +80,7 @@ public class DefaultEmfFormsPage extends FormPage {
         toolkit.paintBordersFor(body);
 
         final EObject domainObject = object;
-        final VView view = ViewProviderHelper.getView(domainObject, null);
+        final VView view = ViewProviderHelper.getView(domainObject,null);
         final ViewModelContext vmc = ViewModelContextFactory.INSTANCE.createViewModelContext(view, domainObject, new ECPReferenceServiceImpl());
         try {
             ecpView = ECPSWTViewRenderer.INSTANCE.render(body, vmc);

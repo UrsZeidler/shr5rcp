@@ -26,11 +26,13 @@
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="org.eclipse.emf-client-platform">
+  <!-- 
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://download.eclipse.org/emf-store/releases_11"/>
     </rm:provider>
+     -->
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
