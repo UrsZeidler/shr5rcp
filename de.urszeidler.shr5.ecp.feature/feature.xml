@@ -79,19 +79,6 @@
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="org.eclipse.emf.ecp.view.template.model"
-         download-size="29"
-         install-size="62"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecp.view.template.model.edit"
-         download-size="21"
-         install-size="39"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecp.view.template.service"
@@ -185,13 +172,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.ecp.ui.view.swt"
-         download-size="56"
-         install-size="111"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.emf.ecp.view.model.provider.generator"
          download-size="10"
          install-size="15"
@@ -223,13 +203,6 @@
          id="org.eclipse.emf.ecp.edit"
          download-size="30"
          install-size="59"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecp.edit.swt"
-         download-size="198"
-         install-size="423"
          version="0.0.0"
          unpack="false"/>
 
