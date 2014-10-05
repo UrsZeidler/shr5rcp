@@ -302,14 +302,14 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+<!--
    <plugin
          id="org.eclipse.emf.ecp.application.e3"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.acceleo.engine"
          download-size="0"

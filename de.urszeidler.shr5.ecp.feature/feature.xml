@@ -20,4 +20,44 @@
          id="org.eclipse.emf.ecp.workspace.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.emf.ecp.diffmerge.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.validation.view.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.viewmodel.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.e3"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.application.e3"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
