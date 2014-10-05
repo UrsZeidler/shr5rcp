@@ -68,7 +68,7 @@
 
 		<repository>
 			<id>ecp</id>
-			<url>http://download.eclipse.org/ecp/releases/releases_12</url>
+			<url>http://download.eclipse.org/ecp/releases/releases_13</url>
 			<layout>p2</layout>
 		</repository>
 
