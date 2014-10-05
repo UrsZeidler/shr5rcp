@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
+<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
   <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
@@ -17805,243 +17805,681 @@
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EVL21TnTEeSe6_w6Jrbqxg" name="Magic">
-      <entries xsi:type="shr5:ShrList" xmi:id="_EVL21jnTEeSe6_w6Jrbqxg" name="powers">
+      <entries xsi:type="shr5:ShrList" xmi:id="_lkwrQEzFEeS5AK9kA4rl5g" name="power">
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkx5YEzFEeS5AK9kA4rl5g" name="Adrenaline Boost 1" parentId="8caaadf4-75b4-4535-928a-5648d395c13a" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lkx5YUzFEeS5AK9kA4rl5g" local="de" name="Adrenalinschub 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkx5YkzFEeS5AK9kA4rl5g" name="Adrenaline Boost 2" parentId="8caaadf4-75b4-4535-928a-5648d395c13a" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lkx5Y0zFEeS5AK9kA4rl5g" local="de" name="Adrenalinschub 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkx5ZEzFEeS5AK9kA4rl5g" name="Adrenaline Boost 3" parentId="8caaadf4-75b4-4535-928a-5648d395c13a" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lkx5ZUzFEeS5AK9kA4rl5g" local="de" name="Adrenalinschub 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkx5ZkzFEeS5AK9kA4rl5g" name="Adrenaline Boost 4" parentId="8caaadf4-75b4-4535-928a-5648d395c13a" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lkx5Z0zFEeS5AK9kA4rl5g" local="de" name="Adrenalinschub 4"/>
+        </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="8caaadf4-75b4-4535-928a-5648d395c13a" name="Adrenaline Boost" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVMd4DnTEeSe6_w6Jrbqxg" local="de" name="Adrenalinschub"/>
+          <localizations xmi:id="_lkygcEzFEeS5AK9kA4rl5g" local="de" name="Adrenalinschub"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="39224ecf-f3d0-40b6-95a6-2f047f95d736" name="Astral Perception" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
-          <localizations xmi:id="_EVMd4TnTEeSe6_w6Jrbqxg" local="de" name="Astrale Wahrnehmung"/>
+          <localizations xmi:id="_lkygcUzFEeS5AK9kA4rl5g" local="de" name="Astrale Wahrnehmung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkygckzFEeS5AK9kA4rl5g" name="Attribute Boost 1" parentId="ddcca815-d6fe-41ed-b174-2e7255320f17" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lkygc0zFEeS5AK9kA4rl5g" local="de" name="Attributschub 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkygdEzFEeS5AK9kA4rl5g" name="Attribute Boost 2" parentId="ddcca815-d6fe-41ed-b174-2e7255320f17" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lkygdUzFEeS5AK9kA4rl5g" local="de" name="Attributschub 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkygdkzFEeS5AK9kA4rl5g" name="Attribute Boost 3" parentId="ddcca815-d6fe-41ed-b174-2e7255320f17" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lkygd0zFEeS5AK9kA4rl5g" local="de" name="Attributschub 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkygeEzFEeS5AK9kA4rl5g" name="Attribute Boost 4" parentId="ddcca815-d6fe-41ed-b174-2e7255320f17" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lkzHgEzFEeS5AK9kA4rl5g" local="de" name="Attributschub 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="ddcca815-d6fe-41ed-b174-2e7255320f17" name="Attribute Boost" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVMd4jnTEeSe6_w6Jrbqxg" local="de" name="Attributschub"/>
+          <localizations xmi:id="_lkzHgUzFEeS5AK9kA4rl5g" local="de" name="Attributschub"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzHgkzFEeS5AK9kA4rl5g" name="Combat Sense 1" parentId="76337564-7688-497f-84f9-302c6ece10fe" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_tRDokEzFEeS5AK9kA4rl5g" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+          </mods>
+          <localizations xmi:id="_lkzHg0zFEeS5AK9kA4rl5g" local="de" name="Kampfsinn 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzHhEzFEeS5AK9kA4rl5g" name="Combat Sense 2" parentId="76337564-7688-497f-84f9-302c6ece10fe" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <mods xmi:id="_tRDokEzFEeS5AK9kA4rl5g" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+          </mods>
+          <localizations xmi:id="_lkzHhUzFEeS5AK9kA4rl5g" local="de" name="Kampfsinn 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzHhkzFEeS5AK9kA4rl5g" name="Combat Sense 3" parentId="76337564-7688-497f-84f9-302c6ece10fe" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <mods xmi:id="_tRDokEzFEeS5AK9kA4rl5g" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+          </mods>
+          <localizations xmi:id="_lkzHh0zFEeS5AK9kA4rl5g" local="de" name="Kampfsinn 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzHiEzFEeS5AK9kA4rl5g" name="Combat Sense 4" parentId="76337564-7688-497f-84f9-302c6ece10fe" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <mods xmi:id="_tRDokEzFEeS5AK9kA4rl5g" wert="4">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+          </mods>
+          <localizations xmi:id="_lkzHiUzFEeS5AK9kA4rl5g" local="de" name="Kampfsinn 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="76337564-7688-497f-84f9-302c6ece10fe" name="Combat Sense" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVNE8DnTEeSe6_w6Jrbqxg" local="de" name="Kampfsinn"/>
+          <localizations xmi:id="_lkzukEzFEeS5AK9kA4rl5g" local="de" name="Kampfsinn"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="dbf16604-164c-485c-96c8-fe3136cd5caa" name="Critical Strike" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVNE8TnTEeSe6_w6Jrbqxg" local="de" name="Kritischer Schlag"/>
+          <localizations xmi:id="_lkzukUzFEeS5AK9kA4rl5g" local="de" name="Kritischer Schlag"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzukkzFEeS5AK9kA4rl5g" name="Danger Sense 1" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lkzuk0zFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzulEzFEeS5AK9kA4rl5g" name="Danger Sense 2" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lkzulUzFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzulkzFEeS5AK9kA4rl5g" name="Danger Sense 3" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lkzul0zFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lkzumEzFEeS5AK9kA4rl5g" name="Danger Sense 4" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lkzumUzFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="980d6575-c28f-4076-9b36-881cea018335" name="Danger Sense" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVNE8jnTEeSe6_w6Jrbqxg" local="de" name="Gefahrensinn"/>
+          <localizations xmi:id="_lk0VoEzFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk0VoUzFEeS5AK9kA4rl5g" name="Enhanced Perception 1" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk0VokzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk0Vo0zFEeS5AK9kA4rl5g" name="Enhanced Perception 2" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk0VpEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk0VpUzFEeS5AK9kA4rl5g" name="Enhanced Perception 3" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk0VpkzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk0Vp0zFEeS5AK9kA4rl5g" name="Enhanced Perception 4" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk0VqEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="974d2aba-1772-474b-aaff-c84a12766e5f" name="Enhanced Perception" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVNE8znTEeSe6_w6Jrbqxg" local="de" name="Verbesserte Wahrnehmung"/>
+          <localizations xmi:id="_lk0VqUzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="e009da31-0301-4604-b13f-49b071aa25a1" name="Enhanced Accuracy (skill)" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVNE9DnTEeSe6_w6Jrbqxg" local="de" name="Erhöhte Präzision"/>
+          <localizations xmi:id="_lk08sEzFEeS5AK9kA4rl5g" local="de" name="Erhöhte Präzision"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk08sUzFEeS5AK9kA4rl5g" name="Improved Ability (skill) 1" parentId="75821fb7-a180-4012-aa16-daa92ac3bb63" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk08skzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Fertigkeit (Fertigkeit) 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk08s0zFEeS5AK9kA4rl5g" name="Improved Ability (skill) 2" parentId="75821fb7-a180-4012-aa16-daa92ac3bb63" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk08tEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Fertigkeit (Fertigkeit) 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk08tUzFEeS5AK9kA4rl5g" name="Improved Ability (skill) 3" parentId="75821fb7-a180-4012-aa16-daa92ac3bb63" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk08tkzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Fertigkeit (Fertigkeit) 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk08t0zFEeS5AK9kA4rl5g" name="Improved Ability (skill) 4" parentId="75821fb7-a180-4012-aa16-daa92ac3bb63" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk08uEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Fertigkeit (Fertigkeit) 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="75821fb7-a180-4012-aa16-daa92ac3bb63" name="Improved Ability (skill)" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVNsADnTEeSe6_w6Jrbqxg" local="de" name="Verbesserte Fertigkeit (Fertigkeit)"/>
+          <localizations xmi:id="_lk1jwEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Fertigkeit (Fertigkeit)"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jwUzFEeS5AK9kA4rl5g" name="Improved Physical Attribute 1" parentId="901d2af5-246a-447a-a8e2-b2e8c10593df" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk1jwkzFEeS5AK9kA4rl5g" local="de" name="Gesteigertes Körperliches Attribut 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jw0zFEeS5AK9kA4rl5g" name="Improved Physical Attribute 2" parentId="901d2af5-246a-447a-a8e2-b2e8c10593df" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk1jxEzFEeS5AK9kA4rl5g" local="de" name="Gesteigertes Körperliches Attribut 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jxUzFEeS5AK9kA4rl5g" name="Improved Physical Attribute 3" parentId="901d2af5-246a-447a-a8e2-b2e8c10593df" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-300">
+          <localizations xmi:id="_lk1jxkzFEeS5AK9kA4rl5g" local="de" name="Gesteigertes Körperliches Attribut 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jx0zFEeS5AK9kA4rl5g" name="Improved Physical Attribute 4" parentId="901d2af5-246a-447a-a8e2-b2e8c10593df" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-400">
+          <localizations xmi:id="_lk1jyEzFEeS5AK9kA4rl5g" local="de" name="Gesteigertes Körperliches Attribut 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="901d2af5-246a-447a-a8e2-b2e8c10593df" name="Improved Physical Attribute" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
-          <localizations xmi:id="_EVNsATnTEeSe6_w6Jrbqxg" local="de" name="Gesteigertes Körperliches Attribut"/>
+          <localizations xmi:id="_lk1jyUzFEeS5AK9kA4rl5g" local="de" name="Gesteigertes Körperliches Attribut"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jykzFEeS5AK9kA4rl5g" name="Improved Potential (limit) 1" parentId="1fde7231-e5cc-4fa3-a1fe-b80b00212417" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk2K0EzFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Limit) 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk1jykzFEeS5AK9kA4rl5g" name="Improved Potential (physical) 1" parentId="1fde7231-e5cc-4fa3-a1fe-b80b00212417" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_UCkxcEzGEeS65dkyCEzXnA" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/koerperlich"/>
+          </mods>
+          <localizations xmi:id="_lk2K0EzFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Physisch) 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk2K0UzFEeS5AK9kA4rl5g" name="Improved Potential (limit) 2" parentId="1fde7231-e5cc-4fa3-a1fe-b80b00212417" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk2K0kzFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Limit) 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk2K00zFEeS5AK9kA4rl5g" name="Improved Potential (limit) 3" parentId="1fde7231-e5cc-4fa3-a1fe-b80b00212417" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk2K1EzFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Limit) 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk2K1UzFEeS5AK9kA4rl5g" name="Improved Potential (limit) 4" parentId="1fde7231-e5cc-4fa3-a1fe-b80b00212417" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk2K1kzFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Limit) 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1fde7231-e5cc-4fa3-a1fe-b80b00212417" name="Improved Potential (limit)" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVNsAjnTEeSe6_w6Jrbqxg" local="de" name="Erhöhtes Potential (Limit)"/>
+          <localizations xmi:id="_lk2K10zFEeS5AK9kA4rl5g" local="de" name="Erhöhtes Potential (Limit)"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="96d01fd7-abe8-495c-960e-a250d8e2dec0" name="Improved Reflexes 1" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
-          <mods xmi:id="_EVNsAznTEeSe6_w6Jrbqxg">
+          <mods xmi:id="_lk2x4EzFEeS5AK9kA4rl5g" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+          </mods>
+          <mods xmi:id="_lk2x4UzFEeS5AK9kA4rl5g" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <localizations xmi:id="_EVNsBDnTEeSe6_w6Jrbqxg" local="de" name="Gesteigerte Reflexe 1"/>
+          <localizations xmi:id="_lk2x4kzFEeS5AK9kA4rl5g" local="de" name="Gesteigerte Reflexe 1"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="60eb2147-c131-4f2f-a3cf-d210453533ef" name="Improved Reflexes 2" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-250">
-          <mods xmi:id="_EVNsBTnTEeSe6_w6Jrbqxg">
+          <mods xmi:id="_lk2x40zFEeS5AK9kA4rl5g" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+          </mods>
+          <mods xmi:id="_lk2x5EzFEeS5AK9kA4rl5g" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <localizations xmi:id="_EVOTEDnTEeSe6_w6Jrbqxg" local="de" name="Gesteigerte Reflexe 2"/>
+          <localizations xmi:id="_lk2x5UzFEeS5AK9kA4rl5g" local="de" name="Gesteigerte Reflexe 2"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="669f249e-49fe-4870-89ba-475cfb027dfc" name="Improved Reflexes 3" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-350">
-          <mods xmi:id="_EVOTETnTEeSe6_w6Jrbqxg">
+          <mods xmi:id="_lk3Y8EzFEeS5AK9kA4rl5g" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+          </mods>
+          <mods xmi:id="_lk3Y8UzFEeS5AK9kA4rl5g" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <localizations xmi:id="_EVOTEjnTEeSe6_w6Jrbqxg" local="de" name="Gesteigerte Reflexe 3"/>
+          <localizations xmi:id="_lk3Y8kzFEeS5AK9kA4rl5g" local="de" name="Gesteigerte Reflexe 3"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1376c13b-9a01-4873-b935-5b7d91e03785" name="Improved Sense" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVOTEznTEeSe6_w6Jrbqxg" local="de" name="Geschärfter Sinn"/>
+          <localizations xmi:id="_lk3Y80zFEeS5AK9kA4rl5g" local="de" name="Geschärfter Sinn"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="23636777-44df-44f1-8742-db29dc3c4fdf" name="Killing Hands" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVOTFDnTEeSe6_w6Jrbqxg" local="de" name="Todeskralle"/>
+          <localizations xmi:id="_lk3Y9EzFEeS5AK9kA4rl5g" local="de" name="Todeskralle"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk3Y9UzFEeS5AK9kA4rl5g" name="Kinesics 1" parentId="f1e8a618-ba12-4972-91f0-974500387893" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lk3Y9kzFEeS5AK9kA4rl5g" local="de" name="Körpersprache 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk3Y90zFEeS5AK9kA4rl5g" name="Kinesics 2" parentId="f1e8a618-ba12-4972-91f0-974500387893" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk4AAEzFEeS5AK9kA4rl5g" local="de" name="Körpersprache 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4AAUzFEeS5AK9kA4rl5g" name="Kinesics 3" parentId="f1e8a618-ba12-4972-91f0-974500387893" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lk4AAkzFEeS5AK9kA4rl5g" local="de" name="Körpersprache 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4AA0zFEeS5AK9kA4rl5g" name="Kinesics 4" parentId="f1e8a618-ba12-4972-91f0-974500387893" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk4ABEzFEeS5AK9kA4rl5g" local="de" name="Körpersprache 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="f1e8a618-ba12-4972-91f0-974500387893" name="Kinesics" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVOTFTnTEeSe6_w6Jrbqxg" local="de" name="Körpersprache"/>
+          <localizations xmi:id="_lk4ABUzFEeS5AK9kA4rl5g" local="de" name="Körpersprache"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4ABkzFEeS5AK9kA4rl5g" name="Light Body 1" parentId="ce7df757-792e-4fac-a86e-6b587586deb2" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lk4AB0zFEeS5AK9kA4rl5g" local="de" name="Leichter Körper 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4ACEzFEeS5AK9kA4rl5g" name="Light Body 2" parentId="ce7df757-792e-4fac-a86e-6b587586deb2" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk4ACUzFEeS5AK9kA4rl5g" local="de" name="Leichter Körper 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4nEEzFEeS5AK9kA4rl5g" name="Light Body 3" parentId="ce7df757-792e-4fac-a86e-6b587586deb2" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lk4nEUzFEeS5AK9kA4rl5g" local="de" name="Leichter Körper 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4nEkzFEeS5AK9kA4rl5g" name="Light Body 4" parentId="ce7df757-792e-4fac-a86e-6b587586deb2" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk4nE0zFEeS5AK9kA4rl5g" local="de" name="Leichter Körper 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="ce7df757-792e-4fac-a86e-6b587586deb2" name="Light Body" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVOTFjnTEeSe6_w6Jrbqxg" local="de" name="Leichter Körper"/>
+          <localizations xmi:id="_lk4nFEzFEeS5AK9kA4rl5g" local="de" name="Leichter Körper"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4nFUzFEeS5AK9kA4rl5g" name="Missile Parry 1" parentId="c152dcba-8bb7-4a2a-86bb-6f854ea53b55" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lk4nFkzFEeS5AK9kA4rl5g" local="de" name="Geschossparade 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4nF0zFEeS5AK9kA4rl5g" name="Missile Parry 2" parentId="c152dcba-8bb7-4a2a-86bb-6f854ea53b55" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk4nGEzFEeS5AK9kA4rl5g" local="de" name="Geschossparade 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk4nGUzFEeS5AK9kA4rl5g" name="Missile Parry 3" parentId="c152dcba-8bb7-4a2a-86bb-6f854ea53b55" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lk4nGkzFEeS5AK9kA4rl5g" local="de" name="Geschossparade 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk5OIEzFEeS5AK9kA4rl5g" name="Missile Parry 4" parentId="c152dcba-8bb7-4a2a-86bb-6f854ea53b55" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk5OIUzFEeS5AK9kA4rl5g" local="de" name="Geschossparade 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="c152dcba-8bb7-4a2a-86bb-6f854ea53b55" name="Missile Parry" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVO6IDnTEeSe6_w6Jrbqxg" local="de" name="Geschossparade"/>
+          <localizations xmi:id="_lk5OIkzFEeS5AK9kA4rl5g" local="de" name="Geschossparade"/>
         </entries>
-        <entries xsi:type="shr5:KiKraft" xmi:id="da5f9389-a5fd-48ed-8825-8852ff5c56a8" name="Mystic Armor" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <mods xmi:id="_EVO6ITnTEeSe6_w6Jrbqxg">
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk5OI0zFEeS5AK9kA4rl5g" name="Mystic Armor 1" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_lk5OJEzFEeS5AK9kA4rl5g" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <localizations xmi:id="_EVO6IjnTEeSe6_w6Jrbqxg" local="de" name="Mystischer Panzer"/>
+          <localizations xmi:id="_lk5OJUzFEeS5AK9kA4rl5g" local="de" name="Mystischer Panzer 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk51MEzFEeS5AK9kA4rl5g" name="Mystic Armor 2" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <mods xmi:id="_lk51MUzFEeS5AK9kA4rl5g" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <localizations xmi:id="_lk51MkzFEeS5AK9kA4rl5g" local="de" name="Mystischer Panzer 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk51M0zFEeS5AK9kA4rl5g" name="Mystic Armor 3" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <mods xmi:id="_lk51NEzFEeS5AK9kA4rl5g" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <localizations xmi:id="_lk51NUzFEeS5AK9kA4rl5g" local="de" name="Mystischer Panzer 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk51NkzFEeS5AK9kA4rl5g" name="Mystic Armor 4" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <mods xmi:id="_lk51N0zFEeS5AK9kA4rl5g" wert="4">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <localizations xmi:id="_lk6cQEzFEeS5AK9kA4rl5g" local="de" name="Mystischer Panzer 4"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="da5f9389-a5fd-48ed-8825-8852ff5c56a8" name="Mystic Armor" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_lk6cQUzFEeS5AK9kA4rl5g" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <localizations xmi:id="_lk6cQkzFEeS5AK9kA4rl5g" local="de" name="Mystischer Panzer"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk6cQ0zFEeS5AK9kA4rl5g" name="Natural Immunity 1" parentId="98b59b41-6a91-4abc-a6d2-e8debaa3b5aa" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+          <localizations xmi:id="_lk6cREzFEeS5AK9kA4rl5g" local="de" name="Natürliche Immunität 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk6cRUzFEeS5AK9kA4rl5g" name="Natural Immunity 2" parentId="98b59b41-6a91-4abc-a6d2-e8debaa3b5aa" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk7DUEzFEeS5AK9kA4rl5g" local="de" name="Natürliche Immunität 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7DUUzFEeS5AK9kA4rl5g" name="Natural Immunity 3" parentId="98b59b41-6a91-4abc-a6d2-e8debaa3b5aa" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-75">
+          <localizations xmi:id="_lk7DUkzFEeS5AK9kA4rl5g" local="de" name="Natürliche Immunität 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7DU0zFEeS5AK9kA4rl5g" name="Natural Immunity 4" parentId="98b59b41-6a91-4abc-a6d2-e8debaa3b5aa" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk7DVEzFEeS5AK9kA4rl5g" local="de" name="Natürliche Immunität 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="98b59b41-6a91-4abc-a6d2-e8debaa3b5aa" name="Natural Immunity" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
-          <localizations xmi:id="_EVO6IznTEeSe6_w6Jrbqxg" local="de" name="Natürliche Immunität"/>
+          <localizations xmi:id="_lk7DVUzFEeS5AK9kA4rl5g" local="de" name="Natürliche Immunität"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7DVkzFEeS5AK9kA4rl5g" name="Pain Resistance 1" parentId="545a4bec-c144-42a1-b553-6d6c0c91f07f" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk7DV0zFEeS5AK9kA4rl5g" local="de" name="Schmerzresistenz 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7DWEzFEeS5AK9kA4rl5g" name="Pain Resistance 2" parentId="545a4bec-c144-42a1-b553-6d6c0c91f07f" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk7qYEzFEeS5AK9kA4rl5g" local="de" name="Schmerzresistenz 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7qYUzFEeS5AK9kA4rl5g" name="Pain Resistance 3" parentId="545a4bec-c144-42a1-b553-6d6c0c91f07f" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk7qYkzFEeS5AK9kA4rl5g" local="de" name="Schmerzresistenz 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7qY0zFEeS5AK9kA4rl5g" name="Pain Resistance 4" parentId="545a4bec-c144-42a1-b553-6d6c0c91f07f" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk7qZEzFEeS5AK9kA4rl5g" local="de" name="Schmerzresistenz 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="545a4bec-c144-42a1-b553-6d6c0c91f07f" name="Pain Resistance" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVO6JDnTEeSe6_w6Jrbqxg" local="de" name="Schmerzresistenz"/>
+          <localizations xmi:id="_lk7qZUzFEeS5AK9kA4rl5g" local="de" name="Schmerzresistenz"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7qZkzFEeS5AK9kA4rl5g" name="Rapid Healing 1" parentId="4676b6f7-120d-4344-81ac-5922445a521b" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk7qZ0zFEeS5AK9kA4rl5g" local="de" name="Beschleunigte Heilung 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk7qaEzFEeS5AK9kA4rl5g" name="Rapid Healing 2" parentId="4676b6f7-120d-4344-81ac-5922445a521b" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk7qaUzFEeS5AK9kA4rl5g" local="de" name="Beschleunigte Heilung 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk8RcEzFEeS5AK9kA4rl5g" name="Rapid Healing 3" parentId="4676b6f7-120d-4344-81ac-5922445a521b" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk8RcUzFEeS5AK9kA4rl5g" local="de" name="Beschleunigte Heilung 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk8RckzFEeS5AK9kA4rl5g" name="Rapid Healing 4" parentId="4676b6f7-120d-4344-81ac-5922445a521b" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk8Rc0zFEeS5AK9kA4rl5g" local="de" name="Beschleunigte Heilung 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="4676b6f7-120d-4344-81ac-5922445a521b" name="Rapid Healing" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVO6JTnTEeSe6_w6Jrbqxg" local="de" name="Beschleunigte Heilung"/>
+          <localizations xmi:id="_lk8RdEzFEeS5AK9kA4rl5g" local="de" name="Beschleunigte Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk8RdUzFEeS5AK9kA4rl5g" name="Spell Resistance 1" parentId="82d8c376-7509-468a-be17-8c9cba4c86c4" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk8RdkzFEeS5AK9kA4rl5g" local="de" name="Magieresistenz 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk8Rd0zFEeS5AK9kA4rl5g" name="Spell Resistance 2" parentId="82d8c376-7509-468a-be17-8c9cba4c86c4" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk8ReEzFEeS5AK9kA4rl5g" local="de" name="Magieresistenz 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk8ReUzFEeS5AK9kA4rl5g" name="Spell Resistance 3" parentId="82d8c376-7509-468a-be17-8c9cba4c86c4" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk8RekzFEeS5AK9kA4rl5g" local="de" name="Magieresistenz 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk84gEzFEeS5AK9kA4rl5g" name="Spell Resistance 4" parentId="82d8c376-7509-468a-be17-8c9cba4c86c4" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk84gUzFEeS5AK9kA4rl5g" local="de" name="Magieresistenz 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="82d8c376-7509-468a-be17-8c9cba4c86c4" name="Spell Resistance" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVPhMDnTEeSe6_w6Jrbqxg" local="de" name="Magieresistenz"/>
+          <localizations xmi:id="_lk84gkzFEeS5AK9kA4rl5g" local="de" name="Magieresistenz"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="3f3fcdbc-c046-4a95-bd46-511a76d75b56" name="Traceless Walk" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
-          <localizations xmi:id="_EVPhMTnTEeSe6_w6Jrbqxg" local="de" name="Spurloser Schritt"/>
+          <localizations xmi:id="_lk84g0zFEeS5AK9kA4rl5g" local="de" name="Spurloser Schritt"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk84hEzFEeS5AK9kA4rl5g" name="Voice Control 1" parentId="71692391-e01f-4902-98f0-abbbf5431680" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <localizations xmi:id="_lk84hUzFEeS5AK9kA4rl5g" local="de" name="Stimmkontrolle 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk84hkzFEeS5AK9kA4rl5g" name="Voice Control 2" parentId="71692391-e01f-4902-98f0-abbbf5431680" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_lk84h0zFEeS5AK9kA4rl5g" local="de" name="Stimmkontrolle 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk84iEzFEeS5AK9kA4rl5g" name="Voice Control 3" parentId="71692391-e01f-4902-98f0-abbbf5431680" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <localizations xmi:id="_lk84iUzFEeS5AK9kA4rl5g" local="de" name="Stimmkontrolle 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk9fkEzFEeS5AK9kA4rl5g" name="Voice Control 4" parentId="71692391-e01f-4902-98f0-abbbf5431680" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <localizations xmi:id="_lk9fkUzFEeS5AK9kA4rl5g" local="de" name="Stimmkontrolle 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="71692391-e01f-4902-98f0-abbbf5431680" name="Voice Control" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVPhMjnTEeSe6_w6Jrbqxg" local="de" name="Stimmkontrolle"/>
+          <localizations xmi:id="_lk9fkkzFEeS5AK9kA4rl5g" local="de" name="Stimmkontrolle"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="bfd1e09c-5765-423b-b079-f5d8e794485a" name="Wall Running" page="311" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <localizations xmi:id="_EVPhMznTEeSe6_w6Jrbqxg" local="de" name="Wandlaufen"/>
+          <localizations xmi:id="_lk9fk0zFEeS5AK9kA4rl5g" local="de" name="Wandlaufen"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk9flEzFEeS5AK9kA4rl5g" name="Analytics 1" parentId="0099ad65-bcc1-47a5-a241-02f621e7c33a" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_lk9flUzFEeS5AK9kA4rl5g" local="de" name="Analytik 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk9flkzFEeS5AK9kA4rl5g" name="Analytics 2" parentId="0099ad65-bcc1-47a5-a241-02f621e7c33a" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_lk9fl0zFEeS5AK9kA4rl5g" local="de" name="Analytik 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk9fmEzFEeS5AK9kA4rl5g" name="Analytics 3" parentId="0099ad65-bcc1-47a5-a241-02f621e7c33a" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-150">
+          <localizations xmi:id="_lk-GoEzFEeS5AK9kA4rl5g" local="de" name="Analytik 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-GoUzFEeS5AK9kA4rl5g" name="Analytics 4" parentId="0099ad65-bcc1-47a5-a241-02f621e7c33a" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-200">
+          <localizations xmi:id="_lk-GokzFEeS5AK9kA4rl5g" local="de" name="Analytik 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="0099ad65-bcc1-47a5-a241-02f621e7c33a" name="Analytics" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVPhNDnTEeSe6_w6Jrbqxg" local="de" name="Analytik"/>
+          <localizations xmi:id="_lk-Go0zFEeS5AK9kA4rl5g" local="de" name="Analytik"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-GpEzFEeS5AK9kA4rl5g" name="Animal Empathy 1" parentId="870edcf8-cb19-4e15-948c-1b3bf80ac651" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_lk-GpUzFEeS5AK9kA4rl5g" local="de" name="Tierempathie 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-GpkzFEeS5AK9kA4rl5g" name="Animal Empathy 2" parentId="870edcf8-cb19-4e15-948c-1b3bf80ac651" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_lk-Gp0zFEeS5AK9kA4rl5g" local="de" name="Tierempathie 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-GqEzFEeS5AK9kA4rl5g" name="Animal Empathy 3" parentId="870edcf8-cb19-4e15-948c-1b3bf80ac651" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_lk-GqUzFEeS5AK9kA4rl5g" local="de" name="Tierempathie 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-tsEzFEeS5AK9kA4rl5g" name="Animal Empathy 4" parentId="870edcf8-cb19-4e15-948c-1b3bf80ac651" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_lk-tsUzFEeS5AK9kA4rl5g" local="de" name="Tierempathie 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="870edcf8-cb19-4e15-948c-1b3bf80ac651" name="Animal Empathy" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVPhNTnTEeSe6_w6Jrbqxg" local="de" name="Tierempathie"/>
+          <localizations xmi:id="_lk-tskzFEeS5AK9kA4rl5g" local="de" name="Tierempathie"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="80577dac-7697-4da9-87fd-d4442dc34560" name="Berserk" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVQIQDnTEeSe6_w6Jrbqxg" local="de" name="Berserker"/>
+          <localizations xmi:id="_lk-ts0zFEeS5AK9kA4rl5g" local="de" name="Berserker"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="59455eae-beb5-45fc-b19d-dc3aff65335d" name="Berserker's Rage" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVQIQTnTEeSe6_w6Jrbqxg" local="de" name="Berserker's Rage"/>
+          <localizations xmi:id="_lk-ttEzFEeS5AK9kA4rl5g" local="de" name="Berserker's Rage"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="f3df89bb-71f6-41d8-a86d-4bde1ab74352" name="Blind Fighting" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVQIQjnTEeSe6_w6Jrbqxg" local="de" name="Blindkampf"/>
+          <localizations xmi:id="_lk-ttUzFEeS5AK9kA4rl5g" local="de" name="Blindkampf"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk-ttkzFEeS5AK9kA4rl5g" name="Cloak 1" parentId="42baa818-50ca-4c6b-b316-780a51df9c97" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_lk_UwEzFEeS5AK9kA4rl5g" local="de" name="Mystischer Mantel 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_UwUzFEeS5AK9kA4rl5g" name="Cloak 2" parentId="42baa818-50ca-4c6b-b316-780a51df9c97" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_lk_UwkzFEeS5AK9kA4rl5g" local="de" name="Mystischer Mantel 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_Uw0zFEeS5AK9kA4rl5g" name="Cloak 3" parentId="42baa818-50ca-4c6b-b316-780a51df9c97" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_lk_UxEzFEeS5AK9kA4rl5g" local="de" name="Mystischer Mantel 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_UxUzFEeS5AK9kA4rl5g" name="Cloak 4" parentId="42baa818-50ca-4c6b-b316-780a51df9c97" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_lk_UxkzFEeS5AK9kA4rl5g" local="de" name="Mystischer Mantel 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="42baa818-50ca-4c6b-b316-780a51df9c97" name="Cloak" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVQIQznTEeSe6_w6Jrbqxg" local="de" name="Mystischer Mantel"/>
+          <localizations xmi:id="_lk_Ux0zFEeS5AK9kA4rl5g" local="de" name="Mystischer Mantel"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_UyEzFEeS5AK9kA4rl5g" name="Cool Resolve 1" parentId="deec22db-cf2c-47b6-ac34-95a13bcd0bf8" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_lk_UyUzFEeS5AK9kA4rl5g" local="de" name="Kalte Entschlossenheit 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_70EzFEeS5AK9kA4rl5g" name="Cool Resolve 2" parentId="deec22db-cf2c-47b6-ac34-95a13bcd0bf8" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-200">
+          <localizations xmi:id="_lk_70UzFEeS5AK9kA4rl5g" local="de" name="Kalte Entschlossenheit 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_70kzFEeS5AK9kA4rl5g" name="Cool Resolve 3" parentId="deec22db-cf2c-47b6-ac34-95a13bcd0bf8" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-300">
+          <localizations xmi:id="_lk_700zFEeS5AK9kA4rl5g" local="de" name="Kalte Entschlossenheit 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_71EzFEeS5AK9kA4rl5g" name="Cool Resolve 4" parentId="deec22db-cf2c-47b6-ac34-95a13bcd0bf8" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-400">
+          <localizations xmi:id="_lk_71UzFEeS5AK9kA4rl5g" local="de" name="Kalte Entschlossenheit 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="deec22db-cf2c-47b6-ac34-95a13bcd0bf8" name="Cool Resolve" page="169" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVQIRDnTEeSe6_w6Jrbqxg" local="de" name="Kalte Entschlossenheit"/>
+          <localizations xmi:id="_lk_71kzFEeS5AK9kA4rl5g" local="de" name="Kalte Entschlossenheit"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_lk_710zFEeS5AK9kA4rl5g" name="Commanding Voice 1" parentId="5f1ebcd8-9571-4716-b7fd-ec674306b833" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_lk_72EzFEeS5AK9kA4rl5g" local="de" name="Befehlsstimme 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llAi4EzFEeS5AK9kA4rl5g" name="Commanding Voice 2" parentId="5f1ebcd8-9571-4716-b7fd-ec674306b833" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llAi4UzFEeS5AK9kA4rl5g" local="de" name="Befehlsstimme 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llAi4kzFEeS5AK9kA4rl5g" name="Commanding Voice 3" parentId="5f1ebcd8-9571-4716-b7fd-ec674306b833" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llAi40zFEeS5AK9kA4rl5g" local="de" name="Befehlsstimme 3"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="5f1ebcd8-9571-4716-b7fd-ec674306b833" name="Commanding Voice" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVQvUDnTEeSe6_w6Jrbqxg" local="de" name="Befehlsstimme"/>
+          <localizations xmi:id="_llAi5EzFEeS5AK9kA4rl5g" local="de" name="Befehlsstimme"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llAi5UzFEeS5AK9kA4rl5g" name="Counterstrike 1" parentId="6770cfab-8c1a-4c6d-add7-f7d96220e9b0" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llAi5kzFEeS5AK9kA4rl5g" local="de" name="Gegenangriff 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llAi50zFEeS5AK9kA4rl5g" name="Counterstrike 2" parentId="6770cfab-8c1a-4c6d-add7-f7d96220e9b0" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-200">
+          <localizations xmi:id="_llAi6EzFEeS5AK9kA4rl5g" local="de" name="Gegenangriff 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llAi6UzFEeS5AK9kA4rl5g" name="Counterstrike 3" parentId="6770cfab-8c1a-4c6d-add7-f7d96220e9b0" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-300">
+          <localizations xmi:id="_llAi6kzFEeS5AK9kA4rl5g" local="de" name="Gegenangriff 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBJ8EzFEeS5AK9kA4rl5g" name="Counterstrike 4" parentId="6770cfab-8c1a-4c6d-add7-f7d96220e9b0" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-400">
+          <localizations xmi:id="_llBJ8UzFEeS5AK9kA4rl5g" local="de" name="Gegenangriff 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="6770cfab-8c1a-4c6d-add7-f7d96220e9b0" name="Counterstrike" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVQvUTnTEeSe6_w6Jrbqxg" local="de" name="Gegenangriff"/>
+          <localizations xmi:id="_llBJ8kzFEeS5AK9kA4rl5g" local="de" name="Gegenangriff"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1eb8d3fa-2a67-4b71-a9de-dfbf5236eeda" name="Elemental Body" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVQvUjnTEeSe6_w6Jrbqxg" local="de" name="Elemental Body"/>
+          <localizations xmi:id="_llBJ80zFEeS5AK9kA4rl5g" local="de" name="Elemental Body"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="3d27c3bb-9cca-45c2-b8b1-6225a236069b" name="Elemental Strike" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVQvUznTEeSe6_w6Jrbqxg" local="de" name="Elementarer Schlag"/>
+          <localizations xmi:id="_llBJ9EzFEeS5AK9kA4rl5g" local="de" name="Elementarer Schlag"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="eb323003-4112-42ad-955a-00211e43e6d1" name="Elemental Weapon" page="170" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVQvVDnTEeSe6_w6Jrbqxg" local="de" name="Elemental Weapon"/>
+          <localizations xmi:id="_llBJ9UzFEeS5AK9kA4rl5g" local="de" name="Elemental Weapon"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="6680b68d-77df-4fe4-a722-30464dd3c646" name="Empathic Healing" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVQvVTnTEeSe6_w6Jrbqxg" local="de" name="Empathische Heilung"/>
+          <localizations xmi:id="_llBJ9kzFEeS5AK9kA4rl5g" local="de" name="Empathische Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBJ90zFEeS5AK9kA4rl5g" name="Facial Sculpt 1" parentId="fbd06bae-b3ba-4514-8d90-870eff1c336b" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llBxAEzFEeS5AK9kA4rl5g" local="de" name="Gesichtsformung 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBxAUzFEeS5AK9kA4rl5g" name="Facial Sculpt 2" parentId="fbd06bae-b3ba-4514-8d90-870eff1c336b" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llBxAkzFEeS5AK9kA4rl5g" local="de" name="Gesichtsformung 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBxA0zFEeS5AK9kA4rl5g" name="Facial Sculpt 3" parentId="fbd06bae-b3ba-4514-8d90-870eff1c336b" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llBxBEzFEeS5AK9kA4rl5g" local="de" name="Gesichtsformung 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBxBUzFEeS5AK9kA4rl5g" name="Facial Sculpt 4" parentId="fbd06bae-b3ba-4514-8d90-870eff1c336b" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llBxBkzFEeS5AK9kA4rl5g" local="de" name="Gesichtsformung 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="fbd06bae-b3ba-4514-8d90-870eff1c336b" name="Facial Sculpt" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVQvVjnTEeSe6_w6Jrbqxg" local="de" name="Gesichtsformung"/>
+          <localizations xmi:id="_llBxB0zFEeS5AK9kA4rl5g" local="de" name="Gesichtsformung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llBxCEzFEeS5AK9kA4rl5g" name="Flexibility 1" parentId="438fb5de-9c09-4421-a6a8-c3d68ba8aada" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llBxCUzFEeS5AK9kA4rl5g" local="de" name="Flexibilität 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYEEzFEeS5AK9kA4rl5g" name="Flexibility 2" parentId="438fb5de-9c09-4421-a6a8-c3d68ba8aada" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llCYEUzFEeS5AK9kA4rl5g" local="de" name="Flexibilität 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYEkzFEeS5AK9kA4rl5g" name="Flexibility 3" parentId="438fb5de-9c09-4421-a6a8-c3d68ba8aada" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llCYE0zFEeS5AK9kA4rl5g" local="de" name="Flexibilität 3"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="438fb5de-9c09-4421-a6a8-c3d68ba8aada" name="Flexibility" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVRWYDnTEeSe6_w6Jrbqxg" local="de" name="Flexibilität"/>
+          <localizations xmi:id="_llCYFEzFEeS5AK9kA4rl5g" local="de" name="Flexibilität"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYFUzFEeS5AK9kA4rl5g" name="Freefall 1" parentId="88bf5626-6cf8-4dcc-bfc0-8abc889cdf4e" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llCYFkzFEeS5AK9kA4rl5g" local="de" name="Freier Fall 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYF0zFEeS5AK9kA4rl5g" name="Freefall 2" parentId="88bf5626-6cf8-4dcc-bfc0-8abc889cdf4e" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llCYGEzFEeS5AK9kA4rl5g" local="de" name="Freier Fall 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYGUzFEeS5AK9kA4rl5g" name="Freefall 3" parentId="88bf5626-6cf8-4dcc-bfc0-8abc889cdf4e" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llCYGkzFEeS5AK9kA4rl5g" local="de" name="Freier Fall 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llCYG0zFEeS5AK9kA4rl5g" name="Freefall 4" parentId="88bf5626-6cf8-4dcc-bfc0-8abc889cdf4e" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llCYHEzFEeS5AK9kA4rl5g" local="de" name="Freier Fall 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="88bf5626-6cf8-4dcc-bfc0-8abc889cdf4e" name="Freefall" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVRWYTnTEeSe6_w6Jrbqxg" local="de" name="Freier Fall"/>
+          <localizations xmi:id="_llCYHUzFEeS5AK9kA4rl5g" local="de" name="Freier Fall"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llC_IEzFEeS5AK9kA4rl5g" name="Hang Time 1" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llC_IUzFEeS5AK9kA4rl5g" local="de" name="Hang Time 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llC_IkzFEeS5AK9kA4rl5g" name="Hang Time 2" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llC_I0zFEeS5AK9kA4rl5g" local="de" name="Hang Time 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llC_JEzFEeS5AK9kA4rl5g" name="Hang Time 3" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llC_JUzFEeS5AK9kA4rl5g" local="de" name="Hang Time 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llC_JkzFEeS5AK9kA4rl5g" name="Hang Time 4" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llC_J0zFEeS5AK9kA4rl5g" local="de" name="Hang Time 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="c59c1bb0-9b3e-41be-9079-8982b451fe45" name="Hang Time" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVRWYjnTEeSe6_w6Jrbqxg" local="de" name="Hang Time"/>
+          <localizations xmi:id="_llC_KEzFEeS5AK9kA4rl5g" local="de" name="Hang Time"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="da59618c-059d-4cc5-adb5-c61e6049378c" name="Inertia Strike" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVRWYznTEeSe6_w6Jrbqxg" local="de" name="Trägheitsschlag"/>
+          <localizations xmi:id="_llC_KUzFEeS5AK9kA4rl5g" local="de" name="Trägheitsschlag"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="e1e242c3-cb63-476f-9868-90c311b36383" name="Kinesics Mastery" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVRWZDnTEeSe6_w6Jrbqxg" local="de" name="Perfekte Körpersprache"/>
+          <localizations xmi:id="_llC_KkzFEeS5AK9kA4rl5g" local="de" name="Perfekte Körpersprache"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="44f0bbba-184a-4e76-93de-19862ac6607b" name="Linguistics" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVRWZTnTEeSe6_w6Jrbqxg" local="de" name="Sprachtalent"/>
+          <localizations xmi:id="_llC_K0zFEeS5AK9kA4rl5g" local="de" name="Sprachtalent"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="d20f0441-a290-4732-829f-3138d446aad4" name="Magic Sense" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVR9cDnTEeSe6_w6Jrbqxg" local="de" name="Magiegespür"/>
+          <localizations xmi:id="_llC_LEzFEeS5AK9kA4rl5g" local="de" name="Magiegespür"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="2149818a-22b0-4267-83d6-7b3c27d4ee69" name="Melanin Control" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVR9cTnTEeSe6_w6Jrbqxg" local="de" name="Melaninkontrolle"/>
+          <localizations xmi:id="_llDmMEzFEeS5AK9kA4rl5g" local="de" name="Melaninkontrolle"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="ecd611b4-dda6-4683-b7a9-850a469a3274" name="Metabolic Control" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVR9cjnTEeSe6_w6Jrbqxg" local="de" name="Stoffwechselkontrolle"/>
+          <localizations xmi:id="_llDmMUzFEeS5AK9kA4rl5g" local="de" name="Stoffwechselkontrolle"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1221e699-e61b-4aed-adbb-a8eec02a65e2" name="Missile Mastery" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVR9cznTEeSe6_w6Jrbqxg" local="de" name="Geschossmeisterschaft"/>
+          <localizations xmi:id="_llDmMkzFEeS5AK9kA4rl5g" local="de" name="Geschossmeisterschaft"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="930ace31-a2a2-4616-8dfb-1074e4be76c9" name="Motion Sense" page="172" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVR9dDnTEeSe6_w6Jrbqxg" local="de" name="Bewegungsgespür"/>
+          <localizations xmi:id="_llDmM0zFEeS5AK9kA4rl5g" local="de" name="Bewegungsgespür"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="d1279546-69a6-4c35-9b3d-0211138050e8" name="Nerve Strike" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVR9dTnTEeSe6_w6Jrbqxg" local="de" name="Nervenschlag"/>
+          <localizations xmi:id="_llDmNEzFEeS5AK9kA4rl5g" local="de" name="Nervenschlag"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1ec402f1-6139-4f94-8e86-92aa463bf536" name="Nimble Fingers" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVSkgDnTEeSe6_w6Jrbqxg" local="de" name="Geschickte Finger"/>
+          <localizations xmi:id="_llDmNUzFEeS5AK9kA4rl5g" local="de" name="Geschickte Finger"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="adda6c9c-703b-4361-a4dd-d7ebfd3c138d" name="Pain Relief" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVSkgTnTEeSe6_w6Jrbqxg" local="de" name="Schmerzerleichterung"/>
+          <localizations xmi:id="_llDmNkzFEeS5AK9kA4rl5g" local="de" name="Schmerzerleichterung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llDmN0zFEeS5AK9kA4rl5g" name="Penetrating Strike 1" parentId="70311f5c-a019-47b9-be21-e9a8d270e32e" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llDmOEzFEeS5AK9kA4rl5g" local="de" name="Durchdringender Schlag 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llENQEzFEeS5AK9kA4rl5g" name="Penetrating Strike 2" parentId="70311f5c-a019-47b9-be21-e9a8d270e32e" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llENQUzFEeS5AK9kA4rl5g" local="de" name="Durchdringender Schlag 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llENQkzFEeS5AK9kA4rl5g" name="Penetrating Strike 3" parentId="70311f5c-a019-47b9-be21-e9a8d270e32e" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llENQ0zFEeS5AK9kA4rl5g" local="de" name="Durchdringender Schlag 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llENREzFEeS5AK9kA4rl5g" name="Penetrating Strike 4" parentId="70311f5c-a019-47b9-be21-e9a8d270e32e" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llENRUzFEeS5AK9kA4rl5g" local="de" name="Durchdringender Schlag 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="70311f5c-a019-47b9-be21-e9a8d270e32e" name="Penetrating Strike" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVSkgjnTEeSe6_w6Jrbqxg" local="de" name="Durchdringender Schlag"/>
+          <localizations xmi:id="_llENRkzFEeS5AK9kA4rl5g" local="de" name="Durchdringender Schlag"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="941225f2-148b-484e-a2b2-0a32cc7debe1" name="Plague Cloud" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVSkgznTEeSe6_w6Jrbqxg" local="de" name="Plague Cloud"/>
+          <localizations xmi:id="_llENR0zFEeS5AK9kA4rl5g" local="de" name="Plague Cloud"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="832a418d-4d55-433c-8230-4b04f05ba6d9" name="Rapid Draw" page="173" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVSkhDnTEeSe6_w6Jrbqxg" local="de" name="Rapid Draw"/>
+          <localizations xmi:id="_llENSEzFEeS5AK9kA4rl5g" local="de" name="Rapid Draw"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llENSUzFEeS5AK9kA4rl5g" name="Riposte 1" parentId="11f3fa59-e06d-4816-87a9-b74664d1ae9a" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llENSkzFEeS5AK9kA4rl5g" local="de" name="Riposte 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llENS0zFEeS5AK9kA4rl5g" name="Riposte 2" parentId="11f3fa59-e06d-4816-87a9-b74664d1ae9a" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llENTEzFEeS5AK9kA4rl5g" local="de" name="Riposte 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llE0UEzFEeS5AK9kA4rl5g" name="Riposte 3" parentId="11f3fa59-e06d-4816-87a9-b74664d1ae9a" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-150">
+          <localizations xmi:id="_llE0UUzFEeS5AK9kA4rl5g" local="de" name="Riposte 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llE0UkzFEeS5AK9kA4rl5g" name="Riposte 4" parentId="11f3fa59-e06d-4816-87a9-b74664d1ae9a" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-200">
+          <localizations xmi:id="_llE0U0zFEeS5AK9kA4rl5g" local="de" name="Riposte 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="11f3fa59-e06d-4816-87a9-b74664d1ae9a" name="Riposte" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVSkhTnTEeSe6_w6Jrbqxg" local="de" name="Riposte"/>
+          <localizations xmi:id="_llE0VEzFEeS5AK9kA4rl5g" local="de" name="Riposte"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="c0d647dd-4f66-42a6-9040-202b1bba4b71" name="Skate" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVTLkDnTEeSe6_w6Jrbqxg" local="de" name="Skate"/>
+          <localizations xmi:id="_llE0VUzFEeS5AK9kA4rl5g" local="de" name="Skate"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="1dc0b5c6-94a8-4598-a017-f6399d9175da" name="Smashing Blow" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
-          <localizations xmi:id="_EVTLkTnTEeSe6_w6Jrbqxg" local="de" name="Trümmerschlag"/>
+          <localizations xmi:id="_llE0VkzFEeS5AK9kA4rl5g" local="de" name="Trümmerschlag"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="24bc482d-9ce3-4d0a-bd43-31311b6716d6" name="Spirit Claw" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVTLkjnTEeSe6_w6Jrbqxg" local="de" name="Spirit Claw"/>
+          <localizations xmi:id="_llE0V0zFEeS5AK9kA4rl5g" local="de" name="Spirit Claw"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="6145977c-5825-4358-b0db-1d189cd9d402" name="Spirit Ram" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVTLkznTEeSe6_w6Jrbqxg" local="de" name="Spirit Ram"/>
+          <localizations xmi:id="_llE0WEzFEeS5AK9kA4rl5g" local="de" name="Spirit Ram"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llE0WUzFEeS5AK9kA4rl5g" name="Stillness 1" parentId="02eb1616-9361-47a8-acc8-030566d9a0ea" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llFbYEzFEeS5AK9kA4rl5g" local="de" name="Stillness 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llFbYUzFEeS5AK9kA4rl5g" name="Stillness 2" parentId="02eb1616-9361-47a8-acc8-030566d9a0ea" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llFbYkzFEeS5AK9kA4rl5g" local="de" name="Stillness 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llFbY0zFEeS5AK9kA4rl5g" name="Stillness 3" parentId="02eb1616-9361-47a8-acc8-030566d9a0ea" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llFbZEzFEeS5AK9kA4rl5g" local="de" name="Stillness 3"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="02eb1616-9361-47a8-acc8-030566d9a0ea" name="Stillness" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVTLlDnTEeSe6_w6Jrbqxg" local="de" name="Stillness"/>
+          <localizations xmi:id="_llFbZUzFEeS5AK9kA4rl5g" local="de" name="Stillness"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="772e0298-8abf-42b7-9734-359cadcb8d1e" name="Sustenance" page="174" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVTLlTnTEeSe6_w6Jrbqxg" local="de" name="Genügsamkeit"/>
+          <localizations xmi:id="_llFbZkzFEeS5AK9kA4rl5g" local="de" name="Genügsamkeit"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llFbZ0zFEeS5AK9kA4rl5g" name="Temperature Tolerance 1" parentId="bf425bd4-f112-4218-b729-2e8bb32f3b2b" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <localizations xmi:id="_llFbaEzFEeS5AK9kA4rl5g" local="de" name="Temperaturresistenz 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llFbaUzFEeS5AK9kA4rl5g" name="Temperature Tolerance 2" parentId="bf425bd4-f112-4218-b729-2e8bb32f3b2b" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <localizations xmi:id="_llFbakzFEeS5AK9kA4rl5g" local="de" name="Temperaturresistenz 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llFba0zFEeS5AK9kA4rl5g" name="Temperature Tolerance 3" parentId="bf425bd4-f112-4218-b729-2e8bb32f3b2b" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
+          <localizations xmi:id="_llFbbEzFEeS5AK9kA4rl5g" local="de" name="Temperaturresistenz 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGCcEzFEeS5AK9kA4rl5g" name="Temperature Tolerance 4" parentId="bf425bd4-f112-4218-b729-2e8bb32f3b2b" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-100">
+          <localizations xmi:id="_llGCcUzFEeS5AK9kA4rl5g" local="de" name="Temperaturresistenz 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="bf425bd4-f112-4218-b729-2e8bb32f3b2b" name="Temperature Tolerance" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
-          <localizations xmi:id="_EVTyoDnTEeSe6_w6Jrbqxg" local="de" name="Temperaturresistenz"/>
+          <localizations xmi:id="_llGCckzFEeS5AK9kA4rl5g" local="de" name="Temperaturresistenz"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="61406917-9d88-440f-a756-16bdf6ffb37e" name="Three-Dimensional Memory" page="175" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVTyoTnTEeSe6_w6Jrbqxg" local="de" name="Dreidimensionales Gedächtnis"/>
+          <localizations xmi:id="_llGCc0zFEeS5AK9kA4rl5g" local="de" name="Dreidimensionales Gedächtnis"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="6ed1a784-1097-4db8-b179-e4198493c2f0" name="Toxic Strike" page="176" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
-          <localizations xmi:id="_EVTyojnTEeSe6_w6Jrbqxg" local="de" name="Toxic Strike"/>
+          <localizations xmi:id="_llGCdEzFEeS5AK9kA4rl5g" local="de" name="Toxic Strike"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="0f0a55a8-5c39-4568-a15d-219b3664b10f" name="Feign Illness" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-50">
-          <localizations xmi:id="_EVTyoznTEeSe6_w6Jrbqxg" local="de" name="Feign Illness"/>
+          <localizations xmi:id="_llGCdUzFEeS5AK9kA4rl5g" local="de" name="Feign Illness"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="ca35c065-86ab-4aa8-a52f-ae37cc69648c" name="Feign Death" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-100">
-          <localizations xmi:id="_EVTypDnTEeSe6_w6Jrbqxg" local="de" name="Feign Death"/>
+          <localizations xmi:id="_llGCdkzFEeS5AK9kA4rl5g" local="de" name="Feign Death"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGCd0zFEeS5AK9kA4rl5g" name="Transmit Damage 1" parentId="d890df94-b4f0-4b56-8289-7e1cfac2a95d" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-100">
+          <localizations xmi:id="_llGCeEzFEeS5AK9kA4rl5g" local="de" name="Transmit Damage 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGCeUzFEeS5AK9kA4rl5g" name="Transmit Damage 2" parentId="d890df94-b4f0-4b56-8289-7e1cfac2a95d" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-200">
+          <localizations xmi:id="_llGCekzFEeS5AK9kA4rl5g" local="de" name="Transmit Damage 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGpgEzFEeS5AK9kA4rl5g" name="Transmit Damage 3" parentId="d890df94-b4f0-4b56-8289-7e1cfac2a95d" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-300">
+          <localizations xmi:id="_llGpgUzFEeS5AK9kA4rl5g" local="de" name="Transmit Damage 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGpgkzFEeS5AK9kA4rl5g" name="Transmit Damage 4" parentId="d890df94-b4f0-4b56-8289-7e1cfac2a95d" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-400">
+          <localizations xmi:id="_llGpg0zFEeS5AK9kA4rl5g" local="de" name="Transmit Damage 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="d890df94-b4f0-4b56-8289-7e1cfac2a95d" name="Transmit Damage" page="22" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" kraftpunkte="-100">
-          <localizations xmi:id="_EVTypTnTEeSe6_w6Jrbqxg" local="de" name="Transmit Damage"/>
+          <localizations xmi:id="_llGphEzFEeS5AK9kA4rl5g" local="de" name="Transmit Damage"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGphUzFEeS5AK9kA4rl5g" name="Light Touch 1" parentId="b6982580-fb86-4ac8-9312-98459ecbe811" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-25">
+          <localizations xmi:id="_llGphkzFEeS5AK9kA4rl5g" local="de" name="Leichte Berührung 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGph0zFEeS5AK9kA4rl5g" name="Light Touch 2" parentId="b6982580-fb86-4ac8-9312-98459ecbe811" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-50">
+          <localizations xmi:id="_llGpiEzFEeS5AK9kA4rl5g" local="de" name="Leichte Berührung 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llGpiUzFEeS5AK9kA4rl5g" name="Light Touch 3" parentId="b6982580-fb86-4ac8-9312-98459ecbe811" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-75">
+          <localizations xmi:id="_llGpikzFEeS5AK9kA4rl5g" local="de" name="Leichte Berührung 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llHQkEzFEeS5AK9kA4rl5g" name="Light Touch 4" parentId="b6982580-fb86-4ac8-9312-98459ecbe811" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-100">
+          <localizations xmi:id="_llHQkUzFEeS5AK9kA4rl5g" local="de" name="Leichte Berührung 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="b6982580-fb86-4ac8-9312-98459ecbe811" name="Light Touch" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-25">
-          <localizations xmi:id="_EVUZsDnTEeSe6_w6Jrbqxg" local="de" name="Leichte Berührung"/>
+          <localizations xmi:id="_llHQkkzFEeS5AK9kA4rl5g" local="de" name="Leichte Berührung"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llHQk0zFEeS5AK9kA4rl5g" name="Mimic 1" parentId="60ac2e3a-d24a-459c-b8a4-cf648f0de447" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-25">
+          <localizations xmi:id="_llHQlEzFEeS5AK9kA4rl5g" local="de" name="Mimic 1"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llHQlUzFEeS5AK9kA4rl5g" name="Mimic 2" parentId="60ac2e3a-d24a-459c-b8a4-cf648f0de447" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-50">
+          <localizations xmi:id="_llHQlkzFEeS5AK9kA4rl5g" local="de" name="Mimic 2"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llHQl0zFEeS5AK9kA4rl5g" name="Mimic 3" parentId="60ac2e3a-d24a-459c-b8a4-cf648f0de447" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-75">
+          <localizations xmi:id="_llHQmEzFEeS5AK9kA4rl5g" local="de" name="Mimic 3"/>
+        </entries>
+        <entries xsi:type="shr5:KiKraft" xmi:id="_llHQmUzFEeS5AK9kA4rl5g" name="Mimic 4" parentId="60ac2e3a-d24a-459c-b8a4-cf648f0de447" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-100">
+          <localizations xmi:id="_llHQmkzFEeS5AK9kA4rl5g" local="de" name="Mimic 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="60ac2e3a-d24a-459c-b8a4-cf648f0de447" name="Mimic" page="191" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" kraftpunkte="-25">
-          <localizations xmi:id="_EVUZsTnTEeSe6_w6Jrbqxg" local="de" name="Mimic"/>
+          <localizations xmi:id="_llH3oEzFEeS5AK9kA4rl5g" local="de" name="Mimic"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="ee72398d-9daf-493f-b79b-5dab81e84013" name="Living Focus" page="1" srcBook="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" kraftpunkte="-100">
-          <localizations xmi:id="_EVUZsjnTEeSe6_w6Jrbqxg" local="de" name="Lebender Fokus"/>
+          <localizations xmi:id="_llH3oUzFEeS5AK9kA4rl5g" local="de" name="Lebender Fokus"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="830de0b7-8d83-467b-91e4-ce10081838b0" name="Keratin Control" page="1" srcBook="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" kraftpunkte="-50">
-          <localizations xmi:id="_EVUZsznTEeSe6_w6Jrbqxg" local="de" name="Keratinkontrolle"/>
+          <localizations xmi:id="_llH3okzFEeS5AK9kA4rl5g" local="de" name="Keratinkontrolle"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EVUZtDnTEeSe6_w6Jrbqxg" name="spells">
