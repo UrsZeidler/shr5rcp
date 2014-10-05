@@ -1,3 +1,21 @@
+2014-10-05 Version 0.2.1-rc
+
+* enhance the runtime
+	* ammunition management
+	* support for the different fw modie
+	* spend edge on seize ini
+	
+	
+	
+
+2014-09-19 Version 0.2.0
+
+* resources
+	* update the xsl to resources to the new working chummer5 project https://code.google.com/p/chummer5/
+	* added complex forms
+	* added mentors
+	* added drugs and toxins
+
 2014-09-07 Version 0.2.0-rc
 
 * update script editing
