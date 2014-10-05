@@ -9,6 +9,7 @@ import java.util.ListIterator;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -58,9 +59,18 @@ import de.urszeidler.shr5.ecp.Activator;
 
 public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
-    private Label gesamtPreisLabel;
+    /**
+     * @wbp.parser.constructor
+     */
+    public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, Object object, EClassifier eClassifier, List<?> currentValues,
+            String displayName, List<?> choiceOfValues) {
+        super(parent, labelProvider, object, eClassifier, currentValues, displayName, choiceOfValues);
+        // TODO Auto-generated constructor stub
+    }
+
+    protected Label gesamtPreisLabel;
     // private Label gesamtStrassenPreisLabel;
-    private TableViewer choiceTableViewer;
+    protected TableViewer choiceTableViewer;
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
 
@@ -74,9 +84,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                         || notification.getEventType() == org.eclipse.emf.common.notify.Notification.REMOVE
                         || notification.getEventType() == org.eclipse.emf.common.notify.Notification.REMOVE_MANY
                         || notification.getEventType() == org.eclipse.emf.common.notify.Notification.ADD_MANY) {
-                    gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren()) + "¥");
-                    // gesamtStrassenPreisLabel.setText(PersonaEditor.calcStrassenListenWert(values.getChildren())+"¥");
-                    // gesamtStrassenPreisLabel.setText(PersonaEditor.calcListenGewicht_(values.getChildren())+"Kg");
+                    updateLabel();
                 }
             }
         };
@@ -84,6 +92,10 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         values.addListener(listner);
         dialogSettings = Activator.getDefault().getDialogSettings();
 
+    }
+
+    protected void updateLabel() {
+        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren()) + "¥");        
     }
 
     /**
@@ -298,6 +310,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         downButtonGridData.verticalAlignment = SWT.FILL;
         downButtonGridData.horizontalAlignment = SWT.FILL;
         downButton.setLayoutData(downButtonGridData);
+        
+        addContollButtons(controlButtons);
 
         Composite featureComposite = new Composite(contents, SWT.NONE);
         {
@@ -483,12 +497,13 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         choiceComposite.setLayout(gridLayout);
 
         Label label = new Label(choiceComposite, SWT.NONE);
-        label.setText("gesamtpreis");
+        label.setText("---");
         gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
         gesamtPreisLabel = new Label(choiceComposite, SWT.NONE);
         gesamtPreisLabel.setLayoutData(gridData);
-        EList<Object> list = values.getChildren();
-        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(list) + "¥");
+//        EList<Object> list = values.getChildren();
+        updateLabel();
+//        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(list) + "¥");
         label = new Label(choiceComposite, SWT.NONE);
 
         // label = new Label(choiceComposite, SWT.NONE);
@@ -510,5 +525,9 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             choiceTableViewer.addFilter(shrListFilter);
 
         return composite;
+    }
+
+    protected void addContollButtons(Composite controlButtons) {
+        
     }
 }

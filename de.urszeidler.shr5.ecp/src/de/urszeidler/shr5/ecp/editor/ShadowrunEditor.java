@@ -8,16 +8,21 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.IObservable;
+import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.ui.EMFEditUIPlugin;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.window.Window;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
@@ -70,9 +75,11 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.dialogs.GenericEObjectDialog;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
+import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.dialogs.CreateAttributModifikatorDialog;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogMagazine;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
@@ -125,18 +132,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
                         Messages.ShadowrunEditor_dlg_select_type, Messages.ShadowrunEditor_dlg_select_persona_type);
                 dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-                int open = dialog.open();
-                if (open == Dialog.OK) {
-                    Object[] result = dialog.getResult();
-                    IObservable observable = e.getObservable();
-                    if (observable instanceof IObservableValue) {
-                        IObservableValue ov = (IObservableValue)e.getObservable();
-                        if (result.length > 0)
-                            ov.setValue((EClass)result[0]);
-                        else
-                            ov.setValue(null);
-                    }
-                }
+                setSingleRefernceFromDialog(e, dialog);
                 return;
             } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())) {
                 List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
@@ -147,9 +143,60 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                         ov.setValue(copyAddToPersona.get(0));
                     }
                 }
-            }
+                return;
+            } else if (Shr5Package.Literals.MAGAZIN__BULLETS.equals(e.getFeature())) {
+                // super.handleManage(e, object);
+                IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, e.getFeature());
+                List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+                Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+                FeatureEditorDialogWert featureEditorDialog = new FeatureEditorDialogMagazine(shell, this, object, e.getFeature(), "Manage magazine",
+                        values);
+                int result = featureEditorDialog.open();
+                if (result == Window.OK) {
+                    EList<?> eList = featureEditorDialog.getResult();
+                    IObservable observable = e.getObservable();
+                    if (observable instanceof IObservableList) {
+                        IObservableList ol = (IObservableList)observable;
+                        ol.clear();
+                        ol.addAll(eList);
+                    } else if (observable instanceof IObservableValue) {
+                        IObservableValue ov = (IObservableValue)observable;
 
+                    }
+                }
+
+                return;
+            } else if (Shr5Package.Literals.FEUERWAFFE__MAGAZIN.equals(e.getFeature())) {
+                IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, e.getFeature());
+                List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+                Object[] choises = NullObject.toChoises(values);
+                OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), choises, Messages.ShadowrunEditor_dlg_select_type,
+                        Messages.ShadowrunEditor_dlg_select_persona_type);
+                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                setSingleRefernceFromDialog(e, dialog);
+                return;
+            }
             super.handleManage(e, object);
+        }
+
+        /**
+         * Set the value to the formbuilder entry.
+         * @param e
+         * @param dialog
+         */
+        private void setSingleRefernceFromDialog(FormbuilderEntry e, OwnChooseDialog dialog) {
+            int open = dialog.open();
+            if (open == Dialog.OK) {
+                Object[] result = dialog.getResult();
+                IObservable observable = e.getObservable();
+                if (observable instanceof IObservableValue) {
+                    IObservableValue ov = (IObservableValue)e.getObservable();
+                    if (result.length > 0)
+                        ov.setValue((EClass)result[0]);
+                    else
+                        ov.setValue(null);
+                }
+            }
         }
 
         @Override
@@ -238,7 +285,6 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 else
                     return null;
             }
-
             return defaultCreationDialog(e, object);
         }
 
@@ -258,6 +304,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 }
                 return null;
             }
+
             @Override
             public Object caseSpezies(Spezies object) {
                 try {
@@ -430,7 +477,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseNahkampfwaffe(Nahkampfwaffe object) {
                 try {
@@ -445,6 +492,10 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             public Object caseFeuerwaffe(Feuerwaffe object) {
                 try {
                     addPage(new FeuerwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    if (object.getMagazin() != null)
+                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getMagazin()), object.getMagazin(),
+                                editingDomain, manager));
+
                 } catch (PartInitException e) {
                     logError("error creating FeuerwaffePage", e);//$NON-NLS-1$
                 }

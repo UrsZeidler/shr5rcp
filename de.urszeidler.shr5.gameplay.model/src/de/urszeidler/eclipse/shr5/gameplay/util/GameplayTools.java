@@ -519,7 +519,6 @@ public class GameplayTools {
      * @param numberOfShoots
      */
     public static void reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
-        // TODO Auto-generated method stub
         try {
             if (weapon instanceof Feuerwaffe) {
                 Feuerwaffe fw = (Feuerwaffe)weapon;
@@ -532,12 +531,9 @@ public class GameplayTools {
                             magazin.getBullets().remove(0);
                         }
                     }
-
                 }
             }
-
         } catch (Exception e) {
-            // TODO: handle exception
         }
     }
 
@@ -583,6 +579,19 @@ public class GameplayTools {
         }
         AbstraktPersona persona = object.getCharacter().getPersona();
         return persona.getSpezies().getAngriff();
+    }
+
+    
+    public static Feuerwaffe getMagazingType(Magazin m) {
+        Feuerwaffe type = m.getType();
+        if(type!=null)
+            return type;
+        
+        EObject eContainer = m.eContainer();
+        if (eContainer instanceof Feuerwaffe) {
+            return (Feuerwaffe)eContainer;            
+        }
+        return null;
     }
 
 }
