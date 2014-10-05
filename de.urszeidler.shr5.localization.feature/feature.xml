@@ -19,7 +19,7 @@ Containts the fragments of the bable project.
    </license>
 
    <requires>
-    <!--  <import plugin="org.eclipse.emf.ecp.application.e3"/> -->
+     <import plugin="org.eclipse.emf.ecp.application.e3"/>
       <import plugin="org.eclipse.e4.ui.widgets"/>
       <import plugin="org.eclipse.e4.ui.workbench"/>
       <import plugin="org.eclipse.emf.common"/>
@@ -94,7 +94,7 @@ Containts the fragments of the bable project.
       <import plugin="org.eclipse.ui.intro"/>
       <import plugin="org.eclipse.ui.browser"/>
    </requires>
-<!--
+
    <plugin
          id="org.eclipse.emf.ecp.application.e3.nl_de"
          download-size="0"
@@ -102,7 +102,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
--->
+
    <plugin
          id="org.eclipse.e4.ui.widgets.nl_de"
          download-size="0"
