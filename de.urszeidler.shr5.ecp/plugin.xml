@@ -86,6 +86,7 @@
          </staticTest>
       </control>
       -->
+      <!--
       <control
             class="de.urszeidler.shr5.ecp.widgets.ShrDateWidget"
             id="de.urszeidler.shr5.ecp.ShrDateWidget"
@@ -97,7 +98,6 @@
                supportedEObject="de.urszeidler.eclipse.shr5.SourceBook">
          </staticTest>
       </control>
-      <!--
       <control
             class="de.urszeidler.shr5.ecp.widgets.BeschreibbarTableWidget"
             id="de.urszeidler.shr5.ecp.BeschreibarTable1">
