@@ -24,6 +24,7 @@ import org.eclipse.swt.graphics.Image;
 import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -116,11 +117,16 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
                             EObject eo = (EObject)object;
                             try {
                                 EObject eContainer = eo.eContainer();
-                                EReference eContainmentFeature = eo.eContainmentFeature();
-                                List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
-                                return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)));
+                                if (eContainer instanceof Feuerwaffe) {
+                                    Feuerwaffe fw = (Feuerwaffe)eContainer;
+                                    eContainer = fw.eContainer();
+                                    EReference eContainmentFeature = fw.eContainmentFeature();
+                                    List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
+                                    return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)));
+                                }
 
                             } catch (Exception e) {
+                                e.fillInStackTrace();
                             }
                         }
                         return super.getComboBoxObjects(object);
