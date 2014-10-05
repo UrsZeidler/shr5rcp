@@ -141,6 +141,13 @@
                   style="push">
             </command>
          </menu>
+         <menu
+               label="%menu.help">
+            <command
+                  commandId="org.eclipse.ui.help.aboutAction"
+                  style="push">
+            </command>
+         </menu>
       </menuContribution>
       <!--
       <menuContribution
