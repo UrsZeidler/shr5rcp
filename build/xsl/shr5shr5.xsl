@@ -11,34 +11,122 @@
 
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
+	<xsl:variable name="skills"
+		select="document(concat($path,'/skills.xml'),/)" />
 
 	<xsl:variable name="cyberwares"
 		select="document(concat($path,'/cyberware.xml'),/)" />
 	<xsl:variable name="biowares"
 		select="document(concat($path,'/bioware.xml'),/)" />
+	<xsl:variable name="powers"
+		select="document(concat($path,'/powers.xml'),/)" />
 
 	<xsl:include href="shr5-functions.xsl" />
-	<xsl:template match="categories|version|accessories|grades" />
+	<xsl:template
+		match="categories|version|accessories|grades|enhancements|enhancement" />
 
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
 			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" name="all">
-			<entries xsi:type="shr5:ShrList" name="cyberware">
-				<xsl:for-each select="$cyberwares">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-			</entries>
-			<entries xsi:type="shr5:ShrList" name="bioware">
-				<xsl:for-each select="$biowares">
+			<!-- <entries xsi:type="shr5:ShrList" name="cyberware"> -->
+			<!-- <xsl:for-each select="$cyberwares"> -->
+			<!-- <xsl:apply-templates select="node()" /> -->
+			<!-- </xsl:for-each> -->
+			<!-- </entries> -->
+			<!-- <entries xsi:type="shr5:ShrList" name="bioware"> -->
+			<!-- <xsl:for-each select="$biowares"> -->
+			<!-- <xsl:apply-templates select="node()" /> -->
+			<!-- </xsl:for-each> -->
+			<!-- </entries> -->
+			<entries xsi:type="shr5:ShrList" name="power">
+				<xsl:for-each select="$powers">
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
 			</entries>
 
 		</shr5:ShrList>
 	</xsl:template>
+	<!-- -->
+	<xsl:template name="iterate.kipower">
+		<xsl:param name="index" select="1" />
+		<xsl:param name="max" select="4" />
+		<xsl:call-template name="kipower">
+			<xsl:with-param name="rating" select="$index" />
+		</xsl:call-template>
+
+		<!-- the loop -->
+		<xsl:if test="$index &lt; $max">
+			<!-- Call myself with the next index -->
+			<xsl:call-template name="iterate.kipower">
+				<xsl:with-param name="index" select="$index + 1" />
+				<xsl:with-param name="max" select="$max" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+	<!-- rating based cyberware -->
+	<xsl:template name="kipower">
+		<xsl:param name="rating" />
+		<entries xsi:type="shr5:KiKraft">
+			<xsl:if test="number(points/text())">
+				<xsl:attribute name="kraftpunkte">
+				<xsl:value-of select="number(points/text())*-100 * $rating" />
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:attribute name="name"><xsl:value-of
+				select="concat(name/text(),' ',$rating)" /></xsl:attribute>
+			<xsl:call-template name="set_parentid" />
+			<xsl:call-template name="simple_quelle" />
+			<!-- <xsl:call-template name="gegenstand-basis-rating"> <xsl:with-param 
+				name="rating" select="$rating" /> </xsl:call-template> -->
+			<xsl:call-template name="mods_rating">
+				<xsl:with-param name="rating" select="$rating" />
+			</xsl:call-template>
+
+			<xsl:call-template name="localization_rating">
+				<xsl:with-param name="rating" select="$rating" />
+			</xsl:call-template>
+		</entries>
+	</xsl:template>
+	<xsl:template match="//power">
+		<xsl:choose>
+			<xsl:when test="levels/text()='yes'">
+				<xsl:call-template name="iterate.kipower">
+					<xsl:with-param name="max">
+						<xsl:choose>
+							<xsl:when test="number(maxlevel/text())">
+								<xsl:value-of select="number(maxlevel/text())" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="4" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:with-param>
+				</xsl:call-template>
+
+			</xsl:when>
+		</xsl:choose>
+
+		<entries xsi:type="shr5:KiKraft">
+
+			<xsl:if test="number(points/text())">
+				<xsl:attribute name="kraftpunkte">
+				<xsl:value-of select="number(points/text())*-100" />
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="mods_rating">
+				<xsl:with-param name="rating" select="1" />
+			</xsl:call-template>
+
+			<xsl:call-template name="localization" />
+		</entries>
 
 
+	</xsl:template>
+
+	<!-- -->
 	<xsl:template name="iterate.cyberware">
 		<xsl:param name="index" select="1" />
 		<xsl:param name="max" select="4" />
@@ -74,12 +162,7 @@
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
 		</entries>
-
 	</xsl:template>
-	<!-- <xsl:template name="extractFactor"> <xsl:param name="expression" /> 
-		<xsl:choose> <xsl:when test="starts-with($expression,'Rating' )"> <xsl:value-of 
-		select="substring-after($expression, '*') " /> </xsl:when> </xsl:choose> 
-		</xsl:template> -->
 	<!-- -->
 	<xsl:template match="//cyberware">
 		<xsl:if

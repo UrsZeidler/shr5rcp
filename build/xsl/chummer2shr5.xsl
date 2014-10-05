@@ -2293,6 +2293,7 @@
 	<xsl:template match="//power">
 		<xsl:if test="string-length(skillgroup/text())=0">
 			<entries xsi:type="shr5:KiKraft">
+			
 				<xsl:if test="number(points/text())">
 					<xsl:attribute name="kraftpunkte">
 				<xsl:value-of select="number(points/text())*-100" />
