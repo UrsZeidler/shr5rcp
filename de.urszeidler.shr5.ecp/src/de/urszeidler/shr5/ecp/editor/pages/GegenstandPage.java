@@ -194,7 +194,9 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             }
         }else if (object instanceof Magazin) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__TYPE, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime);
+            GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+            controlGridData.heightHint = 150;
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime,controlGridData);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
@@ -203,9 +205,10 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
-        
+        if (!(object instanceof Magazin)) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
+        }
 //        if (object instanceof MatrixDevice) {
 //            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_DEVICE__PAN, composite_runtime);            
 //        }
