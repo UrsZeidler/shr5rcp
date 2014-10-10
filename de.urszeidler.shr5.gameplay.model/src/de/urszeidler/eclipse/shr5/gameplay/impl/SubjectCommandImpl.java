@@ -381,7 +381,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         setExecuting(false);
         setExecuted(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,GameplayPackage.Literals.PROBE__CLOSE_CALL);
+        
     }
 
 

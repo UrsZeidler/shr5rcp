@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools.DamageCode;
 import de.urszeidler.shr5.gameplay.dice.W6Dice;
@@ -291,6 +292,14 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     }
 
     @Override
+    protected void afterRedo() {
+        super.afterRedo();
+        if (isCloseCall())
+            GameplayTools.increaseEdgeValue(getSubject(), 1);
+    }
+
+    
+    @Override
     public void redo() {
 
         prepareRedo();
@@ -327,7 +336,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
             this.successes = W6Dice.probeSucsessesShr5(getProbe());
             this.glitches = W6Dice.calcGlitchDice(getProbe());
         }
-        if (getCmdCallback() != null && getSubject().canUseEdge())
+        if (getCmdCallback() != null && getSubject().canUseEdge()&& !isPushTheLimit())
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
         secondChance(getProbe().size());

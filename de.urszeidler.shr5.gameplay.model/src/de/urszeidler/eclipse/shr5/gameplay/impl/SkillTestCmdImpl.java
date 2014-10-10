@@ -172,6 +172,13 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
 
     }
 
+    @Override
+    protected void afterRedo() {
+        super.afterRedo();
+        if (isCloseCall())
+            GameplayTools.increaseEdgeValue(getSubject(), 1);
+    }
+
     
     @Override
     public void redo() {
@@ -188,7 +195,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
 
-        if (getCmdCallback() != null && getSubject().canUseEdge())
+        if (getCmdCallback() != null && getSubject().canUseEdge()&& !isPushTheLimit())
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
         secondChance(getProbe().size());

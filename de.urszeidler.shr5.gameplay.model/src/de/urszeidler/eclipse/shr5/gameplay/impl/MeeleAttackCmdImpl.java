@@ -195,6 +195,13 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     }
 
     @Override
+    protected void afterRedo() {
+        super.afterRedo();
+        if (isCloseCall())
+            GameplayTools.increaseEdgeValue(getSubject(), 1);
+    }
+
+    @Override
     public void redo() {
         prepareRedo();
 

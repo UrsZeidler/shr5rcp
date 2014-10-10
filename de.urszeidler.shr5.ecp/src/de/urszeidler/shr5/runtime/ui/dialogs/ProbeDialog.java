@@ -97,6 +97,7 @@ import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -184,15 +185,9 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
         probe.eAdapters().add(this);
-        
-        if (probe instanceof SubjectCommand) {
-            SubjectCommand sc = (SubjectCommand)probe;
-            if(!sc.getSubject().canUseEdge()){
-                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__SECOND_CHANCE);                
-            }
-        }
-        
+
+        configerEdgeOption();
+
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
             txtProbe.setEnabled(false);
@@ -245,6 +240,31 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
     }
 
     /**
+     * 
+     */
+    protected void configerEdgeOption() {
+        if (probe instanceof SubjectCommand) {
+            SubjectCommand sc = (SubjectCommand)probe;
+            if (!sc.getSubject().canUseEdge()) {
+                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+            } else {
+                if (probe instanceof ProbeCommand) {
+                    ProbeCommand pc = (ProbeCommand)probe;
+                    if (pc.getProbeState() != ProbeState.CRITICAL_GLITCH)
+                        eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__CLOSE_CALL);
+                    if (pc.isPushTheLimit()) {
+                        eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+                        eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__CLOSE_CALL);
+                    }
+                    if (pc.isSecondChance())
+                        eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__CLOSE_CALL);
+                }
+            }
+        }
+    }
+
+    /**
      * Create contents of the button bar.
      * 
      * @param parent
@@ -260,8 +280,8 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
      */
     @Override
     protected Point getInitialSize() {
-         Point initialSize = super.getInitialSize();
-        return new Point(450, Math.max(initialSize.y, 500) );
+        Point initialSize = super.getInitialSize();
+        return new Point(450, Math.max(initialSize.y, 500));
     }
 
     @Override

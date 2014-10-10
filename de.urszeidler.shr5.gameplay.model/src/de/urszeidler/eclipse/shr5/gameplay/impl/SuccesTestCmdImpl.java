@@ -187,6 +187,14 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     }
 
     @Override
+    protected void afterRedo() {
+        super.afterRedo();
+        if (isCloseCall())
+            GameplayTools.increaseEdgeValue(getSubject(), 1);
+    }
+
+    
+    @Override
     public void redo() {
         getProbeMods().clear();
         getProbe().clear();
@@ -202,7 +210,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
         
-        if (getCmdCallback() != null && getSubject().canUseEdge())
+        if (getCmdCallback() != null && getSubject().canUseEdge() && !isPushTheLimit())
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
         secondChance(getProbe().size());
