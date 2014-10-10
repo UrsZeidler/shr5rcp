@@ -284,7 +284,9 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
         getProbeMods().clear();
         setExecuting(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
     }
 
@@ -310,6 +312,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
         else
             type = damageCode.getType();
 
+        pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
 
@@ -321,9 +324,13 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
 
             List<Integer> probe = w6Dice.probe(dice);
             this.getProbe().addAll(probe);
-            this.successes = W6Dice.probeSucsessesShr5(probe);
-            this.glitches = W6Dice.calcGlitchDice(probe);
+            this.successes = W6Dice.probeSucsessesShr5(getProbe());
+            this.glitches = W6Dice.calcGlitchDice(getProbe());
         }
+        if (getCmdCallback() != null && getSubject().canUseEdge())
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+
+        secondChance(getProbe().size());
         this.netHits = getSuccesses();
 
         int damageLeft = damageCode.getPower() - getSuccesses();

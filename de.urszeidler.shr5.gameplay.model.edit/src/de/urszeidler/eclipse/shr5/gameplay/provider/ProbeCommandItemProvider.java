@@ -65,6 +65,9 @@ public class ProbeCommandItemProvider
             addLimitPropertyDescriptor(object);
             addProbeStatePropertyDescriptor(object);
             addSkipTestPropertyDescriptor(object);
+            addPushTheLimitPropertyDescriptor(object);
+            addSecondChancePropertyDescriptor(object);
+            addCloseCallPropertyDescriptor(object);
             addThresholdsPropertyDescriptor(object);
             addNetHitsPropertyDescriptor(object);
             addTestStatePropertyDescriptor(object);
@@ -197,6 +200,72 @@ public class ProbeCommandItemProvider
                  getString("_UI_Probe_skipTest_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Probe_skipTest_feature", "_UI_Probe_type"),
                  GameplayPackage.Literals.PROBE__SKIP_TEST,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Push The Limit feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addPushTheLimitPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Probe_pushTheLimit_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Probe_pushTheLimit_feature", "_UI_Probe_type"),
+                 GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Second Chance feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSecondChancePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Probe_secondChance_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Probe_secondChance_feature", "_UI_Probe_type"),
+                 GameplayPackage.Literals.PROBE__SECOND_CHANCE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Close Call feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCloseCallPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Probe_closeCall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Probe_closeCall_feature", "_UI_Probe_type"),
+                 GameplayPackage.Literals.PROBE__CLOSE_CALL,
                  true,
                  false,
                  false,
@@ -353,6 +422,9 @@ public class ProbeCommandItemProvider
             case GameplayPackage.PROBE_COMMAND__LIMIT:
             case GameplayPackage.PROBE_COMMAND__PROBE_STATE:
             case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
+            case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT:
+            case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE:
+            case GameplayPackage.PROBE_COMMAND__CLOSE_CALL:
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
             case GameplayPackage.PROBE_COMMAND__TEST_STATE:

@@ -6,9 +6,12 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
+
+import com.google.common.collect.Collections2;
 
 import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
@@ -208,12 +211,27 @@ public class GameplayToolsTest extends TestCase {
         assertEquals(1, activeCharacters2.size());
         assertEquals(character2, activeCharacters2.get(0));
     }
-    // /**
-    // * Test method for {@link de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools#getSkillDicePool(de.urszeidler.eclipse.shr5.Fertigkeit,
-    // de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter)}.
-    // */
-    // public void testGetSkillDicePool() {
-    // fail("Not yet implemented"); // TODO
-    // }
+    
+    
+    public void testPushTheLimit() throws Exception {
+        int edgeValue = 100;
+        List<Integer> rollPushTheLimit = GameplayTools.rollPushTheLimit(edgeValue);        
+        assertTrue(rollPushTheLimit.size()>=edgeValue);
+        Collection<Integer> filter = Collections2.filter(rollPushTheLimit, new GameplayTools.PushTheLimitPredicate());
+        assertEquals(filter.size()+edgeValue, rollPushTheLimit.size());    
+        
+        edgeValue = 200;
+        rollPushTheLimit = GameplayTools.rollPushTheLimit(edgeValue);        
+        assertTrue(rollPushTheLimit.size()>=edgeValue);
+        filter = Collections2.filter(rollPushTheLimit, new GameplayTools.PushTheLimitPredicate());
+        assertEquals(filter.size()+edgeValue, rollPushTheLimit.size());    
+        
+        edgeValue = 300;
+        rollPushTheLimit = GameplayTools.rollPushTheLimit(edgeValue);        
+        assertTrue(rollPushTheLimit.size()>=edgeValue);
+        filter = Collections2.filter(rollPushTheLimit, new GameplayTools.PushTheLimitPredicate());
+        assertEquals(filter.size()+edgeValue, rollPushTheLimit.size());          
+        
+    }
 
 }

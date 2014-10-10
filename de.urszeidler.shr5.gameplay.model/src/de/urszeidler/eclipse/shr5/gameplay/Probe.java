@@ -25,6 +25,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeState <em>Probe State</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#getProbeMods <em>Probe Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSkipTest <em>Skip Test</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isPushTheLimit <em>Push The Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSecondChance <em>Second Chance</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isCloseCall <em>Close Call</em>}</li>
  * </ul>
  * </p>
  *
@@ -219,5 +222,83 @@ public interface Probe extends EObject {
      * @generated
      */
     void setSkipTest(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Push The Limit</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Push The Limit</em>' attribute.
+     * @see #setPushTheLimit(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_PushTheLimit()
+     * @model
+     * @generated
+     */
+    boolean isPushTheLimit();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isPushTheLimit <em>Push The Limit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Push The Limit</em>' attribute.
+     * @see #isPushTheLimit()
+     * @generated
+     */
+    void setPushTheLimit(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Second Chance</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Second Chance</em>' attribute.
+     * @see #setSecondChance(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_SecondChance()
+     * @model
+     * @generated
+     */
+    boolean isSecondChance();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSecondChance <em>Second Chance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Second Chance</em>' attribute.
+     * @see #isSecondChance()
+     * @generated
+     */
+    void setSecondChance(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Close Call</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Close Call</em>' attribute.
+     * @see #setCloseCall(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbe_CloseCall()
+     * @model
+     * @generated
+     */
+    boolean isCloseCall();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isCloseCall <em>Close Call</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Close Call</em>' attribute.
+     * @see #isCloseCall()
+     * @generated
+     */
+    void setCloseCall(boolean value);
 
 } // Probe

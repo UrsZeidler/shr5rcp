@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -22,6 +23,8 @@ import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +40,9 @@ import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeState <em>Probe State</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbeMods <em>Probe Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#isSkipTest <em>Skip Test</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#isPushTheLimit <em>Push The Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#isSecondChance <em>Second Chance</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#isCloseCall <em>Close Call</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getThresholds <em>Thresholds</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getNetHits <em>Net Hits</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getTestState <em>Test State</em>}</li>
@@ -165,6 +171,66 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * @ordered
      */
     protected boolean skipTest = SKIP_TEST_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #isPushTheLimit() <em>Push The Limit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isPushTheLimit()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean PUSH_THE_LIMIT_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isPushTheLimit() <em>Push The Limit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isPushTheLimit()
+     * @generated
+     * @ordered
+     */
+    protected boolean pushTheLimit = PUSH_THE_LIMIT_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #isSecondChance() <em>Second Chance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSecondChance()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean SECOND_CHANCE_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isSecondChance() <em>Second Chance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSecondChance()
+     * @generated
+     * @ordered
+     */
+    protected boolean secondChance = SECOND_CHANCE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #isCloseCall() <em>Close Call</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isCloseCall()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean CLOSE_CALL_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isCloseCall() <em>Close Call</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isCloseCall()
+     * @generated
+     * @ordered
+     */
+    protected boolean closeCall = CLOSE_CALL_EDEFAULT;
 
     /**
      * The default value of the '{@link #getThresholds() <em>Thresholds</em>}' attribute.
@@ -413,6 +479,69 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isPushTheLimit() {
+        return pushTheLimit;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPushTheLimit(boolean newPushTheLimit) {
+        boolean oldPushTheLimit = pushTheLimit;
+        pushTheLimit = newPushTheLimit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT, oldPushTheLimit, pushTheLimit));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean isSecondChance() {
+        return secondChance;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSecondChance(boolean newSecondChance) {
+        boolean oldSecondChance = secondChance;
+        secondChance = newSecondChance;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__SECOND_CHANCE, oldSecondChance, secondChance));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean isCloseCall() {
+        return closeCall;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCloseCall(boolean newCloseCall) {
+        boolean oldCloseCall = closeCall;
+        closeCall = newCloseCall;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.PROBE_COMMAND__CLOSE_CALL, oldCloseCall, closeCall));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getThresholds() {
         return thresholds;
     }
@@ -520,6 +649,12 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return getProbeMods();
             case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
                 return isSkipTest();
+            case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT:
+                return isPushTheLimit();
+            case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE:
+                return isSecondChance();
+            case GameplayPackage.PROBE_COMMAND__CLOSE_CALL:
+                return isCloseCall();
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return getThresholds();
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -557,6 +692,15 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
             case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
                 setSkipTest((Boolean)newValue);
                 return;
+            case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT:
+                setPushTheLimit((Boolean)newValue);
+                return;
+            case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE:
+                setSecondChance((Boolean)newValue);
+                return;
+            case GameplayPackage.PROBE_COMMAND__CLOSE_CALL:
+                setCloseCall((Boolean)newValue);
+                return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds((Integer)newValue);
                 return;
@@ -593,6 +737,15 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
             case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
                 setSkipTest(SKIP_TEST_EDEFAULT);
                 return;
+            case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT:
+                setPushTheLimit(PUSH_THE_LIMIT_EDEFAULT);
+                return;
+            case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE:
+                setSecondChance(SECOND_CHANCE_EDEFAULT);
+                return;
+            case GameplayPackage.PROBE_COMMAND__CLOSE_CALL:
+                setCloseCall(CLOSE_CALL_EDEFAULT);
+                return;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 setThresholds(THRESHOLDS_EDEFAULT);
                 return;
@@ -628,6 +781,12 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 return probeMods != null && !probeMods.isEmpty();
             case GameplayPackage.PROBE_COMMAND__SKIP_TEST:
                 return skipTest != SKIP_TEST_EDEFAULT;
+            case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT:
+                return pushTheLimit != PUSH_THE_LIMIT_EDEFAULT;
+            case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE:
+                return secondChance != SECOND_CHANCE_EDEFAULT;
+            case GameplayPackage.PROBE_COMMAND__CLOSE_CALL:
+                return closeCall != CLOSE_CALL_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__THRESHOLDS:
                 return thresholds != THRESHOLDS_EDEFAULT;
             case GameplayPackage.PROBE_COMMAND__NET_HITS:
@@ -656,6 +815,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE_COMMAND__PROBE_STATE: return GameplayPackage.PROBE__PROBE_STATE;
                 case GameplayPackage.PROBE_COMMAND__PROBE_MODS: return GameplayPackage.PROBE__PROBE_MODS;
                 case GameplayPackage.PROBE_COMMAND__SKIP_TEST: return GameplayPackage.PROBE__SKIP_TEST;
+                case GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT: return GameplayPackage.PROBE__PUSH_THE_LIMIT;
+                case GameplayPackage.PROBE_COMMAND__SECOND_CHANCE: return GameplayPackage.PROBE__SECOND_CHANCE;
+                case GameplayPackage.PROBE_COMMAND__CLOSE_CALL: return GameplayPackage.PROBE__CLOSE_CALL;
                 default: return -1;
             }
         }
@@ -686,6 +848,9 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
                 case GameplayPackage.PROBE__PROBE_STATE: return GameplayPackage.PROBE_COMMAND__PROBE_STATE;
                 case GameplayPackage.PROBE__PROBE_MODS: return GameplayPackage.PROBE_COMMAND__PROBE_MODS;
                 case GameplayPackage.PROBE__SKIP_TEST: return GameplayPackage.PROBE_COMMAND__SKIP_TEST;
+                case GameplayPackage.PROBE__PUSH_THE_LIMIT: return GameplayPackage.PROBE_COMMAND__PUSH_THE_LIMIT;
+                case GameplayPackage.PROBE__SECOND_CHANCE: return GameplayPackage.PROBE_COMMAND__SECOND_CHANCE;
+                case GameplayPackage.PROBE__CLOSE_CALL: return GameplayPackage.PROBE_COMMAND__CLOSE_CALL;
                 default: return -1;
             }
         }
@@ -720,6 +885,12 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         if (limitESet) result.append(limit); else result.append("<unset>");
         result.append(", skipTest: ");
         result.append(skipTest);
+        result.append(", pushTheLimit: ");
+        result.append(pushTheLimit);
+        result.append(", secondChance: ");
+        result.append(secondChance);
+        result.append(", closeCall: ");
+        result.append(closeCall);
         result.append(", thresholds: ");
         result.append(thresholds);
         result.append(", netHits: ");
@@ -728,6 +899,36 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         result.append(mods);
         result.append(')');
         return result.toString();
+    }
+
+    /**
+     * Doing the second chance. If chosen.
+     * @param dicePool the number of dices thrown
+     */
+    protected void secondChance(int dicePool) {
+        if(isSecondChance()){
+            W6Dice w6Dice = new W6Dice();
+            int dice = dicePool-successes;
+            List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
+            this.getProbe().addAll(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
+            GameplayTools.increaseEdgeValue(getSubject(),1);
+        }
+    }
+
+    
+    /**
+     * Checks for the option and  If chosen.
+     * All the stuff to push the limit.
+     */
+    protected void pushTheLimit() {
+        if(isPushTheLimit()){
+             int edgeValue = GameplayTools.getEdgeValue(getSubject());
+             List<Integer> rollPushTheLimit = GameplayTools.rollPushTheLimit(edgeValue);
+             unsetLimit();
+             this.getProbe().addAll(rollPushTheLimit);
+             GameplayTools.increaseEdgeValue(getSubject(),1);
+         }
     }
 
 } // ProbeCommandImpl

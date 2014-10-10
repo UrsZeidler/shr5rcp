@@ -79,6 +79,9 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/probeState"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//Probe/probeMods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/skipTest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/pushTheLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/secondChance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/closeCall"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//ProbeCommand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//ProbeCommand/mods"/>

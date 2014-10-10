@@ -47,7 +47,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_DIXCEY_HEd6SEpVfiQZsGw" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//DamageTest"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DIXCEo_HEd6SEpVfiQZsGw" x="400" y="635"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DIXCEo_HEd6SEpVfiQZsGw" x="410" y="810"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_rRXiUI_HEd6SEpVfiQZsGw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_rRYwcI_HEd6SEpVfiQZsGw" type="4001"/>
@@ -123,7 +123,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_Q1ENMY_IEd6SEpVfiQZsGw" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SkillTestCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q1ENMo_IEd6SEpVfiQZsGw" x="780" y="640"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q1ENMo_IEd6SEpVfiQZsGw" x="790" y="815"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_WpfNcI_JEd6SEpVfiQZsGw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_Wpf0gI_JEd6SEpVfiQZsGw" type="4001"/>
@@ -139,7 +139,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_WpfNcY_JEd6SEpVfiQZsGw" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//OpposedSkillTestCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpfNco_JEd6SEpVfiQZsGw" x="850" y="735"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpfNco_JEd6SEpVfiQZsGw" x="860" y="910"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_llWt0I_fEd6SEpVfiQZsGw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_lmCqUI_fEd6SEpVfiQZsGw" type="4001"/>
@@ -219,6 +219,18 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/skipTest"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_eNmeQTOcEeS4YZKwsF3Lyw"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_09cgsE_fEeSWz_mDa2g1tA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/pushTheLimit"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_09cgsU_fEeSWz_mDa2g1tA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_CfLAUE_gEeSWz_mDa2g1tA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/secondChance"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_CfLnYE_gEeSWz_mDa2g1tA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_13_A4E_gEeSWz_mDa2g1tA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Probe/closeCall"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_13_A4U_gEeSWz_mDa2g1tA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_rGYMogrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_rGYMowrNEeSXe8h_-hOPdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_rGYMpArNEeSXe8h_-hOPdg"/>
@@ -250,7 +262,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_tg_08QrNEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//ProbeCommand"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tg_08grNEeSXe8h_-hOPdg" x="685" y="500"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tg_08grNEeSXe8h_-hOPdg" x="695" y="675"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_ds-GEArOEeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_dtAiUArOEeSXe8h_-hOPdg" type="4001"/>
@@ -294,7 +306,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_FMnq0QrQEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SuccesTest"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMnq0grQEeSXe8h_-hOPdg" x="790" y="375"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMnq0grQEeSXe8h_-hOPdg" x="715" y="490"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_5IAXgArREeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_5IA-kArREeSXe8h_-hOPdg" type="4001"/>
@@ -334,7 +346,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_1lQNAQrSEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//ExtendetSkillTestCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1lQNAgrSEeSXe8h_-hOPdg" x="665" y="735"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1lQNAgrSEeSXe8h_-hOPdg" x="675" y="910"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_bkyq0AuNEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_bk0gAAuNEeStocVKc3B8yQ" type="4001"/>
@@ -354,7 +366,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_bkyq0QuNEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//DefensTestCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bkyq0guNEeStocVKc3B8yQ" x="215" y="635"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bkyq0guNEeStocVKc3B8yQ" x="225" y="810"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_U2rssAuQEeStocVKc3B8yQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_U2s60AuQEeStocVKc3B8yQ" type="4001"/>
@@ -374,7 +386,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_U2rssQuQEeStocVKc3B8yQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//SuccesTestCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U2rssguQEeStocVKc3B8yQ" x="635" y="640"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U2rssguQEeStocVKc3B8yQ" x="645" y="815"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_j9RWcAxCEeStocVKc3B8yQ" type="1004">
       <children xmi:type="notation:Node" xmi:id="_j9R9gAxCEeStocVKc3B8yQ" type="4008"/>
@@ -417,7 +429,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_KhzKAREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//MeeleAttackCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KhzKAhEWEeSOe8bMc8XWug" x="920" y="865"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KhzKAhEWEeSOe8bMc8XWug" x="930" y="1040"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_m_G4IBEWEeSOe8bMc8XWug" type="1001">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nAms8BEWEeSOe8bMc8XWug" source="Shortcut">
@@ -436,7 +448,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_m_G4IREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Nahkampfwaffe"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_G4IhEWEeSOe8bMc8XWug" x="1120" y="855"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_G4IhEWEeSOe8bMc8XWug" x="1130" y="1030"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_9D16oBEWEeSOe8bMc8XWug" type="1001">
       <children xmi:type="notation:Node" xmi:id="_9ECu8BEWEeSOe8bMc8XWug" type="4001"/>
@@ -464,7 +476,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_9D16oREWEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//RangedAttackCmd"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9D16ohEWEeSOe8bMc8XWug" x="715" y="865"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9D16ohEWEeSOe8bMc8XWug" x="725" y="1040"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_I9rPYBEXEeSOe8bMc8XWug" type="1001">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_I-EQ8BEXEeSOe8bMc8XWug" source="Shortcut">
@@ -483,7 +495,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_I9rPYREXEeSOe8bMc8XWug" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//AbstaktFernKampfwaffe"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9rPYhEXEeSOe8bMc8XWug" x="480" y="876"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9rPYhEXEeSOe8bMc8XWug" x="490" y="1051"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_hR5-MBNaEeS_0uLHotCLhw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_hR7MUBNaEeS_0uLHotCLhw" type="4001"/>
@@ -507,7 +519,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_hR5-MRNaEeS_0uLHotCLhw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//Intervall"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hR5-MhNaEeS_0uLHotCLhw" x="460" y="735"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hR5-MhNaEeS_0uLHotCLhw" x="470" y="910"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_Hi6NsCPzEeS3c462UKKLWQ" type="1001">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hk-qQCPzEeS3c462UKKLWQ" source="Shortcut">
@@ -526,7 +538,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_Hi6NsSPzEeS3c462UKKLWQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hi6NsiPzEeS3c462UKKLWQ" x="1015" y="610"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hi6NsiPzEeS3c462UKKLWQ" x="1045" y="800"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_kx4C4CYPEeSIMvdKIF-9Cg" type="1005">
       <children xmi:type="notation:Node" xmi:id="_kx54ECYPEeSIMvdKIF-9Cg" type="4010"/>
@@ -560,7 +572,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_9Sk8ESYQEeSIMvdKIF-9Cg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EEnum" href="gameplay.ecore#//SuccesTestState"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Sk8EiYQEeSIMvdKIF-9Cg" x="990" y="395"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Sk8EiYQEeSIMvdKIF-9Cg" x="940" y="495"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_BNdxQCyIEeSKO6QkbmakNg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_BNfmcCyIEeSKO6QkbmakNg" type="4001"/>
@@ -789,7 +801,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_qK-w0QrMEeSXe8h_-hOPdg" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_qK-w0grMEeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//OpposedSkillTestCmd/object"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qK-w0wrMEeSXe8h_-hOPdg" points="[80, 0, -258, 547]$[338, 0, 0, 547]$[338, -519, 0, 28]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qK-w0wrMEeSXe8h_-hOPdg" points="[80, 0, -248, 722]$[345, 0, 17, 722]$[329, -694, 1, 28]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_x6bv0ArMEeSXe8h_-hOPdg" type="3002" source="_-0TL4I_GEd6SEpVfiQZsGw" target="_5p9CkI_1Ed6SEpVfiQZsGw">
       <children xmi:type="notation:Node" xmi:id="_x6cW4ArMEeSXe8h_-hOPdg" type="4011">
@@ -835,7 +847,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_IBY4gQrQEeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_IBY4ggrQEeSXe8h_-hOPdg" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IBY4gwrQEeSXe8h_-hOPdg" points="[-54, 0, -49, 93]$[-54, -16, -49, 77]$[-20, -16, -15, 77]$[-20, -45, -15, 48]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IBY4gwrQEeSXe8h_-hOPdg" points="[-36, -1, -86, 178]$[-36, -36, -86, 143]$[16, -36, -34, 143]$[16, -91, -34, 88]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IBatsArQEeSXe8h_-hOPdg" id="(0.7846153846153846,0.015384615384615385)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_5IYK8ArREeSXe8h_-hOPdg" type="3002" source="_5IAXgArREeSXe8h_-hOPdg" target="_qJ0TMArMEeSXe8h_-hOPdg">
@@ -960,7 +972,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_HkStwSPzEeS3c462UKKLWQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_HkStwiPzEeS3c462UKKLWQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="gameplay.ecore#//OpposedSkillTestCmd/objectSkill"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HkStwyPzEeS3c462UKKLWQ" points="[8, 0, -88, 92]$[103, 0, 7, 92]$[103, -52, 7, 40]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HkStwyPzEeS3c462UKKLWQ" points="[8, 0, -75, 88]$[83, 0, 0, 88]$[83, -60, 0, 28]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lja1wCPzEeS3c462UKKLWQ" id="(0.9506172839506173,0.16279069767441862)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_X8TEMCyJEeSKO6QkbmakNg" type="3002" source="_rGVJUArNEeSXe8h_-hOPdg" target="_BNdxQCyIEeSKO6QkbmakNg">

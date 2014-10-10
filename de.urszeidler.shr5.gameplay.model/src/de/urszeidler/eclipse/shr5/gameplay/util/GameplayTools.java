@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -54,11 +55,20 @@ import de.urszeidler.eclipse.shr5.runtime.Zustand;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.shr5.gameplay.dice.W6Dice;
 
 /**
  * @author urs
  */
 public class GameplayTools {
+
+    public static final class PushTheLimitPredicate implements Predicate<Integer> {
+        @Override
+        public boolean apply(Integer input) {
+            // the INteger to 100 is static bound so this should match
+            return input == 6;
+        }
+    }
 
     /**
      * Create a runtime character.
@@ -240,6 +250,28 @@ public class GameplayTools {
     }
 
     /**
+     * Collectes the melee modififćators.
+     * 
+     * @param subject
+     * @param mods
+     * @return
+     */
+    public static int getMeleeCombatMod(RuntimeCharacter subject, List<ProbeMod> mods) {
+        int mod = 0;
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(RuntimePackage.Literals.NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE);
+
+        if (mods != null && subject.getExtendetData().containsKey(data)) {
+            ProbeMod probeMod = createProbeMod(subject, -1, RuntimePackage.Literals.NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE);
+            mods.add(probeMod);
+            mod++;
+        }
+
+        return mod;
+    }
+
+    /**
      * Return the range mod for a given distance and the weapon.
      * 
      * @param subject
@@ -384,6 +416,8 @@ public class GameplayTools {
     private static EObject findParentByType(EObject eObject, EClass eClass) {
         if (eObject != null && eClass.equals(eObject.eClass()))
             return eObject;
+        if (eObject == null)
+            return null;
         eObject = findParentByType(eObject.eContainer(), eClass);
         return eObject;
     }
@@ -396,6 +430,8 @@ public class GameplayTools {
         list.add(GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD);
         list.add(GameplayPackage.Literals.DEFENS_TEST_CMD);
         list.add(GameplayPackage.Literals.DAMAGE_TEST);
+        list.add(GameplayPackage.Literals.MEELE_ATTACK_CMD);
+        list.add(GameplayPackage.Literals.RANGED_ATTACK_CMD);
         return list;
     }
 
@@ -581,17 +617,47 @@ public class GameplayTools {
         return persona.getSpezies().getAngriff();
     }
 
-    
     public static Feuerwaffe getMagazingType(Magazin m) {
         Feuerwaffe type = m.getType();
-        if(type!=null)
+        if (type != null)
             return type;
-        
+
         EObject eContainer = m.eContainer();
         if (eContainer instanceof Feuerwaffe) {
-            return (Feuerwaffe)eContainer;            
+            return (Feuerwaffe)eContainer;
         }
         return null;
+    }
+
+    public static int getEdgeValue(RuntimeCharacter subject) {
+        AbstraktPersona persona = subject.getCharacter().getPersona();
+        int edge = persona.getEdge() + persona.getModManager().getmodWert(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE);
+        return edge;
+    }
+
+    public static List<Integer> rollPushTheLimit(int edgeValue) {
+        W6Dice w6Dice = new W6Dice();
+        List<Integer> probe = w6Dice.probe(edgeValue);
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(probe);
+        Collection<Integer> filter = Collections2.filter(probe, new PushTheLimitPredicate());
+
+        while (!filter.isEmpty()) {
+            probe = w6Dice.probe(filter.size());
+            arrayList.addAll(probe);
+            filter = Collections2.filter(probe, new PushTheLimitPredicate());
+        }
+        return arrayList;
+    }
+
+    /**
+     * Simple method.
+     * 
+     * @param subject
+     * @param i
+     */
+    public static void increaseEdgeValue(RuntimeCharacter subject, int i) {
+        int usedEdge = subject.getUsedEdge();
+        subject.setUsedEdge(usedEdge + i);
     }
 
 }

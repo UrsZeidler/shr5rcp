@@ -723,6 +723,33 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getProbe_PushTheLimit() {
+        return (EAttribute)probeEClass.getEStructuralFeatures().get(7);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getProbe_SecondChance() {
+        return (EAttribute)probeEClass.getEStructuralFeatures().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getProbe_CloseCall() {
+        return (EAttribute)probeEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getProbeCommand() {
         return probeCommandEClass;
     }
@@ -1387,6 +1414,9 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(probeEClass, PROBE__PROBE_STATE);
         createEReference(probeEClass, PROBE__PROBE_MODS);
         createEAttribute(probeEClass, PROBE__SKIP_TEST);
+        createEAttribute(probeEClass, PROBE__PUSH_THE_LIMIT);
+        createEAttribute(probeEClass, PROBE__SECOND_CHANCE);
+        createEAttribute(probeEClass, PROBE__CLOSE_CALL);
 
         probeCommandEClass = createEClass(PROBE_COMMAND);
         createEAttribute(probeCommandEClass, PROBE_COMMAND__MODS);
@@ -1591,6 +1621,9 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getProbe_ProbeState(), this.getProbeState(), "probeState", null, 1, 1, Probe.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEReference(getProbe_ProbeMods(), this.getProbeMod(), null, "probeMods", null, 0, -1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getProbe_SkipTest(), ecorePackage.getEBoolean(), "skipTest", null, 1, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProbe_PushTheLimit(), ecorePackage.getEBoolean(), "pushTheLimit", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProbe_SecondChance(), ecorePackage.getEBoolean(), "secondChance", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProbe_CloseCall(), ecorePackage.getEBoolean(), "closeCall", null, 0, 1, Probe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(probeCommandEClass, ProbeCommand.class, "ProbeCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProbeCommand_Mods(), ecorePackage.getEInt(), "mods", null, 0, 1, ProbeCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

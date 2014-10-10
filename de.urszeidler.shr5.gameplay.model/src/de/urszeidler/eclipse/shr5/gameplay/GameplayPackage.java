@@ -461,13 +461,40 @@ public interface GameplayPackage extends EPackage {
     int PROBE_COMMAND__SKIP_TEST = SUBJECT_COMMAND_FEATURE_COUNT + 6;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__PUSH_THE_LIMIT = SUBJECT_COMMAND_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__SECOND_CHANCE = SUBJECT_COMMAND_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__CLOSE_CALL = SUBJECT_COMMAND_FEATURE_COUNT + 9;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 7;
+    int PROBE_COMMAND__THRESHOLDS = SUBJECT_COMMAND_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Net Hits</b></em>' attribute.
@@ -476,7 +503,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 8;
+    int PROBE_COMMAND__NET_HITS = SUBJECT_COMMAND_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Test State</b></em>' attribute.
@@ -485,7 +512,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 9;
+    int PROBE_COMMAND__TEST_STATE = SUBJECT_COMMAND_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' attribute.
@@ -494,7 +521,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 10;
+    int PROBE_COMMAND__MODS = SUBJECT_COMMAND_FEATURE_COUNT + 13;
 
     /**
      * The number of structural features of the '<em>Probe Command</em>' class.
@@ -503,7 +530,7 @@ public interface GameplayPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 11;
+    int PROBE_COMMAND_FEATURE_COUNT = SUBJECT_COMMAND_FEATURE_COUNT + 14;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -667,6 +694,33 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -904,6 +958,33 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1119,6 +1200,33 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__SKIP_TEST = SKILL_TEST_CMD__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__PUSH_THE_LIMIT = SKILL_TEST_CMD__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__SECOND_CHANCE = SKILL_TEST_CMD__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__CLOSE_CALL = SKILL_TEST_CMD__CLOSE_CALL;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -1475,13 +1583,40 @@ public interface GameplayPackage extends EPackage {
     int PROBE__SKIP_TEST = 6;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__PUSH_THE_LIMIT = 7;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__SECOND_CHANCE = 8;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE__CLOSE_CALL = 9;
+
+    /**
      * The number of structural features of the '<em>Probe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROBE_FEATURE_COUNT = 7;
+    int PROBE_FEATURE_COUNT = 10;
 
     /**
      * The number of operations of the '<em>Probe</em>' class.
@@ -1748,6 +1883,33 @@ public interface GameplayPackage extends EPackage {
     int SUCCES_TEST__SKIP_TEST = PROBE__SKIP_TEST;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__PUSH_THE_LIMIT = PROBE__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__SECOND_CHANCE = PROBE__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST__CLOSE_CALL = PROBE__CLOSE_CALL;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1927,6 +2089,33 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int EXTENDET_SKILL_TEST_CMD__SKIP_TEST = SKILL_TEST_CMD__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__PUSH_THE_LIMIT = SKILL_TEST_CMD__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__SECOND_CHANCE = SKILL_TEST_CMD__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__CLOSE_CALL = SKILL_TEST_CMD__CLOSE_CALL;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -2164,6 +2353,33 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2379,6 +2595,33 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -3579,6 +3822,33 @@ public interface GameplayPackage extends EPackage {
     int MEELE_ATTACK_CMD__SKIP_TEST = OPPOSED_SKILL_TEST_CMD__SKIP_TEST;
 
     /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__PUSH_THE_LIMIT = OPPOSED_SKILL_TEST_CMD__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__SECOND_CHANCE = OPPOSED_SKILL_TEST_CMD__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__CLOSE_CALL = OPPOSED_SKILL_TEST_CMD__CLOSE_CALL;
+
+    /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3821,6 +4091,33 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int RANGED_ATTACK_CMD__SKIP_TEST = OPPOSED_SKILL_TEST_CMD__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__PUSH_THE_LIMIT = OPPOSED_SKILL_TEST_CMD__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__SECOND_CHANCE = OPPOSED_SKILL_TEST_CMD__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__CLOSE_CALL = OPPOSED_SKILL_TEST_CMD__CLOSE_CALL;
 
     /**
      * The feature id for the '<em><b>Thresholds</b></em>' attribute.
@@ -4768,6 +5065,39 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getProbe_SkipTest();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isPushTheLimit <em>Push The Limit</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Push The Limit</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#isPushTheLimit()
+     * @see #getProbe()
+     * @generated
+     */
+    EAttribute getProbe_PushTheLimit();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isSecondChance <em>Second Chance</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Second Chance</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#isSecondChance()
+     * @see #getProbe()
+     * @generated
+     */
+    EAttribute getProbe_SecondChance();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Probe#isCloseCall <em>Close Call</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Close Call</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Probe#isCloseCall()
+     * @see #getProbe()
+     * @generated
+     */
+    EAttribute getProbe_CloseCall();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeCommand <em>Probe Command</em>}'.
@@ -5821,6 +6151,30 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute PROBE__SKIP_TEST = eINSTANCE.getProbe_SkipTest();
+
+        /**
+         * The meta object literal for the '<em><b>Push The Limit</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE__PUSH_THE_LIMIT = eINSTANCE.getProbe_PushTheLimit();
+
+        /**
+         * The meta object literal for the '<em><b>Second Chance</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE__SECOND_CHANCE = eINSTANCE.getProbe_SecondChance();
+
+        /**
+         * The meta object literal for the '<em><b>Close Call</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROBE__CLOSE_CALL = eINSTANCE.getProbe_CloseCall();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl <em>Probe Command</em>}' class.

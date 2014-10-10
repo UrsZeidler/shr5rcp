@@ -96,6 +96,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
+import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -156,7 +157,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         emfFormBuilder.setManager(mananger);
         emfFormBuilder_skip = new EmfFormBuilder(null, itemDelegator, labelProvider, null);
         emfFormBuilder_skip.setManager(mananger);
-        eAllStructuralFeatures = Arrays.asList(features);
+        eAllStructuralFeatures = new ArrayList<EStructuralFeature>(Arrays.asList(features));
     }
 
     @Override
@@ -183,6 +184,15 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             setTitleImage(AdapterFactoryUtil.getInstance().getImageScaledBy(48f, desc.getImage()));
         setMessage(labelProvider.getText(probe));
         probe.eAdapters().add(this);
+        
+        if (probe instanceof SubjectCommand) {
+            SubjectCommand sc = (SubjectCommand)probe;
+            if(!sc.getSubject().canUseEdge()){
+                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+                eAllStructuralFeatures.remove(GameplayPackage.Literals.PROBE__SECOND_CHANCE);                
+            }
+        }
+        
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
             txtProbe.setEnabled(false);

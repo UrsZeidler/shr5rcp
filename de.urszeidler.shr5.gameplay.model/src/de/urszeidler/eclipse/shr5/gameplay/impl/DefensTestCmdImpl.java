@@ -96,6 +96,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
         prepareRedo();
 
+        pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
 
@@ -103,9 +104,13 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
             int dice = dicePool + mods;
             List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
             this.getProbe().addAll(probe);
-            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
+        if (getCmdCallback() != null && getSubject().canUseEdge())
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+
+        secondChance(getProbe().size());
         this.thresholds = attackersHits;
         this.netHits = getSuccesses() - thresholds;
 

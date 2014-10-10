@@ -29,10 +29,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements MeeleAttackCmd {
@@ -40,6 +40,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
      * The cached value of the '{@link #getWeapon() <em>Weapon</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getWeapon()
      * @generated
      * @ordered
@@ -49,6 +50,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MeeleAttackCmdImpl() {
@@ -58,6 +60,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -68,6 +71,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Nahkampfwaffe getWeapon() {
@@ -85,6 +89,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Nahkampfwaffe basicGetWeapon() {
@@ -94,6 +99,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setWeapon(Nahkampfwaffe newWeapon) {
@@ -106,13 +112,15 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.MEELE_ATTACK_CMD__WEAPON:
-                if (resolve) return getWeapon();
+                if (resolve)
+                    return getWeapon();
                 return basicGetWeapon();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -121,6 +129,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -136,6 +145,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -151,6 +161,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -170,14 +181,16 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
         getProbeMods().clear();
         setExecuting(true);
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
+        mods = mods + GameplayTools.getMeleeCombatMod(getSubject(), getProbeMods());
 
-        Fertigkeit fertigkeit = getWeapon().getFertigkeit();
-        setSkill(fertigkeit);
-        setLimit(getWeapon().getPraezision());
-
+        if (getWeapon() != null) {
+            Fertigkeit fertigkeit = getWeapon().getFertigkeit();
+            setSkill(fertigkeit);
+            setLimit(getWeapon().getPraezision());
+        }
         if (isSetCmdCallback() && getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
     }
 
@@ -185,6 +198,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     public void redo() {
         prepareRedo();
 
+        pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
 
@@ -192,22 +206,24 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
             List<Integer> probe = w6Dice.probe(dice);
             this.getProbe().addAll(probe);
             // if(isSetLimit())
-            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
-        this.netHits = getSuccesses() - thresholds;
 
         if (getCmdCallback() != null)
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.SUCCES_TEST__NET_HITS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
+        secondChance(getProbe().size());
+        this.netHits = getSuccesses() - thresholds;
         if (netHits > 0) {
             DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
             defensTestCmd.setSubject(getObject());
             defensTestCmd.setCmdCallback(getCmdCallback());
             defensTestCmd.setDate(getDate());
             defensTestCmd.setAttackersHits(netHits);
-            defensTestCmd.setMods(defensTestCmd.getMods() + GameplayTools.getMeleeReachMod(getSubject(), getWeapon(),getObject(), defensTestCmd.getProbeMods()));
+            defensTestCmd.setMods(defensTestCmd.getMods()
+                    + GameplayTools.getMeleeReachMod(getSubject(), getWeapon(), getObject(), defensTestCmd.getProbeMods()));
             getSubCommands().add(defensTestCmd);
             defensTestCmd.redo();
 

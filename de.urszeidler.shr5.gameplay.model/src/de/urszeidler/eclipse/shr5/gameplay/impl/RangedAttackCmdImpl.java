@@ -361,7 +361,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         if (isSetCmdCallback() && getCmdCallback() != null)
             getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
-                    GameplayPackage.Literals.RANGED_ATTACK_CMD__MODUS);
+                    GameplayPackage.Literals.RANGED_ATTACK_CMD__MODUS,GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
         mods = mods + GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
     }
@@ -370,21 +370,22 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     public void redo() {
         prepareRedo();
 
+        pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
             int dice = GameplayTools.getSkillDicePool(getSkill(), getSubject()) + mods;// getSkill().getStufe() + att + mods;
             List<Integer> probe = w6Dice.probe(dice);
             this.getProbe().addAll(probe);
-            // if(isSetLimit())
-            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
-        this.netHits = getSuccesses() - thresholds;
 
         if (getCmdCallback() != null)
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.SUCCES_TEST__NET_HITS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
+        secondChance(getProbe().size());
+        this.netHits = getSuccesses() - thresholds;
         if (netHits > 0) {
             DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
             defensTestCmd.setSubject(getObject());

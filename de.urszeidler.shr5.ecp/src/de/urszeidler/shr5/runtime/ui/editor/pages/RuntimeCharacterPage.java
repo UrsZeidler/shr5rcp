@@ -202,7 +202,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         }
         
         Group grpState = new Group(monitor, SWT.NONE);
-        grpState.setLayout(new GridLayout(1, false));
+        grpState.setLayout(new GridLayout(3, false));
         grpState.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpState.setText("State");
         managedForm.getToolkit().adapt(grpState);
@@ -238,6 +238,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND, composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND, composite_3);
         // emfFormBuilder.addSeperatorEntry(composite_3);
+        emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE, grpState);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, grpState);
         
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

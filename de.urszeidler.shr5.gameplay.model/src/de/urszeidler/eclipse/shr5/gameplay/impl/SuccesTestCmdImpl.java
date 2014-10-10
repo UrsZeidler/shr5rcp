@@ -21,10 +21,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SuccesTestCmdImpl#getDicePool <em>Dice Pool</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SuccesTestCmdImpl#getDicePool <em>Dice Pool</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd {
@@ -32,6 +32,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * The default value of the '{@link #getDicePool() <em>Dice Pool</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDicePool()
      * @generated
      * @ordered
@@ -42,6 +43,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * The cached value of the '{@link #getDicePool() <em>Dice Pool</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDicePool()
      * @generated
      * @ordered
@@ -51,6 +53,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SuccesTestCmdImpl() {
@@ -60,6 +63,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -70,6 +74,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getDicePool() {
@@ -79,6 +84,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDicePool(int newDicePool) {
@@ -91,6 +97,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -105,6 +112,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -120,6 +128,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -135,6 +144,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -149,11 +159,13 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (dicePool: ");
@@ -162,26 +174,41 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
         return result.toString();
     }
 
-    @Override
-    public void redo() {
-        getProbe().clear();
-        prepareRedo();
-
+    /**
+     * Set the state and call the callback.
+     */
+    protected void prepareRedo() {
+        setExecuting(true);
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SUCCES_TEST_CMD__DICE_POOL);
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SUCCES_TEST_CMD__DICE_POOL,
+                    GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
-        W6Dice w6Dice = new W6Dice();
-        int dice = dicePool + mods;
-        // AbstaktPersona persona = subject.getPersona();
-        List<Integer> probe = w6Dice.probe(dice);// .probe(fertigkeit.getStufe(), mw);
-        this.getProbe().addAll(probe);
-        // if(isSetLimit())
-        this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
-        this.glitches = W6Dice.calcGlitchDice(probe);
+    }
+
+    @Override
+    public void redo() {
+        getProbeMods().clear();
+        getProbe().clear();
+        prepareRedo();
+        
+        pushTheLimit();
+        if (!isSkipTest()) {
+            W6Dice w6Dice = new W6Dice();
+            int dice = dicePool + mods;
+            List<Integer> probe = w6Dice.probe(dice);
+            this.getProbe().addAll(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
+            this.glitches = W6Dice.calcGlitchDice(probe);
+        }
+        
+        if (getCmdCallback() != null && getSubject().canUseEdge())
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+
+        secondChance(getProbe().size());
         this.netHits = getSuccesses() - thresholds;
-
         afterRedo();
     }
+
 
 } // SuccesTestCmdImpl

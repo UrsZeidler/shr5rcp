@@ -579,8 +579,7 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             if (command instanceof Initative) {
                 Initative ini = (Initative)command;
                 if (ini.isSizeInitative()) {
-                    int usedEdge = ini.getSubject().getUsedEdge();
-                    ini.getSubject().setUsedEdge(usedEdge + 1);
+                   GameplayTools.increaseEdgeValue(ini.getSubject(), 1);
                 }
 
                 int currentIni = ini.getIni();

@@ -167,7 +167,8 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());       
         
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL);
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,
+                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
     }
 
@@ -175,23 +176,26 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     @Override
     public void redo() {
          prepareRedo();
-
+         
+        pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
 
             int dice = GameplayTools.getSkillDicePool(getSkill(), getSubject()) + mods;// getSkill().getStufe() + att + mods;
             List<Integer> probe = w6Dice.probe(dice);
             this.getProbe().addAll(probe);
-            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(probe)) : W6Dice.probeSucsessesShr5(probe);
+            this.successes = isSetLimit() ? Math.min(limit, W6Dice.probeSucsessesShr5(getProbe())) : W6Dice.probeSucsessesShr5(getProbe());
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
+
+        if (getCmdCallback() != null && getSubject().canUseEdge())
+            getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+
+        secondChance(getProbe().size());
         this.netHits = getSuccesses() - thresholds;
 
-        if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.afterCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
-        setExecuting(false);
-        setExecuted(true);
+        afterRedo();        
     }
+
 
 } // SkillTestCmdImpl
