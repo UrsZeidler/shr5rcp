@@ -75,7 +75,7 @@ public class ProbeFinishedDialog extends TitleAreaDialog {
      */
     @Override
     protected Control createDialogArea(Composite parent) {
-        setTitle("Probe finished");
+        setTitle(Messages.ProbeFinishedDialog_probeFinished_titel);
         Composite area = (Composite)super.createDialogArea(parent);
         Composite container = new Composite(area, SWT.NONE);
         container.setLayout(new GridLayout(1, false));

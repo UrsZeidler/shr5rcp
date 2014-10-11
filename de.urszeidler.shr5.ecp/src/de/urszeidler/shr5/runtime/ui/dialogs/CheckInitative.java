@@ -47,15 +47,15 @@ public class CheckInitative extends TitleAreaDialog {
      */
     @Override
     protected Control createDialogArea(Composite parent) {
-        setMessage("In the current combat turn the ini is :");
-        setTitle("Initative");
+        setMessage(Messages.CheckInitative_message);
+        setTitle(Messages.CheckInitative_titel);
         Composite area = (Composite)super.createDialogArea(parent);
         
 
         Group container = new Group(area, SWT.H_SCROLL);
         container.setLayout(new FillLayout(SWT.HORIZONTAL));
         container.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
-        container.setText("Ini");
+        container.setText(Messages.CheckInitative_section);
         
         ScrolledComposite scrolledComposite = new ScrolledComposite(container, SWT.H_SCROLL | SWT.V_SCROLL);
         scrolledComposite.setExpandHorizontal(true);

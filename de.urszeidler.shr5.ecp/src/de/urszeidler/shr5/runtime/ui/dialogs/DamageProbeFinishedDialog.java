@@ -34,7 +34,6 @@ import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
@@ -94,7 +93,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
      */
     @Override
     protected Control createDialogArea(Composite parent) {
-        setTitle("Damage probe finished");
+        setTitle(Messages.DamageProbeFinishedDialog_titel);
         
         Composite area = (Composite)super.createDialogArea(parent);
         Composite container = new Composite(area, SWT.NONE);
@@ -106,11 +105,11 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         gd_lblImage.widthHint = 32;
         gd_lblImage.heightHint = 32;
         lblImage.setLayoutData(gd_lblImage);
-        lblImage.setText("Image");
+        lblImage.setText("Image"); //$NON-NLS-1$
 
         lblName = new Label(container, SWT.NONE);
         lblName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        lblName.setText("name");
+        lblName.setText("name"); //$NON-NLS-1$
 
         txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
         txtProbe.setEnabled(false);
@@ -132,7 +131,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         ExpandableComposite xpndblcmpstPhysical = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
         xpndblcmpstPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.paintBordersFor(xpndblcmpstPhysical);
-        xpndblcmpstPhysical.setText("physical");
+        xpndblcmpstPhysical.setText(Messages.DamageProbeFinishedDialog_physical_state);
         xpndblcmpstPhysical.setExpanded(true);
 
         stateMonitorWidgetPhysical = new StateMonitorWidget(xpndblcmpstPhysical, SWT.NONE);
@@ -141,7 +140,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
 
         ExpandableComposite xpndblcmpstMental = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
         xpndblcmpstMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        xpndblcmpstMental.setText("mental");
+        xpndblcmpstMental.setText(Messages.DamageProbeFinishedDialog_mental_state);
         xpndblcmpstMental.setExpanded(true);
 
         stateMonitorWidgetMental = new StateMonitorWidget(xpndblcmpstMental, SWT.NONE);
@@ -150,7 +149,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         ExpandableComposite xpndblcmpstOverdead = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
         xpndblcmpstOverdead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
         formToolkit.paintBordersFor(xpndblcmpstOverdead);
-        xpndblcmpstOverdead.setText("overdead");
+        xpndblcmpstOverdead.setText(Messages.DamageProbeFinishedDialog_overdead_state);
         xpndblcmpstOverdead.setExpanded(true);
 
         stateMonitorWidgetOverDead = new StateMonitorWidget(xpndblcmpstOverdead, SWT.NONE);
