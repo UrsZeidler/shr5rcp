@@ -90,7 +90,9 @@ public class ScriptPage extends AbstractShr5Page<Script> {
 
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, labelProvider.getText(ScriptingPackage.Literals.SCRIPT__PLACEMENTS),
                 SWT.NONE, object, ScriptingPackage.Literals.SCRIPT__PLACEMENTS, toolkit, mananger, editingDomain, this);
-        treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        GridData gd_treeTableWidget = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
+        gd_treeTableWidget.heightHint = 200;
+        treeTableWidget.setLayoutData(gd_treeTableWidget);
         treeTableWidget.setSize(584, 133);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
