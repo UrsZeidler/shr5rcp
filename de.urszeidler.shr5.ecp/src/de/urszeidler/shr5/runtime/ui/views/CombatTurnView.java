@@ -164,7 +164,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
                 menu.setLocation(pt.x, pt.y + rect.height);
                 menu.setVisible(true);
             } else {
-                System.out.println(dropdown.getText() + " Pressed");
+                System.out.println(dropdown.getText() + " Pressed"); //$NON-NLS-1$
             }
         }
 
@@ -240,7 +240,7 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryContentProvider rootContentProvider;
     private AdapterFactoryContentProvider actionListContentProvider;
-    public static final String ID = "de.urszeidler.test.CombatTurnnView";
+    public static final String ID = "de.urszeidler.test.CombatTurnnView"; //$NON-NLS-1$
 
     private SashForm top_1;
     private Composite composite_bottom = null;
@@ -432,22 +432,22 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
                 executeCurrentCommand();
             }
         });
-        tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
-        tltmD.setToolTipText("execute");
+        tltmD.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmD.setToolTipText(Messages.CombatTurnView_tooltip_execute);
         {
             tltmS = new ToolItem(toolBar, SWT.DROP_DOWN);
-            tltmS.setText("c");
+            tltmS.setText(Messages.CombatTurnView_text_complex_action);
             ComplexActionDropdownSelectionListener listenerOne = new ComplexActionDropdownSelectionListener(tltmS);
             SkillTestCmd skillTestCmd = GameplayFactory.eINSTANCE.createSkillTestCmd();
             // skillTestCmd.setSubject(initativePass.getSubject());
             ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
             complexAction.getSubCommands().add(skillTestCmd);
-            listenerOne.add("skill test", complexAction);
+            listenerOne.add(Messages.CombatTurnView_text_skill_test, complexAction);
             SkillTestCmd skillTestCmd1 = GameplayFactory.eINSTANCE.createOpposedSkillTestCmd();
             // skillTestCmd.setSubject(initativePass.getSubject());
             ComplexAction complexAction1 = GameplayFactory.eINSTANCE.createComplexAction();
             complexAction1.getSubCommands().add(skillTestCmd1);
-            listenerOne.add("opposed skill", complexAction1);
+            listenerOne.add(Messages.CombatTurnView_text_opposed_skill_test, complexAction1);
             // listenerOne.add("Cast Spell", null);
             // listenerOne.add("Charge Attack", null);
             // listenerOne.add("Astral Projection", null);
@@ -460,29 +460,29 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
 
         {
             tltmSimple = new ToolItem(toolBar, SWT.DROP_DOWN);
-            tltmSimple.setText("s");
+            tltmSimple.setText(Messages.CombatTurnView_text_simpleAction);
             SimpleActionDropdownSelectionListener listenerOne = new SimpleActionDropdownSelectionListener(tltmSimple, iniPass);
             SimpleAction simpleAction = GameplayFactory.eINSTANCE.createSimpleAction();
-            listenerOne.add("1", simpleAction);
+            listenerOne.add("1", simpleAction); //$NON-NLS-1$
             tltmSimple.addSelectionListener(listenerOne);
 
         }
         {
             ToolItem tltmFree = new ToolItem(toolBar, SWT.DROP_DOWN);
-            tltmFree.setText("f");
+            tltmFree.setText(Messages.CombatTurnView_text_free_action);
             FreeActionDropdownSelectionListner listenerOne = new FreeActionDropdownSelectionListner(tltmFree);
             
             FreeAction freeAction = GameplayFactory.eINSTANCE.createFreeAction();
             SemanticAction semanticAction = GameplayFactory.eINSTANCE.createSemanticAction();
             semanticAction.setType(SemanticType.TALK);
             freeAction.getSubCommands().add(semanticAction);
-            listenerOne.add("say", freeAction);
+            listenerOne.add(Messages.CombatTurnView_text_say_action, freeAction);
             
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
             semanticAction = GameplayFactory.eINSTANCE.createSemanticAction();
             semanticAction.setType(SemanticType.TALK);
             freeAction.getSubCommands().add(semanticAction);
-            listenerOne.add("Gesture", freeAction);
+            listenerOne.add(Messages.CombatTurnView_text_gestrure_action, freeAction);
             
 //            tltmFree.addSelectionListener(listenerOne);            
             
@@ -496,10 +496,10 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             setExtendetData.setData(data);
             setExtendetData.setValue(true);
             freeAction.getSubCommands().add(setExtendetData);
-            listenerOne.add("Drop Prone", freeAction);
+            listenerOne.add(Messages.CombatTurnView_text_drop_prone_action, freeAction);
             
             freeAction = GameplayFactory.eINSTANCE.createFreeAction();
-            listenerOne.add("Kneel", freeAction);
+            listenerOne.add(Messages.CombatTurnView_text_kneel_action, freeAction);
             tltmFree.addSelectionListener(listenerOne);
 
         }

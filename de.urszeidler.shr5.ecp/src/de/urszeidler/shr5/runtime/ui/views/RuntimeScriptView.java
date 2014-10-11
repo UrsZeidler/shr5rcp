@@ -166,15 +166,15 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
                     if (ct.getCurrentTurn() == null)
                         return;
-                    printedProtocol.add(0, String.format("%s has %s %d turn at phase %d", labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
-                            .getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE ? "her" : "his", ct.getCurrentTurn().getTurn(), ct
+                    printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_start_info, labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
+                            .getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE ? Messages.RuntimeScriptView_sex_femal : Messages.RuntimeScriptView_sex_mal, ct.getCurrentTurn().getTurn(), ct
                             .getCurrentTurn().getPhase()));
 
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuted())
-                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has ended.", ct.getDate(), ct.getSequence()));
+                        printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_end, ct.getDate(), ct.getSequence()));
                     else
-                        printedProtocol.add(0, String.format("%tT >> Combat turn %s has started.", ct.getDate(), ct.getSequence()));
+                        printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combatturn_start, ct.getDate(), ct.getSequence()));
                 return;
             } else if (notifier instanceof InitativePass) {
                 InitativePass ip = (InitativePass)notifier;
@@ -183,7 +183,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                         TreeIterator<EObject> eAllContents = ip.eAllContents();
                         if (!eAllContents.hasNext())
-                            printedProtocol.add(0, String.format("%tT >> %s pass", ip.getDate(), labelProvider.getText(ip.getSubject())));
+                            printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_pass, ip.getDate(), labelProvider.getText(ip.getSubject())));
 
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
@@ -228,8 +228,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
 
-    protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective";
-    protected static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective";
+    protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective"; //$NON-NLS-1$
+    protected static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective"; //$NON-NLS-1$
     private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
     private Placement placement1 = ScriptingFactory.eINSTANCE.createPlacement();
     private WritableValue placement = new WritableValue(); // ScriptingFactory.eINSTANCE.createPlacement();
@@ -317,7 +317,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
         };
 
-        timeTrackJob = new TimeTracker("timetrack");
+        timeTrackJob = new TimeTracker("timetrack"); //$NON-NLS-1$
         timeTrackJob.setSystem(true);
     }
 
@@ -365,21 +365,21 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             composite_1.setLayout(twl_composite_1);
         }
 
-        lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE);
+        lblImg = formToolkit.createLabel(composite_1, "", SWT.NONE); //$NON-NLS-1$
         lblImg.setLayoutData(new TableWrapData(TableWrapData.RIGHT, TableWrapData.MIDDLE, 2, 1));
         // lblImg.setBounds(0, 0, 32, 32);
         lblImg.setSize(96, 96);
-        lblImg.setText("         ");
-        lblImg.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png"));
+        lblImg.setText("         "); //$NON-NLS-1$
+        lblImg.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/interrupt-1.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
-        lblName = formToolkit.createLabel(composite_1, "New Label", SWT.NONE);
+        lblName = formToolkit.createLabel(composite_1, "New Label", SWT.NONE); //$NON-NLS-1$
         lblName.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
         lblName.setSize(96, 96);
 
         lblDesc = new Label(composite_1, SWT.NONE);
         lblDesc.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         formToolkit.adapt(lblDesc, true, true);
-        lblDesc.setText("desc");
+        lblDesc.setText("desc"); //$NON-NLS-1$
         // new Label(composite_1, SWT.NONE);
 
         // ----
@@ -393,10 +393,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
 
         sctnActionSection = formToolkit.createSection(composite_7, Section.TWISTIE | Section.TITLE_BAR);
-        sctnActionSection.setDescription("The available actions in this placement.");
+        sctnActionSection.setDescription(Messages.RuntimeScriptView_section_action_desc);
         sctnActionSection.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnActionSection);
-        sctnActionSection.setText("Actions");
+        sctnActionSection.setText(Messages.RuntimeScriptView_section_action);
         sctnActionSection.setExpanded(true);
 
         Composite composite_11 = formToolkit.createComposite(sctnActionSection, SWT.NONE);
@@ -476,8 +476,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             public void widgetSelected(SelectionEvent e) {
                 if (timeTrackJob.isTimetracking) {
                     timeTrackJob.isTimetracking = false;
-                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
-                    tltmTimeTrackingItem.setText("start time tracking");
+                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png")); //$NON-NLS-1$ //$NON-NLS-2$
+                    tltmTimeTrackingItem.setText(Messages.RuntimeScriptView_time_tracking_action_start);
                 } else {
                     TimetrackingDialog timetrackingDialog = new TimetrackingDialog(getSite().getShell(), timeTrackFactor);
                     if (timetrackingDialog.open() == Dialog.CANCEL)
@@ -485,26 +485,26 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     timeTrackFactor = timetrackingDialog.getFactor();
                     timeTrackJob.isTimetracking = true;
                     timeTrackJob.schedule();
-                    tltmTimeTrackingItem.setText("stop time tracking");
-                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking-off.png"));
+                    tltmTimeTrackingItem.setText(Messages.RuntimeScriptView_time_tracking_action_stop);
+                    tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking-off.png")); //$NON-NLS-1$ //$NON-NLS-2$
                 }
             }
         });
-        tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png"));
-        tltmTimeTrackingItem.setText("start time tracking");
+        tltmTimeTrackingItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/time-tracking.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmTimeTrackingItem.setText(Messages.RuntimeScriptView_time_tracking_action_start);
 
         ToolItem tltmStartcombatturn = new ToolItem(toolBar, SWT.NONE);
-        tltmStartcombatturn.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/start-combat.png"));
+        tltmStartcombatturn.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/start-combat.png")); //$NON-NLS-1$ //$NON-NLS-2$
         tltmStartcombatturn.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 startCombatTurn();
             }
         });
-        tltmStartcombatturn.setText("startCombatTurn");
+        tltmStartcombatturn.setText(Messages.RuntimeScriptView_startCombatTurn_action);
 
         ToolItem tltmExecuteaction = new ToolItem(toolBar, SWT.NONE);
-        tltmExecuteaction.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png"));
+        tltmExecuteaction.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/execute-command.png")); //$NON-NLS-1$ //$NON-NLS-2$
         tltmExecuteaction.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -517,19 +517,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 }
             }
         });
-        tltmExecuteaction.setText("executeAction");
+        tltmExecuteaction.setText(Messages.RuntimeScriptView_execute_action);
 
         ToolItem tltmSwitchplacement = new ToolItem(toolBar, SWT.NONE);
-        tltmSwitchplacement.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/switch-placement.png"));
+        tltmSwitchplacement.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/switch-placement.png")); //$NON-NLS-1$ //$NON-NLS-2$
         tltmSwitchplacement.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 switchPlacement();
             }
         });
-        tltmSwitchplacement.setText("switchPlacement");
+        tltmSwitchplacement.setText(Messages.RuntimeScriptView_switch_action);
 
-        lblDatetimelong = formToolkit.createLabel(composite_11, "dateTimeLong", SWT.NONE);
+        lblDatetimelong = formToolkit.createLabel(composite_11, "dateTimeLong", SWT.NONE); //$NON-NLS-1$
         new Label(composite_11, SWT.NONE);
         new Label(composite_11, SWT.NONE);
 
@@ -555,7 +555,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         sctnBackground.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.MIDDLE, 1, 1));
         sctnBackground.setSize(1183, 116);
         formToolkit.paintBordersFor(sctnBackground);
-        sctnBackground.setText("Background");
+        sctnBackground.setText(Messages.RuntimeScriptView_section_background);
         sctnBackground.setExpanded(true);
 
         Composite composite_2 = formToolkit.createComposite(sctnBackground, SWT.NONE);
@@ -576,10 +576,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.paintBordersFor(composite_10);
 
         sctnTimeTracking = formToolkit.createSection(composite_10, Section.TWISTIE | Section.TITLE_BAR);
-        sctnTimeTracking.setDescription("The current time.");
+        sctnTimeTracking.setDescription(Messages.RuntimeScriptView_section_timetracking_description);
 
         formToolkit.paintBordersFor(sctnTimeTracking);
-        sctnTimeTracking.setText("TimeTracking");
+        sctnTimeTracking.setText(Messages.RuntimeScriptView_section_timetracking);
         sctnTimeTracking.setExpanded(true);
 
         Composite composite_5 = formToolkit.createComposite(sctnTimeTracking, SWT.NONE);
@@ -609,7 +609,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         sctnInTheirFace = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
-        sctnInTheirFace.setText("In their face");
+        sctnInTheirFace.setText(Messages.RuntimeScriptView_section_in_their_face);
         sctnInTheirFace.setExpanded(true);
 
         Composite composite_3 = formToolkit.createComposite(sctnInTheirFace, SWT.NONE);
@@ -631,7 +631,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         sctnDebugging.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.TOP, 1, 1));
         sctnInTheirFace.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnInTheirFace);
-        sctnDebugging.setText("Debugging");
+        sctnDebugging.setText(Messages.RuntimeScriptView_section_debugging);
         sctnDebugging.setExpanded(true);
 
         Composite composite_4 = formToolkit.createComposite(sctnDebugging, SWT.NONE);
@@ -654,7 +654,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         twd_sctnProtocol.heightHint = 218;
         sctnProtocol.setLayoutData(twd_sctnProtocol);
         formToolkit.paintBordersFor(sctnProtocol);
-        sctnProtocol.setText("protocol");
+        sctnProtocol.setText(Messages.RuntimeScriptView_section_protocol);
 
         Composite composite_14 = new Composite(sctnProtocol, SWT.NONE);
         sctnProtocol.setClient(composite_14);
@@ -868,7 +868,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
 
         FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, "Select combatans", choiceOfValues);
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues);
         if (dialogWert.open() == Dialog.OK)
             combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
         else
@@ -901,14 +901,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      * @return
      */
     private String printCommand(Command cmd) {
-        return String.format("%tT >> %s %s", cmd.getDate(), labelProvider.getText(cmd), ShadowrunEditingTools.command2String(cmd));
+        return String.format(Messages.RuntimeScriptView_protocol_basic_command, cmd.getDate(), labelProvider.getText(cmd), ShadowrunEditingTools.command2String(cmd));
     }
 
     @SuppressWarnings("unchecked")
     private void switchPlacement() {
         EList<Placement> nextPlacements = placement1.getNextPlacements();
 
-        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), "titel", "message");
+        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), Messages.RuntimeScriptView_choose_placement_dialog_titel, Messages.RuntimeScriptView_choose_placement_dialog_message);
         dialog.setLabelProvider(labelProvider);
         int open = dialog.open();
         if (open == Dialog.OK) {
@@ -918,7 +918,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
                 command.setDate(placement1.getActualDate());
                 scriptService.setPlacement(eo);
-                printedProtocol.add(0, String.format("%tT >> switched to %s", placement1.getActualDate(), labelProvider.getText(eo)));
+                printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_switch_placement, placement1.getActualDate(), labelProvider.getText(eo)));
             }
         }
     }
@@ -926,7 +926,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "before execute", ProbeExecutionState.beforeExecute, eStructuralFeatures);
+                Messages.RuntimeScriptView_probedialog_titel_before_execute, ProbeExecutionState.beforeExecute, eStructuralFeatures);
         d.open();
 
     }
@@ -934,7 +934,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public void beforeSubcommands(Command cmd, EStructuralFeature... eStructuralFeatures) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "before sub", ProbeExecutionState.beforeSubcommands, eStructuralFeatures);
+                Messages.RuntimeScriptView_probedialog_titel_before_subcommand, ProbeExecutionState.beforeSubcommands, eStructuralFeatures);
         d.open();
 
     }
@@ -953,7 +953,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return;
 
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS,
                     GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
@@ -966,7 +966,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // return;
 
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, eStructuralFeatures);
             // GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
             // GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
             // GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
@@ -975,14 +975,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         } else if (cmd instanceof DamageTest) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT );
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DefensTestCmd) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS,
                     GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
             genericEObjectDialog.open();
@@ -999,14 +999,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
         else if (cmd instanceof SkillTestCmd) {
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "prepare", ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                 GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.PROBE__LIMIT,
                 GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS,GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
         d.open();
         return;
         }
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
+                Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, eStructuralFeatures);
         d.open();
         return ;
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -1024,7 +1024,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
 
-            if (MessageDialog.openQuestion(getSite().getShell(), "Continue combat sequence ?", "Continue the combat with the current combatants.")) {
+            if (MessageDialog.openQuestion(getSite().getShell(), Messages.RuntimeScriptView_continue_combat_dialog_titel, Messages.RuntimeScriptView_continue_combat_dialog_message)) {
                 EList<RuntimeCharacter> combatants = ct.getCombatants();
                 contiueCombatTurn(combatants);
             } else {
@@ -1042,7 +1042,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         } else if (cmd instanceof SetFeatureCommand) {
             SetFeatureCommand sf = (SetFeatureCommand)cmd;
             ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                    "prepare", ProbeExecutionState.prepare, eStructuralFeatures);
+                    Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, eStructuralFeatures);
             d.open();
         }
 
@@ -1050,7 +1050,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // probeFinishedDialog.open();
 
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                "finished", ProbeExecutionState.afterExecute);
+                Messages.RuntimeScriptView_probedialog_titel_finished_command, ProbeExecutionState.afterExecute);
         d.open();
 
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
