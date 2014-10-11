@@ -124,7 +124,9 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
                                     List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
                                     return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)));
                                 }
-
+                                EReference eContainmentFeature = eo.eContainmentFeature();
+                                List<EObject> eGet = (List<EObject>)eo.eContainer().eGet(eContainmentFeature);
+                                return new ArrayList<Object>(Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)));                                
                             } catch (Exception e) {
                                 e.fillInStackTrace();
                             }
