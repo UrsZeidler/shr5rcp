@@ -21,6 +21,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Munition} object.
@@ -218,10 +220,14 @@ public class MunitionItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((Munition)object).getName();
+        Munition munition = (Munition)object;
+        String label = munition.getName();
+        
+        String t = munition.getType()== null ? "unset" : AdapterFactoryUtil.getInstance().getLabelProvider().getText(munition.getType());
+        String typeText =  " ("+ t +") " ;
         return label == null || label.length() == 0 ?
             getString("_UI_Munition_type") :
-            getString("_UI_Munition_type") + " " + label;
+            label+typeText+munition.getAnzahl(); 
     }
 
     /**
