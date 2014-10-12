@@ -20647,7 +20647,7 @@
         <members xmi:id="_dugUMD_hEeSuOvfh9dLK7w" character="_uFDVkD_FEeSlOsHYyoPYOQ" leftHand="_N7shkD_HEeSlOsHYyoPYOQ" inUse="_N7shkD_HEeSlOsHYyoPYOQ _N8nHkD_HEeSlOsHYyoPYOQ _N9bm8D_HEeSlOsHYyoPYOQ _OE_ngD_HEeSlOsHYyoPYOQ _yfgOAD_NEeSdXvk3e0TcZw _N_DXkD_HEeSlOsHYyoPYOQ" armor="_OE_ngD_HEeSlOsHYyoPYOQ"/>
       </allTeams>
       <player xmi:id="_lP63MD_hEeSuOvfh9dLK7w" name="player">
-        <members xmi:id="_l3VLYFDKEeSjN8rIya5QCA" character="_BzO4cN0CEeOvVYoRsPZlnA"/>
+        <members xmi:id="_l3VLYFDKEeSjN8rIya5QCA" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_JoEq4FDLEeSjN8rIya5QCA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_JoEq4FDLEeSjN8rIya5QCA _Job3QFDLEeSjN8rIya5QCA _Bz18c90CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18cN0CEeOvVYoRsPZlnA _Bz18dN0CEeOvVYoRsPZlnA _TEY0UFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA _Jo-CwFDLEeSjN8rIya5QCA _Jos9AFDLEeSjN8rIya5QCA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
       </player>
       <history xmi:id="_kBBKAFDKEeSjN8rIya5QCA" currentPlacement="_9PjhID_WEeSQWIeEm8LnkA">
         <commandStack xmi:id="_kBFbcFDKEeSjN8rIya5QCA">
