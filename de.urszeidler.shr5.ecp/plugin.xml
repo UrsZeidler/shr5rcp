@@ -330,6 +330,7 @@
             
          </menu>
          <menu
+               id="de.urszeidler.shr5.ecp.menus.scriptMenu"
                label="script">
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
