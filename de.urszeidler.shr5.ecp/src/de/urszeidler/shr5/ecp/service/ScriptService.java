@@ -28,4 +28,6 @@ public interface ScriptService {
     void registerScriptViewer(ScriptViewer viewer);
     
     void registerCombatViewer(CombatViewer viewer);
+
+    ScriptViewer getScriptViewer();
 }

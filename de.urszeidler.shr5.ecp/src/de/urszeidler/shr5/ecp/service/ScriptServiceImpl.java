@@ -131,4 +131,8 @@ public class ScriptServiceImpl implements ScriptService {
 
         }
     }
+    @Override
+    public ScriptViewer getScriptViewer() {
+        return scriptViewer;
+    }
 }
