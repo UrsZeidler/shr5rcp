@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5ManagementEditPlugin;
 
 /**
@@ -82,14 +83,15 @@ public final class GameplayEditPlugin extends EMFPlugin {
          * Creates an instance.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
+         * @generated not
          */
         public Implementation() {
             super();
 
             // Remember the static instance.
             //
-            plugin = this;
+            plugin = this;            
+            AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(new GameplayItemProviderAdapterFactory());
         }
     }
 

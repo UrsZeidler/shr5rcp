@@ -50,9 +50,9 @@ public abstract class AbstractShr5Editor extends BasicEditor<EObject> {
     @Override
     protected void initAdatpterFactory() {
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
-        adapterFactory.insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
-        adapterFactory.insertAdapterFactory(new GameplayAdapterFactory());
-        adapterFactory.insertAdapterFactory(new RuntimeAdapterFactory());
+//        adapterFactory.insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
+//        adapterFactory.insertAdapterFactory(new GameplayAdapterFactory());
+//        adapterFactory.insertAdapterFactory(new RuntimeAdapterFactory());
         basicContentProvider = new AdapterFactoryContentProvider(adapterFactory);
 
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
