@@ -5,7 +5,9 @@ package de.urszeidler.eclipse.shr5.util;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,8 +18,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -453,30 +458,30 @@ public class ShadowrunTools {
         return -1;
     }
 
-//    /**
-//     * Returns the dicepool for the fertigkeit.
-//     * 
-//     * @param fertigkeit
-//     * @param persona
-//     * @return
-//     */
-//    public static Integer fertigkeitDicePool(PersonaFertigkeit personaFertigkeit, AbstraktPersona persona) {
-//        if (personaFertigkeit == null || persona == null)
-//            return -1;
-//
-//        Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
-//        if (fertigkeit != null && fertigkeit.getAttribut() != null) {
-//            Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
-//            Integer fertigkeitValue = personaFertigkeit.getStufe();
-//            if (fertigkeitValue == 0)
-//                return value - 1;
-//
-//            value = value + fertigkeitValue;
-//            return value;
-//        }
-//
-//        return -1;
-//    }
+    // /**
+    // * Returns the dicepool for the fertigkeit.
+    // *
+    // * @param fertigkeit
+    // * @param persona
+    // * @return
+    // */
+    // public static Integer fertigkeitDicePool(PersonaFertigkeit personaFertigkeit, AbstraktPersona persona) {
+    // if (personaFertigkeit == null || persona == null)
+    // return -1;
+    //
+    // Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
+    // if (fertigkeit != null && fertigkeit.getAttribut() != null) {
+    // Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
+    // Integer fertigkeitValue = personaFertigkeit.getStufe();
+    // if (fertigkeitValue == 0)
+    // return value - 1;
+    //
+    // value = value + fertigkeitValue;
+    // return value;
+    // }
+    //
+    // return -1;
+    // }
 
     /**
      * Returns the stufe or -1.
@@ -532,7 +537,7 @@ public class ShadowrunTools {
     public static int calcRaceMaximum(AbstraktPersona persona, EAttribute attribute) {
         if (persona == null)
             return -1;
-        
+
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
             return -1;
@@ -554,8 +559,8 @@ public class ShadowrunTools {
         if (persona == null)
             return -1;
 
-        //TODO :  this is the wrong method it calcs the overRaceMax need to add the right  method also
-        
+        // TODO : this is the wrong method it calcs the overRaceMax need to add the right method also
+
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
             return -1;
@@ -640,25 +645,26 @@ public class ShadowrunTools {
 
     /**
      * Parse a damage code to an effective one. f.e. STR+1, where the strength is taken from the persona.
+     * 
      * @param damage
      * @param persona
      * @return
      */
-    public static DamageCode parseDamageCode(String damage,AbstraktPersona persona) {
+    public static DamageCode parseDamageCode(String damage, AbstraktPersona persona) {
         DamageCode damageCode = ShadowrunTools.parseDamageCode(damage);
         if (damageCode != null) {
             int power = damageCode.getPower();
-            if(damageCode.getAttribute()!=null){
+            if (damageCode.getAttribute() != null) {
                 Integer value = (Integer)persona.eGet(damageCode.getAttribute());
                 power = value + power;
                 return new DamageCode(power, damageCode.type);
-            }else
+            } else
                 return damageCode;
         }
-        
-        return null;        
+
+        return null;
     }
-    
+
     public static DamageCode parseDamageCode(String damage) {
         if (damage == null)
             return null;
@@ -763,15 +769,70 @@ public class ShadowrunTools {
 
     /**
      * Create a predicate to filter for the eclass.
+     * 
      * @param eClass
      * @return
      */
     public static Predicate<? super EObject> eclassPredicate(final EClass eClass) {
-       return new Predicate<EObject>() {
+        return new Predicate<EObject>() {
             @Override
             public boolean apply(EObject input) {
                 return eClass.equals(input.eClass());
             }
         };
+    }
+
+    public static String getResourceId(EObject eo) {
+        try {
+            XMLResource xmlRes = (XMLResource)eo.eResource();
+            return xmlRes.getID(eo);
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+ 
+    
+    /**
+     * Return a predicate to filter by the xml id.
+     * 
+     * @param id
+     * @return
+     */
+    public static Predicate<EObject> xmlIdPredicate(final String id) {
+        if (id == null)
+            throw new IllegalArgumentException("Null is no valid id !!");
+        return new Predicate<EObject>() {
+            @Override
+            public boolean apply(EObject input) {
+                String resourceId = ShadowrunTools.getResourceId(input);
+                return id.equals(resourceId);
+            }
+        };
+
+    }
+    
+    public static Function<String, EObject> xmlId2EObjectTransformer(final Collection<? extends EObject> objects) {
+        return new Function<String, EObject>() {
+            @Override
+            public EObject apply(String input) {               
+                return getFirstObjectById(objects, input);
+            }
+            
+        };
+    }
+
+    public static EObject getFirstObjectById(Collection<? extends EObject> objects, String id) {
+        try {
+            Collection<? extends EObject> filter = Collections2.filter(objects, ShadowrunTools.xmlIdPredicate(id));
+            Iterator<? extends EObject> iterator = filter.iterator();
+            if (!iterator.hasNext())
+                return null;
+
+            return iterator.next();
+
+        } catch (Exception e) {
+        }
+        return null;
     }
 }
