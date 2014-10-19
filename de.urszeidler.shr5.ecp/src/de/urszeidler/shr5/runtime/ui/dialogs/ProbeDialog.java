@@ -129,7 +129,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             txtProbe.setEnabled(false);
             txtProbe.setText(ShadowrunEditingTools.command2String(probe));
             GridData gd_txtProbe = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
-            gd_txtProbe.heightHint = 53;
+            gd_txtProbe.heightHint = 30;
             txtProbe.setLayoutData(gd_txtProbe);
         }
 
@@ -164,14 +164,14 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             txtProbe.setEnabled(false);
             // txtProbe.setText(GameplayEditTools.probe2ProbeString((Probe)probe));
             GridData gd_txtProbe = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
-            gd_txtProbe.heightHint = 53;
+            gd_txtProbe.heightHint = 30;
             txtProbe.setLayoutData(gd_txtProbe);
         }
 
         TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
         Tree tree = treeViewer.getTree();
         GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
-        layoutData.heightHint = 80;
+        layoutData.heightHint = 60;
         tree.setLayoutData(layoutData);
 
         treeViewer.setLabelProvider(labelProvider);
