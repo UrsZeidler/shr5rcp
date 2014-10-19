@@ -304,14 +304,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
 
         prepareRedo();
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
-        int armor = 0;
-        if (persona instanceof KoerperPersona) {
-            KoerperPersona kp = (KoerperPersona)persona;
-            armor = armor + kp.getPanzer();
-        }
-        Kleidung k = getSubject().getArmor();
-        if (k != null)
-            armor = armor + k.getRuestung();
+        int armor = GameplayTools.getArmorValue(getSubject());
 
         DamageCode damageCode = ShadowrunTools.parseDamageCode(getDamage());
         int modArmor = armor + getDv();
@@ -355,4 +348,4 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
         afterRedo();
     }
 
-} // DamageTestImpl
+ } // DamageTestImpl

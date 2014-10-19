@@ -22,6 +22,8 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
@@ -658,6 +660,23 @@ public class GameplayTools {
     public static void increaseEdgeValue(RuntimeCharacter subject, int i) {
         int usedEdge = subject.getUsedEdge();
         subject.setUsedEdge(usedEdge + i);
+    }
+
+    /**
+     * @param persona
+     * @return
+     */
+    public static int getArmorValue(RuntimeCharacter subject) {
+        AbstraktPersona persona = subject.getCharacter().getPersona();
+        int armor = 0;
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            armor = armor + kp.getPanzer();
+        }
+        Kleidung k = subject.getArmor();
+        if (k != null)
+            armor = armor + k.getRuestung();
+        return armor;
     }
 
 }
