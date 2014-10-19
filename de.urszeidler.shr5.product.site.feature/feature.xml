@@ -22,7 +22,6 @@
 
    <includes
          id="de.urszeidler.shr5.feature"
-         version="0.0.0"
-         optional="true"/>
+         version="0.0.0"/>
 
 </feature>
