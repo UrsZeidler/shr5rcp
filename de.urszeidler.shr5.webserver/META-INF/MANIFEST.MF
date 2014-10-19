@@ -44,3 +44,4 @@ Require-Bundle: javax.servlet;bundle-version="3.0.0",
 Bundle-Activator: de.urszeidler.shr5.webserver.Activator
 Export-Package: de.urszeidler.shr5.webserver,
  de.urszeidler.shr5.webserver.mgnt
+Bundle-ActivationPolicy: lazy
