@@ -531,4 +531,18 @@ public class ShadowrunEditingTools {
         return setFeatureCommand;
     }
 
+    /**
+     * Transform the  eobjects to the label provider names.
+     * @return
+     */
+    public static Function<EObject,String> eObject2StringTransformer() {
+         return new Function<EObject, String>() {
+
+            @Override
+            public String apply(EObject input) {
+                return AdapterFactoryUtil.getInstance().getLabelProvider().getText(input);
+            }
+        };
+    }
+
 }
