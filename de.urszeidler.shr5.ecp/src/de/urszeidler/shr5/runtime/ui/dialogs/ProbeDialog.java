@@ -30,10 +30,12 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
+import de.urszeidler.eclipse.shr5.gameplay.provider.util.GameplayEditTools;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -157,6 +159,13 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             emfFormBuilder_skip.addAllEntries(eAllStructuralFeatures_1, null);
             emfFormBuilder_skip.buildinComposite(ctx, grpData, probe);
             grpData.setSize(grpData.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+
+            txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
+            txtProbe.setEnabled(false);
+            // txtProbe.setText(GameplayEditTools.probe2ProbeString((Probe)probe));
+            GridData gd_txtProbe = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 3);
+            gd_txtProbe.heightHint = 53;
+            txtProbe.setLayoutData(gd_txtProbe);
         }
 
         TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
@@ -221,6 +230,8 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
     @Override
     public void notifyChanged(Notification notification) {
         setMessage(labelProvider.getText(probe));
+        if (txtProbe != null)
+            txtProbe.setText(GameplayEditTools.probe2ProbeString((Probe)probe));
     }
 
     @Override
