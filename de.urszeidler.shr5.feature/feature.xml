@@ -17,10 +17,6 @@
       [Enter License Description here.]
    </license>
 
-   <url>
-      <update label="test" url="http://valis:8080/job/shr5-maven/ws/de.urszeidler.shr5.updatesite/target/repository/"/>
-   </url>
-
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
@@ -197,6 +193,7 @@
          id="de.urszeidler.shr5.webserver"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
