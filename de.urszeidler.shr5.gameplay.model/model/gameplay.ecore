@@ -353,5 +353,6 @@
     </eAnnotations>
     <eLiterals name="talk"/>
     <eLiterals name="gesture" value="1"/>
+    <eLiterals name="description" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

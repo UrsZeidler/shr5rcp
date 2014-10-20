@@ -40,7 +40,15 @@ public enum SemanticType implements Enumerator {
      * @generated
      * @ordered
      */
-    GESTURE(1, "gesture", "gesture");
+    GESTURE(1, "gesture", "gesture"), /**
+     * The '<em><b>Description</b></em>' literal object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #DESCRIPTION_VALUE
+     * @generated
+     * @ordered
+     */
+    DESCRIPTION(2, "description", "description");
 
     /**
      * The '<em><b>Talk</b></em>' literal value.
@@ -73,6 +81,21 @@ public enum SemanticType implements Enumerator {
     public static final int GESTURE_VALUE = 1;
 
     /**
+     * The '<em><b>Description</b></em>' literal value.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>Description</b></em>' literal object isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @see #DESCRIPTION
+     * @model name="description"
+     * @generated
+     * @ordered
+     */
+    public static final int DESCRIPTION_VALUE = 2;
+
+    /**
      * An array of all the '<em><b>Semantic Type</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -82,6 +105,7 @@ public enum SemanticType implements Enumerator {
         new SemanticType[] {
             TALK,
             GESTURE,
+            DESCRIPTION,
         };
 
     /**
@@ -134,6 +158,7 @@ public enum SemanticType implements Enumerator {
         switch (value) {
             case TALK_VALUE: return TALK;
             case GESTURE_VALUE: return GESTURE;
+            case DESCRIPTION_VALUE: return DESCRIPTION;
         }
         return null;
     }

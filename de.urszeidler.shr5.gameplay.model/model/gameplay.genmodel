@@ -28,6 +28,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gameplay.ecore#//SemanticType">
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SemanticType/talk"/>
       <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SemanticType/gesture"/>
+      <genEnumLiterals ecoreEnumLiteral="gameplay.ecore#//SemanticType/description"/>
     </genEnums>
     <genDataTypes ecoreDataType="gameplay.ecore#//CommandCallback"/>
     <genClasses ecoreClass="gameplay.ecore#//ExecutionStack">

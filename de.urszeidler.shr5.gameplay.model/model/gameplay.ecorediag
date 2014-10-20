@@ -706,6 +706,10 @@
           <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//SemanticType/gesture"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_CdGtkUprEeS5_ryhmr9gtg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_6xo7UFiPEeSQItkTxYTbgA" type="2006">
+          <element xmi:type="ecore:EEnumLiteral" href="gameplay.ecore#//SemanticType/description"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6xpiYFiPEeSQItkTxYTbgA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="__IQRoUpqEeS5_ryhmr9gtg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="__IQRokpqEeS5_ryhmr9gtg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="__IQRo0pqEeS5_ryhmr9gtg"/>
