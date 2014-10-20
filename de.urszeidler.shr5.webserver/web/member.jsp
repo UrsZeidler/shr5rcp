@@ -37,18 +37,11 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-   <style>
-         .ui-widget-header,.ui-state-default, ui-button{
-            background:#b9cd6d;
-            border: 1px solid #b9cd6d;
-            color: #FFFFFF;
-            font-weight: bold;
-         }
-      </style>
-</head>
+  </head>
 
 <body>
-<script  type="text/javascript" >
+	<div id="dialog" title="Probe dialog" class="ui-dialog-content"></div>
+	<script  type="text/javascript" >
 $("#dialog").dialog({autoOpen : false, modal : true, show : "fadeIn", hide : "fadeOut"});
 
 (function poll() {
@@ -58,7 +51,10 @@ $("#dialog").dialog({autoOpen : false, modal : true, show : "fadeIn", hide : "fa
         success: function(data) {
         	if(data!=""){
         		$('#dialog').html(data);
-        		$('#page').html('');
+        		//$('#page').html('');
+        		$('#dialog').dialog( "option", "position", { my: "left top", at: "left top", of: window } );
+        		$('#dialog').dialog( "option", "closeOnEscape", false );
+        		$('#dialog').dialog( "option", "closeText", "" );
         		$('#dialog').dialog( "open" );       		
           }  
           setTimeout(function() {poll()}, 1000)
@@ -69,7 +65,7 @@ $("#dialog").dialog({autoOpen : false, modal : true, show : "fadeIn", hide : "fa
     })
 })();
 </script>
-	<div id="dialog" title="Probe dialog" class="ui-dialog-content"></div>
+	
 	<div id="page" class="page">	
 		<div id="character" class="character-container">
 			<div class="character-container-head thin-border small-corner ">
