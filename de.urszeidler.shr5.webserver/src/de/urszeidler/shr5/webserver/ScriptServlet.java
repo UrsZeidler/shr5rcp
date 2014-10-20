@@ -23,8 +23,12 @@ import com.google.common.collect.Collections2;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.Team;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.webserver.mgnt.PlayerManager;
@@ -109,7 +113,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 applyCharacterChange(req, pm);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("history")) {
-                EList<String> writtenProtokol = scriptService.getCurrentScript().getHistory().getWrittenProtokol();
+//                EList<String> writtenProtokol = scriptService.getCurrentScript().getHistory().getWrittenProtokol();
                 resp.sendRedirect("include/history.jsp");
             }else if(action.equals("dialog")){
                 if(pm.getCurrentDialog() == null){
@@ -152,6 +156,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
      * @param req
      * @param pm
      */
+    @SuppressWarnings("unchecked")
     private void applyCharacterChange(HttpServletRequest req, PlayerManager pm) {
         RuntimeCharacter character = pm.getCharacter();
         String aId = (String)req.getParameter("armor");
@@ -169,6 +174,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
         character.getInUse().addAll(
                 (Collection<? extends AbstraktGegenstand>)Collections2.transform(Arrays.asList(parameterValues),
                         ShadowrunTools.xmlId2EObjectTransformer(character.getCharacter().getInventar())));
+        
+        ScriptService scriptService = Activator.getDefault().getScriptService();
+        SemanticAction action = GameplayFactory.eINSTANCE.createSemanticAction();
+        action.setSubject(character);
+        action.setType(SemanticType.DESCRIPTION);
+        action.setMessage(String.format("%s changed the inventory.", AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
+        scriptService.executeCommand(action);
     }
 
     /**
