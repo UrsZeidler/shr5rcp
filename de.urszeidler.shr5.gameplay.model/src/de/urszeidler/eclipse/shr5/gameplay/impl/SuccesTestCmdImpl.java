@@ -21,10 +21,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SuccesTestCmdImpl#getDicePool <em>Dice Pool</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SuccesTestCmdImpl#getDicePool <em>Dice Pool</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd {
@@ -32,7 +32,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * The default value of the '{@link #getDicePool() <em>Dice Pool</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDicePool()
      * @generated
      * @ordered
@@ -43,7 +42,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * The cached value of the '{@link #getDicePool() <em>Dice Pool</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDicePool()
      * @generated
      * @ordered
@@ -53,7 +51,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SuccesTestCmdImpl() {
@@ -63,7 +60,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -74,7 +70,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getDicePool() {
@@ -84,7 +79,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDicePool(int newDicePool) {
@@ -97,7 +91,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -112,7 +105,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -128,7 +120,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -144,7 +135,6 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -159,13 +149,11 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (dicePool: ");

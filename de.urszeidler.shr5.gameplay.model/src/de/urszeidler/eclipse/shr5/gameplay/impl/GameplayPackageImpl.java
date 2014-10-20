@@ -1729,6 +1729,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEEnum(semanticTypeEEnum, SemanticType.class, "SemanticType");
         addEEnumLiteral(semanticTypeEEnum, SemanticType.TALK);
         addEEnumLiteral(semanticTypeEEnum, SemanticType.GESTURE);
+        addEEnumLiteral(semanticTypeEEnum, SemanticType.DESCRIPTION);
 
         // Initialize data types
         initEDataType(commandCallbackEDataType, CommandCallback.class, "CommandCallback", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
