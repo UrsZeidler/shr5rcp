@@ -66,5 +66,10 @@ http://www.shadowruntabletop.com/
       <feature id="de.urszeidler.shr5.product.feature"/>
    </features>
 
+   <configurations>
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+   </configurations>
 
 </product>
