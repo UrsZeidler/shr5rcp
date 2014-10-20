@@ -94,6 +94,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
@@ -925,6 +926,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
+        if (cmd instanceof SemanticAction) {
+            return;            
+        }
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 Messages.RuntimeScriptView_probedialog_titel_before_execute, ProbeExecutionState.beforeExecute, eStructuralFeatures);
         d.open();
@@ -941,7 +945,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction)
+        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction|| cmd instanceof SemanticAction)
             return;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
