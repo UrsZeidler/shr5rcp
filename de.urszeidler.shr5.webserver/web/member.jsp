@@ -40,9 +40,9 @@
   </head>
 
 <body>
-	<div id="dialog" title="Probe dialog" class="ui-dialog-content"></div>
+	<div id="dialog" class="ui-dialog-content no-close"></div>
 	<script  type="text/javascript" >
-$("#dialog").dialog({autoOpen : false, modal : true, show : "fadeIn", hide : "fadeOut"});
+$("#dialog").dialog({autoOpen : false, modal : true, show : "puff", hide : "puff"});
 
 (function poll() {
     $.ajax({
@@ -54,10 +54,11 @@ $("#dialog").dialog({autoOpen : false, modal : true, show : "fadeIn", hide : "fa
         		//$('#page').html('');
         		$('#dialog').dialog( "option", "position", { my: "left top", at: "left top", of: window } );
         		$('#dialog').dialog( "option", "closeOnEscape", false );
-        		$('#dialog').dialog( "option", "closeText", "" );
         		$('#dialog').dialog( "open" );       		
           }  
-          setTimeout(function() {poll()}, 1000)
+          else{
+          	setTimeout(function() {poll()}, 1000)
+          }
         },
         dataType: "text",
 //         complete: setTimeout(function() {poll()}, 10000),

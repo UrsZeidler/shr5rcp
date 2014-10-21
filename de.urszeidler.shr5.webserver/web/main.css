@@ -57,7 +57,7 @@ select.item {
 }
 
 .probe-container {
-	
+	background-color: white;
 }
 
 .probe-header {
@@ -242,4 +242,8 @@ margin: 15px;
 
 .character-multi-item-container {
 	overflow: auto;
+}
+
+.no-close .ui-dialog-titlebar-close {
+display: none;
 }
