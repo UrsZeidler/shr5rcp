@@ -1,3 +1,5 @@
+<%@page import="de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools"%>
+<%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
 <%@page import="de.urszeidler.eclipse.shr5.Feuerwaffe"%>
 <%@page import="de.urszeidler.eclipse.shr5.Nahkampfwaffe"%>
 
@@ -6,8 +8,17 @@
     Object item = request.getAttribute(key);
     if (item instanceof Feuerwaffe) {
         Feuerwaffe fw = (Feuerwaffe)item;
+        Magazin m = (Magazin)fw.getMagazin();
+        Feuerwaffe type = GameplayTools.getMagazingType(m);
+        int kapazitaet = 0;
+        int size = 0;
+        if (type != null) {
+            kapazitaet = type.getKapazitaet();
+            size = m.getBullets().size();
+        }
+        
 %>
-damage :<%=fw.getSchadenscode()%>|
+damage :<%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)
 <br />
 <%=fw.getReichweite().getMin()%>-<%=fw.getReichweite().getKurz()%>|
 <%=fw.getReichweite().getKurz()%>-<%=fw.getReichweite().getMittel()%>|
