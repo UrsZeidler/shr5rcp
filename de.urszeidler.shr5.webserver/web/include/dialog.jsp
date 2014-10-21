@@ -17,12 +17,14 @@
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
     RuntimeCharacter character = pm.getCharacter();
     ProbeDialog pd = pm.getCurrentDialog();
-
+    if(pd==null)
+        return;
+System.out.println(pd.getCmd());
     String characterName = WebTools.getText(character);// character.getCharacter().getPersona().getName();
     //
 %>
 
-<form action="main" method="post">
+<form id="probe-dialog" action="main" method="post">
 	<div class="probe-container thin-border big-corner ui-dialog">
 		<div class="big-corner-margin">
 			<div class="probe-header">
@@ -70,7 +72,7 @@
 			<%
 			    }
 			%>
-			<input type="submit" />
+			<input id="probe-submit" type="submit" />
 		</div>
 	</div>
 </form>

@@ -40,9 +40,15 @@
   </head>
 
 <body>
-	<div id="dialog" class="ui-dialog-content no-close"></div>
+	<div id="dialog" class="no-close"></div>
 	<script  type="text/javascript" >
-$("#dialog").dialog({autoOpen : false, modal : true, show : "puff", hide : "puff"});
+$("#dialog").dialog({
+	dialogClass: "no-close",
+	autoOpen : false, 
+	modal : true, 
+	show : "puff", 
+	hide : "puff"
+});
 
 (function poll() {
     $.ajax({

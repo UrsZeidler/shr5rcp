@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="com.google.common.collect.Collections2"%>
+<%@page import="de.urszeidler.shr5.webserver.mgnt.ScriptViewerWrapper"%>
 <%@page import="de.urszeidler.shr5.webserver.Activator"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.util.ShadowrunTools"%>
@@ -6,7 +8,6 @@
 <%@page import="de.urszeidler.eclipse.shr5.runtime.Team"%>
 <%@page import="org.eclipse.emf.common.util.EList"%>
 <%@page import="de.urszeidler.shr5.scripting.ScriptHistory"%>
-<%@page import="org.eclipse.ui.internal.WorkbenchPlugin"%>
 <%@page import="de.urszeidler.shr5.ecp.service.ScriptService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -14,16 +15,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>test</title>
-<!-- <META HTTP-EQUIV="refresh" CONTENT="5">  -->
+<title>shr5rcp main page</title>
 <link href="main.css" rel="stylesheet" type="text/css" />
-
-
 
 </head>
 <body>
 	<%
 	    ScriptService scriptService = Activator.getDefault().getScriptService();
+		ScriptViewerWrapper scriptViewerWrapper = Activator.getDefault().getScriptViewerWrapper();
 	    if (scriptService.getCurrentScript() == null) {
 	%>
 	No script !
@@ -47,13 +46,18 @@
 			<div class="row-part-left" width="20%">Inpersonate :</div>
 			<div class="main-list row-part-right" width="80%">
 				<%
-				    for (RuntimeCharacter c : player.getMembers()) {
+			for (RuntimeCharacter c : player.getMembers()) {
+				 if(!Collections2.transform(scriptViewerWrapper.getRegisteredPlayers(), 
+				     scriptViewerWrapper.createPlayerManager2RuntimeCharacterTransformer()).contains(c)){
 				%>
-
 				<a href="main?id=<%=ShadowrunTools.getResourceId(c)%>"> <%=WebTools.getText(c)%>
 				</a> 
+				<%}else{%>
+				<%=WebTools.getText(c)%>
+				
 				<%
-				    }
+					}    
+				}
 				%>
 			</div>
 		</div>

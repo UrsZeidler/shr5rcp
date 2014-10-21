@@ -32,8 +32,8 @@
 						edge used :
 						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></h4>
 				</div>
-				<div class="character-single-item-container">
-					left hand : <select class="item " name="lefthand">
+				<div class="character-single-item-container" >
+					left hand : <select class="item " name="lefthand" style="display: list-item;">
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -45,7 +45,7 @@
 						%>
 					</select>
 				</div>
-				<div class="character-single-item-container">right hand : <select class="item " name="righthand">
+				<div class="character-single-item-container">right hand : <select class="item " style="display: list-item;" name="righthand">
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -59,7 +59,7 @@
 					</select>
 				</div>
 				<div class="character-single-item-container">
-					armor : <select class="item " name="armor">
+					armor : <select class="item " name="armor" style="display: list-item;">
 						<%
 						    for (AbstraktGegenstand g : Collections2.filter(character.getInUse(), ShadowrunTools.eclassPredicate(Shr5Package.Literals.KLEIDUNG))) {
 						%>
@@ -71,9 +71,9 @@
 						%>
 					</select>
 				</div>
-				<input type="submit" />
-				<div class="character-multi-item-container">
-					<select class="main-list " name="inventar" multiple="multiple" >
+				<div class="character-multi-item-container" style="vertical-align: top">
+				Inventar<br/>
+					<select class="main-list " name="inventar" multiple="multiple" style="">
 						<%
 						    for (AbstraktGegenstand g : character.getCharacter().getInventar()) {
 						%>
@@ -86,6 +86,8 @@
 						%>
 					</select>
 				</div>
+								<input type="submit" />
+				
 			</div>
 		</form>
 	</div>

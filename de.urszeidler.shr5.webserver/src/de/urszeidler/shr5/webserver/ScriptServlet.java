@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.webserver.mgnt.PlayerManager;
+import de.urszeidler.shr5.webserver.mgnt.ScriptViewerWrapper;
 
 /**
  * Simple control flow servlet, handles the redirects and is accessible under the "main" url.
@@ -100,6 +101,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         ScriptService scriptService = Activator.getDefault().getScriptService();
+        ScriptViewerWrapper scriptViewerWrapper = Activator.getDefault().getScriptViewerWrapper();
         PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
 
         String action = (String)req.getParameter("action");
@@ -107,21 +109,16 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             if (action.equals("logout")) {
                 session.invalidate();
                 if (pm != null)
-                    Activator.getDefault().getScriptViewerWrapper().getRegisteredPlayers().remove(pm);
+                    scriptViewerWrapper.getRegisteredPlayers().remove(pm);
                 resp.sendRedirect("main.jsp");
             } else if (action.equals("changeCharacter")) {
                 applyCharacterChange(req, pm);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("history")) {
-//                EList<String> writtenProtokol = scriptService.getCurrentScript().getHistory().getWrittenProtokol();
+                // EList<String> writtenProtokol = scriptService.getCurrentScript().getHistory().getWrittenProtokol();
                 resp.sendRedirect("include/history.jsp");
-            }else if(action.equals("dialog")){
-                if(pm.getCurrentDialog() == null){
-                    resp.getWriter().write("");
-                    resp.flushBuffer();
-                    }else{
-                        resp.sendRedirect("include/dialog.jsp");
-                    }
+            } else if (action.equals("dialog")) {
+                doDialog(pm, resp);
             }
             return;
         }
@@ -133,12 +130,16 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             if (id == null)
                 resp.sendRedirect("main.jsp");
 
-            RuntimeCharacter playerById = getPlayerById(player, id);
+            RuntimeCharacter playerById = getRuntimeCharacterById(player, id);
             if (playerById != null) {
+                if (Collections2.transform(scriptViewerWrapper.getRegisteredPlayers(),
+                        scriptViewerWrapper.createPlayerManager2RuntimeCharacterTransformer()).contains(playerById))
+                    resp.sendRedirect("main.jsp");
+
                 pm = new PlayerManager();
                 pm.setCharacter(playerById);
                 session.setAttribute("playerManager", pm);
-                Activator.getDefault().getScriptViewerWrapper().getRegisteredPlayers().add(pm);
+                scriptViewerWrapper.getRegisteredPlayers().add(pm);
             } else
                 resp.sendRedirect("main.jsp");
         }
@@ -148,6 +149,28 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private void doDialog(PlayerManager pm, HttpServletResponse resp) throws IOException {
+        if (pm.getCurrentDialog() == null) {
+            sendUnchanged(resp);
+            return;
+        }
+        if (pm.getCurrentDialog().getCmd().isExecuted()) {
+            sendUnchanged(resp);
+            return;
+        }
+
+        resp.sendRedirect("include/dialog.jsp");
+    }
+
+    /**
+     * @param resp
+     * @throws IOException
+     */
+    private void sendUnchanged(HttpServletResponse resp) throws IOException {
+        resp.getWriter().write("");
+        resp.flushBuffer();
     }
 
     /**
@@ -174,7 +197,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
         character.getInUse().addAll(
                 (Collection<? extends AbstraktGegenstand>)Collections2.transform(Arrays.asList(parameterValues),
                         ShadowrunTools.xmlId2EObjectTransformer(character.getCharacter().getInventar())));
-        
+
         ScriptService scriptService = Activator.getDefault().getScriptService();
         SemanticAction action = GameplayFactory.eINSTANCE.createSemanticAction();
         action.setSubject(character);
@@ -188,7 +211,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
      * @param id
      * @return
      */
-    private RuntimeCharacter getPlayerById(Team player, final String id) {
+    private RuntimeCharacter getRuntimeCharacterById(Team player, final String id) {
         EList<RuntimeCharacter> members = player.getMembers();
         Collection<RuntimeCharacter> filter = Collections2.filter(members, ShadowrunTools.xmlIdPredicate(id));
 

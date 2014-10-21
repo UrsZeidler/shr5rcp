@@ -105,6 +105,7 @@ select.item {
 
 .main-list {
 	font-size: 10px;
+	height: 200px;
 }
 
 .history-container {

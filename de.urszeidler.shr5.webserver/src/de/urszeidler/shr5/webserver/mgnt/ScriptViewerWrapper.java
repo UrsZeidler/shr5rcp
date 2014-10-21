@@ -23,6 +23,8 @@ import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.Probe;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
@@ -37,6 +39,13 @@ import de.urszeidler.shr5.webserver.Activator;
  * @author urs
  */
 public class ScriptViewerWrapper implements ScriptViewer {
+    public final class PlayerManager2RuntimeCharacterTransformer implements Function<PlayerManager, RuntimeCharacter> {
+        @Override
+        public RuntimeCharacter apply(PlayerManager input) {
+            return input.getCharacter();
+        }
+    }
+
     private ScriptViewer sv;
     private List<PlayerManager> registeredPlayers = new ArrayList<PlayerManager>();
 
@@ -75,14 +84,14 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
             @Override
             public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction)
+                if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
                     return;
 
                 if (cmd instanceof CombatTurn) {
                     CombatTurn ct = (CombatTurn)cmd;
 
                     EList<Command> subCommands = ct.getSubCommands();
-                    List<PlayerManager> pml= new ArrayList<PlayerManager>();
+                    List<PlayerManager> pml = new ArrayList<PlayerManager>();
                     for (Command command : subCommands) {
                         PlayerManager playerManager = getPlayerManager(command);
                         if (playerManager != null) {
@@ -162,12 +171,16 @@ public class ScriptViewerWrapper implements ScriptViewer {
     private void createDefaultDialog(Command cmd, final PlayerManager playerManager, EStructuralFeature... eStructuralFeatures) {
         sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
         List<EStructuralFeature> eAllStructuralFeatures_1 = new ArrayList<EStructuralFeature>();
-        eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);
-        eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SUCCESSES);
-        eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__GLITCHES);
-        if (playerManager.getCharacter().canUseEdge()) {
-            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+        if (cmd instanceof Probe) {
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SUCCESSES);
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__GLITCHES);
+            if (playerManager.getCharacter().canUseEdge()) {
+                eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+                eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SECOND_CHANCE);
+            }
+        }else if (cmd instanceof SemanticAction) {
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.SEMANTIC_ACTION__MESSAGE);            
         }
 
         createDialog(cmd, playerManager, eAllStructuralFeatures_1);
@@ -186,13 +199,8 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
                     Joiner on = Joiner.on(',');
                     String allNames = on.join(Collections2.transform(
-                            Collections2.transform(Arrays.asList(playerManager), new Function<PlayerManager, RuntimeCharacter>() {
-                                @Override
-                                public RuntimeCharacter apply(PlayerManager input) {
-                                    return input.getCharacter();
-                                }
-
-                            }), ShadowrunEditingTools.eObject2StringTransformer()));
+                            Collections2.transform(Arrays.asList(playerManager), new PlayerManager2RuntimeCharacterTransformer()),
+                            ShadowrunEditingTools.eObject2StringTransformer()));
                     monitor.setTaskName("Waiting for the players : " + allNames);
 
                     while (!monitor.isCanceled()) {
@@ -231,4 +239,7 @@ public class ScriptViewerWrapper implements ScriptViewer {
         return sv;
     }
 
+    public PlayerManager2RuntimeCharacterTransformer createPlayerManager2RuntimeCharacterTransformer() {
+        return new PlayerManager2RuntimeCharacterTransformer();
+    }
 }
