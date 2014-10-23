@@ -4601,6 +4601,747 @@ public interface GameplayPackage extends EPackage {
     int SEMANTIC_ACTION_OPERATION_COUNT = SUBJECT_COMMAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl <em>Drain Command</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getDrainCommand()
+     * @generated
+     */
+    int DRAIN_COMMAND = 30;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__EXECUTED = PROBE_COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__SUB_COMMANDS = PROBE_COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__DATE = PROBE_COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__SUBJECT = PROBE_COMMAND__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Probe</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__PROBE = PROBE_COMMAND__PROBE;
+
+    /**
+     * The feature id for the '<em><b>Successes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__SUCCESSES = PROBE_COMMAND__SUCCESSES;
+
+    /**
+     * The feature id for the '<em><b>Glitches</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__GLITCHES = PROBE_COMMAND__GLITCHES;
+
+    /**
+     * The feature id for the '<em><b>Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__LIMIT = PROBE_COMMAND__LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
+
+    /**
+     * The feature id for the '<em><b>Thresholds</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__THRESHOLDS = PROBE_COMMAND__THRESHOLDS;
+
+    /**
+     * The feature id for the '<em><b>Net Hits</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__TEST_STATE = PROBE_COMMAND__TEST_STATE;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__MODS = PROBE_COMMAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Damage</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__DAMAGE = PROBE_COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Damage Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__DAMAGE_TYPE = PROBE_COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Drain Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND_FEATURE_COUNT = PROBE_COMMAND_FEATURE_COUNT + 2;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND___REDO = PROBE_COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND___UNDO = PROBE_COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Drain Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND_OPERATION_COUNT = PROBE_COMMAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SpellCommandImpl <em>Spell Command</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.SpellCommandImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSpellCommand()
+     * @generated
+     */
+    int SPELL_COMMAND = 31;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__EXECUTED = PROBE_COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SUB_COMMANDS = PROBE_COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__DATE = PROBE_COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__CMD_CALLBACK = PROBE_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__EXECUTING = PROBE_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SUBJECT = PROBE_COMMAND__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Probe</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__PROBE = PROBE_COMMAND__PROBE;
+
+    /**
+     * The feature id for the '<em><b>Successes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SUCCESSES = PROBE_COMMAND__SUCCESSES;
+
+    /**
+     * The feature id for the '<em><b>Glitches</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__GLITCHES = PROBE_COMMAND__GLITCHES;
+
+    /**
+     * The feature id for the '<em><b>Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__LIMIT = PROBE_COMMAND__LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__PROBE_STATE = PROBE_COMMAND__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__PROBE_MODS = PROBE_COMMAND__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SKIP_TEST = PROBE_COMMAND__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__PUSH_THE_LIMIT = PROBE_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SECOND_CHANCE = PROBE_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__CLOSE_CALL = PROBE_COMMAND__CLOSE_CALL;
+
+    /**
+     * The feature id for the '<em><b>Thresholds</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__THRESHOLDS = PROBE_COMMAND__THRESHOLDS;
+
+    /**
+     * The feature id for the '<em><b>Net Hits</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__NET_HITS = PROBE_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__TEST_STATE = PROBE_COMMAND__TEST_STATE;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__MODS = PROBE_COMMAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Spell</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__SPELL = PROBE_COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Spell Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND_FEATURE_COUNT = PROBE_COMMAND_FEATURE_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND___REDO = PROBE_COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND___UNDO = PROBE_COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Spell Command</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND_OPERATION_COUNT = PROBE_COMMAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatSpellCmdImpl <em>Combat Spell Cmd</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.CombatSpellCmdImpl
+     * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCombatSpellCmd()
+     * @generated
+     */
+    int COMBAT_SPELL_CMD = 32;
+
+    /**
+     * The feature id for the '<em><b>Executed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__EXECUTED = SPELL_COMMAND__EXECUTED;
+
+    /**
+     * The feature id for the '<em><b>Sub Commands</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SUB_COMMANDS = SPELL_COMMAND__SUB_COMMANDS;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__DATE = SPELL_COMMAND__DATE;
+
+    /**
+     * The feature id for the '<em><b>Cmd Callback</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__CMD_CALLBACK = SPELL_COMMAND__CMD_CALLBACK;
+
+    /**
+     * The feature id for the '<em><b>Executing</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__EXECUTING = SPELL_COMMAND__EXECUTING;
+
+    /**
+     * The feature id for the '<em><b>Can Execute</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__CAN_EXECUTE = SPELL_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Subject</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SUBJECT = SPELL_COMMAND__SUBJECT;
+
+    /**
+     * The feature id for the '<em><b>Probe</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__PROBE = SPELL_COMMAND__PROBE;
+
+    /**
+     * The feature id for the '<em><b>Successes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SUCCESSES = SPELL_COMMAND__SUCCESSES;
+
+    /**
+     * The feature id for the '<em><b>Glitches</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__GLITCHES = SPELL_COMMAND__GLITCHES;
+
+    /**
+     * The feature id for the '<em><b>Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__LIMIT = SPELL_COMMAND__LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Probe State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__PROBE_STATE = SPELL_COMMAND__PROBE_STATE;
+
+    /**
+     * The feature id for the '<em><b>Probe Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__PROBE_MODS = SPELL_COMMAND__PROBE_MODS;
+
+    /**
+     * The feature id for the '<em><b>Skip Test</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SKIP_TEST = SPELL_COMMAND__SKIP_TEST;
+
+    /**
+     * The feature id for the '<em><b>Push The Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__PUSH_THE_LIMIT = SPELL_COMMAND__PUSH_THE_LIMIT;
+
+    /**
+     * The feature id for the '<em><b>Second Chance</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SECOND_CHANCE = SPELL_COMMAND__SECOND_CHANCE;
+
+    /**
+     * The feature id for the '<em><b>Close Call</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__CLOSE_CALL = SPELL_COMMAND__CLOSE_CALL;
+
+    /**
+     * The feature id for the '<em><b>Thresholds</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__THRESHOLDS = SPELL_COMMAND__THRESHOLDS;
+
+    /**
+     * The feature id for the '<em><b>Net Hits</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__NET_HITS = SPELL_COMMAND__NET_HITS;
+
+    /**
+     * The feature id for the '<em><b>Test State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__TEST_STATE = SPELL_COMMAND__TEST_STATE;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__MODS = SPELL_COMMAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Spell</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__SPELL = SPELL_COMMAND__SPELL;
+
+    /**
+     * The number of structural features of the '<em>Combat Spell Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD_FEATURE_COUNT = SPELL_COMMAND_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Redo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD___REDO = SPELL_COMMAND___REDO;
+
+    /**
+     * The operation id for the '<em>Undo</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD___UNDO = SPELL_COMMAND___UNDO;
+
+    /**
+     * The number of operations of the '<em>Combat Spell Cmd</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD_OPERATION_COUNT = SPELL_COMMAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4608,7 +5349,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getInterruptType()
      * @generated
      */
-    int INTERRUPT_TYPE = 30;
+    int INTERRUPT_TYPE = 33;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.ProbeState <em>Probe State</em>}' enum.
@@ -4618,7 +5359,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getProbeState()
      * @generated
      */
-    int PROBE_STATE = 31;
+    int PROBE_STATE = 34;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestState <em>Succes Test State</em>}' enum.
@@ -4628,7 +5369,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSuccesTestState()
      * @generated
      */
-    int SUCCES_TEST_STATE = 32;
+    int SUCCES_TEST_STATE = 35;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.gameplay.SemanticType <em>Semantic Type</em>}' enum.
@@ -4638,7 +5379,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSemanticType()
      * @generated
      */
-    int SEMANTIC_TYPE = 33;
+    int SEMANTIC_TYPE = 36;
 
     /**
      * The meta object id for the '<em>Command Callback</em>' data type.
@@ -4648,7 +5389,7 @@ public interface GameplayPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCommandCallback()
      * @generated
      */
-    int COMMAND_CALLBACK = 34;
+    int COMMAND_CALLBACK = 37;
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.ExecutionStack <em>Execution Stack</em>}'.
@@ -5749,6 +6490,69 @@ public interface GameplayPackage extends EPackage {
     EAttribute getSemanticAction_Message();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand <em>Drain Command</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Drain Command</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DrainCommand
+     * @generated
+     */
+    EClass getDrainCommand();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamage <em>Damage</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Damage</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamage()
+     * @see #getDrainCommand()
+     * @generated
+     */
+    EAttribute getDrainCommand_Damage();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamageType <em>Damage Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Damage Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamageType()
+     * @see #getDrainCommand()
+     * @generated
+     */
+    EAttribute getDrainCommand_DamageType();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.SpellCommand <em>Spell Command</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Spell Command</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SpellCommand
+     * @generated
+     */
+    EClass getSpellCommand();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SpellCommand#getSpell <em>Spell</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Spell</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SpellCommand#getSpell()
+     * @see #getSpellCommand()
+     * @generated
+     */
+    EReference getSpellCommand_Spell();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd <em>Combat Spell Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Combat Spell Cmd</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd
+     * @generated
+     */
+    EClass getCombatSpellCmd();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6705,6 +7509,60 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute SEMANTIC_ACTION__MESSAGE = eINSTANCE.getSemanticAction_Message();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl <em>Drain Command</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getDrainCommand()
+         * @generated
+         */
+        EClass DRAIN_COMMAND = eINSTANCE.getDrainCommand();
+
+        /**
+         * The meta object literal for the '<em><b>Damage</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DRAIN_COMMAND__DAMAGE = eINSTANCE.getDrainCommand_Damage();
+
+        /**
+         * The meta object literal for the '<em><b>Damage Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DRAIN_COMMAND__DAMAGE_TYPE = eINSTANCE.getDrainCommand_DamageType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.SpellCommandImpl <em>Spell Command</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.SpellCommandImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getSpellCommand()
+         * @generated
+         */
+        EClass SPELL_COMMAND = eINSTANCE.getSpellCommand();
+
+        /**
+         * The meta object literal for the '<em><b>Spell</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SPELL_COMMAND__SPELL = eINSTANCE.getSpellCommand_Spell();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatSpellCmdImpl <em>Combat Spell Cmd</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.CombatSpellCmdImpl
+         * @see de.urszeidler.eclipse.shr5.gameplay.impl.GameplayPackageImpl#getCombatSpellCmd()
+         * @generated
+         */
+        EClass COMBAT_SPELL_CMD = eINSTANCE.getCombatSpellCmd();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.gameplay.InterruptType <em>Interrupt Type</em>}' enum.

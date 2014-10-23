@@ -162,5 +162,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SemanticAction/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SemanticAction/message"/>
     </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//DrainCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damageType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gameplay.ecore#//SpellCommand">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SpellCommand/spell"/>
+    </genClasses>
+    <genClasses ecoreClass="gameplay.ecore#//CombatSpellCmd"/>
   </genPackages>
 </genmodel:GenModel>

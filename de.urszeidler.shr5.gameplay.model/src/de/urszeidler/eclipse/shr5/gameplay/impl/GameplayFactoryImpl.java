@@ -105,6 +105,8 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
             case GameplayPackage.PROBE_MOD: return createProbeMod();
             case GameplayPackage.SET_EXTENDET_DATA: return createSetExtendetData();
             case GameplayPackage.SEMANTIC_ACTION: return createSemanticAction();
+            case GameplayPackage.DRAIN_COMMAND: return createDrainCommand();
+            case GameplayPackage.COMBAT_SPELL_CMD: return createCombatSpellCmd();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -380,6 +382,26 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
     public SemanticAction createSemanticAction() {
         SemanticActionImpl semanticAction = new SemanticActionImpl();
         return semanticAction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DrainCommand createDrainCommand() {
+        DrainCommandImpl drainCommand = new DrainCommandImpl();
+        return drainCommand;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CombatSpellCmd createCombatSpellCmd() {
+        CombatSpellCmdImpl combatSpellCmd = new CombatSpellCmdImpl();
+        return combatSpellCmd;
     }
 
     /**

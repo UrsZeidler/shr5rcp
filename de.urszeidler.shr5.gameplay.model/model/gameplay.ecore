@@ -355,4 +355,13 @@
     <eLiterals name="gesture" value="1"/>
     <eLiterals name="description" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DrainCommand" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damage" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageType" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//SchadensTyp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpellCommand" abstract="true" eSuperTypes="#//ProbeCommand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spell" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Zauber"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CombatSpellCmd" eSuperTypes="#//SpellCommand"/>
 </ecore:EPackage>

@@ -351,6 +351,40 @@ public class GameplaySwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case GameplayPackage.DRAIN_COMMAND: {
+                DrainCommand drainCommand = (DrainCommand)theEObject;
+                T result = caseDrainCommand(drainCommand);
+                if (result == null) result = caseProbeCommand(drainCommand);
+                if (result == null) result = caseSubjectCommand(drainCommand);
+                if (result == null) result = caseSuccesTest(drainCommand);
+                if (result == null) result = caseCommand(drainCommand);
+                if (result == null) result = caseProbe(drainCommand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.SPELL_COMMAND: {
+                SpellCommand spellCommand = (SpellCommand)theEObject;
+                T result = caseSpellCommand(spellCommand);
+                if (result == null) result = caseProbeCommand(spellCommand);
+                if (result == null) result = caseSubjectCommand(spellCommand);
+                if (result == null) result = caseSuccesTest(spellCommand);
+                if (result == null) result = caseCommand(spellCommand);
+                if (result == null) result = caseProbe(spellCommand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case GameplayPackage.COMBAT_SPELL_CMD: {
+                CombatSpellCmd combatSpellCmd = (CombatSpellCmd)theEObject;
+                T result = caseCombatSpellCmd(combatSpellCmd);
+                if (result == null) result = caseSpellCommand(combatSpellCmd);
+                if (result == null) result = caseProbeCommand(combatSpellCmd);
+                if (result == null) result = caseSubjectCommand(combatSpellCmd);
+                if (result == null) result = caseSuccesTest(combatSpellCmd);
+                if (result == null) result = caseCommand(combatSpellCmd);
+                if (result == null) result = caseProbe(combatSpellCmd);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -802,6 +836,51 @@ public class GameplaySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseSemanticAction(SemanticAction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Drain Command</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Drain Command</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDrainCommand(DrainCommand object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Spell Command</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Spell Command</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSpellCommand(SpellCommand object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Combat Spell Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Combat Spell Cmd</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCombatSpellCmd(CombatSpellCmd object) {
         return null;
     }
 

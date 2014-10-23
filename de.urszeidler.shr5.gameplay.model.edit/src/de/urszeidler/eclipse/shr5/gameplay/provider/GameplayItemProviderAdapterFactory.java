@@ -601,6 +601,52 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DrainCommandItemProvider drainCommandItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDrainCommandAdapter() {
+        if (drainCommandItemProvider == null) {
+            drainCommandItemProvider = new DrainCommandItemProvider(this);
+        }
+
+        return drainCommandItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CombatSpellCmdItemProvider combatSpellCmdItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCombatSpellCmdAdapter() {
+        if (combatSpellCmdItemProvider == null) {
+            combatSpellCmdItemProvider = new CombatSpellCmdItemProvider(this);
+        }
+
+        return combatSpellCmdItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -722,6 +768,8 @@ public class GameplayItemProviderAdapterFactory extends GameplayAdapterFactory i
         if (probeModItemProvider != null) probeModItemProvider.dispose();
         if (setExtendetDataItemProvider != null) setExtendetDataItemProvider.dispose();
         if (semanticActionItemProvider != null) semanticActionItemProvider.dispose();
+        if (drainCommandItemProvider != null) drainCommandItemProvider.dispose();
+        if (combatSpellCmdItemProvider != null) combatSpellCmdItemProvider.dispose();
     }
 
 }

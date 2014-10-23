@@ -434,6 +434,7 @@ public class GameplayTools {
         list.add(GameplayPackage.Literals.DAMAGE_TEST);
         list.add(GameplayPackage.Literals.MEELE_ATTACK_CMD);
         list.add(GameplayPackage.Literals.RANGED_ATTACK_CMD);
+        list.add(GameplayPackage.Literals.DRAIN_COMMAND);
         return list;
     }
 

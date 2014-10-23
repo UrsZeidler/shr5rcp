@@ -216,6 +216,18 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
                 return createSemanticActionAdapter();
             }
             @Override
+            public Adapter caseDrainCommand(DrainCommand object) {
+                return createDrainCommandAdapter();
+            }
+            @Override
+            public Adapter caseSpellCommand(SpellCommand object) {
+                return createSpellCommandAdapter();
+            }
+            @Override
+            public Adapter caseCombatSpellCmd(CombatSpellCmd object) {
+                return createCombatSpellCmdAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -652,6 +664,48 @@ public class GameplayAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSemanticActionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand <em>Drain Command</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.DrainCommand
+     * @generated
+     */
+    public Adapter createDrainCommandAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.SpellCommand <em>Spell Command</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.SpellCommand
+     * @generated
+     */
+    public Adapter createSpellCommandAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd <em>Combat Spell Cmd</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd
+     * @generated
+     */
+    public Adapter createCombatSpellCmdAdapter() {
         return null;
     }
 

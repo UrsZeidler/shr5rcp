@@ -230,6 +230,24 @@ public interface GameplayFactory extends EFactory {
     SemanticAction createSemanticAction();
 
     /**
+     * Returns a new object of class '<em>Drain Command</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Drain Command</em>'.
+     * @generated
+     */
+    DrainCommand createDrainCommand();
+
+    /**
+     * Returns a new object of class '<em>Combat Spell Cmd</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Combat Spell Cmd</em>'.
+     * @generated
+     */
+    CombatSpellCmd createCombatSpellCmd();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

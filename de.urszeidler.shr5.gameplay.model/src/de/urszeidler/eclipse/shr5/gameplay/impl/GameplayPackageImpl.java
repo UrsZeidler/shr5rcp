@@ -12,12 +12,14 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.DrainCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
@@ -44,6 +46,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SpellCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
@@ -267,6 +270,27 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * @generated
      */
     private EClass semanticActionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass drainCommandEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass spellCommandEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass combatSpellCmdEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1299,6 +1323,60 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getDrainCommand() {
+        return drainCommandEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDrainCommand_Damage() {
+        return (EAttribute)drainCommandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDrainCommand_DamageType() {
+        return (EAttribute)drainCommandEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSpellCommand() {
+        return spellCommandEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSpellCommand_Spell() {
+        return (EReference)spellCommandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCombatSpellCmd() {
+        return combatSpellCmdEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getInterruptType() {
         return interruptTypeEEnum;
     }
@@ -1500,6 +1578,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(semanticActionEClass, SEMANTIC_ACTION__TYPE);
         createEAttribute(semanticActionEClass, SEMANTIC_ACTION__MESSAGE);
 
+        drainCommandEClass = createEClass(DRAIN_COMMAND);
+        createEAttribute(drainCommandEClass, DRAIN_COMMAND__DAMAGE);
+        createEAttribute(drainCommandEClass, DRAIN_COMMAND__DAMAGE_TYPE);
+
+        spellCommandEClass = createEClass(SPELL_COMMAND);
+        createEReference(spellCommandEClass, SPELL_COMMAND__SPELL);
+
+        combatSpellCmdEClass = createEClass(COMBAT_SPELL_CMD);
+
         // Create enums
         interruptTypeEEnum = createEEnum(INTERRUPT_TYPE);
         probeStateEEnum = createEEnum(PROBE_STATE);
@@ -1567,6 +1654,9 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         rangedAttackCmdEClass.getESuperTypes().add(this.getOpposedSkillTestCmd());
         setExtendetDataEClass.getESuperTypes().add(this.getCommand());
         semanticActionEClass.getESuperTypes().add(this.getSubjectCommand());
+        drainCommandEClass.getESuperTypes().add(this.getProbeCommand());
+        spellCommandEClass.getESuperTypes().add(this.getProbeCommand());
+        combatSpellCmdEClass.getESuperTypes().add(this.getSpellCommand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(executionStackEClass, ExecutionStack.class, "ExecutionStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1707,6 +1797,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEClass(semanticActionEClass, SemanticAction.class, "SemanticAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSemanticAction_Type(), this.getSemanticType(), "type", null, 0, 1, SemanticAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSemanticAction_Message(), ecorePackage.getEString(), "message", null, 0, 1, SemanticAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(drainCommandEClass, DrainCommand.class, "DrainCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDrainCommand_Damage(), ecorePackage.getEInt(), "damage", null, 1, 1, DrainCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDrainCommand_DamageType(), theShr5Package.getSchadensTyp(), "damageType", null, 0, 1, DrainCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(spellCommandEClass, SpellCommand.class, "SpellCommand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSpellCommand_Spell(), theShr5Package.getZauber(), null, "spell", null, 1, 1, SpellCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(combatSpellCmdEClass, CombatSpellCmd.class, "CombatSpellCmd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(interruptTypeEEnum, InterruptType.class, "InterruptType");

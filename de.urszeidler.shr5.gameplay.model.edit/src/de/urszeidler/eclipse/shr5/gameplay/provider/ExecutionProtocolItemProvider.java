@@ -239,6 +239,16 @@ public class ExecutionProtocolItemProvider
             (createChildParameter
                 (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
                  GameplayFactory.eINSTANCE.createSemanticAction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createDrainCommand()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (GameplayPackage.Literals.EXECUTION_PROTOCOL__COMMANDS,
+                 GameplayFactory.eINSTANCE.createCombatSpellCmd()));
     }
 
     /**
