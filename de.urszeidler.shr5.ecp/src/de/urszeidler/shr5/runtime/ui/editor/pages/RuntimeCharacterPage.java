@@ -230,8 +230,10 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
+        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+        controlGridData.heightHint = 150;
 
-        emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE, composite_3);
+        emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE, composite_3,controlGridData);
         emfFormBuilder.addSeperatorEntry(composite_3);
 
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR, composite_3);
