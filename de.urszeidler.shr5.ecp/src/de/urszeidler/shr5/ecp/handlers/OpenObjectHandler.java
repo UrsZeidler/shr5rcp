@@ -6,6 +6,7 @@ package de.urszeidler.shr5.ecp.handlers;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -149,7 +150,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 if (start)
                     startScript(eo, shell);
                 else
-                    openOneObject(shell, filteredObject, titel, message);
+                    openOneObject(shell,Collections.singleton((EObject)eo), titel, message);
 
             }
         }
