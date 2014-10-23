@@ -33,7 +33,7 @@
 <!-- <meta http-equiv="refresh" content="2;url=main"> -->
 <!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">  -->
 
-<link href="main.css" rel="stylesheet" type="text/css" />
+<%@include file="include/style.jsp" %>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 

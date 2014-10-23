@@ -16,8 +16,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>shr5rcp main page</title>
-<link href="main.css" rel="stylesheet" type="text/css" />
-
+<%@include file="include/style.jsp" %>
 </head>
 <body>
 	<%

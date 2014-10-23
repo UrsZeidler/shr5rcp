@@ -17,7 +17,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>manage <%=WebTools.getText(character)%></title>
-<link href="main.css" rel="stylesheet" type="text/css" />
+<%@include file="include/style.jsp" %>
 </head>
 <body>
 	<div class="page">
