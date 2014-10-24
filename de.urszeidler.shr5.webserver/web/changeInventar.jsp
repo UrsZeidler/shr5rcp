@@ -72,7 +72,7 @@
 					</select>
 				</div>
 				<div class="character-multi-item-container" style="vertical-align: top">
-				Inventar<br/>
+				Inventory<br/>
 					<select class="main-list " name="inventar" multiple="multiple" style="">
 						<%
 						    for (AbstraktGegenstand g : character.getCharacter().getInventar()) {
