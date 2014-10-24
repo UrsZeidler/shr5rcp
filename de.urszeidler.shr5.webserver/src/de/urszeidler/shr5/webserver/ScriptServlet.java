@@ -203,6 +203,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
         action.setSubject(character);
         action.setType(SemanticType.DESCRIPTION);
         action.setMessage(String.format("%s changed the inventory.", AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
+        pm.setCommandToIgnore(action);
         scriptService.executeCommand(action);
     }
 

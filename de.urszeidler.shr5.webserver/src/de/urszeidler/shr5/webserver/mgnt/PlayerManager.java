@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
@@ -59,6 +60,7 @@ public class PlayerManager {
     private String characterId;
     private boolean active;
     private ProbeDialog currentDialog;
+    private Command ignoreCommand;
 
     public RuntimeCharacter getCharacter() {
         return character;
@@ -80,5 +82,13 @@ public class PlayerManager {
     public void createDialog(Command cmd, EStructuralFeature[] eStructuralFeatures) {
         this.currentDialog = new ProbeDialog(cmd,eStructuralFeatures);
         
+    }
+
+    public void setCommandToIgnore(Command command) {
+       ignoreCommand = command;        
+    }
+
+    public Command getIgnoreCommand() {
+        return ignoreCommand;
     }
 }

@@ -110,7 +110,10 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
                 PlayerManager playerManager = getPlayerManager(cmd);
                 if (playerManager != null) {
-                    createDefaultDialog(cmd, playerManager, eStructuralFeatures);
+                    if (cmd.equals(playerManager.getIgnoreCommand())) {
+                        playerManager.setCommandToIgnore(null);
+                    } else
+                        createDefaultDialog(cmd, playerManager, eStructuralFeatures);
                 } else
                     sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
 
@@ -126,7 +129,10 @@ public class ScriptViewerWrapper implements ScriptViewer {
             public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
                 PlayerManager playerManager = getPlayerManager(cmd);
                 if (playerManager != null) {
-                    createDefaultDialog(cmd, playerManager, eStructuralFeatures);
+                    if (cmd.equals(playerManager.getIgnoreCommand())) {
+                        playerManager.setCommandToIgnore(null);
+                    } else
+                        createDefaultDialog(cmd, playerManager, eStructuralFeatures);
                 } else
                     sv.getCmdCallback().beforeExecute(cmd, eStructuralFeatures);
 
@@ -179,8 +185,8 @@ public class ScriptViewerWrapper implements ScriptViewer {
                 eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
                 eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SECOND_CHANCE);
             }
-        }else if (cmd instanceof SemanticAction) {
-            eAllStructuralFeatures_1.add(GameplayPackage.Literals.SEMANTIC_ACTION__MESSAGE);            
+        } else if (cmd instanceof SemanticAction) {
+            eAllStructuralFeatures_1.add(GameplayPackage.Literals.SEMANTIC_ACTION__MESSAGE);
         }
 
         createDialog(cmd, playerManager, eAllStructuralFeatures_1);
