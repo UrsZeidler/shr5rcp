@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
+<%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
 <%@page import="com.google.common.collect.Collections2"%>
 <%@page import="de.urszeidler.eclipse.shr5.util.ShadowrunTools"%>
@@ -33,7 +35,7 @@
 						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></h4>
 				</div>
 				<div class="character-single-item-container" >
-					left hand : <select class="item " name="lefthand" style="display: list-item;">
+					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> : <select class="item " name="lefthand" style="display: list-item;">
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -45,7 +47,7 @@
 						%>
 					</select>
 				</div>
-				<div class="character-single-item-container">right hand : <select class="item " style="display: list-item;" name="righthand">
+				<div class="character-single-item-container"><%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> : <select class="item " style="display: list-item;" name="righthand">
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -59,7 +61,7 @@
 					</select>
 				</div>
 				<div class="character-single-item-container">
-					armor : <select class="item " name="armor" style="display: list-item;">
+					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR) %> : <select class="item " name="armor" style="display: list-item;">
 						<%
 						    for (AbstraktGegenstand g : Collections2.filter(character.getInUse(), ShadowrunTools.eclassPredicate(Shr5Package.Literals.KLEIDUNG))) {
 						%>
@@ -72,7 +74,7 @@
 					</select>
 				</div>
 				<div class="character-multi-item-container" style="vertical-align: top">
-				Inventory<br/>
+				<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE) %><br/>
 					<select class="main-list " name="inventar" multiple="multiple" style="">
 						<%
 						    for (AbstraktGegenstand g : character.getCharacter().getInventar()) {

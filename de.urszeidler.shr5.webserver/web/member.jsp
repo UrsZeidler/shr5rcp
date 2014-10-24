@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
+<%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.KoerperPersona"%>
 <%@page import="org.eclipse.emf.common.util.EList"%>
 <%@page import="de.urszeidler.shr5.scripting.ScriptHistory"%>
@@ -88,7 +90,7 @@ $("#dialog").dialog({
 			<div class="container-row">
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					left hand :
+					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> :
 					<%=WebTools.getText(character.getLeftHand())%>
 					<hr />
 					<jsp:include page="include/item.jsp">
@@ -97,7 +99,7 @@ $("#dialog").dialog({
 				</div>
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					right hand :
+					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> :
 					<%=WebTools.getText(character.getRightHand())%>
 					<hr />
 					<jsp:include page="include/item.jsp">
