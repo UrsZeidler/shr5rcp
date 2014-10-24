@@ -56,7 +56,7 @@ import de.urszeidler.shr5.scripting.ScriptingFactory;
  */
 public class OpenObjectHandler extends AbstractHandler {
 
-    private static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective";
+    private static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective"; //$NON-NLS-1$
     private ScriptService scriptService;
 
     /*
@@ -111,10 +111,10 @@ public class OpenObjectHandler extends AbstractHandler {
                     openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
                     break;
                 case 5:
-                    openScript(shell, "Open script for playing", "!", monitor, true);
+                    openScript(shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_message, monitor, true);
                     break;
                 case 6:
-                    openScript(shell, "Open script for editing", "!", monitor, false);
+                    openScript(shell, Messages.OpenObjectHandler_openScrip_titel, Messages.OpenObjectHandler_openScrip_message, monitor, false);
                     break;
 
                 default:
@@ -127,7 +127,7 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor, boolean start) {
-        monitor.beginTask("collection scripts ...", 1);
+        monitor.beginTask(Messages.OpenObjectHandler_openScript_task, 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -162,7 +162,7 @@ public class OpenObjectHandler extends AbstractHandler {
         if (eo.getHistory() == null) {
             initalizeScript(eo, shell);
         } else {
-            if (MessageDialog.open(MessageDialog.QUESTION, shell, "", "Continue the script ?", SWT.NONE))
+            if (MessageDialog.open(MessageDialog.QUESTION, shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_continue, SWT.NONE))
                 placement = eo.getHistory().getCurrentPlacement();
             else {
                 eo.getPlayer().getMembers().clear();
@@ -195,7 +195,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 Shr5managementPackage.Literals.PLAYER_CHARACTER);
         eo.getPlayer().getMembers().clear();
         FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
-                RuntimePackage.Literals.TEAM__MEMBERS, "Select combatans", new ArrayList<EObject>(Collections2.filter(
+                RuntimePackage.Literals.TEAM__MEMBERS, Messages.OpenObjectHandler_select_combatans, new ArrayList<EObject>(Collections2.filter(
                         (Collection<ManagedCharacter>)choiceOfValues,
                         ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))));
 
@@ -212,7 +212,7 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     private void openItem(Shell shell, String titel, String message, IProgressMonitor monitor) {
-        monitor.beginTask("collection items ...", 1);
+        monitor.beginTask(Messages.OpenObjectHandler_collect_items, 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -228,7 +228,7 @@ public class OpenObjectHandler extends AbstractHandler {
     }
 
     private void openBeschreibbar(Shell shell, String titel, String message, IProgressMonitor monitor) {
-        monitor.beginTask("collection Objects ...", 1);
+        monitor.beginTask(Messages.OpenObjectHandler_collect_objects, 1);
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
