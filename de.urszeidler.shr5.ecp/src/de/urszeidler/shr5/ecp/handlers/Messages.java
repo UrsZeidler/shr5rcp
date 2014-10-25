@@ -20,7 +20,6 @@ public class Messages extends NLS {
     public static String OpenObjectHandler_playScript_continue;
     public static String OpenObjectHandler_playScript_message;
     public static String OpenObjectHandler_playScript_titel;
-    public static String OpenObjectHandler_playScript_titel1;
     public static String OpenObjectHandler_select_combatans;
     static {
         // initialize resource bundle

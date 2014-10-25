@@ -307,7 +307,7 @@ public class GameplayTools {
         Reichweite reichweite = weapon.getReichweite();
         if (reichweite != null) {
             if (reichweite.getMin() <= range && reichweite.getKurz() > range) {
-                return 0;
+                mod = 0;
             } else if (reichweite.getKurz() <= range && reichweite.getMittel() > range) {
                 mod = -1;
             } else if (reichweite.getMittel() <= range && reichweite.getWeit() > range) {
