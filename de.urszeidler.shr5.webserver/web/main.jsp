@@ -37,7 +37,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <div class="page">
 	<div class="main-header">
-		Current placement :<%=history.getCurrentPlacement().getName()%>
+		Current placement :<b><%=history.getCurrentPlacement().getName()%></b>
 		at
 		<%=history.getCurrentDate()%></div>
 	<div class="main-container">

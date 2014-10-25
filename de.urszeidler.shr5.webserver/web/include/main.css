@@ -6,6 +6,11 @@ body {
 	width: 550px;
 }
 
+.page {
+	width: 90%;
+	align: center;
+}
+
 a {
 	
 }
@@ -41,11 +46,6 @@ hr {
 
 select.item {
 	font-size: 10px;
-}
-
-.page {
-	width: 90%;
-	align: center;
 }
 
 .row-part-left {
@@ -179,7 +179,7 @@ select.item {
 .condition-monitor-container {
 
 	vertical-align: top;
-
+	width: 80px;
 	float: left;
 }
 
