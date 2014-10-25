@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.gameplay.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -168,6 +169,25 @@ public class GameplayTools {
     }
 
     /**
+     * Removes the probe mode.
+     * @param subject
+     * @param val
+     * @param feature
+     * @param mods
+     */
+    public static void removeProbeMode(EObject subject, EStructuralFeature feature,List<ProbeMod> mods){
+        ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
+        data.setEObject(subject);
+        data.setEFeature(feature);
+
+        for (Iterator<ProbeMod> iterator = mods.iterator(); iterator.hasNext();) {
+            ProbeMod probeMod = iterator.next();
+            if(data.equals(probeMod.getType()))
+                iterator.remove();
+        }
+    }
+    
+    /**
      * Calculates the current defense mod for the given character.
      * 
      * @param subject
@@ -299,6 +319,7 @@ public class GameplayTools {
 
             if (mods != null) {
                 ProbeMod probeMod = createProbeMod(weapon, mod, Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE);
+                removeProbeMode(weapon, Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, mods);
                 mods.add(probeMod);
             }
         }

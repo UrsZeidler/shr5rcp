@@ -163,11 +163,12 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setRange(int newRange) {
         int oldRange = range;
         range = newRange;
+        GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.RANGED_ATTACK_CMD__RANGE, oldRange, range));
     }
@@ -352,7 +353,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             Feuerwaffe feuerwaffe = (Feuerwaffe)getWeapon();
             FeuerModus fireArmModus = GameplayTools.getFireArmModus(getSubject(), feuerwaffe);
             setModus(fireArmModus);
-            mods = mods + GameplayTools.getRecoilMod(getSubject(), feuerwaffe, getProbeMods());
+            mods = mods + GameplayTools.getRecoilMod(getSubject(), feuerwaffe, getProbeMods());            
         }
         Fertigkeit fertigkeit = getWeapon().getFertigkeit();
         setSkill(fertigkeit);
