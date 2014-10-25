@@ -22,11 +22,11 @@
 			        if (i % 3 == 0) {
 			%>
 			<div class="condition-monitor-row">
-				<div  class="condition-box <%if (i >= pcmd) {%>" <%} else {%>red-filled" <%}%>>&#160;</div>
+				<div  class="condition-box <%if (i >= pcmd) {%>" <%} else {%>red-filled" <%}%>></div>
 				<%
 				    } else {
 				%>
-				<div  class="condition-box <%if (i >= pcmd) {%>" <%} else {%>red-filled" <%}%>>&#160;</div>
+				<div  class="condition-box <%if (i >= pcmd) {%>" <%} else {%>red-filled" <%}%>></div>
 				<%
 				    }
 				        if ((i % 3 == 2) || (i + 1 == pcm)) {

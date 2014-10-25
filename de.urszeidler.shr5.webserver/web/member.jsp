@@ -32,13 +32,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Impersonating <%=characterName%></title>
-<!-- <meta http-equiv="refresh" content="2;url=main"> -->
-<!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">  -->
-
 <%@include file="include/style.jsp" %>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-
   </head>
 
 <body>
@@ -82,7 +78,7 @@ $("#dialog").dialog({
 					Name
 					<%=characterName%></h4>
 				<h4 class="container-row">
-					edge used :
+					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE) %>:
 					<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></h4>
 					<hr />
 				<jsp:include page="include/conditionMonitor.jsp" />

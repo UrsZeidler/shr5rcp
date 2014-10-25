@@ -165,27 +165,27 @@ select.item {
 	border-top-right-radius: 20px;
 	-moz-border-radius-topleft: 20px;
 	border-top-left-radius: 20px;
-	
 	box-shadow: 4px 4px 2px #888888;
 }
 
-.big-corner-margin{
-	
-margin: 15px;
-	
+.big-corner-margin {
+	margin: 15px;
 }
+
 .condition-monitor-section {
-	
+		overflow: auto;
 }
 
 .condition-monitor-container {
-	display: inline-block;
+
 	vertical-align: top;
-	margin: 5px;
+
+	float: left;
 }
 
 .condition-monitor-titel {
-	
+	font-size: 9px;
+	margin: 5px;
 }
 
 .condition-monitor {
@@ -194,35 +194,43 @@ margin: 15px;
 
 .condition-monitor-row {
 	margin: 2px;
+	overflow: auto;
+	width: 150px;
 }
 
 .condition-box {
+	padding: 2px;
+	margin: 2px;
+	height: 8px;
+	width: 7px;
+	float: left;
+	
 	display: inline;
 	border: 1px;
 	border-color: Black;
 	border-style: solid;
-	font-size: 7px;
+	font-size: 1px;
+	
+	-moz-border-radius-bottomright: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-bottom-left-radius: 2px;
+	-moz-top-radius-topright: 2px;
+	border-top-right-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	border-top-left-radius: 2px;
+	box-shadow: 1px 1px 1px #888888;
 }
 
 .red-filled {
 	background: red;
 }
 
-.condition-box-filled {
-	display: inline;
-	background: red;
-	width: 10px;
-	height: 10px;
-	margin: 1px;
-	border: 1px;
-	border-color: Black;
-	border-style: solid;
-	min-width: 10px;
-}
-
 .condition-box-number {
 	display: inline;
 	font-size: 7px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .character-container {
@@ -246,5 +254,5 @@ margin: 15px;
 }
 
 .no-close .ui-dialog-titlebar-close {
-display: none;
+	display: none;
 }
