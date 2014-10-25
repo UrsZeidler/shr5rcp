@@ -9,11 +9,16 @@
     EList<String> writtenProtokol = history.getWrittenProtokol();
 %>
 <div id="history-container" class="history-container">
-History
-<div id="history-list" class="history-list small-corner thin-border" ><%
-	    for (String line : writtenProtokol) {
-	%>
-<div class="history-line"><%=WebTools.escapeHTML(line)%></div><%
- 	    }
- 	%></div>
+	History
+	<div id="history-list" class="history-list small-corner thin-border">
+		<div class="inner-margin">
+			<%
+			    for (String line : writtenProtokol) {
+			%>
+			<div class="history-line"><%=WebTools.escapeHTML(line)%></div>
+			<%
+			    }
+			%>
+		</div>
+	</div>
 </div>

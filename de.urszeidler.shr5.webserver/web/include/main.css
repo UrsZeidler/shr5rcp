@@ -91,8 +91,18 @@ select.item {
 	
 }
 
+.inner-margin {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
 .container-row {
 	display: inline-flex;
+	width: 100%;
+
 }
 
 .container-element-inline {
@@ -234,15 +244,16 @@ select.item {
 }
 
 .character-container {
-	
+
 }
 
 .character-container-head {
-	
+
 }
 
 .character-single-item-container {
-	margin: 2px;
+
+	font-size: 10px;
 }
 
 .character-inventar-container {

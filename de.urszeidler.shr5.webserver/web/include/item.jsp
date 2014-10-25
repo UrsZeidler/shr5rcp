@@ -1,3 +1,4 @@
+<%@page import="de.urszeidler.eclipse.shr5.Kleidung"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
@@ -5,7 +6,6 @@
 <%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
 <%@page import="de.urszeidler.eclipse.shr5.Feuerwaffe"%>
 <%@page import="de.urszeidler.eclipse.shr5.Nahkampfwaffe"%>
-
 <%
     String key = (String)request.getParameter("object");
     Object item = request.getAttribute(key);
@@ -37,5 +37,11 @@
 <%=WebTools.toFeatureName(nw, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE) %> :
 <%=nw.getReichweite()%>
 <%
-    }
+    }else if (item instanceof Kleidung) {
+        Kleidung k = (Kleidung)item;
 %>
+<%=WebTools.toFeatureName(k, Shr5Package.Literals.KLEIDUNG__RUESTUNG) %> :
+<%=k.getRuestung()%>|
+<%} %>
+
+

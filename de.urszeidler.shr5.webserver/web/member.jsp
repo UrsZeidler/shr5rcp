@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
 <%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.KoerperPersona"%>
@@ -27,115 +28,148 @@
     EList<String> writtenProtokol = history.getWrittenProtokol();
     request.setAttribute("lhand", character.getLeftHand());
     request.setAttribute("rhand", character.getRightHand());
+    request.setAttribute("armor", character.getArmor());
     //
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Impersonating <%=characterName%></title>
-<%@include file="include/style.jsp" %>
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-  </head>
+<%@include file="include/style.jsp"%>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</head>
 
 <body>
 	<div id="dialog" class="no-close"></div>
-	<script  type="text/javascript" >
-$("#dialog").dialog({
-	dialogClass: "no-close",
-	autoOpen : false, 
-	modal : true, 
-	show : "puff", 
-	hide : "puff"
-});
+	<script type="text/javascript">
+		$("#dialog").dialog({
+			dialogClass : "no-close",
+			autoOpen : false,
+			modal : true,
+			show : "puff",
+			hide : "puff"
+		});
 
-(function poll() {
-    $.ajax({
-        url: "/main?action=dialog",
-        type: "GET",
-        success: function(data) {
-        	if(data!=""){
-        		$('#dialog').html(data);
-        		//$('#page').html('');
-        		$('#dialog').dialog( "option", "position", { my: "left top", at: "left top", of: window } );
-        		$('#dialog').dialog( "option", "closeOnEscape", false );
-        		$('#dialog').dialog( "open" );       		
-          }  
-          else{
-          	setTimeout(function() {poll()}, 1000)
-          }
-        },
-        dataType: "text",
-//         complete: setTimeout(function() {poll()}, 10000),
-        timeout: 2000
-    })
-})();
-</script>
-	
-	<div id="page" class="page">	
+		(function poll() {
+			$.ajax({
+				url : "/main?action=dialog",
+				type : "GET",
+				success : function(data) {
+					if (data != "") {
+						$('#dialog').html(data);
+						//$('#page').html('');
+						$('#dialog').dialog("option", "position", {
+							my : "left top",
+							at : "left top",
+							of : window
+						});
+						$('#dialog').dialog("option", "closeOnEscape", false);
+						$('#dialog').dialog("open");
+					} else {
+						setTimeout(function() {
+							poll()
+						}, 1000)
+					}
+				},
+				dataType : "text",
+				//         complete: setTimeout(function() {poll()}, 10000),
+				timeout : 2000
+			})
+		})();
+	</script>
+	<div id="page" class="page">
 		<div id="character" class="character-container">
 			<div class="character-container-head thin-border small-corner ">
-				<h4 class="container-row">
-					Name
-					<%=characterName%></h4>
-				<h4 class="container-row">
-					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE) %>:
-					<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></h4>
+				<div class="inner-margin">
+					<strong class="container-row"> <%=WebTools.toFeatureName(character.getCharacter().getPersona(), Shr5Package.Literals.BESCHREIBBAR__NAME)%>
+						<%=characterName%></strong> <strong class="container-row"> <%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE)%>:
+						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></strong>
 					<hr />
-				<jsp:include page="include/conditionMonitor.jsp" />
+					<jsp:include page="include/conditionMonitor.jsp" />
+				</div>
 			</div>
 			<div class="container-row">
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> :
-					<%=WebTools.getText(character.getLeftHand())%>
-					<hr />
-					<jsp:include page="include/item.jsp">
-						<jsp:param name="object" value="lhand" />
-					</jsp:include>
+					<div class="inner-margin">
+						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%>
+						:
+						<%=WebTools.getText(character.getLeftHand())%>
+						<hr />
+						<jsp:include page="include/item.jsp">
+							<jsp:param name="object" value="lhand" />
+						</jsp:include>
+					</div>
 				</div>
+				
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> :
-					<%=WebTools.getText(character.getRightHand())%>
-					<hr />
-					<jsp:include page="include/item.jsp">
-						<jsp:param name="object" value="rhand" />
-					</jsp:include>
+					<div class="inner-margin">
+						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND)%>
+						:
+						<%=WebTools.getText(character.getRightHand())%>
+						<hr />
+						<jsp:include page="include/item.jsp">
+							<jsp:param name="object" value="rhand" />
+						</jsp:include>
+					</div>
 				</div>
-			</div>
+
+				<div
+					class="character-single-item-container thin-border small-corner ">
+					<div class="inner-margin">
+						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR)%>
+						:
+						<%=WebTools.getText(character.getArmor())%>
+						<hr />
+						<jsp:include page="include/item.jsp">
+							<jsp:param name="object" value="armor" />
+						</jsp:include>
+					</div>
+				</div>
+				
+			</div><!-- end of row -->
 		</div>
+
 		<!-- end container -->
 		<div class="character-inventar-container">
 			<a href="changeInventar.jsp">change</a> </br>
 			<div class="character-multi-item-container thin-border small-corner">
-				<%
-				    for (AbstraktGegenstand g : character.getInUse()) {
-				%>
-				<p class="inventar"><%=WebTools.getText(g)%></p>
-				<%
-				    }
-				%>
+				<div class="inner-margin">
+					<%
+					    for (AbstraktGegenstand g : character.getInUse()) {
+					%>
+					<p class="inventar"><%=WebTools.getText(g)%></p>
+					<%
+					    }
+					%>
+				</div>
 			</div>
 		</div>
-<script  type="text/javascript" >
-(function poll() {
-    $.ajax({
-        url: "/main?action=history",
-        type: "GET",
-        success: function(data) {
-            $('#history-container').html(data);
+		<script type="text/javascript">
+			(function poll() {
+				$.ajax({
+					url : "/main?action=history",
+					type : "GET",
+					success : function(data) {
+						$('#history-container').html(data);
 
-            
-        },
-        dataType: "text",
-        complete: setTimeout(function() {poll()}, 3000),
-        timeout: 2000
-    })
-})();
-</script>
+					},
+					dataType : "text",
+					complete : setTimeout(function() {
+						poll()
+					}, 3000),
+					timeout : 2000
+				})
+			})();
+		</script>
 		<jsp:include page="include/history.jsp" />
 		<a href="main?action=logout">stop being <%=WebTools.getText(character)%>(logout)
 		</a>
+	</div>
 	</div>
 </body>
 </html>
