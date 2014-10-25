@@ -51,23 +51,22 @@ public class Activator extends AbstractUIPlugin {
         plugin = this;
         store = getPreferenceStore();
 
-//        startJetty();
+        // startJetty();
     }
 
     /**
      * @throws Exception
      */
     public void startJetty() throws Exception {
-        Hashtable<String,Object> dictionary=new Hashtable<String,Object>();
+        Hashtable<String, Object> dictionary = new Hashtable<String, Object>();
         int http_port = store.getInt(PreferenceConstants.SERVER_PORT);
         dictionary.put(JettyConstants.HTTP_ENABLED, Boolean.TRUE);
-        dictionary.put(JettyConstants.HTTP_PORT,http_port);
+        dictionary.put(JettyConstants.HTTP_PORT, http_port);
 
         try {
-          JettyConfigurator.startServer(PLUGIN_ID + ".server",dictionary);
-        }
-       catch (  RuntimeException e) {
-          logError("Error starting jetty server", e);
+            JettyConfigurator.startServer(PLUGIN_ID + ".server", dictionary);
+        } catch (RuntimeException e) {
+            logError("Error starting jetty server", e);
         }
     }
 
@@ -76,7 +75,7 @@ public class Activator extends AbstractUIPlugin {
      * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
      */
     public void stop(BundleContext context) throws Exception {
-        stopJetty();        
+        stopJetty();
         plugin = null;
         super.stop(context);
     }
@@ -87,11 +86,10 @@ public class Activator extends AbstractUIPlugin {
     public void stopJetty() {
         try {
             JettyConfigurator.stopServer(PLUGIN_ID + ".server");
-          }
-         catch (  RuntimeException e) {
-             logError("Error stopping jetty server", e);
-          } catch (Exception e) {
-              logError("Error stopping jetty server", e);
+        } catch (RuntimeException e) {
+            logError("Error stopping jetty server", e);
+        } catch (Exception e) {
+            logError("Error stopping jetty server", e);
         }
     }
 
@@ -125,7 +123,7 @@ public class Activator extends AbstractUIPlugin {
         ScriptViewer scriptViewer = this.scriptService.getScriptViewer();
         scriptViewerWrapper = new ScriptViewerWrapper(scriptViewer);
         scriptService.registerScriptViewer(scriptViewerWrapper);
-       }
+    }
 
     public ScriptService getScriptService() {
         return scriptService;
@@ -134,14 +132,16 @@ public class Activator extends AbstractUIPlugin {
     public ScriptViewerWrapper getScriptViewerWrapper() {
         return scriptViewerWrapper;
     }
-    
+
     /**
      * Cleans the script wrapper and restore the the old one.
      */
     public void cleanScriptWrapper() {
-        ScriptViewer sv = scriptViewerWrapper.getSv();
-        scriptService.registerScriptViewer(sv);
-        scriptViewerWrapper = null;
+        if (scriptViewerWrapper != null) {
+            ScriptViewer sv = scriptViewerWrapper.getSv();
+            scriptService.registerScriptViewer(sv);
+            scriptViewerWrapper = null;
+        }
     }
 
     public IPreferenceStore getStore() {
