@@ -1,3 +1,6 @@
+<%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
+<%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
+<%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
 <%@page import="de.urszeidler.eclipse.shr5.Feuerwaffe"%>
@@ -15,10 +18,10 @@
         if (type != null) {
             kapazitaet = type.getKapazitaet();
             size = m.getBullets().size();
-        }
-        
+        }        
 %>
-damage :<%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)
+<%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
+<%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)
 <br />
 <%=fw.getReichweite().getMin()%>-<%=fw.getReichweite().getKurz()%>|
 <%=fw.getReichweite().getKurz()%>-<%=fw.getReichweite().getMittel()%>|
@@ -28,10 +31,10 @@ damage :<%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)
     } else if (item instanceof Nahkampfwaffe) {
         Nahkampfwaffe nw = (Nahkampfwaffe)item;
 %>
-damage :
+<%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
 <%=nw.getSchadenscode()%>|
 <br />
-reach :
+<%=WebTools.toFeatureName(nw, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE) %> :
 <%=nw.getReichweite()%>
 <%
     }

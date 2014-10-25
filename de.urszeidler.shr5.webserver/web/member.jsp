@@ -90,7 +90,7 @@ $("#dialog").dialog({
 			<div class="container-row">
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> :
+					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> :
 					<%=WebTools.getText(character.getLeftHand())%>
 					<hr />
 					<jsp:include page="include/item.jsp">
@@ -99,12 +99,11 @@ $("#dialog").dialog({
 				</div>
 				<div
 					class="character-single-item-container thin-border small-corner ">
-					<%=ShadowrunEditingTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> :
+					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> :
 					<%=WebTools.getText(character.getRightHand())%>
 					<hr />
 					<jsp:include page="include/item.jsp">
 						<jsp:param name="object" value="rhand" />
-
 					</jsp:include>
 				</div>
 			</div>
