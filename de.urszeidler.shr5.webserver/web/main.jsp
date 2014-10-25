@@ -42,7 +42,7 @@
 		<%=history.getCurrentDate()%></div>
 	<div class="main-container">
 		<div class="main-container-row">
-			<div class="row-part-left" width="20%">Inpersonate :</div>
+			<div class="row-part-left" width="20%">Impersonate :</div>
 			<div class="main-list row-part-right" width="80%">
 				<%
 			for (RuntimeCharacter c : player.getMembers()) {
