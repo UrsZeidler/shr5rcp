@@ -156,10 +156,6 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             sendUnchanged(resp);
             return;
         }
-        if (pm.getCurrentDialog().getCmd().isExecuted()) {
-            sendUnchanged(resp);
-            return;
-        }
 
         resp.sendRedirect("include/dialog.jsp");
     }
