@@ -545,4 +545,17 @@ public class ShadowrunEditingTools {
         };
     }
 
+    /**
+     * Returns the localized feature name.
+     * 
+     * @param object
+     * @param eAttribute
+     * @return
+     */
+    public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
+        IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
+        return descriptor.getDisplayName(eAttribute);
+    }
+
+
 }
