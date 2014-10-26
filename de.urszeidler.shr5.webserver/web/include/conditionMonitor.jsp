@@ -19,7 +19,6 @@
     int rcm = kp.getZustandGrenze();
     int rcmd = character.getOverDead();
 %>
-<div class="condition-monitor-section">
 	<div class="condition-monitor-container">
 		<div class="condition-monitor-titel">physical</div>
 		<div class="condition-monitor " >
@@ -95,5 +94,4 @@
 		</div>
 		<div class="condition-monitor-titel"><%=WebTools.toFeatureName(character, RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND)%>:<%=WebTools.literal2Name(character.getZustand(), character, RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND) %></div>
 	</div>
-</div>
 <!-- last line -->

@@ -23,7 +23,8 @@
         }    
 %>
 <%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
-<%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)
+<%=fw.getSchadenscode()%>|
+<%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT) %>:<%=fw.getDurchschlagsKraft()%>|(<%=size%>/<%=kapazitaet%>)
 <br />
 <%=fw.getReichweite().getMin()%>-<%=fw.getReichweite().getKurz()%>|
 <%=fw.getReichweite().getKurz()%>-<%=fw.getReichweite().getMittel()%>|
@@ -35,6 +36,7 @@
 %>
 <%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
 <%=nw.getSchadenscode()%>|
+<%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT) %>:<%=nw.getDurchschlagsKraft()%>|
 <br />
 <%=WebTools.toFeatureName(nw, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE) %> :
 <%=nw.getReichweite()%>

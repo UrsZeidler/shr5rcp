@@ -83,12 +83,20 @@
 		<div id="character" class="character-container">
 			<div class="character-container-head thin-border small-corner ">
 				<div class="inner-margin">
-					<strong class="container-row"> 
-					<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character)%>" />
+					<strong class="container-row"> <img class="eobject"
+						src="images?uriFragment=<%=WebTools.getUriFragment(character)%>" />
 						<%=characterName%></strong> <strong class="container-row"> <%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE)%>:
 						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></strong>
 					<hr />
-					<jsp:include page="include/conditionMonitor.jsp" />
+					<div class="condition-monitor-section" >
+						<jsp:include page="include/conditionMonitor.jsp" />
+						
+						<div class="condition-monitor-container">
+						Actions<br/>
+						<a class="action" href="member.jsp">reload</a><br/>
+						<a class="action" href="changeInventar.jsp">change inventory</a></br>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="container-row">
@@ -96,21 +104,21 @@
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%>
-						:
-						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getLeftHand())%>" /><%=WebTools.getText(character.getLeftHand())%>
+						: <img class="eobject"
+							src="images?uriFragment=<%=WebTools.getUriFragment(character.getLeftHand())%>" /><%=WebTools.getText(character.getLeftHand())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="lhand" />
 						</jsp:include>
 					</div>
 				</div>
-				
+
 				<div
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND)%>
-						:
-						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getRightHand())%>" /><%=WebTools.getText(character.getRightHand())%>
+						: <img class="eobject"
+							src="images?uriFragment=<%=WebTools.getUriFragment(character.getRightHand())%>" /><%=WebTools.getText(character.getRightHand())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="rhand" />
@@ -122,41 +130,45 @@
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR)%>
-						:
-						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getArmor())%>" /><%=WebTools.getText(character.getArmor())%>
+						: <img class="eobject"
+							src="images?uriFragment=<%=WebTools.getUriFragment(character.getArmor())%>" /><%=WebTools.getText(character.getArmor())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="armor" />
 						</jsp:include>
 					</div>
 				</div>
-				
-			</div><!--  -->
+
+			</div>
+			<!--  -->
 		</div>
 
 		<!-- end container -->
-		<div class="character-inventar-container">
-			<a href="changeInventar.jsp">change</a> </br>
+		<div id="inventar-container" class="character-inventar-container">
+			
 			<div class="character-multi-item-container thin-border small-corner">
 				<div class="inner-margin">
 					<%
 					    for (AbstraktGegenstand g : character.getInUse()) {
 					%>
-					<p class="inventar"><img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%></p>
+					<p class="inventar">
+						<img class="eobject"
+							src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%></p>
 					<%
 					    }
 					%>
 				</div>
 			</div>
 		</div>
+		<!-- end of inventar -->
 		<script type="text/javascript">
 			(function poll() {
 				$.ajax({
 					url : "/main?action=history",
 					type : "GET",
 					success : function(data) {
-					if (data != "") {
-						$('#history-container').html(data);
+						if (data != "") {
+							$('#history-container').html(data);
 						}
 					},
 					dataType : "text",
