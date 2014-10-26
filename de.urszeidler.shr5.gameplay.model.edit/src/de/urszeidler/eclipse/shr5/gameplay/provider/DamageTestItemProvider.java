@@ -151,6 +151,10 @@ public class DamageTestItemProvider extends ProbeCommandItemProvider implements 
         if (labelprovider != null)
             label = labelprovider.getText(damageTest.getSubject());
 
+        if(damageTest.isExecuting())
+            return getString("_UI_DamageTest_type_text_prepare", new Object[]{ label, damageTest.getDamage(),
+                    damageTest.getEffectiveDamage() == null ? getString("_UI_none"): damageTest.getEffectiveDamage() });           
+        else
         return getString("_UI_DamageTest_type_text", new Object[]{ label, damageTest.getDamage(),
                 damageTest.getEffectiveDamage() == null ? getString("_UI_none"): damageTest.getEffectiveDamage() });
     }

@@ -111,7 +111,10 @@ public class DefensTestCmdItemProvider
 //        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
 //        if (labelprovider != null)
 //            label = labelprovider.getText(defensTestCmd.getSubject());
-
+        if(defensTestCmd.isExecuting())
+            return getString("_UI_DefensTestCmd_type_text_prepare",new Object[]{label,defensTestCmd.getAttackersHits()
+                    ,defensTestCmd.getSuccesses()});
+        else
         return getString("_UI_DefensTestCmd_type_text",new Object[]{label,defensTestCmd.getAttackersHits()
                 ,defensTestCmd.getSuccesses()});
     }
