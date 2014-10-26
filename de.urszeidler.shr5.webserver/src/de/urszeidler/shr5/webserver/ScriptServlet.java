@@ -115,8 +115,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 applyCharacterChange(req, pm);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("history")) {
-                // EList<String> writtenProtokol = scriptService.getCurrentScript().getHistory().getWrittenProtokol();
-                resp.sendRedirect("include/history.jsp");
+                int size = scriptService.getCurrentScript().getHistory().getWrittenProtokol().size();
+                if (pm==null || pm.getHistoryLinesReaded() < size) {
+                    if(pm!=null)
+                        pm.setHistoryLinesReaded(size);
+                    resp.sendRedirect("include/history.jsp");
+                } else
+                    sendUnchanged(resp);
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
             }

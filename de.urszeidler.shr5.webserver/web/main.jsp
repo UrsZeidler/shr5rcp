@@ -34,7 +34,7 @@
     EList<String> writtenProtokol = history.getWrittenProtokol();
     Team player = scriptService.getCurrentScript().getPlayer();
 %>
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
 <div class="page">
 	<div class="main-header">
 		Current placement :<b><%=history.getCurrentPlacement().getName()%></b>
@@ -61,14 +61,15 @@
 			</div>
 		</div>
 	</div>
-		<script  type="text/javascript" >
+	<script  type="text/javascript" >
 (function poll() {
     $.ajax({
         url: "/main?action=history",
         type: "GET",
         success: function(data) {
+        if (data != "") {
             $('#history-container').html(data);
-
+        }
             
         },
         dataType: "text",

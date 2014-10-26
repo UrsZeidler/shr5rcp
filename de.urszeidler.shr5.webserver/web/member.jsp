@@ -16,10 +16,11 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 <%
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
+    if(pm==null){
+    	response.sendRedirect("main");
+    }
     RuntimeCharacter character = pm.getCharacter();
 
     String characterName = WebTools.getText(character.getCharacter().getPersona().getName());
@@ -31,15 +32,13 @@
     request.setAttribute("armor", character.getArmor());
     //
 %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Impersonating <%=characterName%></title>
 <%@include file="include/style.jsp"%>
-<script type="text/javascript"
-	src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript"
-	src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-
 </head>
 
 <body>
@@ -131,7 +130,7 @@
 					</div>
 				</div>
 				
-			</div><!-- end of row -->
+			</div><!--  -->
 		</div>
 
 		<!-- end container -->
@@ -155,8 +154,9 @@
 					url : "/main?action=history",
 					type : "GET",
 					success : function(data) {
+					if (data != "") {
 						$('#history-container').html(data);
-
+						}
 					},
 					dataType : "text",
 					complete : setTimeout(function() {

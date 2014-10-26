@@ -61,6 +61,7 @@ public class PlayerManager {
     private boolean active;
     private ProbeDialog currentDialog;
     private Command ignoreCommand;
+    private int historyLinesReaded;
 
     public RuntimeCharacter getCharacter() {
         return character;
@@ -90,5 +91,13 @@ public class PlayerManager {
 
     public Command getIgnoreCommand() {
         return ignoreCommand;
+    }
+
+    public int getHistoryLinesReaded() {
+        return historyLinesReaded;
+    }
+
+    public void setHistoryLinesReaded(int historyLinesReaded) {
+        this.historyLinesReaded = historyLinesReaded;
     }
 }

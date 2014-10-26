@@ -191,11 +191,12 @@ select.item {
 	vertical-align: top;
 	width: 80px;
 	float: left;
+	margin-bottom: 5px;
 }
 
 .condition-monitor-titel {
 	font-size: 9px;
-	margin: 5px;
+	margin: 3px;
 }
 
 .condition-monitor {

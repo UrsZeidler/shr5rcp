@@ -3,6 +3,9 @@
 <%@page import="de.urszeidler.shr5.webserver.mgnt.PlayerManager"%>
 <%
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
+    if(pm==null){
+    	response.sendRedirect("main");
+    }
     RuntimeCharacter character = pm.getCharacter();
 
     KoerperPersona kp = (KoerperPersona)character.getCharacter().getPersona();
