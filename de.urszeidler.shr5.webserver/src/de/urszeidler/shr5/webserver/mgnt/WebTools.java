@@ -3,9 +3,11 @@
  */
 package de.urszeidler.shr5.webserver.mgnt;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.provider.util.GameplayEditTools;
@@ -65,4 +67,19 @@ public class WebTools {
     public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
         return escapeHTML(ShadowrunEditingTools.toFeatureName(object, eAttribute));
     }
+    
+    public static String literal2Name(Object literal, EObject eobject, EAttribute feature) {
+        if (literal == null)
+            return "";
+
+        String text2 = literal.toString();
+        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(eobject, feature);
+        if (propertyDescriptor != null)
+            text2 = propertyDescriptor.getLabelProvider(eobject).getText(literal);
+
+        return  escapeHTML(text2);
+
+    }
+
+
 }

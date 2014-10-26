@@ -1,3 +1,6 @@
+<%@page import="de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil"%>
+<%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
+<%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter"%>
 <%@page import="de.urszeidler.eclipse.shr5.KoerperPersona"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.PlayerManager"%>
@@ -90,6 +93,7 @@
 			    }
 			%>
 		</div>
+		<div class="condition-monitor-titel"><%=WebTools.toFeatureName(character, RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND)%>:<%=WebTools.literal2Name(character.getZustand(), character, RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND) %></div>
 	</div>
 </div>
 <!-- last line -->
