@@ -37,7 +37,8 @@
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
 <div class="page">
 	<div class="main-header">
-		Current placement :<b><%=history.getCurrentPlacement().getName()%></b>
+		Current placement :<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(history.getCurrentPlacement())%>" />
+		<b><%=history.getCurrentPlacement().getName()%></b>
 		at
 		<%=history.getCurrentDate()%></div>
 	<div class="main-container">
@@ -49,11 +50,11 @@
 				 if(!Collections2.transform(scriptViewerWrapper.getRegisteredPlayers(), 
 				     scriptViewerWrapper.createPlayerManager2RuntimeCharacterTransformer()).contains(c)){
 				%>
-				<a href="main?id=<%=ShadowrunTools.getResourceId(c)%>"> <%=WebTools.getText(c)%>
-				</a> 
+				<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(c)%>" />
+				<a href="main?id=<%=ShadowrunTools.getResourceId(c)%>"><%=WebTools.getText(c)%></a> 
 				<%}else{%>
+				<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(c)%>" />
 				<%=WebTools.getText(c)%>
-				
 				<%
 					}    
 				}

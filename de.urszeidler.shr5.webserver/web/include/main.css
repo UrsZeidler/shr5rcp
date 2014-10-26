@@ -4,6 +4,7 @@ body {
 	font-family: monospace;
 	font-size: 12px;
 	width: 550px;
+
 }
 
 .page {
@@ -46,6 +47,10 @@ hr {
 
 select.item {
 	font-size: 10px;
+}
+
+img.eobject {
+	vertical-align: middle;	
 }
 
 .row-part-left {

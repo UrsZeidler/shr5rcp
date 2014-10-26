@@ -11,14 +11,11 @@
             alias="/*.jsp"
             class="org.eclipse.equinox.jsp.jasper.registry.JSPFactory:/web">
       </servlet>
+      <servlet
+            alias="/images"
+            class="de.urszeidler.shr5.webserver.ImageServlet">
+      </servlet>
 
-   </extension>
-   <extension
-         point="org.eclipse.equinox.http.registry.httpcontexts">
-      <httpcontext
-            class="de.urszeidler.shr5.webserver.TestContext"
-            id="shr5.httpcontext.test">
-      </httpcontext>
    </extension>
    <extension
          point="org.eclipse.equinox.http.registry.resources">

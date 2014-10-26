@@ -83,7 +83,8 @@
 		<div id="character" class="character-container">
 			<div class="character-container-head thin-border small-corner ">
 				<div class="inner-margin">
-					<strong class="container-row"> <%=WebTools.toFeatureName(character.getCharacter().getPersona(), Shr5Package.Literals.BESCHREIBBAR__NAME)%>
+					<strong class="container-row"> 
+					<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character)%>" />
 						<%=characterName%></strong> <strong class="container-row"> <%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE)%>:
 						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></strong>
 					<hr />
@@ -96,7 +97,7 @@
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%>
 						:
-						<%=WebTools.getText(character.getLeftHand())%>
+						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getLeftHand())%>" /><%=WebTools.getText(character.getLeftHand())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="lhand" />
@@ -109,7 +110,7 @@
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND)%>
 						:
-						<%=WebTools.getText(character.getRightHand())%>
+						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getRightHand())%>" /><%=WebTools.getText(character.getRightHand())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="rhand" />
@@ -122,7 +123,7 @@
 					<div class="inner-margin">
 						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR)%>
 						:
-						<%=WebTools.getText(character.getArmor())%>
+						<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(character.getArmor())%>" /><%=WebTools.getText(character.getArmor())%>
 						<hr />
 						<jsp:include page="include/item.jsp">
 							<jsp:param name="object" value="armor" />
@@ -141,7 +142,7 @@
 					<%
 					    for (AbstraktGegenstand g : character.getInUse()) {
 					%>
-					<p class="inventar"><%=WebTools.getText(g)%></p>
+					<p class="inventar"><img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%></p>
 					<%
 					    }
 					%>

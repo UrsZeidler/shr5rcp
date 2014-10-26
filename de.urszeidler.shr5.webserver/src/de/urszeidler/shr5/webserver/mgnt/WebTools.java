@@ -5,6 +5,7 @@ package de.urszeidler.shr5.webserver.mgnt;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 
 import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.provider.util.GameplayEditTools;
@@ -43,6 +44,15 @@ public class WebTools {
         return escapeHTML(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
     }
 
+    public static String getUriFragment(EObject eObject) {
+        Resource eResource = eObject.eResource();
+        if(eResource==null)
+            return "";
+        
+       String uriFragment = eResource.getURIFragment(eObject);
+       return escapeHTML(uriFragment);
+    }
+    
     /**
      * Returns the localized feature name. Html escaped.
      * 
