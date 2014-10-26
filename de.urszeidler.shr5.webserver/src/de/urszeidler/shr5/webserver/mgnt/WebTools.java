@@ -68,6 +68,13 @@ public class WebTools {
         return escapeHTML(ShadowrunEditingTools.toFeatureName(object, eAttribute));
     }
     
+    /**
+     * Enccoded and localized literal name.
+     * @param literal
+     * @param eobject
+     * @param feature
+     * @return
+     */
     public static String literal2Name(Object literal, EObject eobject, EAttribute feature) {
         if (literal == null)
             return "";
