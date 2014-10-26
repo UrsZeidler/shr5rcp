@@ -1,3 +1,4 @@
+<%@page import="de.urszeidler.shr5.webserver.preferences.PreferenceConstants"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
 <%@page import="org.eclipse.emf.common.util.EList"%>
 <%@page import="de.urszeidler.shr5.scripting.ScriptHistory"%>
@@ -7,6 +8,8 @@
     ScriptService scriptService = Activator.getDefault().getScriptService();
     ScriptHistory history = scriptService.getCurrentScript().getHistory();
     EList<String> writtenProtokol = history.getWrittenProtokol();
+    int maxlines =  Activator.getDefault().getPreferenceStore().getInt(PreferenceConstants.HISTORY_LINES);
+    int counter = 0;
 %>
 <div id="history-container" class="history-container">
 	History
@@ -17,8 +20,15 @@
 			%>
 			<div class="history-line"><%=WebTools.escapeHTML(line)%></div>
 			<%
+			if(counter>maxlines)
+			    break;
+			counter++;
 			    }
 			%>
 		</div>
 	</div>
 </div>
+
+<script>
+$( "#history-container" ).resizable();
+</script>
