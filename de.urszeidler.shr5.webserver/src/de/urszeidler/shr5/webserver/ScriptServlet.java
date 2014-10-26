@@ -145,6 +145,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 pm.setCharacter(playerById);
                 session.setAttribute("playerManager", pm);
                 scriptViewerWrapper.getRegisteredPlayers().add(pm);
+                scriptViewerWrapper.addSession(req.getSession());
             } else
                 resp.sendRedirect("main.jsp");
         }

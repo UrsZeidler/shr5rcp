@@ -4,7 +4,10 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.PojoObservables;
@@ -16,8 +19,15 @@ import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -31,6 +41,8 @@ import org.eclipse.swt.widgets.Table;
 
 import de.urszeidler.shr5.webserver.Activator;
 import de.urszeidler.shr5.webserver.preferences.PreferenceConstants;
+
+import org.eclipse.swt.widgets.Button;
 
 public class ServerStatusDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -70,12 +82,12 @@ public class ServerStatusDialog extends TitleAreaDialog {
         grpSetverState.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         Label lblNewLabel = new Label(grpSetverState, SWT.NONE);
-        
+
         Label lblServeriplabel = new Label(grpSetverState, SWT.NONE);
-        
+
         if (viewerWrapper == null)
             lblNewLabel.setText("server not startet");
-        else{
+        else {
             lblNewLabel.setText("server startet");
 
             try {
@@ -88,12 +100,45 @@ public class ServerStatusDialog extends TitleAreaDialog {
         }
 
         Group grpConnectedPlayer = new Group(container, SWT.NONE);
+        grpConnectedPlayer.setLayout(new GridLayout(1, false));
         grpConnectedPlayer.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
         grpConnectedPlayer.setText("connected player");
-        grpConnectedPlayer.setLayout(new FillLayout(SWT.HORIZONTAL));
 
         tableViewer = new TableViewer(grpConnectedPlayer, SWT.BORDER | SWT.FULL_SELECTION);
         table = tableViewer.getTable();
+        table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+
+        Composite composite = new Composite(grpConnectedPlayer, SWT.NONE);
+        composite.setLayout(new GridLayout(1, false));
+        composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+
+        final Button btnDisconnect = new Button(composite, SWT.NONE);
+        btnDisconnect.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                ISelection selection = tableViewer.getSelection();
+                if (selection instanceof IStructuredSelection) {
+                    IStructuredSelection ss = (IStructuredSelection)selection;
+                    Iterator iterator = ss.iterator();
+                    for (Iterator iter = ss.iterator(); iter.hasNext();) {
+                        PlayerManager pm = (PlayerManager)iter.next();
+                        HttpSession sessions = viewerWrapper.getSessions(pm);
+                        if(sessions!=null){
+                            sessions.invalidate();
+                            viewerWrapper.getRegisteredPlayers().remove(pm);
+                        }
+                    }
+                }
+            }
+        });
+        btnDisconnect.setText("disconnect");
+
+        tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+            @Override
+            public void selectionChanged(SelectionChangedEvent event) {
+                btnDisconnect.setEnabled(!event.getSelection().isEmpty());
+            }
+        });
 
         return area;
     }
@@ -111,15 +156,16 @@ public class ServerStatusDialog extends TitleAreaDialog {
             // filters out 127.0.0.1 and inactive interfaces
             if (iface.isLoopback() || !iface.isUp())
                 continue;
-            
+
             Enumeration<InetAddress> addresses = iface.getInetAddresses();
-            while(addresses.hasMoreElements()) {
+            while (addresses.hasMoreElements()) {
                 InetAddress addr = addresses.nextElement();
-                //filter out ip6
-                if(addr.getAddress().length>4)
+                // filter out ip6
+                if (addr.getAddress().length > 4)
                     continue;
 
-                sb.append(iface.getDisplayName()).append("  ").append("http://").append(addr.getHostAddress()).append(":").append(port).append("/main");
+                sb.append(iface.getDisplayName()).append("  ").append("http://").append(addr.getHostAddress()).append(":").append(port)
+                        .append("/main");
                 sb.append("\n");
             }
         }

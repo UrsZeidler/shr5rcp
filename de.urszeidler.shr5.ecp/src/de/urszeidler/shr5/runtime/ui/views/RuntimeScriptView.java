@@ -86,6 +86,7 @@ import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -122,6 +123,7 @@ import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog.ProbeExecutionState;
 import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
@@ -159,7 +161,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             super.notifyChanged(notification);
             Object notifier = notification.getNotifier();
             Object feature = notification.getFeature();
-            if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction|| notifier instanceof FreeAction)
+            if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction
+                    || notifier instanceof FreeAction || notifier instanceof ScriptHistory || notifier instanceof RuntimeCharacter
+                    || notifier instanceof ExecutionProtocol || notifier instanceof ExecutionStack)
                 return;
 
             if (notifier instanceof CombatTurn) {
@@ -167,8 +171,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
                     if (ct.getCurrentTurn() == null)
                         return;
-                    printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_start_info, labelProvider.getText(ct.getCurrentTurn().getSubject()), ct
-                            .getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE ? Messages.RuntimeScriptView_sex_femal : Messages.RuntimeScriptView_sex_mal, ct.getCurrentTurn().getTurn(), ct
+                    printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_start_info, labelProvider.getText(ct
+                            .getCurrentTurn().getSubject()), ct.getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE
+                            ? Messages.RuntimeScriptView_sex_femal : Messages.RuntimeScriptView_sex_mal, ct.getCurrentTurn().getTurn(), ct
                             .getCurrentTurn().getPhase()));
 
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
@@ -184,7 +189,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                         TreeIterator<EObject> eAllContents = ip.eAllContents();
                         if (!eAllContents.hasNext())
-                            printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_pass, ip.getDate(), labelProvider.getText(ip.getSubject())));
+                            printedProtocol.add(0,
+                                    String.format(Messages.RuntimeScriptView_protocol_pass, ip.getDate(), labelProvider.getText(ip.getSubject())));
 
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
@@ -215,7 +221,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 }
                 if (notifier.equals(commandStack.getCurrentCommand())) {
                     Command notifier1 = (Command)notifier;
-                    System.out.println(ShadowrunEditingTools.command2String(notifier1));
                     if (notifier1.isExecuted()) {
                         String text = printCommand(notifier1);
                         printedProtocol.add(0, text);
@@ -675,7 +680,6 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tree.setHeaderVisible(false);
         formToolkit.paintBordersFor(tree);
 
-
         composite.pack(true);
         scrolledComposite.setContent(composite);
         scrolledComposite.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
@@ -721,14 +725,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void setScript(Script script) {
-        // this.script = script;
         commandStack = script.getHistory().getCommandStack();
-        protocol.setValue(commandStack.getProtocol());// = commandStack.getProtocol();
+        protocol.setValue(commandStack.getProtocol());
         history.setValue(script.getHistory());
-        // TODO : remove the adapter
-        // script.eAdapters().remove(adapter);
-        // writtenProtocol = script.getHistory();
-        script.eAdapters().add(adapter);
+        if (!script.eAdapters().contains(adapter))
+            script.eAdapters().add(adapter);
     }
 
     protected DataBindingContext initDataBindings1() {
@@ -902,14 +903,16 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
      * @return
      */
     private String printCommand(Command cmd) {
-        return String.format(Messages.RuntimeScriptView_protocol_basic_command, cmd.getDate(), labelProvider.getText(cmd), ShadowrunEditingTools.command2String(cmd));
+        return String.format(Messages.RuntimeScriptView_protocol_basic_command, cmd.getDate(), labelProvider.getText(cmd),
+                ShadowrunEditingTools.command2String(cmd));
     }
 
     @SuppressWarnings("unchecked")
     private void switchPlacement() {
         EList<Placement> nextPlacements = placement1.getNextPlacements();
 
-        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}), Messages.RuntimeScriptView_choose_placement_dialog_titel, Messages.RuntimeScriptView_choose_placement_dialog_message);
+        OwnChooseDialog dialog = new OwnChooseDialog(getSite().getShell(), nextPlacements.toArray(new Object[]{}),
+                Messages.RuntimeScriptView_choose_placement_dialog_titel, Messages.RuntimeScriptView_choose_placement_dialog_message);
         dialog.setLabelProvider(labelProvider);
         int open = dialog.open();
         if (open == Dialog.OK) {
@@ -919,7 +922,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 SetFeatureCommand command = GameplayFactory.eINSTANCE.createSetFeatureCommand();
                 command.setDate(placement1.getActualDate());
                 scriptService.setPlacement(eo);
-                printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_switch_placement, placement1.getActualDate(), labelProvider.getText(eo)));
+                printedProtocol.add(0,
+                        String.format(Messages.RuntimeScriptView_protocol_switch_placement, placement1.getActualDate(), labelProvider.getText(eo)));
             }
         }
     }
@@ -927,7 +931,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     @Override
     public void beforeExecute(Command cmd, EStructuralFeature... eStructuralFeatures) {
         if (cmd instanceof SemanticAction) {
-            return;            
+            return;
         }
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 Messages.RuntimeScriptView_probedialog_titel_before_execute, ProbeExecutionState.beforeExecute, eStructuralFeatures);
@@ -945,7 +949,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction|| cmd instanceof SemanticAction)
+        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
             return;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
@@ -957,11 +961,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 return;
 
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                    GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
-                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE_COMMAND__MODS,
-                    GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-    
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
+                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON,
+                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof RangedAttackCmd) {
@@ -979,16 +983,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
         } else if (cmd instanceof DamageTest) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                    GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
-                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT );
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
+                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.DAMAGE_TEST__DAMAGE,
+                    GameplayPackage.Literals.DAMAGE_TEST__DV, GameplayPackage.Literals.PROBE_COMMAND__MODS,
+                    GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof DefensTestCmd) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
-                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                    GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS, GameplayPackage.Literals.PROBE_COMMAND__MODS,
-                    GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+                    itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
+                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
             genericEObjectDialog.open();
             return;
         } else if (cmd instanceof SetFeatureCommand) {
@@ -1000,19 +1005,19 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         } else if (cmd instanceof SetExtendetData) {
             // SetExtendetData new_name = (SetExtendetData)cmd;
             return;
-        }
-        else if (cmd instanceof SkillTestCmd) {
-        ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
-                Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
-                GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.PROBE__LIMIT,
-                GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS, GameplayPackage.Literals.PROBE_COMMAND__MODS,GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-        d.open();
-        return;
+        } else if (cmd instanceof SkillTestCmd) {
+            ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
+                    Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
+                    GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+                    GameplayPackage.Literals.PROBE__LIMIT, GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS,
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+            d.open();
+            return;
         }
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, eStructuralFeatures);
         d.open();
-        return ;
+        return;
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
         // new DefaultReferenceManager(itemDelegator));
         // // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
@@ -1028,7 +1033,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             CombatTurn ct = (CombatTurn)cmd;
             ((Placement)placement.getValue()).setActualDate(new Date(ct.getDate().getTime() + 3000));
 
-            if (MessageDialog.openQuestion(getSite().getShell(), Messages.RuntimeScriptView_continue_combat_dialog_titel, Messages.RuntimeScriptView_continue_combat_dialog_message)) {
+            if (MessageDialog.openQuestion(getSite().getShell(), Messages.RuntimeScriptView_continue_combat_dialog_titel,
+                    Messages.RuntimeScriptView_continue_combat_dialog_message)) {
                 EList<RuntimeCharacter> combatants = ct.getCombatants();
                 contiueCombatTurn(combatants);
             } else {

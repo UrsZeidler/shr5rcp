@@ -53,8 +53,8 @@ public class ImageServlet extends HttpServlet implements Servlet {
         ImageLoader imageLoader = new ImageLoader();
         imageLoader.data = new ImageData[] {image.getImageData()};
         OutputStream out = response.getOutputStream();
-        imageLoader.save(out,SWT.IMAGE_PNG);
         response.setContentType("image/png");
+        imageLoader.save(out,SWT.IMAGE_PNG);
         out.close();
     }
 

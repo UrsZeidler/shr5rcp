@@ -12,13 +12,15 @@
     if (item instanceof Feuerwaffe) {
         Feuerwaffe fw = (Feuerwaffe)item;
         Magazin m = (Magazin)fw.getMagazin();
-        Feuerwaffe type = GameplayTools.getMagazingType(m);
         int kapazitaet = 0;
         int size = 0;
-        if (type != null) {
-            kapazitaet = type.getKapazitaet();
-            size = m.getBullets().size();
-        }        
+        if(m!=null){
+        	Feuerwaffe type = GameplayTools.getMagazingType(m);
+        	if (type != null) {
+            	kapazitaet = type.getKapazitaet();
+            	size = m.getBullets().size();
+        	}    
+        }    
 %>
 <%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
 <%=fw.getSchadenscode()%>|(<%=size%>/<%=kapazitaet%>)

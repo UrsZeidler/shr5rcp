@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -48,6 +50,8 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
     private ScriptViewer sv;
     private List<PlayerManager> registeredPlayers = new ArrayList<PlayerManager>();
+    private List<HttpSession> sessionList = new ArrayList<HttpSession>();
+    
 
     public ScriptViewerWrapper(ScriptViewer sv) {
         super();
@@ -247,5 +251,21 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
     public PlayerManager2RuntimeCharacterTransformer createPlayerManager2RuntimeCharacterTransformer() {
         return new PlayerManager2RuntimeCharacterTransformer();
+    }
+
+    public void addSession(HttpSession session) {
+        sessionList.add(session);
+        
+    }
+
+    public HttpSession getSessions(PlayerManager pm) {
+        for (HttpSession session : sessionList) {
+            Object attribute = session.getAttribute("playerManager");
+            if(attribute!=null)
+                if(attribute.equals(pm))
+                    return session;
+           
+        }
+        return null;
     }
 }

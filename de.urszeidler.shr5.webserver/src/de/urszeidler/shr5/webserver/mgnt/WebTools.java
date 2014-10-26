@@ -45,6 +45,8 @@ public class WebTools {
     }
 
     public static String getUriFragment(EObject eObject) {
+        if(eObject==null)
+            return "";
         Resource eResource = eObject.eResource();
         if(eResource==null)
             return "";
