@@ -124,7 +124,7 @@ public interface ScriptHistory extends EObject {
      * <!-- end-model-doc -->
      * @return the value of the '<em>Written Protokol</em>' attribute list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScriptHistory_WrittenProtokol()
-     * @model
+     * @model unique="false"
      * @generated
      */
     EList<String> getWrittenProtokol();

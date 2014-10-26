@@ -3,24 +3,19 @@
 package de.urszeidler.shr5.scripting.impl;
 
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
-
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -212,12 +207,13 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
 
     /**
      * <!-- begin-user-doc -->
+     * Simple fix for not unique.
      * <!-- end-user-doc -->
      * @generated
      */
     public EList<String> getWrittenProtokol() {
         if (writtenProtokol == null) {
-            writtenProtokol = new EDataTypeUniqueEList<String>(String.class, this, ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
+            writtenProtokol = new EDataTypeEList<String>(String.class, this, ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
         }
         return writtenProtokol;
     }

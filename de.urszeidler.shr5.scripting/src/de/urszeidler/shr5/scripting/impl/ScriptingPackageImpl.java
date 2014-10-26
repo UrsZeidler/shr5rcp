@@ -499,7 +499,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScriptHistory_CommandStack(), theGameplayPackage.getExecutionStack(), null, "commandStack", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getScriptHistory_CurrentDate(), theShr5Package.getShrDate(), "currentDate", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScriptHistory_CurrentPlacement(), this.getPlacement(), null, "currentPlacement", null, 0, 1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getScriptHistory_WrittenProtokol(), ecorePackage.getEString(), "writtenProtokol", null, 0, -1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getScriptHistory_WrittenProtokol(), ecorePackage.getEString(), "writtenProtokol", null, 0, -1, ScriptHistory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(scriptsEClass, Scripts.class, "Scripts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getScripts_Stories(), this.getScript(), null, "stories", null, 0, -1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
