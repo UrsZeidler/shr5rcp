@@ -13,6 +13,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
@@ -215,9 +216,24 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
         return super.eIsSet(featureID);
     }
 
+    /**
+     * Set the state and call the callback.
+     */
+    protected void prepareRedo() {
+        getProbe().clear();
+        getProbeMods().clear();
+        setExecuting(true);
+
+        if (isSetCmdCallback() && getCmdCallback() != null)
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+                    GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
+
+    }
+
+    
     @Override
     public void redo() {
-        setExecuting(true);
+        prepareRedo();
 
         SkillTestCmd subjectCommand = GameplayFactory.eINSTANCE.createSkillTestCmd();
         subjectCommand.setSubject(getSubject());

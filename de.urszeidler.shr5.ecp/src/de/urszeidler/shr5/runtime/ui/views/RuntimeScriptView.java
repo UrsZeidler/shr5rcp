@@ -94,6 +94,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptAction;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
@@ -1005,6 +1006,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         } else if (cmd instanceof SetExtendetData) {
             // SetExtendetData new_name = (SetExtendetData)cmd;
             return;
+        } else if (cmd instanceof OpposedSkillTestCmd) {
+        
         } else if (cmd instanceof SkillTestCmd) {
             ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                     Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
