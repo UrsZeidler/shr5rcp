@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getDataAware <em>Data Aware</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getData <em>Data</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getValue <em>Value</em>}</li>
@@ -152,6 +153,26 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * @ordered
      */
     protected static final boolean CAN_EXECUTE_EDEFAULT = false;
+
+    /**
+     * The default value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean HIDDEN_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected boolean hidden = HIDDEN_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getDataAware() <em>Data Aware</em>}' reference.
@@ -347,6 +368,27 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHidden(boolean newHidden) {
+        boolean oldHidden = hidden;
+        hidden = newHidden;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_EXTENDET_DATA__HIDDEN, oldHidden, hidden));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public AbstractExtendetDataAware getDataAware() {
         if (dataAware != null && dataAware.eIsProxy()) {
             InternalEObject oldDataAware = (InternalEObject)dataAware;
@@ -501,6 +543,8 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
                 return isExecuting();
             case GameplayPackage.SET_EXTENDET_DATA__CAN_EXECUTE:
                 return isCanExecute();
+            case GameplayPackage.SET_EXTENDET_DATA__HIDDEN:
+                return isHidden();
             case GameplayPackage.SET_EXTENDET_DATA__DATA_AWARE:
                 if (resolve) return getDataAware();
                 return basicGetDataAware();
@@ -538,6 +582,9 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
             case GameplayPackage.SET_EXTENDET_DATA__EXECUTING:
                 setExecuting((Boolean)newValue);
                 return;
+            case GameplayPackage.SET_EXTENDET_DATA__HIDDEN:
+                setHidden((Boolean)newValue);
+                return;
             case GameplayPackage.SET_EXTENDET_DATA__DATA_AWARE:
                 setDataAware((AbstractExtendetDataAware)newValue);
                 return;
@@ -574,6 +621,9 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
             case GameplayPackage.SET_EXTENDET_DATA__EXECUTING:
                 setExecuting(EXECUTING_EDEFAULT);
                 return;
+            case GameplayPackage.SET_EXTENDET_DATA__HIDDEN:
+                setHidden(HIDDEN_EDEFAULT);
+                return;
             case GameplayPackage.SET_EXTENDET_DATA__DATA_AWARE:
                 setDataAware((AbstractExtendetDataAware)null);
                 return;
@@ -607,6 +657,8 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
                 return executing != EXECUTING_EDEFAULT;
             case GameplayPackage.SET_EXTENDET_DATA__CAN_EXECUTE:
                 return isCanExecute() != CAN_EXECUTE_EDEFAULT;
+            case GameplayPackage.SET_EXTENDET_DATA__HIDDEN:
+                return hidden != HIDDEN_EDEFAULT;
             case GameplayPackage.SET_EXTENDET_DATA__DATA_AWARE:
                 return dataAware != null;
             case GameplayPackage.SET_EXTENDET_DATA__DATA:
@@ -653,6 +705,8 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", hidden: ");
+        result.append(hidden);
         result.append(", value: ");
         result.append(value);
         result.append(')');

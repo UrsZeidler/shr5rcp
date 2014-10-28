@@ -72,6 +72,10 @@
           <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Command/cmdCallback"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_f12OEQxCEeStocVKc3B8yQ"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_s3wF8F7HEeSAtrzaTQGqXA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="gameplay.ecore#//Command/hidden"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_s3wF8V7HEeSAtrzaTQGqXA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_rRYwco_HEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_rRYwc4_HEd6SEpVfiQZsGw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_rRYwdI_HEd6SEpVfiQZsGw"/>
@@ -326,7 +330,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_5IAXgQrREeSXe8h_-hOPdg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="gameplay.ecore#//CombatTurn"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5IAXggrREeSXe8h_-hOPdg" x="670" y="135"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5IAXggrREeSXe8h_-hOPdg" x="630" y="135"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_1lQNAArSEeSXe8h_-hOPdg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_1lQ0EArSEeSXe8h_-hOPdg" type="4001"/>
@@ -946,7 +950,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_5IaAIQrREeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_5IaAIgrREeSXe8h_-hOPdg" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IaAIwrREeSXe8h_-hOPdg" points="[-24, -23, 165, 129]$[-24, -53, 165, 99]$[-150, -53, 39, 99]$[-150, -81, 39, 71]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5IaAIwrREeSXe8h_-hOPdg" points="[-10, -23, 136, 121]$[-10, -33, 136, 111]$[-122, -33, 24, 111]$[-122, -64, 24, 80]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_6KboYArSEeSXe8h_-hOPdg" type="3003" source="_1lQNAArSEeSXe8h_-hOPdg" target="_Q1ENMI_IEd6SEpVfiQZsGw">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_6KboYQrSEeSXe8h_-hOPdg" routing="Rectilinear" lineColor="4210752"/>

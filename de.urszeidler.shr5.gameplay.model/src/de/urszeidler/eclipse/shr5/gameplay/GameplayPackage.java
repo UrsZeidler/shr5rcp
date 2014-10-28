@@ -180,13 +180,22 @@ public interface GameplayPackage extends EPackage {
     int COMMAND__CAN_EXECUTE = 5;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND__HIDDEN = 6;
+
+    /**
      * The number of structural features of the '<em>Command</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMMAND_FEATURE_COUNT = 6;
+    int COMMAND_FEATURE_COUNT = 7;
 
     /**
      * The operation id for the '<em>Redo</em>' operation.
@@ -278,6 +287,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUBJECT_COMMAND__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBJECT_COMMAND__HIDDEN = COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -387,6 +405,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int PROBE_COMMAND__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROBE_COMMAND__HIDDEN = SUBJECT_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -622,6 +649,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DAMAGE_TEST__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DAMAGE_TEST__HIDDEN = PROBE_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -886,6 +922,15 @@ public interface GameplayPackage extends EPackage {
     int SKILL_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_TEST_CMD__HIDDEN = PROBE_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1128,6 +1173,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE = SKILL_TEST_CMD__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int OPPOSED_SKILL_TEST_CMD__HIDDEN = SKILL_TEST_CMD__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1390,6 +1444,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int INITATIVE__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE__HIDDEN = SUBJECT_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1729,6 +1792,15 @@ public interface GameplayPackage extends EPackage {
     int COMBAT_TURN__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_TURN__HIDDEN = COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Combatants</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2019,6 +2091,15 @@ public interface GameplayPackage extends EPackage {
     int EXTENDET_SKILL_TEST_CMD__CAN_EXECUTE = SKILL_TEST_CMD__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EXTENDET_SKILL_TEST_CMD__HIDDEN = SKILL_TEST_CMD__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2281,6 +2362,15 @@ public interface GameplayPackage extends EPackage {
     int DEFENS_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DEFENS_TEST_CMD__HIDDEN = PROBE_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2523,6 +2613,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SUCCES_TEST_CMD__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUCCES_TEST_CMD__HIDDEN = PROBE_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2770,6 +2869,15 @@ public interface GameplayPackage extends EPackage {
     int INITATIVE_PASS__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INITATIVE_PASS__HIDDEN = SUBJECT_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2933,6 +3041,15 @@ public interface GameplayPackage extends EPackage {
     int COMMAND_WRAPPER__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMAND_WRAPPER__HIDDEN = SUBJECT_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3040,6 +3157,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int COMPLEX_ACTION__CAN_EXECUTE = COMMAND_WRAPPER__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMPLEX_ACTION__HIDDEN = COMMAND_WRAPPER__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -3151,6 +3277,15 @@ public interface GameplayPackage extends EPackage {
     int SIMPLE_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTION__HIDDEN = SUBJECT_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3258,6 +3393,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int SIMPLE_ACTIONS__CAN_EXECUTE = COMMAND_WRAPPER__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIMPLE_ACTIONS__HIDDEN = COMMAND_WRAPPER__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -3387,6 +3531,15 @@ public interface GameplayPackage extends EPackage {
     int FREE_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_ACTION__HIDDEN = SUBJECT_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3494,6 +3647,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int INTERRUPT_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERRUPT_ACTION__HIDDEN = SUBJECT_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -3623,6 +3785,15 @@ public interface GameplayPackage extends EPackage {
     int SET_FEATURE_COMMAND__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_FEATURE_COMMAND__HIDDEN = COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3748,6 +3919,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int MEELE_ATTACK_CMD__CAN_EXECUTE = OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MEELE_ATTACK_CMD__HIDDEN = OPPOSED_SKILL_TEST_CMD__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -4019,6 +4199,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int RANGED_ATTACK_CMD__CAN_EXECUTE = OPPOSED_SKILL_TEST_CMD__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGED_ATTACK_CMD__HIDDEN = OPPOSED_SKILL_TEST_CMD__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -4411,6 +4600,15 @@ public interface GameplayPackage extends EPackage {
     int SET_EXTENDET_DATA__CAN_EXECUTE = COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SET_EXTENDET_DATA__HIDDEN = COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Data Aware</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4538,6 +4736,15 @@ public interface GameplayPackage extends EPackage {
     int SEMANTIC_ACTION__CAN_EXECUTE = SUBJECT_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SEMANTIC_ACTION__HIDDEN = SUBJECT_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4663,6 +4870,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int DRAIN_COMMAND__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRAIN_COMMAND__HIDDEN = PROBE_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -4918,6 +5134,15 @@ public interface GameplayPackage extends EPackage {
     int SPELL_COMMAND__CAN_EXECUTE = PROBE_COMMAND__CAN_EXECUTE;
 
     /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELL_COMMAND__HIDDEN = PROBE_COMMAND__HIDDEN;
+
+    /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5160,6 +5385,15 @@ public interface GameplayPackage extends EPackage {
      * @ordered
      */
     int COMBAT_SPELL_CMD__CAN_EXECUTE = SPELL_COMMAND__CAN_EXECUTE;
+
+    /**
+     * The feature id for the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMBAT_SPELL_CMD__HIDDEN = SPELL_COMMAND__HIDDEN;
 
     /**
      * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -5551,6 +5785,17 @@ public interface GameplayPackage extends EPackage {
      * @generated
      */
     EAttribute getCommand_CanExecute();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isHidden <em>Hidden</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Hidden</em>'.
+     * @see de.urszeidler.eclipse.shr5.gameplay.Command#isHidden()
+     * @see #getCommand()
+     * @generated
+     */
+    EAttribute getCommand_Hidden();
 
     /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#redo() <em>Redo</em>}' operation.
@@ -6751,6 +6996,14 @@ public interface GameplayPackage extends EPackage {
          * @generated
          */
         EAttribute COMMAND__CAN_EXECUTE = eINSTANCE.getCommand_CanExecute();
+
+        /**
+         * The meta object literal for the '<em><b>Hidden</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMMAND__HIDDEN = eINSTANCE.getCommand_Hidden();
 
         /**
          * The meta object literal for the '<em><b>Redo</b></em>' operation.

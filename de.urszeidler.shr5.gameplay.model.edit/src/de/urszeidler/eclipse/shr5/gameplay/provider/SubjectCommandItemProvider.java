@@ -66,6 +66,7 @@ public class SubjectCommandItemProvider
             addCmdCallbackPropertyDescriptor(object);
             addExecutingPropertyDescriptor(object);
             addCanExecutePropertyDescriptor(object);
+            addHiddenPropertyDescriptor(object);
             addSubjectPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -182,6 +183,28 @@ public class SubjectCommandItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Hidden feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addHiddenPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Command_hidden_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Command_hidden_feature", "_UI_Command_type"),
+                 GameplayPackage.Literals.COMMAND__HIDDEN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Subject feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -273,6 +296,7 @@ public class SubjectCommandItemProvider
             case GameplayPackage.SUBJECT_COMMAND__CMD_CALLBACK:
             case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
             case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
+            case GameplayPackage.SUBJECT_COMMAND__HIDDEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case GameplayPackage.SUBJECT_COMMAND__SUB_COMMANDS:

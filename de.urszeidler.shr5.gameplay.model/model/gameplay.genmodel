@@ -48,6 +48,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/cmdCallback"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executing"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/canExecute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/hidden"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/redo"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/undo"/>
     </genClasses>

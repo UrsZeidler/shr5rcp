@@ -222,7 +222,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 }
                 if (notifier.equals(commandStack.getCurrentCommand())) {
                     Command notifier1 = (Command)notifier;
-                    if (notifier1.isExecuted()) {
+                    if (notifier1.isExecuted()&& !notifier1.isHidden()) {
                         String text = printCommand(notifier1);
                         printedProtocol.add(0, text);
                     }
@@ -1007,13 +1007,14 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // SetExtendetData new_name = (SetExtendetData)cmd;
             return;
         } else if (cmd instanceof OpposedSkillTestCmd) {
-        
+
         } else if (cmd instanceof SkillTestCmd) {
             ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                     Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
                     GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.PROBE__LIMIT, GameplayPackage.Literals.SUCCES_TEST__THRESHOLDS,
-                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+                    GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT,
+                    GameplayPackage.Literals.COMMAND__HIDDEN);
             d.open();
             return;
         }

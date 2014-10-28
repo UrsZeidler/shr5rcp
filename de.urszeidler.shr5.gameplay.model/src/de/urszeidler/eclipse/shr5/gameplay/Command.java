@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isHidden <em>Hidden</em>}</li>
  * </ul>
  * </p>
  *
@@ -215,6 +216,31 @@ public interface Command extends EObject {
      * @generated
      */
     boolean isCanExecute();
+
+    /**
+     * Returns the value of the '<em><b>Hidden</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Should the command not be notified and written in the history.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Hidden</em>' attribute.
+     * @see #setHidden(boolean)
+     * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_Hidden()
+     * @model
+     * @generated
+     */
+    boolean isHidden();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.Command#isHidden <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Hidden</em>' attribute.
+     * @see #isHidden()
+     * @generated
+     */
+    void setHidden(boolean value);
 
     /**
      * <!-- begin-user-doc -->

@@ -180,6 +180,9 @@ public class ScriptViewerWrapper implements ScriptViewer {
      */
     private void createDefaultDialog(Command cmd, final PlayerManager playerManager, EStructuralFeature... eStructuralFeatures) {
         sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
+        if(cmd.isHidden())
+            return;
+        
         List<EStructuralFeature> eAllStructuralFeatures_1 = new ArrayList<EStructuralFeature>();
         if (cmd instanceof Probe) {
             eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);

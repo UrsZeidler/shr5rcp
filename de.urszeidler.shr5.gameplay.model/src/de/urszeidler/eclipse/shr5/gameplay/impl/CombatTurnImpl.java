@@ -52,6 +52,7 @@ import de.urszeidler.eclipse.shr5.runtime.Zustand;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCombatants <em>Combatants</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getActionPhases <em>Action Phases</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.CombatTurnImpl#getCurrentTurn <em>Current Turn</em>}</li>
@@ -193,6 +194,26 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      * @ordered
      */
     protected static final boolean CAN_EXECUTE_EDEFAULT = false;
+
+    /**
+     * The default value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean HIDDEN_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected boolean hidden = HIDDEN_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getCombatants() <em>Combatants</em>}' reference list.
@@ -423,6 +444,27 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
      */
     public boolean isCanExecute() {
         return !executed && getCombatants().size() > 0;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHidden(boolean newHidden) {
+        boolean oldHidden = hidden;
+        hidden = newHidden;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.COMBAT_TURN__HIDDEN, oldHidden, hidden));
     }
 
     /**
@@ -661,6 +703,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 return isExecuting();
             case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
                 return isCanExecute();
+            case GameplayPackage.COMBAT_TURN__HIDDEN:
+                return isHidden();
             case GameplayPackage.COMBAT_TURN__COMBATANTS:
                 return getCombatants();
             case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
@@ -698,6 +742,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 return;
             case GameplayPackage.COMBAT_TURN__EXECUTING:
                 setExecuting((Boolean)newValue);
+                return;
+            case GameplayPackage.COMBAT_TURN__HIDDEN:
+                setHidden((Boolean)newValue);
                 return;
             case GameplayPackage.COMBAT_TURN__COMBATANTS:
                 getCombatants().clear();
@@ -740,6 +787,9 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             case GameplayPackage.COMBAT_TURN__EXECUTING:
                 setExecuting(EXECUTING_EDEFAULT);
                 return;
+            case GameplayPackage.COMBAT_TURN__HIDDEN:
+                setHidden(HIDDEN_EDEFAULT);
+                return;
             case GameplayPackage.COMBAT_TURN__COMBATANTS:
                 getCombatants().clear();
                 return;
@@ -776,6 +826,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
                 return executing != EXECUTING_EDEFAULT;
             case GameplayPackage.COMBAT_TURN__CAN_EXECUTE:
                 return isCanExecute() != CAN_EXECUTE_EDEFAULT;
+            case GameplayPackage.COMBAT_TURN__HIDDEN:
+                return hidden != HIDDEN_EDEFAULT;
             case GameplayPackage.COMBAT_TURN__COMBATANTS:
                 return combatants != null && !combatants.isEmpty();
             case GameplayPackage.COMBAT_TURN__ACTION_PHASES:
@@ -827,6 +879,8 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", hidden: ");
+        result.append(hidden);
         result.append(", sequence: ");
         result.append(sequence);
         result.append(')');

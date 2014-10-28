@@ -67,6 +67,7 @@ public class SetExtendetDataItemProvider
             addCmdCallbackPropertyDescriptor(object);
             addExecutingPropertyDescriptor(object);
             addCanExecutePropertyDescriptor(object);
+            addHiddenPropertyDescriptor(object);
             addDataAwarePropertyDescriptor(object);
             addDataPropertyDescriptor(object);
             addValuePropertyDescriptor(object);
@@ -177,6 +178,28 @@ public class SetExtendetDataItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Command_canExecute_feature", "_UI_Command_type"),
                  GameplayPackage.Literals.COMMAND__CAN_EXECUTE,
                  false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Hidden feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addHiddenPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Command_hidden_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Command_hidden_feature", "_UI_Command_type"),
+                 GameplayPackage.Literals.COMMAND__HIDDEN,
+                 true,
                  false,
                  false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
@@ -327,6 +350,7 @@ public class SetExtendetDataItemProvider
             case GameplayPackage.SET_EXTENDET_DATA__CMD_CALLBACK:
             case GameplayPackage.SET_EXTENDET_DATA__EXECUTING:
             case GameplayPackage.SET_EXTENDET_DATA__CAN_EXECUTE:
+            case GameplayPackage.SET_EXTENDET_DATA__HIDDEN:
             case GameplayPackage.SET_EXTENDET_DATA__VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

@@ -24,11 +24,11 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamage <em>Damage</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamageType <em>Damage Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamage <em>Damage</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamageType <em>Damage Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
@@ -36,7 +36,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * The default value of the '{@link #getDamage() <em>Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDamage()
      * @generated
      * @ordered
@@ -47,7 +46,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * The cached value of the '{@link #getDamage() <em>Damage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDamage()
      * @generated
      * @ordered
@@ -58,7 +56,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * The default value of the '{@link #getDamageType() <em>Damage Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDamageType()
      * @generated
      * @ordered
@@ -69,7 +66,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * The cached value of the '{@link #getDamageType() <em>Damage Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDamageType()
      * @generated
      * @ordered
@@ -79,7 +75,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected DrainCommandImpl() {
@@ -89,7 +84,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -100,7 +94,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getDamage() {
@@ -110,7 +103,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDamage(int newDamage) {
@@ -123,7 +115,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SchadensTyp getDamageType() {
@@ -133,7 +124,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDamageType(SchadensTyp newDamageType) {
@@ -146,7 +136,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -163,7 +152,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -182,7 +170,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -201,7 +188,6 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -267,13 +253,11 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (damage: ");

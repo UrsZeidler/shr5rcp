@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getValue <em>Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getObject <em>Object</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getFeature <em>Feature</em>}</li>
@@ -154,6 +155,26 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected static final boolean CAN_EXECUTE_EDEFAULT = false;
+
+    /**
+     * The default value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean HIDDEN_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected boolean hidden = HIDDEN_EDEFAULT;
 
     /**
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -350,6 +371,27 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHidden(boolean newHidden) {
+        boolean oldHidden = hidden;
+        hidden = newHidden;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_FEATURE_COMMAND__HIDDEN, oldHidden, hidden));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public Object getValue() {
         return value;
     }
@@ -505,6 +547,8 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
                 return isExecuting();
             case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
                 return isCanExecute();
+            case GameplayPackage.SET_FEATURE_COMMAND__HIDDEN:
+                return isHidden();
             case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 return getValue();
             case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
@@ -542,6 +586,9 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
             case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 setExecuting((Boolean)newValue);
                 return;
+            case GameplayPackage.SET_FEATURE_COMMAND__HIDDEN:
+                setHidden((Boolean)newValue);
+                return;
             case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 setValue(newValue);
                 return;
@@ -578,6 +625,9 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
             case GameplayPackage.SET_FEATURE_COMMAND__EXECUTING:
                 setExecuting(EXECUTING_EDEFAULT);
                 return;
+            case GameplayPackage.SET_FEATURE_COMMAND__HIDDEN:
+                setHidden(HIDDEN_EDEFAULT);
+                return;
             case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 setValue(VALUE_EDEFAULT);
                 return;
@@ -611,6 +661,8 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
                 return executing != EXECUTING_EDEFAULT;
             case GameplayPackage.SET_FEATURE_COMMAND__CAN_EXECUTE:
                 return isCanExecute() != CAN_EXECUTE_EDEFAULT;
+            case GameplayPackage.SET_FEATURE_COMMAND__HIDDEN:
+                return hidden != HIDDEN_EDEFAULT;
             case GameplayPackage.SET_FEATURE_COMMAND__VALUE:
                 return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
             case GameplayPackage.SET_FEATURE_COMMAND__OBJECT:
@@ -657,6 +709,8 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", hidden: ");
+        result.append(hidden);
         result.append(", value: ");
         result.append(value);
         result.append(')');

@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getCmdCallback <em>Cmd Callback</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuting <em>Executing</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isCanExecute <em>Can Execute</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
  * </ul>
  * </p>
@@ -151,6 +152,26 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * @ordered
      */
     protected static final boolean CAN_EXECUTE_EDEFAULT = false;
+
+    /**
+     * The default value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean HIDDEN_EDEFAULT = false;
+
+    /**
+     * The cached value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isHidden()
+     * @generated
+     * @ordered
+     */
+    protected boolean hidden = HIDDEN_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getSubject() <em>Subject</em>}' reference.
@@ -317,6 +338,27 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHidden(boolean newHidden) {
+        boolean oldHidden = hidden;
+        hidden = newHidden;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SUBJECT_COMMAND__HIDDEN, oldHidden, hidden));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public RuntimeCharacter getSubject() {
         if (subject != null && subject.eIsProxy()) {
             InternalEObject oldSubject = (InternalEObject)subject;
@@ -447,6 +489,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return isExecuting();
             case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
                 return isCanExecute();
+            case GameplayPackage.SUBJECT_COMMAND__HIDDEN:
+                return isHidden();
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 if (resolve) return getSubject();
                 return basicGetSubject();
@@ -479,6 +523,9 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
             case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
                 setExecuting((Boolean)newValue);
                 return;
+            case GameplayPackage.SUBJECT_COMMAND__HIDDEN:
+                setHidden((Boolean)newValue);
+                return;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 setSubject((RuntimeCharacter)newValue);
                 return;
@@ -509,6 +556,9 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
             case GameplayPackage.SUBJECT_COMMAND__EXECUTING:
                 setExecuting(EXECUTING_EDEFAULT);
                 return;
+            case GameplayPackage.SUBJECT_COMMAND__HIDDEN:
+                setHidden(HIDDEN_EDEFAULT);
+                return;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 setSubject((RuntimeCharacter)null);
                 return;
@@ -536,6 +586,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
                 return executing != EXECUTING_EDEFAULT;
             case GameplayPackage.SUBJECT_COMMAND__CAN_EXECUTE:
                 return isCanExecute() != CAN_EXECUTE_EDEFAULT;
+            case GameplayPackage.SUBJECT_COMMAND__HIDDEN:
+                return hidden != HIDDEN_EDEFAULT;
             case GameplayPackage.SUBJECT_COMMAND__SUBJECT:
                 return subject != null;
         }
@@ -578,6 +630,8 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         if (cmdCallbackESet) result.append(cmdCallback); else result.append("<unset>");
         result.append(", executing: ");
         result.append(executing);
+        result.append(", hidden: ");
+        result.append(hidden);
         result.append(')');
         return result.toString();
     }

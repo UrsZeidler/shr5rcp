@@ -23,10 +23,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SkillTestCmdImpl#getSkill <em>Skill</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SkillTestCmdImpl#getSkill <em>Skill</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
@@ -34,6 +34,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * The cached value of the '{@link #getSkill() <em>Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSkill()
      * @generated
      * @ordered
@@ -43,6 +44,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SkillTestCmdImpl() {
@@ -52,6 +54,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -62,6 +65,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Fertigkeit getSkill() {
@@ -79,6 +83,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Fertigkeit basicGetSkill() {
@@ -88,6 +93,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSkill(Fertigkeit newSkill) {
@@ -100,13 +106,15 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case GameplayPackage.SKILL_TEST_CMD__SKILL:
-                if (resolve) return getSkill();
+                if (resolve)
+                    return getSkill();
                 return basicGetSkill();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -115,6 +123,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -130,6 +139,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -145,6 +155,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -164,11 +175,11 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         getProbeMods().clear();
         setExecuting(true);
 
-        mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());       
-        
+        mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
+
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS,
-                    GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+                    GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT, GameplayPackage.Literals.COMMAND__HIDDEN);
 
     }
 
@@ -179,11 +190,10 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
             GameplayTools.increaseEdgeValue(getSubject(), 1);
     }
 
-    
     @Override
     public void redo() {
-         prepareRedo();
-         
+        prepareRedo();
+
         pushTheLimit();
         if (!isSkipTest()) {
             W6Dice w6Dice = new W6Dice();
@@ -195,14 +205,13 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
             this.glitches = W6Dice.calcGlitchDice(probe);
         }
 
-        if (getCmdCallback() != null && getSubject().canUseEdge()&& !isPushTheLimit())
+        if (getCmdCallback() != null && getSubject().canUseEdge() && !isPushTheLimit())
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
         secondChance(getProbe().size());
         this.netHits = getSuccesses() - thresholds;
 
-        afterRedo();        
+        afterRedo();
     }
-
 
 } // SkillTestCmdImpl

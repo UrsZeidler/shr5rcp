@@ -531,6 +531,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCommand_Hidden() {
+        return (EAttribute)commandEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EOperation getCommand__Redo() {
         return commandEClass.getEOperations().get(0);
     }
@@ -1462,6 +1471,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         createEAttribute(commandEClass, COMMAND__CMD_CALLBACK);
         createEAttribute(commandEClass, COMMAND__EXECUTING);
         createEAttribute(commandEClass, COMMAND__CAN_EXECUTE);
+        createEAttribute(commandEClass, COMMAND__HIDDEN);
         createEOperation(commandEClass, COMMAND___REDO);
         createEOperation(commandEClass, COMMAND___UNDO);
 
@@ -1677,6 +1687,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         initEAttribute(getCommand_CmdCallback(), this.getCommandCallback(), "cmdCallback", "", 0, 1, Command.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_Executing(), ecorePackage.getEBoolean(), "executing", "false", 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCommand_CanExecute(), ecorePackage.getEBoolean(), "canExecute", null, 1, 1, Command.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCommand_Hidden(), ecorePackage.getEBoolean(), "hidden", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEOperation(getCommand__Redo(), null, "redo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
