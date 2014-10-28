@@ -51,7 +51,6 @@ public class ScriptViewerWrapper implements ScriptViewer {
     private ScriptViewer sv;
     private List<PlayerManager> registeredPlayers = new ArrayList<PlayerManager>();
     private List<HttpSession> sessionList = new ArrayList<HttpSession>();
-    
 
     public ScriptViewerWrapper(ScriptViewer sv) {
         super();
@@ -76,6 +75,14 @@ public class ScriptViewerWrapper implements ScriptViewer {
     public void setScript(Script script) {
         sv.setScript(script);
 
+    }
+
+    @Override
+    public void sendMessage(RuntimeCharacter character, String message) {
+        PlayerManager playerManager = getPlayerManager(character);
+        if (playerManager != null) {
+            playerManager.createDialog("Message", message);
+        }
     }
 
     /*
@@ -163,10 +170,19 @@ public class ScriptViewerWrapper implements ScriptViewer {
         if (cmd instanceof SubjectCommand) {
             SubjectCommand sc = (SubjectCommand)cmd;
             RuntimeCharacter subject = sc.getSubject();
-            for (PlayerManager pm : registeredPlayers) {
-                if (pm.getCharacter() == subject)
-                    return pm;
-            }
+            return getPlayerManager(subject);
+        }
+        return null;
+    }
+
+    /**
+     * @param subject
+     * @return
+     */
+    private PlayerManager getPlayerManager(RuntimeCharacter subject) {
+        for (PlayerManager pm : registeredPlayers) {
+            if (pm.getCharacter() == subject)
+                return pm;
         }
         return null;
     }
@@ -180,9 +196,9 @@ public class ScriptViewerWrapper implements ScriptViewer {
      */
     private void createDefaultDialog(Command cmd, final PlayerManager playerManager, EStructuralFeature... eStructuralFeatures) {
         sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
-        if(cmd.isHidden())
+        if (cmd.isHidden())
             return;
-        
+
         List<EStructuralFeature> eAllStructuralFeatures_1 = new ArrayList<EStructuralFeature>();
         if (cmd instanceof Probe) {
             eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);
@@ -258,16 +274,16 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
     public void addSession(HttpSession session) {
         sessionList.add(session);
-        
+
     }
 
     public HttpSession getSessions(PlayerManager pm) {
         for (HttpSession session : sessionList) {
             Object attribute = session.getAttribute("playerManager");
-            if(attribute!=null)
-                if(attribute.equals(pm))
+            if (attribute != null)
+                if (attribute.equals(pm))
                     return session;
-           
+
         }
         return null;
     }

@@ -19,6 +19,7 @@ import org.eclipse.ui.services.IServiceLocator;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
@@ -48,15 +49,9 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setScript(Script script) {
-        // if(this.script!=null)
-        // this.script.eAdapters().remove(adapter);
-
         this.script = script;
         if (scriptViewer != null)
             scriptViewer.setScript(script);
-
-        // this.script.eAdapters().add(adapter);
-
     }
 
     public Placement getPlacement() {
@@ -77,6 +72,14 @@ public class ScriptServiceImpl implements ScriptService {
             scriptViewer.setPlacement(placement);
     }
 
+
+    @Override
+    public void sendMessage(RuntimeCharacter character, String message) {
+        if (scriptViewer != null)
+            scriptViewer.sendMessage(character, message);        
+    }
+
+    
     @Override
     public void registerScriptViewer(ScriptViewer viewer) {
         this.scriptViewer = viewer;

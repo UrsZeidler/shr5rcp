@@ -19,11 +19,10 @@
     ProbeDialog pd = pm.getCurrentDialog();
     if(pd==null)
         return;
-System.out.println(pd.getCmd());
-    String characterName = WebTools.getText(character);// character.getCharacter().getPersona().getName();
+        
+    String characterName = WebTools.getText(character);
     //
 %>
-
 <form id="probe-dialog" action="main" method="post">
 	<div class="probe-container thin-border big-corner ui-dialog">
 		<div class="big-corner-margin">

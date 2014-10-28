@@ -733,6 +733,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             script.eAdapters().add(adapter);
     }
 
+    @Override
+    public void sendMessage(RuntimeCharacter character, String message) {
+        // don't send messages to our self        
+    }
+
+    
     protected DataBindingContext initDataBindings1() {
         DataBindingContext bindingContext = new DataBindingContext();
         Realm realm = Realm.getDefault();
@@ -1073,4 +1079,5 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     }
 
+ 
 }

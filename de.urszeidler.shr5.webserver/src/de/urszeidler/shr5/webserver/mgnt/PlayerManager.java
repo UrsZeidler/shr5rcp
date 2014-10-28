@@ -31,6 +31,7 @@ public class PlayerManager {
         private ProbeState state;
         private Command cmd;
         private List<EStructuralFeature> features;
+        private String message;
         
         public ProbeDialog(Command cmd, EStructuralFeature[] eStructuralFeatures) {
             this.cmd = cmd;
@@ -84,6 +85,13 @@ public class PlayerManager {
         this.currentDialog = new ProbeDialog(cmd,eStructuralFeatures);
         
     }
+    
+
+    public void createDialog(String titel, String message) {
+        // TODO Auto-generated method stub
+        
+    }
+
 
     public void setCommandToIgnore(Command command) {
        ignoreCommand = command;        
