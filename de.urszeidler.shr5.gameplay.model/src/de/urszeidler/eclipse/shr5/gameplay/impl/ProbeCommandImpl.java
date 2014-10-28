@@ -431,7 +431,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
         if (!isExecuted())
             return ProbeState.NO_GLITCH;
 
-        double half = probe.size() / 2.0;
+        double half = getProbe().size() / 2.0;
         if (getGlitches() > half)
             if (getSuccesses() == 0 && ! isCloseCall())
                 return ProbeState.CRITICAL_GLITCH;

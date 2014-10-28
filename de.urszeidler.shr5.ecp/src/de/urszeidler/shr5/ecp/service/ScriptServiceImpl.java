@@ -12,7 +12,6 @@ import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
@@ -31,16 +30,6 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
 public class ScriptServiceImpl implements ScriptService {
     protected static final String COMBAT_PERSPECTIVE = "de.urszeidler.shr5.product.application.CombatPerspective";
 
-    // private Adapter adapter = new EContentAdapter() {
-    //
-    // public void notifyChanged(Notification notification) {
-    // super.notifyChanged(notification);
-    // notification.getFeature();
-    // if (GameplayPackage.Literals.COMMAND__EXECUTED.equals(notification.getFeature())) {
-    // System.out.println(GameplayTools.printCommand((Command)notification.getNotifier()));
-    // }
-    // }
-    // };
     private Lock lock = new ReentrantLock();
     private Script script;
     private Placement placement;
