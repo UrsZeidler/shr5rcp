@@ -48,7 +48,7 @@
 			dialogClass : "no-close",
 			autoOpen : false,
 			modal : true,
-			height : 400,
+// 			height : 400,
 			show : "puff",
 			hide : "puff"
 		});

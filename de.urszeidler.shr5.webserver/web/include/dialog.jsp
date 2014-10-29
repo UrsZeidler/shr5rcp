@@ -24,16 +24,20 @@
     String characterName = WebTools.getText(character);
     if (pd.getCmd() == null) {
 %>
+<form id="probe-dialog" action="main" method="post">
 <div class="probe-container thin-border big-corner ui-dialog">
 	<div class="big-corner-margin">
 		<div class="probe-header">
 			<h4>
-				Message for
+				A Message for
 				<%=characterName%></h4>
 			<p><%=WebTools.getText(pd.getMessage())%></p>
 		</div>
 	</div>
+<input id="probe-submit" type="submit" />
 </div>
+</form>
+
 <%
     } else {
 %>
