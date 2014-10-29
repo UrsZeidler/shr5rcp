@@ -28,6 +28,3 @@
 		</div>
 	</div>
 </div>
-<script>
-$( "#history-container" ).resizable();
-</script>

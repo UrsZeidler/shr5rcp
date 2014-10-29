@@ -96,7 +96,7 @@
 						<div class="condition-monitor-container">
 						Actions<br/>
 						<a class="action" href="member.jsp">reload</a><br/>
-						<a class="action" href="changeInventar.jsp">change inventory</a></br>
+						<a class="action" href="changeInventar.jsp">change inventory</a><br/>
 						</div>
 					</div>
 				</div>
@@ -184,7 +184,6 @@
 		<jsp:include page="include/history.jsp" />
 		<a href="main?action=logout">stop being <%=WebTools.getText(character)%>(logout)
 		</a>
-	</div>
 	</div>
 </body>
 </html>

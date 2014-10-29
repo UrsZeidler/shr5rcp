@@ -33,8 +33,8 @@
 				<%=characterName%></h4>
 			<p><%=WebTools.getText(pd.getMessage())%></p>
 		</div>
+		<input id="probe-submit" type="submit" />
 	</div>
-<input id="probe-submit" type="submit" />
 </div>
 </form>
 
