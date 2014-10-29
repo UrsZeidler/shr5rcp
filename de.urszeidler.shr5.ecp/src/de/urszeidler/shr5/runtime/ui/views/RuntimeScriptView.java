@@ -528,6 +528,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         tltmExecuteaction.setText(Messages.RuntimeScriptView_execute_action);
 
         ToolItem tltmSendMessage = new ToolItem(toolBar, SWT.NONE);
+        tltmSendMessage.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/talk.png"));
         tltmSendMessage.setText(Messages.RuntimeScriptView_tltmSendMessage_text);
         tltmSendMessage.addSelectionListener(new SelectionAdapter() {
             @Override
