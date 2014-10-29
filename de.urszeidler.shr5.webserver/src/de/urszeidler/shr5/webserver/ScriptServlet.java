@@ -54,10 +54,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("main");
             return;
         }
-        List<EStructuralFeature> features = pm.getCurrentDialog().getFeatures();
-        Command cmd = pm.getCurrentDialog().getCmd();
-        for (EStructuralFeature eStructuralFeature : features) {
-            setValueToFeature(req, cmd, eStructuralFeature);
+
+        if (pm.getCurrentDialog().getCmd() != null) {
+            List<EStructuralFeature> features = pm.getCurrentDialog().getFeatures();
+            Command cmd = pm.getCurrentDialog().getCmd();
+            for (EStructuralFeature eStructuralFeature : features) {
+                setValueToFeature(req, cmd, eStructuralFeature);
+            }
         }
         pm.setCurrentDialog(null);
         resp.sendRedirect("member.jsp");
@@ -116,8 +119,8 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("history")) {
                 int size = scriptService.getCurrentScript().getHistory().getWrittenProtokol().size();
-                if (pm==null || pm.getHistoryLinesReaded() < size) {
-                    if(pm!=null)
+                if (pm == null || pm.getHistoryLinesReaded() < size) {
+                    if (pm != null)
                         pm.setHistoryLinesReaded(size);
                     resp.sendRedirect("include/history.jsp");
                 } else

@@ -41,6 +41,7 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
@@ -222,7 +223,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 }
                 if (notifier.equals(commandStack.getCurrentCommand())) {
                     Command notifier1 = (Command)notifier;
-                    if (notifier1.isExecuted()&& !notifier1.isHidden()) {
+                    if (notifier1.isExecuted() && !notifier1.isHidden()) {
                         String text = printCommand(notifier1);
                         printedProtocol.add(0, text);
                     }
@@ -412,7 +413,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_11.setLayout(new GridLayout(3, false));
 
         Composite composite_13 = new Composite(composite_11, SWT.NONE);
-        GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+        GridData gd_composite_13 = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1);
         gd_composite_13.heightHint = 128;
         gd_composite_13.widthHint = 200;
         composite_13.setLayoutData(gd_composite_13);
@@ -445,7 +446,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.paintBordersFor(characterTable);
 
         Composite composite_12 = new Composite(composite_11, SWT.NONE);
-        GridData gd_composite_12 = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+        GridData gd_composite_12 = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1);
         gd_composite_12.heightHint = 128;
         gd_composite_12.widthHint = 200;
         composite_12.setLayoutData(gd_composite_12);
@@ -525,6 +526,22 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             }
         });
         tltmExecuteaction.setText(Messages.RuntimeScriptView_execute_action);
+
+        ToolItem tltmSendMessage = new ToolItem(toolBar, SWT.NONE);
+        tltmSendMessage.setText(Messages.RuntimeScriptView_tltmSendMessage_text);
+        tltmSendMessage.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                EObject eObject = ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection());
+                if (eObject instanceof RuntimeCharacter) {
+                    RuntimeCharacter character = (RuntimeCharacter)eObject;
+                    InputDialog inputDialog = new InputDialog(getSite().getShell(),"Send a message","Send a message to "+labelProvider.getText(character),"a message",null);
+                    if(inputDialog.open()==Dialog.OK){                       
+                        scriptService.sendMessage(character, inputDialog.getValue());
+                    }
+                }
+            }
+        });
 
         ToolItem tltmSwitchplacement = new ToolItem(toolBar, SWT.NONE);
         tltmSwitchplacement.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/switch-placement.png")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -735,10 +752,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public void sendMessage(RuntimeCharacter character, String message) {
-        // don't send messages to our self        
+        // don't send messages to our self
     }
 
-    
     protected DataBindingContext initDataBindings1() {
         DataBindingContext bindingContext = new DataBindingContext();
         Realm realm = Realm.getDefault();
@@ -1079,5 +1095,4 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     }
 
- 
 }
