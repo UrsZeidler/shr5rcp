@@ -46,7 +46,7 @@
 		<div class="big-corner-margin">
 			<div class="probe-header">
 				<h4>
-					Probe for
+					Test for
 					<%=characterName%></h4>
 				<%=WebTools.getText(pd.getCmd())%>
 				<%
