@@ -21,39 +21,54 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * @author urs
  */
 public class PlayerManager {
-    
+
     /**
      * Holds a probe dialog info which is a command at a probe phase, the state.
+     * 
      * @author urs
-     *
      */
     public class ProbeDialog {
         private ProbeState state;
         private Command cmd;
         private List<EStructuralFeature> features;
         private String message;
-        
+
         public ProbeDialog(Command cmd, EStructuralFeature[] eStructuralFeatures) {
             this.cmd = cmd;
-            this.features = Lists.newArrayList(eStructuralFeatures);
+            if (eStructuralFeatures != null)
+                this.features = Lists.newArrayList(eStructuralFeatures);
         }
+
         public ProbeState getState() {
             return state;
         }
+
         public void setState(ProbeState state) {
             this.state = state;
         }
+
         public Command getCmd() {
             return cmd;
         }
+
         public void setCmd(Command cmd) {
             this.cmd = cmd;
         }
+
         public List<EStructuralFeature> getFeatures() {
             return features;
         }
+
         public void setFeatures(List<EStructuralFeature> features) {
             this.features = features;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
         }
     }
 
@@ -82,19 +97,17 @@ public class PlayerManager {
     }
 
     public void createDialog(Command cmd, EStructuralFeature[] eStructuralFeatures) {
-        this.currentDialog = new ProbeDialog(cmd,eStructuralFeatures);
-        
+        this.currentDialog = new ProbeDialog(cmd, eStructuralFeatures);
+
     }
-    
 
     public void createDialog(String titel, String message) {
-        // TODO Auto-generated method stub
-        
+        this.currentDialog = new ProbeDialog(null, null);
+        this.currentDialog.setMessage(message);
     }
 
-
     public void setCommandToIgnore(Command command) {
-       ignoreCommand = command;        
+        ignoreCommand = command;
     }
 
     public Command getIgnoreCommand() {

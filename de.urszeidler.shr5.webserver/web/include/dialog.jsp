@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@page import="de.urszeidler.eclipse.shr5.gameplay.provider.util.GameplayEditTools"%>
+<%@page
+	import="de.urszeidler.eclipse.shr5.gameplay.provider.util.GameplayEditTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.gameplay.Probe"%>
 <%@page import="de.urszeidler.eclipse.shr5.gameplay.ProbeMod"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.WebTools"%>
@@ -17,36 +18,58 @@
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
     RuntimeCharacter character = pm.getCharacter();
     ProbeDialog pd = pm.getCurrentDialog();
-    if(pd==null)
+    if (pd == null)
         return;
-        
+
     String characterName = WebTools.getText(character);
-    //
+    if (pd.getCmd() == null) {
+%>
+<div class="probe-container thin-border big-corner ui-dialog">
+	<div class="big-corner-margin">
+		<div class="probe-header">
+			<h4>
+				Message for
+				<%=characterName%></h4>
+			<p><%=WebTools.getText(pd.getMessage())%></p>
+		</div>
+	</div>
+</div>
+<%
+    } else {
 %>
 <form id="probe-dialog" action="main" method="post">
 	<div class="probe-container thin-border big-corner ui-dialog">
 		<div class="big-corner-margin">
 			<div class="probe-header">
-				<h4>Probe for
+				<h4>
+					Probe for
 					<%=characterName%></h4>
 				<%=WebTools.getText(pd.getCmd())%>
-				<%if(pd.getCmd() instanceof Probe) {%>
-				<p><%=WebTools.probe2ProbeString((Probe)pd.getCmd())%></p>
-				<%} %>
-			</div>
-			<%if(pd.getCmd() instanceof Probe) {%>
-			<div class="probe-mods">
-			Modifications :
 				<%
-				    for (ProbeMod mod : ((Probe)pd.getCmd()).getProbeMods()) {
+				    if (pd.getCmd() instanceof Probe) {
 				%>
+				<p><%=WebTools.probe2ProbeString((Probe)pd.getCmd())%></p>
+				<%
+				    }
+				%>
+			</div>
+			<%
+			    if (pd.getCmd() instanceof Probe) {
+			%>
+			<div class="probe-mods">
+				Modifications :
+				<%
+			    for (ProbeMod mod : ((Probe)pd.getCmd()).getProbeMods()) {
+			%>
 				<div class="default-line"><%=WebTools.getText(mod)%></div>
 				<%
 				    }
 				%>
 			</div>
-			<hr/>
-			<%} %>
+			<hr />
+			<%
+			    }
+			%>
 			<%
 			    for (EStructuralFeature ef : pd.getFeatures()) {
 			%>
@@ -57,7 +80,8 @@
 					    if (ef.getEType().equals(EcorePackage.Literals.EBOOLEAN)) {
 					%>
 					<input name="<%=ef.getName()%>" type="checkbox" value="true"
-						<%if (pd.getCmd().eGet(ef)!=null && (Boolean)pd.getCmd().eGet(ef)) {%> checked <%}%> />
+						<%if (pd.getCmd().eGet(ef) != null && (Boolean)pd.getCmd().eGet(ef)) {%>
+						checked <%}%> />
 					<%
 					    } else {
 					%>
@@ -75,4 +99,6 @@
 		</div>
 	</div>
 </form>
-
+<%
+    }
+%>

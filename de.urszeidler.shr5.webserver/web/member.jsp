@@ -48,6 +48,7 @@
 			dialogClass : "no-close",
 			autoOpen : false,
 			modal : true,
+			height : 400,
 			show : "puff",
 			hide : "puff"
 		});
@@ -65,6 +66,7 @@
 							at : "left top",
 							of : window
 						});
+			
 						$('#dialog').dialog("option", "closeOnEscape", false);
 						$('#dialog').dialog("open");
 					} else {
