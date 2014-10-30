@@ -34,6 +34,7 @@ import org.eclipse.emf.ecp.core.ECPProject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
@@ -117,6 +118,7 @@ import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
+import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitative;
 import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
@@ -463,7 +465,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         // gd_tree_2.widthHint = 196;
         tree_2.setLayoutData(gd_tree_2);
         treeViewer_Commands.setContentProvider(ArrayContentProvider.getInstance());// new SimpleListContenProvider(actionListContentProvider));
-        treeViewer_Commands.setLabelProvider(labelProvider);
+        treeViewer_Commands.setLabelProvider(new DefaultLabelProvider());
         List<EClass> commands = GameplayTools.getCharacterCommands();// createCharacterCommands(value);
         treeViewer_Commands.setInput(commands);
 
