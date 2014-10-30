@@ -175,11 +175,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
                     if (ct.getCurrentTurn() == null)
                         return;
-                    printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_start_info, labelProvider.getText(ct
+                    String message = String.format(Messages.RuntimeScriptView_protocol_combat_turn_start_info, labelProvider.getText(ct
                             .getCurrentTurn().getSubject()), ct.getCurrentTurn().getSubject().getCharacter().getSex() == Sex.FEMALE
                             ? Messages.RuntimeScriptView_sex_femal : Messages.RuntimeScriptView_sex_mal, ct.getCurrentTurn().getTurn(), ct
-                            .getCurrentTurn().getPhase()));
-
+                            .getCurrentTurn().getPhase());
+                    scriptService.sendMessage(ct.getCurrentTurn().getSubject(), message);
+                    printedProtocol.add(0, message);
                 } else if (GameplayPackage.Literals.COMMAND__EXECUTING.equals(feature))
                     if (ct.isExecuted())
                         printedProtocol.add(0, String.format(Messages.RuntimeScriptView_protocol_combat_turn_end, ct.getDate(), ct.getSequence()));
