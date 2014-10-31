@@ -199,6 +199,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
+                            if(eo instanceof ComplexAction || eo instanceof SimpleAction
+                                    || eo instanceof FreeAction)
+                                continue;
                             if (eo instanceof Command) {
                                 Command cmd = (Command)eo;
                                 String text = printCommand(cmd);
