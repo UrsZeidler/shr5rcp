@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -15,6 +17,7 @@ import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.core.internal.databinding.conversion.DateToStringConverter;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -561,9 +564,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         });
         tltmSwitchplacement.setText(Messages.RuntimeScriptView_switch_action);
 
-        lblDatetimelong = formToolkit.createLabel(composite_11, "dateTimeLong", SWT.NONE); //$NON-NLS-1$
-        new Label(composite_11, SWT.NONE);
-        new Label(composite_11, SWT.NONE);
+        lblDatetimelong = formToolkit.createLabel(composite_11, "", SWT.NONE); //$NON-NLS-1$
+        lblDatetimelong.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
@@ -816,7 +818,16 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         //
         IObservableValue observeDateTimeObserveWidget = WidgetProperties.text().observe(lblDatetimelong);
         IObservableValue observeDetailValue = EMFObservables.observeDetailValue(realm, placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
-        bindingContext.bindValue(observeDateTimeObserveWidget, observeDetailValue, null, new EMFUpdateValueStrategy());
+        EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+        final DateFormat dateTimeInstance = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.SHORT);
+        modelToTarget.setConverter(new Converter(Date.class,String.class) {
+            
+            @Override
+            public Object convert(Object fromObject) {
+                return dateTimeInstance.format(fromObject);
+            }
+        });
+        bindingContext.bindValue(observeDateTimeObserveWidget, observeDetailValue, null, modelToTarget);
 
         //
         IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime_1);
