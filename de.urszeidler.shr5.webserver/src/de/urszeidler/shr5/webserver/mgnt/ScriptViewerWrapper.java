@@ -276,6 +276,10 @@ public class ScriptViewerWrapper implements ScriptViewer {
         sessionList.add(session);
 
     }
+    public void removeSession(HttpSession session) {
+        sessionList.remove(session);
+
+    }
 
     public HttpSession getSessions(PlayerManager pm) {
         for (HttpSession session : sessionList) {

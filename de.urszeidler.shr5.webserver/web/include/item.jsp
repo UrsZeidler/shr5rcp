@@ -29,7 +29,7 @@
 <%=fw.getReichweite().getMin()%>-<%=fw.getReichweite().getKurz()%>|
 <%=fw.getReichweite().getKurz()%>-<%=fw.getReichweite().getMittel()%>|
 <%=fw.getReichweite().getMittel()%>-<%=fw.getReichweite().getWeit()%>|
-<%=fw.getReichweite().getWeit()%>-<%=fw.getReichweite().getExtrem()%>
+<%=fw.getReichweite().getWeit()%>-<%=fw.getReichweite().getExtrem()%>|
 <%
     } else if (item instanceof Nahkampfwaffe) {
         Nahkampfwaffe nw = (Nahkampfwaffe)item;

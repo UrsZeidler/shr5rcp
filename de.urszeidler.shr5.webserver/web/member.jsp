@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.util.ShadowrunTools"%>
+<%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
 <%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
@@ -94,9 +96,14 @@
 						<jsp:include page="include/conditionMonitor.jsp" />
 						
 						<div class="condition-monitor-container">
-						Actions<br/>
-						<a class="action" href="member.jsp">reload</a><br/>
-						<a class="action" href="changeInventar.jsp">change inventory</a><br/>
+						<ul class="action">
+						<li class="action"><a  href="member.jsp">reload page</a></li>
+						<li class="action"><a href="changeInventar.jsp">change inventory</a></li>
+						<li class="action"><a href="manageAmmunition.jsp">manage ammunition</a></li>
+						<li class="action"><a href="transaction.jsp">make a transaction</a></li>
+						
+						</ul>
+						<p>available credits : <%=WebTools.getAvailableCredits(character)%></p>
 						</div>
 					</div>
 				</div>
@@ -155,7 +162,15 @@
 					%>
 					<p class="inventar">
 						<img class="eobject"
-							src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%></p>
+							src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%> 
+							<% if (g instanceof Magazin) {
+							    Magazin mz = (Magazin)g; %>
+							<a  href="manageAmmunition.jsp?id=<%=ShadowrunTools.getResourceId(mz)%>">manage</a>
+							<% }else if (g instanceof Feuerwaffe) {
+							    Feuerwaffe fw = (Feuerwaffe)g;%>
+							    
+							    <% }%>
+							</p>
 					<%
 					    }
 					%>

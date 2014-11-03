@@ -16,11 +16,24 @@ a {
 	
 }
 
-a.action {
+ul.action {
+margin: 1px;
+padding-left: 5px;
+	
+}
+
+li.action {
 font-size: 9px;
+text-align: justify;
+text-shadow: gray;
+word-spacing: normal;
+width: 100px;
+letter-spacing: normal;
+list-style: circle;
 }
 
 p {
+	font-size: 9px;
 	
 }
 
