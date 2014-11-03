@@ -3,8 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,6 +22,8 @@ import com.google.common.collect.Collections2;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -35,21 +39,15 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
-import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
-import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
-import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
-import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
-import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
-import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
-import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
@@ -701,4 +699,17 @@ public class GameplayTools {
         return armor;
     }
 
+    
+    public static SetFeatureCommand createCredstickTransactionCommand(Credstick credstick,String message,BigDecimal amount, Date date) {
+        CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
+        transaction.setDescription(message);
+        transaction.setDate(date);
+        transaction.setAmount(amount);
+                
+        SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
+        setFeatureCommand.setObject(credstick);
+        setFeatureCommand.setFeature(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG);
+        setFeatureCommand.setValue(transaction);
+        return setFeatureCommand;
+    }
 }
