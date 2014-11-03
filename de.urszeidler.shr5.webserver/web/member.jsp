@@ -98,8 +98,7 @@
 						<div class="condition-monitor-container">
 						<ul class="action">
 						<li class="action"><a  href="member.jsp">reload page</a></li>
-						<li class="action"><a href="changeInventar.jsp">change inventory</a></li>
-						<li class="action"><a href="manageAmmunition.jsp">manage ammunition</a></li>
+						<li class="action"><a href="changeInventar.jsp">change inventory</a></li>						
 						<li class="action"><a href="transaction.jsp">make a transaction</a></li>
 						
 						</ul>
