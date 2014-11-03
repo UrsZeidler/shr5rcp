@@ -33,6 +33,8 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
+import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
@@ -767,6 +769,19 @@ public class ShadowrunTools {
         return null;
     }
 
+    public static Predicate<? super EObject> muniForMagazinPredicate(final Magazin eo) {
+        return  new Predicate<Object>() {
+            @Override
+            public boolean apply(Object input) {
+                if (input instanceof Munition) {
+                    Munition muni = (Munition)input;
+                    return muni.getType().equals(eo.getType().getReichweite());
+                }
+                return false;
+            }
+        };   
+    }
+    
     /**
      * Create a predicate to filter for the eclass.
      * 

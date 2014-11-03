@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
-import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 
@@ -148,15 +147,18 @@ public class CredstickTransactionItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        BigDecimal labelValue = ((CredstickTransaction)object).getAmount();
-        String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-            getString("_UI_CredstickTransaction_type") :
-            getString("_UI_CredstickTransaction_type") + " " + label;
+        CredstickTransaction ct = (CredstickTransaction)object;
+        String labelValue = ct.getDescription();
+        String message = labelValue == null ? "No mesage" : labelValue.toString();
+        String formatString = getString("_UI_CredstickTransaction_type_text");
+        return String.format(formatString, message,ct.getAmount());
+//        return label == null || label.length() == 0 ?
+//            getString("_UI_CredstickTransaction_type") :
+//            getString("_UI_CredstickTransaction_type") + " " + label;
     }
 
     /**
