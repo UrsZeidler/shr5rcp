@@ -1,8 +1,10 @@
 package de.urszeidler.shr5.webserver;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,15 +19,21 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.equinox.jsp.jasper.registry.JSPFactory;
 
 import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
+import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -103,16 +111,19 @@ public class ScriptServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        ScriptService scriptService = Activator.getDefault().getScriptService();
-        ScriptViewerWrapper scriptViewerWrapper = Activator.getDefault().getScriptViewerWrapper();
+        Activator activator = Activator.getDefault();
+        ScriptService scriptService = activator.getScriptService();
+        ScriptViewerWrapper scriptViewerWrapper = activator.getScriptViewerWrapper();
         PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
 
         String action = (String)req.getParameter("action");
         if (action != null) {
             if (action.equals("logout")) {
                 session.invalidate();
-                if (pm != null)
+                if (pm != null) {
                     scriptViewerWrapper.getRegisteredPlayers().remove(pm);
+                    scriptViewerWrapper.removeSession(session);
+                }
                 resp.sendRedirect("main.jsp");
             } else if (action.equals("changeCharacter")) {
                 applyCharacterChange(req, pm);
@@ -125,6 +136,12 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                     resp.sendRedirect("include/history.jsp");
                 } else
                     sendUnchanged(resp);
+            } else if (action.equals("doCredstickTransaction")) {
+                doCredstickTransaction(pm, req);
+                resp.sendRedirect("member.jsp");
+            } else if (action.equals("doMagazinRefill")) {
+                doMagazinRefill(pm, req);
+                resp.sendRedirect("member.jsp");
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
             }
@@ -158,6 +175,45 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private void doMagazinRefill(PlayerManager pm, HttpServletRequest req) {
+        try {
+            String magazinId = req.getParameter("magazin");
+            String muniId = req.getParameter("muni");
+            RuntimeCharacter character = pm.getCharacter();
+            Munition muni = (Munition)ShadowrunTools.getFirstObjectById(character.getInUse(), muniId);
+            Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
+
+            while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
+                magazine.getBullets().add(muni);
+            }
+        } catch (Exception e) {
+        }
+        return;
+    }
+
+    private void doCredstickTransaction(PlayerManager pm, HttpServletRequest req) {
+        String amount = req.getParameter("amount");
+        String id = req.getParameter("id");
+        String message = req.getParameter("message");
+
+        try {
+            BigDecimal amount2 = new BigDecimal(amount);
+            RuntimeCharacter character = pm.getCharacter();
+            EObject object = ShadowrunTools.getFirstObjectById(character.getInUse(), id);
+            if (object instanceof Credstick) {
+                Credstick credstick = (Credstick)object;
+                ScriptService scriptService = Activator.getDefault().getScriptService();
+                SetFeatureCommand command = GameplayTools.createCredstickTransactionCommand(credstick, message, amount2, scriptService
+                        .getCurrentScript().getHistory().getCurrentDate());
+
+                pm.setCommandToIgnore(command);
+                scriptService.executeCommand(command);
+            }
+        } catch (Exception e) {
+
+        }
     }
 
     private void doDialog(PlayerManager pm, HttpServletResponse resp) throws IOException {
