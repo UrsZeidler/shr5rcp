@@ -3,11 +3,13 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -20,11 +22,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
 
+import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
+import com.google.common.collect.Collections2;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Feuerwaffe} object.
@@ -40,7 +47,9 @@ public class FeuerwaffeItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
+
+
+    /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,11 +194,11 @@ public class FeuerwaffeItemProvider
      * This adds a property descriptor for the Magazin feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addMagazinPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Feuerwaffe_magazin_feature"),
@@ -200,7 +209,29 @@ public class FeuerwaffeItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @SuppressWarnings({ "unchecked", "rawtypes" })
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof Feuerwaffe) {
+                        final Feuerwaffe fw = (Feuerwaffe)object;
+                        EStructuralFeature structuralFeature = fw.eContainingFeature();
+                        if(!structuralFeature.equals(Shr5Package.Literals.SHR_LIST__ENTRIES)){
+                            Collection<EObject> objects = (Collection<EObject>)super.getComboBoxObjects(object);
+                            return new ArrayList( Collections2.filter(objects, Predicates.and(ShadowrunTools.matchingMagazinPredicate(fw),new Predicate<EObject>(){
+                                @Override
+                                public boolean apply(EObject input) {
+                                     return fw.eContainingFeature().equals(input.eContainingFeature());
+                                }
+                              }  ) ));
+                            
+                        }                            
+                    }
+                    
+                    return super.getComboBoxObjects(object);
+                }
+                
+            });
     }
 
     /**

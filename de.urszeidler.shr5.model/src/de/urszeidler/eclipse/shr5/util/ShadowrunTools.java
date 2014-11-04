@@ -30,7 +30,9 @@ import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.Magazin;
@@ -419,6 +421,51 @@ public class ShadowrunTools {
         return 0;
     }
 
+    public static boolean isSameObject(EObject a, EObject b) {
+        if (a == null || b == null)
+            return false;
+        return isASameB(a, b) || isASameB(b, a);
+    }
+
+    /**
+     * Checks if the a object is a b, which means it has the same parentId
+     * 
+     * @param a
+     * @param b
+     * @return
+     */
+    public static boolean isASameB(EObject a, EObject b) {
+        if (a == b)
+            return true;
+        if (a instanceof Identifiable) {
+            Identifiable id = (Identifiable)a;
+            String parentId = id.getParentId();
+            if (parentId == null)
+                return false;
+            boolean equals = parentId.equals(getResourceId(b));
+            if (equals)
+                return true;
+            if (b instanceof Identifiable) {
+                Identifiable idb = (Identifiable)b;
+                String parentId2 = idb.getParentId();
+                if (parentId2 == null)
+                    return false;
+                return parentId.equals(parentId2);
+            }
+
+            // String resourceId = getResourceId(a);
+            // if(resourceId!=null)
+            // equals = resourceId.equals( getResourceId(b));
+            // if(equals)
+            // return true;
+            // if(parentId==null || ((Identifiable)b).getParentId()==null)
+            // return false;
+            //
+            // return parentId.equals(((Identifiable)b).getParentId());
+        }
+        return false;
+    }
+
     /**
      * Finds the values of {@link PersonaFertigkeitsGruppe} for a given {@link FertigkeitsGruppe} and persona.
      * 
@@ -770,7 +817,7 @@ public class ShadowrunTools {
     }
 
     public static Predicate<? super EObject> muniForMagazinPredicate(final Magazin eo) {
-        return  new Predicate<Object>() {
+        return new Predicate<Object>() {
             @Override
             public boolean apply(Object input) {
                 if (input instanceof Munition) {
@@ -779,9 +826,22 @@ public class ShadowrunTools {
                 }
                 return false;
             }
-        };   
+        };
     }
-    
+
+    public static Predicate<? super EObject> matchingMagazinPredicate(final Feuerwaffe fw) {
+        return new Predicate<Object>() {
+            @Override
+            public boolean apply(Object input) {
+                if (input instanceof Magazin) {
+                    Feuerwaffe type = ((Magazin)input).getType();
+                    return ShadowrunTools.isSameObject(fw, type);
+                }
+                return false;
+            }
+        };
+    }
+
     /**
      * Create a predicate to filter for the eclass.
      * 
@@ -806,8 +866,6 @@ public class ShadowrunTools {
         return null;
     }
 
- 
-    
     /**
      * Return a predicate to filter by the xml id.
      * 
@@ -826,14 +884,14 @@ public class ShadowrunTools {
         };
 
     }
-    
+
     public static Function<String, EObject> xmlId2EObjectTransformer(final Collection<? extends EObject> objects) {
         return new Function<String, EObject>() {
             @Override
-            public EObject apply(String input) {               
+            public EObject apply(String input) {
                 return getFirstObjectById(objects, input);
             }
-            
+
         };
     }
 
