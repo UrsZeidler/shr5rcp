@@ -164,10 +164,10 @@
 							src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%> 
 							<% if (g instanceof Magazin) {
 							    Magazin mz = (Magazin)g; %>
-							<a  href="manageAmmunition.jsp?id=<%=ShadowrunTools.getResourceId(mz)%>">manage</a>
+							<a  href="manageAmmunition.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a>
 							<% }else if (g instanceof Feuerwaffe) {
 							    Feuerwaffe fw = (Feuerwaffe)g;%>
-							    
+							   <a  href="manageFw.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
 							    <% }%>
 							</p>
 					<%
