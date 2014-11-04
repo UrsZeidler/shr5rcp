@@ -192,7 +192,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 if (observable instanceof IObservableValue) {
                     IObservableValue ov = (IObservableValue)e.getObservable();
                     if (result.length > 0)
-                        ov.setValue((EClass)result[0]);
+                        ov.setValue(result[0]);
                     else
                         ov.setValue(null);
                 }
