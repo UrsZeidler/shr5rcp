@@ -42,7 +42,7 @@
 	<div class="page">
 		<form action="main" method="get">
 			<input type="hidden" name="action" value="doManageFw" />
-			<input type="hidden" name="magazin" value="<%=id%>" />
+			<input type="hidden" name="fw" value="<%=id%>" />
 			<div class="character-container">
 				<div class="character-container-head">
 					<h4>
@@ -51,7 +51,7 @@
 						
 				</div>
 				<div class="character-single-item-container" >
-				Choose Magazin type : <select class="item " name="muni" style="display: list-item;">
+				Choose Magazine type : <select class="item " name="mag" style="display: list-item;">
 						<%
 						    for (Object g :  values) {
 						%>

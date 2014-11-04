@@ -25,6 +25,8 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
@@ -142,6 +144,9 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             } else if (action.equals("doMagazinRefill")) {
                 doMagazinRefill(pm, req);
                 resp.sendRedirect("member.jsp");
+            } else if (action.equals("doManageFw")) {
+                doManageFeuerwaffe(pm, req);
+                resp.sendRedirect("member.jsp");
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
             }
@@ -175,6 +180,25 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private void doManageFeuerwaffe(PlayerManager pm, HttpServletRequest req) {
+        try {
+            RuntimeCharacter character = pm.getCharacter();
+            String magazinId = req.getParameter("mag");
+            Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
+            String fwId = req.getParameter("fw");
+            Feuerwaffe fw = (Feuerwaffe)ShadowrunTools.getFirstObjectById(character.getInUse(), fwId);
+            
+            
+            Magazin oldMagazine = fw.getMagazin();
+            fw.setMagazin(magazine);
+            character.getInUse().add(oldMagazine);
+            character.getInUse().remove(magazine);
+            character.getCharacter().getInventar().add(oldMagazine);
+            
+        } catch (Exception e) {
+        }
     }
 
     private void doMagazinRefill(PlayerManager pm, HttpServletRequest req) {
@@ -263,7 +287,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
         SemanticAction action = GameplayFactory.eINSTANCE.createSemanticAction();
         action.setSubject(character);
         action.setType(SemanticType.DESCRIPTION);
-        action.setMessage(String.format("%s changed the inventory.", AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
+        action.setMessage(String.format("Changed the inventory.", AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
         pm.setCommandToIgnore(action);
         scriptService.executeCommand(action);
     }
