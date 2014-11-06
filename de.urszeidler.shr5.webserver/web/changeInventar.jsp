@@ -88,7 +88,8 @@
 						%>
 					</select>
 				</div>
-				<input type="submit" />				
+				<input type="submit" />		
+				<a  href="member.jsp">back</a>		
 			</div>
 		</form>
 	</div>

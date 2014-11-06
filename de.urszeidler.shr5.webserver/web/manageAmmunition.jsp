@@ -41,7 +41,7 @@
 		<form action="main" method="get">
 			<input type="hidden" name="action" value="doMagazinRefill" />
 			<input type="hidden" name="magazin" value="<%=id%>" />
-			<div class="character-container">
+			<div class="character-container" >
 				<div class="character-container-head">
 					<h4>
 						Name
@@ -60,14 +60,14 @@
 						%>
 					</select>
 				</div>
+				<input type="submit" />		<a  href="member.jsp">back</a>		
 
-				<input type="submit" />				
 			</div>
-						<div class="character-single-item-container" >
+		<div class="character-single-item-container small-corner thin-border" >
 			<%for(Munition muni : magazine.getBullets()){ %>
 			<p> <%=WebTools.getText(muni)%>  </p>
 			<%} %>
-			</div>
+		</div>
 			
 		</form>
 	</div>
