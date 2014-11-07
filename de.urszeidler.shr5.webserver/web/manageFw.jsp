@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="com.google.common.base.Predicates"%>
+<%@page import="java.util.Collection"%>
 <%@page import="de.urszeidler.eclipse.shr5.FeuerModus"%>
 <%@page import="de.urszeidler.eclipse.shr5.Feuerwaffe"%>
 <%@page import="de.urszeidler.eclipse.shr5.Munition"%>
@@ -29,7 +31,8 @@
     }
     Feuerwaffe fw = (Feuerwaffe)object;
     IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, Shr5Package.Literals.FEUERWAFFE__MAGAZIN);
-    List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+    List<?> values1 = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+    Collection<?> values = Collections2.filter(values1,Predicates.in((List<?> )character.getInUse()));
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

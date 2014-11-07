@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="java.util.Collection"%>
+<%@page import="com.google.common.base.Predicates"%>
+<%@page import="com.google.common.base.Predicate"%>
 <%@page import="de.urszeidler.eclipse.shr5.Munition"%>
 <%@page import="java.util.List"%>
 <%@page import="de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil"%>
@@ -29,7 +32,9 @@
     }
     Magazin magazine = (Magazin)object;
     IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, Shr5Package.Literals.MAGAZIN__BULLETS);
-    List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+    List<?> values1 = (List<?>)propertyDescriptor.getChoiceOfValues(object);
+    Collection<?> values = Collections2.filter(values1,Predicates.in((List<?> )character.getInUse()));
+    
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
