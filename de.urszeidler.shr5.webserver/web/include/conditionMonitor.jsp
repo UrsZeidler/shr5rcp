@@ -19,7 +19,7 @@
     int rcm = kp.getZustandGrenze();
     int rcmd = character.getOverDead();
 %>
-	<div class="condition-monitor-container">
+	<div  class="condition-monitor-container">
 		<div class="condition-monitor-titel">physical</div>
 		<div class="condition-monitor " >
 			<%

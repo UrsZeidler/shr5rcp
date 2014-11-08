@@ -93,8 +93,9 @@
 						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></strong>
 					<hr />
 					<div class="condition-monitor-section" >
+					<div id="conditionMonitor">
 						<jsp:include page="include/conditionMonitor.jsp" />
-						
+					</div>
 						<div class="condition-monitor-container">
 						<ul class="action">
 						<li class="action"><a  href="member.jsp">reload page</a></li>
@@ -184,7 +185,18 @@
 					type : "GET",
 					success : function(data) {
 						if (data != "") {
-							$('#history-container').html(data);
+							$('#history').html(data);
+						}
+					},
+					dataType : "text",
+					timeout : 2000
+				})
+				$.ajax({
+					url : "/main?action=conditionMonitor",
+					type : "GET",
+					success : function(data) {
+						if (data != "") {
+							$('#conditionMonitor').html(data);
 						}
 					},
 					dataType : "text",
@@ -192,10 +204,12 @@
 						poll()
 					}, 3000),
 					timeout : 2000
-				})
+				})				
 			})();
 		</script>
+		<div id="history">
 		<jsp:include page="include/history.jsp" />
+		</div>
 		<a href="main?action=logout">stop being <%=WebTools.getText(character)%>(logout)
 		</a>
 	</div>

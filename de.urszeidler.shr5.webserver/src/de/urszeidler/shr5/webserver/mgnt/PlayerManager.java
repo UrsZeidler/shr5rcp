@@ -78,6 +78,7 @@ public class PlayerManager {
     private ProbeDialog currentDialog;
     private Command ignoreCommand;
     private int historyLinesReaded;
+    private int woundState;
 
     public RuntimeCharacter getCharacter() {
         return character;
@@ -120,5 +121,13 @@ public class PlayerManager {
 
     public void setHistoryLinesReaded(int historyLinesReaded) {
         this.historyLinesReaded = historyLinesReaded;
+    }
+
+    public int getWoundState() {
+        return woundState;
+    }
+
+    public void setWoundState(int woundState) {
+        this.woundState = woundState;
     }
 }

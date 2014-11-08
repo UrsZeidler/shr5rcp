@@ -138,6 +138,15 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                     resp.sendRedirect("include/history.jsp");
                 } else
                     sendUnchanged(resp);
+            } else if (action.equals("conditionMonitor")) {
+                RuntimeCharacter character = pm.getCharacter();  
+                int w = calcWound(character);
+                if(w!=pm.getWoundState()){
+                    pm.setWoundState(w);
+                    resp.sendRedirect("include/conditionMonitor.jsp");  
+                }
+                else
+                    sendUnchanged(resp);  
             } else if (action.equals("doCredstickTransaction")) {
                 doCredstickTransaction(pm, req);
                 resp.sendRedirect("member.jsp");
@@ -180,6 +189,10 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private int calcWound(RuntimeCharacter character) {
+      return  character.getOverDead()+ 100*character.getPhysicalDamage()+10000*character.getMentalDamage();
     }
 
     private void doManageFeuerwaffe(PlayerManager pm, HttpServletRequest req) {
