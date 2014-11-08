@@ -23,6 +23,8 @@
 <%
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
     RuntimeCharacter character = pm.getCharacter();
+    if(pm.isInCombat())
+        response.sendRedirect("member.jsp");
     String id = (String)request.getParameter("id");
     
     EObject object = ShadowrunTools.getFirstObjectById(character.getInUse(), id);

@@ -78,6 +78,7 @@ public class PlayerManager {
     private Command ignoreCommand;
     private int historyLinesReaded;
     private int woundState;
+    private boolean inCombat;
 
     public RuntimeCharacter getCharacter() {
         return character;
@@ -128,5 +129,14 @@ public class PlayerManager {
 
     public void setWoundState(int woundState) {
         this.woundState = woundState;
+    }
+
+
+    public boolean isInCombat() {
+        return inCombat;
+    }
+
+    public void setInCombat(boolean inCombat) {
+        this.inCombat = inCombat;
     }
 }

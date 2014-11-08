@@ -112,6 +112,7 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
                             createDialog(command, playerManager, eAllStructuralFeatures_1);
                             pml.add(playerManager);
+                            playerManager.setInCombat(true);
                         }
                     }
                     waitForPlayers(pml.toArray(new PlayerManager[]{}));
@@ -151,6 +152,16 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
             @Override
             public void afterCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+                if (cmd instanceof CombatTurn) {
+                    CombatTurn ct = (CombatTurn)cmd;
+                    EList<RuntimeCharacter> combatants = ct.getCombatants();
+                    for (RuntimeCharacter runtimeCharacter : combatants) {
+                        PlayerManager playerManager = getPlayerManager(runtimeCharacter);
+                        if(playerManager!=null)
+                            playerManager.setInCombat(false);
+                    }                    
+                }
+                
                 sv.getCmdCallback().afterCommand(cmd, eStructuralFeatures);
 
             }
