@@ -272,6 +272,14 @@ public class ScriptViewerWrapper implements ScriptViewer {
         return new PlayerManager2RuntimeCharacterTransformer();
     }
 
+    public void removePlayer(PlayerManager pm){
+        HttpSession sessions = getSessions(pm);
+        if(sessions!=null)
+            sessionList.remove(sessions);
+        
+        registeredPlayers.remove(pm);
+    }
+    
     public void addSession(HttpSession session) {
         sessionList.add(session);
 

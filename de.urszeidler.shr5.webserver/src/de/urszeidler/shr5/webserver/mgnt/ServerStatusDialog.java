@@ -27,11 +27,10 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
@@ -41,8 +40,6 @@ import org.eclipse.swt.widgets.Table;
 
 import de.urszeidler.shr5.webserver.Activator;
 import de.urszeidler.shr5.webserver.preferences.PreferenceConstants;
-
-import org.eclipse.swt.widgets.Button;
 
 public class ServerStatusDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -125,7 +122,7 @@ public class ServerStatusDialog extends TitleAreaDialog {
                         HttpSession sessions = viewerWrapper.getSessions(pm);
                         if(sessions!=null){
                             sessions.invalidate();
-                            viewerWrapper.getRegisteredPlayers().remove(pm);
+                            viewerWrapper.removePlayer(pm);                            
                         }
                     }
                 }

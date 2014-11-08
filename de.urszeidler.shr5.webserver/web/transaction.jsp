@@ -50,7 +50,7 @@
 				<div class="character-single-item-container" >
 				Mesage : <input type="text" name="message" />
 				</div>
-				<input type="submit" />				
+				<input type="submit" /><a  href="member.jsp">back</a>			
 			</div>
 		</form>
 	</div>

@@ -11,7 +11,6 @@ import com.google.common.collect.Lists;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
-import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
