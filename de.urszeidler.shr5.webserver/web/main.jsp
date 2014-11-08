@@ -37,7 +37,8 @@
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
 <div class="page">
 	<div class="main-header">
-		Current placement :<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(history.getCurrentPlacement())%>" />
+		Current placement :
+		<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(history.getCurrentPlacement())%>" />
 		<b><%=history.getCurrentPlacement().getName()%></b>
 		at
 		<%=history.getCurrentDate()%></div>
@@ -79,8 +80,20 @@
     })
 })();
 </script>
+
+	
 	
 	<jsp:include page="include/history.jsp" />
 </div>
+	<div>
+	
+	<form action="/characterUpload" method="post" enctype="multipart/form-data">
+  <p>Choose a character from your local file system to upload in the script:<br>
+    <input name="file" type="file" size="50" maxlength="300000" accept="text/*">
+  	</p>
+  		<input type="submit" />
+	</form>
+	
+	</div>
 </body>
 </html>

@@ -15,6 +15,10 @@
             alias="/images"
             class="de.urszeidler.shr5.webserver.ImageServlet">
       </servlet>
+      <servlet
+            alias="/characterUpload"
+            class="de.urszeidler.shr5.webserver.CharacterUploadServlet">
+      </servlet>
 
    </extension>
    <extension
