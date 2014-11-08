@@ -144,8 +144,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 if(w!=pm.getWoundState()){
                     pm.setWoundState(w);
                     resp.sendRedirect("include/conditionMonitor.jsp");  
-                }
-                else
+                } else
                     sendUnchanged(resp);  
             } else if (action.equals("doCredstickTransaction")) {
                 doCredstickTransaction(pm, req);
