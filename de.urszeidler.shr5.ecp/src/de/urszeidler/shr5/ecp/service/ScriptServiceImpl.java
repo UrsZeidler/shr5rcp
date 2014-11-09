@@ -68,8 +68,17 @@ public class ScriptServiceImpl implements ScriptService {
             editingDomain.getCommandStack().execute(createCommand);
             // script.getHistory().setCurrentPlacement(placement);
         }
-        if (scriptViewer != null)
-            scriptViewer.setPlacement(placement);
+        if (scriptViewer != null){
+            if (Realm.getDefault() == null) {
+                Display.getDefault().asyncExec(new Runnable() {
+                    @Override
+                    public void run() {
+                        scriptViewer.setPlacement(ScriptServiceImpl.this.placement);
+                    }
+                });
+            } else         
+                scriptViewer.setPlacement(placement);            
+        }
     }
 
 

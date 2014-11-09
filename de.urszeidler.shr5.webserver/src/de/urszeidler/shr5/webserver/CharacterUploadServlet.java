@@ -29,6 +29,8 @@ import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.shr5.ecp.service.ScriptService;
+import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Script;
 
@@ -62,7 +64,8 @@ public class CharacterUploadServlet extends HttpServlet implements Servlet {
         EObject eObject = resource.getContents().get(0);
         if (eObject instanceof ManagedCharacter) {
             ManagedCharacter mc = (ManagedCharacter)eObject;
-            Script script = Activator.getDefault().getScriptService().getCurrentScript();
+            ScriptService scriptService = Activator.getDefault().getScriptService();
+            Script script = scriptService.getCurrentScript();
             if(script!=null){
                 GamemasterManagement management = script.getManagement();
                 if(management==null){
@@ -78,6 +81,7 @@ public class CharacterUploadServlet extends HttpServlet implements Servlet {
                 CharacterGroup characterGroup = groups.get(0);
                 characterGroup.getMembers().add(mc);
                 script.getPlayer().getMembers().add(ShadowrunEditingTools.managedCharacter2RuntimeFunction().apply(mc));
+                scriptService.setPlacement(script.getHistory().getCurrentPlacement());
             }
         }
       
