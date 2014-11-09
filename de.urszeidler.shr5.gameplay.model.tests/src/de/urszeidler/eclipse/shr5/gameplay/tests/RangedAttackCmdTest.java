@@ -206,7 +206,7 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
 
         assertTrue(getFixture().isExecuted());
         assertEquals(0, getFixture().getMods());
-        assertEquals(0, getFixture().getProbeMods().size());
+        assertEquals(1, getFixture().getProbeMods().size());
 //        assertEquals(2, getFixture().getProbe().size());
         
     }
