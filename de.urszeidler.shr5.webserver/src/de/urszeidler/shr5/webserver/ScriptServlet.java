@@ -203,7 +203,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             String mod = req.getParameter("modus");
             FeuerModus feuerModus = FeuerModus.get(mod);
 
-            if (magazine != null) {
+            if (magazine != null && fw!=null) {
                 Magazin oldMagazine = fw.getMagazin();
                 fw.setMagazin(magazine);
                 character.getInUse().add(oldMagazine);
