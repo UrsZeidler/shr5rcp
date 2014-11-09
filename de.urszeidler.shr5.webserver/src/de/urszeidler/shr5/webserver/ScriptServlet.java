@@ -23,10 +23,12 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
@@ -136,13 +138,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 } else
                     sendUnchanged(resp);
             } else if (action.equals("conditionMonitor")) {
-                RuntimeCharacter character = pm.getCharacter();  
+                RuntimeCharacter character = pm.getCharacter();
                 int w = calcWound(character);
-                if(w!=pm.getWoundState()){
+                if (w != pm.getWoundState()) {
                     pm.setWoundState(w);
-                    resp.sendRedirect("include/conditionMonitor.jsp");  
+                    resp.sendRedirect("include/conditionMonitor.jsp");
                 } else
-                    sendUnchanged(resp);  
+                    sendUnchanged(resp);
             } else if (action.equals("doCredstickTransaction")) {
                 doCredstickTransaction(pm, req);
                 resp.sendRedirect("member.jsp");
@@ -188,7 +190,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
     }
 
     private int calcWound(RuntimeCharacter character) {
-      return  character.getOverDead()+ 100*character.getPhysicalDamage()+10000*character.getMentalDamage();
+        return character.getOverDead() + 100 * character.getPhysicalDamage() + 10000 * character.getMentalDamage();
     }
 
     private void doManageFeuerwaffe(PlayerManager pm, HttpServletRequest req) {
@@ -198,14 +200,18 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
             String fwId = req.getParameter("fw");
             Feuerwaffe fw = (Feuerwaffe)ShadowrunTools.getFirstObjectById(character.getInUse(), fwId);
-            
-            
-            Magazin oldMagazine = fw.getMagazin();
-            fw.setMagazin(magazine);
-            character.getInUse().add(oldMagazine);
-            character.getInUse().remove(magazine);
-            character.getCharacter().getInventar().add(oldMagazine);
-            
+            String mod = req.getParameter("modus");
+            FeuerModus feuerModus = FeuerModus.get(mod);
+
+            if (magazine != null) {
+                Magazin oldMagazine = fw.getMagazin();
+                fw.setMagazin(magazine);
+                character.getInUse().add(oldMagazine);
+                character.getInUse().remove(magazine);
+                character.getCharacter().getInventar().add(oldMagazine);
+            }
+            if (mod != null && !mod.isEmpty()&& fw!=null)
+                GameplayTools.setFireModus(character, fw, feuerModus);
         } catch (Exception e) {
         }
     }
@@ -217,10 +223,10 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             RuntimeCharacter character = pm.getCharacter();
             Munition muni = (Munition)ShadowrunTools.getFirstObjectById(character.getInUse(), muniId);
             Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
-
-            while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
-                magazine.getBullets().add(muni);
-            }
+            if (muni != null && magazine != null)
+                while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
+                    magazine.getBullets().add(muni);
+                }
         } catch (Exception e) {
         }
         return;

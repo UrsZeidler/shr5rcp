@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools"%>
 <%@page import="com.google.common.base.Predicates"%>
 <%@page import="java.util.Collection"%>
 <%@page import="de.urszeidler.eclipse.shr5.FeuerModus"%>
@@ -72,7 +73,9 @@
 						<%
 						    for (FeuerModus g :  fw.getModie()) {
 						%>
-						<option value="<%= g.getLiteral()%>" >
+						<option value="<%= g.getLiteral()%>" 
+						<% if(GameplayTools.getFireArmModus(character, fw)==g) {%>selected="selected"<%} %>
+						 >
 							<%=WebTools.literal2Name(g, fw, Shr5Package.Literals.FEUERWAFFE__MODIE)%></option>
 						<%
 						    }
@@ -82,8 +85,6 @@
 
 				<input type="submit" />	<a  href="member.jsp">back</a>			
 			</div>
-
-			
 		</form>
 	</div>
 </body>
