@@ -223,10 +223,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             RuntimeCharacter character = pm.getCharacter();
             Munition muni = (Munition)ShadowrunTools.getFirstObjectById(character.getInUse(), muniId);
             Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
-            if (muni != null && magazine != null)
+            
+            if (muni != null && magazine != null){
+                magazine.getBullets().clear();
                 while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
                     magazine.getBullets().add(muni);
                 }
+            }
         } catch (Exception e) {
         }
         return;

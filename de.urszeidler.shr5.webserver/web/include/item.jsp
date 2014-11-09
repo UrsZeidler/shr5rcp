@@ -1,3 +1,4 @@
+<%@page import="de.urszeidler.shr5.webserver.mgnt.PlayerManager"%>
 <%@page import="de.urszeidler.eclipse.shr5.Kleidung"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
@@ -7,7 +8,8 @@
 <%@page import="de.urszeidler.eclipse.shr5.Feuerwaffe"%>
 <%@page import="de.urszeidler.eclipse.shr5.Nahkampfwaffe"%>
 <%
-    String key = (String)request.getParameter("object");
+	PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
+	String key = (String)request.getParameter("object");
     Object item = request.getAttribute(key);
     if (item instanceof Feuerwaffe) {
         Feuerwaffe fw = (Feuerwaffe)item;
@@ -22,9 +24,10 @@
         	}    
         }    
 %>
-<%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
+<%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %>:
 <%=fw.getSchadenscode()%>|
-<%=WebTools.toFeatureName(fw, Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT) %>:<%=fw.getDurchschlagsKraft()%>|(<%=size%>/<%=kapazitaet%>)
+AP: <%=fw.getDurchschlagsKraft()%>
+|(<%=size%>/<%=kapazitaet%>)|modus: <%=WebTools.literal2Name(GameplayTools.getFireArmModus(pm.getCharacter(), fw), fw, Shr5Package.Literals.FEUERWAFFE__MODIE) %>
 <br />
 <%=fw.getReichweite().getMin()%>-<%=fw.getReichweite().getKurz()%>|
 <%=fw.getReichweite().getKurz()%>-<%=fw.getReichweite().getMittel()%>|
@@ -34,17 +37,17 @@
     } else if (item instanceof Nahkampfwaffe) {
         Nahkampfwaffe nw = (Nahkampfwaffe)item;
 %>
-<%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %> :
+<%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE) %>:
 <%=nw.getSchadenscode()%>|
-<%=WebTools.toFeatureName(nw, Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT) %>:<%=nw.getDurchschlagsKraft()%>|
+AP: <%=nw.getDurchschlagsKraft()%>|
 <br />
-<%=WebTools.toFeatureName(nw, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE) %> :
+<%=WebTools.toFeatureName(nw, Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE) %>:
 <%=nw.getReichweite()%>
 <%
     }else if (item instanceof Kleidung) {
         Kleidung k = (Kleidung)item;
 %>
-<%=WebTools.toFeatureName(k, Shr5Package.Literals.KLEIDUNG__RUESTUNG) %> :
+<%=WebTools.toFeatureName(k, Shr5Package.Literals.KLEIDUNG__RUESTUNG) %>:
 <%=k.getRuestung()%>|
 <%} %>
 

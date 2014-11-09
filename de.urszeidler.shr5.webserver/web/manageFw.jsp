@@ -66,6 +66,7 @@
 						<%
 						    }
 						%>
+						<option value="null" >no</option>
 					</select>
 				</div>
 				<div class="character-single-item-container" >
