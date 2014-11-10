@@ -1,3 +1,6 @@
+<%@page import="de.urszeidler.eclipse.shr5.RiggerCommandConsole"%>
+<%@page import="de.urszeidler.eclipse.shr5.MatrixProgram"%>
+<%@page import="de.urszeidler.eclipse.shr5.Cyberdeck"%>
 <%@page import="de.urszeidler.shr5.webserver.mgnt.PlayerManager"%>
 <%@page import="de.urszeidler.eclipse.shr5.Kleidung"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
@@ -49,6 +52,22 @@ AP: <%=nw.getDurchschlagsKraft()%>|
 %>
 <%=WebTools.toFeatureName(k, Shr5Package.Literals.KLEIDUNG__RUESTUNG) %>:
 <%=k.getRuestung()%>|
-<%} %>
-
-
+<% } else if (item instanceof Cyberdeck) {
+    Cyberdeck cyb = (Cyberdeck)item; 
+%>
+<div class="small-detail" >
+<%=cyb.getGeraetestufe()%>|
+at: <%=cyb.getAngriff()%>|sn: <%=cyb.getSchleicher()%>|dp: <%=cyb.getDatenverarbeitung()%>|fw: <%=cyb.getFirewall()%>|
+im: <%=WebTools.literal2Name(cyb.getCurrentModus(),cyb,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>|
+<br/>
+<% for(MatrixProgram mp :cyb.getRunningPrograms()){ %>
+<%=WebTools.getText(mp)%>|
+<%} %>   
+ </div> 
+<%}  else if (item instanceof RiggerCommandConsole) {
+    RiggerCommandConsole rcc = (RiggerCommandConsole)item; 
+    %>
+<div class="small-detail" >
+<%=rcc.getGeraetestufe()%>|<%=rcc.getDatenverarbeitung()%>|<%=rcc.getRauschunterdrueckung()%>|<%=rcc.getZugriff()%>|<%=rcc.getFirewall()%>|
+</div>
+<%} %> 

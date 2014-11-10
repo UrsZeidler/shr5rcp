@@ -144,6 +144,11 @@ img.eobject {
 	
 }
 
+.small-detail {
+	font-size: 8px;
+	
+}
+
 .default-line {
 	font-size: 10px;
 	white-space: nowrap;
