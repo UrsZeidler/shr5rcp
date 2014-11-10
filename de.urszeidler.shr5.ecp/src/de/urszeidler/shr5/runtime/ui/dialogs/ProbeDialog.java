@@ -143,6 +143,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             emfFormBuilder.buildinComposite(ctx, grpData, probe);
             grpData.setSize(grpData.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         }
+        //TODO : 
         if (state == ProbeExecutionState.prepare) {
             List<EStructuralFeature> eAllStructuralFeatures_1 = new ArrayList<EStructuralFeature>();
             eAllStructuralFeatures_1.add(GameplayPackage.Literals.PROBE__SKIP_TEST);
@@ -215,7 +216,8 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
     @Override
     protected void createButtonsForButtonBar(Composite parent) {
         createButton(parent, IDialogConstants.OK_ID, IDialogConstants.OK_LABEL, true);
-        // createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
+//        if (state == ProbeExecutionState.prepare)
+//            createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
     }
 
     /**
