@@ -48,6 +48,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
@@ -200,8 +201,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
                         for (Iterator<EObject> iterator = ip.eAllContents(); iterator.hasNext();) {
                             EObject eo = iterator.next();
-                            if(eo instanceof ComplexAction || eo instanceof SimpleAction
-                                    || eo instanceof FreeAction)
+                            if (eo instanceof ComplexAction || eo instanceof SimpleAction || eo instanceof FreeAction)
                                 continue;
                             if (eo instanceof Command) {
                                 Command cmd = (Command)eo;
@@ -428,7 +428,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         formToolkit.paintBordersFor(composite_13);
         composite_13.setLayout(new TableColumnLayout());
 
-        characterViewer = new TableViewer(composite_13, SWT.BORDER);
+        characterViewer = new TableViewer(composite_13, SWT.BORDER | SWT.MULTI);
         // characterViewer.addSelectionChangedListener(new ISelectionChangedListener() {
         //
         // @Override
@@ -447,7 +447,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             @Override
             public void mouseDoubleClick(MouseEvent e) {
                 ISelection selection = characterViewer.getSelection();
-                ShadowrunEditingTools.openEditorForFirstSelection(selection);;
+                ShadowrunEditingTools.openEditorForFirstSelection(selection);
             }
         });
         formToolkit.paintBordersFor(characterTable);
@@ -526,9 +526,20 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 ISelection selection = treeViewer_Commands.getSelection();
                 EClass eObject = (EClass)ShadowrunEditingTools.extractFirstEObject(selection);
                 if (eObject != null) {
-                    SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
-                    command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
-                    scriptService.executeCommand(command);// (Command)eObject);
+                    IStructuredSelection iStructuredSelection = (IStructuredSelection)characterViewer.getSelection();
+                    for (Iterator<?> iterator = iStructuredSelection.iterator(); iterator.hasNext();) {
+                        RuntimeCharacter rc = (RuntimeCharacter)iterator.next();
+                        SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
+                        command.setSubject(rc);
+                        scriptService.executeCommand(command);// (Command)eObject);
+                        
+                    }
+//                    if (iStructuredSelection.size() == 1) {
+//                        SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
+//                        command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
+//                        scriptService.executeCommand(command);// (Command)eObject);
+//                    }
+                    
                 }
             }
         });
@@ -544,8 +555,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                 EObject eObject = ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection());
                 if (eObject instanceof RuntimeCharacter) {
                     RuntimeCharacter character = (RuntimeCharacter)eObject;
-                    InputDialog inputDialog = new InputDialog(getSite().getShell(),"Send a message","Send a message to "+labelProvider.getText(character),"a message",null);
-                    if(inputDialog.open()==Dialog.OK){                       
+                    InputDialog inputDialog = new InputDialog(getSite().getShell(), "Send a message", "Send a message to "
+                            + labelProvider.getText(character), "a message", null);
+                    if (inputDialog.open() == Dialog.OK) {
                         scriptService.sendMessage(character, inputDialog.getValue());
                     }
                 }
@@ -564,6 +576,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
         lblDatetimelong = formToolkit.createLabel(composite_11, "", SWT.NONE); //$NON-NLS-1$
         lblDatetimelong.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
+        new Label(composite_11, SWT.NONE);
 
         Composite composite_8 = formToolkit.createComposite(composite, SWT.NONE);
         composite_8.setLayout(new GridLayout(2, false));
@@ -818,8 +831,8 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         IObservableValue observeDetailValue = EMFObservables.observeDetailValue(realm, placement, ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         final DateFormat dateTimeInstance = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.SHORT);
-        modelToTarget.setConverter(new Converter(Date.class,String.class) {
-            
+        modelToTarget.setConverter(new Converter(Date.class, String.class) {
+
             @Override
             public Object convert(Object fromObject) {
                 return dateTimeInstance.format(fromObject);
