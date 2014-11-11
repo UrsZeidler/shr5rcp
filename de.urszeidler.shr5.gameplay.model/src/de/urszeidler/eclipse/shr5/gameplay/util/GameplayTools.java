@@ -168,23 +168,24 @@ public class GameplayTools {
 
     /**
      * Removes the probe mode.
+     * 
      * @param subject
      * @param val
      * @param feature
      * @param mods
      */
-    public static void removeProbeMode(EObject subject, EStructuralFeature feature,List<ProbeMod> mods){
+    public static void removeProbeMode(EObject subject, EStructuralFeature feature, List<ProbeMod> mods) {
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
         data.setEObject(subject);
         data.setEFeature(feature);
 
         for (Iterator<ProbeMod> iterator = mods.iterator(); iterator.hasNext();) {
             ProbeMod probeMod = iterator.next();
-            if(data.equals(probeMod.getType()))
+            if (data.equals(probeMod.getType()))
                 iterator.remove();
         }
     }
-    
+
     /**
      * Calculates the current defense mod for the given character.
      * 
@@ -699,17 +700,39 @@ public class GameplayTools {
         return armor;
     }
 
-    
-    public static SetFeatureCommand createCredstickTransactionCommand(Credstick credstick,String message,BigDecimal amount, Date date) {
+    public static SetFeatureCommand createCredstickTransactionCommand(Credstick credstick, String message, BigDecimal amount, Date date) {
         CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
         transaction.setDescription(message);
         transaction.setDate(date);
         transaction.setAmount(amount);
-                
+
         SetFeatureCommand setFeatureCommand = GameplayFactory.eINSTANCE.createSetFeatureCommand();
         setFeatureCommand.setObject(credstick);
         setFeatureCommand.setFeature(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG);
         setFeatureCommand.setValue(transaction);
         return setFeatureCommand;
+    }
+
+    /**
+     * Get the limit attribute for a skill or null
+     * @param skill
+     * @return
+     */
+    public static EAttribute getLimitForSkill(Fertigkeit skill) {
+        EAttribute attribut = skill.getAttribut();
+        if (attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT)
+                || attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION)
+                || attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE))
+            return Shr5Package.Literals.CHRAKTER_LIMITS__KOERPERLICH;
+
+        if (attribut.equals(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION) || attribut.equals(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK)
+                || attribut.equals(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT))
+            return Shr5Package.Literals.CHRAKTER_LIMITS__GEISTIG;
+
+        if (attribut.equals(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__CHARISMA))
+            return Shr5Package.Literals.CHRAKTER_LIMITS__SOZIAL;
+        
+        
+        return null;
     }
 }

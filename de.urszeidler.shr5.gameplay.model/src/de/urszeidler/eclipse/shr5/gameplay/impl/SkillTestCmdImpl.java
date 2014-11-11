@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.gameplay.impl;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -94,13 +95,18 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setSkill(Fertigkeit newSkill) {
         Fertigkeit oldSkill = skill;
         skill = newSkill;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SKILL_TEST_CMD__SKILL, oldSkill, skill));
+        EAttribute eAttribute = GameplayTools.getLimitForSkill(skill);
+        if(eAttribute!=null && getSubject()!=null){
+            Integer limit =(Integer) getSubject().getCharacter().getPersona().eGet(eAttribute);
+            setLimit(limit);
+        }
     }
 
     /**
