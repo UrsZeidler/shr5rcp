@@ -91,7 +91,8 @@ public class RuntimeEditor extends AbstractShr5Editor {
                     }
 
                     return objectList;
-                }
+                }else
+                    return null;
             }
             return defaultCreationDialog(e, object);
         }
