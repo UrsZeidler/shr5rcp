@@ -576,8 +576,10 @@ public class GameplayTools {
      * 
      * @param weapon
      * @param numberOfShoots
+     * @return the bullets shot
      */
-    public static void reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
+    public static List<Munition> reduceRounds(AbstaktFernKampfwaffe weapon, int numberOfShoots) {
+        ArrayList<Munition> arrayList = new ArrayList<Munition>(numberOfShoots);
         try {
             if (weapon instanceof Feuerwaffe) {
                 Feuerwaffe fw = (Feuerwaffe)weapon;
@@ -587,13 +589,14 @@ public class GameplayTools {
                         if (magazin.getBullets().size() > 0) {
                             Munition munition = magazin.getBullets().get(0);
                             munition.setAnzahl(munition.getAnzahl() - 1);
-                            magazin.getBullets().remove(0);
+                            arrayList.add(magazin.getBullets().remove(0));
                         }
                     }
                 }
             }
         } catch (Exception e) {
         }
+        return arrayList;
     }
 
     /**
@@ -719,6 +722,9 @@ public class GameplayTools {
      * @return
      */
     public static EAttribute getLimitForSkill(Fertigkeit skill) {
+        if(skill==null)
+            return null;
+        
         EAttribute attribut = skill.getAttribut();
         if (attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT)
                 || attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION)

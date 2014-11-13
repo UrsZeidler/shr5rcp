@@ -14,6 +14,7 @@ import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
@@ -417,9 +418,12 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             getCmdCallback().beforeSubcommands(this, GameplayPackage.Literals.SUCCES_TEST__NET_HITS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__SECOND_CHANCE);
 
+        List<Munition> reduceRounds = GameplayTools.reduceRounds(getWeapon(), getNumberOfShoots());
+        setNumberOfShoots(reduceRounds.size());
+
         secondChance(getProbe().size());
         this.netHits = getSuccesses() - thresholds;
-        if (netHits > 0) {
+        if (netHits > 0 && numberOfShoots > 0) {
             DefensTestCmd defensTestCmd = GameplayFactory.eINSTANCE.createDefensTestCmd();
             defensTestCmd.setSubject(getObject());
             defensTestCmd.setCmdCallback(getCmdCallback());
@@ -430,13 +434,16 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             defensTestCmd.redo();
 
             if (defensTestCmd.getNetHits() < 0) {
+                Munition munition = reduceRounds.get(0);
                 DamageTest damageTest = GameplayFactory.eINSTANCE.createDamageTest();
                 defensTestCmd.getSubCommands().add(damageTest);
                 damageTest.setSubject(getObject());
                 damageTest.setCmdCallback(getCmdCallback());
                 damageTest.setDate(getDate());
-                damageTest.setDv(weapon.getDurchschlagsKraft());
+                damageTest.setDv(weapon.getDurchschlagsKraft()+munition.getArmorMod());
                 DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
+                damageCode.setType(munition.getDamageType());
+                damageCode.setPower(damageCode.getPower()+munition.getDamageMod());
                 if (damageCode != null) {
                     int d = damageCode.getPower() - defensTestCmd.getNetHits();
                     damageTest.setDamage(new DamageCode(d, damageCode.getType()).toString());
@@ -448,7 +455,6 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
         }
         if (getModus() != FeuerModus.EM)// TODO : not getNumberOfShoots() when suppessing fire
             GameplayTools.inceaseRecoilMod(getSubject(), getWeapon(), getNumberOfShoots());
-        GameplayTools.reduceRounds(getWeapon(), getNumberOfShoots());
         afterRedo();
     }
 

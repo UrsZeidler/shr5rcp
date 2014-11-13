@@ -347,6 +347,8 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         persona.setGeschicklichkeitBasis(1);
 
         Feuerwaffe fw = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        fw.setMagazin(Shr5Factory.eINSTANCE.createMagazin());
+        fw.getMagazin().getBullets().add(Shr5Factory.eINSTANCE.createMunition());
         fw.setPraezision(20);
         fw.getModie().add(FeuerModus.EM);
         fw.setSchadenscode("10P");
@@ -362,6 +364,7 @@ public class RangedAttackCmdTest extends OpposedSkillTestCmdTest {
         getFixture().setSubject(runtimeCharacter);
         getFixture().setWeapon(fw);
         getFixture().setObject(object);
+        getFixture().setNumberOfShoots(1);
 
         getFixture().redo();
 

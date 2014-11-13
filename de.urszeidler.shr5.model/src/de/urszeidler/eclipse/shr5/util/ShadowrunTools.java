@@ -800,6 +800,14 @@ public class ShadowrunTools {
         public EAttribute getAttribute() {
             return attribute;
         }
+
+        public void setPower(int power) {
+            this.power = power;
+        }
+
+        public void setType(SchadensTyp type) {
+            this.type = type;
+        }
     }
 
     /**
