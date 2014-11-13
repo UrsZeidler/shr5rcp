@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -168,11 +169,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             Object notifier = notification.getNotifier();
             Object feature = notification.getFeature();
             if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction
-                    || notifier instanceof FreeAction || notifier instanceof ScriptHistory || notifier instanceof RuntimeCharacter
+                    || notifier instanceof FreeAction || notifier instanceof ScriptHistory 
                     || notifier instanceof ExecutionProtocol || notifier instanceof ExecutionStack)
                 return;
-
-            if (notifier instanceof CombatTurn) {
+            if (notifier instanceof RuntimeCharacter) {
+                RuntimeCharacter rc = (RuntimeCharacter)notifier;
+                if (RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND.equals(feature)){
+                    String message = String.format("%tT >> %s is %s",placement1.getActualDate(), labelProvider.getText(rc),ShadowrunEditingTools.toEEnumName(rc.getZustand(), rc, (EAttribute)feature)  );
+                    printedProtocol.add(0, message );
+                }
+                
+            } else if (notifier instanceof CombatTurn) {
                 CombatTurn ct = (CombatTurn)notifier;
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
                     if (ct.getCurrentTurn() == null)
