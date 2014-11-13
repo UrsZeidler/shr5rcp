@@ -24,6 +24,7 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
@@ -84,7 +85,7 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
                     RuntimeCharacter subject = mac.getSubject();
                     if (subject != null) {
                         EList<AbstraktGegenstand> inUse = subject.getInUse();
-                        return new ArrayList<Object>(Collections2.filter(inUse, Predicates.instanceOf(AbstaktFernKampfwaffe.class)));
+                        return new ArrayList<Object>(Collections2.filter(inUse, Predicates.instanceOf(Nahkampfwaffe.class)));
                     }
                 }
                 return super.getComboBoxObjects(object);
