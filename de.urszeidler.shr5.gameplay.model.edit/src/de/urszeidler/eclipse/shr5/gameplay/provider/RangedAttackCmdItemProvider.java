@@ -4,11 +4,13 @@
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -19,8 +21,15 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.Collections2;
+
+import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd} object.
@@ -113,11 +122,11 @@ public class RangedAttackCmdItemProvider
      * This adds a property descriptor for the Weapon feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addWeaponPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RangedAttackCmd_weapon_feature"),
@@ -128,7 +137,21 @@ public class RangedAttackCmdItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof RangedAttackCmd) {
+                        RangedAttackCmd rac = (RangedAttackCmd)object;
+                        RuntimeCharacter subject = rac.getSubject();
+                        if(subject!=null){
+                            EList<AbstraktGegenstand> inUse = subject.getInUse();                            
+                            return new ArrayList<Object>(Collections2.filter(inUse, Predicates.instanceOf(AbstaktFernKampfwaffe.class)));
+                        }
+                    }                    
+                    return super.getComboBoxObjects(object);
+                }
+                
+            });
     }
 
     /**

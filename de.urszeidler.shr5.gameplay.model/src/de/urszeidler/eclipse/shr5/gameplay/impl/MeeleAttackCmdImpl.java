@@ -94,13 +94,17 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWeapon(Nahkampfwaffe newWeapon) {
         Nahkampfwaffe oldWeapon = weapon;
         weapon = newWeapon;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.MEELE_ATTACK_CMD__WEAPON, oldWeapon, weapon));
+        if(weapon!=null){
+            if(weapon.getFertigkeit()!=null)
+                setSkill(weapon.getFertigkeit());
+        }
     }
 
     /**
@@ -178,7 +182,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
             setLimit(getWeapon().getPraezision());
         }
         if (isSetCmdCallback() && getCmdCallback() != null)
-            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
     }

@@ -2,12 +2,14 @@ package de.urszeidler.shr5.runtime.ui.dialogs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.databinding.EMFDataBindingContext;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -123,6 +125,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         probe.eAdapters().add(this);
 
         configerEdgeOption();
+        removeSettedReferences();
 
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
@@ -181,6 +184,19 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
 
         area.setSize(area.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         return area;
+    }
+
+    private void removeSettedReferences() {
+//        Iterator<EStructuralFeature> iterator = eAllStructuralFeatures.iterator();
+        for ( Iterator<EStructuralFeature> iterator = eAllStructuralFeatures.iterator(); iterator.hasNext();) {
+            EStructuralFeature fearure = iterator.next();            
+             if (fearure instanceof EReference) {
+                EReference er = (EReference)fearure;
+                Object eGet = probe.eGet(er);
+                if(eGet!=null)
+                    iterator.remove();
+            }
+        }
     }
 
     /**
