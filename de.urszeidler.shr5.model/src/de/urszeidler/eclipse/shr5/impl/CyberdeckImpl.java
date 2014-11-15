@@ -316,7 +316,17 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 if (Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS.equals(feature))
                     CyberdeckImpl.this
                             .eNotify(new ENotificationImpl(CyberdeckImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
-
+                else if (Shr5Package.Literals.CYBERDECK__CONFIGURATION.equals(feature)){
+                    CyberdeckImpl.this
+                    .eNotify(new ENotificationImpl(CyberdeckImpl.this, Notification.SET, Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, 1, 2));
+                    CyberdeckImpl.this
+                    .eNotify(new ENotificationImpl(CyberdeckImpl.this, Notification.SET, Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, 1, 2));
+                    CyberdeckImpl.this
+                    .eNotify(new ENotificationImpl(CyberdeckImpl.this, Notification.SET, Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF, 1, 2));
+                    CyberdeckImpl.this
+                    .eNotify(new ENotificationImpl(CyberdeckImpl.this, Notification.SET, Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER, 1, 2));
+                    
+                }
             }
 
         };
@@ -636,6 +646,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         if (configuration == null) {
             configuration = new EObjectResolvingEList<EAttribute>(EAttribute.class, this, Shr5Package.CYBERDECK__CONFIGURATION);
         }
+       
         return configuration;
     }
 

@@ -38,6 +38,8 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import de.urszeidler.shr5.runtime.ui.widgets.CommlinkWidget;
+import de.urszeidler.shr5.runtime.ui.widgets.CyberdeckWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.RiggerCommandConsoleWidget;
 
 import org.eclipse.ui.forms.widgets.Section;
@@ -178,22 +180,18 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE4, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__PROGRAM_SLOTS, composite_Additional);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__CONFIGURATION, composite_Additional);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__CONFIGURATION, composite_Additional);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS, composite_Additional);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS, composite_Additional);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS, composite_Additional);
+            CyberdeckWidget riggerCommandConsoleWidget = new CyberdeckWidget(composite_runtime,SWT.NONE, (Cyberdeck)object,getEditingDomain());
+            riggerCommandConsoleWidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 6, 1));
+        
         } else if (object instanceof RiggerCommandConsole) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS, composite_Additional);
-//            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, composite_Additional);
-            
 
-//            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS, composite_runtime);
-//            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF, composite_runtime);
-//            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG, composite_runtime);
-
-//            new RiggerCommandConsoleWidget(composite_runtime,SWT.NONE, (RiggerCommandConsole)object);
             RiggerCommandConsoleWidget riggerCommandConsoleWidget = new RiggerCommandConsoleWidget(composite_runtime,SWT.NONE, (RiggerCommandConsole)object,getEditingDomain());
             riggerCommandConsoleWidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 6, 1));
             new Label(composite_runtime, SWT.NONE);
@@ -202,36 +200,18 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             new Label(composite_runtime, SWT.NONE);
             new Label(composite_runtime, SWT.NONE);
 
-//            
-//            
-//            final Button button = new Button(composite_runtime, SWT.PUSH);
-//            button.setText("create pan");
-//            button.addSelectionListener(new SelectionAdapter() {
-//                @Override
-//                public void widgetSelected(SelectionEvent e) {
-//                   button.dispose();
-//                   RiggerCommandConsole riggerCommandConsole = (RiggerCommandConsole)object;
-//                   riggerCommandConsole.setPan(Shr5Factory.eINSTANCE.createPersonalAreaNetwork());
-//                   EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(getManagedForm().getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
-//                           .getInstance().getLabelProvider(), getEditingDomain());
-//                   emfFormBuilder1.setManager(mananger);
-//                   emfFormBuilder1.setBorderStyle(SWT.NONE);
-//                   emfFormBuilder1.setDblListner(GegenstandPage.this);
-//
-//                   emfFormBuilder1.addAllEntries(Shr5Package.Literals.PERSONAL_AREA_NETWORK, composite_runtime);
-//                   emfFormBuilder1.buildinComposite(m_bindingContext, composite_runtime,riggerCommandConsole.getPan());
-//                   composite_runtime.layout(true,true);
-//                }
-//                
-//            });
-//            GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
-//            controlGridData.heightHint = 150;
-//            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_DEVICE__PAN, composite_runtime,controlGridData);
-            
-
         } else if (object instanceof Commlink) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
+            
+            CommlinkWidget riggerCommandConsoleWidget = new CommlinkWidget(composite_runtime,SWT.NONE, (Commlink)object,getEditingDomain());
+            riggerCommandConsoleWidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 6, 1));
+            new Label(composite_runtime, SWT.NONE);
+            new Label(composite_runtime, SWT.NONE);
+            new Label(composite_runtime, SWT.NONE);
+            new Label(composite_runtime, SWT.NONE);
+            new Label(composite_runtime, SWT.NONE);
+
         } else if (object instanceof Fokus) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpGegenstand);
@@ -253,7 +233,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
-        if (!(object instanceof Magazin)&&!(object instanceof RiggerCommandConsole)) {
+        if (!(object instanceof Magazin)&&!(object instanceof RiggerCommandConsole)&&!(object instanceof Commlink)&&!(object instanceof Cyberdeck)) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
         }
