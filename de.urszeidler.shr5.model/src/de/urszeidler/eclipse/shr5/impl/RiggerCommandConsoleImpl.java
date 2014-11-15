@@ -480,13 +480,17 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setZugriffBasis(int newZugriffBasis) {
         int oldZugriffBasis = zugriffBasis;
         zugriffBasis = newZugriffBasis;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS, oldZugriffBasis, zugriffBasis));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG, oldZugriffBasis, zugriffBasis));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.RIGGER_COMMAND_CONSOLE__ZUGRIFF, oldZugriffBasis, zugriffBasis));
     }
 
     /**
