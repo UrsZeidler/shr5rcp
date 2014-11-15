@@ -19,10 +19,12 @@ import org.eclipse.swt.widgets.Scale;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
+import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
 
 public class RiggerCommandConsoleWidget extends Composite {
 
@@ -53,6 +55,17 @@ public class RiggerCommandConsoleWidget extends Composite {
         toolkit.paintBordersFor(this);
         EmfFormBuilder emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
                 .getInstance().getLabelProvider(), editingDomain);
+        emfFormBuilder.setBorderStyle(SWT.NONE);
+
+        EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+                .getInstance().getLabelProvider(), editingDomain);
+//        emfFormBuilder1.setManager(mananger);
+        emfFormBuilder1.setBorderStyle(SWT.NONE);
+        if(object.getPan()==null)
+            object.setPan(Shr5Factory.eINSTANCE.createPersonalAreaNetwork());
+
+        
+//        composite_runtime.layout(true,true);
 
         
         setLayout(new GridLayout(3, false));
@@ -78,11 +91,13 @@ public class RiggerCommandConsoleWidget extends Composite {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,this);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, this);
 
-        
+        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVES, this);
+        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVE_MAX, this);
 
         emfFormBuilder.buildinComposite(m_bindingContext, this, object);
-
+        emfFormBuilder1.buildinComposite(m_bindingContext, this,object.getPan());
     }
+    
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //

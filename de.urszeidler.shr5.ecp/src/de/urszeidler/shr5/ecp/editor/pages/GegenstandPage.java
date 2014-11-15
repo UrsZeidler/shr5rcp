@@ -202,28 +202,28 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             new Label(composite_runtime, SWT.NONE);
             new Label(composite_runtime, SWT.NONE);
 
-            
-            
-            final Button button = new Button(composite_runtime, SWT.PUSH);
-            button.setText("create pan");
-            button.addSelectionListener(new SelectionAdapter() {
-                @Override
-                public void widgetSelected(SelectionEvent e) {
-                   button.dispose();
-                   RiggerCommandConsole riggerCommandConsole = (RiggerCommandConsole)object;
-                   riggerCommandConsole.setPan(Shr5Factory.eINSTANCE.createPersonalAreaNetwork());
-                   EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(getManagedForm().getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
-                           .getInstance().getLabelProvider(), getEditingDomain());
-                   emfFormBuilder1.setManager(mananger);
-                   emfFormBuilder1.setBorderStyle(SWT.NONE);
-                   emfFormBuilder1.setDblListner(GegenstandPage.this);
-
-                   emfFormBuilder1.addAllEntries(Shr5Package.Literals.PERSONAL_AREA_NETWORK, composite_runtime);
-                   emfFormBuilder1.buildinComposite(m_bindingContext, composite_runtime,riggerCommandConsole.getPan());
-                   composite_runtime.layout(true,true);
-                }
-                
-            });
+//            
+//            
+//            final Button button = new Button(composite_runtime, SWT.PUSH);
+//            button.setText("create pan");
+//            button.addSelectionListener(new SelectionAdapter() {
+//                @Override
+//                public void widgetSelected(SelectionEvent e) {
+//                   button.dispose();
+//                   RiggerCommandConsole riggerCommandConsole = (RiggerCommandConsole)object;
+//                   riggerCommandConsole.setPan(Shr5Factory.eINSTANCE.createPersonalAreaNetwork());
+//                   EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(getManagedForm().getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+//                           .getInstance().getLabelProvider(), getEditingDomain());
+//                   emfFormBuilder1.setManager(mananger);
+//                   emfFormBuilder1.setBorderStyle(SWT.NONE);
+//                   emfFormBuilder1.setDblListner(GegenstandPage.this);
+//
+//                   emfFormBuilder1.addAllEntries(Shr5Package.Literals.PERSONAL_AREA_NETWORK, composite_runtime);
+//                   emfFormBuilder1.buildinComposite(m_bindingContext, composite_runtime,riggerCommandConsole.getPan());
+//                   composite_runtime.layout(true,true);
+//                }
+//                
+//            });
 //            GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
 //            controlGridData.heightHint = 150;
 //            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_DEVICE__PAN, composite_runtime,controlGridData);
