@@ -20523,6 +20523,93 @@
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_JGEC0D_cEeSK2ZzxE2z74g" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_cl8qUD_ZEeSK2ZzxE2z74g" character="_keD2ED_ZEeSK2ZzxE2z74g" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Tank" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ktd0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" startKarma="7" startResources="4595"/>
       </members>
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_uodFQGzCEeSSecZDonIqXg" chracterSource="_hRN-YGzCEeSSecZDonIqXg" choosenLifestyle="_tJXmMGzEEeSSecZDonIqXg" nativeLanguage="878181d4-2f54-4993-ae30-06c9bf1ee11b">
+        <persona xsi:type="shr5:KiAdept" xmi:id="_uodFQWzCEeSSecZDonIqXg" name="Troll phsy adept" edgeBasis="6" konstitutionBasis="8" geschicklichkeitBasis="5" reaktionBasis="4" staerkeBasis="9" charismaBasis="1" willenskraftBasis="1" intuitionBasis="3" logikBasis="1" spezies="77fa1ed8-f4e6-4763-9f0b-f125318b9782" magieBasis="6">
+          <fertigkeiten xmi:id="_MoULQGzDEeSSecZDonIqXg" stufe="4" fertigkeit="1537ca5c-fa93-4c05-b073-a2a0eed91b8e"/>
+          <fertigkeiten xmi:id="_Pkb-IGzDEeSSecZDonIqXg" stufe="1" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <fertigkeiten xmi:id="_TB15IGzDEeSSecZDonIqXg" stufe="1" fertigkeit="9de43fad-b365-4e73-bc06-91dd571b858a"/>
+          <fertigkeiten xmi:id="_T_8gIGzDEeSSecZDonIqXg" stufe="1" fertigkeit="963a548d-c629-4a13-a3e3-31b085a42e20"/>
+          <fertigkeiten xmi:id="_YHKNIGzDEeSSecZDonIqXg" stufe="6" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_dI4akGzDEeSSecZDonIqXg" stufe="1" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_eiJ6oGzDEeSSecZDonIqXg" stufe="1" fertigkeit="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <fertigkeiten xmi:id="_fieIIGzDEeSSecZDonIqXg" stufe="3" fertigkeit="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+          <fertigkeiten xmi:id="_iI7NAGzDEeSSecZDonIqXg" stufe="1" fertigkeit="0dbcb9cd-f824-4b5d-a387-90d33318b04c"/>
+          <fertigkeiten xmi:id="_ltDbEGzDEeSSecZDonIqXg" stufe="4" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <fertigkeiten xmi:id="_pnOKkGzDEeSSecZDonIqXg" stufe="1" fertigkeit="bee29957-affb-4593-a4fe-002f6dd5be9c"/>
+          <fertigkeiten xmi:id="_qnJ9kGzDEeSSecZDonIqXg" stufe="1" fertigkeit="ac86aba3-a7d6-4938-b5f1-186955912643"/>
+          <fertigkeiten xmi:id="_sjRsAGzDEeSSecZDonIqXg" stufe="1" fertigkeit="a1c95207-1864-4723-b26f-b0a8c5b6290d"/>
+          <fertigkeiten xmi:id="_uO78kGzDEeSSecZDonIqXg" stufe="1" fertigkeit="57090b04-5d4c-47ec-9cf3-9b414c40cb09"/>
+          <fertigkeiten xmi:id="_v7WbEGzDEeSSecZDonIqXg" stufe="1" fertigkeit="09ae5c16-0b45-4ab9-9634-cab22ad781c4"/>
+          <fertigkeiten xmi:id="_2t2CkGzDEeSSecZDonIqXg" stufe="1" fertigkeit="67e74b72-7970-4243-ad68-4db92894a12d"/>
+          <fertigkeiten xmi:id="_3_yLkGzDEeSSecZDonIqXg" stufe="2" fertigkeit="5c3ebb6f-d075-4486-8900-d7a19bae958f"/>
+          <fertigkeiten xmi:id="_8jckAGzDEeSSecZDonIqXg" stufe="3" fertigkeit="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <eigenschaften xmi:id="_fXiOAGzEEeSSecZDonIqXg" name="Acrobatic Defender" parentId="5150f4f0-5193-4f02-8914-d70e831e3567" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" karmaKosten="4">
+            <localizations xmi:id="_fXiOAWzEEeSSecZDonIqXg" local="de" name="Acrobatic Defender" page="127"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_fYcM8GzEEeSSecZDonIqXg" name="Perceptive Defender" parentId="b5f6d958-2563-431b-a7a4-a9028a9f0277" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" karmaKosten="4">
+            <localizations xmi:id="_fYcM8WzEEeSSecZDonIqXg" local="de" name="Perceptive Defender" page="127"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_fZcSgGzEEeSSecZDonIqXg" name="Mentor Spirit" parentId="ced3fecf-2277-4b20-b1e0-894162ca9ae2" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="5">
+            <localizations xmi:id="_fZcSgWzEEeSSecZDonIqXg" local="de" name="Schutzgeist"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_faQx4GzEEeSSecZDonIqXg" name="Adept" parentId="55247bdc-c313-4614-ae15-5012308096ff" page="69" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_faQx4WzEEeSSecZDonIqXg" local="de" name="Adept" page="69"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_QBusMGzFEeSSecZDonIqXg" name="Guts" parentId="0d0cb0fc-c79d-418e-9216-8a197369e52d" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
+            <localizations xmi:id="_QBusMWzFEeSSecZDonIqXg" local="de" name="Mut"/>
+          </eigenschaften>
+          <kikraft xmi:id="_EmnwQGzEEeSSecZDonIqXg" name="Improved Reflexes 3" parentId="669f249e-49fe-4870-89ba-475cfb027dfc" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-350">
+            <mods xmi:id="_EmnwQWzEEeSSecZDonIqXg" wert="3">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+            </mods>
+            <mods xmi:id="_EmnwQmzEEeSSecZDonIqXg" wert="3">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <localizations xmi:id="_EmnwQ2zEEeSSecZDonIqXg" local="de" name="Gesteigerte Reflexe 3"/>
+          </kikraft>
+          <kikraft xmi:id="_NV4mcGzEEeSSecZDonIqXg" name="Combat Sense 1" parentId="76337564-7688-497f-84f9-302c6ece10fe" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+            <mods xmi:id="_NV4mcWzEEeSSecZDonIqXg" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+            </mods>
+            <localizations xmi:id="_NV4mcmzEEeSSecZDonIqXg" local="de" name="Kampfsinn 1"/>
+          </kikraft>
+          <kikraft xmi:id="_PMHvUGzEEeSSecZDonIqXg" name="Critical Strike" parentId="dbf16604-164c-485c-96c8-fe3136cd5caa" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+            <localizations xmi:id="_PMHvUWzEEeSSecZDonIqXg" local="de" name="Kritischer Schlag"/>
+          </kikraft>
+          <kikraft xmi:id="_T-yNEGzEEeSSecZDonIqXg" name="Improved Ability (skill) 1" parentId="75821fb7-a180-4012-aa16-daa92ac3bb63" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+            <localizations xmi:id="_T-yNEWzEEeSSecZDonIqXg" local="de" name="Verbesserte Fertigkeit (Fertigkeit) 1"/>
+          </kikraft>
+          <kikraft xmi:id="_FeFHQGzFEeSSecZDonIqXg" name="Enhanced Perception 1" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+            <localizations xmi:id="_FeFHQWzFEeSSecZDonIqXg" local="de" name="Verbesserte Wahrnehmung 1"/>
+          </kikraft>
+          <kikraft xmi:id="_IgK_QGzFEeSSecZDonIqXg" name="Enhanced Accuracy (skill)" parentId="e009da31-0301-4604-b13f-49b071aa25a1" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+            <localizations xmi:id="_IgK_QWzFEeSSecZDonIqXg" local="de" name="Erhöhte Präzision"/>
+          </kikraft>
+          <kikraft xmi:id="_N7Fv0GzFEeSSecZDonIqXg" name="Enhanced Accuracy (skill)" parentId="e009da31-0301-4604-b13f-49b071aa25a1" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-25">
+            <localizations xmi:id="_N7Fv0WzFEeSSecZDonIqXg" local="de" name="Erhöhte Präzision"/>
+          </kikraft>
+        </persona>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_BAF5AGzFEeSSecZDonIqXg" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
+          <localizations xmi:id="_BAF5AWzFEeSSecZDonIqXg" local="de" name="Panzerweste"/>
+        </inventar>
+        <inventar xsi:type="shr5:Projektilwaffe" xmi:id="_BAgIsGzFEeSSecZDonIqXg" parentId="82953b59-7e08-4abb-afe7-7b568d9a07d1" page="423" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9" wertValue="900" name="Bow (Rating 9)" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="_ENGR1TnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_BAgvwGzFEeSSecZDonIqXg" local="de" name="Bogen (Stufe 9)"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_BA6YYGzFEeSSecZDonIqXg" parentId="7c59cf2f-87ea-4dca-95e7-ad17008386a0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="4000" name="Combat Axe" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4" reichweite="2">
+          <localizations xmi:id="_BA6YYWzFEeSSecZDonIqXg" local="de" name="Kampfaxt"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_BBuQsGzFEeSSecZDonIqXg" parentId="89a0f3c9-5ef6-41cd-981f-4ac690ee2ab3" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="100" name="Meta Link" deviceRating="1">
+          <localizations xmi:id="_BBuQsWzFEeSSecZDonIqXg" local="de" name="Meta Link"/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_BCmacGzFEeSSecZDonIqXg" parentId="_ELzRUDnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5" name="Standard" maxValue="5000">
+          <transactionlog xmi:id="_RkA-UGzFEeSSecZDonIqXg" amount="1215" description="Inital transaction of 1215."/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_tJXmMGzEEeSSecZDonIqXg" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000">
+          <localizations xmi:id="_tJXmMWzEEeSSecZDonIqXg" local="de" name="Unterschicht"/>
+        </contracts>
+        <connections xmi:id="_yzbmAGzEEeSSecZDonIqXg" influence="2" loyality="1"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_hRN-YGzCEeSSecZDonIqXg" character="_uodFQGzCEeSSecZDonIqXg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Troll phsy adept" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_BswdAt0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="1" startKarma="1" startResources="1215"/>
+      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Test-Aspekt-1" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwt0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA"/>
