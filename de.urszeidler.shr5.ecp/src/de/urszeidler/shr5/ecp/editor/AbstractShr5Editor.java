@@ -24,12 +24,10 @@ import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
-import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
-import de.urszeidler.eclipse.shr5.runtime.util.RuntimeAdapterFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.editor.BasicEditor;
+import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
@@ -43,16 +41,23 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public abstract class AbstractShr5Editor extends BasicEditor<EObject> {
 
+    protected ReferenceManager manager;
+
     public AbstractShr5Editor() {
         super();
+        manager = createReferenceManager();
+    }
+
+    /**
+     * @return
+     */
+    protected ShrReferenceManager createReferenceManager() {
+        return new ShrReferenceManager(this, AdapterFactoryUtil.getInstance().getItemDelegator(),getEditingDomain());
     }
 
     @Override
     protected void initAdatpterFactory() {
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
-//        adapterFactory.insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
-//        adapterFactory.insertAdapterFactory(new GameplayAdapterFactory());
-//        adapterFactory.insertAdapterFactory(new RuntimeAdapterFactory());
         basicContentProvider = new AdapterFactoryContentProvider(adapterFactory);
 
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
@@ -110,7 +115,7 @@ public abstract class AbstractShr5Editor extends BasicEditor<EObject> {
         return false;
     }
 
-    protected EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
+    private EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
         
         Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(object, e.getFeature(), editingDomain);// provideNewClassTypes(object,
         // e.getFeature());
@@ -139,7 +144,7 @@ public abstract class AbstractShr5Editor extends BasicEditor<EObject> {
      * @param orgObject
      * @return
      */
-    protected List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
+    private List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(getEObject(), object_ref.getEType());
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
     

@@ -30,13 +30,11 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
-import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.editor.AbstractShr5Editor;
-import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.editor.ShrEditingState;
+import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
@@ -56,48 +54,60 @@ import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
  */
 public class RuntimeEditor extends AbstractShr5Editor {
 
+ 
     private static final String EMPTY = ""; //$NON-NLS-1$
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.RuntimeEditorID"; //$NON-NLS-1$
 
-    protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
-        public void handleAdd(FormbuilderEntry e, EObject object) {
-            super.handleAdd(e, object);
-        };
+    
+    /**
+     * @return
+     */
+    protected ShrReferenceManager createReferenceManager() {
+        return new ShrReferenceManager(this, AdapterFactoryUtil.getInstance().getItemDelegator(), getEditingDomain()){
+            @Override
+            protected Object provideObject(FormbuilderEntry e, EObject object) {
+                if (RuntimePackage.Literals.TEAM__MEMBERS.equals(e.getFeature())) {
+                    Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
+                            Shr5managementPackage.Literals.PLAYER_CHARACTER);
 
-        @Override
-        protected Object provideObject(FormbuilderEntry e, EObject object) {
-            if (RuntimePackage.Literals.TEAM__MEMBERS.equals(e.getFeature())) {
-                Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
-                        Shr5managementPackage.Literals.PLAYER_CHARACTER);
+                    ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
-                ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
+                    Transformer<ManagedCharacter, RuntimeCharacter> transformer = ShadowrunEditingTools.managedCharacter2RuntimeTransformer();
 
-                Transformer<ManagedCharacter, RuntimeCharacter> transformer = ShadowrunEditingTools.managedCharacter2RuntimeTransformer();
+                    FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
+                            Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
+                                    Collections2.filter((Collection<ManagedCharacter>)objectsOfType,
+                                            ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))));
 
-                FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                        Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
-                                Collections2.filter((Collection<ManagedCharacter>)objectsOfType,
-                                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))));
-
-                int result = dialog.open();
-                if (result == Window.OK) {
-                    EList<?> list = dialog.getResult();
-                    List<EObject> objectList = new ArrayList<EObject>();
-                    for (Object object1 : list) {
-                        if (object1 instanceof EObject) {
-                            objectList.add(transformer.transform((ManagedCharacter)object1));
+                    int result = dialog.open();
+                    if (result == Window.OK) {
+                        EList<?> list = dialog.getResult();
+                        List<EObject> objectList = new ArrayList<EObject>();
+                        for (Object object1 : list) {
+                            if (object1 instanceof EObject) {
+                                objectList.add(transformer.transform((ManagedCharacter)object1));
+                            }
                         }
-                    }
 
-                    return objectList;
-                }else
-                    return null;
+                        return objectList;
+                    }else
+                        return null;
+                }
+                return defaultCreationDialog(e, object);
             }
-            return defaultCreationDialog(e, object);
-        }
 
-    };
+            
+        };
+    }
+//    
+//    protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
+//        public void handleAdd(FormbuilderEntry e, EObject object) {
+//            super.handleAdd(e, object);
+//        };
+//
+//  
+//    };
 
     @Override
     protected void addPages() {
