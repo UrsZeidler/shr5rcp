@@ -6,6 +6,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -22,6 +23,7 @@ import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 
@@ -34,6 +36,7 @@ public class CommlinkWidget extends Composite {
     private Scale scale;
     private Label label;
     private EditingDomain editingDomain;
+    private StateMonitorWidget stateMonitorWidget;
     
     /**
      * Create the composite.
@@ -81,11 +84,26 @@ public class CommlinkWidget extends Composite {
 
         emfFormBuilder.buildinComposite(m_bindingContext, this, object);
         emfFormBuilder1.buildinComposite(m_bindingContext, this,object.getPan());
+        
+        lblZugriffbasis = new Label(this, SWT.NONE);
+        toolkit.adapt(lblZugriffbasis, true, true);
+        lblZugriffbasis.setText("Matrix Zustand");
+
+        stateMonitorWidget = new StateMonitorWidget(this, SWT.NONE, object.getMatrixZustandMax(), false);
+        
     }
     
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
          //
+        
+        //
+//        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidget);
+//        IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
+//                Shr5Package.Literals.mat);
+//        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
+//                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+
         return bindingContext;
     }
 }

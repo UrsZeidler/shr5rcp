@@ -34,6 +34,8 @@ public class RiggerCommandConsoleWidget extends Composite {
     private Scale scale;
     private Label label;
     private EditingDomain editingDomain;
+    private Label lblZugriffbasis1;
+    private StateMonitorWidget stateMonitorWidget;
     
     /**
      * Create the composite.
@@ -95,6 +97,13 @@ public class RiggerCommandConsoleWidget extends Composite {
 
         emfFormBuilder.buildinComposite(m_bindingContext, this, object);
         emfFormBuilder1.buildinComposite(m_bindingContext, this,object.getPan());
+        
+        lblZugriffbasis1 = new Label(this, SWT.NONE);
+        toolkit.adapt(lblZugriffbasis1, true, true);
+        lblZugriffbasis1.setText("Matrix Zustand");
+
+        stateMonitorWidget = new StateMonitorWidget(this, SWT.NONE, object.getMatrixZustandMax(), false);
+
     }
     
     protected DataBindingContext initDataBindings() {

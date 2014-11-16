@@ -23,30 +23,34 @@ import org.eclipse.emf.edit.domain.EditingDomain;
  * @author lobas_av
  */
 public class EMFEditBeansListObservableFactory extends BeansObservableFactory {
-    private final EditingDomain m_domain;
-    private final EStructuralFeature m_eStructuralFeature;
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // Constructor
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    public EMFEditBeansListObservableFactory(Class<?> beanClass, EditingDomain domain, EStructuralFeature eStructuralFeature) {
-        super(beanClass);
-        m_domain = domain;
-        m_eStructuralFeature = eStructuralFeature;
-    }
-
-    // //////////////////////////////////////////////////////////////////////////
-    //
-    // BeansObservableFactory
-    //
-    // //////////////////////////////////////////////////////////////////////////
-    @Override
-    protected IObservable createBeanObservable(Object target) {
-        if (target instanceof EObject) {
-            return EMFEditObservables.observeList(Realm.getDefault(), m_domain, (EObject)target, m_eStructuralFeature);
-        }
-        return null;
-    }
+	private final EditingDomain m_domain;
+	private final EStructuralFeature m_eStructuralFeature;
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// Constructor
+	//
+	////////////////////////////////////////////////////////////////////////////
+	public EMFEditBeansListObservableFactory(Class<?> beanClass,
+			EditingDomain domain,
+			EStructuralFeature eStructuralFeature) {
+		super(beanClass);
+		m_domain = domain;
+		m_eStructuralFeature = eStructuralFeature;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	//
+	// BeansObservableFactory
+	//
+	////////////////////////////////////////////////////////////////////////////
+	@Override
+	protected IObservable createBeanObservable(Object target) {
+		if (target instanceof EObject) {
+			return EMFEditObservables.observeList(
+				Realm.getDefault(),
+				m_domain,
+				(EObject) target,
+				m_eStructuralFeature);
+		}
+		return null;
+	}
 }
