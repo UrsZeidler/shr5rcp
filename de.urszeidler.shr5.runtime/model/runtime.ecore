@@ -112,4 +112,40 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntRuntimeCharacter" eSuperTypes="#//RuntimeCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true" eSuperTypes="#//AbstractExtendetDataAware">
+    <eTypeParameters name="V">
+      <eBounds eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fahrzeug"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1">
+      <eGenericType eTypeParameter="#//Vehicle/V"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modus" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//InterfaceModus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Drone">
+    <eGenericSuperTypes eClassifier="#//Vehicle">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Drohne"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MatrixDevice">
+    <eTypeParameters name="M">
+      <eBounds eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MatrixDevice"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="device" lowerBound="1">
+      <eGenericType eTypeParameter="#//MatrixDevice/M"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matrixCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="marks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RiggerConsole">
+    <eGenericSuperTypes eClassifier="#//MatrixDevice">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//RiggerCommandConsole"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck">
+    <eGenericSuperTypes eClassifier="#//MatrixDevice">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Cyberdeck"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
 </ecore:EPackage>

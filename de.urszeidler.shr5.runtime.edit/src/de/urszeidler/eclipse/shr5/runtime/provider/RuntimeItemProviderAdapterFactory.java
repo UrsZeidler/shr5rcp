@@ -210,6 +210,98 @@ public class RuntimeItemProviderAdapterFactory extends RuntimeAdapterFactory imp
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.Drone} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DroneItemProvider droneItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.Drone}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDroneAdapter() {
+        if (droneItemProvider == null) {
+            droneItemProvider = new DroneItemProvider(this);
+        }
+
+        return droneItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MatrixDeviceItemProvider matrixDeviceItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMatrixDeviceAdapter() {
+        if (matrixDeviceItemProvider == null) {
+            matrixDeviceItemProvider = new MatrixDeviceItemProvider(this);
+        }
+
+        return matrixDeviceItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.RiggerConsole} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RiggerConsoleItemProvider riggerConsoleItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.RiggerConsole}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createRiggerConsoleAdapter() {
+        if (riggerConsoleItemProvider == null) {
+            riggerConsoleItemProvider = new RiggerConsoleItemProvider(this);
+        }
+
+        return riggerConsoleItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.runtime.Cyberdeck} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CyberdeckItemProvider cyberdeckItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.runtime.Cyberdeck}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCyberdeckAdapter() {
+        if (cyberdeckItemProvider == null) {
+            cyberdeckItemProvider = new CyberdeckItemProvider(this);
+        }
+
+        return cyberdeckItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -314,6 +406,10 @@ public class RuntimeItemProviderAdapterFactory extends RuntimeAdapterFactory imp
         if (teamItemProvider != null) teamItemProvider.dispose();
         if (gruntTeamItemProvider != null) gruntTeamItemProvider.dispose();
         if (gruntRuntimeCharacterItemProvider != null) gruntRuntimeCharacterItemProvider.dispose();
+        if (droneItemProvider != null) droneItemProvider.dispose();
+        if (matrixDeviceItemProvider != null) matrixDeviceItemProvider.dispose();
+        if (riggerConsoleItemProvider != null) riggerConsoleItemProvider.dispose();
+        if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
     }
 
 }

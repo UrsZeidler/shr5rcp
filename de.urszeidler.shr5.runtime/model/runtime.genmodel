@@ -81,5 +81,21 @@
       <genOperations ecoreOperation="runtime.ecore#//GruntTeam/buildMembers"/>
     </genClasses>
     <genClasses ecoreClass="runtime.ecore#//GruntRuntimeCharacter"/>
+    <genClasses ecoreClass="runtime.ecore#//Vehicle">
+      <genTypeParameters ecoreTypeParameter="runtime.ecore#//Vehicle/V"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//Vehicle/vehicle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//Vehicle/vehicleCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//Vehicle/modus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//Vehicle/currentSpeed"/>
+    </genClasses>
+    <genClasses ecoreClass="runtime.ecore#//Drone"/>
+    <genClasses ecoreClass="runtime.ecore#//MatrixDevice">
+      <genTypeParameters ecoreTypeParameter="runtime.ecore#//MatrixDevice/M"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//MatrixDevice/device"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//MatrixDevice/matrixCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//MatrixDevice/marks"/>
+    </genClasses>
+    <genClasses ecoreClass="runtime.ecore#//RiggerConsole"/>
+    <genClasses ecoreClass="runtime.ecore#//Cyberdeck"/>
   </genPackages>
 </genmodel:GenModel>

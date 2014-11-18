@@ -4,6 +4,7 @@ package de.urszeidler.eclipse.shr5.runtime.util;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.runtime.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -138,6 +139,43 @@ public class RuntimeSwitch<T> extends Switch<T> {
                 if (result == null) result = caseAbstractExtendetDataAware(gruntRuntimeCharacter);
                 if (result == null) result = casePhyicalState(gruntRuntimeCharacter);
                 if (result == null) result = caseExtendetDataAware(gruntRuntimeCharacter);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.VEHICLE: {
+                Vehicle<?> vehicle = (Vehicle<?>)theEObject;
+                T result = caseVehicle(vehicle);
+                if (result == null) result = caseAbstractExtendetDataAware(vehicle);
+                if (result == null) result = caseExtendetDataAware(vehicle);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.DRONE: {
+                Drone drone = (Drone)theEObject;
+                T result = caseDrone(drone);
+                if (result == null) result = caseVehicle(drone);
+                if (result == null) result = caseAbstractExtendetDataAware(drone);
+                if (result == null) result = caseExtendetDataAware(drone);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.MATRIX_DEVICE: {
+                MatrixDevice<?> matrixDevice = (MatrixDevice<?>)theEObject;
+                T result = caseMatrixDevice(matrixDevice);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.RIGGER_CONSOLE: {
+                RiggerConsole riggerConsole = (RiggerConsole)theEObject;
+                T result = caseRiggerConsole(riggerConsole);
+                if (result == null) result = caseMatrixDevice(riggerConsole);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case RuntimePackage.CYBERDECK: {
+                Cyberdeck cyberdeck = (Cyberdeck)theEObject;
+                T result = caseCyberdeck(cyberdeck);
+                if (result == null) result = caseMatrixDevice(cyberdeck);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -292,6 +330,81 @@ public class RuntimeSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseGruntRuntimeCharacter(GruntRuntimeCharacter object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public <V extends Fahrzeug> T caseVehicle(Vehicle<V> object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Drone</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Drone</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDrone(Drone object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Matrix Device</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Matrix Device</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public <M extends de.urszeidler.eclipse.shr5.MatrixDevice> T caseMatrixDevice(MatrixDevice<M> object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Rigger Console</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Rigger Console</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseRiggerConsole(RiggerConsole object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Cyberdeck</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Cyberdeck</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCyberdeck(Cyberdeck object) {
         return null;
     }
 

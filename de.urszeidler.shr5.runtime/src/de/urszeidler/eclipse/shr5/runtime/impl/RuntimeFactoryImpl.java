@@ -2,15 +2,13 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.runtime.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -63,6 +61,10 @@ public class RuntimeFactoryImpl extends EFactoryImpl implements RuntimeFactory {
             case RuntimePackage.TEAM: return createTeam();
             case RuntimePackage.GRUNT_TEAM: return createGruntTeam();
             case RuntimePackage.GRUNT_RUNTIME_CHARACTER: return createGruntRuntimeCharacter();
+            case RuntimePackage.DRONE: return createDrone();
+            case RuntimePackage.MATRIX_DEVICE: return createMatrixDevice();
+            case RuntimePackage.RIGGER_CONSOLE: return createRiggerConsole();
+            case RuntimePackage.CYBERDECK: return createCyberdeck();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -156,6 +158,46 @@ public class RuntimeFactoryImpl extends EFactoryImpl implements RuntimeFactory {
     public GruntRuntimeCharacter createGruntRuntimeCharacter() {
         GruntRuntimeCharacterImpl gruntRuntimeCharacter = new GruntRuntimeCharacterImpl();
         return gruntRuntimeCharacter;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Drone createDrone() {
+        DroneImpl drone = new DroneImpl();
+        return drone;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public <M extends MatrixDevice> de.urszeidler.eclipse.shr5.runtime.MatrixDevice<M> createMatrixDevice() {
+        MatrixDeviceImpl<M> matrixDevice = new MatrixDeviceImpl<M>();
+        return matrixDevice;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public RiggerConsole createRiggerConsole() {
+        RiggerConsoleImpl riggerConsole = new RiggerConsoleImpl();
+        return riggerConsole;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Cyberdeck createCyberdeck() {
+        CyberdeckImpl cyberdeck = new CyberdeckImpl();
+        return cyberdeck;
     }
 
     /**

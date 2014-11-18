@@ -35,6 +35,7 @@ public class RuntimeTests extends TestSuite {
         suite.addTestSuite(RuntimeCharacterTest.class);
         suite.addTestSuite(GruntTeamTest.class);
         suite.addTestSuite(GruntRuntimeCharacterTest.class);
+        suite.addTestSuite(DroneTest.class);
         return suite;
     }
 

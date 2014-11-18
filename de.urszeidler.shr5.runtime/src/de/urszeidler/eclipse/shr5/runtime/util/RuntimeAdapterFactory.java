@@ -4,6 +4,8 @@ package de.urszeidler.eclipse.shr5.runtime.util;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 
+import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.runtime.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -108,6 +110,26 @@ public class RuntimeAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseGruntRuntimeCharacter(GruntRuntimeCharacter object) {
                 return createGruntRuntimeCharacterAdapter();
+            }
+            @Override
+            public <V extends Fahrzeug> Adapter caseVehicle(Vehicle<V> object) {
+                return createVehicleAdapter();
+            }
+            @Override
+            public Adapter caseDrone(Drone object) {
+                return createDroneAdapter();
+            }
+            @Override
+            public <M extends MatrixDevice> Adapter caseMatrixDevice(de.urszeidler.eclipse.shr5.runtime.MatrixDevice<M> object) {
+                return createMatrixDeviceAdapter();
+            }
+            @Override
+            public Adapter caseRiggerConsole(RiggerConsole object) {
+                return createRiggerConsoleAdapter();
+            }
+            @Override
+            public Adapter caseCyberdeck(Cyberdeck object) {
+                return createCyberdeckAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -270,6 +292,76 @@ public class RuntimeAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createGruntRuntimeCharacterAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.Vehicle <em>Vehicle</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.Vehicle
+     * @generated
+     */
+    public Adapter createVehicleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.Drone <em>Drone</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.Drone
+     * @generated
+     */
+    public Adapter createDroneAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice <em>Matrix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.MatrixDevice
+     * @generated
+     */
+    public Adapter createMatrixDeviceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.RiggerConsole <em>Rigger Console</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.RiggerConsole
+     * @generated
+     */
+    public Adapter createRiggerConsoleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.runtime.Cyberdeck <em>Cyberdeck</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.runtime.Cyberdeck
+     * @generated
+     */
+    public Adapter createCyberdeckAdapter() {
         return null;
     }
 

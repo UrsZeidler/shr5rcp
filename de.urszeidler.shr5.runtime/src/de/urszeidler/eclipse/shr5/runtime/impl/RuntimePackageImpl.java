@@ -5,17 +5,22 @@ package de.urszeidler.eclipse.shr5.runtime.impl;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import de.urszeidler.eclipse.shr5.runtime.AbstractExtendetDataAware;
+import de.urszeidler.eclipse.shr5.runtime.Cyberdeck;
+import de.urszeidler.eclipse.shr5.runtime.Drone;
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware;
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.MatrixDevice;
 import de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen;
 import de.urszeidler.eclipse.shr5.runtime.PhyicalState;
+import de.urszeidler.eclipse.shr5.runtime.RiggerConsole;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Team;
+import de.urszeidler.eclipse.shr5.runtime.Vehicle;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -28,6 +33,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -106,6 +112,41 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * @generated
      */
     private EClass gruntRuntimeCharacterEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass vehicleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass droneEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass matrixDeviceEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass riggerConsoleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass cyberdeckEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -534,6 +575,114 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getVehicle() {
+        return vehicleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getVehicle_Vehicle() {
+        return (EReference)vehicleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getVehicle_VehicleCondition() {
+        return (EAttribute)vehicleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getVehicle_Modus() {
+        return (EAttribute)vehicleEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getVehicle_CurrentSpeed() {
+        return (EAttribute)vehicleEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getDrone() {
+        return droneEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMatrixDevice() {
+        return matrixDeviceEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMatrixDevice_Device() {
+        return (EReference)matrixDeviceEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatrixDevice_MatrixCondition() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatrixDevice_Marks() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getRiggerConsole() {
+        return riggerConsoleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCyberdeck() {
+        return cyberdeckEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getZustand() {
         return zustandEEnum;
     }
@@ -615,6 +764,23 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
 
         gruntRuntimeCharacterEClass = createEClass(GRUNT_RUNTIME_CHARACTER);
 
+        vehicleEClass = createEClass(VEHICLE);
+        createEReference(vehicleEClass, VEHICLE__VEHICLE);
+        createEAttribute(vehicleEClass, VEHICLE__VEHICLE_CONDITION);
+        createEAttribute(vehicleEClass, VEHICLE__MODUS);
+        createEAttribute(vehicleEClass, VEHICLE__CURRENT_SPEED);
+
+        droneEClass = createEClass(DRONE);
+
+        matrixDeviceEClass = createEClass(MATRIX_DEVICE);
+        createEReference(matrixDeviceEClass, MATRIX_DEVICE__DEVICE);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__MATRIX_CONDITION);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__MARKS);
+
+        riggerConsoleEClass = createEClass(RIGGER_CONSOLE);
+
+        cyberdeckEClass = createEClass(CYBERDECK);
+
         // Create enums
         zustandEEnum = createEEnum(ZUSTAND);
     }
@@ -647,8 +813,14 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         Shr5Package theShr5Package = (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
 
         // Create type parameters
+        ETypeParameter vehicleEClass_V = addETypeParameter(vehicleEClass, "V");
+        ETypeParameter matrixDeviceEClass_M = addETypeParameter(matrixDeviceEClass, "M");
 
         // Set bounds for type parameters
+        EGenericType g1 = createEGenericType(theShr5Package.getFahrzeug());
+        vehicleEClass_V.getEBounds().add(g1);
+        g1 = createEGenericType(theShr5Package.getMatrixDevice());
+        matrixDeviceEClass_M.getEBounds().add(g1);
 
         // Add supertypes to classes
         enviormentEClass.getESuperTypes().add(this.getAbstractExtendetDataAware());
@@ -658,6 +830,19 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         abstractExtendetDataAwareEClass.getESuperTypes().add(this.getExtendetDataAware());
         gruntTeamEClass.getESuperTypes().add(this.getTeam());
         gruntRuntimeCharacterEClass.getESuperTypes().add(this.getRuntimeCharacter());
+        vehicleEClass.getESuperTypes().add(this.getAbstractExtendetDataAware());
+        g1 = createEGenericType(this.getVehicle());
+        EGenericType g2 = createEGenericType(theShr5Package.getDrohne());
+        g1.getETypeArguments().add(g2);
+        droneEClass.getEGenericSuperTypes().add(g1);
+        g1 = createEGenericType(this.getMatrixDevice());
+        g2 = createEGenericType(theShr5Package.getRiggerCommandConsole());
+        g1.getETypeArguments().add(g2);
+        riggerConsoleEClass.getEGenericSuperTypes().add(g1);
+        g1 = createEGenericType(this.getMatrixDevice());
+        g2 = createEGenericType(theShr5Package.getCyberdeck());
+        g1.getETypeArguments().add(g2);
+        cyberdeckEClass.getEGenericSuperTypes().add(g1);
 
         // Initialize classes, features, and operations; add parameters
         initEClass(extendetDataEClass, ExtendetData.class, "ExtendetData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -673,8 +858,8 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         initEAttribute(getNahkampModifikationen_CharacterProne(), ecorePackage.getEBoolean(), "characterProne", null, 0, 1, NahkampModifikationen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(extendetDataAwareEClass, ExtendetDataAware.class, "ExtendetDataAware", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        EGenericType g1 = createEGenericType(ecorePackage.getEMap());
-        EGenericType g2 = createEGenericType(this.getExtendetData());
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(this.getExtendetData());
         g1.getETypeArguments().add(g2);
         g2 = createEGenericType(ecorePackage.getEJavaObject());
         g1.getETypeArguments().add(g2);
@@ -740,6 +925,25 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         initEOperation(getGruntTeam__BuildMembers(), null, "buildMembers", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(gruntRuntimeCharacterEClass, GruntRuntimeCharacter.class, "GruntRuntimeCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(vehicleEClass, Vehicle.class, "Vehicle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        g1 = createEGenericType(vehicleEClass_V);
+        initEReference(getVehicle_Vehicle(), g1, null, "vehicle", null, 1, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getVehicle_VehicleCondition(), ecorePackage.getEInt(), "vehicleCondition", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getVehicle_Modus(), theShr5Package.getInterfaceModus(), "modus", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getVehicle_CurrentSpeed(), ecorePackage.getEInt(), "currentSpeed", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(droneEClass, Drone.class, "Drone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(matrixDeviceEClass, MatrixDevice.class, "MatrixDevice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        g1 = createEGenericType(matrixDeviceEClass_M);
+        initEReference(getMatrixDevice_Device(), g1, null, "device", null, 1, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMatrixDevice_MatrixCondition(), ecorePackage.getEInt(), "matrixCondition", null, 0, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMatrixDevice_Marks(), ecorePackage.getEInt(), "marks", null, 0, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(riggerConsoleEClass, RiggerConsole.class, "RiggerConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(cyberdeckEClass, Cyberdeck.class, "Cyberdeck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(zustandEEnum, Zustand.class, "Zustand");
