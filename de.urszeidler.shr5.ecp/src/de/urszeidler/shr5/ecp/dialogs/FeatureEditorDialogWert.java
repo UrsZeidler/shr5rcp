@@ -66,7 +66,6 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, Object object, EClassifier eClassifier, List<?> currentValues,
             String displayName, List<?> choiceOfValues) {
         super(parent, labelProvider, object, eClassifier, currentValues, displayName, choiceOfValues);
-        // TODO Auto-generated constructor stub
     }
 
     protected Label gesamtPreisLabel;
