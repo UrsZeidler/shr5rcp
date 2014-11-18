@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class CyberdeckWidget extends Composite {
 
@@ -88,11 +89,14 @@ public class CyberdeckWidget extends Composite {
                 toolkit.paintBordersFor(table);
                 
                         Composite composite = toolkit.createComposite(composite_1, SWT.NONE);
-                        composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+                        composite.setToolTipText("up");
+                        composite.setLayoutData(new GridData(SWT.CENTER, SWT.FILL, false, false, 1, 1));
                         composite.setLayout(new GridLayout(1, false));
                         toolkit.paintBordersFor(composite);
                         
-                                Button btnUp = toolkit.createButton(composite, "up", SWT.NONE);
+                                Button btnUp = toolkit.createButton(composite, "", SWT.NONE);
+                                btnUp.setToolTipText("up");
+                                btnUp.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/up.png"));
                                 btnUp.addSelectionListener(new SelectionAdapter() {
                                     @Override
                                     public void widgetSelected(SelectionEvent e) {
@@ -103,7 +107,9 @@ public class CyberdeckWidget extends Composite {
                                         treeViewer.refresh(true);
                                     }
                                 });
-                                Button btnDown = toolkit.createButton(composite, "down", SWT.NONE);
+                                Button btnDown = toolkit.createButton(composite, "", SWT.NONE);
+                                btnDown.setToolTipText("down");
+                                btnDown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/down.png"));
                                 btnDown.addSelectionListener(new SelectionAdapter() {
                                     @Override
                                     public void widgetSelected(SelectionEvent e) {
@@ -142,6 +148,7 @@ public class CyberdeckWidget extends Composite {
         lblZugriffbasis.setText("Matrix Zustand");
 
         stateMonitorWidget = new StateMonitorWidget(this, SWT.NONE, object.getMatrixZustandMax(), false);
+        new Label(this, SWT.NONE);
 
     }
 
