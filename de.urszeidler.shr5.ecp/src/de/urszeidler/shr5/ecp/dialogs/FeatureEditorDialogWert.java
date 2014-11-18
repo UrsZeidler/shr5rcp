@@ -37,6 +37,7 @@ import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -60,7 +61,7 @@ import de.urszeidler.shr5.ecp.Activator;
 public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
     /**
-     * @wbp.parser.constructor
+     * 
      */
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, Object object, EClassifier eClassifier, List<?> currentValues,
             String displayName, List<?> choiceOfValues) {
@@ -74,6 +75,16 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
 
+/**
+ * @wbp.parser.constructor
+ * 
+ * @param parent
+ * @param labelProvider
+ * @param object
+ * @param structuralFeature
+ * @param displayName
+ * @param choiceOfValues
+ */
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
             String displayName, List<?> choiceOfValues) {
         super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues);
@@ -127,7 +138,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             Group filterGroupComposite = new Group(contents, SWT.NONE);
             filterGroupComposite.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_group"));
             filterGroupComposite.setLayout(new GridLayout(3, false));
-            filterGroupComposite.setLayoutData(new GridData(SWT.FILL, SWT.DEFAULT, true, false, 3, 1));
+            filterGroupComposite.setLayoutData(new GridData(SWT.FILL, SWT.DEFAULT, false, false, 3, 1));
 
             Label label = new Label(filterGroupComposite, SWT.NONE);
             label.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_label"));
@@ -138,7 +149,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
             Composite btnComposite = new Composite(filterGroupComposite, SWT.NONE);
             {
-                GridData data = new GridData(SWT.FILL, SWT.FILL, false, true);
+                GridData data = new GridData(SWT.FILL, SWT.FILL, false, false);
                 data.horizontalAlignment = SWT.END;
                 btnComposite.setLayoutData(data);
 
@@ -207,9 +218,10 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         choiceLabel.setLayoutData(choiceLabelGridData);
 
         final Table choiceTable = choiceOfValues == null ? null : new Table(choiceComposite, SWT.MULTI | SWT.BORDER);
+        int width = Math.min(1600, Display.getCurrent().getBounds().width);
         if (choiceTable != null) {
             GridData choiceTableGridData = new GridData();
-            choiceTableGridData.widthHint = Display.getCurrent().getBounds().width / 5;
+            choiceTableGridData.widthHint = width / 5;
             choiceTableGridData.heightHint = Display.getCurrent().getBounds().height / 3;
             choiceTableGridData.verticalAlignment = SWT.FILL;
             choiceTableGridData.horizontalAlignment = SWT.FILL;
@@ -256,7 +268,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         final Text choiceText = choiceOfValues == null ? new Text(choiceComposite, style) : null;
         if (choiceText != null) {
             GridData choiceTextGridData = new GridData();
-            choiceTextGridData.widthHint = Display.getCurrent().getBounds().width / 5;
+            choiceTextGridData.widthHint = width / 5;
             choiceTextGridData.verticalAlignment = SWT.BEGINNING;
             choiceTextGridData.horizontalAlignment = SWT.FILL;
             choiceTextGridData.grabExcessHorizontalSpace = true;
@@ -337,7 +349,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
         final Table featureTable = new Table(featureComposite, SWT.MULTI | SWT.BORDER);
         GridData featureTableGridData = new GridData();
-        featureTableGridData.widthHint = Display.getCurrent().getBounds().width / 5;
+        featureTableGridData.widthHint = width / 5;
         featureTableGridData.heightHint = Display.getCurrent().getBounds().height / 3;
         featureTableGridData.verticalAlignment = SWT.FILL;
         featureTableGridData.horizontalAlignment = SWT.FILL;
@@ -485,8 +497,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
         Composite composite = contents;
         choiceComposite = new Composite(composite, SWT.NONE);
-        GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, false);
-        gridData.grabExcessHorizontalSpace = true;
+        GridData gridData = new GridData(SWT.FILL, SWT.FILL, false, false);
+        gridData.grabExcessHorizontalSpace = false;
         gridData.horizontalSpan = 3;
         choiceComposite.setLayoutData(gridData);
         GridLayout gridLayout = new GridLayout(3, false);
@@ -524,10 +536,17 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
             choiceTableViewer.addFilter(shrListFilter);
 
+        composite.pack();
         return composite;
     }
 
     protected void addContollButtons(Composite controlButtons) {
         
+    }
+    
+    @Override
+    protected Point getInitialSize() {
+        // TODO Auto-generated method stub
+        return super.getInitialSize();
     }
 }
