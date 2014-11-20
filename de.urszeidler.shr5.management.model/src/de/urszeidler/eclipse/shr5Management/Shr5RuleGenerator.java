@@ -3,9 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import de.urszeidler.eclipse.shr5.SourceBook;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 
 /**
@@ -21,6 +23,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +49,22 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      * @generated
      */
     Shr5System getShr5Generator();
+
+    /**
+     * Returns the value of the '<em><b>Allowed Sources</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.SourceBook}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Allowed Sources</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Allowed Sources</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5RuleGenerator_AllowedSources()
+     * @model
+     * @generated
+     */
+    EList<SourceBook> getAllowedSources();
 
     /**
      * <!-- begin-user-doc -->
@@ -114,6 +133,18 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      * @generated
      */
     boolean hasNoConstrainVoilation(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * No attribute over the defined species max value.
+     * There could be an exception defined by a modificator with the species max attributes.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->

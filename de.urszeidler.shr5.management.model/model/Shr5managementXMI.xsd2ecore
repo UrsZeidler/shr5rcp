@@ -253,7 +253,10 @@
           outputs="Shr5managementXMI.xsd#//CharacterAdvancementSystem;XSDComplexTypeDefinition=35/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//CharacterAdvancementSystem" outputs="Shr5managementXMI.xsd#//CharacterAdvancementSystem;XSDElementDeclaration=35"/>
-    <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=36"/>
+    <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=36">
+      <nested inputs="shr5Management.ecore#//Shr5RuleGenerator/allowedSources" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=36/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Shr5RuleGenerator/allowedSources" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
     <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDElementDeclaration=36"/>
     <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37">
       <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse"/>

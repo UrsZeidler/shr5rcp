@@ -747,7 +747,12 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>The shr5 rule generator collects the main rules for all character generation.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:CharacterGenerator"/>
+      <xsd:extension base="shr5mngt:CharacterGenerator">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="allowedSources" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="allowedSources" type="xsd:string"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Shr5RuleGenerator" type="shr5mngt:Shr5RuleGenerator">

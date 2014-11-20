@@ -679,6 +679,18 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eOperations name="hasOnlyAllowedSources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="No attribute over the defined species max value.&#xA;There could be an exception defined by a modificator with the species max attributes."/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
     <eOperations name="hasLifestyleChoosen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="No attribute over the defined species max value.&#xA;There could be an exception defined by a modificator with the species max attributes."/>
@@ -697,6 +709,8 @@
         <details key="documentation" value="The shr5Generator connects to the system."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedSources" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//SourceBook"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

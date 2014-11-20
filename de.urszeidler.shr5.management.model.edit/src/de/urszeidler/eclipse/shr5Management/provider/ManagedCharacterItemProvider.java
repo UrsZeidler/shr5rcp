@@ -527,8 +527,23 @@ public class ManagedCharacterItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR,
+                 Shr5Factory.eINSTANCE.createMagazin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR,
+                 Shr5Factory.eINSTANCE.createDefaultWifi()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS,
                  Shr5Factory.eINSTANCE.createVertrag()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS,
+                 Shr5Factory.eINSTANCE.createIntervallVertrag()));
 
         newChildDescriptors.add
             (createChildParameter

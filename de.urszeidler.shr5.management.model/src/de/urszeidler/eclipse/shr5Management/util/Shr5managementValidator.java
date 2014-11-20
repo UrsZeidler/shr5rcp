@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -248,12 +249,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_RULE_GENERATOR__HAS_NO_CONSTRAIN_VOILATION = 21;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Only Allowed Sources' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES = 22;
+
+    /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Lifestyle Choosen' of 'Shr5 Rule Generator'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN = 22;
+    public static final int SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN = 23;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Karma Points' of 'Shr5 Karma Generator'.
@@ -261,7 +270,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 23;
+    public static final int SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 24;
 
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -269,7 +278,7 @@ public class Shr5managementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 23;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 24;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -590,6 +599,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasCategoryOnlyOnce(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllAttributesPoints(shr5Generator, diagnostics, context);
@@ -923,6 +933,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(shr5RuleGenerator, diagnostics, context);
         return result;
     }
@@ -988,6 +999,16 @@ public class Shr5managementValidator extends EObjectValidator {
     }
 
     /**
+     * Validates the hasOnlyAllowedSources constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasOnlyAllowedSources(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasOnlyAllowedSources(diagnostics, context);
+    }
+
+    /**
      * Validates the hasLifestyleChoosen constraint of '<em>Shr5 Rule Generator</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1018,6 +1039,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
         return result;

@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -24,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -45,12 +49,23 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
+    /**
+     * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAllowedSources()
+     * @generated
+     * @ordered
+     */
+    protected EList<SourceBook> allowedSources;
+
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -91,6 +106,18 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
             return sr5;
         }
         return null;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<SourceBook> getAllowedSources() {
+        if (allowedSources == null) {
+            allowedSources = new EObjectResolvingEList<SourceBook>(SourceBook.class, this, Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES);
+        }
+        return allowedSources;
     }
 
     /**
@@ -372,6 +399,31 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        // TODO: implement this method
+        // -> specify the condition that violates the invariant
+        // -> verify the details of the diagnostic, including severity and message
+        // Ensure that you remove @generated or mark it @generated NOT
+        if (false) {
+            if (diagnostics != null) {
+                diagnostics.add
+                    (new BasicDiagnostic
+                        (Diagnostic.ERROR,
+                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES,
+                         EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }),
+                         new Object [] { this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * 
      * @generated not
      */
@@ -403,8 +455,42 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
                 if (resolve) return getShr5Generator();
                 return basicGetShr5Generator();
+            case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
+                return getAllowedSources();
         }
         return super.eGet(featureID, resolve, coreType);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
+                getAllowedSources().clear();
+                getAllowedSources().addAll((Collection<? extends SourceBook>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
+                getAllowedSources().clear();
+                return;
+        }
+        super.eUnset(featureID);
     }
 
     /**
@@ -417,6 +503,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
                 return basicGetShr5Generator() != null;
+            case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
+                return allowedSources != null && !allowedSources.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -442,6 +530,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
                 return hasNoAttributesOverSpeciesAtt((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP:
                 return hasNoConstrainVoilation((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP:
+                return hasOnlyAllowedSources((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP:
                 return hasLifestyleChoosen((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }

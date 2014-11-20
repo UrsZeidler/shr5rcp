@@ -300,6 +300,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Shr5RuleGenerator">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/shr5Generator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/allowedSources"/>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/context"/>
@@ -323,6 +324,10 @@
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/context"/>
       </genOperations>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen/diagnostics"/>
