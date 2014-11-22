@@ -720,17 +720,15 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
+        if (!canValidate()||getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
                 || getMagic() == null || getCharacter() == null)
-            return true;
-
-        if (state == GeneratorState.COMMITED)
             return true;
 
         boolean spendAll = hasSpendAllAttributesPoints(null, null) && hasSpendAllConnectionPoints(null, null) && hasSpendAllGroupPoints(null, null)
                 && hasSpendAllKarmaPoints(null, null) && hasSpendAllKnowlegeSkillPoints(null, null) && hasSpendAllMagicPoints(null, null)
                 && hasSpendAllMagicSkillsPoints(null, null) && hasSpendAllResourcePoints(null, null) && hasSpendAllSkillPoints(null, null)
-                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null) && hasSpendAllSpellPoints(null, null);
+                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null) && hasSpendAllSpellPoints(null, null)
+                && hasOnlyAllowedSources(null,null);
 
         // int karmaPoints = getShr5Generator().getKarmaPoints();
         //

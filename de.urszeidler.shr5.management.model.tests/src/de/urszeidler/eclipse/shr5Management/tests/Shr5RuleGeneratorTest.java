@@ -11,11 +11,14 @@ import org.eclipse.emf.common.util.DiagnosticChain;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
@@ -320,12 +323,59 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated
+     * @generated not
      */
     public void testHasOnlyAllowedSources__DiagnosticChain_Map() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        AbstraktPersona persona = character.getPersona();
+        KoerperPersona kp = (KoerperPersona)persona;
+        
+        SourceBook sourceBook_allowed = Shr5Factory.eINSTANCE.createSourceBook();
+        SourceBook sourceBook_notallowed = Shr5Factory.eINSTANCE.createSourceBook();        
+        
+        
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+
+        getFixture().getAllowedSources().add(sourceBook_allowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+
+        Gegenstand gegenstand_allowed = Shr5Factory.eINSTANCE.createGegenstand();
+        gegenstand_allowed.setSrcBook(sourceBook_allowed);
+        character.getInventar().add(gegenstand_allowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        
+        Gegenstand gegenstand_notallowed = Shr5Factory.eINSTANCE.createGegenstand();
+        gegenstand_notallowed.setSrcBook(sourceBook_notallowed);
+        character.getInventar().add(gegenstand_notallowed);
+        assertEquals(false, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        
+        character.getInventar().remove(gegenstand_notallowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        
+        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        Fertigkeit fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+        fertigkeit.setSrcBook(sourceBook_allowed);
+        personaFertigkeit.setFertigkeit(fertigkeit);
+        personaFertigkeit.setStufe(1);
+        personaFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
+        persona.getFertigkeiten().add(personaFertigkeit);
+
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        fertigkeit.setSrcBook(sourceBook_notallowed);
+        assertEquals(false, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        fertigkeit.setSrcBook(sourceBook_allowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        
+        PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        kp.getEigenschaften().add(eigenschaft);
+        eigenschaft.setSrcBook(sourceBook_allowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        eigenschaft.setSrcBook(sourceBook_notallowed);
+        assertEquals(false, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        eigenschaft.setSrcBook(sourceBook_allowed);
+        assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
+        
     }
 
     /**

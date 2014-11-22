@@ -348,7 +348,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (state == GeneratorState.COMMITED)
+        if (!canValidate())
             return true;
 
         if (!hasSpendAllKarmaPoints(null, null)) {
@@ -369,9 +369,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * @generated not
      */
     public boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getCharacter() == null || getShr5Generator() == null)
-            return true;
-        if (state == GeneratorState.COMMITED)
+        if (!canValidate())
             return true;
 
         int karmaPoints = getShr5Generator().getKarmaPoints();

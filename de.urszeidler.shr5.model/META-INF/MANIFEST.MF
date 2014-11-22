@@ -13,5 +13,5 @@ Export-Package: de.urszeidler.eclipse.shr5,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- com.google.guava;visibility:=reexport
+ com.google.guava;bundle-version="15.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

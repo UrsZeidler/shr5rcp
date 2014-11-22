@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -21,6 +22,11 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+
+import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -399,21 +405,46 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        // TODO: implement this method
-        // -> specify the condition that violates the invariant
-        // -> verify the details of the diagnostic, including severity and message
-        // Ensure that you remove @generated or mark it @generated NOT
-        if (false) {
+        if (!canValidate()||getAllowedSources().isEmpty())
+            return true;
+
+        final ManagedCharacter managedCharacter = getCharacter();
+
+       ImmutableList<EObject> list = FluentIterable.from(new Iterable<EObject>() {
+
+           @Override
+           public Iterator<EObject> iterator() {
+               // TODO Auto-generated method stub
+               return managedCharacter.eAllContents();
+           }
+       }).filter(new Predicate<EObject>() {
+        @Override
+        public boolean apply(EObject input) {
+            if (input instanceof Quelle) {
+                Quelle q = (Quelle)input;
+                if(q.getSrcBook()==null)
+                    return true;
+                return !getAllowedSources().contains(q.getSrcBook());                
+            } else if (input instanceof PersonaFertigkeit) {
+                PersonaFertigkeit pf = (PersonaFertigkeit)input;
+                return apply(pf.getFertigkeit());
+            }
+            return false;
+        }
+    }).toList();
+ 
+       if (list.size()>0) {
             if (diagnostics != null) {
                 diagnostics.add
                     (new BasicDiagnostic
                         (Diagnostic.ERROR,
                          Shr5managementValidator.DIAGNOSTIC_SOURCE,
                          Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES,
-                         EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }),
+                         ModelPlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
+                                 new Object[] { "_UI_hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }),
                          new Object [] { this }));
             }
             return false;
