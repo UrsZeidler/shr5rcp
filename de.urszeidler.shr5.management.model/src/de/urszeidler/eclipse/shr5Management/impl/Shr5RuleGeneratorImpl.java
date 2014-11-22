@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
@@ -413,21 +414,28 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * 
      * @generated not
      */
-    public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics,final Map<Object, Object> context) {
         if (!canValidate() || getAllowedSources().isEmpty())
             return true;
 
         final ManagedCharacter managedCharacter = getCharacter();
 
-        ImmutableList<EObject> list = FluentIterable.from(ShadowrunTools.toIterable(managedCharacter.eAllContents()))
-                .filter(ShadowrunTools.allowedSourcePredicate(getAllowedSources())).toList();
+        ImmutableList<String> list = FluentIterable.from(ShadowrunTools.toIterable(managedCharacter.eAllContents()))
+                .filter(ShadowrunTools.allowedSourcePredicate(getAllowedSources()))
+                .transform(new Function<EObject, String>() {
+
+                    @Override
+                    public String apply(EObject input) {
+                        return  EObjectValidator.getObjectLabel(input, context);
+                    }
+                }).toList();
 
         if (list.size() > 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "_UI_hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                "_UI_hasOnlyAllowedSources",
+                                new Object[]{ list.toString() }), new Object[]{ this }));
             }
             return false;
         }
