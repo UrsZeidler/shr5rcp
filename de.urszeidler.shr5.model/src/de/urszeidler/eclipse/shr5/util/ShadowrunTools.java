@@ -15,6 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -39,9 +40,11 @@ import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 
 /**
@@ -915,5 +918,43 @@ public class ShadowrunTools {
         } catch (Exception e) {
         }
         return null;
+    }
+    
+    /**
+     * Simple wrapper for an iterable.
+     * @param iterator
+     * @return
+     */
+    public static Iterable<EObject> toIterable(final Iterator<EObject> iterator) {
+      return new Iterable<EObject>() {
+
+            @Override
+            public Iterator<EObject> iterator() {
+             return iterator;
+            }
+        };
+    }
+    
+    /**
+     * Create a allowed Sorces predicate to match {@link Quelle}, need to be unset or in the allowedSource.
+     * @param allowedSources
+     * @return
+     */
+    public static Predicate<EObject> allowedSourcePredicate(final EList<SourceBook> allowedSources) {
+       return new Predicate<EObject>() {
+            @Override
+            public boolean apply(EObject input) {
+                if (input instanceof Quelle) {
+                    Quelle q = (Quelle)input;
+                    if(q.getSrcBook()==null)
+                        return true;
+                    return !allowedSources.contains(q.getSrcBook());                
+                } else if (input instanceof PersonaFertigkeit) {
+                    PersonaFertigkeit pf = (PersonaFertigkeit)input;
+                    return apply(pf.getFertigkeit());
+                }
+                return false;
+            }
+        };
     }
 }

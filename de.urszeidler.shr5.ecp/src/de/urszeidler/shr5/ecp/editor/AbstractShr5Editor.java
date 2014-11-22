@@ -149,7 +149,7 @@ public abstract class AbstractShr5Editor extends BasicEditor<EObject> {
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
     
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + labelProvider.getText(object_ref), new ArrayList<EObject>(collection));
+                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + labelProvider.getText(object_ref), new ArrayList<EObject>(collection),orgObject);
     
         int result = dialog.open();
         if (result == Window.OK) {

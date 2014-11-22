@@ -930,7 +930,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
 
         FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues);
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues,combatTurn);
         if (dialogWert.open() == Dialog.OK)
             combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
         else

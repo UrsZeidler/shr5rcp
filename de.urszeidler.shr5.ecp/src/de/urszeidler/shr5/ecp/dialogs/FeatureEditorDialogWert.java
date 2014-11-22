@@ -3,6 +3,8 @@
  */
 package de.urszeidler.shr5.ecp.dialogs;
 
+import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -12,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
@@ -55,24 +58,23 @@ import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.shr5.ecp.Activator;
 
 public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
-    /**
-     * 
-     */
-    public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, Object object, EClassifier eClassifier, List<?> currentValues,
-            String displayName, List<?> choiceOfValues) {
-        super(parent, labelProvider, object, eClassifier, currentValues, displayName, choiceOfValues);
-    }
-
-    protected Label gesamtPreisLabel;
+     protected Label gesamtPreisLabel;
     // private Label gesamtStrassenPreisLabel;
     protected TableViewer choiceTableViewer;
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
+    private EStructuralFeature feature;
+    private ViewerFilter allowedSourceFilter;
+    private EObject theEObject;
 
 /**
  * @wbp.parser.constructor
@@ -85,7 +87,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
  * @param choiceOfValues
  */
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
-            String displayName, List<?> choiceOfValues) {
+            String displayName, List<?> choiceOfValues, EObject orgObject) {
         super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues);
         INotifyChangedListener listner = new INotifyChangedListener() {
             @Override
@@ -101,6 +103,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
         values.addListener(listner);
         dialogSettings = Activator.getDefault().getDialogSettings();
+        theEObject = orgObject;
 
     }
 
@@ -173,6 +176,21 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     return true;
                 }
             };
+            allowedSourceFilter = new ViewerFilter() {
+                @Override
+                public boolean select(Viewer viewer, Object parentElement, Object element) {
+                    if (theEObject instanceof ManagedCharacter) {
+                        ManagedCharacter mc = (ManagedCharacter)theEObject;
+                        CharacterGenerator generatorSrc = mc.getChracterSource();                        
+                        if (generatorSrc instanceof Shr5RuleGenerator) {
+                            Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+                            EList<SourceBook> allowedSources = srg.getAllowedSources();
+                            return !ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element);                            
+                        }
+                     }
+                    return true;
+                }
+            };
 
             ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
             final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
@@ -183,11 +201,14 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             filterShrList.addSelectionListener(new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
-                    if (filterShrList.getSelection())
+                    if (filterShrList.getSelection()){
                         choiceTableViewer.addFilter(shrListFilter);
-                    else
+                        choiceTableViewer.addFilter(allowedSourceFilter);
+                    }
+                    else{
                         choiceTableViewer.removeFilter(shrListFilter);
-
+                        choiceTableViewer.removeFilter(allowedSourceFilter);
+                    }
                     dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
                 }
             });
@@ -248,6 +269,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     }
                 });
             }
+            choiceTableViewer.addFilter(allowedSourceFilter);
             if (unique) {
                 choiceTableViewer.addFilter(new ViewerFilter() {
 

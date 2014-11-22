@@ -197,7 +197,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), basicList,
-                    Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(objectsOfType));
+                    Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(objectsOfType),object);
 
             int result = dialog.open();
             if (result == Window.OK) {
@@ -262,7 +262,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
     
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection));
+                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection),orgObject);
     
         int result = dialog.open();
         if (result == Window.OK) {

@@ -22,7 +22,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
 public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
     public FeatureEditorDialogMagazine(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
             String displayName, List<?> choiceOfValues) {
-        super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues);
+        super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues,object);
     }
 
     protected void updateLabel() {

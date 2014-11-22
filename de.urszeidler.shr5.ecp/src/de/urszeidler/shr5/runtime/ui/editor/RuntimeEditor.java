@@ -78,7 +78,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
                     FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
                             Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
                                     Collections2.filter((Collection<ManagedCharacter>)objectsOfType,
-                                            ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))));
+                                            ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),object);
 
                     int result = dialog.open();
                     if (result == Window.OK) {

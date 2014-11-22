@@ -108,7 +108,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
-                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(objectsOfType));
+                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(objectsOfType),object);
 
             int result = dialog.open();
             if (result == Window.OK) {

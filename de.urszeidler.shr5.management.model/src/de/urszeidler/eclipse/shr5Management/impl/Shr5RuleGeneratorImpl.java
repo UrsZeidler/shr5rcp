@@ -14,11 +14,11 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
@@ -54,11 +54,11 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
@@ -66,6 +66,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAllowedSources()
      * @generated
      * @ordered
@@ -75,6 +76,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -84,6 +86,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -94,6 +97,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Shr5System getShr5Generator() {
@@ -117,6 +121,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<SourceBook> getAllowedSources() {
@@ -286,7 +291,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (spezies == null)
             return true;
 
-//        getShr5Generator().getNumberOfMaxAttributes();
+        // getShr5Generator().getNumberOfMaxAttributes();
         // int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
@@ -405,47 +410,24 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (!canValidate()||getAllowedSources().isEmpty())
+        if (!canValidate() || getAllowedSources().isEmpty())
             return true;
 
         final ManagedCharacter managedCharacter = getCharacter();
 
-       ImmutableList<EObject> list = FluentIterable.from(new Iterable<EObject>() {
+        ImmutableList<EObject> list = FluentIterable.from(ShadowrunTools.toIterable(managedCharacter.eAllContents()))
+                .filter(ShadowrunTools.allowedSourcePredicate(getAllowedSources())).toList();
 
-           @Override
-           public Iterator<EObject> iterator() {
-               // TODO Auto-generated method stub
-               return managedCharacter.eAllContents();
-           }
-       }).filter(new Predicate<EObject>() {
-        @Override
-        public boolean apply(EObject input) {
-            if (input instanceof Quelle) {
-                Quelle q = (Quelle)input;
-                if(q.getSrcBook()==null)
-                    return true;
-                return !getAllowedSources().contains(q.getSrcBook());                
-            } else if (input instanceof PersonaFertigkeit) {
-                PersonaFertigkeit pf = (PersonaFertigkeit)input;
-                return apply(pf.getFertigkeit());
-            }
-            return false;
-        }
-    }).toList();
- 
-       if (list.size()>0) {
+        if (list.size() > 0) {
             if (diagnostics != null) {
-                diagnostics.add
-                    (new BasicDiagnostic
-                        (Diagnostic.ERROR,
-                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES,
-                         ModelPlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
-                                 new Object[] { "_UI_hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }),
-                         new Object [] { this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "_UI_hasOnlyAllowedSources", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
@@ -466,9 +448,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (managedCharacter.getChoosenLifestyle() == null) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN, ModelPlugin.INSTANCE.getString(
-                                "_UI_NoLivestyleChoosen",
-                                new Object[]{  EObjectValidator.getObjectLabel(managedCharacter, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN, ModelPlugin.INSTANCE.getString("_UI_NoLivestyleChoosen",
+                                new Object[]{ EObjectValidator.getObjectLabel(managedCharacter, context) }), new Object[]{ this }));
             }
             return false;
         }
@@ -478,13 +459,15 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
+                if (resolve)
+                    return getShr5Generator();
                 return basicGetShr5Generator();
             case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
                 return getAllowedSources();
@@ -495,6 +478,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -512,6 +496,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -527,6 +512,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -543,6 +529,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
