@@ -249,7 +249,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         grpAuswahl = new Composite(sctnChoose, SWT.NONE);
         sctnChoose.setClient(grpAuswahl);
-        grpAuswahl.setLayout(new GridLayout(2, false));
+        grpAuswahl.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(grpAuswahl);
         managedForm.getToolkit().paintBordersFor(grpAuswahl);
 
@@ -272,6 +272,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         compositePrio.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(compositePrio);
         managedForm.getToolkit().paintBordersFor(compositePrio);
+
+        Composite compositeAllowedSource = new Composite(grpAuswahl, SWT.NONE);
+        compositeAllowedSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        compositeAllowedSource.setLayout(new GridLayout(1, false));
+        managedForm.getToolkit().adapt(compositeAllowedSource);
+        managedForm.getToolkit().paintBordersFor(compositeAllowedSource);
 
         composite_group = new Composite(grpAuswahl, SWT.NONE);
         composite_group.setLayout(new GridLayout(3, false));
@@ -395,6 +401,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
+
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__ALLOWED_SOURCES, compositeAllowedSource);
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 
