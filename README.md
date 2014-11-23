@@ -9,6 +9,9 @@ shr5rcp
 
 Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download the software.
 
+[![simple instruction](http://img.youtube.com/vi/wQCnu3sj0RA/0.jpg)](http://www.youtube.com/watch?v=wQCnu3sj0RA)
+
+
 * [script runtime](https://github.com/UrsZeidler/shr5rcp/wiki/script-runtime) a script and combat view let you use all stuff, making probes, manages combat turns etc. 
 * [shadowrun 5 character generator](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application#shr5-core-rule-generator) after the core rule book 
 * [karma based](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application#the-shr5-karma-based-generator) character generator
