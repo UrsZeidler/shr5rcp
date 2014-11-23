@@ -20679,6 +20679,90 @@
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_c92RgHNhEeS_hJQnmJOWpQ" chracterSource="_XPdLUHNhEeS_hJQnmJOWpQ" choosenLifestyle="_924kEHNhEeS_hJQnmJOWpQ" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_c924kHNhEeS_hJQnmJOWpQ" name="Gangers &amp; street scum" edgeBasis="2" konstitutionBasis="4" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <fertigkeiten xmi:id="_m9WnkHNhEeS_hJQnmJOWpQ" stufe="4" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <fertigkeiten xmi:id="_pG0OcHNhEeS_hJQnmJOWpQ" stufe="3" fertigkeit="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+          <fertigkeiten xmi:id="_rSSngHNhEeS_hJQnmJOWpQ" stufe="3" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91" spezialisierungen="_EL_ekznTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_vxYB8HNhEeS_hJQnmJOWpQ" stufe="4" fertigkeit="9de43fad-b365-4e73-bc06-91dd571b858a"/>
+          <fertigkeiten xmi:id="_w9hE8HNhEeS_hJQnmJOWpQ" stufe="4" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_ydfp8HNhEeS_hJQnmJOWpQ" stufe="3" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <eigenschaften xmi:id="_1FC7AHNhEeS_hJQnmJOWpQ" name="Toughness" parentId="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+            <mods xmi:id="_1FC7AXNhEeS_hJQnmJOWpQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+            </mods>
+            <localizations xmi:id="_1FC7AnNhEeS_hJQnmJOWpQ" local="de" name="Zähigkeit"/>
+          </eigenschaften>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_8ULbMHNhEeS_hJQnmJOWpQ" parentId="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
+          <localizations xmi:id="_8ULbMXNhEeS_hJQnmJOWpQ" local="de" name="Browning Ultra-Power"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_8ULbMnNhEeS_hJQnmJOWpQ" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_8ULbM3NhEeS_hJQnmJOWpQ" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <magazin xmi:id="_8ULbNHNhEeS_hJQnmJOWpQ" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Browning Ultra-Power ammunition" type="_8ULbMHNhEeS_hJQnmJOWpQ" bullets="_evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w _evh_oHNjEeSQGuBzOeEB5w"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_8Uj1sHNhEeS_hJQnmJOWpQ" parentId="eb16de72-e646-4880-aa5b-21a5a0a2b342" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="10" name="Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X8znTEeSe6_w6Jrbqxg" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
+          <localizations xmi:id="_8Uj1sXNhEeS_hJQnmJOWpQ" local="de" name="Messer"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_8U2woHNhEeS_hJQnmJOWpQ" parentId="89a0f3c9-5ef6-41cd-981f-4ac690ee2ab3" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="100" name="Meta Link" deviceRating="1">
+          <localizations xmi:id="_8U2woXNhEeS_hJQnmJOWpQ" local="de" name="Meta Link"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_evh_oHNjEeSQGuBzOeEB5w" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_evh_oXNjEeSQGuBzOeEB5w" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_924kEHNhEeS_hJQnmJOWpQ" name="Street" parentId="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
+          <localizations xmi:id="_924kEXNhEeS_hJQnmJOWpQ" local="de" name="Straße"/>
+        </contracts>
+        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_XPdLUHNhEeS_hJQnmJOWpQ" character="_c92RgHNhEeS_hJQnmJOWpQ" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Gangers &amp; street scum" selectedSpecies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </generatorSrc>
+      </members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_FLezEHNiEeS_hJQnmJOWpQ" chracterSource="_DNkU4HNiEeS_hJQnmJOWpQ" choosenLifestyle="_6_u7UHNiEeS_hJQnmJOWpQ" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_FLezEXNiEeS_hJQnmJOWpQ" name="Gangers &amp; street scum Lieutenant" edgeBasis="2" konstitutionBasis="4" geschicklichkeitBasis="4" reaktionBasis="4" staerkeBasis="4" charismaBasis="4" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <fertigkeiten xmi:id="_PJHg4HNiEeS_hJQnmJOWpQ" stufe="3" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <fertigkeiten xmi:id="_SRFXYHNiEeS_hJQnmJOWpQ" stufe="4" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91" spezialisierungen="_EL_ekznTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_Voc70HNiEeS_hJQnmJOWpQ" stufe="3" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" spezialisierungen="_EL-3hDnTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_Z30fQHNiEeS_hJQnmJOWpQ" stufe="2" fertigkeit="867a6fa0-7d98-4cde-83a4-b33dd39de08e"/>
+          <fertigkeiten xmi:id="_bovqUHNiEeS_hJQnmJOWpQ" stufe="3" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" spezialisierungen="_EL5_AznTEeSe6_w6Jrbqxg"/>
+          <eigenschaften xmi:id="_e2IMUHNiEeS_hJQnmJOWpQ" name="Toughness" parentId="00cc6499-db13-447e-8116-278d317a9e31" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="9">
+            <mods xmi:id="_e2IMUXNiEeS_hJQnmJOWpQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+            </mods>
+            <localizations xmi:id="_e2IMUnNiEeS_hJQnmJOWpQ" local="de" name="Zähigkeit"/>
+          </eigenschaften>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_ses60HNiEeS_hJQnmJOWpQ" parentId="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
+          <localizations xmi:id="_ses60XNiEeS_hJQnmJOWpQ" local="de" name="Browning Ultra-Power"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_ses60nNiEeS_hJQnmJOWpQ" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_ses603NiEeS_hJQnmJOWpQ" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <magazin xmi:id="_ses61HNiEeS_hJQnmJOWpQ" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Browning Ultra-Power ammunition" type="_ses60HNiEeS_hJQnmJOWpQ" bullets="_ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w _ylTQMHNjEeSQGuBzOeEB5w"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_sfAc0HNiEeS_hJQnmJOWpQ" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+          <localizations xmi:id="_sfAc0XNiEeS_hJQnmJOWpQ" local="de" name="Panzerjacke"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_sfSwsHNiEeS_hJQnmJOWpQ" parentId="eb16de72-e646-4880-aa5b-21a5a0a2b342" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="10" name="Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X8znTEeSe6_w6Jrbqxg" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
+          <localizations xmi:id="_sfSwsXNiEeS_hJQnmJOWpQ" local="de" name="Messer"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_sfj2cHNiEeS_hJQnmJOWpQ" parentId="d808ba12-db93-4a7b-85a1-9e9f6229087f" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="700" name="Sony Emperor" deviceRating="2">
+          <localizations xmi:id="_sfj2cXNiEeS_hJQnmJOWpQ" local="de" name="Sony Emperor"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_ylTQMHNjEeSQGuBzOeEB5w" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_ylT3QHNjEeSQGuBzOeEB5w" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_6_u7UHNiEeS_hJQnmJOWpQ" name="Street" parentId="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
+          <localizations xmi:id="_6_u7UXNiEeS_hJQnmJOWpQ" local="de" name="Straße"/>
+        </contracts>
+        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_DNkU4HNiEeS_hJQnmJOWpQ" character="_FLezEHNiEeS_hJQnmJOWpQ" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Gangers &amp; street scum Lieutenant" selectedSpecies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </generatorSrc>
+      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_mfg7QOJ1EeOcv4XBYqxZsQ" generator="_kwlUQOJ1EeOcv4XBYqxZsQ" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="xxxx" resourcen="_djpCGOJ0EeOht_G61YAQvg" skills="_djpCFeJ0EeOht_G61YAQvg" attribute="_djpB_uJ0EeOht_G61YAQvg" metaType="_djpB-uJ0EeOht_G61YAQvg" magic="_djpCG-J0EeOht_G61YAQvg"/>
@@ -20688,6 +20772,10 @@
     <grunts xmi:id="_B1VKMN0CEeOvVYoRsPZlnA" name="Thugs">
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
+    </grunts>
+    <grunts xmi:id="_u5N1cHNiEeS_hJQnmJOWpQ" name="Gangers &amp; street scum" professionalRating="1">
+      <members xmi:id="_yv_5wHNiEeS_hJQnmJOWpQ" count="5" nsc="_c92RgHNhEeS_hJQnmJOWpQ"/>
+      <leader xmi:id="_u52HkHNiEeS_hJQnmJOWpQ" count="1" nsc="_FLezEHNiEeS_hJQnmJOWpQ"/>
     </grunts>
   </entries>
   <entries xsi:type="scripting:Scripts" xmi:id="_5ulUwD_WEeSQWIeEm8LnkA" name="Own scripts">
