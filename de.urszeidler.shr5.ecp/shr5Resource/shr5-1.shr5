@@ -20655,7 +20655,7 @@
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_B1Ocgd0CEeOvVYoRsPZlnA" chracterSource="_B1PDk90CEeOvVYoRsPZlnA" sex="male">
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_B1Ocgd0CEeOvVYoRsPZlnA" chracterSource="_B1PDk90CEeOvVYoRsPZlnA" choosenLifestyle="_vatjEHPdEeSKeqzpKUXqhA" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_B1Ocgt0CEeOvVYoRsPZlnA" name="Delvil Rat" edgeBasis="2" konstitutionBasis="2" geschicklichkeitBasis="5" reaktionBasis="5" staerkeBasis="1" charismaBasis="5" willenskraftBasis="3" intuitionBasis="5" logikBasis="2" spezies="6fb20284-a25b-4eb7-82d5-e20f79d345e3">
           <fertigkeiten xmi:id="_B1Ocg90CEeOvVYoRsPZlnA" stufe="5" fertigkeit="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
           <fertigkeiten xmi:id="_B1OchN0CEeOvVYoRsPZlnA" stufe="2" fertigkeit="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
@@ -20663,11 +20663,14 @@
           <fertigkeiten xmi:id="_B1PDkd0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
           <eigenschaften xmi:id="_B1PDkt0CEeOvVYoRsPZlnA" name="Allergy Sun(Common, Mild)" page="78" karmaKosten="-10"/>
         </persona>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_vatjEHPdEeSKeqzpKUXqhA" name="Street" parentId="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
+          <localizations xmi:id="_vatjEXPdEeSKeqzpKUXqhA" local="de" name="Straße"/>
+        </contracts>
         <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_B1PDk90CEeOvVYoRsPZlnA" character="_B1Ocgd0CEeOvVYoRsPZlnA" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Delvil Rat">
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_B1PDlN0CEeOvVYoRsPZlnA" chracterSource="_B1Q4wN0CEeOvVYoRsPZlnA" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_B1PDlN0CEeOvVYoRsPZlnA" chracterSource="_B1Q4wN0CEeOvVYoRsPZlnA" choosenLifestyle="_rWEo8HPdEeSKeqzpKUXqhA" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_B1PqoN0CEeOvVYoRsPZlnA" beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. " name="Ralf" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3" charismaBasis="4" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
           <fertigkeiten xmi:id="_B1Pqod0CEeOvVYoRsPZlnA" stufe="6" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
           <fertigkeiten xmi:id="_B1Pqo90CEeOvVYoRsPZlnA" stufe="4" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af"/>
@@ -20675,12 +20678,15 @@
           <fertigkeiten xmi:id="_B1Pqpd0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
           <fertigkeiten xmi:id="_B1Pqpt0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
         </persona>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_rWEo8HPdEeSKeqzpKUXqhA" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000">
+          <localizations xmi:id="_rWEo8XPdEeSKeqzpKUXqhA" local="de" name="Unterschicht"/>
+        </contracts>
         <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_B1Q4wN0CEeOvVYoRsPZlnA" character="_B1PDlN0CEeOvVYoRsPZlnA" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Ralf" selectedSpecies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
       <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_c92RgHNhEeS_hJQnmJOWpQ" chracterSource="_XPdLUHNhEeS_hJQnmJOWpQ" choosenLifestyle="_924kEHNhEeS_hJQnmJOWpQ" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
-        <persona xsi:type="shr5:MudanPersona" xmi:id="_c924kHNhEeS_hJQnmJOWpQ" name="Gangers &amp; street scum" edgeBasis="2" konstitutionBasis="4" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_c924kHNhEeS_hJQnmJOWpQ" image="/shr5Resource/images/ganger.png" name="Gangers &amp; street scum" edgeBasis="2" konstitutionBasis="4" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
           <fertigkeiten xmi:id="_m9WnkHNhEeS_hJQnmJOWpQ" stufe="4" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
           <fertigkeiten xmi:id="_pG0OcHNhEeS_hJQnmJOWpQ" stufe="3" fertigkeit="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
           <fertigkeiten xmi:id="_rSSngHNhEeS_hJQnmJOWpQ" stufe="3" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91" spezialisierungen="_EL_ekznTEeSe6_w6Jrbqxg"/>
