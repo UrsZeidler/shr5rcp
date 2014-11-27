@@ -15,7 +15,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -936,8 +935,8 @@ public class ShadowrunTools {
     }
     
     /**
-     * Create a allowed Sorces predicate to match {@link Quelle}, need to be unset or in the allowedSource.
-     * @param allowedSources
+     * Create a allowed Sorces predicate to match a {@link Quelle}, not in the allowedSources.
+     * @param allowedSources should not be empty
      * @return
      */
     public static Predicate<EObject> allowedSourcePredicate(final EList<SourceBook> allowedSources) {
@@ -947,7 +946,7 @@ public class ShadowrunTools {
                 if (input instanceof Quelle) {
                     Quelle q = (Quelle)input;
                     if(q.getSrcBook()==null)
-                        return true;
+                        return false;
                     return !allowedSources.contains(q.getSrcBook());                
                 } else if (input instanceof PersonaFertigkeit) {
                     PersonaFertigkeit pf = (PersonaFertigkeit)input;
