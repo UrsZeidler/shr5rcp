@@ -185,7 +185,9 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                         if (generatorSrc instanceof Shr5RuleGenerator) {
                             Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
                             EList<SourceBook> allowedSources = srg.getAllowedSources();
-                            return !ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element);                            
+                            if(!allowedSources.isEmpty())
+                            if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
+                                return false;                            
                         }
                      }
                     return true;
