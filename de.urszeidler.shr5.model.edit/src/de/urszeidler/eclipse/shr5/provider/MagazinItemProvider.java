@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -20,14 +19,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.swt.graphics.Image;
-
-import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
-import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -36,7 +31,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Magazin} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class MagazinItemProvider extends AbstraktGegenstandItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -45,7 +39,6 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MagazinItemProvider(AdapterFactory adapterFactory) {
@@ -56,7 +49,6 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -168,13 +160,14 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String getText(Object object) {
         String label = ((Magazin)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Magazin_type") : getString("_UI_Magazin_type") + " " + label;
+        return label == null || label.length() == 0 ?
+            getString("_UI_Magazin_type") :
+            getString("_UI_Magazin_type") + " " + label;
     }
 
     /**
@@ -182,7 +175,6 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -196,7 +188,6 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider implemen
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

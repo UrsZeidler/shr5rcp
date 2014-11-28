@@ -215,7 +215,8 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Wurfwaffe"/>
     <genClasses ecoreClass="shr5.ecore#//ShrList">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//ShrList/entries"/>
+      <genFeatures property="None" children="true" createChild="true" propertyDescription="The entries of the list."
+          ecoreFeature="ecore:EReference shr5.ecore#//ShrList/entries"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Projektilwaffe"/>
     <genClasses ecoreClass="shr5.ecore#//FertigkeitsGruppe">

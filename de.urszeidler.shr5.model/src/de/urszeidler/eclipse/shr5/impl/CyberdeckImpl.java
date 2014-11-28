@@ -646,7 +646,6 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         if (configuration == null) {
             configuration = new EObjectResolvingEList<EAttribute>(EAttribute.class, this, Shr5Package.CYBERDECK__CONFIGURATION);
         }
-       
         return configuration;
     }
 

@@ -22,7 +22,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Munition} object.
@@ -216,7 +215,7 @@ public class MunitionItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
