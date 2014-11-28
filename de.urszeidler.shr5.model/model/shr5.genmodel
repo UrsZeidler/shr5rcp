@@ -345,7 +345,8 @@
     <genClasses image="false" ecoreClass="shr5.ecore#//Zauberer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/zauber"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
+      <genFeatures createChild="false" propertyDescription="The tradition of the spellcaster."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/gebundeneGeister"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/ungebundenerGeist"/>
     </genClasses>

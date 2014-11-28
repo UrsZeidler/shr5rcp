@@ -104,7 +104,7 @@ public class AspektMagierItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Zauberer_tradition_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_tradition_feature", "_UI_Zauberer_type"),
+                 getString("_UI_Zauberer_tradition_description"),
                  Shr5Package.Literals.ZAUBERER__TRADITION,
                  true,
                  false,
