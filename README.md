@@ -19,6 +19,8 @@ Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download 
  
 [![simple instruction](http://img.youtube.com/vi/wQCnu3sj0RA/0.jpg)](http://www.youtube.com/watch?v=wQCnu3sj0RA)
  
+[![create a grunt group instruction](http://img.youtube.com/vi/Q0AX250K9CE/0.jpg)](http://www.youtube.com/watch?v=Q0AX250K9CE)
+
  
 2. Motivation
   
