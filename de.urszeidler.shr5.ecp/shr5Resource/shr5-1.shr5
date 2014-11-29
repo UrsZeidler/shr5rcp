@@ -2173,7 +2173,7 @@
         <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="63dcfdb6-bbd9-4a58-bbf4-cd35f7614fdc" page="132" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Unarmed Attack" schadenscode="(STR)S">
           <localizations xmi:id="_DAZPsUjdEeSs1LVnBuzujg" local="de" name="Waffenlos" page="132"/>
         </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="ae58f859-37ee-4fac-befa-365acd3c7da7" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="AK-98 Grenade Launcher" schadenscode="Grenade" praezision="3" kapazitaet="6">
+        <entries xsi:type="shr5:Feuerwaffe" xmi:id="ae58f859-37ee-4fac-befa-365acd3c7da7" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="AK-98 Grenade Launcher" schadenscode="Grenade" praezision="3" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" kapazitaet="6">
           <localizations xmi:id="_DAZPs0jdEeSs1LVnBuzujg" local="de" name="AK-98 Unterlauf-Granatwerfer"/>
           <modie>EM</modie>
           <erweiterung>Lauf</erweiterung>
@@ -2181,7 +2181,7 @@
           <erweiterung>Unten</erweiterung>
           <magazin xmi:id="_DAZPskjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="AK-98 Grenade Launcher ammunition" type="ae58f859-37ee-4fac-befa-365acd3c7da7"/>
         </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" schadenscode="Grenade" praezision="6" munitionstyp="Streifen" kapazitaet="6">
+        <entries xsi:type="shr5:Feuerwaffe" xmi:id="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" schadenscode="Grenade" praezision="6" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
           <localizations xmi:id="_DAZ2wUjdEeSs1LVnBuzujg" local="de" name="Ares Alpha Unterlauf-Granatwerfer"/>
           <modie>EM</modie>
           <erweiterung>Lauf</erweiterung>
@@ -2189,7 +2189,7 @@
           <erweiterung>Unten</erweiterung>
           <magazin xmi:id="_DAZ2wEjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha Grenade Launcher ammunition" type="e9bea546-f35d-4ecc-9d15-8b30df9bdb28"/>
         </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Grenade Launcher" schadenscode="Grenade" praezision="4" munitionstyp="Streifen" kapazitaet="6">
+        <entries xsi:type="shr5:Feuerwaffe" xmi:id="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Grenade Launcher" schadenscode="Grenade" praezision="4" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
           <localizations xmi:id="_DAad00jdEeSs1LVnBuzujg" local="de" name="HK XM30 Unterlauf-Granatwerfer"/>
           <modie>EM</modie>
           <erweiterung>Lauf</erweiterung>
@@ -19698,6 +19698,7 @@
       <entries xsi:type="shr5:IntervallVertrag" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" name="DocWagon Contract, Super-Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" faelligkeitsIntervall="1" unit="year">
         <localizations xmi:id="_1A5EYkjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Superplatin"/>
       </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -20769,8 +20770,182 @@
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_9G7scHgEEeSv5bbPkjBOVw" chracterSource="_G_vkIN0DEeOF8uJDTAKQmg" choosenLifestyle="_6iLbQHgFEeSv5bbPkjBOVw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_9G7scXgEEeSv5bbPkjBOVw" name="Moto" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="5" reaktionBasis="4" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="4" spezies="08f2c9cc-f9f8-4f1a-9efb-63555af71788">
+          <fertigkeiten xmi:id="_mUaaEHgIEeSv5bbPkjBOVw" stufe="5" fertigkeit="10d5c887-a1e5-4cca-8613-3a28f1aab810"/>
+          <fertigkeiten xmi:id="_nB0SoHgIEeSv5bbPkjBOVw" stufe="5" fertigkeit="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
+          <fertigkeiten xmi:id="_obsPoHgIEeSv5bbPkjBOVw" stufe="5" fertigkeit="b8a24d87-465a-4365-9948-038fe1ac62c4"/>
+          <fertigkeiten xmi:id="_qVmXkHgIEeSv5bbPkjBOVw" stufe="4" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_rLxxoHgIEeSv5bbPkjBOVw" stufe="4" fertigkeit="64841e6e-9487-4b63-80a1-dcad6eb78179"/>
+          <fertigkeiten xmi:id="_sRDXoHgIEeSv5bbPkjBOVw" stufe="4" fertigkeit="58452cff-44ea-41c6-a554-28a869149b27"/>
+          <fertigkeiten xmi:id="_xnAIoHgIEeSv5bbPkjBOVw" stufe="3" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_yktuEHgIEeSv5bbPkjBOVw" stufe="3" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>
+          <fertigkeiten xmi:id="_0sIGgHgIEeSv5bbPkjBOVw" stufe="3" fertigkeit="2c8e5f20-e52d-4844-89e9-51b92dba47df"/>
+          <fertigkeitsGruppen xmi:id="_jZMmIHgIEeSv5bbPkjBOVw" stufe="3" gruppe="_EMAFpDnTEeSe6_w6Jrbqxg"/>
+          <fertigkeitsGruppen xmi:id="_v93AkHgIEeSv5bbPkjBOVw" stufe="2" gruppe="_EL-3hjnTEeSe6_w6Jrbqxg"/>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_VS0osHgFEeSv5bbPkjBOVw" name="Control Rig 2" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10R" wertValue="97000">
+            <mods xmi:id="_VS0osXgFEeSv5bbPkjBOVw" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_VS0osngFEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+            </mods>
+            <mods xmi:id="_VS0os3gFEeSv5bbPkjBOVw" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+            </mods>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_t5mE8HgXEeSv5bbPkjBOVw" name="Synaptic Booster 1" parentId="4a4e1079-5872-4f3f-a450-48c30a5504f3" page="461" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 6)R" wertValue="95000">
+            <mods xmi:id="_t5mE8XgXEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+            </mods>
+            <mods xmi:id="_t5mE8ngXEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <mods xmi:id="_t5mE83gXEeSv5bbPkjBOVw" wert="-50">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_t5mE9HgXEeSv5bbPkjBOVw" local="de" name="Synapsenbeschleuniger 1"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_uoM3YHgXEeSv5bbPkjBOVw" name="Cerebral Booster 1" parentId="81b40aa8-98d1-4a5d-89d6-9b6d438006da" page="460" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 6" wertValue="31500">
+            <mods xmi:id="_uoM3YXgXEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+            </mods>
+            <mods xmi:id="_uoM3YngXEeSv5bbPkjBOVw" wert="-20">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_uoM3Y3gXEeSv5bbPkjBOVw" local="de" name="Zerebralbooster 1"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_vLRvQHgXEeSv5bbPkjBOVw" name="Muscle Replacement 1" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="25000">
+            <mods xmi:id="_vLRvQXgXEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </mods>
+            <mods xmi:id="_vLRvQngXEeSv5bbPkjBOVw" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </mods>
+            <mods xmi:id="_vLRvQ3gXEeSv5bbPkjBOVw" wert="-100">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <localizations xmi:id="_vLRvRHgXEeSv5bbPkjBOVw" local="de" name="Kunstmuskeln 1"/>
+          </koerperMods>
+          <eigenschaften xmi:id="_hJTHcHgFEeSv5bbPkjBOVw" name="Gearhead" parentId="5c18a150-8e38-4f6d-b4f5-b1b674a3581e" page="74" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="11">
+            <localizations xmi:id="_hJTHcXgFEeSv5bbPkjBOVw" local="de" name="Rennpilot" page="74"/>
+          </eigenschaften>
+          <eigenschaften xmi:id="_Faoj0HgMEeSv5bbPkjBOVw" name="Juryrigger" parentId="27c7ea84-bfe4-47e1-8382-38d9a5c8e680" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
+            <localizations xmi:id="_Faoj0XgMEeSv5bbPkjBOVw" local="de" name="Technisches Improvisationstalent"/>
+          </eigenschaften>
+        </persona>
+        <inventar xsi:type="shr5:RiggerCommandConsole" xmi:id="_m7Ff4HgFEeSv5bbPkjBOVw" parentId="f9941dbe-1db1-4948-a8be-d760733446ea" page="266" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="68000" name="Proteus Poseidon" deviceRating="5" datenverarbeitungBasis="5" firewallBasis="6" zugriffBasis="1">
+          <localizations xmi:id="_m7Ff4XgFEeSv5bbPkjBOVw" local="de" name="Proteus Poseidon"/>
+          <mods xmi:id="_m7Ff4ngFEeSv5bbPkjBOVw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+          </mods>
+          <pan xmi:id="_nJM0YHgFEeSv5bbPkjBOVw"/>
+          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_y_OnMHgFEeSv5bbPkjBOVw" wertValue="80" name="Fork" parentId="b96ebe65-9bb5-49e7-8d23-a209eae7f9f3" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_y_OnMXgFEeSv5bbPkjBOVw" local="de" name="Gabel" page="245"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_zEC1wHgFEeSv5bbPkjBOVw" wertValue="80" name="Configurator" parentId="734f653b-35ca-4b26-b837-f64662878e8f" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_zEC1wXgFEeSv5bbPkjBOVw" local="de" name="Konfigurator" page="245"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_0oZH8HgGEeSv5bbPkjBOVw" wertValue="100" name="Pilot" parentId="_UkFd8HgGEeSv5bbPkjBOVw" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="2" skill="10d5c887-a1e5-4cca-8613-3a28f1aab810" model="1291ab59-2483-42ca-b7a9-503b2c354cee"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_st5ZwHgKEeSv5bbPkjBOVw" parentId="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
+          <localizations xmi:id="_st5ZwXgKEeSv5bbPkjBOVw" local="de" name="Ares Alpha"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <einbau xmi:id="_st5ZwngKEeSv5bbPkjBOVw" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_st5Zw3gKEeSv5bbPkjBOVw" local="de" name="Smartgunsystem, Internal"/>
+          </einbau>
+          <magazin xmi:id="_st5ZxHgKEeSv5bbPkjBOVw" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha ammunition" type="_st5ZwHgKEeSv5bbPkjBOVw"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_s00hIHgKEeSv5bbPkjBOVw" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
+          <localizations xmi:id="_s00hIXgKEeSv5bbPkjBOVw" local="de" name="Ares Predator V"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_s00hIngKEeSv5bbPkjBOVw" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_s00hI3gKEeSv5bbPkjBOVw" local="de" name="Smartgunsystem, Internal"/>
+          </einbau>
+          <magazin xmi:id="_s00hJHgKEeSv5bbPkjBOVw" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_s00hIHgKEeSv5bbPkjBOVw"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_s9OPMHgKEeSv5bbPkjBOVw" parentId="40826eaa-c22a-43da-8730-bc1867ea65a1" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="450" name="Armor Clothing" ruestung="6">
+          <localizations xmi:id="_s9OPMXgKEeSv5bbPkjBOVw" local="de" name="Panzerkleidung"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_tFjr0HgKEeSv5bbPkjBOVw" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+          <localizations xmi:id="_tFjr0XgKEeSv5bbPkjBOVw" local="de" name="Panzerjacke"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_tOAdMHgKEeSv5bbPkjBOVw" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
+          <localizations xmi:id="_tOAdMXgKEeSv5bbPkjBOVw" local="de" name="Panzerweste"/>
+        </inventar>
+        <inventar xsi:type="shr5:Magazin" xmi:id="_828AQHgSEeSv5bbPkjBOVw" parentId="_s00hJHgKEeSv5bbPkjBOVw" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_s00hIHgKEeSv5bbPkjBOVw"/>
+        <inventar xsi:type="shr5:Magazin" xmi:id="_8-ahQHgSEeSv5bbPkjBOVw" parentId="_st5ZxHgKEeSv5bbPkjBOVw" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha ammunition" type="_st5ZwHgKEeSv5bbPkjBOVw"/>
+        <inventar xsi:type="shr5:Munition" xmi:id="_DWtgEHgTEeSv5bbPkjBOVw" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwjnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_DWtgEXgTEeSv5bbPkjBOVw" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_DfeagHgTEeSv5bbPkjBOVw" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="100" proAnzahl="10" armorMod="-4" type="_ENFqwjnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_DfeagXgTEeSv5bbPkjBOVw" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_Fd85YHgTEeSv5bbPkjBOVw" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_Fd85YXgTEeSv5bbPkjBOVw" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_FmxeMHgTEeSv5bbPkjBOVw" parentId="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="100" proAnzahl="10" armorMod="-4" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_FmxeMXgTEeSv5bbPkjBOVw" local="de" name="Munition: APDS"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_Fy8KkHgWEeSv5bbPkjBOVw" parentId="be17251c-109c-4fbb-93e6-b59226592536" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="875" name="SCK Model 100" schadenscode="8P" praezision="5" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="30">
+          <localizations xmi:id="_Fy8KkXgWEeSv5bbPkjBOVw" local="de" name="SCK Model 100"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_Fy8KkngWEeSv5bbPkjBOVw" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+            <localizations xmi:id="_Fy8Kk3gWEeSv5bbPkjBOVw" local="de" name="Folding Stock" page="51"/>
+          </einbau>
+          <einbau xmi:id="_Fy8KlHgWEeSv5bbPkjBOVw" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_Fy8KlXgWEeSv5bbPkjBOVw" local="de" name="Smartgunsystem, Internal"/>
+          </einbau>
+          <magazin xmi:id="_Fy8KlngWEeSv5bbPkjBOVw" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="SCK Model 100 ammunition" type="_Fy8KkHgWEeSv5bbPkjBOVw"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_PvIt8HgWEeSv5bbPkjBOVw" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="200" proAnzahl="10" type="_ENFqwDnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_PvIt8XgWEeSv5bbPkjBOVw" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_6iLbQHgFEeSv5bbPkjBOVw" name="Middle" parentId="90f6f4c2-9968-42e1-ba79-e2bf530de32e" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000">
+          <localizations xmi:id="_6iLbQXgFEeSv5bbPkjBOVw" local="de" name="Mittelschicht"/>
+        </contracts>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_6lFlUHgFEeSv5bbPkjBOVw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000">
+          <localizations xmi:id="_6lFlUXgFEeSv5bbPkjBOVw" local="de" name="Unterschicht"/>
+        </contracts>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__wZzoHgFEeSv5bbPkjBOVw" name="MCT Fly-Spy (Minidrone)" parentId="d187e9f7-b308-426f-ac35-957ba601c70c" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="2000" handling="4" geschwindigkeit="3" beschleunigung="2" rumpf="1" pilot="3" sensor="3" fahrzeugTyp="Drones: Mini"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__zPsQHgFEeSv5bbPkjBOVw" name="Aztechnology Crawler (Small)" parentId="16d4e660-7014-434e-a437-08bc869c6200" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="4000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="3" pilot="4" sensor="3" fahrzeugTyp="Drones: Small" panzer="3"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__15XoHgFEeSv5bbPkjBOVw" name="GM-Nissan Doberman (Medium)" parentId="9186a0a7-635f-4242-a0e8-238f48b17ca2" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="5000" handling="5" geschwindigkeit="3" beschleunigung="1" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drones: Medium" panzer="4"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__4jqEHgFEeSv5bbPkjBOVw" name="MCT-Nissan Roto-drone (Medium)" parentId="1291ab59-2483-42ca-b7a9-503b2c354cee" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="5000" handling="4" geschwindigkeit="4" beschleunigung="2" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drones: Medium" panzer="4">
+          <modifizierungen xsi:type="shr5:WeaponMount" xmi:id="_Wm90UHgJEeSv5bbPkjBOVw" name="Ares Alpha">
+            <weapon xsi:type="shr5:Feuerwaffe" xmi:id="_4GkXoHgJEeSv5bbPkjBOVw" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
+              <localizations xmi:id="_4GkXoXgJEeSv5bbPkjBOVw" local="de" name="Ares Alpha"/>
+              <modie>HM</modie>
+              <modie>SM</modie>
+              <modie>AM</modie>
+              <erweiterung>Lauf</erweiterung>
+              <erweiterung>Oben</erweiterung>
+              <erweiterung>Unten</erweiterung>
+              <einbau xmi:id="_4GkXongJEeSv5bbPkjBOVw" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+                <localizations xmi:id="_4GkXo3gJEeSv5bbPkjBOVw" local="de" name="Smartgunsystem, Internal"/>
+              </einbau>
+              <magazin xmi:id="_4GkXpHgJEeSv5bbPkjBOVw" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha ammunition" type="_4GkXoHgJEeSv5bbPkjBOVw"/>
+            </weapon>
+          </modifizierungen>
+        </vehicels>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__7PKoHgFEeSv5bbPkjBOVw" name="Sikorsky-Bell Microskimmer (Microdrone)" parentId="3be36e78-0786-45e6-bc72-6269b75c3f29" page="465" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="1000" handling="3" geschwindigkeit="3" beschleunigung="1" pilot="3" sensor="3" fahrzeugTyp="Drones: Micro">
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_f0DWUHgGEeSv5bbPkjBOVw" wertValue="10" name="Pilot" parentId="_UkFd8HgGEeSv5bbPkjBOVw" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="3" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
+        </vehicels>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_-ptxAHgIEeSv5bbPkjBOVw" name="Hyundai Shin-Hyung (Sport Sedan)" parentId="72a204fc-e4f7-4e00-9d14-7f338fb86817" page="463" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="28500" handling="5" geschwindigkeit="6" beschleunigung="3" rumpf="10" pilot="1" sensor="2" fahrzeugTyp="Cars" panzer="6" sitze="4" handlingGelaende="4">
+          <modifizierungen xsi:type="shr5:WeaponMount" xmi:id="_B1yEYHgJEeSv5bbPkjBOVw"/>
+        </vehicels>
+      </members>
     </groups>
-    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
+    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_9G7scHgEEeSv5bbPkjBOVw" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" allowedSources="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_mfg7QOJ1EeOcv4XBYqxZsQ" generator="_kwlUQOJ1EeOcv4XBYqxZsQ" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="xxxx" resourcen="_djpCGOJ0EeOht_G61YAQvg" skills="_djpCFeJ0EeOht_G61YAQvg" attribute="_djpB_uJ0EeOht_G61YAQvg" metaType="_djpB-uJ0EeOht_G61YAQvg" magic="_djpCG-J0EeOht_G61YAQvg"/>
     <generators xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_snAOwPGbEeO9WPjc44gAjw" generator="_BtTPkN0CEeOvVYoRsPZlnA" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Freestyle-test">
       <selectedType href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
