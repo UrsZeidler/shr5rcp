@@ -6,17 +6,11 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -27,13 +21,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * @generated
  */
 public class FreeStyleGeneratorItemProvider
-	extends CharacterGeneratorItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends CharacterGeneratorItemProvider {
 	/**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -97,7 +85,7 @@ public class FreeStyleGeneratorItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_FreeStyleGenerator_selectedPersona_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedPersona_feature", "_UI_FreeStyleGenerator_type"),
+                 getString("_UI_FreeStyleGenerator_selectedPersona_description"),
                  Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA,
                  true,
                  false,
@@ -119,7 +107,7 @@ public class FreeStyleGeneratorItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_FreeStyleGenerator_selectedSpecies_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedSpecies_feature", "_UI_FreeStyleGenerator_type"),
+                 getString("_UI_FreeStyleGenerator_selectedSpecies_description"),
                  Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES,
                  true,
                  false,
@@ -141,7 +129,7 @@ public class FreeStyleGeneratorItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_FreeStyleGenerator_selectedType_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedType_feature", "_UI_FreeStyleGenerator_type"),
+                 getString("_UI_FreeStyleGenerator_selectedType_description"),
                  Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE,
                  true,
                  false,

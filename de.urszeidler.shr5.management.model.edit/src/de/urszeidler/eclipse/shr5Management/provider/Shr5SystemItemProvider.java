@@ -6,20 +6,13 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
@@ -32,13 +25,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * @generated
  */
 public class Shr5SystemItemProvider
-	extends PrioritySystemItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends PrioritySystemItemProvider {
 	/**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -89,7 +76,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_karmaToResourceFactor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToResourceFactor_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_karmaToResourceFactor_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR,
                  true,
                  false,
@@ -111,7 +98,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_karmaToMagicFactor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToMagicFactor_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_karmaToMagicFactor_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR,
                  true,
                  false,
@@ -133,7 +120,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_numberOfMaxAttributes_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_numberOfMaxAttributes_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_numberOfMaxAttributes_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES,
                  true,
                  false,
@@ -155,7 +142,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_knowlegeSkillFactor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_knowlegeSkillFactor_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_knowlegeSkillFactor_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR,
                  true,
                  false,
@@ -177,7 +164,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_charismaToConnectionFactor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_charismaToConnectionFactor_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_charismaToConnectionFactor_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR,
                  true,
                  false,
@@ -199,7 +186,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_maxResourceToKeep_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxResourceToKeep_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_maxResourceToKeep_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP,
                  true,
                  false,
@@ -221,7 +208,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_maxKarmaToResources_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxKarmaToResources_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_maxKarmaToResources_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES,
                  true,
                  false,
@@ -243,7 +230,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_maxKarmaToKeep_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxKarmaToKeep_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_maxKarmaToKeep_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_KEEP,
                  true,
                  false,
@@ -265,7 +252,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_skillMax_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_skillMax_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_skillMax_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__SKILL_MAX,
                  true,
                  false,
@@ -287,7 +274,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_numberOfSpecalism_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_numberOfSpecalism_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_numberOfSpecalism_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM,
                  true,
                  false,
@@ -309,7 +296,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_karmaToConnectionFactor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToConnectionFactor_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_karmaToConnectionFactor_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR,
                  true,
                  false,
@@ -331,7 +318,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_boundSprititServiceCost_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_boundSprititServiceCost_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_boundSprititServiceCost_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST,
                  true,
                  false,
@@ -353,7 +340,7 @@ public class Shr5SystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Shr5System_applicableGenerators_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_applicableGenerators_feature", "_UI_Shr5System_type"),
+                 getString("_UI_Shr5System_applicableGenerators_description"),
                  Shr5managementPackage.Literals.SHR5_SYSTEM__APPLICABLE_GENERATORS,
                  true,
                  false,

@@ -162,7 +162,7 @@ public class CharacterGeneratorItemProvider extends ItemProviderAdapter implemen
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_CharacterGenerator_selectedGroup_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_CharacterGenerator_selectedGroup_feature", "_UI_CharacterGenerator_type"),
+                 getString("_UI_CharacterGenerator_selectedGroup_description"),
                  Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP,
                  true,
                  false,

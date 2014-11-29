@@ -2431,22 +2431,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 5;
 
     /**
-     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 6;
-
-    /**
      * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 7;
+    int SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 6;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Shr5 Rule Generator</em>' class.
@@ -2747,15 +2747,6 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
 
     /**
-     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
-
-    /**
      * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2763,6 +2754,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -4386,15 +4386,6 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
 
     /**
-     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
-
-    /**
      * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4402,6 +4393,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
@@ -6455,16 +6455,6 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map();
 
     /**
-     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Only Allowed Sources</em>}' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the '<em>Has Only Allowed Sources</em>' operation.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated
-     */
-    EOperation getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
-
-    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Lifestyle Choosen</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6473,6 +6463,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EOperation getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Only Allowed Sources</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Only Allowed Sources</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator <em>Shr5 Karma Generator</em>}'.
@@ -8206,20 +8206,20 @@ public interface Shr5managementPackage extends EPackage {
         EOperation SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map();
 
         /**
-         * The meta object literal for the '<em><b>Has Only Allowed Sources</b></em>' operation.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EOperation SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
-
-        /**
          * The meta object literal for the '<em><b>Has Lifestyle Choosen</b></em>' operation.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
         EOperation SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Only Allowed Sources</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl <em>Shr5 Karma Generator</em>}' class.

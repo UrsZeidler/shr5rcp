@@ -9,12 +9,10 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -22,12 +20,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-
 import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -55,11 +50,11 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
@@ -67,7 +62,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAllowedSources()
      * @generated
      * @ordered
@@ -77,7 +71,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -87,7 +80,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -98,7 +90,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Shr5System getShr5Generator() {
@@ -122,7 +113,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<SourceBook> getAllowedSources() {
@@ -467,15 +457,13 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve)
-                    return getShr5Generator();
+                if (resolve) return getShr5Generator();
                 return basicGetShr5Generator();
             case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
                 return getAllowedSources();
@@ -486,7 +474,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -504,7 +491,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -520,7 +506,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -537,7 +522,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -556,10 +540,10 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
                 return hasNoAttributesOverSpeciesAtt((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP:
                 return hasNoConstrainVoilation((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP:
-                return hasOnlyAllowedSources((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP:
                 return hasLifestyleChoosen((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP:
+                return hasOnlyAllowedSources((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

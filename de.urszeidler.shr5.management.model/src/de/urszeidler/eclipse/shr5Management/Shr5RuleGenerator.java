@@ -144,7 +144,7 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasLifestyleChoosen(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -156,6 +156,6 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasLifestyleChoosen(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Shr5RuleGenerator

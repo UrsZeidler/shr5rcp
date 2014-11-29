@@ -33,8 +33,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/contracts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/connections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/vehicels"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/choosenLifestyle"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The primary lifestyle the character has chosen."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/choosenLifestyle"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The nativ language of the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notoriety"/>
@@ -69,22 +71,36 @@
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyle"/>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PriorityCategorie">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/categorieName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/cost"/>
+      <genFeatures createChild="false" propertyDescription="For the karma system this defines the karma costs."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/cost"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5System">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToResourceFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToMagicFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfMaxAttributes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/knowlegeSkillFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/charismaToConnectionFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxResourceToKeep"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToResources"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/skillMax"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfSpecalism"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToConnectionFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/boundSprititServiceCost"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5System/applicableGenerators"/>
+      <genFeatures createChild="false" propertyDescription="The number of resources for one karma. Used by Shr5Generator and the Shr5KarmaGenerator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToResourceFactor"/>
+      <genFeatures createChild="false" propertyDescription="For mystical adepts the exchange rate between karma to magic points. Used by Shr5Generator"
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToMagicFactor"/>
+      <genFeatures createChild="false" propertyDescription="The number of attributes as hight as the species maximum. Is used by the hasNotMoreMaxAttributes rule."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfMaxAttributes"/>
+      <genFeatures createChild="false" propertyDescription="The factor for free knowlege skills at the character generation. Used by Shr5Generator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/knowlegeSkillFactor"/>
+      <genFeatures createChild="false" propertyDescription="The factor to calculate the conntection points for free. Used by Shr5Generator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/charismaToConnectionFactor"/>
+      <genFeatures createChild="false" propertyDescription="The number of money can be keept at the commitment of the character. Used by Shr5Generator and the Shr5KarmaGenerator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxResourceToKeep"/>
+      <genFeatures createChild="false" propertyDescription="The maximum of karma that can be transformed in mones. Used by Shr5Generator and the Shr5KarmaGenerator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToResources"/>
+      <genFeatures createChild="false" propertyDescription="The maximum of karma can be keep at committing the character. Used by Shr5Generator and the Shr5KarmaGenerator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
+      <genFeatures createChild="false" propertyDescription="The max value a skill can have. Is used by the rule hasNoSkillsOverMax."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/skillMax"/>
+      <genFeatures createChild="false" propertyDescription="The number of specalicies a character can have. Is used by the hasNotMoreSpecalism rule."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfSpecalism"/>
+      <genFeatures createChild="false" propertyDescription="The factor of Karma for a connection point. Used by the Shr5KarmaGenerator."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToConnectionFactor"/>
+      <genFeatures createChild="false" propertyDescription="This is the cost for a service of a bound spirit at chracter creation."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/boundSprititServiceCost"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="A list of generators which can be used together with this system."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5System/applicableGenerators"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//MetaType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
@@ -152,24 +168,34 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGenerator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/character"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/generator"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The generator system used for this character creation."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/generator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/state"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/selectedGroup"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The groupe where the character is stored."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/selectedGroup"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/characterName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/currentInstruction"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyleGenerator">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/freestyleGenerator"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedPersona"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedSpecies"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedType"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The choosen persona get copied."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedPersona"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The sepcies of the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedSpecies"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The type for the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedType"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5Generator">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/resourcen"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/skills"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/attribute"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/metaType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/magic"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The priority for the resources, need to choose from A to E."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/resourcen"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The priority for the skills, need to choose from A to E."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/skills"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The priority for the attributes, need to choose from A to E."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/attribute"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The priority for the metatype, need to choose from A to E."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/metaType"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The priority for the magic, need to choose from A to E."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/magic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaToResource"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/attributeSpend"/>
@@ -300,7 +326,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Shr5RuleGenerator">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/shr5Generator"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/allowedSources"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The list of source allowed in this charater generation, leave empty for no constrain."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/allowedSources"/>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/context"/>
@@ -325,13 +352,13 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/context"/>
-      </genOperations>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">

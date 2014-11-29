@@ -2087,7 +2087,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(6);
     }
 
@@ -2096,7 +2096,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(7);
     }
 
@@ -2491,8 +2491,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP);
-        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP);
 
         shr5KarmaGeneratorEClass = createEClass(SHR5_KARMA_GENERATOR);
         createEReference(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__META_TYPE);
@@ -2989,7 +2989,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        op = initEOperation(getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasOnlyAllowedSources", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasLifestyleChoosen", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -2998,7 +2998,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        op = initEOperation(getShr5RuleGenerator__HasLifestyleChoosen__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasLifestyleChoosen", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasOnlyAllowedSources", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());
