@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.RiggerCommandConsole"%>
 <%@page import="de.urszeidler.eclipse.shr5.util.ShadowrunTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
@@ -20,9 +21,9 @@
 	pageEncoding="UTF-8"%>
 <%
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
-    if(pm==null){
+    if(pm==null)
     	response.sendRedirect("main");
-    }
+
     RuntimeCharacter character = pm.getCharacter();
 
     String characterName = WebTools.getText(character.getCharacter().getPersona().getName());
@@ -112,7 +113,7 @@
 				<div
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
-						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%>
+						<small><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%></small>
 						: <img class="eobject"
 							src="images?uriFragment=<%=WebTools.getUriFragment(character.getLeftHand())%>" /><%=WebTools.getText(character.getLeftHand())%>
 						<hr />
@@ -125,7 +126,7 @@
 				<div
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
-						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND)%>
+						<small><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND)%></small>
 						: <img class="eobject"
 							src="images?uriFragment=<%=WebTools.getUriFragment(character.getRightHand())%>" /><%=WebTools.getText(character.getRightHand())%>
 						<hr />
@@ -138,7 +139,7 @@
 				<div
 					class="character-single-item-container thin-border small-corner ">
 					<div class="inner-margin">
-						<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR)%>
+						<small><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR)%></small>
 						: <img class="eobject"
 							src="images?uriFragment=<%=WebTools.getUriFragment(character.getArmor())%>" /><%=WebTools.getText(character.getArmor())%>
 						<hr />
@@ -169,7 +170,10 @@
 							<% }else if (g instanceof Feuerwaffe) {
 							    Feuerwaffe fw = (Feuerwaffe)g;%>
 							   <a  href="manageFw.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
-							    <% }%>
+							    <% }else if (g instanceof RiggerCommandConsole) {
+							        RiggerCommandConsole rcc = (RiggerCommandConsole)g;%>
+							    <a  href="manageRcc.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
+								<%} %>
 							</p>
 					<%
 					    }

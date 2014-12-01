@@ -21,6 +21,9 @@
 	pageEncoding="UTF-8"%>
 <%
     PlayerManager pm = (PlayerManager)session.getAttribute("playerManager");
+	if(pm==null)
+		response.sendRedirect("main");
+
     if(pm.isInCombat())
         response.sendRedirect("member.jsp");
     RuntimeCharacter character = pm.getCharacter();
