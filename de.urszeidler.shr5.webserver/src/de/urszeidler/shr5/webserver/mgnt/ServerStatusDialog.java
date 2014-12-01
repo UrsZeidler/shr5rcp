@@ -3,19 +3,20 @@ package de.urszeidler.shr5.webserver.mgnt;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.PojoObservables;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
+import org.eclipse.core.databinding.observable.set.IObservableSet;
 import org.eclipse.core.databinding.property.Properties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.databinding.viewers.ObservableSetContentProvider;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -45,7 +46,7 @@ public class ServerStatusDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
     private Table table;
     private ScriptViewerWrapper viewerWrapper;
-    private List<PlayerManager> registeredPlayers;
+    private Collection<PlayerManager> registeredPlayers;
     private TableViewer tableViewer;
 
     /**
@@ -119,12 +120,10 @@ public class ServerStatusDialog extends TitleAreaDialog {
                     Iterator iterator = ss.iterator();
                     for (Iterator iter = ss.iterator(); iter.hasNext();) {
                         PlayerManager pm = (PlayerManager)iter.next();
-                        HttpSession sessions = viewerWrapper.getSessions(pm);
-                        if(sessions!=null){
-                            sessions.invalidate();
-                            viewerWrapper.removePlayer(pm);                            
-                        }
+                        viewerWrapper.removePlayer(pm);
+                        
                     }
+                    tableViewer.refresh();
                 }
             }
         });
@@ -193,15 +192,16 @@ public class ServerStatusDialog extends TitleAreaDialog {
         if (viewerWrapper == null)
             return bindingContext;
         //
-        ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
+        ObservableSetContentProvider listContentProvider = new ObservableSetContentProvider();
         IObservableMap observeMap = PojoObservables.observeMap(listContentProvider.getKnownElements(), PlayerManager.class,
                 "character.character.persona.name");
         tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap));
         tableViewer.setContentProvider(listContentProvider);
         //
-        IObservableList selfList = Properties.selfList(PlayerManager.class).observe(registeredPlayers);
+        IObservableSet selfList = Properties.selfSet(PlayerManager.class).observe(registeredPlayers);
         tableViewer.setInput(selfList);
         //
+//        ObservableSetContentProvider setprovider = ObservableSetContentProvider
         return bindingContext;
     }
 }

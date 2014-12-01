@@ -6,7 +6,10 @@ package de.urszeidler.shr5.webserver.mgnt;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.http.HttpSession;
 
@@ -49,8 +52,9 @@ public class ScriptViewerWrapper implements ScriptViewer {
     }
 
     private ScriptViewer sv;
-    private List<PlayerManager> registeredPlayers = new ArrayList<PlayerManager>();
-    private List<HttpSession> sessionList = new ArrayList<HttpSession>();
+    private Map<PlayerManager, HttpSession> playerSessions = new HashMap<PlayerManager, HttpSession>();
+//    private List<PlayerManager> registeredPlayers = new ArrayList<PlayerManager>();
+//    private List<HttpSession> sessionList = new ArrayList<HttpSession>();
 
     public ScriptViewerWrapper(ScriptViewer sv) {
         super();
@@ -64,7 +68,6 @@ public class ScriptViewerWrapper implements ScriptViewer {
     @Override
     public void setPlacement(Placement placement) {
         sv.setPlacement(placement);
-
     }
 
     /*
@@ -157,11 +160,11 @@ public class ScriptViewerWrapper implements ScriptViewer {
                     EList<RuntimeCharacter> combatants = ct.getCombatants();
                     for (RuntimeCharacter runtimeCharacter : combatants) {
                         PlayerManager playerManager = getPlayerManager(runtimeCharacter);
-                        if(playerManager!=null)
+                        if (playerManager != null)
                             playerManager.setInCombat(false);
-                    }                    
+                    }
                 }
-                
+
                 sv.getCmdCallback().afterCommand(cmd, eStructuralFeatures);
 
             }
@@ -169,8 +172,8 @@ public class ScriptViewerWrapper implements ScriptViewer {
         return commandCallback;
     }
 
-    public List<PlayerManager> getRegisteredPlayers() {
-        return registeredPlayers;
+    public Set<PlayerManager> getRegisteredPlayers() {
+        return playerSessions.keySet();
     }
 
     /**
@@ -191,7 +194,7 @@ public class ScriptViewerWrapper implements ScriptViewer {
      * @return
      */
     private PlayerManager getPlayerManager(RuntimeCharacter subject) {
-        for (PlayerManager pm : registeredPlayers) {
+        for (PlayerManager pm : playerSessions.keySet()) {
             if (pm.getCharacter() == subject)
                 return pm;
         }
@@ -283,31 +286,27 @@ public class ScriptViewerWrapper implements ScriptViewer {
         return new PlayerManager2RuntimeCharacterTransformer();
     }
 
-    public void removePlayer(PlayerManager pm){
-        HttpSession sessions = getSessions(pm);
-        if(sessions!=null)
-            sessionList.remove(sessions);
-        
-        registeredPlayers.remove(pm);
-    }
     
-    public void addSession(HttpSession session) {
-        sessionList.add(session);
-
+    /**
+     * Remove the player and it's session.
+     * @param pm
+     */
+    public void removePlayer(PlayerManager pm) {
+        try {
+            HttpSession session = playerSessions.get(pm);
+            if (session != null){
+                session.invalidate();
+            }
+        } catch (Exception e) {
+        }
+        playerSessions.remove(pm);
     }
-    public void removeSession(HttpSession session) {
-        sessionList.remove(session);
 
+    public void addSession(PlayerManager pm, HttpSession session) {
+        playerSessions.put(pm, session);
     }
 
     public HttpSession getSessions(PlayerManager pm) {
-        for (HttpSession session : sessionList) {
-            Object attribute = session.getAttribute("playerManager");
-            if (attribute != null)
-                if (attribute.equals(pm))
-                    return session;
-
-        }
-        return null;
+        return playerSessions.get(pm);
     }
 }

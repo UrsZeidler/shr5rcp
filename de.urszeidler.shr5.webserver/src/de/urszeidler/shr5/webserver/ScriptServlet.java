@@ -122,8 +122,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             if (action.equals("logout")) {
                 session.invalidate();
                 if (pm != null) {
-                    scriptViewerWrapper.getRegisteredPlayers().remove(pm);
-                    scriptViewerWrapper.removeSession(session);
+                    scriptViewerWrapper.removePlayer(pm);
                 }
                 resp.sendRedirect("main.jsp");
             } else if (action.equals("changeCharacter")) {
@@ -176,8 +175,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 pm = new PlayerManager();
                 pm.setCharacter(playerById);
                 session.setAttribute("playerManager", pm);
-                scriptViewerWrapper.getRegisteredPlayers().add(pm);
-                scriptViewerWrapper.addSession(req.getSession());
+                scriptViewerWrapper.addSession(pm,req.getSession());
             } else
                 resp.sendRedirect("main.jsp");
         }
