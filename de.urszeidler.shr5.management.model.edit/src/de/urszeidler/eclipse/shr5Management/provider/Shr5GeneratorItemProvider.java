@@ -77,7 +77,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     protected void addResourcenPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5Generator_resourcen_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5Generator_resourcen_feature"), getString("_UI_Shr5Generator_resourcen_description",
                                 "_UI_Shr5Generator_resourcen_feature", "_UI_Shr5Generator_type"),
                         Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, true, false, true, null, null, null) {
 
@@ -99,7 +99,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     protected void addSkillsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5Generator_skills_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5Generator_skills_feature"), getString("_UI_Shr5Generator_skills_description",
                                 "_UI_Shr5Generator_skills_feature", "_UI_Shr5Generator_type"), Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS,
                         true, false, true, null, null, null) {
 
@@ -121,7 +121,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     protected void addAttributePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5Generator_attribute_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5Generator_attribute_feature"), getString("_UI_Shr5Generator_attribute_description",
                                 "_UI_Shr5Generator_attribute_feature", "_UI_Shr5Generator_type"),
                         Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE, true, false, true, null, null, null) {
                     @Override
@@ -142,7 +142,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     protected void addMetaTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5Generator_metaType_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5Generator_metaType_feature"), getString("_UI_Shr5Generator_metaType_description",
                                 "_UI_Shr5Generator_metaType_feature", "_UI_Shr5Generator_type"),
                         Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE, true, false, true, null, null, null) {
                     @Override
@@ -163,7 +163,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     protected void addMagicPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5Generator_magic_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5Generator_magic_feature"), getString("_UI_Shr5Generator_magic_description",
                                 "_UI_Shr5Generator_magic_feature", "_UI_Shr5Generator_type"), Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC,
                         true, false, true, null, null, null) {
                     @Override
