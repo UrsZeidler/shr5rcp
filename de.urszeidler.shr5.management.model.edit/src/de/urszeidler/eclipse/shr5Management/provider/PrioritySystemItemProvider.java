@@ -63,7 +63,7 @@ public class PrioritySystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_PrioritySystem_karmaPoints_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PrioritySystem_karmaPoints_feature", "_UI_PrioritySystem_type"),
+                 getString("_UI_PrioritySystem_karmaPoints_description"),
                  Shr5managementPackage.Literals.PRIORITY_SYSTEM__KARMA_POINTS,
                  true,
                  false,

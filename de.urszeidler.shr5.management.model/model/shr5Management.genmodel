@@ -38,7 +38,8 @@
       <genFeatures notify="false" createChild="false" propertyDescription="The nativ language of the character."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The current street cred."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notoriety"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notorietyBasic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/publicAwareness"/>
@@ -54,7 +55,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PrioritySystem/karmaPoints"/>
+      <genFeatures createChild="false" propertyDescription="The karma points for building a character."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//PrioritySystem/karmaPoints"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//NonPlayerCharacter"/>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Changes">
@@ -173,7 +175,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/state"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The group where the character is stored."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/selectedGroup"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/characterName"/>
+      <genFeatures createChild="false" propertyDescription="The name the character will take when created."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/characterName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/currentInstruction"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyleGenerator">
@@ -300,18 +303,23 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//IncreaseCharacterPart/type"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifestyleToStartMoney">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
+      <genFeatures createChild="false" propertyDescription="The number of d6 to define the start money."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
+      <genFeatures createChild="false" propertyDescription="The factor for the start money."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="A list of lifestyles this lifestyle to money description applies to."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//GruntGroup">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntGroup/members"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntGroup/leader"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntGroup/professionalRating"/>
+      <genFeatures createChild="false" propertyDescription="The professional rating of this grunt group."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntGroup/professionalRating"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//GruntMembers">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntMembers/count"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntMembers/nsc"/>
+      <genFeatures createChild="false" propertyDescription="The number of npcs." ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntMembers/count"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The npc of the grunt members."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntMembers/nsc"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerManagement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerManagement/groups"/>

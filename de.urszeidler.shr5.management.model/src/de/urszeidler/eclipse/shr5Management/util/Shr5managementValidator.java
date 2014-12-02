@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
-import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;

@@ -152,7 +152,7 @@ public class GruntGroupItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_GruntGroup_professionalRating_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntGroup_professionalRating_feature", "_UI_GruntGroup_type"),
+                 getString("_UI_GruntGroup_professionalRating_description"),
                  Shr5managementPackage.Literals.GRUNT_GROUP__PROFESSIONAL_RATING,
                  true,
                  false,
