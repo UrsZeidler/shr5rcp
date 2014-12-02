@@ -63,7 +63,7 @@ public class PassagierFahrzeugItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_PassagierFahrzeug_sitze_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PassagierFahrzeug_sitze_feature", "_UI_PassagierFahrzeug_type"),
+                 getString("_UI_PassagierFahrzeug_sitze_description"),
                  Shr5Package.Literals.PASSAGIER_FAHRZEUG__SITZE,
                  true,
                  false,

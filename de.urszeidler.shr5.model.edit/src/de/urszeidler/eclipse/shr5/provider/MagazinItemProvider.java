@@ -66,7 +66,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
     protected void addTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(new ItemPropertyDescriptor// createItemPropertyDescriptor//
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Magazin_type_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_Magazin_type_feature", "_UI_Magazin_type"),
+                        getString("_UI_Magazin_type_description", "_UI_Magazin_type_feature", "_UI_Magazin_type"),
                         Shr5Package.Literals.MAGAZIN__TYPE, true, false, true, null, null, null) {
                     @SuppressWarnings("unchecked")
                     @Override

@@ -129,7 +129,7 @@ public class AbstaktWaffeItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AbstaktWaffe_durchschlagsKraft_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_AbstaktWaffe_durchschlagsKraft_feature", "_UI_AbstaktWaffe_type"),
+                 getString("_UI_AbstaktWaffe_durchschlagsKraft_description"),
                  Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT,
                  true,
                  false,

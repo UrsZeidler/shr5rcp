@@ -205,7 +205,8 @@
           ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadenscode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadesTyp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/praezision"/>
-      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
+      <genFeatures createChild="false" propertyDescription="The armor piering of the weapon."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Nahkampfwaffe">
       <genFeatures createChild="false" propertyDescription="The reach modification."
@@ -213,9 +214,12 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Feuerwaffe">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/munitionstyp"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/modie"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/kapazitaet"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/erweiterung"/>
+      <genFeatures createChild="false" propertyDescription="The possible fire modies the weapon support."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/modie"/>
+      <genFeatures createChild="false" propertyDescription="The capacity of the weapon, the number of bullets."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/kapazitaet"/>
+      <genFeatures createChild="false" propertyDescription="The possible addon for the weapon."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/erweiterung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/rueckstoss"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/einbau"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/magazin"/>
@@ -266,7 +270,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MagischeMods"/>
     <genClasses ecoreClass="shr5.ecore#//KiKraft">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KiKraft/kraftpunkte"/>
+      <genFeatures createChild="false" propertyDescription="The power points for this ki power multiply by 100."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//KiKraft/kraftpunkte"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MagischePersona">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MagischePersona/mentor"/>
@@ -425,7 +430,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelaende"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PassagierFahrzeug">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PassagierFahrzeug/sitze"/>
+      <genFeatures createChild="false" propertyDescription="The number of seats."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//PassagierFahrzeug/sitze"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Drohne">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drohne/programSlotCount"/>
@@ -493,9 +499,11 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Erlernbar"/>
     <genClasses ecoreClass="shr5.ecore#//Credstick">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/maxValue"/>
+      <genFeatures createChild="false" propertyDescription="The max value of money the credstick can store."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/maxValue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Credstick/transactionlog"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currentValue"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The current balance is the summ of all transactions."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currentValue"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Menge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Menge/anzahl"/>
@@ -613,9 +621,11 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FahrzeugZustand/zustandMax"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonalAreaNetwork">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/slaves"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The slaves in this personal area network."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/slaves"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/master"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonalAreaNetwork/slaveMax"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The number of slaves slots the pan can provide."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//PersonalAreaNetwork/slaveMax"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//BasicProgram"/>
     <genClasses ecoreClass="shr5.ecore#//Datasoft">
@@ -661,10 +671,12 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//WaffenFokus"/>
     <genClasses ecoreClass="shr5.ecore#//MagieFokus">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MagieFokus/bindungsFaktor"/>
+      <genFeatures createChild="false" propertyDescription="The factor for the karma binding costs."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//MagieFokus/bindungsFaktor"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FokusBinding">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//FokusBinding/fokus"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference shr5.ecore#//FokusBinding/fokus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FokusBinding/active"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Substance">
@@ -683,7 +695,8 @@
     <genClasses ecoreClass="shr5.ecore#//Magazin">
       <genFeatures notify="false" createChild="false" propertyDescription="The type of the munition, is equivalent to the range category."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/bullets"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The currenly in the magazin placed bullets."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/bullets"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//DefaultWifi"/>
   </genPackages>

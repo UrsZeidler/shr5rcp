@@ -24797,7 +24797,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx1HpjEeS7R_CGLciuCA" label="" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx1HpjEeS7R_CGLciuCA" label="The armor piering of the weapon." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
           </cells>
@@ -24846,7 +24846,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/modie"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/modie"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx33pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx33pjEeS7R_CGLciuCA" label="The possible fire modies the weapon support." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/modie"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/modie"/>
           </cells>
@@ -24859,7 +24859,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/kapazitaet"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/kapazitaet"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx4npjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx4npjEeS7R_CGLciuCA" label="The capacity of the weapon, the number of bullets." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/kapazitaet"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/kapazitaet"/>
           </cells>
@@ -24872,7 +24872,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/erweiterung"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/erweiterung"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx5XpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx5XpjEeS7R_CGLciuCA" label="The possible addon for the weapon." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/erweiterung"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/erweiterung"/>
           </cells>
@@ -25160,7 +25160,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/KiKraft/kraftpunkte"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/KiKraft/kraftpunkte"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNYY-XpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNYY-XpjEeS7R_CGLciuCA" label="The power points for this ki power multiply by 100." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/KiKraft/kraftpunkte"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/KiKraft/kraftpunkte"/>
           </cells>
@@ -26535,7 +26535,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PassagierFahrzeug/sitze"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PassagierFahrzeug/sitze"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNbcTHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNbcTHpjEeS7R_CGLciuCA" label="The number of seats." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PassagierFahrzeug/sitze"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PassagierFahrzeug/sitze"/>
           </cells>
@@ -27004,7 +27004,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/maxValue"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/maxValue"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqX3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqX3pjEeS7R_CGLciuCA" label="The max value of money the credstick can store." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/maxValue"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/maxValue"/>
           </cells>
@@ -27017,7 +27017,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/currentValue"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/currentValue"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqYnpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqYnpjEeS7R_CGLciuCA" label="The current balance is the summ of all transactions." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/currentValue"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Credstick/currentValue"/>
           </cells>
@@ -27961,7 +27961,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaves"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaves"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNeflnpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNeflnpjEeS7R_CGLciuCA" label="The slaves in this personal area network." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaves"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaves"/>
           </cells>
@@ -27987,7 +27987,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaveMax"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaveMax"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNefnHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNefnHpjEeS7R_CGLciuCA" label="The number of slaves slots the pan can provide." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaveMax"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/PersonalAreaNetwork/slaveMax"/>
           </cells>
@@ -28246,7 +28246,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/MagieFokus/bindungsFaktor"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/MagieFokus/bindungsFaktor"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNfGoHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNfGoHpjEeS7R_CGLciuCA" label="The factor for the karma binding costs." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/MagieFokus/bindungsFaktor"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/MagieFokus/bindungsFaktor"/>
           </cells>
@@ -28264,7 +28264,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/fokus"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/fokus"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNfGpHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNfGpHpjEeS7R_CGLciuCA" label="" column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/fokus"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/fokus"/>
           </cells>
@@ -28414,7 +28414,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Magazin/bullets"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Magazin/bullets"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNftknpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNftknpjEeS7R_CGLciuCA" label="The currenly in the magazin placed bullets." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Magazin/bullets"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Magazin/bullets"/>
           </cells>

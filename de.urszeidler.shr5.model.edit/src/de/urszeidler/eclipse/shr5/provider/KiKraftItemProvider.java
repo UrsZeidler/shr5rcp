@@ -63,7 +63,7 @@ public class KiKraftItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_KiKraft_kraftpunkte_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_KiKraft_kraftpunkte_feature", "_UI_KiKraft_type"),
+                 getString("_UI_KiKraft_kraftpunkte_description"),
                  Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE,
                  true,
                  false,

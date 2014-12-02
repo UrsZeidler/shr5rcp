@@ -61,7 +61,7 @@ public class MagieFokusItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_MagieFokus_bindungsFaktor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MagieFokus_bindungsFaktor_feature", "_UI_MagieFokus_type"),
+                 getString("_UI_MagieFokus_bindungsFaktor_description"),
                  Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR,
                  true,
                  false,
