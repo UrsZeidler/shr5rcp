@@ -5,17 +5,10 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
@@ -26,13 +19,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * @generated
  */
 public class AbstaktFernKampfwaffeItemProvider
-	extends AbstaktWaffeItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends AbstaktWaffeItemProvider {
 	/**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,7 +58,7 @@ public class AbstaktFernKampfwaffeItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AbstaktFernKampfwaffe_reichweite_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_AbstaktFernKampfwaffe_reichweite_feature", "_UI_AbstaktFernKampfwaffe_type"),
+                 getString("_UI_AbstaktFernKampfwaffe_reichweite_description"),
                  Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE,
                  true,
                  false,

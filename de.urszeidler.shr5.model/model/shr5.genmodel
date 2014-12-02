@@ -130,8 +130,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Beschreibbar/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Quelle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Quelle/page"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Quelle/srcBook"/>
+      <genFeatures createChild="false" propertyDescription="The page number of the book."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Quelle/page"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The sourcebook the item is described."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Quelle/srcBook"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//SourceBook">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/startShrTime"/>
@@ -156,9 +158,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/stufe"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//GeldWert">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The basic money value."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/verfuegbarkeit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wertValue"/>
+      <genFeatures createChild="false" propertyDescription="The real money value may be the sum of components."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wertValue"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Reichweite">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/min"/>
@@ -193,16 +197,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktGegenstand/wifi"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//AbstaktFernKampfwaffe">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstaktFernKampfwaffe/reichweite"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The range category."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstaktFernKampfwaffe/reichweite"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//AbstaktWaffe">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadenscode"/>
+      <genFeatures createChild="false" propertyDescription="The damage code as nP/M, examples: 9P, 4M."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadenscode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadesTyp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/praezision"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Nahkampfwaffe">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Nahkampfwaffe/reichweite"/>
+      <genFeatures createChild="false" propertyDescription="The reach modification."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Nahkampfwaffe/reichweite"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Feuerwaffe">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/munitionstyp"/>
@@ -325,7 +332,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KiAdept/kikraft"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Kleidung">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Kleidung/ruestung"/>
+      <genFeatures createChild="false" propertyDescription="The armor value of the cloth."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Kleidung/ruestung"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FernkampfwaffeModifikator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffeModifikator/ep"/>
@@ -344,7 +352,8 @@
     <genClasses ecoreClass="shr5.ecore#//Magier"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Zauberer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/zauber"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription=""
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
       <genFeatures createChild="false" propertyDescription="The tradition of the spellcaster."
           ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/gebundeneGeister"/>
@@ -525,9 +534,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Identifiable/localizations"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//CredstickTransaction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/amount"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
+      <genFeatures createChild="false" propertyDescription="The amount of money in the transaction."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/amount"/>
+      <genFeatures createChild="false" propertyDescription="The date of the transaction."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/date"/>
+      <genFeatures createChild="false" propertyDescription="A description." ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Spezialisierung"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatrixAttributes">
@@ -670,7 +681,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drug/addictionType"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Magazin">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/type"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The type of the munition, is equivalent to the range category."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/bullets"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//DefaultWifi"/>
