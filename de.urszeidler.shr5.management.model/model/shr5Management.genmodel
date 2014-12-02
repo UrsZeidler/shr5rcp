@@ -171,7 +171,7 @@
       <genFeatures notify="false" createChild="false" propertyDescription="The generator system used for this character creation."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/generator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/state"/>
-      <genFeatures notify="false" createChild="false" propertyDescription="The groupe where the character is stored."
+      <genFeatures notify="false" createChild="false" propertyDescription="The group where the character is stored."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/selectedGroup"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/characterName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/currentInstruction"/>

@@ -98,15 +98,9 @@ public class CharacterGeneratorItemProvider extends ItemProviderAdapter implemen
     protected void addGeneratorPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(new ItemPropertyDescriptor// createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_CharacterGenerator_generator_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_CharacterGenerator_generator_feature"), getString("_UI_CharacterGenerator_generator_description",
                                 "_UI_CharacterGenerator_generator_feature", "_UI_CharacterGenerator_type"),
                         Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, true, false, true, null, null, null) {
-
-//                    @Override
-//                    public Collection<?> getChoiceOfValues(Object object) {
-//                        Collection<?> list = super.getComboBoxObjects(object);
-//                        return list;
-//                    }
 
                     @Override
                     protected Collection<?> getComboBoxObjects(Object object) {
