@@ -2234,4 +2234,21 @@
       <xsd:documentation>A default wifi device to provide access.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="SubstanceContainer">
+    <xsd:annotation>
+      <xsd:documentation>Holds the substance inthe inventory.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="substance" type="shr5:Substance"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SubstanceContainer" type="shr5:SubstanceContainer">
+    <xsd:annotation>
+      <xsd:documentation>Holds the substance inthe inventory.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

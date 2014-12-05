@@ -140,6 +140,7 @@ import de.urszeidler.eclipse.shr5.Sprite;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.StufenPersona;
 import de.urszeidler.eclipse.shr5.Substance;
+import de.urszeidler.eclipse.shr5.SubstanceContainer;
 import de.urszeidler.eclipse.shr5.SubstanceEffect;
 import de.urszeidler.eclipse.shr5.SubstanceVector;
 import de.urszeidler.eclipse.shr5.Technomancer;
@@ -941,6 +942,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass defaultWifiEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass substanceContainerEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -4729,6 +4737,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSubstanceContainer() {
+        return substanceContainerEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSubstanceContainer_Substance() {
+        return (EReference)substanceContainerEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -6119,6 +6145,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         defaultWifiEClass = createEClass(DEFAULT_WIFI);
 
+        substanceContainerEClass = createEClass(SUBSTANCE_CONTAINER);
+        createEReference(substanceContainerEClass, SUBSTANCE_CONTAINER__SUBSTANCE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6352,6 +6381,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         drugEClass.getESuperTypes().add(this.getModifizierbar());
         magazinEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         defaultWifiEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
+        substanceContainerEClass.getESuperTypes().add(this.getAbstraktGegenstand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6928,6 +6958,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getMagazin_Bullets(), this.getMunition(), null, "bullets", null, 0, -1, Magazin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(defaultWifiEClass, DefaultWifi.class, "DefaultWifi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(substanceContainerEClass, SubstanceContainer.class, "SubstanceContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSubstanceContainer_Substance(), this.getSubstance(), null, "substance", null, 0, 1, SubstanceContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

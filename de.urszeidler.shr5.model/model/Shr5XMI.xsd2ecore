@@ -937,5 +937,9 @@
     <nested inputs="shr5.ecore#//Magazin" outputs="Shr5XMI.xsd#//Magazin;XSDElementDeclaration=128"/>
     <nested inputs="shr5.ecore#//DefaultWifi" outputs="Shr5XMI.xsd#//DefaultWifi;XSDComplexTypeDefinition=129"/>
     <nested inputs="shr5.ecore#//DefaultWifi" outputs="Shr5XMI.xsd#//DefaultWifi;XSDElementDeclaration=129"/>
+    <nested inputs="shr5.ecore#//SubstanceContainer" outputs="Shr5XMI.xsd#//SubstanceContainer;XSDComplexTypeDefinition=130">
+      <nested inputs="shr5.ecore#//SubstanceContainer/substance" outputs="Shr5XMI.xsd#//SubstanceContainer;XSDComplexTypeDefinition=130/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//SubstanceContainer" outputs="Shr5XMI.xsd#//SubstanceContainer;XSDElementDeclaration=130"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

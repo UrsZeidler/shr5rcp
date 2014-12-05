@@ -1475,6 +1475,19 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.SUBSTANCE_CONTAINER: {
+                SubstanceContainer substanceContainer = (SubstanceContainer)theEObject;
+                T result = caseSubstanceContainer(substanceContainer);
+                if (result == null) result = caseAbstraktGegenstand(substanceContainer);
+                if (result == null) result = caseQuelle(substanceContainer);
+                if (result == null) result = caseGeldWert(substanceContainer);
+                if (result == null) result = caseBeschreibbar(substanceContainer);
+                if (result == null) result = caseModifizierbar(substanceContainer);
+                if (result == null) result = caseAnwendbar(substanceContainer);
+                if (result == null) result = caseIdentifiable(substanceContainer);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -3126,6 +3139,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseDefaultWifi(DefaultWifi object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Substance Container</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Substance Container</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSubstanceContainer(SubstanceContainer object) {
         return null;
     }
 

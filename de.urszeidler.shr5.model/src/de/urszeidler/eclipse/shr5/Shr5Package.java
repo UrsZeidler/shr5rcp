@@ -19683,6 +19683,169 @@ public interface Shr5Package extends EPackage {
     int DEFAULT_WIFI_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SubstanceContainerImpl <em>Substance Container</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SubstanceContainerImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceContainer()
+     * @generated
+     */
+    int SUBSTANCE_CONTAINER = 130;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__SPEZIALISIERUNG = ABSTRAKT_GEGENSTAND__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
+
+    /**
+     * The feature id for the '<em><b>Substance</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER__SUBSTANCE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Substance Container</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Substance Container</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_CONTAINER_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19690,7 +19853,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 130;
+	int FEUER_MODUS = 131;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -19700,7 +19863,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 131;
+	int SCHADENS_TYP = 132;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -19710,7 +19873,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 132;
+	int MAGAZIN_TYP = 133;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -19720,7 +19883,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 133;
+	int FEUWERWAFFEN_ERWEITERUNG = 134;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -19730,7 +19893,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 134;
+	int MODIFIKATOR_TYPE = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -19740,7 +19903,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 135;
+	int SMARTGUN_TYPE = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -19750,7 +19913,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 136;
+	int ZAUBER_ART = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -19760,7 +19923,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 137;
+	int ZAUBER_REICHWEITE = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -19770,7 +19933,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 138;
+	int ZAUBER_DAUER = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -19780,7 +19943,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 139;
+	int MAGISCHE_TRADITION = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -19790,7 +19953,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 140;
+	int CRITTER_HANDLUNG = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -19800,7 +19963,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 141;
+	int CRITTER_REICHWEITE = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -19810,7 +19973,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 142;
+	int CRITTER_DAUER = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -19820,7 +19983,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 143;
+	int RESONANZ_ZIEL = 144;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -19830,7 +19993,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 144;
+    int INTERFACE_MODUS = 145;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -19840,7 +20003,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 145;
+    int PROGRAM_TYPE = 146;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -19850,7 +20013,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 146;
+    int MATRIX_PROGRAM_TYPE = 147;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -19860,7 +20023,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 147;
+    int SUBSTANCE_VECTOR = 148;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -19870,7 +20033,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 148;
+    int SUBSTANCE_EFFECT = 149;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -19880,7 +20043,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 149;
+    int ADDICTION_TYPE = 150;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -19890,7 +20053,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 150;
+    int TIME_UNITS = 151;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -19900,7 +20063,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 151;
+	int SHR_DATE = 152;
 
 
 	/**
@@ -19911,7 +20074,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 152;
+	int MODIFICATION_MANAGER = 153;
 
 
 	/**
@@ -23983,6 +24146,27 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EClass getDefaultWifi();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SubstanceContainer <em>Substance Container</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Substance Container</em>'.
+     * @see de.urszeidler.eclipse.shr5.SubstanceContainer
+     * @generated
+     */
+    EClass getSubstanceContainer();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.SubstanceContainer#getSubstance <em>Substance</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Substance</em>'.
+     * @see de.urszeidler.eclipse.shr5.SubstanceContainer#getSubstance()
+     * @see #getSubstanceContainer()
+     * @generated
+     */
+    EReference getSubstanceContainer_Substance();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
@@ -28193,6 +28377,24 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass DEFAULT_WIFI = eINSTANCE.getDefaultWifi();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SubstanceContainerImpl <em>Substance Container</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SubstanceContainerImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceContainer()
+         * @generated
+         */
+        EClass SUBSTANCE_CONTAINER = eINSTANCE.getSubstanceContainer();
+
+        /**
+         * The meta object literal for the '<em><b>Substance</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SUBSTANCE_CONTAINER__SUBSTANCE = eINSTANCE.getSubstanceContainer_Substance();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.

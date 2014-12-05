@@ -1891,6 +1891,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SubstanceContainer} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SubstanceContainerItemProvider substanceContainerItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SubstanceContainer}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSubstanceContainerAdapter() {
+        if (substanceContainerItemProvider == null) {
+            substanceContainerItemProvider = new SubstanceContainerItemProvider(this);
+        }
+
+        return substanceContainerItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2066,6 +2089,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (drugItemProvider != null) drugItemProvider.dispose();
         if (magazinItemProvider != null) magazinItemProvider.dispose();
         if (defaultWifiItemProvider != null) defaultWifiItemProvider.dispose();
+        if (substanceContainerItemProvider != null) substanceContainerItemProvider.dispose();
     }
 
     @Override

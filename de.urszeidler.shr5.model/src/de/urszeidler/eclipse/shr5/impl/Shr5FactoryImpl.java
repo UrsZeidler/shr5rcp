@@ -225,6 +225,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.DRUG: return createDrug();
             case Shr5Package.MAGAZIN: return createMagazin();
             case Shr5Package.DEFAULT_WIFI: return createDefaultWifi();
+            case Shr5Package.SUBSTANCE_CONTAINER: return createSubstanceContainer();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1112,6 +1113,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public DefaultWifi createDefaultWifi() {
         DefaultWifiImpl defaultWifi = new DefaultWifiImpl();
         return defaultWifi;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SubstanceContainer createSubstanceContainer() {
+        SubstanceContainerImpl substanceContainer = new SubstanceContainerImpl();
+        return substanceContainer;
     }
 
     /**

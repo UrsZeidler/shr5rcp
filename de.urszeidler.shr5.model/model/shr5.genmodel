@@ -699,5 +699,8 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Magazin/bullets"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//DefaultWifi"/>
+    <genClasses ecoreClass="shr5.ecore#//SubstanceContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//SubstanceContainer/substance"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

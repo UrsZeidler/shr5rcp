@@ -586,6 +586,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createDefaultWifiAdapter();
             }
             @Override
+            public Adapter caseSubstanceContainer(SubstanceContainer object) {
+                return createSubstanceContainerAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2142,6 +2146,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createDefaultWifiAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SubstanceContainer <em>Substance Container</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SubstanceContainer
+     * @generated
+     */
+    public Adapter createSubstanceContainerAdapter() {
         return null;
     }
 
