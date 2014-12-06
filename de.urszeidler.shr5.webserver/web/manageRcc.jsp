@@ -52,7 +52,7 @@
 				<input type="hidden" name="action" value="doManageRcc" /> <input
 					type="hidden" name="rcc" value="<%=id%>" />
 				<h5>
-					Select software
+					Running Programs
 					<%=WebTools.getText(object)%>
 				</h5>
 				<div class="character-multi-item-container">
