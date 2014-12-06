@@ -3,16 +3,16 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Substance;
 import de.urszeidler.eclipse.shr5.SubstanceContainer;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -173,4 +173,12 @@ public class SubstanceContainerImpl extends AbstraktGegenstandImpl implements Su
         return super.eIsSet(featureID);
     }
 
+    
+    @Override
+    public BigDecimal getWert() {
+        if(getSubstance()!=null)
+            return super.getWert().add(getSubstance().getWert());
+        
+        return super.getWert();
+    }
 } //SubstanceContainerImpl
