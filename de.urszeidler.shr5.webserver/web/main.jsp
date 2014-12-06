@@ -51,8 +51,8 @@
 				 if(!Collections2.transform(scriptViewerWrapper.getRegisteredPlayers(), 
 				     scriptViewerWrapper.createPlayerManager2RuntimeCharacterTransformer()).contains(c)){
 				%>
-				<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(c)%>" />
-				<a href="main?id=<%=ShadowrunTools.getResourceId(c)%>"><%=WebTools.getText(c)%></a> 
+				<a class="button" href="main?id=<%=ShadowrunTools.getResourceId(c)%>"><img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(c)%>" />
+				<%=WebTools.getText(c)%></a> 
 				<%}else{%>
 				<img class="eobject" src="images?uriFragment=<%=WebTools.getUriFragment(c)%>" />
 				<%=WebTools.getText(c)%>

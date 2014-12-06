@@ -1,3 +1,4 @@
+<%@page import="de.urszeidler.eclipse.shr5.RiggerProgram"%>
 <%@page import="de.urszeidler.eclipse.shr5.RiggerCommandConsole"%>
 <%@page import="de.urszeidler.eclipse.shr5.MatrixProgram"%>
 <%@page import="de.urszeidler.eclipse.shr5.Cyberdeck"%>
@@ -56,9 +57,11 @@ AP: <%=nw.getDurchschlagsKraft()%>|
     Cyberdeck cyb = (Cyberdeck)item; 
 %>
 <div class="small-detail" >
-<%=cyb.getGeraetestufe()%>|
-at: <%=cyb.getAngriff()%>|sn: <%=cyb.getSchleicher()%>|dp: <%=cyb.getDatenverarbeitung()%>|fw: <%=cyb.getFirewall()%>|
-im: <%=WebTools.literal2Name(cyb.getCurrentModus(),cyb,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>|
+<%=WebTools.toFeatureName(cyb, Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE)%>:<%=cyb.getGeraetestufe()%>|
+at: <%=cyb.getAngriff()%>|sn: <%=cyb.getSchleicher()%>|
+<%=WebTools.toFeatureName(cyb, Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG)%>:<%=cyb.getDatenverarbeitung()%>|
+<%=WebTools.toFeatureName(cyb, Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL)%>:<%=cyb.getFirewall()%>|
+<%=WebTools.toFeatureName(cyb, Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>:<%=WebTools.literal2Name(cyb.getCurrentModus(),cyb,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>|
 <br/>
 <% for(MatrixProgram mp :cyb.getRunningPrograms()){ %>
 <%=WebTools.getText(mp)%>|
@@ -68,6 +71,15 @@ im: <%=WebTools.literal2Name(cyb.getCurrentModus(),cyb,Shr5Package.Literals.MATR
     RiggerCommandConsole rcc = (RiggerCommandConsole)item; 
     %>
 <div class="small-detail" >
-<%=rcc.getGeraetestufe()%>|<%=rcc.getDatenverarbeitung()%>|<%=rcc.getRauschunterdrueckung()%>|<%=rcc.getZugriff()%>|<%=rcc.getFirewall()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE)%>:<%=rcc.getGeraetestufe()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG)%>:<%=rcc.getDatenverarbeitung()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG)%>:<%=rcc.getRauschunterdrueckung()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF)%>:<%=rcc.getZugriff()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL)%>:<%=rcc.getFirewall()%>|
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>:<%=WebTools.literal2Name(rcc.getCurrentModus(),rcc,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>|
+<br/>
+<% for(RiggerProgram mp :rcc.getRunningPrograms()){ %>
+<%=WebTools.getText(mp)%>|
+<%} %>   
 </div>
 <%} %> 

@@ -99,9 +99,9 @@
 					</div>
 						<div class="condition-monitor-container">
 						<ul class="action">
-						<li class="action"><a  href="member.jsp">reload page</a></li>
-						<li class="action"><a href="changeInventar.jsp">change inventory</a></li>						
-						<li class="action"><a href="transaction.jsp">make a transaction</a></li>
+						<li class="action button"><a class=""  href="member.jsp">reload page</a></li>
+						<li class="action button"><a class="" href="changeInventar.jsp">change inventory</a></li>						
+						<li class="action button"><a class="" href="transaction.jsp">make a transaction</a></li>
 						
 						</ul>
 						<p>available credits : <%=WebTools.getAvailableCredits(character)%></p>
@@ -214,7 +214,7 @@
 		<div id="history">
 		<jsp:include page="include/history.jsp" />
 		</div>
-		<a href="main?action=logout">stop being <%=WebTools.getText(character)%>(logout)
+		<a class="button" href="main?action=logout">stop being <%=WebTools.getText(character)%>(logout)
 		</a>
 	</div>
 </body>

@@ -42,17 +42,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>manage: <%=WebTools.getText(character)%></title>
+<title>configure: <%=WebTools.getText(rcc)%></title>
 <%@include file="include/style.jsp"%>
 </head>
 <body>
+
 	<div class="page">
 		<div class="container">
+		<fieldset>
+    <legend>configure: <%=WebTools.getText(rcc)%></legend>
 			<form action="main" method="get">
-				<input type="hidden" name="action" value="doManageRcc" /> <input
+				<input type="hidden" name="action" value="doManageRcc" /> 
+				<input
 					type="hidden" name="rcc" value="<%=id%>" />
+			<div class="character-single-item-container" >
+			<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>:
+				<select class="item " name="mode" >
+						<%
+						    for (Object g :  Shr5Package.Literals.INTERFACE_MODUS.getELiterals()) {
+						%>
+						<option value="<%=g.toString()%>" >
+							<%=WebTools.literal2Name(g,rcc,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%></option>
+						<%
+						    }
+						%>
+					</select>
+			</div>
+					
 				<h5>
-					Running Programs
+<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS)%>
 					<%=WebTools.getText(object)%>
 				</h5>
 				<div class="character-multi-item-container">
@@ -61,17 +79,25 @@
 						<%
 						    for (Object g : values) {
 						%>
-						<option value="<%=ShadowrunTools.getResourceId((EObject)g)%>">
+						<option value="<%=ShadowrunTools.getResourceId((EObject)g)%>"
+						<%if (rcc.getRunningPrograms().contains(g)) {%> selected="selected"
+							<%}%>
+						>
 							<%=WebTools.getText(g)%></option>
 						<%
 						    }
 						%>
 					</select>
 				</div>
-				Sharing: <input type="range" min="0"
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF)%>: 
+				<input type="number" min="0"
 					max="<%=rcc.getDeviceRating()%>" step="1"
 					value="<%=rcc.getZugriffBasis()%>" />
+					
+					<input class="button" type="submit" />	<a class="button" href="member.jsp">back</a>			
 			</form>
+			</fieldset>
+			
 		</div>
 	</div>
 </body>
