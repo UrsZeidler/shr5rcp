@@ -402,7 +402,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
 
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__ALLOWED_SOURCES, compositeAllowedSource);
+        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+        controlGridData.heightHint = 150;
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__ALLOWED_SOURCES, compositeAllowedSource, controlGridData);
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 

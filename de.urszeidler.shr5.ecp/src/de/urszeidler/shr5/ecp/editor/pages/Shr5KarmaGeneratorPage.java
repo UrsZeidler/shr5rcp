@@ -209,6 +209,13 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         compositePrio.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(compositePrio);
         managedForm.getToolkit().paintBordersFor(compositePrio);
+        
+        Composite compositeAllowedSource = new Composite(grpAuswahl, SWT.NONE);
+        compositeAllowedSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        compositeAllowedSource.setLayout(new GridLayout(1, false));
+        managedForm.getToolkit().adapt(compositeAllowedSource);
+        managedForm.getToolkit().paintBordersFor(compositeAllowedSource);
+
 
         Composite composite_group = new Composite(grpAuswahl, SWT.NONE);
         composite_group.setLayout(new GridLayout(3, false));
@@ -282,7 +289,11 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
         // emfFormBuilder.addSeperatorEntry(compositePrio);
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
+        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+        controlGridData.heightHint = 150;
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__ALLOWED_SOURCES, compositeAllowedSource, controlGridData);
 
+        
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
