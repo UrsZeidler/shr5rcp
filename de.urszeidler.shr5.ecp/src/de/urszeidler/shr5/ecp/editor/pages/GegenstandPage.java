@@ -225,6 +225,8 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
             controlGridData.heightHint = 150;
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime,controlGridData);
+        }else if (object instanceof Magazin) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE, grpGegenstand);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);

@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.SubstanceContainer;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
@@ -194,6 +195,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return null;
             }
 
+            @Override
+            public Object caseSubstanceContainer(SubstanceContainer object) {
+                try {
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseAbstractMatrixDevice(AbstractMatrixDevice object) {
                 try {
