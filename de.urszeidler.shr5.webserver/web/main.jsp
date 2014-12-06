@@ -70,7 +70,7 @@
         type: "GET",
         success: function(data) {
         if (data != "") {
-            $('#history-container').html(data);
+            $('#history').html(data);
         }
             
         },
@@ -83,7 +83,9 @@
 
 	
 	
+<div id="history">
 	<jsp:include page="include/history.jsp" />
+	
 </div>
 	<div>
 	
