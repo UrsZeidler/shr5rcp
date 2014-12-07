@@ -48,6 +48,10 @@
 </head>
 <body>
 	<div class="page">
+		<fieldset>
+			 <legend>manage ammunition for character : <%=WebTools.getText(character)%>
+						</legend>
+	
 		<form action="main" method="get">
 			<input type="hidden" name="action" value="doMagazinRefill" />
 			<input type="hidden" name="magazin" value="<%=id%>" />
@@ -59,12 +63,14 @@
 						
 				</div>
 				<div class="character-single-item-container" >
-				Choose Ammo type : <select class="item " name="muni" style="display: list-item;">
+				<label>Choose Ammo type:</label> 
+				<select class="item " name="muni" >
 						<%
 						    for (Object g :  values) {
 						%>
 						<option value="<%=ShadowrunTools.getResourceId((EObject)g)%>" >
-							<%=WebTools.getText(g)%></option>
+							<%=WebTools.getText(g)%>
+						</option>
 						<%
 						    }
 						%>
@@ -80,6 +86,7 @@
 		</div>
 			
 		</form>
+		</fieldset>
 	</div>
 </body>
 </html>

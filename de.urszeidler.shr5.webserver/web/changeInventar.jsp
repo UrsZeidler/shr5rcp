@@ -29,19 +29,23 @@
 </head>
 <body>
 	<div class="page">
+				<fieldset>
+			 <legend>Inventory for
+						<%=WebTools.getText(character)%>
+						</legend>
+	
 		<form action="main" method="get">
-			<input type="hidden" name="action" value="changeCharacter" />
 			<div class="character-container">
-				<div class="character-container-head">
-					<h4>
-						Name
-						<%=WebTools.getText(character)%></h4>
-					<h4>
-						edge used :
-						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></h4>
-				</div>
+			<div class="character-container-head" >
+			<h5>Change the inventory</h5>
+			</div>
+			
+			<input type="hidden" name="action" value="changeCharacter" />
 				<div class="character-single-item-container" >
-					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %> : <select class="item " name="lefthand" style="display: list-item;">
+<label><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND) %>:
+</label>
+					 
+					<select class="item " name="lefthand" >
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -53,7 +57,9 @@
 						%>
 					</select>
 				</div>
-				<div class="character-single-item-container"><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %> : <select class="item " style="display: list-item;" name="righthand">
+				<div class="character-single-item-container">
+				<label><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %>:</label>
+				 <select class="item " name="righthand">
 						<%
 						    for (AbstraktGegenstand g : character.getInUse()) {
 						%>
@@ -67,7 +73,10 @@
 					</select>
 				</div>
 				<div class="character-single-item-container">
-					<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR) %> : <select class="item " name="armor" style="display: list-item;">
+				<label>
+				<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR) %>:
+				</label>
+					 <select class="item " name="armor" >
 						<%
 						    for (AbstraktGegenstand g : Collections2.filter(character.getInUse(), ShadowrunTools.eclassPredicate(Shr5Package.Literals.KLEIDUNG))) {
 						%>
@@ -79,9 +88,11 @@
 						%>
 					</select>
 				</div>
-				<div class="character-multi-item-container" style="vertical-align: top">
-				<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE) %><br/>
-					<select class="main-list " name="inventar" multiple="multiple" style="">
+				<div class="character-multi-item-container" >
+				<label >
+				<%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE) %>:
+				</label>				
+					<select class="main-list " name="inventar" multiple="multiple" >
 						<%
 						    for (AbstraktGegenstand g : character.getCharacter().getInventar()) {
 						%>
@@ -94,10 +105,11 @@
 						%>
 					</select>
 				</div>
-				<input type="submit" />		
-				<a  href="member.jsp">back</a>		
-			</div>
-		</form>
+				<input class="button" type="submit" />		
+				<a class="button" href="member.jsp">back</a>		
 	</div>
+		</form>
+		</fieldset>
+			</div>
 </body>
 </html>

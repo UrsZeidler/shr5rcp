@@ -50,13 +50,16 @@
 	<div class="page">
 		<div class="container">
 		<fieldset>
-    <legend>configure: <%=WebTools.getText(rcc)%></legend>
+    	<legend>configure: <%=WebTools.getText(rcc)%></legend>
 			<form action="main" method="get">
 				<input type="hidden" name="action" value="doManageRcc" /> 
 				<input
 					type="hidden" name="rcc" value="<%=id%>" />
+					<h5>Configure your command console.</h5>											
 			<div class="character-single-item-container" >
+			<label>
 			<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>:
+			</label>
 				<select class="item " name="mode" >
 						<%
 						    for (Object g :  Shr5Package.Literals.INTERFACE_MODUS.getELiterals()) {
@@ -68,12 +71,11 @@
 						%>
 					</select>
 			</div>
-					
-				<h5>
-<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS)%>
-					<%=WebTools.getText(object)%>
-				</h5>
+
 				<div class="character-multi-item-container">
+				<label>
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS)%>
+				</label>
 					<select class="main-list " name="runningPrograms"
 						multiple="multiple">
 						<%
@@ -83,18 +85,21 @@
 						<%if (rcc.getRunningPrograms().contains(g)) {%> selected="selected"
 							<%}%>
 						>
-							<%=WebTools.getText(g)%></option>
+							<%=WebTools.getText(g)%>
+						</option>
 						<%
 						    }
 						%>
 					</select>
 				</div>
+				<label>
 				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF)%>: 
+				</label>
 				<input type="number" min="0"
 					max="<%=rcc.getDeviceRating()%>" step="1"
 					value="<%=rcc.getZugriffBasis()%>" />
 					
-					<input class="button" type="submit" />	<a class="button" href="member.jsp">back</a>			
+				<input class="button" type="submit" />	<a class="button" href="member.jsp">back</a>			
 			</form>
 			</fieldset>
 			

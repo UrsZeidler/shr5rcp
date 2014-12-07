@@ -28,6 +28,10 @@
 </head>
 <body>
 	<div class="page">
+			<fieldset>
+			 <legend>Name
+						<%=WebTools.getText(character)%>
+						available credits : <%=WebTools.getAvailableCredits(character)%></legend>
 		<form action="main" method="get">
 			<input type="hidden" name="action" value="doCredstickTransaction" />
 			<div class="character-container">
@@ -38,7 +42,8 @@
 						available credits : <%=WebTools.getAvailableCredits(character)%>
 				</div>
 				<div class="character-single-item-container" >
-				Choose Credstick : <select class="item " name="id" style="display: list-item;">
+				<label>Choose Credstick:</label> 
+				 <select class="item " name="id" >
 						<%
 						    for (AbstraktGegenstand g :  Collections2.filter( character.getInUse() ,ShadowrunTools.eclassPredicate(Shr5Package.Literals.CREDSTICK)) ) {
 						%>
@@ -50,14 +55,15 @@
 					</select>
 				</div>
 				<div class="character-single-item-container" >
-				Amount : <input type="text"  name="amount" />
+				<label>Amount:</label> <input type="text"  name="amount" />
 				</div>
 				<div class="character-single-item-container" >
-				Mesage : <input type="text" name="message" />
+				<label>Message:</label> <input type="text" name="message" />
 				</div>
-				<input type="submit" /><a  href="member.jsp">back</a>			
+				<input type="submit" /><a class="button" href="member.jsp">back</a>			
 			</div>
 		</form>
+		</fieldset>
 	</div>
 </body>
 </html>

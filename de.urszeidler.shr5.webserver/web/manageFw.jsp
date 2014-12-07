@@ -49,18 +49,20 @@
 </head>
 <body>
 	<div class="page">
+			<fieldset>
+			 <legend>
+			 configure <%=WebTools.getText(object)%>
+			</legend>	
 		<form action="main" method="get">
 			<input type="hidden" name="action" value="doManageFw" />
 			<input type="hidden" name="fw" value="<%=id%>" />
 			<div class="character-container">
 				<div class="character-container-head">
-					<h4>
-						Name
-						<%=WebTools.getText(object)%></h4>
-						
+					<h5><%=WebTools.getText(object)%></h5>						
 				</div>
 				<div class="character-single-item-container" >
-				Choose Magazine type : <select class="item " name="mag" style="display: list-item;">
+				<label>Choose Magazine type:</label>
+				 <select class="item " name="mag" >
 						<%
 						    for (Object g :  values) {
 						%>
@@ -73,7 +75,8 @@
 					</select>
 				</div>
 				<div class="character-single-item-container" >
-				Choose default fire modus : <select class="item " name="modus" style="display: list-item;">
+				<label>Choose default fire modus: </label> 
+				<select class="item " name="modus" >
 						<%
 						    for (FeuerModus g :  fw.getModie()) {
 						%>
@@ -87,9 +90,10 @@
 					</select>
 				</div>
 
-				<input type="submit" />	<a  href="member.jsp">back</a>			
+				<input class="button" type="submit" />	<a class="button"  href="member.jsp">back</a>			
 			</div>
 		</form>
+		</fieldset>
 	</div>
 </body>
 </html>
