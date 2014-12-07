@@ -6,13 +6,6 @@ body {
    
 }
 
-.page {
-	width: 90%;
-	align: center;
-	
-    
-	
-}
 
 a {
 	
@@ -339,3 +332,44 @@ img.eobject {
 	position:relative;
 	top:1px;
 }
+
+
+label {
+    width: 150px;
+    text-align: right;
+    display: inline-block;
+}
+
+
+fieldset {
+    border-radius: 10px;
+    background: #eee;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    position: relative;
+    border: 2px groove threedface;
+}
+legend {
+    position: absolute;
+    top: -2px;
+    background: #fff;
+    padding: 10px 20px;
+    border: 2px groove threedface;
+    border-top: none;
+    box-shadow: inset 0 -5px 5px rgba(0,0,0,.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+    font-weight: bold;
+}
+legend span {
+    display: block;
+    margin: -20px;
+    background: #fff;
+    padding: 0px 20px;
+}
+
+
+input:focus, textarea:focus {
+    border-color: #C9C9C9;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+    } 

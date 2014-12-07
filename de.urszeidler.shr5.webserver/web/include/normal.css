@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+.page {
+	width: 90%;
+	align: center;
+	max-width: 1200px;
+}
