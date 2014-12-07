@@ -25,10 +25,14 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
+import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
+import de.urszeidler.eclipse.shr5.RiggerProgram;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
@@ -40,8 +44,10 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.shr5.ecp.service.ScriptService;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.webserver.mgnt.PlayerManager;
 import de.urszeidler.shr5.webserver.mgnt.ScriptViewerWrapper;
+import de.urszeidler.shr5.webserver.mgnt.WebTools;
 
 /**
  * Simple control flow servlet, handles the redirects and is accessible under the "main" url.
@@ -153,6 +159,9 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             } else if (action.equals("doManageFw")) {
                 doManageFeuerwaffe(pm, req);
                 resp.sendRedirect("member.jsp");
+            } else if (action.equals("doManageRcc")) {
+                doManageRcc(pm, req);
+                resp.sendRedirect("member.jsp");
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
             }
@@ -175,7 +184,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 pm = new PlayerManager();
                 pm.setCharacter(playerById);
                 session.setAttribute("playerManager", pm);
-                scriptViewerWrapper.addSession(pm,req.getSession());
+                scriptViewerWrapper.addSession(pm, req.getSession());
             } else
                 resp.sendRedirect("main.jsp");
         }
@@ -185,6 +194,30 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private void doManageRcc(PlayerManager pm, HttpServletRequest req) {
+        try {
+            RuntimeCharacter character = pm.getCharacter();
+            String rccId = req.getParameter("rcc");
+            RiggerCommandConsole rcc = (RiggerCommandConsole)ShadowrunTools.getFirstObjectById(character.getInUse(), rccId);
+                        
+            String[] parameterValues = req.getParameterValues("runningPrograms");
+            if (parameterValues != null && parameterValues.length != 0) {
+                rcc.getRunningPrograms().clear();
+                rcc.getRunningPrograms().addAll(
+                        (Collection<? extends RiggerProgram>)Collections2.transform(Arrays.asList(parameterValues),
+                                ShadowrunTools.xmlId2EObjectTransformer(rcc.getStoredPrograms())));
+            }
+            String iModus = req.getParameter("mode");
+            if(iModus!=null)
+                rcc.setCurrentModus(InterfaceModus.getByName(iModus));
+            String sharing = req.getParameter("sharing");
+            if(sharing!=null)
+                rcc.setZugriffBasis(Integer.parseInt(sharing));
+            executeChangeMessageAction(pm, character,  String.format("Change %s configuration", WebTools.getText(rcc)));
+        } catch (Exception e) {
+        }
     }
 
     private int calcWound(RuntimeCharacter character) {
@@ -201,14 +234,14 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             String mod = req.getParameter("modus");
             FeuerModus feuerModus = FeuerModus.get(mod);
 
-            if (magazine != null && fw!=null) {
+            if (magazine != null && fw != null) {
                 Magazin oldMagazine = fw.getMagazin();
                 fw.setMagazin(magazine);
                 character.getInUse().add(oldMagazine);
                 character.getInUse().remove(magazine);
                 character.getCharacter().getInventar().add(oldMagazine);
             }
-            if (mod != null && !mod.isEmpty()&& fw!=null)
+            if (mod != null && !mod.isEmpty() && fw != null)
                 GameplayTools.setFireModus(character, fw, feuerModus);
         } catch (Exception e) {
         }
@@ -221,12 +254,13 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             RuntimeCharacter character = pm.getCharacter();
             Munition muni = (Munition)ShadowrunTools.getFirstObjectById(character.getInUse(), muniId);
             Magazin magazine = (Magazin)ShadowrunTools.getFirstObjectById(character.getInUse(), magazinId);
-            
-            if (muni != null && magazine != null){
+
+            if (muni != null && magazine != null) {
                 magazine.getBullets().clear();
                 while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
                     magazine.getBullets().add(muni);
                 }
+                executeChangeMessageAction(pm, character, "Refill "+WebTools.getText(magazine));
             }
         } catch (Exception e) {
         }
@@ -299,11 +333,21 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 (Collection<? extends AbstraktGegenstand>)Collections2.transform(Arrays.asList(parameterValues),
                         ShadowrunTools.xmlId2EObjectTransformer(character.getCharacter().getInventar())));
 
+        String message = "Changed the inventory.";
+        executeChangeMessageAction(pm, character, message);
+    }
+
+    /**
+     * @param pm
+     * @param character
+     * @param message
+     */
+    private void executeChangeMessageAction(PlayerManager pm, RuntimeCharacter character, String message) {
         ScriptService scriptService = Activator.getDefault().getScriptService();
         SemanticAction action = GameplayFactory.eINSTANCE.createSemanticAction();
         action.setSubject(character);
         action.setType(SemanticType.DESCRIPTION);
-        action.setMessage(String.format("Changed the inventory.", AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
+        action.setMessage(String.format(message, AdapterFactoryUtil.getInstance().getLabelProvider().getText(character)));
         pm.setCommandToIgnore(action);
         scriptService.executeCommand(action);
     }

@@ -64,7 +64,10 @@
 						<%
 						    for (Object g :  Shr5Package.Literals.INTERFACE_MODUS.getELiterals()) {
 						%>
-						<option value="<%=g.toString()%>" >
+						<option value="<%=g.toString()%>" 
+						<%if (rcc.getCurrentModus().getLiteral().equals(g.toString())) {%> selected="selected"
+							<%}%>
+						 >
 							<%=WebTools.literal2Name(g,rcc,Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%></option>
 						<%
 						    }
@@ -95,7 +98,7 @@
 				<label>
 				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF)%>: 
 				</label>
-				<input type="number" min="0"
+				<input name="sharing" type="number" min="0"
 					max="<%=rcc.getDeviceRating()%>" step="1"
 					value="<%=rcc.getZugriffBasis()%>" />
 					
