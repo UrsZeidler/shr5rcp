@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.eclipse.shr5.Cyberdeck"%>
 <%@page import="de.urszeidler.eclipse.shr5.RiggerCommandConsole"%>
 <%@page import="de.urszeidler.eclipse.shr5.util.ShadowrunTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.Magazin"%>
@@ -90,8 +91,8 @@
 				<div class="inner-margin">
 					<strong class="container-row"> <img class="eobject"
 						src="images?uriFragment=<%=WebTools.getUriFragment(character)%>" />
-						<%=characterName%></strong> <strong class="container-row"> <%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE)%>:
-						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></strong>
+						<%=characterName%></strong> 
+						
 					<hr />
 					<div class="condition-monitor-section" >
 					<div id="conditionMonitor">
@@ -99,11 +100,13 @@
 					</div>
 						<div class="condition-monitor-container">
 						<ul class="action">
-						<li class="action button"><a class=""  href="member.jsp">reload page</a></li>
-						<li class="action button"><a class="" href="changeInventar.jsp">change inventory</a></li>						
-						<li class="action button"><a class="" href="transaction.jsp">make a transaction</a></li>
+						<li class="action "><a class="button" style="width: 100px;" href="member.jsp" >reload page</a></li>
+						<li class="action"><a class="button" style="width: 100px;" href="changeInventar.jsp">change inventory</a></li>						
+						<li class="action"><a class="button" style="width: 100px;" href="transaction.jsp">make a transaction</a></li>
 						
 						</ul>
+						<p><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE)%>:
+						<%=character.getUsedEdge()%>/<%=character.getCharacter().getPersona().getEdge()%></p>
 						<p>available credits : <%=WebTools.getAvailableCredits(character)%></p>
 						</div>
 					</div>
@@ -156,23 +159,26 @@
 		<!-- end container -->
 		<div id="inventar-container" class="character-inventar-container">
 			
-			<div class="character-multi-item-container thin-border small-corner">
-				<div class="inner-margin">
+			<div class="character-multi-item-container thin-border small-corner ">
+				<div class="inner-margin two-col">
 					<%
 					    for (AbstraktGegenstand g : character.getInUse()) {
 					%>
-					<p class="inventar">
+					<p class="inventar ">
 						<img class="eobject"
 							src="images?uriFragment=<%=WebTools.getUriFragment(g)%>" /><%=WebTools.getText(g)%> 
 							<% if (g instanceof Magazin) {
 							    Magazin mz = (Magazin)g; %>
-							<a  href="manageAmmunition.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a>
+							<a class="button " href="manageAmmunition.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a>
 							<% }else if (g instanceof Feuerwaffe) {
 							    Feuerwaffe fw = (Feuerwaffe)g;%>
-							   <a  href="manageFw.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
+							   <a class="button " href="manageFw.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
 							    <% }else if (g instanceof RiggerCommandConsole) {
 							        RiggerCommandConsole rcc = (RiggerCommandConsole)g;%>
-							    <a  href="manageRcc.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
+							    <a class="button " href="manageRcc.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
+							    <% }else if (g instanceof Cyberdeck) {
+							        Cyberdeck cyb = (Cyberdeck)g;%>
+							    <a class="button " href="manageCyb.jsp?id=<%=ShadowrunTools.getResourceId(g)%>">manage</a> 
 								<%} %>
 							</p>
 					<%

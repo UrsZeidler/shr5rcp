@@ -100,9 +100,12 @@ font-size: 9px;
 text-align: justify;
 text-shadow: gray;
 word-spacing: normal;
-width: 100px;
+width: 120px;
 letter-spacing: normal;
-list-style: circle;
+list-style: none;
+white-space: nowrap;
+
+
 }
 
 p {
@@ -294,6 +297,13 @@ img.eobject {
 	margin-bottom: 5px;
 }
 
+.float-left-container {
+
+	vertical-align: top;
+	float: left;
+	margin-bottom: 5px;
+}
+
 .condition-monitor-titel {
 	font-size: 9px;
 	margin: 3px;
@@ -373,6 +383,34 @@ img.eobject {
 	display: none;
 }
 
+/* layout */
+
+.three-col {
+       -moz-column-count: 3;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 3;
+       -webkit-column-gap: 20px;
+}
+
+.two-col {
+       -moz-column-count: 2;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 2;
+       -webkit-column-gap: 20px;
+}
+
+.layered-paper {
+    background: #eee;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+        0 10px 0 -5px #eee, /* The second layer */
+        0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+        0 20px 0 -10px #eee, /* The third layer */
+        0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
+}
+
+/* button */
+
 .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -446,8 +484,21 @@ legend span {
     padding: 0px 10px;
 }
 
-
-input:focus, textarea:focus {
-    border-color: #C9C9C9;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
-    } 
+/* input */
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
