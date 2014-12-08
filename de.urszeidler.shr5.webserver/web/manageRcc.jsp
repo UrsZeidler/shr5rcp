@@ -57,7 +57,7 @@
 					type="hidden" name="rcc" value="<%=id%>" />
 					<h5>Configure your command console.</h5>											
 			<div class="character-single-item-container" >
-			<label>
+			<label for="mode">
 			<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS)%>:
 			</label>
 				<select class="item " name="mode" >
@@ -76,7 +76,7 @@
 			</div>
 
 				<div class="character-multi-item-container">
-				<label>
+				<label for="runningPrograms">
 				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS)%>
 				</label>
 					<select class="main-list " name="runningPrograms"
@@ -95,7 +95,7 @@
 						%>
 					</select>
 				</div>
-				<label>
+				<label for="sharing">
 				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF)%>: 
 				</label>
 				<input name="sharing" type="number" min="0"
