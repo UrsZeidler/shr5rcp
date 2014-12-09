@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="org.eclipse.emf.ecore.EAttribute"%>
 <%@page import="de.urszeidler.eclipse.shr5.Cyberdeck"%>
 <%@page import="de.urszeidler.eclipse.shr5.RiggerCommandConsole"%>
 <%@page import="de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools"%>
@@ -106,8 +107,8 @@ $(document).ready(function() {
 			</div>
 
 				<div class="character-multi-item-container">
-				<label for="runningPrograms">
-				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS)%>
+				<label style="vertical-align: top; font-size: 10px;" for="runningPrograms">
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS)%>:
 				</label>
 					<select class="main-list " name="runningPrograms"
 						multiple="multiple">
@@ -125,21 +126,24 @@ $(document).ready(function() {
 						%>
 					</select>
 				</div>
+				<p>attribute configuration:</p>
 				<div class="character-multi-item-container">
-				<label for="configuration">
-				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.CYBERDECK__CONFIGURATION)%>
+				<label style="font-size: 10px;" for="configuration">
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL)%>:<br />
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG)%>:<br />
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER)%>:<br />
+				<%=WebTools.toFeatureName(rcc, Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF)%>:<br />
 				</label>
-					<select id="select-to" name="configuration"
+					<select class="main-list " id="select-to" name="configuration"
 						multiple="multiple">
 						<%
-						    for (Object g : rcc.getConfiguration()) {
-						        
+						    for (EAttribute g : rcc.getConfiguration()) {
+						     Object val = rcc.eGet(g); 
 						%>
-						<option value="<%=WebTools.getText(g)%>"
+			 			<option  value="<%=WebTools.escapeHTML(g.getName())%>"
 						 selected="selected"
-							
 						>
-							<%=WebTools.getText(g)%>
+							<%=WebTools.getText(g)+"="+val%>
 						</option>
 						<%
 						    }

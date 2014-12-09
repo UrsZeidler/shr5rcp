@@ -213,7 +213,8 @@ img.eobject {
 
 .main-list {
 	font-size: 10px;
-	height: 200px;
+
+/* 	min-height: 100px; */
 }
 
 .history-container {

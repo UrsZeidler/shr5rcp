@@ -741,4 +741,22 @@ public class GameplayTools {
         
         return null;
     }
+
+    /**
+     * Return the eattribute for a name of the cyberdeck attributes.
+     * @param attName
+     * @return
+     */
+    public static EAttribute getCyberdeckAttribute(String attName) {
+        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE1.getName().equals(attName))
+            return Shr5Package.Literals.CYBERDECK__ATTRIBUTE1;
+        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2.getName().equals(attName))
+            return Shr5Package.Literals.CYBERDECK__ATTRIBUTE2;
+        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE3.getName().equals(attName))
+            return Shr5Package.Literals.CYBERDECK__ATTRIBUTE3;
+        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE4.getName().equals(attName))
+            return Shr5Package.Literals.CYBERDECK__ATTRIBUTE4;
+ 
+        return null;
+    }
 }

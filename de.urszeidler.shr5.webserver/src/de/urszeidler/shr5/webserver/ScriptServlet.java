@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -23,11 +24,13 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.MatrixProgram;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.RiggerProgram;
@@ -162,6 +165,9 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             } else if (action.equals("doManageRcc")) {
                 doManageRcc(pm, req);
                 resp.sendRedirect("member.jsp");
+            } else if (action.equals("doManageCyb")) {
+                doManageCyb(pm, req);
+                resp.sendRedirect("member.jsp");
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
             }
@@ -194,6 +200,41 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             resp.sendRedirect("member.jsp");
 
         return;
+    }
+
+    private void doManageCyb(PlayerManager pm, HttpServletRequest req) {
+        try {
+            RuntimeCharacter character = pm.getCharacter();
+            String rccId = req.getParameter("cyb");
+            Cyberdeck rcc = (Cyberdeck)ShadowrunTools.getFirstObjectById(character.getInUse(), rccId);
+                        
+            String[] parameterValues = req.getParameterValues("runningPrograms");
+            if (parameterValues != null && parameterValues.length != 0) {
+                rcc.getRunningPrograms().clear();
+                rcc.getRunningPrograms().addAll(
+                        (Collection<? extends MatrixProgram>)Collections2.transform(Arrays.asList(parameterValues),
+                                ShadowrunTools.xmlId2EObjectTransformer(rcc.getStoredPrograms())));
+            }
+            String iModus = req.getParameter("mode");
+            if(iModus!=null)
+                rcc.setCurrentModus(InterfaceModus.getByName(iModus));
+            String[] configuration = req.getParameterValues("configuration");
+            if(configuration!=null && configuration.length==4){
+                for (int i = 0; i < configuration.length; i++) {
+                    String string = configuration[i];
+                    EAttribute attribute = GameplayTools.getCyberdeckAttribute(string);
+                    if(attribute!=null){
+//                        int indexOld = rcc.getConfiguration().indexOf(attribute);
+                        rcc.getConfiguration().move(i, attribute);      
+                    }
+                }
+            }
+//            String sharing = req.getParameter("sharing");
+//            if(sharing!=null)
+//                rcc.setZugriffBasis(Integer.parseInt(sharing));
+            executeChangeMessageAction(pm, character,  String.format("Change %s configuration", WebTools.getText(rcc)));
+        } catch (Exception e) {
+        }
     }
 
     private void doManageRcc(PlayerManager pm, HttpServletRequest req) {
