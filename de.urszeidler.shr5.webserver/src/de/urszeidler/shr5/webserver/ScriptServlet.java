@@ -224,14 +224,10 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                     String string = configuration[i];
                     EAttribute attribute = GameplayTools.getCyberdeckAttribute(string);
                     if(attribute!=null){
-//                        int indexOld = rcc.getConfiguration().indexOf(attribute);
                         rcc.getConfiguration().move(i, attribute);      
                     }
                 }
             }
-//            String sharing = req.getParameter("sharing");
-//            if(sharing!=null)
-//                rcc.setZugriffBasis(Integer.parseInt(sharing));
             executeChangeMessageAction(pm, character,  String.format("Change %s configuration", WebTools.getText(rcc)));
         } catch (Exception e) {
         }
