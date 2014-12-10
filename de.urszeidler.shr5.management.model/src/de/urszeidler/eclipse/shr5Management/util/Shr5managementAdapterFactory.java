@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -177,7 +178,7 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createAdeptAdapter();
             }
             @Override
-            public Adapter caseCharacterGenerator(CharacterGenerator object) {
+            public <G extends CharacterGeneratorSystem> Adapter caseCharacterGenerator(CharacterGenerator<G> object) {
                 return createCharacterGeneratorAdapter();
             }
             @Override

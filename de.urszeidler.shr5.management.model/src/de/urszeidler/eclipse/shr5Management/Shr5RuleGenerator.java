@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Shr5RuleGenerator extends CharacterGenerator {
+public interface Shr5RuleGenerator extends CharacterGenerator<Shr5System> {
     /**
      * Returns the value of the '<em><b>Shr5 Generator</b></em>' reference.
      * <!-- begin-user-doc -->

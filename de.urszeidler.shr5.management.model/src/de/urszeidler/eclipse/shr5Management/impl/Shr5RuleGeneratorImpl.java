@@ -57,7 +57,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *
  * @generated
  */
-public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
+public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5System> implements Shr5RuleGenerator {
     /**
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
@@ -85,6 +85,17 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     @Override
     protected EClass eStaticClass() {
         return Shr5managementPackage.Literals.SHR5_RULE_GENERATOR;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * This is specialized for the more specific type known in this context.
+     * @generated
+     */
+    @Override
+    public void setGenerator(Shr5System newGenerator) {
+        super.setGenerator(newGenerator);
     }
 
     /**

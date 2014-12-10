@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -241,7 +242,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 return result;
             }
             case Shr5managementPackage.CHARACTER_GENERATOR: {
-                CharacterGenerator characterGenerator = (CharacterGenerator)theEObject;
+                CharacterGenerator<?> characterGenerator = (CharacterGenerator<?>)theEObject;
                 T result = caseCharacterGenerator(characterGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -663,7 +664,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseCharacterGenerator(CharacterGenerator object) {
+	public <G extends CharacterGeneratorSystem> T caseCharacterGenerator(CharacterGenerator<G> object) {
         return null;
     }
 

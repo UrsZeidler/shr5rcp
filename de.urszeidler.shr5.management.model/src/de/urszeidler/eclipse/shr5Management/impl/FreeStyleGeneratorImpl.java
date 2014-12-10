@@ -31,7 +31,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *
  * @generated
  */
-public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements FreeStyleGenerator {
+public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> implements FreeStyleGenerator {
     /**
      * The cached value of the '{@link #getSelectedPersona() <em>Selected Persona</em>}' reference.
      * <!-- begin-user-doc -->
@@ -77,6 +77,17 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     @Override
     protected EClass eStaticClass() {
         return Shr5managementPackage.Literals.FREE_STYLE_GENERATOR;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * This is specialized for the more specific type known in this context.
+     * @generated
+     */
+    @Override
+    public void setGenerator(FreeStyle newGenerator) {
+        super.setGenerator(newGenerator);
     }
 
     /**

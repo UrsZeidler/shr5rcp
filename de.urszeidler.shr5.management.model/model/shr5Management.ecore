@@ -292,13 +292,16 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This is the basic character generator."/>
     </eAnnotations>
+    <eTypeParameters name="G">
+      <eBounds eClassifier="#//CharacterGeneratorSystem"/>
+    </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
         eType="#//ManagedCharacter" eOpposite="#//ManagedCharacter/chracterSource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1"
-        eType="#//CharacterGeneratorSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The generator system usesed to build the character."/>
       </eAnnotations>
+      <eGenericType eTypeParameter="#//CharacterGenerator/G"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//GeneratorState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedGroup" lowerBound="1"
@@ -312,12 +315,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FreeStyleGenerator" eSuperTypes="#//CharacterGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="FreeStyleGenerator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="freestyleGenerator" eType="#//FreeStyle"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPersona" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktPersona"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedSpecies" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezies"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eGenericSuperTypes eClassifier="#//CharacterGenerator">
+      <eTypeArguments eClassifier="#//FreeStyle"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator" eSuperTypes="#//Shr5RuleGenerator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -603,7 +609,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
         upperBound="-1" eType="#//Advancement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shr5RuleGenerator" abstract="true" eSuperTypes="#//CharacterGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5RuleGenerator" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The shr5 rule generator collects the main rules for all character generation."/>
     </eAnnotations>
@@ -711,6 +717,9 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedSources" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//SourceBook"/>
+    <eGenericSuperTypes eClassifier="#//CharacterGenerator">
+      <eTypeArguments eClassifier="#//Shr5System"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

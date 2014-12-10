@@ -218,7 +218,7 @@ public class CharacterGeneratorItemProvider extends ItemProviderAdapter implemen
      */
     @Override
     public String getText(Object object) {
-        String label = ((CharacterGenerator)object).getCharacterName();
+        String label = ((CharacterGenerator<?>)object).getCharacterName();
         return label == null || label.length() == 0 ?
             getString("_UI_CharacterGenerator_type") :
             getString("_UI_CharacterGenerator_type") + " " + label;

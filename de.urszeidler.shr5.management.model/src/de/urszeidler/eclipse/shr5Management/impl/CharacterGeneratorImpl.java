@@ -38,7 +38,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *
  * @generated
  */
-public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Container implements CharacterGenerator {
+public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem> extends MinimalEObjectImpl.Container implements CharacterGenerator<G> {
 	/**
      * The cached value of the '{@link #getCharacter() <em>Character</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -55,7 +55,7 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
      * @generated
      * @ordered
      */
-	protected CharacterGeneratorSystem generator;
+	protected G generator;
 
 	/**
      * The default value of the '{@link #getState() <em>State</em>}' attribute.
@@ -260,10 +260,11 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public CharacterGeneratorSystem getGenerator() {
+	@SuppressWarnings("unchecked")
+    public G getGenerator() {
         if (generator != null && generator.eIsProxy()) {
             InternalEObject oldGenerator = (InternalEObject)generator;
-            generator = (CharacterGeneratorSystem)eResolveProxy(oldGenerator);
+            generator = (G)eResolveProxy(oldGenerator);
             if (generator != oldGenerator) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.CHARACTER_GENERATOR__GENERATOR, oldGenerator, generator));
@@ -276,22 +277,23 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public CharacterGeneratorSystem basicGetGenerator() {
+	public G basicGetGenerator() {
         return generator;
     }
 
 	/**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public void setGenerator(CharacterGeneratorSystem newGenerator) {
-        CharacterGeneratorSystem oldGenerator = generator;
+    public void setGenerator(G newGenerator) {
+        G oldGenerator = generator;
         generator = newGenerator;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHARACTER_GENERATOR__GENERATOR, oldGenerator, generator));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -441,14 +443,15 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5managementPackage.CHARACTER_GENERATOR__CHARACTER:
                 setCharacter((ManagedCharacter)newValue);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR__GENERATOR:
-                setGenerator((CharacterGeneratorSystem)newValue);
+                setGenerator((G)newValue);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR__STATE:
                 setState((GeneratorState)newValue);
@@ -474,7 +477,7 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
                 setCharacter((ManagedCharacter)null);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR__GENERATOR:
-                setGenerator((CharacterGeneratorSystem)null);
+                setGenerator((G)null);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR__STATE:
                 setState(STATE_EDEFAULT);

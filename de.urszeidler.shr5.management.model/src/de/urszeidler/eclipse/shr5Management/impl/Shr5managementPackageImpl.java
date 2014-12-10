@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -2542,8 +2543,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         Shr5Package theShr5Package = (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
 
         // Create type parameters
+        ETypeParameter characterGeneratorEClass_G = addETypeParameter(characterGeneratorEClass, "G");
 
         // Set bounds for type parameters
+        EGenericType g1 = createEGenericType(this.getCharacterGeneratorSystem());
+        characterGeneratorEClass_G.getEBounds().add(g1);
 
         // Add supertypes to classes
         characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
@@ -2561,7 +2565,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         technomancerEClass.getESuperTypes().add(this.getSpecialType());
         spellcasterEClass.getESuperTypes().add(this.getAdept());
         adeptEClass.getESuperTypes().add(this.getSpecialType());
-        freeStyleGeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
+        g1 = createEGenericType(this.getCharacterGenerator());
+        EGenericType g2 = createEGenericType(this.getFreeStyle());
+        g1.getETypeArguments().add(g2);
+        freeStyleGeneratorEClass.getEGenericSuperTypes().add(g1);
         shr5GeneratorEClass.getESuperTypes().add(this.getShr5RuleGenerator());
         attributeChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
         playerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
@@ -2574,7 +2581,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         playerManagementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
         characterAdvancementSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
-        shr5RuleGeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
+        g1 = createEGenericType(this.getCharacterGenerator());
+        g2 = createEGenericType(this.getShr5System());
+        g1.getETypeArguments().add(g2);
+        shr5RuleGeneratorEClass.getEGenericSuperTypes().add(g1);
         shr5KarmaGeneratorEClass.getESuperTypes().add(this.getShr5RuleGenerator());
 
         // Initialize classes, features, and operations; add parameters
@@ -2708,7 +2718,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(characterGeneratorEClass, CharacterGenerator.class, "CharacterGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGenerator_Character(), this.getManagedCharacter(), this.getManagedCharacter_ChracterSource(), "character", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCharacterGenerator_Generator(), this.getCharacterGeneratorSystem(), null, "generator", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(characterGeneratorEClass_G);
+        initEReference(getCharacterGenerator_Generator(), g1, null, "generator", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCharacterGenerator_State(), this.getGeneratorState(), "state", null, 0, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGenerator_SelectedGroup(), this.getCharacterGroup(), null, "selectedGroup", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCharacterGenerator_CharacterName(), ecorePackage.getEString(), "characterName", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2741,8 +2752,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-        EGenericType g1 = createEGenericType(ecorePackage.getEMap());
-        EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
         g1.getETypeArguments().add(g2);
         g2 = createEGenericType(ecorePackage.getEJavaObject());
         g1.getETypeArguments().add(g2);

@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface CharacterGenerator extends EObject {
+public interface CharacterGenerator<G extends CharacterGeneratorSystem> extends EObject {
 	/**
      * Returns the value of the '<em><b>Character</b></em>' reference.
      * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getChracterSource <em>Chracter Source</em>}'.
@@ -76,19 +76,19 @@ public interface CharacterGenerator extends EObject {
      * @model required="true"
      * @generated
      */
-	CharacterGeneratorSystem getGenerator();
+	G getGenerator();
 
 	/**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.CharacterGenerator#getGenerator <em>Generator</em>}' reference.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @param value the new value of the '<em>Generator</em>' reference.
      * @see #getGenerator()
      * @generated
      */
-	void setGenerator(CharacterGeneratorSystem value);
+    void setGenerator(G value);
 
-	/**
+    /**
      * Returns the value of the '<em><b>State</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5Management.GeneratorState}.
      * <!-- begin-user-doc -->

@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -352,7 +353,7 @@ public class Shr5managementValidator extends EObjectValidator {
             case Shr5managementPackage.ADEPT:
                 return validateAdept((Adept)value, diagnostics, context);
             case Shr5managementPackage.CHARACTER_GENERATOR:
-                return validateCharacterGenerator((CharacterGenerator)value, diagnostics, context);
+                return validateCharacterGenerator((CharacterGenerator<?>)value, diagnostics, context);
             case Shr5managementPackage.FREE_STYLE_GENERATOR:
                 return validateFreeStyleGenerator((FreeStyleGenerator)value, diagnostics, context);
             case Shr5managementPackage.SHR5_GENERATOR:
@@ -564,7 +565,7 @@ public class Shr5managementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public boolean validateCharacterGenerator(CharacterGenerator characterGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacterGenerator(CharacterGenerator<?> characterGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(characterGenerator, diagnostics, context);
     }
 

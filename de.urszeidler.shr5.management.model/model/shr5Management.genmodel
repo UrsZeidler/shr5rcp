@@ -169,6 +169,7 @@
       </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGenerator">
+      <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//CharacterGenerator/G"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/character"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The generator system used for this character creation."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/generator"/>

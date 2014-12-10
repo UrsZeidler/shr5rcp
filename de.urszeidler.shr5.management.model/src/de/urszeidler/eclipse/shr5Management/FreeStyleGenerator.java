@@ -28,7 +28,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * @model
  * @generated
  */
-public interface FreeStyleGenerator extends CharacterGenerator {
+public interface FreeStyleGenerator extends CharacterGenerator<FreeStyle> {
 
 	/**
      * Returns the value of the '<em><b>Freestyle Generator</b></em>' reference.

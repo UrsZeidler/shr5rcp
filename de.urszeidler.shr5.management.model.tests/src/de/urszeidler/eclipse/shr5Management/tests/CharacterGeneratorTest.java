@@ -28,7 +28,7 @@ public abstract class CharacterGeneratorTest extends TestCase {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	protected CharacterGenerator fixture = null;
+	protected CharacterGenerator<?> fixture = null;
 
 	/**
      * Constructs a new Character Generator test case with the given name.
@@ -46,7 +46,7 @@ public abstract class CharacterGeneratorTest extends TestCase {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	protected void setFixture(CharacterGenerator fixture) {
+	protected void setFixture(CharacterGenerator<?> fixture) {
         this.fixture = fixture;
     }
 
@@ -56,7 +56,7 @@ public abstract class CharacterGeneratorTest extends TestCase {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	protected CharacterGenerator getFixture() {
+	protected CharacterGenerator<?> getFixture() {
         return fixture;
     }
 
