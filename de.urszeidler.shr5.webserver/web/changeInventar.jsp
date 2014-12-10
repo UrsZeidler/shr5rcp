@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="java.util.List"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
 <%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
 <%@page import="de.urszeidler.eclipse.shr5.Shr5Package"%>
@@ -19,6 +20,7 @@
         response.sendRedirect("member.jsp");
     
     RuntimeCharacter character = pm.getCharacter();
+   List<AbstraktGegenstand> inventar = character.getCharacter().getInventar();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,7 +49,7 @@
 					 
 					<select class="item " name="lefthand" >
 						<%
-						    for (AbstraktGegenstand g : character.getInUse()) {
+						    for (AbstraktGegenstand g : inventar) {
 						%>
 						<option value="<%=ShadowrunTools.getResourceId(g)%>"
 							<%if (character.getLeftHand() == g) {%> selected="selected" <%}%>>
@@ -61,7 +63,7 @@
 				<label><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND) %>:</label>
 				 <select class="item " name="righthand">
 						<%
-						    for (AbstraktGegenstand g : character.getInUse()) {
+						    for (AbstraktGegenstand g : inventar) {
 						%>
 						<option value="<%=ShadowrunTools.getResourceId(g)%>"
 							<%if (character.getRightHand() == g) {%> selected="selected"
@@ -78,7 +80,7 @@
 				</label>
 					 <select class="item " name="armor" >
 						<%
-						    for (AbstraktGegenstand g : Collections2.filter(character.getInUse(), ShadowrunTools.eclassPredicate(Shr5Package.Literals.KLEIDUNG))) {
+						    for (AbstraktGegenstand g : Collections2.filter(inventar, ShadowrunTools.eclassPredicate(Shr5Package.Literals.KLEIDUNG))) {
 						%>
 						<option value="<%=ShadowrunTools.getResourceId(g)%>"
 							<%if (character.getArmor() == g) {%> selected="selected" <%}%>>

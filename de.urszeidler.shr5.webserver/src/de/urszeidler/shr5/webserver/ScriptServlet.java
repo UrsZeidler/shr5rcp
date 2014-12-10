@@ -134,10 +134,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                     scriptViewerWrapper.removePlayer(pm);
                 }
                 resp.sendRedirect("main.jsp");
-            } else if (action.equals("changeCharacter")) {
-                applyCharacterChange(req, pm);
-                resp.sendRedirect("member.jsp");
-            } else if (action.equals("history")) {
+            }  else if (action.equals("history")) {
                 int size = scriptService.getCurrentScript().getHistory().getWrittenProtokol().size();
                 if (pm == null || pm.getHistoryLinesReaded() < size) {
                     if (pm != null)
@@ -153,20 +150,29 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                     resp.sendRedirect("include/conditionMonitor.jsp");
                 } else
                     sendUnchanged(resp);
+            }else if (action.equals("changeCharacter")) {
+                if(pm!=null)
+                    applyCharacterChange(req, pm);
+                resp.sendRedirect("member.jsp");
             } else if (action.equals("doCredstickTransaction")) {
-                doCredstickTransaction(pm, req);
+                if(pm!=null)
+                    doCredstickTransaction(pm, req);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("doMagazinRefill")) {
-                doMagazinRefill(pm, req);
+                if(pm!=null)
+                    doMagazinRefill(pm, req);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("doManageFw")) {
-                doManageFeuerwaffe(pm, req);
+                if(pm!=null)
+                    doManageFeuerwaffe(pm, req);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("doManageRcc")) {
-                doManageRcc(pm, req);
+                if(pm!=null)
+                    doManageRcc(pm, req);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("doManageCyb")) {
-                doManageCyb(pm, req);
+                if(pm!=null)
+                    doManageCyb(pm, req);
                 resp.sendRedirect("member.jsp");
             } else if (action.equals("dialog")) {
                 doDialog(pm, resp);
@@ -207,7 +213,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             RuntimeCharacter character = pm.getCharacter();
             String rccId = req.getParameter("cyb");
             Cyberdeck rcc = (Cyberdeck)ShadowrunTools.getFirstObjectById(character.getInUse(), rccId);
-                        
+
             String[] parameterValues = req.getParameterValues("runningPrograms");
             if (parameterValues != null && parameterValues.length != 0) {
                 rcc.getRunningPrograms().clear();
@@ -216,19 +222,19 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                                 ShadowrunTools.xmlId2EObjectTransformer(rcc.getStoredPrograms())));
             }
             String iModus = req.getParameter("mode");
-            if(iModus!=null)
+            if (iModus != null)
                 rcc.setCurrentModus(InterfaceModus.getByName(iModus));
             String[] configuration = req.getParameterValues("configuration");
-            if(configuration!=null && configuration.length==4){
+            if (configuration != null && configuration.length == 4) {
                 for (int i = 0; i < configuration.length; i++) {
                     String string = configuration[i];
                     EAttribute attribute = GameplayTools.getCyberdeckAttribute(string);
-                    if(attribute!=null){
-                        rcc.getConfiguration().move(i, attribute);      
+                    if (attribute != null) {
+                        rcc.getConfiguration().move(i, attribute);
                     }
                 }
             }
-            executeChangeMessageAction(pm, character,  String.format("Change %s configuration", WebTools.getText(rcc)));
+            executeChangeMessageAction(pm, character, String.format("Change %s configuration", WebTools.getText(rcc)));
         } catch (Exception e) {
         }
     }
@@ -238,7 +244,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
             RuntimeCharacter character = pm.getCharacter();
             String rccId = req.getParameter("rcc");
             RiggerCommandConsole rcc = (RiggerCommandConsole)ShadowrunTools.getFirstObjectById(character.getInUse(), rccId);
-                        
+
             String[] parameterValues = req.getParameterValues("runningPrograms");
             if (parameterValues != null && parameterValues.length != 0) {
                 rcc.getRunningPrograms().clear();
@@ -247,12 +253,12 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                                 ShadowrunTools.xmlId2EObjectTransformer(rcc.getStoredPrograms())));
             }
             String iModus = req.getParameter("mode");
-            if(iModus!=null)
+            if (iModus != null)
                 rcc.setCurrentModus(InterfaceModus.getByName(iModus));
             String sharing = req.getParameter("sharing");
-            if(sharing!=null)
+            if (sharing != null)
                 rcc.setZugriffBasis(Integer.parseInt(sharing));
-            executeChangeMessageAction(pm, character,  String.format("Change %s configuration", WebTools.getText(rcc)));
+            executeChangeMessageAction(pm, character, String.format("Change %s configuration", WebTools.getText(rcc)));
         } catch (Exception e) {
         }
     }
@@ -297,7 +303,7 @@ public class ScriptServlet extends HttpServlet implements Servlet {
                 while (magazine.getBullets().size() < magazine.getType().getKapazitaet()) {
                     magazine.getBullets().add(muni);
                 }
-                executeChangeMessageAction(pm, character, "Refill "+WebTools.getText(magazine));
+                executeChangeMessageAction(pm, character, "Refill " + WebTools.getText(magazine));
             }
         } catch (Exception e) {
         }
@@ -355,21 +361,29 @@ public class ScriptServlet extends HttpServlet implements Servlet {
     private void applyCharacterChange(HttpServletRequest req, PlayerManager pm) {
         RuntimeCharacter character = pm.getCharacter();
         String aId = (String)req.getParameter("armor");
-        EObject firstObjectById = ShadowrunTools.getFirstObjectById(character.getInUse(), aId);
+        EList<AbstraktGegenstand> inventar = character.getCharacter().getInventar();
+        EObject firstObjectById = ShadowrunTools.getFirstObjectById(inventar, aId);
         character.setArmor((Kleidung)firstObjectById);
         aId = (String)req.getParameter("lefthand");
-        firstObjectById = ShadowrunTools.getFirstObjectById(character.getInUse(), aId);
-        character.setLeftHand((AbstraktGegenstand)firstObjectById);;
+        firstObjectById = ShadowrunTools.getFirstObjectById(inventar, aId);
+        character.setLeftHand((AbstraktGegenstand)firstObjectById);
         aId = (String)req.getParameter("righthand");
-        firstObjectById = ShadowrunTools.getFirstObjectById(character.getInUse(), aId);
-        character.setRightHand((AbstraktGegenstand)firstObjectById);;
+        firstObjectById = ShadowrunTools.getFirstObjectById(inventar, aId);
+        character.setRightHand((AbstraktGegenstand)firstObjectById);
 
         String[] parameterValues = req.getParameterValues("inventar");
-        character.getInUse().clear();
-        character.getInUse().addAll(
-                (Collection<? extends AbstraktGegenstand>)Collections2.transform(Arrays.asList(parameterValues),
-                        ShadowrunTools.xmlId2EObjectTransformer(character.getCharacter().getInventar())));
-
+        if (parameterValues != null && parameterValues.length != 0) {
+            character.getInUse().clear();
+            character.getInUse().addAll(
+                    (Collection<? extends AbstraktGegenstand>)Collections2.transform(Arrays.asList(parameterValues),
+                            ShadowrunTools.xmlId2EObjectTransformer(inventar)));
+            if (character.getArmor() != null && !character.getInUse().contains(character.getArmor()))
+                character.getInUse().add(character.getArmor());
+            if (character.getLeftHand() != null && !character.getInUse().contains(character.getLeftHand()))
+                character.getInUse().add(character.getLeftHand());
+            if (character.getRightHand() != null && !character.getInUse().contains(character.getRightHand()))
+                character.getInUse().add(character.getRightHand());
+        }
         String message = "Changed the inventory.";
         executeChangeMessageAction(pm, character, message);
     }
