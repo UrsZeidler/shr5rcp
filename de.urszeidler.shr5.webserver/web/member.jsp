@@ -115,6 +115,7 @@
 			<div class="container-row">
 				<div
 					class="character-single-item-container thin-border small-corner ">
+					
 					<div class="inner-margin">
 						<small><%=WebTools.toFeatureName(character, RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND)%></small>
 						: <img class="eobject"
@@ -124,6 +125,7 @@
 							<jsp:param name="object" value="lhand" />
 						</jsp:include>
 					</div>
+					
 				</div>
 
 				<div

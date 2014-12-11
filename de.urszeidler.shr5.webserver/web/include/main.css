@@ -457,7 +457,7 @@ label {
     display: inline-block;
 }
 
-
+/*
 fieldset {
     border-radius: 5px;
     background: #eee;
@@ -484,7 +484,7 @@ legend span {
     background: #fff;
     padding: 0px 10px;
 }
-
+*/
 /* input */
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
