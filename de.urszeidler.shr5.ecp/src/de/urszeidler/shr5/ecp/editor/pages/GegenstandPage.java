@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
+import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
@@ -227,6 +228,12 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime,controlGridData);
         }else if (object instanceof Magazin) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE, grpGegenstand);
+        }else if (object instanceof DefaultWifi) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS, composite_runtime);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
@@ -235,7 +242,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
-        if (!(object instanceof Magazin)&&!(object instanceof RiggerCommandConsole)&&!(object instanceof Commlink)&&!(object instanceof Cyberdeck)) {
+        if (!(object instanceof Magazin)&&!(object instanceof MatrixDevice)) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
         }
