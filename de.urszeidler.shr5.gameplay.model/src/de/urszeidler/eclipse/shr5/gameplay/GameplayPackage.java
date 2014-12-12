@@ -4618,7 +4618,7 @@ public interface GameplayPackage extends EPackage {
     int SET_EXTENDET_DATA__DATA_AWARE = COMMAND_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Data</b></em>' reference.
+     * The feature id for the '<em><b>Data</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -6681,10 +6681,10 @@ public interface GameplayPackage extends EPackage {
     EReference getSetExtendetData_DataAware();
 
     /**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}'.
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Data</em>'.
+     * @return the meta object for the containment reference '<em>Data</em>'.
      * @see de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData()
      * @see #getSetExtendetData()
      * @generated
@@ -7722,7 +7722,7 @@ public interface GameplayPackage extends EPackage {
         EReference SET_EXTENDET_DATA__DATA_AWARE = eINSTANCE.getSetExtendetData_DataAware();
 
         /**
-         * The meta object literal for the '<em><b>Data</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Data</b></em>' containment reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated

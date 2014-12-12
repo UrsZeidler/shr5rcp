@@ -76,6 +76,9 @@ public interface Command extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A command can contains many sub commands.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Sub Commands</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand_SubCommands()
      * @model containment="true"

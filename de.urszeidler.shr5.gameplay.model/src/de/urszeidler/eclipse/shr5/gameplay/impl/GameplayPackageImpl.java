@@ -1802,7 +1802,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
         initEClass(setExtendetDataEClass, SetExtendetData.class, "SetExtendetData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getSetExtendetData_DataAware(), theRuntimePackage.getAbstractExtendetDataAware(), null, "dataAware", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getSetExtendetData_Data(), theRuntimePackage.getExtendetData(), null, "data", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSetExtendetData_Data(), theRuntimePackage.getExtendetData(), null, "data", null, 1, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSetExtendetData_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, SetExtendetData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(semanticActionEClass, SemanticAction.class, "SemanticAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

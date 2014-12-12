@@ -61,6 +61,9 @@ public interface ExecutionStack extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Holds the instance of the protocol.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Protocol</em>' containment reference.
      * @see #setProtocol(ExecutionProtocol)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getExecutionStack_Protocol()

@@ -55,26 +55,26 @@ public interface SetExtendetData extends Command {
     void setDataAware(AbstractExtendetDataAware value);
 
     /**
-     * Returns the value of the '<em><b>Data</b></em>' reference.
+     * Returns the value of the '<em><b>Data</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Data</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Data</em>' reference.
+     * @return the value of the '<em>Data</em>' containment reference.
      * @see #setData(ExtendetData)
      * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSetExtendetData_Data()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     ExtendetData getData();
 
     /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}' reference.
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Data</em>' reference.
+     * @param value the new value of the '<em>Data</em>' containment reference.
      * @see #getData()
      * @generated
      */

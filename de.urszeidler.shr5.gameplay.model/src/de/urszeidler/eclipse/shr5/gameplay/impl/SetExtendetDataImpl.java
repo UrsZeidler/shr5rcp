@@ -185,7 +185,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
     protected AbstractExtendetDataAware dataAware;
 
     /**
-     * The cached value of the '{@link #getData() <em>Data</em>}' reference.
+     * The cached value of the '{@link #getData() <em>Data</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getData()
@@ -428,14 +428,6 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * @generated
      */
     public ExtendetData getData() {
-        if (data != null && data.eIsProxy()) {
-            InternalEObject oldData = (InternalEObject)data;
-            data = (ExtendetData)eResolveProxy(oldData);
-            if (data != oldData) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, GameplayPackage.SET_EXTENDET_DATA__DATA, oldData, data));
-            }
-        }
         return data;
     }
 
@@ -444,8 +436,14 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public ExtendetData basicGetData() {
-        return data;
+    public NotificationChain basicSetData(ExtendetData newData, NotificationChain msgs) {
+        ExtendetData oldData = data;
+        data = newData;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_EXTENDET_DATA__DATA, oldData, newData);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
     }
 
     /**
@@ -454,10 +452,17 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * @generated
      */
     public void setData(ExtendetData newData) {
-        ExtendetData oldData = data;
-        data = newData;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_EXTENDET_DATA__DATA, oldData, data));
+        if (newData != data) {
+            NotificationChain msgs = null;
+            if (data != null)
+                msgs = ((InternalEObject)data).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.SET_EXTENDET_DATA__DATA, null, msgs);
+            if (newData != null)
+                msgs = ((InternalEObject)newData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GameplayPackage.SET_EXTENDET_DATA__DATA, null, msgs);
+            msgs = basicSetData(newData, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, GameplayPackage.SET_EXTENDET_DATA__DATA, newData, newData));
     }
 
     /**
@@ -519,6 +524,8 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
         switch (featureID) {
             case GameplayPackage.SET_EXTENDET_DATA__SUB_COMMANDS:
                 return ((InternalEList<?>)getSubCommands()).basicRemove(otherEnd, msgs);
+            case GameplayPackage.SET_EXTENDET_DATA__DATA:
+                return basicSetData(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -549,8 +556,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
                 if (resolve) return getDataAware();
                 return basicGetDataAware();
             case GameplayPackage.SET_EXTENDET_DATA__DATA:
-                if (resolve) return getData();
-                return basicGetData();
+                return getData();
             case GameplayPackage.SET_EXTENDET_DATA__VALUE:
                 return getValue();
         }
