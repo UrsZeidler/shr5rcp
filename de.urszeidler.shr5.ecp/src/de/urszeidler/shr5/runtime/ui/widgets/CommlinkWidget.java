@@ -9,7 +9,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Scale;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.Commlink;
@@ -24,8 +23,8 @@ public class CommlinkWidget extends Composite {
     private DataBindingContext m_bindingContext;
     private Commlink object;
     private Label lblZugriffbasis;
-    private Scale scale;
-    private Label label;
+//    private Scale scale;
+//    private Label label;
     private EditingDomain editingDomain;
     private StateMonitorWidget stateMonitorWidget;
     

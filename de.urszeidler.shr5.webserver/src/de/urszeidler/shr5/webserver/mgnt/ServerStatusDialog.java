@@ -114,8 +114,8 @@ public class ServerStatusDialog extends TitleAreaDialog {
                 ISelection selection = tableViewer.getSelection();
                 if (selection instanceof IStructuredSelection) {
                     IStructuredSelection ss = (IStructuredSelection)selection;
-                    Iterator iterator = ss.iterator();
-                    for (Iterator iter = ss.iterator(); iter.hasNext();) {
+//                    Iterator<?> iterator = ss.iterator();
+                    for (Iterator<?> iter = ss.iterator(); iter.hasNext();) {
                         PlayerManager pm = (PlayerManager)iter.next();
                         viewerWrapper.removePlayer(pm);
                         
