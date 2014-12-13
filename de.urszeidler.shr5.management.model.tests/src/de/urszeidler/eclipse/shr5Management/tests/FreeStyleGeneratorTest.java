@@ -81,12 +81,10 @@ public class FreeStyleGeneratorTest extends CharacterGeneratorTest {
 	 * @see de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getFreestyleGenerator()
 	 * @generated not
 	 */
-	public void testGetFreestyleGenerator() {
-		
+	public void testGetFreestyleGenerator() {		
 		assertNotNull(getFixture().getFreestyleGenerator());
-		getFixture().setGenerator(Shr5managementFactory.eINSTANCE.createShr5System());
+		getFixture().setGenerator(Shr5managementFactory.eINSTANCE.createFreeStyle());
 		assertNull(getFixture().getFreestyleGenerator());
-
 	}
 
 } //FreeStyleGeneratorTest
