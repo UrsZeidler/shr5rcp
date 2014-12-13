@@ -84,7 +84,7 @@ public class FreeStyleGeneratorTest extends CharacterGeneratorTest {
 	public void testGetFreestyleGenerator() {		
 		assertNotNull(getFixture().getFreestyleGenerator());
 		getFixture().setGenerator(Shr5managementFactory.eINSTANCE.createFreeStyle());
-		assertNull(getFixture().getFreestyleGenerator());
+		assertNotNull(getFixture().getFreestyleGenerator());
 	}
 
 } //FreeStyleGeneratorTest
