@@ -19977,32 +19977,6 @@
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0Xg4t0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T22:59:36.856+0100" from="1" to="2" changeable="_B0VEpt0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0YH8N0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:00:12.990+0100" from="1" to="2" changeable="_B0VEpd0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B0YvAN0CEeOvVYoRsPZlnA" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:14:29.584+0100" from="2" to="3" changeable="_B0Vrsd0CEeOvVYoRsPZlnA"/>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B0YvAd0CEeOvVYoRsPZlnA" page="428" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENGR0TnTEeSe6_w6Jrbqxg">
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_B0YvAt0CEeOvVYoRsPZlnA" name="Laser Sight" page="432"/>
-          <einbau xmi:id="_B0YvA90CEeOvVYoRsPZlnA" name="Gas-Vent 2 System" page="431"/>
-        </inventar>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B0YvBN0CEeOvVYoRsPZlnA" page="427" verfuegbarkeit="5R" wertValue="660" name="Colt Cobra TZ-120" schadenscode="7P" praezision="4" reichweite="_ENFqwDnTEeSe6_w6Jrbqxg">
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_B0YvBd0CEeOvVYoRsPZlnA" name="Laser Sight" page="432"/>
-          <einbau xmi:id="_B0ZWEN0CEeOvVYoRsPZlnA" name="Gas-Vent 2 System" page="431"/>
-        </inventar>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B0ZWEd0CEeOvVYoRsPZlnA" page="426" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau xmi:id="_B0ZWEt0CEeOvVYoRsPZlnA" name="Smartgun System, Internal" page="433"/>
-        </inventar>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_B0ZWE90CEeOvVYoRsPZlnA" page="422" verfuegbarkeit="9R" wertValue="1000" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_B0ZWFN0CEeOvVYoRsPZlnA" page="422" verfuegbarkeit="2R" wertValue="100" name="Knucks" schadenscode="(STR+1)P"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_B0ZWFd0CEeOvVYoRsPZlnA" page="437" verfuegbarkeit="2" wertValue="2000" name="Armor Jacket" ruestung="12"/>
@@ -20015,6 +19989,56 @@
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9It0CEeOvVYoRsPZlnA" page="435" verfuegbarkeit="11F" wertValue="300" name="Minigrenade: High Explosive 3" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9I90CEeOvVYoRsPZlnA" page="435" verfuegbarkeit="6R" wertValue="500" name="Grenade: Flash-Bang 5" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9JN0CEeOvVYoRsPZlnA" wertValue="45" name="SPare clip 9"/>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_4omk0IMZEeSeG83rgDt2Qg" parentId="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="35">
+          <localizations xmi:id="_4omk0YMZEeSeG83rgDt2Qg" local="de" name="FN HAR"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <einbau xmi:id="_4omk0oMZEeSeG83rgDt2Qg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_4omk04MZEeSeG83rgDt2Qg" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <einbau xmi:id="_4omk1IMZEeSeG83rgDt2Qg" name="Gas-Vent 2 System" parentId="b3827611-f631-461e-8660-e744593ba2d2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_4omk1YMZEeSeG83rgDt2Qg" local="de" name="Gasventilsystem 2"/>
+          </einbau>
+          <magazin xmi:id="_4omk1oMZEeSeG83rgDt2Qg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="FN HAR ammunition" type="_4omk0IMZEeSeG83rgDt2Qg"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_4onL4IMZEeSeG83rgDt2Qg" parentId="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="660" name="Colt Cobra TZ-120" schadenscode="7P" praezision="4" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="32" rueckstoss="2">
+          <localizations xmi:id="_4onL4YMZEeSeG83rgDt2Qg" local="de" name="Colt Cobra TZ-120"/>
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_4onL4oMZEeSeG83rgDt2Qg" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+            <localizations xmi:id="_4onL44MZEeSeG83rgDt2Qg" local="de" name="Folding Stock" page="51"/>
+          </einbau>
+          <einbau xmi:id="_4onL5IMZEeSeG83rgDt2Qg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_4onL5YMZEeSeG83rgDt2Qg" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <magazin xmi:id="_4onL5oMZEeSeG83rgDt2Qg" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Colt Cobra TZ-120 ammunition" type="_4onL4IMZEeSeG83rgDt2Qg"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_4onL54MZEeSeG83rgDt2Qg" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
+          <localizations xmi:id="_4onL6IMZEeSeG83rgDt2Qg" local="de" name="Ares Predator V"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_4onL6YMZEeSeG83rgDt2Qg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_4onL6oMZEeSeG83rgDt2Qg" local="de" name="Smartgunsystem, Internal"/>
+          </einbau>
+          <magazin xmi:id="_4onL64MZEeSeG83rgDt2Qg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_4onL54MZEeSeG83rgDt2Qg"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE8IMaEeSeG83rgDt2Qg" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_GfKE8YMaEeSeG83rgDt2Qg" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE8oMaEeSeG83rgDt2Qg" parentId="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
+          <localizations xmi:id="_GfKE84MaEeSeG83rgDt2Qg" local="de" name="Hohlspitzmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE9IMaEeSeG83rgDt2Qg" parentId="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="50" proAnzahl="10" damageMod="1" armorMod="-1" type="_ENGR0TnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_GfKsAIMaEeSeG83rgDt2Qg" local="de" name="Munition: Explosivgeschosse"/>
+        </inventar>
         <contracts xsi:type="shr5:Sin" xmi:id="_B0h48N0CEeOvVYoRsPZlnA" name="Sin Stufe 4" wertValue="10000" stufe="4" gefaelscht="true"/>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_B0h48d0CEeOvVYoRsPZlnA" name="Low 3 month Troll" page="95" verfuegbarkeit="" wertValue="12000" faelligkeitsIntervall="30"/>
         <contracts xsi:type="shr5:Lizenz" xmi:id="_B0mxcN0CEeOvVYoRsPZlnA" name="Gun Licence" wertValue="800" stufe="4" gefaelscht="true" lizenzTraeger="_B0h48N0CEeOvVYoRsPZlnA"/>
