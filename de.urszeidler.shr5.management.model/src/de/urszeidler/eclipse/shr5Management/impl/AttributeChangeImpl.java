@@ -177,7 +177,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     public int getKarmaCost() {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 

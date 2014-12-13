@@ -25,6 +25,7 @@ public class UIServiceFactory extends AbstractServiceFactory {
      * @see org.eclipse.ui.services.AbstractServiceFactory#create(java.lang.Class, org.eclipse.ui.services.IServiceLocator,
      * org.eclipse.ui.services.IServiceLocator)
      */
+    @SuppressWarnings("rawtypes")
     @Override
     public Object create(Class serviceInterface, IServiceLocator parentLocator, IServiceLocator locator) {
         if (serviceInterface.equals(ValidationService.class)) {

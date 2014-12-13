@@ -9,10 +9,8 @@ import java.util.List;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.dialogs.MessageDialogWithToggle;
@@ -66,7 +64,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
     @Override
     public void init(IWorkbench workbench, IStructuredSelection selection) {
         EditingDomain edtingDomain = Activator.getDefault().getEdtingDomain();
-        EList<Resource> resources = edtingDomain.getResourceSet().getResources();
+//        EList<Resource> resources = edtingDomain.getResourceSet().getResources();
         container = new ArrayList<EObject>();
         systems = new ArrayList<EObject>();
         groups = new ArrayList<EObject>();
@@ -129,7 +127,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
      * 
      * @return
      */
-    protected CharacterGenerator createGenerator() {
+    protected CharacterGenerator<?> createGenerator() {
         Shr5Generator generator = Shr5managementFactory.eINSTANCE.createShr5Generator();
         return generator;
     }

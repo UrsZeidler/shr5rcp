@@ -430,7 +430,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         super.dispose();
     }
 
-    protected void resetCharacter(CharacterGenerator object) {
+    protected void resetCharacter(CharacterGenerator<?> object) {
         optionWidgetsCreated = false;
         super.resetCharacter(object);
     }

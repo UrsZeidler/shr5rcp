@@ -140,7 +140,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
         if (context == null || context.getPersona() == null)
             return 0;
 
-        CharacterGenerator generator = context.getChracterSource();
+        CharacterGenerator<?> generator = context.getChracterSource();
 
         int spendByMagic = 0;
         if (generator instanceof Shr5Generator) {

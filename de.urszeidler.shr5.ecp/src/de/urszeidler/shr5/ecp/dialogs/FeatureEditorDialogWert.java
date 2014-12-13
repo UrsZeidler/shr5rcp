@@ -177,7 +177,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                 public boolean select(Viewer viewer, Object parentElement, Object element) {
                     if (theEObject instanceof ManagedCharacter) {
                         ManagedCharacter mc = (ManagedCharacter)theEObject;
-                        CharacterGenerator generatorSrc = mc.getChracterSource();                        
+                        CharacterGenerator<?> generatorSrc = mc.getChracterSource();                        
                         if (generatorSrc instanceof Shr5RuleGenerator) {
                             Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
                             EList<SourceBook> allowedSources = srg.getAllowedSources();

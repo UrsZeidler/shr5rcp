@@ -46,7 +46,7 @@ import de.urszeidler.shr5.gameplay.dice.IniDice;
  * 
  * @author urs
  */
-public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGenerator> implements Adapter {
+public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGenerator<?>> implements Adapter {
 
     public static final String PERSONA_PRINTER = "persona.printer"; //$NON-NLS-1$
     public static final String PERSONA_ADVANCEMENT = "persona.advancement"; //$NON-NLS-1$
@@ -187,7 +187,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      * @param object the generator
      * @return
      */
-    protected ManagedCharacter createManagedCharacter(EClass selectableType, Spezies spezies, boolean createPlayer, CharacterGenerator object) {
+    protected ManagedCharacter createManagedCharacter(EClass selectableType, Spezies spezies, boolean createPlayer, CharacterGenerator<?> object) {
         ManagedCharacter playerCharacter;
         if (createPlayer)
             playerCharacter = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
@@ -209,7 +209,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     /**
      * Clears the character from the generator.
      */
-    protected void resetCharacter(CharacterGenerator object) {
+    protected void resetCharacter(CharacterGenerator<?> object) {
         boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_reset_titel,
                 Messages.AbstractGeneratorPage_dlg_reset_message);
 
@@ -233,7 +233,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         try {
             removePages();
 
-            CharacterGenerator chracterSource = playerCharacter.getChracterSource();
+            CharacterGenerator<?> chracterSource = playerCharacter.getChracterSource();
             if (chracterSource instanceof Shr5KarmaGenerator) {
                 this.getEditor().addPage(
                         1,
@@ -279,7 +279,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             this.getEditor().removePage(1);
     }
 
-    protected void updateGeneratorState(Diagnostic diagnostic, CharacterGenerator generator) {
+    protected void updateGeneratorState(Diagnostic diagnostic, CharacterGenerator<?> generator) {
         if (EObjectValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource())) {
             if (diagnostic.getCode() == EObjectValidator.EOBJECT__EVERY_MULTIPCITY_CONFORMS) {
                 Object object2 = diagnostic.getData().get(1);

@@ -398,7 +398,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     private Integer getKarmaCostAdd(EObject eobject) {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
         if (eobject != null) {
@@ -418,7 +418,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     private int getKarmaCostQuallity(PersonaEigenschaft quallity) {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
@@ -439,7 +439,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     private int getKarmaCostInitation(Initation initation) {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
@@ -460,7 +460,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     private int getKarmaCostSkill(PersonaFertigkeit skill) {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
@@ -487,7 +487,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     private int getKarmaCostSkillGroup(PersonaFertigkeitsGruppe skill) {
         if (getCharacter() == null)
             return 0;
-        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        CharacterGenerator<?> chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 

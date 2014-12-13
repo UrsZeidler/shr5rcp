@@ -145,9 +145,9 @@ public class PersonaPrinter extends BasicPrinter {
      * @param c
      * @return
      */
-    public PrintFactory createShr5CharacterGeneratorPrintFactory(final CharacterGenerator c) {
+    public PrintFactory createShr5CharacterGeneratorPrintFactory(final CharacterGenerator<?> c) {
         return new PrintFactory() {
-            private CharacterGenerator shrGenerator = c;
+            private CharacterGenerator<?> shrGenerator = c;
 
             @Override
             public Print createPrinter() {
@@ -684,7 +684,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param border
      * @param persona
      */
-    private void printGeneratorAttributesSkills(CharacterGenerator generator, GridPrint grid, LineBorder border, AbstraktPersona persona) {
+    private void printGeneratorAttributesSkills(CharacterGenerator<?> generator, GridPrint grid, LineBorder border, AbstraktPersona persona) {
         Print printGeneratorAttributes = printGeneratorAttributes(generator);
 
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
@@ -807,7 +807,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param generator
      * @return
      */
-    private Print printGeneratorAttributes(CharacterGenerator generator) {
+    private Print printGeneratorAttributes(CharacterGenerator<?> generator) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,r:d", look);//$NON-NLS-1$

@@ -171,7 +171,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
             Beschreibbar beschreibbar = (Beschreibbar)eobject;
             object.setValue(beschreibbar.getName());
         } else if (eobject instanceof CharacterGenerator) {
-            CharacterGenerator cg = (CharacterGenerator)eobject;
+            CharacterGenerator<?> cg = (CharacterGenerator<?>)eobject;
             object.setValue(cg.getCharacterName());
         }
 

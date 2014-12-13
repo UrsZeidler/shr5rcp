@@ -264,7 +264,7 @@ public class OpenObjectHandler extends AbstractHandler {
             @Override
             public boolean evaluate(Object input) {
                 if (input instanceof CharacterGenerator) {
-                    CharacterGenerator cg = (CharacterGenerator)input;
+                    CharacterGenerator<?> cg = (CharacterGenerator<?>)input;
                     if (cg.getState() != GeneratorState.COMMITED)
                         return true;
                 }

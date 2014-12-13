@@ -203,7 +203,7 @@ public abstract class AbstractExtendetDataAwareImpl extends MinimalEObjectImpl.C
         if (hasValue(data)) {
             Object object = extendetData.get(data);
             if (object instanceof EList) {
-                EList el = (EList) object;
+                EList<?> el = (EList<?>) object;
                 return el;
             }
         }
