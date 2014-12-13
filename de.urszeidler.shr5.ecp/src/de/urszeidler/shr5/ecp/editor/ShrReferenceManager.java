@@ -72,7 +72,9 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
-        } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())) {
+        } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
+                || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
+                ) {
             List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
             if (!copyAddToPersona.isEmpty()) {
                 IObservable observable = e.getObservable();
@@ -113,16 +115,6 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     Messages.ShadowrunEditor_dlg_select_persona_type);
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
-            return;
-        }else if (Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())) {
-            List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
-            if (!copyAddToPersona.isEmpty()) {
-                IObservable observable = e.getObservable();
-                if (observable instanceof IObservableValue) {
-                    IObservableValue ov = (IObservableValue)e.getObservable();
-                    ov.setValue(copyAddToPersona.get(0));
-                }
-            }
             return;
         }
         super.handleManage(e, object);

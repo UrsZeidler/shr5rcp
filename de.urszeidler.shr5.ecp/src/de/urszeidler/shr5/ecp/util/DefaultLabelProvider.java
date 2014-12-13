@@ -4,8 +4,6 @@
 package de.urszeidler.shr5.ecp.util;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.jface.viewers.ILabelProvider;
-import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
 
