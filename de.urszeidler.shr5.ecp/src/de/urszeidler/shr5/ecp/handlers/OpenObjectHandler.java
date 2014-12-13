@@ -197,7 +197,7 @@ public class OpenObjectHandler extends AbstractHandler {
         FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
                 RuntimePackage.Literals.TEAM__MEMBERS, Messages.OpenObjectHandler_select_combatans, new ArrayList<EObject>(Collections2.filter(
                         (Collection<ManagedCharacter>)choiceOfValues,
-                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo);
+                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo,false);
 
         int result = dialog.open();
         if (result == Window.OK) {

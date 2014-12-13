@@ -63,25 +63,25 @@ import de.urszeidler.shr5.ecp.Activator;
 
 public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
-     protected Label gesamtPreisLabel;
+    protected Label gesamtPreisLabel;
     // private Label gesamtStrassenPreisLabel;
     protected TableViewer choiceTableViewer;
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
-    private EStructuralFeature feature;
+//    private EStructuralFeature feature;
     private ViewerFilter allowedSourceFilter;
     private EObject theEObject;
+    private boolean activateFilter = true;
 
-/**
- * @wbp.parser.constructor
- * 
- * @param parent
- * @param labelProvider
- * @param object
- * @param structuralFeature
- * @param displayName
- * @param choiceOfValues
- */
+    /**
+     * @wbp.parser.constructor
+     * @param parent
+     * @param labelProvider
+     * @param object
+     * @param structuralFeature
+     * @param displayName
+     * @param choiceOfValues
+     */
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
             String displayName, List<?> choiceOfValues, EObject orgObject) {
         super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues);
@@ -103,8 +103,14 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
     }
 
+    public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
+            String displayName, List<?> choiceOfValues, EObject orgObject, boolean activateFilter) {
+        this(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues, orgObject);
+        this.activateFilter = activateFilter;
+    }
+
     protected void updateLabel() {
-        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren()) + "¥");        
+        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren()) + "¥");
     }
 
     /**
@@ -177,15 +183,15 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                 public boolean select(Viewer viewer, Object parentElement, Object element) {
                     if (theEObject instanceof ManagedCharacter) {
                         ManagedCharacter mc = (ManagedCharacter)theEObject;
-                        CharacterGenerator<?> generatorSrc = mc.getChracterSource();                        
+                        CharacterGenerator<?> generatorSrc = mc.getChracterSource();
                         if (generatorSrc instanceof Shr5RuleGenerator) {
                             Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
                             EList<SourceBook> allowedSources = srg.getAllowedSources();
-                            if(!allowedSources.isEmpty())
-                            if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
-                                return false;                            
+                            if (!allowedSources.isEmpty())
+                                if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
+                                    return false;
                         }
-                     }
+                    }
                     return true;
                 }
             };
@@ -193,23 +199,24 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
             final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
             filterShrList.setToolTipText("show only list items");
-            filterShrList.setSelection(dialogSettings.getBoolean("Featuredialog.shrListFilter"));
+            if(activateFilter)
+                filterShrList.setSelection(dialogSettings.getBoolean("Featuredialog.shrListFilter"));
             filterShrList.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
 
-            filterShrList.addSelectionListener(new SelectionAdapter() {
-                @Override
-                public void widgetSelected(SelectionEvent e) {
-                    if (filterShrList.getSelection()){
-                        choiceTableViewer.addFilter(shrListFilter);
-                        choiceTableViewer.addFilter(allowedSourceFilter);
+            if (activateFilter)
+                filterShrList.addSelectionListener(new SelectionAdapter() {
+                    @Override
+                    public void widgetSelected(SelectionEvent e) {
+                        if (filterShrList.getSelection()) {
+                            choiceTableViewer.addFilter(shrListFilter);
+                            choiceTableViewer.addFilter(allowedSourceFilter);
+                        } else {
+                            choiceTableViewer.removeFilter(shrListFilter);
+                            choiceTableViewer.removeFilter(allowedSourceFilter);
+                        }
+                        dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
                     }
-                    else{
-                        choiceTableViewer.removeFilter(shrListFilter);
-                        choiceTableViewer.removeFilter(allowedSourceFilter);
-                    }
-                    dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
-                }
-            });
+                });
 
         }
 
@@ -267,7 +274,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     }
                 });
             }
-            choiceTableViewer.addFilter(allowedSourceFilter);
+            if (activateFilter)
+                choiceTableViewer.addFilter(allowedSourceFilter);
             if (unique) {
                 choiceTableViewer.addFilter(new ViewerFilter() {
 
@@ -341,7 +349,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         downButtonGridData.verticalAlignment = SWT.FILL;
         downButtonGridData.horizontalAlignment = SWT.FILL;
         downButton.setLayoutData(downButtonGridData);
-        
+
         addContollButtons(controlButtons);
 
         Composite featureComposite = new Composite(contents, SWT.NONE);
@@ -532,26 +540,11 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
         gesamtPreisLabel = new Label(choiceComposite, SWT.NONE);
         gesamtPreisLabel.setLayoutData(gridData);
-//        EList<Object> list = values.getChildren();
+        // EList<Object> list = values.getChildren();
         updateLabel();
-//        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(list) + "¥");
+        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(list) + "¥");
         label = new Label(choiceComposite, SWT.NONE);
-
-        // label = new Label(choiceComposite, SWT.NONE);
-        // label.setText("Straßen Gesamtpreis");
-        // gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
-        // gesamtStrassenPreisLabel = new Label(choiceComposite, SWT.NONE);
-        // gesamtStrassenPreisLabel.setLayoutData(gridData);
-        // gesamtStrassenPreisLabel.setText(PersonaEditor.calcStrassenListenWert(list)+"¥");
-        // label = new Label(choiceComposite, SWT.NONE);
-        //
-        // label = new Label(choiceComposite, SWT.NONE);
-        // label.setText("Gesamt Gewicht");
-        // gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
-        // gesamtStrassenPreisLabel = new Label(choiceComposite, SWT.NONE);
-        // gesamtStrassenPreisLabel.setLayoutData(gridData);
-        // gesamtStrassenPreisLabel.setText(PersonaEditor.calcListenGewicht_(list)+"Kg");
-        // label = new Label(choiceComposite, SWT.NONE);
+        if(activateFilter)
         if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
             choiceTableViewer.addFilter(shrListFilter);
 
@@ -560,12 +553,11 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     }
 
     protected void addContollButtons(Composite controlButtons) {
-        
+
     }
-    
+
     @Override
     protected Point getInitialSize() {
-        // TODO Auto-generated method stub
-        return super.getInitialSize();
+         return super.getInitialSize();
     }
 }
