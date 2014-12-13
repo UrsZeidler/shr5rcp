@@ -20100,12 +20100,6 @@
           <gebundeneGeister xmi:id="_B00M0N0CEeOvVYoRsPZlnA" dienste="4"/>
         </persona>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B00M0d0CEeOvVYoRsPZlnA" changeApplied="true" dateApplied="2014-03-25T12:58:04.696+0100" from="2" to="3" changeable="_B0tfJd0CEeOvVYoRsPZlnA"/>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B00M0t0CEeOvVYoRsPZlnA" page="426" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau xmi:id="_B00z4N0CEeOvVYoRsPZlnA" name="Laser Sight" page="432"/>
-        </inventar>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B00z4d0CEeOvVYoRsPZlnA" page="428" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" schadenscode="7P" praezision="4" reichweite="_ENFqwDnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="24">
           <modie>SM</modie>
           <erweiterung>Lauf</erweiterung>
@@ -20127,17 +20121,52 @@
         <inventar xsi:type="shr5:Credstick" xmi:id="_B01a8d0CEeOvVYoRsPZlnA" page="443" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B01a8t0CEeOvVYoRsPZlnA" page="434" verfuegbarkeit="2R" wertValue="400" name="Ammo: Regular Ammo 200" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B01a890CEeOvVYoRsPZlnA" page="434" verfuegbarkeit="2R" wertValue="175" name="Ammo: Gel Rounds 70" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B01a9N0CEeOvVYoRsPZlnA" wertValue="75" name="5 x Bliss" kategorie="Drugs"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B01a9d0CEeOvVYoRsPZlnA" page="447" verfuegbarkeit="8R" wertValue="1500" name="Autopicker 3" kategorie="B&amp;E Gear" stufe="3"/>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_DeQGcIMfEeSuJ8MEYLW0kQ" parentId="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
+          <localizations xmi:id="_DeQGcYMfEeSuJ8MEYLW0kQ" local="de" name="Browning Ultra-Power"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_DeQGcoMfEeSuJ8MEYLW0kQ" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_DeQGc4MfEeSuJ8MEYLW0kQ" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <magazin xmi:id="_DeQGdIMfEeSuJ8MEYLW0kQ" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Browning Ultra-Power ammunition" type="_DeQGcIMfEeSuJ8MEYLW0kQ" bullets="_GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ _GosCIIMfEeSuJ8MEYLW0kQ"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_FIpywIMfEeSuJ8MEYLW0kQ" parentId="e80cca4e-3210-4e38-b333-6c1cd42d6b54" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="450" name="Uzi IV" schadenscode="7P" praezision="4" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="24">
+          <localizations xmi:id="_FIpywYMfEeSuJ8MEYLW0kQ" local="de" name="Uzi IV"/>
+          <modie>SM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_FIpywoMfEeSuJ8MEYLW0kQ" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+            <localizations xmi:id="_FIpyw4MfEeSuJ8MEYLW0kQ" local="de" name="Folding Stock" page="51"/>
+          </einbau>
+          <einbau xmi:id="_FIpyxIMfEeSuJ8MEYLW0kQ" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+            <localizations xmi:id="_FIpyxYMfEeSuJ8MEYLW0kQ" local="de" name="Lasermarkierer"/>
+          </einbau>
+          <magazin xmi:id="_FIpyxoMfEeSuJ8MEYLW0kQ" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Uzi IV ammunition" type="_FIpywIMfEeSuJ8MEYLW0kQ" bullets="_HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ _HkC3IIMfEeSuJ8MEYLW0kQ"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_GosCIIMfEeSuJ8MEYLW0kQ" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="50" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_GosCIYMfEeSuJ8MEYLW0kQ" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_HkC3IIMfEeSuJ8MEYLW0kQ" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="50" proAnzahl="10" type="_ENFqwTnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_HkC3IYMfEeSuJ8MEYLW0kQ" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Magazin" xmi:id="_qw9Q0IMfEeSuJ8MEYLW0kQ" parentId="_C_YjEEjdEeSs1LVnBuzujg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e"/>
+        <inventar xsi:type="shr5:SubstanceContainer" xmi:id="_5s8vAIMfEeSuJ8MEYLW0kQ" parentId="c01b24b0-ed09-4044-95ec-bc7628b10f5e" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="0" name="Bliss">
+          <localizations xmi:id="_5s8vAYMfEeSuJ8MEYLW0kQ" local="de" name="Bliss"/>
+          <substance xsi:type="shr5:Drug" xmi:id="_5s8vAoMfEeSuJ8MEYLW0kQ" name="Bliss" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="15" anzahl="5" proAnzahl="10">
+            <localizations xmi:id="_5s8vA4MfEeSuJ8MEYLW0kQ" local="de" name="Bliss"/>
+          </substance>
+        </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_B01a9t0CEeOvVYoRsPZlnA" name="Low 2 Month" page="95" verfuegbarkeit="" wertValue="4000"/>
-        <contracts xsi:type="shr5:Sin" xmi:id="_B01a990CEeOvVYoRsPZlnA" name="Sin 3" wertValue="7500" stufe="3" gefaelscht="true"/>
+        <contracts xsi:type="shr5:Sin" xmi:id="_B01a990CEeOvVYoRsPZlnA" name="Sin 3 Antonia" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="7500" stufe="3" gefaelscht="true"/>
         <contracts xsi:type="shr5:Lizenz" xmi:id="_B02CAN0CEeOvVYoRsPZlnA" name="Driver Licence" wertValue="800" stufe="4" gefaelscht="true" lizenGegenstand="Driver Licence" lizenzTraeger="_B01a990CEeOvVYoRsPZlnA"/>
         <contracts xsi:type="shr5:Lizenz" xmi:id="_B02CAd0CEeOvVYoRsPZlnA" name="Magic" wertValue="600" stufe="3" gefaelscht="true" lizenzTraeger="_B01a990CEeOvVYoRsPZlnA"/>
-        <contracts xsi:type="shr5:Lizenz" xmi:id="_B02CAt0CEeOvVYoRsPZlnA" name="Fake gun license (Rating 3)" wertValue="600" gefaelscht="true" lizenzTraeger="_B01a990CEeOvVYoRsPZlnA"/>
+        <contracts xsi:type="shr5:Lizenz" xmi:id="_B02CAt0CEeOvVYoRsPZlnA" name="Fake gun license (Rating 3)" wertValue="600" stufe="3" gefaelscht="true" lizenzTraeger="_B01a990CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_LViVIN0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <connections xmi:id="_MCp50N0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <connections xmi:id="_Q6SXIN0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
-        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_B02CA90CEeOvVYoRsPZlnA" name="Yamaha Growler" page="462" verfuegbarkeit="" wertValue="5000" fahrzeugTyp="Bike"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_URH70IMhEeSuJ8MEYLW0kQ" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_oQndoD5YEeSl7-MUHQ63Ow" chracterSource="_B0_zAN0CEeOvVYoRsPZlnA" choosenLifestyle="_E8vOYD5aEeSl7-MUHQ63Ow" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
