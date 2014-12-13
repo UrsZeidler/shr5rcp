@@ -231,7 +231,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="BioWare" eSuperTypes="#//Koerpermods #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Koerpermods" abstract="true" eSuperTypes="#//AbstraktModifikatoren"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Koerpermods" abstract="true" eSuperTypes="#//AbstraktModifikatoren">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Description"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstraktModifikatoren" abstract="true"
       eSuperTypes="#//Beschreibbar #//Modifizierbar #//Quelle"/>
   <eClassifiers xsi:type="ecore:EClass" name="GeistigeAttribute" abstract="true" interface="true"
