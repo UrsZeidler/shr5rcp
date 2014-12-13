@@ -3,8 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay;
 
-import de.urszeidler.eclipse.shr5.TimeUnits;
 import org.eclipse.emf.ecore.EObject;
+
+import de.urszeidler.eclipse.shr5.TimeUnits;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,16 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.Kleidung;
-import de.urszeidler.eclipse.shr5.KoerperPersona;
-import de.urszeidler.eclipse.shr5.runtime.PhyicalState;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.eclipse.shr5.runtime.Zustand;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -21,6 +11,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.runtime.PhyicalState;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 /**
  * <!-- begin-user-doc -->

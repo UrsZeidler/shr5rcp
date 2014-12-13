@@ -3,9 +3,9 @@
 package de.urszeidler.eclipse.shr5.runtime.provider;
 
 
-import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -15,6 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter} object.

@@ -2,8 +2,17 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.ETypeParameter;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.runtime.AbstractExtendetDataAware;
 import de.urszeidler.eclipse.shr5.runtime.Cyberdeck;
 import de.urszeidler.eclipse.shr5.runtime.Drone;
@@ -22,19 +31,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.runtime.Vehicle;
 import de.urszeidler.eclipse.shr5.runtime.Zustand;
-
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.ETypeParameter;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

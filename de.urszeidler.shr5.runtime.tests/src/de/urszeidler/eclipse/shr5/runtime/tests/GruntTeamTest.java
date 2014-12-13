@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
@@ -10,7 +11,6 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

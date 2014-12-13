@@ -2,10 +2,9 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

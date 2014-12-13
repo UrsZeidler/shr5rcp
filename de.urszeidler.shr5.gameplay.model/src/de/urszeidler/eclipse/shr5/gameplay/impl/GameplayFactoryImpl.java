@@ -3,17 +3,19 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.DrainCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
@@ -30,6 +32,8 @@ import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeState;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;

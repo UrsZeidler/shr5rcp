@@ -5,8 +5,8 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
 
-import de.urszeidler.eclipse.shr5.Substance;
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.Substance;
 
 /**
  * <!-- begin-user-doc -->

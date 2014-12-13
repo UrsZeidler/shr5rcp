@@ -2,10 +2,11 @@
  */
 package de.urszeidler.eclipse.shr5.runtime;
 
+import org.eclipse.emf.common.util.EList;
+
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

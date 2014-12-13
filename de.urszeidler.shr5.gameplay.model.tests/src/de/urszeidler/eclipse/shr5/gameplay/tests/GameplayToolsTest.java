@@ -3,17 +3,14 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.tests;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.junit.Test;
+import junit.framework.TestCase;
 
 import com.google.common.collect.Collections2;
 
-import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FeuerModus;

@@ -2,12 +2,11 @@
  */
 package de.urszeidler.shr5.scripting;
 
-import de.urszeidler.eclipse.shr5.Beschreibbar;
+import org.eclipse.emf.common.util.EList;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.Team;
-
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

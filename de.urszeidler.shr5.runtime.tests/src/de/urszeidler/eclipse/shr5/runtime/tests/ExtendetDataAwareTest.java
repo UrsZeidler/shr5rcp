@@ -2,9 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
-import de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware;
 
 /**
  * <!-- begin-user-doc -->

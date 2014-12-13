@@ -2,12 +2,12 @@
  */
 package de.urszeidler.shr5.scripting;
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->

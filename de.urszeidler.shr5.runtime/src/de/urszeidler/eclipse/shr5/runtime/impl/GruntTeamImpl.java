@@ -2,13 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
-import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.GruntMembers;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
@@ -17,6 +10,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 
 /**
  * <!-- begin-user-doc -->

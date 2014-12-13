@@ -2,12 +2,11 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
+import org.eclipse.emf.ecore.EClass;
 
+import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.runtime.RiggerConsole;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,14 +6,17 @@ package de.urszeidler.eclipse.shr5.gameplay.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+
 import com.google.common.base.Predicates;
 import com.google.common.collect.Collections2;
+
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;

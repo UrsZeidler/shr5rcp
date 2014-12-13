@@ -2,9 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
-import de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen;
 
 /**
  * <!-- begin-user-doc -->

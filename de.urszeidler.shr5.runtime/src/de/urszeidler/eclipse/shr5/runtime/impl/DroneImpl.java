@@ -2,12 +2,11 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.Drohne;
+import org.eclipse.emf.ecore.EClass;
 
+import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.runtime.Drone;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

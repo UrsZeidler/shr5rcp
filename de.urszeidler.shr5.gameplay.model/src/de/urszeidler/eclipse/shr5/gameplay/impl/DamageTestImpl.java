@@ -4,9 +4,11 @@
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Package;

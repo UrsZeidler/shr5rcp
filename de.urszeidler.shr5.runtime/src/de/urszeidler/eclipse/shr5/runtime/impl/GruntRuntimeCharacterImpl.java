@@ -2,9 +2,10 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

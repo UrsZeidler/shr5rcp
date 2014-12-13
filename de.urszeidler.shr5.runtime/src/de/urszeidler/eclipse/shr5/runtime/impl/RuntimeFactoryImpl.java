@@ -2,14 +2,26 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.MatrixDevice;
-import de.urszeidler.eclipse.shr5.runtime.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import de.urszeidler.eclipse.shr5.MatrixDevice;
+import de.urszeidler.eclipse.shr5.runtime.Cyberdeck;
+import de.urszeidler.eclipse.shr5.runtime.Drone;
+import de.urszeidler.eclipse.shr5.runtime.Enviorment;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.RiggerConsole;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Team;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,17 +3,14 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
-import de.urszeidler.eclipse.shr5.Zauber;
-
-import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
-import de.urszeidler.eclipse.shr5.gameplay.SpellCommand;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.gameplay.SpellCommand;
 
 /**
  * <!-- begin-user-doc -->

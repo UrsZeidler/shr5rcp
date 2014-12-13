@@ -2,8 +2,9 @@
  */
 package de.urszeidler.eclipse.shr5.runtime;
 
-import de.urszeidler.eclipse.shr5.MatrixDevice;
 import org.eclipse.emf.ecore.EFactory;
+
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 
 /**
  * <!-- begin-user-doc -->

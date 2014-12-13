@@ -2,14 +2,9 @@
  */
 package de.urszeidler.shr5.scripting.impl;
 
-import de.urszeidler.eclipse.shr5.runtime.Enviorment;
-import de.urszeidler.eclipse.shr5.runtime.Team;
-import de.urszeidler.shr5.scripting.Placement;
-import de.urszeidler.shr5.scripting.Script;
-import de.urszeidler.shr5.scripting.ScriptingPackage;
-import de.urszeidler.shr5.scripting.TimeFrame;
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -19,6 +14,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import de.urszeidler.eclipse.shr5.runtime.Enviorment;
+import de.urszeidler.eclipse.shr5.runtime.Team;
+import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.scripting.TimeFrame;
 
 /**
  * <!-- begin-user-doc -->

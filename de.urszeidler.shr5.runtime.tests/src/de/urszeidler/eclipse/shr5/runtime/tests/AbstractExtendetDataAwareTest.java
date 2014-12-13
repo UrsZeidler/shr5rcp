@@ -2,13 +2,14 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import junit.framework.TestCase;
+
 import org.eclipse.emf.common.util.EList;
 
 import de.urszeidler.eclipse.shr5.runtime.AbstractExtendetDataAware;
 import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->

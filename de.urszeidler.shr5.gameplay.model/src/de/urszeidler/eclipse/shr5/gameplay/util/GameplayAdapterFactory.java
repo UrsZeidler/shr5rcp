@@ -3,17 +3,19 @@
  */
 package de.urszeidler.eclipse.shr5.gameplay.util;
 
-import de.urszeidler.eclipse.shr5.gameplay.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+
+import de.urszeidler.eclipse.shr5.gameplay.CombatSpellCmd;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
 import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.DamageTest;
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.DrainCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 import de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd;
@@ -30,11 +32,13 @@ import de.urszeidler.eclipse.shr5.gameplay.Probe;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeCommand;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
 import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
 import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
+import de.urszeidler.eclipse.shr5.gameplay.SpellCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTest;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;

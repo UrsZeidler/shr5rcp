@@ -3,11 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import de.urszeidler.eclipse.shr5.SourceBook;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+
+import de.urszeidler.eclipse.shr5.SourceBook;
 
 
 /**

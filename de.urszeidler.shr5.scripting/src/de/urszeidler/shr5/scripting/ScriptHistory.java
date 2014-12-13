@@ -2,12 +2,12 @@
  */
 package de.urszeidler.shr5.scripting;
 
-import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
-
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
 
 /**
  * <!-- begin-user-doc -->

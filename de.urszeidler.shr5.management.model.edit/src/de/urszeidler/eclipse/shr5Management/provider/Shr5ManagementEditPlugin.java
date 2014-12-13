@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 
 /**

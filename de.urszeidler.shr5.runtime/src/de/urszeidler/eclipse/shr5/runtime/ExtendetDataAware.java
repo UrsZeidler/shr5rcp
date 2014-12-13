@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.runtime;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

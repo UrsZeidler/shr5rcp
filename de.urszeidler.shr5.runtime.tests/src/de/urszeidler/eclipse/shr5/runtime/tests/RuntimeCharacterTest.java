@@ -2,13 +2,13 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

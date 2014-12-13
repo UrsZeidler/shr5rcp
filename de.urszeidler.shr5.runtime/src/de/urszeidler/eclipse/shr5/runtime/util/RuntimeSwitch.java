@@ -2,15 +2,28 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.util;
 
-import de.urszeidler.eclipse.shr5.Beschreibbar;
-
-import de.urszeidler.eclipse.shr5.Fahrzeug;
-import de.urszeidler.eclipse.shr5.runtime.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.runtime.AbstractExtendetDataAware;
+import de.urszeidler.eclipse.shr5.runtime.Cyberdeck;
+import de.urszeidler.eclipse.shr5.runtime.Drone;
+import de.urszeidler.eclipse.shr5.runtime.Enviorment;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware;
+import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.MatrixDevice;
+import de.urszeidler.eclipse.shr5.runtime.NahkampModifikationen;
+import de.urszeidler.eclipse.shr5.runtime.PhyicalState;
+import de.urszeidler.eclipse.shr5.runtime.RiggerConsole;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5.runtime.Team;
+import de.urszeidler.eclipse.shr5.runtime.Vehicle;
 
 /**
  * <!-- begin-user-doc -->

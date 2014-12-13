@@ -2,11 +2,10 @@
  */
 package de.urszeidler.eclipse.shr5.runtime.impl;
 
-import de.urszeidler.eclipse.shr5.Cyberdeck;
-
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-
 import org.eclipse.emf.ecore.EClass;
+
+import de.urszeidler.eclipse.shr5.Cyberdeck;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
 /**
  * <!-- begin-user-doc -->
