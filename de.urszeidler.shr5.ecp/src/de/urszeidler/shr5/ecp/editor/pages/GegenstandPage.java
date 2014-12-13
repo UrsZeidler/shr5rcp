@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SubstanceContainer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -226,7 +227,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
             controlGridData.heightHint = 150;
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGAZIN__BULLETS, composite_runtime,controlGridData);
-        }else if (object instanceof Magazin) {
+        }else if (object instanceof SubstanceContainer) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE, grpGegenstand);
         }else if (object instanceof DefaultWifi) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
