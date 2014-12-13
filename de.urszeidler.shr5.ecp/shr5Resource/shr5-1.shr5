@@ -20703,6 +20703,9 @@
         </persona>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_8ULbMHNhEeS_hJQnmJOWpQ" parentId="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
           <localizations xmi:id="_8ULbMXNhEeS_hJQnmJOWpQ" local="de" name="Browning Ultra-Power"/>
+          <mods xmi:id="_RTugkIKzEeSxK_88hp9LHQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/lasterPointer"/>
+          </mods>
           <modie>HM</modie>
           <erweiterung>Lauf</erweiterung>
           <erweiterung>Oben</erweiterung>
@@ -20719,6 +20722,11 @@
         </inventar>
         <inventar xsi:type="shr5:Munition" xmi:id="_evh_oHNjEeSQGuBzOeEB5w" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_evh_oXNjEeSQGuBzOeEB5w" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:SubstanceContainer" xmi:id="_9nGk8IKyEeSxK_88hp9LHQ" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0" name="bliss">
+          <substance xsi:type="shr5:Drug" xmi:id="__qMeEIKyEeSxK_88hp9LHQ" name="Bliss" parentId="c01b24b0-ed09-4044-95ec-bc7628b10f5e" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="15" anzahl="2" proAnzahl="10">
+            <localizations xmi:id="__qMeEYKyEeSxK_88hp9LHQ" local="de" name="Bliss"/>
+          </substance>
         </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_924kEHNhEeS_hJQnmJOWpQ" name="Street" parentId="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
           <localizations xmi:id="_924kEXNhEeS_hJQnmJOWpQ" local="de" name="Straße"/>
@@ -20743,6 +20751,9 @@
         </persona>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_ses60HNiEeS_hJQnmJOWpQ" parentId="6fb39402-3ae3-4a21-9ed1-50b2c2e1b2c8" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="640" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
           <localizations xmi:id="_ses60XNiEeS_hJQnmJOWpQ" local="de" name="Browning Ultra-Power"/>
+          <mods xmi:id="_XjtQ4IKzEeSxK_88hp9LHQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/lasterPointer"/>
+          </mods>
           <modie>HM</modie>
           <erweiterung>Lauf</erweiterung>
           <erweiterung>Oben</erweiterung>
@@ -20762,6 +20773,11 @@
         </inventar>
         <inventar xsi:type="shr5:Munition" xmi:id="_ylTQMHNjEeSQGuBzOeEB5w" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_ylT3QHNjEeSQGuBzOeEB5w" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:SubstanceContainer" xmi:id="_dfnrIIKyEeSxK_88hp9LHQ" wertValue="0" name="jazz">
+          <substance xsi:type="shr5:Drug" xmi:id="_iec8oIKyEeSxK_88hp9LHQ" name="Jazz" parentId="929c4835-1754-4999-9215-9859e8ec5384" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="75" anzahl="1" proAnzahl="10">
+            <localizations xmi:id="_iec8oYKyEeSxK_88hp9LHQ" local="de" name="Jazz"/>
+          </substance>
         </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_6_u7UHNiEeS_hJQnmJOWpQ" name="Street" parentId="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
           <localizations xmi:id="_6_u7UXNiEeS_hJQnmJOWpQ" local="de" name="Straße"/>
