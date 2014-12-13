@@ -1,5 +1,6 @@
 2014-12-14 Version 0.2.3-rc
 
+* some minor bugfixing
 * development
 	* switched to eclipse 4.4 and sirius (ecoretools2) for modeling
 * model
@@ -8,6 +9,7 @@
 * runtime
 	* added management of rigger console and cyberdeck
 	* added management of ammunition and magazine for firearms
+	* uses the ammo modification in damage tests
 * webapp
 	* some style adjustments
 	* management of ammunition and magazine for firearms also rigger console and cyberdeck	
