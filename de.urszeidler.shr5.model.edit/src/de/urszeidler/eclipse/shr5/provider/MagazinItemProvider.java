@@ -17,6 +17,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.swt.graphics.Image;
 
 import com.google.common.collect.Collections2;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -102,7 +104,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
     protected void addBulletsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(new ItemPropertyDescriptor// createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Magazin_bullets_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_Magazin_bullets_feature", "_UI_Magazin_type"),
+                        getString("_UI_Magazin_bullets_description", "_UI_Magazin_bullets_feature", "_UI_Magazin_type"),
                         Shr5Package.Literals.MAGAZIN__BULLETS, true, false, true, null, null, null) {
                     @SuppressWarnings("unchecked")
                     @Override
@@ -116,17 +118,15 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
                                     eContainer = fw.eContainer();
                                     EReference eContainmentFeature = fw.eContainmentFeature();
                                     List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
-                                    return new ArrayList<Object>(Collections2.filter(
-                                            Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)),
-                                            ShadowrunTools.muniForMagazinPredicate((Magazin)eo)));
+                                    return FluentIterable.from(eGet).filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION))
+                                    .filter(ShadowrunTools.muniForMagazinPredicate((Magazin)eo)).toList();
                                 }
                                 EReference eContainmentFeature = eo.eContainmentFeature();
                                 List<EObject> eGet = (List<EObject>)eo.eContainer().eGet(eContainmentFeature);
-                                return new ArrayList<Object>(Collections2.filter(
-                                        Collections2.filter(eGet, ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION)),
-                                        ShadowrunTools.muniForMagazinPredicate((Magazin)eo)));
+                                return FluentIterable.from(eGet).filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION))
+                                        .filter(ShadowrunTools.muniForMagazinPredicate((Magazin)eo)).toList();
                             } catch (Exception e) {
-                                e.fillInStackTrace();
+                                e.printStackTrace();
                             }
                         }
                         return super.getComboBoxObjects(object);
