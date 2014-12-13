@@ -21,6 +21,7 @@ import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -32,6 +33,7 @@ import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
@@ -46,6 +48,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     private Text text;
     private EObject object;
     private Map<EClass, Map<String, AbstractAcceleoGenerator>> transformerMap = new HashMap<EClass, Map<String, AbstractAcceleoGenerator>>();
+    private Map<String, Image> imageMap = new HashMap<String, Image>();
+    private Map<String, String> descriptionMap = new HashMap<String, String>();
     protected AbstractAcceleoGenerator generator;
     protected File folder;
     private Combo combo;
@@ -69,6 +73,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     public ModelToTextExportDialog(Shell parentShell, EObject object) {
         super(parentShell);
         this.object = object;
+        
 
         HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
         hashMap.put("BB Character Sheet", new BoardCharacterSheet());
@@ -77,6 +82,16 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap.put("simple vehicle->pdf", new GenerateSvgVehicleSheet());
         hashMap.put("characterSheet->pdf", new SvgCharacterSheet());
 
+        imageMap.put("characterSheet->pdf", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
+        descriptionMap.put("characterSheet->pdf", "A nice character sheet");
+
+        imageMap.put("simple svg->pdf", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png"));
+        descriptionMap.put("simple svg->pdf", "A very basic character sheet.");
+        
+        descriptionMap.put("simple vehicle->pdf", "A very basic vehicle sheet.");
+        descriptionMap.put("BB Character Sheet", "A text based bulleting board chracter sheet.");
+        descriptionMap.put("BB Table Character Sheet", "A text based bulleting board chracter sheet based on a table.");
+        
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
 
@@ -110,6 +125,17 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         lblNewLabel.setText("select transformation");
 
         combo = new Combo(container, SWT.NONE);
+        combo.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                String text2 = combo.getText();
+                Image image = imageMap.get(text2);
+//                if(image!=null)
+                    setTitleImage(image);
+                String message = descriptionMap.get(text2);
+                setMessage(message);
+            }
+        });
         combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         new Label(container, SWT.NONE);
 
@@ -168,7 +194,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
             generator = map.get(text2);
         }
         if (generator != null) {
-            Job job = new Job(text2 + "is runing") {
+            Job job = new Job(text2 + " is runing") {
                 @Override
                 protected IStatus run(IProgressMonitor monitor) {
                     try {
