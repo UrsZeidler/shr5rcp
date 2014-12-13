@@ -1,3 +1,35 @@
+2014-12-14 Version 0.2.3-rc
+
+* development
+	* switched to eclipse 4.4 and sirius (ecoretools2) for modeling
+* model
+	* added substance container
+	* added source constrains for character generation
+* runtime
+	* added management of rigger console and cyberdeck
+	* added management of ammunition and magazine for firearms
+* webapp
+	* some style adjustments
+	* management of ammunition and magazine for firearms also rigger console and cyberdeck	
+
+
+2014-11-09 Version 0.2.2
+
+* runtime 
+	* Add a webserver and s simple web app to impersonate players for mobile clients for example. 
+
+2014-10-31 Version 0.2.2-rc
+
+* runtime 
+	* Add a webserver and s simple web app to impersonate players for mobile clients for example. 
+
+2014-10-12 Version 0.2.1
+
+* enhance the runtime
+	* ammunition management
+	* support for the different fw modie
+	* spend edge on seize ini, push the limit, second chance,close call
+
 2014-10-05 Version 0.2.1-rc
 
 * enhance the runtime
