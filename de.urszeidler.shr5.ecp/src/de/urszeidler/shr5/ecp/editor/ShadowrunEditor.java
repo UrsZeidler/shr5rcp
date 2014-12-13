@@ -7,6 +7,7 @@ import org.eclipse.ui.PartInitException;
 
 import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
 import de.urszeidler.eclipse.shr5.AbstraktFokus;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
@@ -260,7 +261,10 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             public Object caseGegenstand(Gegenstand object) {
                 try {
                     addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
-                } catch (PartInitException e) {
+                    if (object.getWifi() != null)
+                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()), (AbstraktGegenstand)object.getWifi(),
+                                editingDomain, manager));
+               } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
@@ -302,6 +306,9 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     addPage(new FeuerwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                     if (object.getMagazin() != null)
                         addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getMagazin()), object.getMagazin(),
+                                editingDomain, manager));
+                    if (object.getWifi() != null)
+                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()), (AbstraktGegenstand)object.getWifi(),
                                 editingDomain, manager));
 
                 } catch (PartInitException e) {
