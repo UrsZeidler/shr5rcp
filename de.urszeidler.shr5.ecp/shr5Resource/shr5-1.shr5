@@ -3625,55 +3625,157 @@
           <localizations xmi:id="_EK5SYznTEeSe6_w6Jrbqxg" local="de" name="Cypher"/>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="c01b24b0-ed09-4044-95ec-bc7628b10f5e" name="Bliss" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="15" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK6ggDnTEeSe6_w6Jrbqxg" local="de" name="Bliss"/>
+          <localizations xmi:id="_qFjMsIK5EeS03LdB575_sA" local="de" name="Bliss"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="c01b24b0-ed09-4044-95ec-bc7628b10f5e" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="0" name="Bliss">
+          <localizations xmi:id="_qFjzwIK5EeS03LdB575_sA" local="de" name="Bliss"/>
+          <substance xsi:type="shr5:Drug" xmi:id="c01b24b0-ed09-4044-95ec-bc7628b10f5e" name="Bliss" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3F" wertValue="15" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFka0IK5EeS03LdB575_sA" local="de" name="Bliss"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="8dc829b9-8b94-4510-ab1a-2305cbad69c9" name="Cram" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="10" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK6ggTnTEeSe6_w6Jrbqxg" local="de" name="Cram"/>
+          <localizations xmi:id="_qFka0YK5EeS03LdB575_sA" local="de" name="Cram"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="8dc829b9-8b94-4510-ab1a-2305cbad69c9" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="0" name="Cram">
+          <localizations xmi:id="_qFka0oK5EeS03LdB575_sA" local="de" name="Cram"/>
+          <substance xsi:type="shr5:Drug" xmi:id="8dc829b9-8b94-4510-ab1a-2305cbad69c9" name="Cram" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="10" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFlB4IK5EeS03LdB575_sA" local="de" name="Cram"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="5f5bc907-ce31-4f34-b7cf-a48d9d5d10b3" name="Deepweed" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="400" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK6ggjnTEeSe6_w6Jrbqxg" local="de" name="Deepweed"/>
+          <localizations xmi:id="_qFlB4YK5EeS03LdB575_sA" local="de" name="Deepweed"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="5f5bc907-ce31-4f34-b7cf-a48d9d5d10b3" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="0" name="Deepweed">
+          <localizations xmi:id="_qFlB4oK5EeS03LdB575_sA" local="de" name="Deepweed"/>
+          <substance xsi:type="shr5:Drug" xmi:id="5f5bc907-ce31-4f34-b7cf-a48d9d5d10b3" name="Deepweed" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="400" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFlB44K5EeS03LdB575_sA" local="de" name="Deepweed"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="929c4835-1754-4999-9215-9859e8ec5384" name="Jazz" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="75" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7HkDnTEeSe6_w6Jrbqxg" local="de" name="Jazz"/>
+          <localizations xmi:id="_qFlo8IK5EeS03LdB575_sA" local="de" name="Jazz"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="929c4835-1754-4999-9215-9859e8ec5384" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="0" name="Jazz">
+          <localizations xmi:id="_qFlo8YK5EeS03LdB575_sA" local="de" name="Jazz"/>
+          <substance xsi:type="shr5:Drug" xmi:id="929c4835-1754-4999-9215-9859e8ec5384" name="Jazz" page="411" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="75" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFlo8oK5EeS03LdB575_sA" local="de" name="Jazz"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="098bf489-bea9-4f17-b3d9-aead979fdc32" name="Kamikaze" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="100" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7HkTnTEeSe6_w6Jrbqxg" local="de" name="Kamikaze"/>
+          <localizations xmi:id="_qFlo84K5EeS03LdB575_sA" local="de" name="Kamikaze"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="098bf489-bea9-4f17-b3d9-aead979fdc32" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="0" name="Kamikaze">
+          <localizations xmi:id="_qFmQAIK5EeS03LdB575_sA" local="de" name="Kamikaze"/>
+          <substance xsi:type="shr5:Drug" xmi:id="098bf489-bea9-4f17-b3d9-aead979fdc32" name="Kamikaze" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="100" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFmQAYK5EeS03LdB575_sA" local="de" name="Kamikaze"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="d4cf626d-0af1-41f7-bec0-e53b4dba2eb1" name="Long Haul" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7HkjnTEeSe6_w6Jrbqxg" local="de" name="Long Haul"/>
+          <localizations xmi:id="_qFmQAoK5EeS03LdB575_sA" local="de" name="Long Haul"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="d4cf626d-0af1-41f7-bec0-e53b4dba2eb1" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="0" name="Long Haul">
+          <localizations xmi:id="_qFmQA4K5EeS03LdB575_sA" local="de" name="Long Haul"/>
+          <substance xsi:type="shr5:Drug" xmi:id="d4cf626d-0af1-41f7-bec0-e53b4dba2eb1" name="Long Haul" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFm3EIK5EeS03LdB575_sA" local="de" name="Long Haul"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="d7ec13fa-8601-4f9c-a59c-6a86573b40ee" name="Nitro" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="50" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7HkznTEeSe6_w6Jrbqxg" local="de" name="Nitro"/>
+          <localizations xmi:id="_qFm3EYK5EeS03LdB575_sA" local="de" name="Nitro"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="d7ec13fa-8601-4f9c-a59c-6a86573b40ee" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="0" name="Nitro">
+          <localizations xmi:id="_qFm3EoK5EeS03LdB575_sA" local="de" name="Nitro"/>
+          <substance xsi:type="shr5:Drug" xmi:id="d7ec13fa-8601-4f9c-a59c-6a86573b40ee" name="Nitro" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="50" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFm3E4K5EeS03LdB575_sA" local="de" name="Nitro"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="836f54d5-1e11-49ea-b115-34c14ed843c9" name="Novacoke" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="10" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7HlDnTEeSe6_w6Jrbqxg" local="de" name="Novacoke"/>
+          <localizations xmi:id="_qFneIIK5EeS03LdB575_sA" local="de" name="Novacoke"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="836f54d5-1e11-49ea-b115-34c14ed843c9" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="0" name="Novacoke">
+          <localizations xmi:id="_qFneIYK5EeS03LdB575_sA" local="de" name="Novacoke"/>
+          <substance xsi:type="shr5:Drug" xmi:id="836f54d5-1e11-49ea-b115-34c14ed843c9" name="Novacoke" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="10" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFneIoK5EeS03LdB575_sA" local="de" name="Novacoke"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="778eefae-94ad-4f8c-ad03-8b9039b5c48e" name="Psyche" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="200" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7uoDnTEeSe6_w6Jrbqxg" local="de" name="Psyche"/>
+          <localizations xmi:id="_qFneI4K5EeS03LdB575_sA" local="de" name="Psyche"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="778eefae-94ad-4f8c-ad03-8b9039b5c48e" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="0" name="Psyche">
+          <localizations xmi:id="_qFoFMIK5EeS03LdB575_sA" local="de" name="Psyche"/>
+          <substance xsi:type="shr5:Drug" xmi:id="778eefae-94ad-4f8c-ad03-8b9039b5c48e" name="Psyche" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="200" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFoFMYK5EeS03LdB575_sA" local="de" name="Psyche"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="3a946800-be1e-4bbb-899a-c3d1c48a3a31" name="Zen" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="5" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7uoTnTEeSe6_w6Jrbqxg" local="de" name="Zen"/>
+          <localizations xmi:id="_qFoFMoK5EeS03LdB575_sA" local="de" name="Zen"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="3a946800-be1e-4bbb-899a-c3d1c48a3a31" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="0" name="Zen">
+          <localizations xmi:id="_qFoFM4K5EeS03LdB575_sA" local="de" name="Zen"/>
+          <substance xsi:type="shr5:Drug" xmi:id="3a946800-be1e-4bbb-899a-c3d1c48a3a31" name="Zen" page="412" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="5" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFosQIK5EeS03LdB575_sA" local="de" name="Zen"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="35309aeb-0cbc-4b64-a809-34de50812564" name="Crash" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="3" wertValue="800" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7uojnTEeSe6_w6Jrbqxg" local="de" name="Crash"/>
+          <localizations xmi:id="_qFosQYK5EeS03LdB575_sA" local="de" name="Crash"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="35309aeb-0cbc-4b64-a809-34de50812564" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="3" wertValue="0" name="Crash">
+          <localizations xmi:id="_qFosQoK5EeS03LdB575_sA" local="de" name="Crash"/>
+          <substance xsi:type="shr5:Drug" xmi:id="35309aeb-0cbc-4b64-a809-34de50812564" name="Crash" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="3" wertValue="800" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFosQ4K5EeS03LdB575_sA" local="de" name="Crash"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="c4ae816f-f683-469d-a7cd-ec1931740e1e" name="Cryo" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="8R" wertValue="1000" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7uoznTEeSe6_w6Jrbqxg" local="de" name="Cryo"/>
+          <localizations xmi:id="_qFpTUIK5EeS03LdB575_sA" local="de" name="Cryo"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="c4ae816f-f683-469d-a7cd-ec1931740e1e" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="8R" wertValue="0" name="Cryo">
+          <localizations xmi:id="_qFpTUYK5EeS03LdB575_sA" local="de" name="Cryo"/>
+          <substance xsi:type="shr5:Drug" xmi:id="c4ae816f-f683-469d-a7cd-ec1931740e1e" name="Cryo" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="8R" wertValue="1000" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFpTUoK5EeS03LdB575_sA" local="de" name="Cryo"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="5929d3b9-451b-4be8-a292-8b6509d0aeb9" name="HemoSynth" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="4" wertValue="2000" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK7upDnTEeSe6_w6Jrbqxg" local="de" name="HemoSynth"/>
+          <localizations xmi:id="_qFpTU4K5EeS03LdB575_sA" local="de" name="HemoSynth"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="5929d3b9-451b-4be8-a292-8b6509d0aeb9" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="4" wertValue="0" name="HemoSynth">
+          <localizations xmi:id="_qFpTVIK5EeS03LdB575_sA" local="de" name="HemoSynth"/>
+          <substance xsi:type="shr5:Drug" xmi:id="5929d3b9-451b-4be8-a292-8b6509d0aeb9" name="HemoSynth" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="4" wertValue="2000" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFp6YIK5EeS03LdB575_sA" local="de" name="HemoSynth"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="076825cd-dc6f-4e48-8c73-e958b21c1766" name="NanoScan" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="5" wertValue="500" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK8VsDnTEeSe6_w6Jrbqxg" local="de" name="NanoScan"/>
+          <localizations xmi:id="_qFp6YYK5EeS03LdB575_sA" local="de" name="NanoScan"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="076825cd-dc6f-4e48-8c73-e958b21c1766" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="5" wertValue="0" name="NanoScan">
+          <localizations xmi:id="_qFp6YoK5EeS03LdB575_sA" local="de" name="NanoScan"/>
+          <substance xsi:type="shr5:Drug" xmi:id="076825cd-dc6f-4e48-8c73-e958b21c1766" name="NanoScan" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="5" wertValue="500" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFp6Y4K5EeS03LdB575_sA" local="de" name="NanoScan"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="cf2dd622-8312-4807-97f0-c5d30f9f67b4" name="Neostigmine" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="100" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK8VsTnTEeSe6_w6Jrbqxg" local="de" name="Neostigmine"/>
+          <localizations xmi:id="_qFqhcIK5EeS03LdB575_sA" local="de" name="Neostigmine"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="cf2dd622-8312-4807-97f0-c5d30f9f67b4" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="0" name="Neostigmine">
+          <localizations xmi:id="_qFqhcYK5EeS03LdB575_sA" local="de" name="Neostigmine"/>
+          <substance xsi:type="shr5:Drug" xmi:id="cf2dd622-8312-4807-97f0-c5d30f9f67b4" name="Neostigmine" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="100" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFqhcoK5EeS03LdB575_sA" local="de" name="Neostigmine"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="1135e850-8371-4827-b2fe-94f5659583d4" name="Ondanstron" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="50" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK8VsjnTEeSe6_w6Jrbqxg" local="de" name="Ondanstron"/>
+          <localizations xmi:id="_qFqhc4K5EeS03LdB575_sA" local="de" name="Ondanstron"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="1135e850-8371-4827-b2fe-94f5659583d4" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="0" name="Ondanstron">
+          <localizations xmi:id="_qFqhdIK5EeS03LdB575_sA" local="de" name="Ondanstron"/>
+          <substance xsi:type="shr5:Drug" xmi:id="1135e850-8371-4827-b2fe-94f5659583d4" name="Ondanstron" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="2" wertValue="50" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFrIgIK5EeS03LdB575_sA" local="de" name="Ondanstron"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Drug" xmi:id="b14cc8cf-8d19-4306-a71a-9a7f761eb321" name="Sugammadex" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="6" wertValue="100" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EK8VsznTEeSe6_w6Jrbqxg" local="de" name="Sugammadex"/>
+          <localizations xmi:id="_qFrIgYK5EeS03LdB575_sA" local="de" name="Sugammadex"/>
+        </entries>
+        <entries xsi:type="shr5:SubstanceContainer" xmi:id="b14cc8cf-8d19-4306-a71a-9a7f761eb321" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="6" wertValue="0" name="Sugammadex">
+          <localizations xmi:id="_qFrIgoK5EeS03LdB575_sA" local="de" name="Sugammadex"/>
+          <substance xsi:type="shr5:Drug" xmi:id="b14cc8cf-8d19-4306-a71a-9a7f761eb321" name="Sugammadex" page="19" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="6" wertValue="100" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_qFrIg4K5EeS03LdB575_sA" local="de" name="Sugammadex"/>
+          </substance>
         </entries>
         <entries xsi:type="shr5:Toxin" xmi:id="d7fc6610-8ec3-45eb-8a8d-c664c84db56f" name="Caldwell Lily Extract" page="188" srcBook="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" verfuegbarkeit="10R" wertValue="600" anzahl="10" proAnzahl="10">
           <localizations xmi:id="_EK8VtDnTEeSe6_w6Jrbqxg" local="de" name="Caldwell Lily Extract"/>

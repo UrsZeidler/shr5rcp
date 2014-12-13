@@ -2646,6 +2646,27 @@
 					<xsl:call-template name="gegenstand-basis" />
 					<xsl:call-template name="localization" />
 				</entries>
+			<entries xsi:type="shr5:SubstanceContainer" >
+			<xsl:attribute name="wertValue">
+					<xsl:value-of select="0" />
+			</xsl:attribute>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			
+			<xsl:call-template name="localization" />			
+         	<substance xsi:type="shr5:Drug">
+  					<xsl:attribute name="proAnzahl">
+					<xsl:value-of select="10" />
+					</xsl:attribute>
+					<xsl:attribute name="anzahl">
+					<xsl:value-of select="10" />
+					</xsl:attribute>
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />            
+          </substance>
+        </entries>
+				
+				
 			</xsl:when>
 			<xsl:when test="category/text()='Toxins'">
 				<entries xsi:type="shr5:Toxin">
