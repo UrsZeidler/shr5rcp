@@ -7,7 +7,7 @@
     <relativePath>../de.urszeidler.shr5.master</relativePath>
     <groupId>de.urszeidler</groupId>
     <artifactId>shr5</artifactId>
-    <version>0.2.2-SNAPSHOT</version>
+    <version>0.2.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>de.urszeidler.shr5.gameplay.model</artifactId>

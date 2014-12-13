@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.2.2" useFeatures="true" includeLaunchers="true">
+<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.2.3.rc" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/de.urszeidler.shr5.product/icons/shrImage_6_250.png"/>
@@ -21,15 +21,19 @@ http://www.shadowruntabletop.com/
    </configIni>
 
    <launcherArgs>
-      <programArgs>-data shr_workspace/</programArgs>
+      <programArgs>-data shr_workspace/
+      </programArgs>
       <vmArgs>-XX:MaxPermSize=256m
 -Xms240m
--Xmx768m</vmArgs>
+-Xmx768m
+      </vmArgs>
       <vmArgsLin>-Dorg.eclipse.swt.browser.DefaultType=mozilla
 -XX:MaxPermSize=256m
 -Xms240m
--Xmx768m</vmArgsLin>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+-Xmx768m
+      </vmArgsLin>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
    </launcherArgs>
 
    <windowImages i16="/de.urszeidler.shr5.product/icons/shrImage_6_16.png" i32="/de.urszeidler.shr5.product/icons/shrImage_6_32.png" i48="/de.urszeidler.shr5.product/icons/shrImage_6_48.png" i64="/de.urszeidler.shr5.product/icons/shrImage_6_64.png" i128="/de.urszeidler.shr5.product/icons/shrImage_6_128.png"/>
