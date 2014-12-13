@@ -832,6 +832,8 @@ public class ShadowrunTools {
             public boolean apply(Object input) {
                 if (input instanceof Munition) {
                     Munition muni = (Munition)input;
+                    if (muni.getType() == null || eo.getType() == null)
+                        return false;
                     return muni.getType().equals(eo.getType().getReichweite());
                 }
                 return false;
@@ -918,36 +920,38 @@ public class ShadowrunTools {
         }
         return null;
     }
-    
+
     /**
      * Simple wrapper for an iterable.
+     * 
      * @param iterator
      * @return
      */
     public static Iterable<EObject> toIterable(final Iterator<EObject> iterator) {
-      return new Iterable<EObject>() {
+        return new Iterable<EObject>() {
 
             @Override
             public Iterator<EObject> iterator() {
-             return iterator;
+                return iterator;
             }
         };
     }
-    
+
     /**
      * Create a allowed Sorces predicate to match a {@link Quelle}, not in the allowedSources.
+     * 
      * @param allowedSources should not be empty
      * @return
      */
     public static Predicate<EObject> allowedSourcePredicate(final EList<SourceBook> allowedSources) {
-       return new Predicate<EObject>() {
+        return new Predicate<EObject>() {
             @Override
             public boolean apply(EObject input) {
                 if (input instanceof Quelle) {
                     Quelle q = (Quelle)input;
-                    if(q.getSrcBook()==null)
+                    if (q.getSrcBook() == null)
                         return false;
-                    return !allowedSources.contains(q.getSrcBook());                
+                    return !allowedSources.contains(q.getSrcBook());
                 } else if (input instanceof PersonaFertigkeit) {
                     PersonaFertigkeit pf = (PersonaFertigkeit)input;
                     return apply(pf.getFertigkeit());
