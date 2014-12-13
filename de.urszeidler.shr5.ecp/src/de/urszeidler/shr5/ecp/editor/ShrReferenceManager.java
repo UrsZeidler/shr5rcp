@@ -114,6 +114,16 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
+        }else if (Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())) {
+            List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
+            if (!copyAddToPersona.isEmpty()) {
+                IObservable observable = e.getObservable();
+                if (observable instanceof IObservableValue) {
+                    IObservableValue ov = (IObservableValue)e.getObservable();
+                    ov.setValue(copyAddToPersona.get(0));
+                }
+            }
+            return;
         }
         super.handleManage(e, object);
     }
