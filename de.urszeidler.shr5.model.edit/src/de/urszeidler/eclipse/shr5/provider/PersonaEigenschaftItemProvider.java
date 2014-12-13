@@ -81,12 +81,19 @@ public class PersonaEigenschaftItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		Beschreibbar beschreibbar = (Beschreibbar) object;
+	    PersonaEigenschaft beschreibbar = (PersonaEigenschaft) object;
+	    
 		if (beschreibbar.getImage() != null) {
 			Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
 			if (image != null)
 				return image;
 		}
+        if(beschreibbar.getKarmaKosten()<0)
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/Negativ"));
+        if(beschreibbar.getKarmaKosten()>0)
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/Positiv"));
+		
+		
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/PersonaEigenschaft"));
 	}
 
