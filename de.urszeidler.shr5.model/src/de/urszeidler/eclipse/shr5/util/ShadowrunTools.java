@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.util;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,6 +14,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.swing.text.NumberFormatter;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -386,7 +389,7 @@ public class ShadowrunTools {
      */
     public static String calcListenWertToString(List<Object> list) {
         BigDecimal summ = calcListenWert(list);
-        return summ.longValue() + EMPTY;
+        return NumberFormat.getNumberInstance().format(summ);// summ.longValue() + EMPTY;
     }
 
     /**

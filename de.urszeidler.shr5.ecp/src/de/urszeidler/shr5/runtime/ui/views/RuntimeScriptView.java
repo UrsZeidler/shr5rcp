@@ -119,6 +119,7 @@ import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert.DialogType;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
@@ -930,7 +931,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
 
         FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues,combatTurn,false);
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues,combatTurn,DialogType.simple);
         if (dialogWert.open() == Dialog.OK)
             combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
         else

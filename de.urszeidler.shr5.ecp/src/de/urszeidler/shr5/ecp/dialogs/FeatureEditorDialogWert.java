@@ -68,10 +68,15 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     protected TableViewer choiceTableViewer;
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
-//    private EStructuralFeature feature;
+    // private EStructuralFeature feature;
     private ViewerFilter allowedSourceFilter;
     private EObject theEObject;
     private boolean activateFilter = true;
+    private DialogType dialogType = DialogType.inventar;
+
+    public enum DialogType {
+        inventar, simple
+    }
 
     /**
      * @wbp.parser.constructor
@@ -109,8 +114,30 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         this.activateFilter = activateFilter;
     }
 
+    public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
+            String displayName, List<?> choiceOfValues, EObject orgObject, DialogType dialogType) {
+        this(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues, orgObject);
+        this.dialogType = dialogType;
+        switch (dialogType) {
+            case simple:
+                this.activateFilter = false;
+                break;
+
+            default:
+                break;
+        }
+       
+    }
+
     protected void updateLabel() {
-        gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren()) + "¥");
+        String label = null;
+        if(dialogType==DialogType.simple)
+             label = String.format("%d selected", values.getChildren().size());
+        else
+         label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                                                                                                                                                  // +
+                                                                                                                                                  // "¥");
+        gesamtPreisLabel.setText(label);
     }
 
     /**
@@ -199,7 +226,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
             final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
             filterShrList.setToolTipText("show only list items");
-            if(activateFilter)
+            if (activateFilter)
                 filterShrList.setSelection(dialogSettings.getBoolean("Featuredialog.shrListFilter"));
             filterShrList.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
 
@@ -535,18 +562,15 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         gridLayout.horizontalSpacing = 5;
         choiceComposite.setLayout(gridLayout);
 
-        Label label = new Label(choiceComposite, SWT.NONE);
-        label.setText("---");
+        // Label label = new Label(choiceComposite, SWT.NONE);
+        // label.setText("---");
         gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
         gesamtPreisLabel = new Label(choiceComposite, SWT.NONE);
         gesamtPreisLabel.setLayoutData(gridData);
-        // EList<Object> list = values.getChildren();
         updateLabel();
-        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(list) + "¥");
-        label = new Label(choiceComposite, SWT.NONE);
-        if(activateFilter)
-        if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
-            choiceTableViewer.addFilter(shrListFilter);
+        if (activateFilter)
+            if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
+                choiceTableViewer.addFilter(shrListFilter);
 
         composite.pack();
         return composite;
@@ -558,6 +582,6 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
     @Override
     protected Point getInitialSize() {
-         return super.getInitialSize();
+        return super.getInitialSize();
     }
 }

@@ -45,6 +45,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert.DialogType;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
@@ -197,7 +198,7 @@ public class OpenObjectHandler extends AbstractHandler {
         FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
                 RuntimePackage.Literals.TEAM__MEMBERS, Messages.OpenObjectHandler_select_combatans, new ArrayList<EObject>(Collections2.filter(
                         (Collection<ManagedCharacter>)choiceOfValues,
-                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo,false);
+                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo,DialogType.simple);
 
         int result = dialog.open();
         if (result == Window.OK) {
