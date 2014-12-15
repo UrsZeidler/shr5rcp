@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.window.Window;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 
@@ -36,7 +37,6 @@ import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.emf.commons.ui.dialogs.GenericEObjectDialog;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
@@ -44,6 +44,7 @@ import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.dialogs.CreateAttributModifikatorDialog;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogMagazine;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -214,10 +215,37 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return objectList;
             }
 
-        } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())
-                || Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
+        } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())){
+            final EObject contextObject = object;
+            EClass eClass = (EClass)e.getFeature().getEType();
+            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); 
+            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, new DefaultReferenceManager(itemDelegator){
+                @Override
+                public void handleManage(FormbuilderEntry e, EObject object) {
+                    if (Shr5managementPackage.Literals.CONNECTION__CHARACTER.equals(e.getFeature())){
+                        Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject, Shr5managementPackage.Literals.MANAGED_CHARACTER);
+                        OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(), objectsOfType.toArray(new Object[]{}),
+                                "Choose connection", "");
+                        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                        setSingleRefernceFromDialog(e, dialog); 
+                    }else
+                    super.handleManage(e, object);
+                }
+                 
+            });
+
+            if (dialog.open() == Dialog.OK)
+                return eObject;
+            else
+                return null;
+
+            
+            
+    } else if (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
                 || Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
+
             EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
             EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
             GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
 

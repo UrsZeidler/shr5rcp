@@ -31,18 +31,19 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
     private FormToolkit toolkit;
     private List<EStructuralFeature> eAllStructuralFeatures;
     private String messagestr;
+    private ILabelProvider labelprovider;
 
     public GenericEObjectDialog(Shell parentShell, EObject eObject, AdapterFactoryItemDelegator itemDelegator, ILabelProvider labelprovider,
             ReferenceManager mananger) {
         super(parentShell, eObject);
         
         toolkit = new FormToolkit(Display.getCurrent());
+        this.labelprovider = labelprovider;
         emfFormBuilder = new EmfFormBuilder(toolkit, itemDelegator, labelprovider, null);
         emfFormBuilder.setManager(mananger);
         eAllStructuralFeatures = eObject.eClass().getEAllStructuralFeatures();
         
-        message = labelprovider.getText(eObject.eClass());
-        
+        message = labelprovider.getText(eObject.eClass());        
     }
 
     public GenericEObjectDialog(Shell parentShell, EObject eObject, AdapterFactoryItemDelegator itemDelegator, ILabelProvider labelprovider,
@@ -78,8 +79,7 @@ public class GenericEObjectDialog extends SimpleEObjectDialog {
      */
     @Override
     protected Image getImage() {
-        // TODO Auto-generated method stub
-        return null;
+        return labelprovider.getImage(eObject);
     }
 
     @Override
