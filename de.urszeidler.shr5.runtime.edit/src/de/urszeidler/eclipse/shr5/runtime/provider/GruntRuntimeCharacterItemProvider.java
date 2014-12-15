@@ -95,12 +95,9 @@ public class GruntRuntimeCharacterItemProvider
             if (labelprovider != null)
                 labelValue = labelprovider.getText(character.getCharacter());
         }
-        
-//        String state = "";
-//        if(character.getZustand()!=Zustand.OK)
-//            state = " "+character.getZustand().getName();
-
-        String label = labelValue == null ? null : character.getCharacter().getGeneratorSrc().getCharacterName();
+        String label = null;
+        if(character!=null&&character.getCharacter()!=null&&character.getCharacter().getGeneratorSrc()!=null)
+            label = labelValue == null ? null : character.getCharacter().getGeneratorSrc().getCharacterName();
 
         return label == null || label.length() == 0 ?
             getString("_UI_GruntRuntimeCharacter_type") :
