@@ -108,8 +108,9 @@ public class BeschreibbarWidget extends Composite {
         toolkit.adapt(lblName, true, true);
         lblName.setText(Messages.BeschreibbarWidget_name);
 
-        textName = new Text(parent, SWT.NONE);
+        textName =    new Text(parent, SWT.BORDER);//toolkit.createText(parent, "");//
         textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        textName.setMessage(Messages.BeschreibbarWidget_name);
         toolkit.adapt(textName, true, true);
 
         imageLabel = new Label(parent, SWT.BORDER);
@@ -127,7 +128,8 @@ public class BeschreibbarWidget extends Composite {
         toolkit.adapt(lblBeschreibbar, true, true);
         lblBeschreibbar.setText(Messages.BeschreibbarWidget_description);
 
-        textBeschreibung = new Text(parent, SWT.MULTI);
+        textBeschreibung = new Text(parent, SWT.MULTI|SWT.BORDER);//toolkit.createText(parent, "", SWT.MULTI|SWT.BORDER);
+        textBeschreibung.setMessage(Messages.BeschreibbarWidget_description);
         GridData gd_textBeschreibung = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 2);
         gd_textBeschreibung.heightHint = 74;
         textBeschreibung.setLayoutData(gd_textBeschreibung);
