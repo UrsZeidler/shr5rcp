@@ -45,6 +45,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.ScriptPage;
+import de.urszeidler.shr5.runtime.ui.editor.pages.VariousPage;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
@@ -67,6 +68,25 @@ public class RuntimeEditor extends AbstractShr5Editor {
         return new ShrReferenceManager(this, AdapterFactoryUtil.getInstance().getItemDelegator(), getEditingDomain()){
             @Override
             protected Object provideObject(FormbuilderEntry e, EObject object) {
+//                if (RuntimePackage.Literals.GRUNT_TEAM__GRUNT_GROUP.equals(e.getFeature())) {
+//                    Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
+//                            Shr5managementPackage.Literals.GRUNT_GROUP);
+//                    
+//                    OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), objectsOfType.toArray(new Object[]{}),
+//                            "Select a grunt group", "");
+//                    dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+//
+// 
+//                    if (dialog.open() == Dialog.OK && dialog.getResult().length==1) {
+//                        return dialog.getResult()[0];
+//                    }
+//                    return null;
+////                    ((GruntTeam)object).getGruntGroup();
+////                    FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), object,
+////                            e.getFeature(), "Add " + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(objectsOfType),object);
+//
+//                }else
+                
                 if (RuntimePackage.Literals.TEAM__MEMBERS.equals(e.getFeature())) {
                     Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
                             Shr5managementPackage.Literals.PLAYER_CHARACTER);
@@ -131,8 +151,8 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseGruntTeam(GruntTeam object) {
                 try {
-                    addPage(new BeschreibbarContainterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
-                            manager, RuntimePackage.Literals.GRUNT_TEAM__GRUNT_GROUP, RuntimePackage.Literals.TEAM__MEMBERS));
+                    addPage(new VariousPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }

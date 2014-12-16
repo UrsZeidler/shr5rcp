@@ -49,6 +49,8 @@ public class TreeTableWidget extends Composite {
     private String titel;
     private ISelectionChangedListener selectionChangeListener;
     private IDoubleClickListener dblListener;
+    //TODO: an enum for the editing state when we want only delete or only add for example
+    private boolean readOnly= false;
 
     /**
      * Create the composite.
@@ -59,13 +61,6 @@ public class TreeTableWidget extends Composite {
     public TreeTableWidget(Composite parent, int style) {
         super(parent, style);
         toolkit = new FormToolkit(Display.getCurrent());
-        addDisposeListener(new DisposeListener() {
-            public void widgetDisposed(DisposeEvent e) {
-                toolkit.dispose();
-            }
-        });
-        toolkit.adapt(this);
-        toolkit.paintBordersFor(this);
         createWidgets();
 
     }
@@ -81,10 +76,22 @@ public class TreeTableWidget extends Composite {
         this.titel = titel;
         this.dblListener = dblListner;
 
-        toolkit.adapt(this);
-        toolkit.paintBordersFor(this);
         createWidgets();
+    }
 
+    public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
+            ReferenceManager mananger, EditingDomain editingDomain, IDoubleClickListener dblListner,boolean readOnly) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.feature = modifizierbarMods;
+        this.manager = mananger;
+        this.editingDomain = editingDomain;
+        this.titel = titel;
+        this.dblListener = dblListner;
+        this.readOnly = readOnly;
+
+        createWidgets();
     }
 
     public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
@@ -99,13 +106,19 @@ public class TreeTableWidget extends Composite {
         this.selectionChangeListener = selectionChangeListener;
         this.dblListener = dblListner;
 
-        toolkit.adapt(this);
-        toolkit.paintBordersFor(this);
-        createWidgets();
-
+         createWidgets();
     }
 
     private void createWidgets() {
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+
+        
         setLayout(new FillLayout(SWT.HORIZONTAL));
 
         Section sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
@@ -129,11 +142,12 @@ public class TreeTableWidget extends Composite {
         tree.setLinesVisible(true);
         toolkit.paintBordersFor(tree);
         tree.setToolTipText(toTooltipName());
-
+        
         ToolBar toolBar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         toolkit.adapt(toolBar);
         toolkit.paintBordersFor(toolBar);
         sctnNewSection.setDescriptionControl(toolBar);
+        toolBar.setVisible(!readOnly);
 
         ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.setText("add");
@@ -177,7 +191,7 @@ public class TreeTableWidget extends Composite {
                 if (manager != null) {
                     manager.handleAdd(e1, object);
 
-                    // treeViewer.refresh(true);
+//                    treeViewer.refresh(true);
                 }
             }
         });
