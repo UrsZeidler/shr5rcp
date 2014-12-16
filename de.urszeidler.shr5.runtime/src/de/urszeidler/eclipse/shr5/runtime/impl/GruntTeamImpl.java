@@ -4,6 +4,8 @@ package de.urszeidler.eclipse.shr5.runtime.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -13,6 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
@@ -110,9 +113,9 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
      * @generated not
      */
     public void buildMembers() {
+        getMembers().clear();
         if (getGruntGroup() == null)
             return;
-        getMembers().clear();
 
         GruntMembers leader = getGruntGroup().getLeader();
         ArrayList<GruntMembers> list = new ArrayList<GruntMembers>(getGruntGroup().getMembers().size() + 1);
@@ -124,7 +127,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
             createRuntimeCharacters(gruntMembers);
         }
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.ADD_MANY, RuntimePackage.TEAM__MEMBERS, list, list));
+            eNotify(new ENotificationImpl(this, Notification.ADD_MANY, RuntimePackage.TEAM__MEMBERS, Collections.EMPTY_LIST, Collections.EMPTY_LIST));
 
     }
 
@@ -140,7 +143,6 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
             gruntRuntimeCharacter.setCharacter(gruntMembers.getNsc());
             getMembers().add(gruntRuntimeCharacter);
         }
-
     }
 
     /**
