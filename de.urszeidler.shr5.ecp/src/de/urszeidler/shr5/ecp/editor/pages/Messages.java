@@ -160,6 +160,11 @@ public class Messages extends NLS {
     public static String SubstancePage_attributes;
     public static String GegenstandPage_sctnRuntime_text;
 
+    public static String TreeTableWidget_add_element;
+    public static String TreeTableWidget_add_element_tooltip;
+    public static String TreeTableWidget_remove_element;
+    public static String TreeTableWidget_remove_element_tooltip;
+
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);

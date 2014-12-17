@@ -36,6 +36,9 @@ import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
+
+import org.eclipse.swt.widgets.Label;
 
 public class TreeTableWidget extends Composite {
 
@@ -150,10 +153,14 @@ public class TreeTableWidget extends Composite {
         toolBar.setVisible(!readOnly);
 
         ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
-        tltmNewItem.setText("add");
+        tltmNewItem.setText(Messages.TreeTableWidget_add_element);
+        tltmNewItem.setToolTipText(String.format(Messages.TreeTableWidget_add_element_tooltip, 
+                AdapterFactoryUtil.getInstance().getLabelProvider().getText(feature.getEType()),
+                AdapterFactoryUtil.getInstance().getLabelProvider().getText(feature)));
 
         ToolItem tltmNewItem_1 = new ToolItem(toolBar, SWT.NONE);
-        tltmNewItem_1.setText("remove");
+        tltmNewItem_1.setText(Messages.TreeTableWidget_remove_element);
+        tltmNewItem_1.setToolTipText(Messages.TreeTableWidget_remove_element_tooltip);
 
         EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
         // EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
