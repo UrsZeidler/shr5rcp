@@ -555,7 +555,7 @@ public class ShadowrunEditingTools {
     public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
         IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
         if(descriptor==null)
-            AdapterFactoryUtil.getInstance().getItemDelegator().getText(eAttribute);
+            return AdapterFactoryUtil.getInstance().getItemDelegator().getText(eAttribute);
             
         return descriptor.getDisplayName(eAttribute);
     }
