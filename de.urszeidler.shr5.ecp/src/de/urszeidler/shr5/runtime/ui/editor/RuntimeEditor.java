@@ -55,38 +55,17 @@ import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
  */
 public class RuntimeEditor extends AbstractShr5Editor {
 
- 
     private static final String EMPTY = ""; //$NON-NLS-1$
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.RuntimeEditorID"; //$NON-NLS-1$
 
-    
     /**
      * @return
      */
     protected ShrReferenceManager createReferenceManager() {
-        return new ShrReferenceManager(this, AdapterFactoryUtil.getInstance().getItemDelegator(), getEditingDomain()){
+        return new ShrReferenceManager(this, AdapterFactoryUtil.getInstance().getItemDelegator(), getEditingDomain()) {
             @Override
             protected Object provideObject(FormbuilderEntry e, EObject object) {
-//                if (RuntimePackage.Literals.GRUNT_TEAM__GRUNT_GROUP.equals(e.getFeature())) {
-//                    Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
-//                            Shr5managementPackage.Literals.GRUNT_GROUP);
-//                    
-//                    OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), objectsOfType.toArray(new Object[]{}),
-//                            "Select a grunt group", "");
-//                    dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-//
-// 
-//                    if (dialog.open() == Dialog.OK && dialog.getResult().length==1) {
-//                        return dialog.getResult()[0];
-//                    }
-//                    return null;
-////                    ((GruntTeam)object).getGruntGroup();
-////                    FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), object,
-////                            e.getFeature(), "Add " + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(objectsOfType),object);
-//
-//                }else
-                
                 if (RuntimePackage.Literals.TEAM__MEMBERS.equals(e.getFeature())) {
                     Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
                             Shr5managementPackage.Literals.PLAYER_CHARACTER);
@@ -96,9 +75,9 @@ public class RuntimeEditor extends AbstractShr5Editor {
                     Transformer<ManagedCharacter, RuntimeCharacter> transformer = ShadowrunEditingTools.managedCharacter2RuntimeTransformer();
 
                     FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                            Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
-                                    Collections2.filter((Collection<ManagedCharacter>)objectsOfType,
-                                            ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),object);
+                            Shr5Package.Literals.SHR_LIST__ENTRIES, "Select members for the team.", new ArrayList<EObject>(Collections2.filter(
+                                    (Collection<ManagedCharacter>)objectsOfType,
+                                    ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))), object);
 
                     int result = dialog.open();
                     if (result == Window.OK) {
@@ -111,23 +90,14 @@ public class RuntimeEditor extends AbstractShr5Editor {
                         }
 
                         return objectList;
-                    }else
+                    } else
                         return null;
                 }
                 return defaultCreationDialog(e, object);
             }
 
-            
         };
     }
-//    
-//    protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
-//        public void handleAdd(FormbuilderEntry e, EObject object) {
-//            super.handleAdd(e, object);
-//        };
-//
-//  
-//    };
 
     @Override
     protected void addPages() {
@@ -136,11 +106,13 @@ public class RuntimeEditor extends AbstractShr5Editor {
             public Object caseRuntimeCharacter(RuntimeCharacter object) {
                 try {
                     addPage(new RuntimeCharacterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
-                            manager));                    
-                    addPage(new ManagedCharacterPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
-                            Messages.ShadowrunEditor_page_character, object.getCharacter(), editingDomain, manager));
-                    addPage(new AbstraktPersonaPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
-                            object.getCharacter().getPersona(), editingDomain, manager));
+                            manager));
+                    if (object.getCharacter() != null)
+                        addPage(new ManagedCharacterPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
+                                Messages.ShadowrunEditor_page_character, object.getCharacter(), editingDomain, manager));
+                    if (object.getCharacter() != null && object.getCharacter().getPersona() != null)
+                        addPage(new AbstraktPersonaPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
+                                object.getCharacter().getPersona(), editingDomain, manager));
 
                 } catch (PartInitException e) {
                     logError("error creating SpeziesPage", e);//$NON-NLS-1$
@@ -151,8 +123,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseGruntTeam(GruntTeam object) {
                 try {
-                    addPage(new VariousPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
-                            manager));
+                    addPage(new VariousPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }

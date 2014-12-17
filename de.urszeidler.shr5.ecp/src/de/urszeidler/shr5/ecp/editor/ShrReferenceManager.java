@@ -112,8 +112,8 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, e.getFeature());
             List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
             Object[] choises = NullObject.toChoises(values);
-            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, Messages.ShadowrunEditor_dlg_select_type,
-                    Messages.ShadowrunEditor_dlg_select_persona_type);
+            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select the magazine",
+                    "");
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
@@ -245,7 +245,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 || Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
 
             EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
-            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
+//            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
             EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
             GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
 
@@ -267,7 +267,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         }
         
         OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
-                Messages.ShadowrunEditor_dlg_select_type, Messages.ShadowrunEditor_dlg_select_persona_type);
+                ShadowrunEditingTools.toFeatureName(object, e.getFeature()), "");
         dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
         int open = dialog.open();
         if (open == Dialog.OK) {
