@@ -6062,6 +6062,15 @@
         <entries xsi:type="shr5:Credstick" xmi:id="_ELz4YDnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="500" name="Platinum" maxValue="500000"/>
         <entries xsi:type="shr5:Credstick" xmi:id="_ELz4YTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="1000" name="Ebony" maxValue="1000000"/>
       </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_gRxBYIXNEeS_sOkeVG-YrA" name="contracts">
+        <entries xsi:type="shr5:Lizenz" xmi:id="_otP_8IXNEeS_sOkeVG-YrA" name="default" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="200" stufe="1" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_ru3W0IXNEeS_sOkeVG-YrA" name="Faked SIN 1" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="1" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_KooD0IXPEeS_sOkeVG-YrA" name="Faked SIN 2" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="2" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_e-eioIXPEeS_sOkeVG-YrA" name="Faked SIN 3" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="3" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_ZrXDMIXPEeS_sOkeVG-YrA" name="Faked SIN 4" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="4" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_hK2TkIXPEeS_sOkeVG-YrA" name="Faked SIN 5" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="5" gefaelscht="true"/>
+        <entries xsi:type="shr5:Sin" xmi:id="_jGcdkIXPEeS_sOkeVG-YrA" name="Faked SIN 6" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="6" gefaelscht="true"/>
+      </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_ELz4YjnTEeSe6_w6Jrbqxg" name="Skills">
       <entries xsi:type="shr5:ShrList" xmi:id="_ELz4YznTEeSe6_w6Jrbqxg" name="skillgroups">
