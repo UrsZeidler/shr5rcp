@@ -219,7 +219,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_leftHand_feature"),
-                 getString("_UI_RuntimeCharacter_lefttHand_description", "_UI_RuntimeCharacter_leftHand_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_leftHand_description", "_UI_RuntimeCharacter_leftHand_feature", "_UI_RuntimeCharacter_type"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND,
                  true,
                  false,
