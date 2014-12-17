@@ -11,6 +11,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerpermods()
  * @model abstract="true"
+ *        annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Description'"
  * @generated
  */
 public interface Koerpermods extends AbstraktModifikatoren {

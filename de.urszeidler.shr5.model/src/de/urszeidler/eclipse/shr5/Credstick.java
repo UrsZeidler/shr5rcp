@@ -39,6 +39,9 @@ public interface Credstick extends AbstraktGegenstand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The max value of money the credstick can store.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Max Value</em>' attribute.
      * @see #setMaxValue(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCredstick_MaxValue()
@@ -80,6 +83,9 @@ public interface Credstick extends AbstraktGegenstand {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The current balance is the summ of all transactions.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Current Value</em>' attribute.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCredstick_CurrentValue()
      * @model transient="true" changeable="false" volatile="true"

@@ -29,6 +29,9 @@ public interface AbstractMatrixDevice extends AbstraktGegenstand, MatrixDevice {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The device rating, it defines the basic properties of a matrix device.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Device Rating</em>' attribute.
      * @see #setDeviceRating(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstractMatrixDevice_DeviceRating()

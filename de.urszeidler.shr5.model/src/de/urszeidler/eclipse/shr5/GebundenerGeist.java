@@ -31,6 +31,9 @@ public interface GebundenerGeist extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The numer of services the bound spirit will provide.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Dienste</em>' attribute.
      * @see #setDienste(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getGebundenerGeist_Dienste()

@@ -67,7 +67,7 @@ public class LifestyleItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Lifestyle_owned_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Lifestyle_owned_feature", "_UI_Lifestyle_type"),
+                 getString("_UI_Lifestyle_owned_description"),
                  Shr5Package.Literals.LIFESTYLE__OWNED,
                  true,
                  false,

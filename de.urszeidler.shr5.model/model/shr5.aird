@@ -16309,6 +16309,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Credstick/maxValue"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Credstick/maxValue"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_cQUkYIX9EeSCd9O2370cJA" label="The max value of money the credstick can store." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Credstick/maxValue/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Credstick/maxValue/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_cQUkYYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cQUkYoX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYVnW5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYV3W5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -16334,6 +16343,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Credstick/currentValue"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Credstick/currentValue"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_d2ZKUIX9EeSCd9O2370cJA" label="The current balance is the summ of all transactions." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Credstick/currentValue/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Credstick/currentValue/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_d2ZxYIX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_d2ZxYYX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYX3W5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYYHW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -16359,7 +16377,7 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Menge/anzahl"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Menge/anzahl"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
-          <cells xmi:type="table:DCell" xmi:id="_cEHYaHW5EeS68OT1x4CSXA" label="The current count of items." column="_cEIk_XW5EeS68OT1x4CSXA">
+          <cells xmi:type="table:DCell" xmi:id="_cEHYaHW5EeS68OT1x4CSXA" label="The current quantity of items." column="_cEIk_XW5EeS68OT1x4CSXA">
             <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Menge/anzahl/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Menge/anzahl/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <currentStyle xmi:type="table:DCellStyle" xmi:id="_cEHYaXW5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
@@ -16418,6 +16436,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Munition/damageMod"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Munition/damageMod"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_jQKrYIX9EeSCd9O2370cJA" label="The damage modifation of the ammo, this value is added to the damage value of the weapon when used." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/damageMod/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/damageMod/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_jQKrYYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_jQKrYoX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYfXW5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYfnW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -16426,6 +16453,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Munition/armorMod"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Munition/armorMod"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_k-6FIIX9EeSCd9O2370cJA" label="The armor modifation of the ammo, this value is added to the armor piercing of the weapon when used." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/armorMod/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/armorMod/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_k-6FIYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_k-6FIoX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYgHW5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYgXW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -16434,6 +16470,15 @@
           <target xmi:type="ecore:EReference" href="shr5.ecore#//Munition/type"/>
           <semanticElements xmi:type="ecore:EReference" href="shr5.ecore#//Munition/type"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_mdGhcIX9EeSCd9O2370cJA" label="The categorie of the ammo, the ammo can be used in every weapon with the same range category." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/type/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//Munition/type/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_mdGhcYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_mdGhcoX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYg3W5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYhHW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -16476,6 +16521,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//GebundenerGeist/dienste"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//GebundenerGeist/dienste"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_om9w8IX9EeSCd9O2370cJA" label="The numer of services the bound spirit will provide." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//GebundenerGeist/dienste/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//GebundenerGeist/dienste/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_om-YAIX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_om-YAYX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEHYknW5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEHYk3W5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -17382,6 +17436,15 @@
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//AbstractMatrixDevice/deviceRating"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//AbstractMatrixDevice/deviceRating"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_SQY7EIX-EeSCd9O2370cJA" label="The device rating, it defines the basic properties of a matrix device." column="_cEIk_XW5EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//AbstractMatrixDevice/deviceRating/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//AbstractMatrixDevice/deviceRating/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_SQY7EYX-EeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_SQY7EoX-EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_cEH-r3W5EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEH-sHW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -17935,7 +17998,32 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cEIk_HW5EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
         </currentStyle>
       </lines>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_cEIk_XW5EeS68OT1x4CSXA" label="Domain Documentation" cells="_cEGvnHW5EeS68OT1x4CSXA _cEGvonW5EeS68OT1x4CSXA _cEGvqHW5EeS68OT1x4CSXA _cEGvrnW5EeS68OT1x4CSXA _cEGvvHW5EeS68OT1x4CSXA _cEGvw3W5EeS68OT1x4CSXA _cEGvyXW5EeS68OT1x4CSXA _cEGvz3W5EeS68OT1x4CSXA _cEGv1HW5EeS68OT1x4CSXA _cEGv7HW5EeS68OT1x4CSXA _cEGv-3W5EeS68OT1x4CSXA _cEGwLHW5EeS68OT1x4CSXA _cEGwMXW5EeS68OT1x4CSXA _cEGwaHW5EeS68OT1x4CSXA _cEGw2XW5EeS68OT1x4CSXA _cEGxD3W5EeS68OT1x4CSXA _cEHWjXW5EeS68OT1x4CSXA _cEHWmnW5EeS68OT1x4CSXA _cEHWoHW5EeS68OT1x4CSXA _cEHWpXW5EeS68OT1x4CSXA _cEHWt3W5EeS68OT1x4CSXA _cEHWynW5EeS68OT1x4CSXA _cEHXC3W5EeS68OT1x4CSXA _cEHXO3W5EeS68OT1x4CSXA _cEHXiXW5EeS68OT1x4CSXA _cEHXlXW5EeS68OT1x4CSXA _cEHXnnW5EeS68OT1x4CSXA _cEHXqHW5EeS68OT1x4CSXA _cEHXrnW5EeS68OT1x4CSXA _cEHYJnW5EeS68OT1x4CSXA _cEHYK3W5EeS68OT1x4CSXA _cEHYQ3W5EeS68OT1x4CSXA _cEHYT3W5EeS68OT1x4CSXA _cEHYWXW5EeS68OT1x4CSXA _cEHYYXW5EeS68OT1x4CSXA _cEHYaHW5EeS68OT1x4CSXA _cEHYbnW5EeS68OT1x4CSXA _cEHYc3W5EeS68OT1x4CSXA _cEHYhXW5EeS68OT1x4CSXA _cEHYi3W5EeS68OT1x4CSXA _cEHYo3W5EeS68OT1x4CSXA _cEH9l3W5EeS68OT1x4CSXA _cEH9r3W5EeS68OT1x4CSXA _cEH9xHW5EeS68OT1x4CSXA _cEH90HW5EeS68OT1x4CSXA _cEH913W5EeS68OT1x4CSXA _cEH93HW5EeS68OT1x4CSXA _cEH96XW5EeS68OT1x4CSXA _cEH9-3W5EeS68OT1x4CSXA _cEH-BnW5EeS68OT1x4CSXA _cEH-JHW5EeS68OT1x4CSXA _cEH-K3W5EeS68OT1x4CSXA _cEH-MXW5EeS68OT1x4CSXA _cEH-N3W5EeS68OT1x4CSXA _cEH-QnW5EeS68OT1x4CSXA _cEH-VXW5EeS68OT1x4CSXA _cEH-YHW5EeS68OT1x4CSXA _cEH-cnW5EeS68OT1x4CSXA _cEH-wHW5EeS68OT1x4CSXA _cEH-2HW5EeS68OT1x4CSXA _cEH-63W5EeS68OT1x4CSXA _cEH-8XW5EeS68OT1x4CSXA _cEH-93W5EeS68OT1x4CSXA _cEH-_HW5EeS68OT1x4CSXA _cEH_BXW5EeS68OT1x4CSXA _cEH_DHW5EeS68OT1x4CSXA _cEH_EXW5EeS68OT1x4CSXA _cEIks3W5EeS68OT1x4CSXA _cEIk4XW5EeS68OT1x4CSXA _cEIk53W5EeS68OT1x4CSXA _cEIk7HW5EeS68OT1x4CSXA _cEIk8nW5EeS68OT1x4CSXA _cEIk-HW5EeS68OT1x4CSXA">
+      <lines xmi:type="table:DLine" xmi:id="_UDK8wIX9EeSCd9O2370cJA" label="EClass : SubstanceContainer">
+        <target xmi:type="ecore:EClass" href="shr5.ecore#//SubstanceContainer"/>
+        <lines xmi:type="table:DLine" xmi:id="_UDoPwIX9EeSCd9O2370cJA" label="EReference : substance">
+          <target xmi:type="ecore:EReference" href="shr5.ecore#//SubstanceContainer/substance"/>
+          <semanticElements xmi:type="ecore:EReference" href="shr5.ecore#//SubstanceContainer/substance"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_UDoPwYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_UDoPwoX9EeSCd9O2370cJA" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="shr5.ecore#//SubstanceContainer"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <cells xmi:type="table:DCell" xmi:id="_UDwyoIX9EeSCd9O2370cJA" label="Holds the substance inthe inventory." column="_cEIk_XW5EeS68OT1x4CSXA">
+          <target xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//SubstanceContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="shr5.ecore#//SubstanceContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <currentStyle xmi:type="table:DCellStyle" xmi:id="_UDwyoYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_UDwyooX9EeSCd9O2370cJA" red="220" green="234" blue="183"/>
+            <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </currentStyle>
+          <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+        </cells>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_UDK8wYX9EeSCd9O2370cJA" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_UDK8woX9EeSCd9O2370cJA" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_cEIk_XW5EeS68OT1x4CSXA" label="Domain Documentation" cells="_cEGvnHW5EeS68OT1x4CSXA _cEGvonW5EeS68OT1x4CSXA _cEGvqHW5EeS68OT1x4CSXA _cEGvrnW5EeS68OT1x4CSXA _cEGvvHW5EeS68OT1x4CSXA _cEGvw3W5EeS68OT1x4CSXA _cEGvyXW5EeS68OT1x4CSXA _cEGvz3W5EeS68OT1x4CSXA _cEGv1HW5EeS68OT1x4CSXA _cEGv7HW5EeS68OT1x4CSXA _cEGv-3W5EeS68OT1x4CSXA _cEGwLHW5EeS68OT1x4CSXA _cEGwMXW5EeS68OT1x4CSXA _cEGwaHW5EeS68OT1x4CSXA _cEGw2XW5EeS68OT1x4CSXA _cEGxD3W5EeS68OT1x4CSXA _cEHWjXW5EeS68OT1x4CSXA _cEHWmnW5EeS68OT1x4CSXA _cEHWoHW5EeS68OT1x4CSXA _cEHWpXW5EeS68OT1x4CSXA _cEHWt3W5EeS68OT1x4CSXA _cEHWynW5EeS68OT1x4CSXA _cEHXC3W5EeS68OT1x4CSXA _cEHXO3W5EeS68OT1x4CSXA _cEHXiXW5EeS68OT1x4CSXA _cEHXlXW5EeS68OT1x4CSXA _cEHXnnW5EeS68OT1x4CSXA _cEHXqHW5EeS68OT1x4CSXA _cEHXrnW5EeS68OT1x4CSXA _cEHYJnW5EeS68OT1x4CSXA _cEHYK3W5EeS68OT1x4CSXA _cEHYQ3W5EeS68OT1x4CSXA _cEHYT3W5EeS68OT1x4CSXA _cEHYWXW5EeS68OT1x4CSXA _cEHYYXW5EeS68OT1x4CSXA _cEHYaHW5EeS68OT1x4CSXA _cEHYbnW5EeS68OT1x4CSXA _cEHYc3W5EeS68OT1x4CSXA _cEHYhXW5EeS68OT1x4CSXA _cEHYi3W5EeS68OT1x4CSXA _cEHYo3W5EeS68OT1x4CSXA _cEH9l3W5EeS68OT1x4CSXA _cEH9r3W5EeS68OT1x4CSXA _cEH9xHW5EeS68OT1x4CSXA _cEH90HW5EeS68OT1x4CSXA _cEH913W5EeS68OT1x4CSXA _cEH93HW5EeS68OT1x4CSXA _cEH96XW5EeS68OT1x4CSXA _cEH9-3W5EeS68OT1x4CSXA _cEH-BnW5EeS68OT1x4CSXA _cEH-JHW5EeS68OT1x4CSXA _cEH-K3W5EeS68OT1x4CSXA _cEH-MXW5EeS68OT1x4CSXA _cEH-N3W5EeS68OT1x4CSXA _cEH-QnW5EeS68OT1x4CSXA _cEH-VXW5EeS68OT1x4CSXA _cEH-YHW5EeS68OT1x4CSXA _cEH-cnW5EeS68OT1x4CSXA _cEH-wHW5EeS68OT1x4CSXA _cEH-2HW5EeS68OT1x4CSXA _cEH-63W5EeS68OT1x4CSXA _cEH-8XW5EeS68OT1x4CSXA _cEH-93W5EeS68OT1x4CSXA _cEH-_HW5EeS68OT1x4CSXA _cEH_BXW5EeS68OT1x4CSXA _cEH_DHW5EeS68OT1x4CSXA _cEH_EXW5EeS68OT1x4CSXA _cEIks3W5EeS68OT1x4CSXA _cEIk4XW5EeS68OT1x4CSXA _cEIk53W5EeS68OT1x4CSXA _cEIk7HW5EeS68OT1x4CSXA _cEIk8nW5EeS68OT1x4CSXA _cEIk-HW5EeS68OT1x4CSXA _UDwyoIX9EeSCd9O2370cJA _cQUkYIX9EeSCd9O2370cJA _d2ZKUIX9EeSCd9O2370cJA _jQKrYIX9EeSCd9O2370cJA _k-6FIIX9EeSCd9O2370cJA _mdGhcIX9EeSCd9O2370cJA _om9w8IX9EeSCd9O2370cJA _SQY7EIX-EeSCd9O2370cJA">
         <target xmi:type="ecore:EPackage" href="shr5.ecore#/"/>
         <semanticElements xmi:type="ecore:EPackage" href="shr5.ecore#/"/>
         <originMapping xmi:type="description_2:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
@@ -25396,7 +25484,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx1HpjEeS7R_CGLciuCA" label="The armor piering of the weapon." column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx1HpjEeS7R_CGLciuCA" label="The armor piering of the weapon. (AP)" column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstaktWaffe/durchschlagsKraft"/>
           </cells>
@@ -25432,7 +25520,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/munitionstyp"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/munitionstyp"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx3HpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx3HpjEeS7R_CGLciuCA" label="The magazine type, like clip cyclinder." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/munitionstyp"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/munitionstyp"/>
           </cells>
@@ -25484,7 +25572,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/rueckstoss"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/rueckstoss"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNXx6HpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNXx6HpjEeS7R_CGLciuCA" label="The build in recoile compensation of the weapon." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/rueckstoss"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Feuerwaffe/rueckstoss"/>
           </cells>
@@ -26433,7 +26521,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Anwendbar/fertigkeit"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Anwendbar/fertigkeit"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNaOB3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNaOB3pjEeS7R_CGLciuCA" label="The skill used for the test when using this item." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Anwendbar/fertigkeit"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Anwendbar/fertigkeit"/>
           </cells>
@@ -27392,7 +27480,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Lifestyle/owned"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Lifestyle/owned"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcDYXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcDYXpjEeS7R_CGLciuCA" label="When you pay 100 time the price the lifestyle is forever." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Lifestyle/owned"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Lifestyle/owned"/>
           </cells>
@@ -27469,7 +27557,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/faelligkeitsIntervall"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/faelligkeitsIntervall"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqQXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqQXpjEeS7R_CGLciuCA" label="The number of units for one intervall." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/faelligkeitsIntervall"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/faelligkeitsIntervall"/>
           </cells>
@@ -27482,7 +27570,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/unit"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/unit"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqRHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqRHpjEeS7R_CGLciuCA" label="The time units used to descibed the intervall." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/unit"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/unit"/>
           </cells>
@@ -27495,7 +27583,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/begin"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/begin"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqR3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqR3pjEeS7R_CGLciuCA" label="The start date of the contract." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/begin"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/IntervallVertrag/begin"/>
           </cells>
@@ -27562,7 +27650,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Fakeable/gefaelscht"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Fakeable/gefaelscht"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqVnpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqVnpjEeS7R_CGLciuCA" label="" column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Fakeable/gefaelscht"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Fakeable/gefaelscht"/>
           </cells>
@@ -27634,7 +27722,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/anzahl"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/anzahl"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqZnpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqZnpjEeS7R_CGLciuCA" label="The quantity of this batch of pieces." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/anzahl"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/anzahl"/>
           </cells>
@@ -27647,7 +27735,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/proAnzahl"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/proAnzahl"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqaXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqaXpjEeS7R_CGLciuCA" label="The quantity factor for the price." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/proAnzahl"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Menge/proAnzahl"/>
           </cells>
@@ -27678,7 +27766,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/damageMod"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/damageMod"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqcHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqcHpjEeS7R_CGLciuCA" label="The damage modifation of the ammo, this value is added to the damage value of the weapon when used." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/damageMod"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/damageMod"/>
           </cells>
@@ -27691,7 +27779,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/armorMod"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/armorMod"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqc3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqc3pjEeS7R_CGLciuCA" label="The armor modifation of the ammo, this value is added to the armor piercing of the weapon when used." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/armorMod"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/armorMod"/>
           </cells>
@@ -27704,7 +27792,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/type"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/type"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqdnpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqdnpjEeS7R_CGLciuCA" label="The categorie of the ammo, the ammo can be used in every weapon with the same range category." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/type"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Munition/type"/>
           </cells>
@@ -27727,7 +27815,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/GebundenerGeist/dienste"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/GebundenerGeist/dienste"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqe3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqe3pjEeS7R_CGLciuCA" label="The numer of services the bound spirit will provide." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/GebundenerGeist/dienste"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/GebundenerGeist/dienste"/>
           </cells>
@@ -27745,7 +27833,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/StufenPersona/stufe"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/StufenPersona/stufe"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNcqf3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNcqf3pjEeS7R_CGLciuCA" label="" column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/StufenPersona/stufe"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/StufenPersona/stufe"/>
           </cells>
@@ -28141,7 +28229,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Cyberdeck/configuration"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Cyberdeck/configuration"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNd4bHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNd4bHpjEeS7R_CGLciuCA" label="This defines the cyberdeck configuration, the order of the attributes will change the matrix attributes." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Cyberdeck/configuration"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Cyberdeck/configuration"/>
           </cells>
@@ -28609,7 +28697,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Datasoft/skill"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Datasoft/skill"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNefoXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNefoXpjEeS7R_CGLciuCA" label="The skill this datasoft can support." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Datasoft/skill"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Datasoft/skill"/>
           </cells>
@@ -28627,7 +28715,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstractMatrixDevice/deviceRating"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstractMatrixDevice/deviceRating"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNefpXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNefpXpjEeS7R_CGLciuCA" label="The device rating, it defines the basic properties of a matrix device." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstractMatrixDevice/deviceRating"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/AbstractMatrixDevice/deviceRating"/>
           </cells>
@@ -28706,7 +28794,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/local"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/local"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNfGgXpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNfGgXpjEeS7R_CGLciuCA" label="The local code for this localization entry, de for german." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/local"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/local"/>
           </cells>
@@ -28719,7 +28807,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/name"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/name"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNfGhHpjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNfGhHpjEeS7R_CGLciuCA" label="The localized name of the item." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/name"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/Localization/name"/>
           </cells>
@@ -28876,7 +28964,7 @@
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/active"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/active"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_aNfGp3pjEeS7R_CGLciuCA" column="_aNftlXpjEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_aNfGp3pjEeS7R_CGLciuCA" label="The focus can be active, or not." column="_aNftlXpjEeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/active"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="shr5.genmodel#//shr5/FokusBinding/active"/>
           </cells>
@@ -29031,7 +29119,7 @@
         <semanticElements xmi:type="genmodel:GenClass" href="shr5.genmodel#//shr5/SubstanceContainer"/>
         <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
       </lines>
-      <columns xmi:type="table:DFeatureColumn" xmi:id="_aNftlHpjEeS7R_CGLciuCA" label="Category" cells="_aNWjoXpjEeS7R_CGLciuCA _aNWjpHpjEeS7R_CGLciuCA _aNWjp3pjEeS7R_CGLciuCA _aNWjq3pjEeS7R_CGLciuCA _aNWjrnpjEeS7R_CGLciuCA _aNWjsnpjEeS7R_CGLciuCA _aNWjtXpjEeS7R_CGLciuCA _aNWjuXpjEeS7R_CGLciuCA _aNWjvHpjEeS7R_CGLciuCA _aNWjv3pjEeS7R_CGLciuCA _aNWjwnpjEeS7R_CGLciuCA _aNWjxXpjEeS7R_CGLciuCA _aNWjyHpjEeS7R_CGLciuCA _aNWjy3pjEeS7R_CGLciuCA _aNWjznpjEeS7R_CGLciuCA _aNWj0XpjEeS7R_CGLciuCA _aNWj1HpjEeS7R_CGLciuCA _aNWj2HpjEeS7R_CGLciuCA _aNWj23pjEeS7R_CGLciuCA _aNWj33pjEeS7R_CGLciuCA _aNWj4npjEeS7R_CGLciuCA _aNXKsnpjEeS7R_CGLciuCA _aNXKtnpjEeS7R_CGLciuCA _aNXKuXpjEeS7R_CGLciuCA _aNXKvHpjEeS7R_CGLciuCA _aNXKv3pjEeS7R_CGLciuCA _aNXKwnpjEeS7R_CGLciuCA _aNXKxnpjEeS7R_CGLciuCA _aNXKyXpjEeS7R_CGLciuCA _aNXKzHpjEeS7R_CGLciuCA _aNXK0XpjEeS7R_CGLciuCA _aNXK1HpjEeS7R_CGLciuCA _aNXK13pjEeS7R_CGLciuCA _aNXK2npjEeS7R_CGLciuCA _aNXK3npjEeS7R_CGLciuCA _aNXK4XpjEeS7R_CGLciuCA _aNXK5HpjEeS7R_CGLciuCA _aNXK53pjEeS7R_CGLciuCA _aNXK6npjEeS7R_CGLciuCA _aNXxwXpjEeS7R_CGLciuCA _aNXxxnpjEeS7R_CGLciuCA _aNXxynpjEeS7R_CGLciuCA _aNXxzXpjEeS7R_CGLciuCA _aNXx0HpjEeS7R_CGLciuCA _aNXx03pjEeS7R_CGLciuCA _aNXx13pjEeS7R_CGLciuCA _aNXx23pjEeS7R_CGLciuCA _aNXx3npjEeS7R_CGLciuCA _aNXx4XpjEeS7R_CGLciuCA _aNXx5HpjEeS7R_CGLciuCA _aNXx53pjEeS7R_CGLciuCA _aNXx73pjEeS7R_CGLciuCA _aNXx8npjEeS7R_CGLciuCA _aNXx9XpjEeS7R_CGLciuCA _aNXx-XpjEeS7R_CGLciuCA _aNYY0HpjEeS7R_CGLciuCA _aNYY1HpjEeS7R_CGLciuCA _aNYY2HpjEeS7R_CGLciuCA _aNYY3HpjEeS7R_CGLciuCA _aNYY4npjEeS7R_CGLciuCA _aNYY5XpjEeS7R_CGLciuCA _aNYY6HpjEeS7R_CGLciuCA _aNYY63pjEeS7R_CGLciuCA _aNYY8HpjEeS7R_CGLciuCA _aNYY83pjEeS7R_CGLciuCA _aNYY-HpjEeS7R_CGLciuCA _aNYY_HpjEeS7R_CGLciuCA _aNYZAHpjEeS7R_CGLciuCA _aNYZA3pjEeS7R_CGLciuCA _aNY_4HpjEeS7R_CGLciuCA _aNY_43pjEeS7R_CGLciuCA _aNY_5npjEeS7R_CGLciuCA _aNY_6XpjEeS7R_CGLciuCA _aNY_7HpjEeS7R_CGLciuCA _aNY_73pjEeS7R_CGLciuCA _aNY_83pjEeS7R_CGLciuCA _aNY_9npjEeS7R_CGLciuCA _aNY_-XpjEeS7R_CGLciuCA _aNY__XpjEeS7R_CGLciuCA _aNZAAHpjEeS7R_CGLciuCA _aNZAA3pjEeS7R_CGLciuCA _aNZABnpjEeS7R_CGLciuCA _aNZACXpjEeS7R_CGLciuCA _aNZADHpjEeS7R_CGLciuCA _aNZAD3pjEeS7R_CGLciuCA _aNZAEnpjEeS7R_CGLciuCA _aNZAFXpjEeS7R_CGLciuCA _aNZAGHpjEeS7R_CGLciuCA _aNZAG3pjEeS7R_CGLciuCA _aNZAHnpjEeS7R_CGLciuCA _aNZAIXpjEeS7R_CGLciuCA _aNZAJHpjEeS7R_CGLciuCA _aNZm8HpjEeS7R_CGLciuCA _aNZm83pjEeS7R_CGLciuCA _aNZm9npjEeS7R_CGLciuCA _aNZm-XpjEeS7R_CGLciuCA _aNZm_HpjEeS7R_CGLciuCA _aNZm_3pjEeS7R_CGLciuCA _aNZnAnpjEeS7R_CGLciuCA _aNZnBXpjEeS7R_CGLciuCA _aNZnCHpjEeS7R_CGLciuCA _aNZnC3pjEeS7R_CGLciuCA _aNZnDnpjEeS7R_CGLciuCA _aNZnEXpjEeS7R_CGLciuCA _aNZnFHpjEeS7R_CGLciuCA _aNZnGHpjEeS7R_CGLciuCA _aNZnG3pjEeS7R_CGLciuCA _aNZnHnpjEeS7R_CGLciuCA _aNZnIXpjEeS7R_CGLciuCA _aNZnJHpjEeS7R_CGLciuCA _aNZnJ3pjEeS7R_CGLciuCA _aNZnLHpjEeS7R_CGLciuCA _aNaOAnpjEeS7R_CGLciuCA _aNaOBnpjEeS7R_CGLciuCA _aNaOCXpjEeS7R_CGLciuCA _aNaODXpjEeS7R_CGLciuCA _aNaOEXpjEeS7R_CGLciuCA _aNaOFHpjEeS7R_CGLciuCA _aNaOGXpjEeS7R_CGLciuCA _aNaOHHpjEeS7R_CGLciuCA _aNaOIXpjEeS7R_CGLciuCA _aNaOJHpjEeS7R_CGLciuCA _aNaOKHpjEeS7R_CGLciuCA _aNaOK3pjEeS7R_CGLciuCA _aNaOLnpjEeS7R_CGLciuCA _aNaOMXpjEeS7R_CGLciuCA _aNaONHpjEeS7R_CGLciuCA _aNaON3pjEeS7R_CGLciuCA _aNaOOnpjEeS7R_CGLciuCA _aNaOPnpjEeS7R_CGLciuCA _aNaOQXpjEeS7R_CGLciuCA _aNaORHpjEeS7R_CGLciuCA _aNa1E3pjEeS7R_CGLciuCA _aNa1F3pjEeS7R_CGLciuCA _aNa1G3pjEeS7R_CGLciuCA _aNa1HnpjEeS7R_CGLciuCA _aNa1IXpjEeS7R_CGLciuCA _aNa1JHpjEeS7R_CGLciuCA _aNa1J3pjEeS7R_CGLciuCA _aNa1KnpjEeS7R_CGLciuCA _aNa1LXpjEeS7R_CGLciuCA _aNa1MHpjEeS7R_CGLciuCA _aNa1NHpjEeS7R_CGLciuCA _aNa1N3pjEeS7R_CGLciuCA _aNa1O3pjEeS7R_CGLciuCA _aNa1QHpjEeS7R_CGLciuCA _aNa1Q3pjEeS7R_CGLciuCA _aNbcIXpjEeS7R_CGLciuCA _aNbcJHpjEeS7R_CGLciuCA _aNbcKHpjEeS7R_CGLciuCA _aNbcK3pjEeS7R_CGLciuCA _aNbcLnpjEeS7R_CGLciuCA _aNbcMXpjEeS7R_CGLciuCA _aNbcNHpjEeS7R_CGLciuCA _aNbcN3pjEeS7R_CGLciuCA _aNbcOnpjEeS7R_CGLciuCA _aNbcPXpjEeS7R_CGLciuCA _aNbcQHpjEeS7R_CGLciuCA _aNbcRHpjEeS7R_CGLciuCA _aNbcR3pjEeS7R_CGLciuCA _aNbcS3pjEeS7R_CGLciuCA _aNbcT3pjEeS7R_CGLciuCA _aNbcUnpjEeS7R_CGLciuCA _aNcDM3pjEeS7R_CGLciuCA _aNcDNnpjEeS7R_CGLciuCA _aNcDOnpjEeS7R_CGLciuCA _aNcDPXpjEeS7R_CGLciuCA _aNcDQHpjEeS7R_CGLciuCA _aNcDRHpjEeS7R_CGLciuCA _aNcDR3pjEeS7R_CGLciuCA _aNcDS3pjEeS7R_CGLciuCA _aNcDTnpjEeS7R_CGLciuCA _aNcDUXpjEeS7R_CGLciuCA _aNcDVHpjEeS7R_CGLciuCA _aNcDV3pjEeS7R_CGLciuCA _aNcDWnpjEeS7R_CGLciuCA _aNcDYHpjEeS7R_CGLciuCA _aNcDZnpjEeS7R_CGLciuCA _aNcDaXpjEeS7R_CGLciuCA _aNcDbHpjEeS7R_CGLciuCA _aNcqQHpjEeS7R_CGLciuCA _aNcqQ3pjEeS7R_CGLciuCA _aNcqRnpjEeS7R_CGLciuCA _aNcqS3pjEeS7R_CGLciuCA _aNcqTnpjEeS7R_CGLciuCA _aNcqUnpjEeS7R_CGLciuCA _aNcqVXpjEeS7R_CGLciuCA _aNcqWXpjEeS7R_CGLciuCA _aNcqXnpjEeS7R_CGLciuCA _aNcqYXpjEeS7R_CGLciuCA _aNcqZXpjEeS7R_CGLciuCA _aNcqaHpjEeS7R_CGLciuCA _aNcqbHpjEeS7R_CGLciuCA _aNcqb3pjEeS7R_CGLciuCA _aNcqcnpjEeS7R_CGLciuCA _aNcqdXpjEeS7R_CGLciuCA _aNcqenpjEeS7R_CGLciuCA _aNcqfnpjEeS7R_CGLciuCA _aNcqgXpjEeS7R_CGLciuCA _aNcqhHpjEeS7R_CGLciuCA _aNdRUHpjEeS7R_CGLciuCA _aNdRU3pjEeS7R_CGLciuCA _aNdRVnpjEeS7R_CGLciuCA _aNdRWXpjEeS7R_CGLciuCA _aNdRXHpjEeS7R_CGLciuCA _aNdRX3pjEeS7R_CGLciuCA _aNdRYnpjEeS7R_CGLciuCA _aNdRZXpjEeS7R_CGLciuCA _aNdRaXpjEeS7R_CGLciuCA _aNdRbXpjEeS7R_CGLciuCA _aNdRcHpjEeS7R_CGLciuCA _aNdRc3pjEeS7R_CGLciuCA _aNdReHpjEeS7R_CGLciuCA _aNdRe3pjEeS7R_CGLciuCA _aNdRfnpjEeS7R_CGLciuCA _aNdRgXpjEeS7R_CGLciuCA _aNdRhXpjEeS7R_CGLciuCA _aNdRiHpjEeS7R_CGLciuCA _aNdRjXpjEeS7R_CGLciuCA _aNdRkXpjEeS7R_CGLciuCA _aNdRlHpjEeS7R_CGLciuCA _aNd4YnpjEeS7R_CGLciuCA _aNd4ZXpjEeS7R_CGLciuCA _aNd4aHpjEeS7R_CGLciuCA _aNd4a3pjEeS7R_CGLciuCA _aNd4bnpjEeS7R_CGLciuCA _aNd4cnpjEeS7R_CGLciuCA _aNd4dnpjEeS7R_CGLciuCA _aNd4eXpjEeS7R_CGLciuCA _aNd4fHpjEeS7R_CGLciuCA _aNd4f3pjEeS7R_CGLciuCA _aNd4gnpjEeS7R_CGLciuCA _aNd4hnpjEeS7R_CGLciuCA _aNd4iXpjEeS7R_CGLciuCA _aNd4jHpjEeS7R_CGLciuCA _aNd4j3pjEeS7R_CGLciuCA _aNd4knpjEeS7R_CGLciuCA _aNd4lnpjEeS7R_CGLciuCA _aNd4mXpjEeS7R_CGLciuCA _aNd4nHpjEeS7R_CGLciuCA _aNd4n3pjEeS7R_CGLciuCA _aNd4onpjEeS7R_CGLciuCA _aNefcHpjEeS7R_CGLciuCA _aNefdHpjEeS7R_CGLciuCA _aNefd3pjEeS7R_CGLciuCA _aNefenpjEeS7R_CGLciuCA _aNeffXpjEeS7R_CGLciuCA _aNefg3pjEeS7R_CGLciuCA _aNefhnpjEeS7R_CGLciuCA _aNefinpjEeS7R_CGLciuCA _aNefjXpjEeS7R_CGLciuCA _aNefkXpjEeS7R_CGLciuCA _aNeflXpjEeS7R_CGLciuCA _aNefmHpjEeS7R_CGLciuCA _aNefm3pjEeS7R_CGLciuCA _aNefoHpjEeS7R_CGLciuCA _aNefpHpjEeS7R_CGLciuCA _aNefqHpjEeS7R_CGLciuCA _aNefrnpjEeS7R_CGLciuCA _aNfGgHpjEeS7R_CGLciuCA _aNfGg3pjEeS7R_CGLciuCA _aNfGhnpjEeS7R_CGLciuCA _aNfGinpjEeS7R_CGLciuCA _aNfGjXpjEeS7R_CGLciuCA _aNfGkHpjEeS7R_CGLciuCA _aNfGlHpjEeS7R_CGLciuCA _aNfGmHpjEeS7R_CGLciuCA _aNfGn3pjEeS7R_CGLciuCA _aNfGo3pjEeS7R_CGLciuCA _aNfGpnpjEeS7R_CGLciuCA _aNfGqnpjEeS7R_CGLciuCA _aNfGrXpjEeS7R_CGLciuCA _aNfGsXpjEeS7R_CGLciuCA _aNfGtHpjEeS7R_CGLciuCA _aNfGt3pjEeS7R_CGLciuCA _aNfGu3pjEeS7R_CGLciuCA _aNfGvnpjEeS7R_CGLciuCA _aNfGwnpjEeS7R_CGLciuCA _aNftkXpjEeS7R_CGLciuCA" width="528" featureName="propertyCategory">
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_aNftlHpjEeS7R_CGLciuCA" label="Category" cells="_aNWjoXpjEeS7R_CGLciuCA _aNWjpHpjEeS7R_CGLciuCA _aNWjp3pjEeS7R_CGLciuCA _aNWjq3pjEeS7R_CGLciuCA _aNWjrnpjEeS7R_CGLciuCA _aNWjsnpjEeS7R_CGLciuCA _aNWjtXpjEeS7R_CGLciuCA _aNWjuXpjEeS7R_CGLciuCA _aNWjvHpjEeS7R_CGLciuCA _aNWjv3pjEeS7R_CGLciuCA _aNWjwnpjEeS7R_CGLciuCA _aNWjxXpjEeS7R_CGLciuCA _aNWjyHpjEeS7R_CGLciuCA _aNWjy3pjEeS7R_CGLciuCA _aNWjznpjEeS7R_CGLciuCA _aNWj0XpjEeS7R_CGLciuCA _aNWj1HpjEeS7R_CGLciuCA _aNWj2HpjEeS7R_CGLciuCA _aNWj23pjEeS7R_CGLciuCA _aNWj33pjEeS7R_CGLciuCA _aNWj4npjEeS7R_CGLciuCA _aNXKsnpjEeS7R_CGLciuCA _aNXKtnpjEeS7R_CGLciuCA _aNXKuXpjEeS7R_CGLciuCA _aNXKvHpjEeS7R_CGLciuCA _aNXKv3pjEeS7R_CGLciuCA _aNXKwnpjEeS7R_CGLciuCA _aNXKxnpjEeS7R_CGLciuCA _aNXKyXpjEeS7R_CGLciuCA _aNXKzHpjEeS7R_CGLciuCA _aNXK0XpjEeS7R_CGLciuCA _aNXK1HpjEeS7R_CGLciuCA _aNXK13pjEeS7R_CGLciuCA _aNXK2npjEeS7R_CGLciuCA _aNXK3npjEeS7R_CGLciuCA _aNXK4XpjEeS7R_CGLciuCA _aNXK5HpjEeS7R_CGLciuCA _aNXK53pjEeS7R_CGLciuCA _aNXK6npjEeS7R_CGLciuCA _aNXxwXpjEeS7R_CGLciuCA _aNXxxnpjEeS7R_CGLciuCA _aNXxynpjEeS7R_CGLciuCA _aNXxzXpjEeS7R_CGLciuCA _aNXx0HpjEeS7R_CGLciuCA _aNXx03pjEeS7R_CGLciuCA _aNXx13pjEeS7R_CGLciuCA _aNXx23pjEeS7R_CGLciuCA _aNXx3npjEeS7R_CGLciuCA _aNXx4XpjEeS7R_CGLciuCA _aNXx5HpjEeS7R_CGLciuCA _aNXx53pjEeS7R_CGLciuCA _aNXx73pjEeS7R_CGLciuCA _aNXx8npjEeS7R_CGLciuCA _aNXx9XpjEeS7R_CGLciuCA _aNXx-XpjEeS7R_CGLciuCA _aNYY0HpjEeS7R_CGLciuCA _aNYY1HpjEeS7R_CGLciuCA _aNYY2HpjEeS7R_CGLciuCA _aNYY3HpjEeS7R_CGLciuCA _aNYY4npjEeS7R_CGLciuCA _aNYY5XpjEeS7R_CGLciuCA _aNYY6HpjEeS7R_CGLciuCA _aNYY63pjEeS7R_CGLciuCA _aNYY8HpjEeS7R_CGLciuCA _aNYY83pjEeS7R_CGLciuCA _aNYY-HpjEeS7R_CGLciuCA _aNYY_HpjEeS7R_CGLciuCA _aNYZAHpjEeS7R_CGLciuCA _aNYZA3pjEeS7R_CGLciuCA _aNY_4HpjEeS7R_CGLciuCA _aNY_43pjEeS7R_CGLciuCA _aNY_5npjEeS7R_CGLciuCA _aNY_6XpjEeS7R_CGLciuCA _aNY_7HpjEeS7R_CGLciuCA _aNY_73pjEeS7R_CGLciuCA _aNY_83pjEeS7R_CGLciuCA _aNY_9npjEeS7R_CGLciuCA _aNY_-XpjEeS7R_CGLciuCA _aNY__XpjEeS7R_CGLciuCA _aNZAAHpjEeS7R_CGLciuCA _aNZAA3pjEeS7R_CGLciuCA _aNZABnpjEeS7R_CGLciuCA _aNZACXpjEeS7R_CGLciuCA _aNZADHpjEeS7R_CGLciuCA _aNZAD3pjEeS7R_CGLciuCA _aNZAEnpjEeS7R_CGLciuCA _aNZAFXpjEeS7R_CGLciuCA _aNZAGHpjEeS7R_CGLciuCA _aNZAG3pjEeS7R_CGLciuCA _aNZAHnpjEeS7R_CGLciuCA _aNZAIXpjEeS7R_CGLciuCA _aNZAJHpjEeS7R_CGLciuCA _aNZm8HpjEeS7R_CGLciuCA _aNZm83pjEeS7R_CGLciuCA _aNZm9npjEeS7R_CGLciuCA _aNZm-XpjEeS7R_CGLciuCA _aNZm_HpjEeS7R_CGLciuCA _aNZm_3pjEeS7R_CGLciuCA _aNZnAnpjEeS7R_CGLciuCA _aNZnBXpjEeS7R_CGLciuCA _aNZnCHpjEeS7R_CGLciuCA _aNZnC3pjEeS7R_CGLciuCA _aNZnDnpjEeS7R_CGLciuCA _aNZnEXpjEeS7R_CGLciuCA _aNZnFHpjEeS7R_CGLciuCA _aNZnGHpjEeS7R_CGLciuCA _aNZnG3pjEeS7R_CGLciuCA _aNZnHnpjEeS7R_CGLciuCA _aNZnIXpjEeS7R_CGLciuCA _aNZnJHpjEeS7R_CGLciuCA _aNZnJ3pjEeS7R_CGLciuCA _aNZnLHpjEeS7R_CGLciuCA _aNaOAnpjEeS7R_CGLciuCA _aNaOBnpjEeS7R_CGLciuCA _aNaOCXpjEeS7R_CGLciuCA _aNaODXpjEeS7R_CGLciuCA _aNaOEXpjEeS7R_CGLciuCA _aNaOFHpjEeS7R_CGLciuCA _aNaOGXpjEeS7R_CGLciuCA _aNaOHHpjEeS7R_CGLciuCA _aNaOIXpjEeS7R_CGLciuCA _aNaOJHpjEeS7R_CGLciuCA _aNaOKHpjEeS7R_CGLciuCA _aNaOK3pjEeS7R_CGLciuCA _aNaOLnpjEeS7R_CGLciuCA _aNaOMXpjEeS7R_CGLciuCA _aNaONHpjEeS7R_CGLciuCA _aNaON3pjEeS7R_CGLciuCA _aNaOOnpjEeS7R_CGLciuCA _aNaOPnpjEeS7R_CGLciuCA _aNaOQXpjEeS7R_CGLciuCA _aNaORHpjEeS7R_CGLciuCA _aNa1E3pjEeS7R_CGLciuCA _aNa1F3pjEeS7R_CGLciuCA _aNa1G3pjEeS7R_CGLciuCA _aNa1HnpjEeS7R_CGLciuCA _aNa1IXpjEeS7R_CGLciuCA _aNa1JHpjEeS7R_CGLciuCA _aNa1J3pjEeS7R_CGLciuCA _aNa1KnpjEeS7R_CGLciuCA _aNa1LXpjEeS7R_CGLciuCA _aNa1MHpjEeS7R_CGLciuCA _aNa1NHpjEeS7R_CGLciuCA _aNa1N3pjEeS7R_CGLciuCA _aNa1O3pjEeS7R_CGLciuCA _aNa1QHpjEeS7R_CGLciuCA _aNa1Q3pjEeS7R_CGLciuCA _aNbcIXpjEeS7R_CGLciuCA _aNbcJHpjEeS7R_CGLciuCA _aNbcKHpjEeS7R_CGLciuCA _aNbcK3pjEeS7R_CGLciuCA _aNbcLnpjEeS7R_CGLciuCA _aNbcMXpjEeS7R_CGLciuCA _aNbcNHpjEeS7R_CGLciuCA _aNbcN3pjEeS7R_CGLciuCA _aNbcOnpjEeS7R_CGLciuCA _aNbcPXpjEeS7R_CGLciuCA _aNbcQHpjEeS7R_CGLciuCA _aNbcRHpjEeS7R_CGLciuCA _aNbcR3pjEeS7R_CGLciuCA _aNbcS3pjEeS7R_CGLciuCA _aNbcT3pjEeS7R_CGLciuCA _aNbcUnpjEeS7R_CGLciuCA _aNcDM3pjEeS7R_CGLciuCA _aNcDNnpjEeS7R_CGLciuCA _aNcDOnpjEeS7R_CGLciuCA _aNcDPXpjEeS7R_CGLciuCA _aNcDQHpjEeS7R_CGLciuCA _aNcDRHpjEeS7R_CGLciuCA _aNcDR3pjEeS7R_CGLciuCA _aNcDS3pjEeS7R_CGLciuCA _aNcDTnpjEeS7R_CGLciuCA _aNcDUXpjEeS7R_CGLciuCA _aNcDVHpjEeS7R_CGLciuCA _aNcDV3pjEeS7R_CGLciuCA _aNcDWnpjEeS7R_CGLciuCA _aNcDYHpjEeS7R_CGLciuCA _aNcDZnpjEeS7R_CGLciuCA _aNcDaXpjEeS7R_CGLciuCA _aNcDbHpjEeS7R_CGLciuCA _aNcqQHpjEeS7R_CGLciuCA _aNcqQ3pjEeS7R_CGLciuCA _aNcqRnpjEeS7R_CGLciuCA _aNcqS3pjEeS7R_CGLciuCA _aNcqTnpjEeS7R_CGLciuCA _aNcqUnpjEeS7R_CGLciuCA _aNcqVXpjEeS7R_CGLciuCA _aNcqWXpjEeS7R_CGLciuCA _aNcqXnpjEeS7R_CGLciuCA _aNcqYXpjEeS7R_CGLciuCA _aNcqZXpjEeS7R_CGLciuCA _aNcqaHpjEeS7R_CGLciuCA _aNcqbHpjEeS7R_CGLciuCA _aNcqb3pjEeS7R_CGLciuCA _aNcqcnpjEeS7R_CGLciuCA _aNcqdXpjEeS7R_CGLciuCA _aNcqenpjEeS7R_CGLciuCA _aNcqfnpjEeS7R_CGLciuCA _aNcqgXpjEeS7R_CGLciuCA _aNcqhHpjEeS7R_CGLciuCA _aNdRUHpjEeS7R_CGLciuCA _aNdRU3pjEeS7R_CGLciuCA _aNdRVnpjEeS7R_CGLciuCA _aNdRWXpjEeS7R_CGLciuCA _aNdRXHpjEeS7R_CGLciuCA _aNdRX3pjEeS7R_CGLciuCA _aNdRYnpjEeS7R_CGLciuCA _aNdRZXpjEeS7R_CGLciuCA _aNdRaXpjEeS7R_CGLciuCA _aNdRbXpjEeS7R_CGLciuCA _aNdRcHpjEeS7R_CGLciuCA _aNdRc3pjEeS7R_CGLciuCA _aNdReHpjEeS7R_CGLciuCA _aNdRe3pjEeS7R_CGLciuCA _aNdRfnpjEeS7R_CGLciuCA _aNdRgXpjEeS7R_CGLciuCA _aNdRhXpjEeS7R_CGLciuCA _aNdRiHpjEeS7R_CGLciuCA _aNdRjXpjEeS7R_CGLciuCA _aNdRkXpjEeS7R_CGLciuCA _aNdRlHpjEeS7R_CGLciuCA _aNd4YnpjEeS7R_CGLciuCA _aNd4ZXpjEeS7R_CGLciuCA _aNd4aHpjEeS7R_CGLciuCA _aNd4a3pjEeS7R_CGLciuCA _aNd4bnpjEeS7R_CGLciuCA _aNd4cnpjEeS7R_CGLciuCA _aNd4dnpjEeS7R_CGLciuCA _aNd4eXpjEeS7R_CGLciuCA _aNd4fHpjEeS7R_CGLciuCA _aNd4f3pjEeS7R_CGLciuCA _aNd4gnpjEeS7R_CGLciuCA _aNd4hnpjEeS7R_CGLciuCA _aNd4iXpjEeS7R_CGLciuCA _aNd4jHpjEeS7R_CGLciuCA _aNd4j3pjEeS7R_CGLciuCA _aNd4knpjEeS7R_CGLciuCA _aNd4lnpjEeS7R_CGLciuCA _aNd4mXpjEeS7R_CGLciuCA _aNd4nHpjEeS7R_CGLciuCA _aNd4n3pjEeS7R_CGLciuCA _aNd4onpjEeS7R_CGLciuCA _aNefcHpjEeS7R_CGLciuCA _aNefdHpjEeS7R_CGLciuCA _aNefd3pjEeS7R_CGLciuCA _aNefenpjEeS7R_CGLciuCA _aNeffXpjEeS7R_CGLciuCA _aNefg3pjEeS7R_CGLciuCA _aNefhnpjEeS7R_CGLciuCA _aNefinpjEeS7R_CGLciuCA _aNefjXpjEeS7R_CGLciuCA _aNefkXpjEeS7R_CGLciuCA _aNeflXpjEeS7R_CGLciuCA _aNefmHpjEeS7R_CGLciuCA _aNefm3pjEeS7R_CGLciuCA _aNefoHpjEeS7R_CGLciuCA _aNefpHpjEeS7R_CGLciuCA _aNefqHpjEeS7R_CGLciuCA _aNefrnpjEeS7R_CGLciuCA _aNfGgHpjEeS7R_CGLciuCA _aNfGg3pjEeS7R_CGLciuCA _aNfGhnpjEeS7R_CGLciuCA _aNfGinpjEeS7R_CGLciuCA _aNfGjXpjEeS7R_CGLciuCA _aNfGkHpjEeS7R_CGLciuCA _aNfGlHpjEeS7R_CGLciuCA _aNfGmHpjEeS7R_CGLciuCA _aNfGn3pjEeS7R_CGLciuCA _aNfGo3pjEeS7R_CGLciuCA _aNfGpnpjEeS7R_CGLciuCA _aNfGqnpjEeS7R_CGLciuCA _aNfGrXpjEeS7R_CGLciuCA _aNfGsXpjEeS7R_CGLciuCA _aNfGtHpjEeS7R_CGLciuCA _aNfGt3pjEeS7R_CGLciuCA _aNfGu3pjEeS7R_CGLciuCA _aNfGvnpjEeS7R_CGLciuCA _aNfGwnpjEeS7R_CGLciuCA _aNftkXpjEeS7R_CGLciuCA" width="159" featureName="propertyCategory">
         <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Category']"/>
       </columns>
       <columns xmi:type="table:DFeatureColumn" xmi:id="_aNftlXpjEeS7R_CGLciuCA" label="Description" cells="_aNWjonpjEeS7R_CGLciuCA _aNWjpXpjEeS7R_CGLciuCA _aNWjqHpjEeS7R_CGLciuCA _aNWjrHpjEeS7R_CGLciuCA _aNWjr3pjEeS7R_CGLciuCA _aNWjs3pjEeS7R_CGLciuCA _aNWjtnpjEeS7R_CGLciuCA _aNWjunpjEeS7R_CGLciuCA _aNWjvXpjEeS7R_CGLciuCA _aNWjwHpjEeS7R_CGLciuCA _aNWjw3pjEeS7R_CGLciuCA _aNWjxnpjEeS7R_CGLciuCA _aNWjyXpjEeS7R_CGLciuCA _aNWjzHpjEeS7R_CGLciuCA _aNWjz3pjEeS7R_CGLciuCA _aNWj0npjEeS7R_CGLciuCA _aNWj1XpjEeS7R_CGLciuCA _aNWj2XpjEeS7R_CGLciuCA _aNWj3HpjEeS7R_CGLciuCA _aNWj4HpjEeS7R_CGLciuCA _aNXKsHpjEeS7R_CGLciuCA _aNXKs3pjEeS7R_CGLciuCA _aNXKt3pjEeS7R_CGLciuCA _aNXKunpjEeS7R_CGLciuCA _aNXKvXpjEeS7R_CGLciuCA _aNXKwHpjEeS7R_CGLciuCA _aNXKw3pjEeS7R_CGLciuCA _aNXKx3pjEeS7R_CGLciuCA _aNXKynpjEeS7R_CGLciuCA _aNXKzXpjEeS7R_CGLciuCA _aNXK0npjEeS7R_CGLciuCA _aNXK1XpjEeS7R_CGLciuCA _aNXK2HpjEeS7R_CGLciuCA _aNXK23pjEeS7R_CGLciuCA _aNXK33pjEeS7R_CGLciuCA _aNXK4npjEeS7R_CGLciuCA _aNXK5XpjEeS7R_CGLciuCA _aNXK6HpjEeS7R_CGLciuCA _aNXK63pjEeS7R_CGLciuCA _aNXxwnpjEeS7R_CGLciuCA _aNXxx3pjEeS7R_CGLciuCA _aNXxy3pjEeS7R_CGLciuCA _aNXxznpjEeS7R_CGLciuCA _aNXx0XpjEeS7R_CGLciuCA _aNXx1HpjEeS7R_CGLciuCA _aNXx2HpjEeS7R_CGLciuCA _aNXx3HpjEeS7R_CGLciuCA _aNXx33pjEeS7R_CGLciuCA _aNXx4npjEeS7R_CGLciuCA _aNXx5XpjEeS7R_CGLciuCA _aNXx6HpjEeS7R_CGLciuCA _aNXx8HpjEeS7R_CGLciuCA _aNXx83pjEeS7R_CGLciuCA _aNXx9npjEeS7R_CGLciuCA _aNXx-npjEeS7R_CGLciuCA _aNYY0XpjEeS7R_CGLciuCA _aNYY1XpjEeS7R_CGLciuCA _aNYY2XpjEeS7R_CGLciuCA _aNYY3XpjEeS7R_CGLciuCA _aNYY43pjEeS7R_CGLciuCA _aNYY5npjEeS7R_CGLciuCA _aNYY6XpjEeS7R_CGLciuCA _aNYY7HpjEeS7R_CGLciuCA _aNYY8XpjEeS7R_CGLciuCA _aNYY9HpjEeS7R_CGLciuCA _aNYY-XpjEeS7R_CGLciuCA _aNYY_XpjEeS7R_CGLciuCA _aNYZAXpjEeS7R_CGLciuCA _aNYZBHpjEeS7R_CGLciuCA _aNY_4XpjEeS7R_CGLciuCA _aNY_5HpjEeS7R_CGLciuCA _aNY_53pjEeS7R_CGLciuCA _aNY_6npjEeS7R_CGLciuCA _aNY_7XpjEeS7R_CGLciuCA _aNY_8HpjEeS7R_CGLciuCA _aNY_9HpjEeS7R_CGLciuCA _aNY_93pjEeS7R_CGLciuCA _aNY_-npjEeS7R_CGLciuCA _aNY__npjEeS7R_CGLciuCA _aNZAAXpjEeS7R_CGLciuCA _aNZABHpjEeS7R_CGLciuCA _aNZAB3pjEeS7R_CGLciuCA _aNZACnpjEeS7R_CGLciuCA _aNZADXpjEeS7R_CGLciuCA _aNZAEHpjEeS7R_CGLciuCA _aNZAE3pjEeS7R_CGLciuCA _aNZAFnpjEeS7R_CGLciuCA _aNZAGXpjEeS7R_CGLciuCA _aNZAHHpjEeS7R_CGLciuCA _aNZAH3pjEeS7R_CGLciuCA _aNZAInpjEeS7R_CGLciuCA _aNZAJXpjEeS7R_CGLciuCA _aNZm8XpjEeS7R_CGLciuCA _aNZm9HpjEeS7R_CGLciuCA _aNZm93pjEeS7R_CGLciuCA _aNZm-npjEeS7R_CGLciuCA _aNZm_XpjEeS7R_CGLciuCA _aNZnAHpjEeS7R_CGLciuCA _aNZnA3pjEeS7R_CGLciuCA _aNZnBnpjEeS7R_CGLciuCA _aNZnCXpjEeS7R_CGLciuCA _aNZnDHpjEeS7R_CGLciuCA _aNZnD3pjEeS7R_CGLciuCA _aNZnEnpjEeS7R_CGLciuCA _aNZnFXpjEeS7R_CGLciuCA _aNZnGXpjEeS7R_CGLciuCA _aNZnHHpjEeS7R_CGLciuCA _aNZnH3pjEeS7R_CGLciuCA _aNZnInpjEeS7R_CGLciuCA _aNZnJXpjEeS7R_CGLciuCA _aNZnKHpjEeS7R_CGLciuCA _aNZnLXpjEeS7R_CGLciuCA _aNaOA3pjEeS7R_CGLciuCA _aNaOB3pjEeS7R_CGLciuCA _aNaOCnpjEeS7R_CGLciuCA _aNaODnpjEeS7R_CGLciuCA _aNaOEnpjEeS7R_CGLciuCA _aNaOFXpjEeS7R_CGLciuCA _aNaOGnpjEeS7R_CGLciuCA _aNaOHXpjEeS7R_CGLciuCA _aNaOInpjEeS7R_CGLciuCA _aNaOJXpjEeS7R_CGLciuCA _aNaOKXpjEeS7R_CGLciuCA _aNaOLHpjEeS7R_CGLciuCA _aNaOL3pjEeS7R_CGLciuCA _aNaOMnpjEeS7R_CGLciuCA _aNaONXpjEeS7R_CGLciuCA _aNaOOHpjEeS7R_CGLciuCA _aNaOO3pjEeS7R_CGLciuCA _aNaOP3pjEeS7R_CGLciuCA _aNaOQnpjEeS7R_CGLciuCA _aNa1EHpjEeS7R_CGLciuCA _aNa1FHpjEeS7R_CGLciuCA _aNa1GHpjEeS7R_CGLciuCA _aNa1HHpjEeS7R_CGLciuCA _aNa1H3pjEeS7R_CGLciuCA _aNa1InpjEeS7R_CGLciuCA _aNa1JXpjEeS7R_CGLciuCA _aNa1KHpjEeS7R_CGLciuCA _aNa1K3pjEeS7R_CGLciuCA _aNa1LnpjEeS7R_CGLciuCA _aNa1MXpjEeS7R_CGLciuCA _aNa1NXpjEeS7R_CGLciuCA _aNa1OHpjEeS7R_CGLciuCA _aNa1PHpjEeS7R_CGLciuCA _aNa1QXpjEeS7R_CGLciuCA _aNa1RHpjEeS7R_CGLciuCA _aNbcInpjEeS7R_CGLciuCA _aNbcJXpjEeS7R_CGLciuCA _aNbcKXpjEeS7R_CGLciuCA _aNbcLHpjEeS7R_CGLciuCA _aNbcL3pjEeS7R_CGLciuCA _aNbcMnpjEeS7R_CGLciuCA _aNbcNXpjEeS7R_CGLciuCA _aNbcOHpjEeS7R_CGLciuCA _aNbcO3pjEeS7R_CGLciuCA _aNbcPnpjEeS7R_CGLciuCA _aNbcQXpjEeS7R_CGLciuCA _aNbcRXpjEeS7R_CGLciuCA _aNbcSHpjEeS7R_CGLciuCA _aNbcTHpjEeS7R_CGLciuCA _aNbcUHpjEeS7R_CGLciuCA _aNbcU3pjEeS7R_CGLciuCA _aNcDNHpjEeS7R_CGLciuCA _aNcDN3pjEeS7R_CGLciuCA _aNcDO3pjEeS7R_CGLciuCA _aNcDPnpjEeS7R_CGLciuCA _aNcDQXpjEeS7R_CGLciuCA _aNcDRXpjEeS7R_CGLciuCA _aNcDSHpjEeS7R_CGLciuCA _aNcDTHpjEeS7R_CGLciuCA _aNcDT3pjEeS7R_CGLciuCA _aNcDUnpjEeS7R_CGLciuCA _aNcDVXpjEeS7R_CGLciuCA _aNcDWHpjEeS7R_CGLciuCA _aNcDW3pjEeS7R_CGLciuCA _aNcDYXpjEeS7R_CGLciuCA _aNcDZ3pjEeS7R_CGLciuCA _aNcDanpjEeS7R_CGLciuCA _aNcDbXpjEeS7R_CGLciuCA _aNcqQXpjEeS7R_CGLciuCA _aNcqRHpjEeS7R_CGLciuCA _aNcqR3pjEeS7R_CGLciuCA _aNcqTHpjEeS7R_CGLciuCA _aNcqT3pjEeS7R_CGLciuCA _aNcqU3pjEeS7R_CGLciuCA _aNcqVnpjEeS7R_CGLciuCA _aNcqWnpjEeS7R_CGLciuCA _aNcqX3pjEeS7R_CGLciuCA _aNcqYnpjEeS7R_CGLciuCA _aNcqZnpjEeS7R_CGLciuCA _aNcqaXpjEeS7R_CGLciuCA _aNcqbXpjEeS7R_CGLciuCA _aNcqcHpjEeS7R_CGLciuCA _aNcqc3pjEeS7R_CGLciuCA _aNcqdnpjEeS7R_CGLciuCA _aNcqe3pjEeS7R_CGLciuCA _aNcqf3pjEeS7R_CGLciuCA _aNcqgnpjEeS7R_CGLciuCA _aNcqhXpjEeS7R_CGLciuCA _aNdRUXpjEeS7R_CGLciuCA _aNdRVHpjEeS7R_CGLciuCA _aNdRV3pjEeS7R_CGLciuCA _aNdRWnpjEeS7R_CGLciuCA _aNdRXXpjEeS7R_CGLciuCA _aNdRYHpjEeS7R_CGLciuCA _aNdRY3pjEeS7R_CGLciuCA _aNdRZnpjEeS7R_CGLciuCA _aNdRanpjEeS7R_CGLciuCA _aNdRbnpjEeS7R_CGLciuCA _aNdRcXpjEeS7R_CGLciuCA _aNdRdHpjEeS7R_CGLciuCA _aNdReXpjEeS7R_CGLciuCA _aNdRfHpjEeS7R_CGLciuCA _aNdRf3pjEeS7R_CGLciuCA _aNdRgnpjEeS7R_CGLciuCA _aNdRhnpjEeS7R_CGLciuCA _aNdRiXpjEeS7R_CGLciuCA _aNdRjnpjEeS7R_CGLciuCA _aNdRknpjEeS7R_CGLciuCA _aNd4YHpjEeS7R_CGLciuCA _aNd4Y3pjEeS7R_CGLciuCA _aNd4ZnpjEeS7R_CGLciuCA _aNd4aXpjEeS7R_CGLciuCA _aNd4bHpjEeS7R_CGLciuCA _aNd4b3pjEeS7R_CGLciuCA _aNd4c3pjEeS7R_CGLciuCA _aNd4d3pjEeS7R_CGLciuCA _aNd4enpjEeS7R_CGLciuCA _aNd4fXpjEeS7R_CGLciuCA _aNd4gHpjEeS7R_CGLciuCA _aNd4g3pjEeS7R_CGLciuCA _aNd4h3pjEeS7R_CGLciuCA _aNd4inpjEeS7R_CGLciuCA _aNd4jXpjEeS7R_CGLciuCA _aNd4kHpjEeS7R_CGLciuCA _aNd4k3pjEeS7R_CGLciuCA _aNd4l3pjEeS7R_CGLciuCA _aNd4mnpjEeS7R_CGLciuCA _aNd4nXpjEeS7R_CGLciuCA _aNd4oHpjEeS7R_CGLciuCA _aNd4o3pjEeS7R_CGLciuCA _aNefcXpjEeS7R_CGLciuCA _aNefdXpjEeS7R_CGLciuCA _aNefeHpjEeS7R_CGLciuCA _aNefe3pjEeS7R_CGLciuCA _aNeffnpjEeS7R_CGLciuCA _aNefhHpjEeS7R_CGLciuCA _aNefh3pjEeS7R_CGLciuCA _aNefi3pjEeS7R_CGLciuCA _aNefjnpjEeS7R_CGLciuCA _aNefknpjEeS7R_CGLciuCA _aNeflnpjEeS7R_CGLciuCA _aNefmXpjEeS7R_CGLciuCA _aNefnHpjEeS7R_CGLciuCA _aNefoXpjEeS7R_CGLciuCA _aNefpXpjEeS7R_CGLciuCA _aNefqXpjEeS7R_CGLciuCA _aNefr3pjEeS7R_CGLciuCA _aNfGgXpjEeS7R_CGLciuCA _aNfGhHpjEeS7R_CGLciuCA _aNfGh3pjEeS7R_CGLciuCA _aNfGi3pjEeS7R_CGLciuCA _aNfGjnpjEeS7R_CGLciuCA _aNfGkXpjEeS7R_CGLciuCA _aNfGlXpjEeS7R_CGLciuCA _aNfGmXpjEeS7R_CGLciuCA _aNfGoHpjEeS7R_CGLciuCA _aNfGpHpjEeS7R_CGLciuCA _aNfGp3pjEeS7R_CGLciuCA _aNfGq3pjEeS7R_CGLciuCA _aNfGrnpjEeS7R_CGLciuCA _aNfGsnpjEeS7R_CGLciuCA _aNfGtXpjEeS7R_CGLciuCA _aNfGuHpjEeS7R_CGLciuCA _aNfGvHpjEeS7R_CGLciuCA _aNfGv3pjEeS7R_CGLciuCA _aNfGw3pjEeS7R_CGLciuCA _aNftknpjEeS7R_CGLciuCA" featureName="propertyDescription">

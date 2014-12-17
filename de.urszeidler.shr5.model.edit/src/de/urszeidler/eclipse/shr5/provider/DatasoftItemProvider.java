@@ -61,7 +61,7 @@ public class DatasoftItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Datasoft_skill_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Datasoft_skill_feature", "_UI_Datasoft_type"),
+                 getString("_UI_Datasoft_skill_description"),
                  Shr5Package.Literals.DATASOFT__SKILL,
                  true,
                  false,

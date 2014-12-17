@@ -78,7 +78,7 @@ public class GebundenerGeistItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_GebundenerGeist_dienste_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GebundenerGeist_dienste_feature", "_UI_GebundenerGeist_type"),
+                 getString("_UI_GebundenerGeist_dienste_description"),
                  Shr5Package.Literals.GEBUNDENER_GEIST__DIENSTE,
                  true,
                  false,

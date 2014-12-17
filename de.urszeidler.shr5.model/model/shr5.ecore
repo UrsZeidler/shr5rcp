@@ -664,7 +664,11 @@
       <details key="documentation" value="A credstick can hold money and has a transactions log."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The max value of money the credstick can store."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactionlog" upperBound="-1"
         eType="#//CredstickTransaction" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -672,7 +676,11 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"
-        changeable="false" volatile="true" transient="true"/>
+        changeable="false" volatile="true" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current balance is the summ of all transactions."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Menge" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -680,7 +688,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The current count of items."/>
+        <details key="documentation" value="The current quantity of items."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="proAnzahl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -694,9 +702,21 @@
       <details key="documentation" value="The ammunition defines the damage modifcation the ammunition does. "/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageType" eType="#//SchadensTyp"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="armorMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Reichweite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The damage modifation of the ammo, this value is added to the damage value of the weapon when used."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="armorMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The armor modifation of the ammo, this value is added to the armor piercing of the weapon when used."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Reichweite">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The categorie of the ammo, the ammo can be used in every weapon with the same range category."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifikatorAttribute" abstract="true"
       interface="true">
@@ -705,7 +725,11 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GebundenerGeist">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dienste" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dienste" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The numer of services the bound spirit will provide."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="geist" lowerBound="1" eType="#//Geist"
         containment="true"/>
   </eClassifiers>
@@ -936,7 +960,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="AbstractMatrixDevice" abstract="true"
       interface="true" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceRating" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The device rating, it defines the basic properties of a matrix device."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConsumerSoft" eSuperTypes="#//BasicProgram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ProgramType"/>

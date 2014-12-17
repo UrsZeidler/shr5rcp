@@ -65,6 +65,9 @@ public interface Munition extends AbstraktGegenstand, Menge {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The damage modifation of the ammo, this value is added to the damage value of the weapon when used.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Damage Mod</em>' attribute.
      * @see #setDamageMod(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMunition_DamageMod()
@@ -91,6 +94,9 @@ public interface Munition extends AbstraktGegenstand, Menge {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The armor modifation of the ammo, this value is added to the armor piercing of the weapon when used.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Armor Mod</em>' attribute.
      * @see #setArmorMod(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMunition_ArmorMod()
@@ -117,6 +123,9 @@ public interface Munition extends AbstraktGegenstand, Menge {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The categorie of the ammo, the ammo can be used in every weapon with the same range category.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Type</em>' reference.
      * @see #setType(Reichweite)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMunition_Type()

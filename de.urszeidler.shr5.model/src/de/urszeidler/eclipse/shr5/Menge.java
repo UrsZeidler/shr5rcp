@@ -32,7 +32,7 @@ public interface Menge extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * The current count of items.
+     * The current quantity of items.
      * <!-- end-model-doc -->
      * @return the value of the '<em>Anzahl</em>' attribute.
      * @see #setAnzahl(int)

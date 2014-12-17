@@ -295,7 +295,7 @@ public class FahrzeugItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Anwendbar_fertigkeit_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_fertigkeit_feature", "_UI_Anwendbar_type"),
+                 getString("_UI_Anwendbar_fertigkeit_description"),
                  Shr5Package.Literals.ANWENDBAR__FERTIGKEIT,
                  true,
                  false,

@@ -180,7 +180,7 @@ public class DefaultWifiItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AbstractMatrixDevice_deviceRating_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_AbstractMatrixDevice_deviceRating_feature", "_UI_AbstractMatrixDevice_type"),
+                 getString("_UI_AbstractMatrixDevice_deviceRating_description"),
                  Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING,
                  true,
                  false,

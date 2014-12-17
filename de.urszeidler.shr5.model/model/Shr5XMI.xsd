@@ -1402,7 +1402,11 @@
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
-        <xsd:attribute name="maxValue" type="xsd:int" use="required"/>
+        <xsd:attribute name="maxValue" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The max value of money the credstick can store.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1422,7 +1426,7 @@
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
     <xsd:attribute name="anzahl" type="xsd:int">
       <xsd:annotation>
-        <xsd:documentation>The current count of items.</xsd:documentation>
+        <xsd:documentation>The current quantity of items.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
     <xsd:attribute name="proAnzahl" type="xsd:int">
@@ -1443,11 +1447,15 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="type" type="shr5:Reichweite"/>
+          <xsd:element name="type" type="shr5:Reichweite">
+            <xsd:annotation>
+              <xsd:documentation>The categorie of the ammo, the ammo can be used in every weapon with the same range category.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="anzahl" type="xsd:int">
           <xsd:annotation>
-            <xsd:documentation>The current count of items.</xsd:documentation>
+            <xsd:documentation>The current quantity of items.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="proAnzahl" type="xsd:int">
@@ -1456,9 +1464,21 @@
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="damageType" type="shr5:SchadensTyp"/>
-        <xsd:attribute name="damageMod" type="xsd:int"/>
-        <xsd:attribute name="armorMod" type="xsd:int"/>
-        <xsd:attribute name="type" type="xsd:string"/>
+        <xsd:attribute name="damageMod" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The damage modifation of the ammo, this value is added to the damage value of the weapon when used.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="armorMod" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The armor modifation of the ammo, this value is added to the armor piercing of the weapon when used.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="type" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The categorie of the ammo, the ammo can be used in every weapon with the same range category.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1489,7 +1509,11 @@
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="dienste" type="xsd:int"/>
+    <xsd:attribute name="dienste" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The numer of services the bound spirit will provide.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <xsd:element name="GebundenerGeist" type="shr5:GebundenerGeist"/>
   <xsd:complexType abstract="true" name="StufenPersona">
@@ -1882,7 +1906,11 @@
           <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
         </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
-        <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
+        <xsd:attribute name="deviceRating" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The device rating, it defines the basic properties of a matrix device.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2147,7 +2175,7 @@
         </xsd:attribute>
         <xsd:attribute name="anzahl" type="xsd:int">
           <xsd:annotation>
-            <xsd:documentation>The current count of items.</xsd:documentation>
+            <xsd:documentation>The current quantity of items.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="proAnzahl" type="xsd:int">

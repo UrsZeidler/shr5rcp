@@ -112,7 +112,7 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_FokusBinding_active_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_FokusBinding_active_feature", "_UI_FokusBinding_type"),
+                 getString("_UI_FokusBinding_active_description"),
                  Shr5Package.Literals.FOKUS_BINDING__ACTIVE,
                  true,
                  false,
