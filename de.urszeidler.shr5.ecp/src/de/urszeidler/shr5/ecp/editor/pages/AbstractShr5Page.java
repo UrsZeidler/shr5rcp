@@ -5,11 +5,13 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -41,12 +43,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
      * @param title
      * @param manager the mananger for refrenece features
      */
-    public AbstractShr5Page(FormEditor editor, String id, String title,
-
-    ReferenceManager manager) {
+    public AbstractShr5Page(FormEditor editor, String id, String title, ReferenceManager manager) {
         super(editor, id, title);
-        // this.object = object;
-        // this.editingDomain = editingDomain;
         this.mananger = manager;
     }
 
@@ -81,4 +79,21 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     }
 
     protected abstract EditingDomain getEditingDomain();
+
+    /**
+     * @param grpWert
+     */
+    protected void addWertFeatures(Composite grpWert) {
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+    }
+
+    /**
+     * @param grpQuelle
+     */
+    protected void addSourceFeature(Group grpQuelle) {
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+    }
 }

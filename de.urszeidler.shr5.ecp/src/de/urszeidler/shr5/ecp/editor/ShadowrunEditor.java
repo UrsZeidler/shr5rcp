@@ -17,6 +17,7 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
+import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
@@ -32,6 +33,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.SubstanceContainer;
 import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
@@ -73,6 +75,8 @@ import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
 import de.urszeidler.shr5.ecp.editor.pages.SourceBookPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.editor.pages.SubstancePage;
+import de.urszeidler.shr5.ecp.editor.pages.VariousItemsPage;
+import de.urszeidler.shr5.ecp.editor.pages.VariousObjectsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VehiclePage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 
@@ -316,9 +320,30 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             }
 
             @Override
+            public Object caseWeaponMount(WeaponMount object) {
+                try {
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseGeist(Geist object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
             public Object caseShrList(ShrList object) {
                 try {
-                    // addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
                     addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES));
                 } catch (PartInitException e) {
