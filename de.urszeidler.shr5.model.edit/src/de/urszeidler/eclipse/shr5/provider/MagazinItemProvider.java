@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -14,8 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.swt.graphics.Image;
+
+import com.google.common.base.Predicates;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.FluentIterable;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
@@ -72,17 +76,22 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
                     @SuppressWarnings("unchecked")
                     @Override
                     protected Collection<?> getComboBoxObjects(Object object) {
-                        if (object instanceof EObject) {
-                            EObject eo = (EObject)object;
-                            try {
-                                EObject eContainer = eo.eContainer();
-                                EReference eContainmentFeature = eo.eContainmentFeature();
-                                List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
-                                return new ArrayList<Object>(Collections2.filter(eGet,
-                                        ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)));
-
-                            } catch (Exception e) {
-                            }
+                        if (object instanceof EObject) {                            
+                           return FluentIterable.from((Collection<EObject>)super.getComboBoxObjects(object))
+                                   .filter(Predicates.notNull())
+                            .filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE))
+                            .toList();
+//                            
+//                            EObject eo = (EObject)object;
+//                            try {
+//                                EObject eContainer = eo.eContainer();
+//                                EReference eContainmentFeature = eo.eContainmentFeature();
+//                                List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
+//                                return new ArrayList<Object>(Collections2.filter(eGet,
+//                                        ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)));
+//
+//                            } catch (Exception e) {
+//                            }
                         }
                         return super.getComboBoxObjects(object);
                     }
