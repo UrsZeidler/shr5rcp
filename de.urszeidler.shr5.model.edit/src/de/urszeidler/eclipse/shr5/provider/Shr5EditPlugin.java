@@ -9,6 +9,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+
 /**
  * This is the central singleton for the Shr5 edit plugin.
  * <!-- begin-user-doc -->
@@ -81,7 +83,7 @@ public final class Shr5EditPlugin extends EMFPlugin {
          * Creates an instance.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-         * @generated
+         * @generated not
          */
 		public Implementation() {
             super();
@@ -89,6 +91,8 @@ public final class Shr5EditPlugin extends EMFPlugin {
             // Remember the static instance.
             //
             plugin = this;
+            AdapterFactoryUtil.getInstance().insertAdapterFactory(new Shr5ItemProviderAdapterFactory());
+
         }
 
 //        public IEclipsePreferences getEclipsePreferences() {

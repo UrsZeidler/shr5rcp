@@ -91,7 +91,7 @@ public final class GameplayEditPlugin extends EMFPlugin {
             // Remember the static instance.
             //
             plugin = this;            
-            AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(new GameplayItemProviderAdapterFactory());
+            AdapterFactoryUtil.getInstance().insertAdapterFactory(new GameplayItemProviderAdapterFactory());
         }
     }
 

@@ -38,8 +38,6 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
-import org.eclipse.swt.widgets.Label;
-
 public class TreeTableWidget extends Composite {
 
     private ReferenceManager manager;
