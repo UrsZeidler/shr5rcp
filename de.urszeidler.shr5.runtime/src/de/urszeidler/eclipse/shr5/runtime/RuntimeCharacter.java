@@ -64,6 +64,9 @@ public interface RuntimeCharacter extends AbstractExtendetDataAware, PhyicalStat
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The item in the right hand of the character.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Right Hand</em>' reference.
      * @see #setRightHand(AbstraktGegenstand)
      * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter_RightHand()
@@ -90,6 +93,9 @@ public interface RuntimeCharacter extends AbstractExtendetDataAware, PhyicalStat
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The item in the left hand of the character.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Left Hand</em>' reference.
      * @see #setLeftHand(AbstraktGegenstand)
      * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter_LeftHand()
@@ -117,6 +123,9 @@ public interface RuntimeCharacter extends AbstractExtendetDataAware, PhyicalStat
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The items the character carries right know, it is a subset of the characters inventory.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>In Use</em>' reference list.
      * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter_InUse()
      * @model
@@ -132,6 +141,9 @@ public interface RuntimeCharacter extends AbstractExtendetDataAware, PhyicalStat
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The cloth the character curently uses.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Armor</em>' reference.
      * @see #setArmor(Kleidung)
      * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter_Armor()

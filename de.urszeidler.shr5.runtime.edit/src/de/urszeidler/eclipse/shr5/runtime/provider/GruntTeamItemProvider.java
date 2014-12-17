@@ -5,17 +5,10 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import de.urszeidler.eclipse.shr5.runtime.GruntTeam;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 
@@ -26,13 +19,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
  * @generated
  */
 public class GruntTeamItemProvider
-    extends TeamItemProvider
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+    extends TeamItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,7 +58,7 @@ public class GruntTeamItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_GruntTeam_gruntGroup_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntTeam_gruntGroup_feature", "_UI_GruntTeam_type"),
+                 getString("_UI_GruntTeam_gruntGroup_description"),
                  RuntimePackage.Literals.GRUNT_TEAM__GRUNT_GROUP,
                  true,
                  false,

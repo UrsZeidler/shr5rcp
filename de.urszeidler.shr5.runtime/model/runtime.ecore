@@ -77,7 +77,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="physicalDamage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mentalDamage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustand" eType="#//Zustand"
-        defaultValueLiteral="ok"/>
+        defaultValueLiteral="ok">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The character state, can be ok, dying ... stunned."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overDead" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
@@ -89,11 +93,27 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rightHand" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="leftHand" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightHand" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The item in the right hand of the character."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftHand" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The item in the left hand of the character."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inUse" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="armor" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Kleidung"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The items the character carries right know, it is a subset of the characters inventory."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="armor" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Kleidung">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The cloth the character curently uses."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="usedEdge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Counts the edge used."/>
@@ -109,7 +129,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="GruntTeam" eSuperTypes="#//Team">
     <eOperations name="buildMembers"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gruntGroup" lowerBound="1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Links to a grunt group, for each member a runtime represatation is created."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntRuntimeCharacter" eSuperTypes="#//RuntimeCharacter"/>
   <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true" eSuperTypes="#//AbstractExtendetDataAware">

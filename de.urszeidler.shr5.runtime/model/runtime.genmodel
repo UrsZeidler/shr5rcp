@@ -60,16 +60,22 @@
     <genClasses image="false" ecoreClass="runtime.ecore#//PhyicalState">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//PhyicalState/physicalDamage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//PhyicalState/mentalDamage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//PhyicalState/zustand"/>
+      <genFeatures createChild="false" propertyDescription="The character state, can be ok, dying ... stunned."
+          ecoreFeature="ecore:EAttribute runtime.ecore#//PhyicalState/zustand"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//PhyicalState/overDead"/>
     </genClasses>
     <genClasses ecoreClass="runtime.ecore#//RuntimeCharacter">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/character"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/rightHand"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/leftHand"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/inUse"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/armor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute runtime.ecore#//RuntimeCharacter/usedEdge"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The item in the right hand of the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/rightHand"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The item in the left hand of the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/leftHand"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The items the character carries right know, it is a subset of the characters inventory."
+          propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/inUse"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The cloth the character curently uses."
+          propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//RuntimeCharacter/armor"/>
+      <genFeatures createChild="false" propertyDescription="The number of edges the character has spended."
+          ecoreFeature="ecore:EAttribute runtime.ecore#//RuntimeCharacter/usedEdge"/>
       <genOperations ecoreOperation="runtime.ecore#//RuntimeCharacter/canUseEdge"/>
     </genClasses>
     <genClasses ecoreClass="runtime.ecore#//Team">
@@ -77,7 +83,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="runtime.ecore#//AbstractExtendetDataAware"/>
     <genClasses ecoreClass="runtime.ecore#//GruntTeam">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//GruntTeam/gruntGroup"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="Links to a grunt group, for each member a runtime represatation is created."
+          propertySortChoices="true" ecoreFeature="ecore:EReference runtime.ecore#//GruntTeam/gruntGroup"/>
       <genOperations ecoreOperation="runtime.ecore#//GruntTeam/buildMembers"/>
     </genClasses>
     <genClasses ecoreClass="runtime.ecore#//GruntRuntimeCharacter"/>

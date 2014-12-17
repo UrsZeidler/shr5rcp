@@ -86,6 +86,9 @@ public interface PhyicalState extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The character state, can be ok, dying ... stunned.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Zustand</em>' attribute.
      * @see de.urszeidler.eclipse.shr5.runtime.Zustand
      * @see #setZustand(Zustand)

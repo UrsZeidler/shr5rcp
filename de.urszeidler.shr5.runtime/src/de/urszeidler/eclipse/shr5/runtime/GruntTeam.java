@@ -31,6 +31,9 @@ public interface GruntTeam extends Team {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Links to a grunt group, for each member a runtime represatation is created.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Grunt Group</em>' reference.
      * @see #setGruntGroup(GruntGroup)
      * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getGruntTeam_GruntGroup()

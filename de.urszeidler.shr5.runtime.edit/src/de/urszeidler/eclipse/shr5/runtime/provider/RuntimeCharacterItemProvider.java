@@ -6,23 +6,16 @@ package de.urszeidler.eclipse.shr5.runtime.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
@@ -35,13 +28,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
  * @generated
  */
 public class RuntimeCharacterItemProvider
-    extends AbstractExtendetDataAwareItemProvider
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+    extends AbstractExtendetDataAwareItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -133,7 +120,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_PhyicalState_zustand_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PhyicalState_zustand_feature", "_UI_PhyicalState_type"),
+                 getString("_UI_PhyicalState_zustand_description"),
                  RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND,
                  true,
                  false,
@@ -199,7 +186,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_rightHand_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_rightHand_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_rightHand_description", "_UI_RuntimeCharacter_rightHand_feature", "_UI_RuntimeCharacter_type"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__RIGHT_HAND,
                  true,
                  false,
@@ -232,7 +219,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_leftHand_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_leftHand_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_lefttHand_description", "_UI_RuntimeCharacter_leftHand_feature", "_UI_RuntimeCharacter_type"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__LEFT_HAND,
                  true,
                  false,
@@ -264,7 +251,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_inUse_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_inUse_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_inUse_description", "_UI_RuntimeCharacter_inUse_feature", "_UI_RuntimeCharacter_type"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE,
                  true,
                  false,
@@ -297,7 +284,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_armor_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_armor_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_armor_description", "_UI_RuntimeCharacter_armor_feature", "_UI_RuntimeCharacter_type"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR,
                  true,
                  false,
@@ -336,7 +323,7 @@ public class RuntimeCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RuntimeCharacter_usedEdge_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RuntimeCharacter_usedEdge_feature", "_UI_RuntimeCharacter_type"),
+                 getString("_UI_RuntimeCharacter_usedEdge_description"),
                  RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE,
                  true,
                  false,
