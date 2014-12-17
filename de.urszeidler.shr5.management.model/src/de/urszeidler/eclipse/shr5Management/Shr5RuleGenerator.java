@@ -60,6 +60,9 @@ public interface Shr5RuleGenerator extends CharacterGenerator<Shr5System> {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A list of sources which are allowed when building a character.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Allowed Sources</em>' reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5RuleGenerator_AllowedSources()
      * @model

@@ -51,9 +51,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="notorietyBasic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicAwareness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaGaint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
+        changeable="false" volatile="true" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The karma the characters has currenly at his disposal."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
+        changeable="false" volatile="true" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The complete karma the character has gained over the time."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatorSrc" eType="#//CharacterGenerator"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -539,7 +547,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="influence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loyality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
-        eType="#//ManagedCharacter"/>
+        eType="#//ManagedCharacter">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The linked character."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaChange" eSuperTypes="#//PersonaValueChange">
     <eStructuralFeatures xsi:type="ecore:EReference" name="changeable" lowerBound="1"
@@ -565,10 +577,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifestyleToStartMoney">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of d6 to define the start money."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The factor for the start money."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lifeStyles" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A list of lifestyles this lifestyle to money description applies to."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntGroup" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -578,14 +602,26 @@
         eType="#//GruntMembers" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="leader" lowerBound="1"
         eType="#//GruntMembers" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="professionalRating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="professionalRating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The professional rating of this grunt group."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntMembers">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This decribes the members of a grunt group. So this defines a group of simular characters."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nsc" lowerBound="1" eType="#//NonPlayerCharacter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of npcs."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nsc" lowerBound="1" eType="#//NonPlayerCharacter">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The npc of the grunt members."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayerManagement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -716,7 +752,11 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedSources" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//SourceBook"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//SourceBook">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A list of sources which are allowed when building a character."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eGenericSuperTypes eClassifier="#//CharacterGenerator">
       <eTypeArguments eClassifier="#//Shr5System"/>
     </eGenericSuperTypes>
@@ -762,10 +802,22 @@
       <details key="documentation" value="Defines a constrain for the source element by holding a list of other elements and an constrain type."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The source object for this constraint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targets" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constrainType" eType="#//QuellenConstrainType"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A list of objects applying the constrain."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constrainType" eType="#//QuellenConstrainType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The kind of constrain, like not Together ..."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QuellenConstrainType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

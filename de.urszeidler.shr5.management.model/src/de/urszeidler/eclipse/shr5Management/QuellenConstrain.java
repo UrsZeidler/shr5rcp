@@ -39,6 +39,9 @@ public interface QuellenConstrain extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The source object for this constraint.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Source</em>' reference.
      * @see #setSource(Quelle)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getQuellenConstrain_Source()
@@ -66,6 +69,9 @@ public interface QuellenConstrain extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A list of objects applying the constrain.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Targets</em>' reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getQuellenConstrain_Targets()
      * @model
@@ -82,6 +88,9 @@ public interface QuellenConstrain extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The kind of constrain, like not Together ...
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Constrain Type</em>' attribute.
      * @see de.urszeidler.eclipse.shr5Management.QuellenConstrainType
      * @see #setConstrainType(QuellenConstrainType)

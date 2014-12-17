@@ -88,6 +88,9 @@ public interface Connection extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The linked character.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Character</em>' reference.
      * @see #setCharacter(ManagedCharacter)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getConnection_Character()

@@ -67,7 +67,7 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
     protected void addMetaTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5KarmaGenerator_metaType_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5KarmaGenerator_metaType_feature"), getString("_UI_Shr5KarmaGenerator_metaType_description",
                                 "_UI_Shr5KarmaGenerator_metaType_feature", "_UI_Shr5KarmaGenerator_type"),
                         Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__META_TYPE, true, false, true, null, null, null) {
                     @Override
@@ -88,7 +88,7 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
     protected void addCharacterConceptPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(// createItemPropertyDescriptor
                 new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Shr5KarmaGenerator_characterConcept_feature"), getString("_UI_PropertyDescriptor_description",
+                        getString("_UI_Shr5KarmaGenerator_characterConcept_feature"), getString("_UI_Shr5KarmaGenerator_characterConcept_description",
                                 "_UI_Shr5KarmaGenerator_characterConcept_feature", "_UI_Shr5KarmaGenerator_type"),
                         Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, true, false, true, null, null, null) {
                     @Override

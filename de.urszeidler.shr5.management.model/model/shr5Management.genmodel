@@ -38,13 +38,15 @@
       <genFeatures notify="false" createChild="false" propertyDescription="The nativ language of the character."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
-      <genFeatures property="Readonly" createChild="false" propertyDescription="The current street cred."
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The current street cred. Its calculated by the karma the character has gaint."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notoriety"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notorietyBasic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/publicAwareness"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/karmaGaint"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/currentKarma"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The complete karma the character has gained over the time."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/karmaGaint"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The karma the characters has currenly at his disposal."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/currentKarma"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/generatorSrc"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
@@ -72,7 +74,8 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyle"/>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PriorityCategorie">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/categorieName"/>
+      <genFeatures createChild="false" propertyDescription="The name of the category, typical somthing like A/B or so."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/categorieName"/>
       <genFeatures createChild="false" propertyDescription="For the karma system this defines the karma costs."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/cost"/>
     </genClasses>
@@ -284,7 +287,8 @@
     <genClasses ecoreClass="shr5Management.ecore#//Connection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Connection/influence"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Connection/loyality"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Connection/character"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The linked character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Connection/character"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PersonaChange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaChange/changeable"/>
@@ -371,8 +375,10 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected species for the character."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The character concept."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/resourceSpend"/>
@@ -384,9 +390,12 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//QuellenConstrain">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/targets"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//QuellenConstrain/constrainType"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The source object for this constraint."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/source"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="A list of objects applying the constrain."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/targets"/>
+      <genFeatures createChild="false" propertyDescription="The kind of constrain, like not Together ..."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//QuellenConstrain/constrainType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

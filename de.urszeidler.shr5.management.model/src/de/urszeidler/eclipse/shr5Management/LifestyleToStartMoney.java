@@ -35,6 +35,9 @@ public interface LifestyleToStartMoney extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of d6 to define the start money.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Number Of W</em>' attribute.
      * @see #setNumberOfW(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifestyleToStartMoney_NumberOfW()
@@ -61,6 +64,9 @@ public interface LifestyleToStartMoney extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The factor for the start money.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Money Factor</em>' attribute.
      * @see #setMoneyFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifestyleToStartMoney_MoneyFactor()
@@ -88,6 +94,9 @@ public interface LifestyleToStartMoney extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A list of lifestyles this lifestyle to money description applies to.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Life Styles</em>' reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifestyleToStartMoney_LifeStyles()
      * @model

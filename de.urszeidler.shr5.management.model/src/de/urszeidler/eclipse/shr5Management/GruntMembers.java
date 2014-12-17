@@ -35,6 +35,9 @@ public interface GruntMembers extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of npcs.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Count</em>' attribute.
      * @see #setCount(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntMembers_Count()
@@ -61,6 +64,9 @@ public interface GruntMembers extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The npc of the grunt members.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Nsc</em>' reference.
      * @see #setNsc(NonPlayerCharacter)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntMembers_Nsc()

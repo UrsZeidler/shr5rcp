@@ -18098,6 +18098,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/karmaGaint"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/karmaGaint"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_brauEIXdEeSCd9O2370cJA" label="The karma the characters has currenly at his disposal." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/karmaGaint/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/karmaGaint/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_brauEYXdEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_brauEoXdEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IVi2XW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IVi2nW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -18106,6 +18115,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/currentKarma"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/currentKarma"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_q7ge4IXbEeSCd9O2370cJA" label="The complete karma the character has gained over the time." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/currentKarma/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//ManagedCharacter/currentKarma/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_q7nzoIXbEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_q7nzoYXbEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IVi3HW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IVi3XW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19229,6 +19247,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Connection/character"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Connection/character"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_I6R_wIXcEeSCd9O2370cJA" label="The linked character." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Connection/character/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Connection/character/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_I6Sm0IXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_I6Sm0YXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWLHXW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWLHnW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19359,6 +19386,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_ReKFUIXcEeSCd9O2370cJA" label="The number of d6 to define the start money." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/numberOfW/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/numberOfW/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_ReKsYIXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_ReKsYYXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw3nW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw33W6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19367,6 +19403,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Tc1YgIXcEeSCd9O2370cJA" label="The factor for the start money." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/moneyFactor/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/moneyFactor/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Tc1YgYXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Tc1YgoXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw4XW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw4nW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19375,6 +19420,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_VFYqsIXcEeSCd9O2370cJA" label="A list of lifestyles this lifestyle to money description applies to." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/lifeStyles/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//LifestyleToStartMoney/lifeStyles/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_VFYqsYXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_VFYqsoXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw5HW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw5XW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19407,6 +19461,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup/professionalRating"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup/professionalRating"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Ygh74IXcEeSCd9O2370cJA" label="The professional rating of this grunt group." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup/professionalRating/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntGroup/professionalRating/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Ygii8IXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Ygii8YXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw8HW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw8XW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19432,6 +19495,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/count"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/count"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_cyjKsIXcEeSCd9O2370cJA" label="The number of npcs." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/count/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/count/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_cyjxwIXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cyjxwYXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw-XW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw-nW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19440,6 +19512,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/nsc"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/nsc"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_fX9twIXcEeSCd9O2370cJA" label="The npc of the grunt members." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/nsc/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//GruntMembers/nsc/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_fX9twYXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_fX9twoXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWw_HW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWw_XW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19564,6 +19645,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Shr5RuleGenerator/allowedSources"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Shr5RuleGenerator/allowedSources"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_of2fUIXcEeSCd9O2370cJA" label="A list of sources which are allowed when building a character." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Shr5RuleGenerator/allowedSources/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//Shr5RuleGenerator/allowedSources/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_of2fUYXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_of2fUoXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWxKXW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWxKnW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19680,6 +19770,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/source"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/source"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_6iIZAIXcEeSCd9O2370cJA" label="The source object for this constraint." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/source/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/source/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_6iIZAYXcEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6iIZAoXcEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWxU3W6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWxVHW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19688,6 +19787,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/targets"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/targets"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_GzwisIXdEeSCd9O2370cJA" label="A list of objects applying the constrain." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/targets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/targets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_GzxJwIXdEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_GzxJwYXdEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWxVnW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWxV3W6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19696,6 +19804,15 @@
           <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/constrainType"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/constrainType"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_L9HCIIXdEeSCd9O2370cJA" label="The kind of constrain, like not Together ..." column="_6IWxZnW6EeS68OT1x4CSXA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/constrainType/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#//QuellenConstrain/constrainType/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_L9HCIYXdEeSCd9O2370cJA" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_L9HCIoXdEeSCd9O2370cJA" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_6IWxWXW6EeS68OT1x4CSXA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWxWnW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -19732,7 +19849,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6IWxZXW6EeS68OT1x4CSXA" red="255" green="255" blue="255"/>
         </currentStyle>
       </lines>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_6IWxZnW6EeS68OT1x4CSXA" label="Domain Documentation" cells="_6IViqXW6EeS68OT1x4CSXA _6IViuHW6EeS68OT1x4CSXA _6IVivnW6EeS68OT1x4CSXA _6IVixHW6EeS68OT1x4CSXA _6IVi33W6EeS68OT1x4CSXA _6IVi5HW6EeS68OT1x4CSXA _6IVi9HW6EeS68OT1x4CSXA _6IVi-XW6EeS68OT1x4CSXA _6IVjBXW6EeS68OT1x4CSXA _6IWJtHW6EeS68OT1x4CSXA _6IWJyXW6EeS68OT1x4CSXA _6IWJ0nW6EeS68OT1x4CSXA _6IWJ2HW6EeS68OT1x4CSXA _6IWJ5HW6EeS68OT1x4CSXA _6IWJ63W6EeS68OT1x4CSXA _6IWJ8XW6EeS68OT1x4CSXA _6IWJ93W6EeS68OT1x4CSXA _6IWJ_XW6EeS68OT1x4CSXA _6IWKA3W6EeS68OT1x4CSXA _6IWKCXW6EeS68OT1x4CSXA _6IWKD3W6EeS68OT1x4CSXA _6IWKFXW6EeS68OT1x4CSXA _6IWKG3W6EeS68OT1x4CSXA _6IWKIXW6EeS68OT1x4CSXA _6IWKJ3W6EeS68OT1x4CSXA _6IWKLXW6EeS68OT1x4CSXA _6IWKNXW6EeS68OT1x4CSXA _6IWKPHW6EeS68OT1x4CSXA _6IWKRHW6EeS68OT1x4CSXA _6IWKd3W6EeS68OT1x4CSXA _6IWKgHW6EeS68OT1x4CSXA _6IWKiXW6EeS68OT1x4CSXA _6IWKk3W6EeS68OT1x4CSXA _6IWKnHW6EeS68OT1x4CSXA _6IWKp3W6EeS68OT1x4CSXA _6IWK73W6EeS68OT1x4CSXA _6IWK-HW6EeS68OT1x4CSXA _6IWLAXW6EeS68OT1x4CSXA _6IWLDXW6EeS68OT1x4CSXA _6IWLH3W6EeS68OT1x4CSXA _6IWw13W6EeS68OT1x4CSXA _6IWw8nW6EeS68OT1x4CSXA _6IWw_nW6EeS68OT1x4CSXA _6IWxDXW6EeS68OT1x4CSXA _6IWxFnW6EeS68OT1x4CSXA _6IWxI3W6EeS68OT1x4CSXA _6IWxK3W6EeS68OT1x4CSXA _6IWxMnW6EeS68OT1x4CSXA _6IWxOHW6EeS68OT1x4CSXA _6IWxTHW6EeS68OT1x4CSXA _6IWxW3W6EeS68OT1x4CSXA _6IWxYXW6EeS68OT1x4CSXA">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_6IWxZnW6EeS68OT1x4CSXA" label="Domain Documentation" cells="_6IViqXW6EeS68OT1x4CSXA _6IViuHW6EeS68OT1x4CSXA _6IVivnW6EeS68OT1x4CSXA _6IVixHW6EeS68OT1x4CSXA _6IVi33W6EeS68OT1x4CSXA _6IVi5HW6EeS68OT1x4CSXA _6IVi9HW6EeS68OT1x4CSXA _6IVi-XW6EeS68OT1x4CSXA _6IVjBXW6EeS68OT1x4CSXA _6IWJtHW6EeS68OT1x4CSXA _6IWJyXW6EeS68OT1x4CSXA _6IWJ0nW6EeS68OT1x4CSXA _6IWJ2HW6EeS68OT1x4CSXA _6IWJ5HW6EeS68OT1x4CSXA _6IWJ63W6EeS68OT1x4CSXA _6IWJ8XW6EeS68OT1x4CSXA _6IWJ93W6EeS68OT1x4CSXA _6IWJ_XW6EeS68OT1x4CSXA _6IWKA3W6EeS68OT1x4CSXA _6IWKCXW6EeS68OT1x4CSXA _6IWKD3W6EeS68OT1x4CSXA _6IWKFXW6EeS68OT1x4CSXA _6IWKG3W6EeS68OT1x4CSXA _6IWKIXW6EeS68OT1x4CSXA _6IWKJ3W6EeS68OT1x4CSXA _6IWKLXW6EeS68OT1x4CSXA _6IWKNXW6EeS68OT1x4CSXA _6IWKPHW6EeS68OT1x4CSXA _6IWKRHW6EeS68OT1x4CSXA _6IWKd3W6EeS68OT1x4CSXA _6IWKgHW6EeS68OT1x4CSXA _6IWKiXW6EeS68OT1x4CSXA _6IWKk3W6EeS68OT1x4CSXA _6IWKnHW6EeS68OT1x4CSXA _6IWKp3W6EeS68OT1x4CSXA _6IWK73W6EeS68OT1x4CSXA _6IWK-HW6EeS68OT1x4CSXA _6IWLAXW6EeS68OT1x4CSXA _6IWLDXW6EeS68OT1x4CSXA _6IWLH3W6EeS68OT1x4CSXA _6IWw13W6EeS68OT1x4CSXA _6IWw8nW6EeS68OT1x4CSXA _6IWw_nW6EeS68OT1x4CSXA _6IWxDXW6EeS68OT1x4CSXA _6IWxFnW6EeS68OT1x4CSXA _6IWxI3W6EeS68OT1x4CSXA _6IWxK3W6EeS68OT1x4CSXA _6IWxMnW6EeS68OT1x4CSXA _6IWxOHW6EeS68OT1x4CSXA _6IWxTHW6EeS68OT1x4CSXA _6IWxW3W6EeS68OT1x4CSXA _6IWxYXW6EeS68OT1x4CSXA _q7ge4IXbEeSCd9O2370cJA _I6R_wIXcEeSCd9O2370cJA _ReKFUIXcEeSCd9O2370cJA _Tc1YgIXcEeSCd9O2370cJA _VFYqsIXcEeSCd9O2370cJA _Ygh74IXcEeSCd9O2370cJA _cyjKsIXcEeSCd9O2370cJA _fX9twIXcEeSCd9O2370cJA _of2fUIXcEeSCd9O2370cJA _6iIZAIXcEeSCd9O2370cJA _GzwisIXdEeSCd9O2370cJA _L9HCIIXdEeSCd9O2370cJA _brauEIXdEeSCd9O2370cJA">
         <target xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#/"/>
         <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.ecore#/"/>
         <originMapping xmi:type="description_2:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
@@ -22737,7 +22854,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/streetCred"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/streetCred"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QIMHf3EeS7R_CGLciuCA" label="The current street cred." column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QIMHf3EeS7R_CGLciuCA" label="The current street cred. Its calculated by the karma the character has gaint." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/streetCred"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/streetCred"/>
           </cells>
@@ -22789,7 +22906,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/karmaGaint"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/karmaGaint"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QIPHf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QIPHf3EeS7R_CGLciuCA" label="The complete karma the character has gained over the time." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/karmaGaint"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/karmaGaint"/>
           </cells>
@@ -22802,7 +22919,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/currentKarma"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/currentKarma"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QIP3f3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QIP3f3EeS7R_CGLciuCA" label="The karma the characters has currenly at his disposal." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/currentKarma"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/ManagedCharacter/currentKarma"/>
           </cells>
@@ -22954,7 +23071,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/PriorityCategorie/categorieName"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/PriorityCategorie/categorieName"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QIYXf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QIYXf3EeS7R_CGLciuCA" label="The name of the category, typical somthing like A/B or so." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/PriorityCategorie/categorieName"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/PriorityCategorie/categorieName"/>
           </cells>
@@ -23806,7 +23923,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Connection/character"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Connection/character"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJI3f3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJI3f3EeS7R_CGLciuCA" label="The linked character." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Connection/character"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Connection/character"/>
           </cells>
@@ -24066,7 +24183,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/metaType"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/metaType"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJXXf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJXXf3EeS7R_CGLciuCA" label="The selected species for the character." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/metaType"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/metaType"/>
           </cells>
@@ -24079,7 +24196,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/characterConcept"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/characterConcept"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJYHf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJYHf3EeS7R_CGLciuCA" label="The character concept." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/characterConcept"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/Shr5KarmaGenerator/characterConcept"/>
           </cells>
@@ -24162,7 +24279,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/source"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/source"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJc3f3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJc3f3EeS7R_CGLciuCA" label="The source object for this constraint." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/source"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/source"/>
           </cells>
@@ -24175,7 +24292,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/targets"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/targets"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJdnf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJdnf3EeS7R_CGLciuCA" label="A list of objects applying the constrain." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/targets"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/targets"/>
           </cells>
@@ -24188,7 +24305,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/constrainType"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/constrainType"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_k-QJeXf3EeS7R_CGLciuCA" column="_k-QJe3f3EeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_k-QJeXf3EeS7R_CGLciuCA" label="The kind of constrain, like not Together ..." column="_k-QJe3f3EeS7R_CGLciuCA">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/constrainType"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.management.model/model/shr5Management.genmodel#//shr5Management/QuellenConstrain/constrainType"/>
           </cells>

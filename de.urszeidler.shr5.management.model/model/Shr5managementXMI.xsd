@@ -576,14 +576,22 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>A connection refers to a managed character and has the loy and influence value.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
+      <xsd:element name="character" type="shr5mngt:ManagedCharacter">
+        <xsd:annotation>
+          <xsd:documentation>The linked character.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
     <xsd:attribute name="influence" type="xsd:int"/>
     <xsd:attribute name="loyality" type="xsd:int"/>
-    <xsd:attribute name="character" type="xsd:string"/>
+    <xsd:attribute name="character" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The linked character.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <xsd:element name="Connection" type="shr5mngt:Connection">
     <xsd:annotation>
@@ -649,14 +657,30 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   </xsd:element>
   <xsd:complexType name="LifestyleToStartMoney">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="lifeStyles" type="shr5:Lifestyle"/>
+      <xsd:element name="lifeStyles" type="shr5:Lifestyle">
+        <xsd:annotation>
+          <xsd:documentation>A list of lifestyles this lifestyle to money description applies to.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="numberOfW" type="xsd:int"/>
-    <xsd:attribute name="moneyFactor" type="xsd:int"/>
-    <xsd:attribute name="lifeStyles" type="xsd:string"/>
+    <xsd:attribute name="numberOfW" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The number of d6 to define the start money.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="moneyFactor" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The factor for the start money.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="lifeStyles" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>A list of lifestyles this lifestyle to money description applies to.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <xsd:element name="LifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
   <xsd:complexType name="GruntGroup">
@@ -669,7 +693,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
           <xsd:element name="members" type="shr5mngt:GruntMembers"/>
           <xsd:element name="leader" type="shr5mngt:GruntMembers"/>
         </xsd:choice>
-        <xsd:attribute name="professionalRating" type="xsd:int"/>
+        <xsd:attribute name="professionalRating" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The professional rating of this grunt group.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -683,13 +711,25 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>This decribes the members of a grunt group. So this defines a group of simular characters.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="nsc" type="shr5mngt:NonPlayerCharacter"/>
+      <xsd:element name="nsc" type="shr5mngt:NonPlayerCharacter">
+        <xsd:annotation>
+          <xsd:documentation>The npc of the grunt members.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="count" type="xsd:int" use="required"/>
-    <xsd:attribute name="nsc" type="xsd:string"/>
+    <xsd:attribute name="count" type="xsd:int" use="required">
+      <xsd:annotation>
+        <xsd:documentation>The number of npcs.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="nsc" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The npc of the grunt members.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <xsd:element name="GruntMembers" type="shr5mngt:GruntMembers">
     <xsd:annotation>
@@ -749,9 +789,17 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="allowedSources" type="shr5:SourceBook"/>
+          <xsd:element name="allowedSources" type="shr5:SourceBook">
+            <xsd:annotation>
+              <xsd:documentation>A list of sources which are allowed when building a character.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
-        <xsd:attribute name="allowedSources" type="xsd:string"/>
+        <xsd:attribute name="allowedSources" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>A list of sources which are allowed when building a character.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -804,15 +852,35 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>Defines a constrain for the source element by holding a list of other elements and an constrain type.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="source" type="shr5:Quelle"/>
-      <xsd:element name="targets" type="shr5:Quelle"/>
+      <xsd:element name="source" type="shr5:Quelle">
+        <xsd:annotation>
+          <xsd:documentation>The source object for this constraint.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="targets" type="shr5:Quelle">
+        <xsd:annotation>
+          <xsd:documentation>A list of objects applying the constrain.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="constrainType" type="shr5mngt:QuellenConstrainType"/>
-    <xsd:attribute name="source" type="xsd:string"/>
-    <xsd:attribute name="targets" type="xsd:string"/>
+    <xsd:attribute name="constrainType" type="shr5mngt:QuellenConstrainType">
+      <xsd:annotation>
+        <xsd:documentation>The kind of constrain, like not Together ...</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="source" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The source object for this constraint.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="targets" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>A list of objects applying the constrain.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <xsd:element name="QuellenConstrain" type="shr5mngt:QuellenConstrain">
     <xsd:annotation>

@@ -369,6 +369,9 @@ public interface ManagedCharacter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The karma the characters has currenly at his disposal.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Karma Gaint</em>' attribute.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_KarmaGaint()
      * @model transient="true" changeable="false" volatile="true"
@@ -384,6 +387,9 @@ public interface ManagedCharacter extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The complete karma the character has gained over the time.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Current Karma</em>' attribute.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_CurrentKarma()
      * @model transient="true" changeable="false" volatile="true"

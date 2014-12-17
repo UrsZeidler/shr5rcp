@@ -80,6 +80,9 @@ public interface GruntGroup extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The professional rating of this grunt group.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Professional Rating</em>' attribute.
      * @see #setProfessionalRating(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntGroup_ProfessionalRating()

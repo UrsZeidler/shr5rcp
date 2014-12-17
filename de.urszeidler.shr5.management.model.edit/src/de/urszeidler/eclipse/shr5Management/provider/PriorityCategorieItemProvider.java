@@ -77,7 +77,7 @@ public class PriorityCategorieItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_PriorityCategorie_categorieName_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PriorityCategorie_categorieName_feature", "_UI_PriorityCategorie_type"),
+                 getString("_UI_PriorityCategorie_categorieName_description"),
                  Shr5managementPackage.Literals.PRIORITY_CATEGORIE__CATEGORIE_NAME,
                  true,
                  false,
