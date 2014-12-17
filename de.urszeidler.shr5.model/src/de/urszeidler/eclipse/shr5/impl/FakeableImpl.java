@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -193,6 +195,19 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
         }
         return super.eIsSet(featureID);
     }
+    
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        if(getWertValue()!=null)
+            return getWertValue().multiply(new BigDecimal(getStufe()));
+        return BigDecimal.ZERO;
+    }
+
+
 
     /**
      * <!-- begin-user-doc -->
