@@ -188,14 +188,14 @@ public class ShrListItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public String getText(Object object) {
         String label = ((ShrList)object).getName();
         return label == null || label.length() == 0 ?
             getString("_UI_ShrList_type") :
-            getString("_UI_ShrList_type") + " " + label;
+            label;
     }
 
 	/**
