@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
@@ -35,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -326,6 +328,28 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                             editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseKomplexeForm(KomplexeForm object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseZauber(Zauber object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }

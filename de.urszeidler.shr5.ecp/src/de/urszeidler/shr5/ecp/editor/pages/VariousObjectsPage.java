@@ -19,10 +19,12 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.WeaponMount;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
@@ -140,6 +142,7 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
 
         if (object instanceof Geist) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.STUFEN_PERSONA__STUFE, grpGegenstand);
+            emfFormBuilder.addSeperatorEntry(grpGegenstand);
              
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__KONSTITUTION_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__STAERKE_BASIS, grpGegenstand);
@@ -149,11 +152,24 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__CHARISMA_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__WILLENSKRAFT_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__INTUITION_BASIS, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__LOGIK_BASIS, grpGegenstand);
 
             emfFormBuilder.addTextEntry(Shr5Package.Literals.STUFEN_PERSONA__SKILLS, composite_Additional);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.STUFEN_PERSONA__SKILL_GROUPS, composite_Additional);
 
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEIST__POWERS, composite_Additional);            
+        } else if (object instanceof Zauber) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__KATEGORIE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__ENTZUG, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__ART, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__DAUER, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__REICHWEITE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__SCHADEN, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBER__MERKMALE, grpGegenstand);
+        }else if (object instanceof KomplexeForm) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__ZIEL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__SCHWUND, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__DAUER, grpGegenstand);
             
         }
         addSourceFeature(grpQuelle);
