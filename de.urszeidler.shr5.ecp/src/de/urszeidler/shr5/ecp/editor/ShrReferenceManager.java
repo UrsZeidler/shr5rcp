@@ -64,9 +64,8 @@ public class ShrReferenceManager extends DefaultReferenceManager {
 
     public void handleManage(FormbuilderEntry e, EObject object) {
         if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
-            Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(
-                    Shr5managementFactory.eINSTANCE.createPlayerCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA,
-                    editingDomain);
+            Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(Shr5managementFactory.eINSTANCE.createPlayerCharacter(),
+                    Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA, editingDomain);
 
             OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
                     Messages.ShadowrunEditor_dlg_select_type, Messages.ShadowrunEditor_dlg_select_persona_type);
@@ -75,13 +74,13 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
-                ) {
-            List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
-            if (!copyAddToPersona.isEmpty()) {
+                || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
+            EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
+            if (copyAddToPersona != null) {
                 IObservable observable = e.getObservable();
                 if (observable instanceof IObservableValue) {
                     IObservableValue ov = (IObservableValue)e.getObservable();
-                    ov.setValue(copyAddToPersona.get(0));
+                    ov.setValue(copyAddToPersona);
                 }
             }
             return;
@@ -100,11 +99,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     IObservableList ol = (IObservableList)observable;
                     ol.clear();
                     ol.addAll(eList);
-                } 
-//                else if (observable instanceof IObservableValue) {
-//                    IObservableValue ov = (IObservableValue)observable;
-//
-//                }
+                }
             }
 
             return;
@@ -112,8 +107,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, e.getFeature());
             List<?> values = (List<?>)propertyDescriptor.getChoiceOfValues(object);
             Object[] choises = NullObject.toChoises(values);
-            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select the magazine",
-                    "");
+            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select the magazine", "");
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
@@ -123,6 +117,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
 
     /**
      * Set the value to the formbuilder entry.
+     * 
      * @param e
      * @param dialog
      */
@@ -145,8 +140,8 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     protected Object provideObject(FormbuilderEntry e, EObject object) {
         if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
             de.urszeidler.eclipse.shr5.AttributModifikatorWert amw = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
-            CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(this.shadowrunEditor.getSite().getShell(), amw, (Modifizierbar)object,
-                    Messages.ShadowrunEditor_dlg_add_AttibuteModificator);
+            CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(this.shadowrunEditor.getSite().getShell(), amw,
+                    (Modifizierbar)object, Messages.ShadowrunEditor_dlg_add_AttibuteModificator);
 
             if (dialog.open() == Dialog.OK)
                 return amw;
@@ -180,8 +175,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return null;
 
         } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN.equals(e.getFeature())) {
-            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object,
-                    Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
 
             PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
             ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
@@ -199,8 +193,9 @@ public class ShrReferenceManager extends DefaultReferenceManager {
 
             Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
 
-            FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), basicList,
-                    Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(objectsOfType),object);
+            FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
+                    .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells,
+                    new ArrayList<EObject>(objectsOfType), object);
 
             int result = dialog.open();
             if (result == Window.OK) {
@@ -215,37 +210,37 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return objectList;
             }
 
-        } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())){
+        } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())) {
             final EObject contextObject = object;
             EClass eClass = (EClass)e.getFeature().getEType();
-            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); 
-            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, new DefaultReferenceManager(itemDelegator){
-                @Override
-                public void handleManage(FormbuilderEntry e, EObject object) {
-                    if (Shr5managementPackage.Literals.CONNECTION__CHARACTER.equals(e.getFeature())){
-                        Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject, Shr5managementPackage.Literals.MANAGED_CHARACTER);
-                        OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(), objectsOfType.toArray(new Object[]{}),
-                                "Choose connection", "");
-                        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-                        setSingleRefernceFromDialog(e, dialog); 
-                    }else
-                    super.handleManage(e, object);
-                }
-                 
-            });
+            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass);
+            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this,
+                    new DefaultReferenceManager(itemDelegator) {
+                        @Override
+                        public void handleManage(FormbuilderEntry e, EObject object) {
+                            if (Shr5managementPackage.Literals.CONNECTION__CHARACTER.equals(e.getFeature())) {
+                                Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject,
+                                        Shr5managementPackage.Literals.MANAGED_CHARACTER);
+                                OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(),
+                                        objectsOfType.toArray(new Object[]{}), "Choose connection", "");
+                                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                                setSingleRefernceFromDialog(e, dialog);
+                            } else
+                                super.handleManage(e, object);
+                        }
+
+                    });
 
             if (dialog.open() == Dialog.OK)
                 return eObject;
             else
                 return null;
 
-            
-            
-    } else if (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
+        } else if (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
                 || Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
 
             EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
-//            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
+            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
             EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
             GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
 
@@ -256,16 +251,16 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         }
         return defaultCreationDialog(e, object);
     }
-    
+
     protected EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
-        
+
         Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(object, e.getFeature(), editingDomain);// provideNewClassTypes(object,
         // e.getFeature());
         if (filteredEClasses.size() == 1) {
             EClass eClass = filteredEClasses.iterator().next();
             return eClass.getEPackage().getEFactoryInstance().create(eClass);
         }
-        
+
         OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
                 ShadowrunEditingTools.toFeatureName(object, e.getFeature()), "");
         dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
@@ -277,12 +272,40 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return eClass.getEPackage().getEFactoryInstance().create(eClass);
             }
         }
-        
+
         return null;
     }
-    
 
     /**
+     * Select one object and returns a copy.
+     * 
+     * @param object_ref
+     * @param orgObject
+     * @return
+     */
+    protected EObject handleCopySingleAddToPersona(EReference object_ref, EObject orgObject) {
+        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
+
+        OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), NullObject.toChoises(collection),
+                String.format("Add a %s object.", ShadowrunEditingTools.toFeatureName(orgObject, object_ref)), "");
+        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+
+        int result = dialog.open();
+        if (result == Window.OK) {
+            Object[] list = dialog.getResult();
+
+            if (list != null && list.length == 1 && list[0] instanceof EObject) {
+                EObject eo = (EObject)list[0];
+                EObject copy = copyWithParentId(eo);
+                return copy;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Select a list of object for the feature and return a list of copied objects.
+     * 
      * @param object_ref
      * @param orgObject
      * @return
@@ -290,10 +313,11 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     protected List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
-    
-        FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(), basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection),orgObject);
-    
+
+        FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
+                .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add "
+                + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection), orgObject);
+
         int result = dialog.open();
         if (result == Window.OK) {
             EList<?> list = dialog.getResult();
@@ -305,12 +329,11 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     objectList.add(copy);
                 }
             }
-    
+
             return objectList;
         }
         return null;
     }
-
 
     /**
      * Creates a copy of the eobject, when it is an {@link Identifiable} the parent id will be set to the id of the org object when the org object has
@@ -328,14 +351,12 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 String parentId = ((Identifiable)eo).getParentId();
                 if (parentId != null && !parentId.isEmpty())
                     id = parentId;
-    
+
                 Identifiable iden = (Identifiable)copy;
                 iden.setParentId(id);
             }
         }
         return copy;
     }
-
-
 
 }
