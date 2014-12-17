@@ -156,6 +156,7 @@ public class Messages extends NLS {
     public static String CharacterAdvancementPage_column_name;
     public static String CharacterAdvancementPage_titel;
     public static String BeschreibbarWidget_sctnNewSection_text;
+    public static String EmfFormbuilder_non_selected;
     public static String SubstancePage_attributes;
     public static String GegenstandPage_sctnRuntime_text;
 
