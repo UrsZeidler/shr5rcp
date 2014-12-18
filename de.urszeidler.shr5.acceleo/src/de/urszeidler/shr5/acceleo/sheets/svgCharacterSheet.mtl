@@ -13,13 +13,17 @@
 [template public svgCharacterSheetManagedCharacter(aManagedCharacter : ManagedCharacter)]
 	
 	[comment @main /]
-	[aManagedCharacter.printNewCharacterSheetPageOne()/]
-	[aManagedCharacter.printNewCharacterSheetPageTwo()/]
+[aManagedCharacter.printNewCharacterSheetPageOne()/]
+[aManagedCharacter.printNewCharacterSheetPageTwo()/]
+[if (not aManagedCharacter.inventar->selectByKind(RiggerCommandConsole)->isEmpty())]
+[aManagedCharacter.printRiggerSheetPageTwo()/]
+[/if]
 	
 [/template]
 
 
-[template public printNewCharacterSheetPageTwo(aManagedCharacter : ManagedCharacter)  
+
+[template public printRiggerSheetPageTwo(aManagedCharacter : ManagedCharacter)  
 {
 kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
 empty : String = '....................' ;
@@ -27,10 +31,37 @@ empty40 : String = '........................................' ;
 column : Sequence(Integer) = Sequence{45,420} ;
 size : Integer = 12; }
 ]  [comment]30[/comment]
-[file ('characterSheet-'+aManagedCharacter.persona.name+'-page2.svg', false, 'UTF-8')]
+[file ('riggerSheet-'+aManagedCharacter.persona.name+'-page2.svg', false, 'UTF-8')]
+[pageStart('Rigger page for '+aManagedCharacter.persona.name)+' page 2'/]
+
+[switchRigger(aManagedCharacter, empty, column->at(1), 25,size)/]	
+
+[printFirearmsDataBlock(aManagedCharacter, empty, column->at(2), 25,size,
+printRightSideUp('_UI_AbstaktFernKampfwaffe_type'.localizedString()))/]
+[let pos : Integer = 75+(aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->size()*65)]
+[if (not aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->isEmpty())]
+[printMeleeDataBlock(aManagedCharacter, empty, column->at(2), pos,size, 
+printRightSideUp('Meele'.localizedString()))/]
+[/if]
+[let pos1 : Integer = pos+aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*size]
+[printContractBlock(aManagedCharacter, empty40, column->at(2), pos1, size)/]
+[let pos2 : Integer =pos1+ 100+ (aManagedCharacter.contracts ->size()*12)]
+[printGearsBlock(aManagedCharacter, empty40, column->at(2), pos2, size)/]
+[/let]
+[/let][/let]
+
+[comment][printMeleeDataBlock(aManagedCharacter, empty, column->at(2), 25,size, 
+printRightSideUp('Meele'.localizedString()))/][/comment]
+
+  </g>
+</svg>
+[/file]
+[/template]
+
+
+[template public pageStart(pageName : String)]
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -75,11 +106,11 @@ size : Integer = 12; }
      id="metadata7">
     <rdf:RDF>
       <cc:Work
-         rdf:about="[escapeXML('characterSheet-'+aManagedCharacter.persona.name+'-page2.svg')/]">
+         rdf:about="[escapeXML(pageName)/]">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Shadowrun5 character sheet [aManagedCharacter.persona.name.escapeXML()/] page 1</dc:title>
+        <dc:title>Shadowrun5 character sheet [escapeXML(pageName)/]</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,10 +118,22 @@ size : Integer = 12; }
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1">
+[/template]
 
-[printFirearmsDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
+[template public printNewCharacterSheetPageTwo(aManagedCharacter : ManagedCharacter)  
+{
+kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
+empty : String = '....................' ;
+empty40 : String = '........................................' ; 
+column : Sequence(Integer) = Sequence{45,420} ;
+size : Integer = 12; }
+]  [comment]30[/comment]
+[file ('characterSheet-'+aManagedCharacter.persona.name+'-page2.svg', false, 'UTF-8')]
+[pageStart(aManagedCharacter.persona.name)+' page 2'/]
+
+[printFirearmsDataBlock(aManagedCharacter, empty, column->at(1), 25,size,printLeftSideUp('_UI_AbstaktFernKampfwaffe_type'.localizedString()))/]
 [let pos : Integer = 75+(aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->size()*65)]
-[printMeleeDataBlock(aManagedCharacter, empty, column->at(1), pos,size)/]
+[printMeleeDataBlock(aManagedCharacter, empty, column->at(1), pos,size, printLeftSideUp('Meele'.localizedString()))/]
 [let pos1 : Integer = pos + 55+(aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*45)]
 [if (not aManagedCharacter.inventar->selectByKind(Cyberdeck)->isEmpty())]
 [printCyberdeckBlock(aManagedCharacter, empty,column->at(1), pos1,size)/]
@@ -105,7 +148,7 @@ size : Integer = 12; }
 [comment]right side[/comment]
 [printGearsBlock(aManagedCharacter, empty40, column->at(2), 25, size)/]
 [let pos : Integer = 100+ (aManagedCharacter.inventar->size()*12)]
-[printLicenseBlock(aManagedCharacter, empty40, column->at(2), pos, size)/]
+[printContractBlock(aManagedCharacter, empty40, column->at(2), pos, size)/]
 [/let]
 
   </g>
@@ -129,7 +172,7 @@ x:Integer,y:Integer,size :Integer)
 [printVehicleDetail(it, empty, 10,50+ 100 *(i-1) , size)/]
 [/for]
 
-[let ypos : Integer = (15+aManagedCharacter.vehicels->size()*size) ]
+[let ypos : Integer = (15+aManagedCharacter.vehicels->size()*150) ]
 [let pos : Integer = (1046-y).min(ypos+y) ]
 [printBotton(30, pos)/]
 [/let][/let]
@@ -172,11 +215,11 @@ transform="translate([x/],[y/])"
 [**
  * Print the gears and cut the rest
 */]
-[template public printLicenseBlock (aManagedCharacter : ManagedCharacter,empty :String,
+[template public printContractBlock (aManagedCharacter : ManagedCharacter,empty :String,
 x:Integer,y:Integer,size :Integer) 
 ]
     <g
-       	id="g-License"
+       	id="g-Contracts"
 		transform="translate([x/],[y/])">
 [printRightSideUp('_UI_ManagedCharacter_contracts_feature'.localizedString())/]
 
@@ -333,14 +376,13 @@ x:Integer,y:Integer,size :Integer)
 
 
 [template public printFirearmsDataBlock(aManagedCharacter : ManagedCharacter,empty :String,
-x:Integer,y:Integer,size :Integer) 
+x:Integer,y:Integer,size :Integer ,header:String) 
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
     <g
        id="g-firearms"
 transform="translate([x/],[y/])"
 >
-
-[printLeftSideUp('_UI_AbstaktFernKampfwaffe_type'.localizedString())/]
+[header/]
 
 [for (rw : AbstaktFernKampfwaffe | aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe))]
 [printFerkampfWaffeDetail(rw, 0, (40)+((i-1)*65))/]
@@ -352,14 +394,14 @@ transform="translate([x/],[y/])"
 [/template]
 
 [template public printMeleeDataBlock(aManagedCharacter : ManagedCharacter,empty :String,
-x:Integer,y:Integer,size :Integer) 
+x:Integer,y:Integer,size :Integer, header : String) 
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
     <g
        id="g-melee"
 transform="translate([x/],[y/])"
 >
 
-[printLeftSideUp('Meele'.localizedString())/]
+[header/]
 
 [for (rw : Nahkampfwaffe | aManagedCharacter.inventar->selectByKind(Nahkampfwaffe))]
 [printNahkampfWaffeDetail(rw, 0, (40)+((i-1)*45))/]
@@ -381,65 +423,7 @@ column : Sequence(Integer) = Sequence{45,420} ;
 size : Integer = 12; }
 ]  [comment]30[/comment]
 [file ('characterSheet-'+aManagedCharacter.persona.name+'-page1.svg', false, 'UTF-8')]
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   id="svg2"
-   version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Zeichnung-1.svg">
-  <defs
-     id="defs4">
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="70.952328"
-     inkscape:cy="1001.4987"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1320"
-     inkscape:window-height="660"
-     inkscape:window-x="0"
-     inkscape:window-y="174"
-     inkscape:window-maximized="0">
-    <inkscape:grid
-       type="xygrid"
-       id="grid2985" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="[escapeXML('characterSheet-'+aManagedCharacter.persona.name+'page1.svg')/]">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Shadowrun5 character sheet [aManagedCharacter.persona.name.escapeXML()/] page 1</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1">
+[pageStart(aManagedCharacter.persona.name)+' page 1'/]
 
 [printPersonalDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
 [printAttributeBlock(aManagedCharacter, empty,column->at(1),155,size)/]
@@ -767,7 +751,7 @@ transform="translate([x/],[y/])"
 */]
 [template public printNahkampfWaffeDetail(mw : Nahkampfwaffe,x:Integer,y:Integer)]
     <g
-       	id="g-notes-1"
+       	id="g-notes-[mw.getText().escapeXML()/]"
 		transform="translate([x/],[y/])">
  
    <text
@@ -775,8 +759,9 @@ transform="translate([x/],[y/])"
        style="font-size:12px;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;font-weight:bold;-inkscape-font-specification:Trebuchet MS Bold;font-style:normal;font-stretch:normal;font-variant:normal"
        x="10"
        y="10"
-       id="text4648"
-       sodipodi:linespacing="125%">[mw.getText()/]</text>
+       id="textName-[x/]-[y/]"
+	   textLength="180"	
+       sodipodi:linespacing="125%">[mw.getText().escapeXML()/]</text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -789,8 +774,9 @@ transform="translate([x/],[y/])"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="10"
        y="35"
-       id="text4648-4"
-       sodipodi:linespacing="125%">[mw.schadenscode/]</text>
+       id="textDamage-[x/]-[y/]"
+       textLength="55"
+       sodipodi:linespacing="125%">[mw.schadenscode.escapeXML()/]</text>
 
     <text
        xml:space="preserve"
@@ -812,7 +798,8 @@ transform="translate([x/],[y/])"
        x="100"
        y="35"
        id="text4648-4"
-       sodipodi:linespacing="125%">[mw.reichweite/]</text>
+		textLength="120"
+       sodipodi:linespacing="125%">[mw.reichweite.escapeXML()/]</text>
 
 
 
@@ -832,43 +819,45 @@ transform="translate([x/],[y/])"
        style="font-size:12px;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;font-weight:bold;-inkscape-font-specification:Trebuchet MS Bold;font-style:normal;font-stretch:normal;font-variant:normal"
        x="10"
        y="10"
-       id="text4648"
-       sodipodi:linespacing="125%">[fw.getText()/]</text>
+       id="textName-[x/]-[y/]"
+	   textLength="150"	
+       sodipodi:linespacing="125%">[fw.getText().escapeXML()/]</text>
    <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="200"
        y="10"
-       id="text46481"
-       sodipodi:linespacing="125%">[fw.reichweite.getText()/]</text>
+       id="textRange-[x/]-[y/]"
+	   textLength="120"
+       sodipodi:linespacing="125%">[fw.reichweite.getText().escapeXML()/]</text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="10"
        y="25"
-       id="text4648-4"
+       id="textTT-[x/]-[y/]"
        sodipodi:linespacing="125%">Dmg  Acc	Ap	Mode        	RC 	Ammo </text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="10"
        y="35"
-       id="text4648-4"
-       sodipodi:linespacing="125%">[fw.schadenscode/]</text>
-
+       id="textDamage-[x/]-[y/]"
+	   textLength="15"	
+       sodipodi:linespacing="125%">[fw.schadenscode.escapeXML()/]</text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="40"
        y="35"
-       id="text4648-4"
+       id="textAcc-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.praezision/]</text>
    <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="55"
        y="35"
-       id="text4648-4"
+       id="textAP-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.durchschlagsKraft/]</text>
    <text
        xml:space="preserve"
@@ -876,7 +865,7 @@ transform="translate([x/],[y/])"
        x="65"
        y="35"
        textLength="[fw.oclAsType(Feuerwaffe).modie->size() * 15/]"
-       id="text4648-4"
+       id="textMod-[x/]-[y/]"
        sodipodi:linespacing="125%">[if (fw.oclIsTypeOf(Feuerwaffe))]
   [fw.oclAsType(Feuerwaffe).modie.fwModusToName()/][/if]</text>
    <text
@@ -884,21 +873,22 @@ transform="translate([x/],[y/])"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="120"
        y="35"
-       id="text4648-4"
+       id="textRC-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.oclAsType(Feuerwaffe).rueckstoss /]</text>
   <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="135"
        y="35"
-       id="text4648-4"
+       id="textMag-[x/]-[y/]"
+	   textLength="50"	
        sodipodi:linespacing="125%">[fw.oclAsType(Feuerwaffe).kapazitaet/] [fw.oclAsType(Feuerwaffe).munitionstyp.fwMagazinToName()/]</text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="10"
        y="45"
-       id="text4648-4"
+       id="textRangeTab-[x/]-[y/]"
        textLength="150"
        sodipodi:linespacing="125%">short  medium   far   extrem</text>
  <text
@@ -906,7 +896,7 @@ transform="translate([x/],[y/])"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="10"
        y="55"
-       id="text4648-4"
+       id="text1-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.reichweite.min/]-[fw.reichweite.kurz/]</text>
 
  <text
@@ -914,21 +904,21 @@ transform="translate([x/],[y/])"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="50"
        y="55"
-       id="text4648-4"
+       id="text2-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.reichweite.kurz/]-[fw.reichweite.mittel/]</text>
  <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="90"
        y="55"
-       id="text4648-4"
+       id="text3-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.reichweite.mittel/]-[fw.reichweite.weit/]</text>
  <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="135"
        y="55"
-       id="text4648-4"
+       id="text4-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.reichweite.weit/]-[fw.reichweite.extrem/]</text>
 
    <text
@@ -936,7 +926,7 @@ transform="translate([x/],[y/])"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="190"
        y="25"
-       id="text4648-4"
+       id="text5-[x/]-[y/]"
        sodipodi:linespacing="125%">['Accessories'.localizedString()/]</text>
 [for (it : FernkampfwaffeModifikator | fw.oclAsType(Feuerwaffe).einbau)]
 [printSvgLineValue(it.name,190,(25+i*10),10)/]
