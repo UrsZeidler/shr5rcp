@@ -6070,6 +6070,18 @@
         <entries xsi:type="shr5:Sin" xmi:id="_ZrXDMIXPEeS_sOkeVG-YrA" name="Faked SIN 4" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="4" gefaelscht="true"/>
         <entries xsi:type="shr5:Sin" xmi:id="_hK2TkIXPEeS_sOkeVG-YrA" name="Faked SIN 5" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="5" gefaelscht="true"/>
         <entries xsi:type="shr5:Sin" xmi:id="_jGcdkIXPEeS_sOkeVG-YrA" name="Faked SIN 6" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="6" gefaelscht="true"/>
+        <entries xsi:type="shr5:IntervallVertrag" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" name="DocWagon Contract, Basic" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" faelligkeitsIntervall="1" unit="year">
+          <localizations xmi:id="_1A4dUEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Standard"/>
+        </entries>
+        <entries xsi:type="shr5:IntervallVertrag" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" name="DocWagon Contract, Gold" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="25000" faelligkeitsIntervall="1" unit="year">
+          <localizations xmi:id="_1A5EYEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Gold"/>
+        </entries>
+        <entries xsi:type="shr5:IntervallVertrag" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" name="DocWagon Contract, Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50000" faelligkeitsIntervall="1" unit="year">
+          <localizations xmi:id="_1A5EYUjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Platin"/>
+        </entries>
+        <entries xsi:type="shr5:IntervallVertrag" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" name="DocWagon Contract, Super-Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" faelligkeitsIntervall="1" unit="year">
+          <localizations xmi:id="_1A5EYkjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Superplatin"/>
+        </entries>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_ELz4YjnTEeSe6_w6Jrbqxg" name="Skills">
@@ -8402,35 +8414,37 @@
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ENhIkznTEeSe6_w6Jrbqxg" name="lifestyles">
-        <entries xsi:type="shr5:Lifestyle" xmi:id="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" name="Street" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" name="Street" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="0" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENjk0DnTEeSe6_w6Jrbqxg" local="de" name="Straße"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="b46c5d66-940f-42c4-a8cb-a055f459bbb4" name="Squatter" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="500">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="b46c5d66-940f-42c4-a8cb-a055f459bbb4" name="Squatter" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="500" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENjk0TnTEeSe6_w6Jrbqxg" local="de" name="Squatter"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" name="Low" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" name="Low" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENjk0jnTEeSe6_w6Jrbqxg" local="de" name="Unterschicht"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="90f6f4c2-9968-42e1-ba79-e2bf530de32e" name="Middle" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="90f6f4c2-9968-42e1-ba79-e2bf530de32e" name="Middle" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENkL4DnTEeSe6_w6Jrbqxg" local="de" name="Mittelschicht"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="619be8b8-52a0-46b0-9566-a4102bd2040a" name="High" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="10000">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="619be8b8-52a0-46b0-9566-a4102bd2040a" name="High" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="10000" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENkL4TnTEeSe6_w6Jrbqxg" local="de" name="Oberschicht"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="ebb68d2c-a882-4356-8031-2f62d3f6d064" name="Luxury" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="100000">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="ebb68d2c-a882-4356-8031-2f62d3f6d064" name="Luxury" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="100000" faelligkeitsIntervall="1" unit="month">
           <localizations xmi:id="_ENkL4jnTEeSe6_w6Jrbqxg" local="de" name="Luxus"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="4be85958-af8f-4404-812f-0d8a426f01d6" name="Hospitalized, Basic" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="500">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="4be85958-af8f-4404-812f-0d8a426f01d6" name="Hospitalized, Basic" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="500" faelligkeitsIntervall="1" unit="day">
           <localizations xmi:id="_ENky8DnTEeSe6_w6Jrbqxg" local="de" name="Krankenhaus, Basic"/>
         </entries>
-        <entries xsi:type="shr5:Lifestyle" xmi:id="2be1a0f7-6133-4966-be57-720ed9b927a9" name="Hospitalized, Intensive" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="1000">
+        <entries xsi:type="shr5:Lifestyle" xmi:id="2be1a0f7-6133-4966-be57-720ed9b927a9" name="Hospitalized, Intensive" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="1000" faelligkeitsIntervall="1" unit="day">
           <localizations xmi:id="_ENky8TnTEeSe6_w6Jrbqxg" local="de" name="Krankenhaus, Intensivstation"/>
         </entries>
-        <entries xsi:type="shr5:LifestyleOption" xmi:id="_ENlaADnTEeSe6_w6Jrbqxg" name="Special Work Area" wertValue="1000"/>
-        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmBEDnTEeSe6_w6Jrbqxg" name="Extra Secure" wertValue="20"/>
-        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoIDnTEeSe6_w6Jrbqxg" name="Obscure/Difficult to Find" wertValue="10"/>
-        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoITnTEeSe6_w6Jrbqxg" name="Cramped" wertValue="-10"/>
-        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoIjnTEeSe6_w6Jrbqxg" name="Dangerous Area" wertValue="-20"/>
+        <entries xsi:type="shr5:LifestyleOption" xmi:id="_ENlaADnTEeSe6_w6Jrbqxg" name="Special Work Area" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="1000"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmBEDnTEeSe6_w6Jrbqxg" name="Extra Secure" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="20"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoIDnTEeSe6_w6Jrbqxg" name="Obscure/Difficult to Find" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="10"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoITnTEeSe6_w6Jrbqxg" name="Cramped" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="-10"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_ENmoIjnTEeSe6_w6Jrbqxg" name="Dangerous Area" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="-20"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_fm7E0IaiEeSXruMPxKiFDw" name="Dwarf" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="20"/>
+        <entries xsi:type="shr5:PercentLifestyleOption" xmi:id="_kFaCUIaiEeSXruMPxKiFDw" name="Troll" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100"/>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ENmoIznTEeSe6_w6Jrbqxg" name="Critters species">
         <entries xsi:type="shr5:Critter" xmi:id="47428a29-890f-4b3a-9d18-d8c2e581f1b4" name="Dog" page="299" konstitutionMin="2" geschicklichkeitMin="3" reaktionMin="3" staerkeMin="2" charismaMin="3" willenskraftMin="3" intuitionMin="3" logikMin="1" edgeMin="3" konstitutionMax="2" geschicklichkeitMax="3" reaktionMax="3" staerkeMax="2" charismaMax="3" willenskraftMax="3" intuitionMax="3" logikMax="1" edgeMax="3" resonanzMax="6" essenzMax="6">
@@ -19797,19 +19811,7 @@
       <entries xsi:type="shr5:QiFokus" xmi:id="_ik5OoD_REeSRYrHAmMULWA" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="QiFocus"/>
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
-      <entries xsi:type="shr5:IntervallVertrag" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" name="DocWagon Contract, Basic" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" faelligkeitsIntervall="1" unit="year">
-        <localizations xmi:id="_1A4dUEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Standard"/>
-      </entries>
-      <entries xsi:type="shr5:IntervallVertrag" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" name="DocWagon Contract, Gold" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="25000" faelligkeitsIntervall="1" unit="year">
-        <localizations xmi:id="_1A5EYEjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Gold"/>
-      </entries>
-      <entries xsi:type="shr5:IntervallVertrag" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" name="DocWagon Contract, Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50000" faelligkeitsIntervall="1" unit="year">
-        <localizations xmi:id="_1A5EYUjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Platin"/>
-      </entries>
-      <entries xsi:type="shr5:IntervallVertrag" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" name="DocWagon Contract, Super-Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" faelligkeitsIntervall="1" unit="year">
-        <localizations xmi:id="_1A5EYkjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Superplatin"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" name="" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -19938,7 +19940,7 @@
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
       </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_B0h48d0CEeOvVYoRsPZlnA" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_B0UdkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/rob.png" name="Rob" edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11" charismaBasis="3" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="77fa1ed8-f4e6-4763-9f0b-f125318b9782">
           <fertigkeiten xmi:id="_B0Udkd0CEeOvVYoRsPZlnA" stufe="2" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
           <fertigkeiten xmi:id="_B0VEoN0CEeOvVYoRsPZlnA" stufe="2" fertigkeit="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
@@ -19991,13 +19993,10 @@
         <inventar xsi:type="shr5:Kleidung" xmi:id="_B0ZWFd0CEeOvVYoRsPZlnA" page="437" verfuegbarkeit="2" wertValue="2000" name="Armor Jacket" ruestung="12"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0ZWFt0CEeOvVYoRsPZlnA" page="443" verfuegbarkeit="6" wertValue="1400" name="Contacts" kategorie="Optical &amp; Imaging Devices"/>
         <inventar xsi:type="shr5:Credstick" xmi:id="_B0ZWF90CEeOvVYoRsPZlnA" page="443" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0ZWGN0CEeOvVYoRsPZlnA" page="439" verfuegbarkeit="6" wertValue="1000" name="Renraku Sensei" kategorie="Commlink"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0ZWGd0CEeOvVYoRsPZlnA" page="434" verfuegbarkeit="2R" wertValue="600" name="Ammo: Regular Ammo 300" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9IN0CEeOvVYoRsPZlnA" page="434" verfuegbarkeit="9F" wertValue="400" name="Ammo: Explosive Rounds 50" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9Id0CEeOvVYoRsPZlnA" page="434" verfuegbarkeit="4F" wertValue="140" name="Ammo: Hollow Points 20" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9It0CEeOvVYoRsPZlnA" page="435" verfuegbarkeit="11F" wertValue="300" name="Minigrenade: High Explosive 3" kategorie="Ammunition"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9I90CEeOvVYoRsPZlnA" page="435" verfuegbarkeit="6R" wertValue="500" name="Grenade: Flash-Bang 5" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B0Z9JN0CEeOvVYoRsPZlnA" wertValue="45" name="SPare clip 9"/>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_4omk0IMZEeSeG83rgDt2Qg" parentId="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="35">
           <localizations xmi:id="_4omk0YMZEeSeG83rgDt2Qg" local="de" name="FN HAR"/>
           <modie>HM</modie>
@@ -20042,15 +20041,27 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_GfKE8IMaEeSeG83rgDt2Qg" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_GfKE8YMaEeSeG83rgDt2Qg" local="de" name="Munition: Standardmunition"/>
         </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE8oMaEeSeG83rgDt2Qg" parentId="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
+        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE8oMaEeSeG83rgDt2Qg" parentId="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="20" proAnzahl="10" damageMod="1" armorMod="2" type="_ENFqwjnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_GfKE84MaEeSeG83rgDt2Qg" local="de" name="Hohlspitzmunition"/>
         </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE9IMaEeSeG83rgDt2Qg" parentId="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="50" proAnzahl="10" damageMod="1" armorMod="-1" type="_ENGR0TnTEeSe6_w6Jrbqxg">
+        <inventar xsi:type="shr5:Munition" xmi:id="_GfKE9IMaEeSeG83rgDt2Qg" parentId="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="50" proAnzahl="10" damageMod="1" armorMod="-1" type="_ENFqwTnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_GfKsAIMaEeSeG83rgDt2Qg" local="de" name="Munition: Explosivgeschosse"/>
         </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_jJ5U8IalEeSVUMMR5ontNw" parentId="15a6c42b-12a4-494e-8ca5-e6c3a1052314" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="1000" name="Renraku Sensei" deviceRating="3">
+          <localizations xmi:id="_jJ5U8YalEeSVUMMR5ontNw" local="de" name="Renraku Sensei"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_jKaSUIalEeSVUMMR5ontNw" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwjnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_jKaSUYalEeSVUMMR5ontNw" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_4sON8IalEeSVUMMR5ontNw" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwTnTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_4sON8YalEeSVUMMR5ontNw" local="de" name="Munition: Standardmunition"/>
+        </inventar>
         <contracts xsi:type="shr5:Sin" xmi:id="_B0h48N0CEeOvVYoRsPZlnA" name="Sin Stufe 4" wertValue="10000" stufe="4" gefaelscht="true"/>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_B0h48d0CEeOvVYoRsPZlnA" name="Low 3 month Troll" page="95" verfuegbarkeit="" wertValue="12000" faelligkeitsIntervall="30"/>
         <contracts xsi:type="shr5:Lizenz" xmi:id="_B0mxcN0CEeOvVYoRsPZlnA" name="Gun Licence" wertValue="800" stufe="4" gefaelscht="true" lizenzTraeger="_B0h48N0CEeOvVYoRsPZlnA"/>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_CguDUIalEeSVUMMR5ontNw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="6000" faelligkeitsIntervall="3" unit="month">
+          <localizations xmi:id="_CguDUYalEeSVUMMR5ontNw" local="de" name="Unterschicht"/>
+          <options xsi:type="shr5:PercentLifestyleOption" xmi:id="_EwE20IalEeSVUMMR5ontNw" name="Troll" parentId="_kFaCUIaiEeSXruMPxKiFDw" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100"/>
+        </contracts>
         <connections xmi:id="_B0nYgN0CEeOvVYoRsPZlnA" influence="2" loyality="3"/>
         <connections xmi:id="_B0nYgd0CEeOvVYoRsPZlnA" influence="2" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4d0CEeOvVYoRsPZlnA" character="_B0TPcd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Rob" resourcen="_BtMh4t0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ksd0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="1" startResources="2810"/>
