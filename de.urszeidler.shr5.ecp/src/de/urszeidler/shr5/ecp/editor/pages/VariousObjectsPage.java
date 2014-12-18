@@ -16,14 +16,12 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Geist;
-import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -170,6 +168,9 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__ZIEL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__SCHWUND, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__DAUER, grpGegenstand);
+            
+        }else if (object instanceof MetaMagie) {
+          
             
         }
         addSourceFeature(grpQuelle);

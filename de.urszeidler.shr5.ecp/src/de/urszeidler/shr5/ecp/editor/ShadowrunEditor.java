@@ -20,10 +20,13 @@ import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.LifestyleOption;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
+import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -328,6 +331,28 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                             editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseLifestyleOption(LifestyleOption object) {
+                try {
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseMetaMagie(MetaMagie object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
