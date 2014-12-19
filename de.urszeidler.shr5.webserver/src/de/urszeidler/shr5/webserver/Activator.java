@@ -35,6 +35,8 @@ public class Activator extends AbstractUIPlugin {
 
     private ScriptViewerWrapper scriptViewerWrapper;
 
+    private boolean started= false;
+
     /**
      * The constructor
      */
@@ -49,14 +51,15 @@ public class Activator extends AbstractUIPlugin {
         super.start(context);
         plugin = this;
         store = getPreferenceStore();
-
-        // startJetty();
     }
 
     /**
      * @throws Exception
      */
     public void startJetty() throws Exception {
+        if(started)
+            return;
+            
         Hashtable<String, Object> dictionary = new Hashtable<String, Object>();
         int http_port = store.getInt(PreferenceConstants.SERVER_PORT);
         dictionary.put(JettyConstants.HTTP_ENABLED, Boolean.TRUE);
@@ -64,6 +67,7 @@ public class Activator extends AbstractUIPlugin {
 
         try {
             JettyConfigurator.startServer(PLUGIN_ID + ".server", dictionary);
+            started = true;
         } catch (RuntimeException e) {
             logError("Error starting jetty server", e);
         }
@@ -85,6 +89,7 @@ public class Activator extends AbstractUIPlugin {
     public void stopJetty() {
         try {
             JettyConfigurator.stopServer(PLUGIN_ID + ".server");
+            started = false;
         } catch (RuntimeException e) {
             logError("Error stopping jetty server", e);
         } catch (Exception e) {
@@ -145,5 +150,9 @@ public class Activator extends AbstractUIPlugin {
 
     public IPreferenceStore getStore() {
         return store;
+    }
+
+    public boolean isStarted() {
+        return started;
     }
 }

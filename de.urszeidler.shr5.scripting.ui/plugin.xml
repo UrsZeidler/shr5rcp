@@ -102,5 +102,19 @@
                      </menu>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
+            id="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
+            name="Script Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="de.urszeidler.shr5.scripting.ui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
 
 </plugin>
