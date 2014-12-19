@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="Scripting Command"
+            id="de.urszeidler.shr5.scripting.ui.commands">
+          <commandParameter
+               id="de.urszeidler.shr5.webserver.webserver"
+               name="action"
+               optional="true">
+         </commandParameter>
+            
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="de.urszeidler.shr5.scripting.ui.commands"
+            class="de.urszeidler.shr5.scripting.ui.handlers.ScriptHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
+         <menu
+               id="de.urszeidler.shr5.ecp.menus.scriptMenu"
+               label="script">
+               
+                           <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="start script"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="playScript">
+               </parameter>
+            </command>
+           <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="open script"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="openScript">
+               </parameter>
+            </command>
+               
+               
+                           <separator
+                  name="de.urszeidler.shr5.webserver.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="start webserver"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="start">
+               </parameter>
+            </command>
+            <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="stop webserver"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="stop">
+               </parameter>
+            </command>
+            <separator
+                  name="de.urszeidler.shr5.webserver.separator2"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="manage session"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="manage">
+               </parameter>
+            </command>
+               
+            <separator
+                  name="de.urszeidler.shr5.scripting.ui.separator1">
+            </separator>
+             <command
+                  commandId="de.urszeidler.shr5.scripting.ui.commands"
+                  label="start quick combat"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.webserver.webserver"
+                     value="combat">
+               </parameter>
+            </command>
+                     </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

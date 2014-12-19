@@ -57,7 +57,7 @@ import de.urszeidler.shr5.scripting.ScriptingFactory;
  */
 public class OpenObjectHandler extends AbstractHandler {
 
-    private static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective"; //$NON-NLS-1$
+    public static final String RUNTIME_PERSPECTIVE = "de.urszeidler.shr5.product.application.RuntimePerspective"; //$NON-NLS-1$
     private ScriptService scriptService;
 
     /*
@@ -111,12 +111,12 @@ public class OpenObjectHandler extends AbstractHandler {
                 case 4:
                     openItem(shell, Messages.OpenObjectHandler_open_item_titel, Messages.OpenObjectHandler_open_item_message, monitor);
                     break;
-                case 5:
-                    openScript(shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_message, monitor, true);
-                    break;
-                case 6:
-                    openScript(shell, Messages.OpenObjectHandler_openScrip_titel, Messages.OpenObjectHandler_openScrip_message, monitor, false);
-                    break;
+//                case 5:
+//                    openScript(shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_message, monitor, true);
+//                    break;
+//                case 6:
+//                    openScript(shell, Messages.OpenObjectHandler_openScrip_titel, Messages.OpenObjectHandler_openScrip_message, monitor, false);
+//                    break;
 
                 default:
                     break;
@@ -127,90 +127,90 @@ public class OpenObjectHandler extends AbstractHandler {
         }
     }
 
-    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor, boolean start) {
-        monitor.beginTask(Messages.OpenObjectHandler_openScript_task, 1);
-        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
-        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
-            @Override
-            public boolean evaluate(Object input) {
-                if (input instanceof Script) {
-                    return true;
-                }
-                return false;
-            }
-        });
-        monitor.done();
-
-        OwnChooseDialog dialog = new OwnChooseDialog(shell, filteredObject.toArray(new Object[]{}), titel, message);
-        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        int open = dialog.open();
-        if (open == Dialog.OK) {
-            Object[] result = dialog.getResult();
-            if (result.length > 0) {
-                Script eo = (Script)result[0];
-                if (start)
-                    startScript(eo, shell);
-                else
-                    openOneObject(shell,Collections.singleton((EObject)eo), titel, message);
-
-            }
-        }
-    }
-
-    protected void startScript(Script eo, Shell shell) {
-
-        Placement placement = eo.getEntry();
-        if (eo.getHistory() == null) {
-            initalizeScript(eo, shell);
-        } else {
-            if (MessageDialog.open(MessageDialog.QUESTION, shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_continue, SWT.NONE))
-                placement = eo.getHistory().getCurrentPlacement();
-            else {
-                eo.getPlayer().getMembers().clear();
-                initalizeScript(eo, shell);
-            }
-        }
-        try {
-            PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
-        } catch (WorkbenchException e) {
-            Activator.logError(e);
-        }
-
-        scriptService.setScript(eo);
-        scriptService.setPlacement(placement);
-    }
-
-    protected void initalizeScript(Script eo, Shell shell) {
-        eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
-
-        if (eo.getHistory().getCommandStack() == null) {
-            eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
-            eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
-        }
-        fillPayerGoup(eo, shell);
-    }
-
-    @SuppressWarnings("unchecked")
-    protected void fillPayerGoup(Script eo, Shell shell) {
-        Collection<? extends EObject> choiceOfValues = ItemPropertyDescriptor.getReachableObjectsOfType(eo,
-                Shr5managementPackage.Literals.PLAYER_CHARACTER);
-        eo.getPlayer().getMembers().clear();
-        FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
-                RuntimePackage.Literals.TEAM__MEMBERS, Messages.OpenObjectHandler_select_combatans, new ArrayList<EObject>(Collections2.filter(
-                        (Collection<ManagedCharacter>)choiceOfValues,
-                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo,DialogType.simple);
-
-        int result = dialog.open();
-        if (result == Window.OK) {
-            EList<?> list = dialog.getResult();
-            Team player = eo.getPlayer();
-            if (player == null)
-                player = RuntimeFactory.eINSTANCE.createTeam();
-
-            player.getMembers().addAll(
-                    Collections2.transform((Collection<ManagedCharacter>)list, ShadowrunEditingTools.managedCharacter2RuntimeFunction()));
-        }
-    }
+//    private void openScript(Shell shell, String titel, String message, IProgressMonitor monitor, boolean start) {
+//        monitor.beginTask(Messages.OpenObjectHandler_openScript_task, 1);
+//        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+//        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+//            @Override
+//            public boolean evaluate(Object input) {
+//                if (input instanceof Script) {
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
+//        monitor.done();
+//
+//        OwnChooseDialog dialog = new OwnChooseDialog(shell, filteredObject.toArray(new Object[]{}), titel, message);
+//        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+//        int open = dialog.open();
+//        if (open == Dialog.OK) {
+//            Object[] result = dialog.getResult();
+//            if (result.length > 0) {
+//                Script eo = (Script)result[0];
+//                if (start)
+//                    startScript(eo, shell);
+//                else
+//                    openOneObject(shell,Collections.singleton((EObject)eo), titel, message);
+//
+//            }
+//        }
+//    }
+//
+//    protected void startScript(Script eo, Shell shell) {
+//
+//        Placement placement = eo.getEntry();
+//        if (eo.getHistory() == null) {
+//            initalizeScript(eo, shell);
+//        } else {
+//            if (MessageDialog.open(MessageDialog.QUESTION, shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_continue, SWT.NONE))
+//                placement = eo.getHistory().getCurrentPlacement();
+//            else {
+//                eo.getPlayer().getMembers().clear();
+//                initalizeScript(eo, shell);
+//            }
+//        }
+//        try {
+//            PlatformUI.getWorkbench().showPerspective(RUNTIME_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+//        } catch (WorkbenchException e) {
+//            Activator.logError(e);
+//        }
+//
+//        scriptService.setScript(eo);
+//        scriptService.setPlacement(placement);
+//    }
+//
+//    protected void initalizeScript(Script eo, Shell shell) {
+//        eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
+//
+//        if (eo.getHistory().getCommandStack() == null) {
+//            eo.getHistory().setCommandStack(GameplayFactory.eINSTANCE.createExecutionStack());
+//            eo.getHistory().getCommandStack().setProtocol(GameplayFactory.eINSTANCE.createExecutionProtocol());
+//        }
+//        fillPayerGoup(eo, shell);
+//    }
+//
+//    @SuppressWarnings("unchecked")
+//    protected void fillPayerGoup(Script eo, Shell shell) {
+//        Collection<? extends EObject> choiceOfValues = ItemPropertyDescriptor.getReachableObjectsOfType(eo,
+//                Shr5managementPackage.Literals.PLAYER_CHARACTER);
+//        eo.getPlayer().getMembers().clear();
+//        FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(shell, AdapterFactoryUtil.getInstance().getLabelProvider(), eo.getPlayer(),
+//                RuntimePackage.Literals.TEAM__MEMBERS, Messages.OpenObjectHandler_select_combatans, new ArrayList<EObject>(Collections2.filter(
+//                        (Collection<ManagedCharacter>)choiceOfValues,
+//                        ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))),eo,DialogType.simple);
+//
+//        int result = dialog.open();
+//        if (result == Window.OK) {
+//            EList<?> list = dialog.getResult();
+//            Team player = eo.getPlayer();
+//            if (player == null)
+//                player = RuntimeFactory.eINSTANCE.createTeam();
+//
+//            player.getMembers().addAll(
+//                    Collections2.transform((Collection<ManagedCharacter>)list, ShadowrunEditingTools.managedCharacter2RuntimeFunction()));
+//        }
+//    }
 
     private void openItem(Shell shell, String titel, String message, IProgressMonitor monitor) {
         monitor.beginTask(Messages.OpenObjectHandler_collect_items, 1);
@@ -284,7 +284,7 @@ public class OpenObjectHandler extends AbstractHandler {
      * @param titel
      * @param message
      */
-    private void openOneObject(Shell shell, Collection<EObject> filteredObject, String titel, String message) {
+    public static void openOneObject(Shell shell, Collection<EObject> filteredObject, String titel, String message) {
         if (filteredObject.size() == 1) {
             EObject eo = filteredObject.iterator().next();
             ShadowrunEditingTools.openEObject(eo);

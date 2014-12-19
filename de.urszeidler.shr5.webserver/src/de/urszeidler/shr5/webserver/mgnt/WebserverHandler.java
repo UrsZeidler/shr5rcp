@@ -18,6 +18,7 @@ import de.urszeidler.shr5.webserver.Activator;
 /**
  * @author urs
  */
+@Deprecated
 public class WebserverHandler extends AbstractHandler implements IHandler {
 
     /*

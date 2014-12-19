@@ -28,6 +28,7 @@
             base-name="/web">
       </resource>
    </extension>
+               <!--
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
@@ -74,6 +75,8 @@
          </menu>
       </menuContribution>
    </extension>
+            -->
+         <!--
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -93,6 +96,7 @@
             commandId="de.urszeidler.shr5.webserver.webserver">
       </handler>
    </extension>
+      -->
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
