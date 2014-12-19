@@ -17,7 +17,7 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 	 */
 	public void initializeDefaultPreferences() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		store.setDefault(PreferenceConstants.START_SERVER_AT_SCRIPT_START, true);
+		store.setDefault(PreferenceConstants.OPEN_APP_URLS_AT_SERVER_START, true);
 		store.setDefault(PreferenceConstants.SERVER_PORT, 8089);
 		store.setDefault(PreferenceConstants.HISTORY_LINES,
 				2000);

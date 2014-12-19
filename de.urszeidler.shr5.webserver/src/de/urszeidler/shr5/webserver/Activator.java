@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.webserver;
 
+import java.net.URL;
 import java.util.Hashtable;
 
 import org.eclipse.core.runtime.IStatus;
@@ -10,6 +11,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.equinox.http.jetty.JettyConfigurator;
 import org.eclipse.equinox.http.jetty.JettyConstants;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -35,7 +37,7 @@ public class Activator extends AbstractUIPlugin {
 
     private ScriptViewerWrapper scriptViewerWrapper;
 
-    private boolean started= false;
+    private boolean started = false;
 
     /**
      * The constructor
@@ -57,9 +59,9 @@ public class Activator extends AbstractUIPlugin {
      * @throws Exception
      */
     public void startJetty() throws Exception {
-        if(started)
+        if (started)
             return;
-            
+
         Hashtable<String, Object> dictionary = new Hashtable<String, Object>();
         int http_port = store.getInt(PreferenceConstants.SERVER_PORT);
         dictionary.put(JettyConstants.HTTP_ENABLED, Boolean.TRUE);
@@ -68,6 +70,8 @@ public class Activator extends AbstractUIPlugin {
         try {
             JettyConfigurator.startServer(PLUGIN_ID + ".server", dictionary);
             started = true;
+            if (store.getBoolean(PreferenceConstants.OPEN_APP_URLS_AT_SERVER_START))
+                PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(new URL("http://localhost:" + http_port + "/main"));
         } catch (RuntimeException e) {
             logError("Error starting jetty server", e);
         }

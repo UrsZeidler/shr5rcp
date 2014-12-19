@@ -45,7 +45,7 @@ public class WebserverPreferencePage
 	        integerFieldEditor.setTextLimit(8);
 	        addField(integerFieldEditor);
 	    }
-	    addField(new BooleanFieldEditor(PreferenceConstants.START_SERVER_AT_SCRIPT_START, "Start server with script", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
+	    addField(new BooleanFieldEditor(PreferenceConstants.OPEN_APP_URLS_AT_SERVER_START, "Open web app in brower on server start.", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
 	    addField(new IntegerFieldEditor(PreferenceConstants.HISTORY_LINES, "History lines", getFieldEditorParent()));
 	}
 
