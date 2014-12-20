@@ -174,9 +174,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         body.setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit, editingDomain);
-        GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-        beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
+        beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
         toolkit.adapt(beschreibbarWidget);
         toolkit.paintBordersFor(beschreibbarWidget);
 
@@ -185,73 +184,51 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         compositeMetaType.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         toolkit.adapt(compositeMetaType);
         toolkit.paintBordersFor(compositeMetaType);
+        
+        Section sctnAttributes = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnAttributes.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnAttributes);
+        sctnAttributes.setText(Messages.AbstraktPersonaPage_sctnAttributes_text);
+        sctnAttributes.setExpanded(true);
 
-        Group grpAttribute = new Group(body, SWT.NONE);
+        Composite grpAttribute = new Composite(sctnAttributes, SWT.NONE);
+        sctnAttributes.setClient(grpAttribute);
         grpAttribute.setLayout(new GridLayout(4, true));
-        grpAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1));
-        grpAttribute.setText(Messages.AbstraktPersonaPage_Attribute);
         toolkit.adapt(grpAttribute);
         toolkit.paintBordersFor(grpAttribute);
 
-        Section sctnKoerperAttribute = managedForm.getToolkit().createSection(grpAttribute,
-                Section.DESCRIPTION | Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-        sctnKoerperAttribute.setDescription(Messages.AbstraktPersonaPage_Body_Attributes);
-        sctnKoerperAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(sctnKoerperAttribute);
-        sctnKoerperAttribute.setText(Messages.AbstraktPersonaPage_Body);
-        sctnKoerperAttribute.setExpanded(true);
 
-        Composite grpKrperlicheAttribute = new Composite(sctnKoerperAttribute, SWT.NONE);
+        Group grpKrperlicheAttribute = new Group(grpAttribute, SWT.NONE);
+        grpKrperlicheAttribute.setText(Messages.AbstraktPersonaPage_Body);
+        grpKrperlicheAttribute.setToolTipText(Messages.AbstraktPersonaPage_Body_Attributes);
         grpKrperlicheAttribute.setLayout(new GridLayout(3, false));
-        grpKrperlicheAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        grpKrperlicheAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpKrperlicheAttribute);
         toolkit.paintBordersFor(grpKrperlicheAttribute);
-        sctnKoerperAttribute.setClient(grpKrperlicheAttribute);
 
-        Section sctnGeistigeAttribute = managedForm.getToolkit().createSection(grpAttribute,
-                Section.DESCRIPTION | Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-        sctnGeistigeAttribute.setDescription(Messages.AbstraktPersonaPage_Mental_Attributes);
-        sctnGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(sctnGeistigeAttribute);
-        sctnGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
-        sctnGeistigeAttribute.setExpanded(true);
-
-        Composite grpGeistigeAttribute = new Composite(sctnGeistigeAttribute, SWT.NONE);
+        Group grpGeistigeAttribute = new Group(grpAttribute, SWT.NONE);
+        grpGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
+        grpGeistigeAttribute.setToolTipText(Messages.AbstraktPersonaPage_Mental_Attributes);
         grpGeistigeAttribute.setLayout(new GridLayout(3, false));
-        grpGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        grpGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpGeistigeAttribute);
         toolkit.paintBordersFor(grpGeistigeAttribute);
-        sctnGeistigeAttribute.setClient(grpGeistigeAttribute);
 
-        Section sctnSpezielleAttribute = managedForm.getToolkit().createSection(grpAttribute,
-                Section.DESCRIPTION | Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-        sctnSpezielleAttribute.setDescription(Messages.AbstraktPersonaPage_Special_Attributes);
-        sctnSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(sctnSpezielleAttribute);
-        sctnSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
-        sctnSpezielleAttribute.setExpanded(true);
-
-        Composite grpSpezielleAttribute = new Composite(sctnSpezielleAttribute, SWT.NONE);
+        Group grpSpezielleAttribute = new Group(grpAttribute, SWT.NONE);
+        grpSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
+        grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);       
         grpSpezielleAttribute.setLayout(new GridLayout(3, false));
-        grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpSpezielleAttribute);
         toolkit.paintBordersFor(grpSpezielleAttribute);
-        sctnSpezielleAttribute.setClient(grpSpezielleAttribute);
 
-        Section sctnLimits = managedForm.getToolkit().createSection(grpAttribute,
-                Section.DESCRIPTION | Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-        sctnLimits.setDescription(Messages.AbstraktPersonaPage_The_Limits);
-        sctnLimits.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(sctnLimits);
-        sctnLimits.setText(Messages.AbstraktPersonaPage_Limits);
-        sctnLimits.setExpanded(true);
-
-        Composite compositelimits = new Composite(sctnLimits, SWT.NONE);
+        Group compositelimits = new Group(grpAttribute, SWT.NONE);
+        compositelimits.setText(Messages.AbstraktPersonaPage_Limits);
+        compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);       
         compositelimits.setLayout(new GridLayout(3, false));
-        compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(compositelimits);
         toolkit.paintBordersFor(compositelimits);
-        sctnLimits.setClient(compositelimits);
 
         final Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayout(new FillLayout(SWT.HORIZONTAL));

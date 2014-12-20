@@ -164,6 +164,7 @@ public class Messages extends NLS {
     public static String TreeTableWidget_add_element_tooltip;
     public static String TreeTableWidget_remove_element;
     public static String TreeTableWidget_remove_element_tooltip;
+    public static String AbstraktPersonaPage_sctnAttributes_text;
 
     static {
         // initialize resource bundle
