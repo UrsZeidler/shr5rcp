@@ -74,6 +74,8 @@ http://www.shadowruntabletop.com/
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <property name="applicationCSSResources" value="platform:/plugin/org.eclipse.ui.themes/images/" />
+      <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default" />
    </configurations>
 
    <repositories>
