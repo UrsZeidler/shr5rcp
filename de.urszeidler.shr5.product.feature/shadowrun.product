@@ -76,4 +76,10 @@ http://www.shadowruntabletop.com/
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
 
+   <repositories>
+      <repository location="http://download.eclipse.org/eclipse/updates/4.3" enabled="true" />
+      <repository location="http://download.eclipse.org/releases/kepler" enabled="true" />
+      <repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/" enabled="true" />
+   </repositories>
+
 </product>
