@@ -224,7 +224,7 @@ public class CombatScriptWizardPage extends WizardPage {
         
         if (runtimeCharacters.isEmpty())
             buffer.append(Messages.CombatScriptWizardPage_error1);
-        if(((String)selectedScriptName.getValue()).isEmpty())
+        if(selectedScriptName.getValue()==null || ((String)selectedScriptName.getValue()).isEmpty())
             buffer.append(Messages.CombatScriptWizardPage_error2);
         if(selectedScriptContainer.getValue()==null)
             buffer.append(Messages.CombatScriptWizardPage_error3);
