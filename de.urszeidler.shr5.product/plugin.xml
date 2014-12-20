@@ -89,6 +89,7 @@
                label="%menu.label">
             <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
+                  icon="icons/save_edit.gif"
                   label="%command.save"
                   style="push">
             </command>

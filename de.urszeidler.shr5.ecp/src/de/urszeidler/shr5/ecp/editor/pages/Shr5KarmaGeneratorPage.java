@@ -57,7 +57,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
  */
 public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
-    protected static final String EMPTY = "";
+    protected static final String EMPTY = ""; //$NON-NLS-1$
     private Shr5KarmaGenerator object;
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
@@ -127,6 +127,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
         tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmChoose.setToolTipText(Messages.Shr5KarmaGeneratorPage_Step_One_tooltip);
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
@@ -138,6 +139,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         });
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
         tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_2.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmNewItem.setToolTipText(Messages.GeneratorPage_Step_Two_tooltip);
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
         tltmCommit.addSelectionListener(new SelectionAdapter() {
@@ -148,6 +150,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
         tltmCommit.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_3.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmCommit.setToolTipText(Messages.GeneratorPage_Step_Tree_tooltip);
 
         restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -158,6 +161,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         });
         restItem.setText(Messages.GeneratorPage_reset);
         restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        restItem.setToolTipText(Messages.GeneratorPage_Reset_tooltip);
 
         Group grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));

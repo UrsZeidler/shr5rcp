@@ -189,6 +189,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
+        tltmChoose.setToolTipText(Messages.Shr5GeneratorPage_Step_One_tooltip);
         tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
@@ -200,6 +201,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
+        tltmNewItem.setToolTipText(Messages.GeneratorPage_Step_Two_tooltip);
         tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_2.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
@@ -211,6 +213,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
         tltmCommit.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_3.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        tltmCommit.setToolTipText(Messages.GeneratorPage_Step_Tree_tooltip);
 
         restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -221,7 +224,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         });
         restItem.setText(Messages.GeneratorPage_reset);
         restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
-
+        restItem.setToolTipText(Messages.GeneratorPage_Reset_tooltip);
+ 
         grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));
         grpOverview.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));

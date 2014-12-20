@@ -110,6 +110,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
+        tltmChoose.setToolTipText(Messages.FreeStyleGeneratorPage_Step_One_tooltip);
         tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
@@ -121,6 +122,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
+        tltmNewItem.setToolTipText(Messages.GeneratorPage_Step_Two_tooltip);
         tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_2.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
@@ -131,6 +133,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
+        tltmCommit.setToolTipText(Messages.GeneratorPage_Step_Tree_tooltip);
         tltmCommit.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_3.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         restItem = new ToolItem(toolBar, SWT.NONE);
@@ -141,6 +144,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         restItem.setText(Messages.GeneratorPage_reset);
+        restItem.setToolTipText(Messages.GeneratorPage_Reset_tooltip);
         restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         Group grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);

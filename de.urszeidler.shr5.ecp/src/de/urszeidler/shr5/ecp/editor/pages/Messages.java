@@ -124,7 +124,9 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_page_shr5_generator;
     public static String ShadowrunEditor_shr5_generator_sheet;
     public static String Shr5GeneratorPage_initial_transaction_message0;
+    public static String Shr5GeneratorPage_Step_One_tooltip;
     public static String Shr5KarmaGeneratorPage_grpResources_text;
+    public static String Shr5KarmaGeneratorPage_Step_One_tooltip;
     public static String AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText;
 
     public static String AttributModifikatorWertWidget_mod_attribute;
@@ -165,6 +167,11 @@ public class Messages extends NLS {
     public static String TreeTableWidget_remove_element;
     public static String TreeTableWidget_remove_element_tooltip;
     public static String AbstraktPersonaPage_sctnAttributes_text;
+
+    public static String GeneratorPage_Reset_tooltip;
+    public static String FreeStyleGeneratorPage_Step_One_tooltip;
+    public static String GeneratorPage_Step_Tree_tooltip;
+    public static String GeneratorPage_Step_Two_tooltip;
 
     static {
         // initialize resource bundle
