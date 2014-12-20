@@ -5,11 +5,11 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            name="Scripting Command"
+            name="%scripting.command.name"
             id="de.urszeidler.shr5.scripting.ui.commands">
           <commandParameter
                id="de.urszeidler.shr5.webserver.webserver"
-               name="action"
+               name="%scripting.commandParameter.name"
                optional="true">
          </commandParameter>
             
@@ -29,11 +29,11 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
          <menu
                id="de.urszeidler.shr5.ecp.menus.scriptMenu"
-               label="script">
+               label="%scripting.menu.label">
                
                            <command
                   commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="start script"
+                  label="%scripting.command.label.startScript"
                   style="push">
                <parameter
                      name="de.urszeidler.shr5.webserver.webserver"
@@ -42,22 +42,36 @@
             </command>
            <command
                   commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="open script"
+                  label="%scripting.command.label.openScript"
                   style="push">
                <parameter
                      name="de.urszeidler.shr5.webserver.webserver"
                      value="openScript">
                </parameter>
             </command>
+           <separator
+                 name="de.urszeidler.shr5.scripting.ui.separator1"
+                 visible="true">
+           </separator>
+           <command
+                 commandId="de.urszeidler.shr5.scripting.ui.commands"
+                 icon="icons/start-combat.png"
+                 label="%scripting.command.label.quickCombat"
+                 style="push">
+              <parameter
+                    name="de.urszeidler.shr5.webserver.webserver"
+                    value="combat">
+              </parameter>
+           </command>
                
                
                            <separator
-                  name="de.urszeidler.shr5.webserver.separator1"
+                  name="de.urszeidler.shr5.webserver.separator3"
                   visible="true">
             </separator>
             <command
                   commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="start webserver"
+                  label="%scripting.command.label.startWebserver"
                   style="push">
                <parameter
                      name="de.urszeidler.shr5.webserver.webserver"
@@ -66,7 +80,7 @@
             </command>
             <command
                   commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="stop webserver"
+                  label="%scripting.command.label.stopWebserver"
                   style="push">
                <parameter
                      name="de.urszeidler.shr5.webserver.webserver"
@@ -79,7 +93,7 @@
             </separator>
             <command
                   commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="manage session"
+                  label="%scripting.command.label.manageSession"
                   style="push">
                <parameter
                      name="de.urszeidler.shr5.webserver.webserver"
@@ -87,18 +101,6 @@
                </parameter>
             </command>
                
-            <separator
-                  name="de.urszeidler.shr5.scripting.ui.separator1">
-            </separator>
-             <command
-                  commandId="de.urszeidler.shr5.scripting.ui.commands"
-                  label="start quick combat"
-                  style="push">
-               <parameter
-                     name="de.urszeidler.shr5.webserver.webserver"
-                     value="combat">
-               </parameter>
-            </command>
                      </menu>
       </menuContribution>
    </extension>
@@ -107,7 +109,7 @@
       <page
             class="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
             id="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
-            name="Script Preferences">
+            name="%scripting.perferencePage.name">
       </page>
    </extension>
    <extension
@@ -115,6 +117,21 @@
       <initializer
             class="de.urszeidler.shr5.scripting.ui.preferences.PreferenceInitializer">
       </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="de.urszeidler.shr5.scripting.ui.wizards"
+            name="%scripting.wizardCategory.name">
+      </category>
+      <wizard
+            category="de.urszeidler.shr5.scripting.ui.wizards"
+            class="de.urszeidler.shr5.scripting.ui.wizards.CombatScriptWizard"
+            finalPerspective="de.urszeidler.shr5.product.application.RuntimePerspective"
+            icon="icons/start-combat.png"
+            id="de.urszeidler.shr5.scripting.ui.wizards.CombatScriptWizard"
+            name="%scripting.combatScriptwizard.name">
+      </wizard>
    </extension>
 
 </plugin>

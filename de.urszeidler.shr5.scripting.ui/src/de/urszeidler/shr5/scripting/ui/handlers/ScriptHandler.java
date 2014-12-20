@@ -16,6 +16,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.window.Window;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
@@ -23,6 +24,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.internal.WorkbenchWindow;
 
 import com.google.common.collect.Collections2;
 
@@ -46,6 +48,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
+import de.urszeidler.shr5.scripting.ui.wizards.CombatScriptWizard;
 import de.urszeidler.shr5.webserver.Activator;
 import de.urszeidler.shr5.webserver.mgnt.ServerStatusDialog;
 
@@ -56,7 +59,7 @@ import de.urszeidler.shr5.webserver.mgnt.ServerStatusDialog;
  * @see org.eclipse.core.commands.AbstractHandler
  */
 public class ScriptHandler extends AbstractHandler {
-    private static final String START_WEBSERVER_DEFAULT = "START_WEBSERVER_DEFAULT";
+    private static final String START_WEBSERVER_DEFAULT = "START_WEBSERVER_DEFAULT";//$NON-NLS-1$
     private ScriptService scriptService;
 
     /**
@@ -76,28 +79,34 @@ public class ScriptHandler extends AbstractHandler {
         final Shell shell = window.getShell();
         scriptService = (ScriptService)window.getService(ScriptService.class);
 
-        if (parameter.equals("start")) {
-            startWebserver(shell);
-        } else if (parameter.equals("stop")) {
+        if (parameter.equals("start")) {//$NON-NLS-1$
+            startWebserver(shell, scriptService);
+        } else if (parameter.equals("stop")) {//$NON-NLS-1$
             try {
                 Activator.getDefault().cleanScriptWrapper();
                 Activator.getDefault().stopJetty();
+                setStatusMessage(de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_serverStopped_status_msg);
             } catch (Exception e) {
-                Activator.logError("Could not stop jetty", e);
+                Activator.logError("Could not stop jetty", e);//$NON-NLS-1$
             }
-        } else if (parameter.equals("manage")) {
+        } else if (parameter.equals("manage")) {//$NON-NLS-1$
             try {
                 ServerStatusDialog serverStatusDialog = new ServerStatusDialog(shell);
                 serverStatusDialog.open();
             } catch (Exception e) {
-                Activator.logError("Could not stop jetty", e);
+                Activator.logError("Could not stop jetty", e);//$NON-NLS-1$
             }
-        } else if (parameter.equals("combat")) {
-
-        } else if (parameter.equals("openScript")) {
+        } else if (parameter.equals("combat")) {//$NON-NLS-1$
+            CombatScriptWizard wizard = new CombatScriptWizard();
+            wizard.init(window.getWorkbench(), null);
+            WizardDialog dialog = new WizardDialog(shell, wizard);
+            dialog.create();
+            dialog.open();
+            return null;
+        } else if (parameter.equals("openScript")) {//$NON-NLS-1$
             openScript(shell, Messages.OpenObjectHandler_openScrip_titel, Messages.OpenObjectHandler_openScrip_message, false);
 
-        } else if (parameter.equals("playScript")) {
+        } else if (parameter.equals("playScript")) {//$NON-NLS-1$
             openScript(shell, Messages.OpenObjectHandler_playScript_titel, Messages.OpenObjectHandler_playScript_message, true);
 
         }
@@ -107,24 +116,25 @@ public class ScriptHandler extends AbstractHandler {
     /**
      * @param shell
      */
-    private void startWebserver(final Shell shell) {
+    private static void startWebserver(final Shell shell, ScriptService scriptService) {
         try {
             if (scriptService.getCurrentScript() == null) {
                 MessageBox messageBox = new MessageBox(shell);
-                messageBox.setMessage("No script started.");
+                messageBox.setMessage(de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_no_script_started_dlg);
                 messageBox.open();
                 return;
             }
             if (Activator.getDefault().getScriptViewerWrapper() != null) {
                 MessageBox messageBox = new MessageBox(shell);
-                messageBox.setMessage("Script and server started started, try stop first.");
+                messageBox.setMessage(de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_server_scrip_started_dlg);
                 messageBox.open();
                 return;
             }
             Activator.getDefault().startJetty();
             Activator.getDefault().setScriptService(scriptService);
+            setStatusMessage(de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_server_scriptStarted_status_msg);
         } catch (Exception e) {
-            Activator.logError("Could not start jetty", e);
+            Activator.logError("Could not start jetty", e);//$NON-NLS-1$
         }
     }
 
@@ -148,7 +158,7 @@ public class ScriptHandler extends AbstractHandler {
             if (result.length > 0) {
                 Script eo = (Script)result[0];
                 if (start)
-                    startScript(eo, shell);
+                    startScript(eo, shell, scriptService);
                 else
                     OpenObjectHandler.openOneObject(shell, Collections.singleton((EObject)eo), titel, message);
 
@@ -156,7 +166,16 @@ public class ScriptHandler extends AbstractHandler {
         }
     }
 
-    protected void startScript(Script eo, Shell shell) {
+    @SuppressWarnings("restriction")
+    public static void setStatusMessage(String msg){
+        IWorkbenchWindow activeWorkbenchWindow = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+        if (activeWorkbenchWindow instanceof WorkbenchWindow) {
+            WorkbenchWindow w = (WorkbenchWindow)activeWorkbenchWindow;
+           w.getStatusLineManager().setMessage(msg); 
+        }        
+    }
+    
+    public static void startScript(Script eo, Shell shell, ScriptService scriptService) {
         Placement placement = eo.getEntry();
         if (eo.getHistory() == null) {
             initalizeScript(eo, shell);
@@ -182,23 +201,23 @@ public class ScriptHandler extends AbstractHandler {
             IPreferenceStore store = de.urszeidler.shr5.scripting.ui.Activator.getDefault().getPreferenceStore();
             String value = store.getString(START_WEBSERVER_DEFAULT);
             if (MessageDialogWithToggle.ALWAYS.equals(value)) {
-                startWebserver(shell);
+                startWebserver(shell, scriptService);
                 return;
             }
             if (MessageDialogWithToggle.NEVER.equals(value)) {
                 return;
             }
-            MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, shell, "Start webserver",
-                    "Should the webserver also started ?", "Don't ask again", false, store, START_WEBSERVER_DEFAULT, SWT.NONE);
+            MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, shell, de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_startWebserver_dlg_titel,
+                    de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_startWebserver_dlg_msg, de.urszeidler.shr5.scripting.ui.Messages.ScriptHandler_startWebserver_dlg_daa, false, store, START_WEBSERVER_DEFAULT, SWT.NONE);
 
-            if (open.getReturnCode() == 2)
-                startWebserver(shell);
-
+            if (open.getReturnCode() == 2){
+                startWebserver(shell, scriptService);                
+            }
         }
 
     }
 
-    protected void initalizeScript(Script eo, Shell shell) {
+    protected static void initalizeScript(Script eo, Shell shell) {
         eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
 
         if (eo.getHistory().getCommandStack() == null) {
