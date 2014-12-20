@@ -90,7 +90,7 @@ transform="translate([column->at(1)/],560)">
 [printBotton(column->at(1), 150, 30)/]
 </g>
 <g
-       id="g-sins"
+       id="g-lifestyle"
 transform="translate([column->at(1)/],745)">
 [printLeftSideUp('Lifestyle'.localizedString())/]
 
@@ -118,6 +118,24 @@ transform="translate([column->at(1)/],880)">
 </g>
 [comment]end[/comment]
 [/if]
+<g
+       id="g-Advancement"
+transform="translate([column->at(2)/],25)">
+[printRightSideUp('Advancement'.localizedString())/]
+
+[for (c : Changes | aManagedCharacter.changes)]
+[let y : Integer =( (50+((i-1)*12))  ) ]
+[printSvgFullLine(c.getText(), empty40+empty,10,y,290)/]
+[comment][printSvgLineValue(c.dateApplied,240,y,size)/][/comment]
+[printSvgLineValue(c.karmaCost,310,y,size)/]
+[/let]
+[/for]
+
+
+
+
+[printBotton(column->at(1), 900,400)/]
+</g>
   </g>
 </svg>
 [/file]
@@ -763,7 +781,7 @@ x:Integer,y:Integer,size :Integer)
 [/for]
 [let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
 [let pos : Integer = (1050-y).min(ypos+y) ]
-[printBotton(25, pos, ypos)/]
+[printBotton(25, pos)/]
 [/let][/let]
 	</g>
 [/template]

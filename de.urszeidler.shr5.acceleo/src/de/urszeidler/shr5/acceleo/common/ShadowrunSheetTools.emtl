@@ -13,7 +13,7 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
+    <imports href="ShadowrunTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Query" name="getText" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
         <body startPosition="286" endPosition="331" value="&#xA;Get the text from the item descriptor.&#xA;&#xA;"/>
@@ -51,7 +51,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(Integer)">
           <source xsi:type="mtl:QueryInvocation" eType="/3/Sequence(EAttribute)">
-            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getOrderedBasedAttibutesForPersona"/>
+            <definition href="ShadowrunTools.emtl#/0/getOrderedBasedAttibutesForPersona"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/sumAttributes/persona">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
             </argument>
@@ -88,7 +88,7 @@
                 </source>
                 <argument xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
-                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/base2SpeciesMin"/>
+                  <definition href="ShadowrunTools.emtl#/0/base2SpeciesMin"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/sumAttributes/%/collect/ea">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
                   </argument>
@@ -1602,9 +1602,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getOrderedBasedAttibutesForPersona"/>
+          <references href="ShadowrunTools.emtl#/0/getOrderedBasedAttibutesForPersona"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:SequenceType" href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(EAttribute)"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="ShadowrunTools.emtl#/3/Sequence(EAttribute)"/>
         <eParameters name="arg0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </eParameters>
@@ -1614,7 +1614,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/base2SpeciesMin"/>
+          <references href="ShadowrunTools.emtl#/0/base2SpeciesMin"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
         <eParameters name="arg0">
@@ -1717,7 +1717,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(OclAny)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+        <references href="ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe_Class">
