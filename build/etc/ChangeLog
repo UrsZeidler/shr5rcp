@@ -9,6 +9,7 @@
 	* added substance container
 	* added source constrains for character generation
 * runtime
+	* combat script wizard
 	* added management of rigger console and cyberdeck
 	* added management of ammunition and magazine for firearms
 	* uses the ammo modification in damage tests
