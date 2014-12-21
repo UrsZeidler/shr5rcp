@@ -37,6 +37,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.binding.ModificatedAttributeLabelValue;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -142,7 +143,7 @@ public class PersonaUIToolkit {
         EAttribute attribute = Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ;
         getToolkit().createLabel(client, toFeatureName(attribute, eObject));// itemDelegator.getText(attribute));
 
-        Label text = getToolkit().createLabel(client, "");
+        Label text = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         IObservableValue observeValue = createObservableValue(attribute);
         ISWTObservableValue observeEditable = SWTObservables.observeText(text);
 
@@ -152,13 +153,13 @@ public class PersonaUIToolkit {
         // Binding binding = ctx.bindValue(observeEditable, observeValue,
         // updateStrategie1, updateStrategie1);
         // ctx.addBinding(binding);
-        getToolkit().createLabel(client, "");
+        getToolkit().createLabel(client, ""); //$NON-NLS-1$
     }
 
     private void createAttributeWidget(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        Text text = getToolkit().createText(client, "__", SWT.NONE);
+        Text text = getToolkit().createText(client, "__", SWT.BORDER);//$NON-NLS-1$ 
         setDefaultLayout(text);
 
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
@@ -176,7 +177,7 @@ public class PersonaUIToolkit {
 
         final IObservableValue feature = bindTextFeature(text, basefeature, new EMFUpdateValueStrategy(), updateStrategie);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
-        Label label2 = getToolkit().createLabel(client, "");
+        Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         setDefaultLayout(label2);
 
         bindObservable(computedValue, SWTObservables.observeText(label2));
@@ -202,13 +203,13 @@ public class PersonaUIToolkit {
     private void createAttributeWidgetRO(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        Label text = getToolkit().createLabel(client, "_____");
+        Label text = getToolkit().createLabel(client, "_____");//$NON-NLS-1$ 
         setDefaultLayout(text);
         final IObservableValue feature = bindLabelFeature(text, basefeature, new EMFUpdateValueStrategy());
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
 
-        Label label2 = getToolkit().createLabel(client, "");
+        Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         setDefaultLayout(label2);
         bindObservable(computedValue, SWTObservables.observeText(label2));
     }
@@ -216,18 +217,18 @@ public class PersonaUIToolkit {
     private void createReaktionAttWidgets(EAttribute basefeature, EAttribute calcFeature, Composite client) {
 
         getToolkit().createLabel(client, toFeatureName(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, eObject));
-        Label label = getToolkit().createLabel(client, "ini");
+        Label label = getToolkit().createLabel(client, "ini");//$NON-NLS-1$ 
         bindLabelFeature(label, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, new EMFUpdateValueStrategy());
         final IObservableValue reaktWValue = createObservableValue(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
         ComputedValue computedValue = new ComputedValue() {
 
             @Override
             protected Object calculate() {
-                return reaktWValue.getValue() + "W";
+                return reaktWValue.getValue() + Messages.PersonaUIToolkit_dice;
             }
         };
 
-        Label label2 = getToolkit().createLabel(client, "");
+        Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         bindObservable(computedValue, SWTObservables.observeText(label2));
 
     }

@@ -100,6 +100,7 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_sctnSkill_text;
     public static String PersonaFertigkeitenWidget_trclmnNewColumn_text;
     public static String PersonaFertigkeitenWidget_trclmnSpecs_text;
+    public static String PersonaUIToolkit_dice;
     public static String ShadowrunEditor_dlg_add_AttibuteModificator;
     public static String ShadowrunEditor_dlg_manage_inventory;
     public static String ShadowrunEditor_dlg_select_object_type;
