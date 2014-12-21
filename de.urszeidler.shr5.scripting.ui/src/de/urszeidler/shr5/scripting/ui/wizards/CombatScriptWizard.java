@@ -153,7 +153,8 @@ public class CombatScriptWizard extends Wizard implements INewWizard {
             IDialogSettings settings = getDialogSettings();
             if (settings != null) {
                 String name = settings.get("scriptName");//$NON-NLS-1$
-                selectedScriptName.setValue(name);
+                if(name!=null && !name.isEmpty())
+                    selectedScriptName.setValue(name);
                 String date = settings.get("scriptDate");//$NON-NLS-1$
                 Date sDate = new Date(Long.parseLong(date));
                 startDate.setValue(sDate);
