@@ -29,7 +29,7 @@ public class WebserverPreferencePage
 	public WebserverPreferencePage() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-		setDescription("A demonstration of a preference page implementation");
+		setDescription("Preferences for the webserver and the app.");
 	}
 	
 	/**
