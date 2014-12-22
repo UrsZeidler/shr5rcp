@@ -1,10 +1,16 @@
 package de.urszeidler.shr5.runtime.ui.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.ChangeEvent;
+import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.draw2d.IFigure;
+import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -19,9 +25,12 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.zest.core.viewers.AbstractZoomableViewer;
 import org.eclipse.zest.core.viewers.EntityConnectionData;
 import org.eclipse.zest.core.viewers.GraphViewer;
+import org.eclipse.zest.core.viewers.IEntityConnectionStyleProvider;
 import org.eclipse.zest.core.viewers.IGraphEntityContentProvider;
+import org.eclipse.zest.core.viewers.IGraphEntityRelationshipContentProvider;
 import org.eclipse.zest.core.viewers.IZoomableWorkbenchPart;
 import org.eclipse.zest.core.viewers.ZoomContributionViewItem;
+import org.eclipse.zest.core.widgets.ZestStyles;
 import org.eclipse.zest.layouts.LayoutAlgorithm;
 import org.eclipse.zest.layouts.LayoutStyles;
 import org.eclipse.zest.layouts.algorithms.TreeLayoutAlgorithm;
@@ -41,34 +50,73 @@ public class ScriptPage extends AbstractShr5Page<Script> {
     private EditingDomain editingDomain;
 
     protected DataBindingContext m_bindingContext;
-    public class ZestNodeContentProvider extends ArrayContentProvider  implements IGraphEntityContentProvider {
+    private IObservableList observeList;
+
+    public class ZestRelationContentProvider extends ArrayContentProvider implements IGraphEntityRelationshipContentProvider {
+
+        @Override
+        public Object[] getRelationships(Object source, Object dest) {
+            // TODO Auto-generated method stub
+            // new EntityConnectionData(source, dest);
+            return null;
+        }
+
+    }
+
+    public class ZestNodeContentProvider extends ArrayContentProvider implements IGraphEntityContentProvider {
 
         @Override
         public Object[] getConnectedTo(Object entity) {
-          if (entity instanceof Placement) {
-              Placement node = (Placement) entity;
-            return node.getNextPlacements().toArray();
-          }
-          throw new RuntimeException("Type not supported");
+            if (entity instanceof Placement) {
+                Placement node = (Placement)entity;
+                return node.getNextPlacements().toArray();
+            }
+            throw new RuntimeException("Type not supported");
         }
-      } 
-    
-    public class ZestLabelProvider extends LabelProvider{
+    }
+
+    public class ZestLabelProvider extends LabelProvider implements IEntityConnectionStyleProvider {
         @Override
         public String getText(Object element) {
 
             if (element instanceof EntityConnectionData) {
-//              EntityConnectionData test = (EntityConnectionData) element;
-              return "";
+                // EntityConnectionData test = (EntityConnectionData) element;
+                return "";
             }
             return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
         }
-        
+
         @Override
         public Image getImage(Object element) {
             return AdapterFactoryUtil.getInstance().getLabelProvider().getImage(element);
         }
+
+        @Override
+        public int getConnectionStyle(Object src, Object dest) {
+            return ZestStyles.CONNECTIONS_DIRECTED;
+        }
+
+        @Override
+        public Color getColor(Object src, Object dest) {
+            return null;
+        }
+
+        @Override
+        public Color getHighlightColor(Object src, Object dest) {
+            return null;
+        }
+
+        @Override
+        public int getLineWidth(Object src, Object dest) {
+            return -1;
+        }
+
+        @Override
+        public IFigure getTooltip(Object entity) {
+            return null;
+        }
     }
+
     /**
      * Create the form page.
      * 
@@ -100,6 +148,12 @@ public class ScriptPage extends AbstractShr5Page<Script> {
         this.editingDomain = editingDomain;
     }
 
+    @Override
+    public void dispose() {
+        observeList.dispose();
+        super.dispose();
+    }
+
     /**
      * Create contents of the form.
      * 
@@ -126,32 +180,29 @@ public class ScriptPage extends AbstractShr5Page<Script> {
         managedForm.getToolkit().adapt(composite_2);
         managedForm.getToolkit().paintBordersFor(composite_2);
         composite_2.setLayout(new GridLayout(3, false));
-        
+
         Section sctnScriptGraph = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnScriptGraph.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnScriptGraph);
         sctnScriptGraph.setText("Script graph");
         sctnScriptGraph.setExpanded(true);
-        
 
         Composite composite = managedForm.getToolkit().createComposite(sctnScriptGraph, SWT.NONE);
         sctnScriptGraph.setClient(composite);
         managedForm.getToolkit().paintBordersFor(composite);
         composite.setLayout(new GridLayout(1, false));
-        
+
         ToolBar toolBar = new ToolBar(composite, SWT.FLAT | SWT.RIGHT);
-//        sctnScriptGraph.setDescriptionControl(toolBar);
+        // sctnScriptGraph.setDescriptionControl(toolBar);
         toolBar.setLayoutData(new GridData(SWT.RIGHT, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().adapt(toolBar);
         managedForm.getToolkit().paintBordersFor(toolBar);
-        
-        
+
         final GraphViewer graphViewer = new GraphViewer(composite, SWT.NONE);
         Control control = graphViewer.getControl();
         GridData gd_control = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
         gd_control.minimumHeight = 200;
         control.setLayoutData(gd_control);
-
 
         Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true, 1, 1));
@@ -185,14 +236,22 @@ public class ScriptPage extends AbstractShr5Page<Script> {
         graphViewer.setLayoutAlgorithm(layout, true);
         graphViewer.applyLayout();
 
-        ZoomContributionViewItem zoomContributionViewItem = new ZoomContributionViewItem(new IZoomableWorkbenchPart(){
+//        ZoomContributionViewItem zoomContributionViewItem = new ZoomContributionViewItem(new IZoomableWorkbenchPart() {
+//            @Override
+//            public AbstractZoomableViewer getZoomableViewer() {
+//                return graphViewer;
+//            }
+//        });
+//        zoomContributionViewItem.fill(toolBar, 0);
+        observeList = EMFObservables.observeList(m_bindingContext.getValidationRealm(), object, ScriptingPackage.Literals.SCRIPT__PLACEMENTS);
+        observeList.addChangeListener(new IChangeListener() {
+
             @Override
-            public AbstractZoomableViewer getZoomableViewer() {
-                return graphViewer;
+            public void handleChange(ChangeEvent event) {
+                graphViewer.setInput(object.getPlacements());
             }
         });
-        zoomContributionViewItem.fill(toolBar, 0);
-        
+
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
 
