@@ -38,6 +38,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
+import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet;
 import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
 import de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet;
@@ -81,6 +82,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap.put("simple svg->pdf", new SimpleSvg());
         hashMap.put("simple vehicle->pdf", new GenerateSvgVehicleSheet());
         hashMap.put("characterSheet->pdf", new SvgCharacterSheet());
+        hashMap.put("npc character sheet->pdf", new GenerateNpcCharacterSheet());
 
         imageMap.put("characterSheet->pdf", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
         descriptionMap.put("characterSheet->pdf", "A nice character sheet");

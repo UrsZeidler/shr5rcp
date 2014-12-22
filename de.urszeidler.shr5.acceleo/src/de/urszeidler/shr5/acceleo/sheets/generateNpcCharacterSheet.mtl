@@ -1,0 +1,603 @@
+[comment encoding = UTF-8 /]
+[module generateNpcCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+
+[template public generateNpcCharacterSheet(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+	[printNpcSheet(aManagedCharacter)/]
+	
+[/template]
+
+[template public printNpcSheet(aManagedCharacter : ManagedCharacter) ] 
+[file ('npcSheet'+aManagedCharacter.persona.name+'.svg', false, 'UTF-8')]
+[pageStart('Npc sheet for '+aManagedCharacter.persona.name)/]
+
+<g id="g-npc" transform="translate(30,30)">
+[printDataBlock(aManagedCharacter,20,20)/]
+[printSkillBlock(aManagedCharacter,370,110)/]
+[printWeaponDetailBlock(aManagedCharacter,20,110,12)/]
+[printGearsBlock(aManagedCharacter,20,250,12)/]
+[printConditionMonitorBlock(aManagedCharacter,500,20)/]
+[printDeco()/]
+</g>
+[comment]page end[/comment]
+  </g>
+</svg>
+[/file]
+[/template]
+
+[template public printConditionMonitorBlock(aManagedCharacter : ManagedCharacter,
+x:Integer,y:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ;
+kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
+}]
+<g id="g-Gears" transform="translate([x/],[y/])">
+[printOneMonitorSmall('Phy',kp.zustandKoerperlichMax,0,0,14)/]
+[printOneMonitorSmall('Men',kp.zustandGeistigMax,0,20,14)/]
+[printOneMonitorSmall('Ove',kp.zustandGrenze,0,40,14)/]
+[printSvgTextBold('-1'.localizedString(),60,10,7)/]
+[printSvgTextBold('-2'.localizedString(),105,10,7)/]
+[printSvgTextBold('-3'.localizedString(),150,10,7)/]
+</g>
+[/template]
+
+
+[**
+ * Print the gears and cut the rest
+*/]
+[template public printGearsBlock (aManagedCharacter : ManagedCharacter,
+x:Integer,y:Integer,size :Integer) 
+{empty10 : String = '          ' ;
+empty20 : String = empty10+empty10 ;
+empty40 : String = empty20+empty20 ;
+empty80 : String = empty40+empty40 ;
+}
+]
+    <g id="g-Gears" transform="translate([x/],[y/])">
+[printSvgText('_UI_ManagedCharacter_inventar_feature'.localizedString(),0,0,14)/]
+
+[for (k : AbstraktGegenstand | aManagedCharacter.inventar)]
+[let ypos : Integer = (15+(i-1)*size) ]
+[if (ypos<150)]
+[printSvgText(k.getText(), 0,ypos,size,230,empty40)/]
+[printSvgText((k.wert.toString()),255,ypos,size)/]
+[/if][/let]
+[/for]
+
+	</g>
+[/template]
+
+
+
+[template public printSkillBlock(aManagedCharacter : ManagedCharacter,x:Integer,y:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }
+] 
+<g id="g-skill-[x/]-[y/]" transform="translate([x/],[y/])">
+
+[printSvgText('_UI_AbstraktPersona_fertigkeiten_feature'.localizedString(),0,0,14)/]
+
+[let count : Integer = persona.fertigkeitsGruppenToFertigkeiten()->size()]
+[for (b : Beschreibbar | persona.fertigkeitsGruppenToFertigkeiten())]
+[let ypos : Integer = (0+i*12)]
+[if (b.oclIsKindOf(FertigkeitsGruppe))]
+[printSvgText(b.getText(), 0,ypos,12)/]
+[printSvgText(findGruppe(b.oclAsType(FertigkeitsGruppe), persona).stufe.toString(),255,ypos,12)/]
+[else]
+[let name : String = b.getText()]
+[let attributeName : String = b.oclAsType(Fertigkeit).attribut.getText()]
+[let stufe : Integer = findFertigkeitValue(b.oclAsType(Fertigkeit), persona)]
+[printSvgText(name, 0,ypos,12)/]
+[printSvgText(findFertigkeitValue(b.oclAsType(Fertigkeit), persona).toString(),230,ypos,12)/]
+[printSvgText(attributeName.substring(1, 3) ,245,ypos,12)/]
+[printSvgText((stufe + persona.eGet(b.oclAsType(Fertigkeit).attribut).oclAsType(Integer)).toString() ,275,ypos,12)/]
+[/let][/let][/let]
+[/if][/let]
+[/for]
+
+[for (pfg : PersonaFertigkeit | persona.fertigkeiten)]
+[let ypos : Integer = (0+i*12)+(count*12)]
+[if (ypos<280)]
+
+[let name : String = pfg.fertigkeit.getText()]
+[let attributeName : String = pfg.fertigkeit.attribut.getText()]
+[printSvgText(name, 0,ypos,12)/]
+[printSvgText(pfg.stufe.toString(),230,ypos,12)/]
+[printSvgText(attributeName.substring(1, 3) ,245,ypos,12)/]
+[printSvgText((pfg.stufe + persona.eGet(pfg.fertigkeit.attribut).oclAsType(Integer)).toString() ,275,ypos,12)/]
+[/let][/let][/if]
+[/let]
+[/for]
+[/let]
+
+</g>
+[/template]
+
+
+
+[template public printWeaponDetailBlock(aManagedCharacter : ManagedCharacter,
+x:Integer,y:Integer,size:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-Weapons"
+transform="translate([x/],[y/])"
+>
+
+
+[printSvgText('_UI_SpezielleAttribute_ausweichen_feature'.localizedString(), 0,0,size)/]
+[printSvgText(persona.ausweichen.toString(),150,0,size)/]
+
+[printSvgText('Armor'.localizedString(), 0,(size),size)/]
+[let rw : Kleidung = aManagedCharacter.inventar->selectByKind(Kleidung)->any(true)]
+[printSvgText(rw.getText(), 50,(size),size)/]
+[printSvgText(rw.ruestung.toString(),255,(size),12)/]
+[printSvgText('|'+(rw.ruestung+persona.oclAsType(KoerperPersona).panzer ),275,(size),size)/]
+[/let]
+[let rw : AbstaktFernKampfwaffe = aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->any(true)]
+[printFerkampfWaffeDetail(rw, 0, (1*size+ 5))/]
+[/let]
+[let mw : Nahkampfwaffe = aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->any(true)]
+[printNahkampfWaffeDetail(mw, 0, (1*size)+70)/]
+[/let]
+	</g>
+[/template]
+
+[**
+ * Print the detail of a firearm.
+*/]
+[template public printFerkampfWaffeDetail(fw : AbstaktFernKampfwaffe,x:Integer,y:Integer)
+{empty10 : String = '          ' ;
+empty20 : String = empty10+empty10 ;
+empty40 : String = empty20+empty20 ;
+empty80 : String = empty40+empty40 ;
+}]
+    <g
+       	id="g-notes-1"
+		transform="translate([x/],[y/])">
+ 
+   <text
+       xml:space="preserve"
+       style="[textStyle(12)/]"
+       x="0"
+       y="10"
+       id="textName-[x/]-[y/]"
+	   textLength="150"	
+       sodipodi:linespacing="125%">[fw.getText().escapeXML()/]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="200"
+       y="10"
+       id="textRange-[x/]-[y/]"
+	   textLength="120"
+       sodipodi:linespacing="125%">[fw.reichweite.getText().escapeXML()/]</text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="0"
+       y="25"
+       id="textTT-[x/]-[y/]"
+       sodipodi:linespacing="125%">Dmg  Acc	Ap	Mode        	RC 	Ammo </text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="0"
+       y="35"
+       id="textDamage-[x/]-[y/]"
+	   textLength="15"	
+       sodipodi:linespacing="125%">[fw.schadenscode.escapeXML()/]</text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="45"
+       y="35"
+       id="textAcc-[x/]-[y/]"
+text-anchor="middle"
+       sodipodi:linespacing="125%">[fw.praezision/]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="65"
+       y="35"
+       id="textAP-[x/]-[y/]"
+text-anchor="middle"
+       sodipodi:linespacing="125%">[fw.durchschlagsKraft/]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="80"
+       y="35"
+text-anchor="middle"
+       textLength="[fw.oclAsType(Feuerwaffe).modie->size() * 15/]"
+       id="textMod-[x/]-[y/]"
+       sodipodi:linespacing="125%">[if (fw.oclIsTypeOf(Feuerwaffe))]
+  [fw.oclAsType(Feuerwaffe).modie.fwModusToName()/][/if]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="135"
+       y="35"
+       id="textRC-[x/]-[y/]"
+text-anchor="middle"
+       sodipodi:linespacing="125%">[fw.oclAsType(Feuerwaffe).rueckstoss /]</text>
+  <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="150"
+       y="35"
+       id="textMag-[x/]-[y/]"
+	   textLength="35"	
+       sodipodi:linespacing="125%">[fw.oclAsType(Feuerwaffe).kapazitaet/] [fw.oclAsType(Feuerwaffe).munitionstyp.fwMagazinToName().substring(1,3)/]</text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="0"
+       y="45"
+       id="textRangeTab-[x/]-[y/]"
+       textLength="150"
+       sodipodi:linespacing="125%">short  medium   far   extrem</text>
+ <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"       
+		x="0"
+       y="55"
+       id="text1-[x/]-[y/]"
+       sodipodi:linespacing="125%">[fw.reichweite.min/]-[fw.reichweite.kurz/]</text>
+
+ <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="50"
+       y="55"
+       id="text2-[x/]-[y/]"
+       sodipodi:linespacing="125%">[fw.reichweite.kurz/]-[fw.reichweite.mittel/]</text>
+ <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="90"
+       y="55"
+       id="text3-[x/]-[y/]"
+       sodipodi:linespacing="125%">[fw.reichweite.mittel/]-[fw.reichweite.weit/]</text>
+ <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="135"
+       y="55"
+       id="text4-[x/]-[y/]"
+       sodipodi:linespacing="125%">[fw.reichweite.weit/]-[fw.reichweite.extrem/]</text>
+
+   <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="210"
+       y="25"
+       id="text5-[x/]-[y/]"
+       sodipodi:linespacing="125%">['Accessories'.localizedString()/]</text>
+[for (it : FernkampfwaffeModifikator | fw.oclAsType(Feuerwaffe).einbau)]
+[let name : String = it.getText()]
+[printSvgText(name.substring(12,name.size()),210,(25+i*10),10,120,empty40)/]
+[/let]
+[/for]
+
+	</g>
+
+[/template]
+
+
+[**
+ * Print the detail of a firearm.
+*/]
+[template private printNahkampfWaffeDetail(mw : Nahkampfwaffe,x:Integer,y:Integer)]
+    <g
+       	id="g-notes-[mw.getText().escapeXML()/]"
+		transform="translate([x/],[y/])">
+ 
+   <text
+	xml:space="preserve"
+	style="[textStyle(12)/]"
+	x="0"
+	y="10"
+	id="textName-[x/]-[y/]"
+	textLength="180"	
+	sodipodi:linespacing="125%">[mw.getText().escapeXML()/]</text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(10)/]"
+       x="0"
+       y="25"
+       id="text4648-4"
+       sodipodi:linespacing="125%">Dmg           Acc	Ap	Reach</text>
+    <text
+       xml:space="preserve"
+       style="[textStyle(11)/]"
+       x="0"
+       y="35"
+       id="textDamage-[x/]-[y/]"
+       textLength="50"
+
+       sodipodi:linespacing="125%">[mw.schadenscode.escapeXML()/]</text>
+
+    <text
+       xml:space="preserve"
+       style="[textStyle(11)/]"
+       x="70"
+       y="35"
+       id="text4648-4"
+text-anchor="middle"
+       sodipodi:linespacing="125%">[mw.praezision/]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(11)/]"
+       x="95"
+       y="35"
+       id="text4648-4"
+text-anchor="middle"
+       sodipodi:linespacing="125%">[mw.durchschlagsKraft/]</text>
+   <text
+       xml:space="preserve"
+       style="[textStyle(11)/]"
+       x="110"
+       y="35"
+       id="text4648-4"
+		textLength="120"
+       sodipodi:linespacing="125%">[mw.reichweite.escapeXML()/]</text>
+
+
+
+	</g>
+[/template]
+
+
+
+[template public printDataBlock(aManagedCharacter : ManagedCharacter,x:Integer,y:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }
+] 
+<g id="g-data-[x/]-[y/]" transform="translate([x/],[y/])">
+
+[printSvgText('_UI_Beschreibbar_name_feature'.localizedString().concat(': ').concat(persona.name), 0,0,12)/]
+[printSvgText(sexToName(aManagedCharacter.sex),0,12,12)/]
+[printSvgText(persona.spezies.getText(),110,12,12)/]
+
+
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[let attributeName : String = getText(base2Calced(ea))]
+[let xpos : Integer = 25*i-1]
+[printSvgTextBold(attributeName.substring(1, 1),xpos ,28,14)/]
+[printSvgText(persona.attributeValue(ea),xpos,44,14,22)/]
+[/let]
+[/let]
+[/for]
+
+<g id="g-data1-[x/]-[y/]" transform="translate(280,0)">
+[printSvgText('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString(), 0,0,12)/]
+[printSvgText((persona.oclAsType(KoerperPersona).selbstbeherrschung ).toString(),120,0,12)/]
+[printSvgText('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString(), 0,15,12)/]
+[printSvgText((persona.oclAsType(KoerperPersona).menschenkenntnis).toString(),120,15,12)/]
+[printSvgText('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString(), 0,30,12)/]
+[printSvgText((persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString(),120,30,12)/]
+
+
+[printSvgText('Lifting/Carrying'.localizedString(), 0,45,12)/] 
+[printSvgText((persona.liftCarry()),120,45,12)/]
+
+[printSvgText('Movment'.localizedString(), 0,60,12)/] 
+[printSvgText((persona.movement()),120,60,12)/]
+
+
+</g>
+
+[printSvgText('_UI_SpezielleAttribute_initative_feature'.localizedString(), 0,60,12)/]
+[printSvgTextBold(persona.toLocalizedInitative(),100,60,12)/]
+
+[printSvgText('_UI_ChrakterLimits_koerperlich_feature'.localizedString().substring(1, 1).concat(': '+ persona.koerperlich.toString()),180,60,12)/]
+[printSvgText('_UI_ChrakterLimits_geistig_feature'.localizedString().substring(1, 1).concat(': '+ persona.geistig.toString()),210,60,12)/]
+[printSvgText('_UI_ChrakterLimits_sozial_feature'.localizedString().substring(1, 1).concat(': '+ persona.sozial.toString()),240,60,12)/]
+
+
+</g>
+[/template]
+
+
+[template private printOneMonitorSmall(name : String,value : Integer,x:Integer,y:Integer,rowCount : Integer)]
+   <g
+       id="g-conditionMonitor-[name/]"
+transform="translate([x/],[y/])"
+>
+
+[printSvgText(name.localizedString().substring(1,3),0,12,12)/]
+[for (it : String | value.createNumberList())]
+[let xpos : Integer = (i-1).mod(rowCount)]
+[let ypos : Integer = (i-1).div(rowCount)]
+   <rect
+         y="[ypos*20/]"
+         x="[30+xpos*15  /]"
+         height="15"
+         width="10"
+         id="rect-monitorbox-[it/]"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+
+[/let][/let]
+[/for]
+
+
+	</g>
+[/template]
+
+
+[template public printDeco()]
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20,0 700,0"
+       id="path3092"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20,90 700,0"
+       id="path3092-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20,400 700,0"
+       id="path3092-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 360,100 0,290"
+       id="path3094"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 290,12 0,70"
+       id="path3096"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 480,12 0,70"
+       id="path3098"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20,232 325,0"
+       id="path3100"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20,187 325,0"
+       id="path3102"
+       inkscape:connector-curvature="0" />
+[/template]
+
+[**
+ * print a text bold.
+*/]
+[template private printSvgTextBold(arg : OclAny,x:Integer,y:Integer,size:Integer)]
+   <text
+       xml:space="preserve"
+       style="font-size:[size/]px;font-style: normal;font-variant:normal;font-weight:bold;font-stretch:normal;
+		line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;
+		font-family:TeX Gyre Adventor;-inkscape-font-specification:Sans Bold"
+       x="[x/]"
+       y="[y/]"
+       id="text-[x/]-[y/]"
+       sodipodi:linespacing="125%"
+       lengthAdjust="spacing">[escapeXML(arg)/]</text>
+[/template]
+
+
+[**
+ * print a text.
+*/]
+[template private printSvgText(arg : OclAny,x:Integer,y:Integer,size:Integer)]
+   <text
+       xml:space="preserve"
+       style="[textStyle(size)/]"
+       x="[x/]"
+       y="[y/]"
+       id="text-[x/]-[y/]"
+       sodipodi:linespacing="125%"
+       lengthAdjust="spacing">[escapeXML(arg)/]</text>
+[/template]
+
+[**
+ * print a text.
+*/]
+[template private printSvgText(arg : OclAny,x:Integer,y:Integer,size:Integer,length : Integer)]
+   <text
+       xml:space="preserve"
+       style="[textStyle(size)/]"
+        x="[x/]"
+        y="[y/]"
+        id="text-[x/]-[y/]"
+        sodipodi:linespacing="125%"
+		textLength="[length/]"
+        lengthAdjust="spacing">[escapeXML(arg)/]</text>
+[/template]
+[**
+ * print a text.
+*/]
+[template private printSvgText(arg : OclAny,x:Integer,y:Integer,size:Integer,length : Integer, empty: String)]
+   <text
+       xml:space="preserve"
+       style="[textStyle(size)/]"
+        x="[x/]"
+        y="[y/]"
+        id="text-[x/]-[y/]"
+        sodipodi:linespacing="125%"
+		textLength="[length/]"
+        lengthAdjust="spacing">[escapeXML(printTextPlusSpace(arg.toString(),empty))/]</text>
+[/template]
+
+[query public textStyle(size : Integer) : String = 'font-size:'+size+'px;font-style: normal;font-variant:normal;font-weight:normal;font-stretch:normal;'
+		+'line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;'
+		+'font-family:TeX Gyre Adventor;-inkscape-font-specification:Sans' /]
+
+
+[template public pageStart(pageName : String)]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="148mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Zeichnung-1.svg">
+  <defs
+     id="defs4">
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="70.952328"
+     inkscape:cy="1001.4987"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1320"
+     inkscape:window-height="660"
+     inkscape:window-x="0"
+     inkscape:window-y="174"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="[escapeXML(pageName)/]">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Shadowrun5 character sheet [escapeXML(pageName)/]</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+[/template]
