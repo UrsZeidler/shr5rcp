@@ -121,14 +121,16 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         createFormBuilder(managedForm);
 
         if (object instanceof Koerpermods) {
+            if (object instanceof Cyberware) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__TYPE, composite_add);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY, composite_add);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
+            }
             grpWert.setText(Messages.ObjectPage_price);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
 
-            if (object instanceof Cyberware) {
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
-            }
 
         } else if (object instanceof PersonaEigenschaft) {
             grpWert.setText(Messages.ObjectPage_karmaCost);
