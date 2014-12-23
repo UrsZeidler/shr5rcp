@@ -3,10 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.provider;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -14,12 +12,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
-
 import com.google.common.base.Predicates;
-import com.google.common.collect.Collections2;
 import com.google.common.collect.FluentIterable;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
@@ -55,10 +51,56 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addCapacityFeaturePropertyDescriptor(object);
+            addCapacityPropertyDescriptor(object);
             addTypePropertyDescriptor(object);
             addBulletsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity Feature feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityFeaturePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacityFeature_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityFeature_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY_FEATURE,
+                 false,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacity_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -182,6 +224,12 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(Magazin.class)) {
+            case Shr5Package.MAGAZIN__CAPACITY:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
         super.notifyChanged(notification);
     }
 

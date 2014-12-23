@@ -190,6 +190,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createAddictionTypeFromString(eDataType, initialValue);
             case Shr5Package.TIME_UNITS:
                 return createTimeUnitsFromString(eDataType, initialValue);
+            case Shr5Package.CYBERWARE_TYPE:
+                return createCyberwareTypeFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -247,6 +249,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertAddictionTypeToString(eDataType, instanceValue);
             case Shr5Package.TIME_UNITS:
                 return convertTimeUnitsToString(eDataType, instanceValue);
+            case Shr5Package.CYBERWARE_TYPE:
+                return convertCyberwareTypeToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -1451,6 +1455,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertTimeUnitsToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CyberwareType createCyberwareTypeFromString(EDataType eDataType, String initialValue) {
+        CyberwareType result = CyberwareType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertCyberwareTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

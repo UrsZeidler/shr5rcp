@@ -3990,13 +3990,31 @@ public interface Shr5Package extends EPackage {
     int CYBERWARE__WERT_VALUE = KOERPERMODS_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__CAPACITY_FEATURE = KOERPERMODS_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__CAPACITY = KOERPERMODS_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Persona</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CYBERWARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 3;
+	int CYBERWARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Einbau</b></em>' containment reference list.
@@ -4005,7 +4023,25 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int CYBERWARE__EINBAU = KOERPERMODS_FEATURE_COUNT + 4;
+	int CYBERWARE__EINBAU = KOERPERMODS_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Cyberware Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__CYBERWARE_CAPACITY = KOERPERMODS_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__TYPE = KOERPERMODS_FEATURE_COUNT + 8;
 
     /**
      * The number of structural features of the '<em>Cyberware</em>' class.
@@ -4014,7 +4050,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 5;
+	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 9;
 
     /**
      * The number of operations of the '<em>Cyberware</em>' class.
@@ -15250,13 +15286,31 @@ public interface Shr5Package extends EPackage {
     int CYBERDECK__SCHLEICHER = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__CAPACITY_FEATURE = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__CAPACITY = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Program Slots</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CYBERDECK__PROGRAM_SLOTS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 2;
+    int CYBERDECK__PROGRAM_SLOTS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Attribute1</b></em>' attribute.
@@ -15265,7 +15319,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE1 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 3;
+    int CYBERDECK__ATTRIBUTE1 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Attribute2</b></em>' attribute.
@@ -15274,7 +15328,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE2 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 4;
+    int CYBERDECK__ATTRIBUTE2 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Attribute3</b></em>' attribute.
@@ -15283,7 +15337,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE3 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 5;
+    int CYBERDECK__ATTRIBUTE3 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Attribute4</b></em>' attribute.
@@ -15292,7 +15346,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE4 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 6;
+    int CYBERDECK__ATTRIBUTE4 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Configuration</b></em>' reference list.
@@ -15301,7 +15355,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__CONFIGURATION = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 7;
+    int CYBERDECK__CONFIGURATION = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Stored Programs</b></em>' containment reference list.
@@ -15310,7 +15364,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 8;
+    int CYBERDECK__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Running Programs</b></em>' reference list.
@@ -15319,7 +15373,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__RUNNING_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 9;
+    int CYBERDECK__RUNNING_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 11;
 
     /**
      * The number of structural features of the '<em>Cyberdeck</em>' class.
@@ -15328,7 +15382,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 10;
+    int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 12;
 
     /**
      * The number of operations of the '<em>Cyberdeck</em>' class.
@@ -19430,13 +19484,31 @@ public interface Shr5Package extends EPackage {
     int MAGAZIN__WIFI = ABSTRAKT_GEGENSTAND__WIFI;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__CAPACITY_FEATURE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN__CAPACITY = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Type</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MAGAZIN__TYPE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+    int MAGAZIN__TYPE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Bullets</b></em>' reference list.
@@ -19445,7 +19517,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MAGAZIN__BULLETS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+    int MAGAZIN__BULLETS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Magazin</em>' class.
@@ -19454,7 +19526,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MAGAZIN_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+    int MAGAZIN_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Magazin</em>' class.
@@ -19846,6 +19918,52 @@ public interface Shr5Package extends EPackage {
     int SUBSTANCE_CONTAINER_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Capacity <em>Capacity</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCapacity()
+     * @generated
+     */
+    int CAPACITY = 131;
+
+    /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CAPACITY__CAPACITY_FEATURE = 0;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CAPACITY__CAPACITY = 1;
+
+    /**
+     * The number of structural features of the '<em>Capacity</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CAPACITY_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Capacity</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CAPACITY_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19853,7 +19971,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 131;
+	int FEUER_MODUS = 132;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -19863,7 +19981,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 132;
+	int SCHADENS_TYP = 133;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -19873,7 +19991,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 133;
+	int MAGAZIN_TYP = 134;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -19883,7 +20001,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 134;
+	int FEUWERWAFFEN_ERWEITERUNG = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -19893,7 +20011,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 135;
+	int MODIFIKATOR_TYPE = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -19903,7 +20021,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 136;
+	int SMARTGUN_TYPE = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -19913,7 +20031,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 137;
+	int ZAUBER_ART = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -19923,7 +20041,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 138;
+	int ZAUBER_REICHWEITE = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -19933,7 +20051,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 139;
+	int ZAUBER_DAUER = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -19943,7 +20061,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 140;
+	int MAGISCHE_TRADITION = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -19953,7 +20071,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 141;
+	int CRITTER_HANDLUNG = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -19963,7 +20081,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 142;
+	int CRITTER_REICHWEITE = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -19973,7 +20091,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 143;
+	int CRITTER_DAUER = 144;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -19983,7 +20101,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 144;
+	int RESONANZ_ZIEL = 145;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -19993,7 +20111,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 145;
+    int INTERFACE_MODUS = 146;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -20003,7 +20121,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 146;
+    int PROGRAM_TYPE = 147;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -20013,7 +20131,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 147;
+    int MATRIX_PROGRAM_TYPE = 148;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -20023,7 +20141,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 148;
+    int SUBSTANCE_VECTOR = 149;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -20033,7 +20151,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 149;
+    int SUBSTANCE_EFFECT = 150;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -20043,7 +20161,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 150;
+    int ADDICTION_TYPE = 151;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -20053,7 +20171,17 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 151;
+    int TIME_UNITS = 152;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.CyberwareType
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
+     * @generated
+     */
+    int CYBERWARE_TYPE = 153;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -20063,7 +20191,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 152;
+	int SHR_DATE = 154;
 
 
 	/**
@@ -20074,7 +20202,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 153;
+	int MODIFICATION_MANAGER = 155;
 
 
 	/**
@@ -21066,6 +21194,28 @@ public interface Shr5Package extends EPackage {
 	EReference getCyberware_Einbau();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberware#getCyberwareCapacity <em>Cyberware Capacity</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Cyberware Capacity</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberware#getCyberwareCapacity()
+     * @see #getCyberware()
+     * @generated
+     */
+    EAttribute getCyberware_CyberwareCapacity();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberware#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberware#getType()
+     * @see #getCyberware()
+     * @generated
+     */
+    EAttribute getCyberware_Type();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.BioWare <em>Bio Ware</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -24169,6 +24319,38 @@ public interface Shr5Package extends EPackage {
     EReference getSubstanceContainer_Substance();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Capacity <em>Capacity</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Capacity</em>'.
+     * @see de.urszeidler.eclipse.shr5.Capacity
+     * @generated
+     */
+    EClass getCapacity();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature <em>Capacity Feature</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Capacity Feature</em>'.
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature()
+     * @see #getCapacity()
+     * @generated
+     */
+    EReference getCapacity_CapacityFeature();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacity <em>Capacity</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Capacity</em>'.
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacity()
+     * @see #getCapacity()
+     * @generated
+     */
+    EAttribute getCapacity_Capacity();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -25074,6 +25256,16 @@ public interface Shr5Package extends EPackage {
     EEnum getTimeUnits();
 
     /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Cyberware Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareType
+     * @generated
+     */
+    EEnum getCyberwareType();
+
+    /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25903,6 +26095,22 @@ public interface Shr5Package extends EPackage {
 		EReference CYBERWARE__EINBAU = eINSTANCE.getCyberware_Einbau();
 
 		/**
+         * The meta object literal for the '<em><b>Cyberware Capacity</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE__CYBERWARE_CAPACITY = eINSTANCE.getCyberware_CyberwareCapacity();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE__TYPE = eINSTANCE.getCyberware_Type();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl <em>Bio Ware</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -28397,6 +28605,32 @@ public interface Shr5Package extends EPackage {
         EReference SUBSTANCE_CONTAINER__SUBSTANCE = eINSTANCE.getSubstanceContainer_Substance();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Capacity <em>Capacity</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Capacity
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCapacity()
+         * @generated
+         */
+        EClass CAPACITY = eINSTANCE.getCapacity();
+
+        /**
+         * The meta object literal for the '<em><b>Capacity Feature</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CAPACITY__CAPACITY_FEATURE = eINSTANCE.getCapacity_CapacityFeature();
+
+        /**
+         * The meta object literal for the '<em><b>Capacity</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CAPACITY__CAPACITY = eINSTANCE.getCapacity_Capacity();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -29165,6 +29399,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum TIME_UNITS = eINSTANCE.getTimeUnits();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.CyberwareType
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
+         * @generated
+         */
+        EEnum CYBERWARE_TYPE = eINSTANCE.getCyberwareType();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

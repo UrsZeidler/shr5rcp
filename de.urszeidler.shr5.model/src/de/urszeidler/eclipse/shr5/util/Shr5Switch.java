@@ -295,6 +295,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseCyberware(cyberware);
                 if (result == null) result = caseKoerpermods(cyberware);
                 if (result == null) result = caseGeldWert(cyberware);
+                if (result == null) result = caseCapacity(cyberware);
                 if (result == null) result = caseAbstraktModifikatoren(cyberware);
                 if (result == null) result = caseBeschreibbar(cyberware);
                 if (result == null) result = caseModifizierbar(cyberware);
@@ -1066,6 +1067,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseCyberdeck(cyberdeck);
                 if (result == null) result = caseAbstractMatrixDevice(cyberdeck);
                 if (result == null) result = caseActiveMatixDevice(cyberdeck);
+                if (result == null) result = caseCapacity(cyberdeck);
                 if (result == null) result = caseAbstraktGegenstand(cyberdeck);
                 if (result == null) result = caseMatrixDevice(cyberdeck);
                 if (result == null) result = caseQuelle(cyberdeck);
@@ -1449,6 +1451,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 Magazin magazin = (Magazin)theEObject;
                 T result = caseMagazin(magazin);
                 if (result == null) result = caseAbstraktGegenstand(magazin);
+                if (result == null) result = caseCapacity(magazin);
                 if (result == null) result = caseQuelle(magazin);
                 if (result == null) result = caseGeldWert(magazin);
                 if (result == null) result = caseBeschreibbar(magazin);
@@ -1485,6 +1488,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseModifizierbar(substanceContainer);
                 if (result == null) result = caseAnwendbar(substanceContainer);
                 if (result == null) result = caseIdentifiable(substanceContainer);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CAPACITY: {
+                Capacity capacity = (Capacity)theEObject;
+                T result = caseCapacity(capacity);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -3154,6 +3163,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseSubstanceContainer(SubstanceContainer object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Capacity</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Capacity</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCapacity(Capacity object) {
         return null;
     }
 

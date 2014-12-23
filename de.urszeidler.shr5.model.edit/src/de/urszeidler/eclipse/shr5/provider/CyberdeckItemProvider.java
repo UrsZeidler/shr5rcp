@@ -59,6 +59,8 @@ public class CyberdeckItemProvider
             addDeviceRatingPropertyDescriptor(object);
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
+            addCapacityFeaturePropertyDescriptor(object);
+            addCapacityPropertyDescriptor(object);
             addProgramSlotsPropertyDescriptor(object);
             addAttribute1PropertyDescriptor(object);
             addAttribute2PropertyDescriptor(object);
@@ -239,6 +241,50 @@ public class CyberdeckItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_ActiveMatixDevice_schleicher_feature", "_UI_ActiveMatixDevice_type"),
                  Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER,
                  false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity Feature feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityFeaturePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacityFeature_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityFeature_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY_FEATURE,
+                 false,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacity_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY,
+                 true,
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
@@ -489,6 +535,7 @@ public class CyberdeckItemProvider
             case Shr5Package.CYBERDECK__DEVICE_RATING:
             case Shr5Package.CYBERDECK__ANGRIFF:
             case Shr5Package.CYBERDECK__SCHLEICHER:
+            case Shr5Package.CYBERDECK__CAPACITY:
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
             case Shr5Package.CYBERDECK__ATTRIBUTE1:
             case Shr5Package.CYBERDECK__ATTRIBUTE2:

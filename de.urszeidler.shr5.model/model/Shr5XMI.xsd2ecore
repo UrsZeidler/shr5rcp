@@ -117,6 +117,10 @@
       <nested inputs="shr5.ecore#//TimeUnits/month" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=5"/>
       <nested inputs="shr5.ecore#//TimeUnits/year" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=6"/>
     </nested>
+    <nested inputs="shr5.ecore#//CyberwareType" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21">
+      <nested inputs="shr5.ecore#//CyberwareType/headware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//CyberwareType/bodyware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=1"/>
+    </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -273,7 +277,9 @@
     </nested>
     <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDElementDeclaration=22"/>
     <nested inputs="shr5.ecore#//Cyberware" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23">
-      <nested inputs="shr5.ecore#//Cyberware/persona" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Cyberware/cyberwareCapacity" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Cyberware/type" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Cyberware/persona" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDAttributeUse=4"/>
       <nested inputs="shr5.ecore#//Cyberware/persona" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//Cyberware/einbau" outputs="Shr5XMI.xsd#//Cyberware;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
@@ -941,5 +947,7 @@
       <nested inputs="shr5.ecore#//SubstanceContainer/substance" outputs="Shr5XMI.xsd#//SubstanceContainer;XSDComplexTypeDefinition=130/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//SubstanceContainer" outputs="Shr5XMI.xsd#//SubstanceContainer;XSDElementDeclaration=130"/>
+    <nested inputs="shr5.ecore#//Capacity" outputs="Shr5XMI.xsd#//Capacity;XSDComplexTypeDefinition=131"/>
+    <nested inputs="shr5.ecore#//Capacity" outputs="Shr5XMI.xsd#//Capacity;XSDElementDeclaration=131"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

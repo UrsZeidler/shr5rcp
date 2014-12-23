@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Magazin extends AbstraktGegenstand {
+public interface Magazin extends AbstraktGegenstand, Capacity {
     /**
      * Returns the value of the '<em><b>Type</b></em>' reference.
      * <!-- begin-user-doc -->

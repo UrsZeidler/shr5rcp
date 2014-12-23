@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.BerechneteAttribute;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.CommonProgram;
@@ -36,6 +37,7 @@ import de.urszeidler.eclipse.shr5.CritterReichweite;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareModifikatioren;
+import de.urszeidler.eclipse.shr5.CyberwareType;
 import de.urszeidler.eclipse.shr5.Datasoft;
 import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.Drohne;
@@ -955,6 +957,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass capacityEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1236,6 +1245,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EEnum timeUnitsEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum cyberwareTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2141,6 +2157,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberware_CyberwareCapacity() {
+        return (EAttribute)cyberwareEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberware_Type() {
+        return (EAttribute)cyberwareEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4755,6 +4789,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getCapacity() {
+        return capacityEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCapacity_CapacityFeature() {
+        return (EReference)capacityEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCapacity_Capacity() {
+        return (EAttribute)capacityEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5526,6 +5587,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getCyberwareType() {
+        return cyberwareTypeEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5685,6 +5755,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         cyberwareEClass = createEClass(CYBERWARE);
         createEReference(cyberwareEClass, CYBERWARE__PERSONA);
         createEReference(cyberwareEClass, CYBERWARE__EINBAU);
+        createEAttribute(cyberwareEClass, CYBERWARE__CYBERWARE_CAPACITY);
+        createEAttribute(cyberwareEClass, CYBERWARE__TYPE);
 
         bioWareEClass = createEClass(BIO_WARE);
         createEReference(bioWareEClass, BIO_WARE__PERSONA);
@@ -6148,6 +6220,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         substanceContainerEClass = createEClass(SUBSTANCE_CONTAINER);
         createEReference(substanceContainerEClass, SUBSTANCE_CONTAINER__SUBSTANCE);
 
+        capacityEClass = createEClass(CAPACITY);
+        createEReference(capacityEClass, CAPACITY__CAPACITY_FEATURE);
+        createEAttribute(capacityEClass, CAPACITY__CAPACITY);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6170,6 +6246,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         substanceEffectEEnum = createEEnum(SUBSTANCE_EFFECT);
         addictionTypeEEnum = createEEnum(ADDICTION_TYPE);
         timeUnitsEEnum = createEEnum(TIME_UNITS);
+        cyberwareTypeEEnum = createEEnum(CYBERWARE_TYPE);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -6237,6 +6314,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         personaFertigkeitsGruppeEClass.getESuperTypes().add(this.getSteigerbar());
         cyberwareEClass.getESuperTypes().add(this.getKoerpermods());
         cyberwareEClass.getESuperTypes().add(this.getGeldWert());
+        cyberwareEClass.getESuperTypes().add(this.getCapacity());
         bioWareEClass.getESuperTypes().add(this.getKoerpermods());
         bioWareEClass.getESuperTypes().add(this.getGeldWert());
         koerpermodsEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
@@ -6337,6 +6415,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         cyberdeckEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
         cyberdeckEClass.getESuperTypes().add(this.getMatrixDevice());
         cyberdeckEClass.getESuperTypes().add(this.getActiveMatixDevice());
+        cyberdeckEClass.getESuperTypes().add(this.getCapacity());
         softwareAgentEClass.getESuperTypes().add(this.getMatrixProgram());
         hostEClass.getESuperTypes().add(this.getBeschreibbar());
         hostEClass.getESuperTypes().add(this.getMatrixDevice());
@@ -6380,6 +6459,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         drugEClass.getESuperTypes().add(this.getSubstance());
         drugEClass.getESuperTypes().add(this.getModifizierbar());
         magazinEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        magazinEClass.getESuperTypes().add(this.getCapacity());
         defaultWifiEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
         substanceContainerEClass.getESuperTypes().add(this.getAbstraktGegenstand());
 
@@ -6499,6 +6579,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(cyberwareEClass, Cyberware.class, "Cyberware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCyberware_Persona(), this.getAbstraktPersona(), null, "persona", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCyberware_Einbau(), this.getAbstraktGegenstand(), null, "einbau", null, 0, -1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberware_CyberwareCapacity(), ecorePackage.getEInt(), "cyberwareCapacity", null, 1, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberware_Type(), this.getCyberwareType(), "type", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(bioWareEClass, BioWare.class, "BioWare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getBioWare_Persona(), this.getAbstraktPersona(), null, "persona", null, 0, 1, BioWare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6962,6 +7044,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(substanceContainerEClass, SubstanceContainer.class, "SubstanceContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getSubstanceContainer_Substance(), this.getSubstance(), null, "substance", null, 0, 1, SubstanceContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        initEClass(capacityEClass, Capacity.class, "Capacity", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCapacity_CapacityFeature(), ecorePackage.getEReference(), null, "capacityFeature", null, 1, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCapacity_Capacity(), ecorePackage.getEInt(), "capacity", null, 1, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
         addEEnumLiteral(feuerModusEEnum, FeuerModus.EM);
@@ -7077,6 +7163,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.WEEK);
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.MONTH);
         addEEnumLiteral(timeUnitsEEnum, TimeUnits.YEAR);
+
+        initEEnum(cyberwareTypeEEnum, CyberwareType.class, "CyberwareType");
+        addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.HEADWARE);
+        addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.BODYWARE);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

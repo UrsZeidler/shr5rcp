@@ -223,10 +223,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeitsGruppe" eSuperTypes="#//Steigerbar">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gruppe" eType="#//FertigkeitsGruppe"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Cyberware" eSuperTypes="#//Koerpermods #//GeldWert">
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberware" eSuperTypes="#//Koerpermods #//GeldWert #//Capacity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
         eType="#//AbstraktGegenstand" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cyberwareCapacity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CyberwareType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BioWare" eSuperTypes="#//Koerpermods #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
@@ -817,7 +820,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="matrixZustandMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//AbstractMatrixDevice #//MatrixDevice #//ActiveMatixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//AbstractMatrixDevice #//MatrixDevice #//ActiveMatixDevice #//Capacity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines the cyberdeck."/>
     </eAnnotations>
@@ -1095,7 +1098,7 @@
     <eLiterals name="physiological" value="1"/>
     <eLiterals name="both" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Magazin" eSuperTypes="#//AbstraktGegenstand">
+  <eClassifiers xsi:type="ecore:EClass" name="Magazin" eSuperTypes="#//AbstraktGegenstand #//Capacity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This is the bullet container (clip) for a fw."/>
     </eAnnotations>
@@ -1134,5 +1137,28 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="substance" eType="#//Substance"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capacity" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This interfaces defines a simple capacity contract which bounds the capacty of a given refenrence to an interger feature."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capacityFeature" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The reference which is limited by this capacity description."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The capacity value."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CyberwareType">
+    <eLiterals name="headware"/>
+    <eLiterals name="bodyware"/>
   </eClassifiers>
 </ecore:EPackage>

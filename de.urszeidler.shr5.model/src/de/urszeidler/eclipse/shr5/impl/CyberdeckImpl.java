@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
@@ -45,6 +47,8 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getDeviceRating <em>Device Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getSchleicher <em>Schleicher</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getProgramSlots <em>Program Slots</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getAttribute1 <em>Attribute1</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getAttribute2 <em>Attribute2</em>}</li>
@@ -168,6 +172,16 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * @ordered
      */
     protected static final int SCHLEICHER_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacity()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_EDEFAULT = 0;
 
     /**
      * The default value of the '{@link #getProgramSlots() <em>Program Slots</em>}' attribute.
@@ -399,6 +413,34 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
             return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER, getMods());            
         }
         return -1;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCapacityFeature() {
+        EReference capacityFeature = basicGetCapacityFeature();
+        return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public EReference basicGetCapacityFeature() {
+        return Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getCapacity() {
+        return getProgramSlots();
     }
 
     /**
@@ -731,6 +773,11 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return getAngriff();
             case Shr5Package.CYBERDECK__SCHLEICHER:
                 return getSchleicher();
+            case Shr5Package.CYBERDECK__CAPACITY_FEATURE:
+                if (resolve) return getCapacityFeature();
+                return basicGetCapacityFeature();
+            case Shr5Package.CYBERDECK__CAPACITY:
+                return getCapacity();
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
                 return getProgramSlots();
             case Shr5Package.CYBERDECK__ATTRIBUTE1:
@@ -871,6 +918,10 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.CYBERDECK__SCHLEICHER:
                 return getSchleicher() != SCHLEICHER_EDEFAULT;
+            case Shr5Package.CYBERDECK__CAPACITY_FEATURE:
+                return basicGetCapacityFeature() != null;
+            case Shr5Package.CYBERDECK__CAPACITY:
+                return getCapacity() != CAPACITY_EDEFAULT;
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
                 return programSlots != PROGRAM_SLOTS_EDEFAULT;
             case Shr5Package.CYBERDECK__ATTRIBUTE1:
@@ -926,6 +977,13 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 default: return -1;
             }
         }
+        if (baseClass == Capacity.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.CYBERDECK__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
+                case Shr5Package.CYBERDECK__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -961,6 +1019,13 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
             switch (baseFeatureID) {
                 case Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF: return Shr5Package.CYBERDECK__ANGRIFF;
                 case Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER: return Shr5Package.CYBERDECK__SCHLEICHER;
+                default: return -1;
+            }
+        }
+        if (baseClass == Capacity.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.CYBERDECK__CAPACITY_FEATURE;
+                case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.CYBERDECK__CAPACITY;
                 default: return -1;
             }
         }

@@ -53,7 +53,11 @@ public class CyberwareItemProvider
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
+            addCapacityFeaturePropertyDescriptor(object);
+            addCapacityPropertyDescriptor(object);
             addPersonaPropertyDescriptor(object);
+            addCyberwareCapacityPropertyDescriptor(object);
+            addTypePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -125,6 +129,50 @@ public class CyberwareItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Capacity Feature feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityFeaturePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacityFeature_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityFeature_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY_FEATURE,
+                 false,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacity_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Persona feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,6 +195,50 @@ public class CyberwareItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Cyberware Capacity feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCyberwareCapacityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberware_cyberwareCapacity_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberware_cyberwareCapacity_feature", "_UI_Cyberware_type"),
+                 Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Type feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addTypePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberware_type_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberware_type_feature", "_UI_Cyberware_type"),
+                 Shr5Package.Literals.CYBERWARE__TYPE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -222,6 +314,9 @@ public class CyberwareItemProvider
             case Shr5Package.CYBERWARE__WERT:
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
             case Shr5Package.CYBERWARE__WERT_VALUE:
+            case Shr5Package.CYBERWARE__CAPACITY:
+            case Shr5Package.CYBERWARE__CYBERWARE_CAPACITY:
+            case Shr5Package.CYBERWARE__TYPE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.CYBERWARE__EINBAU:

@@ -3,13 +3,13 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import junit.textui.TestRunner;
-import de.urszeidler.eclipse.shr5.Magazin;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Capacity;
+
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Magazin</b></em>'.
+ * A test case for the model object '<em><b>Capacity</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
@@ -20,58 +20,44 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * </p>
  * @generated
  */
-public class MagazinTest extends AbstraktGegenstandTest {
+public abstract class CapacityTest extends TestCase {
 
     /**
+     * The fixture for this Capacity test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static void main(String[] args) {
-        TestRunner.run(MagazinTest.class);
-    }
+    protected Capacity fixture = null;
 
     /**
-     * Constructs a new Magazin test case with the given name.
+     * Constructs a new Capacity test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public MagazinTest(String name) {
+    public CapacityTest(String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Magazin test case.
+     * Sets the fixture for this Capacity test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    protected Magazin getFixture() {
-        return (Magazin)fixture;
+    protected void setFixture(Capacity fixture) {
+        this.fixture = fixture;
     }
 
     /**
+     * Returns the fixture for this Capacity test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see junit.framework.TestCase#setUp()
      * @generated
      */
-    @Override
-    protected void setUp() throws Exception {
-        setFixture(Shr5Factory.eINSTANCE.createMagazin());
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see junit.framework.TestCase#tearDown()
-     * @generated
-     */
-    @Override
-    protected void tearDown() throws Exception {
-        setFixture(null);
+    protected Capacity getFixture() {
+        return fixture;
     }
 
     /**
@@ -100,4 +86,4 @@ public class MagazinTest extends AbstraktGegenstandTest {
         fail();
     }
 
-} //MagazinTest
+} //CapacityTest
