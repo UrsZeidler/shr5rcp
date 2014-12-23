@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.ResourceManager;
 
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
@@ -64,6 +65,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
      */
     public ModelToTextExportDialog(Shell parentShell) {
         super(parentShell);
+        setShellStyle(SWT.TITLE);
     }
 
     /**
@@ -74,31 +76,35 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     public ModelToTextExportDialog(Shell parentShell, EObject object) {
         super(parentShell);
         this.object = object;
+        String titel = AdapterFactoryUtil.getInstance().getLabelProvider().getText(object);
+        setTitle(String.format(Messages.ModelToTextExportDialog_titel, titel));
         
-
         HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap.put("BB Character Sheet", new BoardCharacterSheet());
-        hashMap.put("BB Table Character Sheet", new TableBoardShr5CharacterSheet());
-        hashMap.put("simple svg->pdf", new SimpleSvg());
-        hashMap.put("simple vehicle->pdf", new GenerateSvgVehicleSheet());
-        hashMap.put("characterSheet->pdf", new SvgCharacterSheet());
-        hashMap.put("npc character sheet->pdf", new GenerateNpcCharacterSheet());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_BBcs, new BoardCharacterSheet());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, new TableBoardShr5CharacterSheet());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvg, new SimpleSvg());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, new GenerateSvgVehicleSheet());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_csPDF, new SvgCharacterSheet());
+        hashMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, new GenerateNpcCharacterSheet());
 
-        imageMap.put("characterSheet->pdf", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
-        descriptionMap.put("characterSheet->pdf", "A nice character sheet");
-
-        imageMap.put("simple svg->pdf", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png"));
-        descriptionMap.put("simple svg->pdf", "A very basic character sheet.");
+        imageMap.put(Messages.ModelToTextExportDialog_tf_csPDF, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
+        imageMap.put(Messages.ModelToTextExportDialog_tf_ssvg, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        imageMap.put(Messages.ModelToTextExportDialog_tf_BBcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
         
-        descriptionMap.put("simple vehicle->pdf", "A very basic vehicle sheet.");
-        descriptionMap.put("BB Character Sheet", "A text based bulleting board chracter sheet.");
-        descriptionMap.put("BB Table Character Sheet", "A text based bulleting board chracter sheet based on a table.");
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, Messages.ModelToTextExportDialog_tf_ssvgv_desc);
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBcs, Messages.ModelToTextExportDialog_tf_BBcs_desc);
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
+        descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
         
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
 
         HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("BB shr5 generator sheet", new BoardShr5GeneratorSheet());
+        hashMap1.put(Messages.ModelToTextExportDialog_tf_BBGcs, new BoardShr5GeneratorSheet());
         transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
 
         hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
@@ -124,7 +130,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         container.setLayoutData(new GridData(GridData.FILL_BOTH));
 
         Label lblNewLabel = new Label(container, SWT.NONE);
-        lblNewLabel.setText("select transformation");
+        lblNewLabel.setToolTipText(Messages.ModelToTextExportDialog_select_m2m_tooltip);
+        lblNewLabel.setText(Messages.ModelToTextExportDialog_select_m2m_lable);
 
         combo = new Combo(container, SWT.NONE);
         combo.addSelectionListener(new SelectionAdapter() {
@@ -142,7 +149,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         new Label(container, SWT.NONE);
 
         Label lblNewLabel_1 = new Label(container, SWT.NONE);
-        lblNewLabel_1.setText("select target directory");
+        lblNewLabel_1.setToolTipText(Messages.ModelToTextExportDialog_select_dir_tooltip);
+        lblNewLabel_1.setText(Messages.ModelToTextExportDialog_select_dir_lable);
 
         text = new Text(container, SWT.BORDER);
         text.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -155,7 +163,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 DirectoryDialog directoryDialog = new DirectoryDialog(getShell());
                 String open = directoryDialog.open();
                 if (open == null)
-                    open = "select directory";
+                    open = Messages.ModelToTextExportDialog_select_dir_lable;
                 text.setText(open);
                 try {
                     folder = new File(open);
@@ -164,7 +172,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 }
             }
         });
-        btnNewButton.setText("...");
+        btnNewButton.setText("...");//$NON-NLS-1$
 
         Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
         if (map != null) {
@@ -172,7 +180,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
             combo.setItems(map.keySet().toArray(new String[]{}));
         }
 
-        String dir = dialogSettings.get("m2t.dir");
+        String dir = dialogSettings.get("m2t.dir");//$NON-NLS-1$
         if (dir != null) {
             text.setText(dir);
             try {
@@ -181,9 +189,11 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 setErrorMessage(e2.getLocalizedMessage());
             }
         }
-        String trans = dialogSettings.get("m2t.transformation");
+        String trans = dialogSettings.get("m2t.transformation");//$NON-NLS-1$
         if (trans != null)
             combo.setText(trans);
+        
+        setMessage(String.format(Messages.ModelToTextExportDialog_default_message, AdapterFactoryUtil.getInstance().getLabelProvider().getText(object)));
         return area;
     }
 
@@ -196,7 +206,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
             generator = map.get(text2);
         }
         if (generator != null) {
-            Job job = new Job(text2 + " is runing") {
+            Job job = new Job(text2 + Messages.ModelToTextExportDialog_progress) {
                 @Override
                 protected IStatus run(IProgressMonitor monitor) {
                     try {
@@ -214,8 +224,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
             job.setUser(true);
             job.schedule();
         }
-        dialogSettings.put("m2t.dir", text.getText());
-        dialogSettings.put("m2t.transformation", text2);
+        dialogSettings.put("m2t.dir", text.getText());//$NON-NLS-1$
+        dialogSettings.put("m2t.transformation", text2);//$NON-NLS-1$
         super.okPressed();
     }
 

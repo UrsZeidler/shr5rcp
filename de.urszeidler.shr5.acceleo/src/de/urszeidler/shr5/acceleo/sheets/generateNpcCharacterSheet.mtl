@@ -19,8 +19,8 @@
 [/template]
 
 [template public printNpcSheet(aManagedCharacter : ManagedCharacter) ] 
-[file ('npcSheet'+aManagedCharacter.persona.name+'.svg', false, 'UTF-8')]
-[pageStart('Npc sheet for '+aManagedCharacter.persona.name)/]
+[file ('nscSheet'+aManagedCharacter.persona.name+'.svg', false, 'UTF-8')]
+[pageStart('Nsc sheet for '+aManagedCharacter.persona.name)/]
 
 <g id="g-npc" transform="translate(30,30)">
 [printDataBlock(aManagedCharacter,20,20)/]
