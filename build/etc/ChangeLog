@@ -1,4 +1,27 @@
+2015-01-04 Version 0.2.4-rc 
+
+* script
+	* added zest to display the script graph
+* model to text
+	* added npc sheet
+
 2014-12-21 Version 0.2.3
+
+* some minor bugfixing
+* development
+	* switched to eclipse 4.4 and sirius (ecoretools2) for modeling
+* model
+	* added substance container
+	* added source constrains for character generation
+* runtime
+	* combat script wizard
+	* added management of rigger console and cyberdeck
+	* added management of ammunition and magazine for firearms
+	* uses the ammo modification in damage tests
+* webapp
+	* some style adjustments
+	* management of ammunition and magazine for firearms also rigger console and cyberdeck	
+
 
 2014-12-14 Version 0.2.3-rc
 
@@ -9,7 +32,6 @@
 	* added substance container
 	* added source constrains for character generation
 * runtime
-	* combat script wizard
 	* added management of rigger console and cyberdeck
 	* added management of ammunition and magazine for firearms
 	* uses the ammo modification in damage tests
