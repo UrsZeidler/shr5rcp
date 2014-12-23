@@ -125,6 +125,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//CyberwareType">
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/headware"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/bodyware"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/cyberlimb"/>
     </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
@@ -257,6 +258,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/einbau"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberware/cyberwareCapacity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberware/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/wifi"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//BioWare">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//BioWare/persona"/>
@@ -730,6 +732,14 @@
     <genClasses image="false" ecoreClass="shr5.ecore#//Capacity">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//Capacity/capacityFeature"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Capacity/capacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Capacity/capacityRemains"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//CyberwareEnhancement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareEnhancement/capacityUse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareEnhancement/type"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//CyberImplantWeapon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//CyberImplantWeapon/weapon"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

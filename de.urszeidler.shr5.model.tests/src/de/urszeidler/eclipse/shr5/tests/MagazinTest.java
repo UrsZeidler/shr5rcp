@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature() <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacity() <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -95,6 +96,19 @@ public class MagazinTest extends AbstraktGegenstandTest {
      * @generated
      */
     public void testGetCapacity() {
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
+     * @generated
+     */
+    public void testGetCapacityRemains() {
         // TODO: implement this feature getter test method
         // Ensure that you remove @generated or mark it @generated NOT
         fail();

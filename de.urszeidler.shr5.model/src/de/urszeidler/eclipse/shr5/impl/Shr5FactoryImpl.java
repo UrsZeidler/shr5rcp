@@ -135,6 +135,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.MAGAZIN: return createMagazin();
             case Shr5Package.DEFAULT_WIFI: return createDefaultWifi();
             case Shr5Package.SUBSTANCE_CONTAINER: return createSubstanceContainer();
+            case Shr5Package.CYBERWARE_ENHANCEMENT: return createCyberwareEnhancement();
+            case Shr5Package.CYBER_IMPLANT_WEAPON: return createCyberImplantWeapon();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1036,6 +1038,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public SubstanceContainer createSubstanceContainer() {
         SubstanceContainerImpl substanceContainer = new SubstanceContainerImpl();
         return substanceContainer;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CyberwareEnhancement createCyberwareEnhancement() {
+        CyberwareEnhancementImpl cyberwareEnhancement = new CyberwareEnhancementImpl();
+        return cyberwareEnhancement;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CyberImplantWeapon createCyberImplantWeapon() {
+        CyberImplantWeaponImpl cyberImplantWeapon = new CyberImplantWeaponImpl();
+        return cyberImplantWeapon;
     }
 
     /**

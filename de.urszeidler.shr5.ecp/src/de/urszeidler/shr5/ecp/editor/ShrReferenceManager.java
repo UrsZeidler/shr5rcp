@@ -111,6 +111,9 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
+        } else if (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())) {
+            EObject newWeapon = defaultCreationDialog(e, object);
+            setValue(e, newWeapon);
         }
         super.handleManage(e, object);
     }
@@ -125,14 +128,23 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         int open = dialog.open();
         if (open == Dialog.OK) {
             Object[] result = dialog.getResult();
-            IObservable observable = e.getObservable();
-            if (observable instanceof IObservableValue) {
-                IObservableValue ov = (IObservableValue)e.getObservable();
-                if (result.length > 0)
-                    ov.setValue(result[0]);
-                else
-                    ov.setValue(null);
-            }
+            Object value = null;
+            if (result.length > 0)
+                value = result[0];
+
+            setValue(e, value);
+        }
+    }
+
+    /**
+     * @param e
+     * @param value
+     */
+    private void setValue(FormbuilderEntry e, Object value) {
+        IObservable observable = e.getObservable();
+        if (observable instanceof IObservableValue) {
+            IObservableValue ov = (IObservableValue)e.getObservable();
+            ov.setValue(value);
         }
     }
 

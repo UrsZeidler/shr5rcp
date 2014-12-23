@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains <em>Capacity Remains</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,7 +38,7 @@ public interface Capacity extends EObject {
      * <!-- end-model-doc -->
      * @return the value of the '<em>Capacity Feature</em>' reference.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCapacity_CapacityFeature()
-     * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+     * @model transient="true" changeable="false" volatile="true" derived="true"
      * @generated
      */
     EReference getCapacityFeature();
@@ -51,9 +52,24 @@ public interface Capacity extends EObject {
      * <!-- end-model-doc -->
      * @return the value of the '<em>Capacity</em>' attribute.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCapacity_Capacity()
-     * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+     * @model transient="true" changeable="false" volatile="true" derived="true"
      * @generated
      */
     int getCapacity();
+
+    /**
+     * Returns the value of the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Capacity Remains</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Capacity Remains</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCapacity_CapacityRemains()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getCapacityRemains();
 
 } // Capacity

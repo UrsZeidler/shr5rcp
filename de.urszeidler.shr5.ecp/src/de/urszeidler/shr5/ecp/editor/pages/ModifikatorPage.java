@@ -15,8 +15,11 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.BioWare;
+import de.urszeidler.eclipse.shr5.CyberImplantWeapon;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
+import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
@@ -92,12 +95,18 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
+        composite_add = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite_add.setLayout(new GridLayout(6, false));
+        composite_add.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_add);
+        managedForm.getToolkit().paintBordersFor(composite_add);
+
         Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         composite.setLayout(new FillLayout(SWT.HORIZONTAL));
         composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
-
+       
         Group grpWert = new Group(composite, SWT.NONE);
         // grpWert.setText("Wert");
         managedForm.getToolkit().adapt(grpWert);
@@ -110,11 +119,6 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
 
-        composite_add = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        composite_add.setLayout(new GridLayout(3, false));
-        composite_add.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-        managedForm.getToolkit().adapt(composite_add);
-        managedForm.getToolkit().paintBordersFor(composite_add);
 
         m_bindingContext = initDataBindings();
 
@@ -126,10 +130,6 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY, composite_add);
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
             }
-            grpWert.setText(Messages.ObjectPage_price);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
 
 
         } else if (object instanceof PersonaEigenschaft) {
@@ -143,8 +143,23 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         } else if (object instanceof KiKraft) {
             grpWert.setText(Messages.ObjectPage_powwerPoint);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, grpWert);
+        }else if (object instanceof CyberwareEnhancement) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE_ENHANCEMENT__TYPE, composite_add);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE_ENHANCEMENT__CAPACITY_USE, composite_add);
+            if (object instanceof CyberImplantWeapon) {
+                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON, composite_add);
+                
+            }
         }
 
+        if (object instanceof GeldWert) {
+            grpWert.setText(Messages.ObjectPage_price);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+        }else
+            grpWert.setVisible(false);
+        
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 

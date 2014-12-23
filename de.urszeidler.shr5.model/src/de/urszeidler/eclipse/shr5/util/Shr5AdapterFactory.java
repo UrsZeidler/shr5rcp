@@ -594,6 +594,14 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createCapacityAdapter();
             }
             @Override
+            public Adapter caseCyberwareEnhancement(CyberwareEnhancement object) {
+                return createCyberwareEnhancementAdapter();
+            }
+            @Override
+            public Adapter caseCyberImplantWeapon(CyberImplantWeapon object) {
+                return createCyberImplantWeaponAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2178,6 +2186,34 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCapacityAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.CyberwareEnhancement <em>Cyberware Enhancement</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.CyberwareEnhancement
+     * @generated
+     */
+    public Adapter createCyberwareEnhancementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.CyberImplantWeapon <em>Cyber Implant Weapon</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.CyberImplantWeapon
+     * @generated
+     */
+    public Adapter createCyberImplantWeaponAdapter() {
         return null;
     }
 

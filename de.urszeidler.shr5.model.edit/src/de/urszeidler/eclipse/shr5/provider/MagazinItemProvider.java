@@ -53,6 +53,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
 
             addCapacityFeaturePropertyDescriptor(object);
             addCapacityPropertyDescriptor(object);
+            addCapacityRemainsPropertyDescriptor(object);
             addTypePropertyDescriptor(object);
             addBulletsPropertyDescriptor(object);
         }
@@ -95,6 +96,28 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
                  getString("_UI_Capacity_capacity_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
                  Shr5Package.Literals.CAPACITY__CAPACITY,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Capacity Remains feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityRemainsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacityRemains_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityRemains_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS,
                  true,
                  false,
                  false,
@@ -227,6 +250,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
 
         switch (notification.getFeatureID(Magazin.class)) {
             case Shr5Package.MAGAZIN__CAPACITY:
+            case Shr5Package.MAGAZIN__CAPACITY_REMAINS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

@@ -1918,6 +1918,52 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CyberwareEnhancement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CyberwareEnhancementItemProvider cyberwareEnhancementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CyberwareEnhancement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCyberwareEnhancementAdapter() {
+        if (cyberwareEnhancementItemProvider == null) {
+            cyberwareEnhancementItemProvider = new CyberwareEnhancementItemProvider(this);
+        }
+
+        return cyberwareEnhancementItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CyberImplantWeapon} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CyberImplantWeaponItemProvider cyberImplantWeaponItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CyberImplantWeapon}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCyberImplantWeaponAdapter() {
+        if (cyberImplantWeaponItemProvider == null) {
+            cyberImplantWeaponItemProvider = new CyberImplantWeaponItemProvider(this);
+        }
+
+        return cyberImplantWeaponItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2094,6 +2140,8 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (magazinItemProvider != null) magazinItemProvider.dispose();
         if (defaultWifiItemProvider != null) defaultWifiItemProvider.dispose();
         if (substanceContainerItemProvider != null) substanceContainerItemProvider.dispose();
+        if (cyberwareEnhancementItemProvider != null) cyberwareEnhancementItemProvider.dispose();
+        if (cyberImplantWeaponItemProvider != null) cyberImplantWeaponItemProvider.dispose();
     }
 
     @Override

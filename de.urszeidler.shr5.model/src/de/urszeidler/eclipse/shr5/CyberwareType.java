@@ -37,7 +37,15 @@ public enum CyberwareType implements Enumerator {
      * @generated
      * @ordered
      */
-    BODYWARE(0, "bodyware", "bodyware");
+    BODYWARE(0, "bodyware", "bodyware"), /**
+     * The '<em><b>Cyberlimb</b></em>' literal object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #CYBERLIMB_VALUE
+     * @generated
+     * @ordered
+     */
+    CYBERLIMB(0, "cyberlimb", "cyberlimb");
 
     /**
      * The '<em><b>Headware</b></em>' literal value.
@@ -70,6 +78,21 @@ public enum CyberwareType implements Enumerator {
     public static final int BODYWARE_VALUE = 0;
 
     /**
+     * The '<em><b>Cyberlimb</b></em>' literal value.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>Cyberlimb</b></em>' literal object isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @see #CYBERLIMB
+     * @model name="cyberlimb"
+     * @generated
+     * @ordered
+     */
+    public static final int CYBERLIMB_VALUE = 0;
+
+    /**
      * An array of all the '<em><b>Cyberware Type</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -79,6 +102,7 @@ public enum CyberwareType implements Enumerator {
         new CyberwareType[] {
             HEADWARE,
             BODYWARE,
+            CYBERLIMB,
         };
 
     /**

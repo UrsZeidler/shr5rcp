@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getBullets <em>Bullets</em>}</li>
  * </ul>
@@ -45,6 +46,16 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
      * @ordered
      */
     protected static final int CAPACITY_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCapacityRemains() <em>Capacity Remains</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityRemains()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_REMAINS_EDEFAULT = 0;
 
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -120,6 +131,15 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getCapacityRemains() {
+        return getCapacity()-getBullets().size();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     public Feuerwaffe getType() {
@@ -186,6 +206,8 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
                 return basicGetCapacityFeature();
             case Shr5Package.MAGAZIN__CAPACITY:
                 return getCapacity();
+            case Shr5Package.MAGAZIN__CAPACITY_REMAINS:
+                return getCapacityRemains();
             case Shr5Package.MAGAZIN__TYPE:
                 if (resolve) return getType();
                 return basicGetType();
@@ -245,6 +267,8 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
                 return basicGetCapacityFeature() != null;
             case Shr5Package.MAGAZIN__CAPACITY:
                 return getCapacity() != CAPACITY_EDEFAULT;
+            case Shr5Package.MAGAZIN__CAPACITY_REMAINS:
+                return getCapacityRemains() != CAPACITY_REMAINS_EDEFAULT;
             case Shr5Package.MAGAZIN__TYPE:
                 return type != null;
             case Shr5Package.MAGAZIN__BULLETS:
@@ -264,6 +288,7 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
             switch (derivedFeatureID) {
                 case Shr5Package.MAGAZIN__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
                 case Shr5Package.MAGAZIN__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                case Shr5Package.MAGAZIN__CAPACITY_REMAINS: return Shr5Package.CAPACITY__CAPACITY_REMAINS;
                 default: return -1;
             }
         }
@@ -281,6 +306,7 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
             switch (baseFeatureID) {
                 case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.MAGAZIN__CAPACITY_FEATURE;
                 case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.MAGAZIN__CAPACITY;
+                case Shr5Package.CAPACITY__CAPACITY_REMAINS: return Shr5Package.MAGAZIN__CAPACITY_REMAINS;
                 default: return -1;
             }
         }

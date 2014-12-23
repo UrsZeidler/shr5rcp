@@ -34,8 +34,10 @@ import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;
 import de.urszeidler.eclipse.shr5.CritterKraft;
 import de.urszeidler.eclipse.shr5.CritterReichweite;
+import de.urszeidler.eclipse.shr5.CyberImplantWeapon;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.CyberwareModifikatioren;
 import de.urszeidler.eclipse.shr5.CyberwareType;
 import de.urszeidler.eclipse.shr5.Datasoft;
@@ -958,6 +960,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass capacityEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass cyberwareEnhancementEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass cyberImplantWeaponEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2172,6 +2188,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getCyberware_Type() {
         return (EAttribute)cyberwareEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCyberware_Wifi() {
+        return (EReference)cyberwareEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -4816,6 +4841,60 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCapacity_CapacityRemains() {
+        return (EAttribute)capacityEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCyberwareEnhancement() {
+        return cyberwareEnhancementEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareEnhancement_CapacityUse() {
+        return (EAttribute)cyberwareEnhancementEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareEnhancement_Type() {
+        return (EAttribute)cyberwareEnhancementEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCyberImplantWeapon() {
+        return cyberImplantWeaponEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCyberImplantWeapon_Weapon() {
+        return (EReference)cyberImplantWeaponEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5757,6 +5836,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(cyberwareEClass, CYBERWARE__EINBAU);
         createEAttribute(cyberwareEClass, CYBERWARE__CYBERWARE_CAPACITY);
         createEAttribute(cyberwareEClass, CYBERWARE__TYPE);
+        createEReference(cyberwareEClass, CYBERWARE__WIFI);
 
         bioWareEClass = createEClass(BIO_WARE);
         createEReference(bioWareEClass, BIO_WARE__PERSONA);
@@ -6223,6 +6303,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         capacityEClass = createEClass(CAPACITY);
         createEReference(capacityEClass, CAPACITY__CAPACITY_FEATURE);
         createEAttribute(capacityEClass, CAPACITY__CAPACITY);
+        createEAttribute(capacityEClass, CAPACITY__CAPACITY_REMAINS);
+
+        cyberwareEnhancementEClass = createEClass(CYBERWARE_ENHANCEMENT);
+        createEAttribute(cyberwareEnhancementEClass, CYBERWARE_ENHANCEMENT__CAPACITY_USE);
+        createEAttribute(cyberwareEnhancementEClass, CYBERWARE_ENHANCEMENT__TYPE);
+
+        cyberImplantWeaponEClass = createEClass(CYBER_IMPLANT_WEAPON);
+        createEReference(cyberImplantWeaponEClass, CYBER_IMPLANT_WEAPON__WEAPON);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -6462,6 +6550,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         magazinEClass.getESuperTypes().add(this.getCapacity());
         defaultWifiEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
         substanceContainerEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        cyberwareEnhancementEClass.getESuperTypes().add(this.getGeldWert());
+        cyberwareEnhancementEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
+        cyberImplantWeaponEClass.getESuperTypes().add(this.getCyberwareEnhancement());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6578,9 +6669,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(cyberwareEClass, Cyberware.class, "Cyberware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCyberware_Persona(), this.getAbstraktPersona(), null, "persona", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCyberware_Einbau(), this.getAbstraktGegenstand(), null, "einbau", null, 0, -1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getCyberware_CyberwareCapacity(), ecorePackage.getEInt(), "cyberwareCapacity", null, 1, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCyberware_Einbau(), this.getCyberwareEnhancement(), null, "einbau", null, 0, -1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberware_CyberwareCapacity(), ecorePackage.getEInt(), "cyberwareCapacity", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberware_Type(), this.getCyberwareType(), "type", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCyberware_Wifi(), this.getDefaultWifi(), null, "wifi", null, 0, -1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(bioWareEClass, BioWare.class, "BioWare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getBioWare_Persona(), this.getAbstraktPersona(), null, "persona", null, 0, 1, BioWare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7045,8 +7137,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getSubstanceContainer_Substance(), this.getSubstance(), null, "substance", null, 0, 1, SubstanceContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(capacityEClass, Capacity.class, "Capacity", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getCapacity_CapacityFeature(), ecorePackage.getEReference(), null, "capacityFeature", null, 1, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEAttribute(getCapacity_Capacity(), ecorePackage.getEInt(), "capacity", null, 1, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getCapacity_CapacityFeature(), ecorePackage.getEReference(), null, "capacityFeature", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCapacity_Capacity(), ecorePackage.getEInt(), "capacity", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCapacity_CapacityRemains(), ecorePackage.getEInt(), "capacityRemains", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        initEClass(cyberwareEnhancementEClass, CyberwareEnhancement.class, "CyberwareEnhancement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCyberwareEnhancement_CapacityUse(), ecorePackage.getEInt(), "capacityUse", null, 0, 1, CyberwareEnhancement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberwareEnhancement_Type(), this.getCyberwareType(), "type", null, 0, 1, CyberwareEnhancement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(cyberImplantWeaponEClass, CyberImplantWeapon.class, "CyberImplantWeapon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCyberImplantWeapon_Weapon(), this.getAbstaktWaffe(), null, "weapon", null, 1, 1, CyberImplantWeapon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
@@ -7167,6 +7267,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEEnum(cyberwareTypeEEnum, CyberwareType.class, "CyberwareType");
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.HEADWARE);
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.BODYWARE);
+        addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.CYBERLIMB);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

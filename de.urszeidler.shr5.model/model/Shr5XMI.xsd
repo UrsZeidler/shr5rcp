@@ -166,6 +166,7 @@
     <xsd:restriction base="xsd:NCName">
       <xsd:enumeration value="headware"/>
       <xsd:enumeration value="bodyware"/>
+      <xsd:enumeration value="cyberlimb"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
@@ -543,7 +544,8 @@
       <xsd:extension base="shr5:Koerpermods">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="persona" type="shr5:AbstraktPersona"/>
-          <xsd:element name="einbau" type="shr5:AbstraktGegenstand"/>
+          <xsd:element name="einbau" type="shr5:CyberwareEnhancement"/>
+          <xsd:element name="wifi" type="shr5:DefaultWifi"/>
         </xsd:choice>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
           <xsd:annotation>
@@ -555,7 +557,7 @@
             <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="cyberwareCapacity" type="xsd:int" use="required"/>
+        <xsd:attribute name="cyberwareCapacity" type="xsd:int"/>
         <xsd:attribute name="type" type="shr5:CyberwareType"/>
         <xsd:attribute name="persona" type="xsd:string"/>
       </xsd:extension>
@@ -2302,4 +2304,41 @@
       <xsd:documentation>This interfaces defines a simple capacity contract which bounds the capacty of a given refenrence to an interger feature.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="CyberwareEnhancement">
+    <xsd:annotation>
+      <xsd:documentation>Defines an enhancements for a cyberware.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:GeldWert">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="capacityUse" type="xsd:int"/>
+        <xsd:attribute name="type" type="shr5:CyberwareType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CyberwareEnhancement" type="shr5:CyberwareEnhancement">
+    <xsd:annotation>
+      <xsd:documentation>Defines an enhancements for a cyberware.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CyberImplantWeapon">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:CyberwareEnhancement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="weapon" type="shr5:AbstaktWaffe"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CyberImplantWeapon" type="shr5:CyberImplantWeapon"/>
 </xsd:schema>

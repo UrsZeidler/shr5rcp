@@ -724,6 +724,24 @@ public interface Shr5Factory extends EFactory {
     SubstanceContainer createSubstanceContainer();
 
     /**
+     * Returns a new object of class '<em>Cyberware Enhancement</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Cyberware Enhancement</em>'.
+     * @generated
+     */
+    CyberwareEnhancement createCyberwareEnhancement();
+
+    /**
+     * Returns a new object of class '<em>Cyber Implant Weapon</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Cyber Implant Weapon</em>'.
+     * @generated
+     */
+    CyberImplantWeapon createCyberImplantWeapon();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

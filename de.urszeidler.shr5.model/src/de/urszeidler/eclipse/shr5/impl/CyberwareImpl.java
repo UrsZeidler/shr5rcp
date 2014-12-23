@@ -12,14 +12,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.CyberwareType;
+import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -36,10 +38,12 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCyberwareCapacity <em>Cyberware Capacity</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,6 +111,16 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     protected static final int CAPACITY_EDEFAULT = 0;
 
     /**
+     * The default value of the '{@link #getCapacityRemains() <em>Capacity Remains</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityRemains()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_REMAINS_EDEFAULT = 0;
+
+    /**
      * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -124,7 +138,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * @generated
      * @ordered
      */
-    protected EList<AbstraktGegenstand> einbau;
+    protected EList<CyberwareEnhancement> einbau;
 
     /**
      * The default value of the '{@link #getCyberwareCapacity() <em>Cyberware Capacity</em>}' attribute.
@@ -167,12 +181,42 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     protected CyberwareType type = TYPE_EDEFAULT;
 
     /**
+     * The cached value of the '{@link #getWifi() <em>Wifi</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see #getWifi()
      * @generated
+     * @ordered
+     */
+    protected EList<DefaultWifi> wifi;
+
+    private EContentAdapter eContentAdapter;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
      */
     protected CyberwareImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.CYBERWARE__EINBAU.equals(feature)){
+                    CyberwareImpl.this
+                            .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                }else if (Shr5Package.Literals.GELD_WERT__WERT_VALUE.equals(feature)){
+                    CyberwareImpl.this
+                    .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+        }
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**
@@ -275,6 +319,17 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getCapacityRemains() {
+        // TODO: implement this method to return the 'Capacity Remains' attribute
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public AbstraktPersona getPersona() {
         if (persona != null && persona.eIsProxy()) {
             InternalEObject oldPersona = (InternalEObject)persona;
@@ -313,9 +368,9 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<AbstraktGegenstand> getEinbau() {
+    public EList<CyberwareEnhancement> getEinbau() {
         if (einbau == null) {
-            einbau = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5Package.CYBERWARE__EINBAU);
+            einbau = new EObjectContainmentEList<CyberwareEnhancement>(CyberwareEnhancement.class, this, Shr5Package.CYBERWARE__EINBAU);
         }
         return einbau;
     }
@@ -367,11 +422,25 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<DefaultWifi> getWifi() {
+        if (wifi == null) {
+            wifi = new EObjectContainmentEList<DefaultWifi>(DefaultWifi.class, this, Shr5Package.CYBERWARE__WIFI);
+        }
+        return wifi;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.CYBERWARE__EINBAU:
                 return ((InternalEList<?>)getEinbau()).basicRemove(otherEnd, msgs);
+            case Shr5Package.CYBERWARE__WIFI:
+                return ((InternalEList<?>)getWifi()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -395,6 +464,8 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 return basicGetCapacityFeature();
             case Shr5Package.CYBERWARE__CAPACITY:
                 return getCapacity();
+            case Shr5Package.CYBERWARE__CAPACITY_REMAINS:
+                return getCapacityRemains();
             case Shr5Package.CYBERWARE__PERSONA:
                 if (resolve) return getPersona();
                 return basicGetPersona();
@@ -404,6 +475,8 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 return getCyberwareCapacity();
             case Shr5Package.CYBERWARE__TYPE:
                 return getType();
+            case Shr5Package.CYBERWARE__WIFI:
+                return getWifi();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -428,13 +501,17 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 return;
             case Shr5Package.CYBERWARE__EINBAU:
                 getEinbau().clear();
-                getEinbau().addAll((Collection<? extends AbstraktGegenstand>)newValue);
+                getEinbau().addAll((Collection<? extends CyberwareEnhancement>)newValue);
                 return;
             case Shr5Package.CYBERWARE__CYBERWARE_CAPACITY:
                 setCyberwareCapacity((Integer)newValue);
                 return;
             case Shr5Package.CYBERWARE__TYPE:
                 setType((CyberwareType)newValue);
+                return;
+            case Shr5Package.CYBERWARE__WIFI:
+                getWifi().clear();
+                getWifi().addAll((Collection<? extends DefaultWifi>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -466,6 +543,9 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
             case Shr5Package.CYBERWARE__TYPE:
                 setType(TYPE_EDEFAULT);
                 return;
+            case Shr5Package.CYBERWARE__WIFI:
+                getWifi().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -488,6 +568,8 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 return basicGetCapacityFeature() != null;
             case Shr5Package.CYBERWARE__CAPACITY:
                 return getCapacity() != CAPACITY_EDEFAULT;
+            case Shr5Package.CYBERWARE__CAPACITY_REMAINS:
+                return getCapacityRemains() != CAPACITY_REMAINS_EDEFAULT;
             case Shr5Package.CYBERWARE__PERSONA:
                 return persona != null;
             case Shr5Package.CYBERWARE__EINBAU:
@@ -496,6 +578,8 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 return cyberwareCapacity != CYBERWARE_CAPACITY_EDEFAULT;
             case Shr5Package.CYBERWARE__TYPE:
                 return type != TYPE_EDEFAULT;
+            case Shr5Package.CYBERWARE__WIFI:
+                return wifi != null && !wifi.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -519,6 +603,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
             switch (derivedFeatureID) {
                 case Shr5Package.CYBERWARE__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
                 case Shr5Package.CYBERWARE__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                case Shr5Package.CYBERWARE__CAPACITY_REMAINS: return Shr5Package.CAPACITY__CAPACITY_REMAINS;
                 default: return -1;
             }
         }
@@ -544,6 +629,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
             switch (baseFeatureID) {
                 case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.CYBERWARE__CAPACITY_FEATURE;
                 case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.CYBERWARE__CAPACITY;
+                case Shr5Package.CAPACITY__CAPACITY_REMAINS: return Shr5Package.CYBERWARE__CAPACITY_REMAINS;
                 default: return -1;
             }
         }

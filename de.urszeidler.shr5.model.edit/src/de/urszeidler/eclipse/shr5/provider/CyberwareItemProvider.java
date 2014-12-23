@@ -55,6 +55,7 @@ public class CyberwareItemProvider
             addWertValuePropertyDescriptor(object);
             addCapacityFeaturePropertyDescriptor(object);
             addCapacityPropertyDescriptor(object);
+            addCapacityRemainsPropertyDescriptor(object);
             addPersonaPropertyDescriptor(object);
             addCyberwareCapacityPropertyDescriptor(object);
             addTypePropertyDescriptor(object);
@@ -173,6 +174,28 @@ public class CyberwareItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Capacity Remains feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityRemainsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Capacity_capacityRemains_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityRemains_feature", "_UI_Capacity_type"),
+                 Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Persona feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -251,6 +274,7 @@ public class CyberwareItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.CYBERWARE__EINBAU);
+            childrenFeatures.add(Shr5Package.Literals.CYBERWARE__WIFI);
         }
         return childrenFeatures;
     }
@@ -315,11 +339,13 @@ public class CyberwareItemProvider
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
             case Shr5Package.CYBERWARE__WERT_VALUE:
             case Shr5Package.CYBERWARE__CAPACITY:
+            case Shr5Package.CYBERWARE__CAPACITY_REMAINS:
             case Shr5Package.CYBERWARE__CYBERWARE_CAPACITY:
             case Shr5Package.CYBERWARE__TYPE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.CYBERWARE__EINBAU:
+            case Shr5Package.CYBERWARE__WIFI:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -340,87 +366,17 @@ public class CyberwareItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createGegenstand()));
+                 Shr5Factory.eINSTANCE.createCyberwareEnhancement()));
 
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createNahkampfwaffe()));
+                 Shr5Factory.eINSTANCE.createCyberImplantWeapon()));
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createFeuerwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createWurfwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createProjektilwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createKleidung()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createCredstick()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createMunition()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createCommlink()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createCyberdeck()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createRiggerCommandConsole()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createQiFokus()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createWaffenFokus()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createMagieFokus()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createMagazin()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                (Shr5Package.Literals.CYBERWARE__WIFI,
                  Shr5Factory.eINSTANCE.createDefaultWifi()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createSubstanceContainer()));
     }
 
 }

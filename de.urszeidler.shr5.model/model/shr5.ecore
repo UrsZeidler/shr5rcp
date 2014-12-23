@@ -226,10 +226,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Cyberware" eSuperTypes="#//Koerpermods #//GeldWert #//Capacity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
-        eType="#//AbstraktGegenstand" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cyberwareCapacity" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="#//CyberwareEnhancement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cyberwareCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CyberwareType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wifi" upperBound="-1" eType="#//DefaultWifi"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BioWare" eSuperTypes="#//Koerpermods #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
@@ -1142,23 +1143,35 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This interfaces defines a simple capacity contract which bounds the capacty of a given refenrence to an interger feature."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capacityFeature" lowerBound="1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference" changeable="false"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capacityFeature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"
+        changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The reference which is limited by this capacity description."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The capacity value."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityRemains" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CyberwareType">
     <eLiterals name="headware"/>
     <eLiterals name="bodyware"/>
+    <eLiterals name="cyberlimb"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CyberwareEnhancement" eSuperTypes="#//GeldWert #//AbstraktModifikatoren">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines an enhancements for a cyberware."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityUse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CyberwareType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CyberImplantWeapon" eSuperTypes="#//CyberwareEnhancement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" lowerBound="1"
+        eType="#//AbstaktWaffe" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

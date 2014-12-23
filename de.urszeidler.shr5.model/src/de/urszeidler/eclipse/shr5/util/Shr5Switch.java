@@ -1497,6 +1497,31 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.CYBERWARE_ENHANCEMENT: {
+                CyberwareEnhancement cyberwareEnhancement = (CyberwareEnhancement)theEObject;
+                T result = caseCyberwareEnhancement(cyberwareEnhancement);
+                if (result == null) result = caseGeldWert(cyberwareEnhancement);
+                if (result == null) result = caseAbstraktModifikatoren(cyberwareEnhancement);
+                if (result == null) result = caseBeschreibbar(cyberwareEnhancement);
+                if (result == null) result = caseModifizierbar(cyberwareEnhancement);
+                if (result == null) result = caseQuelle(cyberwareEnhancement);
+                if (result == null) result = caseIdentifiable(cyberwareEnhancement);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CYBER_IMPLANT_WEAPON: {
+                CyberImplantWeapon cyberImplantWeapon = (CyberImplantWeapon)theEObject;
+                T result = caseCyberImplantWeapon(cyberImplantWeapon);
+                if (result == null) result = caseCyberwareEnhancement(cyberImplantWeapon);
+                if (result == null) result = caseGeldWert(cyberImplantWeapon);
+                if (result == null) result = caseAbstraktModifikatoren(cyberImplantWeapon);
+                if (result == null) result = caseBeschreibbar(cyberImplantWeapon);
+                if (result == null) result = caseModifizierbar(cyberImplantWeapon);
+                if (result == null) result = caseQuelle(cyberImplantWeapon);
+                if (result == null) result = caseIdentifiable(cyberImplantWeapon);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -3178,6 +3203,36 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCapacity(Capacity object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Cyberware Enhancement</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Cyberware Enhancement</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCyberwareEnhancement(CyberwareEnhancement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Cyber Implant Weapon</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Cyber Implant Weapon</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCyberImplantWeapon(CyberImplantWeapon object) {
         return null;
     }
 

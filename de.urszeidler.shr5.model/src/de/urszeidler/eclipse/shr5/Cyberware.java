@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getEinbau <em>Einbau</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getCyberwareCapacity <em>Cyberware Capacity</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getType <em>Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getWifi <em>Wifi</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,7 +53,7 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
 
 	/**
      * Returns the value of the '<em><b>Einbau</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.AbstraktGegenstand}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.CyberwareEnhancement}.
      * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Einbau</em>' containment reference list isn't clear,
@@ -64,7 +65,7 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
      * @model containment="true"
      * @generated
      */
-	EList<AbstraktGegenstand> getEinbau();
+	EList<CyberwareEnhancement> getEinbau();
 
     /**
      * Returns the value of the '<em><b>Cyberware Capacity</b></em>' attribute.
@@ -77,7 +78,7 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
      * @return the value of the '<em>Cyberware Capacity</em>' attribute.
      * @see #setCyberwareCapacity(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberware_CyberwareCapacity()
-     * @model required="true"
+     * @model
      * @generated
      */
     int getCyberwareCapacity();
@@ -120,5 +121,21 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
      * @generated
      */
     void setType(CyberwareType value);
+
+    /**
+     * Returns the value of the '<em><b>Wifi</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.DefaultWifi}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Wifi</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Wifi</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberware_Wifi()
+     * @model containment="true"
+     * @generated
+     */
+    EList<DefaultWifi> getWifi();
 
 } // Cyberware

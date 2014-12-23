@@ -49,6 +49,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getProgramSlots <em>Program Slots</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getAttribute1 <em>Attribute1</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getAttribute2 <em>Attribute2</em>}</li>
@@ -182,6 +183,16 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * @ordered
      */
     protected static final int CAPACITY_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCapacityRemains() <em>Capacity Remains</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityRemains()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_REMAINS_EDEFAULT = 0;
 
     /**
      * The default value of the '{@link #getProgramSlots() <em>Program Slots</em>}' attribute.
@@ -441,6 +452,15 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      */
     public int getCapacity() {
         return getProgramSlots();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getCapacityRemains() {
+        return getProgramSlots()-getRunningPrograms().size();
     }
 
     /**
@@ -778,6 +798,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return basicGetCapacityFeature();
             case Shr5Package.CYBERDECK__CAPACITY:
                 return getCapacity();
+            case Shr5Package.CYBERDECK__CAPACITY_REMAINS:
+                return getCapacityRemains();
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
                 return getProgramSlots();
             case Shr5Package.CYBERDECK__ATTRIBUTE1:
@@ -922,6 +944,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return basicGetCapacityFeature() != null;
             case Shr5Package.CYBERDECK__CAPACITY:
                 return getCapacity() != CAPACITY_EDEFAULT;
+            case Shr5Package.CYBERDECK__CAPACITY_REMAINS:
+                return getCapacityRemains() != CAPACITY_REMAINS_EDEFAULT;
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
                 return programSlots != PROGRAM_SLOTS_EDEFAULT;
             case Shr5Package.CYBERDECK__ATTRIBUTE1:
@@ -981,6 +1005,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
             switch (derivedFeatureID) {
                 case Shr5Package.CYBERDECK__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
                 case Shr5Package.CYBERDECK__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                case Shr5Package.CYBERDECK__CAPACITY_REMAINS: return Shr5Package.CAPACITY__CAPACITY_REMAINS;
                 default: return -1;
             }
         }
@@ -1026,6 +1051,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
             switch (baseFeatureID) {
                 case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.CYBERDECK__CAPACITY_FEATURE;
                 case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.CYBERDECK__CAPACITY;
+                case Shr5Package.CAPACITY__CAPACITY_REMAINS: return Shr5Package.CYBERDECK__CAPACITY_REMAINS;
                 default: return -1;
             }
         }

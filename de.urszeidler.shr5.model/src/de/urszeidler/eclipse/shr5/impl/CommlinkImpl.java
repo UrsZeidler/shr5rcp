@@ -153,7 +153,10 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 Object feature = notification.getFeature();
                 if (Shr5Package.Literals.COMMLINK__STORED_PROGRAMS.equals(feature))
                     CommlinkImpl.this
-                            .eNotify(new ENotificationImpl(CommlinkImpl.this, Notification.SET, Shr5Package.COMMLINK__WERT, 1, 2));
+                            .eNotify(new ENotificationImpl(CommlinkImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                else if (Shr5Package.Literals.GELD_WERT__WERT_VALUE.equals(feature))
+                    CommlinkImpl.this
+                    .eNotify(new ENotificationImpl(CommlinkImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
 
             }
 

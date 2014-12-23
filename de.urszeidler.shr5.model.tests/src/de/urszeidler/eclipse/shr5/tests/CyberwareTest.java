@@ -3,10 +3,9 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
-
 import junit.textui.TestRunner;
-import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
@@ -19,6 +18,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature() <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacity() <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -117,6 +117,19 @@ public class CyberwareTest extends KoerpermodsTest {
     }
 
     /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
+     * @generated
+     */
+    public void testGetCapacityRemains() {
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
+
+    /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -127,7 +140,7 @@ public class CyberwareTest extends KoerpermodsTest {
         getFixture().setWertValue(new BigDecimal(10));        
         assertEquals(10,getFixture().getWert().intValue());
         
-        AbstraktGegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
+        CyberwareEnhancement gegenstand = Shr5Factory.eINSTANCE.createCyberwareEnhancement();
         gegenstand.setWertValue(new BigDecimal(10));
         getFixture().getEinbau().add(gegenstand);
         assertEquals(20,getFixture().getWert().intValue());        
