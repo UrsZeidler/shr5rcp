@@ -34,6 +34,11 @@ Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download 
  and checkout the [constribute](https://github.com/UrsZeidler/shr5rcp/wiki/Building%20and%20development#contributing)
  section
  
+ If you are not part of the github community you could use other channels to contact:
+ 
+ * twitter: [@shr5rcp](https://twitter.com/shr5rcp)
+ * email: shr5rcp@urszeilder.de
+ 
 3. Installation
 
  As the software is an eclipse product so you need to unpack the software and start the exe, you will need java installed.
