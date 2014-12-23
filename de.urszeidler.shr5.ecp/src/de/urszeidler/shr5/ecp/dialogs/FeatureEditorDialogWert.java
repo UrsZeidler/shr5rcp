@@ -53,6 +53,9 @@ import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.wb.swt.ResourceManager;
 
+import de.urszeidler.eclipse.shr5.Capacity;
+import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -126,17 +129,23 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             default:
                 break;
         }
-       
+
     }
 
     protected void updateLabel() {
         String label = null;
-        if(dialogType==DialogType.simple)
-             label = String.format("%d selected", values.getChildren().size());
+        if (theEObject instanceof GeldWert) {
+            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+
+        } else if (theEObject instanceof Cyberware) {
+            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+
+        } else if (dialogType == DialogType.simple)
+            label = String.format("%d selected", values.getChildren().size());
         else
-         label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-                                                                                                                                                  // +
-                                                                                                                                                  // "¥");
+            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                                                                                                                                               // +
+                                                                                                                                               // "¥");
         gesamtPreisLabel.setText(label);
     }
 
@@ -497,7 +506,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     for (Iterator<?> i = selection.iterator(); i.hasNext();) {
                         Object value = i.next();
                         if (!unique || !children.contains(value)) {
-                            children.add(value);
+                            if(!capacityReached())
+                                children.add(value);
                         }
                     }
                     featureTableViewer.refresh();
@@ -574,6 +584,15 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
         composite.pack();
         return composite;
+    }
+
+    protected boolean capacityReached() {
+        if (theEObject instanceof Capacity) {
+            Capacity ca = (Capacity)theEObject;
+           
+            return false;
+        }
+        return false;
     }
 
     protected void addContollButtons(Composite controlButtons) {

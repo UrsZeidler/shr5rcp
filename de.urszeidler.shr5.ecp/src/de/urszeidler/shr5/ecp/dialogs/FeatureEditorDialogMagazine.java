@@ -15,6 +15,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Shell;
 
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
@@ -33,12 +34,26 @@ public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
                 int kapazitaet = type.getKapazitaet();
                 int size = this.values.getChildren().size();
                 gesamtPreisLabel.setText(String.format("%s(%d/%d)", type.getName(), kapazitaet, size));
-                if(kapazitaet<size)
-                    this.values.getChildren().remove(kapazitaet-1);
+//                if(kapazitaet<size)
+//                    this.values.getChildren().remove(kapazitaet-1);
             }
         }
     }
 
+    protected boolean capacityReached() {
+        if (this.object instanceof Magazin) {
+            Magazin m = (Magazin)this.object;
+            Feuerwaffe type = GameplayTools.getMagazingType(m);
+            if (type != null) {
+                return this.values.getChildren().size()>= m.getCapacity();
+            }
+            return false;
+        }
+        return false;
+    }
+
+    
+    
     protected void addContollButtons(org.eclipse.swt.widgets.Composite controlButtons) {
         final Button downButton = new Button(controlButtons, SWT.PUSH);
         downButton.setText("add all");
@@ -61,7 +76,8 @@ public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
                         for (Iterator<?> i1 = selection.iterator(); i1.hasNext();) {
                             Object value = i1.next();
                             if (!unique || !children.contains(value)) {
-                                children.add(value);
+                                if(!capacityReached())
+                                    children.add(value);
                             }
                         }
                         choiceTableViewer.refresh();
