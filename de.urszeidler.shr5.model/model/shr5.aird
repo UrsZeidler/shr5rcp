@@ -14110,24 +14110,6 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_BXNioYqMEeSVS6TrSOpGKg" fontName="Ubuntu" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BXNiooqMEeSVS6TrSOpGKg" x="555" y="335" width="218" height="83"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_bN_ogIqOEeSVS6TrSOpGKg" type="2003" element="_bNmm8IqOEeSVS6TrSOpGKg">
-            <children xmi:type="notation:Node" xmi:id="_bOAPkIqOEeSVS6TrSOpGKg" type="5007"/>
-            <children xmi:type="notation:Node" xmi:id="_bOAPkYqOEeSVS6TrSOpGKg" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_ejEt8IqOEeSVS6TrSOpGKg" type="3010" element="_eik-sIqOEeSVS6TrSOpGKg">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_ejEt8YqOEeSVS6TrSOpGKg"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_iDOa8IqOEeSVS6TrSOpGKg" type="3010" element="_iC0yUIqOEeSVS6TrSOpGKg">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_iDOa8YqOEeSVS6TrSOpGKg"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_S8qE0IrYEeSVS6TrSOpGKg" type="3010" element="_S74owIrYEeSVS6TrSOpGKg">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_S8qE0YrYEeSVS6TrSOpGKg"/>
-              </children>
-              <styles xmi:type="notation:SortingStyle" xmi:id="_bOAPkoqOEeSVS6TrSOpGKg"/>
-              <styles xmi:type="notation:FilteringStyle" xmi:id="_bOAPk4qOEeSVS6TrSOpGKg"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_bN_ogYqOEeSVS6TrSOpGKg" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bN_ogoqOEeSVS6TrSOpGKg" x="560" y="425"/>
-          </children>
           <children xmi:type="notation:Node" xmi:id="_7AAr0IqSEeSVS6TrSOpGKg" type="2003" element="_6_pfcIqSEeSVS6TrSOpGKg">
             <children xmi:type="notation:Node" xmi:id="_7ABS4IqSEeSVS6TrSOpGKg" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_7AB58IqSEeSVS6TrSOpGKg" type="7004">
@@ -14429,7 +14411,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_fjlfZIr0EeSVS6TrSOpGKg" red="228" green="228" blue="228"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8GDAcIqKEeSVS6TrSOpGKg" name="/capacity : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@524c2ac7{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Capacity/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8GDAcIqKEeSVS6TrSOpGKg" name="/capacity : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Capacity/capacity"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Capacity/capacity"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_M3qy0Ir0EeSVS6TrSOpGKg" labelAlignment="LEFT" description="_M3qLwIr0EeSVS6TrSOpGKg">
@@ -14439,7 +14421,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cR0zsIr0EeSVS6TrSOpGKg" name="/capacityRemains : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@6f5dc335{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Capacity/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cR0zsIr0EeSVS6TrSOpGKg" name="/capacityRemains : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Capacity/capacityRemains"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Capacity/capacityRemains"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_sA9woIr1EeSVS6TrSOpGKg" labelAlignment="LEFT" description="_sA9Jkor1EeSVS6TrSOpGKg">
@@ -14576,7 +14558,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_yP76JIqOEeSVS6TrSOpGKg" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_K_c9UIqOEeSVS6TrSOpGKg" name="cyberwareCapacity : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@5466e43e{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Cyberware/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_K_c9UIqOEeSVS6TrSOpGKg" name="cyberwareCapacity : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/cyberwareCapacity"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/cyberwareCapacity"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_PYOEAIr0EeSVS6TrSOpGKg" labelAlignment="LEFT">
@@ -14587,7 +14569,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_U0kBQIqOEeSVS6TrSOpGKg" name="type : CyberwareType = headware" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@24d65da2{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Cyberware/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_U0kBQIqOEeSVS6TrSOpGKg" name="type : CyberwareType = headware" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/type"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/type"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_mCwLkIqOEeSVS6TrSOpGKg" labelAlignment="LEFT">
@@ -14615,54 +14597,6 @@
           </centerLabelStyle>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_bNmm8IqOEeSVS6TrSOpGKg" name="CyberwareType" tooltipText="">
-        <target xmi:type="ecore:EEnum" href="shr5.ecore#//CyberwareType"/>
-        <semanticElements xmi:type="ecore:EEnum" href="shr5.ecore#//CyberwareType"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_bNmm8YqOEeSVS6TrSOpGKg" backgroundStyle="Liquid">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_bNmm8oqOEeSVS6TrSOpGKg"/>
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_bNmm84qOEeSVS6TrSOpGKg" red="125" green="125" blue="125"/>
-          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_bNmm9IqOEeSVS6TrSOpGKg" red="255" green="255" blue="255"/>
-          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_bNmm9YqOEeSVS6TrSOpGKg" red="221" green="236" blue="202"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_eik-sIqOEeSVS6TrSOpGKg" name="headware" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/headware"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/headware"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_eillwIqOEeSVS6TrSOpGKg" labelAlignment="LEFT">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_eillwYqOEeSVS6TrSOpGKg"/>
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
-            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_eillwoqOEeSVS6TrSOpGKg"/>
-            <color xmi:type="viewpoint:RGBValues" xmi:id="_eillw4qOEeSVS6TrSOpGKg"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_iC0yUIqOEeSVS6TrSOpGKg" name="bodyware" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/bodyware"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/bodyware"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_iC1ZYIqOEeSVS6TrSOpGKg" labelAlignment="LEFT">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_iC1ZYYqOEeSVS6TrSOpGKg"/>
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
-            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_iC1ZYoqOEeSVS6TrSOpGKg"/>
-            <color xmi:type="viewpoint:RGBValues" xmi:id="_iC1ZY4qOEeSVS6TrSOpGKg"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_S74owIrYEeSVS6TrSOpGKg" name="cyberlimb" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/cyberlimb"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="shr5.ecore#//CyberwareType/cyberlimb"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_S74owYrYEeSVS6TrSOpGKg" labelAlignment="LEFT">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_S74oworYEeSVS6TrSOpGKg"/>
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
-            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_S74ow4rYEeSVS6TrSOpGKg"/>
-            <color xmi:type="viewpoint:RGBValues" xmi:id="_S74oxIrYEeSVS6TrSOpGKg"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
-        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6_pfcIqSEeSVS6TrSOpGKg" name="Cyberdeck" tooltipText="" outgoingEdges="_5Q5MsIqUEeSVS6TrSOpGKg" width="12" height="10">
         <target xmi:type="ecore:EClass" href="shr5.ecore#//Cyberdeck"/>
@@ -15360,7 +15294,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_4vRboIq7EeSVS6TrSOpGKg" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4vbMoIq7EeSVS6TrSOpGKg" name="cyberwareCapacity : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@5466e43e{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Cyberware/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4vbMoIq7EeSVS6TrSOpGKg" name="cyberwareCapacity : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/cyberwareCapacity"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/cyberwareCapacity"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_PYw2kIr0EeSVS6TrSOpGKg" labelAlignment="LEFT">
@@ -15371,7 +15305,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4wNPwIq7EeSVS6TrSOpGKg" name="type : CyberwareType = headware" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@24d65da2{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//Cyberware/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4wNPwIq7EeSVS6TrSOpGKg" name="type : CyberwareType = headware" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/type"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberware/type"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_4wN20Iq7EeSVS6TrSOpGKg" labelAlignment="LEFT">
@@ -15676,7 +15610,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_M9rk9IrYEeSVS6TrSOpGKg" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_bD_k4IrDEeSVS6TrSOpGKg" name="capacityUse : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@11d57445{platform:/resource/de.urszeidler.shr5.model/model/shr5.ecore#//CyberwareAddon/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_bD_k4IrDEeSVS6TrSOpGKg" name="capacityUse : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="shr5.ecore#//CyberwareEnhancement/capacityUse"/>
           <semanticElements xmi:type="ecore:EAttribute" href="shr5.ecore#//CyberwareEnhancement/capacityUse"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ewo1wIrDEeSVS6TrSOpGKg" labelAlignment="LEFT">
