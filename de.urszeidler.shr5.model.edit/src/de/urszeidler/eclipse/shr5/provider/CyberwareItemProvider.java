@@ -300,12 +300,22 @@ public class CyberwareItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		Beschreibbar beschreibbar = (Beschreibbar) object;
+		Cyberware beschreibbar = (Cyberware) object;
 		if (beschreibbar.getImage() != null) {
 			Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
 			if (image != null)
 				return image;
 		}
+		switch (beschreibbar.getType()) {
+            case HEADWARE:
+                return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware_head"));
+            case CYBERLIMB:
+                return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware_limb"));
+//
+            default:
+                break;
+        }
+		
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware"));
 	}
 
