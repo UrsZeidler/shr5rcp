@@ -29,21 +29,21 @@
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
 			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" name="all">
-			<!-- <entries xsi:type="shr5:ShrList" name="cyberware"> -->
-			<!-- <xsl:for-each select="$cyberwares"> -->
-			<!-- <xsl:apply-templates select="node()" /> -->
-			<!-- </xsl:for-each> -->
-			<!-- </entries> -->
+			<entries xsi:type="shr5:ShrList" name="cyberware">
+				<xsl:for-each select="$cyberwares">
+					<xsl:apply-templates select="node()" />
+				</xsl:for-each>
+			</entries>
 			<!-- <entries xsi:type="shr5:ShrList" name="bioware"> -->
 			<!-- <xsl:for-each select="$biowares"> -->
 			<!-- <xsl:apply-templates select="node()" /> -->
 			<!-- </xsl:for-each> -->
 			<!-- </entries> -->
-			<entries xsi:type="shr5:ShrList" name="power">
-				<xsl:for-each select="$powers">
-					<xsl:apply-templates select="node()" />
-				</xsl:for-each>
-			</entries>
+			<!-- <entries xsi:type="shr5:ShrList" name="power"> -->
+			<!-- <xsl:for-each select="$powers"> -->
+			<!-- <xsl:apply-templates select="node()" /> -->
+			<!-- </xsl:for-each> -->
+			<!-- </entries> -->
 
 		</shr5:ShrList>
 	</xsl:template>
@@ -143,12 +143,55 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
+<!-- 	additional cyberware attributes-->
+		<xsl:template name="cyberware_add">
+		<xsl:choose>
+			<xsl:when test="category/text()='Cyberlimb Enhancement' or category/text()='Cyberlimb Accessory'">
+				<xsl:attribute name="xsi:type">shr5:CyberwareEnhancement</xsl:attribute>
+				<xsl:if test="starts-with(capacity/text(),'[')">
+				<xsl:attribute name="capacityUse">
+				<xsl:value-of select="substring-after(substring-before(capacity/text(), ']'), '[')" />
+				</xsl:attribute>
+			</xsl:if>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:attribute name="xsi:type">shr5:Cyberware</xsl:attribute>
+			</xsl:otherwise>
+		</xsl:choose>
+		
+			<xsl:if test="number(capacity/text())">
+				<xsl:attribute name="cyberwareCapacity">
+				<xsl:value-of select="number(capacity/text())" />
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:choose>
+			<xsl:when test="category/text()='Cyberlimb' or category/text()='Cyberlimb Enhancement' or category/text()='Cyberlimb Accessory'">
+				<xsl:attribute name="type">cyberlimb</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="category/text()='Bodyware'">
+				<xsl:attribute name="type">bodyware</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="category/text()='Headware'">
+				<xsl:attribute name="type">headware</xsl:attribute>
+			</xsl:when>
+
+			</xsl:choose>
+		
+		</xsl:template>
 	<!-- rating based cyberware -->
 	<xsl:template name="cyberware">
 		<xsl:param name="rating" />
 		<entries xsi:type="shr5:Cyberware">
 			<xsl:attribute name="name"><xsl:value-of
 				select="concat(name/text(),' ',$rating)" /></xsl:attribute>
+			<xsl:call-template name="cyberware_add"/>
+			
+			<xsl:if test="starts-with(capacity/text(),'[')">
+				<xsl:attribute name="capacityUse">
+				<xsl:value-of select="$rating" />
+				</xsl:attribute>
+			</xsl:if>
+
 			<xsl:call-template name="gegenstand-basis-rating">
 				<xsl:with-param name="rating" select="$rating" />
 			</xsl:call-template>
@@ -166,7 +209,7 @@
 	<!-- -->
 	<xsl:template match="//cyberware">
 		<xsl:if
-			test="category/text()!='Cyberlimb Enhancement' and category/text()!='Cyberlimb Accessory' and category/text()!='Cyber Implant Weapon'">
+			test=" category/text()!='Cyber Implant Weapon'">
 			<xsl:choose>
 				<xsl:when test="number(rating/text())">
 					<xsl:call-template name="iterate.cyberware">
@@ -180,6 +223,7 @@
 
 			<entries xsi:type="shr5:Cyberware">
 				<xsl:call-template name="gegenstand-basis" />
+				<xsl:call-template name="cyberware_add"/>
 				<xsl:call-template name="mods_rating">
 					<xsl:with-param name="rating" select="1" />
 				</xsl:call-template>

@@ -3842,1095 +3842,1497 @@
           <localizations xmi:id="_EK-x8znTEeSe6_w6Jrbqxg" local="de" name="Eigener Gegenstand"/>
         </entries>
       </entries>
-      <entries xsi:type="shr5:ShrList" xmi:id="_keMTAD9XEeSqL_XDQ5rTNg" name="cyberware">
+      <entries xsi:type="shr5:ShrList" xmi:id="_nZLnYItcEeSGSeeIynfV0w" name="cyberware">
         <entries xsi:type="shr5:Cyberware" xmi:id="6b219dfa-310a-45ab-98af-40a62e2431cf" name="Commlink" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="2000">
-          <mods xmi:id="_keOIMD9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZNckItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keOIMT9XEeSqL_XDQ5rTNg" local="de" name="Kommlink"/>
+          <localizations xmi:id="_nZNckYtcEeSGSeeIynfV0w" local="de" name="Kommlink"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keOIMj9XEeSqL_XDQ5rTNg" name="Control Rig 1" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="43000">
-          <mods xmi:id="_keOvQD9XEeSqL_XDQ5rTNg" wert="-100">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZNckotcEeSGSeeIynfV0w" name="Control Rig 1" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="43000">
+          <mods xmi:id="_nZNck4tcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keOvQT9XEeSqL_XDQ5rTNg" local="de" name="Riggerkontrolle 1"/>
+          <localizations xmi:id="_nZNclItcEeSGSeeIynfV0w" local="de" name="Riggerkontrolle 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keOvQj9XEeSqL_XDQ5rTNg" name="Control Rig 2" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="97000">
-          <mods xmi:id="_keOvQz9XEeSqL_XDQ5rTNg" wert="-200">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZODoItcEeSGSeeIynfV0w" name="Control Rig 2" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="97000">
+          <mods xmi:id="_nZODoYtcEeSGSeeIynfV0w" wert="-200">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keOvRD9XEeSqL_XDQ5rTNg" local="de" name="Riggerkontrolle 2"/>
+          <localizations xmi:id="_nZODootcEeSGSeeIynfV0w" local="de" name="Riggerkontrolle 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keOvRT9XEeSqL_XDQ5rTNg" name="Control Rig 3" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="208000">
-          <mods xmi:id="_keOvRj9XEeSqL_XDQ5rTNg" wert="-300">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZODo4tcEeSGSeeIynfV0w" name="Control Rig 3" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="208000">
+          <mods xmi:id="_nZODpItcEeSGSeeIynfV0w" wert="-300">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kePWUD9XEeSqL_XDQ5rTNg" local="de" name="Riggerkontrolle 3"/>
+          <localizations xmi:id="_nZODpYtcEeSGSeeIynfV0w" local="de" name="Riggerkontrolle 3"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="16b45886-2916-48eb-aea5-ecb74da835bd" name="Control Rig" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5">
-          <mods xmi:id="_kePWUT9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZODpotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kePWUj9XEeSqL_XDQ5rTNg" local="de" name="Riggerkontrolle"/>
+          <localizations xmi:id="_nZODp4tcEeSGSeeIynfV0w" local="de" name="Riggerkontrolle"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="56e37c9d-9191-4f19-a733-33580888a560" name="Cranial Bomb - Kink Bomb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="10000">
-          <mods xmi:id="_kePWUz9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZOqsItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kePWVD9XEeSqL_XDQ5rTNg" local="de" name="Cortexbombe - Spleenbombe"/>
+          <localizations xmi:id="_nZOqsYtcEeSGSeeIynfV0w" local="de" name="Cortexbombe - Spleenbombe"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ff8b165b-1b43-479e-b9d7-87d9a341ef71" name="Cranial Bomb - Microbomb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="25000">
-          <mods xmi:id="_kePWVT9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZOqsotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keP9YD9XEeSqL_XDQ5rTNg" local="de" name="Cortexbombe - Mikrobrombe"/>
+          <localizations xmi:id="_nZOqs4tcEeSGSeeIynfV0w" local="de" name="Cortexbombe - Mikrobrombe"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="7af78ea8-2b19-4dee-a07f-194393a4a65b" name="Cranial Bomb - Area Bomb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="20F" wertValue="40000">
-          <mods xmi:id="_keP9YT9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZOqtItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keP9Yj9XEeSqL_XDQ5rTNg" local="de" name="Cortexbombe - Flächenbombe"/>
+          <localizations xmi:id="_nZOqtYtcEeSGSeeIynfV0w" local="de" name="Cortexbombe - Flächenbombe"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="754a2083-9d89-4034-b43f-31bd5bb43595" name="Cyberdeck" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="5000">
-          <mods xmi:id="_keP9Yz9XEeSqL_XDQ5rTNg" wert="-40">
+          <mods xmi:id="_nZPRwItcEeSGSeeIynfV0w" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keP9ZD9XEeSqL_XDQ5rTNg" local="de" name="Cyberdeck"/>
+          <localizations xmi:id="_nZPRwYtcEeSGSeeIynfV0w" local="de" name="Cyberdeck"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="47c48542-48c3-417e-91f0-b5a456183f05" name="Datajack" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000">
-          <mods xmi:id="_keP9ZT9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZPRwotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keQkcD9XEeSqL_XDQ5rTNg" local="de" name="Datenbuchse"/>
+          <localizations xmi:id="_nZPRw4tcEeSGSeeIynfV0w" local="de" name="Datenbuchse"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keQkcT9XEeSqL_XDQ5rTNg" name="Data Lock 1" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="1000">
-          <mods xmi:id="_keQkcj9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZP40ItcEeSGSeeIynfV0w" name="Data Lock 1" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="1000">
+          <mods xmi:id="_nZP40YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keQkcz9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 1"/>
+          <localizations xmi:id="_nZP40otcEeSGSeeIynfV0w" local="de" name="Datenschloss 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keQkdD9XEeSqL_XDQ5rTNg" name="Data Lock 2" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="2000">
-          <mods xmi:id="_keQkdT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZP404tcEeSGSeeIynfV0w" name="Data Lock 2" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="2000">
+          <mods xmi:id="_nZP41ItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keQkdj9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 2"/>
+          <localizations xmi:id="_nZP41YtcEeSGSeeIynfV0w" local="de" name="Datenschloss 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keQkdz9XEeSqL_XDQ5rTNg" name="Data Lock 3" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="3000">
-          <mods xmi:id="_keRLgD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZQf4ItcEeSGSeeIynfV0w" name="Data Lock 3" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="3000">
+          <mods xmi:id="_nZQf4YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRLgT9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 3"/>
+          <localizations xmi:id="_nZQf4otcEeSGSeeIynfV0w" local="de" name="Datenschloss 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keRLgj9XEeSqL_XDQ5rTNg" name="Data Lock 4" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="4000">
-          <mods xmi:id="_keRLgz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZQf44tcEeSGSeeIynfV0w" name="Data Lock 4" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="4000">
+          <mods xmi:id="_nZQf5ItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRLhD9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 4"/>
+          <localizations xmi:id="_nZQf5YtcEeSGSeeIynfV0w" local="de" name="Datenschloss 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keRLhT9XEeSqL_XDQ5rTNg" name="Data Lock 5" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="5000">
-          <mods xmi:id="_keRLhj9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZRG8ItcEeSGSeeIynfV0w" name="Data Lock 5" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="5000">
+          <mods xmi:id="_nZRG8YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRLhz9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 5"/>
+          <localizations xmi:id="_nZRG8otcEeSGSeeIynfV0w" local="de" name="Datenschloss 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keRykD9XEeSqL_XDQ5rTNg" name="Data Lock 6" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="6000">
-          <mods xmi:id="_keRykT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZRG84tcEeSGSeeIynfV0w" name="Data Lock 6" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="6000">
+          <mods xmi:id="_nZRG9ItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRykj9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 6"/>
+          <localizations xmi:id="_nZRG9YtcEeSGSeeIynfV0w" local="de" name="Datenschloss 6"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keRykz9XEeSqL_XDQ5rTNg" name="Data Lock 7" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="7000">
-          <mods xmi:id="_keRylD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZRG9otcEeSGSeeIynfV0w" name="Data Lock 7" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="7000">
+          <mods xmi:id="_nZRG94tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRylT9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 7"/>
+          <localizations xmi:id="_nZRuAItcEeSGSeeIynfV0w" local="de" name="Datenschloss 7"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keRylj9XEeSqL_XDQ5rTNg" name="Data Lock 8" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="8000">
-          <mods xmi:id="_keRylz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZRuAYtcEeSGSeeIynfV0w" name="Data Lock 8" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="8000">
+          <mods xmi:id="_nZRuAotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keRymD9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 8"/>
+          <localizations xmi:id="_nZRuA4tcEeSGSeeIynfV0w" local="de" name="Datenschloss 8"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keSZoD9XEeSqL_XDQ5rTNg" name="Data Lock 9" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="9000">
-          <mods xmi:id="_keSZoT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZRuBItcEeSGSeeIynfV0w" name="Data Lock 9" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="9000">
+          <mods xmi:id="_nZRuBYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keSZoj9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 9"/>
+          <localizations xmi:id="_nZRuBotcEeSGSeeIynfV0w" local="de" name="Datenschloss 9"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keSZoz9XEeSqL_XDQ5rTNg" name="Data Lock 10" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="10000">
-          <mods xmi:id="_keSZpD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZSVEItcEeSGSeeIynfV0w" name="Data Lock 10" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="10000">
+          <mods xmi:id="_nZSVEYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keSZpT9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 10"/>
+          <localizations xmi:id="_nZSVEotcEeSGSeeIynfV0w" local="de" name="Datenschloss 10"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keSZpj9XEeSqL_XDQ5rTNg" name="Data Lock 11" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="11000">
-          <mods xmi:id="_keTAsD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZSVE4tcEeSGSeeIynfV0w" name="Data Lock 11" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="11000">
+          <mods xmi:id="_nZSVFItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTAsT9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 11"/>
+          <localizations xmi:id="_nZSVFYtcEeSGSeeIynfV0w" local="de" name="Datenschloss 11"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keTAsj9XEeSqL_XDQ5rTNg" name="Data Lock 12" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="12000">
-          <mods xmi:id="_keTAsz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZSVFotcEeSGSeeIynfV0w" name="Data Lock 12" parentId="eb9e691a-8002-4138-ac8d-d9714d398b1e" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="12000">
+          <mods xmi:id="_nZS8IItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTAtD9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss 12"/>
+          <localizations xmi:id="_nZS8IYtcEeSGSeeIynfV0w" local="de" name="Datenschloss 12"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="eb9e691a-8002-4138-ac8d-d9714d398b1e" name="Data Lock" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2">
-          <mods xmi:id="_keTAtT9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZS8IotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTAtj9XEeSqL_XDQ5rTNg" local="de" name="Datenschloss"/>
+          <localizations xmi:id="_nZS8I4tcEeSGSeeIynfV0w" local="de" name="Datenschloss"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keTAtz9XEeSqL_XDQ5rTNg" name="Olfactory Booster 1" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
-          <mods xmi:id="_keTnwD9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZS8JItcEeSGSeeIynfV0w" name="Olfactory Booster 1" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
+          <mods xmi:id="_nZS8JYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTnwT9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 1"/>
+          <localizations xmi:id="_nZS8JotcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keTnwj9XEeSqL_XDQ5rTNg" name="Olfactory Booster 2" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
-          <mods xmi:id="_keTnwz9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZS8J4tcEeSGSeeIynfV0w" name="Olfactory Booster 2" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
+          <mods xmi:id="_nZTjMItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTnxD9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 2"/>
+          <localizations xmi:id="_nZTjMYtcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keTnxT9XEeSqL_XDQ5rTNg" name="Olfactory Booster 3" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
-          <mods xmi:id="_keTnxj9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZTjMotcEeSGSeeIynfV0w" name="Olfactory Booster 3" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
+          <mods xmi:id="_nZTjM4tcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keTnxz9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 3"/>
+          <localizations xmi:id="_nZTjNItcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keUO0D9XEeSqL_XDQ5rTNg" name="Olfactory Booster 4" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="16000">
-          <mods xmi:id="_keUO0T9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZTjNYtcEeSGSeeIynfV0w" name="Olfactory Booster 4" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="16000">
+          <mods xmi:id="_nZTjNotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keUO0j9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 4"/>
+          <localizations xmi:id="_nZTjN4tcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keUO0z9XEeSqL_XDQ5rTNg" name="Olfactory Booster 5" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="20000">
-          <mods xmi:id="_keUO1D9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZUKQItcEeSGSeeIynfV0w" name="Olfactory Booster 5" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="20000">
+          <mods xmi:id="_nZUKQYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keUO1T9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 5"/>
+          <localizations xmi:id="_nZUKQotcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keUO1j9XEeSqL_XDQ5rTNg" name="Olfactory Booster 6" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="24000">
-          <mods xmi:id="_keUO1z9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZUKQ4tcEeSGSeeIynfV0w" name="Olfactory Booster 6" parentId="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="24000">
+          <mods xmi:id="_nZUKRItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keU14D9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster 6"/>
+          <localizations xmi:id="_nZUKRYtcEeSGSeeIynfV0w" local="de" name="Geruchsbooster 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="e9136c81-f8d5-4e7f-be2d-3be7ff6d1673" name="Olfactory Booster" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_keU14T9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZUKRotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keU14j9XEeSqL_XDQ5rTNg" local="de" name="Geruchsbooster"/>
+          <localizations xmi:id="_nZUKR4tcEeSGSeeIynfV0w" local="de" name="Geruchsbooster"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ed88f785-7d61-43ec-b4ed-0ebb94736f5e" name="Simrig" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="4000">
-          <mods xmi:id="_keU14z9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZUxUItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keU15D9XEeSqL_XDQ5rTNg" local="de" name="Simrig"/>
+          <localizations xmi:id="_nZUxUYtcEeSGSeeIynfV0w" local="de" name="Simrig"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keVc8D9XEeSqL_XDQ5rTNg" name="Skilljack 1" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="20000">
-          <mods xmi:id="_keVc8T9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZUxUotcEeSGSeeIynfV0w" name="Skilljack 1" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="20000">
+          <mods xmi:id="_nZUxU4tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keVc8j9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 1"/>
+          <localizations xmi:id="_nZUxVItcEeSGSeeIynfV0w" local="de" name="Talentbuchse 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keVc8z9XEeSqL_XDQ5rTNg" name="Skilljack 2" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="40000">
-          <mods xmi:id="_keVc9D9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZUxVYtcEeSGSeeIynfV0w" name="Skilljack 2" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="40000">
+          <mods xmi:id="_nZUxVotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keVc9T9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 2"/>
+          <localizations xmi:id="_nZUxV4tcEeSGSeeIynfV0w" local="de" name="Talentbuchse 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keVc9j9XEeSqL_XDQ5rTNg" name="Skilljack 3" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="60000">
-          <mods xmi:id="_keVc9z9XEeSqL_XDQ5rTNg" wert="-30">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZVYYItcEeSGSeeIynfV0w" name="Skilljack 3" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="60000">
+          <mods xmi:id="_nZVYYYtcEeSGSeeIynfV0w" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keVc-D9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 3"/>
+          <localizations xmi:id="_nZVYYotcEeSGSeeIynfV0w" local="de" name="Talentbuchse 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keWEAD9XEeSqL_XDQ5rTNg" name="Skilljack 4" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="80000">
-          <mods xmi:id="_keWEAT9XEeSqL_XDQ5rTNg" wert="-40">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZVYY4tcEeSGSeeIynfV0w" name="Skilljack 4" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="80000">
+          <mods xmi:id="_nZVYZItcEeSGSeeIynfV0w" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keWEAj9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 4"/>
+          <localizations xmi:id="_nZVYZYtcEeSGSeeIynfV0w" local="de" name="Talentbuchse 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keWEAz9XEeSqL_XDQ5rTNg" name="Skilljack 5" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="100000">
-          <mods xmi:id="_keWEBD9XEeSqL_XDQ5rTNg" wert="-50">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZVYZotcEeSGSeeIynfV0w" name="Skilljack 5" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="100000">
+          <mods xmi:id="_nZVYZ4tcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keWEBT9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 5"/>
+          <localizations xmi:id="_nZVYaItcEeSGSeeIynfV0w" local="de" name="Talentbuchse 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keWEBj9XEeSqL_XDQ5rTNg" name="Skilljack 6" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="120000">
-          <mods xmi:id="_keWrED9XEeSqL_XDQ5rTNg" wert="-60">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZV_cItcEeSGSeeIynfV0w" name="Skilljack 6" parentId="d31497dd-2be9-4b8a-808f-3ced36287c0c" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="120000">
+          <mods xmi:id="_nZV_cYtcEeSGSeeIynfV0w" wert="-60">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keWrET9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse 6"/>
+          <localizations xmi:id="_nZV_cotcEeSGSeeIynfV0w" local="de" name="Talentbuchse 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="d31497dd-2be9-4b8a-808f-3ced36287c0c" name="Skilljack" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2">
-          <mods xmi:id="_keWrEj9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZV_c4tcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keWrEz9XEeSqL_XDQ5rTNg" local="de" name="Talentbuchse"/>
+          <localizations xmi:id="_nZV_dItcEeSGSeeIynfV0w" local="de" name="Talentbuchse"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keWrFD9XEeSqL_XDQ5rTNg" name="Skilljack (German) 1" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="1000">
-          <mods xmi:id="_keWrFT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZV_dYtcEeSGSeeIynfV0w" name="Skilljack (German) 1" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="1000">
+          <mods xmi:id="_nZV_dotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keWrFj9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 1"/>
+          <localizations xmi:id="_nZV_d4tcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keWrFz9XEeSqL_XDQ5rTNg" name="Skilljack (German) 2" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="2000">
-          <mods xmi:id="_keXSID9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZWmgItcEeSGSeeIynfV0w" name="Skilljack (German) 2" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="2000">
+          <mods xmi:id="_nZWmgYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keXSIT9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 2"/>
+          <localizations xmi:id="_nZWmgotcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keXSIj9XEeSqL_XDQ5rTNg" name="Skilljack (German) 3" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="3000">
-          <mods xmi:id="_keXSIz9XEeSqL_XDQ5rTNg" wert="-30">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZWmg4tcEeSGSeeIynfV0w" name="Skilljack (German) 3" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="3000">
+          <mods xmi:id="_nZWmhItcEeSGSeeIynfV0w" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keXSJD9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 3"/>
+          <localizations xmi:id="_nZWmhYtcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keXSJT9XEeSqL_XDQ5rTNg" name="Skilljack (German) 4" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="4000">
-          <mods xmi:id="_keXSJj9XEeSqL_XDQ5rTNg" wert="-40">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZWmhotcEeSGSeeIynfV0w" name="Skilljack (German) 4" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="4000">
+          <mods xmi:id="_nZWmh4tcEeSGSeeIynfV0w" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keXSJz9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 4"/>
+          <localizations xmi:id="_nZWmiItcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keX5MD9XEeSqL_XDQ5rTNg" name="Skilljack (German) 5" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="5000">
-          <mods xmi:id="_keX5MT9XEeSqL_XDQ5rTNg" wert="-50">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZXNkItcEeSGSeeIynfV0w" name="Skilljack (German) 5" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="5000">
+          <mods xmi:id="_nZXNkYtcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keX5Mj9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 5"/>
+          <localizations xmi:id="_nZXNkotcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keX5Mz9XEeSqL_XDQ5rTNg" name="Skilljack (German) 6" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="6000">
-          <mods xmi:id="_keX5ND9XEeSqL_XDQ5rTNg" wert="-60">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZXNk4tcEeSGSeeIynfV0w" name="Skilljack (German) 6" parentId="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2" wertValue="6000">
+          <mods xmi:id="_nZXNlItcEeSGSeeIynfV0w" wert="-60">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keX5NT9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German) 6"/>
+          <localizations xmi:id="_nZXNlYtcEeSGSeeIynfV0w" local="de" name="Skilljack (German) 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="c533c0db-3a04-4fdd-95f9-d4d9781a3e79" name="Skilljack (German)" page="452" srcBook="b3c5ea18-56dc-42f4-b567-50ead12fab1f" verfuegbarkeit="Rating * 2">
-          <mods xmi:id="_keX5Nj9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZXNlotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keX5Nz9XEeSqL_XDQ5rTNg" local="de" name="Skilljack (German)"/>
+          <localizations xmi:id="_nZXNl4tcEeSGSeeIynfV0w" local="de" name="Skilljack (German)"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keYgQD9XEeSqL_XDQ5rTNg" name="Taste Booster 1" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3000">
-          <mods xmi:id="_keYgQT9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZX0oItcEeSGSeeIynfV0w" name="Taste Booster 1" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3000">
+          <mods xmi:id="_nZX0oYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keYgQj9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 1"/>
+          <localizations xmi:id="_nZX0ootcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keYgQz9XEeSqL_XDQ5rTNg" name="Taste Booster 2" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="6000">
-          <mods xmi:id="_keYgRD9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZX0o4tcEeSGSeeIynfV0w" name="Taste Booster 2" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="6000">
+          <mods xmi:id="_nZX0pItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keYgRT9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 2"/>
+          <localizations xmi:id="_nZX0pYtcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keYgRj9XEeSqL_XDQ5rTNg" name="Taste Booster 3" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="9000">
-          <mods xmi:id="_keYgRz9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZX0potcEeSGSeeIynfV0w" name="Taste Booster 3" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="9000">
+          <mods xmi:id="_nZYbsItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZHUD9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 3"/>
+          <localizations xmi:id="_nZYbsYtcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keZHUT9XEeSqL_XDQ5rTNg" name="Taste Booster 4" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
-          <mods xmi:id="_keZHUj9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZYbsotcEeSGSeeIynfV0w" name="Taste Booster 4" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
+          <mods xmi:id="_nZYbs4tcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZHUz9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 4"/>
+          <localizations xmi:id="_nZYbtItcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keZHVD9XEeSqL_XDQ5rTNg" name="Taste Booster 5" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="15000">
-          <mods xmi:id="_keZHVT9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZYbtYtcEeSGSeeIynfV0w" name="Taste Booster 5" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="15000">
+          <mods xmi:id="_nZYbtotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZHVj9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 5"/>
+          <localizations xmi:id="_nZYbt4tcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keZHVz9XEeSqL_XDQ5rTNg" name="Taste Booster 6" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="18000">
-          <mods xmi:id="_keZuYD9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZYbuItcEeSGSeeIynfV0w" name="Taste Booster 6" parentId="99128200-57f7-4ea1-ba48-7bae7215d6bb" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="18000">
+          <mods xmi:id="_nZZCwItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZuYT9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster 6"/>
+          <localizations xmi:id="_nZZCwYtcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="99128200-57f7-4ea1-ba48-7bae7215d6bb" name="Taste Booster" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_keZuYj9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZZCwotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZuYz9XEeSqL_XDQ5rTNg" local="de" name="Geschmacksbooster"/>
+          <localizations xmi:id="_nZZCw4tcEeSGSeeIynfV0w" local="de" name="Geschmacksbooster"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="7924a873-341c-43a7-be03-f92895e0dc34" name="Tooth Compartment, Storage" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="800">
-          <mods xmi:id="_keZuZD9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZZCxItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keZuZT9XEeSqL_XDQ5rTNg" local="de" name="Zahnbehälter, Lager"/>
+          <localizations xmi:id="_nZZCxYtcEeSGSeeIynfV0w" local="de" name="Zahnbehälter, Lager"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="cd113e17-8412-4d93-80d0-91d6212646f0" name="Tooth Compartment, Breakable" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="800">
-          <mods xmi:id="_keaVcD9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZZp0ItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keaVcT9XEeSqL_XDQ5rTNg" local="de" name="Zahnbehälter, Zerbrechlich"/>
+          <localizations xmi:id="_nZZp0YtcEeSGSeeIynfV0w" local="de" name="Zahnbehälter, Zerbrechlich"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keaVcj9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 1" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="12000">
-          <mods xmi:id="_keaVcz9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZZp0otcEeSGSeeIynfV0w" name="Ultrasound Sensor 1" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="12000">
+          <mods xmi:id="_nZZp04tcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keaVdD9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 1"/>
+          <localizations xmi:id="_nZZp1ItcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keaVdT9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 2" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="24000">
-          <mods xmi:id="_keaVdj9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZZp1YtcEeSGSeeIynfV0w" name="Ultrasound Sensor 2" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="24000">
+          <mods xmi:id="_nZZp1otcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keaVdz9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 2"/>
+          <localizations xmi:id="_nZZp14tcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kea8gD9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 3" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="36000">
-          <mods xmi:id="_kea8gT9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZaQ4ItcEeSGSeeIynfV0w" name="Ultrasound Sensor 3" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="36000">
+          <mods xmi:id="_nZaQ4YtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kea8gj9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 3"/>
+          <localizations xmi:id="_nZaQ4otcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kea8gz9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 4" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="48000">
-          <mods xmi:id="_kea8hD9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZaQ44tcEeSGSeeIynfV0w" name="Ultrasound Sensor 4" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="48000">
+          <mods xmi:id="_nZaQ5ItcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kea8hT9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 4"/>
+          <localizations xmi:id="_nZaQ5YtcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kea8hj9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 5" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="60000">
-          <mods xmi:id="_kea8hz9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZaQ5otcEeSGSeeIynfV0w" name="Ultrasound Sensor 5" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="60000">
+          <mods xmi:id="_nZa38ItcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kebjkD9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 5"/>
+          <localizations xmi:id="_nZa38YtcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kebjkT9XEeSqL_XDQ5rTNg" name="Ultrasound Sensor 6" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="72000">
-          <mods xmi:id="_kebjkj9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZa38otcEeSGSeeIynfV0w" name="Ultrasound Sensor 6" parentId="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="72000">
+          <mods xmi:id="_nZa384tcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kebjkz9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor 6"/>
+          <localizations xmi:id="_nZa39ItcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="92e9d8e5-b9aa-4786-add3-a1d1f82b8ec0" name="Ultrasound Sensor" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10">
-          <mods xmi:id="_kebjlD9XEeSqL_XDQ5rTNg" wert="-25">
+          <mods xmi:id="_nZa39YtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kebjlT9XEeSqL_XDQ5rTNg" local="de" name="Ultraschallsensor"/>
+          <localizations xmi:id="_nZa39otcEeSGSeeIynfV0w" local="de" name="Ultraschallsensor"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kebjlj9XEeSqL_XDQ5rTNg" name="Voice Modulator 1" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="5000">
-          <mods xmi:id="_kebjlz9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZbfAItcEeSGSeeIynfV0w" name="Voice Modulator 1" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="5000">
+          <mods xmi:id="_nZbfAYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecKoD9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 1"/>
+          <localizations xmi:id="_nZbfAotcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kecKoT9XEeSqL_XDQ5rTNg" name="Voice Modulator 2" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="10000">
-          <mods xmi:id="_kecKoj9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZbfA4tcEeSGSeeIynfV0w" name="Voice Modulator 2" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="10000">
+          <mods xmi:id="_nZbfBItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecKoz9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 2"/>
+          <localizations xmi:id="_nZbfBYtcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kecKpD9XEeSqL_XDQ5rTNg" name="Voice Modulator 3" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="15000">
-          <mods xmi:id="_kecKpT9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZbfBotcEeSGSeeIynfV0w" name="Voice Modulator 3" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="15000">
+          <mods xmi:id="_nZbfB4tcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecKpj9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 3"/>
+          <localizations xmi:id="_nZcGEItcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kecKpz9XEeSqL_XDQ5rTNg" name="Voice Modulator 4" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="20000">
-          <mods xmi:id="_kecxsD9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZcGEYtcEeSGSeeIynfV0w" name="Voice Modulator 4" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="20000">
+          <mods xmi:id="_nZcGEotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecxsT9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 4"/>
+          <localizations xmi:id="_nZcGE4tcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kecxsj9XEeSqL_XDQ5rTNg" name="Voice Modulator 5" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="25000">
-          <mods xmi:id="_kecxsz9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZcGFItcEeSGSeeIynfV0w" name="Voice Modulator 5" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="25000">
+          <mods xmi:id="_nZcGFYtcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecxtD9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 5"/>
+          <localizations xmi:id="_nZcGFotcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kecxtT9XEeSqL_XDQ5rTNg" name="Voice Modulator 6" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="30000">
-          <mods xmi:id="_kecxtj9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZcGF4tcEeSGSeeIynfV0w" name="Voice Modulator 6" parentId="ebc25387-655f-4a24-8ae7-81548c097dac" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F" wertValue="30000">
+          <mods xmi:id="_nZctIItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kecxtz9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator 6"/>
+          <localizations xmi:id="_nZctIYtcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ebc25387-655f-4a24-8ae7-81548c097dac" name="Voice Modulator" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3F">
-          <mods xmi:id="_kedYwD9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZctIotcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kedYwT9XEeSqL_XDQ5rTNg" local="de" name="Stimmenmodulator"/>
+          <localizations xmi:id="_nZctI4tcEeSGSeeIynfV0w" local="de" name="Stimmenmodulator"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kedYwj9XEeSqL_XDQ5rTNg" name="Cybereyes Basic System 1" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="4000">
-          <mods xmi:id="_kedYwz9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZctJItcEeSGSeeIynfV0w" name="Cybereyes Basic System 1" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="4000">
+          <mods xmi:id="_nZctJYtcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kedYxD9XEeSqL_XDQ5rTNg" local="de" name="Cyberaugen-Basissystem 1"/>
+          <localizations xmi:id="_nZctJotcEeSGSeeIynfV0w" local="de" name="Cyberaugen-Basissystem 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kedYxT9XEeSqL_XDQ5rTNg" name="Cybereyes Basic System 2" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="6000">
-          <mods xmi:id="_kedYxj9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZctJ4tcEeSGSeeIynfV0w" name="Cybereyes Basic System 2" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="6000">
+          <mods xmi:id="_nZdUMItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kedYxz9XEeSqL_XDQ5rTNg" local="de" name="Cyberaugen-Basissystem 2"/>
+          <localizations xmi:id="_nZdUMYtcEeSGSeeIynfV0w" local="de" name="Cyberaugen-Basissystem 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ked_0D9XEeSqL_XDQ5rTNg" name="Cybereyes Basic System 3" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="10000">
-          <mods xmi:id="_ked_0T9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZdUMotcEeSGSeeIynfV0w" name="Cybereyes Basic System 3" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="10000">
+          <mods xmi:id="_nZdUM4tcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ked_0j9XEeSqL_XDQ5rTNg" local="de" name="Cyberaugen-Basissystem 3"/>
+          <localizations xmi:id="_nZdUNItcEeSGSeeIynfV0w" local="de" name="Cyberaugen-Basissystem 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ked_0z9XEeSqL_XDQ5rTNg" name="Cybereyes Basic System 4" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="14000">
-          <mods xmi:id="_ked_1D9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZdUNYtcEeSGSeeIynfV0w" name="Cybereyes Basic System 4" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="14000">
+          <mods xmi:id="_nZdUNotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ked_1T9XEeSqL_XDQ5rTNg" local="de" name="Cyberaugen-Basissystem 4"/>
+          <localizations xmi:id="_nZdUN4tcEeSGSeeIynfV0w" local="de" name="Cyberaugen-Basissystem 4"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="8e414ade-2764-4dc7-bdc4-83bb4a086034" name="Cybereyes Basic System" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)">
-          <mods xmi:id="_ked_1j9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZdUOItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ked_1z9XEeSqL_XDQ5rTNg" local="de" name="Cyberaugen-Basissystem"/>
+          <localizations xmi:id="_nZd7QItcEeSGSeeIynfV0w" local="de" name="Cyberaugen-Basissystem"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="5921a6ac-1e20-483b-b210-dc84a14d3045" name="Flare Compensation" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1000">
-          <mods xmi:id="_keem4D9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZd7QYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keem4T9XEeSqL_XDQ5rTNg" local="de" name="Blitzkompensation"/>
+          <localizations xmi:id="_nZd7QotcEeSGSeeIynfV0w" local="de" name="Blitzkompensation"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="e03d454f-4a15-43ce-9cd0-db80e8600eae" name="Image Link" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1000">
-          <mods xmi:id="_keem4j9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZd7Q4tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keem4z9XEeSqL_XDQ5rTNg" local="de" name="Bildverbindung"/>
+          <localizations xmi:id="_nZd7RItcEeSGSeeIynfV0w" local="de" name="Bildverbindung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="97910ef7-dc30-4a87-8314-d1e0021dc39c" name="Low-Light Vision" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1500">
-          <mods xmi:id="_keem5D9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZd7RYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keem5T9XEeSqL_XDQ5rTNg" local="de" name="Restlichtverstärkung"/>
+          <localizations xmi:id="_nZd7RotcEeSGSeeIynfV0w" local="de" name="Restlichtverstärkung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="fde2bfc3-c7a2-435e-a220-4896f49d8ca9" name="Ocular Drone" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="6000">
-          <mods xmi:id="_kefN8D9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZeiUItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kefN8T9XEeSqL_XDQ5rTNg" local="de" name="Okular-Drohne"/>
+          <localizations xmi:id="_nZeiUYtcEeSGSeeIynfV0w" local="de" name="Okular-Drohne"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kefN8j9XEeSqL_XDQ5rTNg" name="Retinal Duplication 1" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="20000">
-          <mods xmi:id="_kefN8z9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZeiUotcEeSGSeeIynfV0w" name="Retinal Duplication 1" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="20000">
+          <mods xmi:id="_nZeiU4tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kefN9D9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 1"/>
+          <localizations xmi:id="_nZeiVItcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kefN9T9XEeSqL_XDQ5rTNg" name="Retinal Duplication 2" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="40000">
-          <mods xmi:id="_kefN9j9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZeiVYtcEeSGSeeIynfV0w" name="Retinal Duplication 2" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="40000">
+          <mods xmi:id="_nZeiVotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kefN9z9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 2"/>
+          <localizations xmi:id="_nZfJYItcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kef1AD9XEeSqL_XDQ5rTNg" name="Retinal Duplication 3" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="60000">
-          <mods xmi:id="_kef1AT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZfJYYtcEeSGSeeIynfV0w" name="Retinal Duplication 3" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="60000">
+          <mods xmi:id="_nZfJYotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kef1Aj9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 3"/>
+          <localizations xmi:id="_nZfJY4tcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kef1Az9XEeSqL_XDQ5rTNg" name="Retinal Duplication 4" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="80000">
-          <mods xmi:id="_kef1BD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZfJZItcEeSGSeeIynfV0w" name="Retinal Duplication 4" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="80000">
+          <mods xmi:id="_nZfJZYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kef1BT9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 4"/>
+          <localizations xmi:id="_nZfJZotcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kef1Bj9XEeSqL_XDQ5rTNg" name="Retinal Duplication 5" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="100000">
-          <mods xmi:id="_kef1Bz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZfJZ4tcEeSGSeeIynfV0w" name="Retinal Duplication 5" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="100000">
+          <mods xmi:id="_nZfwcItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kegcED9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 5"/>
+          <localizations xmi:id="_nZfwcYtcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kegcET9XEeSqL_XDQ5rTNg" name="Retinal Duplication 6" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="120000">
-          <mods xmi:id="_kegcEj9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZfwcotcEeSGSeeIynfV0w" name="Retinal Duplication 6" parentId="fb0419a3-6f0d-4fbb-8b37-39e853efa195" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F" wertValue="120000">
+          <mods xmi:id="_nZfwc4tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kegcEz9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat 6"/>
+          <localizations xmi:id="_nZfwdItcEeSGSeeIynfV0w" local="de" name="Retinaduplikat 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="fb0419a3-6f0d-4fbb-8b37-39e853efa195" name="Retinal Duplication" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16F">
-          <mods xmi:id="_kegcFD9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZfwdYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kegcFT9XEeSqL_XDQ5rTNg" local="de" name="Retinaduplikat"/>
+          <localizations xmi:id="_nZfwdotcEeSGSeeIynfV0w" local="de" name="Retinaduplikat"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="35dba0e2-1d3d-4386-a657-17fedca4622d" name="Smartlink" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="4000">
-          <mods xmi:id="_kegcFj9XEeSqL_XDQ5rTNg" wert="-20">
+          <mods xmi:id="_nZgXgItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehDID9XEeSqL_XDQ5rTNg" local="de" name="Smartlink, Smartgunverbindung"/>
+          <localizations xmi:id="_nZgXgYtcEeSGSeeIynfV0w" local="de" name="Smartlink, Smartgunverbindung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ba3204d8-3ec5-4da0-b980-44992a3a4a13" name="Thermographic Vision" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1500">
-          <mods xmi:id="_kehDIT9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZgXgotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehDIj9XEeSqL_XDQ5rTNg" local="de" name="Infrarot"/>
+          <localizations xmi:id="_nZgXg4tcEeSGSeeIynfV0w" local="de" name="Infrarot"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kehDIz9XEeSqL_XDQ5rTNg" name="Vision Enhancement 1" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
-          <mods xmi:id="_kehDJD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZgXhItcEeSGSeeIynfV0w" name="Vision Enhancement 1" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
+          <mods xmi:id="_nZgXhYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehDJT9XEeSqL_XDQ5rTNg" local="de" name="Sichtverbesserung 1"/>
+          <localizations xmi:id="_nZgXhotcEeSGSeeIynfV0w" local="de" name="Sichtverbesserung 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kehDJj9XEeSqL_XDQ5rTNg" name="Vision Enhancement 2" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
-          <mods xmi:id="_kehqMD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZg-kItcEeSGSeeIynfV0w" name="Vision Enhancement 2" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
+          <mods xmi:id="_nZg-kYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehqMT9XEeSqL_XDQ5rTNg" local="de" name="Sichtverbesserung 2"/>
+          <localizations xmi:id="_nZg-kotcEeSGSeeIynfV0w" local="de" name="Sichtverbesserung 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kehqMj9XEeSqL_XDQ5rTNg" name="Vision Enhancement 3" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
-          <mods xmi:id="_kehqMz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZg-k4tcEeSGSeeIynfV0w" name="Vision Enhancement 3" parentId="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
+          <mods xmi:id="_nZg-lItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehqND9XEeSqL_XDQ5rTNg" local="de" name="Sichtverbesserung 3"/>
+          <localizations xmi:id="_nZg-lYtcEeSGSeeIynfV0w" local="de" name="Sichtverbesserung 3"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="35c9c51e-5364-41b4-b3c9-4d1f080bd48c" name="Vision Enhancement" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_kehqNT9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZg-lotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kehqNj9XEeSqL_XDQ5rTNg" local="de" name="Sichtverbesserung"/>
+          <localizations xmi:id="_nZhloItcEeSGSeeIynfV0w" local="de" name="Sichtverbesserung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="2c578376-1219-468d-b76b-4c0da44dfca2" name="Vision Magnification" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="2000">
-          <mods xmi:id="_keiRQD9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZhloYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keiRQT9XEeSqL_XDQ5rTNg" local="de" name="Sichtvergrößerung"/>
+          <localizations xmi:id="_nZhlootcEeSGSeeIynfV0w" local="de" name="Sichtvergrößerung"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keiRQj9XEeSqL_XDQ5rTNg" name="Cyberears 1" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3000">
-          <mods xmi:id="_keiRQz9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZhlo4tcEeSGSeeIynfV0w" name="Cyberears 1" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3000">
+          <mods xmi:id="_nZhlpItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keiRRD9XEeSqL_XDQ5rTNg" local="de" name="Cyberohren 1"/>
+          <localizations xmi:id="_nZhlpYtcEeSGSeeIynfV0w" local="de" name="Cyberohren 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keiRRT9XEeSqL_XDQ5rTNg" name="Cyberears 2" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4500">
-          <mods xmi:id="_keiRRj9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZhlpotcEeSGSeeIynfV0w" name="Cyberears 2" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4500">
+          <mods xmi:id="_nZhlp4tcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keiRRz9XEeSqL_XDQ5rTNg" local="de" name="Cyberohren 2"/>
+          <localizations xmi:id="_nZiMsItcEeSGSeeIynfV0w" local="de" name="Cyberohren 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kei4UD9XEeSqL_XDQ5rTNg" name="Cyberears 3" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="7500">
-          <mods xmi:id="_kei4UT9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZiMsYtcEeSGSeeIynfV0w" name="Cyberears 3" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="7500">
+          <mods xmi:id="_nZiMsotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kei4Uj9XEeSqL_XDQ5rTNg" local="de" name="Cyberohren 3"/>
+          <localizations xmi:id="_nZiMs4tcEeSGSeeIynfV0w" local="de" name="Cyberohren 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kei4Uz9XEeSqL_XDQ5rTNg" name="Cyberears 4" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="11000">
-          <mods xmi:id="_kei4VD9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZiMtItcEeSGSeeIynfV0w" name="Cyberears 4" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="11000">
+          <mods xmi:id="_nZiMtYtcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kei4VT9XEeSqL_XDQ5rTNg" local="de" name="Cyberohren 4"/>
+          <localizations xmi:id="_nZiMtotcEeSGSeeIynfV0w" local="de" name="Cyberohren 4"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" name="Cyberears" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_kei4Vj9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZiMt4tcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kei4Vz9XEeSqL_XDQ5rTNg" local="de" name="Cyberohren"/>
+          <localizations xmi:id="_nZizwItcEeSGSeeIynfV0w" local="de" name="Cyberohren"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kejfYD9XEeSqL_XDQ5rTNg" name="Audio Enhancement 1" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
-          <mods xmi:id="_kejfYT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZizwYtcEeSGSeeIynfV0w" name="Audio Enhancement 1" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4000">
+          <mods xmi:id="_nZizwotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kejfYj9XEeSqL_XDQ5rTNg" local="de" name="Audioverbesserung 1"/>
+          <localizations xmi:id="_nZizw4tcEeSGSeeIynfV0w" local="de" name="Audioverbesserung 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kejfYz9XEeSqL_XDQ5rTNg" name="Audio Enhancement 2" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
-          <mods xmi:id="_kejfZD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZizxItcEeSGSeeIynfV0w" name="Audio Enhancement 2" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="8000">
+          <mods xmi:id="_nZizxYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kejfZT9XEeSqL_XDQ5rTNg" local="de" name="Audioverbesserung 2"/>
+          <localizations xmi:id="_nZizxotcEeSGSeeIynfV0w" local="de" name="Audioverbesserung 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kejfZj9XEeSqL_XDQ5rTNg" name="Audio Enhancement 3" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
-          <mods xmi:id="_kekGcD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZja0ItcEeSGSeeIynfV0w" name="Audio Enhancement 3" parentId="9cdee6a3-a04e-40a1-95ce-e509b26b192c" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="12000">
+          <mods xmi:id="_nZja0YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kekGcT9XEeSqL_XDQ5rTNg" local="de" name="Audioverbesserung 3"/>
+          <localizations xmi:id="_nZja0otcEeSGSeeIynfV0w" local="de" name="Audioverbesserung 3"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="9cdee6a3-a04e-40a1-95ce-e509b26b192c" name="Audio Enhancement" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_kekGcj9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZja04tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kekGcz9XEeSqL_XDQ5rTNg" local="de" name="Audioverbesserung"/>
+          <localizations xmi:id="_nZja1ItcEeSGSeeIynfV0w" local="de" name="Audioverbesserung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="31d82330-4650-4550-aa90-c314a189f897" name="Balance Augmenter" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="8000">
-          <mods xmi:id="_kekGdD9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZja1YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kekGdT9XEeSqL_XDQ5rTNg" local="de" name="Balanceverstärker"/>
+          <localizations xmi:id="_nZja1otcEeSGSeeIynfV0w" local="de" name="Balanceverstärker"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="3785a2cf-c3df-476a-b7cd-6e224ea77ab0" name="Damper" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="2250">
-          <mods xmi:id="_kektgD9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZkB4ItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kektgT9XEeSqL_XDQ5rTNg" local="de" name="Dämpfer"/>
+          <localizations xmi:id="_nZkB4YtcEeSGSeeIynfV0w" local="de" name="Dämpfer"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kektgj9XEeSqL_XDQ5rTNg" name="Select Sound Filter 1" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3500">
-          <mods xmi:id="_kektgz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZkB4otcEeSGSeeIynfV0w" name="Select Sound Filter 1" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3500">
+          <mods xmi:id="_nZkB44tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kekthD9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 1"/>
+          <localizations xmi:id="_nZkB5ItcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kekthT9XEeSqL_XDQ5rTNg" name="Select Sound Filter 2" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="7000">
-          <mods xmi:id="_kekthj9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZkB5YtcEeSGSeeIynfV0w" name="Select Sound Filter 2" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="7000">
+          <mods xmi:id="_nZkB5otcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kekthz9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 2"/>
+          <localizations xmi:id="_nZkB54tcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kelUkD9XEeSqL_XDQ5rTNg" name="Select Sound Filter 3" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="10500">
-          <mods xmi:id="_kelUkT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZko8ItcEeSGSeeIynfV0w" name="Select Sound Filter 3" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="10500">
+          <mods xmi:id="_nZko8YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kelUkj9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 3"/>
+          <localizations xmi:id="_nZko8otcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kelUkz9XEeSqL_XDQ5rTNg" name="Select Sound Filter 4" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="14000">
-          <mods xmi:id="_kelUlD9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZko84tcEeSGSeeIynfV0w" name="Select Sound Filter 4" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="14000">
+          <mods xmi:id="_nZko9ItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kelUlT9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 4"/>
+          <localizations xmi:id="_nZko9YtcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kelUlj9XEeSqL_XDQ5rTNg" name="Select Sound Filter 5" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="17500">
-          <mods xmi:id="_kelUlz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZko9otcEeSGSeeIynfV0w" name="Select Sound Filter 5" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="17500">
+          <mods xmi:id="_nZko94tcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kelUmD9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 5"/>
+          <localizations xmi:id="_nZlQAItcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kel7oD9XEeSqL_XDQ5rTNg" name="Select Sound Filter 6" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="21000">
-          <mods xmi:id="_kel7oT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZlQAYtcEeSGSeeIynfV0w" name="Select Sound Filter 6" parentId="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="21000">
+          <mods xmi:id="_nZlQAotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kel7oj9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter 6"/>
+          <localizations xmi:id="_nZlQA4tcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter 6"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ab2e5330-25c6-4460-bab7-35a9e6b9aeb1" name="Select Sound Filter" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3">
-          <mods xmi:id="_kel7oz9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZlQBItcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kel7pD9XEeSqL_XDQ5rTNg" local="de" name="Selektiver Geräuschfilter"/>
+          <localizations xmi:id="_nZlQBYtcEeSGSeeIynfV0w" local="de" name="Selektiver Geräuschfilter"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="e0212e7e-e690-41d8-a461-4834a668d9c8" name="Sound Link" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1000">
-          <mods xmi:id="_kel7pT9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZlQBotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kel7pj9XEeSqL_XDQ5rTNg" local="de" name="Audioverbindung"/>
+          <localizations xmi:id="_nZl3EItcEeSGSeeIynfV0w" local="de" name="Audioverbindung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="004b7eb4-190e-4903-8308-27fe9b2f626b" name="Spatial Recognizer" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="4000">
-          <mods xmi:id="_kemisD9XEeSqL_XDQ5rTNg" wert="-10">
+          <mods xmi:id="_nZl3EYtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kemisT9XEeSqL_XDQ5rTNg" local="de" name="Richtungsdetektor"/>
+          <localizations xmi:id="_nZl3EotcEeSGSeeIynfV0w" local="de" name="Richtungsdetektor"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="76523da7-271d-459a-9502-3f7c8d54be6a" name="Bone Lacing (Aluminum)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="18000">
-          <mods xmi:id="_kemisj9XEeSqL_XDQ5rTNg" wert="2">
+        <entries xsi:type="shr5:Cyberware" xmi:id="76523da7-271d-459a-9502-3f7c8d54be6a" name="Bone Lacing (Aluminum)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="18000" type="bodyware">
+          <mods xmi:id="_nZl3E4tcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kemisz9XEeSqL_XDQ5rTNg" wert="2">
+          <mods xmi:id="_nZl3FItcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
           </mods>
-          <mods xmi:id="_kemitD9XEeSqL_XDQ5rTNg" wert="-100">
+          <mods xmi:id="_nZl3FYtcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kemitT9XEeSqL_XDQ5rTNg" local="de" name="Kompositknochen (Aluminium)"/>
+          <localizations xmi:id="_nZl3FotcEeSGSeeIynfV0w" local="de" name="Kompositknochen (Aluminium)"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="4fd033ab-9a43-4ee0-9675-47414af3c8f4" name="Bone Lacing (Plastic)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="8000">
-          <mods xmi:id="_kenJwD9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="4fd033ab-9a43-4ee0-9675-47414af3c8f4" name="Bone Lacing (Plastic)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="8000" type="bodyware">
+          <mods xmi:id="_nZmeIItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kenJwT9XEeSqL_XDQ5rTNg" wert="1">
+          <mods xmi:id="_nZmeIYtcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
           </mods>
-          <mods xmi:id="_kenJwj9XEeSqL_XDQ5rTNg" wert="-50">
+          <mods xmi:id="_nZmeIotcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kenJwz9XEeSqL_XDQ5rTNg" local="de" name="Kompositknochen (Plastik)"/>
+          <localizations xmi:id="_nZmeI4tcEeSGSeeIynfV0w" local="de" name="Kompositknochen (Plastik)"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="2ecc8684-5a9f-4523-beb8-d3abc886a233" name="Bone Lacing (Titanium)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16R" wertValue="30000">
-          <mods xmi:id="_kenJxD9XEeSqL_XDQ5rTNg" wert="3">
+        <entries xsi:type="shr5:Cyberware" xmi:id="2ecc8684-5a9f-4523-beb8-d3abc886a233" name="Bone Lacing (Titanium)" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16R" wertValue="30000" type="bodyware">
+          <mods xmi:id="_nZmeJItcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kenJxT9XEeSqL_XDQ5rTNg" wert="3">
+          <mods xmi:id="_nZmeJYtcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
           </mods>
-          <mods xmi:id="_kenJxj9XEeSqL_XDQ5rTNg" wert="-150">
+          <mods xmi:id="_nZmeJotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kenJxz9XEeSqL_XDQ5rTNg" local="de" name="Kompositknochen (Titan)"/>
+          <localizations xmi:id="_nZnFMItcEeSGSeeIynfV0w" local="de" name="Kompositknochen (Titan)"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kenw0D9XEeSqL_XDQ5rTNg" name="Dermal Plating 1" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="3000">
-          <mods xmi:id="_kenw0T9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZnFMYtcEeSGSeeIynfV0w" name="Dermal Plating 1" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="3000" type="bodyware">
+          <mods xmi:id="_nZnFMotcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kenw0j9XEeSqL_XDQ5rTNg" wert="-50">
+          <mods xmi:id="_nZnFM4tcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kenw0z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 1"/>
+          <localizations xmi:id="_nZnFNItcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kenw1D9XEeSqL_XDQ5rTNg" name="Dermal Plating 2" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="6000">
-          <mods xmi:id="_kenw1T9XEeSqL_XDQ5rTNg" wert="2">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZnFNYtcEeSGSeeIynfV0w" name="Dermal Plating 2" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="6000" type="bodyware">
+          <mods xmi:id="_nZnFNotcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kenw1j9XEeSqL_XDQ5rTNg" wert="-100">
+          <mods xmi:id="_nZnFN4tcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kenw1z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 2"/>
+          <localizations xmi:id="_nZnFOItcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keoX4D9XEeSqL_XDQ5rTNg" name="Dermal Plating 3" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="9000">
-          <mods xmi:id="_keoX4T9XEeSqL_XDQ5rTNg" wert="3">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZnsQItcEeSGSeeIynfV0w" name="Dermal Plating 3" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="9000" type="bodyware">
+          <mods xmi:id="_nZnsQYtcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_keoX4j9XEeSqL_XDQ5rTNg" wert="-150">
+          <mods xmi:id="_nZnsQotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keoX4z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 3"/>
+          <localizations xmi:id="_nZnsQ4tcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keoX5D9XEeSqL_XDQ5rTNg" name="Dermal Plating 4" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="12000">
-          <mods xmi:id="_keoX5T9XEeSqL_XDQ5rTNg" wert="4">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZnsRItcEeSGSeeIynfV0w" name="Dermal Plating 4" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="12000" type="bodyware">
+          <mods xmi:id="_nZnsRYtcEeSGSeeIynfV0w" wert="4">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_keoX5j9XEeSqL_XDQ5rTNg" wert="-200">
+          <mods xmi:id="_nZnsRotcEeSGSeeIynfV0w" wert="-200">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keoX5z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 4"/>
+          <localizations xmi:id="_nZnsR4tcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keo-8D9XEeSqL_XDQ5rTNg" name="Dermal Plating 5" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="15000">
-          <mods xmi:id="_keo-8T9XEeSqL_XDQ5rTNg" wert="5">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZoTUItcEeSGSeeIynfV0w" name="Dermal Plating 5" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="15000" type="bodyware">
+          <mods xmi:id="_nZoTUYtcEeSGSeeIynfV0w" wert="5">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_keo-8j9XEeSqL_XDQ5rTNg" wert="-250">
+          <mods xmi:id="_nZoTUotcEeSGSeeIynfV0w" wert="-250">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keo-8z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 5"/>
+          <localizations xmi:id="_nZoTU4tcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keo-9D9XEeSqL_XDQ5rTNg" name="Dermal Plating 6" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="18000">
-          <mods xmi:id="_keo-9T9XEeSqL_XDQ5rTNg" wert="6">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZoTVItcEeSGSeeIynfV0w" name="Dermal Plating 6" parentId="6ba5239b-651e-456a-bcc9-f58d975d2397" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="18000" type="bodyware">
+          <mods xmi:id="_nZoTVYtcEeSGSeeIynfV0w" wert="6">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_keo-9j9XEeSqL_XDQ5rTNg" wert="-300">
+          <mods xmi:id="_nZoTVotcEeSGSeeIynfV0w" wert="-300">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keo-9z9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung 6"/>
+          <localizations xmi:id="_nZoTV4tcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung 6"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="6ba5239b-651e-456a-bcc9-f58d975d2397" name="Dermal Plating" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R">
-          <mods xmi:id="_kepmAD9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="6ba5239b-651e-456a-bcc9-f58d975d2397" name="Dermal Plating" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" type="bodyware">
+          <mods xmi:id="_nZoTWItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
-          <mods xmi:id="_kepmAT9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZo6YItcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kepmAj9XEeSqL_XDQ5rTNg" local="de" name="Dermalpanzerung"/>
+          <localizations xmi:id="_nZo6YYtcEeSGSeeIynfV0w" local="de" name="Dermalpanzerung"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="be1ed1c6-9a80-4299-9df3-335c59506027" name="Fingertip Compartment" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="3000">
-          <mods xmi:id="_kepmAz9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="be1ed1c6-9a80-4299-9df3-335c59506027" name="Fingertip Compartment" page="454" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="3000" type="bodyware">
+          <mods xmi:id="_nZo6YotcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kepmBD9XEeSqL_XDQ5rTNg" local="de" name="Fingerkuppenbehälter"/>
+          <localizations xmi:id="_nZo6Y4tcEeSGSeeIynfV0w" local="de" name="Fingerkuppenbehälter"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="f145d15f-37e7-4961-98ba-38146dc849c9" name="Grapple Gun" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="5000">
-          <mods xmi:id="_kepmBT9XEeSqL_XDQ5rTNg" wert="-50">
+        <entries xsi:type="shr5:Cyberware" xmi:id="f145d15f-37e7-4961-98ba-38146dc849c9" name="Grapple Gun" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="5000" type="bodyware">
+          <mods xmi:id="_nZo6ZItcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keqNED9XEeSqL_XDQ5rTNg" local="de" name="Enterhakenkanone"/>
+          <localizations xmi:id="_nZo6ZYtcEeSGSeeIynfV0w" local="de" name="Enterhakenkanone"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keqNET9XEeSqL_XDQ5rTNg" name="Internal Air Tank 1" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="4500">
-          <mods xmi:id="_keqNEj9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZphcItcEeSGSeeIynfV0w" name="Internal Air Tank 1" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="4500" type="bodyware">
+          <mods xmi:id="_nZphcYtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keqNEz9XEeSqL_XDQ5rTNg" local="de" name="Interner Lufttank 1"/>
+          <localizations xmi:id="_nZphcotcEeSGSeeIynfV0w" local="de" name="Interner Lufttank 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keqNFD9XEeSqL_XDQ5rTNg" name="Internal Air Tank 2" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="9000">
-          <mods xmi:id="_keqNFT9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZphc4tcEeSGSeeIynfV0w" name="Internal Air Tank 2" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="9000" type="bodyware">
+          <mods xmi:id="_nZphdItcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keqNFj9XEeSqL_XDQ5rTNg" local="de" name="Interner Lufttank 2"/>
+          <localizations xmi:id="_nZphdYtcEeSGSeeIynfV0w" local="de" name="Interner Lufttank 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keqNFz9XEeSqL_XDQ5rTNg" name="Internal Air Tank 3" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="13500">
-          <mods xmi:id="_keq0ID9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZphdotcEeSGSeeIynfV0w" name="Internal Air Tank 3" parentId="02ae9eca-ad70-4c27-8c1d-dec355265b8f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" wertValue="13500" type="bodyware">
+          <mods xmi:id="_nZphd4tcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keq0IT9XEeSqL_XDQ5rTNg" local="de" name="Interner Lufttank 3"/>
+          <localizations xmi:id="_nZqIgItcEeSGSeeIynfV0w" local="de" name="Interner Lufttank 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="02ae9eca-ad70-4c27-8c1d-dec355265b8f" name="Internal Air Tank" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating">
-          <mods xmi:id="_keq0Ij9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="02ae9eca-ad70-4c27-8c1d-dec355265b8f" name="Internal Air Tank" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" type="bodyware">
+          <mods xmi:id="_nZqIgYtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keq0Iz9XEeSqL_XDQ5rTNg" local="de" name="Interner Lufttank"/>
+          <localizations xmi:id="_nZqIgotcEeSGSeeIynfV0w" local="de" name="Interner Lufttank"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keq0JD9XEeSqL_XDQ5rTNg" name="Muscle Replacement 1" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="25000">
-          <mods xmi:id="_keq0JT9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZqIg4tcEeSGSeeIynfV0w" name="Muscle Replacement 1" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="25000" type="bodyware">
+          <mods xmi:id="_nZqIhItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
           </mods>
-          <mods xmi:id="_keq0Jj9XEeSqL_XDQ5rTNg" wert="1">
+          <mods xmi:id="_nZqIhYtcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
           </mods>
-          <mods xmi:id="_keq0Jz9XEeSqL_XDQ5rTNg" wert="-100">
+          <mods xmi:id="_nZqIhotcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kerbMD9XEeSqL_XDQ5rTNg" local="de" name="Kunstmuskeln 1"/>
+          <localizations xmi:id="_nZqIh4tcEeSGSeeIynfV0w" local="de" name="Kunstmuskeln 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kerbMT9XEeSqL_XDQ5rTNg" name="Muscle Replacement 2" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="50000">
-          <mods xmi:id="_kerbMj9XEeSqL_XDQ5rTNg" wert="2">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZqvkItcEeSGSeeIynfV0w" name="Muscle Replacement 2" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="50000" type="bodyware">
+          <mods xmi:id="_nZqvkYtcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
           </mods>
-          <mods xmi:id="_kerbMz9XEeSqL_XDQ5rTNg" wert="2">
+          <mods xmi:id="_nZqvkotcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
           </mods>
-          <mods xmi:id="_kerbND9XEeSqL_XDQ5rTNg" wert="-200">
+          <mods xmi:id="_nZqvk4tcEeSGSeeIynfV0w" wert="-200">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kerbNT9XEeSqL_XDQ5rTNg" local="de" name="Kunstmuskeln 2"/>
+          <localizations xmi:id="_nZqvlItcEeSGSeeIynfV0w" local="de" name="Kunstmuskeln 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kerbNj9XEeSqL_XDQ5rTNg" name="Muscle Replacement 3" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="75000">
-          <mods xmi:id="_kerbNz9XEeSqL_XDQ5rTNg" wert="3">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZqvlYtcEeSGSeeIynfV0w" name="Muscle Replacement 3" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="75000" type="bodyware">
+          <mods xmi:id="_nZqvlotcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
           </mods>
-          <mods xmi:id="_kerbOD9XEeSqL_XDQ5rTNg" wert="3">
+          <mods xmi:id="_nZqvl4tcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
           </mods>
-          <mods xmi:id="_kesCQD9XEeSqL_XDQ5rTNg" wert="-300">
+          <mods xmi:id="_nZrWoItcEeSGSeeIynfV0w" wert="-300">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kesCQT9XEeSqL_XDQ5rTNg" local="de" name="Kunstmuskeln 3"/>
+          <localizations xmi:id="_nZrWoYtcEeSGSeeIynfV0w" local="de" name="Kunstmuskeln 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kesCQj9XEeSqL_XDQ5rTNg" name="Muscle Replacement 4" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="100000">
-          <mods xmi:id="_kesCQz9XEeSqL_XDQ5rTNg" wert="4">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZrWootcEeSGSeeIynfV0w" name="Muscle Replacement 4" parentId="46f80a44-80ae-41d7-a7c8-a119c4cff70f" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="100000" type="bodyware">
+          <mods xmi:id="_nZrWo4tcEeSGSeeIynfV0w" wert="4">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
           </mods>
-          <mods xmi:id="_kesCRD9XEeSqL_XDQ5rTNg" wert="4">
+          <mods xmi:id="_nZrWpItcEeSGSeeIynfV0w" wert="4">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
           </mods>
-          <mods xmi:id="_kesCRT9XEeSqL_XDQ5rTNg" wert="-400">
+          <mods xmi:id="_nZrWpYtcEeSGSeeIynfV0w" wert="-400">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kesCRj9XEeSqL_XDQ5rTNg" local="de" name="Kunstmuskeln 4"/>
+          <localizations xmi:id="_nZrWpotcEeSGSeeIynfV0w" local="de" name="Kunstmuskeln 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="46f80a44-80ae-41d7-a7c8-a119c4cff70f" name="Muscle Replacement" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R">
-          <mods xmi:id="_kesCRz9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="46f80a44-80ae-41d7-a7c8-a119c4cff70f" name="Muscle Replacement" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" type="bodyware">
+          <mods xmi:id="_nZrWp4tcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
           </mods>
-          <mods xmi:id="_kesCSD9XEeSqL_XDQ5rTNg" wert="1">
+          <mods xmi:id="_nZr9sItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
           </mods>
-          <mods xmi:id="_kespUD9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZr9sYtcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kespUT9XEeSqL_XDQ5rTNg" local="de" name="Kunstmuskeln"/>
+          <localizations xmi:id="_nZr9sotcEeSGSeeIynfV0w" local="de" name="Kunstmuskeln"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kespUj9XEeSqL_XDQ5rTNg" name="Reaction Enhancers 1" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="13000">
-          <mods xmi:id="_kespUz9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZr9s4tcEeSGSeeIynfV0w" name="Reaction Enhancers 1" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="13000" type="bodyware">
+          <mods xmi:id="_nZr9tItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kespVD9XEeSqL_XDQ5rTNg" wert="-30">
+          <mods xmi:id="_nZr9tYtcEeSGSeeIynfV0w" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kespVT9XEeSqL_XDQ5rTNg" local="de" name="Reaktionsverbesserung 1"/>
+          <localizations xmi:id="_nZr9totcEeSGSeeIynfV0w" local="de" name="Reaktionsverbesserung 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kespVj9XEeSqL_XDQ5rTNg" name="Reaction Enhancers 2" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="26000">
-          <mods xmi:id="_kespVz9XEeSqL_XDQ5rTNg" wert="2">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZr9t4tcEeSGSeeIynfV0w" name="Reaction Enhancers 2" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="26000" type="bodyware">
+          <mods xmi:id="_nZr9uItcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kespWD9XEeSqL_XDQ5rTNg" wert="-60">
+          <mods xmi:id="_nZskwItcEeSGSeeIynfV0w" wert="-60">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ketQYD9XEeSqL_XDQ5rTNg" local="de" name="Reaktionsverbesserung 2"/>
+          <localizations xmi:id="_nZskwYtcEeSGSeeIynfV0w" local="de" name="Reaktionsverbesserung 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ketQYT9XEeSqL_XDQ5rTNg" name="Reaction Enhancers 3" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="39000">
-          <mods xmi:id="_ketQYj9XEeSqL_XDQ5rTNg" wert="3">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZskwotcEeSGSeeIynfV0w" name="Reaction Enhancers 3" parentId="4cef53aa-13ea-4f28-8fbf-e3b254248247" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" wertValue="39000" type="bodyware">
+          <mods xmi:id="_nZskw4tcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_ketQYz9XEeSqL_XDQ5rTNg" wert="-90">
+          <mods xmi:id="_nZskxItcEeSGSeeIynfV0w" wert="-90">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ketQZD9XEeSqL_XDQ5rTNg" local="de" name="Reaktionsverbesserung 3"/>
+          <localizations xmi:id="_nZskxYtcEeSGSeeIynfV0w" local="de" name="Reaktionsverbesserung 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="4cef53aa-13ea-4f28-8fbf-e3b254248247" name="Reaction Enhancers" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R">
-          <mods xmi:id="_ketQZT9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="4cef53aa-13ea-4f28-8fbf-e3b254248247" name="Reaction Enhancers" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 5)R" type="bodyware">
+          <mods xmi:id="_nZskxotcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_ketQZj9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZskx4tcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ketQZz9XEeSqL_XDQ5rTNg" local="de" name="Reaktionsverbesserung"/>
+          <localizations xmi:id="_nZskyItcEeSGSeeIynfV0w" local="de" name="Reaktionsverbesserung"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ket3cD9XEeSqL_XDQ5rTNg" name="Skillwires 1" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="20000">
-          <mods xmi:id="_ket3cT9XEeSqL_XDQ5rTNg" wert="-10">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZtL0ItcEeSGSeeIynfV0w" name="Skillwires 1" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="20000" type="bodyware">
+          <mods xmi:id="_nZtL0YtcEeSGSeeIynfV0w" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ket3cj9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 1"/>
+          <localizations xmi:id="_nZtL0otcEeSGSeeIynfV0w" local="de" name="Talentleitungen 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ket3cz9XEeSqL_XDQ5rTNg" name="Skillwires 2" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="40000">
-          <mods xmi:id="_ket3dD9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZtL04tcEeSGSeeIynfV0w" name="Skillwires 2" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="40000" type="bodyware">
+          <mods xmi:id="_nZtL1ItcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_ket3dT9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 2"/>
+          <localizations xmi:id="_nZtL1YtcEeSGSeeIynfV0w" local="de" name="Talentleitungen 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_ket3dj9XEeSqL_XDQ5rTNg" name="Skillwires 3" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="60000">
-          <mods xmi:id="_ket3dz9XEeSqL_XDQ5rTNg" wert="-30">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZtL1otcEeSGSeeIynfV0w" name="Skillwires 3" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="60000" type="bodyware">
+          <mods xmi:id="_nZtL14tcEeSGSeeIynfV0w" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keuegD9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 3"/>
+          <localizations xmi:id="_nZtL2ItcEeSGSeeIynfV0w" local="de" name="Talentleitungen 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keuegT9XEeSqL_XDQ5rTNg" name="Skillwires 4" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="80000">
-          <mods xmi:id="_keuegj9XEeSqL_XDQ5rTNg" wert="-40">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZty4ItcEeSGSeeIynfV0w" name="Skillwires 4" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="80000" type="bodyware">
+          <mods xmi:id="_nZty4YtcEeSGSeeIynfV0w" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keuegz9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 4"/>
+          <localizations xmi:id="_nZty4otcEeSGSeeIynfV0w" local="de" name="Talentleitungen 4"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keuehD9XEeSqL_XDQ5rTNg" name="Skillwires 5" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="100000">
-          <mods xmi:id="_keuehT9XEeSqL_XDQ5rTNg" wert="-50">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZty44tcEeSGSeeIynfV0w" name="Skillwires 5" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="100000" type="bodyware">
+          <mods xmi:id="_nZty5ItcEeSGSeeIynfV0w" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keuehj9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 5"/>
+          <localizations xmi:id="_nZty5YtcEeSGSeeIynfV0w" local="de" name="Talentleitungen 5"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_keuehz9XEeSqL_XDQ5rTNg" name="Skillwires 6" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="120000">
-          <mods xmi:id="_keueiD9XEeSqL_XDQ5rTNg" wert="-60">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZty5otcEeSGSeeIynfV0w" name="Skillwires 6" parentId="60485c4e-042f-44f6-ad89-324003223f73" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" wertValue="120000" type="bodyware">
+          <mods xmi:id="_nZty54tcEeSGSeeIynfV0w" wert="-60">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kevFkD9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen 6"/>
+          <localizations xmi:id="_nZuZ8ItcEeSGSeeIynfV0w" local="de" name="Talentleitungen 6"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="60485c4e-042f-44f6-ad89-324003223f73" name="Skillwires" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)">
-          <mods xmi:id="_kevFkT9XEeSqL_XDQ5rTNg">
+        <entries xsi:type="shr5:Cyberware" xmi:id="60485c4e-042f-44f6-ad89-324003223f73" name="Skillwires" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)" type="bodyware">
+          <mods xmi:id="_nZuZ8YtcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kevFkj9XEeSqL_XDQ5rTNg" local="de" name="Talentleitungen"/>
+          <localizations xmi:id="_nZuZ8otcEeSGSeeIynfV0w" local="de" name="Talentleitungen"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="21055f0b-4f4d-4286-8cfb-e251e5898c04" name="Smuggling Compartment" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="7500">
-          <mods xmi:id="_kevFkz9XEeSqL_XDQ5rTNg" wert="-20">
+        <entries xsi:type="shr5:Cyberware" xmi:id="21055f0b-4f4d-4286-8cfb-e251e5898c04" name="Smuggling Compartment" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="7500" type="bodyware">
+          <mods xmi:id="_nZuZ84tcEeSGSeeIynfV0w" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kevFlD9XEeSqL_XDQ5rTNg" local="de" name="Schmuggelbehälter"/>
+          <localizations xmi:id="_nZuZ9ItcEeSGSeeIynfV0w" local="de" name="Schmuggelbehälter"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kevFlT9XEeSqL_XDQ5rTNg" name="Wired Reflexes 1" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="39000">
-          <mods xmi:id="_kevFlj9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZuZ9YtcEeSGSeeIynfV0w" name="Wired Reflexes 1" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="39000" type="bodyware">
+          <mods xmi:id="_nZuZ9otcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
           </mods>
-          <mods xmi:id="_kevsoD9XEeSqL_XDQ5rTNg" wert="1">
+          <mods xmi:id="_nZvBAItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kevsoT9XEeSqL_XDQ5rTNg" wert="-200">
+          <mods xmi:id="_nZvBAYtcEeSGSeeIynfV0w" wert="-200">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kevsoj9XEeSqL_XDQ5rTNg" local="de" name="Reflexbooster 1"/>
+          <localizations xmi:id="_nZvBAotcEeSGSeeIynfV0w" local="de" name="Reflexbooster 1"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kevsoz9XEeSqL_XDQ5rTNg" name="Wired Reflexes 2" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="149000">
-          <mods xmi:id="_kevspD9XEeSqL_XDQ5rTNg" wert="2">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZvBA4tcEeSGSeeIynfV0w" name="Wired Reflexes 2" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="149000" type="bodyware">
+          <mods xmi:id="_nZvBBItcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
           </mods>
-          <mods xmi:id="_kevspT9XEeSqL_XDQ5rTNg" wert="2">
+          <mods xmi:id="_nZvBBYtcEeSGSeeIynfV0w" wert="2">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kevspj9XEeSqL_XDQ5rTNg" wert="-300">
+          <mods xmi:id="_nZvBBotcEeSGSeeIynfV0w" wert="-300">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kevspz9XEeSqL_XDQ5rTNg" local="de" name="Reflexbooster 2"/>
+          <localizations xmi:id="_nZvBB4tcEeSGSeeIynfV0w" local="de" name="Reflexbooster 2"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="_kevsqD9XEeSqL_XDQ5rTNg" name="Wired Reflexes 3" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="217000">
-          <mods xmi:id="_kewTsD9XEeSqL_XDQ5rTNg" wert="3">
+        <entries xsi:type="shr5:Cyberware" xmi:id="_nZvBCItcEeSGSeeIynfV0w" name="Wired Reflexes 3" parentId="bea0ded3-821f-449c-9507-815088f68b86" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" wertValue="217000" type="bodyware">
+          <mods xmi:id="_nZvoEItcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
           </mods>
-          <mods xmi:id="_kewTsT9XEeSqL_XDQ5rTNg" wert="3">
+          <mods xmi:id="_nZvoEYtcEeSGSeeIynfV0w" wert="3">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kewTsj9XEeSqL_XDQ5rTNg" wert="-500">
+          <mods xmi:id="_nZvoEotcEeSGSeeIynfV0w" wert="-500">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kewTsz9XEeSqL_XDQ5rTNg" local="de" name="Reflexbooster 3"/>
+          <localizations xmi:id="_nZvoE4tcEeSGSeeIynfV0w" local="de" name="Reflexbooster 3"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="bea0ded3-821f-449c-9507-815088f68b86" name="Wired Reflexes" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)">
-          <mods xmi:id="_kewTtD9XEeSqL_XDQ5rTNg" wert="1">
+        <entries xsi:type="shr5:Cyberware" xmi:id="bea0ded3-821f-449c-9507-815088f68b86" name="Wired Reflexes" page="455" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="FixedValues(8R,12R,20R)" type="bodyware">
+          <mods xmi:id="_nZvoFItcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
           </mods>
-          <mods xmi:id="_kewTtT9XEeSqL_XDQ5rTNg" wert="1">
+          <mods xmi:id="_nZvoFYtcEeSGSeeIynfV0w" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
           </mods>
-          <mods xmi:id="_kewTtj9XEeSqL_XDQ5rTNg">
+          <mods xmi:id="_nZvoFotcEeSGSeeIynfV0w">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kewTtz9XEeSqL_XDQ5rTNg" local="de" name="Reflexbooster"/>
+          <localizations xmi:id="_nZvoF4tcEeSGSeeIynfV0w" local="de" name="Reflexbooster"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="df01eed6-a019-4198-b88d-4ba8f9aaefdf" name="Obvious Full Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="15000">
-          <mods xmi:id="_kew6wD9XEeSqL_XDQ5rTNg" wert="-100">
+        <entries xsi:type="shr5:Cyberware" xmi:id="df01eed6-a019-4198-b88d-4ba8f9aaefdf" name="Obvious Full Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="15000" cyberwareCapacity="15" type="cyberlimb">
+          <mods xmi:id="_nZwPIItcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kew6wT9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Ganzer Arm"/>
+          <localizations xmi:id="_nZwPIYtcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Ganzer Arm"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="c7b88f7e-4e3c-4c29-9f86-a4e244ec5066" name="Obvious Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="15000">
-          <mods xmi:id="_kew6wj9XEeSqL_XDQ5rTNg" wert="-100">
+        <entries xsi:type="shr5:Cyberware" xmi:id="c7b88f7e-4e3c-4c29-9f86-a4e244ec5066" name="Obvious Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="15000" cyberwareCapacity="20" type="cyberlimb">
+          <mods xmi:id="_nZwPIotcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kew6wz9XEeSqL_XDQ5rTNg" local="de" name="Offensichtliches Ganzes Bein"/>
+          <localizations xmi:id="_nZwPI4tcEeSGSeeIynfV0w" local="de" name="Offensichtliches Ganzes Bein"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="eee044c5-3586-4f04-9577-5e290466c485" name="Obvious Foot" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="5000">
-          <mods xmi:id="_kew6xD9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="eee044c5-3586-4f04-9577-5e290466c485" name="Obvious Foot" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="5000" cyberwareCapacity="4" type="cyberlimb">
+          <mods xmi:id="_nZwPJItcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kew6xT9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Fuß"/>
+          <localizations xmi:id="_nZw2MItcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Fuß"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="cc503281-ff05-4e22-9121-09116a4a8306" name="Obvious Hand" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="5000">
-          <mods xmi:id="_kexh0D9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="cc503281-ff05-4e22-9121-09116a4a8306" name="Obvious Hand" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="5000" cyberwareCapacity="4" type="cyberlimb">
+          <mods xmi:id="_nZw2MYtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kexh0T9XEeSqL_XDQ5rTNg" local="de" name="Offensichtliche Hand"/>
+          <localizations xmi:id="_nZw2MotcEeSGSeeIynfV0w" local="de" name="Offensichtliche Hand"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="fdb0ef96-2234-46fa-9d51-55c7d1164b7a" name="Obvious Lower Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="10000">
-          <mods xmi:id="_kexh0j9XEeSqL_XDQ5rTNg" wert="-45">
+        <entries xsi:type="shr5:Cyberware" xmi:id="fdb0ef96-2234-46fa-9d51-55c7d1164b7a" name="Obvious Lower Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="10000" cyberwareCapacity="10" type="cyberlimb">
+          <mods xmi:id="_nZw2M4tcEeSGSeeIynfV0w" wert="-45">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kexh0z9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Unterarm"/>
+          <localizations xmi:id="_nZw2NItcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Unterarm"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="f769235c-c295-4c31-9843-e9d413d77adf" name="Obvious Lower Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="10000">
-          <mods xmi:id="_kexh1D9XEeSqL_XDQ5rTNg" wert="-45">
+        <entries xsi:type="shr5:Cyberware" xmi:id="f769235c-c295-4c31-9843-e9d413d77adf" name="Obvious Lower Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="10000" cyberwareCapacity="12" type="cyberlimb">
+          <mods xmi:id="_nZxdQItcEeSGSeeIynfV0w" wert="-45">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kexh1T9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Unterschenkel"/>
+          <localizations xmi:id="_nZxdQYtcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Unterschenkel"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="48e490fb-fe6a-482c-a47d-40cb04985897" name="Obvious Torso" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="20000">
-          <mods xmi:id="_keyI4D9XEeSqL_XDQ5rTNg" wert="-150">
+        <entries xsi:type="shr5:Cyberware" xmi:id="48e490fb-fe6a-482c-a47d-40cb04985897" name="Obvious Torso" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="20000" cyberwareCapacity="10" type="cyberlimb">
+          <mods xmi:id="_nZxdQotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyI4T9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Torso"/>
+          <localizations xmi:id="_nZxdQ4tcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Torso"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="ea676290-1859-4a56-86f8-a3fb90decc32" name="Obvious Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="10000">
-          <mods xmi:id="_keyI4j9XEeSqL_XDQ5rTNg" wert="-75">
+        <entries xsi:type="shr5:Cyberware" xmi:id="ea676290-1859-4a56-86f8-a3fb90decc32" name="Obvious Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="10000" cyberwareCapacity="4" type="cyberlimb">
+          <mods xmi:id="_nZxdRItcEeSGSeeIynfV0w" wert="-75">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyI4z9XEeSqL_XDQ5rTNg" local="de" name="Offensichtlicher Schädel"/>
+          <localizations xmi:id="_nZxdRYtcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Schädel"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="f4a48c40-29df-4435-8d09-b1f3153d61ee" name="Synthetic Full Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="20000">
-          <mods xmi:id="_keyI5D9XEeSqL_XDQ5rTNg" wert="-100">
+        <entries xsi:type="shr5:Cyberware" xmi:id="f4a48c40-29df-4435-8d09-b1f3153d61ee" name="Synthetic Full Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="20000" cyberwareCapacity="8" type="cyberlimb">
+          <mods xmi:id="_nZyEUItcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyI5T9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Ganzer Arm"/>
+          <localizations xmi:id="_nZyEUYtcEeSGSeeIynfV0w" local="de" name="Synthetischer Ganzer Arm"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="bf29ff5e-839a-4fd3-8063-371ce05065d6" name="Synthetic Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="20000">
-          <mods xmi:id="_keyv8D9XEeSqL_XDQ5rTNg" wert="-100">
+        <entries xsi:type="shr5:Cyberware" xmi:id="bf29ff5e-839a-4fd3-8063-371ce05065d6" name="Synthetic Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="20000" cyberwareCapacity="10" type="cyberlimb">
+          <mods xmi:id="_nZyEUotcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyv8T9XEeSqL_XDQ5rTNg" local="de" name="Synthetisches Ganzes Bein"/>
+          <localizations xmi:id="_nZyEU4tcEeSGSeeIynfV0w" local="de" name="Synthetisches Ganzes Bein"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="1e511ad7-4806-4862-8685-a04887b1bec9" name="Synthetic Foot" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="6000">
-          <mods xmi:id="_keyv8j9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="1e511ad7-4806-4862-8685-a04887b1bec9" name="Synthetic Foot" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="6000" cyberwareCapacity="2" type="cyberlimb">
+          <mods xmi:id="_nZyEVItcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyv8z9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Fuß"/>
+          <localizations xmi:id="_nZyrYItcEeSGSeeIynfV0w" local="de" name="Synthetischer Fuß"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="a1591e59-d859-40fc-aaf8-30fde5cf6a42" name="Synthetic Hand" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="6000">
-          <mods xmi:id="_keyv9D9XEeSqL_XDQ5rTNg" wert="-25">
+        <entries xsi:type="shr5:Cyberware" xmi:id="a1591e59-d859-40fc-aaf8-30fde5cf6a42" name="Synthetic Hand" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="6000" cyberwareCapacity="2" type="cyberlimb">
+          <mods xmi:id="_nZyrYYtcEeSGSeeIynfV0w" wert="-25">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_keyv9T9XEeSqL_XDQ5rTNg" local="de" name="Synthetische Hand"/>
+          <localizations xmi:id="_nZyrYotcEeSGSeeIynfV0w" local="de" name="Synthetische Hand"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="4e8c4c99-b0bf-494f-b82c-1ab15ec26eb7" name="Synthetic Lower Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="12000">
-          <mods xmi:id="_kezXAD9XEeSqL_XDQ5rTNg" wert="-45">
+        <entries xsi:type="shr5:Cyberware" xmi:id="4e8c4c99-b0bf-494f-b82c-1ab15ec26eb7" name="Synthetic Lower Arm" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="12000" cyberwareCapacity="5" type="cyberlimb">
+          <mods xmi:id="_nZyrY4tcEeSGSeeIynfV0w" wert="-45">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kezXAT9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Unterarm"/>
+          <localizations xmi:id="_nZyrZItcEeSGSeeIynfV0w" local="de" name="Synthetischer Unterarm"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="d3a7e6f2-cb8c-42c0-9aef-c88b26648859" name="Synthetic Lower Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="12000">
-          <mods xmi:id="_kezXAj9XEeSqL_XDQ5rTNg" wert="-45">
+        <entries xsi:type="shr5:Cyberware" xmi:id="d3a7e6f2-cb8c-42c0-9aef-c88b26648859" name="Synthetic Lower Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="12000" cyberwareCapacity="6" type="cyberlimb">
+          <mods xmi:id="_nZzScItcEeSGSeeIynfV0w" wert="-45">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kezXAz9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Unterschenkel"/>
+          <localizations xmi:id="_nZzScYtcEeSGSeeIynfV0w" local="de" name="Synthetischer Unterschenkel"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="40878e5d-cabc-4980-ad87-0dd5d5f5c037" name="Synthetic Torso" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="25000">
-          <mods xmi:id="_kezXBD9XEeSqL_XDQ5rTNg" wert="-150">
+        <entries xsi:type="shr5:Cyberware" xmi:id="40878e5d-cabc-4980-ad87-0dd5d5f5c037" name="Synthetic Torso" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="25000" cyberwareCapacity="5" type="cyberlimb">
+          <mods xmi:id="_nZzScotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kezXBT9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Torso"/>
+          <localizations xmi:id="_nZzSc4tcEeSGSeeIynfV0w" local="de" name="Synthetischer Torso"/>
         </entries>
-        <entries xsi:type="shr5:Cyberware" xmi:id="992fbf6b-8f9a-4c27-a527-8705ecc3341f" name="Synthetic Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="15000">
-          <mods xmi:id="_kez-ED9XEeSqL_XDQ5rTNg" wert="-75">
+        <entries xsi:type="shr5:Cyberware" xmi:id="992fbf6b-8f9a-4c27-a527-8705ecc3341f" name="Synthetic Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="15000" cyberwareCapacity="2" type="cyberlimb">
+          <mods xmi:id="_nZzSdItcEeSGSeeIynfV0w" wert="-75">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
-          <localizations xmi:id="_kez-ET9XEeSqL_XDQ5rTNg" local="de" name="Synthetischer Schädel"/>
+          <localizations xmi:id="_nZzSdYtcEeSGSeeIynfV0w" local="de" name="Synthetischer Schädel"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ0gkItcEeSGSeeIynfV0w" verfuegbarkeit="Rating * 5" wertValue="3000" name="Armor 1" parentId="8ea736c6-5a90-471c-9320-18432ec9aaf0" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_nZ1HoItcEeSGSeeIynfV0w" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <mods xmi:id="_nZ1HoYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ1HootcEeSGSeeIynfV0w" local="de" name="Panzerung 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ1Ho4tcEeSGSeeIynfV0w" verfuegbarkeit="Rating * 5" wertValue="6000" name="Armor 2" parentId="8ea736c6-5a90-471c-9320-18432ec9aaf0" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_nZ1HpItcEeSGSeeIynfV0w" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <mods xmi:id="_nZ1HpYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ1HpotcEeSGSeeIynfV0w" local="de" name="Panzerung 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ1usItcEeSGSeeIynfV0w" verfuegbarkeit="Rating * 5" wertValue="9000" name="Armor 3" parentId="8ea736c6-5a90-471c-9320-18432ec9aaf0" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_nZ1usYtcEeSGSeeIynfV0w" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <mods xmi:id="_nZ1usotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ1us4tcEeSGSeeIynfV0w" local="de" name="Panzerung 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="8ea736c6-5a90-471c-9320-18432ec9aaf0" verfuegbarkeit="Rating * 5" name="Armor" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_nZ2VwItcEeSGSeeIynfV0w" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <mods xmi:id="_nZ2VwYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ2VwotcEeSGSeeIynfV0w" local="de" name="Panzerung"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ2Vw4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 1" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_nZ280ItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ280YtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ280otcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 2" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_nZ2804tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ281ItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ281YtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 3" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_nZ281otcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ3j4ItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ3j4YtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 4" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="4" type="cyberlimb">
+          <mods xmi:id="_nZ3j4otcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ3j44tcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 4"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ3j5ItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 5" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="5" type="cyberlimb">
+          <mods xmi:id="_nZ3j5YtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ4K8ItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 5"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ4K8YtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 6" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="6" type="cyberlimb">
+          <mods xmi:id="_nZ4K8otcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ4K84tcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 6"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ4K9ItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 7" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="7" type="cyberlimb">
+          <mods xmi:id="_nZ4K9YtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ4K9otcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 7"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ4yAItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 8" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="8" type="cyberlimb">
+          <mods xmi:id="_nZ4yAYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ4yAotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 8"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ4yA4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 9" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="9" type="cyberlimb">
+          <mods xmi:id="_nZ4yBItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ4yBYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 9"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ5ZEItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 10" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="10" type="cyberlimb">
+          <mods xmi:id="_nZ5ZEYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ5ZEotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 10"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ5ZE4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 11" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="11" type="cyberlimb">
+          <mods xmi:id="_nZ5ZFItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ5ZFYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 11"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ6AIItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 12" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="12" type="cyberlimb">
+          <mods xmi:id="_nZ6AIYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ6AIotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 12"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ6AI4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 13" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="13" type="cyberlimb">
+          <mods xmi:id="_nZ6AJItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ6nMItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 13"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ6nMYtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 14" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="14" type="cyberlimb">
+          <mods xmi:id="_nZ6nMotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ6nM4tcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 14"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ6nNItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 15" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="15" type="cyberlimb">
+          <mods xmi:id="_nZ6nNYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ6nNotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 15"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ7OQItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 16" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="16" type="cyberlimb">
+          <mods xmi:id="_nZ7OQYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ7OQotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 16"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ7OQ4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 17" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="17" type="cyberlimb">
+          <mods xmi:id="_nZ7ORItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ7ORYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 17"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ71UItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 18" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="18" type="cyberlimb">
+          <mods xmi:id="_nZ71UYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ71UotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 18"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ71U4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 19" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="19" type="cyberlimb">
+          <mods xmi:id="_nZ71VItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ71VYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 19"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ8cYItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Strength 20" parentId="7d61f860-0637-4214-914d-c68022361d24" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="20" type="cyberlimb">
+          <mods xmi:id="_nZ8cYYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ8cYotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke 20"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="7d61f860-0637-4214-914d-c68022361d24" verfuegbarkeit="+1" name="Customized Strength" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_nZ8cY4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ8cZItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Stärke"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ8cZYtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 1" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_nZ9DcItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ9DcYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ9DcotcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 2" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_nZ9Dc4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ9DdItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ9DdYtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 3" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_nZ9qgItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ9qgYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ9qgotcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 4" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="4" type="cyberlimb">
+          <mods xmi:id="_nZ9qg4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ9qhItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 4"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ9qhYtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 5" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="5" type="cyberlimb">
+          <mods xmi:id="_nZ9qhotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ-RkItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 5"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ-RkYtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 6" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="6" type="cyberlimb">
+          <mods xmi:id="_nZ-RkotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ-Rk4tcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 6"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ-RlItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 7" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="7" type="cyberlimb">
+          <mods xmi:id="_nZ-RlYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ-RlotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 7"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ-4oItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 8" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="8" type="cyberlimb">
+          <mods xmi:id="_nZ-4oYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ-4ootcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 8"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ-4o4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 9" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="9" type="cyberlimb">
+          <mods xmi:id="_nZ-4pItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ-4pYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 9"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ_fsItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 10" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="10" type="cyberlimb">
+          <mods xmi:id="_nZ_fsYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ_fsotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 10"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_nZ_fs4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 11" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="11" type="cyberlimb">
+          <mods xmi:id="_nZ_ftItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_nZ_ftYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 11"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naAGwItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 12" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="12" type="cyberlimb">
+          <mods xmi:id="_naAGwYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naAGwotcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 12"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naAGw4tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 13" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="13" type="cyberlimb">
+          <mods xmi:id="_naAGxItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naAGxYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 13"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naAGxotcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 14" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="14" type="cyberlimb">
+          <mods xmi:id="_naAt0ItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naAt0YtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 14"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naAt0otcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 15" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="15" type="cyberlimb">
+          <mods xmi:id="_naAt04tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naAt1ItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 15"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naAt1YtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 16" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="16" type="cyberlimb">
+          <mods xmi:id="_naAt1otcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naBU4ItcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 16"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naBU4YtcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 17" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="17" type="cyberlimb">
+          <mods xmi:id="_naBU4otcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naBU44tcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 17"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naBU5ItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 18" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="18" type="cyberlimb">
+          <mods xmi:id="_naBU5YtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naBU5otcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 18"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naB78ItcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 19" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="19" type="cyberlimb">
+          <mods xmi:id="_naB78YtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naB78otcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 19"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naB784tcEeSGSeeIynfV0w" verfuegbarkeit="+1" name="Customized Agility 20" parentId="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="20" type="cyberlimb">
+          <mods xmi:id="_naB79ItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naB79YtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit 20"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="7afb23c7-435f-450c-9d1c-f7a0e7e631a6" verfuegbarkeit="+1" name="Customized Agility" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_naCjAItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naCjAYtcEeSGSeeIynfV0w" local="de" name="Maßgefertigte Geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naCjAotcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="6500" name="Enhanced Strength 1" parentId="a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_naCjA4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naCjBItcEeSGSeeIynfV0w" local="de" name="Verbesserte Stärke 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naCjBYtcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="13000" name="Enhanced Strength 2" parentId="a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_naCjBotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naDKEItcEeSGSeeIynfV0w" local="de" name="Verbesserte Stärke 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naDKEYtcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="19500" name="Enhanced Strength 3" parentId="a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_naDKEotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naDKE4tcEeSGSeeIynfV0w" local="de" name="Verbesserte Stärke 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de" verfuegbarkeit="(Rating * 3)R" name="Enhanced Strength" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_naDKFItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naDKFYtcEeSGSeeIynfV0w" local="de" name="Verbesserte Stärke"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naDxIItcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="6500" name="Enhanced Agility 1" parentId="2c50d5c1-f2ff-4c7b-bf5e-46925e808648" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_naDxIYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naDxIotcEeSGSeeIynfV0w" local="de" name="Verbesserte Geschicklichkeit 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naDxI4tcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="13000" name="Enhanced Agility 2" parentId="2c50d5c1-f2ff-4c7b-bf5e-46925e808648" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_naDxJItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naDxJYtcEeSGSeeIynfV0w" local="de" name="Verbesserte Geschicklichkeit 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naDxJotcEeSGSeeIynfV0w" verfuegbarkeit="(Rating * 3)R" wertValue="19500" name="Enhanced Agility 3" parentId="2c50d5c1-f2ff-4c7b-bf5e-46925e808648" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_naDxJ4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naEYMItcEeSGSeeIynfV0w" local="de" name="Verbesserte Geschicklichkeit 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="2c50d5c1-f2ff-4c7b-bf5e-46925e808648" verfuegbarkeit="(Rating * 3)R" name="Enhanced Agility" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_naEYMYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naEYMotcEeSGSeeIynfV0w" local="de" name="Verbesserte Geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="eea42123-0449-4c20-8c0b-ae766025b72b" verfuegbarkeit="8R" wertValue="2000" name="Cyber Holster" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="5" type="cyberlimb">
+          <mods xmi:id="_naEYM4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naEYNItcEeSGSeeIynfV0w" local="de" name="Cyber-Holster"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="816fbe31-0bfb-455f-a939-fca85b968bd2" verfuegbarkeit="12F" wertValue="6000" name="Cyberarm Gyromount" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="8" type="cyberlimb">
+          <mods xmi:id="_naE_QItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naE_QYtcEeSGSeeIynfV0w" local="de" name="Cyberarm-Gyrostabilisator"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="17e0bf0e-db82-4db7-ad85-d88e9945f5a7" verfuegbarkeit="12R" wertValue="3000" name="Cyberarm Slide" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_naE_QotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naE_Q4tcEeSGSeeIynfV0w" local="de" name="Cyber-Springarm"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naE_RItcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="2500" name="Hydraulic Jacks 1" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="cyberlimb">
+          <mods xmi:id="_naE_RYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naE_RotcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 1"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naFmUItcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="5000" name="Hydraulic Jacks 2" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="2" type="cyberlimb">
+          <mods xmi:id="_naFmUYtcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naFmUotcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 2"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naFmU4tcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="7500" name="Hydraulic Jacks 3" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="3" type="cyberlimb">
+          <mods xmi:id="_naFmVItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naFmVYtcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 3"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naFmVotcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="10000" name="Hydraulic Jacks 4" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="4" type="cyberlimb">
+          <mods xmi:id="_naGNYItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naGNYYtcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 4"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naGNYotcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="12500" name="Hydraulic Jacks 5" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="5" type="cyberlimb">
+          <mods xmi:id="_naGNY4tcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naGNZItcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 5"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="_naGNZYtcEeSGSeeIynfV0w" verfuegbarkeit="9" wertValue="15000" name="Hydraulic Jacks 6" parentId="c7a55431-c54c-41ba-8468-0d9c3028010a" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="6" type="cyberlimb">
+          <mods xmi:id="_naGNZotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naGNZ4tcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik 6"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="c7a55431-c54c-41ba-8468-0d9c3028010a" verfuegbarkeit="9" name="Hydraulic Jacks" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="cyberlimb">
+          <mods xmi:id="_naG0cItcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naG0cYtcEeSGSeeIynfV0w" local="de" name="Sprunghydraulik"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="32096cc1-25c0-4b29-a53d-92528f352d2f" verfuegbarkeit="6" wertValue="8000" name="Large Smuggling Compartment" page="457" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="5" type="cyberlimb">
+          <mods xmi:id="_naG0cotcEeSGSeeIynfV0w">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <localizations xmi:id="_naG0c4tcEeSGSeeIynfV0w" local="de" name="Großer Schmuggelbehälter"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_kez-Ej9XEeSqL_XDQ5rTNg" name="bioware">
@@ -21177,7 +21579,7 @@
       <history xmi:id="_y9bM4DnqEeS_lYhXLDoiow" currentDate="2074-07-31T07:53:29.000+0200" currentPlacement="_CCbIATnpEeSb-uPPMR9TEw">
         <commandStack xmi:id="_y9jIsDnqEeS_lYhXLDoiow" currentCommand="_2V0FADnqEeS_lYhXLDoiow">
           <protocol xmi:id="_y9qdcDnqEeS_lYhXLDoiow">
-            <commands xsi:type="gameplay:SkillTestCmd" xmi:id="_2V0FADnqEeS_lYhXLDoiow" executed="true" date="2074-07-31T07:53:29.000+0200" subject="_z0RVUDnqEeS_lYhXLDoiow" glitches="1" limit="1" thresholds="1" netHits="-1" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3">
+            <commands xsi:type="gameplay:SkillTestCmd" xmi:id="_2V0FADnqEeS_lYhXLDoiow" executed="true" date="2074-07-31T07:53:29.000+0200" subject="_z0RVUDnqEeS_lYhXLDoiow" glitches="1" limit="4" thresholds="1" netHits="-1" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3">
               <probe>1</probe>
             </commands>
           </protocol>
