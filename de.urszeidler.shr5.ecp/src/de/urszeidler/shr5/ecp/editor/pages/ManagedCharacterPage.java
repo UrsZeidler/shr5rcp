@@ -3,7 +3,6 @@ package de.urszeidler.shr5.ecp.editor.pages;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.DoubleClickEvent;
-import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -13,10 +12,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
-import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -31,13 +30,13 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  * This is a basic generic page to display eObjects in an form with an
  * emfformbilder.
  */
-public class ManagedCharacterPage extends FormPage implements IDoubleClickListener {
+public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
     private DataBindingContext m_bindingContext;
 
     protected ManagedCharacter object;
     protected EditingDomain editingDomain;
-    protected ReferenceManager mananger;
-    protected EmfFormBuilder emfFormBuilder;
+//    protected ReferenceManager mananger;
+//    protected EmfFormBuilder emfFormBuilder;
 
     public ManagedCharacterPage(String id, String title) {
         super(id, title);
@@ -69,25 +68,25 @@ public class ManagedCharacterPage extends FormPage implements IDoubleClickListen
         this.mananger = manager;
     }
 
-    @Override
-    public void dispose() {
-        if (emfFormBuilder != null)
-            emfFormBuilder.dispose();
-        super.dispose();
-    }
+//    @Override
+//    public void dispose() {
+//        if (emfFormBuilder != null)
+//            emfFormBuilder.dispose();
+//        super.dispose();
+//    }
 
-    /**
-     * Simple Factory method to create the formbuilder.
-     * 
-     * @param managedForm
-     */
-    protected void createFormBuilder(IManagedForm managedForm) {
-        emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
-                .getInstance().getLabelProvider(), editingDomain);
-        emfFormBuilder.setManager(mananger);
-        emfFormBuilder.setBorderStyle(SWT.NONE);
-
-    }
+//    /**
+//     * Simple Factory method to create the formbuilder.
+//     * 
+//     * @param managedForm
+//     */
+//    protected void createFormBuilder(IManagedForm managedForm) {
+//        emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+//                .getInstance().getLabelProvider(), editingDomain);
+//        emfFormBuilder.setManager(mananger);
+//        emfFormBuilder.setBorderStyle(SWT.NONE);
+//
+//    }
 
     /**
      * Create contents of the form.
@@ -179,9 +178,14 @@ public class ManagedCharacterPage extends FormPage implements IDoubleClickListen
         return bindingContext;
     }
 
+//    @Override
+//    public void doubleClick(DoubleClickEvent event) {
+//        ISelection selection = event.getSelection();
+//        ShadowrunEditingTools.openEditorForFirstSelection(selection);
+//    }
+
     @Override
-    public void doubleClick(DoubleClickEvent event) {
-        ISelection selection = event.getSelection();
-        ShadowrunEditingTools.openEditorForFirstSelection(selection);
+    protected EditingDomain getEditingDomain() {
+        return editingDomain;
     }
 }
