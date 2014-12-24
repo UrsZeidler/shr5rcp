@@ -20,6 +20,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.wb.swt.ResourceManager;
@@ -90,6 +91,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     protected Map<Object, Object> context;
     protected ValidationService validationService;
     protected IPreferenceStore store;
+    private boolean validating;
 
     public AbstractGeneratorPage(String id, String title) {
         super(id, title);
@@ -160,8 +162,20 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             return;
         if (!notificationIsRequierd(notification))
             return;
-
-        validateChange();
+ 
+        if(validating)
+            return;
+        validating= true;
+        
+        Display.getDefault().asyncExec( new Runnable() {            
+            @Override
+            public void run() {
+                validateChange();
+                validating = false;
+            }
+        });
+        
+        
     }
 
     protected abstract boolean notificationIsRequierd(Notification notification);
