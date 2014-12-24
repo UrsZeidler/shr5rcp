@@ -57,7 +57,7 @@ public class ModSetter implements Adapter {
         dirty = false;
         for (Modifizierbar modifikatoren : list) {
             addModificationValue(modifikatoren);
-        }
+         }
 
     }
 
@@ -67,17 +67,29 @@ public class ModSetter implements Adapter {
     }
 
     private void addModificationValue(Modifizierbar modifikatoren) {
-        EList<AttributModifikatorWert> mods = modifikatoren.getMods();
+        EList<AttributModifikatorWert> mods = modifikatoren.getMods();        
+        addModificatorValue(mods);
+        if (modifikatoren instanceof Cyberware) {
+            Cyberware cb = (Cyberware)modifikatoren;
+            for (CyberwareEnhancement ce : cb.getEinbau()) {
+                mods = ce.getMods();
+                addModificatorValue(mods);
+            }
+        }
+    }
+
+    /**
+     * @param mods
+     */
+    private void addModificatorValue(EList<AttributModifikatorWert> mods) {
         for (AttributModifikatorWert wert : mods) {
             if (wert.getAttribut() != null) {
                 Integer value = fMap.get(wert.getAttribut());
                 if (value == null) {
                     value = new Integer(0);
-                    //fMap.put(wert.getAttribut(), value);
                 }
                 value = value + wert.getWert();
                 fMap.put(wert.getAttribut(), value);
-
             }
         }
     }
@@ -150,6 +162,13 @@ public class ModSetter implements Adapter {
             mods = new ArrayList<AttributModifikatorWert>();
             for (Modifizierbar modifizierbar : newValue) {
                 mods.addAll(modifizierbar.getMods());
+                if (modifizierbar instanceof Cyberware) {
+                    Cyberware cb = (Cyberware)modifizierbar;
+                    for (CyberwareEnhancement ce : cb.getEinbau()) {
+                        mods = ce.getMods();
+                        mods.addAll(modifizierbar.getMods());
+                    }
+                }
             }
 
         } else {
