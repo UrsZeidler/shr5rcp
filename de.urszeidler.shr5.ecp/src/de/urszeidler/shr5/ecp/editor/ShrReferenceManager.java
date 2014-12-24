@@ -74,6 +74,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
+//                || Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())
                 || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
             EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
             if (copyAddToPersona != null) {
@@ -168,6 +169,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
                 || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                 || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
+                || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
