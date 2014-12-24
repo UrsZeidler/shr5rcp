@@ -129,6 +129,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__TYPE, composite_add);
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY, composite_add);
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, composite_add);
             }
 
 
@@ -153,15 +154,17 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         }
 
         if (object instanceof GeldWert) {
+            addWertFeatures(grpWert);
             grpWert.setText(Messages.ObjectPage_price);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
         }else
             grpWert.setVisible(false);
         
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+        addSourceFeature(grpQuelle);
+//        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+//        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
