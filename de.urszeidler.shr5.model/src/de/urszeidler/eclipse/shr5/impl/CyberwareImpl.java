@@ -223,7 +223,9 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
                 Object feature = notification.getFeature();
                 if (Shr5Package.Literals.CYBERWARE__EINBAU.equals(feature)) {
                     CyberwareImpl.this
-                            .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                    .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                    CyberwareImpl.this
+                    .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, 1, 2));
                 } else if (Shr5Package.Literals.GELD_WERT__WERT_VALUE.equals(feature)) {
                     CyberwareImpl.this
                             .eNotify(new ENotificationImpl(CyberwareImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
