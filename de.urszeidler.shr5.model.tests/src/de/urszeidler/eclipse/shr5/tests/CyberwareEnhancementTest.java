@@ -3,11 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
-
 import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -98,12 +98,11 @@ public class CyberwareEnhancementTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
-     * @generated
+     * @generated not
      */
     public void testGetWert() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
     }
 
 } //CyberwareEnhancementTest

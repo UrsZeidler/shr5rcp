@@ -9,6 +9,7 @@ import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.CommonProgram;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -140,12 +141,11 @@ public class CyberdeckTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityFeature() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS, getFixture().getCapacityFeature());
+
     }
 
     /**
@@ -153,12 +153,11 @@ public class CyberdeckTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacity()
-     * @generated
+     * @generated not
      */
     public void testGetCapacity() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setProgramSlots(10);
+        assertEquals(10, getFixture().getCapacity());
     }
 
     /**
@@ -166,12 +165,20 @@ public class CyberdeckTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityRemains() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setProgramSlots(10);
+        assertEquals(10, getFixture().getCapacity());
+        
+        CommonProgram program = Shr5Factory.eINSTANCE.createCommonProgram();
+        getFixture().getRunningPrograms().add(program);
+        assertEquals(9, getFixture().getCapacityRemains());
+        program = Shr5Factory.eINSTANCE.createCommonProgram();
+        getFixture().getRunningPrograms().add(program);
+        assertEquals(8, getFixture().getCapacityRemains());
+        getFixture().getRunningPrograms().remove(program);
+        assertEquals(9, getFixture().getCapacityRemains());
     }
 
     /**

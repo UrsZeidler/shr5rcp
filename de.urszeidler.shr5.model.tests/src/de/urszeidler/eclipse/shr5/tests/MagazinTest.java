@@ -4,8 +4,11 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,12 +83,10 @@ public class MagazinTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityFeature() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(Shr5Package.Literals.MAGAZIN__BULLETS, getFixture().getCapacityFeature());
     }
 
     /**
@@ -93,12 +94,15 @@ public class MagazinTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacity()
-     * @generated
+     * @generated not
      */
     public void testGetCapacity() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        Feuerwaffe feuerwaffe = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        feuerwaffe.setKapazitaet(10);
+        assertEquals(0, getFixture().getCapacity());        
+        
+        getFixture().setType(feuerwaffe);
+        assertEquals(10, getFixture().getCapacity());
     }
 
     /**
@@ -106,12 +110,20 @@ public class MagazinTest extends AbstraktGegenstandTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityRemains() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        Munition munition = Shr5Factory.eINSTANCE.createMunition();
+        Feuerwaffe feuerwaffe = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        feuerwaffe.setKapazitaet(10);
+        assertEquals(0, getFixture().getCapacityRemains());        
+        
+        getFixture().setType(feuerwaffe);
+        assertEquals(10, getFixture().getCapacityRemains());
+        getFixture().getBullets().add(munition);
+        getFixture().getBullets().add(munition);
+        getFixture().getBullets().add(munition);
+        assertEquals(7, getFixture().getCapacityRemains());
     }
 
 } //MagazinTest

@@ -3,10 +3,12 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,12 +97,10 @@ public class CyberwareTest extends KoerpermodsTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityFeature()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityFeature() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(Shr5Package.Literals.CYBERWARE__EINBAU, getFixture().getCapacityFeature());
     }
 
     /**
@@ -108,12 +108,11 @@ public class CyberwareTest extends KoerpermodsTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacity()
-     * @generated
+     * @generated not
      */
     public void testGetCapacity() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setCyberwareCapacity(10);
+        assertEquals(10, getFixture().getCapacity());
     }
 
     /**
@@ -121,12 +120,24 @@ public class CyberwareTest extends KoerpermodsTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
-     * @generated
+     * @generated not
      */
     public void testGetCapacityRemains() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setCyberwareCapacity(10);
+        assertEquals(10, getFixture().getCapacityRemains());
+        
+        CyberwareEnhancement gegenstand = Shr5Factory.eINSTANCE.createCyberwareEnhancement();
+        gegenstand.setCapacityUse(2);
+        getFixture().getEinbau().add(gegenstand);
+        assertEquals(8, getFixture().getCapacityRemains());
+        
+        gegenstand = Shr5Factory.eINSTANCE.createCyberwareEnhancement();
+        gegenstand.setCapacityUse(3);
+        getFixture().getEinbau().add(gegenstand);
+        assertEquals(5, getFixture().getCapacityRemains());
+        
+        getFixture().getEinbau().remove(gegenstand);
+        assertEquals(8, getFixture().getCapacityRemains());
     }
 
     /**
