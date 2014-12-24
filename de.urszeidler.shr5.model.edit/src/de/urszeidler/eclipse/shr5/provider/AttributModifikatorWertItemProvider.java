@@ -135,7 +135,8 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 	                         arrayList.addAll(Shr5Package.Literals.CYBERWARE_MODIFIKATIOREN.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.SICHTVERHAELTNISSE.getEAttributes());
-
+                            arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX);
+                            arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX);
 							return arrayList;
 
 						}
