@@ -4840,11 +4840,18 @@
           <mods xmi:id="_nZwPIItcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+                    <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
+          </mods>
+          
           <localizations xmi:id="_nZwPIYtcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Ganzer Arm"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="c7b88f7e-4e3c-4c29-9f86-a4e244ec5066" name="Obvious Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="15000" cyberwareCapacity="20" type="cyberlimb">
           <mods xmi:id="_nZwPIotcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
           </mods>
           <localizations xmi:id="_nZwPI4tcEeSGSeeIynfV0w" local="de" name="Offensichtliches Ganzes Bein"/>
         </entries>
@@ -4876,6 +4883,10 @@
           <mods xmi:id="_nZxdQotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+                    <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
+          </mods>
+          
           <localizations xmi:id="_nZxdQ4tcEeSGSeeIynfV0w" local="de" name="Offensichtlicher Torso"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="ea676290-1859-4a56-86f8-a3fb90decc32" name="Obvious Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="10000" cyberwareCapacity="4" type="cyberlimb">
@@ -4888,12 +4899,20 @@
           <mods xmi:id="_nZyEUItcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+          <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
+          </mods>
+          
           <localizations xmi:id="_nZyEUYtcEeSGSeeIynfV0w" local="de" name="Synthetischer Ganzer Arm"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="bf29ff5e-839a-4fd3-8063-371ce05065d6" name="Synthetic Full Leg" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="20000" cyberwareCapacity="10" type="cyberlimb">
           <mods xmi:id="_nZyEUotcEeSGSeeIynfV0w" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+                    <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
+          </mods>
+          
           <localizations xmi:id="_nZyEU4tcEeSGSeeIynfV0w" local="de" name="Synthetisches Ganzes Bein"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="1e511ad7-4806-4862-8685-a04887b1bec9" name="Synthetic Foot" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="6000" cyberwareCapacity="2" type="cyberlimb">
@@ -4924,6 +4943,10 @@
           <mods xmi:id="_nZzScotcEeSGSeeIynfV0w" wert="-150">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+                    <mods xmi:id="_9lBHsIttEeSw9fVRx_RpGQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//PersonaZustand/zustandKoerperlichMax"/>
+          </mods>
+          
           <localizations xmi:id="_nZzSc4tcEeSGSeeIynfV0w" local="de" name="Synthetischer Torso"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="992fbf6b-8f9a-4c27-a527-8705ecc3341f" name="Synthetic Skull" page="456" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="16" wertValue="15000" cyberwareCapacity="2" type="cyberlimb">
