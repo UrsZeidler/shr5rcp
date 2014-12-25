@@ -114,6 +114,9 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      * @param textToShow
      */
     protected void updateDecorator(Set<Integer> newSet, Object featureID, ControlDecoration decoration, String textToShow) {
+        if(decoration.getControl().isDisposed())
+            return;
+            
         if (newSet.contains(featureID)) {
             decoration.setDescriptionText(textToShow);
             decoration.setImage(decoratorImage);
@@ -121,7 +124,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             // decoration.showHoverText(textToShow);
         } else if (decoration.getImage() != null) {
             decoration.setDescriptionText(""); //$NON-NLS-1$
-            decoration.setImage(null);
+//            decoration.setImage(null);
         }
     }
 
@@ -160,6 +163,8 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             return;
         if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__CURRENT_INSTRUCTION.equals(feature))
             return;
+        if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER.equals(feature))
+            return;
         if (!notificationIsRequierd(notification))
             return;
  
@@ -167,7 +172,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             return;
         validating= true;
         
-        Display.getDefault().asyncExec( new Runnable() {            
+        Display.getDefault().asyncExec(new Runnable() {            
             @Override
             public void run() {
                 validateChange();
@@ -175,7 +180,9 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             }
         });
         
-        
+//        validateChange();
+//        validating = false;
+ 
     }
 
     protected abstract boolean notificationIsRequierd(Notification notification);

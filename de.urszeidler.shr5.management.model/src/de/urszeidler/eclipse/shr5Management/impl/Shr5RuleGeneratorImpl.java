@@ -422,7 +422,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         final ManagedCharacter managedCharacter = getCharacter();
 
         ImmutableList<String> list = FluentIterable.from(ShadowrunTools.toIterable(managedCharacter.eAllContents()))
-                .filter(ShadowrunTools.allowedSourcePredicate(getAllowedSources()))
+                .filter(ShadowrunTools.notAllowedSourcePredicate(getAllowedSources()))
                 .transform(new Function<EObject, String>() {
 
                     @Override

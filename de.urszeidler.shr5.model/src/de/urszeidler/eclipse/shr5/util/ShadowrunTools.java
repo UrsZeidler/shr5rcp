@@ -946,7 +946,7 @@ public class ShadowrunTools {
      * @param allowedSources should not be empty
      * @return
      */
-    public static Predicate<EObject> allowedSourcePredicate(final EList<SourceBook> allowedSources) {
+    public static Predicate<EObject> notAllowedSourcePredicate(final EList<SourceBook> allowedSources) {
         return new Predicate<EObject>() {
             @Override
             public boolean apply(EObject input) {
@@ -960,6 +960,29 @@ public class ShadowrunTools {
                     return apply(pf.getFertigkeit());
                 }
                 return false;
+            }
+        };
+    }
+    /**
+     * Create a allowed Sorces predicate to match a {@link Quelle}, in the allowedSources.
+     * 
+     * @param allowedSources should not be empty
+     * @return
+     */
+    public static Predicate<EObject> allowedSourcePredicate(final EList<SourceBook> allowedSources) {
+        return new Predicate<EObject>() {
+            @Override
+            public boolean apply(EObject input) {
+                if (input instanceof Quelle) {
+                    Quelle q = (Quelle)input;
+                    if (q.getSrcBook() == null)
+                        return true;
+                    return allowedSources.contains(q.getSrcBook());
+                } else if (input instanceof PersonaFertigkeit) {
+                    PersonaFertigkeit pf = (PersonaFertigkeit)input;
+                    return apply(pf.getFertigkeit());
+                }
+                return true;
             }
         };
     }
