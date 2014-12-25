@@ -62,6 +62,12 @@ public class TreeTableWidget extends Composite {
     public TreeTableWidget(Composite parent, int style) {
         super(parent, style);
         toolkit = new FormToolkit(Display.getCurrent());
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+
         createWidgets();
 
     }
@@ -111,11 +117,6 @@ public class TreeTableWidget extends Composite {
     }
 
     private void createWidgets() {
-        addDisposeListener(new DisposeListener() {
-            public void widgetDisposed(DisposeEvent e) {
-                toolkit.dispose();
-            }
-        });
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
 
