@@ -167,6 +167,8 @@
       <xsd:enumeration value="headware"/>
       <xsd:enumeration value="bodyware"/>
       <xsd:enumeration value="cyberlimb"/>
+      <xsd:enumeration value="earware"/>
+      <xsd:enumeration value="eyeware"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
@@ -544,7 +546,11 @@
       <xsd:extension base="shr5:Koerpermods">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="persona" type="shr5:AbstraktPersona"/>
-          <xsd:element name="einbau" type="shr5:CyberwareEnhancement"/>
+          <xsd:element name="einbau" type="shr5:CyberwareEnhancement">
+            <xsd:annotation>
+              <xsd:documentation>Only matching cyberwaretypes a accepable.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="wifi" type="shr5:DefaultWifi"/>
         </xsd:choice>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
@@ -557,7 +563,11 @@
             <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="cyberwareCapacity" type="xsd:int"/>
+        <xsd:attribute name="cyberwareCapacity" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>This is the capacity feature, it is related with einbau.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <xsd:attribute name="type" type="shr5:CyberwareType"/>
         <xsd:attribute name="persona" type="xsd:string"/>
       </xsd:extension>

@@ -174,6 +174,12 @@
 			<xsl:when test="category/text()='Headware'">
 				<xsl:attribute name="type">headware</xsl:attribute>
 			</xsl:when>
+			<xsl:when test="category/text()='Eyeware'">
+				<xsl:attribute name="type">eyeware</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="category/text()='Earware'">
+				<xsl:attribute name="type">earware</xsl:attribute>
+			</xsl:when>
 
 			</xsl:choose>
 		

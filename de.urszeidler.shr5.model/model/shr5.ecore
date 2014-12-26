@@ -226,8 +226,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Cyberware" eSuperTypes="#//Koerpermods #//GeldWert #//Capacity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
-        eType="#//CyberwareEnhancement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cyberwareCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="#//CyberwareEnhancement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Only matching cyberwaretypes a accepable."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cyberwareCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the capacity feature, it is related with einbau."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CyberwareType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="wifi" upperBound="-1" eType="#//DefaultWifi"
         containment="true"/>
@@ -1162,6 +1170,8 @@
     <eLiterals name="headware"/>
     <eLiterals name="bodyware"/>
     <eLiterals name="cyberlimb"/>
+    <eLiterals name="earware"/>
+    <eLiterals name="eyeware"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CyberwareEnhancement" eSuperTypes="#//GeldWert #//AbstraktModifikatoren">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

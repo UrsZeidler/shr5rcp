@@ -126,6 +126,8 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/headware"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/bodyware"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/cyberlimb"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/earware"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/eyeware"/>
     </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>

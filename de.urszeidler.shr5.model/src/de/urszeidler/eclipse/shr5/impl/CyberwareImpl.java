@@ -4,7 +4,6 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import java.math.BigDecimal;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,9 +14,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import com.google.common.collect.FluentIterable;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
@@ -35,17 +31,17 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacity <em>Capacity</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCyberwareCapacity <em>Cyberware Capacity</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getType <em>Type</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWifi <em>Wifi</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getCyberwareCapacity <em>Cyberware Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,7 +52,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWert()
      * @generated
      * @ordered
@@ -67,7 +62,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -78,7 +72,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -89,7 +82,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -100,7 +92,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -111,7 +102,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCapacity()
      * @generated
      * @ordered
@@ -122,7 +112,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getCapacityRemains() <em>Capacity Remains</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCapacityRemains()
      * @generated
      * @ordered
@@ -133,7 +122,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPersona()
      * @generated
      * @ordered
@@ -144,7 +132,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getEinbau() <em>Einbau</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEinbau()
      * @generated
      * @ordered
@@ -155,7 +142,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getCyberwareCapacity() <em>Cyberware Capacity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCyberwareCapacity()
      * @generated
      * @ordered
@@ -166,7 +152,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getCyberwareCapacity() <em>Cyberware Capacity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCyberwareCapacity()
      * @generated
      * @ordered
@@ -177,7 +162,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getType() <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getType()
      * @generated
      * @ordered
@@ -188,7 +172,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getType()
      * @generated
      * @ordered
@@ -199,7 +182,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getWifi() <em>Wifi</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWifi()
      * @generated
      * @ordered
@@ -241,7 +223,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -266,7 +247,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVerfuegbarkeit() {
@@ -276,7 +256,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
@@ -289,7 +268,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -314,7 +292,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EReference getCapacityFeature() {
@@ -360,7 +337,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona getPersona() {
@@ -378,7 +354,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona basicGetPersona() {
@@ -388,7 +363,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPersona(AbstraktPersona newPersona) {
@@ -401,7 +375,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<CyberwareEnhancement> getEinbau() {
@@ -414,7 +387,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getCyberwareCapacity() {
@@ -424,7 +396,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setCyberwareCapacity(int newCyberwareCapacity) {
@@ -437,7 +408,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public CyberwareType getType() {
@@ -447,7 +417,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setType(CyberwareType newType) {
@@ -460,7 +429,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<DefaultWifi> getWifi() {
@@ -473,7 +441,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -490,7 +457,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -503,16 +469,14 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
             case Shr5Package.CYBERWARE__WERT_VALUE:
                 return getWertValue();
             case Shr5Package.CYBERWARE__CAPACITY_FEATURE:
-                if (resolve)
-                    return getCapacityFeature();
+                if (resolve) return getCapacityFeature();
                 return basicGetCapacityFeature();
             case Shr5Package.CYBERWARE__CAPACITY:
                 return getCapacity();
             case Shr5Package.CYBERWARE__CAPACITY_REMAINS:
                 return getCapacityRemains();
             case Shr5Package.CYBERWARE__PERSONA:
-                if (resolve)
-                    return getPersona();
+                if (resolve) return getPersona();
                 return basicGetPersona();
             case Shr5Package.CYBERWARE__EINBAU:
                 return getEinbau();
@@ -529,7 +493,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -566,7 +529,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -600,7 +562,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -635,33 +596,24 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.CYBERWARE__WERT:
-                    return Shr5Package.GELD_WERT__WERT;
-                case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                case Shr5Package.CYBERWARE__WERT_VALUE:
-                    return Shr5Package.GELD_WERT__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.CYBERWARE__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.CYBERWARE__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.CYBERWARE__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
+                default: return -1;
             }
         }
         if (baseClass == Capacity.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.CYBERWARE__CAPACITY_FEATURE:
-                    return Shr5Package.CAPACITY__CAPACITY_FEATURE;
-                case Shr5Package.CYBERWARE__CAPACITY:
-                    return Shr5Package.CAPACITY__CAPACITY;
-                case Shr5Package.CYBERWARE__CAPACITY_REMAINS:
-                    return Shr5Package.CAPACITY__CAPACITY_REMAINS;
-                default:
-                    return -1;
+                case Shr5Package.CYBERWARE__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
+                case Shr5Package.CYBERWARE__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                case Shr5Package.CYBERWARE__CAPACITY_REMAINS: return Shr5Package.CAPACITY__CAPACITY_REMAINS;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -670,33 +622,24 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT:
-                    return Shr5Package.CYBERWARE__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
-                    return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
-                case Shr5Package.GELD_WERT__WERT_VALUE:
-                    return Shr5Package.CYBERWARE__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.GELD_WERT__WERT: return Shr5Package.CYBERWARE__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.CYBERWARE__WERT_VALUE;
+                default: return -1;
             }
         }
         if (baseClass == Capacity.class) {
             switch (baseFeatureID) {
-                case Shr5Package.CAPACITY__CAPACITY_FEATURE:
-                    return Shr5Package.CYBERWARE__CAPACITY_FEATURE;
-                case Shr5Package.CAPACITY__CAPACITY:
-                    return Shr5Package.CYBERWARE__CAPACITY;
-                case Shr5Package.CAPACITY__CAPACITY_REMAINS:
-                    return Shr5Package.CYBERWARE__CAPACITY_REMAINS;
-                default:
-                    return -1;
+                case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.CYBERWARE__CAPACITY_FEATURE;
+                case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.CYBERWARE__CAPACITY;
+                case Shr5Package.CAPACITY__CAPACITY_REMAINS: return Shr5Package.CYBERWARE__CAPACITY_REMAINS;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -705,13 +648,11 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (verfuegbarkeit: ");

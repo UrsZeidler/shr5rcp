@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -14,8 +13,6 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -311,6 +308,8 @@ public class CyberwareItemProvider
                 return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware_head"));
             case CYBERLIMB:
                 return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware_limb"));
+            case EYEWARE:
+                return overlayImage(object, getResourceLocator().getImage("full/obj16/Cyberware_eye"));
 //
             default:
                 break;

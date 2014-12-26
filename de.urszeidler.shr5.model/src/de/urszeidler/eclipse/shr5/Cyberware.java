@@ -60,6 +60,9 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Only matching cyberwaretypes a accepable.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Einbau</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberware_Einbau()
      * @model containment="true"
@@ -75,6 +78,9 @@ public interface Cyberware extends Koerpermods, GeldWert, Capacity {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This is the capacity feature, it is related with einbau.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Cyberware Capacity</em>' attribute.
      * @see #setCyberwareCapacity(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberware_CyberwareCapacity()

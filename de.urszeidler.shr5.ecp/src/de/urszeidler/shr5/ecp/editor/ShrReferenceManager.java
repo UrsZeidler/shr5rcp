@@ -24,9 +24,12 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 
+import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -306,7 +309,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      */
     protected EObject handleCopySingleAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
-        collection = filterAllowedSource(collection);
+        collection = filterProvidedObjects(collection);
         
         OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), NullObject.toChoises(collection),
                 String.format("Add a %s object.", ShadowrunEditingTools.toFeatureName(orgObject, object_ref)), "");
@@ -334,7 +337,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      */
     protected List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
-        collection = filterAllowedSource(collection);
+        collection = filterProvidedObjects(collection);
         
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
@@ -359,18 +362,46 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         return null;
     }
 
-    private Collection<EObject> filterAllowedSource(Collection<EObject> collection) {
+    private Collection<EObject> filterProvidedObjects(Collection<EObject> collection) {
         EObject theEObject = shadowrunEditor.getEObject();
+        FluentIterable<EObject> fluentIterable = FluentIterable.from(collection);
+        //filter the cyberwaretypes
+        if (theEObject instanceof Cyberware) {
+            final Cyberware cw = (Cyberware)theEObject;
+            fluentIterable = fluentIterable.filter(new Predicate<EObject>() {
+
+                @Override
+                public boolean apply(EObject input) {
+                    if (input instanceof CyberwareEnhancement) {
+                        CyberwareEnhancement ce = (CyberwareEnhancement)input;
+                        return ce.getType().equals(cw.getType());
+                    }
+                    return true;
+                }
+            });
+        }
+        
+        // filter the allowed sources
         if (theEObject instanceof CharacterGenerator) {
             CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
             if (generatorSrc instanceof Shr5RuleGenerator) {
                 Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
                 EList<SourceBook> allowedSources = srg.getAllowedSources();
                 if (!allowedSources.isEmpty())
-                    return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
+                    fluentIterable = fluentIterable.filter(ShadowrunTools.allowedSourcePredicate(allowedSources));
+                    //return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
             }
         }
-        return collection;
+//        if (theEObject instanceof CharacterGenerator) {
+//            CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
+//            if (generatorSrc instanceof Shr5RuleGenerator) {
+//                Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+//                EList<SourceBook> allowedSources = srg.getAllowedSources();
+//                if (!allowedSources.isEmpty())
+//                    return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
+//            }
+//        }
+        return fluentIterable.toList();  //collection;
     }
 
     /**

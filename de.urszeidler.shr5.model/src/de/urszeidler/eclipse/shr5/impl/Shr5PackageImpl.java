@@ -7268,6 +7268,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.HEADWARE);
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.BODYWARE);
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.CYBERLIMB);
+        addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.EARWARE);
+        addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.EYEWARE);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

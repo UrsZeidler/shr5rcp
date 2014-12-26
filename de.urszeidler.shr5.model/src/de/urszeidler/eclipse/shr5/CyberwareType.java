@@ -45,7 +45,23 @@ public enum CyberwareType implements Enumerator {
      * @generated
      * @ordered
      */
-    CYBERLIMB(0, "cyberlimb", "cyberlimb");
+    CYBERLIMB(0, "cyberlimb", "cyberlimb"), /**
+     * The '<em><b>Earware</b></em>' literal object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #EARWARE_VALUE
+     * @generated
+     * @ordered
+     */
+    EARWARE(0, "earware", "earware"), /**
+     * The '<em><b>Eyeware</b></em>' literal object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #EYEWARE_VALUE
+     * @generated
+     * @ordered
+     */
+    EYEWARE(0, "eyeware", "eyeware");
 
     /**
      * The '<em><b>Headware</b></em>' literal value.
@@ -93,6 +109,36 @@ public enum CyberwareType implements Enumerator {
     public static final int CYBERLIMB_VALUE = 0;
 
     /**
+     * The '<em><b>Earware</b></em>' literal value.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>Earware</b></em>' literal object isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @see #EARWARE
+     * @model name="earware"
+     * @generated
+     * @ordered
+     */
+    public static final int EARWARE_VALUE = 0;
+
+    /**
+     * The '<em><b>Eyeware</b></em>' literal value.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>Eyeware</b></em>' literal object isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @see #EYEWARE
+     * @model name="eyeware"
+     * @generated
+     * @ordered
+     */
+    public static final int EYEWARE_VALUE = 0;
+
+    /**
      * An array of all the '<em><b>Cyberware Type</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -103,6 +149,8 @@ public enum CyberwareType implements Enumerator {
             HEADWARE,
             BODYWARE,
             CYBERLIMB,
+            EARWARE,
+            EYEWARE,
         };
 
     /**

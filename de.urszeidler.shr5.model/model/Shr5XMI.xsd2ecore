@@ -121,6 +121,8 @@
       <nested inputs="shr5.ecore#//CyberwareType/headware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet"/>
       <nested inputs="shr5.ecore#//CyberwareType/bodyware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=1"/>
       <nested inputs="shr5.ecore#//CyberwareType/cyberlimb" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//CyberwareType/earware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//CyberwareType/eyeware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=4"/>
     </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
