@@ -101,11 +101,6 @@ public class ScriptServiceImpl implements ScriptService {
 
     @Override
     public void setCombatTurn(CombatTurn kr) {
-        try {
-            PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
-        } catch (WorkbenchException e) {
-            Activator.logError(e);
-        }
 
         if (script.getHistory().getCommandStack().getCurrentCommand() instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)script.getHistory().getCommandStack().getCurrentCommand();

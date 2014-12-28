@@ -177,15 +177,17 @@ public class ScriptHandler extends AbstractHandler {
     
     public static void startScript(Script eo, Shell shell, ScriptService scriptService) {
         Placement placement = eo.getEntry();
-        if (eo.getHistory() == null) {
-            initalizeScript(eo, shell);
+        if (eo.getHistory() == null || eo.getHistory().getCommandStack() == null) {
+           if(!initalizeScript(eo, shell))
+               return;
         } else {
             if (MessageDialog.open(MessageDialog.QUESTION, shell, Messages.OpenObjectHandler_playScript_titel,
                     Messages.OpenObjectHandler_playScript_continue, SWT.NONE))
                 placement = eo.getHistory().getCurrentPlacement();
             else {
                 eo.getPlayer().getMembers().clear();
-                initalizeScript(eo, shell);
+                if(!initalizeScript(eo, shell))
+                    return;
             }
         }
         try {
@@ -217,7 +219,7 @@ public class ScriptHandler extends AbstractHandler {
 
     }
 
-    protected static void initalizeScript(Script eo, Shell shell) {
+    protected static boolean initalizeScript(Script eo, Shell shell) {
         eo.setHistory(ScriptingFactory.eINSTANCE.createScriptHistory());
 
         if (eo.getHistory().getCommandStack() == null) {
@@ -242,7 +244,9 @@ public class ScriptHandler extends AbstractHandler {
 
             player.getMembers().addAll(
                     Collections2.transform((Collection<ManagedCharacter>)list, ShadowrunEditingTools.managedCharacter2RuntimeFunction()));
+            return true;
         }
+        return false;
     }
 
 }

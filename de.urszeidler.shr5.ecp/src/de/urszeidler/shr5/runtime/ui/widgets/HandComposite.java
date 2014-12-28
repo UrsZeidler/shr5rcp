@@ -369,11 +369,12 @@ public class HandComposite extends NameableComposite {
         toolItemMeeleItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
-                MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
-                meeleAttackCmd.setWeapon(object);
-
-                complexAction.getSubCommands().add(meeleAttackCmd);
+//                ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
+//                MeeleAttackCmd meeleAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
+//                meeleAttackCmd.setWeapon(object);
+//
+//                complexAction.getSubCommands().add(meeleAttackCmd);
+                ComplexAction complexAction = GameplayTools.createMeleeAction(null,null,object);
                 initativePass.setAction(complexAction);
             }
         });

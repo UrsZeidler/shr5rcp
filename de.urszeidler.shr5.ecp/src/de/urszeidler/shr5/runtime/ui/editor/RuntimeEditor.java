@@ -43,6 +43,7 @@ import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
+import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementSimulationPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.ScriptPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.VariousPage;
@@ -155,7 +156,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
                 try {
                     addPage(new ScriptPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating SpeziesPage", e);//$NON-NLS-1$
+                    logError("error creating ScriptPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
@@ -164,8 +165,9 @@ public class RuntimeEditor extends AbstractShr5Editor {
             public Object casePlacement(Placement object) {
                 try {
                     addPage(new PlacementPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new PlacementSimulationPage(RuntimeEditor.this, EMPTY,"simulation", object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating SpeziesPage", e);//$NON-NLS-1$
+                    logError("error creating placement pages", e);//$NON-NLS-1$
                 }
                 return null;
             }

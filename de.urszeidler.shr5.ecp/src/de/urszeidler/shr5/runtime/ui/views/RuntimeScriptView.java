@@ -938,7 +938,11 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             return;
 
         sctnActionSection.setExpanded(false);
-        // scriptService.executeCommand(combatTurn);
+        try {
+            PlatformUI.getWorkbench().showPerspective(COMBAT_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+        } catch (WorkbenchException e) {
+            Activator.logError(e);
+        }
         scriptService.setCombatTurn(combatTurn);
     }
 
