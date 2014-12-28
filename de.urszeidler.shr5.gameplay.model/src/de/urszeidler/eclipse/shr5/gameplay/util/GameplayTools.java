@@ -39,10 +39,12 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.CommandWrapper;
+import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.gameplay.InterruptType;
+import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.ProbeMod;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
@@ -110,6 +112,9 @@ public class GameplayTools {
      * @return
      */
     public static FeuerModus getFireArmModus(RuntimeCharacter subject, Feuerwaffe waffe) {
+        if (waffe == null)
+            return null;
+
         EList<FeuerModus> modie = waffe.getModie();
         FeuerModus value = modie.get(0);
         ExtendetData data = RuntimeFactory.eINSTANCE.createExtendetData();
@@ -643,6 +648,24 @@ public class GameplayTools {
         return persona.getSpezies().getAngriff();
     }
 
+    /**
+     * Returns from left to right the first melee weapon or the angriff of the {@link Spezies}.
+     * 
+     * @param object
+     * @return
+     */
+    public static AbstaktFernKampfwaffe getRangedWeapon(RuntimeCharacter object) {
+        AbstraktGegenstand leftHand = object.getLeftHand();
+        if (leftHand instanceof AbstaktFernKampfwaffe) {
+            return (AbstaktFernKampfwaffe)leftHand;
+        }
+        AbstraktGegenstand rightHand = object.getRightHand();
+        if (rightHand instanceof AbstaktFernKampfwaffe) {
+            return (AbstaktFernKampfwaffe)rightHand;
+        }
+        return null;
+    }
+
     public static Feuerwaffe getMagazingType(Magazin m) {
         Feuerwaffe type = m.getType();
         if (type != null)
@@ -718,13 +741,14 @@ public class GameplayTools {
 
     /**
      * Get the limit attribute for a skill or null
+     * 
      * @param skill
      * @return
      */
     public static EAttribute getLimitForSkill(Fertigkeit skill) {
-        if(skill==null)
+        if (skill == null)
             return null;
-        
+
         EAttribute attribut = skill.getAttribut();
         if (attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT)
                 || attribut.equals(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION)
@@ -737,26 +761,61 @@ public class GameplayTools {
 
         if (attribut.equals(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__CHARISMA))
             return Shr5Package.Literals.CHRAKTER_LIMITS__SOZIAL;
-        
-        
+
         return null;
     }
 
     /**
      * Return the eattribute for a name of the cyberdeck attributes.
+     * 
      * @param attName
      * @return
      */
     public static EAttribute getCyberdeckAttribute(String attName) {
-        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE1.getName().equals(attName))
+        if (Shr5Package.Literals.CYBERDECK__ATTRIBUTE1.getName().equals(attName))
             return Shr5Package.Literals.CYBERDECK__ATTRIBUTE1;
-        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2.getName().equals(attName))
+        if (Shr5Package.Literals.CYBERDECK__ATTRIBUTE2.getName().equals(attName))
             return Shr5Package.Literals.CYBERDECK__ATTRIBUTE2;
-        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE3.getName().equals(attName))
+        if (Shr5Package.Literals.CYBERDECK__ATTRIBUTE3.getName().equals(attName))
             return Shr5Package.Literals.CYBERDECK__ATTRIBUTE3;
-        if(Shr5Package.Literals.CYBERDECK__ATTRIBUTE4.getName().equals(attName))
+        if (Shr5Package.Literals.CYBERDECK__ATTRIBUTE4.getName().equals(attName))
             return Shr5Package.Literals.CYBERDECK__ATTRIBUTE4;
- 
+
         return null;
     }
+
+    public static ComplexAction createMeleeAction(RuntimeCharacter subject, RuntimeCharacter target, Nahkampfwaffe meleeWeapon) {
+        ComplexAction complexAction = GameplayFactory.eINSTANCE.createComplexAction();
+        MeeleAttackCmd meleeAttackCmd = GameplayFactory.eINSTANCE.createMeeleAttackCmd();
+        meleeAttackCmd.setWeapon(meleeWeapon);
+        meleeAttackCmd.setObject(target);
+
+        complexAction.getSubCommands().add(meleeAttackCmd);
+        return complexAction;
+    }
+
+    public static SimpleAction createRangedAction(InitativePass initativePass, int numberOfShoots, AbstaktFernKampfwaffe object, FeuerModus modus, RuntimeCharacter target, int distance) {
+        SimpleAction simpleAction = GameplayTools.getSimpleAction(initativePass);
+        if (simpleAction == null || object==null|| modus==null)
+            return null;
+
+        RangedAttackCmd rangedAttackCmd = GameplayFactory.eINSTANCE.createRangedAttackCmd();
+
+        rangedAttackCmd.setNumberOfShoots(numberOfShoots);
+        rangedAttackCmd.setWeapon(object);
+        rangedAttackCmd.setModus(modus);
+        rangedAttackCmd.setObject(target);
+        rangedAttackCmd.setRange(distance);
+        if (object instanceof Feuerwaffe) {
+            Feuerwaffe fw = (Feuerwaffe)object;
+            Magazin magazin = fw.getMagazin();
+            if(magazin!=null)
+                if(magazin.getBullets().size()==0)
+                    return null;
+        }
+
+        simpleAction.getSubCommands().add(rangedAttackCmd);
+        return simpleAction;
+    }
+
 }
