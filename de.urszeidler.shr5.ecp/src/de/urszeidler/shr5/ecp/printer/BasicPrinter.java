@@ -57,10 +57,11 @@ public class BasicPrinter implements IPropertyChangeListener {
     }
 
     protected IPreferenceStore store;
-    protected FontData boldFontData;
+    protected FontData headFontData;
     protected FontData attributeFont;
     protected AdapterFactoryItemDelegator itemDelegator;
-    protected FontData italicFontData;
+    protected FontData tableHeaderFontData;
+    protected FontData head1;
 
     /**
      * Returns the localized feature name.
@@ -96,10 +97,11 @@ public class BasicPrinter implements IPropertyChangeListener {
      * 
      */
     private void initalizeFontData() {
-        boldFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
-        italicFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
+        headFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
+        tableHeaderFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
         attributeFont = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_NORMAL_TEXT)[0];
-        //
+        head1 = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_HEAD1_TEXT)[0];
+        //haeder
         // boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
         // italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
         // attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
@@ -124,8 +126,8 @@ public class BasicPrinter implements IPropertyChangeListener {
                 // grid.add(new EmptyPrint(), GridPrint.REMAINDER);
 
                 grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
-                grid.add(new TextPrint(Messages.Printer_footer_1, italicFontData));
-                grid.add(new PageNumberPrint(pageNumber, italicFontData, SWT.RIGHT));
+                grid.add(new TextPrint(Messages.Printer_footer_1, tableHeaderFontData));
+                grid.add(new PageNumberPrint(pageNumber, tableHeaderFontData, SWT.RIGHT));
                 return grid;
             }
         };

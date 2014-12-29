@@ -14,4 +14,5 @@ public class PreferenceConstants {
     public static final String PAGE_MARGIN = "PAGE_MARGIN";
     public static final String PRINT_PERSONA_DECRIPTION = "PRINT_PERSONA_DECRIPTION";
     public static final String DEFAUL_PROJECT_NAME = "DEFAUL_PROJECT_NAME";
+    public static final String FONT_HEAD1_TEXT = "FONT_HEAD1_TEXT";
 }

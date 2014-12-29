@@ -38,6 +38,7 @@ public class PrintPreferencePage extends FieldEditorPreferencePage implements IW
      * restore itself.
      */
     public void createFieldEditors() {
+        addField(new FontFieldEditor(PreferenceConstants.FONT_HEAD1_TEXT, "header1", "This is a titel as example header", getFieldEditorParent()));
         addField(new FontFieldEditor(PreferenceConstants.FONT_MAIN_HEADER, "header", "This is a titel as example header", getFieldEditorParent()));
         addField(new FontFieldEditor(PreferenceConstants.FONT_TABLE_HEADER, "table header", "table header", getFieldEditorParent()));
         addField(new FontFieldEditor(PreferenceConstants.FONT_NORMAL_TEXT, "normal text", "attribute", getFieldEditorParent()));

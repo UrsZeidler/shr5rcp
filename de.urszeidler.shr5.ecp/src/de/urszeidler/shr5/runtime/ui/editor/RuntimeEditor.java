@@ -41,6 +41,9 @@ import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
+import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
+import de.urszeidler.shr5.ecp.printer.ScriptPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementSimulationPage;
@@ -155,6 +158,8 @@ public class RuntimeEditor extends AbstractShr5Editor {
             public Object caseScript(Script object) {
                 try {
                     addPage(new ScriptPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new PrintPreviewPage(RuntimeEditor.this, "id1", "script print", ScriptPrinter
+                            .getInstance().createPrintFactory(object)));
                 } catch (PartInitException e) {
                     logError("error creating ScriptPage", e);//$NON-NLS-1$
                 }
