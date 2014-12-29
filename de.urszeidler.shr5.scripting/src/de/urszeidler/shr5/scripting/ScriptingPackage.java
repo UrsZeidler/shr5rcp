@@ -4,6 +4,7 @@ package de.urszeidler.shr5.scripting;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -295,13 +296,22 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__ENVIORMENT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
+     * The feature id for the '<em><b>Options</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__OPTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 10;
+
+    /**
      * The number of structural features of the '<em>Placement</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 10;
+    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The number of operations of the '<em>Placement</em>' class.
@@ -482,6 +492,17 @@ public interface ScriptingPackage extends EPackage {
 
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.PlacementOptions
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacementOptions()
+     * @generated
+     */
+    int PLACEMENT_OPTIONS = 5;
+
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Script <em>Script</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -645,6 +666,17 @@ public interface ScriptingPackage extends EPackage {
     EReference getPlacement_Enviorment();
 
     /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.shr5.scripting.Placement#getOptions <em>Options</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Options</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getOptions()
+     * @see #getPlacement()
+     * @generated
+     */
+    EAttribute getPlacement_Options();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -772,6 +804,16 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      */
     EAttribute getScripts_Name();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Placement Options</em>'.
+     * @see de.urszeidler.shr5.scripting.PlacementOptions
+     * @generated
+     */
+    EEnum getPlacementOptions();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -921,6 +963,14 @@ public interface ScriptingPackage extends EPackage {
         EReference PLACEMENT__ENVIORMENT = eINSTANCE.getPlacement_Enviorment();
 
         /**
+         * The meta object literal for the '<em><b>Options</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PLACEMENT__OPTIONS = eINSTANCE.getPlacement_Options();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1021,6 +1071,16 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EAttribute SCRIPTS__NAME = eINSTANCE.getScripts_Name();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.PlacementOptions
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacementOptions()
+         * @generated
+         */
+        EEnum PLACEMENT_OPTIONS = eINSTANCE.getPlacementOptions();
 
     }
 

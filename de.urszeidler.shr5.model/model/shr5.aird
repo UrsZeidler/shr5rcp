@@ -8171,7 +8171,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m_hvEnfFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m_gg8XfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_gg8nfFEeSpDJAqDmka7w" x="30" width="120" height="100"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_gg8nfFEeSpDJAqDmka7w" x="30" width="120" height="58"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_1CUnYIC4EeSK-udt6gQCVA" type="2003" element="_1BDcEIC4EeSK-udt6gQCVA">
             <children xmi:type="notation:Node" xmi:id="_1CkfAIC4EeSK-udt6gQCVA" type="5007"/>
@@ -8180,7 +8180,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_1CltIoC4EeSK-udt6gQCVA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_1CUnYYC4EeSK-udt6gQCVA" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CUnYoC4EeSK-udt6gQCVA" x="300" y="-35" width="120" height="100"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CUnYoC4EeSK-udt6gQCVA" x="300" y="-35" width="120" height="53"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_SurKQIzoEeSjHLmIMXZ9XQ" type="2003" element="_St01sIzoEeSjHLmIMXZ9XQ">
             <children xmi:type="notation:Node" xmi:id="_SvY78IzoEeSjHLmIMXZ9XQ" type="5007"/>
@@ -8194,11 +8194,17 @@
               <children xmi:type="notation:Node" xmi:id="_rwJDoIzoEeSjHLmIMXZ9XQ" type="3010" element="_rvnfMIzoEeSjHLmIMXZ9XQ">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_rwJDoYzoEeSjHLmIMXZ9XQ"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_KMyr8I9dEeS006BjraluoQ" type="3010" element="_KLQa4I9dEeS006BjraluoQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_KMyr8Y9dEeS006BjraluoQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_MgJOoI9dEeS006BjraluoQ" type="3010" element="_MfOooI9dEeS006BjraluoQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_MgJOoY9dEeS006BjraluoQ"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_SvZjAYzoEeSjHLmIMXZ9XQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_SvZjAozoEeSjHLmIMXZ9XQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_SurKQYzoEeSjHLmIMXZ9XQ" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SurKQozoEeSjHLmIMXZ9XQ" x="640" y="325"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SurKQozoEeSjHLmIMXZ9XQ" x="630" y="295"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_jU1mAnfFEeSpDJAqDmka7w"/>
           <edges xmi:type="notation:Edge" xmi:id="_kaMEhHfFEeSpDJAqDmka7w" type="4001" element="_kaEIsHfFEeSpDJAqDmka7w" source="_j-1lQHfFEeSpDJAqDmka7w" target="_kaKPUHfFEeSpDJAqDmka7w">
@@ -8893,6 +8899,28 @@
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_rvoGQozoEeSjHLmIMXZ9XQ"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_rvoGQ4zoEeSjHLmIMXZ9XQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_KLQa4I9dEeS006BjraluoQ" name="matrix" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/matrix"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/matrix"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_KLQa4Y9dEeS006BjraluoQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_KLQa4o9dEeS006BjraluoQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_KLQa449dEeS006BjraluoQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_KLQa5I9dEeS006BjraluoQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_MfOooI9dEeS006BjraluoQ" name="astralSpace" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/astralSpace"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/astralSpace"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_MfPPsI9dEeS006BjraluoQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_MfPPsY9dEeS006BjraluoQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_MfPPso9dEeS006BjraluoQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_MfPPs49dEeS006BjraluoQ"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
@@ -25259,6 +25287,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/placements"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/placements"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_nD0hoI9dEeS006BjraluoQ" label="All the placements/scence in the script." column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/placements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/placements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_nD1IsI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_nD1IsY9dEeS006BjraluoQ" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyT0k3fLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyT0lHfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -25309,6 +25346,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/entry"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/entry"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_iW-_EI9dEeS006BjraluoQ" label="The entry point for the script." column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/entry/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/entry/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_iW_mII9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_iW_mIY9dEeS006BjraluoQ" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyT0pXfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyT0pnfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -25351,6 +25397,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Yzhr0I9dEeS006BjraluoQ" label="The list of availble placements." column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Y2YykI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Y2YykY9dEeS006BjraluoQ" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyT0tHfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyT0tXfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -25410,6 +25465,23 @@
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyT0yXfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyT0ynfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_TkursI9dEeS006BjraluoQ" label="EAttribute : options">
+          <target xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/options"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/options"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Tlm1cI9dEeS006BjraluoQ" label="The options for this placement, they define the available actions for the placement." column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/options/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/options/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_ToOEkI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_ToOEkY9dEeS006BjraluoQ" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_TkvSwI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_TkvSwY9dEeS006BjraluoQ" red="255" green="255" blue="255"/>
           </currentStyle>
         </lines>
         <semanticElements xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement"/>
@@ -25559,7 +25631,15 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyUbzXfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
         </currentStyle>
       </lines>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_hyUbznfLEeS7R_CGLciuCA" label="Domain Documentation" cells="_hyT0lnfLEeS7R_CGLciuCA _hyT0n3fLEeS7R_CGLciuCA _hyT0qHfLEeS7R_CGLciuCA _hyT0rXfLEeS7R_CGLciuCA _hyT0t3fLEeS7R_CGLciuCA _hyT0y3fLEeS7R_CGLciuCA _hyUbr3fLEeS7R_CGLciuCA _hyUbuHfLEeS7R_CGLciuCA _hyUbvXfLEeS7R_CGLciuCA _hyUbyXfLEeS7R_CGLciuCA">
+      <lines xmi:type="table:DLine" xmi:id="_TjmDQI9dEeS006BjraluoQ" label="EEnum : PlacementOptions">
+        <target xmi:type="ecore:EEnum" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions"/>
+        <semanticElements xmi:type="ecore:EEnum" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Tj7acI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Tj7acY9dEeS006BjraluoQ" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_hyUbznfLEeS7R_CGLciuCA" label="Domain Documentation" cells="_hyT0lnfLEeS7R_CGLciuCA _hyT0n3fLEeS7R_CGLciuCA _hyT0qHfLEeS7R_CGLciuCA _hyT0rXfLEeS7R_CGLciuCA _hyT0t3fLEeS7R_CGLciuCA _hyT0y3fLEeS7R_CGLciuCA _hyUbr3fLEeS7R_CGLciuCA _hyUbuHfLEeS7R_CGLciuCA _hyUbvXfLEeS7R_CGLciuCA _hyUbyXfLEeS7R_CGLciuCA _Tlm1cI9dEeS006BjraluoQ _Yzhr0I9dEeS006BjraluoQ _iW-_EI9dEeS006BjraluoQ _nD0hoI9dEeS006BjraluoQ">
         <target xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#/"/>
         <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#/"/>
         <originMapping xmi:type="description_2:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
@@ -32227,6 +32307,236 @@
         <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Category']"/>
       </columns>
       <columns xmi:type="table:DFeatureColumn" xmi:id="_nI2wLIXfEeSCd9O2370cJA" label="Description" cells="_nI2v1IXfEeSCd9O2370cJA _nI2v14XfEeSCd9O2370cJA _nI2v3IXfEeSCd9O2370cJA _nI2v34XfEeSCd9O2370cJA _nI2v4oXfEeSCd9O2370cJA _nI2v5YXfEeSCd9O2370cJA _nI2v6YXfEeSCd9O2370cJA _nI2v7YXfEeSCd9O2370cJA _nI2v8IXfEeSCd9O2370cJA _nI2v84XfEeSCd9O2370cJA _nI2v9oXfEeSCd9O2370cJA _nI2v-oXfEeSCd9O2370cJA _nI2v_YXfEeSCd9O2370cJA _nI2wAIXfEeSCd9O2370cJA _nI2wA4XfEeSCd9O2370cJA _nI2wBoXfEeSCd9O2370cJA _nI2wCYXfEeSCd9O2370cJA _nI2wD4XfEeSCd9O2370cJA _nI2wFIXfEeSCd9O2370cJA _nI2wF4XfEeSCd9O2370cJA _nI2wGoXfEeSCd9O2370cJA _nI2wHYXfEeSCd9O2370cJA _nI2wIoXfEeSCd9O2370cJA _nI2wJYXfEeSCd9O2370cJA _nI2wKIXfEeSCd9O2370cJA" featureName="propertyDescription">
+        <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Decription']"/>
+      </columns>
+      <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_CrnkEI9eEeS006BjraluoQ" name="Scripting generation table" headerColumnWidth="192">
+      <target xmi:type="genmodel:GenPackage" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting"/>
+      <lines xmi:type="table:DLine" xmi:id="_CrnkEY9eEeS006BjraluoQ" label="Script">
+        <target xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script"/>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkEo9eEeS006BjraluoQ" label="entry">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkE49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkFI9eEeS006BjraluoQ" label="The entry point for the script." column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script/entry"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Script"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_CrnkFY9eEeS006BjraluoQ" label="Placement">
+        <target xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement"/>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkFo9eEeS006BjraluoQ" label="nextPlacements">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkF49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkGI9eEeS006BjraluoQ" label="The list of availble placements." column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkGY9eEeS006BjraluoQ" label="teams">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkGo9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkG49eEeS006BjraluoQ" label="The teams in the placement." column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/teams"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkHI9eEeS006BjraluoQ" label="background">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkHY9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkHo9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/background"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkH49eEeS006BjraluoQ" label="inTheirFace">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkII9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkIY9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/inTheirFace"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkIo9eEeS006BjraluoQ" label="script">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkI49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkJI9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/script"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkJY9eEeS006BjraluoQ" label="debugging">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkJo9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkJ49eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/debugging"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkKI9eEeS006BjraluoQ" label="options">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkKY9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkKo9eEeS006BjraluoQ" label="The options for this placement, they define the available actions for the placement." column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/options"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_CrnkK49eEeS006BjraluoQ" label="TimeFrame">
+        <target xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame"/>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkLI9eEeS006BjraluoQ" label="startDate">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkLY9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkLo9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkL49eEeS006BjraluoQ" label="endDate">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkMI9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkMY9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/endDate"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkMo9eEeS006BjraluoQ" label="actualDate">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkM49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkNI9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/actualDate"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_CrnkNY9eEeS006BjraluoQ" label="ScriptHistory">
+        <target xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory"/>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkNo9eEeS006BjraluoQ" label="currentDate">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkN49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkOI9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkOY9eEeS006BjraluoQ" label="currentPlacement">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkOo9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkO49eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_CrnkPI9eEeS006BjraluoQ" label="writtenProtokol">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CrnkPY9eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CroLII9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/writtenProtokol"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_CroLIY9eEeS006BjraluoQ" label="Scripts">
+        <target xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts"/>
+        <lines xmi:type="table:DLine" xmi:id="_CroLIo9eEeS006BjraluoQ" label="name">
+          <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_CroLI49eEeS006BjraluoQ" column="_CroLJY9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_CroLJI9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+            <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts/name"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Scripts"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_CroLJY9eEeS006BjraluoQ" label="Category" cells="_CrnkE49eEeS006BjraluoQ _CrnkF49eEeS006BjraluoQ _CrnkGo9eEeS006BjraluoQ _CrnkHY9eEeS006BjraluoQ _CrnkII9eEeS006BjraluoQ _CrnkI49eEeS006BjraluoQ _CrnkJo9eEeS006BjraluoQ _CrnkKY9eEeS006BjraluoQ _CrnkLY9eEeS006BjraluoQ _CrnkMI9eEeS006BjraluoQ _CrnkM49eEeS006BjraluoQ _CrnkN49eEeS006BjraluoQ _CrnkOo9eEeS006BjraluoQ _CrnkPY9eEeS006BjraluoQ _CroLI49eEeS006BjraluoQ" width="261" featureName="propertyCategory">
+        <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Category']"/>
+      </columns>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_CroLJo9eEeS006BjraluoQ" label="Description" cells="_CrnkFI9eEeS006BjraluoQ _CrnkGI9eEeS006BjraluoQ _CrnkG49eEeS006BjraluoQ _CrnkHo9eEeS006BjraluoQ _CrnkIY9eEeS006BjraluoQ _CrnkJI9eEeS006BjraluoQ _CrnkJ49eEeS006BjraluoQ _CrnkKo9eEeS006BjraluoQ _CrnkLo9eEeS006BjraluoQ _CrnkMY9eEeS006BjraluoQ _CrnkNI9eEeS006BjraluoQ _CrnkOI9eEeS006BjraluoQ _CrnkO49eEeS006BjraluoQ _CroLII9eEeS006BjraluoQ _CroLJI9eEeS006BjraluoQ" featureName="propertyDescription">
         <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Decription']"/>
       </columns>
       <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']"/>

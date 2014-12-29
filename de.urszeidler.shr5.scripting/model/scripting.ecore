@@ -6,7 +6,11 @@
       <details key="documentation" value="The script is made of a set of placements.&#xA;It contains all needed to play an adventure."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="placements" upperBound="-1"
-        eType="#//Placement" containment="true" eOpposite="#//Placement/script"/>
+        eType="#//Placement" containment="true" eOpposite="#//Placement/script">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="All the placements/scence in the script."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allTeams" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
         containment="true">
@@ -23,7 +27,11 @@
         <details key="documentation" value="Here the characters only in the scrip exist, can be stored."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Placement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Placement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The entry point for the script."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="history" eType="#//ScriptHistory"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -36,7 +44,11 @@
       <details key="documentation" value="A placement is a setting or scene.&#xA;Here can a combat happen."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextPlacements" upperBound="-1"
-        eType="#//Placement"/>
+        eType="#//Placement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of availble placements."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teams" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -94,5 +106,7 @@
     <eLiterals name="combat"/>
     <eLiterals name="legWork"/>
     <eLiterals name="homeGround"/>
+    <eLiterals name="matrix"/>
+    <eLiterals name="astralSpace"/>
   </eClassifiers>
 </ecore:EPackage>

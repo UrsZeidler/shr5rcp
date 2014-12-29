@@ -4,6 +4,7 @@ package de.urszeidler.shr5.scripting.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -13,6 +14,7 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
@@ -61,6 +63,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * @generated
      */
     private EClass scriptsEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum placementOptionsEEnum = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -266,6 +275,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getPlacement_Options() {
+        return (EAttribute)placementEClass.getEStructuralFeatures().get(7);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getTimeFrame() {
         return timeFrameEClass;
     }
@@ -374,6 +392,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EEnum getPlacementOptions() {
+        return placementOptionsEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }
@@ -413,6 +440,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(placementEClass, PLACEMENT__SCRIPT);
         createEAttribute(placementEClass, PLACEMENT__DEBUGGING);
         createEReference(placementEClass, PLACEMENT__ENVIORMENT);
+        createEAttribute(placementEClass, PLACEMENT__OPTIONS);
 
         timeFrameEClass = createEClass(TIME_FRAME);
         createEAttribute(timeFrameEClass, TIME_FRAME__START_DATE);
@@ -428,6 +456,9 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         scriptsEClass = createEClass(SCRIPTS);
         createEReference(scriptsEClass, SCRIPTS__STORIES);
         createEAttribute(scriptsEClass, SCRIPTS__NAME);
+
+        // Create enums
+        placementOptionsEEnum = createEEnum(PLACEMENT_OPTIONS);
     }
 
     /**
@@ -485,6 +516,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getPlacement_Script(), this.getScript(), this.getScript_Placements(), "script", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getPlacement_Debugging(), ecorePackage.getEString(), "debugging", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Enviorment(), theRuntimePackage.getEnviorment(), null, "enviorment", null, 1, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPlacement_Options(), this.getPlacementOptions(), "options", null, 0, 2, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(timeFrameEClass, TimeFrame.class, "TimeFrame", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getTimeFrame_StartDate(), theShr5Package.getShrDate(), "startDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -500,6 +532,14 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEClass(scriptsEClass, Scripts.class, "Scripts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getScripts_Stories(), this.getScript(), null, "stories", null, 0, -1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getScripts_Name(), ecorePackage.getEString(), "name", null, 1, 1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        // Initialize enums and add enum literals
+        initEEnum(placementOptionsEEnum, PlacementOptions.class, "PlacementOptions");
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.COMBAT);
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.LEG_WORK);
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.HOME_GROUND);
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.MATRIX);
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.ASTRAL_SPACE);
 
         // Create resource
         createResource(eNS_URI);

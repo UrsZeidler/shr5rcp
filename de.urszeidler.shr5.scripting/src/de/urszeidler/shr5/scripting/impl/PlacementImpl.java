@@ -12,12 +12,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 import de.urszeidler.shr5.scripting.TimeFrame;
@@ -42,6 +44,7 @@ import de.urszeidler.shr5.scripting.TimeFrame;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getScript <em>Script</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getDebugging <em>Debugging</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getEnviorment <em>Enviorment</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getOptions <em>Options</em>}</li>
  * </ul>
  * </p>
  *
@@ -257,6 +260,16 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * @ordered
      */
     protected Enviorment enviorment;
+
+    /**
+     * The cached value of the '{@link #getOptions() <em>Options</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOptions()
+     * @generated
+     * @ordered
+     */
+    protected EList<PlacementOptions> options;
 
     /**
      * <!-- begin-user-doc -->
@@ -579,6 +592,18 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<PlacementOptions> getOptions() {
+        if (options == null) {
+            options = new EDataTypeUniqueEList<PlacementOptions>(PlacementOptions.class, this, ScriptingPackage.PLACEMENT__OPTIONS);
+        }
+        return options;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -654,6 +679,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return getDebugging();
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 return getEnviorment();
+            case ScriptingPackage.PLACEMENT__OPTIONS:
+                return getOptions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -708,6 +735,10 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 setEnviorment((Enviorment)newValue);
                 return;
+            case ScriptingPackage.PLACEMENT__OPTIONS:
+                getOptions().clear();
+                getOptions().addAll((Collection<? extends PlacementOptions>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -759,6 +790,9 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 setEnviorment((Enviorment)null);
                 return;
+            case ScriptingPackage.PLACEMENT__OPTIONS:
+                getOptions().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -797,6 +831,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return DEBUGGING_EDEFAULT == null ? debugging != null : !DEBUGGING_EDEFAULT.equals(debugging);
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
                 return enviorment != null;
+            case ScriptingPackage.PLACEMENT__OPTIONS:
+                return options != null && !options.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -865,6 +901,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
         result.append(inTheirFace);
         result.append(", debugging: ");
         result.append(debugging);
+        result.append(", options: ");
+        result.append(options);
         result.append(')');
         return result.toString();
     }

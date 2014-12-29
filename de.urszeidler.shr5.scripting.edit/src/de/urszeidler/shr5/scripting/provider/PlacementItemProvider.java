@@ -34,7 +34,6 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  * This is the item provider adapter for a {@link de.urszeidler.shr5.scripting.Placement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class PlacementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -43,7 +42,6 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PlacementItemProvider(AdapterFactory adapterFactory) {
@@ -54,7 +52,6 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -73,6 +70,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
             addBackgroundPropertyDescriptor(object);
             addInTheirFacePropertyDescriptor(object);
             addDebuggingPropertyDescriptor(object);
+            addOptionsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -81,84 +79,132 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * This adds a property descriptor for the Beschreibung feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addBeschreibungPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Beschreibbar_beschreibung_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
-                Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Image feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addImagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Beschreibbar_image_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
-                Shr5Package.Literals.BESCHREIBBAR__IMAGE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Name feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Beschreibbar_name_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
-                Shr5Package.Literals.BESCHREIBBAR__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Start Date feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addStartDatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_TimeFrame_startDate_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_startDate_feature", "_UI_TimeFrame_type"),
-                ScriptingPackage.Literals.TIME_FRAME__START_DATE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_startDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_startDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__START_DATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the End Date feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addEndDatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_TimeFrame_endDate_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_endDate_feature", "_UI_TimeFrame_type"),
-                ScriptingPackage.Literals.TIME_FRAME__END_DATE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_endDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_endDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__END_DATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Actual Date feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addActualDatePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_TimeFrame_actualDate_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_actualDate_feature", "_UI_TimeFrame_type"),
-                ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TimeFrame_actualDate_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_actualDate_feature", "_UI_TimeFrame_type"),
+                 ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -219,42 +265,88 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * This adds a property descriptor for the Background feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addBackgroundPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Placement_background_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Placement_background_feature", "_UI_Placement_type"),
-                ScriptingPackage.Literals.PLACEMENT__BACKGROUND, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Placement_background_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Placement_background_feature", "_UI_Placement_type"),
+                 ScriptingPackage.Literals.PLACEMENT__BACKGROUND,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the In Their Face feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addInTheirFacePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Placement_inTheirFace_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Placement_inTheirFace_feature", "_UI_Placement_type"),
-                ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Placement_inTheirFace_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Placement_inTheirFace_feature", "_UI_Placement_type"),
+                 ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Debugging feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addDebuggingPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Placement_debugging_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Placement_debugging_feature", "_UI_Placement_type"),
-                ScriptingPackage.Literals.PLACEMENT__DEBUGGING, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Placement_debugging_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Placement_debugging_feature", "_UI_Placement_type"),
+                 ScriptingPackage.Literals.PLACEMENT__DEBUGGING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Options feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addOptionsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Placement_options_feature"),
+                 getString("_UI_Placement_options_description"),
+                 ScriptingPackage.Literals.PLACEMENT__OPTIONS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -263,7 +355,6 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -278,7 +369,6 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -312,13 +402,14 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String getText(Object object) {
         String label = ((Placement)object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Placement_type") : getString("_UI_Placement_type") + " " + label;
+        return label == null || label.length() == 0 ?
+            getString("_UI_Placement_type") :
+            getString("_UI_Placement_type") + " " + label;
     }
 
     /**
@@ -326,7 +417,6 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -343,6 +433,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
             case ScriptingPackage.PLACEMENT__BACKGROUND:
             case ScriptingPackage.PLACEMENT__IN_THEIR_FACE:
             case ScriptingPackage.PLACEMENT__DEBUGGING:
+            case ScriptingPackage.PLACEMENT__OPTIONS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
@@ -357,21 +448,22 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(ScriptingPackage.Literals.PLACEMENT__ENVIORMENT, RuntimeFactory.eINSTANCE.createEnviorment()));
+        newChildDescriptors.add
+            (createChildParameter
+                (ScriptingPackage.Literals.PLACEMENT__ENVIORMENT,
+                 RuntimeFactory.eINSTANCE.createEnviorment()));
     }
 
     /**
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

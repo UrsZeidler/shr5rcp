@@ -2,7 +2,9 @@
  */
 package de.urszeidler.shr5.scripting.impl;
 
+import de.urszeidler.shr5.scripting.*;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -73,6 +75,36 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
+    public Object createFromString(EDataType eDataType, String initialValue) {
+        switch (eDataType.getClassifierID()) {
+            case ScriptingPackage.PLACEMENT_OPTIONS:
+                return createPlacementOptionsFromString(eDataType, initialValue);
+            default:
+                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String convertToString(EDataType eDataType, Object instanceValue) {
+        switch (eDataType.getClassifierID()) {
+            case ScriptingPackage.PLACEMENT_OPTIONS:
+                return convertPlacementOptionsToString(eDataType, instanceValue);
+            default:
+                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public Script createScript() {
         ScriptImpl script = new ScriptImpl();
         return script;
@@ -106,6 +138,26 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
     public Scripts createScripts() {
         ScriptsImpl scripts = new ScriptsImpl();
         return scripts;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PlacementOptions createPlacementOptionsFromString(EDataType eDataType, String initialValue) {
+        PlacementOptions result = PlacementOptions.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertPlacementOptionsToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**

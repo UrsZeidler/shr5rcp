@@ -5,7 +5,6 @@ package de.urszeidler.shr5.scripting.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;

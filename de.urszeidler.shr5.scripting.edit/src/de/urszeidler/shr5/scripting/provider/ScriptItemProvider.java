@@ -9,6 +9,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -27,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
@@ -144,22 +146,34 @@ public class ScriptItemProvider
      * This adds a property descriptor for the Entry feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addEntryPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Script_entry_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Script_entry_feature", "_UI_Script_type"),
+                 getString("_UI_Script_entry_description"),
                  ScriptingPackage.Literals.SCRIPT__ENTRY,
                  true,
                  false,
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {                   
+                    if (object instanceof Script) {
+                        Script s = (Script)object;
+                        return s.getPlacements();
+                    }
+
+                    return super.getComboBoxObjects(object);
+                }
+
+            });
     }
 
     /**

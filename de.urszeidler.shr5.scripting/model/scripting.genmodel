@@ -8,22 +8,34 @@
   <foreignModel>scripting.ecore</foreignModel>
   <genPackages prefix="Scripting" basePackage="de.urszeidler.shr5" disposableProviderFactory="true"
       ecorePackage="scripting.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scripting.ecore#//PlacementOptions">
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/combat"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/legWork"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/homeGround"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/matrix"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/astralSpace"/>
+    </genEnums>
     <genClasses ecoreClass="scripting.ecore#//Script">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/placements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/allTeams"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/player"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/management"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/entry"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The entry point for the script."
+          propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/entry"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/history"/>
     </genClasses>
     <genClasses ecoreClass="scripting.ecore#//Placement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/nextPlacements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/teams"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The list of availble placements."
+          propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/nextPlacements"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The teams in the placement."
+          propertySortChoices="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/teams"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/background"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/inTheirFace"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scripting.ecore#//Placement/script"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/debugging"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/enviorment"/>
+      <genFeatures createChild="false" propertyDescription="The options for this placement, they define the available actions for the placement."
+          ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/options"/>
     </genClasses>
     <genClasses image="false" ecoreClass="scripting.ecore#//TimeFrame">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/startDate"/>

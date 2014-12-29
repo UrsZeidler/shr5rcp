@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getScript <em>Script</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getEnviorment <em>Enviorment</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.Placement#getOptions <em>Options</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,6 +46,9 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The list of availble placements.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Next Placements</em>' reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_NextPlacements()
      * @model
@@ -202,5 +206,22 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * @generated
      */
     void setEnviorment(Enviorment value);
+
+    /**
+     * Returns the value of the '<em><b>Options</b></em>' attribute list.
+     * The list contents are of type {@link de.urszeidler.shr5.scripting.PlacementOptions}.
+     * The literals are from the enumeration {@link de.urszeidler.shr5.scripting.PlacementOptions}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The options for this placement, they define the available actions for the placement.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Options</em>' attribute list.
+     * @see de.urszeidler.shr5.scripting.PlacementOptions
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Options()
+     * @model upper="2"
+     * @generated
+     */
+    EList<PlacementOptions> getOptions();
 
 } // Placement

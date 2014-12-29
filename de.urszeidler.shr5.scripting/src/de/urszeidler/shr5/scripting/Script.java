@@ -45,6 +45,9 @@ public interface Script extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * All the placements/scence in the script.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Placements</em>' containment reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_Placements()
      * @see de.urszeidler.shr5.scripting.Placement#getScript
@@ -135,6 +138,9 @@ public interface Script extends Beschreibbar {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The entry point for the script.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Entry</em>' reference.
      * @see #setEntry(Placement)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_Entry()
