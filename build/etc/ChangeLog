@@ -2,6 +2,8 @@
 
 * script
 	* added zest to display the script graph
+	* added script printer
+	* added placement combat simulator
 * model to text
 	* added npc sheet
 * resources
