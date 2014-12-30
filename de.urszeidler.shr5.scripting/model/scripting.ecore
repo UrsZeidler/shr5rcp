@@ -15,7 +15,7 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The teams of the complete script."/>
+        <details key="documentation" value="All he teams of the complete script. They are contained here and referd in the placements."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team"
@@ -46,13 +46,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextPlacements" upperBound="-1"
         eType="#//Placement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The list of availble placements."/>
+        <details key="documentation" value="The list of availble placements for the scene change."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teams" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Team">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The teams in the placement."/>
+        <details key="documentation" value="The teams in the placement. Refers a team from the all features."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -62,7 +62,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugging" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enviorment" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.runtime/model/runtime.ecore#//Enviorment"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The enviorment defines the outer modifications, like light, background count etc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="options" upperBound="2"
         eType="#//PlacementOptions">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -71,13 +75,16 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeFrame" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The timeframe interface defines and time range and a current time."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ScriptHistory">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Contains the current state."/>
+      <details key="documentation" value="Contains the current state of the run, and all executed commands."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="commandStack" eType="ecore:EClass ../../de.urszeidler.shr5.gameplay.model/model/gameplay.ecore#//ExecutionStack"
         containment="true"/>
@@ -86,7 +93,11 @@
         <details key="documentation" value="The current date."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentPlacement" eType="#//Placement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentPlacement" eType="#//Placement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current selected placement in the runing script."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="writtenProtokol" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -108,5 +119,6 @@
     <eLiterals name="homeGround"/>
     <eLiterals name="matrix"/>
     <eLiterals name="astralSpace"/>
+    <eLiterals name="socialInteraction"/>
   </eClassifiers>
 </ecore:EPackage>

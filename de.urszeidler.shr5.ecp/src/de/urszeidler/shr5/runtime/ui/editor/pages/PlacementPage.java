@@ -230,21 +230,13 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         styledText_2.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
-        
-//        Composite composite_6 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
-//        composite_6.setLayout(new GridLayout(4, false));
-//        composite_6.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 3));
-//        managedForm.getToolkit().paintBordersFor(composite_6);
-//        new Label(composite_1, SWT.NONE);
-//        new Label(composite_1, SWT.NONE);
-//        new Label(composite_1, SWT.NONE);
 
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
 
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__OPTIONS, composite_5);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, composite_5);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__TEAMS, composite_5);
-        
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

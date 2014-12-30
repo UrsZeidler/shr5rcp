@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Time Frame</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The timeframe interface defines and time range and a current time.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

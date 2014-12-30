@@ -540,6 +540,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.HOME_GROUND);
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.MATRIX);
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.ASTRAL_SPACE);
+        addEEnumLiteral(placementOptionsEEnum, PlacementOptions.SOCIAL_INTERACTION);
 
         // Create resource
         createResource(eNS_URI);

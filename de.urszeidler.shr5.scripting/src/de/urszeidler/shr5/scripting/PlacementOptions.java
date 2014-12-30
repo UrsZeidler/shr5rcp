@@ -66,7 +66,15 @@ public enum PlacementOptions implements Enumerator {
      * @generated
      * @ordered
      */
-    ASTRAL_SPACE(0, "astralSpace", "astralSpace");
+    ASTRAL_SPACE(0, "astralSpace", "astralSpace"), /**
+     * The '<em><b>Social Interaction</b></em>' literal object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #SOCIAL_INTERACTION_VALUE
+     * @generated
+     * @ordered
+     */
+    SOCIAL_INTERACTION(0, "socialInteraction", "socialInteraction");
 
     /**
      * The '<em><b>Combat</b></em>' literal value.
@@ -144,6 +152,21 @@ public enum PlacementOptions implements Enumerator {
     public static final int ASTRAL_SPACE_VALUE = 0;
 
     /**
+     * The '<em><b>Social Interaction</b></em>' literal value.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of '<em><b>Social Interaction</b></em>' literal object isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @see #SOCIAL_INTERACTION
+     * @model name="socialInteraction"
+     * @generated
+     * @ordered
+     */
+    public static final int SOCIAL_INTERACTION_VALUE = 0;
+
+    /**
      * An array of all the '<em><b>Placement Options</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -156,6 +179,7 @@ public enum PlacementOptions implements Enumerator {
             HOME_GROUND,
             MATRIX,
             ASTRAL_SPACE,
+            SOCIAL_INTERACTION,
         };
 
     /**

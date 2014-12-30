@@ -47,7 +47,7 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * </p>
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * The list of availble placements.
+     * The list of availble placements for the scene change.
      * <!-- end-model-doc -->
      * @return the value of the '<em>Next Placements</em>' reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_NextPlacements()
@@ -66,7 +66,7 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * </p>
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * The teams in the placement.
+     * The teams in the placement. Refers a team from the all features.
      * <!-- end-model-doc -->
      * @return the value of the '<em>Teams</em>' reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Teams()
@@ -189,6 +189,9 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The enviorment defines the outer modifications, like light, background count etc
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Enviorment</em>' containment reference.
      * @see #setEnviorment(Enviorment)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Enviorment()

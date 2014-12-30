@@ -8105,7 +8105,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_j-2MU3fFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_j-1lQXfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j-1lQnfFEeSpDJAqDmka7w" x="165" y="280" width="120" height="58"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j-1lQnfFEeSpDJAqDmka7w" x="155" y="165" width="120" height="58"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kaKPUHfFEeSpDJAqDmka7w" type="2003" element="_kZ2GQHfFEeSpDJAqDmka7w">
             <children xmi:type="notation:Node" xmi:id="_kaK2YHfFEeSpDJAqDmka7w" type="5007"/>
@@ -8126,7 +8126,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_kaK2Y3fFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_kaKPUXfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kaKPUnfFEeSpDJAqDmka7w" x="441" y="337" width="177" height="106"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kaKPUnfFEeSpDJAqDmka7w" x="431" y="222" width="177" height="106"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_lH4Q8HfFEeSpDJAqDmka7w" type="2003" element="_lHkH4HfFEeSpDJAqDmka7w">
             <children xmi:type="notation:Node" xmi:id="_lH4Q83fFEeSpDJAqDmka7w" type="5007"/>
@@ -8144,7 +8144,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_lH44AnfFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_lH4Q8XfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8" italic="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lH4Q8nfFEeSpDJAqDmka7w" x="475" y="83" width="153" height="85"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lH4Q8nfFEeSpDJAqDmka7w" x="465" y="-32" width="153" height="85"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_l1x4wHfFEeSpDJAqDmka7w" type="2003" element="_l1Wa8HfFEeSpDJAqDmka7w">
             <children xmi:type="notation:Node" xmi:id="_l1yf0HfFEeSpDJAqDmka7w" type="5007"/>
@@ -8159,7 +8159,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_l1yf03fFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_l1x4wXfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l1x4wnfFEeSpDJAqDmka7w" x="20" y="395" width="160" height="88"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l1x4wnfFEeSpDJAqDmka7w" x="10" y="280" width="160" height="88"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_m_gg8HfFEeSpDJAqDmka7w" type="2003" element="_m-6EAHfFEeSpDJAqDmka7w">
             <children xmi:type="notation:Node" xmi:id="_m_hIAHfFEeSpDJAqDmka7w" type="5007"/>
@@ -8171,7 +8171,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m_hvEnfFEeSpDJAqDmka7w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m_gg8XfFEeSpDJAqDmka7w" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_gg8nfFEeSpDJAqDmka7w" x="30" width="120" height="58"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m_gg8nfFEeSpDJAqDmka7w" x="25" y="-40" width="120" height="58"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_1CUnYIC4EeSK-udt6gQCVA" type="2003" element="_1BDcEIC4EeSK-udt6gQCVA">
             <children xmi:type="notation:Node" xmi:id="_1CkfAIC4EeSK-udt6gQCVA" type="5007"/>
@@ -8180,7 +8180,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_1CltIoC4EeSK-udt6gQCVA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_1CUnYYC4EeSK-udt6gQCVA" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CUnYoC4EeSK-udt6gQCVA" x="300" y="-35" width="120" height="53"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1CUnYoC4EeSK-udt6gQCVA" x="290" y="-40" width="120" height="53"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_SurKQIzoEeSjHLmIMXZ9XQ" type="2003" element="_St01sIzoEeSjHLmIMXZ9XQ">
             <children xmi:type="notation:Node" xmi:id="_SvY78IzoEeSjHLmIMXZ9XQ" type="5007"/>
@@ -8200,11 +8200,14 @@
               <children xmi:type="notation:Node" xmi:id="_MgJOoI9dEeS006BjraluoQ" type="3010" element="_MfOooI9dEeS006BjraluoQ">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_MgJOoY9dEeS006BjraluoQ"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_2ZNO4I9rEeS006BjraluoQ" type="3010" element="_2XjCAI9rEeS006BjraluoQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_2ZNO4Y9rEeS006BjraluoQ"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_SvZjAYzoEeSjHLmIMXZ9XQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_SvZjAozoEeSjHLmIMXZ9XQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_SurKQYzoEeSjHLmIMXZ9XQ" fontName="Ubuntu" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SurKQozoEeSjHLmIMXZ9XQ" x="630" y="295"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SurKQozoEeSjHLmIMXZ9XQ" x="615" y="165"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_jU1mAnfFEeSpDJAqDmka7w"/>
           <edges xmi:type="notation:Edge" xmi:id="_kaMEhHfFEeSpDJAqDmka7w" type="4001" element="_kaEIsHfFEeSpDJAqDmka7w" source="_j-1lQHfFEeSpDJAqDmka7w" target="_kaKPUHfFEeSpDJAqDmka7w">
@@ -8515,6 +8518,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_kZ2GQHfFEeSpDJAqDmka7w" name="Placement" tooltipText="" outgoingEdges="_kaF94HfFEeSpDJAqDmka7w _lHz_gHfFEeSpDJAqDmka7w _1CF94IC4EeSK-udt6gQCVA" incomingEdges="_kaEIsHfFEeSpDJAqDmka7w _kaF94HfFEeSpDJAqDmka7w _kaHMAHfFEeSpDJAqDmka7w _l1tAQHfFEeSpDJAqDmka7w" width="12" height="10">
         <target xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement"/>
         <semanticElements xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_1yKiMIzoEeSjHLmIMXZ9XQ" backgroundStyle="Liquid">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_1yKiMYzoEeSjHLmIMXZ9XQ"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
@@ -8619,6 +8625,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_lHkH4HfFEeSpDJAqDmka7w" name="TimeFrame" tooltipText="" incomingEdges="_lHz_gHfFEeSpDJAqDmka7w" width="12" height="10">
         <target xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//TimeFrame"/>
         <semanticElements xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//TimeFrame"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_lHku8HfFEeSpDJAqDmka7w" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_interface.gif" backgroundStyle="Liquid">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_lHku8XfFEeSpDJAqDmka7w"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.0/@style"/>
@@ -8921,6 +8930,17 @@
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_MfPPso9dEeS006BjraluoQ"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_MfPPs49dEeS006BjraluoQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2XjCAI9rEeS006BjraluoQ" name="socialInteraction" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/socialInteraction"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//PlacementOptions/socialInteraction"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_2XjpEI9rEeS006BjraluoQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_2XjpEY9rEeS006BjraluoQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_2XjpEo9rEeS006BjraluoQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_2XjpE49rEeS006BjraluoQ"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
@@ -25304,7 +25324,7 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/allTeams"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/allTeams"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
-          <cells xmi:type="table:DCell" xmi:id="_hyT0lnfLEeS7R_CGLciuCA" label="The teams of the complete script." column="_hyUbznfLEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_hyT0lnfLEeS7R_CGLciuCA" label="All he teams of the complete script. They are contained here and referd in the placements." column="_hyUbznfLEeS7R_CGLciuCA">
             <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/allTeams/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Script/allTeams/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <currentStyle xmi:type="table:DCellStyle" xmi:id="_hyT0l3fLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
@@ -25397,7 +25417,7 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
-          <cells xmi:type="table:DCell" xmi:id="_Yzhr0I9dEeS006BjraluoQ" label="The list of availble placements." column="_hyUbznfLEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_Yzhr0I9dEeS006BjraluoQ" label="The list of availble placements for the scene change." column="_hyUbznfLEeS7R_CGLciuCA">
             <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/nextPlacements/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <currentStyle xmi:type="table:DCellStyle" xmi:id="_Y2YykI9dEeS006BjraluoQ" defaultBackgroundStyle="true">
@@ -25414,7 +25434,7 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/teams"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/teams"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
-          <cells xmi:type="table:DCell" xmi:id="_hyT0t3fLEeS7R_CGLciuCA" label="The teams in the placement." column="_hyUbznfLEeS7R_CGLciuCA">
+          <cells xmi:type="table:DCell" xmi:id="_hyT0t3fLEeS7R_CGLciuCA" label="The teams in the placement. Refers a team from the all features." column="_hyUbznfLEeS7R_CGLciuCA">
             <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/teams/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/teams/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
             <currentStyle xmi:type="table:DCellStyle" xmi:id="_hyT0uHfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
@@ -25463,6 +25483,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/enviorment"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/enviorment"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_DfufUJATEeSuYMKvwPdAIg" label="The enviorment defines the outer modifications, like light, background count etc" column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/enviorment/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//Placement/enviorment/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_DhCG4JATEeSuYMKvwPdAIg" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_DhCG4ZATEeSuYMKvwPdAIg" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyT0yXfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyT0ynfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -25527,6 +25556,15 @@
         </lines>
         <semanticElements xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//TimeFrame"/>
         <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <cells xmi:type="table:DCell" xmi:id="_i0cU4JASEeSuYMKvwPdAIg" label="The timeframe interface defines and time range and a current time." column="_hyUbznfLEeS7R_CGLciuCA">
+          <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//TimeFrame/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//TimeFrame/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <currentStyle xmi:type="table:DCellStyle" xmi:id="_i1dokJASEeSuYMKvwPdAIg" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_i1dokZASEeSuYMKvwPdAIg" red="220" green="234" blue="183"/>
+            <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </currentStyle>
+          <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+        </cells>
         <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyUbqHfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyUbqXfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
         </currentStyle>
@@ -25562,6 +25600,15 @@
           <target xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/currentPlacement"/>
           <semanticElements xmi:type="ecore:EReference" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/currentPlacement"/>
           <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_i1ePoJASEeSuYMKvwPdAIg" label="The current selected placement in the runing script." column="_hyUbznfLEeS7R_CGLciuCA">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/currentPlacement/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/currentPlacement/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_i1k9UJASEeSuYMKvwPdAIg" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_i1k9UZASEeSuYMKvwPdAIg" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description_2:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
           <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_hyUbtXfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
             <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hyUbtnfLEeS7R_CGLciuCA" red="255" green="255" blue="255"/>
           </currentStyle>
@@ -25585,7 +25632,7 @@
         </lines>
         <semanticElements xmi:type="ecore:EClass" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory"/>
         <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
-        <cells xmi:type="table:DCell" xmi:id="_hyUbvXfLEeS7R_CGLciuCA" label="Contains the current state." column="_hyUbznfLEeS7R_CGLciuCA">
+        <cells xmi:type="table:DCell" xmi:id="_hyUbvXfLEeS7R_CGLciuCA" label="Contains the current state of the run, and all executed commands." column="_hyUbznfLEeS7R_CGLciuCA">
           <target xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
           <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#//ScriptHistory/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
           <currentStyle xmi:type="table:DCellStyle" xmi:id="_hyUbvnfLEeS7R_CGLciuCA" defaultBackgroundStyle="true">
@@ -25639,7 +25686,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Tj7acY9dEeS006BjraluoQ" red="255" green="255" blue="255"/>
         </currentStyle>
       </lines>
-      <columns xmi:type="table:DTargetColumn" xmi:id="_hyUbznfLEeS7R_CGLciuCA" label="Domain Documentation" cells="_hyT0lnfLEeS7R_CGLciuCA _hyT0n3fLEeS7R_CGLciuCA _hyT0qHfLEeS7R_CGLciuCA _hyT0rXfLEeS7R_CGLciuCA _hyT0t3fLEeS7R_CGLciuCA _hyT0y3fLEeS7R_CGLciuCA _hyUbr3fLEeS7R_CGLciuCA _hyUbuHfLEeS7R_CGLciuCA _hyUbvXfLEeS7R_CGLciuCA _hyUbyXfLEeS7R_CGLciuCA _Tlm1cI9dEeS006BjraluoQ _Yzhr0I9dEeS006BjraluoQ _iW-_EI9dEeS006BjraluoQ _nD0hoI9dEeS006BjraluoQ">
+      <columns xmi:type="table:DTargetColumn" xmi:id="_hyUbznfLEeS7R_CGLciuCA" label="Domain Documentation" cells="_hyT0lnfLEeS7R_CGLciuCA _hyT0n3fLEeS7R_CGLciuCA _hyT0qHfLEeS7R_CGLciuCA _hyT0rXfLEeS7R_CGLciuCA _hyT0t3fLEeS7R_CGLciuCA _hyT0y3fLEeS7R_CGLciuCA _hyUbr3fLEeS7R_CGLciuCA _hyUbuHfLEeS7R_CGLciuCA _hyUbvXfLEeS7R_CGLciuCA _hyUbyXfLEeS7R_CGLciuCA _Tlm1cI9dEeS006BjraluoQ _Yzhr0I9dEeS006BjraluoQ _iW-_EI9dEeS006BjraluoQ _nD0hoI9dEeS006BjraluoQ _i0cU4JASEeSuYMKvwPdAIg _i1ePoJASEeSuYMKvwPdAIg _DfufUJATEeSuYMKvwPdAIg">
         <target xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#/"/>
         <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.ecore#/"/>
         <originMapping xmi:type="description_2:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
@@ -32341,7 +32388,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_CrnkGI9eEeS006BjraluoQ" label="The list of availble placements." column="_CroLJo9eEeS006BjraluoQ">
+          <cells xmi:type="table:DCell" xmi:id="_CrnkGI9eEeS006BjraluoQ" label="The list of availble placements for placement change." column="_CroLJo9eEeS006BjraluoQ">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/Placement/nextPlacements"/>
           </cells>
@@ -32437,7 +32484,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_CrnkLo9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+          <cells xmi:type="table:DCell" xmi:id="_CrnkLo9eEeS006BjraluoQ" label="" column="_CroLJo9eEeS006BjraluoQ">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/TimeFrame/startDate"/>
           </cells>
@@ -32481,7 +32528,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_CrnkOI9eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+          <cells xmi:type="table:DCell" xmi:id="_CrnkOI9eEeS006BjraluoQ" label="The curent date in the running game." column="_CroLJo9eEeS006BjraluoQ">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentDate"/>
           </cells>
@@ -32494,7 +32541,7 @@
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
           </cells>
-          <cells xmi:type="table:DCell" xmi:id="_CrnkO49eEeS006BjraluoQ" column="_CroLJo9eEeS006BjraluoQ">
+          <cells xmi:type="table:DCell" xmi:id="_CrnkO49eEeS006BjraluoQ" label="The current placement the adventure is in." column="_CroLJo9eEeS006BjraluoQ">
             <target xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
             <semanticElements xmi:type="genmodel:GenFeature" href="platform:/resource/de.urszeidler.shr5.scripting/model/scripting.genmodel#//scripting/ScriptHistory/currentPlacement"/>
           </cells>

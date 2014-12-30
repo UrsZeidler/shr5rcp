@@ -66,7 +66,7 @@ public interface Script extends Beschreibbar {
      * </p>
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * The teams of the complete script.
+     * All he teams of the complete script. They are contained here and referd in the placements.
      * <!-- end-model-doc -->
      * @return the value of the '<em>All Teams</em>' containment reference list.
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript_AllTeams()

@@ -15,7 +15,7 @@ import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Contains the current state.
+ * Contains the current state of the run, and all executed commands.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -96,6 +96,9 @@ public interface ScriptHistory extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The current selected placement in the runing script.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Current Placement</em>' reference.
      * @see #setCurrentPlacement(Placement)
      * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScriptHistory_CurrentPlacement()
