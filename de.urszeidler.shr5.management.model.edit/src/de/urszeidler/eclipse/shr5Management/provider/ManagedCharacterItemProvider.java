@@ -115,7 +115,7 @@ public class ManagedCharacterItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ManagedCharacter_sex_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ManagedCharacter_sex_feature", "_UI_ManagedCharacter_type"),
+                 getString("_UI_ManagedCharacter_sex_description"),
                  Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX,
                  true,
                  false,

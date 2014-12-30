@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -117,6 +118,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM: return createCharacterAdvancementSystem();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
             case Shr5managementPackage.QUELLEN_CONSTRAIN: return createQuellenConstrain();
+            case Shr5managementPackage.PACK: return createPack();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -448,6 +450,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public QuellenConstrain createQuellenConstrain() {
         QuellenConstrainImpl quellenConstrain = new QuellenConstrainImpl();
         return quellenConstrain;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Pack createPack() {
+        PackImpl pack = new PackImpl();
+        return pack;
     }
 
     /**

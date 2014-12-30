@@ -887,4 +887,32 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>Defines a constrain for the source element by holding a list of other elements and an constrain type.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="Pack">
+    <xsd:annotation>
+      <xsd:documentation>A pack is used in the generation process, to speed up somes choises. It contains a set of things.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="items" type="shr5:AbstraktGegenstand">
+            <xsd:annotation>
+              <xsd:documentation>The list of items this pack contains.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="wertValue" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Pack" type="shr5mngt:Pack">
+    <xsd:annotation>
+      <xsd:documentation>A pack is used in the generation process, to speed up somes choises. It contains a set of things.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

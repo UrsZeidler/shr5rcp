@@ -750,6 +750,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.Pack} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PackItemProvider packItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.Pack}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPackAdapter() {
+        if (packItemProvider == null) {
+            packItemProvider = new PackItemProvider(this);
+        }
+
+        return packItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -877,6 +900,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (characterAdvancementSystemItemProvider != null) characterAdvancementSystemItemProvider.dispose();
         if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
         if (quellenConstrainItemProvider != null) quellenConstrainItemProvider.dispose();
+        if (packItemProvider != null) packItemProvider.dispose();
     }
 
 	/**
@@ -1070,6 +1094,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createQuellenConstrain()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createPack()));
 
                 return null;
             }

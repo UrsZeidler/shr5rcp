@@ -23,6 +23,8 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.Pack;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 
@@ -138,6 +140,11 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
 
         }else if (object instanceof PercentLifestyleOption) {
             
+        }else if (object instanceof Pack) {
+            GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+            controlGridData.heightHint = 150;
+
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,controlGridData);
         }
         
         

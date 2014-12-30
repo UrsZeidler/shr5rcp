@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -395,6 +396,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateShr5KarmaGenerator((Shr5KarmaGenerator)value, diagnostics, context);
             case Shr5managementPackage.QUELLEN_CONSTRAIN:
                 return validateQuellenConstrain((QuellenConstrain)value, diagnostics, context);
+            case Shr5managementPackage.PACK:
+                return validatePack((Pack)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1061,6 +1064,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateQuellenConstrain(QuellenConstrain quellenConstrain, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(quellenConstrain, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validatePack(Pack pack, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(pack, diagnostics, context);
     }
 
     /**

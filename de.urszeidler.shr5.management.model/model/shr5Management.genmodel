@@ -37,7 +37,8 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/choosenLifestyle"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The nativ language of the character."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
+      <genFeatures createChild="false" propertyDescription="The selected sex of the character."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
       <genFeatures property="Readonly" createChild="false" propertyDescription="The current street cred. Its calculated by the karma the character has gaint."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notoriety"/>
@@ -396,6 +397,9 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/targets"/>
       <genFeatures createChild="false" propertyDescription="The kind of constrain, like not Together ..."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//QuellenConstrain/constrainType"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Pack">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Pack/items"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

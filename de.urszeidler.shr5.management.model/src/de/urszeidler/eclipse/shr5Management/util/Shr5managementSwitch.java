@@ -8,8 +8,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -390,6 +392,16 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.QUELLEN_CONSTRAIN: {
                 QuellenConstrain quellenConstrain = (QuellenConstrain)theEObject;
                 T result = caseQuellenConstrain(quellenConstrain);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.PACK: {
+                Pack pack = (Pack)theEObject;
+                T result = casePack(pack);
+                if (result == null) result = caseBeschreibbar(pack);
+                if (result == null) result = caseQuelle(pack);
+                if (result == null) result = caseGeldWert(pack);
+                if (result == null) result = caseIdentifiable(pack);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -983,6 +995,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
     /**
+     * Returns the result of interpreting the object as an instance of '<em>Pack</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Pack</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePack(Pack object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Beschreibbar</em>'.
      * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1028,6 +1055,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
 	/**
+     * Returns the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGeldWert(GeldWert object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
      * <!-- begin-user-doc -->
 	 * This implementation returns null;

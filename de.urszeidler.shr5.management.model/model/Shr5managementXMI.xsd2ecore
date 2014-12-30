@@ -278,6 +278,10 @@
       <nested inputs="shr5Management.ecore#//QuellenConstrain/targets" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//QuellenConstrain" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDElementDeclaration=38"/>
+    <nested inputs="shr5Management.ecore#//Pack" outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39">
+      <nested inputs="shr5Management.ecore#//Pack/items" outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Pack" outputs="Shr5managementXMI.xsd#//Pack;XSDElementDeclaration=39"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
@@ -288,4 +292,17 @@
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=2"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDAttributeUse"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/localizations"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDAttributeUse=1"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDAttributeUse=2"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//GeldWert/verfuegbarkeit"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDAttributeUse=3"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//GeldWert/wertValue"
+      outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDAttributeUse=4"/>
 </xsd2ecore:XSD2EcoreMappingRoot>
