@@ -143,7 +143,6 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof Pack) {
             GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
             controlGridData.heightHint = 150;
-
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,controlGridData);
         }
         

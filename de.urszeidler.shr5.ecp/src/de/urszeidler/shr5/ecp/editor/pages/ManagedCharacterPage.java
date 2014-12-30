@@ -1,6 +1,7 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.ISelection;
@@ -17,6 +18,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -131,7 +133,7 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
 
-        TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite, "Inventar", SWT.NONE, object,
+        TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidgetInventar);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
@@ -141,17 +143,17 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         managedForm.getToolkit().paintBordersFor(composite_1);
         composite_1.setLayout(new FillLayout(SWT.VERTICAL));
 
-        TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1, "Connections", SWT.NONE, object,
+        TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidgetConnections);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetConnections);
 
-        TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1, "Contracts", SWT.NONE, object,
+        TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidget_1);
         managedForm.getToolkit().paintBordersFor(treeTableWidget_1);
 
-        TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, "Vehicles", SWT.NONE, object,
+        TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
@@ -170,6 +172,10 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
 
+    }
+
+    private String featureName(EStructuralFeature feature) {
+        return ShadowrunEditingTools.toFeatureName(object, feature);
     }
 
     protected DataBindingContext initDataBindings() {
