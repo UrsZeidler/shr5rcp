@@ -52,6 +52,7 @@ public class TreeTableWidget extends Composite {
     private IDoubleClickListener dblListener;
     //TODO: an enum for the editing state when we want only delete or only add for example
     private boolean readOnly= false;
+    private ToolBar optionalToolbar;
 
     /**
      * Create the composite.
@@ -180,6 +181,12 @@ public class TreeTableWidget extends Composite {
 
         treeViewer.setContentProvider(treeContentProvider);
         IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        
+        optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
+//        toolkit.adapt(optionalToolbar);
+//        toolkit.paintBordersFor(optionalToolbar);
+        optionalToolbar.setVisible(false);
+        sctnNewSection.setTextClient(optionalToolbar);
         IListProperty property = null;
         if (editingDomain != null)
             property = EMFEditProperties.list(editingDomain, feature);
@@ -225,6 +232,10 @@ public class TreeTableWidget extends Composite {
 
         String displayName = propertyDescriptor.getDescription(feature);
         return displayName;
+    }
+
+    public ToolBar getOptionalToolbar() {
+        return optionalToolbar;
     }
 
 

@@ -363,7 +363,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         return null;
     }
 
-    private Collection<EObject> filterProvidedObjects(Collection<EObject> collection) {
+    public Collection<EObject> filterProvidedObjects(Collection<EObject> collection) {
         EObject theEObject = shadowrunEditor.getEObject();
         FluentIterable<EObject> fluentIterable = FluentIterable.from(collection);
         //filter the cyberwaretypes
@@ -412,7 +412,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      * @param eo the org {@link EObject}
      * @return the copy
      */
-    private EObject copyWithParentId(EObject eo) {
+    public static EObject copyWithParentId(EObject eo) {
         EObject copy = EcoreUtil.copy(eo);
         if (eo.eResource() instanceof XMLResource) {
             XMLResource xmlRes = (XMLResource)eo.eResource();

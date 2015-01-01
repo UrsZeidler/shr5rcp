@@ -1,16 +1,26 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.Collection;
+
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -20,25 +30,31 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
+import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import org.eclipse.wb.swt.ResourceManager;
 
 /**
  * This is a basic generic page to display eObjects in an form with an
  * emfformbilder.
  */
-public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
+public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
     private DataBindingContext m_bindingContext;
 
     protected ManagedCharacter object;
     protected EditingDomain editingDomain;
-//    protected ReferenceManager mananger;
-//    protected EmfFormBuilder emfFormBuilder;
+
+    // protected ReferenceManager mananger;
+    // protected EmfFormBuilder emfFormBuilder;
 
     public ManagedCharacterPage(String id, String title) {
         super(id, title);
@@ -70,25 +86,25 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         this.mananger = manager;
     }
 
-//    @Override
-//    public void dispose() {
-//        if (emfFormBuilder != null)
-//            emfFormBuilder.dispose();
-//        super.dispose();
-//    }
+    // @Override
+    // public void dispose() {
+    // if (emfFormBuilder != null)
+    // emfFormBuilder.dispose();
+    // super.dispose();
+    // }
 
-//    /**
-//     * Simple Factory method to create the formbuilder.
-//     * 
-//     * @param managedForm
-//     */
-//    protected void createFormBuilder(IManagedForm managedForm) {
-//        emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
-//                .getInstance().getLabelProvider(), editingDomain);
-//        emfFormBuilder.setManager(mananger);
-//        emfFormBuilder.setBorderStyle(SWT.NONE);
-//
-//    }
+    // /**
+    // * Simple Factory method to create the formbuilder.
+    // *
+    // * @param managedForm
+    // */
+    // protected void createFormBuilder(IManagedForm managedForm) {
+    // emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+    // .getInstance().getLabelProvider(), editingDomain);
+    // emfFormBuilder.setManager(mananger);
+    // emfFormBuilder.setBorderStyle(SWT.NONE);
+    //
+    // }
 
     /**
      * Create contents of the form.
@@ -133,28 +149,68 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
 
-        TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR), SWT.NONE, object,
+        TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite,
+                featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidgetInventar);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
+        // we use the toolbar for the packs to add
+        ToolBar optionalToolbar = treeTableWidgetInventar.getOptionalToolbar();
+        optionalToolbar.setVisible(true);
+        ToolItem toolItem = new ToolItem(optionalToolbar, SWT.PUSH);
+        toolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/add_pack_action.gif"));
+        toolItem.setToolTipText("Adds a pack to the character.");
+        toolItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (mananger instanceof ShrReferenceManager) {
+                    ShrReferenceManager srm = (ShrReferenceManager)mananger;
+                    Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5managementPackage.Literals.PACK);
+                    collection = srm.filterProvidedObjects(collection);
+
+                    OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), NullObject.toChoises(collection),"Select a pack", "");
+                    dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+
+                    int result = dialog.open();
+                    if (result == Window.OK) {
+                        Object[] list = dialog.getResult();
+
+                        if (list != null && list.length == 1 && list[0] instanceof EObject) {
+                            EObject eo = (EObject)list[0];
+                            if (eo instanceof Pack) {
+                                Pack p = (Pack)eo;
+                                EList<AbstraktGegenstand> items = p.getItems();
+                                for (AbstraktGegenstand abstraktGegenstand : items) {
+                                    EObject copy = srm.copyWithParentId(abstraktGegenstand);
+                                    object.getInventar().add((AbstraktGegenstand)copy);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        });
 
         Composite composite_1 = new Composite(composite, SWT.NONE);
         managedForm.getToolkit().adapt(composite_1);
         managedForm.getToolkit().paintBordersFor(composite_1);
         composite_1.setLayout(new FillLayout(SWT.VERTICAL));
 
-        TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS), SWT.NONE, object,
+        TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1,
+                featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidgetConnections);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetConnections);
 
-        TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS), SWT.NONE, object,
+        TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1,
+                featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS), SWT.NONE, object,
                 Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidget_1);
         managedForm.getToolkit().paintBordersFor(treeTableWidget_1);
 
-        TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS), SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
+        TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS),
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
 
@@ -184,11 +240,11 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter>{
         return bindingContext;
     }
 
-//    @Override
-//    public void doubleClick(DoubleClickEvent event) {
-//        ISelection selection = event.getSelection();
-//        ShadowrunEditingTools.openEditorForFirstSelection(selection);
-//    }
+    // @Override
+    // public void doubleClick(DoubleClickEvent event) {
+    // ISelection selection = event.getSelection();
+    // ShadowrunEditingTools.openEditorForFirstSelection(selection);
+    // }
 
     @Override
     protected EditingDomain getEditingDomain() {
