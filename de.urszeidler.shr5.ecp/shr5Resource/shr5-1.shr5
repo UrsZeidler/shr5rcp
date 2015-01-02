@@ -3853,9 +3853,21 @@
           <mods xmi:id="_VM6wkowzEeS-eZ7FDdCmfQ" wert="-100">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
+          <mods xmi:id="_EWA9RDnTEeSe6_w6Jrbqxg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+          </mods>
+          <mods xmi:id="_EWA9RTnTEeSe6_w6Jrbqxg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+          </mods>
           <localizations xmi:id="_VM6wk4wzEeS-eZ7FDdCmfQ" local="de" name="Riggerkontrolle 1"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VM6wlIwzEeS-eZ7FDdCmfQ" name="Control Rig 2" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="97000">
+          <mods xmi:id="_EWA9RDnTEeSe6_w6Jrbqxg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+          </mods>
+          <mods xmi:id="_EWA9RTnTEeSe6_w6Jrbqxg" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+          </mods>
           <mods xmi:id="_VM6wlYwzEeS-eZ7FDdCmfQ" wert="-200">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
@@ -3864,6 +3876,12 @@
         <entries xsi:type="shr5:Cyberware" xmi:id="_VM7XoYwzEeS-eZ7FDdCmfQ" name="Control Rig 3" parentId="16b45886-2916-48eb-aea5-ecb74da835bd" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 5" wertValue="208000">
           <mods xmi:id="_VM7XoowzEeS-eZ7FDdCmfQ" wert="-300">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <mods xmi:id="_EWA9RDnTEeSe6_w6Jrbqxg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+          </mods>
+          <mods xmi:id="_EWA9RTnTEeSe6_w6Jrbqxg" wert="3">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
           </mods>
           <localizations xmi:id="_VM7Xo4wzEeS-eZ7FDdCmfQ" local="de" name="Riggerkontrolle 3"/>
         </entries>
@@ -20097,8 +20115,22 @@
           </items>
           <items xsi:type="shr5:Magazin" xmi:id="_0CI88JH0EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
           <items xsi:type="shr5:Magazin" xmi:id="_qgBRAJH1EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
-          <items xsi:type="shr5:Magazin" xmi:id="_0yuFUJH0EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_0yuFUJH0EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="93722378-dcb6-4988-ba4e-54ce545644fe"/>
           <items xsi:type="shr5:Magazin" xmi:id="_sRG0IJH1EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_SsM90JK2EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="93722378-dcb6-4988-ba4e-54ce545644fe"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_TdoawJK2EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="93722378-dcb6-4988-ba4e-54ce545644fe"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_WmV4IJK2EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="971c711b-db32-4339-9203-865ef38f350e"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_e5Jb0JK2EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="971c711b-db32-4339-9203-865ef38f350e"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_fao_UJK2EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="971c711b-db32-4339-9203-865ef38f350e"/>
+          <items xsi:type="shr5:Munition" xmi:id="_T78NwJK-EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="20" proAnzahl="10" type="_ENFDsTnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_T78NwZK-EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
+          <items xsi:type="shr5:Munition" xmi:id="_Z71ToJK-EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsjnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_Z71ToZK-EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
+          <items xsi:type="shr5:Munition" xmi:id="_mkYIgJK-EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="30" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_mkYIgZK-EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
         </entries>
         <entries xsi:type="shr5mngt:Pack" xmi:id="_zsOMwJHzEeSAavuXEODnew" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Gangbanger kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
           <items xsi:type="shr5:Nahkampfwaffe" xmi:id="_j3UpQJH2EeSAavuXEODnew" parentId="656906d8-b6a4-47a2-9554-de365097eba0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="300" name="Combat Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
@@ -20121,6 +20153,83 @@
           <items xsi:type="shr5:Magazin" xmi:id="_j3j50JH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
           <items xsi:type="shr5:Magazin" xmi:id="_1Jq60JH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
           <items xsi:type="shr5:Magazin" xmi:id="_1oBDsJH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
+          <items xsi:type="shr5:Munition" xmi:id="_GwKwAJK-EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsjnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_GwKwAZK-EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
+        </entries>
+        <entries xsi:type="shr5mngt:Pack" xmi:id="__CLqQJK1EeSxvrTnLBRm7A" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (High-end)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Kleidung" xmi:id="__CLqQZK1EeSxvrTnLBRm7A" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+            <localizations xmi:id="__CLqQpK1EeSxvrTnLBRm7A" local="de" name="Panzerjacke"/>
+          </items>
+          <items xsi:type="shr5:Gegenstand" xmi:id="__CLqRpK1EeSxvrTnLBRm7A" parentId="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
+          <items xsi:type="shr5:Gegenstand" xmi:id="__CLqR5K1EeSxvrTnLBRm7A" parentId="5de1956f-0ec3-4fad-9e9a-d8b90ac1e3f4" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="500" name="Slap Patch, Trauma Patch" kategorie="Biotech">
+            <localizations xmi:id="__CLqSJK1EeSxvrTnLBRm7A" local="de" name="Slap Patch, Trauma Patch"/>
+          </items>
+          <items xsi:type="shr5:Sin" xmi:id="_FV2nwJK2EeSxvrTnLBRm7A" name="Faked SIN 4" parentId="_ZrXDMIXPEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="4" gefaelscht="true"/>
+          <items xsi:type="shr5:Commlink" xmi:id="_G9FrUJK2EeSxvrTnLBRm7A" parentId="01077e2d-4f67-428a-850d-250faad2007c" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12" wertValue="5000" name="Transys Avalon" deviceRating="6">
+            <localizations xmi:id="_G9FrUZK2EeSxvrTnLBRm7A" local="de" name="Transys Avalon"/>
+          </items>
+        </entries>
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_rmXqcJK4EeSxvrTnLBRm7A" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Automatics Specialist Kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqgJK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqgZK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqgpK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqg5K4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="017d8327-3bce-420a-af24-a2bed3ab0e83"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqhJK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="017d8327-3bce-420a-af24-a2bed3ab0e83"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqhZK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="017d8327-3bce-420a-af24-a2bed3ab0e83"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqhpK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="3a7a90ce-fbb5-4599-a857-b9849eb9769c"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqh5K4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="3a7a90ce-fbb5-4599-a857-b9849eb9769c"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_rmXqiJK4EeSxvrTnLBRm7A" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="3a7a90ce-fbb5-4599-a857-b9849eb9769c"/>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_1eCTIJK4EeSxvrTnLBRm7A" parentId="cb2afbcc-a1bf-465b-9fc2-c91e1ddfb100" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="830" name="Ares Crusader II" schadenscode="7P" praezision="5" reichweite="_ENFqwDnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="40">
+            <localizations xmi:id="_1eCTIZK4EeSxvrTnLBRm7A" local="de" name="Ares Crusader II"/>
+            <modie>HM</modie>
+            <modie>SM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <einbau xmi:id="_1eCTIpK4EeSxvrTnLBRm7A" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_1eCTI5K4EeSxvrTnLBRm7A" local="de" name="Smartgunsystem, Internal"/>
+            </einbau>
+            <einbau xmi:id="_1eCTJJK4EeSxvrTnLBRm7A" name="Gas-Vent 2 System" parentId="b3827611-f631-461e-8660-e744593ba2d2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_1eCTJZK4EeSxvrTnLBRm7A" local="de" name="Gasventilsystem 2"/>
+            </einbau>
+            <magazin xmi:id="_1eCTJpK4EeSxvrTnLBRm7A" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Crusader II ammunition" type="_1eCTIJK4EeSxvrTnLBRm7A"/>
+          </items>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_6j4LkJK4EeSxvrTnLBRm7A" parentId="017d8327-3bce-420a-af24-a2bed3ab0e83" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="800" name="Ingram Smartgun X" schadenscode="8P" praezision="4" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="32" rueckstoss="2">
+            <localizations xmi:id="_6j4LkZK4EeSxvrTnLBRm7A" local="de" name="Ingram Smartgun X"/>
+            <modie>SM</modie>
+            <modie>AM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <einbau xmi:id="_6j4LkpK4EeSxvrTnLBRm7A" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_6j4Lk5K4EeSxvrTnLBRm7A" local="de" name="Smartgunsystem, Internal"/>
+            </einbau>
+            <einbau xmi:id="_6j4LlJK4EeSxvrTnLBRm7A" name="Sound Suppressor" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_6j4LlZK4EeSxvrTnLBRm7A" local="de" name="Schallunterdrücker" page="432"/>
+            </einbau>
+            <magazin xmi:id="_6j4LlpK4EeSxvrTnLBRm7A" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ingram Smartgun X ammunition" type="_6j4LkJK4EeSxvrTnLBRm7A"/>
+          </items>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_6j9rIJK4EeSxvrTnLBRm7A" parentId="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
+            <localizations xmi:id="_6j9rIZK4EeSxvrTnLBRm7A" local="de" name="Ares Alpha"/>
+            <modie>HM</modie>
+            <modie>SM</modie>
+            <modie>AM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <erweiterung>Unten</erweiterung>
+            <einbau xmi:id="_6j9rIpK4EeSxvrTnLBRm7A" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_6j9rI5K4EeSxvrTnLBRm7A" local="de" name="Smartgunsystem, Internal"/>
+            </einbau>
+            <magazin xmi:id="_6j9rJJK4EeSxvrTnLBRm7A" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha ammunition" type="_6j9rIJK4EeSxvrTnLBRm7A"/>
+          </items>
+          <items xsi:type="shr5:Munition" xmi:id="_wlalEJK9EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwDnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_wlalEZK9EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
+          <items xsi:type="shr5:Munition" xmi:id="_3k9xIJK9EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwTnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_3k9xIZK9EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
+          <items xsi:type="shr5:Munition" xmi:id="_4mrFwJK9EeSxvrTnLBRm7A" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqwjnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_4mrFwZK9EeSxvrTnLBRm7A" local="de" name="Munition: Standardmunition"/>
+          </items>
         </entries>
       </entries>
       <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_EV_vJDnTEeSe6_w6Jrbqxg" name="Streetgangs Berlin">
