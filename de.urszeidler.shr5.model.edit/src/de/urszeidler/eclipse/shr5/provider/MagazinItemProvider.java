@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -14,11 +15,14 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
+
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -27,6 +31,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Magazin} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
@@ -34,6 +39,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public MagazinItemProvider(AdapterFactory adapterFactory) {
@@ -44,6 +50,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -64,66 +71,42 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * This adds a property descriptor for the Capacity Feature feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addCapacityFeaturePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Capacity_capacityFeature_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityFeature_feature", "_UI_Capacity_type"),
-                 Shr5Package.Literals.CAPACITY__CAPACITY_FEATURE,
-                 false,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_Capacity_capacityFeature_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityFeature_feature", "_UI_Capacity_type"),
+                Shr5Package.Literals.CAPACITY__CAPACITY_FEATURE, false, false, false, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Capacity feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addCapacityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Capacity_capacity_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
-                 Shr5Package.Literals.CAPACITY__CAPACITY,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_Capacity_capacity_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacity_feature", "_UI_Capacity_type"),
+                Shr5Package.Literals.CAPACITY__CAPACITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Capacity Remains feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addCapacityRemainsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Capacity_capacityRemains_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityRemains_feature", "_UI_Capacity_type"),
-                 Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_Capacity_capacityRemains_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Capacity_capacityRemains_feature", "_UI_Capacity_type"),
+                Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -141,22 +124,20 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
                     @SuppressWarnings("unchecked")
                     @Override
                     protected Collection<?> getComboBoxObjects(Object object) {
-                        if (object instanceof EObject) {                            
-                           return FluentIterable.from((Collection<EObject>)super.getComboBoxObjects(object))
-                                   .filter(Predicates.notNull())
-                            .filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE))
-                            .toList();
-//                            
-//                            EObject eo = (EObject)object;
-//                            try {
-//                                EObject eContainer = eo.eContainer();
-//                                EReference eContainmentFeature = eo.eContainmentFeature();
-//                                List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
-//                                return new ArrayList<Object>(Collections2.filter(eGet,
-//                                        ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)));
-//
-//                            } catch (Exception e) {
-//                            }
+                        if (object instanceof EObject) {
+                            return FluentIterable.from((Collection<EObject>)super.getComboBoxObjects(object)).filter(Predicates.notNull())
+                                    .filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)).toList();
+                            //
+                            // EObject eo = (EObject)object;
+                            // try {
+                            // EObject eContainer = eo.eContainer();
+                            // EReference eContainmentFeature = eo.eContainmentFeature();
+                            // List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
+                            // return new ArrayList<Object>(Collections2.filter(eGet,
+                            // ShadowrunTools.eclassPredicate(Shr5Package.Literals.FEUERWAFFE)));
+                            //
+                            // } catch (Exception e) {
+                            // }
                         }
                         return super.getComboBoxObjects(object);
                     }
@@ -189,7 +170,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
                                     EReference eContainmentFeature = fw.eContainmentFeature();
                                     List<EObject> eGet = (List<EObject>)eContainer.eGet(eContainmentFeature);
                                     return FluentIterable.from(eGet).filter(ShadowrunTools.eclassPredicate(Shr5Package.Literals.MUNITION))
-                                    .filter(ShadowrunTools.muniForMagazinPredicate((Magazin)eo)).toList();
+                                            .filter(ShadowrunTools.muniForMagazinPredicate((Magazin)eo)).toList();
                                 }
                                 EReference eContainmentFeature = eo.eContainmentFeature();
                                 List<EObject> eGet = (List<EObject>)eo.eContainer().eGet(eContainmentFeature);
@@ -227,14 +208,28 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((Magazin)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_Magazin_type") :
-            getString("_UI_Magazin_type") + " " + label;
+        Magazin magazin = (Magazin)object;
+        if (magazin.getType() != null) {             
+            Feuerwaffe feuerwaffe = magazin.getType();
+            MagazinTyp munitionstyp = feuerwaffe.getMunitionstyp();
+            String type = getString("_UI_Magazin_type");
+            IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(feuerwaffe, Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP);
+            if (propertyDescriptor != null)
+                type = propertyDescriptor.getLabelProvider(feuerwaffe).getText(munitionstyp);
+            
+            
+            String name = String.format("%s %s (%d/%d)", type, feuerwaffe.getName(), magazin.getBullets().size(),
+                    feuerwaffe.getKapazitaet());
+            return name;
+        }
+
+        String label = magazin.getName();
+        return label == null || label.length() == 0 ? getString("_UI_Magazin_type") : getString("_UI_Magazin_type") + " " + label;
     }
 
     /**
@@ -242,6 +237,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -262,6 +258,7 @@ public class MagazinItemProvider extends AbstraktGegenstandItemProvider {
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
