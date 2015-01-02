@@ -20039,6 +20039,75 @@
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EV_vIznTEeSe6_w6Jrbqxg" name="additional stuff">
+      <entries xsi:type="shr5:ShrList" xmi:id="_ahEy8JHzEeSAavuXEODnew" name="packs">
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (Low-end)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Kleidung" xmi:id="_VtLJoJH0EeSAavuXEODnew" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
+            <localizations xmi:id="_VtLJoZH0EeSAavuXEODnew" local="de" name="Panzerweste"/>
+          </items>
+          <items xsi:type="shr5:Commlink" xmi:id="_VtRQQJH0EeSAavuXEODnew" parentId="d808ba12-db93-4a7b-85a1-9e9f6229087f" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="700" name="Sony Emperor" deviceRating="2">
+            <localizations xmi:id="_VtRQQZH0EeSAavuXEODnew" local="de" name="Sony Emperor"/>
+          </items>
+          <items xsi:type="shr5:Gegenstand" xmi:id="_VtWv0JH0EeSAavuXEODnew" parentId="5de1956f-0ec3-4fad-9e9a-d8b90ac1e3f4" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="500" name="Slap Patch, Trauma Patch" kategorie="Biotech">
+            <localizations xmi:id="_VtWv0ZH0EeSAavuXEODnew" local="de" name="Slap Patch, Trauma Patch"/>
+          </items>
+        </entries>
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_y1k4oJHzEeSAavuXEODnew" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Pistoleer Kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_kfWkgJH0EeSAavuXEODnew" parentId="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" schadenscode="6P" praezision="4" reichweite="_ENFDsTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
+            <localizations xmi:id="_kfWkgZH0EeSAavuXEODnew" local="de" name="Streetline Special"/>
+            <modie>HM</modie>
+            <magazin xmi:id="_kfWkgpH0EeSAavuXEODnew" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Streetline Special ammunition" type="_kfWkgJH0EeSAavuXEODnew"/>
+          </items>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_kfcrIJH0EeSAavuXEODnew" parentId="93722378-dcb6-4988-ba4e-54ce545644fe" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6F" wertValue="1250" name="Ares Light Fire 75" schadenscode="6P" praezision="6" reichweite="_ENFDsjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="16">
+            <localizations xmi:id="_kfcrIZH0EeSAavuXEODnew" local="de" name="Ares Light Fire 75"/>
+            <modie>HM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <einbau xmi:id="_kfcrIpH0EeSAavuXEODnew" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_kfcrI5H0EeSAavuXEODnew" local="de" name="Smartgunsystem, Internal"/>
+            </einbau>
+            <einbau xmi:id="_kfcrJJH0EeSAavuXEODnew" name="Silencer, Ares Light Fire 70" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_kfcrJZH0EeSAavuXEODnew" local="de" name="Schalldämpfer, Ares Light Fire 70"/>
+            </einbau>
+            <magazin xmi:id="_kfcrJpH0EeSAavuXEODnew" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Light Fire 75 ammunition" type="_kfcrIJH0EeSAavuXEODnew"/>
+          </items>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_kfiKsJH0EeSAavuXEODnew" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
+            <localizations xmi:id="_kfiKsZH0EeSAavuXEODnew" local="de" name="Ares Predator V"/>
+            <modie>HM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <einbau xmi:id="_kfiKspH0EeSAavuXEODnew" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+              <localizations xmi:id="_kfiKs5H0EeSAavuXEODnew" local="de" name="Smartgunsystem, Internal"/>
+            </einbau>
+            <magazin xmi:id="_kfiKtJH0EeSAavuXEODnew" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_kfiKsJH0EeSAavuXEODnew"/>
+          </items>
+          <items xsi:type="shr5:Magazin" xmi:id="_0CI88JH0EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_qgBRAJH1EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_0yuFUJH0EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_sRG0IJH1EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_zsOMwJHzEeSAavuXEODnew" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Gangbanger kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Nahkampfwaffe" xmi:id="_j3UpQJH2EeSAavuXEODnew" parentId="656906d8-b6a4-47a2-9554-de365097eba0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="300" name="Combat Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
+            <localizations xmi:id="_j3UpQZH2EeSAavuXEODnew" local="de" name="Kampfmesser"/>
+          </items>
+          <items xsi:type="shr5:Nahkampfwaffe" xmi:id="_j3bW8JH2EeSAavuXEODnew" parentId="168c2aa5-c4d9-4fd7-a629-fc70c6720d03" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="100" name="Knucks" schadenscode="(STR+1)P">
+            <localizations xmi:id="_j3bW8ZH2EeSAavuXEODnew" local="de" name="Schlagring"/>
+          </items>
+          <items xsi:type="shr5:Feuerwaffe" xmi:id="_j3foYJH2EeSAavuXEODnew" parentId="cbff618e-6a12-4bab-aaeb-2453706bf42e" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7R" wertValue="210" name="Beretta 201T" schadenscode="6P" praezision="6" reichweite="_ENFDsjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="21">
+            <localizations xmi:id="_j3foYZH2EeSAavuXEODnew" local="de" name="Beretta 201T"/>
+            <modie>HM</modie>
+            <modie>SM</modie>
+            <erweiterung>Lauf</erweiterung>
+            <erweiterung>Oben</erweiterung>
+            <einbau xmi:id="_j3foYpH2EeSAavuXEODnew" name="Stock" parentId="27de824f-d5e4-43fd-abaa-e42da6023569" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+              <localizations xmi:id="_j3foY5H2EeSAavuXEODnew" local="de" name="Schulterstütze"/>
+            </einbau>
+            <magazin xmi:id="_j3foZJH2EeSAavuXEODnew" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Beretta 201T ammunition" type="_j3foYJH2EeSAavuXEODnew"/>
+          </items>
+          <items xsi:type="shr5:Magazin" xmi:id="_j3j50JH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_1Jq60JH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
+          <items xsi:type="shr5:Magazin" xmi:id="_1oBDsJH2EeSAavuXEODnew" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="_j3foYJH2EeSAavuXEODnew"/>
+        </entries>
+      </entries>
       <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_EV_vJDnTEeSe6_w6Jrbqxg" name="Streetgangs Berlin">
         <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
       </entries>
@@ -20598,7 +20667,7 @@
         <connections xmi:id="_MCp50N0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <connections xmi:id="_Q6SXIN0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_URH70IMhEeSuJ8MEYLW0kQ" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
-        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_oQndoD5YEeSl7-MUHQ63Ow" chracterSource="_B0_zAN0CEeOvVYoRsPZlnA" choosenLifestyle="_E8vOYD5aEeSl7-MUHQ63Ow" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_oQndoT5YEeSl7-MUHQ63Ow" name="Ex-Firewatch Concept" edgeBasis="5" konstitutionBasis="3" geschicklichkeitBasis="7" reaktionBasis="5" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="5" logikBasis="3" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">

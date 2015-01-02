@@ -27,6 +27,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -41,7 +43,12 @@ import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+
 import org.eclipse.wb.swt.ResourceManager;
+
+import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
+import com.google.common.collect.FluentIterable;
 
 /**
  * This is a basic generic page to display eObjects in an form with an
@@ -167,8 +174,10 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                     ShrReferenceManager srm = (ShrReferenceManager)mananger;
                     Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5managementPackage.Literals.PACK);
                     collection = srm.filterProvidedObjects(collection);
+//                    collection = FluentIterable.from(collection).filter(
+//                            Predicates.or(Predicates.instanceOf(AbstraktGegenstand.class), Predicates.instanceOf(Vertrag.class))).toList();
 
-                    OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), NullObject.toChoises(collection),"Select a pack", "");
+                    OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), NullObject.toChoises(collection), "Select a pack", "");
                     dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
 
                     int result = dialog.open();
@@ -179,10 +188,14 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                             EObject eo = (EObject)list[0];
                             if (eo instanceof Pack) {
                                 Pack p = (Pack)eo;
-                                EList<AbstraktGegenstand> items = p.getItems();
-                                for (AbstraktGegenstand abstraktGegenstand : items) {
-                                    EObject copy = srm.copyWithParentId(abstraktGegenstand);
-                                    object.getInventar().add((AbstraktGegenstand)copy);
+                                EList<Quelle> items = p.getItems();
+                                for (Quelle abstraktGegenstand : items) {
+                                    EObject copy = ShrReferenceManager.copyWithParentId(abstraktGegenstand);
+                                    if (abstraktGegenstand instanceof AbstraktGegenstand) {
+                                        object.getInventar().add((AbstraktGegenstand)copy);
+                                    } else if (abstraktGegenstand instanceof Vertrag) {
+                                        object.getContracts().add((Vertrag)copy);
+                                    }
                                 }
                             }
                         }

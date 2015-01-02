@@ -3,11 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Quelle;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -33,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Pack extends Beschreibbar, Quelle, GeldWert {
     /**
      * Returns the value of the '<em><b>Items</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.AbstraktGegenstand}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Quelle}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
@@ -44,6 +42,6 @@ public interface Pack extends Beschreibbar, Quelle, GeldWert {
      * @model containment="true"
      * @generated
      */
-    EList<AbstraktGegenstand> getItems();
+    EList<Quelle> getItems();
 
 } // Pack

@@ -896,7 +896,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
-          <xsd:element name="items" type="shr5:AbstraktGegenstand">
+          <xsd:element name="items" type="shr5:Quelle">
             <xsd:annotation>
               <xsd:documentation>The list of items this pack contains.</xsd:documentation>
             </xsd:annotation>

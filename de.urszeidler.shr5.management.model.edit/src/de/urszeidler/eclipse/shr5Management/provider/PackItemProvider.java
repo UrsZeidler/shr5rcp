@@ -8,6 +8,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import de.urszeidler.eclipse.shr5Management.Pack;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 import java.util.Collection;
@@ -406,6 +407,21 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5managementFactory.eINSTANCE.createFreeStyle()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5managementFactory.eINSTANCE.createShr5System()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5managementFactory.eINSTANCE.createPack()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createGegenstand()));
 
         newChildDescriptors.add
@@ -431,7 +447,137 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createFertigkeitsGruppe()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createFertigkeit()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCyberware()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createBioWare()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createKiKraft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSpezies()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createKleidung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createFernkampfwaffeModifikator()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createPersonaEigenschaft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createZauber()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSchutzgeist()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createMetaMagie()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCritterKraft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createPassagierFahrzeug()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createBodenfahrzeug()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createDrohne()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createKomplexeForm()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSprite()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createEcho()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createVertrag()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createIntervallVertrag()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createLifestyle()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createWissensfertigkeit()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSprachfertigkeit()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCritter()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createLizenz()));
 
         newChildDescriptors.add
             (createChildParameter
@@ -446,6 +592,16 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createGeist()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSpezialisierung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createCommlink()));
 
         newChildDescriptors.add
@@ -456,7 +612,57 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSoftwareAgent()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createRiggerCommandConsole()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createAutoSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createTutorsoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSkillSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createDatasoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createConsumerSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCommonProgram()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createWeaponMount()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createLifestyleOption()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createPercentLifestyleOption()));
 
         newChildDescriptors.add
             (createChildParameter
@@ -476,6 +682,16 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createToxin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createDrug()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createMagazin()));
 
         newChildDescriptors.add
@@ -487,6 +703,16 @@ public class PackItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createSubstanceContainer()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCyberwareEnhancement()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createCyberImplantWeapon()));
     }
 
     /**

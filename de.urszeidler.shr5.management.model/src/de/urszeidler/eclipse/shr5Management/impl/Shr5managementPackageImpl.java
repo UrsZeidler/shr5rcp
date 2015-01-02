@@ -3074,7 +3074,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getQuellenConstrain_ConstrainType(), this.getQuellenConstrainType(), "constrainType", null, 0, 1, QuellenConstrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(packEClass, Pack.class, "Pack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getPack_Items(), theShr5Package.getAbstraktGegenstand(), null, "items", null, 0, -1, Pack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPack_Items(), theShr5Package.getQuelle(), null, "items", null, 0, -1, Pack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

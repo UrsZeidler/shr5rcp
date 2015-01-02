@@ -3,21 +3,17 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
-import de.urszeidler.eclipse.shr5.impl.CyberdeckImpl;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.math.BigDecimal;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -36,17 +32,17 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getBeschreibung <em>Beschreibung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getImage <em>Image</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getName <em>Name</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getParentId <em>Parent Id</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getLocalizations <em>Localizations</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getPage <em>Page</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getSrcBook <em>Src Book</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getWert <em>Wert</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getWertValue <em>Wert Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getLocalizations <em>Localizations</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getItems <em>Items</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,7 +53,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -68,7 +63,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -79,7 +73,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -90,7 +83,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -101,7 +93,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -112,7 +103,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -123,7 +113,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -134,7 +123,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -145,7 +133,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getLocalizations()
      * @generated
      * @ordered
@@ -156,7 +143,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -167,7 +153,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -178,7 +163,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSrcBook()
      * @generated
      * @ordered
@@ -189,7 +173,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWert()
      * @generated
      * @ordered
@@ -200,7 +183,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -211,7 +193,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -222,7 +203,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -233,7 +213,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -244,12 +223,11 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * The cached value of the '{@link #getItems() <em>Items</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getItems()
      * @generated
      * @ordered
      */
-    protected EList<AbstraktGegenstand> items;
+    protected EList<Quelle> items;
 
     private EContentAdapter eContentAdapter;
 
@@ -279,7 +257,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -290,7 +267,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getBeschreibung() {
@@ -300,7 +276,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setBeschreibung(String newBeschreibung) {
@@ -313,7 +288,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getImage() {
@@ -323,7 +297,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setImage(String newImage) {
@@ -336,7 +309,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
@@ -346,7 +318,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setName(String newName) {
@@ -359,7 +330,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getParentId() {
@@ -369,7 +339,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setParentId(String newParentId) {
@@ -382,7 +351,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<Localization> getLocalizations() {
@@ -395,7 +363,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getPage() {
@@ -405,7 +372,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPage(String newPage) {
@@ -418,7 +384,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook getSrcBook() {
@@ -436,7 +401,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook basicGetSrcBook() {
@@ -446,7 +410,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSrcBook(SourceBook newSrcBook) {
@@ -473,7 +436,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVerfuegbarkeit() {
@@ -483,7 +445,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
@@ -496,7 +457,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -521,12 +481,11 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
-    public EList<AbstraktGegenstand> getItems() {
+    public EList<Quelle> getItems() {
         if (items == null) {
-            items = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5managementPackage.PACK__ITEMS);
+            items = new EObjectContainmentEList<Quelle>(Quelle.class, this, Shr5managementPackage.PACK__ITEMS);
         }
         return items;
     }
@@ -534,7 +493,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -551,7 +509,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -570,8 +527,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
             case Shr5managementPackage.PACK__PAGE:
                 return getPage();
             case Shr5managementPackage.PACK__SRC_BOOK:
-                if (resolve)
-                    return getSrcBook();
+                if (resolve) return getSrcBook();
                 return basicGetSrcBook();
             case Shr5managementPackage.PACK__WERT:
                 return getWert();
@@ -588,7 +544,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -625,7 +580,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
                 return;
             case Shr5managementPackage.PACK__ITEMS:
                 getItems().clear();
-                getItems().addAll((Collection<? extends AbstraktGegenstand>)newValue);
+                getItems().addAll((Collection<? extends Quelle>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -634,7 +589,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -677,7 +631,6 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -712,41 +665,30 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
-                case Shr5managementPackage.PACK__PARENT_ID:
-                    return Shr5Package.IDENTIFIABLE__PARENT_ID;
-                case Shr5managementPackage.PACK__LOCALIZATIONS:
-                    return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
-                default:
-                    return -1;
+                case Shr5managementPackage.PACK__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5managementPackage.PACK__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
-                case Shr5managementPackage.PACK__PAGE:
-                    return Shr5Package.QUELLE__PAGE;
-                case Shr5managementPackage.PACK__SRC_BOOK:
-                    return Shr5Package.QUELLE__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5managementPackage.PACK__PAGE: return Shr5Package.QUELLE__PAGE;
+                case Shr5managementPackage.PACK__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                default: return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5managementPackage.PACK__WERT:
-                    return Shr5Package.GELD_WERT__WERT;
-                case Shr5managementPackage.PACK__VERFUEGBARKEIT:
-                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                case Shr5managementPackage.PACK__WERT_VALUE:
-                    return Shr5Package.GELD_WERT__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5managementPackage.PACK__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5managementPackage.PACK__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5managementPackage.PACK__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -755,41 +697,30 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
-                case Shr5Package.IDENTIFIABLE__PARENT_ID:
-                    return Shr5managementPackage.PACK__PARENT_ID;
-                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS:
-                    return Shr5managementPackage.PACK__LOCALIZATIONS;
-                default:
-                    return -1;
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5managementPackage.PACK__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5managementPackage.PACK__LOCALIZATIONS;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
-                case Shr5Package.QUELLE__PAGE:
-                    return Shr5managementPackage.PACK__PAGE;
-                case Shr5Package.QUELLE__SRC_BOOK:
-                    return Shr5managementPackage.PACK__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5Package.QUELLE__PAGE: return Shr5managementPackage.PACK__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK: return Shr5managementPackage.PACK__SRC_BOOK;
+                default: return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT:
-                    return Shr5managementPackage.PACK__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
-                    return Shr5managementPackage.PACK__VERFUEGBARKEIT;
-                case Shr5Package.GELD_WERT__WERT_VALUE:
-                    return Shr5managementPackage.PACK__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.GELD_WERT__WERT: return Shr5managementPackage.PACK__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5managementPackage.PACK__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5managementPackage.PACK__WERT_VALUE;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -798,13 +729,11 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (beschreibung: ");

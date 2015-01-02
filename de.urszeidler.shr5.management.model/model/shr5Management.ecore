@@ -839,7 +839,7 @@
       <details key="documentation" value="A pack is used in the generation process, to speed up somes choises. It contains a set of things."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The list of items this pack contains."/>
