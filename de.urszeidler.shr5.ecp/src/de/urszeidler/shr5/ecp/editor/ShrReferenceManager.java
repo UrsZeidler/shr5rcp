@@ -25,9 +25,11 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 
 import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -39,11 +41,12 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -84,7 +87,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
-//                || Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())
+                // || Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())
                 || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
             EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
             if (copyAddToPersona != null) {
@@ -159,6 +162,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     protected Object provideObject(FormbuilderEntry e, EObject object) {
         if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
@@ -180,13 +184,26 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                 || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
                 || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature())
-                || Shr5managementPackage.Literals.PACK__ITEMS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
             return handleCopyAddToPersona((EReference)e.getFeature(), object);
+        } else if (Shr5managementPackage.Literals.PACK__ITEMS.equals(e.getFeature())) {
+            Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, ((EReference)e.getFeature()).getEType());
+            collection = filterProvidedObjects(collection);
+            collection = FluentIterable
+                    .from(collection)
+                    .filter(Predicates.or(Predicates.instanceOf(Vertrag.class), 
+                            Predicates.instanceOf(AbstraktGegenstand.class),
+                            Predicates.instanceOf(Fahrzeug.class))).toList();
 
-            // return null;
+            ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
+
+            FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
+                    .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add to "
+                    + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(collection), object);
+
+            return copyObjectsFromDialog(dialog);
         } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
 
@@ -311,7 +328,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     protected EObject handleCopySingleAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
         collection = filterProvidedObjects(collection);
-        
+
         OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), NullObject.toChoises(collection),
                 String.format("Add a %s object.", ShadowrunEditingTools.toFeatureName(orgObject, object_ref)), "");
         dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
@@ -339,13 +356,21 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     protected List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(orgObject, object_ref.getEType());
         collection = filterProvidedObjects(collection);
-        
+
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                 .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add "
                 + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection), orgObject);
 
+        return copyObjectsFromDialog(dialog);
+    }
+
+    /**
+     * @param dialog
+     * @return
+     */
+    private List<EObject> copyObjectsFromDialog(FeatureEditorDialog dialog) {
         int result = dialog.open();
         if (result == Window.OK) {
             EList<?> list = dialog.getResult();
@@ -366,7 +391,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     public Collection<EObject> filterProvidedObjects(Collection<EObject> collection) {
         EObject theEObject = shadowrunEditor.getEObject();
         FluentIterable<EObject> fluentIterable = FluentIterable.from(collection);
-        //filter the cyberwaretypes
+        // filter the cyberwaretypes
         if (theEObject instanceof Cyberware) {
             final Cyberware cw = (Cyberware)theEObject;
             fluentIterable = fluentIterable.filter(new Predicate<EObject>() {
@@ -381,7 +406,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 }
             });
         }
-        
+
         // filter the allowed sources
         if (theEObject instanceof CharacterGenerator) {
             CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
@@ -390,19 +415,19 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 EList<SourceBook> allowedSources = srg.getAllowedSources();
                 if (!allowedSources.isEmpty())
                     fluentIterable = fluentIterable.filter(ShadowrunTools.allowedSourcePredicate(allowedSources));
-                    //return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
+                // return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
             }
         }
-//        if (theEObject instanceof CharacterGenerator) {
-//            CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
-//            if (generatorSrc instanceof Shr5RuleGenerator) {
-//                Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
-//                EList<SourceBook> allowedSources = srg.getAllowedSources();
-//                if (!allowedSources.isEmpty())
-//                    return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
-//            }
-//        }
-        return fluentIterable.toList();  //collection;
+        // if (theEObject instanceof CharacterGenerator) {
+        // CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
+        // if (generatorSrc instanceof Shr5RuleGenerator) {
+        // Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+        // EList<SourceBook> allowedSources = srg.getAllowedSources();
+        // if (!allowedSources.isEmpty())
+        // return FluentIterable.from(collection).filter(ShadowrunTools.allowedSourcePredicate(allowedSources)).toList();
+        // }
+        // }
+        return fluentIterable.toList(); // collection;
     }
 
     /**

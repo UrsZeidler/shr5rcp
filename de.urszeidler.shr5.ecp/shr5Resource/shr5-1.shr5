@@ -20053,6 +20053,19 @@
           <items xsi:type="shr5:Sin" xmi:id="_oEnhIJKbEeSgSKX46bDaQA" name="Faked SIN 1" parentId="_ru3W0IXNEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="1" gefaelscht="true"/>
           <items xsi:type="shr5:Gegenstand" xmi:id="_xzgoUJKbEeSgSKX46bDaQA" parentId="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
         </entries>
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_0SKNUJKhEeSH1q4tA6058A" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (Mid-range)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+          <items xsi:type="shr5:Kleidung" xmi:id="_G77k0JKiEeSH1q4tA6058A" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+            <localizations xmi:id="_G77k0ZKiEeSH1q4tA6058A" local="de" name="Panzerjacke"/>
+          </items>
+          <items xsi:type="shr5:Commlink" xmi:id="_G8C5kJKiEeSH1q4tA6058A" parentId="72d1ca07-71b1-4085-8a4d-bd720a6b1908" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" deviceRating="4">
+            <localizations xmi:id="_G8C5kZKiEeSH1q4tA6058A" local="de" name="Erika Elite"/>
+          </items>
+          <items xsi:type="shr5:Sin" xmi:id="_G8JAMJKiEeSH1q4tA6058A" name="Faked SIN 3" parentId="_e-eioIXPEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="3" gefaelscht="true"/>
+          <items xsi:type="shr5:Gegenstand" xmi:id="_G8N4sJKiEeSH1q4tA6058A" parentId="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
+          <items xsi:type="shr5:Gegenstand" xmi:id="_G8SxMJKiEeSH1q4tA6058A" parentId="5de1956f-0ec3-4fad-9e9a-d8b90ac1e3f4" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="500" name="Slap Patch, Trauma Patch" kategorie="Biotech">
+            <localizations xmi:id="_G8SxMZKiEeSH1q4tA6058A" local="de" name="Slap Patch, Trauma Patch"/>
+          </items>
+        </entries>
         <entries xsi:type="shr5mngt:Pack" xmi:id="_y1k4oJHzEeSAavuXEODnew" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Pistoleer Kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
           <items xsi:type="shr5:Feuerwaffe" xmi:id="_kfWkgJH0EeSAavuXEODnew" parentId="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" schadenscode="6P" praezision="4" reichweite="_ENFDsTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
             <localizations xmi:id="_kfWkgZH0EeSAavuXEODnew" local="de" name="Streetline Special"/>
