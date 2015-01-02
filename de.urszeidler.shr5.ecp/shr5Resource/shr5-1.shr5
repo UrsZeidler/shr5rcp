@@ -20040,7 +20040,7 @@
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EV_vIznTEeSe6_w6Jrbqxg" name="additional stuff">
       <entries xsi:type="shr5:ShrList" xmi:id="_ahEy8JHzEeSAavuXEODnew" name="packs">
-        <entries xsi:type="shr5mngt:Pack" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (Low-end)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
+        <entries xsi:type="shr5mngt:Pack" xmi:id="_BssLkN0CEeOvVYoRsPZlnAC" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (Low-end)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
           <items xsi:type="shr5:Kleidung" xmi:id="_VtLJoJH0EeSAavuXEODnew" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
             <localizations xmi:id="_VtLJoZH0EeSAavuXEODnew" local="de" name="Panzerweste"/>
           </items>
@@ -20050,6 +20050,8 @@
           <items xsi:type="shr5:Gegenstand" xmi:id="_VtWv0JH0EeSAavuXEODnew" parentId="5de1956f-0ec3-4fad-9e9a-d8b90ac1e3f4" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="500" name="Slap Patch, Trauma Patch" kategorie="Biotech">
             <localizations xmi:id="_VtWv0ZH0EeSAavuXEODnew" local="de" name="Slap Patch, Trauma Patch"/>
           </items>
+          <items xsi:type="shr5:Sin" xmi:id="_oEnhIJKbEeSgSKX46bDaQA" name="Faked SIN 1" parentId="_ru3W0IXNEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="1" gefaelscht="true"/>
+          <items xsi:type="shr5:Gegenstand" xmi:id="_xzgoUJKbEeSgSKX46bDaQA" parentId="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
         </entries>
         <entries xsi:type="shr5mngt:Pack" xmi:id="_y1k4oJHzEeSAavuXEODnew" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Pistoleer Kit" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
           <items xsi:type="shr5:Feuerwaffe" xmi:id="_kfWkgJH0EeSAavuXEODnew" parentId="f5497ad2-f4aa-4b84-9d1d-a9d2dfe90bfc" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="120" name="Streetline Special" schadenscode="6P" praezision="4" reichweite="_ENFDsTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
@@ -20292,6 +20294,7 @@
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
       <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" name="" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
+      <entries xsi:type="shr5:Gegenstand" xmi:id="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -20667,7 +20670,7 @@
         <connections xmi:id="_MCp50N0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <connections xmi:id="_Q6SXIN0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_URH70IMhEeSuJ8MEYLW0kQ" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
-        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_oQndoD5YEeSl7-MUHQ63Ow" chracterSource="_B0_zAN0CEeOvVYoRsPZlnA" choosenLifestyle="_E8vOYD5aEeSl7-MUHQ63Ow" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_oQndoT5YEeSl7-MUHQ63Ow" name="Ex-Firewatch Concept" edgeBasis="5" konstitutionBasis="3" geschicklichkeitBasis="7" reaktionBasis="5" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="5" logikBasis="3" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
