@@ -27,6 +27,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -189,12 +190,14 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                             if (eo instanceof Pack) {
                                 Pack p = (Pack)eo;
                                 EList<Quelle> items = p.getItems();
-                                for (Quelle abstraktGegenstand : items) {
-                                    EObject copy = ShrReferenceManager.copyWithParentId(abstraktGegenstand);
-                                    if (abstraktGegenstand instanceof AbstraktGegenstand) {
+                                for (Quelle item : items) {
+                                    EObject copy = ShrReferenceManager.copyWithParentId(item);
+                                    if (item instanceof AbstraktGegenstand) {
                                         object.getInventar().add((AbstraktGegenstand)copy);
-                                    } else if (abstraktGegenstand instanceof Vertrag) {
+                                    } else if (item instanceof Vertrag) {
                                         object.getContracts().add((Vertrag)copy);
+                                    } else if (item instanceof Fahrzeug) {
+                                        object.getVehicels().add((Fahrzeug)copy);
                                     }
                                 }
                             }
