@@ -36,7 +36,7 @@ Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download 
  
  If you are not part of the github community you could use other channels to contact:
  
- * diaspora : [shr5rcp@pod.geraspora.de](https://pod.geraspora.de/people/94e9fef074180132e8774860008dbc6c) 
+ * diaspora : [shr5rcp@pod.geraspora.de](https://pod.geraspora.de/people/94e9fef074180132e8774860008dbc6c), [a Community-run, Distributed Social-network](https://joindiaspora.com/)
  * email: shr5rcp@noreply.github.com 
  * twitter: [@shr5rcp](https://twitter.com/shr5rcp)
  
