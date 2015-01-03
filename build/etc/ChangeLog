@@ -8,6 +8,7 @@
 	* added npc sheet
 * resources/model
 	* added cyberware enhancement
+	* added packs as a container to speed up the generation process 
 
 2014-12-21 Version 0.2.3
 
