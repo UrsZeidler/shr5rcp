@@ -25,7 +25,6 @@ import org.eclipse.ui.WorkbenchException;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
@@ -108,10 +107,10 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
      */
     @Override
     public boolean performFinish() {
-        CharacterGenerator generator = createGenerator();
+        CharacterGenerator<Shr5System> generator = (CharacterGenerator<Shr5System>)createGenerator();
 
         generator.setSelectedGroup((CharacterGroup)selectedGroup.getValue());
-        generator.setGenerator((CharacterGeneratorSystem)selectedSystem.getValue());
+        generator.setGenerator((Shr5System)selectedSystem.getValue());
         EditingDomain edtingDomain = Activator.getDefault().getEdtingDomain();
         Command command = AddCommand.create(edtingDomain, selectedContainer.getValue(), Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GENERATORS,
                 generator);

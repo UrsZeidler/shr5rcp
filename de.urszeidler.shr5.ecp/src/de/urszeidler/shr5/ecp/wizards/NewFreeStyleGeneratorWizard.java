@@ -40,7 +40,7 @@ public class NewFreeStyleGeneratorWizard extends NewShr5GeneratorWizard {
     }
 
     @Override
-    protected CharacterGenerator createGenerator() {
+    protected CharacterGenerator<FreeStyle> createGenerator() {
         return Shr5managementFactory.eINSTANCE.createFreeStyleGenerator();
     }
 
