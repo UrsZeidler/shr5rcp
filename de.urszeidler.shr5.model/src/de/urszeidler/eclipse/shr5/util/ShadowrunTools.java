@@ -986,4 +986,13 @@ public class ShadowrunTools {
             }
         };
     }
+
+    public static Predicate<EClass> esupertypePredicate(final EClass eClass) {
+        return new Predicate<EClass>() {
+            @Override
+            public boolean apply(EClass input) {
+                return input.getEAllSuperTypes().contains(eClass);
+            }
+        };        
+    }
 }

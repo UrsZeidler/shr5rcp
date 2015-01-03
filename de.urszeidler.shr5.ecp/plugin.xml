@@ -196,14 +196,14 @@
             class="de.urszeidler.shr5.runtime.ui.views.CombatTurnView"
             icon="images/start-combat-on.png"
             id="de.urszeidler.shr5.ecp.CombatTurnView"
-            name="Combat view"
+            name="%combat.view.name"
             restorable="true">
       </view>
       <view
             category="de.urszeidler.shr5.ecp.category.views"
             class="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
             id="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
-            name="Runtime Script View">
+            name="%runtime.view.name">
       </view>
    </extension>
    <extension
@@ -259,6 +259,89 @@
             %freestyle.wizard.description
          </description>
       </wizard>
+      <category
+            id="de.urszeidler.shr5.ecp.item"
+            name="%create.wizard.category.name">
+      </category>
+      <wizard
+            category="de.urszeidler.shr5.ecp.item"
+            class="de.urszeidler.shr5.ecp.wizards.createItem.NewItemWizard"
+            id="de.urszeidler.shr5.ecp.wizard2"
+            name="%create.item.wizard.name">
+         <description>
+            %create.item.wizard.description
+         </description>
+      </wizard>
+      <wizard
+            category="de.urszeidler.shr5.ecp.item"
+            class="de.urszeidler.shr5.ecp.wizards.createItem.NewContractWizard"
+            icon="images/newContractWizard-small.png"
+            id="de.urszeidler.shr5.ecp.wizard3"
+            name="%create.contract.wizard.name">
+         <description>
+            %create.contract.wizard.description
+         </description>
+      </wizard>
+     <wizard
+           category="de.urszeidler.shr5.ecp.item"
+           class="de.urszeidler.shr5.ecp.wizards.createItem.NewSoftwareWizard"
+           hasPages="true"
+           icon="images/AutoSoft.gif"
+           id="de.urszeidler.shr5.ecp.wizard5"
+           name="%create.software.wizard.name">
+        <description>
+           %create.software.wizard.description
+        </description>
+      </wizard>
+     <wizard
+            category="de.urszeidler.shr5.ecp.item"
+            class="de.urszeidler.shr5.ecp.wizards.createItem.NewDefinitionWizard"
+            id="de.urszeidler.shr5.ecp.wizard6"
+            name="%create.description.wizard.name">
+        <description>
+           %create.description.wizard.description
+        </description>
+      </wizard>
+     <wizard
+           category="de.urszeidler.shr5.ecp.item"
+           class="de.urszeidler.shr5.ecp.wizards.createItem.NewPersonaPartWizard"
+           hasPages="true"
+           id="de.urszeidler.shr5.ecp.wizard7"
+           name="%create.personapart.wizard.name">
+        <description>
+           %create.personapart.wizard.description
+        </description>
+      </wizard>
+     <wizard
+           category="de.urszeidler.shr5.ecp.item"
+           class="de.urszeidler.shr5.ecp.wizards.createItem.NewByuableWizard"
+           id="de.urszeidler.shr5.ecp.wizard4"
+           name="%create.value.wizard.name">
+        <description>
+           %create.value.wizard.description
+        </description>
+     </wizard>
+    <wizard
+           category="de.urszeidler.shr5.ecp.item"
+           class="de.urszeidler.shr5.ecp.wizards.createItem.NewManagementWizard"
+           hasPages="true"
+           id="de.urszeidler.shr5.ecp.wizard8"
+           name="%create.mng.wizard.name">
+       <description>
+          %create.mng.wizard.description
+       </description>
+      </wizard>
+         <wizard
+           category="de.urszeidler.shr5.ecp.item"
+           class="de.urszeidler.shr5.ecp.wizards.createItem.NewDescibeableWizard"
+           hasPages="true"
+           id="de.urszeidler.shr5.ecp.wizard9"
+           name="%create.describeable.wizard.name">
+       <description>
+          %create.describeable.wizard.description
+       </description>
+      </wizard>
+      
    </extension>
 
   <extension
@@ -299,6 +382,14 @@
          <menu
                id="de.urszeidler.shr5.ecp.menus.extraMenu"
                label="%extra.menu.label">
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.createItemWizard"
+                  style="push">
+            </command>
+            <separator
+                  name="de.urszeidler.shr5.ecp.separator1"
+                  visible="true">
+            </separator>
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
                   label="%open.Any.Object.command"
@@ -373,12 +464,16 @@
      <command
            categoryId="de.urszeidler.shr5.ecp.commands.openWizard"
            id="de.urszeidler.shr5.ecp.commands.openObjectCommand"
-           name="open object">
+           name="%open.object.command.name">
         <commandParameter
               id="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
               name="type"
               optional="true">
         </commandParameter>
+     </command>
+     <command
+           id="de.urszeidler.shr5.ecp.commands.createItemWizard"
+           name="%create.object.command.name">
      </command>
   </extension>
   <extension
@@ -390,6 +485,10 @@
      <handler
            class="de.urszeidler.shr5.ecp.handlers.OpenObjectHandler"
            commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand">
+     </handler>
+     <handler
+           class="de.urszeidler.shr5.ecp.handlers.CreateNewObjectsWizardCommandHandler"
+           commandId="de.urszeidler.shr5.ecp.commands.createItemWizard">
      </handler>
   </extension>
 
