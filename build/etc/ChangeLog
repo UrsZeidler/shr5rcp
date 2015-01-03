@@ -7,6 +7,7 @@
 * model to text
 	* added npc sheet
 * resources/model
+	* added wizards to create new objects
 	* added cyberware enhancement
 	* added packs as a container to speed up the generation process 
 
