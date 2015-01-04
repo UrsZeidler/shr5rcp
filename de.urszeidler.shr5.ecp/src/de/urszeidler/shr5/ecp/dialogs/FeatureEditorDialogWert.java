@@ -56,6 +56,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -204,6 +205,12 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
                 @Override
                 public boolean select(Viewer viewer, Object parentElement, Object element) {
+//                    if (element instanceof Identifiable) {
+//                        Identifiable id = (Identifiable)element;
+//                        if(id.getParentId()!=null)
+//                            return false;
+//                    }
+                    
                     if (element instanceof EObject) {
                         EObject eo = (EObject)element;
                         EObject eContainer = eo.eContainer();
