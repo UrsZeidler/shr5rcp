@@ -359,10 +359,10 @@ public class ShrReferenceManager extends DefaultReferenceManager {
 
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
-        FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
+        FeatureEditorDialogWert dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                 .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add "
                 + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object_ref), new ArrayList<EObject>(collection), orgObject);
-
+        dialog.setIsUnique(false);
         return copyObjectsFromDialog(dialog);
     }
 

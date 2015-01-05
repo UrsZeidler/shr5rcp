@@ -53,10 +53,13 @@ import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.wb.swt.ResourceManager;
 
+import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Koerpermods;
+import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -73,7 +76,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     private IDialogSettings dialogSettings;
     private ViewerFilter shrListFilter;
     // private EStructuralFeature feature;
-    private ViewerFilter allowedSourceFilter;
+//    private ViewerFilter allowedSourceFilter;
     private EObject theEObject;
     private boolean activateFilter = true;
     private DialogType dialogType = DialogType.inventar;
@@ -135,16 +138,27 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
     protected void updateLabel() {
         String label = null;
-        if (theEObject instanceof GeldWert) {
+        List<Object> children = values.getChildren();
+        Object type=null;
+        if(!children.isEmpty())
+            type = children.get(0);
+        
+        if (type instanceof Cyberware || type instanceof BioWare) {
+            List<?> children1 = children;
+            label = String.format("%s ¥ (%d items) %d essence", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size(), ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1));// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+
+        } else if (type instanceof GeldWert) {
             label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
 
-        } else if (theEObject instanceof Cyberware) {
-            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+//        } 
+//        else if (type instanceof PersonaEigenschaft) {
+//       
+//            label = String.format("%s ¥ (%d items)", ShadowrunTools.(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
 
-        } else if (dialogType == DialogType.simple)
+        }  else //if (type == DialogType.simple)
             label = String.format("%d selected", values.getChildren().size());
-        else
-            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+//        else
+//            label = String.format("%s ¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                                                                                                                                                // +
                                                                                                                                                // "¥");
         gesamtPreisLabel.setText(label);
@@ -205,11 +219,6 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
                 @Override
                 public boolean select(Viewer viewer, Object parentElement, Object element) {
-//                    if (element instanceof Identifiable) {
-//                        Identifiable id = (Identifiable)element;
-//                        if(id.getParentId()!=null)
-//                            return false;
-//                    }
                     
                     if (element instanceof EObject) {
                         EObject eo = (EObject)element;
@@ -221,23 +230,23 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     return true;
                 }
             };
-            allowedSourceFilter = new ViewerFilter() {
-                @Override
-                public boolean select(Viewer viewer, Object parentElement, Object element) {
-//                    if (theEObject instanceof ManagedCharacter) {
-//                        ManagedCharacter mc = (ManagedCharacter)theEObject;
-//                        CharacterGenerator<?> generatorSrc = mc.getChracterSource();
-//                        if (generatorSrc instanceof Shr5RuleGenerator) {
-//                            Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
-//                            EList<SourceBook> allowedSources = srg.getAllowedSources();
-//                            if (!allowedSources.isEmpty())
-//                                if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
-//                                    return false;
-//                        }
-//                    }
-                    return true;
-                }
-            };
+//            allowedSourceFilter = new ViewerFilter() {
+//                @Override
+//                public boolean select(Viewer viewer, Object parentElement, Object element) {
+////                    if (theEObject instanceof ManagedCharacter) {
+////                        ManagedCharacter mc = (ManagedCharacter)theEObject;
+////                        CharacterGenerator<?> generatorSrc = mc.getChracterSource();
+////                        if (generatorSrc instanceof Shr5RuleGenerator) {
+////                            Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+////                            EList<SourceBook> allowedSources = srg.getAllowedSources();
+////                            if (!allowedSources.isEmpty())
+////                                if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
+////                                    return false;
+////                        }
+////                    }
+//                    return true;
+//                }
+//            };
 
             ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
             final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
@@ -252,10 +261,10 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     public void widgetSelected(SelectionEvent e) {
                         if (filterShrList.getSelection()) {
                             choiceTableViewer.addFilter(shrListFilter);
-                            choiceTableViewer.addFilter(allowedSourceFilter);
+//                            choiceTableViewer.addFilter(allowedSourceFilter);
                         } else {
                             choiceTableViewer.removeFilter(shrListFilter);
-                            choiceTableViewer.removeFilter(allowedSourceFilter);
+//                            choiceTableViewer.removeFilter(allowedSourceFilter);
                         }
                         dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
                     }
@@ -317,8 +326,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     }
                 });
             }
-            if (activateFilter)
-                choiceTableViewer.addFilter(allowedSourceFilter);
+//            if (activateFilter)
+//                choiceTableViewer.addFilter(allowedSourceFilter);
             if (unique) {
                 choiceTableViewer.addFilter(new ViewerFilter() {
 
@@ -513,8 +522,9 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     for (Iterator<?> i = selection.iterator(); i.hasNext();) {
                         Object value = i.next();
                         if (!unique || !children.contains(value)) {
-                            if(!capacityReached())
-                                children.add(value);
+                            if(!capacityReached()){
+                                children.add(value);                                
+                            }
                         }
                     }
                     featureTableViewer.refresh();
@@ -596,8 +606,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     protected boolean capacityReached() {
         if (theEObject instanceof Capacity) {
             Capacity ca = (Capacity)theEObject;
-           
-            return false;
+            ca.getCapacityFeature();
+            return ca.getCapacityRemains()<1;
         }
         return false;
     }
@@ -609,5 +619,9 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     @Override
     protected Point getInitialSize() {
         return super.getInitialSize();
+    }
+    
+    public void setIsUnique(boolean unique){
+        this.unique = unique;
     }
 }

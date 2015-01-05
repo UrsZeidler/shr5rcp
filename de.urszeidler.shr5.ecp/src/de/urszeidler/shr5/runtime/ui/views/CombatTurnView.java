@@ -19,12 +19,9 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
@@ -53,6 +50,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.service.CombatViewer;
 import de.urszeidler.shr5.ecp.service.ScriptService;
+import de.urszeidler.shr5.ecp.util.DropdownSelectionListener;
 import de.urszeidler.shr5.runtime.ui.widgets.BasicActionPanelWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.CombatTurnList;
 
@@ -145,30 +143,6 @@ public class CombatTurnView extends ViewPart implements CombatViewer {
             });
         }
 
-    }
-
-    public abstract class DropdownSelectionListener<A> extends SelectionAdapter {
-        protected ToolItem dropdown;
-        protected Menu menu;
-
-        public DropdownSelectionListener(ToolItem dropdown) {
-            this.dropdown = dropdown;
-            menu = new Menu(dropdown.getParent().getShell());
-        }
-
-        public void widgetSelected(SelectionEvent event) {
-            if (event.detail == SWT.ARROW) {
-                ToolItem item = (ToolItem)event.widget;
-                Rectangle rect = item.getBounds();
-                Point pt = item.getParent().toDisplay(new Point(rect.x, rect.y));
-                menu.setLocation(pt.x, pt.y + rect.height);
-                menu.setVisible(true);
-            } else {
-                System.out.println(dropdown.getText() + " Pressed"); //$NON-NLS-1$
-            }
-        }
-
-        public abstract void add(String item, final A action);
     }
 
     public class FreeActionDropdownSelectionListner extends DropdownSelectionListener<FreeAction> {
