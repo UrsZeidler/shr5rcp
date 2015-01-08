@@ -3,6 +3,9 @@
  */
 package de.urszeidler.shr5.runtime.ui.editor.pages;
 
+import java.util.Map.Entry;
+import java.util.Set;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.IConverter;
@@ -17,6 +20,8 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.ToolBarManager;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -30,6 +35,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -41,6 +47,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayAdapterFactory;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
@@ -72,7 +79,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private AdapterFactoryContentProvider actionListContentProvider;
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryItemDelegator itemDelegator;
-    private Text formText;
+//    private Text formText;
     /**
      * Create the form page.
      * 
@@ -208,12 +215,26 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().adapt(grpState);
         managedForm.getToolkit().paintBordersFor(grpState);
 
+        ToolBarManager extendetDataToolbar = new ToolBarManager(SWT.HORIZONTAL);
+        Set<Entry<ExtendetData, Object>> entrySet = object.getExtendetData().entrySet();
+        for (Entry<ExtendetData, Object> entry : entrySet) {
+            ExtendetData key = entry.getKey();
+            if (key.getEObject() != null) {
+                extendetDataToolbar.add(new Action(labelProvider.getText(key.getEObject()) + " " + labelProvider.getText(key.getEFeature()) + "  "
+                        + entry.getValue()) {
+                });
+            }
+        }
+        ToolBar toolbar = extendetDataToolbar.createControl(managedForm.getForm().getBody());
+        managedForm.getToolkit().adapt(toolbar);
+        managedForm.getToolkit().paintBordersFor(toolbar);
         
-        formText = managedForm.getToolkit().createText(managedForm.getForm().getBody(), "",SWT.MULTI);
-        formText.setEditable(false);
-        TableWrapData twd_formText = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 5, 1);
-        twd_formText.heightHint = 74;
-        formText.setLayoutData(twd_formText);
+        
+//        formText = managedForm.getToolkit().createText(managedForm.getForm().getBody(), "",SWT.MULTI);
+//        formText.setEditable(false);
+//        TableWrapData twd_formText = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 5, 1);
+//        twd_formText.heightHint = 74;
+//        formText.setLayoutData(twd_formText);
 
         
         Composite composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
@@ -265,19 +286,19 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         bindingContext.bindValue(observeTextLblNameObserveWidget, objectNameObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
                 new EMFUpdateValueStrategy());
         //
-        IObservableValue observeTextObserveWidget = WidgetProperties.text().observe(formText);
-        IObservableValue objectExtendetObserveValue = EMFEditProperties.value(
-                editingDomain,
-                FeaturePath.fromList(Literals.EXTENDET_DATA_AWARE__EXTENDET_DATA)).observe(object);
-        bindingContext.bindValue(observeTextObserveWidget, objectExtendetObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
-                new EMFUpdateValueStrategy(){
-            @Override
-            public Object convert(Object value) {
-                return value.toString();
-                //return super.convert(value);
-            }
-            
-        });
+//        IObservableValue observeTextObserveWidget = WidgetProperties.text().observe(formText);
+//        IObservableValue objectExtendetObserveValue = EMFEditProperties.value(
+//                editingDomain,
+//                FeaturePath.fromList(Literals.EXTENDET_DATA_AWARE__EXTENDET_DATA)).observe(object);
+//        bindingContext.bindValue(observeTextObserveWidget, objectExtendetObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
+//                new EMFUpdateValueStrategy(){
+//            @Override
+//            public Object convert(Object value) {
+//                return value.toString();
+//                //return super.convert(value);
+//            }
+//            
+//        });
 
         //
 

@@ -136,13 +136,6 @@ public class RuntimeCharacterTooltip extends ToolTip {
         Set<Entry<ExtendetData, Object>> entrySet = runtimeCharacter.getExtendetData().entrySet();
         for (Entry<ExtendetData, Object> entry : entrySet) {
             ExtendetData key = entry.getKey();
-//            if (key.getEFeature().equals(RuntimePackage.Literals.NAHKAMP_MODIFIKATIONEN__CHARACTER_PRONE))
-//                extendetDataToolbar.add(new Action("prone") {
-//                });
-//            if (key.getEFeature().equals(Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS))
-//                extendetDataToolbar.add(new Action("recoile") {
-//                });
-
             if (key.getEObject() != null) {
                 extendetDataToolbar.add(new Action(labelProvider.getText(key.getEObject()) + " " + labelProvider.getText(key.getEFeature()) + "  "
                         + entry.getValue()) {
