@@ -4270,25 +4270,25 @@
           <localizations xmi:id="_VNn7MowzEeS-eZ7FDdCmfQ" local="de" name="Stimmenmodulator"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNoiQIwzEeS-eZ7FDdCmfQ" name="Cybereyes Basic System 1" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="4000" cyberwareCapacity="4" type="eyeware">
-          <mods xmi:id="_VNpJUIwzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNpJUIwzEeS-eZ7FDdCmfQ" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNpJUYwzEeS-eZ7FDdCmfQ" local="de" name="Cyberaugen-Basissystem 1"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNpJUowzEeS-eZ7FDdCmfQ" name="Cybereyes Basic System 2" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="6000" cyberwareCapacity="8" type="eyeware">
-          <mods xmi:id="_VNpJU4wzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNpJU4wzEeS-eZ7FDdCmfQ" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNpJVIwzEeS-eZ7FDdCmfQ" local="de" name="Cyberaugen-Basissystem 2"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNpJVYwzEeS-eZ7FDdCmfQ" name="Cybereyes Basic System 3" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="10000" cyberwareCapacity="12" type="eyeware">
-          <mods xmi:id="_VNpwYIwzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNpwYIwzEeS-eZ7FDdCmfQ" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNpwYYwzEeS-eZ7FDdCmfQ" local="de" name="Cyberaugen-Basissystem 3"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNpwYowzEeS-eZ7FDdCmfQ" name="Cybereyes Basic System 4" parentId="8e414ade-2764-4dc7-bdc4-83bb4a086034" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)" wertValue="14000" cyberwareCapacity="16" type="eyeware">
-          <mods xmi:id="_VNpwY4wzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNpwY4wzEeS-eZ7FDdCmfQ" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNpwZIwzEeS-eZ7FDdCmfQ" local="de" name="Cyberaugen-Basissystem 4"/>
@@ -4323,6 +4323,15 @@
         <entries xsi:type="shr5:Cyberware" xmi:id="97910ef7-dc30-4a87-8314-d1e0021dc39c" name="Low-Light Vision" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1500" type="eyeware">
           <mods xmi:id="_VNq-gowzEeS-eZ7FDdCmfQ" wert="-10">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+          </mods>
+          <mods xmi:id="_OLxLcJeLEeSR0NwUixKsDQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <localizations xmi:id="_VNq-g4wzEeS-eZ7FDdCmfQ" local="de" name="Restlichtverstärkung"/>
+        </entries>
+        <entries xsi:type="shr5:CyberwareEnhancement" xmi:id="97910ef7-dc30-4a87-8314-d1e0021dc39c" verfuegbarkeit="4" wertValue="1500" name="Low-Light Vision" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" capacityUse="1" type="eyeware">
+          <mods xmi:id="_OLxygJeLEeSR0NwUixKsDQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
           </mods>
           <localizations xmi:id="_VNq-g4wzEeS-eZ7FDdCmfQ" local="de" name="Restlichtverstärkung"/>
         </entries>
@@ -4417,25 +4426,25 @@
           <localizations xmi:id="_VNxsMYwzEeS-eZ7FDdCmfQ" local="de" name="Sichtvergrößerung"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNxsMowzEeS-eZ7FDdCmfQ" name="Cyberears 1" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="3000" type="earware">
-          <mods xmi:id="_VNxsM4wzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNxsM4wzEeS-eZ7FDdCmfQ" wert="-20">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNxsNIwzEeS-eZ7FDdCmfQ" local="de" name="Cyberohren 1"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNyTQIwzEeS-eZ7FDdCmfQ" name="Cyberears 2" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="4500" type="earware">
-          <mods xmi:id="_VNy6UIwzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNy6UIwzEeS-eZ7FDdCmfQ" wert="-30">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNy6UYwzEeS-eZ7FDdCmfQ" local="de" name="Cyberohren 2"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNy6UowzEeS-eZ7FDdCmfQ" name="Cyberears 3" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="7500" type="earware">
-          <mods xmi:id="_VNy6U4wzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNy6U4wzEeS-eZ7FDdCmfQ" wert="-40">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNy6VIwzEeS-eZ7FDdCmfQ" local="de" name="Cyberohren 3"/>
         </entries>
         <entries xsi:type="shr5:Cyberware" xmi:id="_VNzhYIwzEeS-eZ7FDdCmfQ" name="Cyberears 4" parentId="2767fdaf-4f49-4403-a799-e91b9e6c8fa2" page="453" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 3" wertValue="11000" type="earware">
-          <mods xmi:id="_VNzhYYwzEeS-eZ7FDdCmfQ">
+          <mods xmi:id="_VNzhYYwzEeS-eZ7FDdCmfQ" wert="-50">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
           </mods>
           <localizations xmi:id="_VNzhYowzEeS-eZ7FDdCmfQ" local="de" name="Cyberohren 4"/>
