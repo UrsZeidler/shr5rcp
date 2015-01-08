@@ -166,6 +166,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -4850,6 +4851,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getCapacity__CanAdd__EObject() {
+        return capacityEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getCyberwareEnhancement() {
         return cyberwareEnhancementEClass;
     }
@@ -6304,6 +6314,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(capacityEClass, CAPACITY__CAPACITY_FEATURE);
         createEAttribute(capacityEClass, CAPACITY__CAPACITY);
         createEAttribute(capacityEClass, CAPACITY__CAPACITY_REMAINS);
+        createEOperation(capacityEClass, CAPACITY___CAN_ADD__EOBJECT);
 
         cyberwareEnhancementEClass = createEClass(CYBERWARE_ENHANCEMENT);
         createEAttribute(cyberwareEnhancementEClass, CYBERWARE_ENHANCEMENT__CAPACITY_USE);
@@ -7140,6 +7151,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getCapacity_CapacityFeature(), ecorePackage.getEReference(), null, "capacityFeature", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getCapacity_Capacity(), ecorePackage.getEInt(), "capacity", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getCapacity_CapacityRemains(), ecorePackage.getEInt(), "capacityRemains", null, 0, 1, Capacity.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        EOperation op = initEOperation(getCapacity__CanAdd__EObject(), ecorePackage.getEBoolean(), "canAdd", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEObject(), "object", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(cyberwareEnhancementEClass, CyberwareEnhancement.class, "CyberwareEnhancement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCyberwareEnhancement_CapacityUse(), ecorePackage.getEInt(), "capacityUse", null, 0, 1, CyberwareEnhancement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

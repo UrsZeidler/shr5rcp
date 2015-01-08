@@ -22,6 +22,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}</li>
  * </ul>
  * </p>
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject) <em>Can Add</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class MagazinTest extends AbstraktGegenstandTest {
@@ -125,5 +131,25 @@ public class MagazinTest extends AbstraktGegenstandTest {
         getFixture().getBullets().add(munition);
         assertEquals(7, getFixture().getCapacityRemains());
     }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject) <em>Can Add</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject)
+     * @generated not
+     */
+    public void testCanAdd__EObject() {
+        Munition munition = Shr5Factory.eINSTANCE.createMunition();
+        Feuerwaffe feuerwaffe = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        feuerwaffe.setKapazitaet(1);
+        assertEquals(0, getFixture().getCapacityRemains());        
+        
+        getFixture().setType(feuerwaffe);
+        assertEquals(1, getFixture().getCapacityRemains());
+        assertTrue(getFixture().canAdd(munition));
+        getFixture().getBullets().add(munition);
+        assertFalse(getFixture().canAdd(munition));
+   }
 
 } //MagazinTest

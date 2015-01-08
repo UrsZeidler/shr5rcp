@@ -72,4 +72,12 @@ public interface Capacity extends EObject {
      */
     int getCapacityRemains();
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean canAdd(EObject object);
+
 } // Capacity

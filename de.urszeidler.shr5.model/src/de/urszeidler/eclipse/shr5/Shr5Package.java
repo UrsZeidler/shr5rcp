@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -4071,13 +4072,22 @@ public interface Shr5Package extends EPackage {
 	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 11;
 
     /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE___CAN_ADD__EOBJECT = KOERPERMODS_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Cyberware</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CYBERWARE_OPERATION_COUNT = KOERPERMODS_OPERATION_COUNT + 0;
+	int CYBERWARE_OPERATION_COUNT = KOERPERMODS_OPERATION_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -15412,13 +15422,22 @@ public interface Shr5Package extends EPackage {
     int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 13;
 
     /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK___CAN_ADD__EOBJECT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Cyberdeck</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CYBERDECK_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
+    int CYBERDECK_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.
@@ -19565,13 +19584,22 @@ public interface Shr5Package extends EPackage {
     int MAGAZIN_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 5;
 
     /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGAZIN___CAN_ADD__EOBJECT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Magazin</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MAGAZIN_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+    int MAGAZIN_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl <em>Default Wifi</em>}' class.
@@ -20000,13 +20028,22 @@ public interface Shr5Package extends EPackage {
     int CAPACITY_FEATURE_COUNT = 3;
 
     /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CAPACITY___CAN_ADD__EOBJECT = 0;
+
+    /**
      * The number of operations of the '<em>Capacity</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CAPACITY_OPERATION_COUNT = 0;
+    int CAPACITY_OPERATION_COUNT = 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberwareEnhancementImpl <em>Cyberware Enhancement</em>}' class.
@@ -24717,6 +24754,16 @@ public interface Shr5Package extends EPackage {
     EAttribute getCapacity_CapacityRemains();
 
     /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject) <em>Can Add</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Can Add</em>' operation.
+     * @see de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject)
+     * @generated
+     */
+    EOperation getCapacity__CanAdd__EObject();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.CyberwareEnhancement <em>Cyberware Enhancement</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -29064,6 +29111,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute CAPACITY__CAPACITY_REMAINS = eINSTANCE.getCapacity_CapacityRemains();
+
+        /**
+         * The meta object literal for the '<em><b>Can Add</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation CAPACITY___CAN_ADD__EOBJECT = eINSTANCE.getCapacity__CanAdd__EObject();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CyberwareEnhancementImpl <em>Cyberware Enhancement</em>}' class.

@@ -735,6 +735,9 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//Capacity/capacityFeature"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Capacity/capacity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Capacity/capacityRemains"/>
+      <genOperations ecoreOperation="shr5.ecore#//Capacity/canAdd">
+        <genParameters ecoreParameter="shr5.ecore#//Capacity/canAdd/object"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//CyberwareEnhancement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareEnhancement/capacityUse"/>

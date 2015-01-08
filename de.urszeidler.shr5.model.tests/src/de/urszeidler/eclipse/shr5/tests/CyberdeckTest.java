@@ -29,6 +29,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}</li>
  * </ul>
  * </p>
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject) <em>Can Add</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class CyberdeckTest extends AbstraktGegenstandTest {
@@ -179,6 +185,25 @@ public class CyberdeckTest extends AbstraktGegenstandTest {
         assertEquals(8, getFixture().getCapacityRemains());
         getFixture().getRunningPrograms().remove(program);
         assertEquals(9, getFixture().getCapacityRemains());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject) <em>Can Add</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#canAdd(org.eclipse.emf.ecore.EObject)
+     * @generated not
+     */
+    public void testCanAdd__EObject() {
+        getFixture().setProgramSlots(1);
+        assertEquals(1, getFixture().getCapacity());
+        
+        CommonProgram program = Shr5Factory.eINSTANCE.createCommonProgram();
+        assertTrue(getFixture().canAdd(program));
+        getFixture().getRunningPrograms().add(program);
+        assertEquals(0, getFixture().getCapacityRemains());
+        program = Shr5Factory.eINSTANCE.createCommonProgram();
+        assertFalse(getFixture().canAdd(program));
     }
 
     /**

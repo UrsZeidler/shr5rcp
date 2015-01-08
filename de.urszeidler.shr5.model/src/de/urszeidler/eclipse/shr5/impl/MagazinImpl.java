@@ -9,6 +9,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,6 +19,7 @@ import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -196,6 +198,18 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean canAdd(EObject object) {
+        if(getCapacityRemains()<1)
+            return false;
+        else
+            return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -311,6 +325,36 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+        if (baseClass == Capacity.class) {
+            switch (baseOperationID) {
+                case Shr5Package.CAPACITY___CAN_ADD__EOBJECT: return Shr5Package.MAGAZIN___CAN_ADD__EOBJECT;
+                default: return -1;
+            }
+        }
+        return super.eDerivedOperationID(baseOperationID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+        switch (operationID) {
+            case Shr5Package.MAGAZIN___CAN_ADD__EOBJECT:
+                return canAdd((EObject)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
     }
 
 } //MagazinImpl
