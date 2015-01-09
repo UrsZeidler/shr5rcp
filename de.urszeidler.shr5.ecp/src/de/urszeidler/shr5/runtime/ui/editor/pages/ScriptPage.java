@@ -4,7 +4,9 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.Label;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ArrayContentProvider;
@@ -22,14 +24,12 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.zest.core.viewers.AbstractZoomableViewer;
 import org.eclipse.zest.core.viewers.EntityConnectionData;
 import org.eclipse.zest.core.viewers.GraphViewer;
 import org.eclipse.zest.core.viewers.IEntityConnectionStyleProvider;
+import org.eclipse.zest.core.viewers.IEntityStyleProvider;
 import org.eclipse.zest.core.viewers.IGraphEntityContentProvider;
 import org.eclipse.zest.core.viewers.IGraphEntityRelationshipContentProvider;
-import org.eclipse.zest.core.viewers.IZoomableWorkbenchPart;
-import org.eclipse.zest.core.viewers.ZoomContributionViewItem;
 import org.eclipse.zest.core.widgets.ZestStyles;
 import org.eclipse.zest.layouts.LayoutAlgorithm;
 import org.eclipse.zest.layouts.LayoutStyles;
@@ -41,6 +41,7 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
@@ -51,13 +52,13 @@ public class ScriptPage extends AbstractShr5Page<Script> {
 
     protected DataBindingContext m_bindingContext;
     private IObservableList observeList;
+    private Color combatColor = ColorConstants.red;
+    private Color combatColorF = ColorConstants.white;
 
     public class ZestRelationContentProvider extends ArrayContentProvider implements IGraphEntityRelationshipContentProvider {
 
         @Override
         public Object[] getRelationships(Object source, Object dest) {
-            // TODO Auto-generated method stub
-            // new EntityConnectionData(source, dest);
             return null;
         }
 
@@ -75,7 +76,7 @@ public class ScriptPage extends AbstractShr5Page<Script> {
         }
     }
 
-    public class ZestLabelProvider extends LabelProvider implements IEntityConnectionStyleProvider {
+    public class ZestLabelProvider extends LabelProvider implements IEntityConnectionStyleProvider,IEntityStyleProvider {
         @Override
         public String getText(Object element) {
 
@@ -113,7 +114,58 @@ public class ScriptPage extends AbstractShr5Page<Script> {
 
         @Override
         public IFigure getTooltip(Object entity) {
+            if (entity instanceof Placement) {
+                Placement p = (Placement)entity;
+                Label label = new Label();
+                label.setText(p.getBeschreibung());
+                return label;
+            }
             return null;
+        }
+
+        @Override
+        public Color getNodeHighlightColor(Object entity) {
+            return null;
+        }
+
+        @Override
+        public Color getBorderColor(Object entity) {
+            return null;
+        }
+
+        @Override
+        public Color getBorderHighlightColor(Object entity) {
+            return null;
+        }
+
+        @Override
+        public int getBorderWidth(Object entity) {
+            return 1;
+        }
+
+        @Override
+        public Color getBackgroundColour(Object entity) {
+            if (entity instanceof Placement) {
+                Placement p = (Placement)entity;
+                if(p.getOptions().contains(PlacementOptions.COMBAT))
+                    return combatColor;
+            }
+            return null;
+        }
+
+        @Override
+        public Color getForegroundColour(Object entity) {
+            if (entity instanceof Placement) {
+                Placement p = (Placement)entity;
+                if(p.getOptions().contains(PlacementOptions.COMBAT))
+                    return combatColorF;
+            }
+            return null;
+        }
+
+        @Override
+        public boolean fisheyeNode(Object entity) {
+            return false;
         }
     }
 
@@ -199,6 +251,7 @@ public class ScriptPage extends AbstractShr5Page<Script> {
         managedForm.getToolkit().paintBordersFor(toolBar);
 
         final GraphViewer graphViewer = new GraphViewer(composite, SWT.NONE);
+        graphViewer.addDoubleClickListener(this);
         Control control = graphViewer.getControl();
         GridData gd_control = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
         gd_control.minimumHeight = 200;

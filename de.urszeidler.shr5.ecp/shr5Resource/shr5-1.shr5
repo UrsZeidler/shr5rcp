@@ -20560,7 +20560,7 @@
           </einbau>
           <magazin xmi:id="_Job3RFDLEeSjN8rIya5QCA" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Remington 950 ammunition" type="_Job3QFDLEeSjN8rIya5QCA" bullets="_lswdoFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA"/>
         </inventar>
-        <inventar xsi:type="shr5:Magazin" xmi:id="_Jos9AFDLEeSjN8rIya5QCA" parentId="_C_YjEEjdEeSs1LVnBuzujg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e"/>
+        <inventar xsi:type="shr5:Magazin" xmi:id="_Jos9AFDLEeSjN8rIya5QCA" parentId="_C_YjEEjdEeSs1LVnBuzujg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e" bullets="_TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA"/>
         <inventar xsi:type="shr5:Magazin" xmi:id="_Jo-CwFDLEeSjN8rIya5QCA" parentId="_DAD4hUjdEeSs1LVnBuzujg" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Remington 950 ammunition" type="01d7b203-e57e-4cbd-9f68-a2134683e178"/>
         <inventar xsi:type="shr5:Munition" xmi:id="_TEY0UFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_TEY0UVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
@@ -21713,6 +21713,12 @@
           <eigenschaften xmi:id="_Faoj0HgMEeSv5bbPkjBOVw" name="Juryrigger" parentId="27c7ea84-bfe4-47e1-8382-38d9a5c8e680" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
             <localizations xmi:id="_Faoj0XgMEeSv5bbPkjBOVw" local="de" name="Technisches Improvisationstalent"/>
           </eigenschaften>
+          <eigenschaften xmi:id="_REAcQJgtEeS4raFL_bi_Cw" name="Quick Healer" parentId="291efdb6-a8b8-49ce-b2be-72f9d3f8a243" page="77" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="3">
+            <mods xmi:id="_REAcQZgtEeS4raFL_bi_Cw" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
+            </mods>
+            <localizations xmi:id="_REAcQpgtEeS4raFL_bi_Cw" local="de" name="Schnellheilung"/>
+          </eigenschaften>
         </persona>
         <inventar xsi:type="shr5:RiggerCommandConsole" xmi:id="_m7Ff4HgFEeSv5bbPkjBOVw" parentId="f9941dbe-1db1-4948-a8be-d760733446ea" page="266" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="68000" name="Proteus Poseidon" deviceRating="5" datenverarbeitungBasis="5" firewallBasis="6" zugriffBasis="1">
           <localizations xmi:id="_m7Ff4XgFEeSv5bbPkjBOVw" local="de" name="Proteus Poseidon"/>
@@ -21797,7 +21803,9 @@
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_6lFlUHgFEeSv5bbPkjBOVw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000">
           <localizations xmi:id="_6lFlUXgFEeSv5bbPkjBOVw" local="de" name="Unterschicht"/>
         </contracts>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="__wZzoHgFEeSv5bbPkjBOVw" name="MCT Fly-Spy (Minidrone)" parentId="d187e9f7-b308-426f-ac35-957ba601c70c" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="2000" handling="4" geschwindigkeit="3" beschleunigung="2" rumpf="1" pilot="3" sensor="3" fahrzeugTyp="Drones: Mini"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="__wZzoHgFEeSv5bbPkjBOVw" name="MCT Fly-Spy (Minidrone)" parentId="d187e9f7-b308-426f-ac35-957ba601c70c" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="2000" handling="4" geschwindigkeit="3" beschleunigung="2" rumpf="1" pilot="3" sensor="3" fahrzeugTyp="Drones: Mini">
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_lwt74JgtEeS4raFL_bi_Cw" wertValue="10" name="" parentId="_UkFd8HgGEeSv5bbPkjBOVw" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="d187e9f7-b308-426f-ac35-957ba601c70c"/>
+        </vehicels>
         <vehicels xsi:type="shr5:Drohne" xmi:id="__zPsQHgFEeSv5bbPkjBOVw" name="Aztechnology Crawler (Small)" parentId="16d4e660-7014-434e-a437-08bc869c6200" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="4000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="3" pilot="4" sensor="3" fahrzeugTyp="Drones: Small" panzer="3"/>
         <vehicels xsi:type="shr5:Drohne" xmi:id="__15XoHgFEeSv5bbPkjBOVw" name="GM-Nissan Doberman (Medium)" parentId="9186a0a7-635f-4242-a0e8-238f48b17ca2" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="5000" handling="5" geschwindigkeit="3" beschleunigung="1" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drones: Medium" panzer="4"/>
         <vehicels xsi:type="shr5:Drohne" xmi:id="__4jqEHgFEeSv5bbPkjBOVw" name="MCT-Nissan Roto-drone (Medium)" parentId="1291ab59-2483-42ca-b7a9-503b2c354cee" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="5000" handling="4" geschwindigkeit="4" beschleunigung="2" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drones: Medium" panzer="4">
@@ -21841,29 +21849,35 @@
   </entries>
   <entries xsi:type="scripting:Scripts" xmi:id="_5ulUwD_WEeSQWIeEm8LnkA" name="Own scripts">
     <stories xmi:id="_CCbIADnpEeSb-uPPMR9TEw" beschreibung="Just some thugs at the corner." name="A test Script with thugs." entry="_CCbIATnpEeSb-uPPMR9TEw">
-      <placements xmi:id="_CCbIATnpEeSb-uPPMR9TEw" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_CCbvEDnpEeSb-uPPMR9TEw" background="There are thugs which needs to be beaten." inTheirFace="This is you Job. Beat the thugs over there." debugging="Nothing can go wrong.">
+      <placements xmi:id="_CCbIATnpEeSb-uPPMR9TEw" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_CCbvEDnpEeSb-uPPMR9TEw" background="There are thugs which needs to be beaten.&#xA;This could be an simple money job, or an initiation for other real jobs." inTheirFace="This is you Job. &#xA;Beat the thugs over there." debugging="Nothing can go wrong.">
         <enviorment xmi:id="_RHGysDnqEeSZlrJ9CDZaLA"/>
       </placements>
       <placements xmi:id="_CCbvEDnpEeSb-uPPMR9TEw" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_CCbvEjnpEeSb-uPPMR9TEw" teams="_CCbvEznpEeSb-uPPMR9TEw" background="The fighting start now." inTheirFace="In a dark alley. The thugs are.&#xA;Beat them up.&#xA;">
         <enviorment xmi:id="_CCbvETnpEeSb-uPPMR9TEw"/>
+        <options>combat</options>
       </placements>
-      <placements xmi:id="_CCbvEjnpEeSb-uPPMR9TEw" name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" background="After beating get the reward.">
+      <placements xmi:id="_CCbvEjnpEeSb-uPPMR9TEw" beschreibung="After the fight, when living, the reward." name="the rewart" startDate="2074-08-01T07:12:18.000+0200" endDate="2074-08-01T07:12:18.000+0200" background="After beating get the reward.&#xA;What ever promised the character should get." inTheirFace="&quot;Yeah you did it.&quot;&#xA;You can get some money.&#xA;" debugging="There should no problem here, as they can take the money and it good.">
         <enviorment xmi:id="_TKOhADnqEeSZlrJ9CDZaLA"/>
+        <options>socialInteraction</options>
       </placements>
       <allTeams xsi:type="runtime:GruntTeam" xmi:id="_CCbvEznpEeSb-uPPMR9TEw" name="The bad guys." gruntGroup="_B1VKMN0CEeOvVYoRsPZlnA">
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsDnqEeSZlrJ9CDZaLA" physicalDamage="16" zustand="tot" character="_B1NOYN0CEeOvVYoRsPZlnA" rightHand="_B1N1dN0CEeOvVYoRsPZlnA" leftHand="_FUWboI3DEeSt0rb90Hcdbg" inUse="_FUWboI3DEeSt0rb90Hcdbg _B1N1ct0CEeOvVYoRsPZlnA _B1N1dN0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsTnqEeSZlrJ9CDZaLA" physicalDamage="13" zustand="tot" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFt0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsjnqEeSZlrJ9CDZaLA" physicalDamage="16" zustand="tot" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsznqEeSZlrJ9CDZaLA" physicalDamage="10" zustand="sterbend" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttDnqEeSZlrJ9CDZaLA" physicalDamage="10" zustand="sterbend" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFt0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttTnqEeSZlrJ9CDZaLA" physicalDamage="18" zustand="tot" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttjnqEeSZlrJ9CDZaLA" physicalDamage="19" zustand="tot" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
-        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttznqEeSZlrJ9CDZaLA" physicalDamage="14" zustand="tot" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsDnqEeSZlrJ9CDZaLA" character="_B1NOYN0CEeOvVYoRsPZlnA" rightHand="_B1N1dN0CEeOvVYoRsPZlnA" leftHand="_FUWboI3DEeSt0rb90Hcdbg" inUse="_FUWboI3DEeSt0rb90Hcdbg _B1N1ct0CEeOvVYoRsPZlnA _B1N1dN0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFt0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20tsznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttDnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFt0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttTnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttjnqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
+        <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
       </allTeams>
       <player xmi:id="_CCbvHDnpEeSb-uPPMR9TEw" name="Players">
-        <members xmi:id="_z0RVUDnqEeS_lYhXLDoiow" mentalDamage="4" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_JoEq4FDLEeSjN8rIya5QCA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VY90CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _Bz18eN0CEeOvVYoRsPZlnA _JoEq4FDLEeSjN8rIya5QCA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
+        <members xmi:id="_5lBz4JgtEeS4raFL_bi_Cw" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_JoEq4FDLEeSjN8rIya5QCA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_Bz1VY90CEeOvVYoRsPZlnA _Bz18c90CEeOvVYoRsPZlnA _JoEq4FDLEeSjN8rIya5QCA _Jos9AFDLEeSjN8rIya5QCA _Bz18dt0CEeOvVYoRsPZlnA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
       </player>
-      <history xmi:id="_Z_HNII4IEeSNivpsJHp3wQ" currentPlacement="_CCbvEDnpEeSb-uPPMR9TEw"/>
+      <history xmi:id="_5CypgJgtEeS4raFL_bi_Cw" currentPlacement="_CCbIATnpEeSb-uPPMR9TEw">
+        <commandStack xmi:id="_5DAr8JgtEeS4raFL_bi_Cw">
+          <protocol xmi:id="_5DLEAJgtEeS4raFL_bi_Cw"/>
+        </commandStack>
+      </history>
     </stories>
     <stories xmi:id="_7blpID_WEeSQWIeEm8LnkA" beschreibung="This script has only one placement. it can be used for combat handling.&#xA;Simply add all comabatans at the start.&#xA;And run it." name="Quick fight." entry="_9PjhID_WEeSQWIeEm8LnkA">
       <placements xmi:id="_9PjhID_WEeSQWIeEm8LnkA" beschreibung="Used as combat management." name="Quick fight" startDate="2074-09-04T10:28:42.814+0200" endDate="2074-12-12T10:28:42.844+0100" teams="_MsvA0D_XEeSQWIeEm8LnkA">
