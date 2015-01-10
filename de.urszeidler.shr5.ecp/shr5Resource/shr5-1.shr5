@@ -21851,6 +21851,8 @@
     <stories xmi:id="_CCbIADnpEeSb-uPPMR9TEw" beschreibung="Just some thugs at the corner." name="A test Script with thugs." entry="_CCbIATnpEeSb-uPPMR9TEw">
       <placements xmi:id="_CCbIATnpEeSb-uPPMR9TEw" beschreibung="The thugs waiting in a dark alley." name="Instructions" startDate="2074-07-31T07:53:29.000+0200" endDate="2074-07-31T07:53:29.000+0200" actualDate="2074-07-31T07:53:29.000+0200" nextPlacements="_CCbvEDnpEeSb-uPPMR9TEw" background="There are thugs which needs to be beaten.&#xA;This could be an simple money job, or an initiation for other real jobs." inTheirFace="This is you Job. &#xA;Beat the thugs over there." debugging="Nothing can go wrong.">
         <enviorment xmi:id="_RHGysDnqEeSZlrJ9CDZaLA"/>
+        <options>homeGround</options>
+        <options>socialInteraction</options>
       </placements>
       <placements xmi:id="_CCbvEDnpEeSb-uPPMR9TEw" beschreibung="Here the grunt member team appears." image="/shr5Resource/images/Alley.png" name="get them" startDate="2074-08-01T07:12:04.000+0200" endDate="2074-08-01T07:12:04.000+0200" nextPlacements="_CCbvEjnpEeSb-uPPMR9TEw" teams="_CCbvEznpEeSb-uPPMR9TEw" background="The fighting start now." inTheirFace="In a dark alley. The thugs are.&#xA;Beat them up.&#xA;">
         <enviorment xmi:id="_CCbvETnpEeSb-uPPMR9TEw"/>
@@ -21882,6 +21884,8 @@
     <stories xmi:id="_7blpID_WEeSQWIeEm8LnkA" beschreibung="This script has only one placement. it can be used for combat handling.&#xA;Simply add all comabatans at the start.&#xA;And run it." name="Quick fight." entry="_9PjhID_WEeSQWIeEm8LnkA">
       <placements xmi:id="_9PjhID_WEeSQWIeEm8LnkA" beschreibung="Used as combat management." name="Quick fight" startDate="2074-09-04T10:28:42.814+0200" endDate="2074-12-12T10:28:42.844+0100" teams="_MsvA0D_XEeSQWIeEm8LnkA">
         <enviorment xmi:id="_26SL4D_8EeSD-LoNvgwd5Q"/>
+        <options>combat</options>
+        <options>homeGround</options>
       </placements>
       <allTeams xmi:id="_MsvA0D_XEeSQWIeEm8LnkA" name="enemies">
         <members xmi:id="_dugUMD_hEeSuOvfh9dLK7w" mentalDamage="5" character="_uFDVkD_FEeSlOsHYyoPYOQ" rightHand="_IZqZAI2-EeSTOuFR7092Cw" leftHand="_N9bm8D_HEeSlOsHYyoPYOQ" inUse="_N8nHkD_HEeSlOsHYyoPYOQ _N9bm8D_HEeSlOsHYyoPYOQ _OE_ngD_HEeSlOsHYyoPYOQ _yfgOAD_NEeSdXvk3e0TcZw _IZqZAI2-EeSTOuFR7092Cw" armor="_OE_ngD_HEeSlOsHYyoPYOQ"/>

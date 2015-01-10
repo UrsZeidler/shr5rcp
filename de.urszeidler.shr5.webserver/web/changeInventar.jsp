@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="de.urszeidler.shr5.scripting.PlacementOptions"%>
+<%@page import="de.urszeidler.shr5.scripting.Placement"%>
+<%@page import="de.urszeidler.shr5.webserver.Activator"%>
+<%@page import="de.urszeidler.shr5.ecp.service.ScriptService"%>
 <%@page import="java.util.List"%>
 <%@page import="de.urszeidler.eclipse.shr5.runtime.RuntimePackage"%>
 <%@page import="de.urszeidler.shr5.ecp.util.ShadowrunEditingTools"%>
@@ -16,6 +20,11 @@
 	if(pm==null)
 		response.sendRedirect("main");
 
+	 ScriptService scriptService = Activator.getDefault().getScriptService();
+	 Placement pl = scriptService.getPlacement();
+	 if(!pl.getOptions().contains(PlacementOptions.HOME_GROUND))
+	     response.sendRedirect("member.jsp");
+	
     if(pm.isInCombat())
         response.sendRedirect("member.jsp");
     

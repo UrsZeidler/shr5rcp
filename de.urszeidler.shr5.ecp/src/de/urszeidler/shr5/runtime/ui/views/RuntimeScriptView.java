@@ -1031,7 +1031,10 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
-            genericEObjectDialog.open();
+           if(genericEObjectDialog.open()==Dialog.CANCEL){
+               
+           }
+            
             return;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
