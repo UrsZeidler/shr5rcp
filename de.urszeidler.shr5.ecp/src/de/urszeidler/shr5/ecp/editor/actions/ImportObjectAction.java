@@ -27,6 +27,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.ResourceManager;
+import org.omg.CORBA.OMGVMCID;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl;
@@ -107,6 +108,7 @@ public class ImportObjectAction extends Action {
             monitor.worked(20);
             final EObject eObjectImport = resource.getContents().get(0);
             EList<EReference> allContainments = currentEObject.eClass().getEAllContainments();
+            boolean imported = false;
             for (EReference eReference : allContainments) {
                 if (eReference.getEReferenceType().isInstance(eObjectImport)) {
                     if (eReference.isMany()) {
@@ -114,8 +116,12 @@ public class ImportObjectAction extends Action {
                     } else {
                         editingDomain.getCommandStack().execute(new SetCommand(editingDomain, currentEObject, eReference, eObjectImport));
                     }
+                    imported = true;
+                    break;
                 }
             }
+            if(!imported)
+                return new Status(Status.WARNING, Activator.PLUGIN_ID, "No feature for import found.");
         } catch (final IOException e) {
             return Status.CANCEL_STATUS;
         }
@@ -124,6 +130,6 @@ public class ImportObjectAction extends Action {
     }
 
     protected String getJobName() {
-        return String.format("exporting %s to the file %s", objectName, filename);
+        return String.format("importing the file %s to  %s", filename, objectName);
     }
 }
