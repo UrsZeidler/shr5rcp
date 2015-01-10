@@ -57,6 +57,7 @@ import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.ShrList;
@@ -152,6 +153,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                 currentTypes = currentTypes | 2;
             else if (type instanceof PersonaEigenschaft)
                 currentTypes = currentTypes | 4;
+            else if (type instanceof KiKraft)
+                currentTypes = currentTypes | 8;
         }
         switch (currentTypes) {
             case 1:
@@ -164,6 +167,10 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                 break;
             case 4:
                 label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
+                        values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                break;
+            case 8:
+                label = String.format("%.2f powerpoints (%d selected)", ShadowrunTools.calcKiPowerSum((List<KiKraft>)children1)/100f,
                         values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                 break;
             default:
