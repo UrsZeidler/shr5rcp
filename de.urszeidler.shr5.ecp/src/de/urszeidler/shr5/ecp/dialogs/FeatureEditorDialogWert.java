@@ -57,15 +57,10 @@ import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.GeldWert;
-import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.ShrList;
-import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.Activator;
 
@@ -139,25 +134,62 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
     @SuppressWarnings("unchecked")
     protected void updateLabel() {
+        // if (dialogType == DialogType.simple) {
+        // String label = String.format("%d selected", values.getChildren().size());
+        // gesamtPreisLabel.setText(label);
+        // return;
+        // }
+
         String label = null;
         List<Object> children = values.getChildren();
-        Object type = null;
-        if (!children.isEmpty())
-            type = children.get(0);
+        List<?> children1 = children;
 
-        if (type instanceof Cyberware || type instanceof BioWare) {
-            List<?> children1 = children;
-            label = String.format("%s¥ %.2f essence (%d items) ", ShadowrunTools.calcListenWertToString(values.getChildren()),
-                    ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1) / 100f, values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        } else if (type instanceof GeldWert) {
-            label = String.format("%s¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        } else if (type instanceof PersonaEigenschaft) {
-            List<?> children1 = children;
-            label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
-                    values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        } else
-            label = String.format("%d selected", values.getChildren().size());
-         gesamtPreisLabel.setText(label);
+        int currentTypes = 0;
+        for (Object type : children) {
+            if (type instanceof Cyberware || type instanceof BioWare)
+                currentTypes = currentTypes | 1;
+            else if (type instanceof GeldWert)
+                currentTypes = currentTypes | 2;
+            else if (type instanceof PersonaEigenschaft)
+                currentTypes = currentTypes | 4;
+        }
+        switch (currentTypes) {
+            case 1:
+                label = String.format("%s¥ %.2f essence (%d items) ", ShadowrunTools.calcListenWertToString(values.getChildren()),
+                        ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1) / 100f, values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                break;
+            case 2:
+            case 3:
+                label = String.format("%s¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                break;
+            case 4:
+                label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
+                        values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                break;
+            default:
+                label = String.format("%d selected", values.getChildren().size());
+                break;
+        }
+
+        // Object type = null;
+        // if (!children.isEmpty())
+        // type = children.get(0);
+        //
+        // if (type instanceof Cyberware || type instanceof BioWare) {
+        // List<?> children1 = children;
+        // label = String.format("%s¥ %.2f essence (%d items) ", ShadowrunTools.calcListenWertToString(values.getChildren()),
+        // ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1) / 100f, values.getChildren().size());//
+        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+        // } else if (type instanceof GeldWert) {
+        // label = String.format("%s¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());//
+        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+        // } else if (type instanceof PersonaEigenschaft) {
+        // List<?> children1 = children;
+        // label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
+        // values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+        // } else
+        // label = String.format("%d selected", values.getChildren().size());
+        gesamtPreisLabel.setText(label);
     }
 
     /**

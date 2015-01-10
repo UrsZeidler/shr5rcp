@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -57,6 +58,7 @@ import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.dialogs.CreateAttributModifikatorDialog;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogMagazine;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert.DialogType;
 import de.urszeidler.shr5.ecp.dialogs.GenericEObjectDialog;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
@@ -195,14 +197,15 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     .from(collection)
                     .filter(Predicates.or(Predicates.instanceOf(Vertrag.class), 
                             Predicates.instanceOf(AbstraktGegenstand.class),
+                            Predicates.instanceOf(Koerpermods.class),
                             Predicates.instanceOf(Fahrzeug.class))).toList();
 
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                     .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add to "
-                    + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(collection), object);
-
+                    + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(collection), object,DialogType.simple);
+            
             return copyObjectsFromDialog(dialog);
         } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);

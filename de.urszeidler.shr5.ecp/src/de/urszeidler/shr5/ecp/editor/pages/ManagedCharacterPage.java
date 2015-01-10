@@ -8,8 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.jface.viewers.DoubleClickEvent;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -25,33 +23,28 @@ import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
-import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
-import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
-import de.urszeidler.shr5.ecp.editor.actions.ImportObjectAction;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
-
-import org.eclipse.wb.swt.ResourceManager;
-
-import com.google.common.base.Predicate;
-import com.google.common.base.Predicates;
-import com.google.common.collect.FluentIterable;
 
 /**
  * This is a basic generic page to display eObjects in an form with an
@@ -178,12 +171,13 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                     ShrReferenceManager srm = (ShrReferenceManager)mananger;
                     Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5managementPackage.Literals.PACK);
                     collection = srm.filterProvidedObjects(collection);
-//                    collection = FluentIterable.from(collection).filter(
-//                            Predicates.or(Predicates.instanceOf(AbstraktGegenstand.class), Predicates.instanceOf(Vertrag.class))).toList();
+                    // collection = FluentIterable.from(collection).filter(
+                    // Predicates.or(Predicates.instanceOf(AbstraktGegenstand.class), Predicates.instanceOf(Vertrag.class))).toList();
 
                     OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), NullObject.toChoises(collection), "Select a pack", "");
                     dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-
+//                    dialog.setContenProvider(new SimpleListContenProvider(new AdapterFactoryContentProvider(AdapterFactoryUtil.getInstance()
+//                            .getAdapterFactory())));
                     int result = dialog.open();
                     if (result == Window.OK) {
                         Object[] list = dialog.getResult();
@@ -201,6 +195,9 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                                         object.getContracts().add((Vertrag)copy);
                                     } else if (item instanceof Fahrzeug) {
                                         object.getVehicels().add((Fahrzeug)copy);
+                                    } else if (item instanceof Koerpermods) {
+                                        AbstraktPersona persona = object.getPersona();
+                                       ((KoerperPersona) persona).getKoerperMods().add((Koerpermods)copy);
                                     }
                                 }
                             }
