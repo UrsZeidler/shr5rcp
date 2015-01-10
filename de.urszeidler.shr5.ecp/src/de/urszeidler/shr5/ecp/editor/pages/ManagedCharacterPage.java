@@ -42,7 +42,7 @@ import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
-import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.actions.ImportObjectAction;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -128,7 +128,7 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
-        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        form.getToolBarManager().add(new ImportObjectAction(form.getShell(), object));
         form.getToolBarManager().update(true);
 
         toolkit.paintBordersFor(body);
