@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Gegenstand;
@@ -120,11 +121,19 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.addAll(Shr5Package.Literals.CHRAKTER_LIMITS.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
+                            arrayList.add(Shr5Package.Literals.SPEZIES__CHARISMA_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__STAERKE_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__INTUITION_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__LOGIK_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__EDGE_MAX);
 
 							return arrayList;
 
 						}
-						if( (modifiziertes instanceof Cyberware)||(modifiziertes instanceof BioWare) ){
+						if( (modifiziertes instanceof Cyberware)||(modifiziertes instanceof BioWare|| modifiziertes instanceof CyberwareEnhancement ) ){
 							ArrayList<Object> arrayList = new ArrayList<Object>();
 							arrayList.addAll(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
@@ -132,11 +141,12 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE);
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
-	                         arrayList.addAll(Shr5Package.Literals.CYBERWARE_MODIFIKATIOREN.getEAttributes());
+	                        arrayList.addAll(Shr5Package.Literals.CYBERWARE_MODIFIKATIOREN.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.SICHTVERHAELTNISSE.getEAttributes());
                             arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX);
                             arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX);
+                            arrayList.addAll(Shr5Package.Literals.GEGENSTAND_STUFEN.getEAttributes());
 							return arrayList;
 
 						}
@@ -151,9 +161,16 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
 							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
                             arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
+                            arrayList.add(Shr5Package.Literals.SPEZIES__CHARISMA_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__STAERKE_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__INTUITION_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__LOGIK_MAX);
+                            arrayList.add(Shr5Package.Literals.SPEZIES__EDGE_MAX);
 
 							return arrayList;
-
 						}
 						return super.getChoiceOfValues(object);
 					}
