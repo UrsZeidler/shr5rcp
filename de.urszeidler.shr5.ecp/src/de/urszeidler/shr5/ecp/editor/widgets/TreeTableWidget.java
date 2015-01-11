@@ -4,6 +4,8 @@ import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.property.list.IListProperty;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -33,10 +35,12 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.rcp.databinding.EMFBeansListObservableFactory;
 import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class TreeTableWidget extends Composite {
 
@@ -45,13 +49,12 @@ public class TreeTableWidget extends Composite {
 
     private EObject object;
     private EStructuralFeature feature;
-    // private EStructuralFeature labelFeature;
     private EditingDomain editingDomain;
     private String titel;
     private ISelectionChangedListener selectionChangeListener;
     private IDoubleClickListener dblListener;
-    //TODO: an enum for the editing state when we want only delete or only add for example
-    private boolean readOnly= false;
+    // TODO: an enum for the editing state when we want only delete or only add for example
+    private boolean readOnly = false;
     private ToolBar optionalToolbar;
 
     /**
@@ -88,7 +91,7 @@ public class TreeTableWidget extends Composite {
     }
 
     public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
-            ReferenceManager mananger, EditingDomain editingDomain, IDoubleClickListener dblListner,boolean readOnly) {
+            ReferenceManager mananger, EditingDomain editingDomain, IDoubleClickListener dblListner, boolean readOnly) {
         super(parent, style);
         this.toolkit = toolkit;
         this.object = object;
@@ -114,14 +117,13 @@ public class TreeTableWidget extends Composite {
         this.selectionChangeListener = selectionChangeListener;
         this.dblListener = dblListner;
 
-         createWidgets();
+        createWidgets();
     }
 
     private void createWidgets() {
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
 
-        
         setLayout(new FillLayout(SWT.HORIZONTAL));
 
         Section sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
@@ -136,7 +138,7 @@ public class TreeTableWidget extends Composite {
 
         composite.setLayout(new TreeColumnLayout());
 
-        final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER);
+        final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER | SWT.MULTI);
         if (selectionChangeListener != null)
             treeViewer.addSelectionChangedListener(selectionChangeListener);
         if (dblListener != null)
@@ -145,7 +147,7 @@ public class TreeTableWidget extends Composite {
         tree.setLinesVisible(true);
         toolkit.paintBordersFor(tree);
         tree.setToolTipText(toTooltipName());
-        
+
         ToolBar toolBar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         toolkit.adapt(toolBar);
         toolkit.paintBordersFor(toolBar);
@@ -153,20 +155,34 @@ public class TreeTableWidget extends Composite {
         toolBar.setVisible(!readOnly);
 
         ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
+        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/addButton.png"));
         tltmNewItem.setText(Messages.TreeTableWidget_add_element);
-        tltmNewItem.setToolTipText(String.format(Messages.TreeTableWidget_add_element_tooltip, 
-                AdapterFactoryUtil.getInstance().getLabelProvider().getText(feature.getEType()),
-                AdapterFactoryUtil.getInstance().getLabelProvider().getText(feature)));
+        tltmNewItem.setToolTipText(String.format(Messages.TreeTableWidget_add_element_tooltip, AdapterFactoryUtil.getInstance().getLabelProvider()
+                .getText(feature.getEType()), AdapterFactoryUtil.getInstance().getLabelProvider().getText(feature)));
 
         ToolItem tltmNewItem_1 = new ToolItem(toolBar, SWT.NONE);
+        tltmNewItem_1.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/removeButton.png"));
         tltmNewItem_1.setText(Messages.TreeTableWidget_remove_element);
         tltmNewItem_1.setToolTipText(Messages.TreeTableWidget_remove_element_tooltip);
 
         EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
-        // EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
         ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, null);
-        // treeViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), feature, null) {
+
+        EStructuralFeature nameFeature = null;
+        EStructuralFeature imageFeature = null;
+
+        EClassifier eType = feature.getEType();
+        if (eType instanceof EClass) {
+            EClass ec = (EClass)eType;
+            if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.BESCHREIBBAR)) {
+                nameFeature = Shr5Package.Literals.BESCHREIBBAR__NAME;
+                imageFeature = Shr5Package.Literals.BESCHREIBBAR__IMAGE;
+            } else if (ec.equals(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT)) {
+                nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
+            }
+        }
+
+        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), nameFeature, imageFeature) {
             @Override
             public String getText(Object element) {
                 return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
@@ -181,10 +197,10 @@ public class TreeTableWidget extends Composite {
 
         treeViewer.setContentProvider(treeContentProvider);
         IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
-        
+
         optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
-//        toolkit.adapt(optionalToolbar);
-//        toolkit.paintBordersFor(optionalToolbar);
+        // toolkit.adapt(optionalToolbar);
+        // toolkit.paintBordersFor(optionalToolbar);
         optionalToolbar.setVisible(false);
         sctnNewSection.setTextClient(optionalToolbar);
         IListProperty property = null;
@@ -203,8 +219,6 @@ public class TreeTableWidget extends Composite {
             public void widgetSelected(SelectionEvent e) {
                 if (manager != null) {
                     manager.handleAdd(e1, object);
-
-//                    treeViewer.refresh(true);
                 }
             }
         });
@@ -215,12 +229,11 @@ public class TreeTableWidget extends Composite {
                 manager.handleRemove(e1, object);
             }
         });
-
     }
 
-    
     /**
      * Get the tooltip.
+     * 
      * @param e
      * @param object
      * @return
@@ -237,6 +250,5 @@ public class TreeTableWidget extends Composite {
     public ToolBar getOptionalToolbar() {
         return optionalToolbar;
     }
-
 
 }
