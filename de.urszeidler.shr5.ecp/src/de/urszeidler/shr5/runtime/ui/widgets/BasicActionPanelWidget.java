@@ -157,7 +157,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         grpExra = new Group(composite_state, SWT.NONE);
         grpExra.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpExra.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
-        grpExra.setText("Exra");
+        grpExra.setText("overflow");
         toolkit.adapt(grpExra);
         toolkit.paintBordersFor(grpExra);
         stateMonitorOverdead = new StateMonitorWidget(grpExra, SWT.NONE,3,false);
