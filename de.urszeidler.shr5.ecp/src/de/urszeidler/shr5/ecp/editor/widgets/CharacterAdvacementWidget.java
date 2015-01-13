@@ -244,7 +244,7 @@ public class CharacterAdvacementWidget extends Composite {
         Label lblAdvacement = toolkit.createLabel(composite, Messages.CharacterAdvacementWidget_advacment_type, SWT.NONE);
         lblAdvacement.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
-        ComboViewer comboViewer = new ComboViewer(composite, SWT.NONE);
+        ComboViewer comboViewer = new ComboViewer(composite, SWT.READ_ONLY);
         comboViewer.setLabelProvider(new LabelProvider() {
             @Override
             public String getText(Object element) {
@@ -266,7 +266,8 @@ public class CharacterAdvacementWidget extends Composite {
                 StructuredSelection ss = (StructuredSelection)event.getSelection();
                 ChangeOperation co = (ChangeOperation)ss.getFirstElement();
                 currentOperation = co;
-                handleSelect(co.type);
+                if(co.type!=null)
+                    handleSelect(co.type);
             }
         });
 
@@ -543,6 +544,7 @@ public class CharacterAdvacementWidget extends Composite {
             changeableSelected = pc.getChangeable() != null;
         } else if (currentChange instanceof KarmaGaint) {
             changeableSelected = true;
+            canSpend = true;
         } else if (currentChange instanceof AttributeChange) {
             AttributeChange ac = (AttributeChange)currentChange;
             changeableSelected = ac.getAttibute() != null;
