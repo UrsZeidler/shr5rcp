@@ -350,8 +350,7 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
          <menu
                id="de.urszeidler.shr5.ecp.menus.characterMenu"
-               label="%character.menu.label"
-               mnemonic="M">
+               label="%character.menu.label">
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
                   mnemonic="S">
