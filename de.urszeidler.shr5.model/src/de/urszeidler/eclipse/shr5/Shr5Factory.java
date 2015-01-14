@@ -742,6 +742,15 @@ public interface Shr5Factory extends EFactory {
     CyberImplantWeapon createCyberImplantWeapon();
 
     /**
+     * Returns a new object of class '<em>Magische Tradition</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Magische Tradition</em>'.
+     * @generated
+     */
+    MagischeTradition createMagischeTradition();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

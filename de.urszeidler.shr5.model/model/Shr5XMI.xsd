@@ -67,12 +67,6 @@
       <xsd:enumeration value="Permanent"/>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="MagischeTradition">
-    <xsd:restriction base="xsd:NCName">
-      <xsd:enumeration value="Hermetisch"/>
-      <xsd:enumeration value="Schamanisch"/>
-    </xsd:restriction>
-  </xsd:simpleType>
   <xsd:simpleType name="CritterHandlung">
     <xsd:restriction base="xsd:NCName">
       <xsd:enumeration value="komplex"/>
@@ -169,6 +163,13 @@
       <xsd:enumeration value="cyberlimb"/>
       <xsd:enumeration value="earware"/>
       <xsd:enumeration value="eyeware"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Enzug">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="wil_log"/>
+      <xsd:enumeration value="wil_cha"/>
+      <xsd:enumeration value="wil_int"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
@@ -875,9 +876,14 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>A spirit can be bound.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="tradition" type="shr5:MagischeTradition"/>
         </xsd:choice>
-        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+        <xsd:attribute name="tradition" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -890,12 +896,17 @@
           <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
+      <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist">
+        <xsd:annotation>
+          <xsd:documentation>A spirit can be bound.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="tradition" type="shr5:MagischeTradition"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+    <xsd:attribute name="tradition" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="Zauberer" type="shr5:Zauberer"/>
   <xsd:complexType name="MysticAdept">
@@ -908,9 +919,14 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>A spirit can be bound.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="tradition" type="shr5:MagischeTradition"/>
         </xsd:choice>
-        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+        <xsd:attribute name="tradition" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -981,10 +997,15 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>A spirit can be bound.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="tradition" type="shr5:MagischeTradition"/>
           <xsd:element name="aspekt" type="shr5:FertigkeitsGruppe"/>
         </xsd:choice>
-        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+        <xsd:attribute name="tradition" type="xsd:string"/>
         <xsd:attribute name="aspekt" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -2351,4 +2372,21 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="CyberImplantWeapon" type="shr5:CyberImplantWeapon"/>
+  <xsd:complexType name="MagischeTradition">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="beschwoerbar" type="shr5:Geist"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="enzug" type="shr5:Enzug"/>
+        <xsd:attribute name="beschwoerbar" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MagischeTradition" type="shr5:MagischeTradition"/>
 </xsd:schema>

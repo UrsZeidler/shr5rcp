@@ -54,10 +54,6 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberDauer/Aufrechterhalten"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberDauer/Permanent"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//MagischeTradition">
-      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagischeTradition/Hermetisch"/>
-      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagischeTradition/Schamanisch"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//CritterHandlung">
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterHandlung/komplex"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterHandlung/auto"/>
@@ -128,6 +124,11 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/cyberlimb"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/earware"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CyberwareType/eyeware"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//Enzug">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//Enzug/wil_log"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//Enzug/wil_cha"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//Enzug/wil_int"/>
     </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
@@ -372,10 +373,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/zauber"/>
       <genFeatures property="Readonly" createChild="false" propertyDescription=""
           ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
-      <genFeatures createChild="false" propertyDescription="The tradition of the spellcaster."
-          ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/gebundeneGeister"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/ungebundenerGeist"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/tradition"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//MysticAdept"/>
     <genClasses ecoreClass="shr5.ecore#//PersonaZauber">
@@ -745,6 +745,10 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//CyberImplantWeapon">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//CyberImplantWeapon/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MagischeTradition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MagischeTradition/enzug"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MagischeTradition/beschwoerbar"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

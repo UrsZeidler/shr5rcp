@@ -45,6 +45,7 @@ import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.Enzug;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
@@ -981,6 +982,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass magischeTraditionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1184,13 +1192,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private EEnum magischeTraditionEEnum = null;
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	private EEnum critterHandlungEEnum = null;
 
 	/**
@@ -1269,6 +1270,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EEnum cyberwareTypeEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum enzugEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3015,8 +3023,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauberer_Tradition() {
-        return (EAttribute)zaubererEClass.getEStructuralFeatures().get(2);
+	public EReference getZauberer_Tradition() {
+        return (EReference)zaubererEClass.getEStructuralFeatures().get(4);
     }
 
 	/**
@@ -3025,7 +3033,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EReference getZauberer_GebundeneGeister() {
-        return (EReference)zaubererEClass.getEStructuralFeatures().get(3);
+        return (EReference)zaubererEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3034,7 +3042,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EReference getZauberer_UngebundenerGeist() {
-        return (EReference)zaubererEClass.getEStructuralFeatures().get(4);
+        return (EReference)zaubererEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -5571,11 +5579,29 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getMagischeTradition() {
-        return magischeTraditionEEnum;
+	public EClass getMagischeTradition() {
+        return magischeTraditionEClass;
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMagischeTradition_Enzug() {
+        return (EAttribute)magischeTraditionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMagischeTradition_Beschwoerbar() {
+        return (EReference)magischeTraditionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -5681,6 +5707,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EEnum getCyberwareType() {
         return cyberwareTypeEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getEnzug() {
+        return enzugEEnum;
     }
 
     /**
@@ -5959,9 +5994,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         zaubererEClass = createEClass(ZAUBERER);
         createEReference(zaubererEClass, ZAUBERER__ZAUBER);
         createEAttribute(zaubererEClass, ZAUBERER__ENZUG);
-        createEAttribute(zaubererEClass, ZAUBERER__TRADITION);
         createEReference(zaubererEClass, ZAUBERER__GEBUNDENE_GEISTER);
         createEReference(zaubererEClass, ZAUBERER__UNGEBUNDENER_GEIST);
+        createEReference(zaubererEClass, ZAUBERER__TRADITION);
 
         mysticAdeptEClass = createEClass(MYSTIC_ADEPT);
 
@@ -6323,6 +6358,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         cyberImplantWeaponEClass = createEClass(CYBER_IMPLANT_WEAPON);
         createEReference(cyberImplantWeaponEClass, CYBER_IMPLANT_WEAPON__WEAPON);
 
+        magischeTraditionEClass = createEClass(MAGISCHE_TRADITION);
+        createEAttribute(magischeTraditionEClass, MAGISCHE_TRADITION__ENZUG);
+        createEReference(magischeTraditionEClass, MAGISCHE_TRADITION__BESCHWOERBAR);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6333,7 +6372,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         zauberArtEEnum = createEEnum(ZAUBER_ART);
         zauberReichweiteEEnum = createEEnum(ZAUBER_REICHWEITE);
         zauberDauerEEnum = createEEnum(ZAUBER_DAUER);
-        magischeTraditionEEnum = createEEnum(MAGISCHE_TRADITION);
         critterHandlungEEnum = createEEnum(CRITTER_HANDLUNG);
         critterReichweiteEEnum = createEEnum(CRITTER_REICHWEITE);
         critterDauerEEnum = createEEnum(CRITTER_DAUER);
@@ -6346,6 +6384,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addictionTypeEEnum = createEEnum(ADDICTION_TYPE);
         timeUnitsEEnum = createEEnum(TIME_UNITS);
         cyberwareTypeEEnum = createEEnum(CYBERWARE_TYPE);
+        enzugEEnum = createEEnum(ENZUG);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -6564,6 +6603,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         cyberwareEnhancementEClass.getESuperTypes().add(this.getGeldWert());
         cyberwareEnhancementEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         cyberImplantWeaponEClass.getESuperTypes().add(this.getCyberwareEnhancement());
+        magischeTraditionEClass.getESuperTypes().add(this.getBeschreibbar());
+        magischeTraditionEClass.getESuperTypes().add(this.getQuelle());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6796,9 +6837,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(zaubererEClass, Zauberer.class, "Zauberer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getZauberer_Zauber(), this.getPersonaZauber(), null, "zauber", null, 0, -1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getZauberer_Enzug(), ecorePackage.getEInt(), "enzug", null, 0, 1, Zauberer.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getZauberer_Tradition(), this.getMagischeTradition(), "tradition", null, 0, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getZauberer_GebundeneGeister(), this.getGebundenerGeist(), null, "gebundeneGeister", null, 0, -1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getZauberer_UngebundenerGeist(), this.getGebundenerGeist(), null, "ungebundenerGeist", null, 0, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getZauberer_Tradition(), this.getMagischeTradition(), null, "tradition", null, 1, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mysticAdeptEClass, MysticAdept.class, "MysticAdept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -7162,6 +7203,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(cyberImplantWeaponEClass, CyberImplantWeapon.class, "CyberImplantWeapon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCyberImplantWeapon_Weapon(), this.getAbstaktWaffe(), null, "weapon", null, 1, 1, CyberImplantWeapon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        initEClass(magischeTraditionEClass, MagischeTradition.class, "MagischeTradition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMagischeTradition_Enzug(), this.getEnzug(), "enzug", null, 0, 1, MagischeTradition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getMagischeTradition_Beschwoerbar(), this.getGeist(), null, "beschwoerbar", null, 0, -1, MagischeTradition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
         addEEnumLiteral(feuerModusEEnum, FeuerModus.EM);
@@ -7209,10 +7254,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(zauberDauerEEnum, ZauberDauer.SOFORT);
         addEEnumLiteral(zauberDauerEEnum, ZauberDauer.AUFRECHTERHALTEN);
         addEEnumLiteral(zauberDauerEEnum, ZauberDauer.PERMANENT);
-
-        initEEnum(magischeTraditionEEnum, MagischeTradition.class, "MagischeTradition");
-        addEEnumLiteral(magischeTraditionEEnum, MagischeTradition.HERMETISCH);
-        addEEnumLiteral(magischeTraditionEEnum, MagischeTradition.SCHAMANISCH);
 
         initEEnum(critterHandlungEEnum, CritterHandlung.class, "CritterHandlung");
         addEEnumLiteral(critterHandlungEEnum, CritterHandlung.KOMPLEX);
@@ -7284,6 +7325,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.CYBERLIMB);
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.EARWARE);
         addEEnumLiteral(cyberwareTypeEEnum, CyberwareType.EYEWARE);
+
+        initEEnum(enzugEEnum, Enzug.class, "Enzug");
+        addEEnumLiteral(enzugEEnum, Enzug.WIL_LOG);
+        addEEnumLiteral(enzugEEnum, Enzug.WIL_CHA);
+        addEEnumLiteral(enzugEEnum, Enzug.WIL_INT);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

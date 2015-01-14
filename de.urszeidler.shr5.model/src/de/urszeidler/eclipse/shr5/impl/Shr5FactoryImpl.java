@@ -137,6 +137,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.SUBSTANCE_CONTAINER: return createSubstanceContainer();
             case Shr5Package.CYBERWARE_ENHANCEMENT: return createCyberwareEnhancement();
             case Shr5Package.CYBER_IMPLANT_WEAPON: return createCyberImplantWeapon();
+            case Shr5Package.MAGISCHE_TRADITION: return createMagischeTradition();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -168,8 +169,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createZauberReichweiteFromString(eDataType, initialValue);
             case Shr5Package.ZAUBER_DAUER:
                 return createZauberDauerFromString(eDataType, initialValue);
-            case Shr5Package.MAGISCHE_TRADITION:
-                return createMagischeTraditionFromString(eDataType, initialValue);
             case Shr5Package.CRITTER_HANDLUNG:
                 return createCritterHandlungFromString(eDataType, initialValue);
             case Shr5Package.CRITTER_REICHWEITE:
@@ -194,6 +193,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createTimeUnitsFromString(eDataType, initialValue);
             case Shr5Package.CYBERWARE_TYPE:
                 return createCyberwareTypeFromString(eDataType, initialValue);
+            case Shr5Package.ENZUG:
+                return createEnzugFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -227,8 +228,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertZauberReichweiteToString(eDataType, instanceValue);
             case Shr5Package.ZAUBER_DAUER:
                 return convertZauberDauerToString(eDataType, instanceValue);
-            case Shr5Package.MAGISCHE_TRADITION:
-                return convertMagischeTraditionToString(eDataType, instanceValue);
             case Shr5Package.CRITTER_HANDLUNG:
                 return convertCritterHandlungToString(eDataType, instanceValue);
             case Shr5Package.CRITTER_REICHWEITE:
@@ -253,6 +252,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertTimeUnitsToString(eDataType, instanceValue);
             case Shr5Package.CYBERWARE_TYPE:
                 return convertCyberwareTypeToString(eDataType, instanceValue);
+            case Shr5Package.ENZUG:
+                return convertEnzugToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -1062,6 +1063,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MagischeTradition createMagischeTradition() {
+        MagischeTraditionImpl magischeTradition = new MagischeTraditionImpl();
+        return magischeTradition;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1237,26 +1248,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
 	public String convertZauberDauerToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public MagischeTradition createMagischeTraditionFromString(EDataType eDataType, String initialValue) {
-        MagischeTradition result = MagischeTradition.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public String convertMagischeTraditionToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -1497,6 +1488,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertCyberwareTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Enzug createEnzugFromString(EDataType eDataType, String initialValue) {
+        Enzug result = Enzug.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertEnzugToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

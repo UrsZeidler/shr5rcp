@@ -3,6 +3,7 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.Enzug;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -81,15 +82,17 @@ public class MysticAdeptTest extends KiAdeptTest {
 	 * @generated not
 	 */
 	public void testGetEnzug() {
-		getFixture().setTradition(MagischeTradition.HERMETISCH);
+	   MagischeTradition magischeTradition = Shr5Factory.eINSTANCE.createMagischeTradition();
+
+		getFixture().setTradition(magischeTradition);
 		getFixture().setLogikBasis(1);
 		getFixture().setWillenskraftBasis(1);
 		getFixture().setIntuitionBasis(2);
 		
-		
+		magischeTradition.setEnzug(Enzug.WIL_LOG);
 		assertEquals("need to be 2",2, getFixture().getEnzug());
 		
-		getFixture().setTradition(MagischeTradition.SCHAMANISCH);
+		magischeTradition.setEnzug(Enzug.WIL_INT);
 		assertEquals("need to be 3",3, getFixture().getEnzug());
 	}
 

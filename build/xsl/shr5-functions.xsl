@@ -111,6 +111,19 @@
 			</xsl:for-each>
 		</xsl:for-each>
 	</xsl:template>
+	
+	
+	<xsl:template name="findSpirit">
+		<xsl:param name="spiritname" />
+		<xsl:for-each select="$critter-species">
+			<xsl:for-each select="chummer/metatypes/*">
+				<xsl:if test="name/text()=$spiritname">
+					<xsl:variable name="id_name" select="id/text()" />
+					<xsl:value-of select="concat($id_name,' ')" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
 
 	<!-- find the source book -->
 	<xsl:template name="findSourceBook">

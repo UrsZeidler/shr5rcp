@@ -7636,22 +7636,13 @@ public interface Shr5Package extends EPackage {
 	int MAGIER__ENZUG = MAGISCHE_PERSONA_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Tradition</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
-
-    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+    int MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
@@ -7660,7 +7651,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+    int MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Tradition</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Astrales Limit</b></em>' attribute.
@@ -7771,22 +7771,13 @@ public interface Shr5Package extends EPackage {
 	int ZAUBERER__ENZUG = 1;
 
     /**
-     * The feature id for the '<em><b>Tradition</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ZAUBERER__TRADITION = 2;
-
-    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ZAUBERER__GEBUNDENE_GEISTER = 3;
+    int ZAUBERER__GEBUNDENE_GEISTER = 2;
 
     /**
      * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
@@ -7795,7 +7786,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ZAUBERER__UNGEBUNDENER_GEIST = 4;
+    int ZAUBERER__UNGEBUNDENER_GEIST = 3;
+
+    /**
+     * The feature id for the '<em><b>Tradition</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ZAUBERER__TRADITION = 4;
 
     /**
      * The number of structural features of the '<em>Zauberer</em>' class.
@@ -8275,22 +8275,13 @@ public interface Shr5Package extends EPackage {
 	int MYSTIC_ADEPT__ENZUG = KI_ADEPT_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Tradition</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int MYSTIC_ADEPT__TRADITION = KI_ADEPT_FEATURE_COUNT + 2;
-
-    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MYSTIC_ADEPT__GEBUNDENE_GEISTER = KI_ADEPT_FEATURE_COUNT + 3;
+    int MYSTIC_ADEPT__GEBUNDENE_GEISTER = KI_ADEPT_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
@@ -8299,7 +8290,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MYSTIC_ADEPT__UNGEBUNDENER_GEIST = KI_ADEPT_FEATURE_COUNT + 4;
+    int MYSTIC_ADEPT__UNGEBUNDENER_GEIST = KI_ADEPT_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Tradition</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int MYSTIC_ADEPT__TRADITION = KI_ADEPT_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Mystic Adept</em>' class.
@@ -9022,22 +9022,13 @@ public interface Shr5Package extends EPackage {
 	int ASPEKT_MAGIER__ENZUG = MAGISCHE_PERSONA_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Tradition</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ASPEKT_MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
-
-    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ASPEKT_MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+    int ASPEKT_MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
@@ -9046,7 +9037,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ASPEKT_MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+    int ASPEKT_MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Tradition</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ASPEKT_MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Aspekt</b></em>' reference.
@@ -20352,7 +20352,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 134;
+	int FEUER_MODUS = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20362,7 +20362,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 135;
+	int SCHADENS_TYP = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20372,7 +20372,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 136;
+	int MAGAZIN_TYP = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20382,7 +20382,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 137;
+	int FEUWERWAFFEN_ERWEITERUNG = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20392,7 +20392,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 138;
+	int MODIFIKATOR_TYPE = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20402,7 +20402,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 139;
+	int SMARTGUN_TYPE = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20412,7 +20412,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 140;
+	int ZAUBER_ART = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20422,7 +20422,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 141;
+	int ZAUBER_REICHWEITE = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20432,19 +20432,118 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 142;
+	int ZAUBER_DAUER = 143;
 
 	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MagischeTradition
+     * @see de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 143;
+	int MAGISCHE_TRADITION = 134;
 
 	/**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Enzug</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__ENZUG = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Beschwoerbar</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION__BESCHWOERBAR = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Magische Tradition</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The number of operations of the '<em>Magische Tradition</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_TRADITION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20565,6 +20664,16 @@ public interface Shr5Package extends EPackage {
     int CYBERWARE_TYPE = 155;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Enzug
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
+     * @generated
+     */
+    int ENZUG = 156;
+
+    /**
      * The meta object id for the '<em>Shr Date</em>' data type.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20572,7 +20681,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 156;
+	int SHR_DATE = 157;
 
 
 	/**
@@ -20583,7 +20692,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 157;
+	int MODIFICATION_MANAGER = 158;
 
 
 	/**
@@ -22576,15 +22685,15 @@ public interface Shr5Package extends EPackage {
 	EAttribute getZauberer_Enzug();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}'.
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Tradition</em>'.
+     * @return the meta object for the reference '<em>Tradition</em>'.
      * @see de.urszeidler.eclipse.shr5.Zauberer#getTradition()
      * @see #getZauberer()
      * @generated
      */
-	EAttribute getZauberer_Tradition();
+	EReference getZauberer_Tradition();
 
 	/**
      * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister <em>Gebundene Geister</em>}'.
@@ -25602,16 +25711,38 @@ public interface Shr5Package extends EPackage {
 	EEnum getZauberDauer();
 
 	/**
-     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Magische Tradition</em>'.
+     * @return the meta object for class '<em>Magische Tradition</em>'.
      * @see de.urszeidler.eclipse.shr5.MagischeTradition
      * @generated
      */
-	EEnum getMagischeTradition();
+	EClass getMagischeTradition();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MagischeTradition#getEnzug <em>Enzug</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Enzug</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagischeTradition#getEnzug()
+     * @see #getMagischeTradition()
+     * @generated
+     */
+    EAttribute getMagischeTradition_Enzug();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.MagischeTradition#getBeschwoerbar <em>Beschwoerbar</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Beschwoerbar</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagischeTradition#getBeschwoerbar()
+     * @see #getMagischeTradition()
+     * @generated
+     */
+    EReference getMagischeTradition_Beschwoerbar();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25730,6 +25861,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EEnum getCyberwareType();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Enzug</em>'.
+     * @see de.urszeidler.eclipse.shr5.Enzug
+     * @generated
+     */
+    EEnum getEnzug();
 
     /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
@@ -27349,12 +27490,12 @@ public interface Shr5Package extends EPackage {
 		EAttribute ZAUBERER__ENZUG = eINSTANCE.getZauberer_Enzug();
 
 		/**
-         * The meta object literal for the '<em><b>Tradition</b></em>' attribute feature.
+         * The meta object literal for the '<em><b>Tradition</b></em>' reference feature.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
          * @generated
          */
-		EAttribute ZAUBERER__TRADITION = eINSTANCE.getZauberer_Tradition();
+		EReference ZAUBERER__TRADITION = eINSTANCE.getZauberer_Tradition();
 
 		/**
          * The meta object literal for the '<em><b>Gebundene Geister</b></em>' containment reference list feature.
@@ -29815,16 +29956,32 @@ public interface Shr5Package extends EPackage {
 		EEnum ZAUBER_DAUER = eINSTANCE.getZauberDauer();
 
 		/**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.MagischeTradition
+         * @see de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl
          * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
          * @generated
          */
-		EEnum MAGISCHE_TRADITION = eINSTANCE.getMagischeTradition();
+		EClass MAGISCHE_TRADITION = eINSTANCE.getMagischeTradition();
 
 		/**
+         * The meta object literal for the '<em><b>Enzug</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MAGISCHE_TRADITION__ENZUG = eINSTANCE.getMagischeTradition_Enzug();
+
+        /**
+         * The meta object literal for the '<em><b>Beschwoerbar</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MAGISCHE_TRADITION__BESCHWOERBAR = eINSTANCE.getMagischeTradition_Beschwoerbar();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -29943,6 +30100,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum CYBERWARE_TYPE = eINSTANCE.getCyberwareType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Enzug
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
+         * @generated
+         */
+        EEnum ENZUG = eINSTANCE.getEnzug();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

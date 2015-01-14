@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug <em>Enzug</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister <em>Gebundene Geister</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,29 +58,26 @@ public interface Zauberer extends EObject {
 	int getEnzug();
 
 	/**
-     * Returns the value of the '<em><b>Tradition</b></em>' attribute.
-     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.MagischeTradition}.
+     * Returns the value of the '<em><b>Tradition</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tradition</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Tradition</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.MagischeTradition
+     * @return the value of the '<em>Tradition</em>' reference.
      * @see #setTradition(MagischeTradition)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauberer_Tradition()
-     * @model
+     * @model required="true"
      * @generated
      */
 	MagischeTradition getTradition();
 
 	/**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}' attribute.
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Tradition</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.MagischeTradition
+     * @param value the new value of the '<em>Tradition</em>' reference.
      * @see #getTradition()
      * @generated
      */
@@ -109,6 +106,9 @@ public interface Zauberer extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A spirit can be bound.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Ungebundener Geist</em>' containment reference.
      * @see #setUngebundenerGeist(GebundenerGeist)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauberer_UngebundenerGeist()

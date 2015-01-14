@@ -49,80 +49,81 @@
       <nested inputs="shr5.ecore#//ZauberDauer/Aufrechterhalten" outputs="Shr5XMI.xsd#//ZauberDauer;XSDSimpleTypeDefinition=8/XSDEnumerationFacet=1"/>
       <nested inputs="shr5.ecore#//ZauberDauer/Permanent" outputs="Shr5XMI.xsd#//ZauberDauer;XSDSimpleTypeDefinition=8/XSDEnumerationFacet=2"/>
     </nested>
-    <nested inputs="shr5.ecore#//MagischeTradition" outputs="Shr5XMI.xsd#//MagischeTradition;XSDSimpleTypeDefinition=9">
-      <nested inputs="shr5.ecore#//MagischeTradition/Hermetisch" outputs="Shr5XMI.xsd#//MagischeTradition;XSDSimpleTypeDefinition=9/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//MagischeTradition/Schamanisch" outputs="Shr5XMI.xsd#//MagischeTradition;XSDSimpleTypeDefinition=9/XSDEnumerationFacet=1"/>
+    <nested inputs="shr5.ecore#//CritterHandlung" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=9">
+      <nested inputs="shr5.ecore#//CritterHandlung/komplex" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=9/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//CritterHandlung/auto" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=9/XSDEnumerationFacet=1"/>
     </nested>
-    <nested inputs="shr5.ecore#//CritterHandlung" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=10">
-      <nested inputs="shr5.ecore#//CritterHandlung/komplex" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=10/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//CritterHandlung/auto" outputs="Shr5XMI.xsd#//CritterHandlung;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=1"/>
+    <nested inputs="shr5.ecore#//CritterReichweite" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=10">
+      <nested inputs="shr5.ecore#//CritterReichweite/blickfeld" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=10/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//CritterReichweite/beruehrung" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//CritterReichweite/selbst" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//CritterReichweite/speziell" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=10/XSDEnumerationFacet=3"/>
     </nested>
-    <nested inputs="shr5.ecore#//CritterReichweite" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=11">
-      <nested inputs="shr5.ecore#//CritterReichweite/blickfeld" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=11/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//CritterReichweite/beruehrung" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//CritterReichweite/selbst" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//CritterReichweite/speziell" outputs="Shr5XMI.xsd#//CritterReichweite;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=3"/>
+    <nested inputs="shr5.ecore#//CritterDauer" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11">
+      <nested inputs="shr5.ecore#//CritterDauer/immer" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//CritterDauer/sofort" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//CritterDauer/aufrechterhalten" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//CritterDauer/permanent" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//CritterDauer/speziell" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=11/XSDEnumerationFacet=4"/>
     </nested>
-    <nested inputs="shr5.ecore#//CritterDauer" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12">
-      <nested inputs="shr5.ecore#//CritterDauer/immer" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//CritterDauer/sofort" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//CritterDauer/aufrechterhalten" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//CritterDauer/permanent" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=3"/>
-      <nested inputs="shr5.ecore#//CritterDauer/speziell" outputs="Shr5XMI.xsd#//CritterDauer;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=4"/>
+    <nested inputs="shr5.ecore#//ResonanzZiel" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12">
+      <nested inputs="shr5.ecore#//ResonanzZiel/datei" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//ResonanzZiel/geraet" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//ResonanzZiel/selbst" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//ResonanzZiel/persona" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//ResonanzZiel/sprite" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=12/XSDEnumerationFacet=4"/>
     </nested>
-    <nested inputs="shr5.ecore#//ResonanzZiel" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13">
-      <nested inputs="shr5.ecore#//ResonanzZiel/datei" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//ResonanzZiel/geraet" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//ResonanzZiel/selbst" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//ResonanzZiel/persona" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=3"/>
-      <nested inputs="shr5.ecore#//ResonanzZiel/sprite" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=4"/>
+    <nested inputs="shr5.ecore#//InterfaceModus" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=13">
+      <nested inputs="shr5.ecore#//InterfaceModus/augmentedReality" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=13/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//InterfaceModus/coldSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//InterfaceModus/hotSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=2"/>
     </nested>
-    <nested inputs="shr5.ecore#//InterfaceModus" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14">
-      <nested inputs="shr5.ecore#//InterfaceModus/augmentedReality" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//InterfaceModus/coldSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//InterfaceModus/hotSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=2"/>
+    <nested inputs="shr5.ecore#//ProgramType" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=14">
+      <nested inputs="shr5.ecore#//ProgramType/defaultSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=14/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//ProgramType/dataSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//ProgramType/shopSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=2"/>
     </nested>
-    <nested inputs="shr5.ecore#//ProgramType" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15">
-      <nested inputs="shr5.ecore#//ProgramType/defaultSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//ProgramType/dataSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//ProgramType/shopSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=2"/>
+    <nested inputs="shr5.ecore#//MatrixProgramType" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=15">
+      <nested inputs="shr5.ecore#//MatrixProgramType/defaultProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//MatrixProgramType/hackingProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=1"/>
     </nested>
-    <nested inputs="shr5.ecore#//MatrixProgramType" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=16">
-      <nested inputs="shr5.ecore#//MatrixProgramType/defaultProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=16/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//MatrixProgramType/hackingProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=16/XSDEnumerationFacet=1"/>
+    <nested inputs="shr5.ecore#//SubstanceVector" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=16">
+      <nested inputs="shr5.ecore#//SubstanceVector/contact" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=16/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/inhalation" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=16/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/ingestion" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=16/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/injection" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=16/XSDEnumerationFacet=3"/>
     </nested>
-    <nested inputs="shr5.ecore#//SubstanceVector" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17">
-      <nested inputs="shr5.ecore#//SubstanceVector/contact" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//SubstanceVector/inhalation" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//SubstanceVector/ingestion" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//SubstanceVector/injection" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=3"/>
+    <nested inputs="shr5.ecore#//SubstanceEffect" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=17">
+      <nested inputs="shr5.ecore#//SubstanceEffect/disorientation" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=17/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/nausea" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/paralysis" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/stunDamage" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=3"/>
     </nested>
-    <nested inputs="shr5.ecore#//SubstanceEffect" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18">
-      <nested inputs="shr5.ecore#//SubstanceEffect/disorientation" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//SubstanceEffect/nausea" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//SubstanceEffect/paralysis" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//SubstanceEffect/stunDamage" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=3"/>
+    <nested inputs="shr5.ecore#//AddictionType" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=18">
+      <nested inputs="shr5.ecore#//AddictionType/psychological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=18/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//AddictionType/physiological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//AddictionType/both" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=2"/>
     </nested>
-    <nested inputs="shr5.ecore#//AddictionType" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19">
-      <nested inputs="shr5.ecore#//AddictionType/psychological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//AddictionType/physiological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//AddictionType/both" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=2"/>
+    <nested inputs="shr5.ecore#//TimeUnits" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19">
+      <nested inputs="shr5.ecore#//TimeUnits/sec" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//TimeUnits/min" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//TimeUnits/hour" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//TimeUnits/day" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//TimeUnits/week" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=4"/>
+      <nested inputs="shr5.ecore#//TimeUnits/month" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=5"/>
+      <nested inputs="shr5.ecore#//TimeUnits/year" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=6"/>
     </nested>
-    <nested inputs="shr5.ecore#//TimeUnits" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20">
-      <nested inputs="shr5.ecore#//TimeUnits/sec" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//TimeUnits/min" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//TimeUnits/hour" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//TimeUnits/day" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=3"/>
-      <nested inputs="shr5.ecore#//TimeUnits/week" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=4"/>
-      <nested inputs="shr5.ecore#//TimeUnits/month" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=5"/>
-      <nested inputs="shr5.ecore#//TimeUnits/year" outputs="Shr5XMI.xsd#//TimeUnits;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=6"/>
+    <nested inputs="shr5.ecore#//CyberwareType" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20">
+      <nested inputs="shr5.ecore#//CyberwareType/headware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//CyberwareType/bodyware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//CyberwareType/cyberlimb" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//CyberwareType/earware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//CyberwareType/eyeware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=20/XSDEnumerationFacet=4"/>
     </nested>
-    <nested inputs="shr5.ecore#//CyberwareType" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21">
-      <nested inputs="shr5.ecore#//CyberwareType/headware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet"/>
-      <nested inputs="shr5.ecore#//CyberwareType/bodyware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=1"/>
-      <nested inputs="shr5.ecore#//CyberwareType/cyberlimb" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=2"/>
-      <nested inputs="shr5.ecore#//CyberwareType/earware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=3"/>
-      <nested inputs="shr5.ecore#//CyberwareType/eyeware" outputs="Shr5XMI.xsd#//CyberwareType;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=4"/>
+    <nested inputs="shr5.ecore#//Enzug" outputs="Shr5XMI.xsd#//Enzug;XSDSimpleTypeDefinition=21">
+      <nested inputs="shr5.ecore#//Enzug/wil_log" outputs="Shr5XMI.xsd#//Enzug;XSDSimpleTypeDefinition=21/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//Enzug/wil_cha" outputs="Shr5XMI.xsd#//Enzug;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//Enzug/wil_int" outputs="Shr5XMI.xsd#//Enzug;XSDSimpleTypeDefinition=21/XSDEnumerationFacet=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
@@ -429,23 +430,26 @@
     </nested>
     <nested inputs="shr5.ecore#//ProbenModifikatoren" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDElementDeclaration=43"/>
     <nested inputs="shr5.ecore#//Magier" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44"/>
-    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Zauberer/ungebundenerGeist" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     <nested inputs="shr5.ecore#//Magier" outputs="Shr5XMI.xsd#//Magier;XSDElementDeclaration=44"/>
     <nested inputs="shr5.ecore#//Zauberer" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45">
-      <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=1"/>
       <nested inputs="shr5.ecore#//Zauberer/ungebundenerGeist" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Zauberer" outputs="Shr5XMI.xsd#//Zauberer;XSDElementDeclaration=45"/>
     <nested inputs="shr5.ecore#//MysticAdept" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46"/>
-    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Zauberer/ungebundenerGeist" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     <nested inputs="shr5.ecore#//MysticAdept" outputs="Shr5XMI.xsd#//MysticAdept;XSDElementDeclaration=46"/>
     <nested inputs="shr5.ecore#//PersonaZauber" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47">
       <nested inputs="shr5.ecore#//PersonaZauber/stufe" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse"/>
@@ -474,12 +478,13 @@
     <nested inputs="shr5.ecore#//Panzerung" outputs="Shr5XMI.xsd#//Panzerung;XSDElementDeclaration=50"/>
     <nested inputs="shr5.ecore#//AspektMagier" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51">
       <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=4"/>
     </nested>
-    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Zauberer/ungebundenerGeist" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     <nested inputs="shr5.ecore#//AspektMagier" outputs="Shr5XMI.xsd#//AspektMagier;XSDElementDeclaration=51"/>
     <nested inputs="shr5.ecore#//AstraleProjektion" outputs="Shr5XMI.xsd#//AstraleProjektion;XSDComplexTypeDefinition=52"/>
     <nested inputs="shr5.ecore#//AstraleProjektion" outputs="Shr5XMI.xsd#//AstraleProjektion;XSDElementDeclaration=52"/>
@@ -971,5 +976,16 @@
       <nested inputs="shr5.ecore#//CyberImplantWeapon/weapon" outputs="Shr5XMI.xsd#//CyberImplantWeapon;XSDComplexTypeDefinition=133/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//CyberImplantWeapon" outputs="Shr5XMI.xsd#//CyberImplantWeapon;XSDElementDeclaration=133"/>
+    <nested inputs="shr5.ecore#//MagischeTradition" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134">
+      <nested inputs="shr5.ecore#//MagischeTradition/enzug" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//MagischeTradition/beschwoerbar" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//MagischeTradition/beschwoerbar" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//MagischeTradition" outputs="Shr5XMI.xsd#//MagischeTradition;XSDElementDeclaration=134"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

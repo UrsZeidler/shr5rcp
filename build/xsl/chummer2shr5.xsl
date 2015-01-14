@@ -48,6 +48,8 @@
 		select="document(concat($path,'/mentors.xml'),/)" />
 	<xsl:variable name="metamagic"
 		select="document(concat($path,'/metamagic.xml'),/)" />
+	<xsl:variable name="tradition"
+		select="document(concat($path,'/traditions.xml'),/)" />
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
 	<xsl:include href="shr5-functions.xsl" />
@@ -71,6 +73,11 @@
 					</xsl:for-each>
 				</entries>
 				<entries xsi:type="shr5:ShrList" name="generators">
+					<xsl:for-each select="$shr5CharacterBuilder">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+				
+				
 				</entries>
 				<entries xsi:type="shr5:ShrList" name="Gear">
 					<xsl:for-each select="$weapons">
@@ -139,6 +146,9 @@
 						<xsl:apply-templates select="node()" />
 					</xsl:for-each>
 					<xsl:for-each select="$spells">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+					<xsl:for-each select="$tradition">
 						<xsl:apply-templates select="node()" />
 					</xsl:for-each>
 					<xsl:for-each select="$complexforms">
@@ -301,25 +311,31 @@
 		</entries>
 	</xsl:template>
 	<xsl:template
-		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors|metamagics|accessories">
+		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers
+		|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors
+		|metamagics|accessories|traditions">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
 		</entries>
 	</xsl:template>
 	<!-- the generator -->
-	<xsl:template match="priority" mode="gen" />
+<!-- 	<xsl:template match="priority" mode="gen" /> -->
 	<xsl:template match="bonus" mode="gen" />
 	<!-- <xsl:template match="specials" mode="gen" /> -->
-	<xsl:template match="priorities">
+	<xsl:template match="gameplayoption">
 		<entries xsi:type="shr5:ShrList" name="generators">
-			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
-				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25"
+		
+		
+			<entries xsi:type="shr5mngt:Shr5System" 
+				karmaToResourceFactor="2000" karmaToMagicFactor="5" 
 				characterAdvancements="//@entries.0/@entries.16/@entries.2"
 				charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6"
 				numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2"
 				maxKarmaToKeep="7" numberOfMaxAttributes="1"
 				boundSprititServiceCost="1" karmaToConnectionFactor="2">
+				<xsl:attribute name="name"><xsl:value-of select="name/text()"/></xsl:attribute>
+				<xsl:attribute name="karmaPoints"><xsl:value-of select="karma/text()"/></xsl:attribute>
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
@@ -2228,6 +2244,34 @@
 			<xsl:call-template name="localization" />
 		</entries>
 	</xsl:template>
+	<!-- traditions -->
+	<xsl:template match="//tradition">
+		<entries xsi:type="shr5:MagischeTradition">
+				<xsl:choose>
+				<xsl:when test="drain/text()='WIL + CHA'">
+				<xsl:attribute name="enzug" ><xsl:value-of select="'wil_cha'" /></xsl:attribute>
+				</xsl:when>
+				<xsl:when test="drain/text()='WIL + LOG'">
+				<xsl:attribute name="enzug" ><xsl:value-of select="'wil_log'" /></xsl:attribute>
+				</xsl:when>
+				<xsl:when test="drain/text()='WIL + INT'">
+				<xsl:attribute name="enzug" ><xsl:value-of select="'wil_int'" /></xsl:attribute>
+				</xsl:when>
+				</xsl:choose>
+				<xsl:attribute name="beschwoerbar" >
+					<xsl:for-each select="spirits">
+					<xsl:call-template name="findSpirit">
+						<xsl:with-param name="spiritname" select="spirit/text()" />
+					</xsl:call-template>
+					</xsl:for-each>
+				</xsl:attribute>
+				
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="localization" />
+		</entries>
+	</xsl:template>
+	
 	<!-- mentors -->
 	<xsl:template match="//mentor">
 		<entries xsi:type="shr5:Schutzgeist">

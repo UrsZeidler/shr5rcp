@@ -19830,6 +19830,71 @@
           <localizations xmi:id="_EV1XEjnTEeSe6_w6Jrbqxg" local="de" name="Ernährung"/>
         </entries>
       </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_lyfm8JwyEeSGFKxJfk8QkA" name="traditions">
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="616ba093-306c-45fc-8f41-0b98c8cccb46" name="Custom" page="279" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_lyg1EJwyEeSGFKxJfk8QkA" local="de" name="Eigene Tradition"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="19320625-bc1a-492f-8904-da6a847e5700" name="Hermetic" page="279" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e">
+          <localizations xmi:id="_lyg1EZwyEeSGFKxJfk8QkA" local="de" name="Hermetisch"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="8d185e0e-5f49-4992-babd-d1ac9c848f68" name="Shamanic" page="279" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" enzug="wil_cha" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 4a80bfc5-da03-4896-9722-2a785d32095e 285885ed-d2cb-4c02-976c-a8f81efa67cb f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e">
+          <localizations xmi:id="_lyg1EpwyEeSGFKxJfk8QkA" local="de" name="Schamanisch"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="4fba452f-a240-4530-82b6-5ffd4bb83f28" name="Aztec" page="41" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="4a80bfc5-da03-4896-9722-2a785d32095e 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 19fab76c-5420-4961-905c-336dae200c2b f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyg1E5wyEeSGFKxJfk8QkA" local="de" name="Aztekisch"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="66ceefed-2cb1-4027-96ca-756ab4eed7ad" name="Black Magic" page="41" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e">
+          <localizations xmi:id="_lyg1FJwyEeSGFKxJfk8QkA" local="de" name="Schwarze Magie"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="a283220f-2197-4526-b15a-331b9185b326" name="Buddhism" page="43" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 78985b33-9957-43e1-9095-1fae3242ef1a">
+          <localizations xmi:id="_lyg1FZwyEeSGFKxJfk8QkA" local="de" name="Buddhismus"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="20b8e39f-a956-49bd-b417-6e1bd4a14604" name="Chaos Magic" page="44" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e">
+          <localizations xmi:id="_lyg1FpwyEeSGFKxJfk8QkA" local="de" name="Chaosmagie"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="5d98ea69-29b1-4fb4-b9f3-56396d1dce16" name="Christian Theurgy" page="44" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 78985b33-9957-43e1-9095-1fae3242ef1a">
+          <localizations xmi:id="_lyg1F5wyEeSGFKxJfk8QkA" local="de" name="Christliche Theurgie"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="fb6f9683-47bb-4b04-9d15-4b59a003bf69" name="Druid" page="45" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 4a80bfc5-da03-4896-9722-2a785d32095e 285885ed-d2cb-4c02-976c-a8f81efa67cb 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcIJwyEeSGFKxJfk8QkA" local="de" name="Druid"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="2c924aa1-2298-4b02-b28b-946d0769dbd3" name="Hinduism" page="46" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 4a80bfc5-da03-4896-9722-2a785d32095e 285885ed-d2cb-4c02-976c-a8f81efa67cb 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcIZwyEeSGFKxJfk8QkA" local="de" name="Hinduism"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="9acc0a3e-3209-4274-9c98-4cbc42c456a7" name="Islam" page="46" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 19fab76c-5420-4961-905c-336dae200c2b f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcIpwyEeSGFKxJfk8QkA" local="de" name="Islam"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="7f6073fd-e7f3-41f5-a40f-2a5b1cde382e" name="Path of the Wheel" page="47" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 78985b33-9957-43e1-9095-1fae3242ef1a">
+          <localizations xmi:id="_lyhcI5wyEeSGFKxJfk8QkA" local="de" name="Pfad des Rades"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="c3604051-9f2b-4cc3-9525-f3029c611926" name="Qabbalism" page="48" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e c527ac71-e69c-400b-a944-f0cbf508fd2a">
+          <localizations xmi:id="_lyhcJJwyEeSGFKxJfk8QkA" local="de" name="Qabbalism"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="9abbebc1-48a3-4dde-960a-af565b163a3d" name="Shinto" page="48" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 4a80bfc5-da03-4896-9722-2a785d32095e f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcJZwyEeSGFKxJfk8QkA" local="de" name="Shintō"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="e548b126-5df3-4da5-a603-c0b6b252e982" name="Sioux" page="49" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 4a80bfc5-da03-4896-9722-2a785d32095e 3232c4f1-0b22-4799-8c80-392392f9af38 19fab76c-5420-4961-905c-336dae200c2b f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcJpwyEeSGFKxJfk8QkA" local="de" name="Sioux"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="35ecfae9-0c2d-4084-a899-e91c230e209d" name="Vodou" page="50" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_cha" beschwoerbar="f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 19fab76c-5420-4961-905c-336dae200c2b 78985b33-9957-43e1-9095-1fae3242ef1a c527ac71-e69c-400b-a944-f0cbf508fd2a">
+          <localizations xmi:id="_lyhcJ5wyEeSGFKxJfk8QkA" local="de" name="Vodou"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="24601762-ef67-44d8-b974-03f626db848a" name="Wicca, Gardnerian" page="50" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcKJwyEeSGFKxJfk8QkA" local="de" name="Wicca, Gardnerian"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="895b2dd2-f401-477e-9cb5-a5620598582e" name="Wicca, Goddess" page="50" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyhcKZwyEeSGFKxJfk8QkA" local="de" name="Wicca, Goddess"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="0cd0412c-cba4-4417-bc8f-f785fa5b821d" name="Wuxing" page="51" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="285885ed-d2cb-4c02-976c-a8f81efa67cb 3232c4f1-0b22-4799-8c80-392392f9af38 4c0349ca-be2b-4b7f-9c52-9c9db12c873e 78985b33-9957-43e1-9095-1fae3242ef1a f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyiDMJwyEeSGFKxJfk8QkA" local="de" name="Wuxing"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="9f4bae13-56fd-43ac-a6aa-8e2384018065" name="Zoroastrianism" page="52" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" beschwoerbar="7f0f9028-4351-4729-a363-ff8533895d1c 3232c4f1-0b22-4799-8c80-392392f9af38 f4794218-5a32-43c5-a8f7-784bccb4c5aa 4c0349ca-be2b-4b7f-9c52-9c9db12c873e f0fe95d7-0d9a-4615-bb1b-a6a965f6cb81">
+          <localizations xmi:id="_lyiDMZwyEeSGFKxJfk8QkA" local="de" name="Zoroastrianism"/>
+        </entries>
+        <entries xsi:type="shr5:MagischeTradition" xmi:id="0d13bad3-9fa2-45fb-879c-068916944e1b" name="Insect Shaman" page="94" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" enzug="wil_int">
+          <localizations xmi:id="_lyiDMpwyEeSGFKxJfk8QkA" local="de" name="Insect Shaman"/>
+        </entries>
+      </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EV1XEznTEeSe6_w6Jrbqxg" name="complexforms">
         <entries xsi:type="shr5:KomplexeForm" xmi:id="373638b9-4334-4645-99f5-c3673e4f809b" page="252" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Cleaner" ziel="persona" dauer="Permanent" schwund="L+1">
           <localizations xmi:id="_EV2lMDnTEeSe6_w6Jrbqxg" local="de" name="Reiniger" page="252"/>
@@ -20708,7 +20773,7 @@
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4d0CEeOvVYoRsPZlnA" character="_B0TPcd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Rob" resourcen="_BtMh4t0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ksd0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="1" startResources="2810"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0nYgt0CEeOvVYoRsPZlnA" chracterSource="_B0_L8N0CEeOvVYoRsPZlnA" choosenLifestyle="_B01a9t0CEeOvVYoRsPZlnA" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
-        <persona xsi:type="shr5:MysticAdept" xmi:id="_B0sRAN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="b3259991-b315-4dbe-ae3c-51f71a1116e2" magieBasis="6">
+        <persona xsi:type="shr5:MysticAdept" xmi:id="_B0sRAN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="b3259991-b315-4dbe-ae3c-51f71a1116e2" magieBasis="6" tradition="8d185e0e-5f49-4992-babd-d1ac9c848f68">
           <fertigkeiten xmi:id="_B0sRAd0CEeOvVYoRsPZlnA" stufe="5" fertigkeit="3db81bcc-264b-47e1-847c-06bdacd88973"/>
           <fertigkeiten xmi:id="_B0sRAt0CEeOvVYoRsPZlnA" stufe="5" fertigkeit="c4367a39-4065-4b1d-aa62-e9dce377e452"/>
           <fertigkeiten xmi:id="_B0sRA90CEeOvVYoRsPZlnA" stufe="4" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>

@@ -3,7 +3,6 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -12,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Magier;
@@ -30,9 +28,9 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getEnzug <em>Enzug</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getGebundeneGeister <em>Gebundene Geister</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
@@ -67,24 +65,6 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      */
 	protected static final int ENZUG_EDEFAULT = 0;
 	/**
-     * The default value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getTradition()
-     * @generated
-     * @ordered
-     */
-	protected static final MagischeTradition TRADITION_EDEFAULT = MagischeTradition.HERMETISCH;
-	/**
-     * The cached value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getTradition()
-     * @generated
-     * @ordered
-     */
-	protected MagischeTradition tradition = TRADITION_EDEFAULT;
-	/**
      * The cached value of the '{@link #getGebundeneGeister() <em>Gebundene Geister</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -103,6 +83,16 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      * @ordered
      */
     protected GebundenerGeist ungebundenerGeist;
+
+    /**
+     * The cached value of the '{@link #getTradition() <em>Tradition</em>}' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getTradition()
+     * @generated
+     * @ordered
+     */
+	protected MagischeTradition tradition;
 
     /**
      * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
@@ -214,15 +204,19 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	 * @generated not
 	 */
 	public int getEnzug() {
-		switch (tradition) {
-		case HERMETISCH:
-			return getWillenskraft() + getLogik();
-		case SCHAMANISCH :
-			return getWillenskraft()+ getIntuition();
-			
-		default:
-			return 0;
-		}
+        if (tradition != null)
+            switch (tradition.getEnzug()) {
+                case WIL_LOG:
+                    return getWillenskraft() + getLogik();
+                case WIL_INT:
+                    return getWillenskraft() + getIntuition();
+                case WIL_CHA:
+                    return getWillenskraft() + getCharisma();
+
+                default:
+                    return 0;
+            }
+        return 0;
 	}
 
 	/**
@@ -231,17 +225,34 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      * @generated
      */
 	public MagischeTradition getTradition() {
+        if (tradition != null && tradition.eIsProxy()) {
+            InternalEObject oldTradition = (InternalEObject)tradition;
+            tradition = (MagischeTradition)eResolveProxy(oldTradition);
+            if (tradition != oldTradition) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.MAGIER__TRADITION, oldTradition, tradition));
+            }
+        }
         return tradition;
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MagischeTradition basicGetTradition() {
+        return tradition;
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
 	public void setTradition(MagischeTradition newTradition) {
         MagischeTradition oldTradition = tradition;
-        tradition = newTradition == null ? TRADITION_EDEFAULT : newTradition;
+        tradition = newTradition;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIER__TRADITION, oldTradition, tradition));
     }
@@ -407,12 +418,13 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
                 return getZauber();
             case Shr5Package.MAGIER__ENZUG:
                 return getEnzug();
-            case Shr5Package.MAGIER__TRADITION:
-                return getTradition();
             case Shr5Package.MAGIER__GEBUNDENE_GEISTER:
                 return getGebundeneGeister();
             case Shr5Package.MAGIER__UNGEBUNDENER_GEIST:
                 return getUngebundenerGeist();
+            case Shr5Package.MAGIER__TRADITION:
+                if (resolve) return getTradition();
+                return basicGetTradition();
             case Shr5Package.MAGIER__ASTRALES_LIMIT:
                 return getAstralesLimit();
             case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
@@ -446,15 +458,15 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
                 getZauber().clear();
                 getZauber().addAll((Collection<? extends PersonaZauber>)newValue);
                 return;
-            case Shr5Package.MAGIER__TRADITION:
-                setTradition((MagischeTradition)newValue);
-                return;
             case Shr5Package.MAGIER__GEBUNDENE_GEISTER:
                 getGebundeneGeister().clear();
                 getGebundeneGeister().addAll((Collection<? extends GebundenerGeist>)newValue);
                 return;
             case Shr5Package.MAGIER__UNGEBUNDENER_GEIST:
                 setUngebundenerGeist((GebundenerGeist)newValue);
+                return;
+            case Shr5Package.MAGIER__TRADITION:
+                setTradition((MagischeTradition)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -471,14 +483,14 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
             case Shr5Package.MAGIER__ZAUBER:
                 getZauber().clear();
                 return;
-            case Shr5Package.MAGIER__TRADITION:
-                setTradition(TRADITION_EDEFAULT);
-                return;
             case Shr5Package.MAGIER__GEBUNDENE_GEISTER:
                 getGebundeneGeister().clear();
                 return;
             case Shr5Package.MAGIER__UNGEBUNDENER_GEIST:
                 setUngebundenerGeist((GebundenerGeist)null);
+                return;
+            case Shr5Package.MAGIER__TRADITION:
+                setTradition((MagischeTradition)null);
                 return;
         }
         super.eUnset(featureID);
@@ -496,12 +508,12 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
                 return zauber != null && !zauber.isEmpty();
             case Shr5Package.MAGIER__ENZUG:
                 return getEnzug() != ENZUG_EDEFAULT;
-            case Shr5Package.MAGIER__TRADITION:
-                return tradition != TRADITION_EDEFAULT;
             case Shr5Package.MAGIER__GEBUNDENE_GEISTER:
                 return gebundeneGeister != null && !gebundeneGeister.isEmpty();
             case Shr5Package.MAGIER__UNGEBUNDENER_GEIST:
                 return ungebundenerGeist != null;
+            case Shr5Package.MAGIER__TRADITION:
+                return tradition != null;
             case Shr5Package.MAGIER__ASTRALES_LIMIT:
                 return getAstralesLimit() != ASTRALES_LIMIT_EDEFAULT;
             case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
@@ -533,9 +545,9 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
             switch (derivedFeatureID) {
                 case Shr5Package.MAGIER__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
                 case Shr5Package.MAGIER__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
-                case Shr5Package.MAGIER__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
                 case Shr5Package.MAGIER__GEBUNDENE_GEISTER: return Shr5Package.ZAUBERER__GEBUNDENE_GEISTER;
                 case Shr5Package.MAGIER__UNGEBUNDENER_GEIST: return Shr5Package.ZAUBERER__UNGEBUNDENER_GEIST;
+                case Shr5Package.MAGIER__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
                 default: return -1;
             }
         }
@@ -566,9 +578,9 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
             switch (baseFeatureID) {
                 case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.MAGIER__ZAUBER;
                 case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MAGIER__ENZUG;
-                case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MAGIER__TRADITION;
                 case Shr5Package.ZAUBERER__GEBUNDENE_GEISTER: return Shr5Package.MAGIER__GEBUNDENE_GEISTER;
                 case Shr5Package.ZAUBERER__UNGEBUNDENER_GEIST: return Shr5Package.MAGIER__UNGEBUNDENER_GEIST;
+                case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MAGIER__TRADITION;
                 default: return -1;
             }
         }
@@ -586,22 +598,6 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public String toString() {
-        if (eIsProxy()) return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (tradition: ");
-        result.append(tradition);
-        result.append(')');
-        return result.toString();
     }
 
 } //MagierImpl

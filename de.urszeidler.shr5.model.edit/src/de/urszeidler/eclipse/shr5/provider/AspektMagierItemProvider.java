@@ -84,26 +84,26 @@ public class AspektMagierItemProvider
 	/**
      * This adds a property descriptor for the Tradition feature.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	protected void addTraditionPropertyDescriptor(Object object) {
+    protected void addTraditionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Zauberer_tradition_feature"),
-                 getString("_UI_Zauberer_tradition_description"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_tradition_feature", "_UI_Zauberer_type"),
                  Shr5Package.Literals.ZAUBERER__TRADITION,
                  true,
                  false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 true,
+                 null,
                  null,
                  null));
     }
 
-	/**
+    /**
      * This adds a property descriptor for the Aspekt feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,7 +209,6 @@ public class AspektMagierItemProvider
 
         switch (notification.getFeatureID(AspektMagier.class)) {
             case Shr5Package.ASPEKT_MAGIER__ENZUG:
-            case Shr5Package.ASPEKT_MAGIER__TRADITION:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.ASPEKT_MAGIER__ZAUBER:
