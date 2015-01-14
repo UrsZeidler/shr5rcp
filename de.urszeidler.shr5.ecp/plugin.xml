@@ -352,8 +352,7 @@
                id="de.urszeidler.shr5.ecp.menus.characterMenu"
                label="%character.menu.label">
             <command
-                  commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
-                  mnemonic="S">
+                  commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand">
             </command>
             <separator
                   name="de.urszeidler.shr5.ecp.separator3"
