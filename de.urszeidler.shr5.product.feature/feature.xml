@@ -31,10 +31,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.core.runtime.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.common"
          version="0.0.0"/>
 
@@ -382,13 +378,6 @@
 
    <plugin
          id="org.eclipse.jdt.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.pdf"
          download-size="0"
          install-size="0"
          version="0.0.0"
