@@ -81,6 +81,7 @@
       <import plugin="org.eclipse.core.databinding"/>
       <import plugin="org.eclipse.core.databinding.observable"/>
       <import plugin="com.ibm.icu"/>
+      <import plugin="de.urszeidler.fop.help"/>
    </requires>
 
    <plugin
