@@ -34,7 +34,8 @@
          id="de.urszeidler.shr5.runtime.tests"
          download-size="0"
          install-size="0"
-         version="0.2.4.qualifier"/>
+         version="0.2.4.qualifier"
+         unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.gameplay.model.tests"
