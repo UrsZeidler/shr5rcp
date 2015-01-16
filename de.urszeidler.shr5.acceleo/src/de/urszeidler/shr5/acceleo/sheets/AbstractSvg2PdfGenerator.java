@@ -12,6 +12,7 @@ import org.apache.batik.transcoder.Transcoder;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.fop.render.intermediate.util.IFConcatenator;
 import org.apache.fop.svg.PDFTranscoder;
 import org.eclipse.acceleo.engine.event.AbstractAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.event.AcceleoTextGenerationEvent;
@@ -84,6 +85,7 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
         transcoder.transcode(input_svg_image, output_pdf_file);
         pdf_ostream.flush();
         pdf_ostream.close();
+        
     }
 
     /**

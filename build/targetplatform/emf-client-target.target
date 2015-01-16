@@ -1,168 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="77">
+<?pde version="3.8"?><target includeMode="feature" name="new" sequenceNumber="32">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="javax.servlet.source" version="3.0.0.v201112011016"/>
+<unit id="javax.servlet" version="3.0.0.v201112011016"/>
+<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.ext.awt.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.jasper" version="7.0.47.v201312060745"/>
+<unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
+<unit id="org.apache.batik.extension.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.bridge.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom" version="1.7.0.v201011041433"/>
+<unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
+<unit id="org.apache.commons.io" version="1.3.2.v20080604-1500"/>
+<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.svggen.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.xml.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
+<unit id="org.mortbay.jetty.util.source" version="6.1.23.v201012071420"/>
+<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
+<unit id="org.mortbay.jetty.server" version="6.1.23.v201012071420"/>
+<unit id="org.apache.batik.transcoder.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom.svg.source" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.util.source" version="1.7.0.v201011041433"/>
+<unit id="com.google.guava" version="15.0.0.v201403281430"/>
+<unit id="org.mortbay.jetty.server.source" version="6.1.23.v201012071420"/>
+<unit id="org.mortbay.jetty.util" version="6.1.23.v201012071420"/>
+<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
+<unit id="com.google.guava.source" version="15.0.0.v201403281430"/>
+<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
+<unit id="org.json" version="1.0.0.v201011060100"/>
 <unit id="org.apache.xml.resolver" version="1.2.0.v201005080400"/>
-<unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
 <unit id="org.apache.xml.serializer" version="2.7.1.v201005080400"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
+<unit id="org.apache.xmlgraphics" version="1.4.0.v201301251218"/>
+<unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
+<unit id="org.eclipse.babel.nls_modeling.ecp_de.feature.group" version="4.4.0.v20141223043836"/>
+<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.4.0.v20141223043836"/>
+<repository location="http://download.eclipse.org/technology/babel/update-site/R0.12.1/luna"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.ecp.view.custom.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.group.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.categorization.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.table.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.emfforms.runtime.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.horizontal.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.e3.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.rule.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.label.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.validation.view.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.vertical.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.treemasterdetail.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.validation.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.view.unset.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.diffmerge.feature.feature.group" version="1.3.0.20140610-1229"/>
-<unit id="org.eclipse.emf.ecp.viewmodel.feature.feature.group" version="1.3.0.20140610-1229"/>
-<repository location="http://download.eclipse.org/ecp/releases/releases_13"/>
+<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.workspace.feature.source.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.validation.view.feature.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.view.mappingdmr.feature.feature.group" version="1.4.1.20141006-1346"/>
+<unit id="org.eclipse.emf.ecp.ecore.feature.feature.group" version="1.4.1.20141006-1346"/>
+<repository location="http://download.eclipse.org/ecp/releases/releases_14"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.ganttchart.feature.feature.group" version="1.0.0.201412190917"/>
-<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201412190917"/>
-<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201412190917"/>
-<unit id="org.eclipse.nebula.widgets.compositetable.feature.feature.group" version="1.0.0.201412190917"/>
-<unit id="org.eclipse.nebula.widgets.gallery.feature.feature.group" version="1.0.0.201412190917"/>
-<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201412190917"/>
-<unit id="org.eclipse.nebula.widgets.pgroup.feature.feature.group" version="1.0.0.201412190917"/>
-<unit id="org.eclipse.nebula.visualization.feature.feature.group" version="0.9.9.201412190917"/>
+<unit id="org.eclipse.nebula.widgets.calendarcombo.feature.feature.group" version="1.0.0.201412230843"/>
+<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201412230843"/>
+<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201412230843"/>
+<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201412230843"/>
 <repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.7.0.201306111400"/>
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.9.2.v20140203-1126"/>
-<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.7.0.201306111341"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
+<unit id="org.eclipse.emf.query.sdk.feature.group" version="1.8.0.201405281426"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.1.v20140901-1055"/>
+<unit id="org.eclipse.net4j.sdk.feature.group" version="4.3.0.v20140308-0604"/>
+<unit id="org.eclipse.acceleo.feature.group" version="3.5.1.201409021433"/>
+<unit id="org.eclipse.acceleo.source.feature.group" version="3.5.1.201409021433"/>
+<unit id="org.eclipse.emf.query.master.feature.group" version="1.8.0.201405281426"/>
+<unit id="org.eclipse.ocl.all.sdk.feature.group" version="5.0.2.v20140819-1612"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.1.v20140901-1055"/>
+<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.8.0.201405281429"/>
+<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.8.0.201405281451"/>
+<unit id="org.eclipse.zest.sdk.feature.group" version="1.5.101.201408150207"/>
+<repository location="http://download.eclipse.org/releases/luna"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.mortbay.jetty.util" version="6.1.23.v201012071420"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.10.0.v20140909-1633"/>
+<unit id="org.eclipse.platform.sdk" version="4.4.1.M20140925-0400"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.4.0.v20140925-0400"/>
+<unit id="org.eclipse.platform.ide" version="4.4.1.M20140925-0400"/>
+<unit id="org.eclipse.sdk.ide" version="4.4.1.M20140925-0400"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.4"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.net4j.sdk.feature.group" version="4.2.1.v20140218-1830"/>
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.9.2.v20140203-1126"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.batik.pdf" version="1.6.0.v201105071520"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.babel.nls_webtools_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_tools.tm_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_technology.dltk_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_tools.cdt_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_tools.mat_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_technology.packaging.mpc_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_birt_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_mylyn_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_rt.rap_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_technology.egit_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_technology.packaging_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_modeling.tmf.xtext_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_soa.stardust_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_technology.recommenders_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_datatools_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_modeling.emf.compare_de.feature.group" version="4.3.0.v20140623031152"/>
-<unit id="org.eclipse.babel.nls_modeling.mdt.xsd_de.feature.group" version="4.3.0.v20140623031152"/>
-<repository location="http://download.eclipse.org/technology/babel/update-site/R0.12.0/kepler"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="javax.servlet" version="3.0.0.v201112011016"/>
-<unit id="javax.servlet" version="3.0.0.v201112011016"/>
-<unit id="javax.servlet" version="3.0.0.v201112011016"/>
-<unit id="org.mortbay.jetty.server" version="6.1.23.v201012071420"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.batik.parser.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.ext.awt" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.bridge.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.parser" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.svggen.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.bridge" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.xml" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.ext.awt.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.transcoder" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.xml.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.transcoder.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom.svg" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.svggen" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.util" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom.svg.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.util.source" version="1.6.0.v201011041432"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.acceleo.source.feature.group" version="3.4.2.201401221203"/>
-<unit id="org.eclipse.ocl.all.sdk.feature.group" version="4.1.1.v20140210-1137"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.sdk" version="4.3.2.M20140221-1700"/>
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20140221-1852"/>
-<unit id="org.eclipse.sdk.ide" version="4.3.2.M20140221-1700"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.3.2.v20140221-1700"/>
-<unit id="org.eclipse.platform.ide" version="4.3.2.M20140221-1700"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.json" version="1.0.0.v201011060100"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20141217-1534"/>
+<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20150116-1959"/>
 <repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.batik.css.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.util.gui" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.css" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.ext.awt" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.bridge.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.parser" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.util.gui.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.bridge" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.xml" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.ext.awt.source" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.transcoder" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.svggen" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.dom.svg" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.extension" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.util" version="1.6.0.v201011041432"/>
-<unit id="org.apache.batik.pdf" version="1.6.0.v201105071520"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="com.google.guava" version="15.0.0.v201403281430"/>
-<unit id="com.google.guava.source" version="15.0.0.v201403281430"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.zest.sdk.feature.group" version="1.5.1.201308190730"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
+<unit id="org.eclipse.emf.ecp.diffmerge.feature.feature.group" version="1.4.1.20141006-1346"/>
+<repository location="http://download.eclipse.org/ecp/releases/releases_14"/>
 </location>
 </locations>
 </target>

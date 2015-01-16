@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
+
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,10 +49,14 @@ import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.TableColumnLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
+import org.eclipse.jface.viewers.ColumnViewer;
+import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.ViewerCell;
+import org.eclipse.jface.window.ToolTip;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -66,10 +71,13 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.IViewSite;
@@ -247,6 +255,35 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
     };
 
+    static  class ViewColumnViewerToolTipSupport extends
+    ColumnViewerToolTipSupport {
+
+protected ViewColumnViewerToolTipSupport(ColumnViewer viewer,
+        int style, boolean manualActivation) {
+    super(viewer, style, manualActivation);
+}
+
+@Override
+ protected Composite createViewerToolTipContentArea(Event event,
+        ViewerCell cell, Composite parent) {
+    final Composite composite = new Composite(parent, SWT.NONE);
+    composite.setLayout(new RowLayout(SWT.VERTICAL));
+//    Text text = new Text(composite, SWT.SINGLE);
+//    text.setText(getText(event));
+//    text.setSize(100, 60);
+//    DateTime calendar = new DateTime(composite, SWT.CALENDAR);
+//    calendar.setEnabled(false);
+//    calendar.setSize(100, 100);
+//    composite.pack();
+    return composite;
+}
+
+public static  final void enableFor(final ColumnViewer viewer) {
+    new ViewColumnViewerToolTipSupport(viewer, ToolTip.NO_RECREATE,
+            false);
+}
+}
+    
     protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
@@ -437,6 +474,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         composite_13.setLayout(new TableColumnLayout());
 
         characterViewer = new TableViewer(composite_13, SWT.BORDER | SWT.MULTI);
+        ViewColumnViewerToolTipSupport.enableFor(characterViewer);
         // characterViewer.addSelectionChangedListener(new ISelectionChangedListener() {
         //
         // @Override
