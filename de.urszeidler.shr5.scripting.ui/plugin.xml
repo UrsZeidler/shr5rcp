@@ -26,7 +26,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
+            locationURI="menu:org.eclipse.ui.main.menu?after=de.urszeidler.shr5.ecp.menus.extraMenu">
          <menu
                id="de.urszeidler.shr5.ecp.menus.scriptMenu"
                label="%scripting.menu.label">
