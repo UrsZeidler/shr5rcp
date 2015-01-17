@@ -27,7 +27,6 @@
       <import plugin="org.eclipse.acceleo.model" version="3.3.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.acceleo.profiler" version="3.3.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.acceleo.engine" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="com.google.guava"/>
       <import plugin="org.apache.batik.transcoder"/>
       <import plugin="org.apache.batik.util"/>
       <import plugin="org.apache.xerces"/>
@@ -81,7 +80,10 @@
       <import plugin="org.eclipse.core.databinding"/>
       <import plugin="org.eclipse.core.databinding.observable"/>
       <import plugin="com.ibm.icu"/>
-      <import plugin="de.urszeidler.fop.help"/>
+      <import plugin="de.urszeidler.fop.help" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.zest.core"/>
+      <import plugin="org.eclipse.zest.layouts"/>
+      <import plugin="com.google.guava" version="15.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
