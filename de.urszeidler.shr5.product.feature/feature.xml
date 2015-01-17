@@ -77,10 +77,6 @@
          optional="true"/>
 
    <includes
-         id="org.eclipse.equinox.p2.user.ui"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.equinox.p2.rcp.feature"
          version="0.0.0"/>
 
@@ -703,6 +699,13 @@
 
    <plugin
          id="org.eclipse.ui.navigator.resources"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.workbench.texteditor"
          download-size="0"
          install-size="0"
          version="0.0.0"
