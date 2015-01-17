@@ -17,25 +17,12 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
  */
 public class Application implements IApplication {
 
-    protected static final String PERSPECTIVE_ID = "de.urszeidler.shr5.product.application.ShadowrunPerspective";
+    public static final String PERSPECTIVE_ID = "de.urszeidler.shr5.product.application.ShadowrunPerspective";
 
     public Object start(IApplicationContext context) throws Exception {
         Display display = PlatformUI.createDisplay();
         try {
-            int returnCode = PlatformUI.createAndRunWorkbench(display, new org.eclipse.emf.ecp.application3x.ApplicationWorkbenchAdvisor(){
-                /** {@inheritDoc} */
-                @Override
-                public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
-                    return new ApplicationWorkbenchWindowAdvisor(configurer);
-                }
-                
-                /** {@inheritDoc} */
-                @Override
-                public String getInitialWindowPerspectiveId() {
-                    return PERSPECTIVE_ID;
-                }
-
-            });
+            int returnCode = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
             if (returnCode == PlatformUI.RETURN_RESTART) {
                 return IApplication.EXIT_RESTART;
             }
