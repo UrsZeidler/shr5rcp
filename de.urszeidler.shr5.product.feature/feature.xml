@@ -102,6 +102,10 @@
          id="org.eclipse.ecf.core.ssl.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.ecf.filetransfer.feature"
+         version="0.0.0"/>
+
    <plugin
          id="javax.servlet"
          download-size="0"
