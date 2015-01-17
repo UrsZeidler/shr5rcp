@@ -53,6 +53,11 @@
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
+    </rm:provider>
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://download.eclipse.org/technology/nebula/snapshot"/>
     </rm:provider>
    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">

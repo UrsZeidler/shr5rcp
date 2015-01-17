@@ -97,19 +97,11 @@
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.9.0.v20140827-1444"/>
-<repository location="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.0.0.v20140827-1444"/>
-<repository location="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.0.0.v20140827-1444"/>
-<repository location="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.0.0.v20140827-1444"/>
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.9.1.v20140827-1444"/>
+<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.0.0.v20140827-1444"/>
+<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.0.0.v20140827-1444"/>
+
 <repository location="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
 </location>
 </locations>
