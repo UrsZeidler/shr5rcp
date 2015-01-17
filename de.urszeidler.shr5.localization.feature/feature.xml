@@ -19,18 +19,10 @@ Containts the fragments of the bable project.
    </license>
 
    <requires>
-      <import plugin="org.eclipse.emf.ecp.application.e3"/>
       <import plugin="org.eclipse.e4.ui.widgets"/>
       <import plugin="org.eclipse.e4.ui.workbench"/>
-      <import plugin="org.eclipse.emf.common"/>
-      <import plugin="org.eclipse.emf.databinding.edit"/>
-      <import plugin="org.eclipse.emf.databinding"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.emf.ecp.core"/>
       <import plugin="org.eclipse.emf.ecp.ui.e3"/>
       <import plugin="org.eclipse.emf.ecp.ui"/>
-      <import plugin="org.eclipse.emf.ecp.validation"/>
-      <import plugin="org.eclipse.emf.ecp.workspace.core"/>
       <import plugin="org.eclipse.ui.workbench"/>
       <import plugin="org.eclipse.ui.views"/>
       <import plugin="org.eclipse.e4.core.commands"/>
@@ -55,12 +47,6 @@ Containts the fragments of the bable project.
       <import plugin="org.eclipse.core.databinding.property"/>
       <import plugin="org.eclipse.core.net"/>
       <import plugin="org.eclipse.core.variables"/>
-      <import plugin="org.eclipse.emf.common.ui"/>
-      <import plugin="org.eclipse.emf.ecore.change"/>
-      <import plugin="org.eclipse.emf.ecore.edit"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.equinox.p2.core"/>
       <import plugin="org.eclipse.equinox.p2.engine"/>
       <import plugin="org.eclipse.equinox.p2.metadata"/>
@@ -93,16 +79,10 @@ Containts the fragments of the bable project.
       <import plugin="org.eclipse.equinox.p2.ui.sdk"/>
       <import plugin="org.eclipse.ui.intro"/>
       <import plugin="org.eclipse.ui.browser"/>
+      <import plugin="org.eclipse.swt" version="3.7.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.ui" version="1.4.0" match="compatible"/>
    </requires>
-<!--
-   <plugin
-         id="org.eclipse.emf.ecp.application.e3.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
--->
+
    <plugin
          id="org.eclipse.e4.ui.widgets.nl_de"
          download-size="0"
@@ -118,47 +98,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-<!--
-   <plugin
-         id="org.eclipse.emf.common.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
 
-   <plugin
-         id="org.eclipse.emf.databinding.edit.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.databinding.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecore.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecp.core.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
--->
    <plugin
          id="org.eclipse.emf.ecp.ui.e3.nl_de"
          download-size="0"
@@ -174,23 +114,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-<!--
-   <plugin
-         id="org.eclipse.emf.ecp.validation.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
 
-   <plugin
-         id="org.eclipse.emf.ecp.workspace.core.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
--->
    <plugin
          id="org.eclipse.ui.workbench.nl_de"
          download-size="0"
@@ -382,55 +306,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-<!--
-   <plugin
-         id="org.eclipse.emf.common.ui.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
 
-   <plugin
-         id="org.eclipse.emf.ecore.change.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecore.edit.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecore.xmi.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.edit.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.edit.ui.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
--->
    <plugin
          id="org.eclipse.equinox.p2.core.nl_de"
          download-size="0"
