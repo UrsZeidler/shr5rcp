@@ -94,7 +94,7 @@ Containts the fragments of the bable project.
       <import plugin="org.eclipse.ui.intro"/>
       <import plugin="org.eclipse.ui.browser"/>
    </requires>
-
+<!--
    <plugin
          id="org.eclipse.emf.ecp.application.e3.nl_de"
          download-size="0"
@@ -102,7 +102,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.e4.ui.widgets.nl_de"
          download-size="0"
@@ -118,7 +118,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+<!--
    <plugin
          id="org.eclipse.emf.common.nl_de"
          download-size="0"
@@ -158,7 +158,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.emf.ecp.ui.e3.nl_de"
          download-size="0"
@@ -174,7 +174,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+<!--
    <plugin
          id="org.eclipse.emf.ecp.validation.nl_de"
          download-size="0"
@@ -190,7 +190,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.ui.workbench.nl_de"
          download-size="0"
@@ -382,7 +382,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+<!--
    <plugin
          id="org.eclipse.emf.common.ui.nl_de"
          download-size="0"
@@ -430,7 +430,7 @@ Containts the fragments of the bable project.
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.equinox.p2.core.nl_de"
          download-size="0"
