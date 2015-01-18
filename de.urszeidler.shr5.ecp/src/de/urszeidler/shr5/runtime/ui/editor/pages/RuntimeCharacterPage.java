@@ -60,8 +60,10 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.actions.OpenCharacterByRuntimeEditorAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
+import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
 
 /**
  * @author urs
@@ -79,6 +81,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private AdapterFactoryContentProvider actionListContentProvider;
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryItemDelegator itemDelegator;
+    private StateMonitorWidget stateMonitorWidgetUsedEdge;
 //    private Text formText;
     /**
      * Create the form page.
@@ -165,40 +168,55 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().paintBordersFor(composite_3);
 
         Composite monitor = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        monitor.setLayout(new GridLayout(4, false));
+        monitor.setLayout(new GridLayout(5, false));
         monitor.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         managedForm.getToolkit().adapt(monitor);
         managedForm.getToolkit().paintBordersFor(monitor);
 
         Group grpPhysical = new Group(monitor, SWT.NONE);
         grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpPhysical.setText("Physical");
+        grpPhysical.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE));
         managedForm.getToolkit().adapt(grpPhysical);
         managedForm.getToolkit().paintBordersFor(grpPhysical);
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
 
         stateMonitorWidgetPhysical = new StateMonitorWidget(grpPhysical, SWT.NONE);
+        stateMonitorWidgetPhysical.setType(MonitorType.physical);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetPhysical);
 
         Group grpMental = new Group(monitor, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpMental.setText("Mental");
+        grpMental.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE));
         managedForm.getToolkit().adapt(grpMental);
         managedForm.getToolkit().paintBordersFor(grpMental);
 
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
+        stateMonitorWidgetMental.setType(MonitorType.mental);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetMental);
         
         
         Group grpOverDead = new Group(monitor, SWT.NONE);
         grpOverDead.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpOverDead.setText("Overdead");
+        grpOverDead.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD));
         managedForm.getToolkit().adapt(grpOverDead);
         managedForm.getToolkit().paintBordersFor(grpOverDead);
 
         stateMonitorWidgetOverDead = new StateMonitorWidget(grpOverDead, SWT.NONE,3,false);
+        stateMonitorWidgetOverDead.setType(MonitorType.overflow);
+        managedForm.getToolkit().paintBordersFor(stateMonitorWidgetOverDead);
+
+        Group grpUsedEdge = new Group(monitor, SWT.NONE);
+        grpUsedEdge.setLayout(new FillLayout(SWT.HORIZONTAL));
+        grpUsedEdge.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpUsedEdge.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE));
+        managedForm.getToolkit().adapt(grpUsedEdge);
+        managedForm.getToolkit().paintBordersFor(grpUsedEdge);
+
+        stateMonitorWidgetUsedEdge = new StateMonitorWidget(grpUsedEdge, SWT.NONE,3,false);
+        stateMonitorWidgetUsedEdge.setType(MonitorType.edge);
+        managedForm.getToolkit().paintBordersFor(stateMonitorWidgetUsedEdge);
 
         if (object != null && object.getCharacter() != null && object.getCharacter().getPersona() != null) {
             AbstraktPersona persona2 = object.getCharacter().getPersona();
@@ -206,6 +224,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             stateMonitorWidgetMental.setMaxConditions(koerperPersona.getZustandGeistigMax());
             stateMonitorWidgetPhysical.setMaxConditions(koerperPersona.getZustandKoerperlichMax());
             stateMonitorWidgetOverDead.setMaxConditions(koerperPersona.getZustandGrenze());
+            stateMonitorWidgetUsedEdge.setMaxConditions(koerperPersona.getEdge());
         }
         
         Group grpState = new Group(monitor, SWT.NONE);
@@ -333,7 +352,13 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetOverDead);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
                     RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD);
-            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+            bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
+        }
+        if (stateMonitorWidgetUsedEdge != null) {
+            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetUsedEdge);
+            IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
+                    RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE);
+            bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
 
         return bindingContext;

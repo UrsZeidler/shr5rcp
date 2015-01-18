@@ -32,7 +32,12 @@ public class StateMonitorWidget extends Composite implements IPropertyListener {
     private int column = 3;
     private boolean showLable = true;
     private int damage;
+    private MonitorType type;
 
+    public enum MonitorType{
+        physical,mental,overflow,edge
+    }
+    
     /**
      * Create the composite.
      * 
@@ -103,6 +108,7 @@ public class StateMonitorWidget extends Composite implements IPropertyListener {
             GridData gridData = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             stateWidget.setLayoutData(gridData);
             stateWidget.setChangeListener(this);
+            stateWidget.setType(type);
             stateMonitors.add(stateWidget);
             if (showLable)
                 if (i % column == 0) {
@@ -152,6 +158,10 @@ public class StateMonitorWidget extends Composite implements IPropertyListener {
 
     public int getDamage() {
         return damage;
+    }
+
+    public void setType(MonitorType type) {
+        this.type = type;
     }
 
 }

@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
 import de.urszeidler.eclipse.shr5.runtime.GruntRuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
 
 /**
  * 
@@ -145,6 +146,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.adapt(grpPhysical);
         toolkit.paintBordersFor(grpPhysical);
         stateMonitorWidgetPhysical = new StateMonitorWidget(grpPhysical, SWT.NONE);
+        stateMonitorWidgetPhysical.setType(MonitorType.physical);
         
         grpMental = new Group(composite_state, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -153,6 +155,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.adapt(grpMental);
         toolkit.paintBordersFor(grpMental);
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
+        stateMonitorWidgetMental.setType(MonitorType.mental);
         
         grpExra = new Group(composite_state, SWT.NONE);
         grpExra.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -161,6 +164,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         toolkit.adapt(grpExra);
         toolkit.paintBordersFor(grpExra);
         stateMonitorOverdead = new StateMonitorWidget(grpExra, SWT.NONE,3,false);
+        stateMonitorOverdead.setType(MonitorType.overflow);
     }
 
     /**
@@ -311,24 +315,27 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         IObservableValue observeTextLabel_nameObserveWidget_1 = WidgetProperties.text().observe(lblName);
         IObservableValue characterNameObserveValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), persona,
                 Shr5Package.Literals.BESCHREIBBAR__NAME);
-        bindingContext.bindValue(observeTextLabel_nameObserveWidget_1, characterNameObserveValue, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        bindingContext.bindValue(observeTextLabel_nameObserveWidget_1, characterNameObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         //
         if(stateMonitorWidgetMental!=null){
         ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
         IObservableValue observeValue1 = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
                 RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
-        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        bindingContext.bindValue(observe, observeValue1,new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
 
         }
         if(stateMonitorWidgetPhysical!=null){
         ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
         IObservableValue observeValue1 = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
                 RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
-        bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
 
+        }
+        if(stateMonitorOverdead!=null){
+        ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorOverdead);
+        IObservableValue observeValue1 = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), character,
+                RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD);
+        bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
        
         

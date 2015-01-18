@@ -12,8 +12,9 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IPropertyListener;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.internal.preferences.PropertyListenerList;
 import org.eclipse.wb.swt.ResourceManager;
+
+import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
 
 /*
  * (c) urs zeidler
@@ -26,7 +27,9 @@ public class SingleStateWidget extends Composite implements MouseListener {
     private Label statelabel = null;
     private boolean markt = false;
     private int size = 12;
-    private int spacing = size/10;    
+    private int spacing = size/10;
+
+    private MonitorType type= MonitorType.physical;    
     
     public SingleStateWidget(Composite parent, int style) {
         super(parent, style);     
@@ -88,13 +91,12 @@ public class SingleStateWidget extends Composite implements MouseListener {
      * @param markt the markt to set
      */
     public void setMarkt(boolean markt) {
+        String name = type.toString();
         if(markt){
-            //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_RED));
-            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-1.png"));
+            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-"+name+"-1.png"));
         }
         else{
-            //Statelabel.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
+            statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-"+name+"-2.png"));
         }            
         this.markt = markt;
     }
@@ -115,6 +117,10 @@ public class SingleStateWidget extends Composite implements MouseListener {
 
     public void setChangeListener(IPropertyListener changeListener) {
         this.changeListener = changeListener;
+    }
+
+    public void setType(MonitorType type) {
+        this.type =type;        
     }
 
 }

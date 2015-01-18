@@ -41,6 +41,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
 
 /**
  * @author urs
@@ -112,10 +113,13 @@ public class RuntimeCharacterTooltip extends ToolTip {
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
 
         stateMonitorWidgetPhysical = new StateMonitorWidget(grpPhysical, SWT.NONE);
+        stateMonitorWidgetPhysical.setType(MonitorType.physical);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
+        stateMonitorWidgetMental.setType(MonitorType.mental);
         grpRest.setLayout(new FillLayout(SWT.HORIZONTAL));
         stateMonitorWidgetOverDead = new StateMonitorWidget(grpRest, SWT.NONE, 3, false);
+        stateMonitorWidgetOverDead.setType(MonitorType.overflow);
 
         Group grpExtendedData = new Group(comp, SWT.NONE);
         grpExtendedData.setLayout(new FillLayout(SWT.HORIZONTAL));
