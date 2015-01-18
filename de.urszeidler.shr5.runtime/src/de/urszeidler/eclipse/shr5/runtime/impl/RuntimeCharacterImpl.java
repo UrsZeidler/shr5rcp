@@ -261,11 +261,12 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
             return;
         KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
         
-        if(mentalDamage>persona.getZustandGeistigMax()){
+        if(mentalDamage>=persona.getZustandGeistigMax()){
             int diff1 = mentalDamage- persona.getZustandGeistigMax();
             mentalDamage=persona.getZustandGeistigMax();
-            setPhysicalDamage(physicalDamage +diff1);
             setZustand(Zustand.BETAEUBT);
+            if(diff1>0)
+                setPhysicalDamage(physicalDamage +diff1);
         }
             
         if (eNotificationRequired())
