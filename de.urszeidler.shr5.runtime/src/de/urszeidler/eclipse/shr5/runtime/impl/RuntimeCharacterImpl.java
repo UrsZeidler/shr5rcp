@@ -8,6 +8,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -234,6 +235,8 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
         
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__PHYSICAL_DAMAGE, oldPhysicalDamage, physicalDamage));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__OVER_DEAD, oldPhysicalDamage, physicalDamage));
     }
 
     /**
@@ -269,6 +272,15 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
             eNotify(new ENotificationImpl(this, Notification.SET, RuntimePackage.RUNTIME_CHARACTER__MENTAL_DAMAGE, oldMentalDamage, mentalDamage));
     }
 
+    public void eSet(EStructuralFeature eFeature, Object newValue) {
+        if(RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD.equals(eFeature)){
+            KoerperPersona persona = (KoerperPersona)getCharacter().getPersona();
+            int zustandKoerperlichMax = persona.getZustandKoerperlichMax();
+            setPhysicalDamage(zustandKoerperlichMax+(Integer)newValue);
+        }
+        super.eSet(eFeature, newValue);
+    }
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
