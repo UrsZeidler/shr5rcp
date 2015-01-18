@@ -3,6 +3,7 @@ package de.urszeidler.shr5.runtime.ui.widgets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -11,7 +12,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.IPropertyListener;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 /**
@@ -19,7 +22,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
  * 
  * @author urs
  */
-public class StateMonitorWidget extends Composite {
+public class StateMonitorWidget extends Composite implements IPropertyListener {
 
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
     private int maxConditions;
@@ -28,6 +31,7 @@ public class StateMonitorWidget extends Composite {
     private int style;
     private int column = 3;
     private boolean showLable = true;
+    private int damage;
 
     /**
      * Create the composite.
@@ -98,6 +102,7 @@ public class StateMonitorWidget extends Composite {
             SingleStateWidget stateWidget = new SingleStateWidget(composite_state, style);
             GridData gridData = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             stateWidget.setLayoutData(gridData);
+            stateWidget.setChangeListener(this);
             stateMonitors.add(stateWidget);
             if (showLable)
                 if (i % column == 0) {
@@ -111,6 +116,7 @@ public class StateMonitorWidget extends Composite {
         for (int i = 0; i < stateMonitors.size(); i++) {
             SingleStateWidget singleStateWidget = stateMonitors.get(i);
             singleStateWidget.setMarkt(i < damage);
+            this.damage = damage;
         }
     }
 
@@ -123,6 +129,29 @@ public class StateMonitorWidget extends Composite {
         this.maxConditions = maxConditions;
         init();
         this.layout(true, true);
+    }
+
+    @Override
+    public void propertyChanged(Object source, int propId) {
+        if (source instanceof SingleStateWidget) {
+            SingleStateWidget ssw = (SingleStateWidget)source;
+            int indexOf = stateMonitors.indexOf(source) + 1;
+            if (ssw.isMarkt()) {
+                if (indexOf == damage)
+                    setDamage(0);
+                else
+                    setDamage(indexOf);
+            } else
+                setDamage(indexOf);
+            Event event = new Event();
+            event.widget = this;
+            notifyListeners(SWT.CHANGED, event);
+        }
+
+    }
+
+    public int getDamage() {
+        return damage;
     }
 
 }

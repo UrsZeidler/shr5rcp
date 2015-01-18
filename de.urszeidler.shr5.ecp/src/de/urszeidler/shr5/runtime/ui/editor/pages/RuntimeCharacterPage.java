@@ -321,13 +321,13 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
                     RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
-            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+            bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
         if (stateMonitorWidgetPhysical != null) {
             ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), object,
                     RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
-            bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+            bindingContext.bindValue(observe, observeValue1, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
         if (stateMonitorWidgetOverDead != null) {
             ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetOverDead);

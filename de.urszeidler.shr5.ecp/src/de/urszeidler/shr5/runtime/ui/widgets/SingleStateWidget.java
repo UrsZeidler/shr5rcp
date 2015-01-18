@@ -3,21 +3,26 @@ package de.urszeidler.shr5.runtime.ui.widgets;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.IPropertyListener;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.internal.preferences.PropertyListenerList;
 import org.eclipse.wb.swt.ResourceManager;
 
 /*
  * (c) urs zeidler
  */
 
-public class SingleStateWidget extends Composite {
+public class SingleStateWidget extends Composite implements MouseListener {
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
     
+    private IPropertyListener changeListener;
     private Label statelabel = null;
     private boolean markt = false;
     private int size = 12;
@@ -65,6 +70,7 @@ public class SingleStateWidget extends Composite {
         statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
         //Statelabel.setText("");
         statelabel.setLayoutData(gridData);
+        statelabel.addMouseListener(this);
         
         
         this.setLayout(gridLayout);
@@ -91,6 +97,24 @@ public class SingleStateWidget extends Composite {
             statelabel.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/damage-2.png"));
         }            
         this.markt = markt;
+    }
+
+    @Override
+    public void mouseDoubleClick(MouseEvent e) {
+        if(changeListener!=null)
+            changeListener.propertyChanged(this, 1);
+    }
+
+    @Override
+    public void mouseDown(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseUp(MouseEvent e) {
+    }
+
+    public void setChangeListener(IPropertyListener changeListener) {
+        this.changeListener = changeListener;
     }
 
 }

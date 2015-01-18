@@ -4,6 +4,7 @@
 package de.urszeidler.shr5.runtime.ui.widgets;
 
 import org.eclipse.jface.databinding.swt.WidgetValueProperty;
+import org.eclipse.swt.SWT;
 
 /**
  * A property for the damage state.
@@ -13,12 +14,14 @@ import org.eclipse.jface.databinding.swt.WidgetValueProperty;
 public class DamageStateValueProperty extends WidgetValueProperty {
 
     public DamageStateValueProperty() {
-        super();
+        super(SWT.CHANGED);
     }
 
     @Override
     protected Object doGetValue(Object source) {
-        return 0;
+        if (source == null)
+            return 0;
+        return ((StateMonitorWidget)source).getDamage();
     }
 
     @Override
