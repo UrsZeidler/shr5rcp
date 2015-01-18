@@ -73,7 +73,7 @@ public class DefaultEmfFormsPage extends FormPage {
     protected void createFormContent(IManagedForm managedForm) {
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
-        form.setText("default model page");
+        form.setText("default model page, a simple reflective form allowing generic edit");
         Composite body = form.getBody();
         body.setLayout(new GridLayout());
         toolkit.decorateFormHeading(form.getForm());
