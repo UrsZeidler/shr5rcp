@@ -11,7 +11,7 @@
 <booleanAttribute key="clearConfig" value="false"/>
 <booleanAttribute key="clearws" value="true"/>
 <booleanAttribute key="clearwslog" value="false"/>
-<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/emf-client -plugins test httpserver"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/emf-client -plugins test httpserver de"/>
 <booleanAttribute key="default" value="false"/>
 <stringAttribute key="deselected_workspace_plugins" value="de.urszeidler.shr5.gameplay.model.tests,de.urszeidler.shr5.management.model.tests,de.urszeidler.shr5.model.tests,de.urszeidler.shr5.runtime.tests"/>
 <stringAttribute key="featureDefaultLocation" value="workspace"/>
@@ -20,7 +20,7 @@
 <stringAttribute key="location" value="${workspace_loc}/../runtime-emf-client"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl en  -consoleLog"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl de  -consoleLog"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.browser.XULRunnerPath=/home/urs/programme/xulrunner&#10;-Dorg.eclipse.swt.browser.DefaultType=mozilla&#10;-Dorg.eclipse.equinox.http.jetty.autostart=false"/>
 <stringAttribute key="pde.version" value="3.3"/>
