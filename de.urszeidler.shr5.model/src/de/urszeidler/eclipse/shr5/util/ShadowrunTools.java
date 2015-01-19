@@ -724,12 +724,16 @@ public class ShadowrunTools {
             return null;
 
         Matcher matcher = damagePattern.matcher(damage.trim());
+        SchadensTyp st = SchadensTyp.KOERPERLICH;
         if (matcher.matches()) {
             String p = matcher.group(1);
             String t = matcher.group(2);
 
+            if ("M".equalsIgnoreCase(t))
+                st = SchadensTyp.GEISTIG;
+
             try {
-                return new DamageCode(Integer.parseInt(p), SchadensTyp.KOERPERLICH);
+                return new DamageCode(Integer.parseInt(p), st);
             } catch (Exception e) {
             }
         } else {
@@ -738,8 +742,11 @@ public class ShadowrunTools {
                 String a = matcher.group(1);
                 String p = matcher.group(2);
                 String t = matcher.group(3);
+                if ("M".equalsIgnoreCase(t))
+                    st = SchadensTyp.GEISTIG;
+
                 try {
-                    return new DamageCode(Integer.parseInt(p), SchadensTyp.KOERPERLICH, a);
+                    return new DamageCode(Integer.parseInt(p), st, a);
                 } catch (Exception e) {
                 }
             }
@@ -963,6 +970,7 @@ public class ShadowrunTools {
             }
         };
     }
+
     /**
      * Create a allowed Sorces predicate to match a {@link Quelle}, in the allowedSources.
      * 
@@ -993,6 +1001,6 @@ public class ShadowrunTools {
             public boolean apply(EClass input) {
                 return input.getEAllSuperTypes().contains(eClass);
             }
-        };        
+        };
     }
 }

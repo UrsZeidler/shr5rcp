@@ -11,11 +11,37 @@ import org.junit.Assert;
 
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools.DamageCode;
 
 public class ShadowrunToolsTest extends TestCase {
 
+    public void testParseDamagecode() {
+        DamageCode damageCode = ShadowrunTools.parseDamageCode("9P");
+        
+        assertEquals(damageCode.getPower(),9);
+        assertEquals(damageCode.getType(),SchadensTyp.KOERPERLICH);
+        
+        damageCode = ShadowrunTools.parseDamageCode("9M");
+        
+        assertEquals(damageCode.getPower(),9);
+        assertEquals(damageCode.getType(),SchadensTyp.GEISTIG);
+    }
+    
+    public void testParseDamagecode_1() {
+        DamageCode damageCode = ShadowrunTools.parseDamageCode("(STR+1)P");
+        
+        assertEquals(damageCode.getPower(),1);
+        assertEquals(damageCode.getType(),SchadensTyp.KOERPERLICH);
+        
+        damageCode = ShadowrunTools.parseDamageCode("(STR+1)M");
+        
+        assertEquals(damageCode.getPower(),1);
+        assertEquals(damageCode.getType(),SchadensTyp.GEISTIG);
+    }
+    
     public void testFilterSkillGroups() {
         ArrayList<FertigkeitsGruppe> arrayList = new ArrayList<FertigkeitsGruppe>();
         

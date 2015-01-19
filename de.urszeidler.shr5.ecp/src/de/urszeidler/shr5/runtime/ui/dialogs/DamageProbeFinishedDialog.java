@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
+import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
 
 public class DamageProbeFinishedDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -133,6 +134,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         xpndblcmpstPhysical.setExpanded(true);
 
         stateMonitorWidgetPhysical = new StateMonitorWidget(xpndblcmpstPhysical, SWT.NONE);
+        stateMonitorWidgetPhysical.setType(MonitorType.physical);
 
         xpndblcmpstPhysical.setClient(stateMonitorWidgetPhysical);
 
@@ -142,6 +144,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         xpndblcmpstMental.setExpanded(true);
 
         stateMonitorWidgetMental = new StateMonitorWidget(xpndblcmpstMental, SWT.NONE);
+        stateMonitorWidgetMental.setType(MonitorType.mental);
         xpndblcmpstMental.setClient(stateMonitorWidgetMental);
 
         ExpandableComposite xpndblcmpstOverdead = formToolkit.createExpandableComposite(composite, ExpandableComposite.TWISTIE);
@@ -151,6 +154,7 @@ public class DamageProbeFinishedDialog extends TitleAreaDialog {
         xpndblcmpstOverdead.setExpanded(true);
 
         stateMonitorWidgetOverDead = new StateMonitorWidget(xpndblcmpstOverdead, SWT.NONE);
+        stateMonitorWidgetOverDead.setType(MonitorType.overflow);
         xpndblcmpstOverdead.setClient(stateMonitorWidgetOverDead);
         
         composite_state = formToolkit.createComposite(composite, SWT.NONE);
