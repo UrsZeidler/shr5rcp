@@ -969,13 +969,15 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 
 	/**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public void setLogikBasis(int newLogikBasis) {
         int oldLogikBasis = logikBasis;
         logikBasis = newLogikBasis;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_PERSONA__LOGIK_BASIS, oldLogikBasis, logikBasis));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.Literals.CHRAKTER_LIMITS__GEISTIG, 0, 1));   
+        }
     }
 
 	/**
