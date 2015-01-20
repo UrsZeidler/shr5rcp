@@ -58,6 +58,15 @@ public interface ScriptingFactory extends EFactory {
     Scripts createScripts();
 
     /**
+     * Returns a new object of class '<em>Handout</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Handout</em>'.
+     * @generated
+     */
+    Handout createHandout();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

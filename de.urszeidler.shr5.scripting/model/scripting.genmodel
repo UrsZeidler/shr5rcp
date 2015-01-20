@@ -16,6 +16,11 @@
       <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/astralSpace"/>
       <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//PlacementOptions/socialInteraction"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scripting.ecore#//HandoutType">
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//HandoutType/webpage"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//HandoutType/image"/>
+      <genEnumLiterals ecoreEnumLiteral="scripting.ecore#//HandoutType/document"/>
+    </genEnums>
     <genClasses ecoreClass="scripting.ecore#//Script">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/placements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Script/allTeams"/>
@@ -37,6 +42,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/enviorment"/>
       <genFeatures createChild="false" propertyDescription="The options for this placement, they define the available actions for the placement."
           ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/handouts"/>
     </genClasses>
     <genClasses image="false" ecoreClass="scripting.ecore#//TimeFrame">
       <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/startDate"/>
@@ -54,6 +60,10 @@
     <genClasses ecoreClass="scripting.ecore#//Scripts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Scripts/stories"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Scripts/name"/>
+    </genClasses>
+    <genClasses ecoreClass="scripting.ecore#//Handout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Handout/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Handout/url"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

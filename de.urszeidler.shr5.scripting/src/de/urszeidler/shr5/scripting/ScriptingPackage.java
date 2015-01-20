@@ -305,13 +305,22 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__OPTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
+     * The feature id for the '<em><b>Handouts</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__HANDOUTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 11;
+
+    /**
      * The number of structural features of the '<em>Placement</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 11;
+    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 12;
 
     /**
      * The number of operations of the '<em>Placement</em>' class.
@@ -492,6 +501,52 @@ public interface ScriptingPackage extends EPackage {
 
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.HandoutImpl <em>Handout</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.HandoutImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getHandout()
+     * @generated
+     */
+    int HANDOUT = 5;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT__TYPE = 0;
+
+    /**
+     * The feature id for the '<em><b>Url</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT__URL = 1;
+
+    /**
+     * The number of structural features of the '<em>Handout</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Handout</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -499,7 +554,18 @@ public interface ScriptingPackage extends EPackage {
      * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacementOptions()
      * @generated
      */
-    int PLACEMENT_OPTIONS = 5;
+    int PLACEMENT_OPTIONS = 6;
+
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.HandoutType <em>Handout Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.HandoutType
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getHandoutType()
+     * @generated
+     */
+    int HANDOUT_TYPE = 7;
 
 
     /**
@@ -677,6 +743,17 @@ public interface ScriptingPackage extends EPackage {
     EAttribute getPlacement_Options();
 
     /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.shr5.scripting.Placement#getHandouts <em>Handouts</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Handouts</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getHandouts()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_Handouts();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -806,6 +883,38 @@ public interface ScriptingPackage extends EPackage {
     EAttribute getScripts_Name();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Handout <em>Handout</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Handout</em>'.
+     * @see de.urszeidler.shr5.scripting.Handout
+     * @generated
+     */
+    EClass getHandout();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Handout#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see de.urszeidler.shr5.scripting.Handout#getType()
+     * @see #getHandout()
+     * @generated
+     */
+    EAttribute getHandout_Type();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Handout#getUrl <em>Url</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Url</em>'.
+     * @see de.urszeidler.shr5.scripting.Handout#getUrl()
+     * @see #getHandout()
+     * @generated
+     */
+    EAttribute getHandout_Url();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -814,6 +923,16 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      */
     EEnum getPlacementOptions();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.shr5.scripting.HandoutType <em>Handout Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Handout Type</em>'.
+     * @see de.urszeidler.shr5.scripting.HandoutType
+     * @generated
+     */
+    EEnum getHandoutType();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -971,6 +1090,14 @@ public interface ScriptingPackage extends EPackage {
         EAttribute PLACEMENT__OPTIONS = eINSTANCE.getPlacement_Options();
 
         /**
+         * The meta object literal for the '<em><b>Handouts</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__HANDOUTS = eINSTANCE.getPlacement_Handouts();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1073,6 +1200,32 @@ public interface ScriptingPackage extends EPackage {
         EAttribute SCRIPTS__NAME = eINSTANCE.getScripts_Name();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.HandoutImpl <em>Handout</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.HandoutImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getHandout()
+         * @generated
+         */
+        EClass HANDOUT = eINSTANCE.getHandout();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HANDOUT__TYPE = eINSTANCE.getHandout_Type();
+
+        /**
+         * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HANDOUT__URL = eINSTANCE.getHandout_Url();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1081,6 +1234,16 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EEnum PLACEMENT_OPTIONS = eINSTANCE.getPlacementOptions();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.HandoutType <em>Handout Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.HandoutType
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getHandoutType()
+         * @generated
+         */
+        EEnum HANDOUT_TYPE = eINSTANCE.getHandoutType();
 
     }
 

@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.shr5.scripting.*;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
@@ -89,6 +90,10 @@ public class ScriptingAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseScripts(Scripts object) {
                 return createScriptsAdapter();
+            }
+            @Override
+            public Adapter caseHandout(Handout object) {
+                return createHandoutAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -181,6 +186,20 @@ public class ScriptingAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createScriptsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.shr5.scripting.Handout <em>Handout</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.shr5.scripting.Handout
+     * @generated
+     */
+    public Adapter createHandoutAdapter() {
         return null;
     }
 

@@ -163,6 +163,29 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.shr5.scripting.Handout} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected HandoutItemProvider handoutItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.shr5.scripting.Handout}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createHandoutAdapter() {
+        if (handoutItemProvider == null) {
+            handoutItemProvider = new HandoutItemProvider(this);
+        }
+
+        return handoutItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -265,6 +288,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
         if (placementItemProvider != null) placementItemProvider.dispose();
         if (scriptHistoryItemProvider != null) scriptHistoryItemProvider.dispose();
         if (scriptsItemProvider != null) scriptsItemProvider.dispose();
+        if (handoutItemProvider != null) handoutItemProvider.dispose();
     }
 
 }

@@ -130,7 +130,7 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         managedForm.getToolkit().paintBordersFor(dateTime);
         
         Composite composite_5 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
-        composite_5.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL, 3, 1));
+        composite_5.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL, 4, 1));
         composite_5.setBounds(0, 0, 64, 64);
         managedForm.getToolkit().paintBordersFor(composite_5);
         composite_5.setLayout(new GridLayout(1, false));
@@ -140,6 +140,12 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         dateTime_1 = new CDateTime(composite_1, CDT.CLOCK_24_HOUR | CDT.DROP_DOWN | CDT.DATE_SHORT | CDT.TIME_SHORT);
         managedForm.getToolkit().adapt(dateTime_1);
         managedForm.getToolkit().paintBordersFor(dateTime_1);
+        
+        Composite composite_7 = new Composite(composite_1, SWT.NONE);
+        composite_7.setLayout(new GridLayout(3, false));
+        composite_7.setLayoutData(new TableWrapData(TableWrapData.LEFT, TableWrapData.TOP, 1, 2));
+        managedForm.getToolkit().adapt(composite_7);
+        managedForm.getToolkit().paintBordersFor(composite_7);
         new Label(composite_1, SWT.NONE);
         new Label(composite_1, SWT.NONE);
 
@@ -234,9 +240,13 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__OPTIONS, composite_5);
+        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+        controlGridData.heightHint = 120;
+
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__OPTIONS, composite_7,controlGridData);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, composite_5);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__TEAMS, composite_5);
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__HANDOUTS, composite_5);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

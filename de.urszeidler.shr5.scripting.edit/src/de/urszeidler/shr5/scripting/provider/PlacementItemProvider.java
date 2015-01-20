@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 /**
@@ -362,6 +363,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(ScriptingPackage.Literals.PLACEMENT__ENVIORMENT);
+            childrenFeatures.add(ScriptingPackage.Literals.PLACEMENT__HANDOUTS);
         }
         return childrenFeatures;
     }
@@ -437,6 +439,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
+            case ScriptingPackage.PLACEMENT__HANDOUTS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -458,6 +461,11 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
             (createChildParameter
                 (ScriptingPackage.Literals.PLACEMENT__ENVIORMENT,
                  RuntimeFactory.eINSTANCE.createEnviorment()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (ScriptingPackage.Literals.PLACEMENT__HANDOUTS,
+                 ScriptingFactory.eINSTANCE.createHandout()));
     }
 
     /**

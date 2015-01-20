@@ -65,6 +65,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
             case ScriptingPackage.PLACEMENT: return createPlacement();
             case ScriptingPackage.SCRIPT_HISTORY: return createScriptHistory();
             case ScriptingPackage.SCRIPTS: return createScripts();
+            case ScriptingPackage.HANDOUT: return createHandout();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -80,6 +81,8 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
         switch (eDataType.getClassifierID()) {
             case ScriptingPackage.PLACEMENT_OPTIONS:
                 return createPlacementOptionsFromString(eDataType, initialValue);
+            case ScriptingPackage.HANDOUT_TYPE:
+                return createHandoutTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -95,6 +98,8 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
         switch (eDataType.getClassifierID()) {
             case ScriptingPackage.PLACEMENT_OPTIONS:
                 return convertPlacementOptionsToString(eDataType, instanceValue);
+            case ScriptingPackage.HANDOUT_TYPE:
+                return convertHandoutTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -145,6 +150,16 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    public Handout createHandout() {
+        HandoutImpl handout = new HandoutImpl();
+        return handout;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public PlacementOptions createPlacementOptionsFromString(EDataType eDataType, String initialValue) {
         PlacementOptions result = PlacementOptions.get(initialValue);
         if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -157,6 +172,26 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * @generated
      */
     public String convertPlacementOptionsToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public HandoutType createHandoutTypeFromString(EDataType eDataType, String initialValue) {
+        HandoutType result = HandoutType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertHandoutTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

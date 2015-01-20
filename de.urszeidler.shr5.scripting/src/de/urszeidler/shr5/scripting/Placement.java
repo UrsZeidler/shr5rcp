@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getDebugging <em>Debugging</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getEnviorment <em>Enviorment</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getOptions <em>Options</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.Placement#getHandouts <em>Handouts</em>}</li>
  * </ul>
  * </p>
  *
@@ -226,5 +227,20 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * @generated
      */
     EList<PlacementOptions> getOptions();
+
+    /**
+     * Returns the value of the '<em><b>Handouts</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.shr5.scripting.Handout}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A list of handouts in this scene.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Handouts</em>' containment reference list.
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Handouts()
+     * @model containment="true"
+     * @generated
+     */
+    EList<Handout> getHandouts();
 
 } // Placement

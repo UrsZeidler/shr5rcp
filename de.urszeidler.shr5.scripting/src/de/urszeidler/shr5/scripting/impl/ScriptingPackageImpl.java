@@ -13,6 +13,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.shr5.scripting.Handout;
+import de.urszeidler.shr5.scripting.HandoutType;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
@@ -69,7 +71,21 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass handoutEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EEnum placementOptionsEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum handoutTypeEEnum = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -284,6 +300,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getPlacement_Handouts() {
+        return (EReference)placementEClass.getEStructuralFeatures().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getTimeFrame() {
         return timeFrameEClass;
     }
@@ -392,8 +417,44 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getHandout() {
+        return handoutEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHandout_Type() {
+        return (EAttribute)handoutEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHandout_Url() {
+        return (EAttribute)handoutEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getPlacementOptions() {
         return placementOptionsEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getHandoutType() {
+        return handoutTypeEEnum;
     }
 
     /**
@@ -441,6 +502,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEAttribute(placementEClass, PLACEMENT__DEBUGGING);
         createEReference(placementEClass, PLACEMENT__ENVIORMENT);
         createEAttribute(placementEClass, PLACEMENT__OPTIONS);
+        createEReference(placementEClass, PLACEMENT__HANDOUTS);
 
         timeFrameEClass = createEClass(TIME_FRAME);
         createEAttribute(timeFrameEClass, TIME_FRAME__START_DATE);
@@ -457,8 +519,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(scriptsEClass, SCRIPTS__STORIES);
         createEAttribute(scriptsEClass, SCRIPTS__NAME);
 
+        handoutEClass = createEClass(HANDOUT);
+        createEAttribute(handoutEClass, HANDOUT__TYPE);
+        createEAttribute(handoutEClass, HANDOUT__URL);
+
         // Create enums
         placementOptionsEEnum = createEEnum(PLACEMENT_OPTIONS);
+        handoutTypeEEnum = createEEnum(HANDOUT_TYPE);
     }
 
     /**
@@ -517,6 +584,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEAttribute(getPlacement_Debugging(), ecorePackage.getEString(), "debugging", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Enviorment(), theRuntimePackage.getEnviorment(), null, "enviorment", null, 1, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getPlacement_Options(), this.getPlacementOptions(), "options", null, 0, 2, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPlacement_Handouts(), this.getHandout(), null, "handouts", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(timeFrameEClass, TimeFrame.class, "TimeFrame", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getTimeFrame_StartDate(), theShr5Package.getShrDate(), "startDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -533,6 +601,10 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getScripts_Stories(), this.getScript(), null, "stories", null, 0, -1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getScripts_Name(), ecorePackage.getEString(), "name", null, 1, 1, Scripts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        initEClass(handoutEClass, Handout.class, "Handout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getHandout_Type(), this.getHandoutType(), "type", null, 0, 1, Handout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getHandout_Url(), ecorePackage.getEString(), "url", null, 0, 1, Handout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(placementOptionsEEnum, PlacementOptions.class, "PlacementOptions");
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.COMBAT);
@@ -541,6 +613,11 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.MATRIX);
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.ASTRAL_SPACE);
         addEEnumLiteral(placementOptionsEEnum, PlacementOptions.SOCIAL_INTERACTION);
+
+        initEEnum(handoutTypeEEnum, HandoutType.class, "HandoutType");
+        addEEnumLiteral(handoutTypeEEnum, HandoutType.WEBPAGE);
+        addEEnumLiteral(handoutTypeEEnum, HandoutType.IMAGE);
+        addEEnumLiteral(handoutTypeEEnum, HandoutType.DOCUMENT);
 
         // Create resource
         createResource(eNS_URI);
