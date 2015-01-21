@@ -1,6 +1,11 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -84,6 +89,8 @@ import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
+import org.eclipse.ui.forms.events.HyperlinkAdapter;
+import org.eclipse.ui.forms.events.HyperlinkEvent;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
@@ -137,11 +144,15 @@ import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog;
 import de.urszeidler.shr5.runtime.ui.dialogs.ProbeDialog.ProbeExecutionState;
 import de.urszeidler.shr5.runtime.ui.dialogs.TimetrackingDialog;
+import de.urszeidler.shr5.scripting.Handout;
+import de.urszeidler.shr5.scripting.HandoutType;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+
+import org.eclipse.ui.forms.widgets.Hyperlink;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -358,6 +369,10 @@ public static  final void enableFor(final ColumnViewer viewer) {
 
     private IObservableList printedProtocol;
     private Table tree;
+
+    private Composite composite_16;
+
+    private Composite composite_handout;
 
     public RuntimeScriptView() {
 
@@ -634,7 +649,6 @@ public static  final void enableFor(final ColumnViewer viewer) {
             TableWrapLayout twl_composite_9 = new TableWrapLayout();
             twl_composite_9.topMargin = 0;
             twl_composite_9.makeColumnsEqualWidth = true;
-            twl_composite_9.numColumns = 1;
             composite_9.setLayout(twl_composite_9);
         }
         GridData gd_composite_9 = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
@@ -676,7 +690,7 @@ public static  final void enableFor(final ColumnViewer viewer) {
         Composite composite_5 = formToolkit.createComposite(sctnTimeTracking, SWT.NONE);
         formToolkit.paintBordersFor(composite_5);
         sctnTimeTracking.setClient(composite_5);
-        composite_5.setLayout(new GridLayout(2, false));
+        composite_5.setLayout(new GridLayout(1, false));
 
         dateTime = new CDateTime(composite_5, CDT.SPINNER | CDT.COMPACT | CDT.DATE_LONG);
         dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
@@ -739,7 +753,25 @@ public static  final void enableFor(final ColumnViewer viewer) {
         styledText_2.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
-
+        
+        Section sctnHandouts = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+        sctnHandouts.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
+        formToolkit.paintBordersFor(sctnHandouts);
+        sctnHandouts.setText(Messages.RuntimeScriptView_sctnHandouts_text);
+        sctnHandouts.setExpanded(true);
+        
+        composite_16 = formToolkit.createComposite(sctnHandouts, SWT.NONE);
+        formToolkit.adapt(composite_16);
+        formToolkit.paintBordersFor(composite_16);
+        sctnHandouts.setClient(composite_16);
+        composite_16.setLayout(new FillLayout(SWT.HORIZONTAL));
+        
+        composite_handout = new Composite(composite_16, SWT.NONE);
+        formToolkit.adapt(composite_handout);
+        formToolkit.paintBordersFor(composite_handout);
+        composite_handout.setLayout(new GridLayout(1, false));
+        
+ 
         Section sctnProtocol = formToolkit.createSection(composite, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
         TableWrapData twd_sctnProtocol = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 1, 1);
         twd_sctnProtocol.heightHint = 218;
@@ -806,6 +838,41 @@ public static  final void enableFor(final ColumnViewer viewer) {
         sctnDebugging.setExpanded(false);
         sctnInTheirFace.setExpanded(false);
         sctnTimeTracking.setEnabled(true);
+        
+         buildHandouts();
+    }
+
+    private void buildHandouts() {
+        composite_handout.dispose();
+
+        composite_handout = new Composite(composite_16, SWT.NONE);
+        formToolkit.adapt(composite_handout);
+        formToolkit.paintBordersFor(composite_handout);
+        composite_handout.setLayout(new GridLayout(1, false));
+        EList<Handout> handouts = placement1.getHandouts();
+        for (Handout handout : handouts) {
+//            final String url = handout.getUrl();
+//            final HandoutType type = handout.getType();
+//            Hyperlink hprlnkNewHyperlink = formToolkit.createHyperlink(composite_handout, handout.getName(), SWT.NONE);
+//            formToolkit.paintBordersFor(hprlnkNewHyperlink);
+//            hprlnkNewHyperlink.addHyperlinkListener(new HyperlinkAdapter() {
+//                @Override
+//                public void linkActivated(HyperlinkEvent e) {
+//                    try {
+//                        if (type == HandoutType.WEBPAGE)
+//                            Desktop.getDesktop().browse(new URI(url));
+//                        else {
+//                            File file = new File(url);
+//                            Desktop.getDesktop().open(file);
+//                        }
+//                    } catch (IOException e1) {
+//                        e1.printStackTrace();
+//                    } catch (URISyntaxException e1) {
+//                        e1.printStackTrace();
+//                    }
+//                }
+//            });
+        }
     }
 
     @Override

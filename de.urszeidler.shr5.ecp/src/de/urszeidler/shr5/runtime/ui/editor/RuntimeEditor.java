@@ -42,6 +42,8 @@ import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
+import de.urszeidler.shr5.ecp.editor.pages.VariousDescriptionPage;
+import de.urszeidler.shr5.ecp.editor.pages.VariousObjectsPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.printer.ScriptPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -50,6 +52,7 @@ import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementSimulationPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.ScriptPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.VariousPage;
+import de.urszeidler.shr5.scripting.Handout;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
@@ -173,6 +176,16 @@ public class RuntimeEditor extends AbstractShr5Editor {
                     addPage(new PlacementSimulationPage(RuntimeEditor.this, EMPTY,"simulation", object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating placement pages", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseHandout(Handout object) {
+                try {
+                    addPage(new VariousDescriptionPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousDescriptionPage pages", e);//$NON-NLS-1$
                 }
                 return null;
             }

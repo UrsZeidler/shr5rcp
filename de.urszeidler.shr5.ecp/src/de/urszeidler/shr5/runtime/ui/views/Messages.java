@@ -46,6 +46,8 @@ public class Messages extends NLS {
     public static String RuntimeScriptView_time_tracking_action_stop;
     public static String RuntimeScriptView_tltmSendMessage_text;
     public static String RuntimeScriptView_tltmSendMessage_toolTipText;
+    public static String RuntimeScriptView_sctnHandouts_text;
+    public static String RuntimeScriptView_hprlnkNewHyperlink_text;
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);
