@@ -2,7 +2,7 @@
  */
 package de.urszeidler.shr5.scripting;
 
-import org.eclipse.emf.ecore.EObject;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Handout extends EObject {
+public interface Handout extends Beschreibbar {
     /**
      * Returns the value of the '<em><b>Type</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.shr5.scripting.HandoutType}.

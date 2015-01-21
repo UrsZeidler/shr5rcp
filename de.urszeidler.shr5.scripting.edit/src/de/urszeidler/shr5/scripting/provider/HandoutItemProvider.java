@@ -3,18 +3,14 @@
 package de.urszeidler.shr5.scripting.provider;
 
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.shr5.scripting.Handout;
-import de.urszeidler.shr5.scripting.HandoutType;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -61,10 +57,79 @@ public class HandoutItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
             addTypePropertyDescriptor(object);
             addUrlPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Beschreibung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBeschreibungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Image feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addImagePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addNamePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -130,8 +195,7 @@ public class HandoutItemProvider
      */
     @Override
     public String getText(Object object) {
-        HandoutType labelValue = ((Handout)object).getType();
-        String label = labelValue == null ? null : labelValue.toString();
+        String label = ((Handout)object).getName();
         return label == null || label.length() == 0 ?
             getString("_UI_Handout_type") :
             getString("_UI_Handout_type") + " " + label;
@@ -150,6 +214,9 @@ public class HandoutItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Handout.class)) {
+            case ScriptingPackage.HANDOUT__BESCHREIBUNG:
+            case ScriptingPackage.HANDOUT__IMAGE:
+            case ScriptingPackage.HANDOUT__NAME:
             case ScriptingPackage.HANDOUT__TYPE:
             case ScriptingPackage.HANDOUT__URL:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

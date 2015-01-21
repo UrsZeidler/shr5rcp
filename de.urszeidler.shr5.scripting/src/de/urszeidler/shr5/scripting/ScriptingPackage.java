@@ -511,13 +511,40 @@ public interface ScriptingPackage extends EPackage {
     int HANDOUT = 5;
 
     /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HANDOUT__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
      * The feature id for the '<em><b>Type</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int HANDOUT__TYPE = 0;
+    int HANDOUT__TYPE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -526,7 +553,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int HANDOUT__URL = 1;
+    int HANDOUT__URL = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Handout</em>' class.
@@ -535,7 +562,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int HANDOUT_FEATURE_COUNT = 2;
+    int HANDOUT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Handout</em>' class.
@@ -544,7 +571,7 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int HANDOUT_OPERATION_COUNT = 0;
+    int HANDOUT_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.

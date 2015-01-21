@@ -20,6 +20,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getUrl <em>Url</em>}</li>
  * </ul>
@@ -28,6 +31,66 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout {
+    /**
+     * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected static final String BESCHREIBUNG_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMAGE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected String image = IMAGE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected String name = NAME_EDEFAULT;
+
     /**
      * The default value of the '{@link #getType() <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -92,6 +155,69 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBeschreibung(String newBeschreibung) {
+        String oldBeschreibung = beschreibung;
+        beschreibung = newBeschreibung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.HANDOUT__BESCHREIBUNG, oldBeschreibung, beschreibung));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setImage(String newImage) {
+        String oldImage = image;
+        image = newImage;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.HANDOUT__IMAGE, oldImage, image));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ScriptingPackage.HANDOUT__NAME, oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public HandoutType getType() {
         return type;
     }
@@ -137,6 +263,12 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case ScriptingPackage.HANDOUT__BESCHREIBUNG:
+                return getBeschreibung();
+            case ScriptingPackage.HANDOUT__IMAGE:
+                return getImage();
+            case ScriptingPackage.HANDOUT__NAME:
+                return getName();
             case ScriptingPackage.HANDOUT__TYPE:
                 return getType();
             case ScriptingPackage.HANDOUT__URL:
@@ -153,6 +285,15 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case ScriptingPackage.HANDOUT__BESCHREIBUNG:
+                setBeschreibung((String)newValue);
+                return;
+            case ScriptingPackage.HANDOUT__IMAGE:
+                setImage((String)newValue);
+                return;
+            case ScriptingPackage.HANDOUT__NAME:
+                setName((String)newValue);
+                return;
             case ScriptingPackage.HANDOUT__TYPE:
                 setType((HandoutType)newValue);
                 return;
@@ -171,6 +312,15 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+            case ScriptingPackage.HANDOUT__BESCHREIBUNG:
+                setBeschreibung(BESCHREIBUNG_EDEFAULT);
+                return;
+            case ScriptingPackage.HANDOUT__IMAGE:
+                setImage(IMAGE_EDEFAULT);
+                return;
+            case ScriptingPackage.HANDOUT__NAME:
+                setName(NAME_EDEFAULT);
+                return;
             case ScriptingPackage.HANDOUT__TYPE:
                 setType(TYPE_EDEFAULT);
                 return;
@@ -189,6 +339,12 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case ScriptingPackage.HANDOUT__BESCHREIBUNG:
+                return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+            case ScriptingPackage.HANDOUT__IMAGE:
+                return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
+            case ScriptingPackage.HANDOUT__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case ScriptingPackage.HANDOUT__TYPE:
                 return type != TYPE_EDEFAULT;
             case ScriptingPackage.HANDOUT__URL:
@@ -207,7 +363,13 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (type: ");
+        result.append(" (beschreibung: ");
+        result.append(beschreibung);
+        result.append(", image: ");
+        result.append(image);
+        result.append(", name: ");
+        result.append(name);
+        result.append(", type: ");
         result.append(type);
         result.append(", url: ");
         result.append(url);

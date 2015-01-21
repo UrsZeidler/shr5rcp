@@ -565,6 +565,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         scriptEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         placementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         placementEClass.getESuperTypes().add(this.getTimeFrame());
+        handoutEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(scriptEClass, Script.class, "Script", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -127,7 +127,7 @@
     <eLiterals name="astralSpace"/>
     <eLiterals name="socialInteraction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Handout">
+  <eClassifiers xsi:type="ecore:EClass" name="Handout" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//HandoutType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

@@ -107,6 +107,7 @@ public class ScriptingSwitch<T> extends Switch<T> {
             case ScriptingPackage.HANDOUT: {
                 Handout handout = (Handout)theEObject;
                 T result = caseHandout(handout);
+                if (result == null) result = caseBeschreibbar(handout);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
