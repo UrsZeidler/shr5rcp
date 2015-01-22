@@ -1,5 +1,7 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -28,6 +30,9 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.scripting.Handout;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Button;
@@ -36,6 +41,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+
 import de.urszeidler.shr5.scripting.ScriptingPackage.Literals;
 
 /**
@@ -170,7 +176,11 @@ public class VariousDescriptionPage extends AbstractShr5Page<Beschreibbar> {
                         break;
                     case IMAGE:
                     case DOCUMENT:
-
+                        String name= new FileDialog(Display.getDefault().getActiveShell(), SWT.OPEN).open();
+                        if (name != null){
+                            Handout ho = (Handout)object;
+                            ho.setUrl(name);
+                        }                         
                         break;
 
                     default:

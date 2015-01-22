@@ -1,6 +1,5 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
-
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -138,6 +137,8 @@ import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert.DialogType;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.service.ScriptViewer;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
+import de.urszeidler.shr5.ecp.util.DesktopApi;
+import de.urszeidler.shr5.ecp.util.GenericHyperlinkAdapter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.dialogs.CheckInitative;
 import de.urszeidler.shr5.runtime.ui.dialogs.DamageProbeFinishedDialog;
@@ -189,16 +190,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             Object notifier = notification.getNotifier();
             Object feature = notification.getFeature();
             if (notifier instanceof CommandWrapper || notifier instanceof ComplexAction || notifier instanceof SimpleAction
-                    || notifier instanceof FreeAction || notifier instanceof ScriptHistory 
-                    || notifier instanceof ExecutionProtocol || notifier instanceof ExecutionStack)
+                    || notifier instanceof FreeAction || notifier instanceof ScriptHistory || notifier instanceof ExecutionProtocol
+                    || notifier instanceof ExecutionStack)
                 return;
             if (notifier instanceof RuntimeCharacter) {
                 RuntimeCharacter rc = (RuntimeCharacter)notifier;
-                if (RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND.equals(feature)){
-                    String message = String.format("%tT >> %s is %s",placement1.getActualDate(), labelProvider.getText(rc),ShadowrunEditingTools.toEEnumName(rc.getZustand(), rc, (EAttribute)feature)  );
-                    printedProtocol.add(0, message );
+                if (RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND.equals(feature)) {
+                    String message = String.format("%tT >> %s is %s", placement1.getActualDate(), labelProvider.getText(rc),
+                            ShadowrunEditingTools.toEEnumName(rc.getZustand(), rc, (EAttribute)feature));
+                    printedProtocol.add(0, message);
                 }
-                
+
             } else if (notifier instanceof CombatTurn) {
                 CombatTurn ct = (CombatTurn)notifier;
                 if (GameplayPackage.Literals.COMBAT_TURN__CURRENT_TURN.equals(feature)) {
@@ -266,35 +268,31 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         }
     };
 
-    static  class ViewColumnViewerToolTipSupport extends
-    ColumnViewerToolTipSupport {
+    static class ViewColumnViewerToolTipSupport extends ColumnViewerToolTipSupport {
 
-protected ViewColumnViewerToolTipSupport(ColumnViewer viewer,
-        int style, boolean manualActivation) {
-    super(viewer, style, manualActivation);
-}
+        protected ViewColumnViewerToolTipSupport(ColumnViewer viewer, int style, boolean manualActivation) {
+            super(viewer, style, manualActivation);
+        }
 
-@Override
- protected Composite createViewerToolTipContentArea(Event event,
-        ViewerCell cell, Composite parent) {
-    final Composite composite = new Composite(parent, SWT.NONE);
-    composite.setLayout(new RowLayout(SWT.VERTICAL));
-//    Text text = new Text(composite, SWT.SINGLE);
-//    text.setText(getText(event));
-//    text.setSize(100, 60);
-//    DateTime calendar = new DateTime(composite, SWT.CALENDAR);
-//    calendar.setEnabled(false);
-//    calendar.setSize(100, 100);
-//    composite.pack();
-    return composite;
-}
+        @Override
+        protected Composite createViewerToolTipContentArea(Event event, ViewerCell cell, Composite parent) {
+            final Composite composite = new Composite(parent, SWT.NONE);
+            composite.setLayout(new RowLayout(SWT.VERTICAL));
+            // Text text = new Text(composite, SWT.SINGLE);
+            // text.setText(getText(event));
+            // text.setSize(100, 60);
+            // DateTime calendar = new DateTime(composite, SWT.CALENDAR);
+            // calendar.setEnabled(false);
+            // calendar.setSize(100, 100);
+            // composite.pack();
+            return composite;
+        }
 
-public static  final void enableFor(final ColumnViewer viewer) {
-    new ViewColumnViewerToolTipSupport(viewer, ToolTip.NO_RECREATE,
-            false);
-}
-}
-    
+        public static final void enableFor(final ColumnViewer viewer) {
+            new ViewColumnViewerToolTipSupport(viewer, ToolTip.NO_RECREATE, false);
+        }
+    }
+
     protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"; //$NON-NLS-1$
@@ -373,6 +371,8 @@ public static  final void enableFor(final ColumnViewer viewer) {
     private Composite composite_16;
 
     private Composite composite_handout;
+
+    private Section sctnHandouts;
 
     public RuntimeScriptView() {
 
@@ -593,14 +593,14 @@ public static  final void enableFor(final ColumnViewer viewer) {
                         SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
                         command.setSubject(rc);
                         scriptService.executeCommand(command);// (Command)eObject);
-                        
+
                     }
-//                    if (iStructuredSelection.size() == 1) {
-//                        SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
-//                        command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
-//                        scriptService.executeCommand(command);// (Command)eObject);
-//                    }
-                    
+                    // if (iStructuredSelection.size() == 1) {
+                    // SubjectCommand command = (SubjectCommand)GameplayFactory.eINSTANCE.create(eObject);
+                    // command.setSubject((RuntimeCharacter)ShadowrunEditingTools.extractFirstEObject(characterViewer.getSelection()));
+                    // scriptService.executeCommand(command);// (Command)eObject);
+                    // }
+
                 }
             }
         });
@@ -753,25 +753,24 @@ public static  final void enableFor(final ColumnViewer viewer) {
         styledText_2.setAlwaysShowScrollBars(false);
         formToolkit.adapt(styledText_2);
         formToolkit.paintBordersFor(styledText_2);
-        
-        Section sctnHandouts = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
+
+        sctnHandouts = formToolkit.createSection(composite_9, Section.TWISTIE | Section.TITLE_BAR);
         sctnHandouts.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
         formToolkit.paintBordersFor(sctnHandouts);
         sctnHandouts.setText(Messages.RuntimeScriptView_sctnHandouts_text);
         sctnHandouts.setExpanded(true);
-        
+
         composite_16 = formToolkit.createComposite(sctnHandouts, SWT.NONE);
         formToolkit.adapt(composite_16);
         formToolkit.paintBordersFor(composite_16);
         sctnHandouts.setClient(composite_16);
         composite_16.setLayout(new FillLayout(SWT.HORIZONTAL));
-        
+
         composite_handout = new Composite(composite_16, SWT.NONE);
         formToolkit.adapt(composite_handout);
         formToolkit.paintBordersFor(composite_handout);
         composite_handout.setLayout(new GridLayout(1, false));
-        
- 
+
         Section sctnProtocol = formToolkit.createSection(composite, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
         TableWrapData twd_sctnProtocol = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 1, 1);
         twd_sctnProtocol.heightHint = 218;
@@ -838,8 +837,8 @@ public static  final void enableFor(final ColumnViewer viewer) {
         sctnDebugging.setExpanded(false);
         sctnInTheirFace.setExpanded(false);
         sctnTimeTracking.setEnabled(true);
-        
-         buildHandouts();
+
+        buildHandouts();
     }
 
     private void buildHandouts() {
@@ -851,28 +850,30 @@ public static  final void enableFor(final ColumnViewer viewer) {
         composite_handout.setLayout(new GridLayout(1, false));
         EList<Handout> handouts = placement1.getHandouts();
         for (Handout handout : handouts) {
-//            final String url = handout.getUrl();
-//            final HandoutType type = handout.getType();
-//            Hyperlink hprlnkNewHyperlink = formToolkit.createHyperlink(composite_handout, handout.getName(), SWT.NONE);
-//            formToolkit.paintBordersFor(hprlnkNewHyperlink);
-//            hprlnkNewHyperlink.addHyperlinkListener(new HyperlinkAdapter() {
-//                @Override
-//                public void linkActivated(HyperlinkEvent e) {
-//                    try {
-//                        if (type == HandoutType.WEBPAGE)
-//                            Desktop.getDesktop().browse(new URI(url));
-//                        else {
-//                            File file = new File(url);
-//                            Desktop.getDesktop().open(file);
-//                        }
-//                    } catch (IOException e1) {
-//                        e1.printStackTrace();
-//                    } catch (URISyntaxException e1) {
-//                        e1.printStackTrace();
-//                    }
-//                }
-//            });
+            Hyperlink hprlnkNewHyperlink = formToolkit.createHyperlink(composite_handout,
+                    handout.getName() != null ? handout.getName() : handout.getUrl(), SWT.NONE);
+            formToolkit.paintBordersFor(hprlnkNewHyperlink);
+            hprlnkNewHyperlink.addHyperlinkListener(new GenericHyperlinkAdapter<Handout>(handout) {
+                @Override
+                public void linkActivated(HyperlinkEvent e) {
+                    try {
+                        if (object.getType() == HandoutType.WEBPAGE){
+                            URI uri = new URI(object.getUrl());
+                            DesktopApi.browse(uri);
+                        } else {
+                            File file = new File(object.getUrl());
+                            DesktopApi.open(file);
+                        }
+                    } catch (URISyntaxException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            });
         }
+        composite_handout.layout(true, true);
+        composite_16.getParent().layout(true,true);
+        sctnHandouts.setExpanded(false);
+        sctnHandouts.setExpanded(true);
     }
 
     @Override
@@ -1036,7 +1037,8 @@ public static  final void enableFor(final ColumnViewer viewer) {
             choiceOfValues.addAll(placement1.getScript().getPlayer().getMembers());
 
         FeatureEditorDialogWert dialogWert = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, combatTurn,
-                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues,combatTurn,DialogType.simple);
+                GameplayPackage.Literals.COMBAT_TURN__COMBATANTS, Messages.RuntimeScriptView_dialog_select_combatans_titel, choiceOfValues,
+                combatTurn, DialogType.simple);
         if (dialogWert.open() == Dialog.OK)
             combatTurn.getCombatants().addAll((Collection<? extends RuntimeCharacter>)dialogWert.getResult());
         else
@@ -1136,10 +1138,10 @@ public static  final void enableFor(final ColumnViewer viewer) {
                     GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
-           if(genericEObjectDialog.open()==Dialog.CANCEL){
-               
-           }
-            
+            if (genericEObjectDialog.open() == Dialog.CANCEL) {
+
+            }
+
             return;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
