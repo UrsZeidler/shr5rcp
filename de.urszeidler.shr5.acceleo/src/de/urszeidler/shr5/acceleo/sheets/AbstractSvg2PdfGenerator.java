@@ -5,27 +5,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.apache.batik.transcoder.Transcoder;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
-import org.apache.fop.render.intermediate.util.IFConcatenator;
 import org.apache.fop.svg.PDFTranscoder;
-import org.eclipse.acceleo.engine.event.AbstractAcceleoTextGenerationListener;
-import org.eclipse.acceleo.engine.event.AcceleoTextGenerationEvent;
-import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
-import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import de.urszeidler.emf.commons.ui.util.DesktopApi;
 import de.urszeidler.shr5.acceleo.Activator;
 
-public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator {
+public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
 
     /**
      * The list of properties files from the launch parameters (Launch configuration).
@@ -33,7 +27,6 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
      * @generated
      */
     private List<String> propertiesFiles = new ArrayList<String>();
-    protected Collection<String> svgFiles = new ArrayList<String>();
 
     public AbstractSvg2PdfGenerator() {
         super();
@@ -54,7 +47,7 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
         
         monitor.subTask("transforming to pdf");
         try {
-            for (String fname : svgFiles) {
+            for (String fname : files) {
                 File file = new File(fname);
                 monitor.subTask("writing :"+fname);
                 storeAsPdf(file);
@@ -87,31 +80,11 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
         transcoder.transcode(input_svg_image, output_pdf_file);
         pdf_ostream.flush();
         pdf_ostream.close();
-        DesktopApi.open(new File(outputFilename));
+        if(open)
+            DesktopApi.open(new File(outputFilename));
     }
 
-    /**
-     * If this generator needs to listen to text generation events, listeners can be returned from here.
-     * 
-     * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated not
-     */
-    @Override
-    public List<IAcceleoTextGenerationListener> getGenerationListeners() {
-        List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
-    
-        AbstractAcceleoTextGenerationListener listner = new AbstractAcceleoTextGenerationListener() {
-    
-            @Override
-            public void filePathComputed(AcceleoTextGenerationEvent event) {
-                svgFiles.add(event.getText());
-            }
-        };
-    
-        listeners.add(listner);
-        return listeners;
-    }
-
+ 
     /**
      * If you need to change the way files are generated, this is your entry point.
      * <p>
@@ -244,4 +217,5 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
 
+  
 }

@@ -37,6 +37,9 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
+import de.urszeidler.shr5.acceleo.sheets.AbstractSvg2PdfGenerator;
+import de.urszeidler.shr5.acceleo.sheets.AbstractTextGenerator;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;
@@ -56,6 +59,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     protected File folder;
     private Combo combo;
     private IDialogSettings dialogSettings;
+    private Button button_open;
 
     /**
      * Create the dialog.
@@ -173,6 +177,13 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
             }
         });
         btnNewButton.setText("...");//$NON-NLS-1$
+        
+        Label lblOpen = new Label(container, SWT.NONE);
+        lblOpen.setText(Messages.ModelToTextExportDialog_lblOpen_text);
+        
+        button_open = new Button(container, SWT.CHECK);
+        button_open.setText("");
+        new Label(container, SWT.NONE);
 
         Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
         if (map != null) {
@@ -202,6 +213,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     protected void okPressed() {
         Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
         String text2 = combo.getText();
+        final boolean open = button_open.getSelection();
         if (map != null) {
             generator = map.get(text2);
         }
@@ -210,6 +222,11 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 @Override
                 protected IStatus run(IProgressMonitor monitor) {
                     try {
+                        if (generator instanceof AbstractGenerator) {
+                            AbstractGenerator g = (AbstractGenerator)generator;
+                            g.setOpen(open);
+                        }
+                        
                         generator.initialize(object, folder, Collections.EMPTY_LIST);
                         Monitor m = BasicMonitor.toMonitor(monitor);
                         generator.doGenerate(m);

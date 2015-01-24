@@ -24,6 +24,8 @@ public class Messages extends NLS {
     public static String ModelToTextExportDialog_tf_ssvgv;
     public static String ModelToTextExportDialog_tf_ssvgv_desc;
     public static String ModelToTextExportDialog_titel;
+    public static String ModelToTextExportDialog_lblOpen_text;
+    public static String ModelToTextExportDialog_button_text;
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);
