@@ -100,6 +100,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
             class="de.urszeidler.shr5.webserver.preferences.WebserverPreferencePage"
             id="de.urszeidler.shr5.webserver.preferences.WebserverPreferencePage"
             name="Webserver Preferences">

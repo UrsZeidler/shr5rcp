@@ -15,4 +15,7 @@ public class PreferenceConstants {
     public static final String PRINT_PERSONA_DECRIPTION = "PRINT_PERSONA_DECRIPTION";
     public static final String DEFAUL_PROJECT_NAME = "DEFAUL_PROJECT_NAME";
     public static final String FONT_HEAD1_TEXT = "FONT_HEAD1_TEXT";
+    
+    public static final String SCRIPT_GRAPH_COLOR_FG = "SCRIPT_GRAPH_COLOR_FG_";
+    public static final String SCRIPT_GRAPH_COLOR_BG = "SCRIPT_GRAPH_COLOR_BG_";
 }

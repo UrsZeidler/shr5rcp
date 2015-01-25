@@ -7,8 +7,12 @@ import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFObservables;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
@@ -24,6 +28,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.zest.core.viewers.EntityConnectionData;
 import org.eclipse.zest.core.viewers.GraphViewer;
 import org.eclipse.zest.core.viewers.IEntityConnectionStyleProvider;
@@ -37,10 +42,12 @@ import org.eclipse.zest.layouts.algorithms.TreeLayoutAlgorithm;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
@@ -55,6 +62,7 @@ public class ScriptPage extends AbstractShr5Page<Script> {
     private IObservableList observeList;
     private Color combatColor = ColorConstants.red;
     private Color combatColorF = ColorConstants.white;
+    private IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 
     public class ZestRelationContentProvider extends ArrayContentProvider implements IGraphEntityRelationshipContentProvider {
 
@@ -149,7 +157,13 @@ public class ScriptPage extends AbstractShr5Page<Script> {
             if (entity instanceof Placement) {
                 Placement p = (Placement)entity;
                 if(p.getOptions().contains(PlacementOptions.COMBAT))
-                    return combatColor;
+                    return SWTResourceManager.getColor(PreferenceConverter.getColor(store, PreferenceConstants.SCRIPT_GRAPH_COLOR_BG+PlacementOptions.COMBAT));// combatColorF;combatColor;
+            
+                EList<EEnumLiteral> eLiterals = ScriptingPackage.Literals.PLACEMENT_OPTIONS.getELiterals();
+                for (EEnumLiteral eEnumLiteral : eLiterals) {
+                    if(p.getOptions().contains(eEnumLiteral.getInstance()))
+                        return SWTResourceManager.getColor(PreferenceConverter.getColor(store, PreferenceConstants.SCRIPT_GRAPH_COLOR_BG+eEnumLiteral.getName()));
+                     }
             }
             return null;
         }
@@ -159,7 +173,13 @@ public class ScriptPage extends AbstractShr5Page<Script> {
             if (entity instanceof Placement) {
                 Placement p = (Placement)entity;
                 if(p.getOptions().contains(PlacementOptions.COMBAT))
-                    return combatColorF;
+                    return SWTResourceManager.getColor(PreferenceConverter.getColor(store, PreferenceConstants.SCRIPT_GRAPH_COLOR_FG+PlacementOptions.COMBAT));// combatColorF;
+
+                EList<EEnumLiteral> eLiterals = ScriptingPackage.Literals.PLACEMENT_OPTIONS.getELiterals();
+                for (EEnumLiteral eEnumLiteral : eLiterals) {
+                    if(p.getOptions().contains(eEnumLiteral.getInstance()))
+                        return SWTResourceManager.getColor(PreferenceConverter.getColor(store, PreferenceConstants.SCRIPT_GRAPH_COLOR_FG+eEnumLiteral.getName()));
+                     }
             }
             return null;
         }

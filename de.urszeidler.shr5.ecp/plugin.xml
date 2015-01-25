@@ -171,6 +171,12 @@
             id="de.urszeidler.shr5.ecp.preferences.basic.page"
             name="%main.preferences.page.name">
       </page>
+      <page
+            category="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
+            class="de.urszeidler.shr5.ecp.preferences.ScriptGraphPreferencePage"
+            id="de.urszeidler.shr5.ecp.page1de.urszeidler.shr5.ecp.preferences.ScriptPreferencePage"
+            name="Script graph preferences">
+      </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
