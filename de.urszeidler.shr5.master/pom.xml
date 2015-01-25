@@ -24,6 +24,9 @@
 		<module>../de.urszeidler.shr5.scripting</module>
 		<module>../de.urszeidler.shr5.scripting.edit</module>
 		<module>../de.urszeidler.shr5.webserver</module>
+		<module>../de.urszeidler.shr5.scripting.ui</module>
+		
+		
 		<module>../de.urszeidler.shr5.feature</module>
 
 
@@ -49,15 +52,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
 		<tycho.version>0.20.0</tycho.version>
-		<kepler-repo.url>http://download.eclipse.org/releases/kepler</kepler-repo.url>
+		<platform-repo.url>http://download.eclipse.org/releases/luna</platform-repo.url>
 	</properties>
 
 
 
 	<repositories>
 		<repository>
-			<id>kepler</id>
-			<url>${kepler-repo.url}</url>
+			<id>platform</id>
+			<url>${platform-repo.url}</url>
 			<layout>p2</layout>
 		</repository>
 
@@ -69,7 +72,7 @@
 
 		<repository>
 			<id>ecp</id>
-			<url>http://download.eclipse.org/ecp/releases/releases_13</url>
+			<url>http://download.eclipse.org/ecp/releases/releases_14</url>
 			<layout>p2</layout>
 		</repository>
 
@@ -81,7 +84,7 @@
 
 		<repository>
 			<id>babel</id>
-			<url>http://download.eclipse.org/technology/babel/update-site/R0.12.0/kepler</url>
+			<url>http://download.eclipse.org/technology/babel/update-site/R0.12.1/luna</url>
 			<layout>p2</layout>
 		</repository>
 
