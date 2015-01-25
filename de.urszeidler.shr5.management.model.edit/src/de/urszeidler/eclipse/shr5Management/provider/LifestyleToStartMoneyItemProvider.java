@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -21,6 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -147,11 +149,23 @@ public class LifestyleToStartMoneyItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         LifestyleToStartMoney lifestyleToStartMoney = (LifestyleToStartMoney)object;
+        EList<Lifestyle> lifeStyles = lifestyleToStartMoney.getLifeStyles();
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        if (factory != null && !lifeStyles.isEmpty()) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(lifeStyles.get(0),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                return String.format("%s %s [%d dice x %d]", getString("_UI_LifestyleToStartMoney_type"),
+                        labelprovider.getText(lifeStyles.get(0))
+                        ,lifestyleToStartMoney.getNumberOfW()
+                        ,lifestyleToStartMoney.getMoneyFactor())   ;
+
+        }
         return getString("_UI_LifestyleToStartMoney_type") + " " + lifestyleToStartMoney.getNumberOfW();
     }
 
