@@ -28,6 +28,7 @@
 		
 		
 		<module>../de.urszeidler.shr5.feature</module>
+		<module>../de.urszeidler.shr5.model.feature</module>
 
 
 
