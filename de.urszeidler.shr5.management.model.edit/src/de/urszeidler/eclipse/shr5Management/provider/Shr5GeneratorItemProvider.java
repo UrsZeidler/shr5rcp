@@ -451,13 +451,13 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     public Object getImage(Object object) {
         Shr5Generator pc = (Shr5Generator) object;
 
-        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
-        if (factory != null && pc.getCharacter() != null) {
-            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(pc.getCharacter(),
-                    IItemLabelProvider.class);
-            if (labelprovider != null)
-                return labelprovider.getImage(pc.getCharacter());
-        }
+//        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+//        if (factory != null && pc.getCharacter() != null) {
+//            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(pc.getCharacter(),
+//                    IItemLabelProvider.class);
+//            if (labelprovider != null)
+//                return labelprovider.getImage(pc.getCharacter());
+//        }
         return overlayImage(object, getResourceLocator().getImage("full/obj16/Shr5Generator"));
     }
 
