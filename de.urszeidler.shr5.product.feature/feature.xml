@@ -90,7 +90,7 @@
          id="javax.servlet"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="3.0.0.v201112011016"
          unpack="false"/>
 
    <plugin
