@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 /**
  * Entry point of the 'BoardCharacterSheet' generation module.
  *
- * @generated
+ * @generated not
  */
 public class BoardCharacterSheet extends AbstractTextGenerator {
     /**

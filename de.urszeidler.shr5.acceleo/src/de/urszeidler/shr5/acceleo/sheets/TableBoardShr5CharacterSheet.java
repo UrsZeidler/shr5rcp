@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 /**
  * Entry point of the 'TableBoardShr5CharacterSheet' generation module.
  * 
- * @generated
+ * @generated not
  */
 public class TableBoardShr5CharacterSheet extends AbstractTextGenerator {
     /**
