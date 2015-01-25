@@ -111,8 +111,57 @@
 			</xsl:for-each>
 		</xsl:for-each>
 	</xsl:template>
-	
-	
+
+
+	<xsl:template name="generator-instructions">
+		<instructions key="new" value="Select the categories and the group." />
+		<instructions key="readyForCreation"
+			value="All has been set, you can create the character now." />
+		<instructions key="personaCreated"
+			value="The character is created spend all the values." />
+		<instructions key="commited"
+			value="The character is finshed and commited." />
+	</xsl:template>
+
+	<xsl:template name="additional-constrains">
+		<xsl:for-each select="$qualities">
+			<xsl:for-each select="chummer/qualities/*">
+				<xsl:call-template name="additional-constrain">
+					<xsl:with-param name="id" select="id/text()" />
+				</xsl:call-template>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
+
+	<xsl:template name="additional-constrain">
+		<xsl:param name="id" />
+		<additionalConstrains
+			targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247">
+			<xsl:attribute name="source">
+	<xsl:value-of select="$id" />
+	</xsl:attribute>
+
+		</additionalConstrains>
+
+	</xsl:template>
+
+	<xsl:template name="lifestyle-to-money">
+		<xsl:for-each select="$lifestyle">
+			<xsl:for-each select="chummer/lifestyles/*">
+				<xsl:if test="number(dice/text())">
+					<lifestyleToStartMoney>
+						<xsl:attribute name="numberOfW"><xsl:value-of
+							select="dice/text()" /></xsl:attribute>
+						<xsl:attribute name="moneyFactor"><xsl:value-of
+							select="multiplier/text()" /></xsl:attribute>
+						<xsl:attribute name="lifeStyles"><xsl:value-of
+							select="id/text()" /></xsl:attribute>
+					</lifestyleToStartMoney>
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
+
 	<xsl:template name="findSpirit">
 		<xsl:param name="spiritname" />
 		<xsl:for-each select="$critter-species">
