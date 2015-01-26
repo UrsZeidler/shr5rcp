@@ -1,8 +1,6 @@
 package de.urszeidler.shr5.runtime.ui.views;
 
-import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
@@ -81,16 +79,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
-import org.eclipse.ui.forms.events.HyperlinkAdapter;
 import org.eclipse.ui.forms.events.HyperlinkEvent;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Hyperlink;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
 import org.eclipse.ui.forms.widgets.TableWrapLayout;
@@ -152,8 +149,6 @@ import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
-
-import org.eclipse.ui.forms.widgets.Hyperlink;
 
 public class RuntimeScriptView extends ViewPart implements ScriptViewer, CommandCallback {
 
@@ -832,13 +827,13 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
         for (Team team : teams) {
             characters.addAll(team.getMembers());
         }
+        buildHandouts();
         sctnActionSection.setExpanded(true);
         sctnBackground.setExpanded(true);
         sctnDebugging.setExpanded(false);
         sctnInTheirFace.setExpanded(false);
         sctnTimeTracking.setEnabled(true);
 
-        buildHandouts();
     }
 
     private void buildHandouts() {
