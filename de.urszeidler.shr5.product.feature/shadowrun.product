@@ -79,9 +79,13 @@ http://www.shadowruntabletop.com/
    </configurations>
 
    <repositories>
-      <repository location="http://download.eclipse.org/eclipse/updates/4.3" enabled="true" />
-      <repository location="http://download.eclipse.org/releases/kepler" enabled="true" />
       <repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/" enabled="true" />
+      <repository location="http://download.eclipse.org/eclipse/updates/4.4" enabled="true" />
+      <repository location="http://download.eclipse.org/releases/luna" enabled="true" />
+      <repository location="http://opensource.urszeidler.de/shr5updatesite/" enabled="true" />
+      <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/" enabled="true" />
+      <repository location="http://download.eclipse.org/technology/babel/update-site/R0.12.1/luna" enabled="true" />
+      <repository location="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/" enabled="true" />
    </repositories>
 
 </product>
