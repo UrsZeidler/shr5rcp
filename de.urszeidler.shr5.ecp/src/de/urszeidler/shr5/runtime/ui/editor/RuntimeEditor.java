@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
+import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.window.Window;
 import org.eclipse.ui.PartInitException;
 
@@ -43,9 +44,8 @@ import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.VariousDescriptionPage;
-import de.urszeidler.shr5.ecp.editor.pages.VariousObjectsPage;
-import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.printer.ScriptPrinter;
+import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementSimulationPage;
@@ -65,7 +65,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
     private static final String EMPTY = ""; //$NON-NLS-1$
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.RuntimeEditorID"; //$NON-NLS-1$
-
+    private ILabelProvider defaultLabelProvider = new DefaultLabelProvider();
     /**
      * @return
      */
@@ -81,7 +81,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
 
                     Transformer<ManagedCharacter, RuntimeCharacter> transformer = ShadowrunEditingTools.managedCharacter2RuntimeTransformer();
 
-                    FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
+                    FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), defaultLabelProvider, basicList,
                             Shr5Package.Literals.SHR_LIST__ENTRIES, "Select members for the team.", new ArrayList<EObject>(Collections2.filter(
                                     (Collection<ManagedCharacter>)objectsOfType,
                                     ShadowrunManagmentTools.characterGeneratorStatePredicate(GeneratorState.COMMITED))), object);
@@ -112,7 +112,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseRuntimeCharacter(RuntimeCharacter object) {
                 try {
-                    addPage(new RuntimeCharacterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                    addPage(new RuntimeCharacterPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain,
                             manager));
                     if (object.getCharacter() != null)
                         addPage(new ManagedCharacterPage(RuntimeEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
@@ -130,7 +130,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseGruntTeam(GruntTeam object) {
                 try {
-                    addPage(new VariousPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new VariousPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -140,7 +140,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseTeam(Team object) {
                 try {
-                    addPage(new BeschreibbarContainterPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                    addPage(new BeschreibbarContainterPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain,
                             manager, RuntimePackage.Literals.TEAM__MEMBERS));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
@@ -160,7 +160,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseScript(Script object) {
                 try {
-                    addPage(new ScriptPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new ScriptPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
                     addPage(new PrintPreviewPage(RuntimeEditor.this, "id1", "script print", ScriptPrinter
                             .getInstance().createPrintFactory(object)));
                 } catch (PartInitException e) {
@@ -172,7 +172,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object casePlacement(Placement object) {
                 try {
-                    addPage(new PlacementPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new PlacementPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
                     addPage(new PlacementSimulationPage(RuntimeEditor.this, EMPTY,"simulation", object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating placement pages", e);//$NON-NLS-1$
@@ -183,7 +183,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             public Object caseHandout(Handout object) {
                 try {
-                    addPage(new VariousDescriptionPage(RuntimeEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new VariousDescriptionPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousDescriptionPage pages", e);//$NON-NLS-1$
                 }
