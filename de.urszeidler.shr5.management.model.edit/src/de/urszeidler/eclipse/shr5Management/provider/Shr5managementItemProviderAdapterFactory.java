@@ -6,11 +6,15 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -26,13 +30,23 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
+import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
+import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementAdapterFactory;
+import de.urszeidler.shr5.model.edit.preferences.PreferenceConstants;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -68,11 +82,15 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
      */
 	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
+    private String iso3Country;
+
+    private boolean doLocalize;
+
 	/**
      * This constructs an instance.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public Shr5managementItemProviderAdapterFactory() {
         supportedTypes.add(IEditingDomainItemProvider.class);
@@ -80,6 +98,41 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         supportedTypes.add(ITreeItemContentProvider.class);
         supportedTypes.add(IItemLabelProvider.class);
         supportedTypes.add(IItemPropertySource.class);
+        
+        try {
+            configureFactory();
+            IPreferenceStore store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
+            store.addPropertyChangeListener(new IPropertyChangeListener() {
+
+                @Override
+                public void propertyChange(PropertyChangeEvent event) {
+                    configureFactory();
+                }
+            });
+
+        } catch (Exception e) {
+            Shr5ManagementEditPlugin.getPlugin().getLog().log(new Status(Status.ERROR,Shr5ManagementEditPlugin.getPlugin().getSymbolicName(), "Error initialising Shr5managementItemProviderAdapterFactory", e));
+        }
+
+    }
+
+    /**
+     * Configures the factory by the preferences.
+     */
+    private void configureFactory() {
+            IPreferenceStore store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
+
+            if (store.getBoolean(PreferenceConstants.AUTOMATIC_CHOOSEN_LOCALISATION)) {
+                Locale default1 = Locale.getDefault();
+                iso3Country = default1.getLanguage();// default1.getISO3Country();
+                if (iso3Country.equals("de"))
+                    doLocalize = true;
+
+            } else {
+                iso3Country = store.getString(PreferenceConstants.CHOOSEN_LOCALISATION);
+            }
+
+            doLocalize = store.getBoolean(PreferenceConstants.RESOURCE_LOCALIZAION_ENABLED);
     }
 
 	/**
@@ -1133,5 +1186,37 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
             return Shr5ManagementEditPlugin.INSTANCE;
         }
 	}
+
+	   @Override
+	    public Adapter createAdapter(Notifier target) {
+
+	        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
+	        if (doLocalize)
+	            if (target instanceof Identifiable) {
+	                return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
+	                    @Override
+	                    public String getText(Object object) {
+	                        if (object instanceof Identifiable) {
+	                            Identifiable id = (Identifiable)object;
+
+	                            EObject eObject = (EObject)object;
+	                            EClass eClass = eObject.eClass();
+	                            // EStructuralFeature feature = getLabelFeature(eClass);
+
+	                            String className = ModifikatorItemProvider.getEClassName(eClass);
+	                            EList<Localization> localizations = id.getLocalizations();
+	                            for (Localization localization : localizations) {
+	                                if (iso3Country.equals(localization.getLocal())) {
+	                                    return className + " " + localization.getName();
+	                                }
+	                            }
+	                        }
+	                        return super.getText(object);
+	                    }
+	                };
+	            }
+	        return doSwitch;
+
+	    }
 
 }

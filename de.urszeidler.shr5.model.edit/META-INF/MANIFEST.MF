@@ -9,7 +9,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.urszeidler.eclipse.shr5.provider,
- de.urszeidler.eclipse.shr5.util
+ de.urszeidler.eclipse.shr5.util,
+ de.urszeidler.shr5.model.edit.preferences
 Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.model;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Locale;
 
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -100,7 +101,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
             });
 
         } catch (Exception e) {
-            // TODO: handle exception
+            Shr5EditPlugin.getPlugin().getLog().log(new Status(Status.ERROR,Shr5EditPlugin.getPlugin().getSymbolicName(), "Error initialising Shr5ItemProviderAdapterFactory", e));
         }
     }
 
