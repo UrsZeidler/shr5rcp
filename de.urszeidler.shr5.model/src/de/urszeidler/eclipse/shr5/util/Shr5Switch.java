@@ -238,6 +238,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 ShrList shrList = (ShrList)theEObject;
                 T result = caseShrList(shrList);
                 if (result == null) result = caseBeschreibbar(shrList);
+                if (result == null) result = caseIdentifiable(shrList);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }

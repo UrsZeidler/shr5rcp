@@ -12,25 +12,24 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit() <em>Geschicklichkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion() <em>Reaktion</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke() <em>Staerke</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel() <em>Initativ Wuerfel</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen() <em>Ausweichen</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz() <em>Essenz</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge() <em>Edge</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma() <em>Charisma</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft() <em>Willenskraft</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition() <em>Intuition</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik() <em>Logik</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich() <em>Koerperlich</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig() <em>Geistig</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial() <em>Sozial</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit() <em>Geschicklichkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion() <em>Reaktion</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke() <em>Staerke</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel() <em>Initativ Wuerfel</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen() <em>Ausweichen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz() <em>Essenz</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge() <em>Edge</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma() <em>Charisma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft() <em>Willenskraft</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition() <em>Intuition</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik() <em>Logik</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich() <em>Koerperlich</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig() <em>Geistig</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial() <em>Sozial</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public abstract class AbstraktPersonaTest extends TestCase {
@@ -39,7 +38,6 @@ public abstract class AbstraktPersonaTest extends TestCase {
      * The fixture for this Abstrakt Persona test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AbstraktPersona fixture = null;
@@ -58,7 +56,6 @@ public abstract class AbstraktPersonaTest extends TestCase {
      * Sets the fixture for this Abstrakt Persona test case.
      * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(AbstraktPersona fixture) {

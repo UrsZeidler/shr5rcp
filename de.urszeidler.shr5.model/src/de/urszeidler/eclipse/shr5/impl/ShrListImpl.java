@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,6 +30,8 @@ import de.urszeidler.eclipse.shr5.ShrList;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getEntries <em>Entries</em>}</li>
  * </ul>
  * </p>
@@ -96,6 +100,36 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
+
+    /**
      * The cached value of the '{@link #getEntries() <em>Entries</em>}' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +180,39 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SHR_LIST__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SHR_LIST__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -207,6 +274,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.SHR_LIST__ENTRIES:
                 return ((InternalEList<?>)getEntries()).basicRemove(otherEnd, msgs);
         }
@@ -227,6 +296,10 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
                 return getImage();
             case Shr5Package.SHR_LIST__NAME:
                 return getName();
+            case Shr5Package.SHR_LIST__PARENT_ID:
+                return getParentId();
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.SHR_LIST__ENTRIES:
                 return getEntries();
         }
@@ -250,6 +323,13 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
                 return;
             case Shr5Package.SHR_LIST__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.SHR_LIST__PARENT_ID:
+                setParentId((String)newValue);
+                return;
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.SHR_LIST__ENTRIES:
                 getEntries().clear();
@@ -276,6 +356,12 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
             case Shr5Package.SHR_LIST__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5Package.SHR_LIST__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.SHR_LIST__ENTRIES:
                 getEntries().clear();
                 return;
@@ -297,6 +383,10 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5Package.SHR_LIST__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.SHR_LIST__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.SHR_LIST__ENTRIES:
                 return entries != null && !entries.isEmpty();
         }
@@ -304,6 +394,40 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.SHR_LIST__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.SHR_LIST__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.SHR_LIST__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.SHR_LIST__LOCALIZATIONS;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -319,6 +443,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(')');
         return result.toString();
     }

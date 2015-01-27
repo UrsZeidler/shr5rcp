@@ -66,6 +66,7 @@ public class ShrListItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -93,6 +94,28 @@ public class ShrListItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Beschreibung feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +171,7 @@ public class ShrListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.SHR_LIST__ENTRIES);
         }
         return childrenFeatures;
@@ -213,8 +237,10 @@ public class ShrListItemProvider
             case Shr5Package.SHR_LIST__BESCHREIBUNG:
             case Shr5Package.SHR_LIST__IMAGE:
             case Shr5Package.SHR_LIST__NAME:
+            case Shr5Package.SHR_LIST__PARENT_ID:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.SHR_LIST__LOCALIZATIONS:
             case Shr5Package.SHR_LIST__ENTRIES:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -232,6 +258,11 @@ public class ShrListItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter
@@ -640,6 +671,29 @@ public class ShrListItemProvider
     }
 
 	/**
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+        Object childFeature = feature;
+        Object childObject = child;
+
+        boolean qualify =
+            childFeature == Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS ||
+            childFeature == Shr5Package.Literals.SHR_LIST__ENTRIES;
+
+        if (qualify) {
+            return getString
+                ("_UI_CreateChild_text2",
+                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
+    }
+
+    /**
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

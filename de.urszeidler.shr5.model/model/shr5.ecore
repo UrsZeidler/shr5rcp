@@ -194,7 +194,7 @@
     <eLiterals name="Gurt" value="2"/>
     <eLiterals name="Streifen" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ShrList" eSuperTypes="#//Beschreibbar">
+  <eClassifiers xsi:type="ecore:EClass" name="ShrList" eSuperTypes="#//Beschreibbar #//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
   </eClassifiers>

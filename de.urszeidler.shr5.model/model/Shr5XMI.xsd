@@ -472,8 +472,10 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="entries" type="ecore:EObject"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

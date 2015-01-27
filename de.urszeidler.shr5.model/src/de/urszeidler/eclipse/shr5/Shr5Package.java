@@ -3163,13 +3163,31 @@ public interface Shr5Package extends EPackage {
 	int SHR_LIST__NAME = BESCHREIBBAR__NAME;
 
     /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_LIST__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_LIST__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Entries</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR_LIST__ENTRIES = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int SHR_LIST__ENTRIES = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Shr List</em>' class.
@@ -3178,7 +3196,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR_LIST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int SHR_LIST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>Shr List</em>' class.

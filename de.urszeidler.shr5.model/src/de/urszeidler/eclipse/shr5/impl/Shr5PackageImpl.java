@@ -6443,6 +6443,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         feuerwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
         wurfwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
         shrListEClass.getESuperTypes().add(this.getBeschreibbar());
+        shrListEClass.getESuperTypes().add(this.getIdentifiable());
         projektilwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
         fertigkeitsGruppeEClass.getESuperTypes().add(this.getBeschreibbar());
         fertigkeitsGruppeEClass.getESuperTypes().add(this.getQuelle());

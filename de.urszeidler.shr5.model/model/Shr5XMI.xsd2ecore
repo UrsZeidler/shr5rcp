@@ -241,8 +241,10 @@
     <nested inputs="shr5.ecore#//Wurfwaffe" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDComplexTypeDefinition=16"/>
     <nested inputs="shr5.ecore#//Wurfwaffe" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDElementDeclaration=16"/>
     <nested inputs="shr5.ecore#//ShrList" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17">
-      <nested inputs="shr5.ecore#//ShrList/entries" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//ShrList/entries" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//ShrList" outputs="Shr5XMI.xsd#//ShrList;XSDElementDeclaration=17"/>
     <nested inputs="shr5.ecore#//Projektilwaffe" outputs="Shr5XMI.xsd#//Projektilwaffe;XSDComplexTypeDefinition=18"/>
     <nested inputs="shr5.ecore#//Projektilwaffe" outputs="Shr5XMI.xsd#//Projektilwaffe;XSDElementDeclaration=18"/>

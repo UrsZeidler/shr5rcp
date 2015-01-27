@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ShrList extends Beschreibbar {
+public interface ShrList extends Beschreibbar, Identifiable {
 	/**
      * Returns the value of the '<em><b>Entries</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
