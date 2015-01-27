@@ -1203,7 +1203,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
 	                            EClass eClass = eObject.eClass();
 	                            // EStructuralFeature feature = getLabelFeature(eClass);
 
-	                            String className = ModifikatorItemProvider.getEClassName(eClass);
+	                            String className = getEClassName(eClass);
 	                            EList<Localization> localizations = id.getLocalizations();
 	                            for (Localization localization : localizations) {
 	                                if (iso3Country.equals(localization.getLocal())) {
@@ -1217,6 +1217,17 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
 	            }
 	        return doSwitch;
 
+	    }
+
+	   public static String getEClassName(EClass object) {
+	        EClass ec = (EClass)object;
+	        String key = "_UI_" + ec.getName() + "_type";
+	        try {
+	            return Shr5ManagementEditPlugin.INSTANCE.getString(key);
+	        } catch (Exception e) {
+	            return ec.getName();
+	        }
+	        
 	    }
 
 }
