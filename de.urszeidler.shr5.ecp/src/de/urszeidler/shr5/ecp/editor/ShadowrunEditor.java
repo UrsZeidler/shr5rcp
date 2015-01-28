@@ -26,7 +26,6 @@ import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
-import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -59,6 +58,7 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
+import de.urszeidler.shr5.ecp.editor.pages.CommitedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ContractPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
@@ -517,6 +517,11 @@ public class ShadowrunEditor extends AbstractShr5Editor {
 
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER,
                             Messages.ShadowrunEditor_page_character_sheet, PersonaPrinter.getInstance().createPrintFactory(object)));
+
+                    
+                    addPage(new CommitedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
+                            object, editingDomain, manager));
+
                     if (object.getGeneratorSrc() != null)
                         this.doSwitch(object.getGeneratorSrc());
 

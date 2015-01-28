@@ -322,6 +322,19 @@ public class PersonaUIToolkit {
                 Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT, client);
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__REAKTION, client);
     }
+    /**
+     * Creates bound widget for the koeperlichen attributes.
+     * 
+     * @param client
+     */
+    public void createKoerperlicheAttributesRO(Composite client) {
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION,
+                client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE, client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS,
+                Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT, client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__REAKTION, client);
+    }
 
     /**
      * Creates bound widget for the koeperlichen attributes.
@@ -357,6 +370,28 @@ public class PersonaUIToolkit {
         }
 
     }
+    /**
+     * Creates bound widget for the koeperlichen attributes.
+     * 
+     * @param client
+     */
+    public void createSpezielleAttributesRO(Composite client) {
+        createEssenzWidget(client);
+        createReaktionAttWidgets(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, client);
+
+        createAttributeWidgetRO(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN, client);
+        createAttributeWidgetRO(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, client);
+
+        createAttributeWidgetRO(Shr5Package.Literals.PANZERUNG__PANZER, Shr5Package.Literals.PANZERUNG__PANZER, client);
+
+        if (eObject instanceof BaseMagischePersona) {
+            createAttributeWidgetRO(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE, client);
+
+        } else if (eObject instanceof Technomancer) {
+            createAttributeWidgetRO(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
+        }
+
+    }
 
     /**
      * Creates bound widget for the koeperlichen attributes.
@@ -369,6 +404,18 @@ public class PersonaUIToolkit {
                 client);
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION, client);
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK, client);
+    }
+    /**
+     * Creates bound widget for the koeperlichen attributes.
+     * 
+     * @param client
+     */
+    public void createGeistigeAttributesRO(Composite client) {
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__CHARISMA, client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT,
+                client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION, client);
+        createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK, client);
     }
 
     private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie) {
