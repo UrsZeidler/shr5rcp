@@ -13,6 +13,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -325,6 +326,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             }
 
             @Override
+            public Object caseFernkampfwaffeModifikator(FernkampfwaffeModifikator object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
             public Object caseWeaponMount(WeaponMount object) {
                 try {
                     addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
@@ -509,12 +520,12 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                         if (object.getGeneratorSrc().getState() == GeneratorState.COMMITED) {
                             addPage(new CommitedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.COMMITED,
                                     Messages.ShadowrunEditor_page_persona, object, editingDomain, manager));
-                        } else {
-                            addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA,
-                                    Messages.ShadowrunEditor_page_persona, object.getPersona(), editingDomain, manager));
-                            addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
-                                    Messages.ShadowrunEditor_page_character, object, editingDomain, manager));
                         }
+                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
+                            object.getPersona(), editingDomain, manager));
+                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
+                            Messages.ShadowrunEditor_page_character, object, editingDomain, manager));
+
                     addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT,
                             Messages.ShadowrunEditor_page_advacement, object, editingDomain, manager));
 

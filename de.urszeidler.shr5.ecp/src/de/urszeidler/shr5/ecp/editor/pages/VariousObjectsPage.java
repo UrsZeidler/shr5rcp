@@ -16,6 +16,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.MetaMagie;
@@ -172,6 +173,8 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof MetaMagie) {
           
             
+        }else if (object instanceof FernkampfwaffeModifikator) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
         }
         addSourceFeature(grpQuelle);
 
