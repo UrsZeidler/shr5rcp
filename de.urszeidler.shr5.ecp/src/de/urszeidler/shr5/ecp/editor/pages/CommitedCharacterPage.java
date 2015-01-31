@@ -1,7 +1,19 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.IValueChangeListener;
+import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
+import org.eclipse.core.databinding.property.value.IValueProperty;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -12,6 +24,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ImageHyperlink;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -23,20 +36,40 @@ import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
-import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
+    private final class LabelEntry implements EntryFactory {
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            createLabelEntry(container,entry, object,dbc,emfFormBuilder);
+        }
+    }
+    
+//    private final class LinkEntry implements EntryFactory{
+//
+//        @Override
+//        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+//            createLinkRO(toolkit, container, entry,object,emfFormBuilder);
+//        }
+//    }
     private ManagedCharacter object;
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
     private AbstraktPersona persona;
     private PersonaFertigkeitenWidget personaFertigkeitenWidget;
+    private Label lblNewLabel_1;
 
     /**
      * Create the form page.
@@ -79,7 +112,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
      */
     @Override
     protected void createFormContent(IManagedForm managedForm) {
-        FormToolkit toolkit = managedForm.getToolkit();
+        final FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
         Composite body = form.getBody();
@@ -164,7 +197,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         }
 
         Composite composite = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
-        composite.setLayout(new GridLayout(3, false));
+        composite.setLayout(new GridLayout(9, false));
         composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
         managedForm.getToolkit().paintBordersFor(composite);
 
@@ -178,22 +211,28 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         createFormBuilder(managedForm);
         gd_grpSkills.heightHint = grpAttributes.getBounds().height;
 
-        emfFormBuilder.addTextEntry(Messages.AbstraktPersonaPage_MethaType, Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, composite);
-        new Label(composite_1, SWT.NONE);
-        new Label(composite_1, SWT.NONE);
-        if (object instanceof Zauberer) {
+        EntryFactory factory = new EntryFactory(){
+
+            @Override
+            public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+                createLinkRO(toolkit, container, entry,object,emfFormBuilder);
+            }
+        };
+
+        emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, composite,factory);
+        if (persona instanceof Zauberer) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBERER__TRADITION, composite);
         }
-        if (object instanceof AspektMagier) {
+        if (persona instanceof AspektMagier) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT, composite);
         }
         emfFormBuilder.buildinComposite(m_bindingContext, body, persona);
-        composite.setEnabled(false);
+//        composite.setEnabled(false);
 
         Section sctnNewSection_1 = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnNewSection_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnNewSection_1);
-        sctnNewSection_1.setText("New Section");
+        sctnNewSection_1.setText("others");
         sctnNewSection_1.setExpanded(true);
 
         Composite composite_3 = new Composite(sctnNewSection_1, SWT.NONE);
@@ -201,9 +240,104 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         composite_3.setLayout(new GridLayout(2, true));
         managedForm.getToolkit().adapt(composite_3);
         managedForm.getToolkit().paintBordersFor(composite_3);
+        
+        Section sctnCharacter = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnCharacter.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnCharacter);
+        sctnCharacter.setText("character");
+        sctnCharacter.setExpanded(true);
+        
+        Composite composite_4 = new Composite(sctnCharacter, SWT.NONE);
+        managedForm.getToolkit().adapt(composite_4);
+        managedForm.getToolkit().paintBordersFor(composite_4);
+        sctnCharacter.setClient(composite_4);
+        composite_4.setLayout(new GridLayout(3, false));
+        
+        Composite composite_5 = new Composite(composite_4, SWT.NONE);
+        composite_5.setLayout(new GridLayout(1, false));
+        composite_5.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_5);
+        managedForm.getToolkit().paintBordersFor(composite_5);
+        
+        
+        Composite composite_6 = new Composite(composite_4, SWT.NONE);
+        composite_6.setLayout(new GridLayout(1, false));
+        composite_6.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_6);
+        managedForm.getToolkit().paintBordersFor(composite_6);
+        
+        Composite composite_7 = new Composite(composite_4, SWT.NONE);
+        composite_7.setLayout(new GridLayout(3, false));
+        composite_7.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_7);
+        managedForm.getToolkit().paintBordersFor(composite_7);
+        
+        
 
+        EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), labelprovider, getEditingDomain());
+        emfFormBuilder1.setManager(mananger);
+        emfFormBuilder1.setNullString(Messages.EmfFormbuilder_non_selected);
+//        emfFormBuilder.setBorderStyle(SWT.NONE);
+        emfFormBuilder1.setDblListner(this);
+        
+        
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite,new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite,new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite,factory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite,new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__PUBLIC_AWARENESS, composite,new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite,factory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite,new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHRACTER_SOURCE, composite,new LabelEntry());
+
+        
+        emfFormBuilder1.buildinComposite(m_bindingContext, composite_7, object);        
+        
+        createCharacterParts(managedForm, toolkit, composite_5, composite_6);
         createPersonaParts(managedForm, toolkit, composite_3);
         managedForm.reflow(true);
+    }
+
+    /**
+     * @param managedForm
+     * @param toolkit
+     * @param composite_5
+     * @param composite_6
+     */
+    private void createCharacterParts(IManagedForm managedForm, FormToolkit toolkit, Composite composite_5, Composite composite_6) {
+        SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_5, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR),
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this);
+        GridData layoutData = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
+        treeTableWidgetEigenschaften.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+        managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+        
+        
+        treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS),
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this);
+        layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        layoutData.heightHint = 150;
+        treeTableWidgetEigenschaften.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+        managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+        
+        
+        treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS),
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this);
+        layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        layoutData.heightHint = 150;
+        treeTableWidgetEigenschaften.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+        managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+
+        treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS),
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
+        layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        layoutData.heightHint = 150;
+        treeTableWidgetEigenschaften.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+        managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+
     }
 
     /**
@@ -231,20 +365,20 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (persona instanceof KiAdept) {
             SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_KiPowers, SWT.NONE,
                     persona, Shr5Package.Literals.KI_ADEPT__KIKRAFT, toolkit, mananger, editingDomain, this);
-            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
         if (persona instanceof Zauberer) {
             SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_Spells, SWT.NONE,
                     persona, Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger, editingDomain, this);
-            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
 
             treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_sct_bound_spririts, SWT.NONE, persona,
                     Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger, editingDomain, this);
-            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+            treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
@@ -257,14 +391,86 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         }
     }
 
-    protected DataBindingContext initDataBindings() {
-        DataBindingContext bindingContext = new DataBindingContext();
-        //
-        return bindingContext;
-    }
-
     @Override
     protected EditingDomain getEditingDomain() {
         return editingDomain;
+    }
+    
+    protected String featureName(EStructuralFeature feature) {
+        return ShadowrunEditingTools.toFeatureName(object, feature);
+    }
+
+
+    /**
+     * @param container
+     * @param object
+     * @param dbc 
+     * @param emfFormBuilder 
+     */
+    private void createLabelEntry(Composite container, FormbuilderEntry e,EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+        emfFormBuilder.createConfiguredLable(container, e, object);
+        Label label = new Label(container, SWT.NONE);
+        label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+        IObservableValue observeTextLblNewLabel_1ObserveWidget = WidgetProperties.text().observe(label);
+        IObservableValue objectNativeLanguageObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object, e.getFeature());
+        UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
+//        strategy.setConverter(new ReferenceToStringConverter(labelprovider));
+        dbc.bindValue(observeTextLblNewLabel_1ObserveWidget, objectNativeLanguageObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
+    }
+
+    
+    /**
+     * @param toolkit
+     * @param container
+     * @param e
+     * @param object
+     * @param emfFormBuilder 
+     */
+    private void createLinkRO(final FormToolkit toolkit, Composite container, FormbuilderEntry e, EObject object, EmfFormBuilder emfFormBuilder) {
+        Label label = emfFormBuilder.createConfiguredLable(container, e, object);
+        label.setText(featureName(e.getFeature()));
+
+        final ImageHyperlink srcLink = toolkit.createImageHyperlink(container,
+                SWT.NONE);
+        toolkit.paintBordersFor(srcLink);
+        srcLink.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 2, 1));
+
+        Object value = object.eGet(e.getFeature());
+
+        final String nullString=Messages.EmfFormbuilder_non_selected;
+        String element = value == null ? nullString : labelprovider
+                .getText(value);
+        srcLink.setText(element);
+        srcLink.setImage(labelprovider.getImage(value));
+
+        // ISWTObservableValue uiObs = SWTObservables.observeText(srcLink);
+        IValueProperty property = null;
+        if (getEditingDomain() != null)
+            property = EMFEditProperties.value(getEditingDomain(), e.getFeature());
+        else
+            property = EMFProperties.value(e.getFeature());
+
+        final IObservableValue mObs = property.observe(object);
+        e.setObservable(mObs);
+        mObs.addValueChangeListener(new IValueChangeListener() {
+            @Override
+            public void handleValueChange(ValueChangeEvent event) {
+                Object value = event.getObservableValue().getValue();
+                srcLink.setText(value == null ? nullString : labelprovider
+                        .getText(value));
+                srcLink.setImage(labelprovider.getImage(value));
+            }
+        });
+    }
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+//        IObservableValue observeTextLblNewLabel_1ObserveWidget = WidgetProperties.text().observe(lblNewLabel_1);
+//        IObservableValue objectNativeLanguageObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE);
+//        UpdateValueStrategy strategy = new UpdateValueStrategy();
+//        strategy.setConverter(new ReferenceConverter());
+//        bindingContext.bindValue(observeTextLblNewLabel_1ObserveWidget, objectNativeLanguageObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
+        //
+        return bindingContext;
     }
 }

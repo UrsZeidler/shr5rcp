@@ -1,9 +1,11 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
@@ -15,6 +17,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -26,6 +29,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     // protected EditingDomain editingDomain;
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
+    protected ILabelProvider labelprovider = new DefaultLabelProvider();
 
     public AbstractShr5Page(String id, String title) {
         super(id, title);
@@ -96,4 +100,5 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
     }
+
 }
