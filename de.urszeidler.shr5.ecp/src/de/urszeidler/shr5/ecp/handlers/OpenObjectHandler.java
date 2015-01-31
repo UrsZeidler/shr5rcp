@@ -4,53 +4,31 @@
 package de.urszeidler.shr5.ecp.handlers;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
-import org.eclipse.jface.window.Window;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.handlers.HandlerUtil;
-
-import com.google.common.collect.Collections2;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
-import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
-import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
-import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
-import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert.DialogType;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
-import de.urszeidler.shr5.scripting.Placement;
-import de.urszeidler.shr5.scripting.Script;
-import de.urszeidler.shr5.scripting.ScriptingFactory;
 
 /**
  * @author urs

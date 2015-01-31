@@ -5,14 +5,10 @@ package de.urszeidler.shr5.ecp.preferences;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EEnumLiteral;
+import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
-import org.eclipse.jface.preference.PreferencePage;
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-import org.eclipse.jface.preference.ColorFieldEditor;
 
 import de.urszeidler.commons.eclipse.preferences.editor.SeparatorFieldEditor;
 import de.urszeidler.shr5.ecp.Activator;

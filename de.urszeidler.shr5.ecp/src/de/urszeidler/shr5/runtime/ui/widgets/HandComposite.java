@@ -28,7 +28,6 @@ import de.urszeidler.eclipse.shr5.gameplay.ComplexAction;
 import de.urszeidler.eclipse.shr5.gameplay.FreeAction;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
-import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;

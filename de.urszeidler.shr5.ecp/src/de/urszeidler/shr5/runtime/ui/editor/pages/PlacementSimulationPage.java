@@ -34,6 +34,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.ProgressBar;
 import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
@@ -88,7 +89,6 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.Scripts;
-import org.eclipse.swt.widgets.ProgressBar;
 
 public class PlacementSimulationPage extends AbstractShr5Page<Placement> {
     // private DataBindingContext m_bindingContext;

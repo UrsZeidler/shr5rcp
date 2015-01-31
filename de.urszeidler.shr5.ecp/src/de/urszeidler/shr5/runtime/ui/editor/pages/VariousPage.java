@@ -21,9 +21,7 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
-import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
-import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 
 /**

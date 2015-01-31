@@ -15,7 +15,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Shell;
 
-import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;

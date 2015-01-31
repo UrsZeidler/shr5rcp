@@ -38,8 +38,6 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
-import de.urszeidler.shr5.acceleo.sheets.AbstractSvg2PdfGenerator;
-import de.urszeidler.shr5.acceleo.sheets.AbstractTextGenerator;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;

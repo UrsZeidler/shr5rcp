@@ -16,8 +16,6 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Gegenstand;
-import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
