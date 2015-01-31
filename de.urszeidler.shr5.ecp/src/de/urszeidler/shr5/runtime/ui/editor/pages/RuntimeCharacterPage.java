@@ -174,7 +174,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
 
         Group grpPhysical = new Group(monitor, SWT.NONE);
         grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpPhysical.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE));
+        grpPhysical.setText("physical");
         managedForm.getToolkit().adapt(grpPhysical);
         managedForm.getToolkit().paintBordersFor(grpPhysical);
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -186,7 +186,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpMental = new Group(monitor, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpMental.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE));
+        grpMental.setText("mental");
         managedForm.getToolkit().adapt(grpMental);
         managedForm.getToolkit().paintBordersFor(grpMental);
 
@@ -198,7 +198,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpOverDead = new Group(monitor, SWT.NONE);
         grpOverDead.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpOverDead.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD));
+        grpOverDead.setText("overflow");
         managedForm.getToolkit().adapt(grpOverDead);
         managedForm.getToolkit().paintBordersFor(grpOverDead);
 
