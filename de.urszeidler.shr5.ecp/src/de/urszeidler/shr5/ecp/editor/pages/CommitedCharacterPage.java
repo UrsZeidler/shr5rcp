@@ -43,6 +43,8 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
@@ -118,6 +120,11 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        form.getToolBarManager().update(true);
+
+        
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, persona, toolkit, editingDomain);
@@ -352,8 +359,8 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
      * @param composite_3
      */
     private void createPersonaParts(IManagedForm managedForm, FormToolkit toolkit, Composite composite_3) {
-        if (object instanceof KoerperPersona) {
-            KoerperPersona kp = (KoerperPersona)object;
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
             if (!kp.getEigenschaften().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_3,
                         Messages.AbstraktPersonaPage_sct_quallities, SWT.NONE, persona, Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit,
