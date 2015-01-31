@@ -101,7 +101,8 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
             });
 
         } catch (Exception e) {
-            Shr5EditPlugin.getPlugin().getLog().log(new Status(Status.ERROR,Shr5EditPlugin.getPlugin().getSymbolicName(), "Error initialising Shr5ItemProviderAdapterFactory", e));
+            if(Shr5EditPlugin.getPlugin()!=null)
+                Shr5EditPlugin.getPlugin().getLog().log(new Status(Status.ERROR,Shr5EditPlugin.getPlugin().getSymbolicName(), "Error initialising Shr5ItemProviderAdapterFactory", e));
         }
     }
 
