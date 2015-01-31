@@ -67,7 +67,8 @@
 						<xsl:for-each select="chummer/books/*">
 							<entries xsi:type="shr5:SourceBook" startShrTime="2072-12-13T17:51:44.000+0100"
 								endShrTime="2075-12-13T17:51:44.000+0100">
-								<xsl:attribute name="beschreibung"><xsl:value-of select="url/text()" /></xsl:attribute>
+								<xsl:attribute name="beschreibung"><xsl:value-of
+									select="url/text()" /></xsl:attribute>
 								<xsl:call-template name="set_id" />
 								<xsl:call-template name="beschreibbar" />
 							</entries>
@@ -479,7 +480,7 @@
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 			</priorities>
 			<xsl:call-template name="lifestyle-to-money" />
-			<xsl:call-template name="generator-instructions"/>
+			<xsl:call-template name="generator-instructions" />
 		</entries>
 
 	</xsl:template>
@@ -502,7 +503,7 @@
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
 					<selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 				</priorities>
-				<xsl:call-template name="generator-instructions"/>
+				<xsl:call-template name="generator-instructions" />
 
 				<xsl:call-template name="lifestyle-to-money" />
 			</entries>
@@ -556,7 +557,7 @@
 				<instructions key="commited"
 					value="The character is finshed and commited." />
 				<xsl:call-template name="lifestyle-to-money" />
-	
+
 			</entries>
 		</entries>
 	</xsl:template>
@@ -1669,8 +1670,34 @@
 	</xsl:template>
 
 	<xsl:template name="mods">
+	<xsl:for-each select="qualities/positive/*">
+	<xsl:choose>
+		<xsl:when test="text()='Thermographic Vision'">
+          <mods wert="1" attribut="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+		</xsl:when>
+		<xsl:when test="text()='Low-Light Vision'">
+          <mods wert="1" attribut="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+		</xsl:when>
+	</xsl:choose>
+	
+	</xsl:for-each>
 		<xsl:for-each select="bonus/*">
 			<xsl:choose>
+				<xsl:when test="name()='reach'">
+					<mods>
+						<xsl:if test="number(text())">
+							<xsl:attribute name="wert">
+				<xsl:value-of select="number(text())" />
+				</xsl:attribute>
+						</xsl:if>
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
+							<xsl:value-of
+							select="'http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite'" />
+					</xsl:attribute>
+						<!-- </attribut> -->
+					</mods>
+				</xsl:when>
 				<xsl:when test="name()='initiativedice'">
 					<mods>
 						<xsl:if test="number(text())">
@@ -2100,22 +2127,22 @@
 		</xsl:if>
 
 
-		<xsl:if test="number(run/text())">
-			<xsl:attribute name="rennen"><xsl:value-of select="number(run/text())" /></xsl:attribute>
+		<xsl:if test="number(substring-after(run/text(),'AGI*' ))">
+			<xsl:attribute name="rennen"><xsl:value-of select="number(substring-after(run/text(),'AGI*' ))" /></xsl:attribute>
 		</xsl:if>
-		<xsl:if test="number(walk/text())">
-			<xsl:attribute name="laufen"><xsl:value-of select="number(walk/text())" /></xsl:attribute>
+		<xsl:if test="number(substring-after(walk/text(),'AGI*' ))">
+			<xsl:attribute name="laufen"><xsl:value-of select="number(substring-after(walk/text(),'AGI*' ))" /></xsl:attribute>
 		</xsl:if>
-		<xsl:if test="number(sprint/text())">
+<!-- 		<xsl:if test="substring(1,1,sprint/text())"> -->
 			<xsl:attribute name="sprinten"><xsl:value-of
-				select="number(sprint/text())" /></xsl:attribute>
-		</xsl:if>
+				select="substring(sprint/text(),2,1)" /></xsl:attribute>
+<!-- 		</xsl:if> -->
 
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 		<xsl:call-template name="mods" />
 		<!-- <xsl:call-template name="localization"/> -->
-		<angriff name="unarmed" schadenscode="(STR)P" />
+		<angriff name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P" />
 
 	</xsl:template>
 
@@ -2750,30 +2777,30 @@
 	</xsl:template>
 
 	<xsl:template match="//accessory">
-		<xsl:if test="mount/text()!=''">
-			<entries xsi:type="shr5:FernkampfwaffeModifikator">
-				<xsl:choose>
-					<xsl:when test="mount/text()='Barrel'">
-						<xsl:attribute name="ep"><xsl:value-of
-							select="'Lauf'" /></xsl:attribute>
-					</xsl:when>
-					<xsl:when test="mount/text()='Top'">
-						<xsl:attribute name="ep"><xsl:value-of
-							select="'Oben'" /></xsl:attribute>
-					</xsl:when>
-					<xsl:when test="mount/text()='Under'">
-						<xsl:attribute name="ep"><xsl:value-of
-							select="'Unten'" /></xsl:attribute>
-					</xsl:when>
-				</xsl:choose>
+		<!-- <xsl:if test="mount/text()!=''"> -->
+		<entries xsi:type="shr5:FernkampfwaffeModifikator">
+			<xsl:choose>
+				<xsl:when test="mount/text()='Barrel'">
+					<xsl:attribute name="ep"><xsl:value-of
+						select="'Lauf'" /></xsl:attribute>
+				</xsl:when>
+				<xsl:when test="mount/text()='Top'">
+					<xsl:attribute name="ep"><xsl:value-of
+						select="'Oben'" /></xsl:attribute>
+				</xsl:when>
+				<xsl:when test="mount/text()='Under'">
+					<xsl:attribute name="ep"><xsl:value-of
+						select="'Unten'" /></xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
 
-				<xsl:call-template name="set_parentid" />
-				<xsl:call-template name="beschreibbar" />
-				<xsl:call-template name="simple_quelle" />
-				<xsl:call-template name="localization" />
-			</entries>
+			<xsl:call-template name="set_parentid" />
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="simple_quelle" />
+			<xsl:call-template name="localization" />
+		</entries>
 
-		</xsl:if>
+		<!-- </xsl:if> -->
 	</xsl:template>
 	<!-- weapon -->
 	<xsl:template match="weapon">
