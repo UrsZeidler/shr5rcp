@@ -96,7 +96,6 @@ public class ShadowrunEditor extends AbstractShr5Editor {
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
-
     @Override
     protected void addPages() {
 
@@ -213,7 +212,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseAbstractMatrixDevice(AbstractMatrixDevice object) {
                 try {
@@ -270,9 +269,9 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 try {
                     addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                     if (object.getWifi() != null)
-                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()), (AbstraktGegenstand)object.getWifi(),
-                                editingDomain, manager));
-               } catch (PartInitException e) {
+                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()),
+                                (AbstraktGegenstand)object.getWifi(), editingDomain, manager));
+                } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
@@ -316,8 +315,8 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                         addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getMagazin()), object.getMagazin(),
                                 editingDomain, manager));
                     if (object.getWifi() != null)
-                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()), (AbstraktGegenstand)object.getWifi(),
-                                editingDomain, manager));
+                        addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.getWifi()),
+                                (AbstraktGegenstand)object.getWifi(), editingDomain, manager));
 
                 } catch (PartInitException e) {
                     logError("error creating FeuerwaffePage", e);//$NON-NLS-1$
@@ -328,69 +327,67 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseWeaponMount(WeaponMount object) {
                 try {
-                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseLifestyleOption(LifestyleOption object) {
                 try {
-                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseMetaMagie(MetaMagie object) {
                 try {
-                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseKomplexeForm(KomplexeForm object) {
                 try {
-                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseZauber(Zauber object) {
                 try {
-                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseGeist(Geist object) {
                 try {
-                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseShrList(ShrList object) {
                 try {
@@ -508,19 +505,21 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {
-                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
-                            object.getPersona(), editingDomain, manager));
-                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
-                            Messages.ShadowrunEditor_page_character, object, editingDomain, manager));
+                    if (object.getGeneratorSrc() != null)
+                        if (object.getGeneratorSrc().getState() == GeneratorState.COMMITED) {
+                            addPage(new CommitedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.COMMITED,
+                                    Messages.ShadowrunEditor_page_persona, object, editingDomain, manager));
+                        } else {
+                            addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA,
+                                    Messages.ShadowrunEditor_page_persona, object.getPersona(), editingDomain, manager));
+                            addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
+                                    Messages.ShadowrunEditor_page_character, object, editingDomain, manager));
+                        }
                     addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT,
                             Messages.ShadowrunEditor_page_advacement, object, editingDomain, manager));
 
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER,
                             Messages.ShadowrunEditor_page_character_sheet, PersonaPrinter.getInstance().createPrintFactory(object)));
-
-                    
-                    addPage(new CommitedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
-                            object, editingDomain, manager));
 
                     if (object.getGeneratorSrc() != null)
                         this.doSwitch(object.getGeneratorSrc());
@@ -614,12 +613,11 @@ public class ShadowrunEditor extends AbstractShr5Editor {
 
                 return super.caseCharacterGenerator(object);
             }
-            
+
             @Override
             public Object casePack(Pack object) {
                 try {
-                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
                 }

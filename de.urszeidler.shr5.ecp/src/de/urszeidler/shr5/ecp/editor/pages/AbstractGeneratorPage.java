@@ -53,6 +53,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     public static final String PERSONA_ADVANCEMENT = "persona.advancement"; //$NON-NLS-1$
     public static final String PERSONA_INVENTAR = "persona.inventar"; //$NON-NLS-1$
     public static final String PERSONA = "persona"; //$NON-NLS-1$
+    public static final String COMMITED = "character-commited";//$NON-NLS-1$
 
     /**
      * Provides the lables for the validation chain.

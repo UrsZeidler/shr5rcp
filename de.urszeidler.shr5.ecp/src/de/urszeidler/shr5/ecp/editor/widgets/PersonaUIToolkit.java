@@ -33,6 +33,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
@@ -368,6 +369,8 @@ public class PersonaUIToolkit {
         } else if (eObject instanceof Technomancer) {
             createAttributeWidget(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
         }
+//        if(eObject instanceof Zauberer)
+//            createAttributeWidgetRO(Shr5Package.Literals.ZAUBERER__ENZUG, Shr5Package.Literals.ZAUBERER__ENZUG, client);
 
     }
     /**
@@ -390,6 +393,8 @@ public class PersonaUIToolkit {
         } else if (eObject instanceof Technomancer) {
             createAttributeWidgetRO(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
         }
+        if(eObject instanceof Zauberer)
+            createAttributeWidgetRO(Shr5Package.Literals.ZAUBERER__ENZUG, Shr5Package.Literals.ZAUBERER__ENZUG, client);
 
     }
 
