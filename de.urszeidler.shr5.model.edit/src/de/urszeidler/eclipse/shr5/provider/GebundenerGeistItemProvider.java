@@ -25,6 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.GebundenerGeist} object.
@@ -133,12 +134,13 @@ public class GebundenerGeistItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         GebundenerGeist gebundenerGeist = (GebundenerGeist)object;
-        return getString("_UI_GebundenerGeist_type") + " " + gebundenerGeist.getDienste();
+        String t = gebundenerGeist.getGeist()== null ? "[unset]" : AdapterFactoryUtil.getInstance().getLabelProvider().getText(gebundenerGeist.getGeist()) + ":"+gebundenerGeist.getGeist().getStufe();
+        return getString("_UI_GebundenerGeist_type")+" "+t + " [" + gebundenerGeist.getDienste()+"]";
     }
 
     /**

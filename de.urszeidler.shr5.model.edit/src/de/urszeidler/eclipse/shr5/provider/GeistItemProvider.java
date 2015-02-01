@@ -1101,11 +1101,13 @@ public class GeistItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((Geist)object).getName();
+        Geist geist = (Geist)object;
+        
+        String label = geist.getName();
         return label == null || label.length() == 0 ?
             getString("_UI_Geist_type") :
             getString("_UI_Geist_type") + " " + label;
