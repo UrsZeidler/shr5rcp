@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -175,6 +176,9 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             
         }else if (object instanceof FernkampfwaffeModifikator) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
+        }else if (object instanceof MagischeTradition) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__ENZUG, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__BESCHWOERBAR, grpGegenstand);
         }
         addSourceFeature(grpQuelle);
 

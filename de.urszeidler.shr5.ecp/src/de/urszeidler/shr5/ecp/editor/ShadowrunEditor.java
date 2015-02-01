@@ -23,6 +23,7 @@ import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.LifestyleOption;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
@@ -324,7 +325,15 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 }
                 return null;
             }
-
+            @Override
+            public Object caseMagischeTradition(MagischeTradition object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
             @Override
             public Object caseFernkampfwaffeModifikator(FernkampfwaffeModifikator object) {
                 try {
