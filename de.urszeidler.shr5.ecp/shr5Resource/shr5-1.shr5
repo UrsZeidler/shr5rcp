@@ -21339,8 +21339,105 @@
           <zauber xmi:id="_B0wicd0CEeOvVYoRsPZlnA" stufe="1" formel="fb44d690-17c0-4d22-819e-8b7b463b2599"/>
           <zauber xmi:id="_B0wict0CEeOvVYoRsPZlnA" stufe="1" formel="fc5bf8bd-1c7e-4093-bd86-4d9943aafbd4"/>
           <zauber xmi:id="_B0wic90CEeOvVYoRsPZlnA" stufe="1" formel="1d9430e9-3ae9-4c0a-ba60-ee92c245ee08"/>
-          <gebundeneGeister xmi:id="_B0zlwN0CEeOvVYoRsPZlnA" dienste="4"/>
-          <gebundeneGeister xmi:id="_B00M0N0CEeOvVYoRsPZlnA" dienste="4"/>
+          <gebundeneGeister xmi:id="_cwotUKoGEeSfjL47WzeqVg" dienste="4">
+            <geist xmi:id="4c0349ca-be2b-4b7f-9c52-9c9db12c873e" page="303" name="Spirit of Water" stufe="6" skills="59318078-e071-411b-9194-7222560e9f4a b7599a42-ceed-4558-b357-865aa3e317f5 88ee65ba-c797-4f9c-91fe-39bc43b0f9c8 04e1eb3e-e82d-485b-a7fd-1e677df2a070 4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" konstitutionBasis="2" reaktionBasis="2">
+              <localizations xmi:id="_ER6gYDnTEeSe6_w6Jrbqxg" local="de" name="Wassergeist"/>
+              <powers xmi:id="_ER6gYTnTEeSe6_w6Jrbqxg" name="Astral Form" page="208" reichweite="selbst">
+                <localizations xmi:id="_ER6gYjnTEeSe6_w6Jrbqxg" local="de" name="Astrale Gestalt"/>
+              </powers>
+              <powers xmi:id="_ER6gYznTEeSe6_w6Jrbqxg" name="Concealment" page="209" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER6gZDnTEeSe6_w6Jrbqxg" local="de" name="Verschleierung"/>
+              </powers>
+              <powers xmi:id="_ER6gZTnTEeSe6_w6Jrbqxg" name="Confusion" page="209" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER6gZjnTEeSe6_w6Jrbqxg" local="de" name="Verwirrung"/>
+              </powers>
+              <powers xmi:id="_ER7HcDnTEeSe6_w6Jrbqxg" name="Engulf" page="294" art="Physisch" reichweite="beruehrung" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER7HcTnTEeSe6_w6Jrbqxg" local="de" name="Verschlingen"/>
+              </powers>
+              <powers xmi:id="_ER7HcjnTEeSe6_w6Jrbqxg" name="Engulf" page="210" art="Physisch" reichweite="beruehrung" dauer="aufrechterhalten"/>
+              <powers xmi:id="_ER7HcznTEeSe6_w6Jrbqxg" name="Materialization" page="213" art="Physisch" reichweite="selbst" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER7HdDnTEeSe6_w6Jrbqxg" local="de" name="Materialisierung"/>
+              </powers>
+              <powers xmi:id="_ER7HdTnTEeSe6_w6Jrbqxg" name="Movement" page="213" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER7HdjnTEeSe6_w6Jrbqxg" local="de" name="Bewegung"/>
+              </powers>
+              <powers xmi:id="_ER7HdznTEeSe6_w6Jrbqxg" name="Sapience" page="206" art="Physisch" reichweite="selbst">
+                <localizations xmi:id="_ER7HeDnTEeSe6_w6Jrbqxg" local="de" name="Bewußtsein"/>
+              </powers>
+              <powers xmi:id="_ER7HeTnTEeSe6_w6Jrbqxg" name="Search" page="215" art="Physisch" reichweite="speziell">
+                <localizations xmi:id="_ER7ugDnTEeSe6_w6Jrbqxg" local="de" name="Suche"/>
+              </powers>
+              <powers xmi:id="_ER7ugTnTEeSe6_w6Jrbqxg" name="Allergy" page="219">
+                <localizations xmi:id="_ER7ugjnTEeSe6_w6Jrbqxg" local="de" name="Allergie"/>
+              </powers>
+              <optionalPowers xmi:id="_ER7ugznTEeSe6_w6Jrbqxg" name="Accident" page="208" art="Physisch" dauer="sofort">
+                <localizations xmi:id="_ER7uhDnTEeSe6_w6Jrbqxg" local="de" name="Unfall"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ER7uhTnTEeSe6_w6Jrbqxg" name="Binding" page="293" art="Physisch" dauer="sofort">
+                <localizations xmi:id="_ER7uhjnTEeSe6_w6Jrbqxg" local="de" name="Bindung"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ER7uhznTEeSe6_w6Jrbqxg" name="Binding" page="209" art="Physisch" dauer="sofort"/>
+              <optionalPowers xmi:id="_ER7uiDnTEeSe6_w6Jrbqxg" name="Elemental Attack" page="210" art="Physisch" dauer="sofort">
+                <localizations xmi:id="_ER7uiTnTEeSe6_w6Jrbqxg" local="de" name="Elementarer Angriff"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ER8VkDnTEeSe6_w6Jrbqxg" name="Energy Aura" page="210" art="Physisch" reichweite="selbst">
+                <localizations xmi:id="_ER8VkTnTEeSe6_w6Jrbqxg" local="de" name="Energieaura"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ER8VkjnTEeSe6_w6Jrbqxg" name="Guard" page="212" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER8VkznTEeSe6_w6Jrbqxg" local="de" name="Schutz"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ER8VlDnTEeSe6_w6Jrbqxg" name="Weather Control" page="215" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ER8VlTnTEeSe6_w6Jrbqxg" local="de" name="Wetterbeherrschung"/>
+              </optionalPowers>
+            </geist>
+          </gebundeneGeister>
+          <gebundeneGeister xmi:id="_jqEDQKoGEeSfjL47WzeqVg" dienste="4">
+            <geist xmi:id="4a80bfc5-da03-4896-9722-2a785d32095e" page="302" name="Spirit of Beasts" stufe="6" skills="59318078-e071-411b-9194-7222560e9f4a b7599a42-ceed-4558-b357-865aa3e317f5 04e1eb3e-e82d-485b-a7fd-1e677df2a070 4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" konstitutionBasis="2" geschicklichkeitBasis="1" reaktionBasis="2" staerkeBasis="2">
+              <localizations xmi:id="_ERozkDnTEeSe6_w6Jrbqxg" local="de" name="Geist des Tieres"/>
+              <powers xmi:id="_ERozkTnTEeSe6_w6Jrbqxg" name="Animal Control" page="208" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERozkjnTEeSe6_w6Jrbqxg" local="de" name="Tierbeherrschung"/>
+              </powers>
+              <powers xmi:id="_ERozkznTEeSe6_w6Jrbqxg" name="Astral Form" page="208" reichweite="selbst">
+                <localizations xmi:id="_ERpaoDnTEeSe6_w6Jrbqxg" local="de" name="Astrale Gestalt"/>
+              </powers>
+              <powers xmi:id="_ERpaoTnTEeSe6_w6Jrbqxg" name="Enhanced Senses" page="204" art="Physisch" reichweite="selbst">
+                <localizations xmi:id="_ERpaojnTEeSe6_w6Jrbqxg" local="de" name="Gesteigerte Sinne"/>
+              </powers>
+              <powers xmi:id="_ERpaoznTEeSe6_w6Jrbqxg" name="Fear" page="212">
+                <localizations xmi:id="_ERpapDnTEeSe6_w6Jrbqxg" local="de" name="Grauen"/>
+              </powers>
+              <powers xmi:id="_ERpapTnTEeSe6_w6Jrbqxg" name="Materialization" page="213" art="Physisch" reichweite="selbst" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERpapjnTEeSe6_w6Jrbqxg" local="de" name="Materialisierung"/>
+              </powers>
+              <powers xmi:id="_ERpapznTEeSe6_w6Jrbqxg" name="Movement" page="213" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERpaqDnTEeSe6_w6Jrbqxg" local="de" name="Bewegung"/>
+              </powers>
+              <powers xmi:id="_ERpaqTnTEeSe6_w6Jrbqxg" name="Sapience" page="206" art="Physisch" reichweite="selbst">
+                <localizations xmi:id="_ERqBsDnTEeSe6_w6Jrbqxg" local="de" name="Bewußtsein"/>
+              </powers>
+              <optionalPowers xmi:id="_ERqBsTnTEeSe6_w6Jrbqxg" name="Concealment" page="209" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERqBsjnTEeSe6_w6Jrbqxg" local="de" name="Verschleierung"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqBsznTEeSe6_w6Jrbqxg" name="Confusion" page="209" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERqBtDnTEeSe6_w6Jrbqxg" local="de" name="Verwirrung"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqBtTnTEeSe6_w6Jrbqxg" name="Guard" page="212" art="Physisch" dauer="aufrechterhalten">
+                <localizations xmi:id="_ERqBtjnTEeSe6_w6Jrbqxg" local="de" name="Schutz"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqBtznTEeSe6_w6Jrbqxg" name="Natural Weapon" page="206" art="Physisch" reichweite="beruehrung" dauer="sofort">
+                <localizations xmi:id="_ERqBuDnTEeSe6_w6Jrbqxg" local="de" name="Natürliche Waffe"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqowDnTEeSe6_w6Jrbqxg" name="Noxious Breath" page="213" art="Physisch" reichweite="speziell" dauer="sofort">
+                <localizations xmi:id="_ERqowTnTEeSe6_w6Jrbqxg" local="de" name="Übler Atem"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqowjnTEeSe6_w6Jrbqxg" name="Search" page="215" art="Physisch" reichweite="speziell">
+                <localizations xmi:id="_ERqowznTEeSe6_w6Jrbqxg" local="de" name="Suche"/>
+              </optionalPowers>
+              <optionalPowers xmi:id="_ERqoxDnTEeSe6_w6Jrbqxg" name="Venom" page="208" art="Physisch" reichweite="beruehrung" dauer="sofort">
+                <localizations xmi:id="_ERqoxTnTEeSe6_w6Jrbqxg" local="de" name="Gift"/>
+              </optionalPowers>
+            </geist>
+          </gebundeneGeister>
         </persona>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_B00M0d0CEeOvVYoRsPZlnA" changeApplied="true" dateApplied="2014-03-25T12:58:04.696+0100" from="2" to="3" changeable="_B0tfJd0CEeOvVYoRsPZlnA"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_B00z490CEeOvVYoRsPZlnA" page="437" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12"/>
