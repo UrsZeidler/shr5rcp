@@ -17,6 +17,10 @@
       [Enter License Description here.]
    </license>
 
+   <url>
+      <update label="shr5updatesite" url="http://opensource.urszeidler.de/shr5updatesite/"/>
+   </url>
+
    <includes
          id="org.eclipse.e4.rcp"
          version="0.0.0"
