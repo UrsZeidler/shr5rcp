@@ -256,33 +256,14 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             }
 
         } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())) {
-            final EObject contextObject = object;
-            EClass eClass = (EClass)e.getFeature().getEType();
-            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass);
-            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this,
-                    new DefaultReferenceManager(itemDelegator) {
-                        @Override
-                        public void handleManage(FormbuilderEntry e, EObject object) {
-                            if (Shr5managementPackage.Literals.CONNECTION__CHARACTER.equals(e.getFeature())) {
-                                Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject,
-                                        Shr5managementPackage.Literals.MANAGED_CHARACTER);
-                                OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(),
-                                        objectsOfType.toArray(new Object[]{}), "Choose connection", "");
-                                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-                                setSingleRefernceFromDialog(e, dialog);
-                            } else
-                                super.handleManage(e, object);
-                        }
-
-                    });
-
-            if (dialog.open() == Dialog.OK)
-                return eObject;
-            else
-                return null;
-
-        } else if (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
-                || Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
+            final EClass type_lookup_class = Shr5managementPackage.Literals.MANAGED_CHARACTER;
+            final EReference inner_feature = Shr5managementPackage.Literals.CONNECTION__CHARACTER;
+            return provideInnerObject(e, object, type_lookup_class, inner_feature);
+        } else if (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())) {
+            final EClass type_lookup_class = Shr5Package.Literals.GEIST;
+            final EReference inner_feature = Shr5Package.Literals.GEBUNDENER_GEIST__GEIST;
+            return provideInnerObject(e, object, type_lookup_class, inner_feature);
+        }  else if (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
 
             EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
             // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
@@ -295,6 +276,40 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return null;
         }
         return defaultCreationDialog(e, object);
+    }
+
+    /**
+     * @param e
+     * @param object
+     * @param type_lookup_class
+     * @param inner_feature
+     * @return
+     */
+    private Object provideInnerObject(FormbuilderEntry e, EObject object, final EClass type_lookup_class, final EReference inner_feature) {
+        final EObject contextObject = object;
+        EClass eClass = (EClass)e.getFeature().getEType();
+        EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass);
+        GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this,
+                new DefaultReferenceManager(itemDelegator) {
+                    @Override
+                    public void handleManage(FormbuilderEntry e, EObject object) {
+                        if (inner_feature.equals(e.getFeature())) {
+                            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject,
+                                    type_lookup_class);
+                            OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(),
+                                    objectsOfType.toArray(new Object[]{}), "Choose connection", "");
+                            dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                            setSingleRefernceFromDialog(e, dialog);
+                        } else
+                            super.handleManage(e, object);
+                    }
+
+                });
+
+        if (dialog.open() == Dialog.OK)
+            return eObject;
+        else
+            return null;
     }
 
     protected EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
