@@ -59,6 +59,8 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.actions.OpenCharacterByRuntimeEditorAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
@@ -81,7 +83,8 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
     private ComposedAdapterFactory adapterFactory;
     private AdapterFactoryItemDelegator itemDelegator;
     private StateMonitorWidget stateMonitorWidgetUsedEdge;
-//    private Text formText;
+
+    // private Text formText;
     /**
      * Create the form page.
      * 
@@ -121,18 +124,16 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
         actionListContentProvider = new AdapterFactoryContentProvider(adapterFactory);
-        
-        
+
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
         Composite body = form.getBody();
-        
+
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         form.getToolBarManager().add(new OpenCharacterByRuntimeEditorAction(object));
         form.getToolBarManager().update(true);
-        
-        
+
         LabelProvider labelProvider = AdapterFactoryUtil.getInstance().getLabelProvider();
         form.setText(labelProvider.getText(object));
         {
@@ -157,9 +158,46 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().paintBordersFor(composite_1);
         {
             TableWrapLayout twl_composite_1 = new TableWrapLayout();
-            twl_composite_1.numColumns = 2;
             composite_1.setLayout(twl_composite_1);
         }
+
+        Composite composite_4 = new Composite(composite_1, SWT.NONE);
+        composite_4.setLayout(new GridLayout(4, false));
+        composite_4.setLayoutData(new TableWrapData(TableWrapData.FILL, TableWrapData.TOP, 1, 1));
+        managedForm.getToolkit().adapt(composite_4);
+        managedForm.getToolkit().paintBordersFor(composite_4);
+        
+        Group grpKrperlicheAttribute = new Group(composite_4, SWT.NONE);
+        grpKrperlicheAttribute.setText(Messages.AbstraktPersonaPage_Body);
+        grpKrperlicheAttribute.setToolTipText(Messages.AbstraktPersonaPage_Body_Attributes);
+        grpKrperlicheAttribute.setLayout(new GridLayout(3, false));
+        grpKrperlicheAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        toolkit.adapt(grpKrperlicheAttribute);
+        toolkit.paintBordersFor(grpKrperlicheAttribute);
+
+        Group grpGeistigeAttribute = new Group(composite_4, SWT.NONE);
+        grpGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
+        grpGeistigeAttribute.setToolTipText(Messages.AbstraktPersonaPage_Mental_Attributes);
+        grpGeistigeAttribute.setLayout(new GridLayout(3, false));
+        grpGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        toolkit.adapt(grpGeistigeAttribute);
+        toolkit.paintBordersFor(grpGeistigeAttribute);
+
+        Group grpSpezielleAttribute = new Group(composite_4, SWT.NONE);
+        grpSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
+        grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);
+        grpSpezielleAttribute.setLayout(new GridLayout(3, false));
+        grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        toolkit.adapt(grpSpezielleAttribute);
+        toolkit.paintBordersFor(grpSpezielleAttribute);
+
+        Group compositelimits = new Group(composite_4, SWT.NONE);
+        compositelimits.setText(Messages.AbstraktPersonaPage_Limits);
+        compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);
+        compositelimits.setLayout(new GridLayout(3, false));
+        compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+        toolkit.adapt(compositelimits);
+        toolkit.paintBordersFor(compositelimits);
 
         Composite composite_3 = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
         composite_3.setLayout(new GridLayout(3, false));
@@ -173,7 +211,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().paintBordersFor(monitor);
 
         Group grpPhysical = new Group(monitor, SWT.NONE);
-        grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpPhysical.setText("physical");
         managedForm.getToolkit().adapt(grpPhysical);
         managedForm.getToolkit().paintBordersFor(grpPhysical);
@@ -185,7 +223,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
 
         Group grpMental = new Group(monitor, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpMental.setText("mental");
         managedForm.getToolkit().adapt(grpMental);
         managedForm.getToolkit().paintBordersFor(grpMental);
@@ -193,27 +231,26 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         stateMonitorWidgetMental = new StateMonitorWidget(grpMental, SWT.NONE);
         stateMonitorWidgetMental.setType(MonitorType.mental);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetMental);
-        
-        
+
         Group grpOverDead = new Group(monitor, SWT.NONE);
         grpOverDead.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpOverDead.setText("overflow");
         managedForm.getToolkit().adapt(grpOverDead);
         managedForm.getToolkit().paintBordersFor(grpOverDead);
 
-        stateMonitorWidgetOverDead = new StateMonitorWidget(grpOverDead, SWT.NONE,3,false);
+        stateMonitorWidgetOverDead = new StateMonitorWidget(grpOverDead, SWT.NONE, 3, false);
         stateMonitorWidgetOverDead.setType(MonitorType.overflow);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetOverDead);
 
         Group grpUsedEdge = new Group(monitor, SWT.NONE);
         grpUsedEdge.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpUsedEdge.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpUsedEdge.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpUsedEdge.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE));
         managedForm.getToolkit().adapt(grpUsedEdge);
         managedForm.getToolkit().paintBordersFor(grpUsedEdge);
 
-        stateMonitorWidgetUsedEdge = new StateMonitorWidget(grpUsedEdge, SWT.NONE,3,false);
+        stateMonitorWidgetUsedEdge = new StateMonitorWidget(grpUsedEdge, SWT.NONE, 3, false);
         stateMonitorWidgetUsedEdge.setType(MonitorType.edge);
         managedForm.getToolkit().paintBordersFor(stateMonitorWidgetUsedEdge);
 
@@ -225,7 +262,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
             stateMonitorWidgetOverDead.setMaxConditions(koerperPersona.getZustandGrenze());
             stateMonitorWidgetUsedEdge.setMaxConditions(koerperPersona.getEdge());
         }
-        
+
         Group grpState = new Group(monitor, SWT.NONE);
         grpState.setLayout(new GridLayout(3, false));
         grpState.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
@@ -246,15 +283,13 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         ToolBar toolbar = extendetDataToolbar.createControl(managedForm.getForm().getBody());
         managedForm.getToolkit().adapt(toolbar);
         managedForm.getToolkit().paintBordersFor(toolbar);
-        
-        
-//        formText = managedForm.getToolkit().createText(managedForm.getForm().getBody(), "",SWT.MULTI);
-//        formText.setEditable(false);
-//        TableWrapData twd_formText = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 5, 1);
-//        twd_formText.heightHint = 74;
-//        formText.setLayoutData(twd_formText);
 
-        
+        // formText = managedForm.getToolkit().createText(managedForm.getForm().getBody(), "",SWT.MULTI);
+        // formText.setEditable(false);
+        // TableWrapData twd_formText = new TableWrapData(TableWrapData.FILL, TableWrapData.FILL_GRAB, 5, 1);
+        // twd_formText.heightHint = 74;
+        // formText.setLayoutData(twd_formText);
+
         Composite composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         TableWrapData twd_composite_2 = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.FILL_GRAB, 1, 1);
         twd_composite_2.heightHint = 142;
@@ -262,17 +297,14 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         managedForm.getToolkit().adapt(composite_2);
         managedForm.getToolkit().paintBordersFor(composite_2);
         composite_2.setLayout(new GridLayout(1, false));
-        
 
-        
-        
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = 150;
 
-        emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE, composite_3,controlGridData);
+        emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__IN_USE, composite_3, controlGridData);
         emfFormBuilder.addSeperatorEntry(composite_3);
 
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__ARMOR, composite_3);
@@ -281,9 +313,15 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         // emfFormBuilder.addSeperatorEntry(composite_3);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE, grpState);
         emfFormBuilder.addTextEntry(RuntimePackage.Literals.PHYICAL_STATE__ZUSTAND, grpState);
-        
+
+        PersonaUIToolkit personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, object.getCharacter(), editingDomain, toolkit);
+
+        personaUIToolkit.createKoerperlicheAttributesRO(grpKrperlicheAttribute);
+        personaUIToolkit.createGeistigeAttributesRO(grpGeistigeAttribute);
+        personaUIToolkit.createSpezielleAttributesRO(grpSpezielleAttribute);
+        personaUIToolkit.createLimits(compositelimits);
+
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-           
 
         managedForm.reflow(true);
     }
@@ -304,19 +342,19 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         bindingContext.bindValue(observeTextLblNameObserveWidget, objectNameObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
                 new EMFUpdateValueStrategy());
         //
-//        IObservableValue observeTextObserveWidget = WidgetProperties.text().observe(formText);
-//        IObservableValue objectExtendetObserveValue = EMFEditProperties.value(
-//                editingDomain,
-//                FeaturePath.fromList(Literals.EXTENDET_DATA_AWARE__EXTENDET_DATA)).observe(object);
-//        bindingContext.bindValue(observeTextObserveWidget, objectExtendetObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
-//                new EMFUpdateValueStrategy(){
-//            @Override
-//            public Object convert(Object value) {
-//                return value.toString();
-//                //return super.convert(value);
-//            }
-//            
-//        });
+        // IObservableValue observeTextObserveWidget = WidgetProperties.text().observe(formText);
+        // IObservableValue objectExtendetObserveValue = EMFEditProperties.value(
+        // editingDomain,
+        // FeaturePath.fromList(Literals.EXTENDET_DATA_AWARE__EXTENDET_DATA)).observe(object);
+        // bindingContext.bindValue(observeTextObserveWidget, objectExtendetObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
+        // new EMFUpdateValueStrategy(){
+        // @Override
+        // public Object convert(Object value) {
+        // return value.toString();
+        // //return super.convert(value);
+        // }
+        //
+        // });
 
         //
 
