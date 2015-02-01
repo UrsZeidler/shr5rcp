@@ -528,7 +528,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     if (object.getGeneratorSrc() != null)
                         if (object.getGeneratorSrc().getState() == GeneratorState.COMMITED) {
                             addPage(new CommitedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.COMMITED,
-                                    Messages.ShadowrunEditor_page_persona, object, editingDomain, manager));
+                                    "Overview", object, editingDomain, manager));
                         }
                     addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
                             object.getPersona(), editingDomain, manager));
