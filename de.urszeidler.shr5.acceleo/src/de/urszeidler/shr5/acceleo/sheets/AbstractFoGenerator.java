@@ -21,15 +21,47 @@ import org.apache.fop.apps.FOPException;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
+import org.eclipse.emf.common.util.Monitor;
+
+import de.urszeidler.shr5.acceleo.Activator;
 
 /**
  * @author urs
  *
  */
-public class AbstractFoGenerator {
+public abstract class AbstractFoGenerator extends AbstractGenerator{
+
+    /**
+     * Launches the generation described by this instance.
+     * 
+     * @param monitor
+     * This will be used to display progress information to the user.
+     * @throws IOException
+     * This will be thrown if any of the output files cannot be saved to disk.
+     * @generated not
+     */
+    @Override
+    public void doGenerate(Monitor monitor) throws IOException {
+        super.doGenerate(monitor);
+        
+        monitor.subTask("transforming to pdf");
+        try {
+            for (String fname : files) {
+                File file = new File(fname);
+                monitor.subTask("writing :"+fname);
+                transform(file);
+                monitor.subTask("open :"+fname);
+            }
+        } catch (FOPException e) {
+            Activator.logError("Error while storing as pdf", e);
+        } catch (TransformerException e) {
+            Activator.logError("Error while storing as pdf", e);
+        }
+    }
 
 
-    private void transform(File file) throws FOPException, TransformerException, IOException{
+
+    protected void transform(File file) throws FOPException, TransformerException, IOException{
         /*..*/
 
         String svg_URI_input = file.toURI().toURL().toString();

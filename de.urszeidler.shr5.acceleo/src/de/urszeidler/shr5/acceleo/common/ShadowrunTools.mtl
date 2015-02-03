@@ -13,6 +13,12 @@
 [query public getOrderedAttibutes(anOclAny: OclAny) : Sequence(EAttribute)
 	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getOrderedAttibutes()', Sequence{})
 /]
+[**
+ * The documentation of the query
+ */]
+[query public getAstraleAttribute(anOclAny: OclAny) : Sequence(EAttribute)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getAstraleAttribute()', Sequence{})
+/]
 
 [**
  * The documentation of the query

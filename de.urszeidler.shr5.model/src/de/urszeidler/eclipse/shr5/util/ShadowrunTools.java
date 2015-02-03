@@ -29,6 +29,7 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -133,7 +134,15 @@ public class ShadowrunTools {
         // orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 
     }
-
+    
+    /**
+     * The list of the astral attributes.
+     * @return
+     */
+    public static EList<EAttribute> getAstraleAttribute() {
+        return Shr5Package.Literals.ASTRALE_PROJEKTION.getEAllAttributes();
+    }
+    
     /**
      * The ordered list of the attributes.
      * 
