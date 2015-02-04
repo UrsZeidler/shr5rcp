@@ -45,10 +45,12 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             emfFormBuilder.createConfiguredLable(container, entry, object);
             Label label = new Label(container, SWT.NONE);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-            IObservableValue observeTextLblNewLabel_1ObserveWidget = WidgetProperties.text().observe(label);
-            IObservableValue objectNativeLanguageObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            entry.setUiObservable(widgetObserver);
+            entry.setObservable(objectObserver);
             UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
-            dbc.bindValue(observeTextLblNewLabel_1ObserveWidget, objectNativeLanguageObserveValue, new UpdateValueStrategy(
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
                     UpdateValueStrategy.POLICY_NEVER), strategy);
         }
     }
@@ -74,16 +76,16 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             formToolkit.paintBordersFor(dateTime);
             emfFormBuilder.layoutRow(entry, label, dateTime);
             
-            IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime);
-            IObservableValue currentChangeDateObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object,
+            IObservableValue widgetObserver = new CDateTimeObservableValue(dateTime);
+            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object,
                     entry.getFeature());
-            dbc.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
+            entry.setUiObservable(widgetObserver);
+            entry.setObservable(objectObserver);
+            dbc.bindValue(widgetObserver, objectObserver, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
 
     }
  
-    // protected A object;
-    // protected EditingDomain editingDomain;
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
