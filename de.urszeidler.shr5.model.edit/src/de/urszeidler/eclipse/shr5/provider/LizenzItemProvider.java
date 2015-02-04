@@ -4,11 +4,15 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -18,6 +22,8 @@ import org.eclipse.swt.graphics.Image;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Lizenz;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
@@ -81,11 +87,11 @@ public class LizenzItemProvider
      * This adds a property descriptor for the Lizenz Traeger feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addLizenzTraegerPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Lizenz_lizenzTraeger_feature"),
@@ -96,7 +102,28 @@ public class LizenzItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    if (object instanceof Lizenz) {
+                        Lizenz l = (Lizenz)object;
+                        EObject eContainer = l.eContainer();
+                        if (! (eContainer instanceof ShrList)) {
+                            ArrayList<Sin> list = new ArrayList<Sin>();
+                            for (Iterator<EObject> iterator = eContainer.eAllContents(); iterator.hasNext();) {
+                                EObject eo = (EObject)iterator.next();
+                                if (eo instanceof Sin) {
+                                    list.add((Sin)eo);                                    
+                                }
+                            }
+                            return list;
+                        }
+                    }
+                    return super.getComboBoxObjects(object);
+                }
+                
+            });
     }
 
     /**
