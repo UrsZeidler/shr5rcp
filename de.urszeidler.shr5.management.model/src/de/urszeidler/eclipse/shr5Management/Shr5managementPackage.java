@@ -3281,13 +3281,22 @@ public interface Shr5managementPackage extends EPackage {
     int PLAYER_CHARACTER__GENERATOR_SRC = MANAGED_CHARACTER__GENERATOR_SRC;
 
     /**
+     * The feature id for the '<em><b>Diary</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__DIARY = MANAGED_CHARACTER_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 0;
+	int PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Player Character</em>' class.
@@ -4604,6 +4613,217 @@ public interface Shr5managementPackage extends EPackage {
     int PACK_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl <em>Character Diary</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterDiary()
+     * @generated
+     */
+    int CHARACTER_DIARY = 40;
+
+    /**
+     * The feature id for the '<em><b>Character Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_DIARY__CHARACTER_DATE = 0;
+
+    /**
+     * The feature id for the '<em><b>Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_DIARY__ENTRIES = 1;
+
+    /**
+     * The number of structural features of the '<em>Character Diary</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_DIARY_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Character Diary</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_DIARY_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl <em>Diary Entry</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getDiaryEntry()
+     * @generated
+     */
+    int DIARY_ENTRY = 41;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIARY_ENTRY__DATE = 0;
+
+    /**
+     * The feature id for the '<em><b>Message</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIARY_ENTRY__MESSAGE = 1;
+
+    /**
+     * The number of structural features of the '<em>Diary Entry</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIARY_ENTRY_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Diary Entry</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIARY_ENTRY_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl <em>Contract Payment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getContractPayment()
+     * @generated
+     */
+    int CONTRACT_PAYMENT = 42;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT__DATE = DIARY_ENTRY__DATE;
+
+    /**
+     * The feature id for the '<em><b>Message</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT__MESSAGE = DIARY_ENTRY__MESSAGE;
+
+    /**
+     * The feature id for the '<em><b>Contract To Pay</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT__CONTRACT_TO_PAY = DIARY_ENTRY_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Payed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT__PAYED = DIARY_ENTRY_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Contract Payment</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT_FEATURE_COUNT = DIARY_ENTRY_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Contract Payment</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONTRACT_PAYMENT_OPERATION_COUNT = DIARY_ENTRY_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl <em>Character Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterChange()
+     * @generated
+     */
+    int CHARACTER_CHANGE = 43;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_CHANGE__DATE = DIARY_ENTRY__DATE;
+
+    /**
+     * The feature id for the '<em><b>Message</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_CHANGE__MESSAGE = DIARY_ENTRY__MESSAGE;
+
+    /**
+     * The feature id for the '<em><b>Change</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_CHANGE__CHANGE = DIARY_ENTRY_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Character Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_CHANGE_FEATURE_COUNT = DIARY_ENTRY_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Character Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_CHANGE_OPERATION_COUNT = DIARY_ENTRY_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4611,7 +4831,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 40;
+	int GENERATOR_STATE = 44;
 
 
 	/**
@@ -4622,7 +4842,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 41;
+	int SEX = 45;
 
 
 	/**
@@ -4633,7 +4853,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 42;
+    int QUELLEN_CONSTRAIN_TYPE = 46;
 
 
     /**
@@ -6084,6 +6304,17 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getPlayerCharacter();
 
 	/**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.PlayerCharacter#getDiary <em>Diary</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Diary</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerCharacter#getDiary()
+     * @see #getPlayerCharacter()
+     * @generated
+     */
+    EReference getPlayerCharacter_Diary();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Mudan <em>Mudan</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6761,6 +6992,123 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getPack_Items();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterDiary <em>Character Diary</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Character Diary</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterDiary
+     * @generated
+     */
+    EClass getCharacterDiary();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.CharacterDiary#getCharacterDate <em>Character Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Character Date</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterDiary#getCharacterDate()
+     * @see #getCharacterDiary()
+     * @generated
+     */
+    EAttribute getCharacterDiary_CharacterDate();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterDiary#getEntries <em>Entries</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Entries</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterDiary#getEntries()
+     * @see #getCharacterDiary()
+     * @generated
+     */
+    EReference getCharacterDiary_Entries();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.DiaryEntry <em>Diary Entry</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Diary Entry</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.DiaryEntry
+     * @generated
+     */
+    EClass getDiaryEntry();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.DiaryEntry#getDate <em>Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Date</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.DiaryEntry#getDate()
+     * @see #getDiaryEntry()
+     * @generated
+     */
+    EAttribute getDiaryEntry_Date();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.DiaryEntry#getMessage <em>Message</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Message</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.DiaryEntry#getMessage()
+     * @see #getDiaryEntry()
+     * @generated
+     */
+    EAttribute getDiaryEntry_Message();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ContractPayment <em>Contract Payment</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Contract Payment</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ContractPayment
+     * @generated
+     */
+    EClass getContractPayment();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.ContractPayment#getContractToPay <em>Contract To Pay</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Contract To Pay</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ContractPayment#getContractToPay()
+     * @see #getContractPayment()
+     * @generated
+     */
+    EReference getContractPayment_ContractToPay();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ContractPayment#isPayed <em>Payed</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Payed</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ContractPayment#isPayed()
+     * @see #getContractPayment()
+     * @generated
+     */
+    EAttribute getContractPayment_Payed();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterChange <em>Character Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Character Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterChange
+     * @generated
+     */
+    EClass getCharacterChange();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.CharacterChange#getChange <em>Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterChange#getChange()
+     * @see #getCharacterChange()
+     * @generated
+     */
+    EReference getCharacterChange_Change();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
@@ -7948,6 +8296,14 @@ public interface Shr5managementPackage extends EPackage {
 		EClass PLAYER_CHARACTER = eINSTANCE.getPlayerCharacter();
 
 		/**
+         * The meta object literal for the '<em><b>Diary</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLAYER_CHARACTER__DIARY = eINSTANCE.getPlayerCharacter_Diary();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MudanImpl <em>Mudan</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8494,6 +8850,102 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference PACK__ITEMS = eINSTANCE.getPack_Items();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl <em>Character Diary</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterDiary()
+         * @generated
+         */
+        EClass CHARACTER_DIARY = eINSTANCE.getCharacterDiary();
+
+        /**
+         * The meta object literal for the '<em><b>Character Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CHARACTER_DIARY__CHARACTER_DATE = eINSTANCE.getCharacterDiary_CharacterDate();
+
+        /**
+         * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHARACTER_DIARY__ENTRIES = eINSTANCE.getCharacterDiary_Entries();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl <em>Diary Entry</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getDiaryEntry()
+         * @generated
+         */
+        EClass DIARY_ENTRY = eINSTANCE.getDiaryEntry();
+
+        /**
+         * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DIARY_ENTRY__DATE = eINSTANCE.getDiaryEntry_Date();
+
+        /**
+         * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DIARY_ENTRY__MESSAGE = eINSTANCE.getDiaryEntry_Message();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl <em>Contract Payment</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getContractPayment()
+         * @generated
+         */
+        EClass CONTRACT_PAYMENT = eINSTANCE.getContractPayment();
+
+        /**
+         * The meta object literal for the '<em><b>Contract To Pay</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CONTRACT_PAYMENT__CONTRACT_TO_PAY = eINSTANCE.getContractPayment_ContractToPay();
+
+        /**
+         * The meta object literal for the '<em><b>Payed</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CONTRACT_PAYMENT__PAYED = eINSTANCE.getContractPayment_Payed();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl <em>Character Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterChange()
+         * @generated
+         */
+        EClass CHARACTER_CHANGE = eINSTANCE.getCharacterChange();
+
+        /**
+         * The meta object literal for the '<em><b>Change</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHARACTER_CHANGE__CHANGE = eINSTANCE.getCharacterChange_Change();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

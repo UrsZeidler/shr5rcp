@@ -178,7 +178,9 @@
       <nested inputs="shr5Management.ecore#//AttributeChange/attibute" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//AttributeChange" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDElementDeclaration=20"/>
-    <nested inputs="shr5Management.ecore#//PlayerCharacter" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDComplexTypeDefinition=21"/>
+    <nested inputs="shr5Management.ecore#//PlayerCharacter" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDComplexTypeDefinition=21">
+      <nested inputs="shr5Management.ecore#//PlayerCharacter/diary" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
     <nested inputs="shr5Management.ecore#//PlayerCharacter" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDElementDeclaration=21"/>
     <nested inputs="shr5Management.ecore#//Mudan" outputs="Shr5managementXMI.xsd#//Mudan;XSDComplexTypeDefinition=22"/>
     <nested inputs="shr5Management.ecore#//Mudan" outputs="Shr5managementXMI.xsd#//Mudan;XSDElementDeclaration=22"/>
@@ -282,6 +284,27 @@
       <nested inputs="shr5Management.ecore#//Pack/items" outputs="Shr5managementXMI.xsd#//Pack;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Pack" outputs="Shr5managementXMI.xsd#//Pack;XSDElementDeclaration=39"/>
+    <nested inputs="shr5Management.ecore#//CharacterDiary" outputs="Shr5managementXMI.xsd#//CharacterDiary;XSDComplexTypeDefinition=40">
+      <nested inputs="shr5Management.ecore#//CharacterDiary/characterDate" outputs="Shr5managementXMI.xsd#//CharacterDiary;XSDComplexTypeDefinition=40/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//CharacterDiary/entries" outputs="Shr5managementXMI.xsd#//CharacterDiary;XSDComplexTypeDefinition=40/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//CharacterDiary" outputs="Shr5managementXMI.xsd#//CharacterDiary;XSDElementDeclaration=40"/>
+    <nested inputs="shr5Management.ecore#//DiaryEntry" outputs="Shr5managementXMI.xsd#//DiaryEntry;XSDComplexTypeDefinition=41">
+      <nested inputs="shr5Management.ecore#//DiaryEntry/date" outputs="Shr5managementXMI.xsd#//DiaryEntry;XSDComplexTypeDefinition=41/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//DiaryEntry/message" outputs="Shr5managementXMI.xsd#//DiaryEntry;XSDComplexTypeDefinition=41/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//DiaryEntry" outputs="Shr5managementXMI.xsd#//DiaryEntry;XSDElementDeclaration=41"/>
+    <nested inputs="shr5Management.ecore#//ContractPayment" outputs="Shr5managementXMI.xsd#//ContractPayment;XSDComplexTypeDefinition=42">
+      <nested inputs="shr5Management.ecore#//ContractPayment/payed" outputs="Shr5managementXMI.xsd#//ContractPayment;XSDComplexTypeDefinition=42/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ContractPayment/contractToPay" outputs="Shr5managementXMI.xsd#//ContractPayment;XSDComplexTypeDefinition=42/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ContractPayment/contractToPay" outputs="Shr5managementXMI.xsd#//ContractPayment;XSDComplexTypeDefinition=42/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ContractPayment" outputs="Shr5managementXMI.xsd#//ContractPayment;XSDElementDeclaration=42"/>
+    <nested inputs="shr5Management.ecore#//CharacterChange" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDComplexTypeDefinition=43">
+      <nested inputs="shr5Management.ecore#//CharacterChange/change" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDComplexTypeDefinition=43/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//CharacterChange/change" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDComplexTypeDefinition=43/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//CharacterChange" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDElementDeclaration=43"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

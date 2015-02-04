@@ -280,7 +280,9 @@
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//AttributeChange/attibute"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
+    <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerCharacter/diary"/>
+    </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Mudan"/>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterGroup">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGroup/members"/>
@@ -400,6 +402,21 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Pack">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Pack/items"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//CharacterDiary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterDiary/characterDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterDiary/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//DiaryEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/message"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ContractPayment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ContractPayment/contractToPay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ContractPayment/payed"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//CharacterChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterChange/change"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

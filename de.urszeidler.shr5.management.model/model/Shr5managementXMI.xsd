@@ -537,7 +537,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   </xsd:element>
   <xsd:complexType name="PlayerCharacter">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ManagedCharacter"/>
+      <xsd:extension base="shr5mngt:ManagedCharacter">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="diary" type="shr5mngt:CharacterDiary"/>
+        </xsd:choice>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PlayerCharacter" type="shr5mngt:PlayerCharacter"/>
@@ -915,4 +919,65 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>A pack is used in the generation process, to speed up somes choises. It contains a set of things.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="CharacterDiary">
+    <xsd:annotation>
+      <xsd:documentation>Holds the data of the diary and the current time.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="entries" type="shr5mngt:DiaryEntry"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="characterDate" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The current date for the character, should be at lest the last entry of the diary. it is used for caculation of the contract payments.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:element name="CharacterDiary" type="shr5mngt:CharacterDiary">
+    <xsd:annotation>
+      <xsd:documentation>Holds the data of the diary and the current time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DiaryEntry">
+    <xsd:annotation>
+      <xsd:documentation>Can hold a message and a date.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="date" type="xsd:string"/>
+    <xsd:attribute name="message" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="DiaryEntry" type="shr5mngt:DiaryEntry">
+    <xsd:annotation>
+      <xsd:documentation>Can hold a message and a date.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ContractPayment">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:DiaryEntry">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="contractToPay" type="shr5:Vertrag"/>
+        </xsd:choice>
+        <xsd:attribute name="payed" type="xsd:boolean"/>
+        <xsd:attribute name="contractToPay" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ContractPayment" type="shr5mngt:ContractPayment"/>
+  <xsd:complexType name="CharacterChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:DiaryEntry">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="change" type="shr5mngt:Changes"/>
+        </xsd:choice>
+        <xsd:attribute name="change" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CharacterChange" type="shr5mngt:CharacterChange"/>
 </xsd:schema>

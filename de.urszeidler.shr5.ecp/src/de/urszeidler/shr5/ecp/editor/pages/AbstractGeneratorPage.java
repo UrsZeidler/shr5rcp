@@ -29,10 +29,12 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -211,8 +213,11 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      */
     protected ManagedCharacter createManagedCharacter(EClass selectableType, Spezies spezies, boolean createPlayer, CharacterGenerator<?> object) {
         ManagedCharacter playerCharacter;
-        if (createPlayer)
+        if (createPlayer){
             playerCharacter = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
+            CharacterDiary diary = Shr5managementFactory.eINSTANCE.createCharacterDiary();
+            ((PlayerCharacter)playerCharacter).setDiary(diary);
+        }
         else
             playerCharacter = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
 

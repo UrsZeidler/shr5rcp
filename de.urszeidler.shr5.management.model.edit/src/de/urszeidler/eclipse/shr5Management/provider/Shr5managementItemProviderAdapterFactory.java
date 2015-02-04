@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -34,14 +33,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
-import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -826,6 +823,98 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.CharacterDiary} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CharacterDiaryItemProvider characterDiaryItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.CharacterDiary}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCharacterDiaryAdapter() {
+        if (characterDiaryItemProvider == null) {
+            characterDiaryItemProvider = new CharacterDiaryItemProvider(this);
+        }
+
+        return characterDiaryItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.DiaryEntry} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DiaryEntryItemProvider diaryEntryItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.DiaryEntry}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDiaryEntryAdapter() {
+        if (diaryEntryItemProvider == null) {
+            diaryEntryItemProvider = new DiaryEntryItemProvider(this);
+        }
+
+        return diaryEntryItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ContractPayment} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ContractPaymentItemProvider contractPaymentItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ContractPayment}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createContractPaymentAdapter() {
+        if (contractPaymentItemProvider == null) {
+            contractPaymentItemProvider = new ContractPaymentItemProvider(this);
+        }
+
+        return contractPaymentItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.CharacterChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CharacterChangeItemProvider characterChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.CharacterChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCharacterChangeAdapter() {
+        if (characterChangeItemProvider == null) {
+            characterChangeItemProvider = new CharacterChangeItemProvider(this);
+        }
+
+        return characterChangeItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -954,6 +1043,10 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
         if (quellenConstrainItemProvider != null) quellenConstrainItemProvider.dispose();
         if (packItemProvider != null) packItemProvider.dispose();
+        if (characterDiaryItemProvider != null) characterDiaryItemProvider.dispose();
+        if (diaryEntryItemProvider != null) diaryEntryItemProvider.dispose();
+        if (contractPaymentItemProvider != null) contractPaymentItemProvider.dispose();
+        if (characterChangeItemProvider != null) characterChangeItemProvider.dispose();
     }
 
 	/**
@@ -1152,6 +1245,26 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createPack()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createCharacterDiary()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createDiaryEntry()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createContractPayment()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createCharacterChange()));
 
                 return null;
             }

@@ -515,7 +515,10 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attibute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerCharacter" eSuperTypes="#//ManagedCharacter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diary" lowerBound="1" eType="#//CharacterDiary"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mudan" eSuperTypes="#//SpecialType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The generator system option for a simple mudan character."/>
@@ -845,5 +848,33 @@
         <details key="documentation" value="The list of items this pack contains."/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterDiary">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Holds the data of the diary and the current time."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterDate" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current date for the character, should be at lest the last entry of the diary. it is used for caculation of the contract payments."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
+        eType="#//DiaryEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiaryEntry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Can hold a message and a date."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContractPayment" eSuperTypes="#//DiaryEntry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contractToPay" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Vertrag"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="payed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterChange" eSuperTypes="#//DiaryEntry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="change" lowerBound="1"
+        eType="#//Changes"/>
   </eClassifiers>
 </ecore:EPackage>

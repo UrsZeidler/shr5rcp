@@ -398,6 +398,14 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateQuellenConstrain((QuellenConstrain)value, diagnostics, context);
             case Shr5managementPackage.PACK:
                 return validatePack((Pack)value, diagnostics, context);
+            case Shr5managementPackage.CHARACTER_DIARY:
+                return validateCharacterDiary((CharacterDiary)value, diagnostics, context);
+            case Shr5managementPackage.DIARY_ENTRY:
+                return validateDiaryEntry((DiaryEntry)value, diagnostics, context);
+            case Shr5managementPackage.CONTRACT_PAYMENT:
+                return validateContractPayment((ContractPayment)value, diagnostics, context);
+            case Shr5managementPackage.CHARACTER_CHANGE:
+                return validateCharacterChange((CharacterChange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1073,6 +1081,42 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validatePack(Pack pack, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(pack, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateCharacterDiary(CharacterDiary characterDiary, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(characterDiary, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateDiaryEntry(DiaryEntry diaryEntry, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(diaryEntry, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateContractPayment(ContractPayment contractPayment, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(contractPayment, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateCharacterChange(CharacterChange characterChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(characterChange, diagnostics, context);
     }
 
     /**

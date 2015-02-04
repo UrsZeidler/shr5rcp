@@ -284,6 +284,42 @@ public interface Shr5managementFactory extends EFactory {
     Pack createPack();
 
     /**
+     * Returns a new object of class '<em>Character Diary</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Character Diary</em>'.
+     * @generated
+     */
+    CharacterDiary createCharacterDiary();
+
+    /**
+     * Returns a new object of class '<em>Diary Entry</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Diary Entry</em>'.
+     * @generated
+     */
+    DiaryEntry createDiaryEntry();
+
+    /**
+     * Returns a new object of class '<em>Contract Payment</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Contract Payment</em>'.
+     * @generated
+     */
+    ContractPayment createContractPayment();
+
+    /**
+     * Returns a new object of class '<em>Character Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Character Change</em>'.
+     * @generated
+     */
+    CharacterChange createCharacterChange();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

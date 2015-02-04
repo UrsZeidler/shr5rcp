@@ -271,6 +271,22 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createPackAdapter();
             }
             @Override
+            public Adapter caseCharacterDiary(CharacterDiary object) {
+                return createCharacterDiaryAdapter();
+            }
+            @Override
+            public Adapter caseDiaryEntry(DiaryEntry object) {
+                return createDiaryEntryAdapter();
+            }
+            @Override
+            public Adapter caseContractPayment(ContractPayment object) {
+                return createContractPaymentAdapter();
+            }
+            @Override
+            public Adapter caseCharacterChange(CharacterChange object) {
+                return createCharacterChangeAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -863,6 +879,62 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createPackAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.CharacterDiary <em>Character Diary</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterDiary
+     * @generated
+     */
+    public Adapter createCharacterDiaryAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.DiaryEntry <em>Diary Entry</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.DiaryEntry
+     * @generated
+     */
+    public Adapter createDiaryEntryAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ContractPayment <em>Contract Payment</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ContractPayment
+     * @generated
+     */
+    public Adapter createContractPaymentAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.CharacterChange <em>Character Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterChange
+     * @generated
+     */
+    public Adapter createCharacterChangeAdapter() {
         return null;
     }
 

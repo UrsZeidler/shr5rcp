@@ -23,10 +23,14 @@ import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -349,6 +353,34 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass packEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass characterDiaryEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass diaryEntryEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass contractPaymentEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass characterChangeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1670,6 +1702,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPlayerCharacter_Diary() {
+        return (EReference)playerCharacterEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2246,6 +2287,105 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCharacterDiary() {
+        return characterDiaryEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCharacterDiary_CharacterDate() {
+        return (EAttribute)characterDiaryEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCharacterDiary_Entries() {
+        return (EReference)characterDiaryEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getDiaryEntry() {
+        return diaryEntryEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDiaryEntry_Date() {
+        return (EAttribute)diaryEntryEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDiaryEntry_Message() {
+        return (EAttribute)diaryEntryEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getContractPayment() {
+        return contractPaymentEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getContractPayment_ContractToPay() {
+        return (EReference)contractPaymentEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getContractPayment_Payed() {
+        return (EAttribute)contractPaymentEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCharacterChange() {
+        return characterChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCharacterChange_Change() {
+        return (EReference)characterChangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2456,6 +2596,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(attributeChangeEClass, ATTRIBUTE_CHANGE__ATTIBUTE);
 
         playerCharacterEClass = createEClass(PLAYER_CHARACTER);
+        createEReference(playerCharacterEClass, PLAYER_CHARACTER__DIARY);
 
         mudanEClass = createEClass(MUDAN);
 
@@ -2539,6 +2680,21 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         packEClass = createEClass(PACK);
         createEReference(packEClass, PACK__ITEMS);
 
+        characterDiaryEClass = createEClass(CHARACTER_DIARY);
+        createEAttribute(characterDiaryEClass, CHARACTER_DIARY__CHARACTER_DATE);
+        createEReference(characterDiaryEClass, CHARACTER_DIARY__ENTRIES);
+
+        diaryEntryEClass = createEClass(DIARY_ENTRY);
+        createEAttribute(diaryEntryEClass, DIARY_ENTRY__DATE);
+        createEAttribute(diaryEntryEClass, DIARY_ENTRY__MESSAGE);
+
+        contractPaymentEClass = createEClass(CONTRACT_PAYMENT);
+        createEReference(contractPaymentEClass, CONTRACT_PAYMENT__CONTRACT_TO_PAY);
+        createEAttribute(contractPaymentEClass, CONTRACT_PAYMENT__PAYED);
+
+        characterChangeEClass = createEClass(CHARACTER_CHANGE);
+        createEReference(characterChangeEClass, CHARACTER_CHANGE__CHANGE);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2618,6 +2774,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         packEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         packEClass.getESuperTypes().add(theShr5Package.getQuelle());
         packEClass.getESuperTypes().add(theShr5Package.getGeldWert());
+        contractPaymentEClass.getESuperTypes().add(this.getDiaryEntry());
+        characterChangeEClass.getESuperTypes().add(this.getDiaryEntry());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2921,6 +3079,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getAttributeChange_Attibute(), ecorePackage.getEAttribute(), null, "attibute", null, 0, 1, AttributeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(playerCharacterEClass, PlayerCharacter.class, "PlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPlayerCharacter_Diary(), this.getCharacterDiary(), null, "diary", null, 1, 1, PlayerCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mudanEClass, Mudan.class, "Mudan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3075,6 +3234,21 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(packEClass, Pack.class, "Pack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPack_Items(), theShr5Package.getQuelle(), null, "items", null, 0, -1, Pack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(characterDiaryEClass, CharacterDiary.class, "CharacterDiary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCharacterDiary_CharacterDate(), theShr5Package.getShrDate(), "characterDate", null, 0, 1, CharacterDiary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterDiary_Entries(), this.getDiaryEntry(), null, "entries", null, 0, -1, CharacterDiary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(diaryEntryEClass, DiaryEntry.class, "DiaryEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDiaryEntry_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, DiaryEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDiaryEntry_Message(), ecorePackage.getEString(), "message", null, 0, 1, DiaryEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(contractPaymentEClass, ContractPayment.class, "ContractPayment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getContractPayment_ContractToPay(), theShr5Package.getVertrag(), null, "contractToPay", null, 1, 1, ContractPayment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getContractPayment_Payed(), ecorePackage.getEBoolean(), "payed", null, 0, 1, ContractPayment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(characterChangeEClass, CharacterChange.class, "CharacterChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCharacterChange_Change(), this.getChanges(), null, "change", null, 1, 1, CharacterChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
