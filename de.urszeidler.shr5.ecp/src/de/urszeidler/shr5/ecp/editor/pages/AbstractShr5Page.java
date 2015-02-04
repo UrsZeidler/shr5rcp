@@ -1,21 +1,36 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
+import org.eclipse.nebula.widgets.cdatetime.CDT;
+import org.eclipse.nebula.widgets.cdatetime.CDateTime;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -24,11 +39,56 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public abstract class AbstractShr5Page<A extends EObject> extends FormPage implements IDoubleClickListener {
 
+    protected final class LabelEntry implements EntryFactory {
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            emfFormBuilder.createConfiguredLable(container, entry, object);
+            Label label = new Label(container, SWT.NONE);
+            label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+            IObservableValue observeTextLblNewLabel_1ObserveWidget = WidgetProperties.text().observe(label);
+            IObservableValue objectNativeLanguageObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
+            dbc.bindValue(observeTextLblNewLabel_1ObserveWidget, objectNativeLanguageObserveValue, new UpdateValueStrategy(
+                    UpdateValueStrategy.POLICY_NEVER), strategy);
+        }
+    }
+
+    /**
+     * A emf form factory to create and bind a date widget.
+     */
+    protected class DateEntryFactory implements EntryFactory{
+
+        private final FormToolkit formToolkit;
+        public DateEntryFactory(FormToolkit formToolkit) {
+            super();
+            this.formToolkit = formToolkit;
+        }
+
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            Label label = emfFormBuilder.createConfiguredLable(container, entry, object);
+      
+            CDateTime dateTime = new CDateTime(container,  CDT.DROP_DOWN | CDT.DATE_SHORT );
+            dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));            
+            formToolkit.adapt(dateTime);
+            formToolkit.paintBordersFor(dateTime);
+            emfFormBuilder.layoutRow(entry, label, dateTime);
+            
+            IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(dateTime);
+            IObservableValue currentChangeDateObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object,
+                    entry.getFeature());
+            dbc.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
+        }
+
+    }
+ 
     // protected A object;
     // protected EditingDomain editingDomain;
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
+    
+
 
     public AbstractShr5Page(String id, String title) {
         super(id, title);

@@ -6,15 +6,18 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.DateEntryFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 
 public class SourceBookPage extends AbstractShr5Page<SourceBook> {
@@ -81,8 +84,20 @@ public class SourceBookPage extends AbstractShr5Page<SourceBook> {
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
-        m_bindingContext = initDataBindings();
+        Group grpQuelle = new Group(managedForm.getForm().getBody(), SWT.NONE);
+        grpQuelle.setText("Date range");
+        managedForm.getToolkit().adapt(grpQuelle);
+        managedForm.getToolkit().paintBordersFor(grpQuelle);
+        grpQuelle.setLayout(new GridLayout(6, false));
 
+        m_bindingContext = initDataBindings();
+        createFormBuilder(managedForm);
+
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.SOURCE_BOOK__START_SHR_TIME, grpQuelle, new DateEntryFactory(toolkit));
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.SOURCE_BOOK__END_SHR_TIME, grpQuelle, new DateEntryFactory(toolkit));
+
+        emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        managedForm.reflow(true);
     }
 
     protected DataBindingContext initDataBindings() {

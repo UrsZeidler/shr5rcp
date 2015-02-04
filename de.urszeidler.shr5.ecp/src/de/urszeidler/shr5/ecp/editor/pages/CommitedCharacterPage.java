@@ -1,19 +1,15 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.property.value.IValueProperty;
 import org.eclipse.emf.databinding.EMFProperties;
-import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -52,20 +48,6 @@ import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
-    private final class LabelEntry implements EntryFactory {
-        @Override
-        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
-            createLabelEntry(container, entry, object, dbc, emfFormBuilder);
-        }
-    }
-
-    // private final class LinkEntry implements EntryFactory{
-    //
-    // @Override
-    // public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
-    // createLinkRO(toolkit, container, entry,object,emfFormBuilder);
-    // }
-    // }
     private ManagedCharacter object;
     private EditingDomain editingDomain;
 
@@ -218,7 +200,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         createFormBuilder(managedForm);
         gd_grpSkills.heightHint = grpAttributes.getBounds().height;
 
-        EntryFactory factory = new EntryFactory() {
+        EntryFactory linkLabelEntryFactory = new EntryFactory() {
 
             @Override
             public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
@@ -226,12 +208,12 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             }
         };
 
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, composite, factory);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, composite, linkLabelEntryFactory);
         if (persona instanceof Zauberer) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBERER__TRADITION, composite, factory);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBERER__TRADITION, composite, linkLabelEntryFactory);
         }
         if (persona instanceof AspektMagier) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT, composite, factory);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT, composite, linkLabelEntryFactory);
         }
         emfFormBuilder.buildinComposite(m_bindingContext, body, persona);
         // composite.setEnabled(false);
@@ -287,10 +269,10 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
 
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite, new LabelEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite, new LabelEntry());
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite, factory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite, linkLabelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite, new LabelEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__PUBLIC_AWARENESS, composite, new LabelEntry());
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite, factory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite, linkLabelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite, new LabelEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite, new LabelEntry());
 
@@ -432,24 +414,6 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
 
     protected String featureName(EStructuralFeature feature) {
         return ShadowrunEditingTools.toFeatureName(object, feature);
-    }
-
-    /**
-     * @param container
-     * @param object
-     * @param dbc
-     * @param emfFormBuilder
-     */
-    private void createLabelEntry(Composite container, FormbuilderEntry e, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
-        emfFormBuilder.createConfiguredLable(container, e, object);
-        Label label = new Label(container, SWT.NONE);
-        label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-        IObservableValue observeTextLblNewLabel_1ObserveWidget = WidgetProperties.text().observe(label);
-        IObservableValue objectNativeLanguageObserveValue = EMFEditObservables.observeValue(getEditingDomain(), object, e.getFeature());
-        UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
-        // strategy.setConverter(new ReferenceToStringConverter(labelprovider));
-        dbc.bindValue(observeTextLblNewLabel_1ObserveWidget, objectNativeLanguageObserveValue, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), strategy);
     }
 
     /**

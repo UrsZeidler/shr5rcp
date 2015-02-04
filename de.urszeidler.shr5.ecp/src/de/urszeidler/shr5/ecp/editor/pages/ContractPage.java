@@ -115,7 +115,7 @@ public class ContractPage extends AbstractShr5Page<Vertrag> {
         if (object instanceof IntervallVertrag) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.INTERVALL_VERTRAG__UNIT, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.INTERVALL_VERTRAG__BEGIN, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.INTERVALL_VERTRAG__BEGIN, grpGegenstand, new DateEntryFactory(toolkit));
         } else if (object instanceof Fakeable) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FAKEABLE__STUFE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FAKEABLE__GEFAELSCHT, grpGegenstand);
