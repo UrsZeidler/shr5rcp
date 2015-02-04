@@ -147,13 +147,6 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
 
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
-
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
-
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, compositefw);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, compositefw);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, compositefw);
@@ -171,6 +164,9 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FEUERWAFFE__MAGAZIN, composite_runtime);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
+
+        addWertFeatures(grpWert);
+        addSourceFeature(grpQuelle);
 
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

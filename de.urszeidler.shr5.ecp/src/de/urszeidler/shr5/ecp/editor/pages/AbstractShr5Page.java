@@ -43,8 +43,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
-            Label label = new Label(container, SWT.NONE);
-            label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+            Label label =  emfFormBuilder.createLabel(container);
+            label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
             IObservableValue widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
@@ -79,7 +79,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             IObservableValue widgetObserver = new CDateTimeObservableValue(dateTime);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object,
                     entry.getFeature());
-            entry.setUiObservable(widgetObserver);
+//            entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             dbc.bindValue(widgetObserver, objectObserver, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
@@ -151,7 +151,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected void addWertFeatures(Composite grpWert) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert, new LabelEntry());
     }
 
     /**

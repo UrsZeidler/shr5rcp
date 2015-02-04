@@ -137,12 +137,8 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMON_PROGRAM__PROGRAM_TYPE, grpGegenstand);
         }
 
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
-
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+        addWertFeatures(grpWert);
+        addSourceFeature(grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

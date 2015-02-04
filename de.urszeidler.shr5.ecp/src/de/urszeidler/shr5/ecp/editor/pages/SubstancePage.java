@@ -131,14 +131,8 @@ public class SubstancePage extends AbstractShr5Page<Substance> {
         {
             createFormBuilder(managedForm);
 
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
-
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+            addWertFeatures(grpWert);
+            addSourceFeature(grpQuelle);
 
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE__VECTOR, composite_1);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE__SPEED, composite_1);
