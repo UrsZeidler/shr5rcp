@@ -74,7 +74,6 @@ import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
-import de.urszeidler.shr5.ecp.editor.pages.NahkampwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
@@ -302,7 +301,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseNahkampfwaffe(Nahkampfwaffe object) {
                 try {
-                    addPage(new NahkampwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating NahkampwaffePage", e);//$NON-NLS-1$
                 }

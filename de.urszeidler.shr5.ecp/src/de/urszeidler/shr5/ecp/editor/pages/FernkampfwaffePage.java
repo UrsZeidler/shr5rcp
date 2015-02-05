@@ -15,6 +15,9 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
+import de.urszeidler.eclipse.shr5.AbstaktWaffe;
+import de.urszeidler.eclipse.shr5.Fokus;
+import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -24,12 +27,12 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 
 /**
- * Manages {@link Projektilwaffe} and {@link Wurfwaffe}.
+ * Manages {@link Projektilwaffe} and {@link Wurfwaffe}  {@link Nahkampfwaffe} and also if it is a  {@link Fokus}.
  * 
  * @author urs
  */
-public class FernkampfwaffePage extends AbstractShr5Page<AbstaktFernKampfwaffe> {
-    private AbstaktFernKampfwaffe object;
+public class FernkampfwaffePage extends AbstractShr5Page<AbstaktWaffe> {
+    private AbstaktWaffe object;
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
@@ -69,7 +72,7 @@ public class FernkampfwaffePage extends AbstractShr5Page<AbstaktFernKampfwaffe> 
      * @param editingDomain
      * @param manager
      */
-    public FernkampfwaffePage(FormEditor editor, String id, String title, AbstaktFernKampfwaffe object, EditingDomain editingDomain,
+    public FernkampfwaffePage(FormEditor editor, String id, String title, AbstaktWaffe object, EditingDomain editingDomain,
             ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
@@ -101,7 +104,8 @@ public class FernkampfwaffePage extends AbstractShr5Page<AbstaktFernKampfwaffe> 
         Group grpFernkampfwaffe = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpFernkampfwaffe.setLayout(new GridLayout(15, false));
         grpFernkampfwaffe.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        grpFernkampfwaffe.setText(Messages.ObjectPage_rangedweapon);
+        // grpFernkampfwaffe.setText(Messages.ObjectPage_rangedweapon);
+        grpFernkampfwaffe.setText(labelprovider.getText(object.eClass()));
         managedForm.getToolkit().adapt(grpFernkampfwaffe);
         managedForm.getToolkit().paintBordersFor(grpFernkampfwaffe);
 
@@ -127,28 +131,39 @@ public class FernkampfwaffePage extends AbstractShr5Page<AbstaktFernKampfwaffe> 
         sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnRuntime);
         sctnRuntime.setText(Messages.GegenstandPage_sctnRuntime_text);
-        
+
         Composite composite_runtime = managedForm.getToolkit().createComposite(sctnRuntime, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(composite_runtime);
         sctnRuntime.setClient(composite_runtime);
         composite_runtime.setLayout(new GridLayout(6, false));
 
-        
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, grpFernkampfwaffe);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, grpFernkampfwaffe);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
-        
+        if (object instanceof Nahkampfwaffe) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.NAHKAMPFWAFFE__REICHWEITE, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
+        } else if (object instanceof AbstaktFernKampfwaffe){
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
+        }
+        // could be also a focus
+        if (object instanceof Fokus) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpFernkampfwaffe);
+        } 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__FERTIGKEIT, composite_runtime);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.ANWENDBAR__SPEZIALISIERUNG, composite_runtime);
 
         addWertFeatures(grpWert);
         addSourceFeature(grpQuelle);
-
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
