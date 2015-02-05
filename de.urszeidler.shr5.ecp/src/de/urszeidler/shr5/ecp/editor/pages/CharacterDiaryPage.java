@@ -17,8 +17,10 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.dialogs.PayFineDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 
@@ -77,7 +79,10 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         form.getToolBarManager().add(new Action("pay fine"){
-            
+            @Override
+            public void run() {
+                new PayFineDialog(getEditor().getSite().getShell(),(ManagedCharacter)object.eContainer()).open();
+            }
         });
         form.getToolBarManager().add(new Action("test"){
             
