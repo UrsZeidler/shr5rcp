@@ -71,6 +71,7 @@ public class Shr5Tests extends TestSuite {
 
         suite.addTestSuite(CyberwareEnhancementTest.class);
         suite.addTestSuite(MagazinTest.class);
+        suite.addTestSuite(FernkampfwaffeModifikatorTest.class);
 
         // suite.addTestSuite(HostTest.class);
 

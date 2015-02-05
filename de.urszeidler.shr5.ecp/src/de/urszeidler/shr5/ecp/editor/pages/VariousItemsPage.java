@@ -16,6 +16,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -142,6 +143,8 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
             GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
             controlGridData.heightHint = 150;
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,controlGridData);
+        }else if (object instanceof FernkampfwaffeModifikator) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
         }
         
         

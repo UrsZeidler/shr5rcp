@@ -19,7 +19,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface FernkampfwaffeModifikator extends AbstraktModifikatoren {
+public interface FernkampfwaffeModifikator extends AbstraktModifikatoren, GeldWert {
 	/**
      * Returns the value of the '<em><b>Ep</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung}.

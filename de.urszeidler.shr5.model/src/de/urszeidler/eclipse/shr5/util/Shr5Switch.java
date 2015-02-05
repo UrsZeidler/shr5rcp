@@ -494,6 +494,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 FernkampfwaffeModifikator fernkampfwaffeModifikator = (FernkampfwaffeModifikator)theEObject;
                 T result = caseFernkampfwaffeModifikator(fernkampfwaffeModifikator);
                 if (result == null) result = caseAbstraktModifikatoren(fernkampfwaffeModifikator);
+                if (result == null) result = caseGeldWert(fernkampfwaffeModifikator);
                 if (result == null) result = caseBeschreibbar(fernkampfwaffeModifikator);
                 if (result == null) result = caseModifizierbar(fernkampfwaffeModifikator);
                 if (result == null) result = caseQuelle(fernkampfwaffeModifikator);

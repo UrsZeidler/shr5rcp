@@ -7006,13 +7006,40 @@ public interface Shr5Package extends EPackage {
 	int FERNKAMPFWAFFE_MODIFIKATOR__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
     /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFE_MODIFIKATOR__WERT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFE_MODIFIKATOR__VERFUEGBARKEIT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFE_MODIFIKATOR__WERT_VALUE = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Ep</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFE_MODIFIKATOR__EP = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
+	int FERNKAMPFWAFFE_MODIFIKATOR__EP = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Fernkampfwaffe Modifikator</em>' class.
@@ -7021,7 +7048,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFE_MODIFIKATOR_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 1;
+	int FERNKAMPFWAFFE_MODIFIKATOR_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Fernkampfwaffe Modifikator</em>' class.

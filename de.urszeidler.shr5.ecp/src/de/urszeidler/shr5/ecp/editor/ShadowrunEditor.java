@@ -336,9 +336,9 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseFernkampfwaffeModifikator(FernkampfwaffeModifikator object) {
                 try {
-                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
                 }
                 return null;
             }

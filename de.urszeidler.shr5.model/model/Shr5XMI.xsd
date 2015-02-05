@@ -804,6 +804,16 @@
   <xsd:complexType name="FernkampfwaffeModifikator">
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktModifikatoren">
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <xsd:attribute name="ep" type="shr5:FeuwerwaffenErweiterung"/>
       </xsd:extension>
     </xsd:complexContent>

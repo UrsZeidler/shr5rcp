@@ -370,7 +370,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruestung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffeModifikator" eSuperTypes="#//AbstraktModifikatoren">
+  <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffeModifikator" eSuperTypes="#//AbstraktModifikatoren #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ep" eType="#//FeuwerwaffenErweiterung"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anwendbar" abstract="true" interface="true">

@@ -174,8 +174,6 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof MetaMagie) {
           
             
-        }else if (object instanceof FernkampfwaffeModifikator) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
         }else if (object instanceof MagischeTradition) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__ENZUG, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__BESCHWOERBAR, grpGegenstand);

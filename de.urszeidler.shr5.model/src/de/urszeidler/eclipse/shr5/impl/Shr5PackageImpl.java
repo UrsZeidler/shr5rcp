@@ -6480,6 +6480,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         kiAdeptEClass.getESuperTypes().add(this.getMagischePersona());
         kleidungEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         fernkampfwaffeModifikatorEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
+        fernkampfwaffeModifikatorEClass.getESuperTypes().add(this.getGeldWert());
         personaEigenschaftEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         personaEigenschaftEClass.getESuperTypes().add(this.getErlernbar());
         probenModifikatorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
