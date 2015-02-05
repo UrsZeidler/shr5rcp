@@ -60,10 +60,13 @@ import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
@@ -503,6 +506,16 @@ public class CharacterAdvacementWidget extends Composite {
         clearChangeWidget();
         if (currentChange != null) {
             currentChange.applyChanges();
+            if (character instanceof PlayerCharacter) {
+                PlayerCharacter pl = (PlayerCharacter)character;
+                CharacterChange characterChange = Shr5managementFactory.eINSTANCE.createCharacterChange();
+                characterChange.setChange(currentChange);
+                characterChange.setDate(currentChange.getDate());
+                characterChange.setMessage(String.format("%s", AdapterFactoryUtil.getInstance().getLabelProvider().getText(currentChange)));
+                CharacterDiary diary = pl.getDiary();
+                if(diary!=null)
+                    diary.getEntries().add(characterChange);
+            }
         }
         currentChange = null;
         updateToolbars();
