@@ -407,9 +407,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterDiary/characterDate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterDiary/entries"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//DiaryEntry">
+    <genClasses ecoreClass="shr5Management.ecore#//DiaryEntry" labelFeature="#//shr5Management/DiaryEntry/message">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/message"/>
+      <genFeatures createChild="false" propertyDescription="The message of these diary entry."
+          propertyMultiLine="true" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/message"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ContractPayment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ContractPayment/contractToPay"/>

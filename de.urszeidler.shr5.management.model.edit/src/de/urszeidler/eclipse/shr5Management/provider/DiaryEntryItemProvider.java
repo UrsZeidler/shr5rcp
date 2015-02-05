@@ -7,15 +7,13 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
+import java.text.DateFormat;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -102,10 +100,10 @@ public class DiaryEntryItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_DiaryEntry_message_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DiaryEntry_message_feature", "_UI_DiaryEntry_type"),
+                 getString("_UI_DiaryEntry_message_description"),
                  Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE,
                  true,
-                 false,
+                 true,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
@@ -127,15 +125,17 @@ public class DiaryEntryItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Date labelValue = ((DiaryEntry)object).getDate();
-        String label = labelValue == null ? null : labelValue.toString();
+        String label = crop(((DiaryEntry)object).getMessage());
+        String format = "";
+        if (((DiaryEntry)object).getDate()!=null)
+            format = DateFormat.getDateInstance(DateFormat.SHORT).format(((DiaryEntry)object).getDate());
         return label == null || label.length() == 0 ?
             getString("_UI_DiaryEntry_type") :
-            getString("_UI_DiaryEntry_type") + " " + label;
+            getString("_UI_DiaryEntry_type") +" "+format+ ": " + label;
     }
     
 

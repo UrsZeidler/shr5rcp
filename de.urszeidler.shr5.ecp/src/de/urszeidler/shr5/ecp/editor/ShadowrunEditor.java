@@ -50,16 +50,19 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
+import de.urszeidler.shr5.ecp.editor.pages.CharacterDiaryPage;
 import de.urszeidler.shr5.ecp.editor.pages.CommitedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ContractPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
@@ -534,6 +537,13 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
                             Messages.ShadowrunEditor_page_character, object, editingDomain, manager));
 
+                    if(object instanceof PlayerCharacter){
+                        if(((PlayerCharacter)object).getDiary()==null)
+                            ((PlayerCharacter)object).setDiary(Shr5managementFactory.eINSTANCE.createCharacterDiary());
+                        addPage(new CharacterDiaryPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR,
+                                "Diary", ((PlayerCharacter)object).getDiary(), editingDomain, manager));
+                    }
+                    
                     addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT,
                             Messages.ShadowrunEditor_page_advacement, object, editingDomain, manager));
 
