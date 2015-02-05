@@ -565,376 +565,202 @@
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
       <entries xsi:type="shr5:ShrList" xmi:id="_C-UMEEjdEeSs1LVnBuzujg" name="weapons">
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="24F" wertValue="26000" name="Ares Thuderstruck Gauss Rifle" schadenscode="15P" praezision="7" durchschlagsKraft="-8" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" kapazitaet="10">
-          <localizations xmi:id="_C-bg0EjdEeSs1LVnBuzujg" local="de" name="Ares Thuderstruck Gauss Rifle" page="45"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-ZroEjdEeSs1LVnBuzujg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-aSsEjdEeSs1LVnBuzujg" local="de" name="Lasermarkierer"/>
-          </einbau>
-          <einbau xmi:id="_C-aSsUjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-aSskjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <magazin xmi:id="_C-a5wEjdEeSs1LVnBuzujg" page="45" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Ares Thuderstruck Gauss Rifle ammunition" type="e5ac06f4-3755-42a7-9da9-88de4b3b2ad8"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="944dfbc8-5972-44f7-810e-039d9f7d98b7" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="18F" wertValue="24500" name="Ares Vigorous Assault Cannon" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="12">
-          <localizations xmi:id="_C-cH4UjdEeSs1LVnBuzujg" local="de" name="Ares Vigorous Sturmkanone"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <magazin xmi:id="_C-cH4EjdEeSs1LVnBuzujg" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Ares Vigorous Assault Cannon ammunition" type="944dfbc8-5972-44f7-810e-039d9f7d98b7"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="4a4810ca-4d11-49ee-8705-0411edc4d523" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="20F" wertValue="23000" name="Krime Bomb" schadenscode="16P" praezision="6" durchschlagsKraft="-6" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" kapazitaet="4">
-          <localizations xmi:id="_C-cu9UjdEeSs1LVnBuzujg" local="de" name="Krime Bomb" page="35"/>
-          <modie>EM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-cu8EjdEeSs1LVnBuzujg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-cu8UjdEeSs1LVnBuzujg" local="de" name="Lasermarkierer"/>
-          </einbau>
-          <einbau xmi:id="_C-cu8kjdEeSs1LVnBuzujg" name="Slide Mount" parentId="de62b79f-2864-4023-a286-6c1f270aade3" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-            <localizations xmi:id="_C-cu80jdEeSs1LVnBuzujg" local="de" name="Slide Mount" page="52"/>
-          </einbau>
-          <magazin xmi:id="_C-cu9EjdEeSs1LVnBuzujg" page="35" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Krime Bomb ammunition" type="4a4810ca-4d11-49ee-8705-0411edc4d523"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="3320c670-23ae-4cce-9c2c-e59d2554ddd7" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="20F" wertValue="21000" name="Krime Cannon" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" kapazitaet="6" rueckstoss="1">
-          <localizations xmi:id="_C-dWAUjdEeSs1LVnBuzujg" local="de" name="Krime Cannon"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <magazin xmi:id="_C-dWAEjdEeSs1LVnBuzujg" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Krime Cannon ammunition" type="3320c670-23ae-4cce-9c2c-e59d2554ddd7"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="b59116dd-eeba-4091-ad87-a1216e7e52fe" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="20F" wertValue="32000" name="Ogre Hammer SWS Assault Cannon" schadenscode="16P" praezision="6" durchschlagsKraft="-4" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
-          <localizations xmi:id="_C-ekIkjdEeSs1LVnBuzujg" local="de" name="Ogre Hammer SWS Assault Cannon" page="46"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-d9EEjdEeSs1LVnBuzujg" name="Advanced Safety System, Basic" parentId="06e128ee-00fd-4992-8bf5-4be35815fd11" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-            <localizations xmi:id="_C-d9EUjdEeSs1LVnBuzujg" local="de" name="Advanced Safety System, Basic" page="50"/>
-          </einbau>
-          <einbau xmi:id="_C-d9EkjdEeSs1LVnBuzujg" name="Weapon Commlink" parentId="6c703f4e-fade-4045-9d88-ea636e1266f6" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-            <localizations xmi:id="_C-d9E0jdEeSs1LVnBuzujg" local="de" name="Waffenkommlink"/>
-          </einbau>
-          <einbau xmi:id="_C-d9FEjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-ekIEjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <magazin xmi:id="_C-ekIUjdEeSs1LVnBuzujg" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Ogre Hammer SWS Assault Cannon ammunition" type="b59116dd-eeba-4091-ad87-a1216e7e52fe"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="20F" wertValue="43000" name="Panther XXL" schadenscode="17P" praezision="5" durchschlagsKraft="-6" reichweite="_ENGR0jnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
-          <localizations xmi:id="_C-fLM0jdEeSs1LVnBuzujg" local="de" name="Panther XXL"/>
-          <modie>EM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-fLMEjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-fLMUjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-fLMkjdEeSs1LVnBuzujg" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Panther XXL ammunition" type="8b7cce7a-6e85-4e37-b953-9f79a0ae77fe"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="b625833a-88bc-4047-b3fc-bc432d96744b" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="950" name="AK-97" fertigkeit="788b387b-ee41-4e6a-bf22-481a8cc4cf9f" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38">
-          <localizations xmi:id="_C-fyQUjdEeSs1LVnBuzujg" local="de" name="AK-97"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <magazin xmi:id="_C-fyQEjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="AK-97 ammunition" type="b625833a-88bc-4047-b3fc-bc432d96744b"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="1a5768a6-012a-4884-9bdd-4f3b32e86aa2" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8F" wertValue="1250" name="AK-98" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="38">
-          <localizations xmi:id="_C-gZUUjdEeSs1LVnBuzujg" local="de" name="AK-98"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <magazin xmi:id="_C-gZUEjdEeSs1LVnBuzujg" page="36" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="AK-98 ammunition" type="1a5768a6-012a-4884-9bdd-4f3b32e86aa2"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="3a7a90ce-fbb5-4599-a857-b9849eb9769c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2650" name="Ares Alpha" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="42" rueckstoss="2">
-          <localizations xmi:id="_C-hAY0jdEeSs1LVnBuzujg" local="de" name="Ares Alpha"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-hAYEjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-hAYUjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-hAYkjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha ammunition" type="3a7a90ce-fbb5-4599-a857-b9849eb9769c"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="413200d1-fbd4-485f-8a18-152b60cfb290" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="2400" name="Ares HVAR" schadenscode="8P" praezision="5" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="50" rueckstoss="3">
-          <localizations xmi:id="_C-iOgUjdEeSs1LVnBuzujg" local="de" name="Ares HVAR" page="428"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-hncEjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-hncUjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-hnckjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-hnc0jdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-iOgEjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares HVAR ammunition" type="413200d1-fbd4-485f-8a18-152b60cfb290"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="6d99b7b6-7610-4ba0-833b-ecda09d83366" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="11R" wertValue="2250" name="Colt Inception" schadenscode="10P" praezision="7" durchschlagsKraft="-1" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="36" rueckstoss="1">
-          <localizations xmi:id="_C-i1lUjdEeSs1LVnBuzujg" local="de" name="Colt Inception" page="14"/>
-          <modie>HM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-i1kEjdEeSs1LVnBuzujg" name="Bipod" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Unten">
-            <localizations xmi:id="_C-i1kUjdEeSs1LVnBuzujg" local="de" name="Zweibein"/>
-          </einbau>
-          <einbau xmi:id="_C-i1kkjdEeSs1LVnBuzujg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-i1k0jdEeSs1LVnBuzujg" local="de" name="Lasermarkierer"/>
-          </einbau>
-          <magazin xmi:id="_C-i1lEjdEeSs1LVnBuzujg" page="14" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Colt Inception ammunition" type="6d99b7b6-7610-4ba0-833b-ecda09d83366"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="e27e14ac-01bb-46e0-8d63-62994052d92c" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="550" name="Colt M23" schadenscode="9P" praezision="4" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="40">
-          <localizations xmi:id="_C-jcoUjdEeSs1LVnBuzujg" local="de" name="Colt M23"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <magazin xmi:id="_C-jcoEjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Colt M23 ammunition" type="e27e14ac-01bb-46e0-8d63-62994052d92c"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="e39c445a-9657-4e71-949e-a1ea093c3504" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8R" wertValue="1500" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="35">
-          <localizations xmi:id="_C-kqwUjdEeSs1LVnBuzujg" local="de" name="FN HAR"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-kDsEjdEeSs1LVnBuzujg" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-kDsUjdEeSs1LVnBuzujg" local="de" name="Lasermarkierer"/>
-          </einbau>
-          <einbau xmi:id="_C-kDskjdEeSs1LVnBuzujg" name="Gas-Vent 2 System" parentId="b3827611-f631-461e-8660-e744593ba2d2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-kDs0jdEeSs1LVnBuzujg" local="de" name="Gasventilsystem 2"/>
-          </einbau>
-          <magazin xmi:id="_C-kqwEjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="FN HAR ammunition" type="e39c445a-9657-4e71-949e-a1ea093c3504"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="5f512bfb-c620-491a-bef4-d7c1b1601035" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="15F" wertValue="4500" name="HK XM30" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="30">
-          <localizations xmi:id="_C-lR1kjdEeSs1LVnBuzujg" local="de" name="HK XM30"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-kqwkjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-lR0EjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-lR0UjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-lR0kjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-lR00jdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-lR1EjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-lR1UjdEeSs1LVnBuzujg" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 ammunition" type="5f512bfb-c620-491a-bef4-d7c1b1601035"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="cc446f64-1dbd-42dd-8fc4-ca17dc6bcf42" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Carbine" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="_ENFqwTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="30">
-          <localizations xmi:id="_C-mf80jdEeSs1LVnBuzujg" local="de" name="HK XM30 Karabiner"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-l44EjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-l44UjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-l44kjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-l440jdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-mf8EjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-mf8UjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-mf8kjdEeSs1LVnBuzujg" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 Carbine ammunition" type="cc446f64-1dbd-42dd-8fc4-ca17dc6bcf42"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="1bdda305-3448-4419-871d-42bcd971751b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 LMG" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="_ENGR0DnTEeSe6_w6Jrbqxg" kapazitaet="100" rueckstoss="2">
-          <localizations xmi:id="_C-nuEUjdEeSs1LVnBuzujg" local="de" name="HK XM30 LMG"/>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-nHAEjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-nHAUjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-nHAkjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-nHA0jdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-nHBEjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-nHBUjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-nuEEjdEeSs1LVnBuzujg" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 LMG ammunition" type="1bdda305-3448-4419-871d-42bcd971751b"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="146d58e4-d705-41a0-bd92-c1901b71ffc0" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Shotgun" schadenscode="10P" praezision="3" durchschlagsKraft="-1" munitionstyp="Streifen" kapazitaet="10">
-          <localizations xmi:id="_C-oVJkjdEeSs1LVnBuzujg" local="de" name="HK XM30 Unterlauf-Schrotflinte"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-nuEkjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-oVIEjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-oVIUjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-oVIkjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-oVI0jdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-oVJEjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-oVJUjdEeSs1LVnBuzujg" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 Shotgun ammunition" type="146d58e4-d705-41a0-bd92-c1901b71ffc0"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="5d366d23-c0cd-4613-a035-f5a5378dcfa9" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Sniper" schadenscode="9P" praezision="7" durchschlagsKraft="-2" reichweite="_ENFqxTnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10" rueckstoss="2">
-          <localizations xmi:id="_C-pjRUjdEeSs1LVnBuzujg" local="de" name="HK XM30 Scharfschützengewehr"/>
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-o8MEjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-o8MUjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-pjQEjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-pjQUjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-pjQkjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-pjQ0jdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-pjREjdEeSs1LVnBuzujg" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 Sniper ammunition" type="5d366d23-c0cd-4613-a035-f5a5378dcfa9"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="2abf6c76-fe19-4678-b6a3-f0b8750ee61c" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="10R" wertValue="1300" name="Krupp Arms Kriegfaust" schadenscode="9P" praezision="8" durchschlagsKraft="-1" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" kapazitaet="25" rueckstoss="1">
-          <localizations xmi:id="_C-qxYUjdEeSs1LVnBuzujg" local="de" name="Krupp Arms Kriegfaust" page="15"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-qKUEjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-qKUUjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <magazin xmi:id="_C-qxYEjdEeSs1LVnBuzujg" page="15" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Krupp Arms Kriegfaust ammunition" type="2abf6c76-fe19-4678-b6a3-f0b8750ee61c"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="fd7f400f-c8d5-4e8c-94aa-001109635f19" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="10F" wertValue="2300" name="Nissan Optimum II" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="30" rueckstoss="1">
-          <localizations xmi:id="_C-rYdUjdEeSs1LVnBuzujg" local="de" name="Nissan Optimum II" page="38"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-rYcEjdEeSs1LVnBuzujg" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-rYcUjdEeSs1LVnBuzujg" local="de" name="Schockpolster"/>
-          </einbau>
-          <einbau xmi:id="_C-rYckjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-rYc0jdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-rYdEjdEeSs1LVnBuzujg" page="38" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Nissan Optimum II ammunition" type="fd7f400f-c8d5-4e8c-94aa-001109635f19"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="89396ad6-c605-4577-ad5b-6a18cf58d167" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="4R" wertValue="500" name="SBd-44" schadenscode="10P" praezision="3" durchschlagsKraft="-1" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="32">
-          <localizations xmi:id="_C-smkUjdEeSs1LVnBuzujg" local="de" name="SBd-44" page="16"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-r_gEjdEeSs1LVnBuzujg" name="Vintage" parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
-            <localizations xmi:id="_C-r_gUjdEeSs1LVnBuzujg" local="de" name="Vintage" page="53"/>
-          </einbau>
-          <magazin xmi:id="_C-smkEjdEeSs1LVnBuzujg" page="16" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="SBd-44 ammunition" type="89396ad6-c605-4577-ad5b-6a18cf58d167"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="23141cfc-e7c9-4af9-b4e0-a7f0443f1170" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="10F" wertValue="1900" name="Shiawase Arms Monsoon" schadenscode="10P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" rueckstoss="1">
-          <localizations xmi:id="_C-tNo0jdEeSs1LVnBuzujg" local="de" name="Shiawase Arms Monsoon" page="13"/>
-          <modie>HM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-tNoEjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-tNoUjdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-tNokjdEeSs1LVnBuzujg" page="13" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Shiawase Arms Monsoon ammunition" type="23141cfc-e7c9-4af9-b4e0-a7f0443f1170"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="40bf3eed-b239-4521-ac1d-80a4e472451e" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="8R" wertValue="2800" name="Ultimax Rain Forest Carbine" schadenscode="11P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="18">
-          <localizations xmi:id="_C-ubwUjdEeSs1LVnBuzujg" local="de" name="Ultimax Rain Forest Carbine" page="32"/>
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-t0sEjdEeSs1LVnBuzujg" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-            <localizations xmi:id="_C-t0sUjdEeSs1LVnBuzujg" local="de" name="Zielfernrohr"/>
-          </einbau>
-          <einbau xmi:id="_C-t0skjdEeSs1LVnBuzujg" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-            <localizations xmi:id="_C-t0s0jdEeSs1LVnBuzujg" local="de" name="Folding Stock" page="51"/>
-          </einbau>
-          <magazin xmi:id="_C-ubwEjdEeSs1LVnBuzujg" page="32" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Ultimax Rain Forest Carbine ammunition" type="40bf3eed-b239-4521-ac1d-80a4e472451e"/>
-        </entries>
-        <entries xsi:type="shr5:Feuerwaffe" xmi:id="01e0eee7-452b-4fd5-abe1-29145da4a5e6" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="14F" wertValue="2600" name="Yamaha Raiden" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="_ENFqwjnTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="60" rueckstoss="1">
-          <localizations xmi:id="_C-vp4EjdEeSs1LVnBuzujg" local="de" name="Yamaha Raiden"/>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau xmi:id="_C-vC0EjdEeSs1LVnBuzujg" name="Sound Suppressor" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-vC0UjdEeSs1LVnBuzujg" local="de" name="Schallunterdrücker" page="432"/>
-          </einbau>
-          <einbau xmi:id="_C-vC0kjdEeSs1LVnBuzujg" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-            <localizations xmi:id="_C-vC00jdEeSs1LVnBuzujg" local="de" name="Smartgunsystem, Internal"/>
-          </einbau>
-          <magazin xmi:id="_C-vC1EjdEeSs1LVnBuzujg" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Yamaha Raiden ammunition" type="01e0eee7-452b-4fd5-abe1-29145da4a5e6"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="ad4a06e3-7f8e-4f05-a42e-5be2c875bb72" page="19" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="950" name="Ares 'One' Monosword" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-3" reichweite="1">
-          <localizations xmi:id="_C-w4AEjdEeSs1LVnBuzujg" local="de" name="Ares 'One' Monosword" page="19"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="7c59cf2f-87ea-4dca-95e7-ad17008386a0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="4000" name="Combat Axe" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4" reichweite="2">
-          <localizations xmi:id="_C-yGIEjdEeSs1LVnBuzujg" local="de" name="Kampfaxt"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="656906d8-b6a4-47a2-9554-de365097eba0" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="300" name="Combat Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
-          <localizations xmi:id="_C-zUQEjdEeSs1LVnBuzujg" local="de" name="Kampfmesser"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="78bcb170-2292-4f90-af26-dd16ff303569" page="20" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="7R" wertValue="600" name="Cougar Fineblade: Long" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="6" durchschlagsKraft="-1">
-          <localizations xmi:id="_C-0iYEjdEeSs1LVnBuzujg" local="de" name="Cougar Fineblade: Long" page="20"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="bb068078-540d-4c98-85fd-e526e381dec9" page="20" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="5R" wertValue="350" name="Cougar Fineblade: Short" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-1">
-          <localizations xmi:id="_C-1JcEjdEeSs1LVnBuzujg" local="de" name="Cougar Fineblade: Short" page="20"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="4ca64aa3-f172-4f0b-8c6d-954ddd1133b1" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7R" wertValue="200" name="Forearm Snap-Blades" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="4" durchschlagsKraft="-2">
-          <localizations xmi:id="_C-2XkEjdEeSs1LVnBuzujg" local="de" name="Unterarmschnappklingen"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="5ec246dc-c129-4e61-a27a-c4d82b223bea" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Hand Blade" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" durchschlagsKraft="-2">
-          <localizations xmi:id="_C-2-oEjdEeSs1LVnBuzujg" local="de" name="Handklinge"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="16fe95d3-9c66-4ac6-b4e3-562de5e5619e" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Hand Razors" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+1)P" durchschlagsKraft="-3">
-          <localizations xmi:id="_C-4MwEjdEeSs1LVnBuzujg" local="de" name="Nagelmesser"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="cae4ffe9-cf22-4917-92b1-57be89741f07" page="18" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14R" wertValue="4500" name="Highland Forge Claymore" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+5)P" praezision="5" durchschlagsKraft="-5" reichweite="2">
-          <localizations xmi:id="_C-5a4EjdEeSs1LVnBuzujg" local="de" name="Highland Forge Claymore" page="18"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="2ac6ad2e-1252-4204-943e-7b65ffbe803f" page="18" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="9R" wertValue="500" name="Horizon-Flynn Rapier" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+2)P" praezision="7" durchschlagsKraft="-3" reichweite="1">
-          <localizations xmi:id="_C-6pAEjdEeSs1LVnBuzujg" local="de" name="Horizon-Flynn Rapier" page="18"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="8f266b4c-4035-4ba3-aa89-3289d0f42ce1" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X8znTEeSe6_w6Jrbqxg" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" reichweite="1">
-          <localizations xmi:id="_C-7QEEjdEeSs1LVnBuzujg" local="de" name="Katana"/>
-        </entries>
-        <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="eb16de72-e646-4880-aa5b-21a5a0a2b342" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="10" name="Knife" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X8znTEeSe6_w6Jrbqxg" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
-          <localizations xmi:id="_C-8eMEjdEeSs1LVnBuzujg" local="de" name="Messer"/>
+        <entries xsi:type="shr5:ShrList" xmi:id="_nAINoK0bEeSEgt-_Sti6fg" name="accessories">
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="d34a93a8-b695-4c46-8e34-0948df68d44f" name="Silencer, Ares Light Fire 70" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6F" wertValue="750">
+            <localizations xmi:id="_nAZTYK0bEeSEgt-_Sti6fg" local="de" name="Schalldämpfer, Ares Light Fire 70"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="4026650e-ecd3-4514-b2c6-d03dc1d466b5" name="Silencer, Ares Light Fire 75" parentId="4026650e-ecd3-4514-b2c6-d03dc1d466b5" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6F" wertValue="750">
+            <localizations xmi:id="_nAZTYa0bEeSEgt-_Sti6fg" local="de" name="Silencer, Ares Light Fire 75"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="7898e7dc-3ee6-46a9-83d7-d3ec54a456fb" name="Silencer, PSK-3 Collapsible Heavy Pistol" parentId="7898e7dc-3ee6-46a9-83d7-d3ec54a456fb" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6F" wertValue="700">
+            <localizations xmi:id="_nAZTYq0bEeSEgt-_Sti6fg" local="de" name="Silencer, PSK-3 Collapsible Heavy Pistol" page="32"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="b895c431-3fb0-49b7-a3fc-ddb4e54b69ee" name="Extra Case, Ares Executioner" parentId="b895c431-3fb0-49b7-a3fc-ddb4e54b69ee" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" wertValue="400">
+            <localizations xmi:id="_nAZTY60bEeSEgt-_Sti6fg" local="de" name="Extra Case, Ares Executioner" page="35"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="294a6b30-6e1c-4b7d-8e93-10964647c2dd" name="Airburst Link" parentId="294a6b30-6e1c-4b7d-8e93-10964647c2dd" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="600">
+            <localizations xmi:id="_nAZTZK0bEeSEgt-_Sti6fg" local="de" name="Airburst-Verbindung"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="6e06df00-95b8-450f-9f2a-4a86c582d342" name="Bipod" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="200" ep="Unten">
+            <localizations xmi:id="_nAZ6cK0bEeSEgt-_Sti6fg" local="de" name="Zweibein"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="7f66a669-917a-4423-bd83-cf0e0a1fb2a8" name="Concealable Holster" parentId="7f66a669-917a-4423-bd83-cf0e0a1fb2a8" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="150">
+            <localizations xmi:id="_nAZ6ca0bEeSEgt-_Sti6fg" local="de" name="Tarnholster"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="f46b623b-75b5-4947-a3e4-baa2930749bf" name="Gas-Vent 1 System" parentId="f46b623b-75b5-4947-a3e4-baa2930749bf" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3R" wertValue="200">
+            <localizations xmi:id="_nAZ6cq0bEeSEgt-_Sti6fg" local="de" name="Gasventilsystem 1"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="b3827611-f631-461e-8660-e744593ba2d2" name="Gas-Vent 2 System" parentId="b3827611-f631-461e-8660-e744593ba2d2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="400">
+            <localizations xmi:id="_nAZ6c60bEeSEgt-_Sti6fg" local="de" name="Gasventilsystem 2"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="6b06cf52-04fa-4034-bb10-2bcdd58c4bfb" name="Gas-Vent 3 System" parentId="6b06cf52-04fa-4034-bb10-2bcdd58c4bfb" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="600">
+            <localizations xmi:id="_nAZ6dK0bEeSEgt-_Sti6fg" local="de" name="Gasventilsystem 3"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="baecb236-6b4a-4f7d-b9c4-25212f115d4a" name="Gyro Mount" parentId="baecb236-6b4a-4f7d-b9c4-25212f115d4a" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1400" ep="Unten">
+            <localizations xmi:id="_nAahgK0bEeSEgt-_Sti6fg" local="de" name="Gyrostabilisator"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="7ca0c689-a05e-4377-ae44-3dc15abe2ee2" name="Hidden Gun Arm Slide" parentId="7ca0c689-a05e-4377-ae44-3dc15abe2ee2" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="350">
+            <localizations xmi:id="_nAahga0bEeSEgt-_Sti6fg" local="de" name="Versteckte Armhalterung"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="2905095e-937e-4dbc-aa56-3b66676e1559" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="300" ep="Oben">
+            <localizations xmi:id="_nAahgq0bEeSEgt-_Sti6fg" local="de" name="Zielfernrohr"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="521f9c2e-dfb2-42a6-b707-9808ae4885de" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="125">
+            <localizations xmi:id="_nAahg60bEeSEgt-_Sti6fg" local="de" name="Lasermarkierer"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="12e3bb7f-0058-4c9f-ba36-3a865d52b5a0" name="Periscope" parentId="12e3bb7f-0058-4c9f-ba36-3a865d52b5a0" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3" wertValue="70" ep="Oben">
+            <localizations xmi:id="_nAbIkK0bEeSEgt-_Sti6fg" local="de" name="Periskop"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="18e18bbc-f287-4455-bedf-ba349779a4cb" name="Quick-Draw Holster" parentId="18e18bbc-f287-4455-bedf-ba349779a4cb" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="175">
+            <localizations xmi:id="_nAbIka0bEeSEgt-_Sti6fg" local="de" name="Schnellziehholster"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="46596db4-6f25-4990-80cc-c4102eaf80f7" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="50">
+            <localizations xmi:id="_nAbIkq0bEeSEgt-_Sti6fg" local="de" name="Schockpolster"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="0da6149e-982f-4051-825b-52c1b79c7e52" name="Silencer" parentId="0da6149e-982f-4051-825b-52c1b79c7e52" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="500">
+            <localizations xmi:id="_nAbIk60bEeSEgt-_Sti6fg" local="de" name="Schalldämpfer"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="3c329adb-7c13-4d2c-b25c-49be89173fa1" name="Sound Suppressor" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="500">
+            <localizations xmi:id="_nAbvoK0bEeSEgt-_Sti6fg" local="de" name="Schallunterdrücker" page="432"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="7e25eb59-3ce1-44d8-8367-527fd8c8bc1d" name="Smart Firing Platform" parentId="7e25eb59-3ce1-44d8-8367-527fd8c8bc1d" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="2000" ep="Unten">
+            <localizations xmi:id="_nAbvoa0bEeSEgt-_Sti6fg" local="de" name="Smart-Feuerplattform"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="+2R">
+            <localizations xmi:id="_nAbvoq0bEeSEgt-_Sti6fg" local="de" name="Smartgunsystem, Internal"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="b3562903-b1c6-4300-9f6e-25e0102aa69b" name="Smartgun System, External" parentId="b3562903-b1c6-4300-9f6e-25e0102aa69b" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="200">
+            <localizations xmi:id="_nAbvo60bEeSEgt-_Sti6fg" local="de" name="Smartgunsystem, External"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="4ed24342-276e-4455-acba-22b551e4d775" name="Spare Clip" parentId="4ed24342-276e-4455-acba-22b551e4d775" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5">
+            <localizations xmi:id="_nAcWsK0bEeSEgt-_Sti6fg" local="de" name="Ersatzladestreifen"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="2fa27223-dd56-4520-b26b-a112e8733320" name="Vindicator 200-Round Belt" parentId="2fa27223-dd56-4520-b26b-a112e8733320" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100">
+            <localizations xmi:id="_nAcWsa0bEeSEgt-_Sti6fg" local="de" name="Vindicator 200-Round Belt" page="42"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="4c47baf0-6b34-4e00-8627-a0f605f84ba0" name="Speed Loader" parentId="4c47baf0-6b34-4e00-8627-a0f605f84ba0" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="25">
+            <localizations xmi:id="_nAcWsq0bEeSEgt-_Sti6fg" local="de" name="Schnelllader"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="28936368-9e16-498f-b028-92ec31e89a00" name="Tripod" parentId="28936368-9e16-498f-b028-92ec31e89a00" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" ep="Unten">
+            <localizations xmi:id="_nAcWs60bEeSEgt-_Sti6fg" local="de" name="Dreibein"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="06e128ee-00fd-4992-8bf5-4be35815fd11" name="Advanced Safety System, Basic" parentId="06e128ee-00fd-4992-8bf5-4be35815fd11" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="600">
+            <localizations xmi:id="_nAc9wK0bEeSEgt-_Sti6fg" local="de" name="Advanced Safety System, Basic" page="50"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="fad8757c-622f-41ce-8412-8bbb6fbf6445" name="Advanced Safety System, Immobilization" parentId="fad8757c-622f-41ce-8412-8bbb6fbf6445" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="700">
+            <localizations xmi:id="_nAc9wa0bEeSEgt-_Sti6fg" local="de" name="Advanced Safety System, Immobilization" page="50"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="c9739e50-bbaf-47e7-a19b-c3d7fd2b95af" name="Advanced Safety System, Self Destruct" parentId="c9739e50-bbaf-47e7-a19b-c3d7fd2b95af" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="800">
+            <localizations xmi:id="_nAc9wq0bEeSEgt-_Sti6fg" local="de" name="Advanced Safety System, Self Destruct" page="50"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="25b695f8-ed5a-4b75-baf0-164dcde74f2d" name="Advanced Safety System, Explosive Self Destruct" parentId="25b695f8-ed5a-4b75-baf0-164dcde74f2d" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="11F" wertValue="1000">
+            <localizations xmi:id="_nAc9w60bEeSEgt-_Sti6fg" local="de" name="Advanced Safety System, Explosive Self Destruct" page="50"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="b64d5256-0c24-4842-b05d-25ee735c9b6a" name="Advanced Safety System, Electro Shocker" parentId="b64d5256-0c24-4842-b05d-25ee735c9b6a" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6R" wertValue="950">
+            <localizations xmi:id="_nAc9xK0bEeSEgt-_Sti6fg" local="de" name="Advanced Safety System, Electro Shocker" page="50"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="dc859601-1271-4f5d-ac37-e389c95f052a" name="Bayonet" parentId="dc859601-1271-4f5d-ac37-e389c95f052a" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4R" wertValue="50">
+            <localizations xmi:id="_nAc9xa0bEeSEgt-_Sti6fg" local="de" name="Bajonett"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="ea64527d-0e1e-4248-957b-7c02d79dad30" name="Concealed Quick-Draw Holster" parentId="ea64527d-0e1e-4248-957b-7c02d79dad30" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="275">
+            <localizations xmi:id="_nAdk0K0bEeSEgt-_Sti6fg" local="de" name="Concealed Quick-Draw Holster" page="51"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="381dd922-19af-46fd-9999-0202c85574de" name="Extreme Environment Modification, Level 1" parentId="381dd922-19af-46fd-9999-0202c85574de" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8" wertValue="1500">
+            <localizations xmi:id="_nAdk0a0bEeSEgt-_Sti6fg" local="de" name="Extreme Environment Modification, Level 1" page="51"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="bf33b0e2-ead5-4f1e-b0ae-04489294b141" name="Extreme Environment Modification, Level 2" parentId="bf33b0e2-ead5-4f1e-b0ae-04489294b141" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8" wertValue="3000">
+            <localizations xmi:id="_nAdk0q0bEeSEgt-_Sti6fg" local="de" name="Extreme Environment Modification, Level 2" page="51"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="41ca17be-6fe4-469f-9a66-7345263c4733" name="Flashlight, Standard" parentId="41ca17be-6fe4-469f-9a66-7345263c4733" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="50">
+            <localizations xmi:id="_nAdk060bEeSEgt-_Sti6fg" local="de" name="Lampe, Standard"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="487ae8d8-f45b-4133-a79f-c831a6b6a651" name="Flashlight, Low Light" parentId="487ae8d8-f45b-4133-a79f-c831a6b6a651" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="200">
+            <localizations xmi:id="_nAdk1K0bEeSEgt-_Sti6fg" local="de" name="Flashlight, Low Light" page="51"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="fa873465-a678-4077-888f-f7a1fb792d47" name="Flashlight, Infrared" parentId="fa873465-a678-4077-888f-f7a1fb792d47" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="400">
+            <localizations xmi:id="_nAdk1a0bEeSEgt-_Sti6fg" local="de" name="Lampe, Infrarot"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="f8090e1f-424a-4298-a5d9-f2e6d650ef39" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="30">
+            <localizations xmi:id="_nAeL4K0bEeSEgt-_Sti6fg" local="de" name="Folding Stock" page="51"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="27de824f-d5e4-43fd-abaa-e42da6023569" name="Stock" parentId="27de824f-d5e4-43fd-abaa-e42da6023569" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="30">
+            <localizations xmi:id="_nAeL4a0bEeSEgt-_Sti6fg" local="de" name="Schulterstütze"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="8eec5df1-88e2-4822-b156-9c2340a33efc" name="Foregrip" parentId="8eec5df1-88e2-4822-b156-9c2340a33efc" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="100">
+            <localizations xmi:id="_nAeL4q0bEeSEgt-_Sti6fg" local="de" name="Vordergriff"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="627f212a-ac15-4739-afbc-f44676dfe508" name="Gecko Grip" parentId="627f212a-ac15-4739-afbc-f44676dfe508" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="100">
+            <localizations xmi:id="_nAeL460bEeSEgt-_Sti6fg" local="de" name="Gecko Grip" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="9a27efa9-f3f4-4e47-9165-76e8adbad4ba" name="Guncam" parentId="9a27efa9-f3f4-4e47-9165-76e8adbad4ba" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="350">
+            <localizations xmi:id="_nAeL5K0bEeSEgt-_Sti6fg" local="de" name="Waffenkamera"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="71a37dd2-d162-4829-a233-5afdd954691d" name="Hip Pad Bracing System" parentId="71a37dd2-d162-4829-a233-5afdd954691d" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="250">
+            <localizations xmi:id="_nAeL5a0bEeSEgt-_Sti6fg" local="de" name="Hüftpolstersystem"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="21bc8b85-3fd7-4bde-ac8d-35e1fa099f21" name="Improved Range Finder" parentId="21bc8b85-3fd7-4bde-ac8d-35e1fa099f21" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="2000">
+            <localizations xmi:id="_nAey8K0bEeSEgt-_Sti6fg" local="de" name="Improved Range Finder" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="06af1f95-772c-457d-9287-489cf1b0286d" name="Peak-Discharge Battery Pack, Power Clip" parentId="06af1f95-772c-457d-9287-489cf1b0286d" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14F" wertValue="400">
+            <localizations xmi:id="_nAey8a0bEeSEgt-_Sti6fg" local="de" name="Peak-Discharge Battery Pack, Power Clip" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="dda0b64a-6fa5-4e61-8631-f662f7066756" name="Peak-Discharge Battery Pack, Satchel Power Pack" parentId="dda0b64a-6fa5-4e61-8631-f662f7066756" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="16F" wertValue="900">
+            <localizations xmi:id="_nAey8q0bEeSEgt-_Sti6fg" local="de" name="Peak-Discharge Battery Pack, Satchel Power Pack" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="5a7459f5-2d95-4866-a855-110c0bc4f158" name="Peak-Discharge Battery Pack, Power Backpack" parentId="5a7459f5-2d95-4866-a855-110c0bc4f158" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="20F" wertValue="2500">
+            <localizations xmi:id="_nAey860bEeSEgt-_Sti6fg" local="de" name="Peak-Discharge Battery Pack, Power Backpack" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="51740a3d-4464-4a38-8e2e-8858b3c1481e" name="Safe Target System, Base" parentId="51740a3d-4464-4a38-8e2e-8858b3c1481e" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="750">
+            <localizations xmi:id="_nAey9K0bEeSEgt-_Sti6fg" local="de" name="Safe Target System, Base" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="fbf1ac2e-b131-499c-809e-c2c93c5ec286" name="Safe Target System, Additional set of RFID or GPS data (10 data sets)" parentId="fbf1ac2e-b131-499c-809e-c2c93c5ec286" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6" wertValue="25">
+            <localizations xmi:id="_nAey9a0bEeSEgt-_Sti6fg" local="de" name="Safe Target System, Additional set of RFID or GPS data (10 data sets)" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="9147a5ee-fba6-4915-9123-709df5835998" name="Safe Target System, Image Recognition Capabilities" parentId="9147a5ee-fba6-4915-9123-709df5835998" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8" wertValue="300">
+            <localizations xmi:id="_nAfaAK0bEeSEgt-_Sti6fg" local="de" name="Safe Target System, Image Recognition Capabilities" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="69e7431a-cf62-4712-8e71-728297385d20" name="Safe Target System, Extra image profiles (10 profiles)" parentId="69e7431a-cf62-4712-8e71-728297385d20" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8" wertValue="25">
+            <localizations xmi:id="_nAfaAa0bEeSEgt-_Sti6fg" local="de" name="Safe Target System, Extra image profiles (10 profiles)" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="de62b79f-2864-4023-a286-6c1f270aade3" name="Slide Mount" parentId="de62b79f-2864-4023-a286-6c1f270aade3" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="500">
+            <localizations xmi:id="_nAfaAq0bEeSEgt-_Sti6fg" local="de" name="Slide Mount" page="52"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="a1865555-8ad5-43ec-a30e-b7d77e804fab" name="Sling" parentId="a1865555-8ad5-43ec-a30e-b7d77e804fab" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" wertValue="15">
+            <localizations xmi:id="_nAfaA60bEeSEgt-_Sti6fg" local="de" name="Tragegurt"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="324ee965-d210-4768-a282-aa3180588fc7" name="Tracker" parentId="324ee965-d210-4768-a282-aa3180588fc7" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="150">
+            <localizations xmi:id="_nAfaBK0bEeSEgt-_Sti6fg" local="de" name="Tracker" page="53"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="dd786d50-9f42-406e-82d6-359213c086cc" name="Underbarrel Bola Launcher" parentId="dd786d50-9f42-406e-82d6-359213c086cc" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="350" ep="Unten">
+            <localizations xmi:id="_nAfaBa0bEeSEgt-_Sti6fg" local="de" name="Unterlauf Bolawerfer"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="2ce42c74-5129-4b33-b829-aa392c8eb392" name="Underbarrel Chainsaw" parentId="2ce42c74-5129-4b33-b829-aa392c8eb392" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="10R" wertValue="500" ep="Unten">
+            <localizations xmi:id="_nAgBEK0bEeSEgt-_Sti6fg" local="de" name="Underbarrel Chainsaw" page="53"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="c0191eaa-058c-437c-9e10-141785fc7bc8" name="Underbarrel Flamethrower" parentId="c0191eaa-058c-437c-9e10-141785fc7bc8" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="200" ep="Unten">
+            <localizations xmi:id="_nAgBEa0bEeSEgt-_Sti6fg" local="de" name="Unterlauf Flammenwerfer"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="b479bb05-3b39-4d1f-a4b2-65da27335f18" name="Underbarrel Grapple Gun" parentId="b479bb05-3b39-4d1f-a4b2-65da27335f18" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="600" ep="Unten">
+            <localizations xmi:id="_nAgBEq0bEeSEgt-_Sti6fg" local="de" name="Unterlauf Enterhakenkanone"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="25691076-94be-4869-a067-34e7657285b7" name="Underbarrel Grenade Launcher" parentId="25691076-94be-4869-a067-34e7657285b7" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="10F" wertValue="3500" ep="Unten">
+            <localizations xmi:id="_nAgBE60bEeSEgt-_Sti6fg" local="de" name="Underbarrel Grenade Launcher" page="53"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="9dc660bb-a0b2-4b14-8c43-f5893b174265" name="Underbarrel Weight" parentId="9dc660bb-a0b2-4b14-8c43-f5893b174265" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" ep="Unten">
+            <localizations xmi:id="_nAgBFK0bEeSEgt-_Sti6fg" local="de" name="Unterlaufgewicht"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="6c703f4e-fade-4045-9d88-ea636e1266f6" name="Weapon Commlink" parentId="6c703f4e-fade-4045-9d88-ea636e1266f6" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" wertValue="200">
+            <localizations xmi:id="_nAgBFa0bEeSEgt-_Sti6fg" local="de" name="Waffenkommlink"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="e09095d7-72b5-44ef-b52a-aa2de172da2f" name="Weapon Personality" parentId="e09095d7-72b5-44ef-b52a-aa2de172da2f" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8" wertValue="250">
+            <localizations xmi:id="_nAgoIK0bEeSEgt-_Sti6fg" local="de" name="Waffenpersönlichkeit"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" name="Vintage" parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d" verfuegbarkeit="0">
+            <localizations xmi:id="_nAgoIa0bEeSEgt-_Sti6fg" local="de" name="Vintage" page="53"/>
+          </entries>
+          <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="85b01b5c-c788-4b43-8190-9e0c18391436" name="Personalized Grip" parentId="85b01b5c-c788-4b43-8190-9e0c18391436" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="0">
+            <localizations xmi:id="_nAgoIq0bEeSEgt-_Sti6fg" local="de" name="Personalized Grip" page="31"/>
+          </entries>
         </entries>
         <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="60f52b1f-6376-49fc-a746-b811c54197e7" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="1000" name="Pole Arm" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-2" reichweite="3">
           <localizations xmi:id="_C-9FQEjdEeSs1LVnBuzujg" local="de" name="Hellebarde" page="422"/>
@@ -2513,209 +2339,6 @@
         </entries>
         <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="a5a300fd-d9fa-41dc-a792-2f96015cbe8a" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" verfuegbarkeit="8F" wertValue="2000" name="Vibro Sword" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+4)P" praezision="6" durchschlagsKraft="-2" reichweite="1">
           <localizations xmi:id="_DAevQEjdEeSs1LVnBuzujg" local="de" name="Vibroschwert"/>
-        </entries>
-      </entries>
-      <entries xsi:type="shr5:ShrList" xmi:id="_7ug40KlYEeSw2fR9wg8oKw" name="accessories">
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ug40alYEeSw2fR9wg8oKw" name="Silencer, Ares Light Fire 70" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <mods xmi:id="_AK8A0KlZEeSw2fR9wg8oKw" wert="1">
-            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/schalldaempfer"/>
-          </mods>
-          <localizations xmi:id="_7ug40qlYEeSw2fR9wg8oKw" local="de" name="Schalldämpfer, Ares Light Fire 70"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ug406lYEeSw2fR9wg8oKw" name="Silencer, Ares Light Fire 75" parentId="4026650e-ecd3-4514-b2c6-d03dc1d466b5" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7ug41KlYEeSw2fR9wg8oKw" local="de" name="Silencer, Ares Light Fire 75"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ug41alYEeSw2fR9wg8oKw" name="Silencer, PSK-3 Collapsible Heavy Pistol" parentId="7898e7dc-3ee6-46a9-83d7-d3ec54a456fb" page="32" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ug41qlYEeSw2fR9wg8oKw" local="de" name="Silencer, PSK-3 Collapsible Heavy Pistol" page="32"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ug416lYEeSw2fR9wg8oKw" name="Extra Case, Ares Executioner" parentId="b895c431-3fb0-49b7-a3fc-ddb4e54b69ee" page="35" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uhf4KlYEeSw2fR9wg8oKw" local="de" name="Extra Case, Ares Executioner" page="35"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uhf4alYEeSw2fR9wg8oKw" name="Airburst Link" parentId="294a6b30-6e1c-4b7d-8e93-10964647c2dd" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uhf4qlYEeSw2fR9wg8oKw" local="de" name="Airburst-Verbindung"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uhf46lYEeSw2fR9wg8oKw" name="Bipod" parentId="6e06df00-95b8-450f-9f2a-4a86c582d342" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Unten">
-          <localizations xmi:id="_7uhf5KlYEeSw2fR9wg8oKw" local="de" name="Zweibein"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uhf5alYEeSw2fR9wg8oKw" name="Concealable Holster" parentId="7f66a669-917a-4423-bd83-cf0e0a1fb2a8" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uhf5qlYEeSw2fR9wg8oKw" local="de" name="Tarnholster"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uhf56lYEeSw2fR9wg8oKw" name="Gas-Vent 1 Systen" parentId="f46b623b-75b5-4947-a3e4-baa2930749bf" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <mods xmi:id="_Csrk0KlZEeSw2fR9wg8oKw" wert="1">
-            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/rueckstoss"/>
-          </mods>
-          <localizations xmi:id="_7uhf6KlYEeSw2fR9wg8oKw" local="de" name="Gasventilsystem 1"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiG8KlYEeSw2fR9wg8oKw" name="Gas-Vent 2 System" parentId="b3827611-f631-461e-8660-e744593ba2d2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiG8alYEeSw2fR9wg8oKw" local="de" name="Gasventilsystem 2"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiG8qlYEeSw2fR9wg8oKw" name="Gas-Vent 3 System" parentId="6b06cf52-04fa-4034-bb10-2bcdd58c4bfb" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiG86lYEeSw2fR9wg8oKw" local="de" name="Gasventilsystem 3"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiG9KlYEeSw2fR9wg8oKw" name="Gyro Mount" parentId="baecb236-6b4a-4f7d-b9c4-25212f115d4a" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Unten">
-          <localizations xmi:id="_7uiG9alYEeSw2fR9wg8oKw" local="de" name="Gyrostabilisator"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiG9qlYEeSw2fR9wg8oKw" name="Hidden Gun Arm Slide" parentId="7ca0c689-a05e-4377-ae44-3dc15abe2ee2" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiG96lYEeSw2fR9wg8oKw" local="de" name="Versteckte Armhalterung"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiG-KlYEeSw2fR9wg8oKw" name="Imaging Scope" parentId="2905095e-937e-4dbc-aa56-3b66676e1559" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-          <localizations xmi:id="_7uiG-alYEeSw2fR9wg8oKw" local="de" name="Zielfernrohr"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiuAKlYEeSw2fR9wg8oKw" name="Laser Sight" parentId="521f9c2e-dfb2-42a6-b707-9808ae4885de" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiuAalYEeSw2fR9wg8oKw" local="de" name="Lasermarkierer"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiuAqlYEeSw2fR9wg8oKw" name="Periscope" parentId="12e3bb7f-0058-4c9f-ba36-3a865d52b5a0" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Oben">
-          <localizations xmi:id="_7uiuA6lYEeSw2fR9wg8oKw" local="de" name="Periskop"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiuBKlYEeSw2fR9wg8oKw" name="Quick-Draw Holster" parentId="18e18bbc-f287-4455-bedf-ba349779a4cb" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiuBalYEeSw2fR9wg8oKw" local="de" name="Schnellziehholster"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiuBqlYEeSw2fR9wg8oKw" name="Shock Pad" parentId="46596db4-6f25-4990-80cc-c4102eaf80f7" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiuB6lYEeSw2fR9wg8oKw" local="de" name="Schockpolster"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uiuCKlYEeSw2fR9wg8oKw" name="Silencer" parentId="0da6149e-982f-4051-825b-52c1b79c7e52" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uiuCalYEeSw2fR9wg8oKw" local="de" name="Schalldämpfer"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ujVEKlYEeSw2fR9wg8oKw" name="Sound Suppressor" parentId="3c329adb-7c13-4d2c-b25c-49be89173fa1" page="432" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7ujVEalYEeSw2fR9wg8oKw" local="de" name="Schallunterdrücker" page="432"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ujVEqlYEeSw2fR9wg8oKw" name="Smart Firing Platform" parentId="7e25eb59-3ce1-44d8-8367-527fd8c8bc1d" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Unten">
-          <localizations xmi:id="_7ujVE6lYEeSw2fR9wg8oKw" local="de" name="Smart-Feuerplattform"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ujVFKlYEeSw2fR9wg8oKw" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7ujVFalYEeSw2fR9wg8oKw" local="de" name="Smartgunsystem, Internal"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ujVFqlYEeSw2fR9wg8oKw" name="Smartgun System, External" parentId="b3562903-b1c6-4300-9f6e-25e0102aa69b" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7ujVF6lYEeSw2fR9wg8oKw" local="de" name="Smartgunsystem, External"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ujVGKlYEeSw2fR9wg8oKw" name="Spare Clip" parentId="4ed24342-276e-4455-acba-22b551e4d775" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7ujVGalYEeSw2fR9wg8oKw" local="de" name="Ersatzladestreifen"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uj8IKlYEeSw2fR9wg8oKw" name="Vindicator 200-Round Belt" parentId="2fa27223-dd56-4520-b26b-a112e8733320" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uj8IalYEeSw2fR9wg8oKw" local="de" name="Vindicator 200-Round Belt" page="42"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uj8IqlYEeSw2fR9wg8oKw" name="Speed Loader" parentId="4c47baf0-6b34-4e00-8627-a0f605f84ba0" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_7uj8I6lYEeSw2fR9wg8oKw" local="de" name="Schnelllader"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uj8JKlYEeSw2fR9wg8oKw" name="Tripod" parentId="28936368-9e16-498f-b028-92ec31e89a00" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" ep="Unten">
-          <localizations xmi:id="_7uj8JalYEeSw2fR9wg8oKw" local="de" name="Dreibein"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uj8JqlYEeSw2fR9wg8oKw" name="Advanced Safety System, Basic" parentId="06e128ee-00fd-4992-8bf5-4be35815fd11" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uj8J6lYEeSw2fR9wg8oKw" local="de" name="Advanced Safety System, Basic" page="50"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uj8KKlYEeSw2fR9wg8oKw" name="Advanced Safety System, Immobilization" parentId="fad8757c-622f-41ce-8412-8bbb6fbf6445" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uj8KalYEeSw2fR9wg8oKw" local="de" name="Advanced Safety System, Immobilization" page="50"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ukjMKlYEeSw2fR9wg8oKw" name="Advanced Safety System, Self Destruct" parentId="c9739e50-bbaf-47e7-a19b-c3d7fd2b95af" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ukjMalYEeSw2fR9wg8oKw" local="de" name="Advanced Safety System, Self Destruct" page="50"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ukjMqlYEeSw2fR9wg8oKw" name="Advanced Safety System, Explosive Self Destruct" parentId="25b695f8-ed5a-4b75-baf0-164dcde74f2d" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ukjM6lYEeSw2fR9wg8oKw" local="de" name="Advanced Safety System, Explosive Self Destruct" page="50"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ukjNKlYEeSw2fR9wg8oKw" name="Advanced Safety System, Electro Shocker" parentId="b64d5256-0c24-4842-b05d-25ee735c9b6a" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ukjNalYEeSw2fR9wg8oKw" local="de" name="Advanced Safety System, Electro Shocker" page="50"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ukjNqlYEeSw2fR9wg8oKw" name="Bayonet" parentId="dc859601-1271-4f5d-ac37-e389c95f052a" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ukjN6lYEeSw2fR9wg8oKw" local="de" name="Bajonett"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ukjOKlYEeSw2fR9wg8oKw" name="Concealed Quick-Draw Holster" parentId="ea64527d-0e1e-4248-957b-7c02d79dad30" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulKQKlYEeSw2fR9wg8oKw" local="de" name="Concealed Quick-Draw Holster" page="51"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulKQalYEeSw2fR9wg8oKw" name="Extreme Environment Modification, Level 1" parentId="381dd922-19af-46fd-9999-0202c85574de" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulKQqlYEeSw2fR9wg8oKw" local="de" name="Extreme Environment Modification, Level 1" page="51"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulKQ6lYEeSw2fR9wg8oKw" name="Extreme Environment Modification, Level 2" parentId="bf33b0e2-ead5-4f1e-b0ae-04489294b141" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulKRKlYEeSw2fR9wg8oKw" local="de" name="Extreme Environment Modification, Level 2" page="51"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulKRalYEeSw2fR9wg8oKw" name="Flashlight, Standard" parentId="41ca17be-6fe4-469f-9a66-7345263c4733" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulKRqlYEeSw2fR9wg8oKw" local="de" name="Lampe, Standard"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulKR6lYEeSw2fR9wg8oKw" name="Flashlight, Low Light" parentId="487ae8d8-f45b-4133-a79f-c831a6b6a651" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulKSKlYEeSw2fR9wg8oKw" local="de" name="Flashlight, Low Light" page="51"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulKSalYEeSw2fR9wg8oKw" name="Flashlight, Infrared" parentId="fa873465-a678-4077-888f-f7a1fb792d47" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulxUKlYEeSw2fR9wg8oKw" local="de" name="Lampe, Infrarot"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulxUalYEeSw2fR9wg8oKw" name="Folding Stock" parentId="f8090e1f-424a-4298-a5d9-f2e6d650ef39" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulxUqlYEeSw2fR9wg8oKw" local="de" name="Folding Stock" page="51"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulxU6lYEeSw2fR9wg8oKw" name="Stock" parentId="27de824f-d5e4-43fd-abaa-e42da6023569" page="51" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulxVKlYEeSw2fR9wg8oKw" local="de" name="Schulterstütze"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulxValYEeSw2fR9wg8oKw" name="Foregrip" parentId="8eec5df1-88e2-4822-b156-9c2340a33efc" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulxVqlYEeSw2fR9wg8oKw" local="de" name="Vordergriff"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulxV6lYEeSw2fR9wg8oKw" name="Gecko Grip" parentId="627f212a-ac15-4739-afbc-f44676dfe508" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7ulxWKlYEeSw2fR9wg8oKw" local="de" name="Gecko Grip" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7ulxWalYEeSw2fR9wg8oKw" name="Guncam" parentId="9a27efa9-f3f4-4e47-9165-76e8adbad4ba" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7umYYKlYEeSw2fR9wg8oKw" local="de" name="Waffenkamera"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7umYYalYEeSw2fR9wg8oKw" name="Hip Pad Bracing System" parentId="71a37dd2-d162-4829-a233-5afdd954691d" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7umYYqlYEeSw2fR9wg8oKw" local="de" name="Hüftpolstersystem"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7umYY6lYEeSw2fR9wg8oKw" name="Improved Range Finder" parentId="21bc8b85-3fd7-4bde-ac8d-35e1fa099f21" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7umYZKlYEeSw2fR9wg8oKw" local="de" name="Improved Range Finder" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7umYZalYEeSw2fR9wg8oKw" name="Peak-Discharge Battery Pack, Power Clip" parentId="06af1f95-772c-457d-9287-489cf1b0286d" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7umYZqlYEeSw2fR9wg8oKw" local="de" name="Peak-Discharge Battery Pack, Power Clip" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7umYZ6lYEeSw2fR9wg8oKw" name="Peak-Discharge Battery Pack, Satchel Power Pack" parentId="dda0b64a-6fa5-4e61-8631-f662f7066756" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7umYaKlYEeSw2fR9wg8oKw" local="de" name="Peak-Discharge Battery Pack, Satchel Power Pack" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7umYaalYEeSw2fR9wg8oKw" name="Peak-Discharge Battery Pack, Power Backpack" parentId="5a7459f5-2d95-4866-a855-110c0bc4f158" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7um_cKlYEeSw2fR9wg8oKw" local="de" name="Peak-Discharge Battery Pack, Power Backpack" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7um_calYEeSw2fR9wg8oKw" name="Safe Target System, Base" parentId="51740a3d-4464-4a38-8e2e-8858b3c1481e" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7um_cqlYEeSw2fR9wg8oKw" local="de" name="Safe Target System, Base" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7um_c6lYEeSw2fR9wg8oKw" name="Safe Target System, Additional set of RFID or GPS data (10 data sets)" parentId="fbf1ac2e-b131-499c-809e-c2c93c5ec286" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7um_dKlYEeSw2fR9wg8oKw" local="de" name="Safe Target System, Additional set of RFID or GPS data (10 data sets)" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7um_dalYEeSw2fR9wg8oKw" name="Safe Target System, Image Recognition Capabilities" parentId="9147a5ee-fba6-4915-9123-709df5835998" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7um_dqlYEeSw2fR9wg8oKw" local="de" name="Safe Target System, Image Recognition Capabilities" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7um_d6lYEeSw2fR9wg8oKw" name="Safe Target System, Extra image profiles (10 profiles)" parentId="69e7431a-cf62-4712-8e71-728297385d20" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7um_eKlYEeSw2fR9wg8oKw" local="de" name="Safe Target System, Extra image profiles (10 profiles)" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7um_ealYEeSw2fR9wg8oKw" name="Slide Mount" parentId="de62b79f-2864-4023-a286-6c1f270aade3" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7unmgKlYEeSw2fR9wg8oKw" local="de" name="Slide Mount" page="52"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7unmgalYEeSw2fR9wg8oKw" name="Sling" parentId="a1865555-8ad5-43ec-a30e-b7d77e804fab" page="52" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7unmgqlYEeSw2fR9wg8oKw" local="de" name="Tragegurt"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7unmg6lYEeSw2fR9wg8oKw" name="Tracker" parentId="324ee965-d210-4768-a282-aa3180588fc7" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7unmhKlYEeSw2fR9wg8oKw" local="de" name="Tracker" page="53"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7unmhalYEeSw2fR9wg8oKw" name="Underbarrel Bola Launcher" parentId="dd786d50-9f42-406e-82d6-359213c086cc" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7unmhqlYEeSw2fR9wg8oKw" local="de" name="Unterlauf Bolawerfer"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7unmh6lYEeSw2fR9wg8oKw" name="Underbarrel Chainsaw" parentId="2ce42c74-5129-4b33-b829-aa392c8eb392" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7unmiKlYEeSw2fR9wg8oKw" local="de" name="Underbarrel Chainsaw" page="53"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7unmialYEeSw2fR9wg8oKw" name="Underbarrel Flamethrower" parentId="c0191eaa-058c-437c-9e10-141785fc7bc8" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7uoNkKlYEeSw2fR9wg8oKw" local="de" name="Unterlauf Flammenwerfer"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uoNkalYEeSw2fR9wg8oKw" name="Underbarrel Grapple Gun" parentId="b479bb05-3b39-4d1f-a4b2-65da27335f18" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7uoNkqlYEeSw2fR9wg8oKw" local="de" name="Unterlauf Enterhakenkanone"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uoNk6lYEeSw2fR9wg8oKw" name="Underbarrel Grenade Launcher" parentId="25691076-94be-4869-a067-34e7657285b7" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7uoNlKlYEeSw2fR9wg8oKw" local="de" name="Underbarrel Grenade Launcher" page="53"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uoNlalYEeSw2fR9wg8oKw" name="Underbarrel Weight" parentId="9dc660bb-a0b2-4b14-8c43-f5893b174265" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" ep="Unten">
-          <localizations xmi:id="_7uoNlqlYEeSw2fR9wg8oKw" local="de" name="Unterlaufgewicht"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uoNl6lYEeSw2fR9wg8oKw" name="Weapon Commlink" parentId="6c703f4e-fade-4045-9d88-ea636e1266f6" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uoNmKlYEeSw2fR9wg8oKw" local="de" name="Waffenkommlink"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uoNmalYEeSw2fR9wg8oKw" name="Weapon Personality" parentId="e09095d7-72b5-44ef-b52a-aa2de172da2f" page="53" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_7uo0oKlYEeSw2fR9wg8oKw" local="de" name="Waffenpersönlichkeit"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uo0oalYEeSw2fR9wg8oKw" name="Vintage" parentId="4821b29d-55cd-4cb1-a6e2-c51e9d3a95a1" page="53" srcBook="b68175bc-e10f-4e11-9361-ed62bb371c8d">
-          <localizations xmi:id="_7uo0oqlYEeSw2fR9wg8oKw" local="de" name="Vintage" page="53"/>
-        </entries>
-        <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="_7uo0o6lYEeSw2fR9wg8oKw" name="Personalized Grip" parentId="85b01b5c-c788-4b43-8190-9e0c18391436" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8">
-          <localizations xmi:id="_7uo0pKlYEeSw2fR9wg8oKw" local="de" name="Personalized Grip" page="31"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EJ2wkTnTEeSe6_w6Jrbqxg" name="gears">

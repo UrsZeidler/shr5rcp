@@ -2795,8 +2795,7 @@
 			</xsl:choose>
 
 			<xsl:call-template name="set_parentid" />
-			<xsl:call-template name="beschreibbar" />
-			<xsl:call-template name="simple_quelle" />
+			<xsl:call-template name="gegenstand-basis" />
 			<xsl:call-template name="localization" />
 		</entries>
 
