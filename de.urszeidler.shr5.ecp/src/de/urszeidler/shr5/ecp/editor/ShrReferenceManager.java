@@ -89,7 +89,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
-                // || Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())
+                || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature())
                 || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
             EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
             if (copyAddToPersona != null) {
