@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,6 +22,7 @@ import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -476,4 +478,18 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
         return result.toString();
     }
 
+	   /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        if (getWertValue() == null)
+            return null;
+
+        BigDecimal listenWert = ShadowrunTools.calcListenWert(getEinbau());
+        return getWertValue().add(listenWert);
+    }
+
+	
 } //FeuerwaffeImpl
