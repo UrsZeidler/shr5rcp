@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -144,13 +145,33 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      */
     protected Magazin magazin;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	protected FeuerwaffeImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.FEUERWAFFE__EINBAU.equals(feature)) {
+                    FeuerwaffeImpl.this
+                            .eNotify(new ENotificationImpl(FeuerwaffeImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                } else if (Shr5Package.Literals.GELD_WERT__WERT_VALUE.equals(feature)) {
+                    FeuerwaffeImpl.this
+                            .eNotify(new ENotificationImpl(FeuerwaffeImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                }
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
 	/**
