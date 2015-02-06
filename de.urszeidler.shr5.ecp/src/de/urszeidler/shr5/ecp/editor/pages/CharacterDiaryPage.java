@@ -98,7 +98,10 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
                         return;
                     for (ContractPayment contractPayment : payments) {
                         IntervallVertrag contractToPay = (IntervallVertrag)contractPayment.getContractToPay();
-                        Date date = getPaymentDate(contractToPay) != null ? getPaymentDate(contractToPay) : contractToPay.getBegin();
+                        if(contractPayment.isPayed())
+                            continue;
+                        Date paymentDate = getPaymentDate(contractToPay);
+                        Date date = paymentDate != null ? paymentDate : contractToPay.getBegin();
 
                         Date nextDate = PayFineDialog.getNextPayment(contractToPay, date).getTime();
                         BigDecimal wert = contractToPay.getWert();
@@ -115,7 +118,7 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
                 }
             }
         };
-        action.setDescription("Pay all contracts.");
+        action.setToolTipText("Pay all contracts.");
         form.getToolBarManager().add(action);
 //        form.getToolBarManager().add(new Action() {
 //
@@ -141,10 +144,6 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         initDataBindings();
         createFormBuilder(managedForm);
 
-        // for (DiaryEntry de : object.getEntries()) {
-        // createDiaryEntry(managedForm,de);
-        // }
-
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__CHARACTER_DATE, grpCurrentDate, new DateEntryFactory(toolkit));
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = 250;
@@ -154,28 +153,8 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         managedForm.reflow(true);
     }
 
-    // private void createDiaryEntry(IManagedForm managedForm, DiaryEntry de) {
-    // Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-    // composite.setLayout(new GridLayout(3, false));
-    // composite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
-    // managedForm.getToolkit().adapt(composite);
-    // managedForm.getToolkit().paintBordersFor(composite);
-    //
-    // EmfFormBuilder emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(),
-    // AdapterFactoryUtil
-    // .getInstance().getLabelProvider(), getEditingDomain());
-    // emfFormBuilder.setManager(mananger);
-    // emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
-    // // emfFormBuilder.setBorderStyle(SWT.NONE);
-    // emfFormBuilder.setDblListner(this);
-    //
-    // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite);
-    // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(managedForm.getToolkit()));
-    // emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), de);
-    //
-    // }
 
-    protected Date getPaymentDate(final Vertrag contractToPay) {
+    private Date getPaymentDate(final Vertrag contractToPay) {
         ImmutableList<ContractPayment> sortedList = FluentIterable.from(object.getEntries()).filter(ContractPayment.class)
                 .filter(new Predicate<ContractPayment>() {
 
