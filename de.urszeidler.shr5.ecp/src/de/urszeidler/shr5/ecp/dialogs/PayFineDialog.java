@@ -1,56 +1,55 @@
 package de.urszeidler.shr5.ecp.dialogs;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
+import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
+import org.eclipse.jface.viewers.ArrayContentProvider;
+import org.eclipse.jface.viewers.CheckStateChangedEvent;
+import org.eclipse.jface.viewers.CheckboxTreeViewer;
+import org.eclipse.jface.viewers.ComboViewer;
+import org.eclipse.jface.viewers.ICheckStateListener;
+import org.eclipse.jface.viewers.ILabelProvider;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.nebula.widgets.cdatetime.CDT;
+import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.nebula.widgets.cdatetime.CDateTime;
-import org.eclipse.nebula.widgets.cdatetime.CDT;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.jface.viewers.ArrayContentProvider;
-import org.eclipse.jface.viewers.CheckboxTreeViewer;
-import org.eclipse.jface.viewers.ILabelProvider;
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.jface.viewers.ComboViewer;
 
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
-import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
-
-import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.wb.rcp.databinding.BeansListObservableFactory;
-
-import de.urszeidler.eclipse.shr5.Credstick;
-import de.urszeidler.eclipse.shr5.IntervallVertrag;
-import de.urszeidler.eclipse.shr5.Vertrag;
-
-import org.eclipse.wb.rcp.databinding.TreeBeanAdvisor;
-import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
-import org.eclipse.wb.rcp.databinding.TreeObservableLabelProvider;
-
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
 
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
-import org.eclipse.jface.viewers.ICheckStateListener;
-import org.eclipse.jface.viewers.CheckStateChangedEvent;
+import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.IntervallVertrag;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
+import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class PayFineDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -63,6 +62,11 @@ public class PayFineDialog extends TitleAreaDialog {
     private ComboViewer comboViewer;
 
     private CDateTime dateTime;
+
+    private Date baseDate;
+
+    private List<ContractPayment> payments;
+
 
     /**
      * Create the dialog.
@@ -78,10 +82,12 @@ public class PayFineDialog extends TitleAreaDialog {
      * Create the dialog.
      * 
      * @param parentShell
+     * @param date
      */
-    public PayFineDialog(Shell parentShell, ManagedCharacter character) {
+    public PayFineDialog(Shell parentShell, ManagedCharacter character, Date date) {
         super(parentShell);
         this.character = character;
+        this.baseDate = date;
     }
 
     /**
@@ -91,6 +97,7 @@ public class PayFineDialog extends TitleAreaDialog {
      */
     @Override
     protected Control createDialogArea(Composite parent) {
+        setTitleImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/title_banner-pay.png"));
         Composite area = (Composite)super.createDialogArea(parent);
         Composite container = new Composite(area, SWT.NONE);
         container.setLayout(new GridLayout(2, false));
@@ -102,13 +109,15 @@ public class PayFineDialog extends TitleAreaDialog {
         lblDate.setText("date");
 
         dateTime = new CDateTime(container, CDT.DROP_DOWN | CDT.DATE_SHORT);
+        if (baseDate != null)
+            dateTime.setSelection(baseDate);
         dateTime.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 Date date = dateTime.getSelection();
                 if (date != null)
                     updateToDate(date);
-                
+
                 updateState();
             }
         });
@@ -140,64 +149,76 @@ public class PayFineDialog extends TitleAreaDialog {
         comboViewer.setLabelProvider(labelProvider);
         comboViewer.setContentProvider(ArrayContentProvider.getInstance());
         comboViewer.setInput(FluentIterable.from(character.getInventar()).filter(Credstick.class).toList());
+        comboViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+            @Override
+            public void selectionChanged(SelectionChangedEvent event) {
+                updateState();
+            }
+        });
         Combo combo_credstick = comboViewer.getCombo();
         combo_credstick.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         return area;
     }
 
-    protected void updateState() {
+    private void updateState() {
         StringBuffer errors = new StringBuffer();
-        
-        if(selectedCredstick.getValue()==null)
+
+        final Date selection = dateTime.getSelection();
+        if (selectedCredstick.getValue() == null)
             errors.append("select credstick\n");
-        if(dateTime.getSelection()==null)
+        if (selection == null)
             errors.append("select date\n");
-        if(checkboxTreeViewer.getCheckedElements().length==0)
+        if (checkboxTreeViewer.getCheckedElements().length == 0)
             errors.append("select contract\n");
-        
-        if(errors.length()>0){
+
+        if (errors.length() > 0) {
             setErrorMessage(errors.toString());
             return;
         }
-        
+        setErrorMessage(null);
+
+        Function<IntervallVertrag, ContractPayment> function = new Function<IntervallVertrag, ContractPayment>() {
+
+            @Override
+            public ContractPayment apply(IntervallVertrag input) {
+                ContractPayment contractPayment = Shr5managementFactory.eINSTANCE.createContractPayment();
+                contractPayment.setContractToPay(input);
+//                contractPayment.setDate(selection);
+                contractPayment.setMessage(String.format("Pay for %s", labelProvider.getText(input)));
+                return contractPayment;
+            }
+        };
+
+        payments = new ArrayList<ContractPayment>(checkboxTreeViewer.getCheckedElements().length);
+        for (Object o : checkboxTreeViewer.getCheckedElements()) {
+            IntervallVertrag iv = (IntervallVertrag)o;
+            ContractPayment payment = function.apply(iv);
+            payments.add(payment);
+        }
+
+        setMessage(payments.toString());
     }
 
-    protected void updateToDate(final Date date) {
+    private void updateToDate(final Date date) {
         ImmutableList<IntervallVertrag> list = FluentIterable.from(character.getContracts()).filter(IntervallVertrag.class)
                 .filter(new Predicate<IntervallVertrag>() {
 
                     @Override
                     public boolean apply(IntervallVertrag input) {
-                        Date begin = input.getBegin();
-                        if(begin==null)
-                            return false;
-                        int faelligkeitsIntervall = input.getFaelligkeitsIntervall();
-                        Calendar instance = Calendar.getInstance();
-                        instance.setTime(begin);
-                        int field = 0;
-                        switch (input.getUnit()) {
-                            case DAY:
-                                field = Calendar.DAY_OF_YEAR;
-                                break;
-                            case WEEK:
-                                field = Calendar.WEEK_OF_YEAR;
-                                break;
-                            case MONTH:
-                                field = Calendar.MONTH;
-                                break;
-                            case YEAR:
-                                field = Calendar.YEAR;
-                                break;
+                        
+                        Date begin = getPaymentDate(input,date);//input.getBegin();
 
-                            default:
-                                break;
-                        }
-                        instance.add(field, faelligkeitsIntervall);
+                        Calendar instance = getNextPayment(input, begin);
                         return instance.getTime().before(date);
                     }
                 }).toList();// .copyInto(contracts);
         checkboxTreeViewer.setInput(list);
+    }
+
+    private Date getPaymentDate(IntervallVertrag input, Date date) {
+        // TODO Auto-generated method stub
+        return input.getBegin();
     }
 
     /**
@@ -228,4 +249,44 @@ public class PayFineDialog extends TitleAreaDialog {
         //
         return bindingContext;
     }
+
+    public List<ContractPayment> getPayments() {
+        return payments;
+    }
+
+    public Credstick getSelectedCredstick() {
+        return (Credstick)selectedCredstick.getValue();
+    }
+
+    /**
+     * @param input
+     * @param begin
+     * @return
+     */
+    public static Calendar getNextPayment(IntervallVertrag input, Date begin) {
+        int faelligkeitsIntervall = input.getFaelligkeitsIntervall();
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(begin);
+        int field = 0;
+        switch (input.getUnit()) {
+            case DAY:
+                field = Calendar.DAY_OF_YEAR;
+                break;
+            case WEEK:
+                field = Calendar.WEEK_OF_YEAR;
+                break;
+            case MONTH:
+                field = Calendar.MONTH;
+                break;
+            case YEAR:
+                field = Calendar.YEAR;
+                break;
+
+            default:
+                break;
+        }
+        instance.add(field, faelligkeitsIntervall);
+        return instance;
+    }
+
 }
