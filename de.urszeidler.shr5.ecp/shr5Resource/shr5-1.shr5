@@ -20773,7 +20773,7 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_lswdoVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
@@ -20905,13 +20905,14 @@
         <inventar xsi:type="shr5:Magazin" xmi:id="_i-Zf0JP8EeSg7ale_kHbpw" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="971c711b-db32-4339-9203-865ef38f350e" bullets="_GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg"/>
         <contracts xsi:type="shr5:Sin" xmi:id="_B0h48N0CEeOvVYoRsPZlnA" name="Sin Stufe 4" wertValue="10000" stufe="4" gefaelscht="true"/>
         <contracts xsi:type="shr5:Lizenz" xmi:id="_B0mxcN0CEeOvVYoRsPZlnA" name="Gun Licence" wertValue="800" stufe="4" gefaelscht="true" lizenzTraeger="_B0h48N0CEeOvVYoRsPZlnA"/>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_CguDUIalEeSVUMMR5ontNw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="6000" faelligkeitsIntervall="3" unit="month">
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_CguDUIalEeSVUMMR5ontNw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="6000" faelligkeitsIntervall="3" unit="month" begin="2072-02-01T12:11:01.188+0100">
           <localizations xmi:id="_CguDUYalEeSVUMMR5ontNw" local="de" name="Unterschicht"/>
           <options xsi:type="shr5:PercentLifestyleOption" xmi:id="_EwE20IalEeSVUMMR5ontNw" name="Troll" parentId="_kFaCUIaiEeSXruMPxKiFDw" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100"/>
         </contracts>
         <connections xmi:id="_B0nYgN0CEeOvVYoRsPZlnA" influence="2" loyality="3"/>
         <connections xmi:id="_B0nYgd0CEeOvVYoRsPZlnA" influence="2" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4d0CEeOvVYoRsPZlnA" character="_B0TPcd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Rob" resourcen="_BtMh4t0CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3Ksd0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="1" startResources="2810"/>
+        <diary xmi:id="__QUY8K65EeS4rNwT8QJ8AA"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0nYgt0CEeOvVYoRsPZlnA" chracterSource="_B0_L8N0CEeOvVYoRsPZlnA" choosenLifestyle="_B01a9t0CEeOvVYoRsPZlnA" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
         <persona xsi:type="shr5:MysticAdept" xmi:id="_B0sRAN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="b3259991-b315-4dbe-ae3c-51f71a1116e2" magieBasis="6" tradition="8d185e0e-5f49-4992-babd-d1ac9c848f68">

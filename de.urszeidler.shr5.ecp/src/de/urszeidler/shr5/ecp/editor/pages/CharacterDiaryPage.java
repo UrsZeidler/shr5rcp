@@ -3,7 +3,6 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
-import java.awt.Dialog;
 import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Date;
@@ -34,7 +33,6 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.dialogs.PayFineDialog;

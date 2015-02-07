@@ -174,6 +174,14 @@ public class Messages extends NLS {
     public static String GeneratorPage_Step_Tree_tooltip;
     public static String GeneratorPage_Step_Two_tooltip;
 
+    public static String RuntimeCharacterPage_7;
+    public static String RuntimeCharacterPage_8;
+    public static String RuntimeCharacterPage_edge_monitor;
+    public static String RuntimeCharacterPage_mental_monitor;
+    public static String RuntimeCharacterPage_over_monitor;
+    public static String RuntimeCharacterPage_physical_monitor;
+    public static String RuntimeCharacterPage_state;
+
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);

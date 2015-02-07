@@ -61,7 +61,6 @@ import de.urszeidler.shr5.ecp.editor.actions.OpenCharacterByRuntimeEditorAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
-import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.widgets.DamageStateValueProperty;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget;
 import de.urszeidler.shr5.runtime.ui.widgets.StateMonitorWidget.MonitorType;
@@ -212,7 +211,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
 
         Group grpPhysical = new Group(monitor, SWT.NONE);
         grpPhysical.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-        grpPhysical.setText("physical");
+        grpPhysical.setText(Messages.RuntimeCharacterPage_physical_monitor);
         managedForm.getToolkit().adapt(grpPhysical);
         managedForm.getToolkit().paintBordersFor(grpPhysical);
         grpPhysical.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -224,7 +223,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpMental = new Group(monitor, SWT.NONE);
         grpMental.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpMental.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-        grpMental.setText("mental");
+        grpMental.setText(Messages.RuntimeCharacterPage_mental_monitor);
         managedForm.getToolkit().adapt(grpMental);
         managedForm.getToolkit().paintBordersFor(grpMental);
 
@@ -235,7 +234,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpOverDead = new Group(monitor, SWT.NONE);
         grpOverDead.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpOverDead.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-        grpOverDead.setText("overflow");
+        grpOverDead.setText(Messages.RuntimeCharacterPage_over_monitor);
         managedForm.getToolkit().adapt(grpOverDead);
         managedForm.getToolkit().paintBordersFor(grpOverDead);
 
@@ -246,7 +245,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpUsedEdge = new Group(monitor, SWT.NONE);
         grpUsedEdge.setLayout(new FillLayout(SWT.HORIZONTAL));
         grpUsedEdge.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-        grpUsedEdge.setText(ShadowrunEditingTools.toFeatureName(object, RuntimePackage.Literals.RUNTIME_CHARACTER__USED_EDGE));
+        grpUsedEdge.setText(Messages.RuntimeCharacterPage_edge_monitor);
         managedForm.getToolkit().adapt(grpUsedEdge);
         managedForm.getToolkit().paintBordersFor(grpUsedEdge);
 
@@ -266,7 +265,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpState = new Group(monitor, SWT.NONE);
         grpState.setLayout(new GridLayout(3, false));
         grpState.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
-        grpState.setText("State");
+        grpState.setText(Messages.RuntimeCharacterPage_state);
         managedForm.getToolkit().adapt(grpState);
         managedForm.getToolkit().paintBordersFor(grpState);
 
@@ -275,7 +274,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         for (Entry<ExtendetData, Object> entry : entrySet) {
             ExtendetData key = entry.getKey();
             if (key.getEObject() != null) {
-                extendetDataToolbar.add(new Action(labelProvider.getText(key.getEObject()) + " " + labelProvider.getText(key.getEFeature()) + "  "
+                extendetDataToolbar.add(new Action(labelProvider.getText(key.getEObject()) + Messages.RuntimeCharacterPage_7 + labelProvider.getText(key.getEFeature()) + Messages.RuntimeCharacterPage_8
                         + entry.getValue()) {
                 });
             }
