@@ -274,7 +274,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__PUBLIC_AWARENESS, composite, new LabelEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite, linkLabelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite, new LabelEntry());
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite, new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite, new LabelEnumEntry());
 
         emfFormBuilder1.buildinComposite(m_bindingContext, composite_7, object);
 

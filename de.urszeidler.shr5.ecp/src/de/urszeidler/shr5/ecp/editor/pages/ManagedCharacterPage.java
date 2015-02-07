@@ -237,9 +237,9 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite_left);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite_left);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite_left);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite_right);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite_right);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite_right);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite_right, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite_right, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite_right, new LabelEntry());
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

@@ -2,16 +2,19 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -31,6 +34,8 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
+import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -50,6 +55,51 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
+                    UpdateValueStrategy.POLICY_NEVER), strategy);
+        }
+    }
+
+    protected final class LabelEnumEntry implements EntryFactory {
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            emfFormBuilder.createConfiguredLable(container, entry, object);
+            final LabelProvider provider = emfFormBuilder.createLabelProvider(entry, object);
+            Label label =  emfFormBuilder.createLabel(container);
+            label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            entry.setUiObservable(widgetObserver);
+            entry.setObservable(objectObserver);
+            UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
+            strategy.setConverter(new Converter(EObject.class,String.class) {
+                @Override
+                public Object convert(Object fromObject) {
+                    return provider.getText(fromObject);
+                }
+            });
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
+                    UpdateValueStrategy.POLICY_NEVER), strategy);
+        }
+    }
+
+    protected final class LabelMoneyEntry implements EntryFactory {
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            emfFormBuilder.createConfiguredLable(container, entry, object);
+            Label label =  emfFormBuilder.createLabel(container);
+            label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            entry.setUiObservable(widgetObserver);
+            entry.setObservable(objectObserver);
+            UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
+            strategy.setConverter(new Converter(EObject.class,String.class) {
+                @Override
+                public Object convert(Object fromObject) {
+                    return String.format("%,.0f %s" , fromObject, store.getString(PreferenceConstants.CURRENCY_SYMBOL));
+                }
+            });
             dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
                     UpdateValueStrategy.POLICY_NEVER), strategy);
         }
@@ -89,6 +139,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
+    private IPreferenceStore store;
     
 
 
@@ -98,6 +149,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
 
     public AbstractShr5Page(FormEditor editor, String id, String title) {
         super(editor, id, title);
+        store = Activator.getDefault().getPreferenceStore();
+
     }
 
     /**
@@ -109,7 +162,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
      * @param manager the mananger for refrenece features
      */
     public AbstractShr5Page(FormEditor editor, String id, String title, ReferenceManager manager) {
-        super(editor, id, title);
+        this(editor, id, title);
         this.mananger = manager;
     }
 
@@ -151,7 +204,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected void addWertFeatures(Composite grpWert) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert, new LabelMoneyEntry());
     }
 
     /**
