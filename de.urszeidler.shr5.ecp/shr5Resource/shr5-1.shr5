@@ -20773,10 +20773,11 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_lswdoVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" verfuegbarkeit="" wertValue="2000"/>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
+        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-03-01T00:00:00.000+0100"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_B0UdkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/rob.png" name="Rob" edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11" charismaBasis="3" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="77fa1ed8-f4e6-4763-9f0b-f125318b9782">

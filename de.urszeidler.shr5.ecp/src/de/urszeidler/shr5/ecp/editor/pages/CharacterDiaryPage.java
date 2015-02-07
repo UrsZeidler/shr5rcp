@@ -120,9 +120,6 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         };
         action.setToolTipText("Pay all contracts.");
         form.getToolBarManager().add(action);
-//        form.getToolBarManager().add(new Action() {
-//
-//        });
         form.getToolBarManager().update(true);
 
         toolkit.paintBordersFor(body);

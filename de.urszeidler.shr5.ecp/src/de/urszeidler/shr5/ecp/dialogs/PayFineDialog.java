@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.wb.swt.ResourceManager;
 
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
@@ -48,8 +49,8 @@ import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
-import org.eclipse.wb.swt.ResourceManager;
 
 public class PayFineDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
@@ -184,7 +185,6 @@ public class PayFineDialog extends TitleAreaDialog {
             public ContractPayment apply(IntervallVertrag input) {
                 ContractPayment contractPayment = Shr5managementFactory.eINSTANCE.createContractPayment();
                 contractPayment.setContractToPay(input);
-//                contractPayment.setDate(selection);
                 contractPayment.setMessage(String.format("Pay for %s", labelProvider.getText(input)));
                 return contractPayment;
             }
@@ -196,8 +196,9 @@ public class PayFineDialog extends TitleAreaDialog {
             ContractPayment payment = function.apply(iv);
             payments.add(payment);
         }
-
-        setMessage(payments.toString());
+        
+        ImmutableList<String> list = FluentIterable.from(payments).transform(ShadowrunEditingTools.eObject2StringTransformer()).toList();
+        setMessage(list.toString());
     }
 
     private void updateToDate(final Date date) {
@@ -208,7 +209,9 @@ public class PayFineDialog extends TitleAreaDialog {
                     public boolean apply(IntervallVertrag input) {
                         
                         Date begin = getPaymentDate(input,date);//input.getBegin();
-
+                        if(begin==null)
+                            return false;
+                        
                         Calendar instance = getNextPayment(input, begin);
                         return instance.getTime().before(date);
                     }
@@ -217,7 +220,6 @@ public class PayFineDialog extends TitleAreaDialog {
     }
 
     private Date getPaymentDate(IntervallVertrag input, Date date) {
-        // TODO Auto-generated method stub
         return input.getBegin();
     }
 
