@@ -23,6 +23,7 @@ public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
     public FeatureEditorDialogMagazine(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
             String displayName, List<?> choiceOfValues) {
         super(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues,object,false);
+        this.unique = false;
     }
 
     protected void updateLabel() {
@@ -38,8 +39,9 @@ public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
             }
         }
     }
-
-    protected boolean capacityReached() {
+    
+    @Override
+    protected boolean capacityReached(Object value) {
         if (this.object instanceof Magazin) {
             Magazin m = (Magazin)this.object;
             Feuerwaffe type = GameplayTools.getMagazingType(m);
@@ -75,7 +77,7 @@ public class FeatureEditorDialogMagazine extends FeatureEditorDialogWert {
                         for (Iterator<?> i1 = selection.iterator(); i1.hasNext();) {
                             Object value = i1.next();
                             if (!unique || !children.contains(value)) {
-                                if(!capacityReached())
+                                if(!capacityReached(value))
                                     children.add(value);
                             }
                         }
