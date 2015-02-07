@@ -63,7 +63,7 @@ public class DefensTestCmdItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_DefensTestCmd_attackersHits_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DefensTestCmd_attackersHits_feature", "_UI_DefensTestCmd_type"),
+                 getString("_UI_DefensTestCmd_attackersHits_description"),
                  GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS,
                  true,
                  false,

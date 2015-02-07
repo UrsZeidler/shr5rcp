@@ -37,8 +37,10 @@
       <genOperations ecoreOperation="gameplay.ecore#//ExecutionStack/redo"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DamageTest">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/damage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/dv"/>
+      <genFeatures createChild="false" propertyDescription="The damage code, like 4P or 4M."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/damage"/>
+      <genFeatures createChild="false" propertyDescription="The armor pearcing of the attack."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/dv"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DamageTest/effectiveDamage"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//Command">
@@ -48,7 +50,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/cmdCallback"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/executing"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/canExecute"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/hidden"/>
+      <genFeatures createChild="false" propertyDescription="Hide the command from the history and the collaborations."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//Command/hidden"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/redo"/>
       <genOperations ecoreOperation="gameplay.ecore#//Command/undo"/>
     </genClasses>
@@ -56,10 +59,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SubjectCommand/subject"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//SkillTestCmd">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SkillTestCmd/skill"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The skill used in this test."
+          propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SkillTestCmd/skill"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//OpposedSkillTestCmd">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/object"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The target of the opposed test."
+          propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/object"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//OpposedSkillTestCmd/objectSkill"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//Initative">
@@ -75,14 +80,16 @@
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//Probe">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/probe"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/successes"/>
+      <genFeatures createChild="false" propertyDescription="Number of succeses." ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/successes"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/glitches"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/limit"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/probeState"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//Probe/probeMods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/skipTest"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/pushTheLimit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/secondChance"/>
+      <genFeatures createChild="false" propertyDescription="Use the push the limit edge option for this test."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/pushTheLimit"/>
+      <genFeatures createChild="false" propertyDescription="Use the second change edge option for this test."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/secondChance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Probe/closeCall"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//ProbeCommand">
@@ -99,8 +106,10 @@
       <genOperations ecoreOperation="gameplay.ecore#//CombatTurn/doTurn"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//SuccesTest">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/netHits"/>
+      <genFeatures createChild="false" propertyDescription="The defined theashhold for this test."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/thresholds"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The net hits."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/netHits"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTest/testState"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//ExtendetSkillTestCmd">
@@ -108,7 +117,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gameplay.ecore#//ExtendetSkillTestCmd/intervall"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DefensTestCmd">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DefensTestCmd/attackersHits"/>
+      <genFeatures createChild="false" propertyDescription="The number hits the attacker has."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//DefensTestCmd/attackersHits"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//SuccesTestCmd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SuccesTestCmd/dicePool"/>
@@ -138,13 +148,18 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SetFeatureCommand/feature"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//MeeleAttackCmd">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//MeeleAttackCmd/weapon"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The weapon used for the attack."
+          propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//MeeleAttackCmd/weapon"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//RangedAttackCmd">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/modus"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/range"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//RangedAttackCmd/weapon"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/numberOfShoots"/>
+      <genFeatures createChild="false" propertyDescription="The modus the weapon is used with."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/modus"/>
+      <genFeatures createChild="false" propertyDescription="The range in meters."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/range"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The ranged weapon used in this attack."
+          propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//RangedAttackCmd/weapon"/>
+      <genFeatures createChild="false" propertyDescription="The numer of shoots."
+          ecoreFeature="ecore:EAttribute gameplay.ecore#//RangedAttackCmd/numberOfShoots"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//Intervall">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//Intervall/quantities"/>
@@ -164,8 +179,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//SemanticAction/message"/>
     </genClasses>
     <genClasses ecoreClass="gameplay.ecore#//DrainCommand">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damageType"/>
+      <genFeatures createChild="false" propertyDescription="The drain damage." ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damage"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute gameplay.ecore#//DrainCommand/damageType"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gameplay.ecore#//SpellCommand">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gameplay.ecore#//SpellCommand/spell"/>

@@ -64,7 +64,7 @@ public class DrainCommandItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_DrainCommand_damage_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DrainCommand_damage_feature", "_UI_DrainCommand_type"),
+                 getString("_UI_DrainCommand_damage_description"),
                  GameplayPackage.Literals.DRAIN_COMMAND__DAMAGE,
                  true,
                  false,

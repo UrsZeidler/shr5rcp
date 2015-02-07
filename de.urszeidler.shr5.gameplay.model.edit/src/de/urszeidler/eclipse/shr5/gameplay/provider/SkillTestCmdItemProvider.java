@@ -60,7 +60,7 @@ public class SkillTestCmdItemProvider extends ProbeCommandItemProvider {
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_SkillTestCmd_skill_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SkillTestCmd_skill_feature", "_UI_SkillTestCmd_type"),
+                 getString("_UI_SkillTestCmd_skill_description"),
                  GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                  true,
                  false,

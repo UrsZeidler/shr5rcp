@@ -197,7 +197,7 @@ public class SetFeatureCommandItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Command_hidden_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Command_hidden_feature", "_UI_Command_type"),
+                 getString("_UI_Command_hidden_description"),
                  GameplayPackage.Literals.COMMAND__HIDDEN,
                  true,
                  false,
