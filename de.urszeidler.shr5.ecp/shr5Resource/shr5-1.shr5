@@ -21099,7 +21099,6 @@
           </mods>
         </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_Bz18dt0CEeOvVYoRsPZlnA" wertValue="175" name="quickdraw holfter"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_Bz18d90CEeOvVYoRsPZlnA" page="439" verfuegbarkeit="2" wertValue="100" name="Meta Link" kategorie="Commlink"/>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_Bz18eN0CEeOvVYoRsPZlnA" page="443" verfuegbarkeit="0" wertValue="3750" name="Goggles" kategorie="Optical &amp; Imaging Devices">
           <mods xmi:id="_Bz18ed0CEeOvVYoRsPZlnA">
             <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/smartgun"/>
@@ -21136,11 +21135,84 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_lswdoVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_evVfwK8WEeS3Wp9Q37-3Qw" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000">
+          <transactionlog xmi:id="_y4WccK8WEeS3Wp9Q37-3Qw" amount="470" date="2075-03-15T00:00:00.000+0100" description="Übertrag"/>
+          <transactionlog xmi:id="_4lj24K8WEeS3Wp9Q37-3Qw" amount="10000" date="2075-03-16T00:00:00.000+0100" description="Einnahmen"/>
+          <transactionlog xmi:id="_NR3G0K8XEeS3Wp9Q37-3Qw" amount="-20" date="2075-03-20T00:00:00.000+0100" description="Auslagen"/>
+          <transactionlog xmi:id="_PnonkK9oEeS769kjC9ygTA" amount="-2670" date="2075-03-23T00:00:00.000+0100" description="Einkauf"/>
+          <transactionlog xmi:id="_xcxgkK9pEeS769kjC9ygTA" amount="-1500" date="2075-03-23T00:00:00.000+0100" description="Miete auto"/>
+          <transactionlog xmi:id="_z3vuMK9pEeS769kjC9ygTA" amount="-500" date="2075-03-23T00:00:00.000+0100" description="Beschwörungsmaterialien"/>
+          <transactionlog xmi:id="_f1C_cK9qEeS769kjC9ygTA" amount="-470" date="2075-03-30T00:00:00.000+0100" description="Party gezahlt"/>
+          <transactionlog xmi:id="_03QN8K9qEeS769kjC9ygTA" amount="-2000" date="2075-04-01T09:01:12.185+0200" description="Pay for Lifestyle Low"/>
+          <transactionlog xmi:id="_9ogLsK9rEeS769kjC9ygTA" amount="-500" date="2075-04-01T00:00:00.000+0200" description="Klammoten für Sawatschi"/>
+          <transactionlog xmi:id="_T08_wK9sEeS769kjC9ygTA" amount="5000" date="2075-04-03T00:00:00.000+0200" description="Anzahlung"/>
+          <transactionlog xmi:id="_XJ8loK9sEeS769kjC9ygTA" amount="-5000" date="2075-04-05T00:00:00.000+0200" description="Yahmaha Growler"/>
+          <transactionlog xmi:id="_wdK9YK9sEeS769kjC9ygTA" amount="2500" date="2075-04-05T00:00:00.000+0200" description="Teilauszahlung"/>
+          <transactionlog xmi:id="_Ro3PwK95EeSC2YJFV_dUOA" amount="-350" date="2075-04-10T00:00:00.000+0200" description="Gel Rounds, Endoscope 8"/>
+          <transactionlog xmi:id="_7AeRIK95EeSC2YJFV_dUOA" amount="-500" date="2075-11-04T00:00:00.000+0100" description="Ralf"/>
+          <transactionlog xmi:id="_gsoUcK96EeSC2YJFV_dUOA" amount="-115" date="2075-04-14T00:00:00.000+0200" description="Chronist und Savatchi"/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold" maxValue="100000">
+          <transactionlog xmi:id="_jphFUK8XEeS3Wp9Q37-3Qw" amount="12400" date="9999-03-20T00:00:00.000+0100" description="Einnahmen"/>
+          <transactionlog xmi:id="_pvqD4K9pEeS769kjC9ygTA" amount="5000" date="2075-03-23T00:00:00.000+0100" description="Vorschuss"/>
+          <transactionlog xmi:id="_QP7EsK9qEeS769kjC9ygTA" amount="20000" date="2075-03-29T00:00:00.000+0100" description="Auszahlung"/>
+          <transactionlog xmi:id="_gQ2CQK94EeSC2YJFV_dUOA" amount="5000" date="2075-04-10T00:00:00.000+0200" description="Auszahlung"/>
+          <transactionlog xmi:id="_pW8OoK95EeSC2YJFV_dUOA" amount="7000" date="2075-04-11T00:00:00.000+0200" description="Auszahlung Job"/>
+          <transactionlog xmi:id="_nLRL0K96EeSC2YJFV_dUOA" amount="10000" date="2075-04-14T00:00:00.000+0200" description="Befreiung von Grisu"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_haEHYK9oEeS769kjC9ygTA" parentId="320bd9e3-e261-4a45-aa03-c740b6855e73" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="25" beschreibung="10x" name="Stim Patch" kategorie="Biotech" stufe="6">
+          <localizations xmi:id="_haEHYa9oEeS769kjC9ygTA" local="de" name="Slap Patch, Stim Patch"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_hae-IK9oEeS769kjC9ygTA" parentId="5e4f9fdf-cf51-4ea1-9de0-8ca4f33af8b1" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="20" beschreibung="10x" name="Tranq Patch" kategorie="Biotech" stufe="10">
+          <localizations xmi:id="_hae-Ia9oEeS769kjC9ygTA" local="de" name="Slap Patch, Tranq Patch"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_a4jswK9pEeS769kjC9ygTA" parentId="a210be88-be16-4d66-afcb-7d58b8e1397f" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="250" image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg" name="Miniwelder" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_a4jswa9pEeS769kjC9ygTA" local="de" name="Mini-Schweißgerät"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_a498cK9pEeS769kjC9ygTA" parentId="97f888dd-7e0d-4f33-b4cc-396cddecdf62" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="80" name="Miniwelder Fuel Canister" kategorie="Breaking and Entering Gear">
+          <localizations xmi:id="_a498ca9pEeS769kjC9ygTA" local="de" name="Mini-Schweißgerät Benzin"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_DQ-kMK95EeSC2YJFV_dUOA" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Gel Rounds" anzahl="40" proAnzahl="10" armorMod="1" type="_ENFDsznTEeSe6_w6Jrbqxg">
+          <localizations xmi:id="_DQ-kMa95EeSC2YJFV_dUOA" local="de" name="Munition: Gelgeschosse"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_dMtGYK95EeSC2YJFV_dUOA" parentId="22ceb53b-7863-424b-8ee5-d04bb520d97d" page="444" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="250" name="Endoscope" kategorie="Vision Devices">
+          <localizations xmi:id="_dMtGYa95EeSC2YJFV_dUOA" local="de" name="Endoskop"/>
+        </inventar>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_NoyQEK96EeSC2YJFV_dUOA" parentId="89a0f3c9-5ef6-41cd-981f-4ac690ee2ab3" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="100" name="Meta Link" deviceRating="1">
+          <localizations xmi:id="_NoyQEa96EeSC2YJFV_dUOA" local="de" name="Meta Link"/>
+          <pan xmi:id="_OfkHEK96EeSC2YJFV_dUOA"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="__19ugK97EeSC2YJFV_dUOA" parentId="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Trommel" kapazitaet="6">
+          <localizations xmi:id="__19uga97EeSC2YJFV_dUOA" local="de" name="Ruger Super Warhawk"/>
+          <modie>EM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <magazin xmi:id="__19ugq97EeSC2YJFV_dUOA" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ruger Super Warhawk ammunition" type="__19ugK97EeSC2YJFV_dUOA"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="__2bBgK97EeSC2YJFV_dUOA" parentId="61c59a89-3c51-46b7-880a-933b29394315" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Trommel" kapazitaet="6">
+          <localizations xmi:id="__2bBga97EeSC2YJFV_dUOA" local="de" name="Ruger Super Warhawk"/>
+          <modie>EM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <magazin xmi:id="__2bBgq97EeSC2YJFV_dUOA" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ruger Super Warhawk ammunition" type="__2bBgK97EeSC2YJFV_dUOA"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="__2xm0K97EeSC2YJFV_dUOA" parentId="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="450" name="Defiance T-250" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="_ENFqwznTEeSe6_w6Jrbqxg" kapazitaet="5">
+          <localizations xmi:id="__2xm0a97EeSC2YJFV_dUOA" local="de" name="Defiance T-250"/>
+          <modie>EM</modie>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <magazin xmi:id="__2xm0q97EeSC2YJFV_dUOA" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Defiance T-250 ammunition" type="__2xm0K97EeSC2YJFV_dUOA"/>
+        </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_N5AlwK9sEeS769kjC9ygTA" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
-        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-03-01T00:00:00.000+0100"/>
+        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-03-01T00:00:00.000+0100">
+          <entries xsi:type="shr5mngt:ContractPayment" xmi:id="_03mMMK9qEeS769kjC9ygTA" date="2075-04-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
+        </diary>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_B0UdkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/rob.png" name="Rob" edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11" charismaBasis="3" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="77fa1ed8-f4e6-4763-9f0b-f125318b9782">
