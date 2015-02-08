@@ -943,7 +943,7 @@
           <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/getProperty">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/81">
-              <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
             </source>
             <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="plugin.properties">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -958,7 +958,7 @@
                 <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/toString">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="ee" referredVariable="/0/toLocalizedMagischeTraditionString/ee">
-                    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+                    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
                   </source>
                 </argument>
               </source>
@@ -992,7 +992,7 @@
           <initExpression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/getProperty">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/79">
-              <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
             </source>
             <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1019,7 +1019,7 @@
                 <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/toString">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="ee" referredVariable="/0/toLocalizedMagischeTraditionString/ee">
-                    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+                    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
                   </source>
                 </argument>
               </source>
@@ -1034,7 +1034,7 @@
         <body startPosition="3762" endPosition="3819" value="&#xA;print the localized enum for the MagischeTradition.&#xA;&#xA;"/>
       </documentation>
       <parameter name="ee">
-        <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
       </parameter>
       <parameter name="loc">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1604,7 +1604,7 @@
         <eAnnotations source="MTL" references="/0/toLocalizedMagischeTraditionString"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="ee">
-          <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
         </eParameters>
         <eParameters name="loc">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1993,25 +1993,25 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>

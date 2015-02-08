@@ -69,7 +69,13 @@
 
 [printVehicles(aManagedCharacter.vehicels,empty)/]
 
+[if (aManagedCharacter.oclIsTypeOf(PlayerCharacter))]
+[printDiary(aManagedCharacter.oclAsType(PlayerCharacter).diary)/]
+[/if]
+
 [printAdvacements(aManagedCharacter.changes)/]
+
+[printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick), empty)  /]
 
 [/template]
 
@@ -112,7 +118,7 @@ Limits
 [template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { empty :String = '                                             ' ;}]
 ['_UI_ManagedCharacter_changes_feature'.localizedString().titelText()/]
 [for (ag : Changes | gears)]
-[ printTextPlusSpace(ag.date.getText()+' '+  getText(ag),empty)  /] [ag.karmaCost/]
+[ printTextPlusSpace(ag.date.formatDate()+' '+  getText(ag),empty)  /] [ag.karmaCost/]
 [/for]
 [/template]
 
@@ -254,6 +260,36 @@ Limits
 [/for]
 
 [printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
+[/template]
+
+
+[template public printDiary(diary : CharacterDiary)]
+['Diary'.localizedString().titelText()/]
+Current Date: [diary.characterDate/]
+[for (de : DiaryEntry | diary.entries)]
+[printDiaryEntry(de)/]
+[/for]
+[/template]
+
+[template public printDiaryEntry (aDiaryEntry : DiaryEntry) ]
+[aDiaryEntry.date.formatDate()/]: [aDiaryEntry.message/]
+[/template]
+
+[template public printAllCredSticks(cs : OrderedSet(Credstick), empty :String)]
+['Credsticks'.localizedString().titelText()/]
+[for (credstick : Credstick | cs)]
+[printCredStick(credstick, empty) /]
+[/for]
+[/template]
+
+
+[template public printCredStick(credstick : Credstick, empty :String)]
+[printTextPlusSpace('Credstick: '.concat(credstick.getText()), empty)/]
+[for (t : CredstickTransaction | credstick.transactionlog)]
+[t.date.formatDate() /] [printTextPlusSpace(t.getText(),empty)/]
+[/for]
+[printTextPlusSpace('Saldo :', empty)/] [credstick.currentValue.formatMoney() /]
+
 [/template]
 
 [template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]

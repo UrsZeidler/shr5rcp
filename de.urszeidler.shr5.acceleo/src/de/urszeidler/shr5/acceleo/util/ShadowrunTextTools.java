@@ -3,9 +3,12 @@
  */
 package de.urszeidler.shr5.acceleo.util;
 
+import java.math.BigDecimal;
 import java.text.CharacterIterator;
+import java.text.DateFormat;
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -38,6 +41,7 @@ public class ShadowrunTextTools {
     private static Zauber zauber = Shr5Factory.eINSTANCE.createZauber();
     private static NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
     private static Feuerwaffe fiereweapon = Shr5Factory.eINSTANCE.createFeuerwaffe();
+    private static DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
 
     /**
      * Returns the localized feature name.
@@ -131,6 +135,17 @@ public class ShadowrunTextTools {
         return list;
     }
 
+    public static String formatMoney(BigDecimal decimal) {
+        return String.format("%,.0f %s" , decimal, "¥");//TODO: need to use the prefs when able
+     }
+     
+    public static String formatDate(Date date) {
+        if(date==null)
+            return "unset";
+        
+        return dateFormat.format(date);
+     }
+     
     /**
      * Get a localized text from the managenent plugin with the prefix _PR_.
      * 
