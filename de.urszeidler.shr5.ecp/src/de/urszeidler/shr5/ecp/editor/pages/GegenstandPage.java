@@ -139,7 +139,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         sctnRuntime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnRuntime);
         sctnRuntime.setText(Messages.GegenstandPage_sctnRuntime_text);
-        sctnRuntime.setExpanded(true);
+        sctnRuntime.setExpanded(false);
         
         final Composite composite_runtime = managedForm.getToolkit().createComposite(sctnRuntime, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(composite_runtime);
@@ -159,7 +159,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__RUESTUNG, grpGegenstand);
         } else if (object instanceof Credstick) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand, new LabelMoneyEntry());
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, grpGegenstand);
         } else if (object instanceof Munition) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);

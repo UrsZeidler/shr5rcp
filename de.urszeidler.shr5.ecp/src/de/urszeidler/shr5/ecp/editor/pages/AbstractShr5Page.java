@@ -44,7 +44,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public abstract class AbstractShr5Page<A extends EObject> extends FormPage implements IDoubleClickListener {
 
-    protected final class LabelEntry implements EntryFactory {
+    public final class LabelEntry implements EntryFactory {
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
@@ -60,7 +60,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         }
     }
 
-    protected final class LabelEnumEntry implements EntryFactory {
+    public final class LabelEnumEntry implements EntryFactory {
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
@@ -83,7 +83,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         }
     }
 
-    protected final class LabelMoneyEntry implements EntryFactory {
+    public final class LabelMoneyEntry implements EntryFactory {
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
@@ -108,7 +108,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     /**
      * A emf form factory to create and bind a date widget.
      */
-    protected class DateEntryFactory implements EntryFactory{
+    public class DateEntryFactory implements EntryFactory{
 
         private final FormToolkit formToolkit;
         public DateEntryFactory(FormToolkit formToolkit) {
