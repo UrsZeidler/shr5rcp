@@ -1,0 +1,452 @@
+[comment encoding = UTF-8 /]
+[module foCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+[import de::urszeidler::shr5::acceleo::sheets::svgCharacterSheet /]
+
+
+[template public foCharacterSheet(aManagedCharacter : ManagedCharacter)]
+	[comment @main /]
+[file (aManagedCharacter.getText().concat('.fo'), false, 'UTF-8')]
+[printFoPageStart(aManagedCharacter.getText())/]	
+   <fo:table margin="3pt" >
+    <fo:table-column column-width="50%" />
+    <fo:table-column column-width="50%" />
+    <fo:table-body  >
+    <fo:table-row >
+<!-- colum one -->
+      <fo:table-cell>
+		<fo:block  >
+[printAttributes(aManagedCharacter)  /]
+		</fo:block  >
+		<fo:block margin-top="10pt" >
+[printSkills(aManagedCharacter)  /]
+		</fo:block  >
+      </fo:table-cell>
+<!-- colum two -->
+      <fo:table-cell>
+[comment]<!--
+<fo:block  >
+<fo:instream-foreign-object>
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" 
+ 
+>
+[printConditionMonitorBlock(aManagedCharacter, '', 0, 0, 0)/]
+</svg:svg>
+</fo:instream-foreign-object>
+		</fo:block  >
+-->[/comment]
+[if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
+[let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
+		<fo:block  >
+[printQuallities(kp)/]
+		</fo:block  >
+		<fo:block  margin-top="10pt">
+[printCyberwares(kp)/]
+		</fo:block  >
+		<fo:block  margin-top="10pt">
+[printBioware(kp)/]
+		</fo:block  >
+[/let]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
+		<fo:block  margin-top="10pt">
+[printKiPower(aManagedCharacter.persona.oclAsType(KiAdept))/]
+		</fo:block  >
+[/if] 
+		<fo:block margin-top="10pt" >
+[printGear(aManagedCharacter)  /]
+		</fo:block  >
+
+		<fo:block margin-top="10pt" >
+[printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick))  /]
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+
+[printSimpleFoPageEnd()/]	
+[/file]
+[/template]
+
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printCyberwares(persona : KoerperPersona) ? (not persona.koerperMods->selectByType(Cyberware)->isEmpty())]
+[printSectionTitel('Cyberware'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[for (km : Cyberware | persona.koerperMods->selectByType(Cyberware))]
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+[printCyberware(km)/]
+</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printCyberware(c : Cyberware)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-body  >
+
+    <fo:table-row>
+[printCellSpanned(c.getText(),2 )/]
+[printCellRight(c.capacity)/]
+[printCellRight(c.capacityRemains)/]
+[printCellRight(c.getEssencesValue()/100)/]
+     </fo:table-row>
+[for (ce : CyberwareEnhancement | c.einbau)]
+   <fo:table-row>
+      <fo:table-cell number-columns-spanned="4">
+       <fo:block  >
+<fo:leader leader-pattern="space"/>[escapeXML(ce.getText())/]
+		</fo:block>
+      </fo:table-cell>
+[printCell(ce.capacityUse)/]
+    </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printAttributes(aManagedCharacter : ManagedCharacter) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }
+]
+[printSectionTitel('Attributes'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+     <fo:table-row>
+[let attributeName : String = getText(base2Calced(ea))]
+[printCell(attributeName)/] 
+      <fo:table-cell>
+       <fo:block >
+[persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if] 
+</fo:block>
+      </fo:table-cell>
+[/let]
+     </fo:table-row>
+[/for]
+	<fo:table-row>
+[printCell('_UI_SpezielleAttribute_essenz_feature'.localizedString())/] 
+[printCell((persona.essenz)/100 )/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_SpezielleAttribute_initative_feature'.localizedString())/] 
+[printCell(persona.toLocalizedInitative())/]
+     </fo:table-row>
+[if(persona.oclIsKindOf(AstraleProjektion))]
+[let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
+	<fo:table-row>
+[printCell('_UI_AstraleProjektion_astraleInitative_feature'.localizedString())/]
+[printCell(ap.toLocalizedAstralInitative())/]
+     </fo:table-row>
+[/let][/if]
+[if (aManagedCharacter.hasMatrixInitative())]
+	<fo:table-row>
+[printCell('Matrix Ini cold')/]
+[printCell(aManagedCharacter.getMatrixInitative()+'+3d6')/]
+     </fo:table-row>
+	<fo:table-row>
+[printCell('Matrix Ini hot')/]
+[printCell(aManagedCharacter.getMatrixInitative()+'+4d6')/]
+     </fo:table-row>
+[/if]
+	<fo:table-row>
+[printCell('_UI_Panzerung_panzer_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).panzer)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).selbstbeherrschung.toString())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString())/] 
+[printCell(persona.oclAsType(KoerperPersona).menschenkenntnis)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).errinerungsvermoegen) /]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Lifting/Carrying')/] 
+[printCell(persona.liftCarry())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Movement')/] 
+[printCell(persona.movement())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_koerperlich_feature'.localizedString())/] 
+[printCell(persona.oclAsType(KoerperPersona).koerperlich)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_geistig_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).geistig)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_sozial_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).sozial)/]
+    </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+
+<!-- 
+	<fo:table-row>
+
+    </fo:table-row>
+
+-->
+[/template]
+
+
+
+[template public printSkills (aManagedCharacter : ManagedCharacter) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+[printSectionTitel('_UI_AbstraktPersona_fertigkeiten_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (b : Beschreibbar | persona.fertigkeitsGruppenToFertigkeiten())]
+     <fo:table-row>
+[if (b.oclIsKindOf(FertigkeitsGruppe))]
+[printCell(b.getText())/]
+[printCell(findGruppe(b.oclAsType(FertigkeitsGruppe), persona).stufe.toString())/]
+[printCell('')/]
+[printCell('')/]
+[else]
+[let name : String = b.getText()]
+[let attributeName : String = b.oclAsType(Fertigkeit).attribut.getText()]
+[let stufe : Integer = findFertigkeitValue(b.oclAsType(Fertigkeit), persona)]
+[printCell(name)/]
+[printCell(findFertigkeitValue(b.oclAsType(Fertigkeit), persona).toString())/]
+[printCell(attributeName.substring(1, 3))/]
+[printCellRight((stufe + persona.eGet(b.oclAsType(Fertigkeit).attribut).oclAsType(Integer)).toString())/]
+[/let][/let][/let]
+[/if]
+     </fo:table-row>
+[/for]
+
+[for (pfg : PersonaFertigkeit | persona.fertigkeiten)]
+    <fo:table-row>
+[let name : String = pfg.fertigkeit.getText()]
+[let attributeName : String = pfg.fertigkeit.attribut.getText()]
+[printCell(name)/]
+[printCell(pfg.stufe.toString())/]
+[printCell(attributeName.substring(1, 3))/]
+[printCellRight((pfg.stufe + persona.eGet(pfg.fertigkeit.attribut).oclAsType(Integer)).toString())/]
+[/let][/let]
+    </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printGear (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.inventar->isEmpty())]
+[printSectionTitel('_UI_ManagedCharacter_inventar_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : AbstraktGegenstand | aManagedCharacter.inventar )]
+     <fo:table-row>
+[printCell(t.getText())/]
+
+[printCellRight(t.wert.formatMoney())/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printQuallities (persona : KoerperPersona) ? (not persona.eigenschaften->isEmpty())]
+[printSectionTitel('_UI_KoerperPersona_eigenschaften_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : PersonaEigenschaft | persona.eigenschaften )]
+     <fo:table-row>
+[printCell(t.getText())/]
+[printCellRight(t.karmaKosten)/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printBioware (persona : KoerperPersona) ? (not persona.koerperMods->selectByType(BioWare)->isEmpty())]
+[printSectionTitel('bioware'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : BioWare |  persona.koerperMods->selectByType(BioWare))]
+     <fo:table-row>
+[printCell(t.getText())/]
+[printCellRight(t.getEssencesValue()/100)/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printKiPower (persona : KiAdept) ? (not persona.kikraft->isEmpty())]
+[printSectionTitel('_UI_KiAdept_kikraft_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : KiKraft | persona.kikraft )]
+     <fo:table-row>
+[printCell(t.getText())/]
+[printCellRight(t.kraftpunkte/100)/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+
+[template public printAllCredSticks(cs : OrderedSet(Credstick)) ? (not cs->isEmpty())]
+[printSectionTitel('Credsticks'.localizedString())/]
+[for (credstick : Credstick | cs)]
+[printCredstick(credstick) /]
+[/for]
+[/template]
+
+[template public printSectionTitel(titel : String)]
+ <fo:block font-weight="bold" >
+[escapeXML(titel)/]</fo:block>
+[/template]
+
+[template public printCredstick(c : Credstick) ]
+  <fo:block  >
+[escapeXML(c.getText())/]</fo:block>
+   <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="20%" />
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : CredstickTransaction | c.transactionlog )]
+     <fo:table-row>
+[printCell(t.date.formatDate())/]
+[printCell(t.description)/]
+[printCellRight(t.amount.formatMoney())/]
+     </fo:table-row>
+[/for]
+     <fo:table-row>
+[printCell('')/]
+[printCellRight('Saldo')/]
+[printCellRight(c.currentValue.formatMoney())/]
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template private defaultTableStyle(expression : OclAny)]
+font-size="small" 
+[/template]
+
+[template private printCell(expression : OclAny)]
+      <fo:table-cell>
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template private printCellAttribute(expression : OclAny, cellAttributes: String)]
+      <fo:table-cell [cellAttributes/]>
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template private printCellDots(expression : OclAny, cellAttributes: String)]
+      <fo:table-cell [cellAttributes/]>
+       <fo:block  >
+[escapeXML(expression)/]<fo:leader leader-pattern="dots"/>
+</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template private printCellSpanned(expression : OclAny, span: Integer)]
+      <fo:table-cell number-columns-spanned="[span/]">
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template private printCellRight(expression : OclAny)]
+      <fo:table-cell>
+       <fo:block text-align="right"  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[**
+ * Print the simple end.
+*/]
+[template public printSimpleFoPageEnd (any : OclAny) ]
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>
+[/template]
+
+[**
+ * Print the start of a simple fo page
+*/]
+[template public printFoPageStart(documentTitel : String)]
+<fo:root xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
+	xmlns:cms="http://www.pulitzer.ch/2007/CMSFormat" 
+	xmlns:fo="http://www.w3.org/1999/XSL/Format"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+	xmlns:svg="http://www.w3.org/2000/svg">
+	<fo:layout-master-set>
+		<fo:simple-page-master page-height="297mm"
+			master-name="A4_210_x_297_mm" page-width="210mm">
+			<fo:region-body margin-left="15mm" background-color="transparent"
+				region-name="xsl-region-body" margin-bottom="15mm" margin-top="15mm"
+				margin-right="15mm" />
+		</fo:simple-page-master>
+	</fo:layout-master-set>
+
+	<fo:bookmark-tree />
+	<fo:page-sequence master-reference="A4_210_x_297_mm">
+	
+		<fo:title>[documentTitel /]</fo:title>
+		<fo:flow flow-name="xsl-region-body">
+[/template]

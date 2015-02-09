@@ -40,6 +40,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
+import de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet;
 import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
@@ -90,6 +91,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap.put(Messages.ModelToTextExportDialog_tf_csPDF, new SvgCharacterSheet());
         hashMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, new GenerateNpcCharacterSheet());
         hashMap.put("Bound Spirits", new SpiritFoSheet());
+        hashMap.put("Fo Character sheet", new FoCharacterSheet());
 
         imageMap.put(Messages.ModelToTextExportDialog_tf_csPDF, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
         imageMap.put(Messages.ModelToTextExportDialog_tf_ssvg, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png")); //$NON-NLS-2$ //$NON-NLS-3$
