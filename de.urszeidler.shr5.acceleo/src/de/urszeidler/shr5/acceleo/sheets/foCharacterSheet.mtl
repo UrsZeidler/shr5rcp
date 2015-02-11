@@ -27,6 +27,9 @@
 		<fo:block margin-top="10pt" >
 [printSkills(aManagedCharacter)  /]
 		</fo:block  >
+		<fo:block margin-top="10pt" >
+[printConnections(aManagedCharacter)  /]
+		</fo:block  >
       </fo:table-cell>
 <!-- colum two -->
       <fo:table-cell>
@@ -64,6 +67,14 @@
 		</fo:block  >
 
 		<fo:block margin-top="10pt" >
+[printContracts(aManagedCharacter)  /]
+		</fo:block  >
+[if (aManagedCharacter.oclIsKindOf(PlayerCharacter))]
+		<fo:block margin-top="10pt" >
+[printDiary(aManagedCharacter.oclAsType(PlayerCharacter).diary)  /]
+		</fo:block  >
+[/if]
+		<fo:block margin-top="10pt" >
 [printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick))  /]
 		</fo:block  >
       </fo:table-cell>
@@ -78,12 +89,21 @@
 [**
  * print the attributes the persona, uses the localized text.
 */]
-[template public printCyberwares(persona : KoerperPersona) ? (not persona.koerperMods->selectByType(Cyberware)->isEmpty())]
+[template public printCyberwares(persona : KoerperPersona) ? (not persona.koerperMods->isEmpty())]
 [printSectionTitel('Cyberware'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
     <fo:table-body  >
 [for (km : Cyberware | persona.koerperMods->selectByType(Cyberware))]
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+[printCyberware(km)/]
+</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+[/for]
+[for (km : BioWare | persona.koerperMods->selectByType(BioWare))]
      <fo:table-row>
       <fo:table-cell>
        <fo:block  >
@@ -121,6 +141,18 @@
 [printCell(ce.capacityUse)/]
     </fo:table-row>
 [/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+[template public printCyberware(c : BioWare)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="10%" />
+    <fo:table-body  >
+    <fo:table-row>
+[printCell(c.getText() )/]
+[printCellRight(c.getEssencesValue()/100)/]
+     </fo:table-row>
    </fo:table-body>
    </fo:table>
 [/template]
@@ -277,10 +309,153 @@
 [for (t : AbstraktGegenstand | aManagedCharacter.inventar )]
      <fo:table-row>
 [printCell(t.getText())/]
-
 [printCellRight(t.wert.formatMoney())/]
      </fo:table-row>
 [/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printConnections (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.connections->isEmpty())]
+[printSectionTitel('_UI_ManagedCharacter_connections_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-body  >
+[for (t : Connection | aManagedCharacter.connections )]
+     <fo:table-row>
+[printCell(t.getText())/]
+[printCellRight(t.influence)/]
+[printCellRight(t.loyality)/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printDiary(diary : CharacterDiary)? (not diary.entries->isEmpty())]
+[printSectionTitel('diary'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[for (de : DiaryEntry | diary.entries)]
+     <fo:table-row>
+     <fo:table-cell>
+       <fo:block >
+[printDiaryEntry(de)/]
+       </fo:block >
+     </fo:table-cell>
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printDiaryEntry (aDiaryEntry : DiaryEntry) ]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(aDiaryEntry.date.formatDate())/]
+[printCellSpanned(aDiaryEntry.message,2)/]
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printContracts (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.contracts->isEmpty())]
+[printSectionTitel('_UI_ManagedCharacter_contracts_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[for (t : Vertrag | aManagedCharacter.contracts )]
+     <fo:table-row>
+     <fo:table-cell>
+       <fo:block >
+[printContract(t)/]
+       </fo:block >
+     </fo:table-cell>
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printContract(contract : IntervallVertrag)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCellSpanned(contract.getText(),3)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell(contract.begin.formatDate())/]
+[printCell(contract.faelligkeitsIntervall+' '+contract.unit)/]
+[printCellRight(contract.wert.formatMoney())/]
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printContract(contract : Vertrag)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(contract.getText())/]
+[printCellRight(contract.wert.formatMoney())/]
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+[template public printContract(contract : Sin)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(contract.getText())/]
+[printCell(contract.stufe)/]
+[printCell(contract.gefaelscht)/]
+[printCellRight(contract.wert.formatMoney())/]
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+[template public printContract(contract : Lizenz)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="70%" />
+    <fo:table-column  column-width="5%"/>
+    <fo:table-column  />
+    <fo:table-column column-width="15%" />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(contract.getText())/]
+[printCell(contract.stufe)/]
+[printCell(contract.lizenzTraeger.name.toString())/]
+[printCellRight(contract.wert.formatMoney())/]
+     </fo:table-row>
+
     </fo:table-body>
    </fo:table>
 [/template]
