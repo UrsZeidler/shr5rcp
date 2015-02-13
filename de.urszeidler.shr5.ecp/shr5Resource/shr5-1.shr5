@@ -562,6 +562,37 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="" name="karma system run and gun" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+        <instructions xmi:id="_8RGg8bL6EeS74JF_046f_w" value="Select the categories and the group."/>
+        <instructions xmi:id="_8RGg8rL6EeS74JF_046f_w" key="readyForCreation" value="All has been set, you can create the character now."/>
+        <instructions xmi:id="_8RGg87L6EeS74JF_046f_w" key="personaCreated" value="The character is created spend all the values."/>
+        <instructions xmi:id="_8RGg9LL6EeS74JF_046f_w" key="commited" value="The character is finshed and commited."/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9bL6EeS74JF_046f_w" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9rL6EeS74JF_046f_w" cost="40" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg97L6EeS74JF_046f_w" cost="50" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg-LL6EeS74JF_046f_w" cost="50" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg-bL6EeS74JF_046f_w" cost="90" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+        <priorities xsi:type="shr5mngt:Mudan" xmi:id="_8RGg-rL6EeS74JF_046f_w">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_8RGg-7L6EeS74JF_046f_w" cost="30">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_8RGg_LL6EeS74JF_046f_w" cost="15" resonanz="1">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_8RGg_bL6EeS74JF_046f_w" cost="35" magic="1">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_8RGg_rL6EeS74JF_046f_w" cost="20" magic="1">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_oZUowLL7EeS74JF_046f_w" cost="15">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_AmO4sLL8EeS74JF_046f_w" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+        <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+      </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
       <entries xsi:type="shr5:ShrList" xmi:id="_C-UMEEjdEeSs1LVnBuzujg" name="weapons">
