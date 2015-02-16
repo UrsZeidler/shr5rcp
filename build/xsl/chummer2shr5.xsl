@@ -767,6 +767,30 @@
 		</xsl:for-each>
 		<xsl:for-each select="bonus/*">
 			<xsl:choose>
+				<xsl:when test="name()='limitmodifier'">
+					<mods>
+						<xsl:if test="number(value/text())">
+							<xsl:attribute name="wert">
+				<xsl:value-of select="number(value/text())" />
+				</xsl:attribute>
+						</xsl:if>
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
+						<xsl:choose>
+								<xsl:when test="limit/text()='Social'">
+									<xsl:value-of
+							select="'http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial'" />
+								</xsl:when>
+								<xsl:when test="limit/text()='Physical'">
+									<xsl:value-of
+							select="'http://urszeidler.de/shr5/1.0#//ChrakterLimits/koerperlich'" />
+								</xsl:when>
+								
+							</xsl:choose>
+						</xsl:attribute>
+						<!-- </attribut> -->
+					</mods>
+				</xsl:when>
 				<xsl:when test="name()='reach'">
 					<mods>
 						<xsl:if test="number(text())">
@@ -782,7 +806,7 @@
 						<!-- </attribut> -->
 					</mods>
 				</xsl:when>
-				<xsl:when test="name()='initiativedice'">
+				<xsl:when test="name()='initiativedice' or name()='initiative'">
 					<mods>
 						<xsl:if test="number(text())">
 							<xsl:attribute name="wert">
@@ -1867,14 +1891,16 @@
 			<xsl:call-template name="gegenstand-basis" />
 
 			<xsl:call-template name="waffe" />
-			<xsl:if test="category/text()='Light Pistols'
+			<xsl:if
+				test="category/text()='Light Pistols'
 			or category/text()='Holdouts'
 			or category/text()='Heavy Pistols' ">
 				<xsl:attribute name="fertigkeit">
 				<xsl:value-of select="$skill_pistols" />
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:if test="category/text()='Submachine Guns'
+			<xsl:if
+				test="category/text()='Submachine Guns'
 			or category/text()='Medium Machine Guns'
 			or category/text()='Light Machine Guns'
 			or category/text()='Machine Pistols' ">
@@ -1882,7 +1908,8 @@
 				<xsl:value-of select="$skill_automatics" />
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:if test="category/text()='Sporting Rifles' 
+			<xsl:if
+				test="category/text()='Sporting Rifles' 
 			or category/text()='Sniper Rifles' 
 			or category/text()='Shotguns'">
 				<xsl:attribute name="fertigkeit">
