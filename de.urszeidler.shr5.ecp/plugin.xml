@@ -175,7 +175,7 @@
             category="de.urszeidler.shr5.scripting.ui.preferences.ScriptPreferencePage"
             class="de.urszeidler.shr5.ecp.preferences.ScriptGraphPreferencePage"
             id="de.urszeidler.shr5.ecp.page1de.urszeidler.shr5.ecp.preferences.ScriptPreferencePage"
-            name="Script graph preferences">
+            name="%script.graph.preferences.page.name">
       </page>
    </extension>
    <extension
@@ -252,6 +252,17 @@
             name="%karma.wizard.name">
          <description>
             %karma.wizard.description
+         </description>
+      </wizard>
+      <wizard
+            category="de.urszeidler.shr5.ecp.character"
+            class="de.urszeidler.shr5.ecp.wizards.NewSumToTenGeneratorWizard"
+            descriptionImage="images/SumToTenGenerator64.png"
+            icon="images/SumToTenGenerator16.png"
+            id="de.urszeidler.shr5.ecp.wizards.NewSumToTenGeneratorWizard"
+            name="%sumtoten.wizard.name">
+         <description>
+%sumtoten.wizard.description
          </description>
       </wizard>
       <wizard
