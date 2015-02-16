@@ -3,7 +3,7 @@
 	exclude-result-prefixes="uuid">
 	<xsl:output indent="yes" />
 
-	<xsl:template match="quality">
+	<xsl:template match="quality|metatype">
 		<xsl:copy>
 			<xsl:apply-templates />
 			<xsl:if test="*">

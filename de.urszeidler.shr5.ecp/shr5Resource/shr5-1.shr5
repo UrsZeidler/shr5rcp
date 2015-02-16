@@ -8984,7 +8984,118 @@
           <angriff xmi:id="_Xoq_IKlwEeSSqanOa5diHw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
         </entries>
         <entries xsi:type="shr5:Spezies" xmi:id="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" name="Sasquatch" page="99" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="6" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" konstitutionMax="11" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="10" charismaMax="6" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
-          <angriff xmi:id="_Xoq_IalwEeSSqanOa5diHw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+          <angriff xmi:id="_rYT7pLYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" name="Gnome (Dwarf)" page="88" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="1" willenskraftMin="2" intuitionMin="1" logikMin="2" edgeMin="1" resonanzMin="1" konstitutionMax="4" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="4" charismaMax="6" willenskraftMax="7" intuitionMax="6" logikMax="7" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYUisLYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <angriff xmi:id="_rYUisbYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="08c7d81a-68e2-4e25-bcfc-a5198f968803" name="Hanuman (Dwarf)" page="88" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="2" charismaMin="1" willenskraftMin="1" intuitionMin="2" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="7" charismaMax="5" willenskraftMax="6" intuitionMax="7" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYUisrYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYUis7YrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" name="Koborokuru (Dwarf)" page="90" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="2" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="2" charismaMin="1" willenskraftMin="2" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="7" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="7" charismaMax="6" willenskraftMax="7" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYUitLYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <angriff xmi:id="_rYUitbYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="4673c955-147c-4db8-ad96-0e55f2962f4b" name="Menehune (Dwarf)" page="90" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="2" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="2" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="7" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="7" charismaMax="6" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYUitrYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <angriff xmi:id="_rYVJwLYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" name="Dryad (Elf)" page="95" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="3" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="5" charismaMax="8" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYVJwbYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYVJwrYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" name="Nocturna (Elf)" page="95" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="3" reaktionMin="1" staerkeMin="1" charismaMin="2" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="5" geschicklichkeitMax="8" reaktionMax="6" staerkeMax="6" charismaMax="7" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYVJw7YrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYVJxLYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="5523974a-a069-4806-9de8-c177ec832466" name="Wakyambi (Elf)" page="96" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="1" willenskraftMin="1" intuitionMin="2" logikMin="1" edgeMin="2" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="6" willenskraftMax="6" intuitionMax="7" logikMax="5" edgeMax="7" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYVw0LYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYVw0bYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="c4ab15e5-b57e-43ad-af5e-020de9839347" name="Xapiri Thepe (Elf)" page="97" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="2" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="7" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYVw0rYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYVw07YrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="3e30a537-8d60-4128-8300-99f4ed71efd2" name="Nartaki (Human, 4 Arm)" page="97" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="1" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="6" charismaMax="6" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <angriff xmi:id="_rYVw1LYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="83e0ce27-21ac-407a-bb27-237325c6c026" name="Nartaki (Human, 6 Arm)" page="97" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="1" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="6" charismaMax="6" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <angriff xmi:id="_rYWX4LYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" name="Hobgoblin (Ork)" page="91" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="1" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="2" charismaMin="2" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="7" charismaMax="7" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYWX4bYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYWX4rYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" name="Ogre (Ork)" page="91" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="3" charismaMin="1" willenskraftMin="2" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="6" reaktionMax="5" staerkeMax="8" charismaMax="4" willenskraftMax="7" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYWX47YrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYWX5LYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="f9099985-8f31-4f12-b4cf-7a8608ac5866" name="Oni (Ork)" page="92" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="3" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="2" charismaMin="2" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="8" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="7" charismaMax="7" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYWX5bYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYW-8LYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="160bca5c-349c-4fa7-840d-edf7bf72dbb5" name="Satyr (Ork)" page="92" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="2" geschicklichkeitMin="1" reaktionMin="2" staerkeMin="2" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="7" geschicklichkeitMax="6" reaktionMax="7" staerkeMax="7" charismaMax="5" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+          <mods xmi:id="_rYW-8bYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+          <angriff xmi:id="_rYW-8rYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a" name="Cyclops (Troll)" page="93" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="6" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="11" charismaMax="4" willenskraftMax="6" intuitionMax="5" logikMax="4" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYW-87YrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite"/>
+          </mods>
+          <angriff xmi:id="_rYW-9LYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="46dddfad-48d5-425b-9e9a-197f98badc32" name="Fomorian (Troll)" page="93" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="5" willenskraftMax="5" intuitionMax="4" logikMax="4" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYW-9bYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <mods xmi:id="_rYW-9rYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite"/>
+          </mods>
+          <angriff xmi:id="_rYXmALYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="7c6789af-57a4-44ac-8b0b-cf1744166ba5" name="Giant (Troll)" page="94" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="5" staerkeMax="10" charismaMax="5" willenskraftMax="6" intuitionMax="5" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYXmAbYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <mods xmi:id="_rYXmArYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite"/>
+          </mods>
+          <angriff xmi:id="_rYXmA7YrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
+        </entries>
+        <entries xsi:type="shr5:Spezies" xmi:id="03ec26af-9eff-4d54-afc2-9bf6267dcaa3" name="Minotaur (Troll)" page="94" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" konstitutionMin="6" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="11" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="4" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+          <mods xmi:id="_rYXmBLYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+          <mods xmi:id="_rYXmBbYrEeS3Or4ruGh2xw" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite"/>
+          </mods>
+          <angriff xmi:id="_rYXmBrYrEeS3Or4ruGh2xw" name="unarmed" fertigkeit="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706" schadenscode="(STR)P"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_a2K4cD5dEeSnhdazldEq5w" name="qualities">
