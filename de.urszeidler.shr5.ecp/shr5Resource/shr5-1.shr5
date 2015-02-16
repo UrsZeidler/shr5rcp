@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
+<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:gameplay="http://urszeidler.de/shr5/gameplay/1.0" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
   <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
@@ -562,7 +562,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="" name="karma system run and gun" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
         <instructions xmi:id="_8RGg8bL6EeS74JF_046f_w" value="Select the categories and the group."/>
         <instructions xmi:id="_8RGg8rL6EeS74JF_046f_w" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_8RGg87L6EeS74JF_046f_w" key="personaCreated" value="The character is created spend all the values."/>
@@ -592,6 +592,103 @@
         </priorities>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_AmO4sLL8EeS74JF_046f_w" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+      </entries>
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0C2eOvV1oRsPZlnB" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The sum to ten system" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+        <instructions xmi:id="_BtO-IN0CEeOvVYoRsPZlnA" value="Select the categories and the group."/>
+        <instructions xmi:id="_BtO-Id0CEeOvVYoRsPZlnA" key="readyForCreation" value="All has been set, you can create the character now."/>
+        <instructions xmi:id="_BtO-It0CEeOvVYoRsPZlnA" key="personaCreated" value="The character is created spend all the values."/>
+        <instructions xmi:id="_BtO-I90CEeOvVYoRsPZlnA" key="commited" value="The character is finshed and commited."/>
+        <lifestyleToStartMoney xmi:id="_BtPlMN0CEeOvVYoRsPZlnA" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+        <lifestyleToStartMoney xmi:id="_BtQMQN0CEeOvVYoRsPZlnA" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+        <lifestyleToStartMoney xmi:id="_BtQMQd0CEeOvVYoRsPZlnA" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+        <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+        <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+        <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+        <additionalConstrains xmi:id="_MbFTcD5TEeSxr-Xv_VgZiA" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+        <additionalConstrains xmi:id="_8152kD_MEeSdXvk3e0TcZw" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+        <additionalConstrains xmi:id="_9411ED_eEeSK2ZzxE2z74g" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+        <additionalConstrains xmi:id="_aEz7kD_fEeSK2ZzxE2z74g" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" cost="4" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" cost="4" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" cost="4" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAd0CEeOvVYoRsPZlnA" cost="4" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAt0CEeOvVYoRsPZlnA" cost="4" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BsxEEN0CEeOvVYoRsPZlnA" cost="3" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs2joN0CEeOvVYoRsPZlnA" cost="3" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs2jod0CEeOvVYoRsPZlnA" cost="3" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3KsN0CEeOvVYoRsPZlnA" cost="3" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3Ksd0CEeOvVYoRsPZlnA" cost="3" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3Kst0CEeOvVYoRsPZlnA" cost="2" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3Ks90CEeOvVYoRsPZlnA" cost="2" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3KtN0CEeOvVYoRsPZlnA" cost="2" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3Ktd0CEeOvVYoRsPZlnA" cost="2" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwN0CEeOvVYoRsPZlnA" cost="1" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwd0CEeOvVYoRsPZlnA" cost="1" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwt0CEeOvVYoRsPZlnA" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0N0CEeOvVYoRsPZlnA" cost="4" attibutePoints="24"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0d0CEeOvVYoRsPZlnA" cost="3" attibutePoints="20"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0t0CEeOvVYoRsPZlnA" cost="2" attibutePoints="16"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y090CEeOvVYoRsPZlnA" cost="1" attibutePoints="14"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4_4N0CEeOvVYoRsPZlnA" attibutePoints="12"/>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtAUoN0CEeOvVYoRsPZlnA" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtAUod0CEeOvVYoRsPZlnA" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_BtBiwN0CEeOvVYoRsPZlnA" cost="4" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtCJ0N0CEeOvVYoRsPZlnA" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtCJ0d0CEeOvVYoRsPZlnA" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_BtCw4N0CEeOvVYoRsPZlnA" cost="3" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_BtDX8N0CEeOvVYoRsPZlnA" cost="3" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtDX8d0CEeOvVYoRsPZlnA" cost="3" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtD_AN0CEeOvVYoRsPZlnA" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtD_Ad0CEeOvVYoRsPZlnA" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_BtD_At0CEeOvVYoRsPZlnA" cost="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_BtEmEN0CEeOvVYoRsPZlnA" cost="2" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtEmEd0CEeOvVYoRsPZlnA" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_BtFNIN0CEeOvVYoRsPZlnA" cost="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtFNId0CEeOvVYoRsPZlnA" cost="1" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_BtGbQN0CEeOvVYoRsPZlnA" cost="4" skillPoints="46" groupPoints="10"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_BtGbQd0CEeOvVYoRsPZlnA" cost="3" skillPoints="36" groupPoints="5"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_BtGbQt0CEeOvVYoRsPZlnA" cost="2" skillPoints="28" groupPoints="2"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_BtGbQ90CEeOvVYoRsPZlnA" cost="1" skillPoints="22"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_BtGbRN0CEeOvVYoRsPZlnA" skillPoints="18"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_BtL60N0CEeOvVYoRsPZlnA" cost="4" resource="450000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_BtMh4N0CEeOvVYoRsPZlnA" cost="3" resource="275000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_BtMh4d0CEeOvVYoRsPZlnA" cost="2" resource="140000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_BtMh4t0CEeOvVYoRsPZlnA" cost="1" resource="50000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_BtMh490CEeOvVYoRsPZlnA" resource="6000"/>
+        <priorities xsi:type="shr5mngt:Mudan" xmi:id="_BtNwAN0CEeOvVYoRsPZlnA">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </priorities>
+        <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//SumToTenGenerator"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
@@ -6997,7 +7094,7 @@
       <entries xsi:type="shr5:ShrList" xmi:id="_ELyDMDnTEeSe6_w6Jrbqxg" name="Credsticks">
         <entries xsi:type="shr5:Credstick" xmi:id="_ELzRUDnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5" name="Standard" maxValue="5000"/>
         <entries xsi:type="shr5:Credstick" xmi:id="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
-        <entries xsi:type="shr5:Credstick" xmi:id="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold" maxValue="100000"/>
+        <entries xsi:type="shr5:Credstick" xmi:id="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" name="Gold" maxValue="100000"/>
         <entries xsi:type="shr5:Credstick" xmi:id="_ELz4YDnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="500" name="Platinum" maxValue="500000"/>
         <entries xsi:type="shr5:Credstick" xmi:id="_ELz4YTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10" wertValue="1000" name="Ebony" maxValue="1000000"/>
       </entries>
@@ -21057,7 +21154,7 @@
           <fertigkeiten xmi:id="_BzZ3k90CEeOvVYoRsPZlnA" stufe="4" fertigkeit="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
           <fertigkeiten xmi:id="_BzZ3lN0CEeOvVYoRsPZlnA" stufe="6" fertigkeit="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
           <fertigkeiten xmi:id="_BzZ3ld0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
-          <fertigkeiten xmi:id="_BzZ3lt0CEeOvVYoRsPZlnA" stufe="2" fertigkeit="09fbc992-9fad-4f2d-ab56-725bac943dc6"/>
+          <fertigkeiten xmi:id="_BzZ3lt0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="09fbc992-9fad-4f2d-ab56-725bac943dc6"/>
           <fertigkeiten xmi:id="_BzZ3mN0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="907a3a8f-2c40-4543-a5a9-891bcde41f6b"/>
           <fertigkeiten xmi:id="_BzaeoN0CEeOvVYoRsPZlnA" stufe="1" fertigkeit="7ba1f555-f6b5-4d3a-b0f6-38f9a030b661"/>
           <fertigkeiten xmi:id="_Bzaeod0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="_EV_vJDnTEeSe6_w6Jrbqxg"/>
@@ -21121,6 +21218,8 @@
         </changes>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_Bz0uUN0CEeOvVYoRsPZlnA" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:19:24.648+0100" karma="7"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_Bz1VYN0CEeOvVYoRsPZlnA" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:20:05.723+0100" from="1" to="2" changeable="_BzaepN0CEeOvVYoRsPZlnA"/>
+        <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_zoXVALO0EeSWXbZxnJbnlw" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-13T20:16:46.861+0100" from="2" to="3" changeable="_BzZ3lt0CEeOvVYoRsPZlnA"/>
+        <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_40LisLPtEeS1oJwC38P4RQ" date="2075-06-03T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-14T03:05:38.522+0100" karma="7"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_Bz1VY90CEeOvVYoRsPZlnA" page="422" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_Bz18cN0CEeOvVYoRsPZlnA" page="422" verfuegbarkeit="4" wertValue="300" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_Bz18c90CEeOvVYoRsPZlnA" page="437" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12"/>
@@ -21146,7 +21245,7 @@
           <einbau xmi:id="_JoEq4lDLEeSjN8rIya5QCA" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
             <localizations xmi:id="_JoEq41DLEeSjN8rIya5QCA" local="de" name="Smartgunsystem, Internal"/>
           </einbau>
-          <magazin xmi:id="_JoEq5FDLEeSjN8rIya5QCA" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_JoEq4FDLEeSjN8rIya5QCA" bullets="_TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA"/>
+          <magazin xmi:id="_JoEq5FDLEeSjN8rIya5QCA" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="_JoEq4FDLEeSjN8rIya5QCA" bullets="_TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA"/>
         </inventar>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_Job3QFDLEeSjN8rIya5QCA" parentId="01d7b203-e57e-4cbd-9f68-a2134683e178" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="2100" name="Remington 950" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="_ENFqxTnTEeSe6_w6Jrbqxg" kapazitaet="5">
           <localizations xmi:id="_Job3QVDLEeSjN8rIya5QCA" local="de" name="Remington 950"/>
@@ -21160,7 +21259,7 @@
         </inventar>
         <inventar xsi:type="shr5:Magazin" xmi:id="_Jos9AFDLEeSjN8rIya5QCA" parentId="_C_YjEEjdEeSs1LVnBuzujg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e" bullets="_TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA"/>
         <inventar xsi:type="shr5:Magazin" xmi:id="_Jo-CwFDLEeSjN8rIya5QCA" parentId="_DAD4hUjdEeSs1LVnBuzujg" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Remington 950 ammunition" type="01d7b203-e57e-4cbd-9f68-a2134683e178"/>
-        <inventar xsi:type="shr5:Munition" xmi:id="_TEY0UFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+        <inventar xsi:type="shr5:Munition" xmi:id="_TEY0UFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="99" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_TEY0UVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
@@ -21182,6 +21281,9 @@
           <transactionlog xmi:id="_Ro3PwK95EeSC2YJFV_dUOA" amount="-350" date="2075-04-10T00:00:00.000+0200" description="Gel Rounds, Endoscope 8"/>
           <transactionlog xmi:id="_7AeRIK95EeSC2YJFV_dUOA" amount="-500" date="2075-11-04T00:00:00.000+0100" description="Ralf"/>
           <transactionlog xmi:id="_gsoUcK96EeSC2YJFV_dUOA" amount="-115" date="2075-04-14T00:00:00.000+0200" description="Chronist und Savatchi"/>
+          <transactionlog xmi:id="_HFO9YLO1EeSWXbZxnJbnlw" amount="-2000" date="2075-06-01T09:01:12.185+0200" description="Pay for Lifestyle Low"/>
+          <transactionlog xmi:id="_ltrP4LPBEeSWXbZxnJbnlw" amount="-200" date="2015-06-02T23:00:00.000+0200" description="entritt Freudenstrand"/>
+          <transactionlog xmi:id="_ohDWcLPBEeSWXbZxnJbnlw" amount="-14" date="2075-06-02T06:00:00.000+0200" description="Bier und Snacks"/>
         </inventar>
         <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold" maxValue="100000">
           <transactionlog xmi:id="_jphFUK8XEeS3Wp9Q37-3Qw" amount="12400" date="9999-03-20T00:00:00.000+0100" description="Einnahmen"/>
@@ -21190,6 +21292,8 @@
           <transactionlog xmi:id="_gQ2CQK94EeSC2YJFV_dUOA" amount="5000" date="2075-04-10T00:00:00.000+0200" description="Auszahlung"/>
           <transactionlog xmi:id="_pW8OoK95EeSC2YJFV_dUOA" amount="7000" date="2075-04-11T00:00:00.000+0200" description="Auszahlung Job"/>
           <transactionlog xmi:id="_nLRL0K96EeSC2YJFV_dUOA" amount="10000" date="2075-04-14T00:00:00.000+0200" description="Befreiung von Grisu"/>
+          <transactionlog xmi:id="__cQZ0LO0EeSWXbZxnJbnlw" amount="-2000" date="2075-05-01T09:01:12.185+0200" description="Pay for Lifestyle Low"/>
+          <transactionlog xmi:id="_yK-aELPtEeS1oJwC38P4RQ" amount="10000" description="auszahlung job"/>
         </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_haEHYK9oEeS769kjC9ygTA" parentId="320bd9e3-e261-4a45-aa03-c740b6855e73" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="25" beschreibung="10x" name="Stim Patch" kategorie="Biotech" stufe="6">
           <localizations xmi:id="_haEHYa9oEeS769kjC9ygTA" local="de" name="Slap Patch, Stim Patch"/>
@@ -21236,13 +21340,22 @@
           <erweiterung>Unten</erweiterung>
           <magazin xmi:id="__2xm0q97EeSC2YJFV_dUOA" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Defiance T-250 ammunition" type="__2xm0K97EeSC2YJFV_dUOA"/>
         </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_NMtTILPPEeSnAumGkho7aw" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
+          <localizations xmi:id="_NMtTIbPPEeSnAumGkho7aw" local="de" name="Munition: Gelgeschosse"/>
+        </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_N5AlwK9sEeS769kjC9ygTA" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
-        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-03-01T00:00:00.000+0100">
+        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-06-02T00:00:00.000+0200">
           <entries xsi:type="shr5mngt:ContractPayment" xmi:id="_03mMMK9qEeS769kjC9ygTA" date="2075-04-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_2oO_cLO0EeSWXbZxnJbnlw" date="2075-04-14T21:05:35.585+0200" message="Persona veränderungen Fertigkeit Schlosser 2 -> 3" change="_zoXVALO0EeSWXbZxnJbnlw"/>
+          <entries xsi:type="shr5mngt:ContractPayment" xmi:id="__czMYLO0EeSWXbZxnJbnlw" date="2075-05-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
+          <entries xsi:type="shr5mngt:ContractPayment" xmi:id="_HF1aULO1EeSWXbZxnJbnlw" date="2075-06-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
+          <entries xmi:id="_atj1kLO6EeSWXbZxnJbnlw" date="2075-06-02T00:00:00.000+0200" message="Serien nummer FS75-05-23ukr III&#xA;&#xA;&#xA;Das Freudenstrand. In Kreutzberg..&#xA;3.6.2075&#xA;&#xA;Montag geschlossen.&#xA;"/>
+          <entries xmi:id="_AGUd8LPKEeSnAumGkho7aw" date="2057-06-03T02:00:00.000+0200" message="Wir treffen uns wieder.&#xA;bequatschen den Plan.&#xA;&#xA;Um 18:00 sind wir vor dem Supermarkt. Und warten.&#xA;23:10 kommt der erste, 23:15 der zweite Wagen, wir starten.  &#xA;"/>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_-H8iYLPtEeS1oJwC38P4RQ" date="2075-06-03T21:05:35.585+0200" message="Karma Gained : 7" change="_40LisLPtEeS1oJwC38P4RQ"/>
         </diary>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
