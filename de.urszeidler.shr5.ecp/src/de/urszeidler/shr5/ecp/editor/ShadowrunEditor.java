@@ -57,6 +57,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
@@ -511,6 +512,11 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return super.caseShr5Generator(object);
             }
 
+            @Override
+            public Object caseSumToTenGenerator(SumToTenGenerator object) {
+                return super.caseSumToTenGenerator(object);
+            }
+ 
             @Override
             public Object caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 try {

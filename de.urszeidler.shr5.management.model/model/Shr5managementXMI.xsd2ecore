@@ -305,6 +305,8 @@
       <nested inputs="shr5Management.ecore#//CharacterChange/change" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDComplexTypeDefinition=43/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//CharacterChange" outputs="Shr5managementXMI.xsd#//CharacterChange;XSDElementDeclaration=43"/>
+    <nested inputs="shr5Management.ecore#//SumToTenGenerator" outputs="Shr5managementXMI.xsd#//SumToTenGenerator;XSDComplexTypeDefinition=44"/>
+    <nested inputs="shr5Management.ecore#//SumToTenGenerator" outputs="Shr5managementXMI.xsd#//SumToTenGenerator;XSDElementDeclaration=44"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

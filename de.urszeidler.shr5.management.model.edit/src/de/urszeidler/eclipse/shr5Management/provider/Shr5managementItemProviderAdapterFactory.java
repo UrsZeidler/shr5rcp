@@ -915,6 +915,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SumToTenGeneratorItemProvider sumToTenGeneratorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSumToTenGeneratorAdapter() {
+        if (sumToTenGeneratorItemProvider == null) {
+            sumToTenGeneratorItemProvider = new SumToTenGeneratorItemProvider(this);
+        }
+
+        return sumToTenGeneratorItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1047,6 +1070,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (diaryEntryItemProvider != null) diaryEntryItemProvider.dispose();
         if (contractPaymentItemProvider != null) contractPaymentItemProvider.dispose();
         if (characterChangeItemProvider != null) characterChangeItemProvider.dispose();
+        if (sumToTenGeneratorItemProvider != null) sumToTenGeneratorItemProvider.dispose();
     }
 
 	/**
@@ -1265,6 +1289,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createCharacterChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createSumToTenGenerator()));
 
                 return null;
             }

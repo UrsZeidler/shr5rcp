@@ -116,7 +116,10 @@ public class SkillItemProvider
 	@Override
 	public String getText(Object object) {
 		Skill skill = (Skill)object;
-		String label = skill.getCategorieName();
+        String label = skill.getCategorieName();
+        if (label == null)
+            label = skill.getCost() + "";
+
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(" (");
 		buffer.append(skill.getSkillPoints());

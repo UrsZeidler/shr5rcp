@@ -4824,6 +4824,466 @@ public interface Shr5managementPackage extends EPackage {
     int CHARACTER_CHANGE_OPERATION_COUNT = DIARY_ENTRY_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl <em>Sum To Ten Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSumToTenGenerator()
+     * @generated
+     */
+    int SUM_TO_TEN_GENERATOR = 44;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__CHARACTER = SHR5_GENERATOR__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__GENERATOR = SHR5_GENERATOR__GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__STATE = SHR5_GENERATOR__STATE;
+
+    /**
+     * The feature id for the '<em><b>Selected Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SELECTED_GROUP = SHR5_GENERATOR__SELECTED_GROUP;
+
+    /**
+     * The feature id for the '<em><b>Character Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__CHARACTER_NAME = SHR5_GENERATOR__CHARACTER_NAME;
+
+    /**
+     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__CURRENT_INSTRUCTION = SHR5_GENERATOR__CURRENT_INSTRUCTION;
+
+    /**
+     * The feature id for the '<em><b>Shr5 Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SHR5_GENERATOR = SHR5_GENERATOR__SHR5_GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__ALLOWED_SOURCES = SHR5_GENERATOR__ALLOWED_SOURCES;
+
+    /**
+     * The feature id for the '<em><b>Resourcen</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__RESOURCEN = SHR5_GENERATOR__RESOURCEN;
+
+    /**
+     * The feature id for the '<em><b>Skills</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SKILLS = SHR5_GENERATOR__SKILLS;
+
+    /**
+     * The feature id for the '<em><b>Attribute</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__ATTRIBUTE = SHR5_GENERATOR__ATTRIBUTE;
+
+    /**
+     * The feature id for the '<em><b>Meta Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__META_TYPE = SHR5_GENERATOR__META_TYPE;
+
+    /**
+     * The feature id for the '<em><b>Magic</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__MAGIC = SHR5_GENERATOR__MAGIC;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__KARMA_TO_RESOURCE = SHR5_GENERATOR__KARMA_TO_RESOURCE;
+
+    /**
+     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__KARMA_SPEND = SHR5_GENERATOR__KARMA_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Attribute Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__ATTRIBUTE_SPEND = SHR5_GENERATOR__ATTRIBUTE_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__RESOURCE_SPEND = SHR5_GENERATOR__RESOURCE_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Connection Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__CONNECTION_SPEND = SHR5_GENERATOR__CONNECTION_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Skill Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SKILL_POINT_SPEND = SHR5_GENERATOR__SKILL_POINT_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Special Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SPECIAL_POINT_SPEND = SHR5_GENERATOR__SPECIAL_POINT_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Group Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__GROUP_POINT_SPEND = SHR5_GENERATOR__GROUP_POINT_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Knownlege Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__KNOWNLEGE_POINT_SPEND = SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Spell Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__SPELL_POINT_SPEND = SHR5_GENERATOR__SPELL_POINT_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__START_KARMA = SHR5_GENERATOR__START_KARMA;
+
+    /**
+     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR__START_RESOURCES = SHR5_GENERATOR__START_RESOURCES;
+
+    /**
+     * The number of structural features of the '<em>Sum To Ten Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR_FEATURE_COUNT = SHR5_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Has Spend All Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Category Only Once</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Attributes Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Skill Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Special Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Special Type Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Connection Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Resource Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Magic Skills Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Magic Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Group Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Knowlege Skill Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Spell Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Power Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Sum To Ten</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_SUM_TO_TEN__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR_OPERATION_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Sum To Ten Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR_OPERATION_COUNT = SHR5_GENERATOR_OPERATION_COUNT + 1;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4831,7 +5291,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 44;
+	int GENERATOR_STATE = 45;
 
 
 	/**
@@ -4842,7 +5302,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 45;
+	int SEX = 46;
 
 
 	/**
@@ -4853,7 +5313,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 46;
+    int QUELLEN_CONSTRAIN_TYPE = 47;
 
 
     /**
@@ -7111,6 +7571,26 @@ public interface Shr5managementPackage extends EPackage {
     EReference getCharacterChange_Change();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator <em>Sum To Ten Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Sum To Ten Generator</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.SumToTenGenerator
+     * @generated
+     */
+    EClass getSumToTenGenerator();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator#hasSumToTen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Sum To Ten</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Sum To Ten</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.SumToTenGenerator#hasSumToTen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8946,6 +9426,24 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference CHARACTER_CHANGE__CHANGE = eINSTANCE.getCharacterChange_Change();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl <em>Sum To Ten Generator</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSumToTenGenerator()
+         * @generated
+         */
+        EClass SUM_TO_TEN_GENERATOR = eINSTANCE.getSumToTenGenerator();
+
+        /**
+         * The meta object literal for the '<em><b>Has Sum To Ten</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SUM_TO_TEN_GENERATOR___HAS_SUM_TO_TEN__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

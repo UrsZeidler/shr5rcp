@@ -93,7 +93,10 @@ public class AttributesItemProvider
 	@Override
 	public String getText(Object object) {
 		Attributes attributes = (Attributes)object;
-		String label = attributes.getCategorieName();
+        String label = attributes.getCategorieName();
+        if (label == null)
+            label = attributes.getCost() + "";
+
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(" (");
 		buffer.append(attributes.getAttibutePoints());

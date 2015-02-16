@@ -64,6 +64,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
@@ -381,6 +382,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass characterChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass sumToTenGeneratorEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2386,6 +2394,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSumToTenGenerator() {
+        return sumToTenGeneratorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map() {
+        return sumToTenGeneratorEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2695,6 +2721,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         characterChangeEClass = createEClass(CHARACTER_CHANGE);
         createEReference(characterChangeEClass, CHARACTER_CHANGE__CHANGE);
 
+        sumToTenGeneratorEClass = createEClass(SUM_TO_TEN_GENERATOR);
+        createEOperation(sumToTenGeneratorEClass, SUM_TO_TEN_GENERATOR___HAS_SUM_TO_TEN__DIAGNOSTICCHAIN_MAP);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2776,6 +2805,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         packEClass.getESuperTypes().add(theShr5Package.getGeldWert());
         contractPaymentEClass.getESuperTypes().add(this.getDiaryEntry());
         characterChangeEClass.getESuperTypes().add(this.getDiaryEntry());
+        sumToTenGeneratorEClass.getESuperTypes().add(this.getShr5Generator());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3249,6 +3279,17 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(characterChangeEClass, CharacterChange.class, "CharacterChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterChange_Change(), this.getChanges(), null, "change", null, 1, 1, CharacterChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(sumToTenGeneratorEClass, SumToTenGenerator.class, "SumToTenGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        op = initEOperation(getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSumToTen", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

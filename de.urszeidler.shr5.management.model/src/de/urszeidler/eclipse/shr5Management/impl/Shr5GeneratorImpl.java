@@ -4,8 +4,11 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -15,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.KiAdept;
@@ -691,22 +695,36 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             return true;
 
         HashSet<String> set = new HashSet<String>();
+        List<String> doubles = new ArrayList<String>();
         if (getMetaType() != null)
             set.add(getMetaType().getCategorieName());
         if (getAttribute() != null)
-            set.add(getAttribute().getCategorieName());
+            if(!set.add(getAttribute().getCategorieName())){
+                doubles.add(getAttribute().getCategorieName());
+            }
         if (getMagic() != null)
-            set.add(getMagic().getCategorieName());
+            if(!set.add(getMagic().getCategorieName())){
+                doubles.add(getMagic().getCategorieName());
+            }
         if (getSkills() != null)
-            set.add(getSkills().getCategorieName());
+            if(!set.add(getSkills().getCategorieName())){
+                doubles.add(getSkills().getCategorieName());
+            }
         if (getResourcen() != null)
-            set.add(getResourcen().getCategorieName());
-
+            if(!set.add(getResourcen().getCategorieName())){
+                doubles.add(getResourcen().getCategorieName());
+            }
+        
+        String doubleStr = "";
+        if(!doubles.isEmpty())
+            doubleStr = "Categories choosen twice: "+doubles.toString();
+            
         if (set.size() != 5) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
-                                new Object[]{ "hasCategoryOnlyOnce", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, 
+                        ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
+                                new Object[]{ doubleStr, EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
                                 Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;

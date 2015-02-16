@@ -320,6 +320,15 @@ public interface Shr5managementFactory extends EFactory {
     CharacterChange createCharacterChange();
 
     /**
+     * Returns a new object of class '<em>Sum To Ten Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Sum To Ten Generator</em>'.
+     * @generated
+     */
+    SumToTenGenerator createSumToTenGenerator();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

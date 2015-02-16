@@ -287,6 +287,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createCharacterChangeAdapter();
             }
             @Override
+            public Adapter caseSumToTenGenerator(SumToTenGenerator object) {
+                return createSumToTenGeneratorAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -935,6 +939,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCharacterChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator <em>Sum To Ten Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.SumToTenGenerator
+     * @generated
+     */
+    public Adapter createSumToTenGeneratorAdapter() {
         return null;
     }
 

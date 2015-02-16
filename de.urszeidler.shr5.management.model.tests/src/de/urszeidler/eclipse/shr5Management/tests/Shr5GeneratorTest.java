@@ -92,11 +92,11 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         TestRunner.run(Shr5GeneratorTest.class);
     }
 
-    private Attributes attributes;
-    private MetaType metaType;
-    private Skill skill;
-    private SpecialType mudan;
-    private Resourcen resourcen;
+    protected Attributes attributes;
+    protected MetaType metaType;
+    protected Skill skill;
+    protected SpecialType mudan;
+    protected Resourcen resourcen;
 
     /**
      * Constructs a new Shr5 Generator test case with the given name. <!--
@@ -613,7 +613,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     }
 
-    private void createBasicCategories() {
+    protected void createBasicCategories() {
         attributes = Shr5managementFactory.eINSTANCE.createAttributes();
         metaType = Shr5managementFactory.eINSTANCE.createMetaType();
         skill = Shr5managementFactory.eINSTANCE.createSkill();

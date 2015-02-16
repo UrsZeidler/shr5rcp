@@ -419,5 +419,11 @@
     <genClasses ecoreClass="shr5Management.ecore#//CharacterChange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterChange/change"/>
     </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//SumToTenGenerator">
+      <genOperations ecoreOperation="shr5Management.ecore#//SumToTenGenerator/hasSumToTen">
+        <genParameters ecoreParameter="shr5Management.ecore#//SumToTenGenerator/hasSumToTen/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//SumToTenGenerator/hasSumToTen/context"/>
+      </genOperations>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

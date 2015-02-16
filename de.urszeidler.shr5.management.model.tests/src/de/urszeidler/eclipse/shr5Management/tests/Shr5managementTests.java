@@ -48,6 +48,7 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(PersonaChangeTest.class);
         suite.addTestSuite(Shr5KarmaGeneratorTest.class);
         suite.addTestSuite(PackTest.class);
+        suite.addTestSuite(SumToTenGeneratorTest.class);
         return suite;
     }
 

@@ -980,4 +980,10 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="CharacterChange" type="shr5mngt:CharacterChange"/>
+  <xsd:complexType name="SumToTenGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Shr5Generator"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SumToTenGenerator" type="shr5mngt:SumToTenGenerator"/>
 </xsd:schema>

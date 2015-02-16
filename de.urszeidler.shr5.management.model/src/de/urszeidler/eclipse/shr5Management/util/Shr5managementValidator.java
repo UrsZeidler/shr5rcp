@@ -273,12 +273,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 24;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Sum To Ten' of 'Sum To Ten Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SUM_TO_TEN_GENERATOR__HAS_SUM_TO_TEN = 25;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 24;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 25;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -406,6 +414,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateContractPayment((ContractPayment)value, diagnostics, context);
             case Shr5managementPackage.CHARACTER_CHANGE:
                 return validateCharacterChange((CharacterChange)value, diagnostics, context);
+            case Shr5managementPackage.SUM_TO_TEN_GENERATOR:
+                return validateSumToTenGenerator((SumToTenGenerator)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1117,6 +1127,57 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateCharacterChange(CharacterChange characterChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(characterChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateSumToTenGenerator(SumToTenGenerator sumToTenGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!validate_NoCircularContainment(sumToTenGenerator, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotMoreMaxAttributes(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasCategoryOnlyOnce(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllAttributesPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSkillPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpecialPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpecialTypePoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllConnectionPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllResourcePoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllMagicSkillsPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllMagicPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllGroupPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllKnowlegeSkillPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllKarmaPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpellPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllPowerPoints(sumToTenGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateSumToTenGenerator_hasSumToTen(sumToTenGenerator, diagnostics, context);
+        return result;
+    }
+
+    /**
+     * Validates the hasSumToTen constraint of '<em>Sum To Ten Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateSumToTenGenerator_hasSumToTen(SumToTenGenerator sumToTenGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return sumToTenGenerator.hasSumToTen(diagnostics, context);
     }
 
     /**

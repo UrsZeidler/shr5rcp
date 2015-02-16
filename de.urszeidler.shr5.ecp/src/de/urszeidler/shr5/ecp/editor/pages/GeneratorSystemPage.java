@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
@@ -77,6 +78,8 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
@@ -125,6 +128,14 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         grpConstraint.setText("Constrains");
         managedForm.getToolkit().adapt(grpConstraint);
         managedForm.getToolkit().paintBordersFor(grpConstraint);
+        
+        Group grpQuelle = new Group(composite, SWT.NONE);
+        grpQuelle.setText(Messages.ObjectPage_source);
+        grpQuelle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+        managedForm.getToolkit().adapt(grpQuelle);
+        managedForm.getToolkit().paintBordersFor(grpQuelle);
+        grpQuelle.setLayout(new GridLayout(6, false));
+        
         
         Section sctnNewSection_1 = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnNewSection_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
@@ -193,7 +204,7 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY, composite_1);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS, composite_1);
 //        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, composite_1);
-
+        addSourceFeature(grpQuelle);
         }
         
          

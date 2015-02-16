@@ -123,6 +123,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.DIARY_ENTRY: return createDiaryEntry();
             case Shr5managementPackage.CONTRACT_PAYMENT: return createContractPayment();
             case Shr5managementPackage.CHARACTER_CHANGE: return createCharacterChange();
+            case Shr5managementPackage.SUM_TO_TEN_GENERATOR: return createSumToTenGenerator();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -504,6 +505,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public CharacterChange createCharacterChange() {
         CharacterChangeImpl characterChange = new CharacterChangeImpl();
         return characterChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SumToTenGenerator createSumToTenGenerator() {
+        SumToTenGeneratorImpl sumToTenGenerator = new SumToTenGeneratorImpl();
+        return sumToTenGenerator;
     }
 
     /**

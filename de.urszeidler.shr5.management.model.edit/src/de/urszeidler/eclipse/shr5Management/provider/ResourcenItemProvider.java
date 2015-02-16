@@ -93,7 +93,11 @@ public class ResourcenItemProvider
 	@Override
 	public String getText(Object object) {
 		Resourcen resourcen = (Resourcen)object;
-		String label = resourcen.getCategorieName();
+        String label = resourcen.getCategorieName();
+        if (label == null)
+            label = resourcen.getCost() + "";
+
+
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(" (");
 		buffer.append(resourcen.getResource());

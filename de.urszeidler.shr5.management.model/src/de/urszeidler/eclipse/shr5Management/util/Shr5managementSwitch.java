@@ -431,6 +431,15 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5managementPackage.SUM_TO_TEN_GENERATOR: {
+                SumToTenGenerator sumToTenGenerator = (SumToTenGenerator)theEObject;
+                T result = caseSumToTenGenerator(sumToTenGenerator);
+                if (result == null) result = caseShr5Generator(sumToTenGenerator);
+                if (result == null) result = caseShr5RuleGenerator(sumToTenGenerator);
+                if (result == null) result = caseCharacterGenerator(sumToTenGenerator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -1092,6 +1101,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseCharacterChange(CharacterChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Sum To Ten Generator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sum To Ten Generator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSumToTenGenerator(SumToTenGenerator object) {
         return null;
     }
 
