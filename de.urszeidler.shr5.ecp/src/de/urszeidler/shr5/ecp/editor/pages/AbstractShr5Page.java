@@ -48,15 +48,14 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
-            Label label =  emfFormBuilder.createLabel(container);
+            Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
             IObservableValue widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
-            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
-                    UpdateValueStrategy.POLICY_NEVER), strategy);
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
         }
     }
 
@@ -65,21 +64,20 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
             final LabelProvider provider = emfFormBuilder.createLabelProvider(entry, object);
-            Label label =  emfFormBuilder.createLabel(container);
+            Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
             IObservableValue widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
-            strategy.setConverter(new Converter(EObject.class,String.class) {
+            strategy.setConverter(new Converter(EObject.class, String.class) {
                 @Override
                 public Object convert(Object fromObject) {
                     return provider.getText(fromObject);
                 }
             });
-            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
-                    UpdateValueStrategy.POLICY_NEVER), strategy);
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
         }
     }
 
@@ -87,30 +85,30 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             emfFormBuilder.createConfiguredLable(container, entry, object);
-            Label label =  emfFormBuilder.createLabel(container);
+            Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
             IObservableValue widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             UpdateValueStrategy strategy = new EMFUpdateValueStrategy();
-            strategy.setConverter(new Converter(EObject.class,String.class) {
+            strategy.setConverter(new Converter(EObject.class, String.class) {
                 @Override
                 public Object convert(Object fromObject) {
-                    return String.format("%,.0f %s" , fromObject, store.getString(PreferenceConstants.CURRENCY_SYMBOL));
+                    return String.format("%,.0f %s", fromObject, store.getString(PreferenceConstants.CURRENCY_SYMBOL));
                 }
             });
-            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(
-                    UpdateValueStrategy.POLICY_NEVER), strategy);
+            dbc.bindValue(widgetObserver, objectObserver, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
         }
     }
 
     /**
      * A emf form factory to create and bind a date widget.
      */
-    public class DateEntryFactory implements EntryFactory{
+    public class DateEntryFactory implements EntryFactory {
 
         private final FormToolkit formToolkit;
+
         public DateEntryFactory(FormToolkit formToolkit) {
             super();
             this.formToolkit = formToolkit;
@@ -119,29 +117,26 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         @Override
         public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
             Label label = emfFormBuilder.createConfiguredLable(container, entry, object);
-      
-            CDateTime dateTime = new CDateTime(container,  CDT.DROP_DOWN | CDT.DATE_SHORT );
-            dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));            
+
+            CDateTime dateTime = new CDateTime(container, CDT.DROP_DOWN | CDT.DATE_SHORT);
+            dateTime.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
             formToolkit.adapt(dateTime);
             formToolkit.paintBordersFor(dateTime);
             emfFormBuilder.layoutRow(entry, label, dateTime);
-            
+
             IObservableValue widgetObserver = new CDateTimeObservableValue(dateTime);
-            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object,
-                    entry.getFeature());
-//            entry.setUiObservable(widgetObserver);
+            IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
+            // entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
             dbc.bindValue(widgetObserver, objectObserver, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         }
 
     }
- 
+
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
     private IPreferenceStore store;
-    
-
 
     public AbstractShr5Page(String id, String title) {
         super(id, title);
@@ -149,7 +144,6 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
 
     public AbstractShr5Page(FormEditor editor, String id, String title) {
         super(editor, id, title);
-        store = Activator.getDefault().getPreferenceStore();
 
     }
 
@@ -164,6 +158,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     public AbstractShr5Page(FormEditor editor, String id, String title, ReferenceManager manager) {
         this(editor, id, title);
         this.mananger = manager;
+        store = Activator.getDefault().getPreferenceStore();
     }
 
     @Override
@@ -183,7 +178,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
                 .getInstance().getLabelProvider(), getEditingDomain());
         emfFormBuilder.setManager(mananger);
         emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
-//        emfFormBuilder.setBorderStyle(SWT.NONE);
+        // emfFormBuilder.setBorderStyle(SWT.NONE);
         emfFormBuilder.setDblListner(this);
     }
 
