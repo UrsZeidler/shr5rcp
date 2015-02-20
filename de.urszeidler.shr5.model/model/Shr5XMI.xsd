@@ -2401,4 +2401,33 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="MagischeTradition" type="shr5:MagischeTradition"/>
+  <xsd:complexType name="ShoppingTransaction">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:CredstickTransaction">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="items" type="shr5:GeldWert"/>
+        </xsd:choice>
+        <xsd:attribute name="fee" type="xsd:double">
+          <xsd:annotation>
+            <xsd:documentation>The addional fee is a factor which will be added to the sum.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="items" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ShoppingTransaction" type="shr5:ShoppingTransaction"/>
+  <xsd:complexType name="TransferAmount">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:CredstickTransaction">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="source" type="shr5:Credstick"/>
+          <xsd:element name="dest" type="shr5:Credstick"/>
+        </xsd:choice>
+        <xsd:attribute name="source" type="xsd:string"/>
+        <xsd:attribute name="dest" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TransferAmount" type="shr5:TransferAmount"/>
 </xsd:schema>

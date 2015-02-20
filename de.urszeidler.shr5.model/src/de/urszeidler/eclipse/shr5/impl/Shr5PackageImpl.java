@@ -127,6 +127,7 @@ import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.RiggerProgram;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Schutzgeist;
+import de.urszeidler.eclipse.shr5.ShoppingTransaction;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
@@ -151,6 +152,7 @@ import de.urszeidler.eclipse.shr5.SubstanceVector;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.TimeUnits;
 import de.urszeidler.eclipse.shr5.Toxin;
+import de.urszeidler.eclipse.shr5.TransferAmount;
 import de.urszeidler.eclipse.shr5.Tutorsoft;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.WaffenFokus;
@@ -983,6 +985,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass magischeTraditionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass shoppingTransactionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass transferAmountEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -5603,6 +5619,60 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getShoppingTransaction() {
+        return shoppingTransactionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getShoppingTransaction_Items() {
+        return (EReference)shoppingTransactionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShoppingTransaction_Fee() {
+        return (EAttribute)shoppingTransactionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getTransferAmount() {
+        return transferAmountEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getTransferAmount_Source() {
+        return (EReference)transferAmountEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getTransferAmount_Dest() {
+        return (EReference)transferAmountEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -6362,6 +6432,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(magischeTraditionEClass, MAGISCHE_TRADITION__ENZUG);
         createEReference(magischeTraditionEClass, MAGISCHE_TRADITION__BESCHWOERBAR);
 
+        shoppingTransactionEClass = createEClass(SHOPPING_TRANSACTION);
+        createEReference(shoppingTransactionEClass, SHOPPING_TRANSACTION__ITEMS);
+        createEAttribute(shoppingTransactionEClass, SHOPPING_TRANSACTION__FEE);
+
+        transferAmountEClass = createEClass(TRANSFER_AMOUNT);
+        createEReference(transferAmountEClass, TRANSFER_AMOUNT__SOURCE);
+        createEReference(transferAmountEClass, TRANSFER_AMOUNT__DEST);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6607,6 +6685,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         cyberImplantWeaponEClass.getESuperTypes().add(this.getCyberwareEnhancement());
         magischeTraditionEClass.getESuperTypes().add(this.getBeschreibbar());
         magischeTraditionEClass.getESuperTypes().add(this.getQuelle());
+        shoppingTransactionEClass.getESuperTypes().add(this.getCredstickTransaction());
+        transferAmountEClass.getESuperTypes().add(this.getCredstickTransaction());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7208,6 +7288,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(magischeTraditionEClass, MagischeTradition.class, "MagischeTradition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMagischeTradition_Enzug(), this.getEnzug(), "enzug", null, 0, 1, MagischeTradition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getMagischeTradition_Beschwoerbar(), this.getGeist(), null, "beschwoerbar", null, 0, -1, MagischeTradition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(shoppingTransactionEClass, ShoppingTransaction.class, "ShoppingTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getShoppingTransaction_Items(), this.getGeldWert(), null, "items", null, 0, -1, ShoppingTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShoppingTransaction_Fee(), ecorePackage.getEDouble(), "fee", null, 0, 1, ShoppingTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(transferAmountEClass, TransferAmount.class, "TransferAmount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getTransferAmount_Source(), this.getCredstick(), null, "source", null, 1, 1, TransferAmount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getTransferAmount_Dest(), this.getCredstick(), null, "dest", null, 1, 1, TransferAmount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

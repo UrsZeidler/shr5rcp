@@ -756,6 +756,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//TransferAmount">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/dest"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

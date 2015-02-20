@@ -191,6 +191,16 @@ public class CredstickItemProvider
             (createChildParameter
                 (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG,
                  Shr5Factory.eINSTANCE.createCredstickTransaction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG,
+                 Shr5Factory.eINSTANCE.createShoppingTransaction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG,
+                 Shr5Factory.eINSTANCE.createTransferAmount()));
     }
 
 }

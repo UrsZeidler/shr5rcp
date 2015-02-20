@@ -991,5 +991,18 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MagischeTradition;XSDComplexTypeDefinition=134/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//MagischeTradition" outputs="Shr5XMI.xsd#//MagischeTradition;XSDElementDeclaration=134"/>
+    <nested inputs="shr5.ecore#//ShoppingTransaction" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDComplexTypeDefinition=135">
+      <nested inputs="shr5.ecore#//ShoppingTransaction/fee" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDComplexTypeDefinition=135/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//ShoppingTransaction/items" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDComplexTypeDefinition=135/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//ShoppingTransaction/items" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDComplexTypeDefinition=135/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//ShoppingTransaction" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDElementDeclaration=135"/>
+    <nested inputs="shr5.ecore#//TransferAmount" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136">
+      <nested inputs="shr5.ecore#//TransferAmount/source" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//TransferAmount/source" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//TransferAmount/dest" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//TransferAmount/dest" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//TransferAmount" outputs="Shr5XMI.xsd#//TransferAmount;XSDElementDeclaration=136"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

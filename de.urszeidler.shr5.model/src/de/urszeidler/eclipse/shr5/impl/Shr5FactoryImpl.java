@@ -138,6 +138,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.CYBERWARE_ENHANCEMENT: return createCyberwareEnhancement();
             case Shr5Package.CYBER_IMPLANT_WEAPON: return createCyberImplantWeapon();
             case Shr5Package.MAGISCHE_TRADITION: return createMagischeTradition();
+            case Shr5Package.SHOPPING_TRANSACTION: return createShoppingTransaction();
+            case Shr5Package.TRANSFER_AMOUNT: return createTransferAmount();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1069,6 +1071,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public MagischeTradition createMagischeTradition() {
         MagischeTraditionImpl magischeTradition = new MagischeTraditionImpl();
         return magischeTradition;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ShoppingTransaction createShoppingTransaction() {
+        ShoppingTransactionImpl shoppingTransaction = new ShoppingTransactionImpl();
+        return shoppingTransaction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TransferAmount createTransferAmount() {
+        TransferAmountImpl transferAmount = new TransferAmountImpl();
+        return transferAmount;
     }
 
     /**

@@ -20397,7 +20397,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 135;
+	int FEUER_MODUS = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20407,7 +20407,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 136;
+	int SCHADENS_TYP = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20417,7 +20417,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 137;
+	int MAGAZIN_TYP = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20427,7 +20427,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 138;
+	int FEUWERWAFFEN_ERWEITERUNG = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20437,7 +20437,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 139;
+	int MODIFIKATOR_TYPE = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20447,7 +20447,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 140;
+	int SMARTGUN_TYPE = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20457,7 +20457,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 141;
+	int ZAUBER_ART = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20467,7 +20467,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 142;
+	int ZAUBER_REICHWEITE = 144;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20477,7 +20477,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 143;
+	int ZAUBER_DAUER = 145;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
@@ -20589,6 +20589,152 @@ public interface Shr5Package extends EPackage {
     int MAGISCHE_TRADITION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl <em>Shopping Transaction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShoppingTransaction()
+     * @generated
+     */
+    int SHOPPING_TRANSACTION = 135;
+
+    /**
+     * The feature id for the '<em><b>Amount</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__AMOUNT = CREDSTICK_TRANSACTION__AMOUNT;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__DATE = CREDSTICK_TRANSACTION__DATE;
+
+    /**
+     * The feature id for the '<em><b>Description</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__DESCRIPTION = CREDSTICK_TRANSACTION__DESCRIPTION;
+
+    /**
+     * The feature id for the '<em><b>Items</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__ITEMS = CREDSTICK_TRANSACTION_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Fee</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__FEE = CREDSTICK_TRANSACTION_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Shopping Transaction</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Shopping Transaction</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION_OPERATION_COUNT = CREDSTICK_TRANSACTION_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl <em>Transfer Amount</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.TransferAmountImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTransferAmount()
+     * @generated
+     */
+    int TRANSFER_AMOUNT = 136;
+
+    /**
+     * The feature id for the '<em><b>Amount</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__AMOUNT = CREDSTICK_TRANSACTION__AMOUNT;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__DATE = CREDSTICK_TRANSACTION__DATE;
+
+    /**
+     * The feature id for the '<em><b>Description</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__DESCRIPTION = CREDSTICK_TRANSACTION__DESCRIPTION;
+
+    /**
+     * The feature id for the '<em><b>Source</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__SOURCE = CREDSTICK_TRANSACTION_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Dest</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__DEST = CREDSTICK_TRANSACTION_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Transfer Amount</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Transfer Amount</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT_OPERATION_COUNT = CREDSTICK_TRANSACTION_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20596,7 +20742,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 144;
+	int CRITTER_HANDLUNG = 146;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -20606,7 +20752,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 145;
+	int CRITTER_REICHWEITE = 147;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -20616,7 +20762,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 146;
+	int CRITTER_DAUER = 148;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -20626,7 +20772,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 147;
+	int RESONANZ_ZIEL = 149;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -20636,7 +20782,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 148;
+    int INTERFACE_MODUS = 150;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -20646,7 +20792,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 149;
+    int PROGRAM_TYPE = 151;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -20656,7 +20802,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 150;
+    int MATRIX_PROGRAM_TYPE = 152;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -20666,7 +20812,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 151;
+    int SUBSTANCE_VECTOR = 153;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -20676,7 +20822,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 152;
+    int SUBSTANCE_EFFECT = 154;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -20686,7 +20832,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 153;
+    int ADDICTION_TYPE = 155;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -20696,7 +20842,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 154;
+    int TIME_UNITS = 156;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
@@ -20706,7 +20852,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
      * @generated
      */
-    int CYBERWARE_TYPE = 155;
+    int CYBERWARE_TYPE = 157;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
@@ -20716,7 +20862,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
      * @generated
      */
-    int ENZUG = 156;
+    int ENZUG = 158;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -20726,7 +20872,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 157;
+	int SHR_DATE = 159;
 
 
 	/**
@@ -20737,7 +20883,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 158;
+	int MODIFICATION_MANAGER = 160;
 
 
 	/**
@@ -25788,6 +25934,70 @@ public interface Shr5Package extends EPackage {
     EReference getMagischeTradition_Beschwoerbar();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ShoppingTransaction <em>Shopping Transaction</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Shopping Transaction</em>'.
+     * @see de.urszeidler.eclipse.shr5.ShoppingTransaction
+     * @generated
+     */
+    EClass getShoppingTransaction();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getItems <em>Items</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Items</em>'.
+     * @see de.urszeidler.eclipse.shr5.ShoppingTransaction#getItems()
+     * @see #getShoppingTransaction()
+     * @generated
+     */
+    EReference getShoppingTransaction_Items();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getFee <em>Fee</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Fee</em>'.
+     * @see de.urszeidler.eclipse.shr5.ShoppingTransaction#getFee()
+     * @see #getShoppingTransaction()
+     * @generated
+     */
+    EAttribute getShoppingTransaction_Fee();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.TransferAmount <em>Transfer Amount</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Transfer Amount</em>'.
+     * @see de.urszeidler.eclipse.shr5.TransferAmount
+     * @generated
+     */
+    EClass getTransferAmount();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.TransferAmount#getSource <em>Source</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Source</em>'.
+     * @see de.urszeidler.eclipse.shr5.TransferAmount#getSource()
+     * @see #getTransferAmount()
+     * @generated
+     */
+    EReference getTransferAmount_Source();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.TransferAmount#getDest <em>Dest</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Dest</em>'.
+     * @see de.urszeidler.eclipse.shr5.TransferAmount#getDest()
+     * @see #getTransferAmount()
+     * @generated
+     */
+    EReference getTransferAmount_Dest();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -30025,6 +30235,58 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference MAGISCHE_TRADITION__BESCHWOERBAR = eINSTANCE.getMagischeTradition_Beschwoerbar();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl <em>Shopping Transaction</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShoppingTransaction()
+         * @generated
+         */
+        EClass SHOPPING_TRANSACTION = eINSTANCE.getShoppingTransaction();
+
+        /**
+         * The meta object literal for the '<em><b>Items</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHOPPING_TRANSACTION__ITEMS = eINSTANCE.getShoppingTransaction_Items();
+
+        /**
+         * The meta object literal for the '<em><b>Fee</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHOPPING_TRANSACTION__FEE = eINSTANCE.getShoppingTransaction_Fee();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl <em>Transfer Amount</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.TransferAmountImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTransferAmount()
+         * @generated
+         */
+        EClass TRANSFER_AMOUNT = eINSTANCE.getTransferAmount();
+
+        /**
+         * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference TRANSFER_AMOUNT__SOURCE = eINSTANCE.getTransferAmount_Source();
+
+        /**
+         * The meta object literal for the '<em><b>Dest</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference TRANSFER_AMOUNT__DEST = eINSTANCE.getTransferAmount_Dest();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

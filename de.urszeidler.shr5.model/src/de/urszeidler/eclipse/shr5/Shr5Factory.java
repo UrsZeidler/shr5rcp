@@ -751,6 +751,24 @@ public interface Shr5Factory extends EFactory {
     MagischeTradition createMagischeTradition();
 
     /**
+     * Returns a new object of class '<em>Shopping Transaction</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Shopping Transaction</em>'.
+     * @generated
+     */
+    ShoppingTransaction createShoppingTransaction();
+
+    /**
+     * Returns a new object of class '<em>Transfer Amount</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Transfer Amount</em>'.
+     * @generated
+     */
+    TransferAmount createTransferAmount();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

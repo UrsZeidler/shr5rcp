@@ -1989,6 +1989,52 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ShoppingTransaction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ShoppingTransactionItemProvider shoppingTransactionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ShoppingTransaction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createShoppingTransactionAdapter() {
+        if (shoppingTransactionItemProvider == null) {
+            shoppingTransactionItemProvider = new ShoppingTransactionItemProvider(this);
+        }
+
+        return shoppingTransactionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.TransferAmount} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected TransferAmountItemProvider transferAmountItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.TransferAmount}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createTransferAmountAdapter() {
+        if (transferAmountItemProvider == null) {
+            transferAmountItemProvider = new TransferAmountItemProvider(this);
+        }
+
+        return transferAmountItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2168,6 +2214,8 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (cyberwareEnhancementItemProvider != null) cyberwareEnhancementItemProvider.dispose();
         if (cyberImplantWeaponItemProvider != null) cyberImplantWeaponItemProvider.dispose();
         if (magischeTraditionItemProvider != null) magischeTraditionItemProvider.dispose();
+        if (shoppingTransactionItemProvider != null) shoppingTransactionItemProvider.dispose();
+        if (transferAmountItemProvider != null) transferAmountItemProvider.dispose();
     }
 
     @Override
