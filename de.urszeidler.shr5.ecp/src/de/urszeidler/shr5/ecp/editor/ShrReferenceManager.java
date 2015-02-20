@@ -264,18 +264,19 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             final EClass type_lookup_class = Shr5Package.Literals.GEIST;
             final EReference inner_feature = Shr5Package.Literals.GEBUNDENER_GEIST__GEIST;
             return provideInnerObject(e, object, type_lookup_class, inner_feature);
-        }  else if (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
-
-            EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
-            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
-            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
-            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
-
-            if (dialog.open() == Dialog.OK)
-                return eObject;
-            else
-                return null;
         }
+//        else if (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
+//
+//            EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
+//            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
+//            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
+//            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
+//
+//            if (dialog.open() == Dialog.OK)
+//                return eObject;
+//            else
+//                return null;
+//        }
         return defaultCreationDialog(e, object);
     }
 

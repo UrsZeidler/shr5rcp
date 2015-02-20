@@ -11,6 +11,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
@@ -86,6 +87,7 @@ import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
 import de.urszeidler.shr5.ecp.editor.pages.SourceBookPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.editor.pages.SubstancePage;
+import de.urszeidler.shr5.ecp.editor.pages.TransactionsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VariousItemsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VariousObjectsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VehiclePage;
@@ -126,6 +128,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return null;
             }
 
+            @Override
+            public Object caseCredstickTransaction(CredstickTransaction object) {
+                try {
+                    addPage(new TransactionsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseFertigkeitsGruppe(FertigkeitsGruppe object) {
                 try {
