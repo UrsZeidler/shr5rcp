@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5;
 
+import java.math.BigDecimal;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getItems <em>Items</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getFee <em>Fee</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts <em>Caculated Costs</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,5 +65,20 @@ public interface ShoppingTransaction extends CredstickTransaction {
      * @generated
      */
     void setFee(double value);
+
+    /**
+     * Returns the value of the '<em><b>Caculated Costs</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Caculated Costs</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Caculated Costs</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getShoppingTransaction_CaculatedCosts()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    BigDecimal getCaculatedCosts();
 
 } // ShoppingTransaction

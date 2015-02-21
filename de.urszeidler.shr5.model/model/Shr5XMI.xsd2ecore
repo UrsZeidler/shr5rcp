@@ -998,9 +998,10 @@
     </nested>
     <nested inputs="shr5.ecore#//ShoppingTransaction" outputs="Shr5XMI.xsd#//ShoppingTransaction;XSDElementDeclaration=135"/>
     <nested inputs="shr5.ecore#//TransferAmount" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136">
-      <nested inputs="shr5.ecore#//TransferAmount/source" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//TransferAmount/amountToTransfer" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//TransferAmount/source" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//TransferAmount/source" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//TransferAmount/dest" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//TransferAmount/dest" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//TransferAmount/dest" outputs="Shr5XMI.xsd#//TransferAmount;XSDComplexTypeDefinition=136/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//TransferAmount" outputs="Shr5XMI.xsd#//TransferAmount;XSDElementDeclaration=136"/>

@@ -2424,6 +2424,7 @@
           <xsd:element name="source" type="shr5:Credstick"/>
           <xsd:element name="dest" type="shr5:Credstick"/>
         </xsd:choice>
+        <xsd:attribute name="amountToTransfer" type="xsd:string"/>
         <xsd:attribute name="source" type="xsd:string"/>
         <xsd:attribute name="dest" type="xsd:string"/>
       </xsd:extension>

@@ -26,7 +26,11 @@ public abstract class DropdownSelectionListener<A> extends SelectionAdapter {
             menu.setVisible(true);
         } else {
             System.out.println(dropdown.getText() + " Pressed"); //$NON-NLS-1$
+            buttonPushed();
         }
+    }
+
+    protected void buttonPushed() {
     }
 
     public abstract void add(String item, final A action);

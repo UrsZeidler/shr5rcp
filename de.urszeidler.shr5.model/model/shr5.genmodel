@@ -753,10 +753,12 @@
     <genClasses ecoreClass="shr5.ecore#//ShoppingTransaction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//ShoppingTransaction/items"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ShoppingTransaction/fee"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ShoppingTransaction/caculatedCosts"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//TransferAmount">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/dest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//TransferAmount/amountToTransfer"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

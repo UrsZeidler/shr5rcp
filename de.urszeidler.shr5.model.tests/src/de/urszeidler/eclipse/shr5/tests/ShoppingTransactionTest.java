@@ -14,6 +14,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Shopping Transaction</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts() <em>Caculated Costs</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class ShoppingTransactionTest extends CredstickTransactionTest {
@@ -71,6 +77,25 @@ public class ShoppingTransactionTest extends CredstickTransactionTest {
     }
 
     
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts() <em>Caculated Costs</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts()
+     * @generated not
+     */
+    public void testGetCaculatedCosts() {
+        GeldWert geldwert= Shr5Factory.eINSTANCE.createGegenstand();
+        geldwert.setWertValue(new BigDecimal(100));
+        getFixture().getItems().add(geldwert);
+        
+        geldwert= Shr5Factory.eINSTANCE.createGegenstand();
+        geldwert.setWertValue(new BigDecimal(100));
+        getFixture().getItems().add(geldwert);
+        
+        assertEquals(200, getFixture().getCaculatedCosts().intValue());
+    }
+
     public void testTransactionSum() throws Exception {
         GeldWert geldwert= Shr5Factory.eINSTANCE.createGegenstand();
         geldwert.setWertValue(new BigDecimal(100));
@@ -80,7 +105,7 @@ public class ShoppingTransactionTest extends CredstickTransactionTest {
         geldwert.setWertValue(new BigDecimal(100));
         getFixture().getItems().add(geldwert);
         
-        assertEquals(200, getFixture().getAmount().intValue());
+        assertEquals(200, getFixture().getCaculatedCosts().intValue());
     }
     
     public void testTransactionSumPlusFee() throws Exception {
@@ -93,6 +118,6 @@ public class ShoppingTransactionTest extends CredstickTransactionTest {
         getFixture().getItems().add(geldwert);
         
         getFixture().setFee(0.1D);
-        assertEquals(220, getFixture().getAmount().intValue());
+        assertEquals(220, getFixture().getCaculatedCosts().intValue());
     }
 } //ShoppingTransactionTest

@@ -20644,13 +20644,22 @@ public interface Shr5Package extends EPackage {
     int SHOPPING_TRANSACTION__FEE = CREDSTICK_TRANSACTION_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Caculated Costs</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHOPPING_TRANSACTION__CACULATED_COSTS = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Shopping Transaction</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SHOPPING_TRANSACTION_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+    int SHOPPING_TRANSACTION_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>Shopping Transaction</em>' class.
@@ -20717,13 +20726,22 @@ public interface Shr5Package extends EPackage {
     int TRANSFER_AMOUNT__DEST = CREDSTICK_TRANSACTION_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Amount To Transfer</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+
+    /**
      * The number of structural features of the '<em>Transfer Amount</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRANSFER_AMOUNT_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 2;
+    int TRANSFER_AMOUNT_FEATURE_COUNT = CREDSTICK_TRANSACTION_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>Transfer Amount</em>' class.
@@ -25966,6 +25984,17 @@ public interface Shr5Package extends EPackage {
     EAttribute getShoppingTransaction_Fee();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts <em>Caculated Costs</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Caculated Costs</em>'.
+     * @see de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts()
+     * @see #getShoppingTransaction()
+     * @generated
+     */
+    EAttribute getShoppingTransaction_CaculatedCosts();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.TransferAmount <em>Transfer Amount</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -25996,6 +26025,17 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EReference getTransferAmount_Dest();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.TransferAmount#getAmountToTransfer <em>Amount To Transfer</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Amount To Transfer</em>'.
+     * @see de.urszeidler.eclipse.shr5.TransferAmount#getAmountToTransfer()
+     * @see #getTransferAmount()
+     * @generated
+     */
+    EAttribute getTransferAmount_AmountToTransfer();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
@@ -30263,6 +30303,14 @@ public interface Shr5Package extends EPackage {
         EAttribute SHOPPING_TRANSACTION__FEE = eINSTANCE.getShoppingTransaction_Fee();
 
         /**
+         * The meta object literal for the '<em><b>Caculated Costs</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHOPPING_TRANSACTION__CACULATED_COSTS = eINSTANCE.getShoppingTransaction_CaculatedCosts();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl <em>Transfer Amount</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -30287,6 +30335,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference TRANSFER_AMOUNT__DEST = eINSTANCE.getTransferAmount_Dest();
+
+        /**
+         * The meta object literal for the '<em><b>Amount To Transfer</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER = eINSTANCE.getTransferAmount_AmountToTransfer();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

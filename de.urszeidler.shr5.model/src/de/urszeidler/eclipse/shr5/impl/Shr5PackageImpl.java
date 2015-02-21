@@ -5649,6 +5649,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getShoppingTransaction_CaculatedCosts() {
+        return (EAttribute)shoppingTransactionEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getTransferAmount() {
         return transferAmountEClass;
     }
@@ -5669,6 +5678,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EReference getTransferAmount_Dest() {
         return (EReference)transferAmountEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTransferAmount_AmountToTransfer() {
+        return (EAttribute)transferAmountEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -6435,10 +6453,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         shoppingTransactionEClass = createEClass(SHOPPING_TRANSACTION);
         createEReference(shoppingTransactionEClass, SHOPPING_TRANSACTION__ITEMS);
         createEAttribute(shoppingTransactionEClass, SHOPPING_TRANSACTION__FEE);
+        createEAttribute(shoppingTransactionEClass, SHOPPING_TRANSACTION__CACULATED_COSTS);
 
         transferAmountEClass = createEClass(TRANSFER_AMOUNT);
         createEReference(transferAmountEClass, TRANSFER_AMOUNT__SOURCE);
         createEReference(transferAmountEClass, TRANSFER_AMOUNT__DEST);
+        createEAttribute(transferAmountEClass, TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -7292,10 +7312,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(shoppingTransactionEClass, ShoppingTransaction.class, "ShoppingTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getShoppingTransaction_Items(), this.getGeldWert(), null, "items", null, 0, -1, ShoppingTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShoppingTransaction_Fee(), ecorePackage.getEDouble(), "fee", null, 0, 1, ShoppingTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShoppingTransaction_CaculatedCosts(), ecorePackage.getEBigDecimal(), "caculatedCosts", null, 0, 1, ShoppingTransaction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(transferAmountEClass, TransferAmount.class, "TransferAmount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getTransferAmount_Source(), this.getCredstick(), null, "source", null, 1, 1, TransferAmount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getTransferAmount_Dest(), this.getCredstick(), null, "dest", null, 1, 1, TransferAmount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTransferAmount_AmountToTransfer(), ecorePackage.getEBigDecimal(), "amountToTransfer", null, 0, 1, TransferAmount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -17,6 +17,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.TransferAmount} object.
@@ -48,6 +50,7 @@ public class TransferAmountItemProvider extends CredstickTransactionItemProvider
 
             addSourcePropertyDescriptor(object);
             addDestPropertyDescriptor(object);
+            addAmountToTransferPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -97,6 +100,28 @@ public class TransferAmountItemProvider extends CredstickTransactionItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Amount To Transfer feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAmountToTransferPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_TransferAmount_amountToTransfer_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_TransferAmount_amountToTransfer_feature", "_UI_TransferAmount_type"),
+                 Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns TransferAmount.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -133,6 +158,12 @@ public class TransferAmountItemProvider extends CredstickTransactionItemProvider
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(TransferAmount.class)) {
+            case Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
         super.notifyChanged(notification);
     }
 

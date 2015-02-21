@@ -1206,10 +1206,13 @@
         <details key="documentation" value="The addional fee is a factor which will be added to the sum."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="caculatedCosts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransferAmount" eSuperTypes="#//CredstickTransaction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//Credstick"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" lowerBound="1" eType="#//Credstick"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amountToTransfer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
 </ecore:EPackage>

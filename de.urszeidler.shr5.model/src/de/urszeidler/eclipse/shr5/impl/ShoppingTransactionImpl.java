@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -23,8 +24,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getItems <em>Items</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getFee <em>Fee</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getFee <em>Fee</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getCaculatedCosts <em>Caculated Costs</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,7 +37,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * The cached value of the '{@link #getItems() <em>Items</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getItems()
      * @generated
      * @ordered
@@ -46,7 +47,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * The default value of the '{@link #getFee() <em>Fee</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFee()
      * @generated
      * @ordered
@@ -57,7 +57,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * The cached value of the '{@link #getFee() <em>Fee</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFee()
      * @generated
      * @ordered
@@ -65,19 +64,48 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     protected double fee = FEE_EDEFAULT;
 
     /**
+     * The default value of the '{@link #getCaculatedCosts() <em>Caculated Costs</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     * @see #getCaculatedCosts()
      * @generated
+     * @ordered
      */
-    protected ShoppingTransactionImpl() {
-        super();
-    }
+    protected static final BigDecimal CACULATED_COSTS_EDEFAULT = null;
+
+    private EContentAdapter eContentAdapter;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
+     * @generated not
+     */
+    protected ShoppingTransactionImpl() {
+        super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (!Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE.equals(feature))
+                    ShoppingTransactionImpl.this
+                            .eNotify(new ENotificationImpl(ShoppingTransactionImpl.this, Notification.SET, Shr5Package.SHOPPING_TRANSACTION__AMOUNT, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -88,7 +116,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<GeldWert> getItems() {
@@ -101,7 +128,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public double getFee() {
@@ -111,7 +137,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setFee(double newFee) {
@@ -124,7 +149,20 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     * @generated not
+     */
+    public BigDecimal getCaculatedCosts() {
+        BigDecimal sum = new BigDecimal(0);
+        for (GeldWert geldWert : getItems()) {
+            sum = sum.add(geldWert.getWert());
+        }
+        BigDecimal aFee = sum.multiply(new BigDecimal(fee));
+        return sum.add(aFee);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -134,6 +172,8 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
                 return getItems();
             case Shr5Package.SHOPPING_TRANSACTION__FEE:
                 return getFee();
+            case Shr5Package.SHOPPING_TRANSACTION__CACULATED_COSTS:
+                return getCaculatedCosts();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -141,7 +181,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -162,7 +201,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -181,7 +219,6 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -191,30 +228,30 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
                 return items != null && !items.isEmpty();
             case Shr5Package.SHOPPING_TRANSACTION__FEE:
                 return fee != FEE_EDEFAULT;
+            case Shr5Package.SHOPPING_TRANSACTION__CACULATED_COSTS:
+                return CACULATED_COSTS_EDEFAULT == null ? getCaculatedCosts() != null : !CACULATED_COSTS_EDEFAULT.equals(getCaculatedCosts());
         }
         return super.eIsSet(featureID);
     }
 
-    @Override
-    public BigDecimal getAmount() {
-        BigDecimal sum = new BigDecimal(0);
-        for (GeldWert geldWert : getItems()) {
-            sum = sum.add(geldWert.getWert());
-        }
-        BigDecimal aFee = sum.multiply(new BigDecimal(fee));
-        return sum.add(aFee);
-    }
+//    @Override
+//    public BigDecimal getAmount() {
+//        BigDecimal sum = new BigDecimal(0);
+//        for (GeldWert geldWert : getItems()) {
+//            sum = sum.add(geldWert.getWert());
+//        }
+//        BigDecimal aFee = sum.multiply(new BigDecimal(fee));
+//        return sum.add(aFee);
+//    }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (fee: ");

@@ -7,6 +7,7 @@ import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.TransferAmount;
 
+import java.math.BigDecimal;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getSource <em>Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getAmountToTransfer <em>Amount To Transfer</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,6 +50,26 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * @ordered
      */
     protected Credstick dest;
+
+    /**
+     * The default value of the '{@link #getAmountToTransfer() <em>Amount To Transfer</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAmountToTransfer()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal AMOUNT_TO_TRANSFER_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getAmountToTransfer() <em>Amount To Transfer</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAmountToTransfer()
+     * @generated
+     * @ordered
+     */
+    protected BigDecimal amountToTransfer = AMOUNT_TO_TRANSFER_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -149,6 +171,27 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    public BigDecimal getAmountToTransfer() {
+        return amountToTransfer;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setAmountToTransfer(BigDecimal newAmountToTransfer) {
+        BigDecimal oldAmountToTransfer = amountToTransfer;
+        amountToTransfer = newAmountToTransfer;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, oldAmountToTransfer, amountToTransfer));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -158,6 +201,8 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
             case Shr5Package.TRANSFER_AMOUNT__DEST:
                 if (resolve) return getDest();
                 return basicGetDest();
+            case Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER:
+                return getAmountToTransfer();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -175,6 +220,9 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
                 return;
             case Shr5Package.TRANSFER_AMOUNT__DEST:
                 setDest((Credstick)newValue);
+                return;
+            case Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER:
+                setAmountToTransfer((BigDecimal)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -194,6 +242,9 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
             case Shr5Package.TRANSFER_AMOUNT__DEST:
                 setDest((Credstick)null);
                 return;
+            case Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER:
+                setAmountToTransfer(AMOUNT_TO_TRANSFER_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -210,8 +261,26 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
                 return source != null;
             case Shr5Package.TRANSFER_AMOUNT__DEST:
                 return dest != null;
+            case Shr5Package.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER:
+                return AMOUNT_TO_TRANSFER_EDEFAULT == null ? amountToTransfer != null : !AMOUNT_TO_TRANSFER_EDEFAULT.equals(amountToTransfer);
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy()) return super.toString();
+
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (amountToTransfer: ");
+        result.append(amountToTransfer);
+        result.append(')');
+        return result.toString();
     }
 
 } //TransferAmountImpl

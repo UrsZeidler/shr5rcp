@@ -50,6 +50,7 @@ public class ShoppingTransactionItemProvider extends CredstickTransactionItemPro
 
             addItemsPropertyDescriptor(object);
             addFeePropertyDescriptor(object);
+            addCaculatedCostsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -99,6 +100,28 @@ public class ShoppingTransactionItemProvider extends CredstickTransactionItemPro
     }
 
     /**
+     * This adds a property descriptor for the Caculated Costs feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCaculatedCostsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ShoppingTransaction_caculatedCosts_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ShoppingTransaction_caculatedCosts_feature", "_UI_ShoppingTransaction_type"),
+                 Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns ShoppingTransaction.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -138,6 +161,7 @@ public class ShoppingTransactionItemProvider extends CredstickTransactionItemPro
 
         switch (notification.getFeatureID(ShoppingTransaction.class)) {
             case Shr5Package.SHOPPING_TRANSACTION__FEE:
+            case Shr5Package.SHOPPING_TRANSACTION__CACULATED_COSTS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
