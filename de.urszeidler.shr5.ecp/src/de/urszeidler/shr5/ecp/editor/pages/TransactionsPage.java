@@ -1,8 +1,9 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +18,7 @@ import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -27,7 +29,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
@@ -43,7 +45,10 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.commons.functors.Predicate;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.ShoppingTransaction;
@@ -52,14 +57,19 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.TransferAmount;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.DropdownSelectionListener;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
+
+import org.eclipse.swt.widgets.Label;
 
 public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     private CredstickTransaction object;
@@ -72,9 +82,10 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     private PatternFilter nameFilter;
     private ViewerFilter shrListFilter;
     private ViewerFilter typeFilter;
-    private List<SourceBook> sourceFilterValueList = new ArrayList<SourceBook>();
-    private List<EClass> typeFilterValueList = new ArrayList<EClass>();
+    private Set<SourceBook> sourceFilterValueList = new HashSet<SourceBook>();
+    private Set<EClass> typeFilterValueList = new HashSet<EClass>();
     private ViewerFilter sourceFilter;
+    private SimpleTreeTableWidget treeTableWidgetEigenschaften;
 
     private class SourceDropdownSelectionListener extends DropdownSelectionListener<SourceBook> {
         private boolean filterActive;
@@ -86,6 +97,38 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 add(labelprovider.getText(sourceBook), (SourceBook)sourceBook);
                 sourceFilterValueList.add((SourceBook)sourceBook);
             }
+
+            MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
+            menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText("Mark all");
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    MenuItem[] items = menu.getItems();
+                    for (int i = 0; i < items.length; i++) {
+                        MenuItem menuItem1 = items[i];
+                        Object data = menuItem1.getData("entry");
+                        if (data != null) {
+                            sourceFilterValueList.remove((SourceBook)data);
+                            menuItem1.notifyListeners(SWT.Selection, new Event());
+                        }
+                    }
+                }
+            });
+            menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText("Mark none");
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    MenuItem[] items = menu.getItems();
+                    for (int i = 0; i < items.length; i++) {
+                        MenuItem menuItem1 = items[i];
+                        Object data = menuItem1.getData("entry");
+                        if (data != null) {
+                            sourceFilterValueList.add((SourceBook)data);
+                            menuItem1.notifyListeners(SWT.Selection, new Event());
+                        }
+                    }
+                }
+            });
         }
 
         private Collection<EObject> getSourceBooks() {
@@ -114,12 +157,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         public void add(String item, final SourceBook action) {
             final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
-            if (sourceFilterValueList.contains(action)) {
-                menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                        ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
-            } else {
-                menuItem.setImage(labelprovider.getImage(action));
-            }
+            menuItem.setData("entry", action);
+            sourceFilterValueList.add(action);
+            // if (sourceFilterValueList.contains(action)) {
+            // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
+            // ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
+            // } else {
+            menuItem.setImage(labelprovider.getImage(action));
+            // }
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
@@ -149,10 +194,47 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 if (eClassifier instanceof EClass) {
                     EClass ec = (EClass)eClassifier;
                     if (!ec.isAbstract() && !ec.isInterface())
-                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
-                            add(ec);
+//                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
+                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.ABSTRAKT_GEGENSTAND)
+                                ||ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
+                                ||ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG))
+//                            if (!ec.getEAllSuperTypes().contains(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS))
+                                add(ec);
                 }
             }
+
+            MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
+            menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText("Mark all");
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    MenuItem[] items = menu.getItems();
+                    for (int i = 0; i < items.length; i++) {
+                        MenuItem menuItem1 = items[i];
+                        Object data = menuItem1.getData("entry");
+                        if (data != null) {
+                            typeFilterValueList.remove((EClass)data);
+                            menuItem1.notifyListeners(SWT.Selection, new Event());
+                        }
+                    }
+                }
+            });
+            menuItem = new MenuItem(menu, SWT.NONE);
+            menuItem.setText("Mark none");
+            menuItem.addSelectionListener(new SelectionAdapter() {
+                public void widgetSelected(SelectionEvent event) {
+                    MenuItem[] items = menu.getItems();
+                    for (int i = 0; i < items.length; i++) {
+                        MenuItem menuItem1 = items[i];
+                        Object data = menuItem1.getData("entry");
+                        if (data != null) {
+                            typeFilterValueList.add((EClass)data);
+                            menuItem1.notifyListeners(SWT.Selection, new Event());
+                        }
+                    }
+                }
+            });
+
         }
 
         @Override
@@ -181,12 +263,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         public void add(String item, final EClass action) {
             final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
-            if (typeFilterValueList.contains(action)) {
-                menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                        ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
-            } else {
-                menuItem.setImage(labelprovider.getImage(action));
-            }
+            menuItem.setData("entry", action);
+            typeFilterValueList.add(action);
+            // if (typeFilterValueList.contains(action)) {
+            // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
+            // ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
+            // } else {
+            menuItem.setImage(labelprovider.getImage(action));
+            // }
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
@@ -315,6 +399,43 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         managedForm.getToolkit().paintBordersFor(composite);
 
         // ------------
+        if (object instanceof ShoppingTransaction)
+            createShoppingSection(managedForm);
+
+        // ------------------------------------
+        m_bindingContext = initDataBindings();
+        createFormBuilder(managedForm);
+
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE, composite, new DateEntryFactory(toolkit));
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION, composite);
+
+        if (object instanceof ShoppingTransaction) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS, composite, new LabelMoneyEntry());
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__FEE, composite);
+            treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite, "", SWT.NONE, object,
+                    Shr5Package.Literals.SHOPPING_TRANSACTION__ITEMS, toolkit, mananger, editingDomain, this);
+            GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, true, 3, 1);
+            layoutData.heightHint = 150;
+            treeTableWidgetEigenschaften.setLayoutData(layoutData);
+            managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+            managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+
+        } else if (object instanceof TransferAmount) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, composite);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__SOURCE, composite);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__DEST, composite);
+        } else {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT, composite);
+        }
+
+        emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        managedForm.reflow(true);
+    }
+
+    /**
+     * @param managedForm
+     */
+    private void createShoppingSection(IManagedForm managedForm) {
         Section sctnBuyItems = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnBuyItems.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnBuyItems);
@@ -338,6 +459,15 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         composite_2.setLayoutData(gd_composite_2);
         managedForm.getToolkit().adapt(composite_2);
         managedForm.getToolkit().paintBordersFor(composite_2);
+
+        ViewerComparator nameSorter = new ViewerComparator() {
+            public int compare(Viewer viewer, Object e1, Object e2) {
+                String t1 = labelprovider.getText(e1);
+                String t2 = labelprovider.getText(e2);
+                return t1.compareTo(t2);
+            };
+        };
+
         composite_2.setLayout(new GridLayout(4, false));
 
         shrListFilter = new ViewerFilter() {
@@ -425,8 +555,57 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         });
         tltmAdd.setText("add");
 
+        ToolItem tltmRemove = new ToolItem(toolBar, SWT.NONE);
+        tltmRemove.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                treeTableWidgetEigenschaften.removeSelectedElement();
+            }
+        });
+        tltmRemove.setText("remove");
+
         ToolItem tltmBuy = new ToolItem(toolBar, SWT.NONE);
         tltmBuy.setText("buy");
+        tltmBuy.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                
+                EObject eContainer = object.eContainer();
+                if (eContainer instanceof Credstick) {
+                    Credstick c = (Credstick)eContainer;
+                    EObject c1 = c.eContainer();
+                    if (c1 instanceof ManagedCharacter) {
+                        final ManagedCharacter character = (ManagedCharacter)c1;
+                        ShoppingTransaction st = (ShoppingTransaction)object;
+                        object.setAmount(st.getCaculatedCosts());
+                        EList<GeldWert> items = st.getItems();
+                        Shr5Switch<Object> characterAdder = new Shr5Switch<Object>() {
+                            public Object caseAbstraktGegenstand(AbstraktGegenstand object) {
+                                character.getInventar().add(object);
+                                return null;
+                            };
+
+                            public Object caseVertrag(Vertrag object) {
+                                character.getContracts().add(object);
+                                return null;
+                            };
+
+                            public Object caseFahrzeug(Fahrzeug object) {
+                                character.getVehicels().add(object);
+                                return null;
+                            };
+
+                        };
+                        for (GeldWert geldWert : items) {
+                            characterAdder.doSwitch(geldWert);
+                        }
+                    }
+                }
+            }
+        });
+
+        new Label(composite_2, SWT.NONE);
+        new Label(composite_2, SWT.NONE);
         tltmSource.addSelectionListener(listenerOne);
 
         tableViewer_1 = new TableViewer(composite_3, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
@@ -455,46 +634,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 .getAdapterFactory())));
 
         tableViewer_1.setLabelProvider(new ItemLabelProvider());
+        tableViewer_1.setComparator(nameSorter);
         tableViewer_1.setInput(getAllObjects());
 
         tableViewer_1.addFilter(nameFilter);
         tableViewer_1.addFilter(shrListFilter);
         tableViewer_1.addFilter(typeFilter);
         tableViewer_1.addFilter(sourceFilter);
-
-        // ------------------------------------
-        m_bindingContext = initDataBindings();
-        createFormBuilder(managedForm);
-
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE, composite, new DateEntryFactory(toolkit));
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION, composite);
-
-        if (object instanceof ShoppingTransaction) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS, composite, new LabelMoneyEntry());
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__FEE, composite);
-            SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite, "", SWT.NONE, object,
-                    Shr5Package.Literals.SHOPPING_TRANSACTION__ITEMS, toolkit, mananger, editingDomain, this);
-            GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, true, 3, 1);
-            layoutData.heightHint = 150;
-            treeTableWidgetEigenschaften.setLayoutData(layoutData);
-            managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
-            managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
-
-        } else if (object instanceof TransferAmount) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, composite);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__SOURCE, composite);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__DEST, composite);
-        } else {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT, composite);
-        }
-
-        emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        managedForm.reflow(true);
-    }
-
-    protected EClass getSelectedEClass() {
-        // TODO Auto-generated method stub
-        return null;
     }
 
     /**

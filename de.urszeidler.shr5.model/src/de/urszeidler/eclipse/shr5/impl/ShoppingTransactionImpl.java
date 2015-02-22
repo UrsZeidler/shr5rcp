@@ -91,9 +91,10 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
                 if (!Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT.equals(feature)
                         && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE.equals(feature)
                         && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION.equals(feature)
+                        && !Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS.equals(feature)
                         && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE.equals(feature))
                     ShoppingTransactionImpl.this
-                            .eNotify(new ENotificationImpl(ShoppingTransactionImpl.this, Notification.SET, Shr5Package.SHOPPING_TRANSACTION__AMOUNT, 1, 2));
+                            .eNotify(new ENotificationImpl(ShoppingTransactionImpl.this, Notification.SET, Shr5Package.SHOPPING_TRANSACTION__CACULATED_COSTS, 1, 2));
 
             }
 

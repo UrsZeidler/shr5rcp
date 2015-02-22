@@ -16,7 +16,9 @@ import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -32,6 +34,7 @@ import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 
@@ -44,6 +47,10 @@ public class SimpleTreeTableWidget extends Composite {
     private EditingDomain editingDomain;
     private ISelectionChangedListener selectionChangeListener;
     private IDoubleClickListener dblListener;
+
+    private IObservableList objectList;
+
+    private IViewerObservableList selectionObserver;
 
     /**
      * Create the composite.
@@ -145,7 +152,7 @@ public class SimpleTreeTableWidget extends Composite {
         });
 
         treeViewer.setContentProvider(treeContentProvider);
-        IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        selectionObserver = ViewersObservables.observeMultiSelection(treeViewer);
 
          IListProperty property = null;
         if (editingDomain != null)
@@ -153,13 +160,26 @@ public class SimpleTreeTableWidget extends Composite {
         else
             property = EMFProperties.list(feature);
 
-        IObservableList mObs = property.observe(object);
-        treeViewer.setInput(mObs);
+        objectList = property.observe(object);
+        treeViewer.setInput(objectList);
         final FormbuilderEntry e1 = new FormbuilderEntry(null, feature, null, null);
-        e1.setObservable(mObs);
-        e1.setUiObservable(uiObs);
+        e1.setObservable(objectList);
+        e1.setUiObservable(selectionObserver);
     }
 
+    /**
+     * Removes the selected elements.
+     */
+    public void removeSelectedElement() {
+        ISelection selection = selectionObserver.getViewer().getSelection();
+        if (selection instanceof StructuredSelection) {
+            StructuredSelection ss = (StructuredSelection)selection;
+            for (Object object : ShadowrunTools.toIterable(ss.iterator())) {
+                objectList.remove(object);
+            } 
+        }
+    }
+    
     /**
      * Get the tooltip.
      * 
