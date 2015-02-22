@@ -194,12 +194,12 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 if (eClassifier instanceof EClass) {
                     EClass ec = (EClass)eClassifier;
                     if (!ec.isAbstract() && !ec.isInterface())
-//                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
+                        // if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
                         if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.ABSTRAKT_GEGENSTAND)
-                                ||ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
-                                ||ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG))
-//                            if (!ec.getEAllSuperTypes().contains(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS))
-                                add(ec);
+                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
+                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG))
+                            // if (!ec.getEAllSuperTypes().contains(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS))
+                            add(ec);
                 }
             }
 
@@ -398,8 +398,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
 
-        // ------------
-        if (object instanceof ShoppingTransaction)
+        if (object instanceof ShoppingTransaction && ((ShoppingTransaction)object).getAmount() == null)
             createShoppingSection(managedForm);
 
         // ------------------------------------
@@ -410,8 +409,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION, composite);
 
         if (object instanceof ShoppingTransaction) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS, composite, new LabelMoneyEntry());
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__FEE, composite);
+            if (((ShoppingTransaction)object).getAmount() == null) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__CACULATED_COSTS, composite, new LabelMoneyEntry());
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__FEE, composite);
+            } else {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT, composite, new LabelMoneyEntry());
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.SHOPPING_TRANSACTION__FEE, composite, new LabelMoneyEntry());
+            }
             treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite, "", SWT.NONE, object,
                     Shr5Package.Literals.SHOPPING_TRANSACTION__ITEMS, toolkit, mananger, editingDomain, this);
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, true, 3, 1);
@@ -569,7 +573,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tltmBuy.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                
+
                 EObject eContainer = object.eContainer();
                 if (eContainer instanceof Credstick) {
                     Credstick c = (Credstick)eContainer;
@@ -599,6 +603,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                         for (GeldWert geldWert : items) {
                             characterAdder.doSwitch(geldWert);
                         }
+                        getEditor().close(true);
                     }
                 }
             }
