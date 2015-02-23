@@ -427,7 +427,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                     .getCharacterAdvancements(), quallity.eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
-                return -1 * Math.abs(karmaFactor * quallity.getKarmaKosten());
+                return -1 * karmaFactor * quallity.getKarmaKosten();
             }
         }
         return 0;
