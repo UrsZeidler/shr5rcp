@@ -102,7 +102,7 @@ public class SumToTenGeneratorTest extends Shr5GeneratorTest {
         resourcen.setCost(0);
         
 
-        Map<Object, Object> context = Collections.EMPTY_MAP;
+        Map<Object, Object> context = Collections.emptyMap();
         DiagnosticChain diagnostics = new BasicDiagnostic();
         assertEquals("is true", true, getFixture().hasSumToTen(diagnostics, context));
 
