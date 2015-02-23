@@ -135,15 +135,15 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
 
         } else if (object instanceof PersonaEigenschaft) {
             grpWert.setText(Messages.ObjectPage_karmaCost);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.PERSONA_EIGENSCHAFT__KARMA_KOSTEN, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.PERSONA_EIGENSCHAFT__KARMA_KOSTEN, composite_add);
 
         } else if (object instanceof FernkampfwaffeModifikator) {
             grpWert.setText(Messages.ObjectPage_addon);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, composite_add);
 
         } else if (object instanceof KiKraft) {
             grpWert.setText(Messages.ObjectPage_powwerPoint);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, composite_add);
         }else if (object instanceof CyberwareEnhancement) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE_ENHANCEMENT__TYPE, composite_add);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE_ENHANCEMENT__CAPACITY_USE, composite_add);
