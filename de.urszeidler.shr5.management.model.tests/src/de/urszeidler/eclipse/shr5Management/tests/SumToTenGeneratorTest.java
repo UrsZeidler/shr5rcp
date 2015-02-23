@@ -110,5 +110,7 @@ public class SumToTenGeneratorTest extends Shr5GeneratorTest {
         assertEquals("is true", false, getFixture().hasSumToTen(diagnostics, context));
 
     }
-
+    @Override
+    public void testHasCategoryOnlyOnce__DiagnosticChain_Map() {
+    }
 } //SumToTenGeneratorTest
