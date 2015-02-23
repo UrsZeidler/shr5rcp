@@ -136,7 +136,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected ReferenceManager mananger;
     protected EmfFormBuilder emfFormBuilder;
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
-    private IPreferenceStore store;
+    protected IPreferenceStore store;
 
     public AbstractShr5Page(String id, String title) {
         super(id, title);

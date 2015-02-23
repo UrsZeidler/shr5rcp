@@ -28,6 +28,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.MenuItem;
@@ -62,8 +63,11 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.DropdownSelectionListener;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -89,7 +93,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
 
     private class SourceDropdownSelectionListener extends DropdownSelectionListener<SourceBook> {
         private static final String ENTRY = "entry";
-        private boolean filterActive;
+        private boolean filterActive = true;
 
         public SourceDropdownSelectionListener(ToolItem dropdown) {
             super(dropdown);
@@ -186,7 +190,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     }
 
     private class TypeDropdownSelectionListener extends DropdownSelectionListener<EClass> {
-        private boolean filterActive;
+        private boolean filterActive = true;
 
         public TypeDropdownSelectionListener(ToolItem dropdown) {
             super(dropdown);
@@ -330,7 +334,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     GeldWert geldWert = (GeldWert)element;
                     if (geldWert.getWert() == null)
                         return "0";
-                    return geldWert.getWert().toString();
+                    return String.format("%,.0f %s", geldWert.getWert(), store.getString(PreferenceConstants.CURRENCY_SYMBOL));
 
                 default:
                     break;
@@ -376,6 +380,23 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         super(editor, id, title, manager1);
         this.object = object;
         this.editingDomain = editingDomain;
+
+        EObject c1 = this.object.eContainer();
+        if (c1 instanceof Credstick) {
+            Credstick c = (Credstick)c1;
+            EObject c2 = c.eContainer();
+            if (c2 instanceof ManagedCharacter) {
+                ManagedCharacter mc = (ManagedCharacter)c2;
+                if (this.object.getDate() == null)
+                    this.object.setDate(ShadowrunManagmentTools.findCorrenspondingDate(mc));
+
+                if (this.object instanceof TransferAmount) {
+                    TransferAmount ta = (TransferAmount)this.object;
+                    if (ta.getSource() == null)
+                        ta.setSource(c);
+                }
+            }
+        }
     }
 
     /**
@@ -391,6 +412,9 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        if (object instanceof ShoppingTransaction) {
+            form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        }
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
@@ -426,7 +450,11 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
 
         } else if (object instanceof TransferAmount) {
+            if (object.getAmount() == null) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, composite);
+            }else{
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT, composite, new LabelMoneyEntry());
+            }
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__SOURCE, composite);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__DEST, composite);
         } else {
@@ -434,6 +462,28 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        if (object.getAmount() == null)
+            if (object instanceof TransferAmount) {
+                final TransferAmount ta = (TransferAmount)object;
+                Button button = new Button(composite, SWT.PUSH);
+                button.setText("do transfer");
+                button.addSelectionListener(new SelectionAdapter() {
+                    @Override
+                    public void widgetSelected(SelectionEvent e) {
+                        if (ta.getDest() != null) {
+                            TransferAmount ta1 = Shr5Factory.eINSTANCE.createTransferAmount();
+                            ta1.setAmount(ta.getAmountToTransfer());
+                            ta1.setSource(ta.getSource());
+                            ta1.setDest(ta.getDest());
+                            ta1.setDate(ta.getDate());
+                            ta1.setDescription(ta.getDescription());
+                            ta.getDest().getTransactionlog().add(ta1);
+                            ta.setAmount(ta.getAmountToTransfer().negate());
+                            getEditor().close(true);
+                        }
+                    }
+                });
+            }
         managedForm.reflow(true);
     }
 
@@ -535,7 +585,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         managedForm.getToolkit().adapt(txtSearch, true, true);
 
         ToolBar toolBar = new ToolBar(composite_2, SWT.FLAT | SWT.RIGHT);
-        toolBar.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        toolBar.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(toolBar);
         managedForm.getToolkit().paintBordersFor(toolBar);
 
@@ -561,7 +611,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tltmAdd.setText("add");
         tltmAdd.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/addButton.png"));
         tltmAdd.setText(Messages.TreeTableWidget_add_element);
-        
+
         ToolItem tltmRemove = new ToolItem(toolBar, SWT.NONE);
         tltmRemove.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -588,7 +638,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     if (c1 instanceof ManagedCharacter) {
                         final ManagedCharacter character = (ManagedCharacter)c1;
                         ShoppingTransaction st = (ShoppingTransaction)object;
-                        object.setAmount(st.getCaculatedCosts());
+                        object.setAmount(st.getCaculatedCosts().negate());
                         EList<GeldWert> items = st.getItems();
                         Shr5Switch<Object> characterAdder = new Shr5Switch<Object>() {
                             public Object caseAbstraktGegenstand(AbstraktGegenstand object) {
@@ -616,8 +666,6 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             }
         });
 
-        new Label(composite_2, SWT.NONE);
-        new Label(composite_2, SWT.NONE);
         tltmSource.addSelectionListener(listenerOne);
 
         tableViewer_1 = new TableViewer(composite_3, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
@@ -630,14 +678,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         managedForm.getToolkit().paintBordersFor(table_1);
 
         TableColumn tblclmnName = new TableColumn(table_1, SWT.LEFT);
-        tblclmnName.setWidth(300);
+        tblclmnName.setWidth(320);
         tblclmnName.setText("name");
 
         TableColumn tblclmnSource = new TableColumn(table_1, SWT.NONE);
-        tblclmnSource.setWidth(100);
+        tblclmnSource.setWidth(230);
         tblclmnSource.setText("source");
 
-        TableColumn tblclmnPrice = new TableColumn(table_1, SWT.NONE);
+        TableColumn tblclmnPrice = new TableColumn(table_1, SWT.RIGHT);
         tblclmnPrice.setResizable(false);
         tblclmnPrice.setWidth(100);
         tblclmnPrice.setText("price");
