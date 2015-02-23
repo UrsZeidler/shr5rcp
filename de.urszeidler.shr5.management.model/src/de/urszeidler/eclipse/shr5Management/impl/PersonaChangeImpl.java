@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -47,7 +48,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +59,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * The cached value of the '{@link #getChangeable() <em>Changeable</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getChangeable()
      * @generated
      * @ordered
@@ -67,6 +69,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PersonaChangeImpl() {
@@ -76,6 +79,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -86,6 +90,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar getChangeable() {
@@ -94,7 +99,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             changeable = (Erlernbar)eResolveProxy(oldChangeable);
             if (changeable != oldChangeable) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable, changeable));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable,
+                            changeable));
             }
         }
         return changeable;
@@ -103,6 +109,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar basicGetChangeable() {
@@ -161,13 +168,15 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE:
-                if (resolve) return getChangeable();
+                if (resolve)
+                    return getChangeable();
                 return basicGetChangeable();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -176,6 +185,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -191,6 +201,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -206,6 +217,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -304,6 +316,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 if (getCharacter().getPersona() instanceof KoerperPersona) {
                     KoerperPersona kp = (KoerperPersona)getCharacter().getPersona();
                     EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
+
                     addOrRemoveEntry(object, eigenschaften);
                 }
                 return object;
@@ -318,7 +331,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return object;
             }
-            
+
             @Override
             public Object caseFokus(Fokus object) {
                 if (getCharacter().getPersona() instanceof BaseMagischePersona) {
@@ -327,7 +340,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                     fokusBinding.setFokus(object);
                     EList<FokusBinding> list = bm.getBoundFoki();
                     addOrRemoveEntry(fokusBinding, list);
-                    
+
                 }
                 return object;
             }
@@ -378,9 +391,10 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             public Integer casePersonaKomplexForm(PersonaKomplexForm object) {
                 return getKarmaCostAdd(object);
             }
+
             @Override
             public Integer caseFokus(Fokus object) {
-                 return object.getBindungskosten()*-1;
+                return object.getBindungskosten() * -1;
             }
         };
 
@@ -427,7 +441,10 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                     .getCharacterAdvancements(), quallity.eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
-                return -1 * karmaFactor * quallity.getKarmaKosten();
+                if (chracterSource.getState() != GeneratorState.COMMITED)
+                    return -1 * karmaFactor * quallity.getKarmaKosten();
+                else
+                    return -1 * Math.abs(karmaFactor * quallity.getKarmaKosten());
             }
         }
         return 0;
@@ -466,7 +483,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
 
         if (skill != null) {
             Fertigkeit fertigkeit = skill.getFertigkeit();
-            if(fertigkeit==null)
+            if (fertigkeit == null)
                 return 0;
             EClass eClass = fertigkeit.eClass();
 
