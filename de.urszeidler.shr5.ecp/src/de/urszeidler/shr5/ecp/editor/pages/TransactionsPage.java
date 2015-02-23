@@ -88,6 +88,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     private SimpleTreeTableWidget treeTableWidgetEigenschaften;
 
     private class SourceDropdownSelectionListener extends DropdownSelectionListener<SourceBook> {
+        private static final String ENTRY = "entry";
         private boolean filterActive;
 
         public SourceDropdownSelectionListener(ToolItem dropdown) {
@@ -106,7 +107,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     MenuItem[] items = menu.getItems();
                     for (int i = 0; i < items.length; i++) {
                         MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData("entry");
+                        Object data = menuItem1.getData(ENTRY);
                         if (data != null) {
                             sourceFilterValueList.remove((SourceBook)data);
                             menuItem1.notifyListeners(SWT.Selection, new Event());
@@ -121,7 +122,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     MenuItem[] items = menu.getItems();
                     for (int i = 0; i < items.length; i++) {
                         MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData("entry");
+                        Object data = menuItem1.getData(ENTRY);
                         if (data != null) {
                             sourceFilterValueList.add((SourceBook)data);
                             menuItem1.notifyListeners(SWT.Selection, new Event());
@@ -157,7 +158,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         public void add(String item, final SourceBook action) {
             final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
-            menuItem.setData("entry", action);
+            menuItem.setData(ENTRY, action);
             sourceFilterValueList.add(action);
             // if (sourceFilterValueList.contains(action)) {
             // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
@@ -170,7 +171,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 public void widgetSelected(SelectionEvent event) {
                     if (sourceFilterValueList.contains(action)) {
                         menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
+                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
                         sourceFilterValueList.remove(action);
                     } else {
                         menuItem.setImage(labelprovider.getImage(action));
@@ -276,7 +277,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 public void widgetSelected(SelectionEvent event) {
                     if (typeFilterValueList.contains(action)) {
                         menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
+                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
                         typeFilterValueList.remove(action);
                     } else {
                         menuItem.setImage(labelprovider.getImage(action));
@@ -558,7 +559,9 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             }
         });
         tltmAdd.setText("add");
-
+        tltmAdd.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/addButton.png"));
+        tltmAdd.setText(Messages.TreeTableWidget_add_element);
+        
         ToolItem tltmRemove = new ToolItem(toolBar, SWT.NONE);
         tltmRemove.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -567,9 +570,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             }
         });
         tltmRemove.setText("remove");
+        tltmRemove.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/removeButton.png"));
+        tltmRemove.setText(Messages.TreeTableWidget_remove_element);
+        tltmRemove.setToolTipText(Messages.TreeTableWidget_remove_element_tooltip);
 
         ToolItem tltmBuy = new ToolItem(toolBar, SWT.NONE);
         tltmBuy.setText("buy");
+        tltmBuy.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/newyen.png"));
         tltmBuy.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
