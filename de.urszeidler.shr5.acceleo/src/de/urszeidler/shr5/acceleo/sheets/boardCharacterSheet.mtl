@@ -272,7 +272,7 @@ Current Date: [diary.characterDate/]
 [/template]
 
 [template public printDiaryEntry (aDiaryEntry : DiaryEntry) ]
-[aDiaryEntry.date.formatDate()/]: [aDiaryEntry.message/]
+[aDiaryEntry.date.formatDate()/]: [aDiaryEntry.message.italicText()/]
 [/template]
 
 [template public printAllCredSticks(cs : OrderedSet(Credstick), empty :String)]
@@ -286,10 +286,23 @@ Current Date: [diary.characterDate/]
 [template public printCredStick(credstick : Credstick, empty :String)]
 [printTextPlusSpace('Credstick: '.concat(credstick.getText()), empty)/]
 [for (t : CredstickTransaction | credstick.transactionlog)]
-[t.date.formatDate() /] [printTextPlusSpace(t.getText(),empty)/]
+[if (t.oclIsTypeOf(ShoppingTransaction))]
+Shopping list:
+[printSoppingTransaction(t.oclAsType(ShoppingTransaction))/]
+[else]
+[t.date.formatDate() /] [t.description/] [t.amount.formatMoney()/]
+[/if]
 [/for]
 [printTextPlusSpace('Saldo :', empty)/] [credstick.currentValue.formatMoney() /]
 
+[/template]
+
+
+[template public printSoppingTransaction(ta : ShoppingTransaction)]
+[for (gw : GeldWert | ta.items)]
+[gw.getText()/] [gw.oclAsType(Quelle).srcBook.getText()/] [gw.wertValue.formatMoney()/]
+[/for]
+calculated costs: [ta.caculatedCosts.formatMoney()/] (incuding [ta.fee/] fee)
 [/template]
 
 [template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]
