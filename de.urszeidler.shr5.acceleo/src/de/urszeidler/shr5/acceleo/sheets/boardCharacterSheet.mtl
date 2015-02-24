@@ -290,7 +290,7 @@ Current Date: [diary.characterDate/]
 Shopping list:
 [printSoppingTransaction(t.oclAsType(ShoppingTransaction))/]
 [else]
-[t.date.formatDate() /] [t.description/] [t.amount.formatMoney()/]
+[t.date.formatDate() /] [t.description.italicText()/] [t.amount.formatMoney()/]
 [/if]
 [/for]
 [printTextPlusSpace('Saldo :', empty)/] [credstick.currentValue.formatMoney() /]
