@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -14,6 +15,8 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.viewers.AbstractTreeViewer;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
@@ -65,6 +68,7 @@ import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
@@ -72,8 +76,6 @@ import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.DropdownSelectionListener;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
-
-import org.eclipse.swt.widgets.Label;
 
 public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     private CredstickTransaction object;
@@ -105,7 +107,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
 
             MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
             menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("Mark all");
+            menuItem.setText("filter none");
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
                     MenuItem[] items = menu.getItems();
@@ -120,7 +122,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 }
             });
             menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("Mark none");
+            menuItem.setText("filter all");
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
                     MenuItem[] items = menu.getItems();
@@ -148,12 +150,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     tableViewer_1.removeFilter(sourceFilter);
                     tableViewer_1.refresh();
                 }
+                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
                 filterActive = false;
             } else {
                 if (tableViewer_1 != null) {
                     tableViewer_1.addFilter(sourceFilter);
                     tableViewer_1.refresh();
                 }
+                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
                 filterActive = true;
             }
         }
@@ -164,12 +168,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             menuItem.setText(item);
             menuItem.setData(ENTRY, action);
             sourceFilterValueList.add(action);
-            // if (sourceFilterValueList.contains(action)) {
-            // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-            // ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
-            // } else {
             menuItem.setImage(labelprovider.getImage(action));
-            // }
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
@@ -210,7 +209,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
 
             MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
             menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("Mark all");
+            menuItem.setText("filter none");
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
                     MenuItem[] items = menu.getItems();
@@ -225,7 +224,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                 }
             });
             menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("Mark none");
+            menuItem.setText("filter all");
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
                     MenuItem[] items = menu.getItems();
@@ -250,12 +249,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                     tableViewer_1.refresh();
                 }
                 filterActive = false;
+                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
             } else {
                 if (tableViewer_1 != null) {
                     tableViewer_1.addFilter(typeFilter);
                     tableViewer_1.refresh();
                 }
                 filterActive = true;
+                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
             }
         }
 
@@ -269,13 +270,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
             menuItem.setText(item);
             menuItem.setData("entry", action);
-            typeFilterValueList.add(action);
-            // if (typeFilterValueList.contains(action)) {
-            // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-            // ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif")));
-            // } else {
             menuItem.setImage(labelprovider.getImage(action));
-            // }
 
             menuItem.addSelectionListener(new SelectionAdapter() {
                 public void widgetSelected(SelectionEvent event) {
@@ -287,11 +282,6 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                         menuItem.setImage(labelprovider.getImage(action));
                         typeFilterValueList.add(action);
                     }
-                    //
-                    // if (menuItem.getSelection())
-                    // typeFilterValueList.add(action);
-                    // else
-                    // typeFilterValueList.remove(action);
 
                     if (tableViewer_1 != null)
                         tableViewer_1.refresh();
@@ -451,8 +441,8 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
 
         } else if (object instanceof TransferAmount) {
             if (object.getAmount() == null) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, composite);
-            }else{
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__AMOUNT_TO_TRANSFER, composite);
+            } else {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK_TRANSACTION__AMOUNT, composite, new LabelMoneyEntry());
             }
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TRANSFER_AMOUNT__SOURCE, composite);
@@ -591,21 +581,20 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
 
         ToolItem tltmType = new ToolItem(toolBar, SWT.DROP_DOWN);
         tltmType.setText("type");
+        tltmType.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
         TypeDropdownSelectionListener listenerType = new TypeDropdownSelectionListener(tltmType);
         tltmType.addSelectionListener(listenerType);
 
         ToolItem tltmSource = new ToolItem(toolBar, SWT.DROP_DOWN);
         tltmSource.setText("source");
+        tltmSource.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
         SourceDropdownSelectionListener listenerOne = new SourceDropdownSelectionListener(tltmSource);
 
         ToolItem tltmAdd = new ToolItem(toolBar, SWT.NONE);
         tltmAdd.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                StructuredSelection selection = (StructuredSelection)tableViewer_1.getSelection();
-                for (EObject eo : ShadowrunTools.toIterable(selection.iterator())) {
-                    ((ShoppingTransaction)object).getItems().add((GeldWert)eo);
-                }
+                addSelectedObjectsToList();
             }
         });
         tltmAdd.setText("add");
@@ -657,9 +646,14 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
                             };
 
                         };
+                        ArrayList<GeldWert> arrayList = new ArrayList<GeldWert>();
                         for (GeldWert geldWert : items) {
-                            characterAdder.doSwitch(geldWert);
+                            EObject eObject = ShrReferenceManager.copyWithParentId(geldWert);
+                            characterAdder.doSwitch(eObject);
+                            arrayList.add((GeldWert)eObject);
                         }
+                        st.getItems().clear();
+                        st.getItems().addAll(arrayList);
                         getEditor().close(true);
                     }
                 }
@@ -669,6 +663,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tltmSource.addSelectionListener(listenerOne);
 
         tableViewer_1 = new TableViewer(composite_3, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
+        tableViewer_1.addDoubleClickListener(new IDoubleClickListener() {
+
+            @Override
+            public void doubleClick(DoubleClickEvent event) {
+                addSelectedObjectsToList();
+            }
+        });
         table_1 = tableViewer_1.getTable();
         table_1.setLinesVisible(true);
         table_1.setHeaderVisible(true);
@@ -701,6 +702,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tableViewer_1.addFilter(shrListFilter);
         tableViewer_1.addFilter(typeFilter);
         tableViewer_1.addFilter(sourceFilter);
+    }
+
+    private void addSelectedObjectsToList() {
+        StructuredSelection selection = (StructuredSelection)tableViewer_1.getSelection();
+        for (EObject eo : ShadowrunTools.toIterable(selection.iterator())) {
+            ((ShoppingTransaction)object).getItems().add((GeldWert)eo);
+        }
     }
 
     /**

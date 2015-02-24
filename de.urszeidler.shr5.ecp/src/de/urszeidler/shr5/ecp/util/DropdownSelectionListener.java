@@ -25,7 +25,6 @@ public abstract class DropdownSelectionListener<A> extends SelectionAdapter {
             menu.setLocation(pt.x, pt.y + rect.height);
             menu.setVisible(true);
         } else {
-            System.out.println(dropdown.getText() + " Pressed"); //$NON-NLS-1$
             buttonPushed();
         }
     }
