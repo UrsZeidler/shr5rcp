@@ -21,7 +21,6 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
-import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
