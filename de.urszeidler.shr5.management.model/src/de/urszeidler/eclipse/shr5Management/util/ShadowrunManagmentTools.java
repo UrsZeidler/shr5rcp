@@ -4,8 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
@@ -19,7 +17,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -46,13 +48,16 @@ import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
@@ -393,28 +398,60 @@ public class ShadowrunManagmentTools {
         if (character == null)
             return new Date(System.currentTimeMillis());
 
-        EList<Changes> changes = character.getChanges();
+        Comparator<Date> comparator = new Comparator<Date>() {
+            @Override
+            public int compare(Date o1, Date o2) {
+                if (o1 == null)
+                    return 1;
+                if (o2 == null)
+                    return -1;
 
-        if (!changes.isEmpty()) {
-            ArrayList<Changes> list = new ArrayList<Changes>(changes);
-            Collections.sort(list, new Comparator<Changes>() {
-                @Override
-                public int compare(Changes o1, Changes o2) {
-                    if (o1.getDate() == null)
-                        return 1;
-                    if (o2.getDate() == null)
-                        return -1;
+                return o2.compareTo(o1);
+            }
+        };
 
-                    if (o1.getDate().getTime() < o2.getDate().getTime())
-                        return 1;
-                    if (o1.getDate().getTime() > o2.getDate().getTime())
-                        return -1;
+        Date date = null;
+        if (character instanceof PlayerCharacter) {
+            PlayerCharacter pc = (PlayerCharacter)character;
+            CharacterDiary diary = pc.getDiary();
+            date = diary.getCharacterDate();
 
-                    return 0;
+            if (!diary.getEntries().isEmpty()) {
+                List<Date> sortedList = FluentIterable.from(diary.getEntries()).transform(new Function<DiaryEntry, Date>() {
+                    @Override
+                    public Date apply(DiaryEntry input) {
+                        return input.getDate();
+                    }
+                }).filter(Predicates.notNull()).toSortedList(comparator);
+                if (!sortedList.isEmpty()) {
+                    Date date2 = sortedList.get(0);
+                    if (date == null)
+                        date = date2;
+                    else
+                        date = date2.before(date) ? date : date2;
                 }
-            });
-            return list.get(0).getDate();
+            }
         }
+        EList<Changes> changes = character.getChanges();
+        if (!changes.isEmpty()) {
+            List<Date> sortedList = FluentIterable.from(changes).transform(new Function<Changes, Date>() {
+                @Override
+                public Date apply(Changes input) {
+                    return input.getDate();
+                }
+            }).filter(Predicates.notNull()).toSortedList(comparator);
+
+            if (!sortedList.isEmpty()) {
+                Date date2 = sortedList.get(0);
+
+                if (date == null)
+                    date = date2;
+                else
+                    date = date2.before(date) ? date : date2;
+            }
+        }
+        if (date != null)
+            return date;
 
         try {
             SourceBook srcBook = character.getChracterSource().getGenerator().getSrcBook();
@@ -897,18 +934,19 @@ public class ShadowrunManagmentTools {
         }
 
     }
-    
+
     /**
      * Returns a {@link Predicate} to filter the managed character by its {@link GeneratorState}.
+     * 
      * @param state
      * @return
      */
     public static com.google.common.base.Predicate<ManagedCharacter> characterGeneratorStatePredicate(final GeneratorState state) {
         return new Predicate<ManagedCharacter>() {
-            
+
             @Override
             public boolean apply(ManagedCharacter input) {
-                return input.getChracterSource()!=null && input.getChracterSource().getState()==state;
+                return input.getChracterSource() != null && input.getChracterSource().getState() == state;
             }
         };
     }
