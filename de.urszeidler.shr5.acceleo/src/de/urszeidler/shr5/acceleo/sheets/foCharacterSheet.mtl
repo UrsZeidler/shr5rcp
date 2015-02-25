@@ -30,6 +30,9 @@
 		<fo:block margin-top="10pt" >
 [printConnections(aManagedCharacter)  /]
 		</fo:block  >
+		<fo:block margin-top="10pt" >
+[printVehicles(aManagedCharacter)  /]
+		</fo:block  >
       </fo:table-cell>
 <!-- colum two -->
       <fo:table-cell>
@@ -77,10 +80,59 @@
 		<fo:block margin-top="10pt" >
 [printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick))  /]
 		</fo:block  >
+
+[for (cy : Cyberdeck | aManagedCharacter.inventar->selectByType(Cyberdeck))]
+        <fo:block margin-top="10pt" >
+[printCyberdeckDetail(cy) /]
+		</fo:block  >
+[/for]
+[for (cy : RiggerCommandConsole | aManagedCharacter.inventar->selectByType(RiggerCommandConsole))]
+        <fo:block margin-top="10pt" >
+[printRiggerConsoleDetail(cy) /]
+		</fo:block  >
+[/for]
+[for (cy : Commlink | aManagedCharacter.inventar->selectByType(Commlink))]
+        <fo:block margin-top="10pt" >
+[printComlinkDetail(cy) /]
+		</fo:block  >
+[/for]
+
+
       </fo:table-cell>
      </fo:table-row>
     </fo:table-body>
    </fo:table>
+
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+  <fo:table >
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+[printSpells(aManagedCharacter.persona.oclAsType(Zauberer))  /]
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[/if] 
+
+[if (aManagedCharacter.persona.oclIsKindOf(Technomancer))]
+  <fo:table >
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+[printComplexForms(aManagedCharacter.persona.oclAsType(Technomancer))  /]
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[/if] 
+
 
 [printSimpleFoPageEnd()/]	
 [/file]
@@ -115,6 +167,8 @@
    </fo:table-body>
    </fo:table>
 [/template]
+
+
 
 [template public printCyberware(c : Cyberware)]
   <fo:table [defaultTableStyle()/]>
@@ -254,7 +308,49 @@
 -->
 [/template]
 
+[template public printSpells(z : Zauberer) ? (not z.zauber->isEmpty())]
+[printSectionTitel('_UI_Zauberer_zauber_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="35%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column column-width="5%" />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (pz : PersonaZauber | z.zauber)]
+     <fo:table-row>
+[printCell(pz.formel.getText())/]
+[printCell(pz.formel.kategorie)/]
+[printCell(pz.formel.art)/]
+[printCell(pz.formel.dauer)/]
+[printCell(pz.formel.entzug)/]
+[printCell(pz.formel.merkmale)/]
+	</fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
 
+[template public printComplexForms(z : Technomancer) ? (not z.complexForms->isEmpty())]
+[printSectionTitel('_UI_Technomancer_complexForms_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="35%" />
+    <fo:table-column  />
+    <fo:table-column column-width="5%" />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (pz : PersonaKomplexForm | z.complexForms)]
+     <fo:table-row>
+[printCell(pz.form.getText())/]
+[printCell(pz.form.dauer)/]
+[printCell(pz.form.schwund)/]
+[printCell(pz.form.ziel)/]
+	</fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
 
 [template public printSkills (aManagedCharacter : ManagedCharacter) 
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
@@ -423,6 +519,28 @@
     </fo:table-body>
    </fo:table>
 [/template]
+[template public printSpell(contract : Zauber)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="50%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+   <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(contract.getText())/]
+[printCell(contract.kategorie)/]
+[printCell(contract.art)/]
+[printCell(contract.merkmale)/]
+[printCell(contract.dauer)/]
+[printCell(contract.entzug)/]
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
 [template public printContract(contract : Sin)]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column column-width="70%" />
@@ -508,6 +626,135 @@
    </fo:table>
 [/template]
 
+[template public printVehicles(character : ManagedCharacter)? (not character.vehicels->isEmpty())]
+[for (f : Fahrzeug | character.vehicels)]
+[printVehicle(f)/]
+[/for]
+[/template]
+
+[template public printVehicle (vehicle : Fahrzeug) ]
+[printSectionTitel(vehicle.getText())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_geschwindigkeit_feature'.localizedString())/]
+[printCellRight(vehicle.vehicleSpeed())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_beschleunigung_feature'.localizedString())/]
+[printCellRight(vehicle.beschleunigung)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_handling_feature'.localizedString())/]
+[printCellRight(vehicle.vehicleHandling())/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_pilot_feature'.localizedString())/]
+[printCellRight(vehicle.pilot)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_sensor_feature'.localizedString())/]
+[printCellRight(vehicle.sensor)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_rumpf_feature'.localizedString())/]
+[printCellRight(vehicle.vehicleBody())/]
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printCyberdeckDetail (deck : Cyberdeck) ]
+[printSectionTitel(deck.getText())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+     <fo:table-row>
+[printCell('AttributeArray'.localizedString())/]
+[printCellRight(deck.cyberDeckAttributes())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Cyberdeck_programSlots_feature'.localizedString())/]
+[printCellRight(deck.programSlots)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_MatrixAttributes_geraetestufe_feature'.localizedString())/]
+[printCellRight(deck.deviceRating)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCellSpanned('_UI_Cyberdeck_storedPrograms_feature'.localizedString(),2)/]
+	</fo:table-row>
+[for (prg : MatrixProgram | deck.storedPrograms)]
+     <fo:table-row>
+[printCellSpanned(prg.getText(),2)/]
+	</fo:table-row>
+[/for]
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printRiggerConsoleDetail(deck : RiggerCommandConsole) ]
+[printSectionTitel(deck.getText())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+     <fo:table-row>
+[printCell('_UI_RiggerCommandConsole_zugriff_feature'.localizedString())/]
+[printCellRight(deck.zugriff)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_RiggerCommandConsole_datenverarbeitungBasis_feature'.localizedString())/]
+[printCellRight(deck.datenverarbeitung)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_MatrixAttributes_geraetestufe_feature'.localizedString())/]
+[printCellRight(deck.deviceRating)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCell('_UI_RiggerCommandConsole_rauschunterdrueckung_feature'.localizedString())/]
+[printCellRight(deck.rauschunterdrueckung)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCellSpanned('_UI_RiggerCommandConsole_storedPrograms_feature'.localizedString(),2)/]
+	</fo:table-row>
+[for (prg : RiggerProgram | deck.storedPrograms)]
+     <fo:table-row>
+[printCellSpanned(prg.getText(),2)/]
+	</fo:table-row>
+[/for]
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printComlinkDetail(deck : Commlink) ]
+[printSectionTitel(deck.getText())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+     <fo:table-row>
+[printCell('_UI_MatrixAttributes_geraetestufe_feature'.localizedString())/]
+[printCellRight(deck.deviceRating)/]
+	</fo:table-row>
+     <fo:table-row>
+[printCellSpanned('_UI_RiggerCommandConsole_storedPrograms_feature'.localizedString(),2)/]
+	</fo:table-row>
+[for (prg : BasicProgram | deck.storedPrograms)]
+     <fo:table-row>
+[printCellSpanned(prg.getText(),2)/]
+	</fo:table-row>
+[/for]
+
+    </fo:table-body>
+   </fo:table>
+[/template]
 
 
 [template public printAllCredSticks(cs : OrderedSet(Credstick)) ? (not cs->isEmpty())]
