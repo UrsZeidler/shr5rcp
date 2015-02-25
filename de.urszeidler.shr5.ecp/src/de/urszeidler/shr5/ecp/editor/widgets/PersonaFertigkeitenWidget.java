@@ -190,6 +190,7 @@ public class PersonaFertigkeitenWidget extends Composite {
     private boolean karmaMode = false;
     private boolean filterOnlyPersona;
     private String stringFilter;
+    private boolean readOnly = false;
 
     /**
      * Create the composite.
@@ -405,11 +406,19 @@ public class PersonaFertigkeitenWidget extends Composite {
 
             @Override
             protected boolean canEdit(Object element) {
+                if(readOnly)
+                    return false;
                 if (element instanceof Fertigkeit) {
-                    Fertigkeit fertigkeit = (Fertigkeit)element;
+                    Fertigkeit fertigkeit = (Fertigkeit)element;// TODO : check for #196
+
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
-                    if (personaFertigkeit != null)
+                    if (personaFertigkeit != null) {
+                        if (((Fertigkeit)element).eContainer() instanceof FertigkeitsGruppe) {
+                            FertigkeitsGruppe fg = (FertigkeitsGruppe)((Fertigkeit)element).eContainer();
+                            return ShadowrunTools.findGruppe(fg, persona) == null;
+                        }
                         return true;
+                    }
                 }
                 return false;
             }
@@ -470,9 +479,17 @@ public class PersonaFertigkeitenWidget extends Composite {
         });
         treeViewerValueColumn.setEditingSupport(new EditingSupport(treeViewer) {
             protected boolean canEdit(Object element) {
+                if(readOnly)
+                    return false;
+                
                 if (element instanceof GroupWrapper) {
                     return false;
-                }
+                }// TODO : check for #196
+                if (element instanceof Fertigkeit)
+                    if (((Fertigkeit)element).eContainer() instanceof FertigkeitsGruppe) {
+                        FertigkeitsGruppe fg = (FertigkeitsGruppe)((Fertigkeit)element).eContainer();
+                        return ShadowrunTools.findGruppe(fg, persona) == null;
+                    }
                 return true;
             }
 
@@ -636,5 +653,9 @@ public class PersonaFertigkeitenWidget extends Composite {
         this.stringFilter = stringFilter;
         treeViewer.refresh();
         treeViewer.expandToLevel(2);
+    }
+
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly = readOnly;
     }
 }

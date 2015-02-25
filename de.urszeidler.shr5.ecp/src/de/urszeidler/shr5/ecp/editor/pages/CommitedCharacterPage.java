@@ -183,6 +183,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (object != null) {
             personaFertigkeitenWidget = new PersonaFertigkeitenWidget(grpSkills, SWT.NONE, object, toolkit, editingDomain);
             personaFertigkeitenWidget.setFilterOnlyPersona(true);
+            personaFertigkeitenWidget.setReadOnly(true);
         }
 
         Composite composite = managedForm.getToolkit().createComposite(composite_1, SWT.NONE);
