@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
@@ -55,6 +56,7 @@ import de.urszeidler.shr5.runtime.ui.editor.pages.VariousPage;
 import de.urszeidler.shr5.scripting.Handout;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
 /**
@@ -74,8 +76,11 @@ public class RuntimeEditor extends AbstractShr5Editor {
             @Override
             protected Object provideObject(FormbuilderEntry e, EObject object) {
                 if (RuntimePackage.Literals.TEAM__MEMBERS.equals(e.getFeature())) {
+                    EClass type = Shr5managementPackage.Literals.MANAGED_CHARACTER;
+                    if(ScriptingPackage.Literals.SCRIPT__PLAYER.equals(object.eContainingFeature()))
+                        type = Shr5managementPackage.Literals.PLAYER_CHARACTER;
                     Collection<? extends EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject,
-                            Shr5managementPackage.Literals.PLAYER_CHARACTER);
+                            type);
 
                     ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
