@@ -305,6 +305,8 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             createManagedCharacter(object.getSelectedType(), object.getSelectedSpecies(), btnPlayerButton.getSelection(), object);
         }
         addPersonaPage(object.getCharacter());
+        validateChange();
+
 
     }
 
