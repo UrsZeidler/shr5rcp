@@ -383,7 +383,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             }
 
             @Override
-            public Integer caseZauber(Zauber object) {
+            public Integer casePersonaZauber(PersonaZauber object) {
                 return getKarmaCostAdd(object);
             }
 

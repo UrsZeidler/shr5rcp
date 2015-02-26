@@ -7,6 +7,8 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.IObservable;
+import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +18,9 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.IViewerObservableList;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -96,6 +101,25 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             return null;
         }
 
+        @Override
+        public void handleRemove(FormbuilderEntry e, EObject object) {
+            IObservable uiObservable = e.getUiObservable();
+            if (uiObservable instanceof IViewerObservableList) {
+                IViewerObservableList vol = (IViewerObservableList)uiObservable;
+                ISelection selection = vol.getViewer().getSelection();
+                if (selection instanceof IStructuredSelection) {
+                    IStructuredSelection ss = (IStructuredSelection)selection;
+                    List list = ss.toList();
+                    for (Object object2 : list) {
+                        if (object2 instanceof Erlernbar) {
+                            ShadowrunManagmentTools.changeErlernbarByAdvacement(character, (Erlernbar)object2);
+                        }
+                    }
+                }
+            }
+            super.handleRemove(e, object);
+        }
+
         /**
          * @param object the object to provide the child for
          * @param transformer the transformer
@@ -108,7 +132,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
-                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(objectsOfType),object);
+                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(objectsOfType), object);
 
             int result = dialog.open();
             if (result == Window.OK) {
@@ -184,7 +208,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         compositeMetaType.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         toolkit.adapt(compositeMetaType);
         toolkit.paintBordersFor(compositeMetaType);
-        
+
         Section sctnAttributes = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnAttributes.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnAttributes);
@@ -196,7 +220,6 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         grpAttribute.setLayout(new GridLayout(4, true));
         toolkit.adapt(grpAttribute);
         toolkit.paintBordersFor(grpAttribute);
-
 
         Group grpKrperlicheAttribute = new Group(grpAttribute, SWT.NONE);
         grpKrperlicheAttribute.setText(Messages.AbstraktPersonaPage_Body);
@@ -216,7 +239,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         Group grpSpezielleAttribute = new Group(grpAttribute, SWT.NONE);
         grpSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
-        grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);       
+        grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);
         grpSpezielleAttribute.setLayout(new GridLayout(3, false));
         grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpSpezielleAttribute);
@@ -224,7 +247,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         Group compositelimits = new Group(grpAttribute, SWT.NONE);
         compositelimits.setText(Messages.AbstraktPersonaPage_Limits);
-        compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);       
+        compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);
         compositelimits.setLayout(new GridLayout(3, false));
         compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(compositelimits);
