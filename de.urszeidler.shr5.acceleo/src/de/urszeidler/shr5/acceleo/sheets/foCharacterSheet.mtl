@@ -36,17 +36,7 @@
       </fo:table-cell>
 <!-- colum two -->
       <fo:table-cell>
-[comment]<!--
-<fo:block  >
-<fo:instream-foreign-object>
-<svg:svg xmlns:svg="http://www.w3.org/2000/svg" 
- 
->
-[printConditionMonitorBlock(aManagedCharacter, '', 0, 0, 0)/]
-</svg:svg>
-</fo:instream-foreign-object>
-		</fo:block  >
--->[/comment]
+
 [if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
 [let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
 		<fo:block  >
