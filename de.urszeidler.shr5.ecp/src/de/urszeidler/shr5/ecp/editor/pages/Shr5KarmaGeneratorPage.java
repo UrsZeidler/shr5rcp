@@ -190,7 +190,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         Composite grpAuswahl = new Composite(sctnChoose, SWT.NONE);
         sctnChoose.setClient(grpAuswahl);
-        grpAuswahl.setLayout(new GridLayout(2, false));
+        grpAuswahl.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(grpAuswahl);
         managedForm.getToolkit().paintBordersFor(grpAuswahl);
 
@@ -338,6 +338,9 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         createManagedCharacter(object.getCharacterConcept().getSelectableTypes(), object.getMetaType().getChoosableTypes(),
                 btnPlayerButton.getSelection(), object);
         addPersonaPage(object.getCharacter());
+//        createOptionWidgets();
+        validateChange();
+
 
     }
 
@@ -381,7 +384,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         tltmNewItem.setEnabled(object.getState() == GeneratorState.READY_FOR_CREATION);
         tltmChoose.setEnabled(object.getState() == GeneratorState.NEW);
-        tltmCommit.setEnabled(object.getState() == GeneratorState.PERSONA_CREATED);// && validate.getChildren().isEmpty());
+        tltmCommit.setEnabled(object.getState() == GeneratorState.PERSONA_CREATED && validate.getChildren().isEmpty());
 
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
