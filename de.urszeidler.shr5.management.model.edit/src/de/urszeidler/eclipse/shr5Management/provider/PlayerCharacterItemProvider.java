@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -46,11 +47,34 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addAgePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
 	/**
+     * This adds a property descriptor for the Age feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAgePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PlayerCharacter_age_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PlayerCharacter_age_feature", "_UI_PlayerCharacter_type"),
+                 Shr5managementPackage.Literals.PLAYER_CHARACTER__AGE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -136,6 +160,9 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider {
         updateChildren(notification);
 
         switch (notification.getFeatureID(PlayerCharacter.class)) {
+            case Shr5managementPackage.PLAYER_CHARACTER__AGE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
             case Shr5managementPackage.PLAYER_CHARACTER__DIARY:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;

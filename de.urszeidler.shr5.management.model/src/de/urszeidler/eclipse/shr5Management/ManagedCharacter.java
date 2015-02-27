@@ -12,6 +12,7 @@ import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,6 +43,9 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getKarmaGaint <em>Karma Gaint</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma <em>Current Karma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc <em>Generator Src</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getHeight <em>Height</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getDateofbirth <em>Dateofbirth</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getWeight <em>Weight</em>}</li>
  * </ul>
  * </p>
  *
@@ -425,5 +429,80 @@ public interface ManagedCharacter extends EObject {
      * @generated
      */
     void setGeneratorSrc(CharacterGenerator value);
+
+    /**
+     * Returns the value of the '<em><b>Height</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The height in cm.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Height</em>' attribute.
+     * @see #setHeight(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_Height()
+     * @model
+     * @generated
+     */
+    int getHeight();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getHeight <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Height</em>' attribute.
+     * @see #getHeight()
+     * @generated
+     */
+    void setHeight(int value);
+
+    /**
+     * Returns the value of the '<em><b>Dateofbirth</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The date of the birth.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Dateofbirth</em>' attribute.
+     * @see #setDateofbirth(Date)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_Dateofbirth()
+     * @model dataType="de.urszeidler.eclipse.shr5.ShrDate"
+     * @generated
+     */
+    Date getDateofbirth();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getDateofbirth <em>Dateofbirth</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Dateofbirth</em>' attribute.
+     * @see #getDateofbirth()
+     * @generated
+     */
+    void setDateofbirth(Date value);
+
+    /**
+     * Returns the value of the '<em><b>Weight</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The weight in kg.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Weight</em>' attribute.
+     * @see #setWeight(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_Weight()
+     * @model
+     * @generated
+     */
+    int getWeight();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getWeight <em>Weight</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Weight</em>' attribute.
+     * @see #getWeight()
+     * @generated
+     */
+    void setWeight(int value);
 
 } // ManagedCharacter

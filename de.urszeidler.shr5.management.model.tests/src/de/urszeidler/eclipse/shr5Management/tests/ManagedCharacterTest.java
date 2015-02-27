@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import java.util.Calendar;
 import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -161,5 +162,4 @@ public abstract class ManagedCharacterTest extends TestCase {
         
         
     }
-
 } //ManagedCharacterTest

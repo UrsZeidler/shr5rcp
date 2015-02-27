@@ -30,6 +30,8 @@ import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -68,6 +70,27 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class ShadowrunManagmentTools {
 
+    /**
+     * @param managedCharacter
+     * @return
+     */
+    public static int calcPowerPointsSpend(ManagedCharacter managedCharacter) {
+        AbstraktPersona persona = managedCharacter.getPersona();
+        if (persona == null)
+            return 0;
+        
+        int sum = 0;
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            EList<KiKraft> kikraft = ka.getKikraft();
+            for (KiKraft kraft : kikraft) {
+                sum = sum + kraft.getKraftpunkte();
+            }            
+        }
+        return sum;
+    }
+
+    
     /**
      * Finds the first credstick in the list.
      * 

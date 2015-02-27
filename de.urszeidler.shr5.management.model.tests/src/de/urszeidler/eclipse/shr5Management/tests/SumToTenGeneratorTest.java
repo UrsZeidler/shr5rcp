@@ -6,13 +6,14 @@ package de.urszeidler.eclipse.shr5Management.tests;
 import java.util.Collections;
 import java.util.Map;
 
+import junit.textui.TestRunner;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +63,7 @@ public class SumToTenGeneratorTest extends Shr5GeneratorTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {

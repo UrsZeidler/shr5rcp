@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -55,6 +56,9 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getKarmaGaint <em>Karma Gaint</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getCurrentKarma <em>Current Karma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getGeneratorSrc <em>Generator Src</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getDateofbirth <em>Dateofbirth</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getWeight <em>Weight</em>}</li>
  * </ul>
  * </p>
  *
@@ -251,6 +255,66 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @ordered
      */
     protected CharacterGenerator generatorSrc;
+
+    /**
+     * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
+    protected static final int HEIGHT_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
+    protected int height = HEIGHT_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getDateofbirth() <em>Dateofbirth</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDateofbirth()
+     * @generated
+     * @ordered
+     */
+    protected static final Date DATEOFBIRTH_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getDateofbirth() <em>Dateofbirth</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDateofbirth()
+     * @generated
+     * @ordered
+     */
+    protected Date dateofbirth = DATEOFBIRTH_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWeight()
+     * @generated
+     * @ordered
+     */
+    protected static final int WEIGHT_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWeight()
+     * @generated
+     * @ordered
+     */
+    protected int weight = WEIGHT_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -655,6 +719,69 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getHeight() {
+        return height;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHeight(int newHeight) {
+        int oldHeight = height;
+        height = newHeight;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__HEIGHT, oldHeight, height));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Date getDateofbirth() {
+        return dateofbirth;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setDateofbirth(Date newDateofbirth) {
+        Date oldDateofbirth = dateofbirth;
+        dateofbirth = newDateofbirth;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH, oldDateofbirth, dateofbirth));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getWeight() {
+        return weight;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWeight(int newWeight) {
+        int oldWeight = weight;
+        weight = newWeight;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__WEIGHT, oldWeight, weight));
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -743,6 +870,12 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getCurrentKarma();
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
                 return getGeneratorSrc();
+            case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
+                return getHeight();
+            case Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH:
+                return getDateofbirth();
+            case Shr5managementPackage.MANAGED_CHARACTER__WEIGHT:
+                return getWeight();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -799,6 +932,15 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
                 setGeneratorSrc((CharacterGenerator)newValue);
                 return;
+            case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
+                setHeight((Integer)newValue);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH:
+                setDateofbirth((Date)newValue);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__WEIGHT:
+                setWeight((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -849,6 +991,15 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
                 setGeneratorSrc((CharacterGenerator)null);
                 return;
+            case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
+                setHeight(HEIGHT_EDEFAULT);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH:
+                setDateofbirth(DATEOFBIRTH_EDEFAULT);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__WEIGHT:
+                setWeight(WEIGHT_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -894,6 +1045,12 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getCurrentKarma() != CURRENT_KARMA_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
                 return generatorSrc != null;
+            case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
+                return height != HEIGHT_EDEFAULT;
+            case Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH:
+                return DATEOFBIRTH_EDEFAULT == null ? dateofbirth != null : !DATEOFBIRTH_EDEFAULT.equals(dateofbirth);
+            case Shr5managementPackage.MANAGED_CHARACTER__WEIGHT:
+                return weight != WEIGHT_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -913,6 +1070,12 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
         result.append(notorietyBasic);
         result.append(", publicAwareness: ");
         result.append(publicAwareness);
+        result.append(", height: ");
+        result.append(height);
+        result.append(", dateofbirth: ");
+        result.append(dateofbirth);
+        result.append(", weight: ");
+        result.append(weight);
         result.append(')');
         return result.toString();
     }

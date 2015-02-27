@@ -13,6 +13,7 @@ package de.urszeidler.eclipse.shr5Management;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.PlayerCharacter#getDiary <em>Diary</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.PlayerCharacter#getAge <em>Age</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,4 +48,18 @@ public interface PlayerCharacter extends ManagedCharacter {
      * @generated
      */
     void setDiary(CharacterDiary value);
+
+    /**
+     * Returns the value of the '<em><b>Age</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * When the diary is used, the age is calculated by the character date.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Age</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPlayerCharacter_Age()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getAge();
 } // PlayerCharacter

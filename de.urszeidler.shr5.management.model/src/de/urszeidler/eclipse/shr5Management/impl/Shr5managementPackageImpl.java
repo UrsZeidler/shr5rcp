@@ -648,6 +648,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getManagedCharacter_Height() {
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(17);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getManagedCharacter_Dateofbirth() {
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(18);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getManagedCharacter_Weight() {
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(19);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1719,6 +1746,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getPlayerCharacter_Age() {
+        return (EAttribute)playerCharacterEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2163,6 +2199,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getShr5RuleGenerator__HasKiPowerOverLimit__DiagnosticChain_Map() {
+        return shr5RuleGeneratorEClass.getEOperations().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5RuleGenerator__HasBasicViolations__DiagnosticChain_Map() {
+        return shr5RuleGeneratorEClass.getEOperations().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getShr5KarmaGenerator() {
         return shr5KarmaGeneratorEClass;
     }
@@ -2483,6 +2537,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__KARMA_GAINT);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__CURRENT_KARMA);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__GENERATOR_SRC);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__HEIGHT);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__DATEOFBIRTH);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__WEIGHT);
 
         characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
@@ -2623,6 +2680,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         playerCharacterEClass = createEClass(PLAYER_CHARACTER);
         createEReference(playerCharacterEClass, PLAYER_CHARACTER__DIARY);
+        createEAttribute(playerCharacterEClass, PLAYER_CHARACTER__AGE);
 
         mudanEClass = createEClass(MUDAN);
 
@@ -2687,6 +2745,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP);
 
         shr5KarmaGeneratorEClass = createEClass(SHR5_KARMA_GENERATOR);
         createEReference(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__META_TYPE);
@@ -2826,6 +2886,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getManagedCharacter_KarmaGaint(), ecorePackage.getEInt(), "karmaGaint", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_CurrentKarma(), ecorePackage.getEInt(), "currentKarma", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_GeneratorSrc(), this.getCharacterGenerator(), null, "generatorSrc", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Height(), ecorePackage.getEInt(), "height", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Dateofbirth(), theShr5Package.getShrDate(), "dateofbirth", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3110,6 +3173,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(playerCharacterEClass, PlayerCharacter.class, "PlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlayerCharacter_Diary(), this.getCharacterDiary(), null, "diary", null, 1, 1, PlayerCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPlayerCharacter_Age(), ecorePackage.getEInt(), "age", null, 0, 1, PlayerCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(mudanEClass, Mudan.class, "Mudan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3231,6 +3295,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         op = initEOperation(getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasOnlyAllowedSources", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5RuleGenerator__HasKiPowerOverLimit__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasKiPowerOverLimit", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5RuleGenerator__HasBasicViolations__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasBasicViolations", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());

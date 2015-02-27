@@ -8,17 +8,13 @@ import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.HashSet;
 import java.util.Map;
-
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
 /**
@@ -34,7 +30,6 @@ public class SumToTenGeneratorImpl extends Shr5GeneratorImpl implements SumToTen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SumToTenGeneratorImpl() {
@@ -44,7 +39,6 @@ public class SumToTenGeneratorImpl extends Shr5GeneratorImpl implements SumToTen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -92,7 +86,6 @@ public class SumToTenGeneratorImpl extends Shr5GeneratorImpl implements SumToTen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

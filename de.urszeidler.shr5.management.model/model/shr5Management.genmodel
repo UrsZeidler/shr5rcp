@@ -49,6 +49,9 @@
       <genFeatures property="Readonly" createChild="false" propertyDescription="The karma the characters has currenly at his disposal."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/currentKarma"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/generatorSrc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/dateofbirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/weight"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
@@ -282,6 +285,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerCharacter/diary"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PlayerCharacter/age"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Mudan"/>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterGroup">
@@ -375,6 +379,14 @@
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasOnlyAllowedSources/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasKiPowerOverLimit">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasKiPowerOverLimit/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasKiPowerOverLimit/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasBasicViolations">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasBasicViolations/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasBasicViolations/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">

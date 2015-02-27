@@ -162,4 +162,26 @@ public interface Shr5RuleGenerator extends CharacterGenerator<Shr5System> {
      */
     boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Check for the kipowers, not more as magic.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasKiPowerOverLimit(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Check for change the type or the species, wich is possible.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // Shr5RuleGenerator

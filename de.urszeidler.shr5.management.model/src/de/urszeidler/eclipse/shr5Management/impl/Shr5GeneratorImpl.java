@@ -1199,6 +1199,35 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getMagic() == null ||getMetaType() == null || getCharacter() == null || getShr5Generator() == null || getCharacter().getPersona() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
+
+        boolean sameSpecies = getMetaType().getChoosableTypes().equals(getCharacter().getPersona().getSpezies());
+        
+        if (!sameSpecies) {
+            if (diagnostics != null) {
+                diagnostics.add
+                    (new BasicDiagnostic
+                        (Diagnostic.ERROR,
+                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS,
+                         ModelPlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasBasicViolations", EObjectValidator.getObjectLabel(this, context) }),
+                         new Object [] { this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */

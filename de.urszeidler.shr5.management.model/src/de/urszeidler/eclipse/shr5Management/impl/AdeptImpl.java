@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -100,19 +101,7 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
         ManagedCharacter managedCharacter = context;
         if (managedCharacter == null)
             return 0;
-        AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return 0;
-        
-        int sum = 0;
-        if (persona instanceof KiAdept) {
-            KiAdept ka = (KiAdept)persona;
-            EList<KiKraft> kikraft = ka.getKikraft();
-            for (KiKraft kraft : kikraft) {
-                sum = sum + kraft.getKraftpunkte();
-            }            
-        }
-        return sum;
+        return ShadowrunManagmentTools.calcPowerPointsSpend(managedCharacter);
     }
 
     /**

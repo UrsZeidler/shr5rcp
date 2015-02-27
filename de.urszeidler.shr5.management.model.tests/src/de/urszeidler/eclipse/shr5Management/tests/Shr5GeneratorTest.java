@@ -933,6 +933,26 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
     }
 
     /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Basic Violations</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasBasicViolations__DiagnosticChain_Map() {
+        createBasicCategories();
+        Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
+        getFixture().getMetaType().setChoosableTypes(spezies);
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        character.getPersona().setSpezies(spezies);
+        assertEquals("is true", true, getFixture().hasBasicViolations(diagnostics, context));
+        character.getPersona().setSpezies(Shr5Factory.eINSTANCE.createSpezies());
+        assertEquals("is false", false, getFixture().hasBasicViolations(diagnostics, context));
+    }
+
+    
+    /**
      * Tests the '
      * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Special Type Points</em>}' operation. <!--

@@ -30,13 +30,13 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getMetaType <em>Meta Type</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getCharacterConcept <em>Character Concept</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getKarmaToResource <em>Karma To Resource</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getKarmaSpend <em>Karma Spend</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartResources <em>Start Resources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getMetaType <em>Meta Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getCharacterConcept <em>Character Concept</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getKarmaToResource <em>Karma To Resource</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getKarmaSpend <em>Karma Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartResources <em>Start Resources</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,7 +47,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The cached value of the '{@link #getMetaType() <em>Meta Type</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getMetaType()
      * @generated
      * @ordered
@@ -58,7 +57,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The cached value of the '{@link #getCharacterConcept() <em>Character Concept</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCharacterConcept()
      * @generated
      * @ordered
@@ -69,7 +67,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The default value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKarmaToResource()
      * @generated
      * @ordered
@@ -80,7 +77,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The cached value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKarmaToResource()
      * @generated
      * @ordered
@@ -91,7 +87,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The default value of the '{@link #getKarmaSpend() <em>Karma Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKarmaSpend()
      * @generated
      * @ordered
@@ -102,7 +97,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The default value of the '{@link #getResourceSpend() <em>Resource Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getResourceSpend()
      * @generated
      * @ordered
@@ -113,7 +107,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The default value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartKarma()
      * @generated
      * @ordered
@@ -124,7 +117,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The cached value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartKarma()
      * @generated
      * @ordered
@@ -135,7 +127,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The default value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartResources()
      * @generated
      * @ordered
@@ -146,7 +137,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * The cached value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStartResources()
      * @generated
      * @ordered
@@ -156,7 +146,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Shr5KarmaGeneratorImpl() {
@@ -166,7 +155,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -177,7 +165,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MetaType getMetaType() {
@@ -186,8 +173,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
             metaType = (MetaType)eResolveProxy(oldMetaType);
             if (metaType != oldMetaType) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_KARMA_GENERATOR__META_TYPE, oldMetaType,
-                            metaType));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_KARMA_GENERATOR__META_TYPE, oldMetaType, metaType));
             }
         }
         return metaType;
@@ -196,7 +182,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MetaType basicGetMetaType() {
@@ -206,7 +191,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setMetaType(MetaType newMetaType) {
@@ -219,7 +203,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SpecialType getCharacterConcept() {
@@ -228,8 +211,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
             characterConcept = (SpecialType)eResolveProxy(oldCharacterConcept);
             if (characterConcept != oldCharacterConcept) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT,
-                            oldCharacterConcept, characterConcept));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, oldCharacterConcept, characterConcept));
             }
         }
         return characterConcept;
@@ -238,7 +220,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SpecialType basicGetCharacterConcept() {
@@ -248,21 +229,18 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setCharacterConcept(SpecialType newCharacterConcept) {
         SpecialType oldCharacterConcept = characterConcept;
         characterConcept = newCharacterConcept;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, oldCharacterConcept,
-                    characterConcept));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, oldCharacterConcept, characterConcept));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getKarmaToResource() {
@@ -323,7 +301,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getStartKarma() {
@@ -333,7 +310,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setStartKarma(int newStartKarma) {
@@ -346,7 +322,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getStartResources() {
@@ -356,15 +331,13 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setStartResources(int newStartResources) {
         int oldStartResources = startResources;
         startResources = newStartResources;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES, oldStartResources,
-                    startResources));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES, oldStartResources, startResources));
     }
 
     /**
@@ -420,19 +393,16 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__META_TYPE:
-                if (resolve)
-                    return getMetaType();
+                if (resolve) return getMetaType();
                 return basicGetMetaType();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT:
-                if (resolve)
-                    return getCharacterConcept();
+                if (resolve) return getCharacterConcept();
                 return basicGetCharacterConcept();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE:
                 return getKarmaToResource();
@@ -451,7 +421,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -479,7 +448,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -507,7 +475,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -534,7 +501,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -550,13 +516,11 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (karmaToResource: ");

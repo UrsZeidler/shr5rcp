@@ -77,6 +77,9 @@ public class ManagedCharacterItemProvider
             addPublicAwarenessPropertyDescriptor(object);
             addKarmaGaintPropertyDescriptor(object);
             addCurrentKarmaPropertyDescriptor(object);
+            addHeightPropertyDescriptor(object);
+            addDateofbirthPropertyDescriptor(object);
+            addWeightPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -315,6 +318,72 @@ public class ManagedCharacterItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Height feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addHeightPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ManagedCharacter_height_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ManagedCharacter_height_feature", "_UI_ManagedCharacter_type"),
+                 Shr5managementPackage.Literals.MANAGED_CHARACTER__HEIGHT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Dateofbirth feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDateofbirthPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ManagedCharacter_dateofbirth_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ManagedCharacter_dateofbirth_feature", "_UI_ManagedCharacter_type"),
+                 Shr5managementPackage.Literals.MANAGED_CHARACTER__DATEOFBIRTH,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Weight feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWeightPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ManagedCharacter_weight_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ManagedCharacter_weight_feature", "_UI_ManagedCharacter_type"),
+                 Shr5managementPackage.Literals.MANAGED_CHARACTER__WEIGHT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -384,6 +453,9 @@ public class ManagedCharacterItemProvider
             case Shr5managementPackage.MANAGED_CHARACTER__PUBLIC_AWARENESS:
             case Shr5managementPackage.MANAGED_CHARACTER__KARMA_GAINT:
             case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
+            case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
+            case Shr5managementPackage.MANAGED_CHARACTER__DATEOFBIRTH:
+            case Shr5managementPackage.MANAGED_CHARACTER__WEIGHT:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__PERSONA:

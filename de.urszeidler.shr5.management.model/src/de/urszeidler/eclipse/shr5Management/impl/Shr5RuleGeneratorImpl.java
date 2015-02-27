@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -17,21 +18,27 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+
 import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
@@ -446,6 +453,62 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean hasKiPowerOverLimit(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if( getCharacter() == null || getCharacter().getPersona() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
+
+        boolean check = false;
+        AbstraktPersona persona = getCharacter().getPersona();
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            int calcPowerPointsSpend = ShadowrunManagmentTools.calcPowerPointsSpend(getCharacter())*-1;
+             int magie = ka.getMagie();
+             check = calcPowerPointsSpend>magie*100;
+        }
+        
+        if (check) {
+            if (diagnostics != null) {
+                diagnostics.add
+                    (new BasicDiagnostic
+                        (Diagnostic.ERROR,
+                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_KI_POWER_OVER_LIMIT,
+                         ModelPlugin.INSTANCE.getString("_UI_hasKiPowerOverLimit", new Object[] { EObjectValidator.getObjectLabel(this, context) }),
+                         new Object [] { this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context) {
+//        if (false) {
+//            if (diagnostics != null) {
+//                diagnostics.add
+//                    (new BasicDiagnostic
+//                        (Diagnostic.ERROR,
+//                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
+//                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS,
+//                         EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasBasicViolations", EObjectValidator.getObjectLabel(this, context) }),
+//                         new Object [] { this }));
+//            }
+//            return false;
+//        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * 
      * @generated not
      */
@@ -555,6 +618,10 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
                 return hasLifestyleChoosen((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP:
                 return hasOnlyAllowedSources((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP:
+                return hasKiPowerOverLimit((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP:
+                return hasBasicViolations((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

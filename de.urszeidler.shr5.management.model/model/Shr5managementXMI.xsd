@@ -78,6 +78,21 @@
     <xsd:attribute name="sex" type="shr5mngt:Sex" use="required"/>
     <xsd:attribute name="notorietyBasic" type="xsd:int"/>
     <xsd:attribute name="publicAwareness" type="xsd:int"/>
+    <xsd:attribute name="height" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The height in cm.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="dateofbirth" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The date of the birth.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="weight" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The weight in kg.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
     <xsd:attribute name="chracterSource" type="xsd:string">
       <xsd:annotation>
         <xsd:documentation>Refers the generator.</xsd:documentation>

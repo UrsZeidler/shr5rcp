@@ -225,13 +225,40 @@ public interface Shr5managementPackage extends EPackage {
     int MANAGED_CHARACTER__GENERATOR_SRC = 16;
 
     /**
+     * The feature id for the '<em><b>Height</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANAGED_CHARACTER__HEIGHT = 17;
+
+    /**
+     * The feature id for the '<em><b>Dateofbirth</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANAGED_CHARACTER__DATEOFBIRTH = 18;
+
+    /**
+     * The feature id for the '<em><b>Weight</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANAGED_CHARACTER__WEIGHT = 19;
+
+    /**
      * The number of structural features of the '<em>Managed Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER_FEATURE_COUNT = 17;
+	int MANAGED_CHARACTER_FEATURE_COUNT = 20;
 
 	/**
      * The number of operations of the '<em>Managed Character</em>' class.
@@ -676,6 +703,33 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int NON_PLAYER_CHARACTER__GENERATOR_SRC = MANAGED_CHARACTER__GENERATOR_SRC;
+
+    /**
+     * The feature id for the '<em><b>Height</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__HEIGHT = MANAGED_CHARACTER__HEIGHT;
+
+    /**
+     * The feature id for the '<em><b>Dateofbirth</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__DATEOFBIRTH = MANAGED_CHARACTER__DATEOFBIRTH;
+
+    /**
+     * The feature id for the '<em><b>Weight</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__WEIGHT = MANAGED_CHARACTER__WEIGHT;
 
     /**
      * The number of structural features of the '<em>Non Player Character</em>' class.
@@ -2449,13 +2503,31 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 7;
 
     /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 9;
+
+    /**
      * The number of operations of the '<em>Shr5 Rule Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SHR5_RULE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
+    int SHR5_RULE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 10;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl <em>Shr5 Generator</em>}' class.
@@ -2763,6 +2835,24 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -3281,6 +3371,33 @@ public interface Shr5managementPackage extends EPackage {
     int PLAYER_CHARACTER__GENERATOR_SRC = MANAGED_CHARACTER__GENERATOR_SRC;
 
     /**
+     * The feature id for the '<em><b>Height</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__HEIGHT = MANAGED_CHARACTER__HEIGHT;
+
+    /**
+     * The feature id for the '<em><b>Dateofbirth</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__DATEOFBIRTH = MANAGED_CHARACTER__DATEOFBIRTH;
+
+    /**
+     * The feature id for the '<em><b>Weight</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__WEIGHT = MANAGED_CHARACTER__WEIGHT;
+
+    /**
      * The feature id for the '<em><b>Diary</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3290,13 +3407,22 @@ public interface Shr5managementPackage extends EPackage {
     int PLAYER_CHARACTER__DIARY = MANAGED_CHARACTER_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Age</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__AGE = MANAGED_CHARACTER_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 1;
+	int PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Player Character</em>' class.
@@ -4413,6 +4539,24 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5131,6 +5275,24 @@ public interface Shr5managementPackage extends EPackage {
     int SUM_TO_TEN_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUM_TO_TEN_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5512,6 +5674,39 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getManagedCharacter_GeneratorSrc();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getHeight <em>Height</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Height</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getHeight()
+     * @see #getManagedCharacter()
+     * @generated
+     */
+    EAttribute getManagedCharacter_Height();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getDateofbirth <em>Dateofbirth</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Dateofbirth</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getDateofbirth()
+     * @see #getManagedCharacter()
+     * @generated
+     */
+    EAttribute getManagedCharacter_Dateofbirth();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getWeight <em>Weight</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Weight</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getWeight()
+     * @see #getManagedCharacter()
+     * @generated
+     */
+    EAttribute getManagedCharacter_Weight();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem <em>Character Generator System</em>}'.
@@ -6775,6 +6970,17 @@ public interface Shr5managementPackage extends EPackage {
     EReference getPlayerCharacter_Diary();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.PlayerCharacter#getAge <em>Age</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Age</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerCharacter#getAge()
+     * @see #getPlayerCharacter()
+     * @generated
+     */
+    EAttribute getPlayerCharacter_Age();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Mudan <em>Mudan</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7293,6 +7499,26 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasKiPowerOverLimit(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Ki Power Over Limit</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Ki Power Over Limit</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasKiPowerOverLimit(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasKiPowerOverLimit__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Basic Violations</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Basic Violations</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasBasicViolations__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator <em>Shr5 Karma Generator</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7788,6 +8014,30 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference MANAGED_CHARACTER__GENERATOR_SRC = eINSTANCE.getManagedCharacter_GeneratorSrc();
+
+        /**
+         * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MANAGED_CHARACTER__HEIGHT = eINSTANCE.getManagedCharacter_Height();
+
+        /**
+         * The meta object literal for the '<em><b>Dateofbirth</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MANAGED_CHARACTER__DATEOFBIRTH = eINSTANCE.getManagedCharacter_Dateofbirth();
+
+        /**
+         * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MANAGED_CHARACTER__WEIGHT = eINSTANCE.getManagedCharacter_Weight();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl <em>Character Generator System</em>}' class.
@@ -8784,6 +9034,14 @@ public interface Shr5managementPackage extends EPackage {
         EReference PLAYER_CHARACTER__DIARY = eINSTANCE.getPlayerCharacter_Diary();
 
         /**
+         * The meta object literal for the '<em><b>Age</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PLAYER_CHARACTER__AGE = eINSTANCE.getPlayerCharacter_Age();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MudanImpl <em>Mudan</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9204,6 +9462,22 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasOnlyAllowedSources__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Ki Power Over Limit</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasKiPowerOverLimit__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Basic Violations</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasBasicViolations__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl <em>Shr5 Karma Generator</em>}' class.

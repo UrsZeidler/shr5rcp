@@ -13,6 +13,8 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Gegenstand;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -47,6 +49,8 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Constrain Voilation</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Lifestyle Choosen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasOnlyAllowedSources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Only Allowed Sources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasKiPowerOverLimit(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Ki Power Over Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Basic Violations</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -376,6 +380,44 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         eigenschaft.setSrcBook(sourceBook_allowed);
         assertEquals(true, getFixture().hasOnlyAllowedSources(diagnostics, context));
         
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasKiPowerOverLimit(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Ki Power Over Limit</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasKiPowerOverLimit(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasKiPowerOverLimit__DiagnosticChain_Map() {
+       PlayerCharacter adeptCharacter = PriorityCategorieTest.createAdeptCharacter();
+       getFixture().setCharacter(adeptCharacter);
+       
+        KiAdept persona = (KiAdept)adeptCharacter.getPersona();
+        persona.setMagieBasis(2);
+        assertTrue(getFixture().hasKiPowerOverLimit(diagnostics, context));
+        KiKraft kipower= Shr5Factory.eINSTANCE.createKiKraft();
+        kipower.setKraftpunkte(-201);
+        persona.getKikraft().add(kipower);
+        assertFalse(getFixture().hasKiPowerOverLimit(diagnostics, context));
+        persona.setMagieBasis(3);
+        assertTrue(getFixture().hasKiPowerOverLimit(diagnostics, context));
+        kipower.setKraftpunkte(-300);
+        assertTrue(getFixture().hasKiPowerOverLimit(diagnostics, context));
+        kipower.setKraftpunkte(-301);
+        assertFalse(getFixture().hasKiPowerOverLimit(diagnostics, context));
+
+
+   }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Basic Violations</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasBasicViolations(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasBasicViolations__DiagnosticChain_Map() {
     }
 
     /**
