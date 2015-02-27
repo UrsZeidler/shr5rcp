@@ -4573,6 +4573,9 @@
         <entries xsi:type="shr5:Gegenstand" xmi:id="0025f1c7-45a4-4ec5-a692-e18aab2f97a9" page="1" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Custom Item" kategorie="Custom">
           <localizations xmi:id="_EK-x8znTEeSe6_w6Jrbqxg" local="de" name="Eigener Gegenstand"/>
         </entries>
+        <entries xsi:type="shr5:Gegenstand" xmi:id="_x7dlcLxTEeSEV4z_vgu7UQ" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)F" wertValue="800" name="Jammer, Area 4" kategorie="Communications and Countermeasures" stufe="4">
+          <localizations xmi:id="_x7dlcbxTEeSEV4z_vgu7UQ" local="de" name="Störsender, Area"/>
+        </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_VM4UUIwzEeS-eZ7FDdCmfQ" name="cyberware">
         <entries xsi:type="shr5:Cyberware" xmi:id="6b219dfa-310a-45ab-98af-40a62e2431cf" name="Commlink" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="2000">
@@ -21708,7 +21711,7 @@
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
     <groups xmi:id="_BzNDQN0CEeOvVYoRsPZlnA" name="player group">
-      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_BzO4cN0CEeOvVYoRsPZlnA" chracterSource="_B0O-AN0CEeOvVYoRsPZlnA" choosenLifestyle="_Bz2jgd0CEeOvVYoRsPZlnA" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_BzO4cN0CEeOvVYoRsPZlnA" chracterSource="_B0O-AN0CEeOvVYoRsPZlnA" choosenLifestyle="_Bz2jgd0CEeOvVYoRsPZlnA" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male" height="180" dateofbirth="2057-08-26T20:49:36.746+0200" weight="83">
         <persona xsi:type="shr5:KiAdept" xmi:id="_BzYpcN0CEeOvVYoRsPZlnA" beschreibung="Gunter ist der letzte des alten Geschlechts der Kinzel, die Kinzels sind eine altes Offiziers Familie.&#xA;Der Vater Otto von Kinzel starb in den Eurokriegen, sein Mutter entschied sich sehr spät zu einer künstlichen&#xA;Befruchtung. Sie starb bei der Geburt am 26.8.2057. Gunter wuchs in einem Waisenhaus auf das durch die Stiftung&#xA;der Familie Finanziert wurde. Durch den Crash von 2064 wurde das Stifftungvermögen vernichtet und alle Datensätze&#xA;der Kinzel Stiftung. Gunter wurde wie die anderen Kinder vertrieben.&#xA;Er zog mittellos durch Niedersachsen, um in Berlin zu stranden. " image="/shr5Resource/images/gunter-face-small.png" name="Gunter von Kintzel" edgeBasis="6" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" magieBasis="6">
           <fertigkeiten xmi:id="_BzZQgN0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af"/>
           <fertigkeiten xmi:id="_BzZ3kN0CEeOvVYoRsPZlnA" stufe="6" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
@@ -21856,7 +21859,7 @@
           <transactionlog xmi:id="_pW8OoK95EeSC2YJFV_dUOA" amount="7000" date="2075-04-11T00:00:00.000+0200" description="Auszahlung Job"/>
           <transactionlog xmi:id="_nLRL0K96EeSC2YJFV_dUOA" amount="10000" date="2075-04-14T00:00:00.000+0200" description="Befreiung von Grisu"/>
           <transactionlog xmi:id="__cQZ0LO0EeSWXbZxnJbnlw" amount="-2000" date="2075-05-01T09:01:12.185+0200" description="Pay for Lifestyle Low"/>
-          <transactionlog xmi:id="_yK-aELPtEeS1oJwC38P4RQ" amount="10000" description="auszahlung job"/>
+          <transactionlog xmi:id="_yK-aELPtEeS1oJwC38P4RQ" amount="10000" date="2075-06-03T21:05:35.585+0200" description="auszahlung job"/>
         </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_haEHYK9oEeS769kjC9ygTA" parentId="320bd9e3-e261-4a45-aa03-c740b6855e73" page="451" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating * 2" wertValue="25" beschreibung="10x" name="Stim Patch" kategorie="Biotech" stufe="6">
           <localizations xmi:id="_haEHYa9oEeS769kjC9ygTA" local="de" name="Slap Patch, Stim Patch"/>
@@ -23632,6 +23635,43 @@
         <members xmi:id="_l3VLYFDKEeSjN8rIya5QCA" physicalDamage="14" zustand="sterbend" character="_BzO4cN0CEeOvVYoRsPZlnA" rightHand="_JoEq4FDLEeSjN8rIya5QCA" leftHand="_Bz1VY90CEeOvVYoRsPZlnA" inUse="_JoEq4FDLEeSjN8rIya5QCA _Job3QFDLEeSjN8rIya5QCA _Bz18c90CEeOvVYoRsPZlnA _Bz1VY90CEeOvVYoRsPZlnA _Bz18cN0CEeOvVYoRsPZlnA _Bz18dN0CEeOvVYoRsPZlnA _TEY0UFDLEeSjN8rIya5QCA _lswdoFDLEeSjN8rIya5QCA _Jo-CwFDLEeSjN8rIya5QCA _Jos9AFDLEeSjN8rIya5QCA" armor="_Bz18c90CEeOvVYoRsPZlnA"/>
       </player>
       <history xmi:id="_3K2ukI4IEeSNivpsJHp3wQ" currentPlacement="_9PjhID_WEeSQWIeEm8LnkA"/>
+    </stories>
+    <stories xmi:id="_s2qAEL7KEeS0VKxx1IsigA" beschreibung="A script to write a simple protokol for a character." name="Protokollwriter" entry="_s2qAEb7KEeS0VKxx1IsigA">
+      <placements xmi:id="_s2qAEb7KEeS0VKxx1IsigA" beschreibung="rename before change the placement." name="rename" startDate="2075-07-03T22:32:17.283+0200" endDate="2075-06-08T22:32:17.333+0200" actualDate="2075-02-26T00:00:00.000+0100" nextPlacements="_s2qAEb7KEeS0VKxx1IsigA" teams="_s2qAEr7KEeS0VKxx1IsigA">
+        <options>combat</options>
+        <options>legWork</options>
+        <options>homeGround</options>
+        <options>matrix</options>
+        <options>astralSpace</options>
+        <options>socialInteraction</options>
+      </placements>
+      <allTeams xmi:id="_s2qAEr7KEeS0VKxx1IsigA" name="a dummy team">
+        <members xmi:id="_s2qAE77KEeS0VKxx1IsigA" character="_s2qAGL7KEeS0VKxx1IsigA"/>
+      </allTeams>
+      <player xmi:id="_s2qAFL7KEeS0VKxx1IsigA" name="player">
+        <members xmi:id="_s2qAFb7KEeS0VKxx1IsigA">
+          <character xsi:type="shr5mngt:PlayerCharacter" href="#_BzO4cN0CEeOvVYoRsPZlnA"/>
+        </members>
+      </player>
+      <management xmi:id="_s2qAFr7KEeS0VKxx1IsigA" name="stuff">
+        <groups xmi:id="_s2qAF77KEeS0VKxx1IsigA" name="npcs">
+          <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_s2qAGL7KEeS0VKxx1IsigA" chracterSource="_s2qAHL7KEeS0VKxx1IsigA" choosenLifestyle="_s2qAGr7KEeS0VKxx1IsigA">
+            <persona xsi:type="shr5:MudanPersona" xmi:id="_s2qAGb7KEeS0VKxx1IsigA" name="dummy" edgeBasis="2" konstitutionBasis="1" geschicklichkeitBasis="1" reaktionBasis="1" staerkeBasis="1" charismaBasis="1" willenskraftBasis="1" intuitionBasis="1" logikBasis="1">
+              <spezies href="#a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
+            </persona>
+            <contracts xsi:type="shr5:Lifestyle" xmi:id="_s2qAGr7KEeS0VKxx1IsigA" name="Squatter" parentId="b46c5d66-940f-42c4-a8cb-a055f459bbb4" page="373" verfuegbarkeit="" wertValue="500" faelligkeitsIntervall="1" unit="month">
+              <localizations xmi:id="_s2qAG77KEeS0VKxx1IsigA" local="de" name="Squatter"/>
+              <srcBook href="#f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+            </contracts>
+            <nativeLanguage href="#05eb2251-81aa-4dfb-8619-75102fc7b895"/>
+            <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_s2qAHL7KEeS0VKxx1IsigA" character="_s2qAGL7KEeS0VKxx1IsigA" state="commited" selectedGroup="_s2qAF77KEeS0VKxx1IsigA" characterName="dummy">
+              <generator xsi:type="shr5mngt:FreeStyle" href="#_BtTPkN0CEeOvVYoRsPZlnA"/>
+              <selectedSpecies href="#a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
+              <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+            </generatorSrc>
+          </members>
+        </groups>
+      </management>
     </stories>
   </entries>
 </shr5:ShrList>
