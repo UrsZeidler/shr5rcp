@@ -14,6 +14,9 @@
 	[comment @main /]
 [file (aManagedCharacter.getText().concat('.fo'), false, 'UTF-8')]
 [printFoPageStart(aManagedCharacter.getText())/]	
+
+[printCharacterMainInfo(aManagedCharacter)/]
+
    <fo:table margin="3pt" >
     <fo:table-column column-width="50%" />
     <fo:table-column column-width="50%" />
@@ -398,6 +401,54 @@
 [printCellRight(t.wert.formatMoney())/]
      </fo:table-row>
 [/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printCharacterMainInfo (aManagedCharacter : ManagedCharacter) ]
+[printSectionTitel('Character'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCellSpanned(aManagedCharacter.persona.name,3)/]
+[printCellRight(aManagedCharacter.persona.spezies.getText())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('type'.localizedString())/]
+[printCell(aManagedCharacter.persona.eClass().getText())/]
+[printCell('_UI_ManagedCharacter_nativeLanguage_feature'.localizedString())/]
+[printCell(aManagedCharacter.nativeLanguage.getText())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
+[printCell(aManagedCharacter.sex.sexToName())/]
+[printCell('_UI_ManagedCharacter_dateofbirth_feature'.localizedString())/]
+[printCell(aManagedCharacter.dateofbirth.formatDate())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_streetCred_feature'.localizedString())/]
+[printCell(aManagedCharacter.streetCred)/]
+[printCell('_UI_ManagedCharacter_notoriety_feature'.localizedString())/]
+[printCell(aManagedCharacter.notoriety)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_height_feature'.localizedString())/]
+[printCell(aManagedCharacter.height)/]
+[printCell('_UI_ManagedCharacter_weight_feature'.localizedString())/]
+[printCell(aManagedCharacter.weight)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_karmaGaint_feature'.localizedString())/]
+[printCell(aManagedCharacter.karmaGaint)/]
+[printCell('_UI_ManagedCharacter_currentKarma_feature'.localizedString())/]
+[printCell(aManagedCharacter.currentKarma)/]
+     </fo:table-row>
+
     </fo:table-body>
    </fo:table>
 [/template]
