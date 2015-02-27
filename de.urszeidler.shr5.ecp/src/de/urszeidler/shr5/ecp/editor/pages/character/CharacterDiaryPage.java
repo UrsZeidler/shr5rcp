@@ -37,7 +37,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.dialogs.PayFineDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
-import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.DateEntryFactory;
 
 /**
  * @author urs

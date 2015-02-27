@@ -42,9 +42,7 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
-import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
-import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -124,7 +122,7 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
-        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+//        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
         form.getToolBarManager().update(true);
 
         toolkit.paintBordersFor(body);
@@ -239,9 +237,13 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite_left);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite_left);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite_left);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__DATEOFBIRTH, composite_left, new DateEntryFactory(toolkit));
+        
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite_right, new LabelEntry());
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite_right, new LabelEntry());
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite_right, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__HEIGHT, composite_right);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__WEIGHT, composite_right);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

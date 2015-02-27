@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -43,8 +44,6 @@ import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
-import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
-import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEnumEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
@@ -110,7 +109,6 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
         form.getToolBarManager().update(true);
 
-        
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, persona, toolkit, editingDomain);
@@ -280,6 +278,12 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite, linkLabelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite, new LabelEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite, new LabelEnumEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__HEIGHT, composite, new LabelEnumEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__WEIGHT, composite, new LabelEnumEntry());
+
+        if (object instanceof PlayerCharacter) {
+            emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.PLAYER_CHARACTER__AGE, composite, new LabelEnumEntry());
+        }
 
         emfFormBuilder1.buildinComposite(m_bindingContext, composite_7, object);
 
