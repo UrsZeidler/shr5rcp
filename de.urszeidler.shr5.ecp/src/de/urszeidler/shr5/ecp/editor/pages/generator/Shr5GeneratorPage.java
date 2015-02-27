@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.editor.pages.generator;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -71,6 +71,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.AttributeGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;

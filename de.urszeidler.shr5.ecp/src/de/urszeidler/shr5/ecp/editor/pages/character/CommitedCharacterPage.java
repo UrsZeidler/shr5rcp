@@ -1,4 +1,4 @@
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.editor.pages.character;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -41,6 +41,10 @@ import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEnumEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;

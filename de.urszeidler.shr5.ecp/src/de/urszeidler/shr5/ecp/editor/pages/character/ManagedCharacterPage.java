@@ -1,4 +1,4 @@
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.editor.pages.character;
 
 import java.util.Collection;
 
@@ -43,6 +43,8 @@ import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 

@@ -1,4 +1,4 @@
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.editor.pages.generator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +40,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
+import de.urszeidler.shr5.ecp.editor.pages.character.AbstraktPersonaPage;
+import de.urszeidler.shr5.ecp.editor.pages.character.CharacterAdvancementPage;
+import de.urszeidler.shr5.ecp.editor.pages.character.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.service.ValidationService;
 import de.urszeidler.shr5.gameplay.dice.IniDice;

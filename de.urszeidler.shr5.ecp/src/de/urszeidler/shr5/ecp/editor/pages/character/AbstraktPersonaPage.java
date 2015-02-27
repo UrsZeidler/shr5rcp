@@ -1,4 +1,4 @@
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.editor.pages.character;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -64,6 +64,8 @@ import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
