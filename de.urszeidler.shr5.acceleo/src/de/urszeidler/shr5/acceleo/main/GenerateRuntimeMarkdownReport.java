@@ -171,19 +171,10 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
-        /*
-         * TODO if you wish to change the generation as a whole, override this. The default behavior should
-         * be sufficient in most cases. If you want to change the content of this method, do NOT forget to
-         * change the "@generated" tag in the Javadoc of this method to "@generated NOT". Without this new tag,
-         * any compilation of the Acceleo module with the main template that has caused the creation of this
-         * class will revert your modifications. If you encounter a problem with an unresolved proxy during the
-         * generation, you can remove the comments in the following instructions to check for problems. Please
-         * note that those instructions may have a significant impact on the performances.
-         */
 
         //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
 
@@ -206,17 +197,11 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
         List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
-        /*
-         * TODO if you need to listen to generation event, add listeners to the list here. If you want to change
-         * the content of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method
-         * to "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
-         * that has caused the creation of this class will revert your modifications.
-         */
         return listeners;
     }
     
@@ -265,7 +250,7 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
      * 
      * @return The list of properties file we need to add to the generation context.
      * @see java.util.ResourceBundle#getBundle(String)
-     * @generated
+     * @generated not
      */
     @Override
     public List<String> getProperties() {
@@ -276,33 +261,6 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
          * revert your modifications.
          */
 
-        /*
-         * TODO if your generation module requires access to properties files, add their qualified path to the list here.
-         * 
-         * Properties files can be located in an Eclipse plug-in or in the file system (all Acceleo projects are Eclipse
-         * plug-in). In order to use properties files located in an Eclipse plugin, you need to add the path of the properties
-         * files to the "propertiesFiles" list:
-         * 
-         * final String prefix = "platform:/plugin/";
-         * final String pluginName = "org.eclipse.acceleo.module.sample";
-         * final String packagePath = "/org/eclipse/acceleo/module/sample/properties/";
-         * final String fileName = "default.properties";
-         * propertiesFiles.add(prefix + pluginName + packagePath + fileName);
-         * 
-         * With this mechanism, you can load properties files from your plugin or from another plugin.
-         * 
-         * You may want to load properties files from the file system, for that you need to add the absolute path of the file:
-         * 
-         * propertiesFiles.add("C:\Users\MyName\MyFile.properties");
-         * 
-         * If you want to let your users add properties files located in the same folder as the model:
-         *
-         * if (EMFPlugin.IS_ECLIPSE_RUNNING && model != null && model.eResource() != null) { 
-         *     propertiesFiles.addAll(AcceleoEngineUtils.getPropertiesFilesNearModel(model.eResource()));
-         * }
-         * 
-         * To learn more about Properties Files, have a look at the Acceleo documentation (Help -> Help Contents).
-         */
         return propertiesFiles;
     }
     
@@ -382,7 +340,7 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -394,15 +352,7 @@ public class GenerateRuntimeMarkdownReport extends AbstractAcceleoGenerator {
          * revert your modifications.
          */
         
-        /*
-         * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML.
-         *
-         * If you want to use the generator in stand alone, the resource factory registration will be required.
-         *  
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
-         */ 
-        
+         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
     
