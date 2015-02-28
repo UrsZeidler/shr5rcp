@@ -25,8 +25,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getDiary <em>Diary</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getAge <em>Age</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getDiary <em>Diary</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getAge <em>Age</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,7 +37,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
      * The cached value of the '{@link #getDiary() <em>Diary</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDiary()
      * @generated
      * @ordered
@@ -48,7 +47,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
      * The default value of the '{@link #getAge() <em>Age</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAge()
      * @generated
      * @ordered
@@ -58,7 +56,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PlayerCharacterImpl() {
@@ -68,7 +65,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -79,7 +75,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public CharacterDiary getDiary() {
@@ -89,19 +84,14 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NotificationChain basicSetDiary(CharacterDiary newDiary, NotificationChain msgs) {
         CharacterDiary oldDiary = diary;
         diary = newDiary;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PLAYER_CHARACTER__DIARY, oldDiary,
-                    newDiary);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PLAYER_CHARACTER__DIARY, oldDiary, newDiary);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
         }
         return msgs;
     }
@@ -109,22 +99,19 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDiary(CharacterDiary newDiary) {
         if (newDiary != diary) {
             NotificationChain msgs = null;
             if (diary != null)
-                msgs = ((InternalEObject)diary).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.PLAYER_CHARACTER__DIARY, null,
-                        msgs);
+                msgs = ((InternalEObject)diary).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.PLAYER_CHARACTER__DIARY, null, msgs);
             if (newDiary != null)
-                msgs = ((InternalEObject)newDiary).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.PLAYER_CHARACTER__DIARY, null,
-                        msgs);
+                msgs = ((InternalEObject)newDiary).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.PLAYER_CHARACTER__DIARY, null, msgs);
             msgs = basicSetDiary(newDiary, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PLAYER_CHARACTER__DIARY, newDiary, newDiary));
     }
 
@@ -157,7 +144,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -172,7 +158,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -189,7 +174,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -205,7 +189,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -221,7 +204,6 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

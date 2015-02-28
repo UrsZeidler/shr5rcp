@@ -49,9 +49,11 @@
       <genFeatures property="Readonly" createChild="false" propertyDescription="The karma the characters has currenly at his disposal."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/currentKarma"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/generatorSrc"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/height"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/dateofbirth"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/weight"/>
+      <genFeatures createChild="false" propertyDescription="The height of the character in cm."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/height"/>
+      <genFeatures createChild="false" propertyDescription="The date of the character birth."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/dateofbirth"/>
+      <genFeatures createChild="false" propertyDescription="The wheight in kg." ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/weight"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
@@ -285,7 +287,8 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerCharacter/diary"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PlayerCharacter/age"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The age is caculated by the date of bitrth and the diary date."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//PlayerCharacter/age"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Mudan"/>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterGroup">
@@ -416,7 +419,8 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Pack/items"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterDiary">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterDiary/characterDate"/>
+      <genFeatures createChild="false" propertyDescription="The current date for this character, is also used for the age calculation."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterDiary/characterDate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterDiary/entries"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//DiaryEntry" labelFeature="#//shr5Management/DiaryEntry/message">

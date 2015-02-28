@@ -4,15 +4,10 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.KiAdept;
-import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;

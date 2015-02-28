@@ -82,7 +82,7 @@ public class CharacterDiaryItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_CharacterDiary_characterDate_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_CharacterDiary_characterDate_feature", "_UI_CharacterDiary_type"),
+                 getString("_UI_CharacterDiary_characterDate_description"),
                  Shr5managementPackage.Literals.CHARACTER_DIARY__CHARACTER_DATE,
                  true,
                  false,

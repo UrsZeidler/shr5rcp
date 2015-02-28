@@ -64,7 +64,7 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider {
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_PlayerCharacter_age_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PlayerCharacter_age_feature", "_UI_PlayerCharacter_type"),
+                 getString("_UI_PlayerCharacter_age_description"),
                  Shr5managementPackage.Literals.PLAYER_CHARACTER__AGE,
                  false,
                  false,
