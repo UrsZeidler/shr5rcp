@@ -36,7 +36,6 @@ public class NavigatorRoot implements IAdaptable, IPersistableElement, IElementF
 
 	/** {@inheritDoc} */
 	public void saveState(IMemento memento) {
-		// TODO Auto-generated method stub
 		return;
 	}
 
