@@ -409,7 +409,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 if(readOnly)
                     return false;
                 if (element instanceof Fertigkeit) {
-                    Fertigkeit fertigkeit = (Fertigkeit)element;// TODO : check for #196
+                    Fertigkeit fertigkeit = (Fertigkeit)element;// for #196
 
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null) {
@@ -484,7 +484,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 
                 if (element instanceof GroupWrapper) {
                     return false;
-                }// TODO : check for #196
+                }//  for #196
                 if (element instanceof Fertigkeit)
                     if (((Fertigkeit)element).eContainer() instanceof FertigkeitsGruppe) {
                         FertigkeitsGruppe fg = (FertigkeitsGruppe)((Fertigkeit)element).eContainer();
