@@ -1,6 +1,5 @@
 package de.urszeidler.shr5.ecp.editor.pages.generator;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -9,10 +8,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
@@ -27,7 +22,6 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Spezies;
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
@@ -62,39 +56,6 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     public static final String PERSONA_INVENTAR = "persona.inventar"; //$NON-NLS-1$
     public static final String PERSONA = "persona"; //$NON-NLS-1$
     public static final String COMMITED = "character-commited";//$NON-NLS-1$
-
-    /**
-     * Provides the lables for the validation chain.
-     */
-    public class ValidationLabelProvider implements SubstitutionLabelProvider {
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getObjectLabel(org.eclipse.emf.ecore.EObject)
-         */
-        @Override
-        public String getObjectLabel(EObject eObject) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eObject);
-        }
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getFeatureLabel(org.eclipse.emf.ecore.EStructuralFeature)
-         */
-        @Override
-        public String getFeatureLabel(EStructuralFeature eStructuralFeature) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eStructuralFeature);
-        }
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getValueLabel(org.eclipse.emf.ecore.EDataType, java.lang.Object)
-         */
-        @Override
-        public String getValueLabel(EDataType eDataType, Object value) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(value);
-        }
-    }
 
     private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif"); //$NON-NLS-1$ //$NON-NLS-2$
     protected Map<Object, Object> context;
@@ -135,17 +96,6 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             decoration.setDescriptionText(""); //$NON-NLS-1$
 //            decoration.setImage(null);
         }
-    }
-
-    /**
-     * Creates the validation context.
-     * 
-     * @return
-     */
-    protected Map<Object, Object> createValidationContext() {
-        Map<Object, Object> context = new HashMap<Object, Object>();
-        context.put(SubstitutionLabelProvider.class, new ValidationLabelProvider());
-        return context;
     }
 
     /**

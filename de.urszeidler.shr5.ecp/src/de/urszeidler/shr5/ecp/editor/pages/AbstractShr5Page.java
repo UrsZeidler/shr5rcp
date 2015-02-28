@@ -1,15 +1,28 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.internal.resources.mapping.ResourceModelProvider;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
@@ -23,10 +36,18 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.ide.ResourceUtil;
+import org.eclipse.wb.swt.ResourceManager;
+
+import com.google.common.base.Function;
+import com.google.common.base.Joiner;
+import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -35,9 +56,11 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.ecp.util.ValidationLabelProvider;
 
 /**
  * This is a basic generic page to display eObjects in an form with an emfformbilder.
@@ -169,6 +192,39 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     }
 
     /**
+     * Adds a validation button when there are error and displays them as tooltip.
+     * 
+     * @param toolbarManager
+     * @param object
+     */
+    protected void addValidationResult(IToolBarManager toolbarManager, EObject object) {
+        Diagnostic validate = Diagnostician.INSTANCE.validate(object, createValidationContext());
+        if (!validate.getChildren().isEmpty()) {
+            FluentIterable<String> transform = FluentIterable.from(validate.getChildren()).transform(new Function<Diagnostic, String>() {
+                @Override
+                public String apply(Diagnostic input) {
+                    return input.getMessage();
+                }
+            });
+            final String message = Joiner.on("\n").join(transform);
+            final ImageDescriptor pluginImageDescriptor = ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/error.gif");
+            Action action = new Action() {
+
+                @Override
+                public ImageDescriptor getImageDescriptor() {
+                    return pluginImageDescriptor;
+                }
+
+                @Override
+                public String getToolTipText() {
+                    return message;
+                }
+            };
+            toolbarManager.add(action);
+        }
+    }
+
+    /**
      * Simple Factory method to create the formbuilder.
      * 
      * @param managedForm
@@ -208,6 +264,17 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected void addSourceFeature(Group grpQuelle) {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+    }
+
+    /**
+     * Creates the validation context.
+     * 
+     * @return
+     */
+    protected Map<Object, Object> createValidationContext() {
+        Map<Object, Object> context = new HashMap<Object, Object>();
+        context.put(SubstitutionLabelProvider.class, new ValidationLabelProvider());
+        return context;
     }
 
 }

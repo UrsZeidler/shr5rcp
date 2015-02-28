@@ -107,6 +107,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         toolkit.paintBordersFor(body);
         form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
         form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        addValidationResult(form.getToolBarManager(), object);
         form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
