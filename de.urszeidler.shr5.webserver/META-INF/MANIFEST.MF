@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Webserver
 Bundle-SymbolicName: de.urszeidler.shr5.webserver;singleton:=true
-Bundle-Version: 0.2.5.qualifier
+Bundle-Version: 0.2.6.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: javax.servlet;bundle-version="3.0.0",
  org.eclipse.equinox.http.servlet;bundle-version="1.1.400",

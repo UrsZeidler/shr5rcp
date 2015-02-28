@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.product.feature"
       label="shr5 product Feature"
-      version="0.2.5.qualifier"
+      version="0.2.6.qualifier"
       provider-name="Urs Zeidler">
 
    <description url="http://urszeidler.github.io/shr5rcp/">
