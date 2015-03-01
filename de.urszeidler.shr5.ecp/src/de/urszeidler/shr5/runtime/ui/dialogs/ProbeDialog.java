@@ -2,15 +2,18 @@ package de.urszeidler.shr5.runtime.ui.dialogs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -28,6 +31,9 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+
+import com.google.common.base.Joiner;
+import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -126,6 +132,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
 
         configerEdgeOption();
         removeSettedReferences();
+        validateCommand();
 
         if (state == ProbeExecutionState.afterExecute || state == ProbeExecutionState.beforeSubcommands) {
             txtProbe = new Text(container, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
@@ -248,8 +255,24 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
     @Override
     public void notifyChanged(Notification notification) {
         setMessage(labelProvider.getText(probe));
+        
+        validateCommand();
+            
         if (txtProbe != null)
             txtProbe.setText(GameplayEditTools.probe2ProbeString((Probe)probe));
+    }
+
+    /**
+     * 
+     */
+    private void validateCommand() {
+        Diagnostic validate = Diagnostician.INSTANCE.validate(probe, Collections.EMPTY_MAP);
+        if(!validate.getChildren().isEmpty()){
+            final String message = Joiner.on("\n").join(
+                    FluentIterable.from(validate.getChildren()).transform(ShadowrunEditingTools.diagnosticToStringTransformer()));
+            setErrorMessage(message);
+        }else
+            setErrorMessage(null);
     }
 
     @Override

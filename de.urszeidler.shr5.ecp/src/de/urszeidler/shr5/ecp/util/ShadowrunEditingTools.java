@@ -12,9 +12,9 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
-import org.eclipse.draw2d.text.LineBox;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
@@ -83,7 +83,22 @@ import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
 public class ShadowrunEditingTools {
 
     /**
+     * Transform to the message string.
+     * 
+     * @return
+     */
+    public static Function<Diagnostic, String> diagnosticToStringTransformer() {
+        return new Function<Diagnostic, String>() {
+            @Override
+            public String apply(Diagnostic input) {
+                return input.getMessage();
+            }
+        };
+    }
+
+    /**
      * from "http://www.java2s.com/Code/Java/SWT-JFace-Eclipse/ConvertsabufferedimagetoSWTImageData.htm"
+     * 
      * @param bufferedImage
      * @return
      */
