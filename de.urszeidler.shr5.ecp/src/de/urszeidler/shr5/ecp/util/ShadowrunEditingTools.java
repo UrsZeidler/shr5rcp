@@ -3,11 +3,16 @@
  */
 package de.urszeidler.shr5.ecp.util;
 
+import java.awt.image.BufferedImage;
+import java.awt.image.DirectColorModel;
+import java.awt.image.IndexColorModel;
+import java.awt.image.WritableRaster;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
+import org.eclipse.draw2d.text.LineBox;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
@@ -27,6 +32,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.graphics.PaletteData;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Shell;
 
 import com.google.common.base.Function;
@@ -73,6 +81,56 @@ import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
  * @author urs
  */
 public class ShadowrunEditingTools {
+
+    /**
+     * from "http://www.java2s.com/Code/Java/SWT-JFace-Eclipse/ConvertsabufferedimagetoSWTImageData.htm"
+     * @param bufferedImage
+     * @return
+     */
+    public static ImageData convertToSWT(BufferedImage bufferedImage) {
+        if (bufferedImage.getColorModel() instanceof DirectColorModel) {
+            DirectColorModel colorModel = (DirectColorModel)bufferedImage.getColorModel();
+            PaletteData palette = new PaletteData(colorModel.getRedMask(), colorModel.getGreenMask(), colorModel.getBlueMask());
+            ImageData data = new ImageData(bufferedImage.getWidth(), bufferedImage.getHeight(), colorModel.getPixelSize(), palette);
+            for (int y = 0; y < data.height; y++) {
+                for (int x = 0; x < data.width; x++) {
+                    int rgb = bufferedImage.getRGB(x, y);
+                    int pixel = palette.getPixel(new RGB((rgb >> 16) & 0xFF, (rgb >> 8) & 0xFF, rgb & 0xFF));
+                    data.setPixel(x, y, pixel);
+                    if (colorModel.hasAlpha()) {
+                        data.setAlpha(x, y, (rgb >> 24) & 0xFF);
+                    }
+                }
+            }
+            return data;
+        } else if (bufferedImage.getColorModel() instanceof IndexColorModel) {
+            IndexColorModel colorModel = (IndexColorModel)bufferedImage.getColorModel();
+            int size = colorModel.getMapSize();
+            byte[] reds = new byte[size];
+            byte[] greens = new byte[size];
+            byte[] blues = new byte[size];
+            colorModel.getReds(reds);
+            colorModel.getGreens(greens);
+            colorModel.getBlues(blues);
+            RGB[] rgbs = new RGB[size];
+            for (int i = 0; i < rgbs.length; i++) {
+                rgbs[i] = new RGB(reds[i] & 0xFF, greens[i] & 0xFF, blues[i] & 0xFF);
+            }
+            PaletteData palette = new PaletteData(rgbs);
+            ImageData data = new ImageData(bufferedImage.getWidth(), bufferedImage.getHeight(), colorModel.getPixelSize(), palette);
+            data.transparentPixel = colorModel.getTransparentPixel();
+            WritableRaster raster = bufferedImage.getRaster();
+            int[] pixelArray = new int[1];
+            for (int y = 0; y < data.height; y++) {
+                for (int x = 0; x < data.width; x++) {
+                    raster.getPixel(x, y, pixelArray);
+                    data.setPixel(x, y, pixelArray[0]);
+                }
+            }
+            return data;
+        }
+        return null;
+    }
 
     /**
      * @param choosenLifestyle
@@ -532,11 +590,12 @@ public class ShadowrunEditingTools {
     }
 
     /**
-     * Transform the  eobjects to the label provider names.
+     * Transform the eobjects to the label provider names.
+     * 
      * @return
      */
-    public static Function<EObject,String> eObject2StringTransformer() {
-         return new Function<EObject, String>() {
+    public static Function<EObject, String> eObject2StringTransformer() {
+        return new Function<EObject, String>() {
 
             @Override
             public String apply(EObject input) {
@@ -554,11 +613,10 @@ public class ShadowrunEditingTools {
      */
     public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
         IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
-        if(descriptor==null)
+        if (descriptor == null)
             return AdapterFactoryUtil.getInstance().getItemDelegator().getText(eAttribute);
-            
+
         return descriptor.getDisplayName(eAttribute);
     }
-
 
 }
