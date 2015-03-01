@@ -12,7 +12,7 @@
     </input>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
-    <imports href="boardCharacterSheet.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="boardShr5GeneratorSheetManagedCharacter" visibility="Public" main="true">
@@ -207,7 +207,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -1158,7 +1158,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aManagedCharacter">
@@ -1358,42 +1358,42 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaKomplexForm)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaKomplexForm)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaKomplexForm)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Changes)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Changes)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Changes)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaEigenschaft)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(KiKraft)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(KiKraft)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(KiKraft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Koerpermods)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Koerpermods)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Koerpermods)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaFertigkeitsGruppe)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeitsGruppe)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeitsGruppe)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaFertigkeit)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeit)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeit)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Connection)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Connection)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Connection)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Zauberer_Class">
@@ -1403,17 +1403,17 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(Vertrag)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/Sequence(Vertrag)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/Sequence(Vertrag)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Fahrzeug)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Fahrzeug)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Fahrzeug)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(AbstraktGegenstand)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/Sequence(AbstraktGegenstand)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/Sequence(AbstraktGegenstand)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CharacterDiary_Class">
@@ -1428,7 +1428,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Credstick)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Credstick)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Credstick)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Credstick_Class">

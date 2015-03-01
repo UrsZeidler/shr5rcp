@@ -19,7 +19,7 @@
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5EEnumhelper.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0"/>
+    <imports href="../util/shadowrunTextTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateCharacterSheet" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/printBoardCharacterReport">
@@ -459,7 +459,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_Technomancer_complexForms_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -531,7 +531,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_SpezielleAttribute_essenz_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -561,7 +561,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_SpezielleAttribute_initative_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -573,7 +573,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/toLocalizedInitative"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/toLocalizedInitative"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printPersonaBasic/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </argument>
@@ -586,7 +586,7 @@
             <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
             <argument xsi:type="mtl:QueryInvocation">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+              <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
               <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_AstraleProjektion_astraleInitative_feature">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               </argument>
@@ -598,7 +598,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
           <body xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/toLocalizedAstralInitative"/>
+            <definition href="../util/shadowrunTextTools.emtl#/0/toLocalizedAstralInitative"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="ap" referredVariable="/0/printPersonaBasic/%.12/%/ap">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AstraleProjektion"/>
             </argument>
@@ -722,7 +722,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_Panzerung_panzer_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -752,7 +752,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_BerechneteAttribute_selbstbeherrschung_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -786,7 +786,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_BerechneteAttribute_menschenkenntnis_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -816,7 +816,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_BerechneteAttribute_errinerungsvermoegen_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -885,7 +885,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;Limits&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ChrakterLimits_koerperlich_feature">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -908,7 +908,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" / "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ChrakterLimits_geistig_feature">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -931,7 +931,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" / "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ChrakterLimits_sozial_feature">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -972,7 +972,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_changes_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -989,7 +989,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <source xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDate"/>
+                <definition href="../util/shadowrunTextTools.emtl#/0/formatDate"/>
                 <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="ag" referredVariable="/0/printAdvacements/%.2/ag">
@@ -1048,7 +1048,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_KoerperPersona_eigenschaften_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1122,7 +1122,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_KiAdept_kikraft_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1163,7 +1163,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_KoerperPersona_koerperMods_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1253,7 +1253,7 @@
       <body xsi:type="mtl:LetBlock">
         <body xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_Beschreibbar_name_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1269,7 +1269,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  "/>
         <body xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_sex_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1277,7 +1277,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" : "/>
         <body xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/sexToName"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/sexToName"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5mngt/1.0#//Sex"/>
             <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printBasicCharacterData/aManagedCharacter">
@@ -1289,7 +1289,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
         <body xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_AbstractPersona_spezies_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1489,7 +1489,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_AbstractPersona_fertigkeitsGruppen_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1540,7 +1540,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_AbstractPersona_fertigkeiten_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1674,7 +1674,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_connections_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1738,7 +1738,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_Zauberer_zauber_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1805,7 +1805,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_contracts_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -1878,7 +1878,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_vehicels_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -2117,7 +2117,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_UI_ManagedCharacter_inventar_feature">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -2177,7 +2177,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Diary">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -2217,7 +2217,7 @@
     <ownedModuleElement xsi:type="mtl:Template" name="printDiaryEntry" visibility="Public">
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDate"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/formatDate"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aDiaryEntry" referredVariable="/0/printDiaryEntry/aDiaryEntry">
@@ -2227,12 +2227,16 @@
         </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=": "/>
-      <body xsi:type="ocl.ecore:PropertyCallExp">
+      <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="aDiaryEntry" referredVariable="/0/printDiaryEntry/aDiaryEntry">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//DiaryEntry"/>
-        </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5mngt/1.0#//DiaryEntry/message"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aDiaryEntry" referredVariable="/0/printDiaryEntry/aDiaryEntry">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//DiaryEntry"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5mngt/1.0#//DiaryEntry/message"/>
+        </argument>
       </body>
       <parameter name="aDiaryEntry">
         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//DiaryEntry"/>
@@ -2244,7 +2248,7 @@
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Credsticks">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
@@ -2296,33 +2300,71 @@
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:ForBlock">
-        <body xsi:type="mtl:QueryInvocation">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDate"/>
-          <argument xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Shopping list:&#xA;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/printSoppingTransaction">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/21/ShoppingTransaction">
+                <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
             <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction/date"/>
-          </argument>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
-        <body xsi:type="mtl:TemplateInvocation">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
-          <argument xsi:type="mtl:QueryInvocation">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
-            <argument xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
-              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/21/ShoppingTransaction">
+              <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
             </argument>
-          </argument>
-          <argument xsi:type="ocl.ecore:VariableExp" name="empty" referredVariable="/0/printCredStick/empty">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+          </ifExpr>
+          <else>
+            <body xsi:type="mtl:QueryInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="../util/shadowrunTextTools.emtl#/0/formatDate"/>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction/date"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+            <body xsi:type="mtl:QueryInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction/description"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+            <body xsi:type="mtl:QueryInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="../util/shadowrunTextTools.emtl#/0/formatMoney"/>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/printCredStick/%.2/t">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction/amount"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          </else>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
         <loopVariable name="t">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
         </loopVariable>
@@ -2346,7 +2388,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatMoney"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/formatMoney"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
           <source xsi:type="ocl.ecore:VariableExp" name="credstick" referredVariable="/0/printCredStick/credstick">
@@ -2361,6 +2403,82 @@
       </parameter>
       <parameter name="empty">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printSoppingTransaction" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="gw" referredVariable="/0/printSoppingTransaction/%/gw">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <argument xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//SourceBook"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Quelle"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="gw" referredVariable="/0/printSoppingTransaction/%/gw">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/21/Quelle">
+                <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Quelle"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//Quelle/srcBook"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/formatMoney"/>
+          <argument xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="gw" referredVariable="/0/printSoppingTransaction/%/gw">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeldWert/wertValue"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="gw">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(GeldWert)">
+          <source xsi:type="ocl.ecore:VariableExp" name="ta" referredVariable="/0/printSoppingTransaction/ta">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction/items"/>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="calculated costs: "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/formatMoney"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="ta" referredVariable="/0/printSoppingTransaction/ta">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction/caculatedCosts"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" (incuding "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="ta" referredVariable="/0/printSoppingTransaction/ta">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction/fee"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" fee)"/>
+      <parameter name="ta">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="printGegenstand">
@@ -2639,7 +2757,7 @@
       </guard>
       <post xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/trim">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/362">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/378">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </source>
       </post>
@@ -2941,6 +3059,16 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </eParameters>
       </eOperations>
+      <eOperations name="printSoppingTransaction">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printSoppingTransaction"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="ta">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="printGegenstand">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
@@ -3145,6 +3273,18 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </eParameters>
       </eOperations>
+      <eOperations name="italicText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="txt">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="tagText">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
@@ -3165,7 +3305,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/sexToName"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/sexToName"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="sex">
@@ -3177,7 +3317,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatMoney"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/formatMoney"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="object">
@@ -3189,7 +3329,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDate"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/formatDate"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="object">
@@ -3201,7 +3341,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/toLocalizedInitative"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/toLocalizedInitative"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="persona">
@@ -3213,7 +3353,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/toLocalizedAstralInitative"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/toLocalizedAstralInitative"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="persona">
@@ -3225,7 +3365,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/localizedString"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="text">
@@ -3327,6 +3467,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="Credstick_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://urszeidler.de/shr5/1.0#//Credstick"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ShoppingTransaction_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AbstraktGegenstand_Class">
@@ -3706,6 +3851,12 @@
     <eClassifiers xsi:type="ocl.ecore:TypeType" name="Wissensfertigkeit">
       <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ShoppingTransaction">
+      <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Quelle">
+      <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Quelle"/>
+    </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
@@ -4450,6 +4601,15 @@
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//CredstickTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Credstick"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
@@ -4460,6 +4620,45 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Credstick"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//GeldWert"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//ShoppingTransaction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -8474,7 +8673,7 @@
     </eAnnotations>
     <eAnnotations source="positions.779" references="/0/printDiaryEntry">
       <details key="start" value="11222"/>
-      <details key="end" value="11352"/>
+      <details key="end" value="11365"/>
       <details key="line" value="274"/>
     </eAnnotations>
     <eAnnotations source="positions.780" references="/0/printDiaryEntry/%">
@@ -8499,725 +8698,935 @@
     </eAnnotations>
     <eAnnotations source="positions.784" references="/0/printDiaryEntry/%.2">
       <details key="start" value="11319"/>
+      <details key="end" value="11351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.785" references="/0/printDiaryEntry/%.2/%">
+      <details key="start" value="11319"/>
       <details key="end" value="11338"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.785" references="/0/printDiaryEntry/%.2/aDiaryEntry">
+    <eAnnotations source="positions.786" references="/0/printDiaryEntry/%.2/%/aDiaryEntry">
       <details key="start" value="11319"/>
       <details key="end" value="11330"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.786" references="/0/printDiaryEntry/aDiaryEntry">
+    <eAnnotations source="positions.787" references="/0/printDiaryEntry/aDiaryEntry">
       <details key="start" value="11256"/>
       <details key="end" value="11280"/>
       <details key="line" value="274"/>
     </eAnnotations>
-    <eAnnotations source="positions.787" references="/0/printAllCredSticks">
-      <details key="start" value="11354"/>
-      <details key="end" value="11570"/>
+    <eAnnotations source="positions.788" references="/0/printAllCredSticks">
+      <details key="start" value="11367"/>
+      <details key="end" value="11583"/>
       <details key="line" value="278"/>
     </eAnnotations>
-    <eAnnotations source="positions.788" references="/0/printAllCredSticks/%">
-      <details key="start" value="11435"/>
-      <details key="end" value="11477"/>
+    <eAnnotations source="positions.789" references="/0/printAllCredSticks/%">
+      <details key="start" value="11448"/>
+      <details key="end" value="11490"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.789" references="/0/printAllCredSticks/%/%">
-      <details key="start" value="11435"/>
-      <details key="end" value="11465"/>
+    <eAnnotations source="positions.790" references="/0/printAllCredSticks/%/%">
+      <details key="start" value="11448"/>
+      <details key="end" value="11478"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.790" references="/0/printAllCredSticks/%/%/%">
-      <details key="start" value="11435"/>
-      <details key="end" value="11447"/>
+    <eAnnotations source="positions.791" references="/0/printAllCredSticks/%/%/%">
+      <details key="start" value="11448"/>
+      <details key="end" value="11460"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.791" references="/0/printAllCredSticks/%.1">
-      <details key="start" value="11479"/>
-      <details key="end" value="11480"/>
+    <eAnnotations source="positions.792" references="/0/printAllCredSticks/%.1">
+      <details key="start" value="11492"/>
+      <details key="end" value="11493"/>
       <details key="line" value="280"/>
     </eAnnotations>
-    <eAnnotations source="positions.792" references="/0/printAllCredSticks/%.2">
-      <details key="start" value="11480"/>
-      <details key="end" value="11558"/>
+    <eAnnotations source="positions.793" references="/0/printAllCredSticks/%.2">
+      <details key="start" value="11493"/>
+      <details key="end" value="11571"/>
       <details key="line" value="280"/>
     </eAnnotations>
-    <eAnnotations source="positions.793" references="/0/printAllCredSticks/%.2/%">
-      <details key="start" value="11516"/>
-      <details key="end" value="11548"/>
+    <eAnnotations source="positions.794" references="/0/printAllCredSticks/%.2/%">
+      <details key="start" value="11529"/>
+      <details key="end" value="11561"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.794" references="/0/printAllCredSticks/%.2/%/credstick">
-      <details key="start" value="11531"/>
-      <details key="end" value="11540"/>
+    <eAnnotations source="positions.795" references="/0/printAllCredSticks/%.2/%/credstick">
+      <details key="start" value="11544"/>
+      <details key="end" value="11553"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.795" references="/0/printAllCredSticks/%.2/%/empty">
-      <details key="start" value="11542"/>
-      <details key="end" value="11547"/>
+    <eAnnotations source="positions.796" references="/0/printAllCredSticks/%.2/%/empty">
+      <details key="start" value="11555"/>
+      <details key="end" value="11560"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.796" references="/0/printAllCredSticks/%.2/%.1">
-      <details key="start" value="11551"/>
-      <details key="end" value="11552"/>
+    <eAnnotations source="positions.797" references="/0/printAllCredSticks/%.2/%.1">
+      <details key="start" value="11564"/>
+      <details key="end" value="11565"/>
       <details key="line" value="282"/>
     </eAnnotations>
-    <eAnnotations source="positions.797" references="/0/printAllCredSticks/%.2/credstick">
-      <details key="start" value="11486"/>
-      <details key="end" value="11507"/>
+    <eAnnotations source="positions.798" references="/0/printAllCredSticks/%.2/credstick">
+      <details key="start" value="11499"/>
+      <details key="end" value="11520"/>
       <details key="line" value="280"/>
     </eAnnotations>
-    <eAnnotations source="positions.798" references="/0/printAllCredSticks/%.2/cs">
-      <details key="start" value="11510"/>
-      <details key="end" value="11512"/>
+    <eAnnotations source="positions.799" references="/0/printAllCredSticks/%.2/cs">
+      <details key="start" value="11523"/>
+      <details key="end" value="11525"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.799" references="/0/printAllCredSticks/cs">
-      <details key="start" value="11390"/>
-      <details key="end" value="11416"/>
+    <eAnnotations source="positions.800" references="/0/printAllCredSticks/cs">
+      <details key="start" value="11403"/>
+      <details key="end" value="11429"/>
       <details key="line" value="278"/>
     </eAnnotations>
-    <eAnnotations source="positions.800" references="/0/printAllCredSticks/empty">
-      <details key="start" value="11418"/>
-      <details key="end" value="11431"/>
+    <eAnnotations source="positions.801" references="/0/printAllCredSticks/empty">
+      <details key="start" value="11431"/>
+      <details key="end" value="11444"/>
       <details key="line" value="278"/>
     </eAnnotations>
-    <eAnnotations source="positions.801" references="/0/printCredStick">
-      <details key="start" value="11573"/>
-      <details key="end" value="11941"/>
+    <eAnnotations source="positions.802" references="/0/printCredStick">
+      <details key="start" value="11586"/>
+      <details key="end" value="12100"/>
       <details key="line" value="286"/>
     </eAnnotations>
-    <eAnnotations source="positions.802" references="/0/printCredStick/%">
-      <details key="start" value="11645"/>
-      <details key="end" value="11713"/>
+    <eAnnotations source="positions.803" references="/0/printCredStick/%">
+      <details key="start" value="11658"/>
+      <details key="end" value="11726"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.803" references="/0/printCredStick/%/%">
-      <details key="start" value="11664"/>
-      <details key="end" value="11705"/>
+    <eAnnotations source="positions.804" references="/0/printCredStick/%/%">
+      <details key="start" value="11677"/>
+      <details key="end" value="11718"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.804" references="/0/printCredStick/%/%/%">
-      <details key="start" value="11664"/>
-      <details key="end" value="11677"/>
+    <eAnnotations source="positions.805" references="/0/printCredStick/%/%/%">
+      <details key="start" value="11677"/>
+      <details key="end" value="11690"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.805" references="/0/printCredStick/%/%/%.1">
-      <details key="start" value="11685"/>
-      <details key="end" value="11704"/>
+    <eAnnotations source="positions.806" references="/0/printCredStick/%/%/%.1">
+      <details key="start" value="11698"/>
+      <details key="end" value="11717"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.806" references="/0/printCredStick/%/%/%.1/credstick">
-      <details key="start" value="11685"/>
-      <details key="end" value="11694"/>
+    <eAnnotations source="positions.807" references="/0/printCredStick/%/%/%.1/credstick">
+      <details key="start" value="11698"/>
+      <details key="end" value="11707"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.807" references="/0/printCredStick/%/empty">
-      <details key="start" value="11707"/>
-      <details key="end" value="11712"/>
+    <eAnnotations source="positions.808" references="/0/printCredStick/%/empty">
+      <details key="start" value="11720"/>
+      <details key="end" value="11725"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.808" references="/0/printCredStick/%.1">
-      <details key="start" value="11715"/>
-      <details key="end" value="11716"/>
+    <eAnnotations source="positions.809" references="/0/printCredStick/%.1">
+      <details key="start" value="11728"/>
+      <details key="end" value="11729"/>
       <details key="line" value="288"/>
     </eAnnotations>
-    <eAnnotations source="positions.809" references="/0/printCredStick/%.2">
-      <details key="start" value="11716"/>
-      <details key="end" value="11847"/>
+    <eAnnotations source="positions.810" references="/0/printCredStick/%.2">
+      <details key="start" value="11729"/>
+      <details key="end" value="12006"/>
       <details key="line" value="288"/>
     </eAnnotations>
-    <eAnnotations source="positions.810" references="/0/printCredStick/%.2/%">
-      <details key="start" value="11777"/>
-      <details key="end" value="11796"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.811" references="/0/printCredStick/%.2/%/%">
-      <details key="start" value="11777"/>
-      <details key="end" value="11783"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.812" references="/0/printCredStick/%.2/%/%/t">
-      <details key="start" value="11777"/>
-      <details key="end" value="11778"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.813" references="/0/printCredStick/%.2/%.1">
-      <details key="start" value="11799"/>
-      <details key="end" value="11800"/>
+    <eAnnotations source="positions.811" references="/0/printCredStick/%.2/%">
+      <details key="start" value="11789"/>
+      <details key="end" value="11999"/>
       <details key="line" value="289"/>
     </eAnnotations>
-    <eAnnotations source="positions.814" references="/0/printCredStick/%.2/%.2">
-      <details key="start" value="11801"/>
-      <details key="end" value="11838"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.815" references="/0/printCredStick/%.2/%.2/%">
-      <details key="start" value="11820"/>
-      <details key="end" value="11831"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.816" references="/0/printCredStick/%.2/%.2/%/t">
-      <details key="start" value="11820"/>
-      <details key="end" value="11821"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.817" references="/0/printCredStick/%.2/%.2/empty">
-      <details key="start" value="11832"/>
-      <details key="end" value="11837"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.818" references="/0/printCredStick/%.2/%.3">
-      <details key="start" value="11840"/>
-      <details key="end" value="11841"/>
+    <eAnnotations source="positions.812" references="/0/printCredStick/%.2/%/%">
+      <details key="start" value="11831"/>
+      <details key="end" value="11846"/>
       <details key="line" value="290"/>
     </eAnnotations>
-    <eAnnotations source="positions.819" references="/0/printCredStick/%.2/t">
-      <details key="start" value="11722"/>
-      <details key="end" value="11746"/>
-      <details key="line" value="288"/>
-    </eAnnotations>
-    <eAnnotations source="positions.820" references="/0/printCredStick/%.2/%.4">
-      <details key="start" value="11749"/>
-      <details key="end" value="11773"/>
+    <eAnnotations source="positions.813" references="/0/printCredStick/%.2/%/%.1">
+      <details key="start" value="11847"/>
+      <details key="end" value="11904"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.821" references="/0/printCredStick/%.2/%.4/credstick">
-      <details key="start" value="11749"/>
-      <details key="end" value="11758"/>
+    <eAnnotations source="positions.814" references="/0/printCredStick/%.2/%/%.1/%">
+      <details key="start" value="11871"/>
+      <details key="end" value="11903"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.822" references="/0/printCredStick/%.3">
-      <details key="start" value="11849"/>
-      <details key="end" value="11885"/>
+    <eAnnotations source="positions.815" references="/0/printCredStick/%.2/%/%.1/%/t">
+      <details key="start" value="11871"/>
+      <details key="end" value="11872"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.823" references="/0/printCredStick/%.3/%">
-      <details key="start" value="11868"/>
-      <details key="end" value="11877"/>
+    <eAnnotations source="positions.816" references="/0/printCredStick/%.2/%/%.1/%/%">
+      <details key="start" value="11883"/>
+      <details key="end" value="11902"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.824" references="/0/printCredStick/%.3/empty">
-      <details key="start" value="11879"/>
-      <details key="end" value="11884"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.825" references="/0/printCredStick/%.4">
-      <details key="start" value="11887"/>
-      <details key="end" value="11888"/>
-      <details key="line" value="291"/>
-    </eAnnotations>
-    <eAnnotations source="positions.826" references="/0/printCredStick/%.5">
-      <details key="start" value="11889"/>
-      <details key="end" value="11925"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.827" references="/0/printCredStick/%.5/%">
-      <details key="start" value="11889"/>
-      <details key="end" value="11911"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.828" references="/0/printCredStick/%.5/%/credstick">
-      <details key="start" value="11889"/>
-      <details key="end" value="11898"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.829" references="/0/printCredStick/%.6">
-      <details key="start" value="11928"/>
-      <details key="end" value="11929"/>
+    <eAnnotations source="positions.817" references="/0/printCredStick/%.2/%/%.2">
+      <details key="start" value="11906"/>
+      <details key="end" value="11907"/>
       <details key="line" value="292"/>
     </eAnnotations>
-    <eAnnotations source="positions.830" references="/0/printCredStick/credstick">
-      <details key="start" value="11605"/>
-      <details key="end" value="11626"/>
-      <details key="line" value="286"/>
-    </eAnnotations>
-    <eAnnotations source="positions.831" references="/0/printCredStick/empty">
-      <details key="start" value="11628"/>
-      <details key="end" value="11641"/>
-      <details key="line" value="286"/>
-    </eAnnotations>
-    <eAnnotations source="positions.832" references="/0/printGegenstand">
-      <details key="start" value="11943"/>
-      <details key="end" value="12105"/>
-      <details key="line" value="295"/>
-    </eAnnotations>
-    <eAnnotations source="positions.833" references="/0/printGegenstand/%">
-      <details key="start" value="12026"/>
-      <details key="end" value="12072"/>
+    <eAnnotations source="positions.818" references="/0/printCredStick/%.2/%/%.3">
+      <details key="start" value="11793"/>
+      <details key="end" value="11829"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.834" references="/0/printGegenstand/%/%">
-      <details key="start" value="12045"/>
-      <details key="end" value="12065"/>
+    <eAnnotations source="positions.819" references="/0/printCredStick/%.2/%/%.3/t">
+      <details key="start" value="11794"/>
+      <details key="end" value="11795"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.835" references="/0/printGegenstand/%/%/gegenstand">
-      <details key="start" value="12045"/>
-      <details key="end" value="12055"/>
+    <eAnnotations source="positions.820" references="/0/printCredStick/%.2/%/%.3/%">
+      <details key="start" value="11808"/>
+      <details key="end" value="11827"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.836" references="/0/printGegenstand/%/empty">
-      <details key="start" value="12066"/>
-      <details key="end" value="12071"/>
+    <eAnnotations source="positions.821" references="/0/printCredStick/%.2/%/%.4">
+      <details key="start" value="11907"/>
+      <details key="end" value="11994"/>
+      <details key="line" value="292"/>
+    </eAnnotations>
+    <eAnnotations source="positions.822" references="/0/printCredStick/%.2/%/%.4/%">
+      <details key="start" value="11915"/>
+      <details key="end" value="11934"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.837" references="/0/printGegenstand/%.1">
-      <details key="start" value="12074"/>
-      <details key="end" value="12075"/>
+    <eAnnotations source="positions.823" references="/0/printCredStick/%.2/%/%.4/%/%">
+      <details key="start" value="11915"/>
+      <details key="end" value="11921"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.824" references="/0/printCredStick/%.2/%/%.4/%/%/t">
+      <details key="start" value="11915"/>
+      <details key="end" value="11916"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.825" references="/0/printCredStick/%.2/%/%.4/%.1">
+      <details key="start" value="11937"/>
+      <details key="end" value="11938"/>
+      <details key="line" value="293"/>
+    </eAnnotations>
+    <eAnnotations source="positions.826" references="/0/printCredStick/%.2/%/%.4/%.2">
+      <details key="start" value="11939"/>
+      <details key="end" value="11965"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.827" references="/0/printCredStick/%.2/%/%.4/%.2/%">
+      <details key="start" value="11939"/>
+      <details key="end" value="11952"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.828" references="/0/printCredStick/%.2/%/%.4/%.2/%/t">
+      <details key="start" value="11939"/>
+      <details key="end" value="11940"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.829" references="/0/printCredStick/%.2/%/%.4/%.3">
+      <details key="start" value="11967"/>
+      <details key="end" value="11968"/>
+      <details key="line" value="293"/>
+    </eAnnotations>
+    <eAnnotations source="positions.830" references="/0/printCredStick/%.2/%/%.4/%.4">
+      <details key="start" value="11969"/>
+      <details key="end" value="11991"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.831" references="/0/printCredStick/%.2/%/%.4/%.4/%">
+      <details key="start" value="11969"/>
+      <details key="end" value="11977"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.832" references="/0/printCredStick/%.2/%/%.4/%.4/%/t">
+      <details key="start" value="11969"/>
+      <details key="end" value="11970"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.833" references="/0/printCredStick/%.2/%/%.4/%.5">
+      <details key="start" value="11993"/>
+      <details key="end" value="11994"/>
+      <details key="line" value="294"/>
+    </eAnnotations>
+    <eAnnotations source="positions.834" references="/0/printCredStick/%.2/t">
+      <details key="start" value="11735"/>
+      <details key="end" value="11759"/>
+      <details key="line" value="288"/>
+    </eAnnotations>
+    <eAnnotations source="positions.835" references="/0/printCredStick/%.2/%.1">
+      <details key="start" value="11762"/>
+      <details key="end" value="11786"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.836" references="/0/printCredStick/%.2/%.1/credstick">
+      <details key="start" value="11762"/>
+      <details key="end" value="11771"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.837" references="/0/printCredStick/%.3">
+      <details key="start" value="12008"/>
+      <details key="end" value="12044"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.838" references="/0/printCredStick/%.3/%">
+      <details key="start" value="12027"/>
+      <details key="end" value="12036"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.839" references="/0/printCredStick/%.3/empty">
+      <details key="start" value="12038"/>
+      <details key="end" value="12043"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.840" references="/0/printCredStick/%.4">
+      <details key="start" value="12046"/>
+      <details key="end" value="12047"/>
       <details key="line" value="296"/>
     </eAnnotations>
-    <eAnnotations source="positions.838" references="/0/printGegenstand/%.2">
-      <details key="start" value="12076"/>
-      <details key="end" value="12091"/>
+    <eAnnotations source="positions.841" references="/0/printCredStick/%.5">
+      <details key="start" value="12048"/>
+      <details key="end" value="12084"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.839" references="/0/printGegenstand/%.2/gegenstand">
-      <details key="start" value="12076"/>
-      <details key="end" value="12086"/>
+    <eAnnotations source="positions.842" references="/0/printCredStick/%.5/%">
+      <details key="start" value="12048"/>
+      <details key="end" value="12070"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.840" references="/0/printGegenstand/gegenstand">
-      <details key="start" value="11977"/>
-      <details key="end" value="12008"/>
-      <details key="line" value="295"/>
-    </eAnnotations>
-    <eAnnotations source="positions.841" references="/0/printGegenstand/empty">
-      <details key="start" value="12009"/>
-      <details key="end" value="12022"/>
-      <details key="line" value="295"/>
-    </eAnnotations>
-    <eAnnotations source="positions.842" references="/0/printGegenstand.1">
-      <details key="start" value="12107"/>
-      <details key="end" value="12334"/>
-      <details key="line" value="299"/>
-    </eAnnotations>
-    <eAnnotations source="positions.843" references="/0/printGegenstand.1/%">
-      <details key="start" value="12177"/>
-      <details key="end" value="12222"/>
+    <eAnnotations source="positions.843" references="/0/printCredStick/%.5/%/credstick">
+      <details key="start" value="12048"/>
+      <details key="end" value="12057"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.844" references="/0/printGegenstand.1/%/%">
-      <details key="start" value="12196"/>
-      <details key="end" value="12213"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.844" references="/0/printCredStick/%.6">
+      <details key="start" value="12087"/>
+      <details key="end" value="12088"/>
+      <details key="line" value="297"/>
     </eAnnotations>
-    <eAnnotations source="positions.845" references="/0/printGegenstand.1/%/%/comlink">
-      <details key="start" value="12196"/>
-      <details key="end" value="12203"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.845" references="/0/printCredStick/credstick">
+      <details key="start" value="11618"/>
+      <details key="end" value="11639"/>
+      <details key="line" value="286"/>
     </eAnnotations>
-    <eAnnotations source="positions.846" references="/0/printGegenstand.1/%/empty">
-      <details key="start" value="12216"/>
-      <details key="end" value="12221"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.846" references="/0/printCredStick/empty">
+      <details key="start" value="11641"/>
+      <details key="end" value="11654"/>
+      <details key="line" value="286"/>
     </eAnnotations>
-    <eAnnotations source="positions.847" references="/0/printGegenstand.1/%.1">
-      <details key="start" value="12224"/>
-      <details key="end" value="12225"/>
-      <details key="line" value="300"/>
-    </eAnnotations>
-    <eAnnotations source="positions.848" references="/0/printGegenstand.1/%.2">
-      <details key="start" value="12226"/>
-      <details key="end" value="12243"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.849" references="/0/printGegenstand.1/%.2/comlink">
-      <details key="start" value="12226"/>
-      <details key="end" value="12233"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.850" references="/0/printGegenstand.1/%.3">
-      <details key="start" value="12246"/>
-      <details key="end" value="12247"/>
+    <eAnnotations source="positions.847" references="/0/printSoppingTransaction">
+      <details key="start" value="12103"/>
+      <details key="end" value="12388"/>
       <details key="line" value="301"/>
     </eAnnotations>
-    <eAnnotations source="positions.851" references="/0/printGegenstand.1/%.4">
-      <details key="start" value="12248"/>
-      <details key="end" value="12321"/>
+    <eAnnotations source="positions.848" references="/0/printSoppingTransaction/%">
+      <details key="start" value="12171"/>
+      <details key="end" value="12298"/>
+      <details key="line" value="302"/>
+    </eAnnotations>
+    <eAnnotations source="positions.849" references="/0/printSoppingTransaction/%/%">
+      <details key="start" value="12205"/>
+      <details key="end" value="12217"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.852" references="/0/printGegenstand.1/%.4/%">
-      <details key="start" value="12272"/>
-      <details key="end" value="12294"/>
+    <eAnnotations source="positions.850" references="/0/printSoppingTransaction/%/%/gw">
+      <details key="start" value="12205"/>
+      <details key="end" value="12207"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.853" references="/0/printGegenstand.1/%.4/%/comlink">
-      <details key="start" value="12272"/>
-      <details key="end" value="12279"/>
+    <eAnnotations source="positions.851" references="/0/printSoppingTransaction/%/%.1">
+      <details key="start" value="12219"/>
+      <details key="end" value="12220"/>
+      <details key="line" value="303"/>
+    </eAnnotations>
+    <eAnnotations source="positions.852" references="/0/printSoppingTransaction/%/%.2">
+      <details key="start" value="12221"/>
+      <details key="end" value="12259"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.854" references="/0/printGegenstand.1/%.4/%.1">
-      <details key="start" value="12296"/>
-      <details key="end" value="12308"/>
+    <eAnnotations source="positions.853" references="/0/printSoppingTransaction/%/%.2/%">
+      <details key="start" value="12221"/>
+      <details key="end" value="12249"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.855" references="/0/printGegenstand.1/%.4/%.1/comlink">
-      <details key="start" value="12296"/>
-      <details key="end" value="12303"/>
+    <eAnnotations source="positions.854" references="/0/printSoppingTransaction/%/%.2/%/%">
+      <details key="start" value="12221"/>
+      <details key="end" value="12241"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.856" references="/0/printGegenstand.1/%.4/empty">
-      <details key="start" value="12309"/>
-      <details key="end" value="12314"/>
+    <eAnnotations source="positions.855" references="/0/printSoppingTransaction/%/%.2/%/%/gw">
+      <details key="start" value="12221"/>
+      <details key="end" value="12223"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.857" references="/0/printGegenstand.1/%.4/%.2">
-      <details key="start" value="12316"/>
+    <eAnnotations source="positions.856" references="/0/printSoppingTransaction/%/%.2/%/%/%">
+      <details key="start" value="12234"/>
+      <details key="end" value="12240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.857" references="/0/printSoppingTransaction/%/%.3">
+      <details key="start" value="12261"/>
+      <details key="end" value="12262"/>
+      <details key="line" value="303"/>
+    </eAnnotations>
+    <eAnnotations source="positions.858" references="/0/printSoppingTransaction/%/%.4">
+      <details key="start" value="12263"/>
+      <details key="end" value="12289"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.859" references="/0/printSoppingTransaction/%/%.4/%">
+      <details key="start" value="12263"/>
+      <details key="end" value="12275"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.860" references="/0/printSoppingTransaction/%/%.4/%/gw">
+      <details key="start" value="12263"/>
+      <details key="end" value="12265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.861" references="/0/printSoppingTransaction/%/%.5">
+      <details key="start" value="12291"/>
+      <details key="end" value="12292"/>
+      <details key="line" value="304"/>
+    </eAnnotations>
+    <eAnnotations source="positions.862" references="/0/printSoppingTransaction/%/gw">
+      <details key="start" value="12177"/>
+      <details key="end" value="12190"/>
+      <details key="line" value="302"/>
+    </eAnnotations>
+    <eAnnotations source="positions.863" references="/0/printSoppingTransaction/%/%.6">
+      <details key="start" value="12193"/>
+      <details key="end" value="12201"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.864" references="/0/printSoppingTransaction/%/%.6/ta">
+      <details key="start" value="12193"/>
+      <details key="end" value="12195"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.865" references="/0/printSoppingTransaction/%.1">
+      <details key="start" value="12299"/>
+      <details key="end" value="12317"/>
+      <details key="line" value="305"/>
+    </eAnnotations>
+    <eAnnotations source="positions.866" references="/0/printSoppingTransaction/%.2">
+      <details key="start" value="12318"/>
+      <details key="end" value="12349"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.867" references="/0/printSoppingTransaction/%.2/%">
+      <details key="start" value="12318"/>
+      <details key="end" value="12335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.868" references="/0/printSoppingTransaction/%.2/%/ta">
+      <details key="start" value="12318"/>
       <details key="end" value="12320"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.858" references="/0/printGegenstand.1/comlink">
-      <details key="start" value="12141"/>
-      <details key="end" value="12159"/>
-      <details key="line" value="299"/>
-    </eAnnotations>
-    <eAnnotations source="positions.859" references="/0/printGegenstand.1/empty">
-      <details key="start" value="12160"/>
-      <details key="end" value="12173"/>
-      <details key="line" value="299"/>
-    </eAnnotations>
-    <eAnnotations source="positions.860" references="/0/printGegenstand.2">
-      <details key="start" value="12336"/>
-      <details key="end" value="12575"/>
-      <details key="line" value="303"/>
-    </eAnnotations>
-    <eAnnotations source="positions.861" references="/0/printGegenstand.2/%">
-      <details key="start" value="12418"/>
-      <details key="end" value="12463"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.862" references="/0/printGegenstand.2/%/%">
-      <details key="start" value="12437"/>
-      <details key="end" value="12454"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.863" references="/0/printGegenstand.2/%/%/comlink">
-      <details key="start" value="12437"/>
-      <details key="end" value="12444"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.864" references="/0/printGegenstand.2/%/empty">
-      <details key="start" value="12457"/>
-      <details key="end" value="12462"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.865" references="/0/printGegenstand.2/%.1">
-      <details key="start" value="12465"/>
-      <details key="end" value="12466"/>
-      <details key="line" value="304"/>
-    </eAnnotations>
-    <eAnnotations source="positions.866" references="/0/printGegenstand.2/%.2">
-      <details key="start" value="12467"/>
-      <details key="end" value="12484"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.867" references="/0/printGegenstand.2/%.2/comlink">
-      <details key="start" value="12467"/>
-      <details key="end" value="12474"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.868" references="/0/printGegenstand.2/%.3">
-      <details key="start" value="12487"/>
-      <details key="end" value="12488"/>
+    <eAnnotations source="positions.869" references="/0/printSoppingTransaction/%.3">
+      <details key="start" value="12351"/>
+      <details key="end" value="12362"/>
       <details key="line" value="305"/>
     </eAnnotations>
-    <eAnnotations source="positions.869" references="/0/printGegenstand.2/%.4">
-      <details key="start" value="12489"/>
-      <details key="end" value="12562"/>
+    <eAnnotations source="positions.870" references="/0/printSoppingTransaction/%.4">
+      <details key="start" value="12363"/>
+      <details key="end" value="12369"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.870" references="/0/printGegenstand.2/%.4/%">
-      <details key="start" value="12513"/>
-      <details key="end" value="12535"/>
+    <eAnnotations source="positions.871" references="/0/printSoppingTransaction/%.4/ta">
+      <details key="start" value="12363"/>
+      <details key="end" value="12365"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.871" references="/0/printGegenstand.2/%.4/%/comlink">
-      <details key="start" value="12513"/>
-      <details key="end" value="12520"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.872" references="/0/printSoppingTransaction/%.5">
+      <details key="start" value="12371"/>
+      <details key="end" value="12376"/>
+      <details key="line" value="305"/>
     </eAnnotations>
-    <eAnnotations source="positions.872" references="/0/printGegenstand.2/%.4/%.1">
-      <details key="start" value="12536"/>
-      <details key="end" value="12548"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.873" references="/0/printSoppingTransaction/ta">
+      <details key="start" value="12144"/>
+      <details key="end" value="12168"/>
+      <details key="line" value="301"/>
     </eAnnotations>
-    <eAnnotations source="positions.873" references="/0/printGegenstand.2/%.4/%.1/comlink">
-      <details key="start" value="12536"/>
-      <details key="end" value="12543"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.874" references="/0/printGegenstand.2/%.4/empty">
-      <details key="start" value="12550"/>
-      <details key="end" value="12555"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.875" references="/0/printGegenstand.2/%.4/%.2">
-      <details key="start" value="12557"/>
-      <details key="end" value="12561"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.876" references="/0/printGegenstand.2/comlink">
-      <details key="start" value="12370"/>
-      <details key="end" value="12400"/>
-      <details key="line" value="303"/>
-    </eAnnotations>
-    <eAnnotations source="positions.877" references="/0/printGegenstand.2/empty">
-      <details key="start" value="12401"/>
-      <details key="end" value="12414"/>
-      <details key="line" value="303"/>
-    </eAnnotations>
-    <eAnnotations source="positions.878" references="/0/printGegenstand.3">
-      <details key="start" value="12577"/>
-      <details key="end" value="12854"/>
-      <details key="line" value="307"/>
-    </eAnnotations>
-    <eAnnotations source="positions.879" references="/0/printGegenstand.3/%">
-      <details key="start" value="12648"/>
-      <details key="end" value="12693"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.880" references="/0/printGegenstand.3/%/%">
-      <details key="start" value="12667"/>
-      <details key="end" value="12684"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.881" references="/0/printGegenstand.3/%/%/comlink">
-      <details key="start" value="12667"/>
-      <details key="end" value="12674"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.882" references="/0/printGegenstand.3/%/empty">
-      <details key="start" value="12687"/>
-      <details key="end" value="12692"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.883" references="/0/printGegenstand.3/%.1">
-      <details key="start" value="12695"/>
-      <details key="end" value="12696"/>
+    <eAnnotations source="positions.874" references="/0/printGegenstand">
+      <details key="start" value="12390"/>
+      <details key="end" value="12552"/>
       <details key="line" value="308"/>
     </eAnnotations>
-    <eAnnotations source="positions.884" references="/0/printGegenstand.3/%.2">
-      <details key="start" value="12697"/>
-      <details key="end" value="12714"/>
+    <eAnnotations source="positions.875" references="/0/printGegenstand/%">
+      <details key="start" value="12473"/>
+      <details key="end" value="12519"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.885" references="/0/printGegenstand.3/%.2/comlink">
-      <details key="start" value="12697"/>
-      <details key="end" value="12704"/>
+    <eAnnotations source="positions.876" references="/0/printGegenstand/%/%">
+      <details key="start" value="12492"/>
+      <details key="end" value="12512"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.886" references="/0/printGegenstand.3/%.3">
-      <details key="start" value="12717"/>
-      <details key="end" value="12718"/>
+    <eAnnotations source="positions.877" references="/0/printGegenstand/%/%/gegenstand">
+      <details key="start" value="12492"/>
+      <details key="end" value="12502"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.878" references="/0/printGegenstand/%/empty">
+      <details key="start" value="12513"/>
+      <details key="end" value="12518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.879" references="/0/printGegenstand/%.1">
+      <details key="start" value="12521"/>
+      <details key="end" value="12522"/>
       <details key="line" value="309"/>
     </eAnnotations>
-    <eAnnotations source="positions.887" references="/0/printGegenstand.3/%.4">
-      <details key="start" value="12718"/>
-      <details key="end" value="12843"/>
-      <details key="line" value="309"/>
-    </eAnnotations>
-    <eAnnotations source="positions.888" references="/0/printGegenstand.3/%.4/%">
-      <details key="start" value="12763"/>
-      <details key="end" value="12836"/>
+    <eAnnotations source="positions.880" references="/0/printGegenstand/%.2">
+      <details key="start" value="12523"/>
+      <details key="end" value="12538"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.889" references="/0/printGegenstand.3/%.4/%/%">
-      <details key="start" value="12787"/>
-      <details key="end" value="12809"/>
+    <eAnnotations source="positions.881" references="/0/printGegenstand/%.2/gegenstand">
+      <details key="start" value="12523"/>
+      <details key="end" value="12533"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.890" references="/0/printGegenstand.3/%.4/%/%/comlink">
-      <details key="start" value="12787"/>
-      <details key="end" value="12794"/>
+    <eAnnotations source="positions.882" references="/0/printGegenstand/gegenstand">
+      <details key="start" value="12424"/>
+      <details key="end" value="12455"/>
+      <details key="line" value="308"/>
+    </eAnnotations>
+    <eAnnotations source="positions.883" references="/0/printGegenstand/empty">
+      <details key="start" value="12456"/>
+      <details key="end" value="12469"/>
+      <details key="line" value="308"/>
+    </eAnnotations>
+    <eAnnotations source="positions.884" references="/0/printGegenstand.1">
+      <details key="start" value="12554"/>
+      <details key="end" value="12781"/>
+      <details key="line" value="312"/>
+    </eAnnotations>
+    <eAnnotations source="positions.885" references="/0/printGegenstand.1/%">
+      <details key="start" value="12624"/>
+      <details key="end" value="12669"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.891" references="/0/printGegenstand.3/%.4/%/%.1">
-      <details key="start" value="12811"/>
-      <details key="end" value="12823"/>
+    <eAnnotations source="positions.886" references="/0/printGegenstand.1/%/%">
+      <details key="start" value="12643"/>
+      <details key="end" value="12660"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.892" references="/0/printGegenstand.3/%.4/%/%.1/comlink">
-      <details key="start" value="12811"/>
-      <details key="end" value="12818"/>
+    <eAnnotations source="positions.887" references="/0/printGegenstand.1/%/%/comlink">
+      <details key="start" value="12643"/>
+      <details key="end" value="12650"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.893" references="/0/printGegenstand.3/%.4/%/empty">
-      <details key="start" value="12824"/>
-      <details key="end" value="12829"/>
+    <eAnnotations source="positions.888" references="/0/printGegenstand.1/%/empty">
+      <details key="start" value="12663"/>
+      <details key="end" value="12668"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.894" references="/0/printGegenstand.3/%.4/%/%.2">
-      <details key="start" value="12831"/>
-      <details key="end" value="12835"/>
+    <eAnnotations source="positions.889" references="/0/printGegenstand.1/%.1">
+      <details key="start" value="12671"/>
+      <details key="end" value="12672"/>
+      <details key="line" value="313"/>
+    </eAnnotations>
+    <eAnnotations source="positions.890" references="/0/printGegenstand.1/%.2">
+      <details key="start" value="12673"/>
+      <details key="end" value="12690"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.895" references="/0/printGegenstand.3/%.4/%.1">
-      <details key="start" value="12722"/>
+    <eAnnotations source="positions.891" references="/0/printGegenstand.1/%.2/comlink">
+      <details key="start" value="12673"/>
+      <details key="end" value="12680"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.892" references="/0/printGegenstand.1/%.3">
+      <details key="start" value="12693"/>
+      <details key="end" value="12694"/>
+      <details key="line" value="314"/>
+    </eAnnotations>
+    <eAnnotations source="positions.893" references="/0/printGegenstand.1/%.4">
+      <details key="start" value="12695"/>
+      <details key="end" value="12768"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.894" references="/0/printGegenstand.1/%.4/%">
+      <details key="start" value="12719"/>
+      <details key="end" value="12741"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.895" references="/0/printGegenstand.1/%.4/%/comlink">
+      <details key="start" value="12719"/>
+      <details key="end" value="12726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.896" references="/0/printGegenstand.1/%.4/%.1">
+      <details key="start" value="12743"/>
+      <details key="end" value="12755"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.897" references="/0/printGegenstand.1/%.4/%.1/comlink">
+      <details key="start" value="12743"/>
+      <details key="end" value="12750"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.898" references="/0/printGegenstand.1/%.4/empty">
+      <details key="start" value="12756"/>
       <details key="end" value="12761"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.896" references="/0/printGegenstand.3/%.4/%.1/%">
-      <details key="start" value="12727"/>
-      <details key="end" value="12760"/>
+    <eAnnotations source="positions.899" references="/0/printGegenstand.1/%.4/%.2">
+      <details key="start" value="12763"/>
+      <details key="end" value="12767"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.897" references="/0/printGegenstand.3/%.4/%.1/%/%">
-      <details key="start" value="12727"/>
-      <details key="end" value="12749"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.900" references="/0/printGegenstand.1/comlink">
+      <details key="start" value="12588"/>
+      <details key="end" value="12606"/>
+      <details key="line" value="312"/>
     </eAnnotations>
-    <eAnnotations source="positions.898" references="/0/printGegenstand.3/%.4/%.1/%/%/comlink">
-      <details key="start" value="12727"/>
-      <details key="end" value="12734"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.901" references="/0/printGegenstand.1/empty">
+      <details key="start" value="12607"/>
+      <details key="end" value="12620"/>
+      <details key="line" value="312"/>
     </eAnnotations>
-    <eAnnotations source="positions.899" references="/0/printGegenstand.3/comlink">
-      <details key="start" value="12611"/>
-      <details key="end" value="12630"/>
-      <details key="line" value="307"/>
-    </eAnnotations>
-    <eAnnotations source="positions.900" references="/0/printGegenstand.3/empty">
-      <details key="start" value="12631"/>
-      <details key="end" value="12644"/>
-      <details key="line" value="307"/>
-    </eAnnotations>
-    <eAnnotations source="positions.901" references="/0/printGeldwertCollection">
-      <details key="start" value="12856"/>
-      <details key="end" value="13164"/>
-      <details key="line" value="311"/>
-    </eAnnotations>
-    <eAnnotations source="positions.902" references="/0/printGeldwertCollection/%">
-      <details key="start" value="13011"/>
-      <details key="end" value="13107"/>
-      <details key="line" value="313"/>
-    </eAnnotations>
-    <eAnnotations source="positions.903" references="/0/printGeldwertCollection/%/%">
-      <details key="start" value="13040"/>
-      <details key="end" value="13087"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.904" references="/0/printGeldwertCollection/%/%/%">
-      <details key="start" value="13059"/>
-      <details key="end" value="13078"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.905" references="/0/printGeldwertCollection/%/%/%/prefix">
-      <details key="start" value="13059"/>
-      <details key="end" value="13065"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.906" references="/0/printGeldwertCollection/%/%/%/%">
-      <details key="start" value="13066"/>
-      <details key="end" value="13078"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.907" references="/0/printGeldwertCollection/%/%/%/%/gw">
-      <details key="start" value="13066"/>
-      <details key="end" value="13068"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.908" references="/0/printGeldwertCollection/%/%/empty">
-      <details key="start" value="13081"/>
-      <details key="end" value="13086"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.909" references="/0/printGeldwertCollection/%/%.1">
-      <details key="start" value="13089"/>
-      <details key="end" value="13090"/>
-      <details key="line" value="314"/>
-    </eAnnotations>
-    <eAnnotations source="positions.910" references="/0/printGeldwertCollection/%/%.2">
-      <details key="start" value="13091"/>
-      <details key="end" value="13098"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.911" references="/0/printGeldwertCollection/%/%.2/gw">
-      <details key="start" value="13091"/>
-      <details key="end" value="13093"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.912" references="/0/printGeldwertCollection/%/%.3">
-      <details key="start" value="13100"/>
-      <details key="end" value="13101"/>
-      <details key="line" value="315"/>
-    </eAnnotations>
-    <eAnnotations source="positions.913" references="/0/printGeldwertCollection/%/gw">
-      <details key="start" value="13017"/>
-      <details key="end" value="13030"/>
-      <details key="line" value="313"/>
-    </eAnnotations>
-    <eAnnotations source="positions.914" references="/0/printGeldwertCollection/%/col">
-      <details key="start" value="13033"/>
-      <details key="end" value="13036"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.915" references="/0/printGeldwertCollection/%.1">
-      <details key="start" value="13109"/>
-      <details key="end" value="13143"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.916" references="/0/printGeldwertCollection/%.1/%">
-      <details key="start" value="13128"/>
-      <details key="end" value="13135"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.917" references="/0/printGeldwertCollection/%.1/empty">
-      <details key="start" value="13137"/>
-      <details key="end" value="13142"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.918" references="/0/printGeldwertCollection/%.2">
-      <details key="start" value="13145"/>
-      <details key="end" value="13146"/>
+    <eAnnotations source="positions.902" references="/0/printGegenstand.2">
+      <details key="start" value="12783"/>
+      <details key="end" value="13022"/>
       <details key="line" value="316"/>
     </eAnnotations>
-    <eAnnotations source="positions.919" references="/0/printGeldwertCollection/wert">
-      <details key="start" value="13147"/>
-      <details key="end" value="13151"/>
+    <eAnnotations source="positions.903" references="/0/printGegenstand.2/%">
+      <details key="start" value="12865"/>
+      <details key="end" value="12910"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.920" references="/0/printGeldwertCollection/col">
-      <details key="start" value="12898"/>
-      <details key="end" value="12924"/>
-      <details key="line" value="311"/>
+    <eAnnotations source="positions.904" references="/0/printGegenstand.2/%/%">
+      <details key="start" value="12884"/>
+      <details key="end" value="12901"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.921" references="/0/printGeldwertCollection/wert.1">
-      <details key="start" value="12925"/>
-      <details key="end" value="12942"/>
-      <details key="line" value="311"/>
+    <eAnnotations source="positions.905" references="/0/printGegenstand.2/%/%/comlink">
+      <details key="start" value="12884"/>
+      <details key="end" value="12891"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.922" references="/0/printGeldwertCollection/empty">
-      <details key="start" value="12944"/>
-      <details key="end" value="12957"/>
-      <details key="line" value="311"/>
+    <eAnnotations source="positions.906" references="/0/printGegenstand.2/%/empty">
+      <details key="start" value="12904"/>
+      <details key="end" value="12909"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.923" references="/0/printGeldwertCollection/prefix">
-      <details key="start" value="12958"/>
-      <details key="end" value="12973"/>
-      <details key="line" value="311"/>
+    <eAnnotations source="positions.907" references="/0/printGegenstand.2/%.1">
+      <details key="start" value="12912"/>
+      <details key="end" value="12913"/>
+      <details key="line" value="317"/>
     </eAnnotations>
-    <eAnnotations source="positions.924" references="/0/printGeldwertCollection/%.3">
-      <details key="start" value="12977"/>
+    <eAnnotations source="positions.908" references="/0/printGegenstand.2/%.2">
+      <details key="start" value="12914"/>
+      <details key="end" value="12931"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.909" references="/0/printGegenstand.2/%.2/comlink">
+      <details key="start" value="12914"/>
+      <details key="end" value="12921"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.910" references="/0/printGegenstand.2/%.3">
+      <details key="start" value="12934"/>
+      <details key="end" value="12935"/>
+      <details key="line" value="318"/>
+    </eAnnotations>
+    <eAnnotations source="positions.911" references="/0/printGegenstand.2/%.4">
+      <details key="start" value="12936"/>
+      <details key="end" value="13009"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.912" references="/0/printGegenstand.2/%.4/%">
+      <details key="start" value="12960"/>
+      <details key="end" value="12982"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.913" references="/0/printGegenstand.2/%.4/%/comlink">
+      <details key="start" value="12960"/>
+      <details key="end" value="12967"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.914" references="/0/printGegenstand.2/%.4/%.1">
+      <details key="start" value="12983"/>
       <details key="end" value="12995"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.925" references="/0/printGeldwertCollection/%.3/%">
-      <details key="start" value="12981"/>
-      <details key="end" value="12995"/>
+    <eAnnotations source="positions.915" references="/0/printGegenstand.2/%.4/%.1/comlink">
+      <details key="start" value="12983"/>
+      <details key="end" value="12990"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.926" references="/0/printGeldwertCollection/%.3/%/col">
-      <details key="start" value="12981"/>
-      <details key="end" value="12984"/>
+    <eAnnotations source="positions.916" references="/0/printGegenstand.2/%.4/empty">
+      <details key="start" value="12997"/>
+      <details key="end" value="13002"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.927" references="/0/printGeldwertCollection/%.4">
-      <details key="start" value="13002"/>
+    <eAnnotations source="positions.917" references="/0/printGegenstand.2/%.4/%.2">
+      <details key="start" value="13004"/>
       <details key="end" value="13008"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.928" references="/0/printGeldwertCollection/%.4/self">
+    <eAnnotations source="positions.918" references="/0/printGegenstand.2/comlink">
+      <details key="start" value="12817"/>
+      <details key="end" value="12847"/>
+      <details key="line" value="316"/>
+    </eAnnotations>
+    <eAnnotations source="positions.919" references="/0/printGegenstand.2/empty">
+      <details key="start" value="12848"/>
+      <details key="end" value="12861"/>
+      <details key="line" value="316"/>
+    </eAnnotations>
+    <eAnnotations source="positions.920" references="/0/printGegenstand.3">
+      <details key="start" value="13024"/>
+      <details key="end" value="13301"/>
+      <details key="line" value="320"/>
+    </eAnnotations>
+    <eAnnotations source="positions.921" references="/0/printGegenstand.3/%">
+      <details key="start" value="13095"/>
+      <details key="end" value="13140"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.922" references="/0/printGegenstand.3/%/%">
+      <details key="start" value="13114"/>
+      <details key="end" value="13131"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.923" references="/0/printGegenstand.3/%/%/comlink">
+      <details key="start" value="13114"/>
+      <details key="end" value="13121"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.924" references="/0/printGegenstand.3/%/empty">
+      <details key="start" value="13134"/>
+      <details key="end" value="13139"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.925" references="/0/printGegenstand.3/%.1">
+      <details key="start" value="13142"/>
+      <details key="end" value="13143"/>
+      <details key="line" value="321"/>
+    </eAnnotations>
+    <eAnnotations source="positions.926" references="/0/printGegenstand.3/%.2">
+      <details key="start" value="13144"/>
+      <details key="end" value="13161"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.927" references="/0/printGegenstand.3/%.2/comlink">
+      <details key="start" value="13144"/>
+      <details key="end" value="13151"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.928" references="/0/printGegenstand.3/%.3">
+      <details key="start" value="13164"/>
+      <details key="end" value="13165"/>
+      <details key="line" value="322"/>
+    </eAnnotations>
+    <eAnnotations source="positions.929" references="/0/printGegenstand.3/%.4">
+      <details key="start" value="13165"/>
+      <details key="end" value="13290"/>
+      <details key="line" value="322"/>
+    </eAnnotations>
+    <eAnnotations source="positions.930" references="/0/printGegenstand.3/%.4/%">
+      <details key="start" value="13210"/>
+      <details key="end" value="13283"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.931" references="/0/printGegenstand.3/%.4/%/%">
+      <details key="start" value="13234"/>
+      <details key="end" value="13256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.932" references="/0/printGegenstand.3/%.4/%/%/comlink">
+      <details key="start" value="13234"/>
+      <details key="end" value="13241"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.933" references="/0/printGegenstand.3/%.4/%/%.1">
+      <details key="start" value="13258"/>
+      <details key="end" value="13270"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.934" references="/0/printGegenstand.3/%.4/%/%.1/comlink">
+      <details key="start" value="13258"/>
+      <details key="end" value="13265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.935" references="/0/printGegenstand.3/%.4/%/empty">
+      <details key="start" value="13271"/>
+      <details key="end" value="13276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.936" references="/0/printGegenstand.3/%.4/%/%.2">
+      <details key="start" value="13278"/>
+      <details key="end" value="13282"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.937" references="/0/printGegenstand.3/%.4/%.1">
+      <details key="start" value="13169"/>
+      <details key="end" value="13208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.938" references="/0/printGegenstand.3/%.4/%.1/%">
+      <details key="start" value="13174"/>
+      <details key="end" value="13207"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.939" references="/0/printGegenstand.3/%.4/%.1/%/%">
+      <details key="start" value="13174"/>
+      <details key="end" value="13196"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.940" references="/0/printGegenstand.3/%.4/%.1/%/%/comlink">
+      <details key="start" value="13174"/>
+      <details key="end" value="13181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.941" references="/0/printGegenstand.3/comlink">
+      <details key="start" value="13058"/>
+      <details key="end" value="13077"/>
+      <details key="line" value="320"/>
+    </eAnnotations>
+    <eAnnotations source="positions.942" references="/0/printGegenstand.3/empty">
+      <details key="start" value="13078"/>
+      <details key="end" value="13091"/>
+      <details key="line" value="320"/>
+    </eAnnotations>
+    <eAnnotations source="positions.943" references="/0/printGeldwertCollection">
+      <details key="start" value="13303"/>
+      <details key="end" value="13611"/>
+      <details key="line" value="324"/>
+    </eAnnotations>
+    <eAnnotations source="positions.944" references="/0/printGeldwertCollection/%">
+      <details key="start" value="13458"/>
+      <details key="end" value="13554"/>
+      <details key="line" value="326"/>
+    </eAnnotations>
+    <eAnnotations source="positions.945" references="/0/printGeldwertCollection/%/%">
+      <details key="start" value="13487"/>
+      <details key="end" value="13534"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.946" references="/0/printGeldwertCollection/%/%/%">
+      <details key="start" value="13506"/>
+      <details key="end" value="13525"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.947" references="/0/printGeldwertCollection/%/%/%/prefix">
+      <details key="start" value="13506"/>
+      <details key="end" value="13512"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.948" references="/0/printGeldwertCollection/%/%/%/%">
+      <details key="start" value="13513"/>
+      <details key="end" value="13525"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.949" references="/0/printGeldwertCollection/%/%/%/%/gw">
+      <details key="start" value="13513"/>
+      <details key="end" value="13515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.950" references="/0/printGeldwertCollection/%/%/empty">
+      <details key="start" value="13528"/>
+      <details key="end" value="13533"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.951" references="/0/printGeldwertCollection/%/%.1">
+      <details key="start" value="13536"/>
+      <details key="end" value="13537"/>
+      <details key="line" value="327"/>
+    </eAnnotations>
+    <eAnnotations source="positions.952" references="/0/printGeldwertCollection/%/%.2">
+      <details key="start" value="13538"/>
+      <details key="end" value="13545"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.953" references="/0/printGeldwertCollection/%/%.2/gw">
+      <details key="start" value="13538"/>
+      <details key="end" value="13540"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.954" references="/0/printGeldwertCollection/%/%.3">
+      <details key="start" value="13547"/>
+      <details key="end" value="13548"/>
+      <details key="line" value="328"/>
+    </eAnnotations>
+    <eAnnotations source="positions.955" references="/0/printGeldwertCollection/%/gw">
+      <details key="start" value="13464"/>
+      <details key="end" value="13477"/>
+      <details key="line" value="326"/>
+    </eAnnotations>
+    <eAnnotations source="positions.956" references="/0/printGeldwertCollection/%/col">
+      <details key="start" value="13480"/>
+      <details key="end" value="13483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.957" references="/0/printGeldwertCollection/%.1">
+      <details key="start" value="13556"/>
+      <details key="end" value="13590"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.958" references="/0/printGeldwertCollection/%.1/%">
+      <details key="start" value="13575"/>
+      <details key="end" value="13582"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.959" references="/0/printGeldwertCollection/%.1/empty">
+      <details key="start" value="13584"/>
+      <details key="end" value="13589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.960" references="/0/printGeldwertCollection/%.2">
+      <details key="start" value="13592"/>
+      <details key="end" value="13593"/>
+      <details key="line" value="329"/>
+    </eAnnotations>
+    <eAnnotations source="positions.961" references="/0/printGeldwertCollection/wert">
+      <details key="start" value="13594"/>
+      <details key="end" value="13598"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.962" references="/0/printGeldwertCollection/col">
+      <details key="start" value="13345"/>
+      <details key="end" value="13371"/>
+      <details key="line" value="324"/>
+    </eAnnotations>
+    <eAnnotations source="positions.963" references="/0/printGeldwertCollection/wert.1">
+      <details key="start" value="13372"/>
+      <details key="end" value="13389"/>
+      <details key="line" value="324"/>
+    </eAnnotations>
+    <eAnnotations source="positions.964" references="/0/printGeldwertCollection/empty">
+      <details key="start" value="13391"/>
+      <details key="end" value="13404"/>
+      <details key="line" value="324"/>
+    </eAnnotations>
+    <eAnnotations source="positions.965" references="/0/printGeldwertCollection/prefix">
+      <details key="start" value="13405"/>
+      <details key="end" value="13420"/>
+      <details key="line" value="324"/>
+    </eAnnotations>
+    <eAnnotations source="positions.966" references="/0/printGeldwertCollection/%.3">
+      <details key="start" value="13424"/>
+      <details key="end" value="13442"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.967" references="/0/printGeldwertCollection/%.3/%">
+      <details key="start" value="13428"/>
+      <details key="end" value="13442"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.968" references="/0/printGeldwertCollection/%.3/%/col">
+      <details key="start" value="13428"/>
+      <details key="end" value="13431"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.969" references="/0/printGeldwertCollection/%.4">
+      <details key="start" value="13449"/>
+      <details key="end" value="13455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.970" references="/0/printGeldwertCollection/%.4/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
