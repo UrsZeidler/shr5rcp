@@ -200,13 +200,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected void addValidationResult(IToolBarManager toolbarManager, EObject object) {
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, createValidationContext());
         if (!validate.getChildren().isEmpty()) {
-            FluentIterable<String> transform = FluentIterable.from(validate.getChildren()).transform(new Function<Diagnostic, String>() {
-                @Override
-                public String apply(Diagnostic input) {
-                    return input.getMessage();
-                }
-            });
-            final String message = Joiner.on("\n").join(transform);
+            final String message = Joiner.on("\n").join(
+                    FluentIterable.from(validate.getChildren()).transform(ShadowrunEditingTools.diagnosticToStringTransformer()));
             final ImageDescriptor pluginImageDescriptor = ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/error.gif");
             Action action = new Action() {
 
