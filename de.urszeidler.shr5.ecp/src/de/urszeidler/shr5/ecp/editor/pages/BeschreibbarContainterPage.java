@@ -94,6 +94,7 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
         form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
         form.getToolBarManager().add(new ImportObjectAction(form.getShell(), object));
+        addValidationResult(form.getToolBarManager(), object);
         form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
