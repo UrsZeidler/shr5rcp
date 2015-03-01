@@ -18,4 +18,6 @@ public class PreferenceConstants {
     
     public static final String SCRIPT_GRAPH_COLOR_FG = "SCRIPT_GRAPH_COLOR_FG_";
     public static final String SCRIPT_GRAPH_COLOR_BG = "SCRIPT_GRAPH_COLOR_BG_";
+    public static final String LINKED_SOURCEBOOKS = "LINKED_SOURCEBOOKS";
+    public static final String LINKED_SOURCEBOOKS_OFFSET = "LINKED_SOURCEBOOKS_OFFSET";
 }

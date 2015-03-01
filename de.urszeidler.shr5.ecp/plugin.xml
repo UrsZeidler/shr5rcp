@@ -162,6 +162,12 @@
          point="org.eclipse.ui.preferencePages">
       <page
             category="de.urszeidler.shr5.ecp.preferences.basic.page"
+            class="de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences"
+            id="de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences"
+            name="source view">
+      </page>
+      <page
+            category="de.urszeidler.shr5.ecp.preferences.basic.page"
             class="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             id="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             name="%print.preferences.page.name">
@@ -210,6 +216,11 @@
             class="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
             id="de.urszeidler.shr5.runtime.ui.views.RuntimeScriptView"
             name="%runtime.view.name">
+      </view>
+      <view
+            class="de.urszeidler.shr5.ecp.views.SourceBookView"
+            id="de.urszeidler.shr5.ecp.views.SourceBookView"
+            name="SourceBookView">
       </view>
    </extension>
    <extension
