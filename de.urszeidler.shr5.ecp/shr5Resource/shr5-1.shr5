@@ -21690,6 +21690,21 @@
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_Ix1kYL-CEeS9maZrSgWaVQ" name="Shadowrunner Teams">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
         </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_CXtisMAIEeSSE7G7aOAz9Q" name="Automotive Mechanics">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_IFIYgMAIEeSSE7G7aOAz9Q" name="Drone Designs">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_LcqVAMAIEeSSE7G7aOAz9Q" name="Vehicle Chop Shops">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_mrsmQMAVEeSEwMMqEoWtPQ" name="Hehler">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_zCkcUMAVEeSEwMMqEoWtPQ" name="Berliner Gerüchteküche">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_NmNAYL-EEeS9maZrSgWaVQ" name="software">
         <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" name="" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
@@ -22066,8 +22081,10 @@
           <localizations xmi:id="_NMtTIbPPEeSnAumGkho7aw" local="de" name="Munition: Gelgeschosse"/>
         </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
-        <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="3" loyality="2" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
+        <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="2" loyality="3" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2" character="_g_xAoL-FEeSSYv7eFvElvA"/>
+        <connections xmi:id="_1rAMQMAXEeSK0tFwZsh0jA" influence="2" loyality="1" character="_7fDeQMAGEeSSE7G7aOAz9Q"/>
+        <connections xmi:id="_-Xbw4MAXEeSK0tFwZsh0jA" influence="3" loyality="1" character="_572dwMAUEeSEwMMqEoWtPQ"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_N5AlwK9sEeS769kjC9ygTA" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
         <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-06-02T00:00:00.000+0200">
@@ -22431,6 +22448,7 @@
         <connections xmi:id="_Q6SXIN0CEeOvVYoRsPZlnA" influence="3" loyality="3"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_URH70IMhEeSuJ8MEYLW0kQ" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
+        <diary xmi:id="_bQwe4MATEeSEwMMqEoWtPQ"/>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_oQndoD5YEeSl7-MUHQ63Ow" chracterSource="_B0_zAN0CEeOvVYoRsPZlnA" choosenLifestyle="_E8vOYD5aEeSl7-MUHQ63Ow" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
         <persona xsi:type="shr5:MudanPersona" xmi:id="_oQndoT5YEeSl7-MUHQ63Ow" name="Ex-Firewatch Concept" edgeBasis="5" konstitutionBasis="3" geschicklichkeitBasis="7" reaktionBasis="5" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="5" logikBasis="3" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
@@ -23422,6 +23440,61 @@
           <localizations xmi:id="_kEeu0b-FEeSSYv7eFvElvA" local="de" name="Mittelschicht"/>
         </contracts>
         <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_dDNEcL-FEeSSYv7eFvElvA" character="_g_xAoL-FEeSSYv7eFvElvA" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Simone" selectedPersona="_L8i3wb-AEeS9maZrSgWaVQ"/>
+      </members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_7fDeQMAGEeSSE7G7aOAz9Q" chracterSource="_1efqAMAGEeSSE7G7aOAz9Q" choosenLifestyle="_fP85UMAIEeSSE7G7aOAz9Q" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_7fDeQcAGEeSSE7G7aOAz9Q" beschreibung="Glok ist Mitglied der Berliner Strassengang Die Horde.&#xA;Glok hackte sich während eines Überfalls von Pierosch, &#xA;Savatchi und Gu, auf einen Unterschlupf der Horde in ihre Comlinks. &#xA;Es gelang ihm einen Waffenstillstand auszuhandeln, so daß er gefahrlos entkommen konnte. " name="Glok Norgoz" edgeBasis="2" konstitutionBasis="4" geschicklichkeitBasis="3" reaktionBasis="5" staerkeBasis="3" charismaBasis="2" willenskraftBasis="4" intuitionBasis="2" logikBasis="5" spezies="8ed6892f-88e6-42d0-a704-b805778ec13e">
+          <fertigkeiten xmi:id="_HYUyUMAHEeSSE7G7aOAz9Q" stufe="5" fertigkeit="ada6d9b2-e451-4289-be45-7085fa34a51a"/>
+          <fertigkeiten xmi:id="_UgOcsMAHEeSSE7G7aOAz9Q" stufe="5" fertigkeit="58452cff-44ea-41c6-a554-28a869149b27"/>
+          <fertigkeiten xmi:id="_V_XUMMAHEeSSE7G7aOAz9Q" stufe="3" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <fertigkeiten xmi:id="_YRnqsMAHEeSSE7G7aOAz9Q" stufe="3" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_ad2RsMAHEeSSE7G7aOAz9Q" stufe="3" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_ceU7sMAHEeSSE7G7aOAz9Q" stufe="6" fertigkeit="10d5c887-a1e5-4cca-8613-3a28f1aab810"/>
+          <fertigkeiten xmi:id="_dWjkMMAHEeSSE7G7aOAz9Q" stufe="6" fertigkeit="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
+          <fertigkeiten xmi:id="_eScksMAHEeSSE7G7aOAz9Q" stufe="5" fertigkeit="b8a24d87-465a-4365-9948-038fe1ac62c4"/>
+          <fertigkeiten xmi:id="_Td5nkMAIEeSSE7G7aOAz9Q" stufe="5" fertigkeit="_CXtisMAIEeSSE7G7aOAz9Q"/>
+          <fertigkeiten xmi:id="_VpXZkMAIEeSSE7G7aOAz9Q" stufe="2" fertigkeit="_IFIYgMAIEeSSE7G7aOAz9Q"/>
+          <fertigkeiten xmi:id="_bvdOEMAIEeSSE7G7aOAz9Q" stufe="4" fertigkeit="_LcqVAMAIEeSSE7G7aOAz9Q"/>
+          <fertigkeitsGruppen xmi:id="_PpVmQMAHEeSSE7G7aOAz9Q" stufe="2" gruppe="_EL8bQznTEeSe6_w6Jrbqxg"/>
+          <fertigkeitsGruppen xmi:id="_SHttMMAHEeSSE7G7aOAz9Q" stufe="3" gruppe="_EMAFpDnTEeSe6_w6Jrbqxg"/>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_0ncQwMAHEeSSE7G7aOAz9Q" name="Control Rig 2" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" page="452" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10R" wertValue="97000">
+            <mods xmi:id="_0ncQwcAHEeSSE7G7aOAz9Q" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_0ncQwsAHEeSSE7G7aOAz9Q" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+            </mods>
+            <mods xmi:id="_0ncQw8AHEeSSE7G7aOAz9Q" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+            </mods>
+          </koerperMods>
+        </persona>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_fP85UMAIEeSSE7G7aOAz9Q" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month">
+          <localizations xmi:id="_fP85UcAIEeSSE7G7aOAz9Q" local="de" name="Unterschicht"/>
+        </contracts>
+        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_1efqAMAGEeSSE7G7aOAz9Q" character="_7fDeQMAGEeSSE7G7aOAz9Q" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Glok Norgoz" selectedSpecies="8ed6892f-88e6-42d0-a704-b805778ec13e">
+          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </generatorSrc>
+      </members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_572dwMAUEeSEwMMqEoWtPQ" chracterSource="_1IyXYMAUEeSEwMMqEoWtPQ" choosenLifestyle="_H86S0MAXEeSK0tFwZsh0jA" nativeLanguage="a72084f6-3a4c-4c23-82aa-4697e543ee0b" sex="male">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_572dwcAUEeSEwMMqEoWtPQ" beschreibung="Joe arbeitet exklusiv für eine Berliner Schieberin und stellt für &#xA;sie Kontakte zu neuen Mitarbeitern her. &#xA;Er ist in allen alternativen Bezirken Berlins, &#xA;mit Ausnahme von Oranienburg aktiv &#xA;und soll auch Kontakte nach Temeplhof unterhalten." name="Joe" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="5" willenskraftBasis="4" intuitionBasis="3" logikBasis="5" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <fertigkeiten xmi:id="_NnY0QMAVEeSEwMMqEoWtPQ" stufe="6" fertigkeit="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <fertigkeiten xmi:id="_PmUmIMAVEeSEwMMqEoWtPQ" stufe="8" fertigkeit="_Mpz3UL-JEeSxE5QmePZRyA"/>
+          <fertigkeiten xmi:id="_R726IMAVEeSEwMMqEoWtPQ" stufe="4" fertigkeit="b20acd11-f102-40f3-a641-e3c420fbdb91" spezialisierungen="_EL_ekznTEeSe6_w6Jrbqxg"/>
+          <fertigkeiten xmi:id="_WXD6IMAVEeSEwMMqEoWtPQ" stufe="7" fertigkeit="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <fertigkeiten xmi:id="_YRveIMAVEeSEwMMqEoWtPQ" stufe="6" fertigkeit="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <fertigkeiten xmi:id="_Z7QZoMAVEeSEwMMqEoWtPQ" stufe="4" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <fertigkeiten xmi:id="_fS4loMAVEeSEwMMqEoWtPQ" stufe="9" fertigkeit="_AYnPoL-CEeS9maZrSgWaVQ"/>
+          <fertigkeiten xmi:id="_iqGZEMAVEeSEwMMqEoWtPQ" stufe="8" fertigkeit="_Ix1kYL-CEeS9maZrSgWaVQ"/>
+          <fertigkeiten xmi:id="_ApB1gMAXEeSK0tFwZsh0jA" stufe="8" fertigkeit="_IP5KYL-BEeS9maZrSgWaVQ"/>
+          <fertigkeiten xmi:id="_Ddln0MAXEeSK0tFwZsh0jA" stufe="5" fertigkeit="_zCkcUMAVEeSEwMMqEoWtPQ"/>
+          <fertigkeiten xmi:id="_GHzyYMAXEeSK0tFwZsh0jA" stufe="7" fertigkeit="_mrsmQMAVEeSEwMMqEoWtPQ"/>
+        </persona>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_H86S0MAXEeSK0tFwZsh0jA" name="Middle" parentId="90f6f4c2-9968-42e1-ba79-e2bf530de32e" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="5000" faelligkeitsIntervall="1" unit="month">
+          <localizations xmi:id="_H86S0cAXEeSK0tFwZsh0jA" local="de" name="Mittelschicht"/>
+        </contracts>
+        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_1IyXYMAUEeSEwMMqEoWtPQ" character="_572dwMAUEeSEwMMqEoWtPQ" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Joe" selectedSpecies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
+          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </generatorSrc>
       </members>
     </groups>
     <groups xmi:id="_CB_tQL9LEeS9maZrSgWaVQ" name="Connections">
