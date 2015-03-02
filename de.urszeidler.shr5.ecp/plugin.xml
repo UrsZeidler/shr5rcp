@@ -218,9 +218,11 @@
             name="%runtime.view.name">
       </view>
       <view
+            category="de.urszeidler.shr5.ecp.category.views"
             class="de.urszeidler.shr5.ecp.views.SourceBookView"
+            icon="images/container_obj.gif"
             id="de.urszeidler.shr5.ecp.views.SourceBookView"
-            name="SourceBookView">
+            name="%sourcebook.view.name">
       </view>
    </extension>
    <extension

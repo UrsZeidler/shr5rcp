@@ -4,36 +4,31 @@ import java.util.Collection;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.jface.action.Separator;
-import org.eclipse.jface.preference.FieldEditorPreferencePage;
-import org.eclipse.swt.widgets.Dialog;
-import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.jface.preference.FileFieldEditor;
+import org.eclipse.jface.preference.IntegerFieldEditor;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.eclipse.wb.swt.FieldLayoutPreferencePage;
 
-import de.urszeidler.commons.eclipse.preferences.editor.SeparatorFieldEditor;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
-import org.eclipse.jface.preference.BooleanFieldEditor;
-import org.eclipse.jface.preference.PathEditor;
-
-import com.google.common.base.Joiner;
-
-import org.eclipse.jface.preference.ComboFieldEditor;
-import org.eclipse.jface.preference.FileFieldEditor;
-import org.eclipse.jface.preference.IntegerFieldEditor;
-
-public class SourcebookViewerPreferences extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+public class SourcebookViewerPreferences extends FieldLayoutPreferencePage implements IWorkbenchPreferencePage {
 
     /**
      * Create the preference page.
      */
     public SourcebookViewerPreferences() {
-        super(FLAT);
+
         setTitle("Link source");
         setDescription("Linke the source books with the pdf.");
         setMessage("Link the source books.");
@@ -41,40 +36,7 @@ public class SourcebookViewerPreferences extends FieldEditorPreferencePage imple
 
     }
 
-    /**
-     * Create contents of the preference page.
-     */
-    @Override
-    protected void createFieldEditors() {
-        Object root = Activator.getDefault().getEdtingDomain().getResourceSet().getResources().get(0).getAllContents().next();
-        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)root, Shr5Package.Literals.SOURCE_BOOK);
-
-        // Create the field editors
-        addField(new BooleanFieldEditor("id", "preload pdf", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
-        for (EObject eObject : collection) {
-            if (eObject instanceof SourceBook) {
-                addField(new SeparatorFieldEditor(getFieldEditorParent()));
-                SourceBook sb = (SourceBook)eObject;
-                addField(new FileFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
-                        .getInstance().getLabelProvider().getText(sb), getFieldEditorParent()));
-                addField(new IntegerFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
-                        .getInstance().getLabelProvider().getText(sb)+ " offset", getFieldEditorParent()));
-
-            }
-        }
-//
-//        String string = "sourcebook::idfff"; // getPreferenceStore().getString(PreferenceConstants.LINKED_SOURCEBOOKS);
-//        String[] split = string.split("\n");
-//        for (String string2 : split) {
-//            String[] split2 = string2.split("::");
-//            if (split2.length == 2) {
-//                addField(new FileFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS + split2[1], split2[0], getFieldEditorParent()));
-//
-//            }
-//        }
-        
-    }
-
+ 
     /**
      * Initialize the preference page.
      */
@@ -82,4 +44,50 @@ public class SourcebookViewerPreferences extends FieldEditorPreferencePage imple
         // Initialize the preference page
     }
 
+    /**
+     * Create contents of the preference page.
+     * 
+     * @param parent
+     */
+    @Override
+    public Control createPageContents(Composite parent) {
+        Composite container = new Composite(parent, SWT.NULL);
+        container.setLayout(new GridLayout());
+
+        Group grpSourceBooks = new Group(container, SWT.NONE);
+        grpSourceBooks.setLayout(new GridLayout(1, false));
+        grpSourceBooks.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        grpSourceBooks.setText("Source books");
+
+        Object root = Activator.getDefault().getEdtingDomain().getResourceSet().getResources().get(0).getAllContents().next();
+        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)root, Shr5Package.Literals.SOURCE_BOOK);
+
+        // Create the field editors
+        for (EObject eObject : collection) {
+            if (eObject instanceof SourceBook) {
+                SourceBook sb = (SourceBook)eObject;
+                Composite composite = new Composite(grpSourceBooks, SWT.NONE);
+                composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+                addField(new FileFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
+                        .getInstance().getLabelProvider().getText(sb), composite));
+                Composite composite_1 = new Composite(grpSourceBooks, SWT.NONE);
+                composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+                addField(new IntegerFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
+                        .getInstance().getLabelProvider().getText(sb)
+                        + " offset", composite_1));
+
+            }
+        }
+        //
+        //
+        //
+        // Composite composite = new Composite(grpSourceBooks, SWT.NONE);
+        // composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        // addField(new BooleanFieldEditor("id", "New BooleanFieldEditor", BooleanFieldEditor.DEFAULT, composite));
+        //
+        // Composite composite_1 = new Composite(grpSourceBooks, SWT.NONE);
+        // composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        // addField(new ColorFieldEditor("id", "New ColorFieldEditor", composite_1));
+        return container;
+    }
 }

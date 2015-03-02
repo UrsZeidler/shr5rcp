@@ -297,15 +297,22 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         if (indexOf == -1) {
             String[] split = name.split(" ");
             if (split.length == 2) {
-                indexOf = findByName(name, split[0].toLowerCase());
+                indexOf = findByName(split[0], lowerCase);
                 if (indexOf == -1)
-                    return findByName(name, split[1].toLowerCase());
+                    return findByName(split[1], lowerCase);
             } else if (split.length < 2)
                 return -1;
-            String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 1, split.length));
-            indexOf = findByName(searchstring, lowerCase);
+            
+            for (int i = split.length-1; i > 1; i--) {
+                String string = split[i];
+                String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, i));
+                indexOf = findByName(searchstring, lowerCase);
+                if (indexOf != -1)
+                    return indexOf;
+            }
+            
             if (indexOf == -1) {
-                searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, split.length - 1));
+                String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, split.length - 1));
                 indexOf = findByName(searchstring, lowerCase);
             }
         }
@@ -318,9 +325,15 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
      * @return
      */
     private int findByName(String name, String lowerCase) {
-        int indexOf = lowerCase.indexOf(name.toLowerCase() + ":");
+        if(name.length()<3)
+            return -1;
+        
+        String lowerCaseName = name.toLowerCase();
+        int indexOf = lowerCase.indexOf(lowerCaseName + ":");
         if (indexOf == -1)
-            indexOf = lowerCase.indexOf(name.toLowerCase());
+            indexOf = lowerCase.indexOf(lowerCaseName+" :");
+        if (indexOf == -1)
+            indexOf = lowerCase.indexOf(lowerCaseName);
         return indexOf;
     }
 
