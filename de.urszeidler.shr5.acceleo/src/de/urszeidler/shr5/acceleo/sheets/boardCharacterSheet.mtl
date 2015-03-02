@@ -161,13 +161,20 @@ Limits
 [template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
 ['Basic Data'.titelText()/]
 [let persona : AbstraktPersona = aManagedCharacter.persona]
-['_UI_Beschreibbar_name_feature'.localizedString()/] 		: [persona.name /]  ['_UI_ManagedCharacter_sex_feature'.localizedString()/] : [aManagedCharacter.sex.sexToName()/]
-['_UI_AbstractPersona_spezies_feature'.localizedString()/] 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
+['_UI_Beschreibbar_name_feature'.localizedString()/]: [persona.name.italicText() /]  ['_UI_ManagedCharacter_sex_feature'.localizedString()/] : [aManagedCharacter.sex.sexToName().italicText() /]
+['_UI_AbstractPersona_spezies_feature'.localizedString()/]: [persona.spezies.name.italicText()/] Type: [getText(  persona.eClass()).italicText() /]
 
 [if (not (persona.beschreibung.size()=0 ) )]
 [persona.beschreibung.tagText('quote')/]
 [/if]
 [/let]
+
+['_UI_ManagedCharacter_nativeLanguage_feature'.localizedString()/]: [aManagedCharacter.nativeLanguage.getText()/]
+['_UI_ManagedCharacter_dateofbirth_feature'.localizedString()/]: [aManagedCharacter.dateofbirth.formatDate() /][if (aManagedCharacter.oclIsTypeOf(PlayerCharacter))]  ['_UI_ManagedCharacter_age_feature'.localizedString()/]: [aManagedCharacter.oclAsType(PlayerCharacter).age/][/if]
+['_UI_ManagedCharacter_karmaGaint_feature'.localizedString()/]: [aManagedCharacter.karmaGaint/]  ['_UI_ManagedCharacter_currentKarma_feature'.localizedString()/]: [aManagedCharacter.currentKarma/]
+['_UI_ManagedCharacter_streetCred_feature'.localizedString()/]: [aManagedCharacter.streetCred/]  ['_UI_ManagedCharacter_notoriety_feature'.localizedString()/]: [aManagedCharacter.notoriety/]
+['_UI_ManagedCharacter_height_feature'.localizedString()/]: [aManagedCharacter.height/] cm  ['_UI_ManagedCharacter_weight_feature'.localizedString()/]: [aManagedCharacter.weight/] kg
+
 [/template]
 
 
