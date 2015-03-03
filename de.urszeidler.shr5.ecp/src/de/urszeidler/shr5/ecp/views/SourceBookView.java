@@ -20,6 +20,8 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.dialogs.IInputValidator;
+import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -30,6 +32,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Dialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.ISelectionListener;
@@ -42,23 +45,32 @@ import com.google.common.base.Joiner;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
+import org.eclipse.jface.action.Action;
+import org.eclipse.wb.swt.ResourceManager;
+
 public class SourceBookView extends ViewPart implements ISelectionListener {
     private DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.ecp.views.SourceBookView"; //$NON-NLS-1$
     private Composite container;
+    private Quelle internalQuelle = Shr5Factory.eINSTANCE.createAutoSoft();
+    private Quelle selection = Shr5Factory.eINSTANCE.createAutoSoft();
     private WritableValue displayedText = new WritableValue("", String.class);
-    private Map<String, String> pageMap1 = new HashMap<String, String>();
+    private Map<String, String> pageMap = new HashMap<String, String>();
     private Map<File, PDDocument> bookMap = new HashMap<File, PDDocument>();
     private StyledText styledText;
     private Label lblImage;
     private Label lblName;
+    private Action nextAction;
+    private Action prevAction;
+    private Action gotoPageAction;
 
     public SourceBookView() {
     }
@@ -190,6 +202,58 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
      */
     private void createActions() {
         // Create the actions
+        {
+            nextAction = new Action() {
+                @Override
+                public void run() {
+                    try {
+                        internalQuelle.setSrcBook(selection.getSrcBook());
+                        internalQuelle.setPage(Integer.toString(Integer.parseInt(selection.getPage()) + 1));
+                        setQuelle(internalQuelle);
+                    } catch (Exception e) {
+                    }
+                }
+            };
+            nextAction.setToolTipText("go to the next page");
+            nextAction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/rightarrow.gif"));
+        }
+        {
+            prevAction = new Action() {
+                @Override
+                public void run() {
+                    try {
+                        internalQuelle.setSrcBook(selection.getSrcBook());
+                        internalQuelle.setPage(Integer.toString(Integer.parseInt(selection.getPage()) - 1));
+                        setQuelle(internalQuelle);
+                    } catch (Exception e) {
+                    }
+                }
+            };
+            prevAction.setToolTipText("one page back");
+            prevAction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/leftarrow.gif"));
+            prevAction.setDescription("");
+        }
+        {
+            gotoPageAction = new Action("") {
+                @Override
+                public void run() {
+                    try {
+                        internalQuelle.setSrcBook(selection.getSrcBook());
+                        int pageNumber = Integer.parseInt(selection.getPage());
+                        InputDialog inputDialog = new InputDialog(getSite().getShell(), "Jump to page", "Jump to page number.", Integer.toString(pageNumber), null);
+                        if(inputDialog.open()==org.eclipse.jface.dialogs.Dialog.CANCEL)
+                            return;
+                        pageNumber = Integer.parseInt(inputDialog.getValue());
+                        internalQuelle.setPage(Integer.toString(pageNumber));
+                        setQuelle(internalQuelle);
+                    } catch (Exception e) {
+                    }
+                }
+                
+            };
+            gotoPageAction.setToolTipText("jump to page");
+            gotoPageAction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/doc_tab.gif"));
+        }
     }
 
     /**
@@ -197,6 +261,9 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
      */
     private void initializeToolBar() {
         IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+        toolbarManager.add(prevAction);
+        toolbarManager.add(nextAction);
+        toolbarManager.add(gotoPageAction);
     }
 
     /**
@@ -218,60 +285,70 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
             Object firstElement = ss.getFirstElement();
             if (firstElement instanceof Quelle) {
                 final Quelle q = (Quelle)firstElement;
-                SourceBook srcBook = q.getSrcBook();
-                if (srcBook == null)
-                    return;
-                Image image = AdapterFactoryUtil.getInstance().getLabelProvider().getImage(srcBook);
-                lblImage.setImage(image);
-                lblName.setText(String.format("%s page %s", AdapterFactoryUtil.getInstance().getLabelProvider().getText(srcBook), q.getPage()));
-
-                final File file = getFileFromPreferences(srcBook);//
-                if (file == null){
-                    displayedText.setValue("");
-                    return;
-                }
-
-                final String key = q.getSrcBook().getName() + q.getPage();
-                String text = pageMap1.get(key);
-                if (text == null) {
-                    Job job = new Job("get page text " + key) {
-                        @Override
-                        protected IStatus run(IProgressMonitor monitor) {
-                            try {
-                                PDDocument pdDocument = getpdfDoc(file, monitor);
-                                if(pdDocument==null)
-                                    return Status.OK_STATUS;
-                                final String text1 = getTextFromPage(q, pdDocument);
-                                pageMap1.put(key, text1);
-                                Display.getDefault().asyncExec(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        displayedText.setValue(text1);
-                                        processText(text1, q);
-                                    }
-                                });
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                            return Status.OK_STATUS;
-                        }
-                    };
-                    job.setUser(false);
-                    job.schedule();
-                } else {
-                    displayedText.setValue(text);
-                    processText(text, q);
-                }
+                setQuelle(q);
             }
         }
 
+    }
+
+    /**
+     * @param src
+     */
+    private void setQuelle(final Quelle src) {
+        SourceBook srcBook = src.getSrcBook();
+        if (srcBook == null)
+            return;
+
+        selection = src;
+        Image image = AdapterFactoryUtil.getInstance().getLabelProvider().getImage(srcBook);
+        lblImage.setImage(image);
+        lblName.setText(String.format("%s page %s", AdapterFactoryUtil.getInstance().getLabelProvider().getText(srcBook), src.getPage()));
+
+        final File file = getFileFromPreferences(srcBook);//
+        if (file == null) {
+            displayedText.setValue("");
+            return;
+        }
+
+        final String key = src.getSrcBook().getName() + src.getPage();
+        String text = pageMap.get(key);
+        if (text == null) {
+            Job job = new Job("get page text " + key) {
+                @Override
+                protected IStatus run(IProgressMonitor monitor) {
+                    try {
+                        PDDocument pdDocument = getpdfDoc(file, monitor);
+                        if (pdDocument == null)
+                            return Status.OK_STATUS;
+                        final String text1 = getTextFromPage(src, pdDocument);
+                        pageMap.put(key, text1);
+                        Display.getDefault().asyncExec(new Runnable() {
+                            @Override
+                            public void run() {
+                                displayedText.setValue(text1);
+                                processText(text1, src);
+                            }
+                        });
+                    } catch (IOException e) {
+                        Activator.logError(e);
+                    }
+                    return Status.OK_STATUS;
+                }
+            };
+            job.setUser(false);
+            job.schedule();
+        } else {
+            displayedText.setValue(text);
+            processText(text, src);
+        }
     }
 
     private void processText(String text, Quelle q) {
         if (q instanceof Beschreibbar) {
             Beschreibbar b = (Beschreibbar)q;
             String name = b.getName();
+            if (name == null || name.isEmpty())
+                return;
             String lowerCase = text.toLowerCase();
 
             int indexOf = findNearesMatch(name, lowerCase);
@@ -302,15 +379,15 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                     return findByName(split[1], lowerCase);
             } else if (split.length < 2)
                 return -1;
-            
-            for (int i = split.length-1; i > 1; i--) {
+
+            for (int i = split.length - 1; i > 1; i--) {
                 String string = split[i];
                 String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, i));
                 indexOf = findByName(searchstring, lowerCase);
                 if (indexOf != -1)
                     return indexOf;
             }
-            
+
             if (indexOf == -1) {
                 String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, split.length - 1));
                 indexOf = findByName(searchstring, lowerCase);
@@ -325,13 +402,13 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
      * @return
      */
     private int findByName(String name, String lowerCase) {
-        if(name.length()<3)
+        if (name.length() < 3)
             return -1;
-        
+
         String lowerCaseName = name.toLowerCase();
         int indexOf = lowerCase.indexOf(lowerCaseName + ":");
         if (indexOf == -1)
-            indexOf = lowerCase.indexOf(lowerCaseName+" :");
+            indexOf = lowerCase.indexOf(lowerCaseName + " :");
         if (indexOf == -1)
             indexOf = lowerCase.indexOf(lowerCaseName);
         return indexOf;
@@ -353,15 +430,14 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
     }
 
     private String getTextFromPage(Quelle q, PDDocument pdDocument2) {
-        PDFTextStripper pdfTextStripper;
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         String id2 = ShadowrunEditingTools.getId(q.getSrcBook());
         int offset = store.getInt(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + id2);
         try {
             int page = Integer.parseInt(q.getPage());
-            pdfTextStripper = new PDFTextStripper();
-            pdfTextStripper.setStartPage(page + 2);
-            pdfTextStripper.setEndPage(page + 2);
+            PDFTextStripper pdfTextStripper = new PDFTextStripper();
+            pdfTextStripper.setStartPage(page + offset);
+            pdfTextStripper.setEndPage(page + offset);
             pdfTextStripper.setAddMoreFormatting(true);
 
             String text = pdfTextStripper.getText(pdDocument2).trim();
