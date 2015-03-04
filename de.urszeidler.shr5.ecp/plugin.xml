@@ -164,7 +164,7 @@
             category="de.urszeidler.shr5.ecp.preferences.basic.page"
             class="de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences"
             id="de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences"
-            name="source view">
+            name="%sourcebookview.preferences.page.name">
       </page>
       <page
             category="de.urszeidler.shr5.ecp.preferences.basic.page"
