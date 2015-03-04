@@ -56,7 +56,7 @@ transform="translate([column->at(1)/],25)">
 [if (log->indexOf(ct)<10)]
 [printSvgLineValue(ct.description,15,y1,10)  /]
 [printSvgLineValueWithLength(ct.date,150,y1,10,120)  /]
-[printSvgLineValue(ct.amount,290,y1,10)  /]
+[printSvgLineValue(ct.amount.formatMoney(),280,y1,10)  /]
 [/if]
 
 [/let]
@@ -64,7 +64,7 @@ transform="translate([column->at(1)/],25)">
 [/let]
 [printLine(115, y+108, 210)/]
 [printSvgLineValue('current ammount',120,y+120,12)  /]
-[printSvgLineValue(cs.currentValue,290,y+120,12)  /]
+[printSvgLineValue(cs.currentValue.formatMoney(),280,y+120,12)  /]
 [/let][/for]
 [printBotton(column->at(1), 500, 150)/]
 </g>
@@ -95,13 +95,13 @@ transform="translate([column->at(1)/],745)">
 [printLeftSideUp('Lifestyle'.localizedString())/]
 
 [printSvgFullLine(aManagedCharacter.choosenLifestyle.getText(), empty40,10,50,220)/]
-[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert, 230,50,12)/]
+[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert.formatMoney(), 230,50,12)/]
 
 [for (cs : Lifestyle | aManagedCharacter.contracts->selectByKind(Lifestyle) )]
 [let y : Integer =( (65+((i-1)*12))  ) ]
 [if (not(aManagedCharacter.choosenLifestyle=cs))]
 [printSvgFullLine(cs.getText(), empty40,10,y,220)/]
-[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert, 220,y,12)/]
+[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert.formatMoney(), 220,y,12)/]
 [/if]
 [/let]
 [/for]
@@ -198,7 +198,7 @@ transform="translate([column->at(2)/],360)">
 [let ypos : Integer = (20+(1+i)*size) ]
 [if (ypos<1050)]
 [printSvgFullLine(k.getText(), empty,10,ypos)/]
-[printSvgLineValue((k.wert),255,ypos,size)/]
+[printSvgLineValue((k.wert.formatMoney()),255,ypos,size)/]
 [/if][/let]
 [/for]
 
@@ -450,7 +450,7 @@ x:Integer,y:Integer,size :Integer)
 [let ypos : Integer = (20+(1+i)*size) ]
 [if (ypos+y<1050)]
 [printSvgFullLine(k.getText(), empty,10,ypos)/]
-[printSvgLineValue((k.wert),255,ypos,size)/]
+[printSvgLineValue((k.wert.formatMoney()),255,ypos,size)/]
 [/if][/let]
 [/for]
 [let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
@@ -776,7 +776,7 @@ x:Integer,y:Integer,size :Integer)
 [let ypos : Integer = (20+(1+i)*size) ]
 [if (ypos+y<1050)]
 [printSvgFullLine(k.getText(), empty,10,ypos)/]
-[printSvgLineValue((k.wert),255,ypos,size)/]
+[printSvgLineValue((k.wert.formatMoney()),255,ypos,size)/]
 [/if][/let]
 [/for]
 [let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
@@ -1231,7 +1231,7 @@ x:Integer,y:Integer,size :Integer)
 [printLeftSideUp('_UI_Lizenz_type'.localizedString())/]
 
 [printSvgFullLine(aManagedCharacter.choosenLifestyle.getText(), empty,10,(40+1*12))/]
-[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert,255,(40+1*12),size)/]
+[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert.formatMoney(),255,(40+1*12),size)/]
 
 [for (cred : Credstick | aManagedCharacter.inventar->selectByType(Credstick))]
 [printSvgFullLine(cred.getText(), empty,10,(40+(1+i)*12))/]

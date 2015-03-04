@@ -19,7 +19,6 @@ import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.emf.commons.ui.util.DesktopApi;
 import de.urszeidler.shr5.acceleo.Activator;
 
 public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
