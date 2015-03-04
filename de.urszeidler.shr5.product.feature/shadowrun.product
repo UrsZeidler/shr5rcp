@@ -14,6 +14,9 @@ sample images are from http://openclipart.org/
 
 Shadowrun is © 2013 The Topps Company, Inc, Catalyst Game Labs
 http://www.shadowruntabletop.com/
+
+This software also contains software from pdfBox (https://pdfbox.apache.org) 
+and apache fop (http://xmlgraphics.apache.org/fop/).
       </text>
    </aboutInfo>
 
@@ -62,6 +65,7 @@ http://www.shadowruntabletop.com/
 
    <vm>
    </vm>
+
 
    <plugins>
    </plugins>
