@@ -105,7 +105,7 @@ public class VariousPage extends AbstractShr5Page<Beschreibbar> {
 
             EReference feature = RuntimePackage.Literals.TEAM__MEMBERS;
             TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, labelProvider.getText(feature), SWT.NONE, object,
-                    feature, toolkit, mananger, editingDomain, this,true);
+                    feature, toolkit, mananger, editingDomain,this,true);
             treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 3, 1));
             managedForm.getToolkit().adapt(treeTableWidget);
             managedForm.getToolkit().paintBordersFor(treeTableWidget);

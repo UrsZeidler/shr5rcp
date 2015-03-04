@@ -304,7 +304,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (!object.getInventar().isEmpty()) {
             SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_5,
                     featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR), SWT.NONE, object,
-                    Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this);
+                    Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this, this);
             GridData layoutData = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
             treeTableWidgetEigenschaften.setLayoutData(layoutData);
             managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
@@ -314,7 +314,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (!object.getConnections().isEmpty()) {
             SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6,
                     featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS), SWT.NONE, object,
-                    Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this);
+                    Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this, this);
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
             layoutData.heightHint = 150;
             treeTableWidgetEigenschaften.setLayoutData(layoutData);
@@ -325,7 +325,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (!object.getContracts().isEmpty()) {
             SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6,
                     featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS), SWT.NONE, object,
-                    Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this);
+                    Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this, this);
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
             layoutData.heightHint = 150;
             treeTableWidgetEigenschaften.setLayoutData(layoutData);
@@ -336,7 +336,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         if (!object.getVehicels().isEmpty()) {
             SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_6,
                     featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS), SWT.NONE, object,
-                    Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
+                    Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this, this);
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
             layoutData.heightHint = 150;
             treeTableWidgetEigenschaften.setLayoutData(layoutData);
@@ -356,7 +356,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             if (!kp.getEigenschaften().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetEigenschaften = new SimpleTreeTableWidget(composite_3,
                         Messages.AbstraktPersonaPage_sct_quallities, SWT.NONE, persona, Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit,
-                        mananger, editingDomain, this);
+                        mananger, editingDomain, this, this);
                 GridData layoutData = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
                 layoutData.heightHint = 150;
                 treeTableWidgetEigenschaften.setLayoutData(layoutData);
@@ -365,7 +365,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             }
             if (!kp.getKoerperMods().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetInventar = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_sct_Augmentation,
-                        SWT.NONE, persona, Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain, this);
+                        SWT.NONE, persona, Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain, this, this);
                 GridData layoutData2 = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
                 layoutData2.heightHint = 150;
                 treeTableWidgetInventar.setLayoutData(layoutData2);
@@ -377,7 +377,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             BaseMagischePersona bm = (BaseMagischePersona)persona;
             if (!bm.getInitationen().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_KiPowers,
-                        SWT.NONE, persona, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__INITATIONEN, toolkit, mananger, editingDomain, this);
+                        SWT.NONE, persona, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__INITATIONEN, toolkit, mananger, editingDomain, this, this);
                 treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
                 managedForm.getToolkit().adapt(treeTableWidgetKiPower);
                 managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
@@ -385,7 +385,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         }
         if (persona instanceof KiAdept) {
             SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_KiPowers, SWT.NONE,
-                    persona, Shr5Package.Literals.KI_ADEPT__KIKRAFT, toolkit, mananger, editingDomain, this);
+                    persona, Shr5Package.Literals.KI_ADEPT__KIKRAFT, toolkit, mananger, editingDomain, this, this);
             treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
@@ -394,7 +394,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             Zauberer z = (Zauberer)persona;
             if (!z.getZauber().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_Spells, SWT.NONE,
-                        persona, Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger, editingDomain, this);
+                        persona, Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger, editingDomain, this, this);
                 treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
                 managedForm.getToolkit().adapt(treeTableWidgetKiPower);
                 managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
@@ -402,7 +402,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
             if (!z.getGebundeneGeister().isEmpty()) {
                 SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3,
                         Messages.AbstraktPersonaPage_sct_bound_spririts, SWT.NONE, persona, Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER,
-                        toolkit, mananger, editingDomain, this);
+                        toolkit, mananger, editingDomain, this,this);
                 treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
                 managedForm.getToolkit().adapt(treeTableWidgetKiPower);
                 managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
@@ -410,7 +410,7 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         }
         if (persona instanceof Technomancer) {
             SimpleTreeTableWidget treeTableWidgetKiPower = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_sct_complex_forms,
-                    SWT.NONE, persona, Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger, editingDomain, this);
+                    SWT.NONE, persona, Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger, editingDomain, this,this);
             treeTableWidgetKiPower.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);

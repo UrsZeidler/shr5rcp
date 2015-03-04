@@ -120,6 +120,21 @@ public class TreeTableWidget extends Composite {
         createWidgets();
     }
 
+    public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
+            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener, IDoubleClickListener dblListner, boolean readOnly) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.feature = modifizierbarMods;
+        this.manager = mananger;
+        this.editingDomain = editingDomain;
+        this.titel = titel;
+        this.selectionChangeListener = selectionChangeListener;
+        this.dblListener = dblListner;
+        this.readOnly = readOnly;
+        createWidgets();
+    }
+
     private void createWidgets() {
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
@@ -197,6 +212,7 @@ public class TreeTableWidget extends Composite {
 
         treeViewer.setContentProvider(treeContentProvider);
         IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        
 
         optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         // toolkit.adapt(optionalToolbar);

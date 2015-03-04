@@ -23,7 +23,9 @@ import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -56,7 +58,7 @@ import de.urszeidler.shr5.ecp.util.ValidationLabelProvider;
 /**
  * This is a basic generic page to display eObjects in an form with an emfformbilder.
  */
-public abstract class AbstractShr5Page<A extends EObject> extends FormPage implements IDoubleClickListener {
+public abstract class AbstractShr5Page<A extends EObject> extends FormPage implements IDoubleClickListener, ISelectionChangedListener {
 
     public final class LabelEntry implements EntryFactory {
         @Override
@@ -222,6 +224,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
         // emfFormBuilder.setBorderStyle(SWT.NONE);
         emfFormBuilder.setDblListner(this);
+        emfFormBuilder.setSelectionChangeListener(this);
     }
 
     /**
@@ -233,6 +236,11 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         ShadowrunEditingTools.openEditorForFirstSelection(selection);
     }
 
+    @Override
+    public void selectionChanged(SelectionChangedEvent event) {
+        getSite().getSelectionProvider().setSelection(event.getSelection());
+    }
+    
     protected abstract EditingDomain getEditingDomain();
 
     /**

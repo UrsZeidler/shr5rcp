@@ -155,7 +155,7 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
 
         TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite,
                 featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR), SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain, this,this);
         managedForm.getToolkit().adapt(treeTableWidgetInventar);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
         // we use the toolbar for the packs to add
@@ -215,18 +215,18 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
 
         TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1,
                 featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS), SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain, this,this);
         managedForm.getToolkit().adapt(treeTableWidgetConnections);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetConnections);
 
         TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1,
                 featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS), SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain, this,this);
         managedForm.getToolkit().adapt(treeTableWidget_1);
         managedForm.getToolkit().paintBordersFor(treeTableWidget_1);
 
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, featureName(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS),
-                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this);
+                SWT.NONE, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain, this,this);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
 

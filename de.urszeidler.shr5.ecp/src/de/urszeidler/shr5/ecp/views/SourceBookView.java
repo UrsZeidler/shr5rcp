@@ -79,6 +79,12 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         super.init(site);
     }
 
+    @Override
+    public void dispose() {
+        getSite().getPage().removeSelectionListener(this);
+        super.dispose();
+    }
+    
     /**
      * Create contents of the view part.
      * 
