@@ -663,6 +663,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tltmSource.addSelectionListener(listenerOne);
 
         tableViewer_1 = new TableViewer(composite_3, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
+        getSite().setSelectionProvider(tableViewer_1);
         tableViewer_1.addDoubleClickListener(new IDoubleClickListener() {
 
             @Override
