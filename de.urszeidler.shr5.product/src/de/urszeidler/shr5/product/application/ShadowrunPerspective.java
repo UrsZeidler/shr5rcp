@@ -14,6 +14,7 @@ public class ShadowrunPerspective implements IPerspectiveFactory {
         addViewShortcuts(layout);
         addPerspectiveShortcuts(layout);
         layout.addView("org.eclipse.emf.ecp.ui.ModelExplorerView", IPageLayout.LEFT, 0.3f, IPageLayout.ID_EDITOR_AREA);
+        layout.addView("de.urszeidler.shr5.ecp.views.SourceBookView", IPageLayout.BOTTOM, 0.56f, "org.eclipse.emf.ecp.ui.ModelExplorerView");
     }
 
     /**
@@ -32,6 +33,7 @@ public class ShadowrunPerspective implements IPerspectiveFactory {
      * Add perspective shortcuts to the perspective.
      */
     private void addPerspectiveShortcuts(IPageLayout layout) {
+        layout.addPerspectiveShortcut("de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective");
     }
 
 }
