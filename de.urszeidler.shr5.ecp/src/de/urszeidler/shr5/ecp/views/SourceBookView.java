@@ -17,10 +17,10 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.ISelection;
@@ -32,7 +32,6 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Dialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.ISelectionListener;
@@ -40,9 +39,11 @@ import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
+import org.eclipse.wb.swt.ResourceManager;
 
 import com.google.common.base.Joiner;
 
+import de.urszeidler.commons.Duo;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -51,9 +52,6 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
-
-import org.eclipse.jface.action.Action;
-import org.eclipse.wb.swt.ResourceManager;
 
 public class SourceBookView extends ViewPart implements ISelectionListener {
     private DataBindingContext m_bindingContext;
@@ -351,7 +349,8 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                 return;
             String lowerCase = text.toLowerCase();
 
-            int indexOf = findNearesMatch(name, lowerCase);
+            Duo<Integer, Integer> match = findNearesMatch(name, lowerCase);
+            int indexOf = match.getObjectA();
             if (indexOf == -1)
                 return;
 
@@ -360,40 +359,46 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
 
             StyleRange styleRange = new StyleRange();
             styleRange.start = indexOf;
-            styleRange.length = name.length();
+            styleRange.length = match.getObjectB();
             styleRange.fontStyle = SWT.BOLD;
             styleRange.background = ColorConstants.lightGray;
 
             styledText.setStyleRange(styleRange);
-            styledText.setTopIndex(split.length);
+            if(substring.isEmpty())
+                styledText.setTopIndex(0);
+            else
+                styledText.setTopIndex(split.length);
+            styledText.setSelection(indexOf, indexOf+ match.getObjectB());
+            styledText.showSelection();
         }
     }
 
-    private int findNearesMatch(String name, String lowerCase) {
+    /**
+     * @param name
+     * @param lowerCase
+     * @return {@link Duo} where a is the index and b is the length
+     */
+    private Duo<Integer, Integer> findNearesMatch(String name, String lowerCase) {
         int indexOf = findByName(name, lowerCase);
         if (indexOf == -1) {
             String[] split = name.split(" ");
             if (split.length == 2) {
                 indexOf = findByName(split[0], lowerCase);
                 if (indexOf == -1)
-                    return findByName(split[1], lowerCase);
+                    return new Duo<Integer, Integer>(findByName(split[1], lowerCase), split[0].length());
+                else
+                    return new Duo<Integer, Integer>(indexOf, split[0].length());
             } else if (split.length < 2)
-                return -1;
+                return  new Duo<Integer, Integer>(-1, split[0].length());
 
-            for (int i = split.length - 1; i > 1; i--) {
-                String string = split[i];
+            for (int i = split.length - 1; i > 0; i--) {
                 String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, i));
                 indexOf = findByName(searchstring, lowerCase);
                 if (indexOf != -1)
-                    return indexOf;
-            }
-
-            if (indexOf == -1) {
-                String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, split.length - 1));
-                indexOf = findByName(searchstring, lowerCase);
+                    return new Duo<Integer, Integer>(indexOf, searchstring.length());
             }
         }
-        return indexOf;
+        return new Duo<Integer, Integer>(indexOf, name.length());
     }
 
     /**
