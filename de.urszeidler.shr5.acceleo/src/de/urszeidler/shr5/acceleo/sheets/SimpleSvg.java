@@ -48,6 +48,7 @@ public class SimpleSvg extends AbstractSvg2PdfGenerator {
      * 
      * @generated
      */
+    @SuppressWarnings("unused")
     private List<String> propertiesFiles = new ArrayList<String>();
 
     /**
@@ -315,6 +316,11 @@ public class SimpleSvg extends AbstractSvg2PdfGenerator {
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
         super.registerResourceFactories(resourceSet);
+    }
+
+    @Override
+    protected String createMergeFilename(String objectName) {
+        return "SimpleSheet_"+objectName+".pdf";
     }
 
 }

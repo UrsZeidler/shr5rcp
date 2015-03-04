@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.acceleo.sheets;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,7 @@ public abstract class AbstractGenerator extends AbstractAcceleoGenerator {
 
     protected boolean open;
     protected List<String> files = new ArrayList<String>();
+    protected List<File> tmpFiles = new ArrayList<File>();
 
     /**
      * If this generator needs to listen to text generation events, listeners can be returned from here.
@@ -41,6 +43,12 @@ public abstract class AbstractGenerator extends AbstractAcceleoGenerator {
         listeners.add(listner);
         return listeners;
     }
+
+    protected void removeTmpFiles() {
+        for (File file : tmpFiles) {
+            file.delete();
+        }
+     }
 
     
     public boolean isOpen() {

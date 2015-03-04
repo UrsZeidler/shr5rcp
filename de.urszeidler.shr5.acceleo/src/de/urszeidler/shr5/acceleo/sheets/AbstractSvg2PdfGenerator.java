@@ -12,10 +12,13 @@ import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.fop.svg.PDFTranscoder;
+import org.apache.pdfbox.exceptions.COSVisitorException;
+import org.apache.pdfbox.util.PDFMergerUtility;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.DesktopApi;
 import de.urszeidler.shr5.acceleo.Activator;
 
@@ -44,33 +47,58 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
         super.doGenerate(monitor);
-        
+
+        PDFMergerUtility pdfMergerUtility = new PDFMergerUtility();
+
         monitor.subTask("transforming to pdf");
         try {
             for (String fname : files) {
                 File file = new File(fname);
-                monitor.subTask("writing :"+fname);
-                storeAsPdf(file);
-                monitor.subTask("open :"+fname);
+                tmpFiles.add(file);
+                monitor.subTask("writing :" + fname);
+                String storeAsPdf = storeAsPdf(file);
+                tmpFiles.add(new File(storeAsPdf));
+                pdfMergerUtility.addSource(storeAsPdf);
             }
-    
+            monitor.subTask("merging ...");
+            pdfMergerUtility.setDestinationFileName(getFilename());
+            pdfMergerUtility.mergeDocuments();
         } catch (TranscoderException e) {
-           Activator.logError("Error while storing as pdf", e);
+            Activator.logError("Error while storing as pdf", e);
+        } catch (COSVisitorException e) {
+            Activator.logError("Error while merging the pdf", e);
+        }finally{
+            removeTmpFiles();
         }
     }
+
+    private String getFilename() {
+        String objectName = AdapterFactoryUtil.getInstance().getLabelProvider().getText(model);
+        String replaceAll = objectName.replaceAll(" ", "_");
+        replaceAll = replaceAll.replaceAll(":", "_");
+
+        String baseFilename = createMergeFilename(replaceAll);
+        String absolutePath = targetFolder.getAbsolutePath();
+
+        File file2 = new File(absolutePath + File.separator + baseFilename);
+        return file2.getAbsolutePath();
+    }
+
+    protected abstract String createMergeFilename(String objectName);
 
     /**
      * Transforms the svg file to pdf.
      * 
      * @param file
+     * @return
      * @throws TranscoderException
      * @throws IOException
      */
-    private void storeAsPdf(File file) throws TranscoderException, IOException {
-    
+    private String storeAsPdf(File file) throws TranscoderException, IOException {
+
         String svg_URI_input = file.toURI().toURL().toString();
         String outputFilename = file.getAbsolutePath() + ".pdf";
-    
+
         TranscoderInput input_svg_image = new TranscoderInput(svg_URI_input);
         // Step-2: Define OutputStream to PDF file and attach to TranscoderOutput
         OutputStream pdf_ostream = new FileOutputStream(outputFilename);
@@ -80,11 +108,12 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
         transcoder.transcode(input_svg_image, output_pdf_file);
         pdf_ostream.flush();
         pdf_ostream.close();
-        if(open)
-            DesktopApi.open(new File(outputFilename));
+
+        return outputFilename;
+        // if(open)
+        // DesktopApi.open(new File(outputFilename));
     }
 
- 
     /**
      * If you need to change the way files are generated, this is your entry point.
      * <p>
@@ -127,18 +156,18 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
-    
+
         String prefix = "platform:/plugin/";
         String pluginName = "de.urszeidler.shr5.model.edit";
         String packagePath = "/";
-    
+
         propertiesFiles.add(prefix + pluginName + packagePath + "plugin.properties");
         propertiesFiles.add(prefix + pluginName + packagePath + "plugin_de.properties");
-    
+
         pluginName = "de.urszeidler.shr5.management.model.edit";
         propertiesFiles.add(prefix + pluginName + packagePath + "plugin.properties");
         propertiesFiles.add(prefix + pluginName + packagePath + "plugin_de.properties");
-    
+
         return propertiesFiles;
     }
 
@@ -169,14 +198,14 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
             resourceSet.getPackageRegistry().put(org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getNsURI(),
                     org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
         }
-    
+
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
-    
+
         /*
          * If you need additional package registrations, you can register them here. The following line
          * (in comment) is an example of the package registration for UML.
@@ -213,9 +242,8 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
-    
+
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
 
-  
 }

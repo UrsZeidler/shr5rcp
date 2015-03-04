@@ -324,4 +324,9 @@ public class GenerateNpcCharacterSheet extends AbstractSvg2PdfGenerator {
         super.registerResourceFactories(resourceSet);
      }
     
+    @Override
+    protected String createMergeFilename(String objectName) {
+        return "NpcSheet_"+objectName+".pdf";
+    }
+
 }

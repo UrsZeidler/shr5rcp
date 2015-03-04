@@ -323,4 +323,9 @@ public class GenerateSvgVehicleSheet  extends AbstractSvg2PdfGenerator{
         super.registerResourceFactories(resourceSet);
     }
     
+    @Override
+    protected String createMergeFilename(String objectName) {
+        return "VehicleSheet_"+objectName+".pdf";
+    }
+
 }
