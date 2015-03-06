@@ -27,6 +27,7 @@ public class NewDefinitionWizard extends AbstractNewItemWizard {
         list.add(Shr5Package.Literals.SOURCE_BOOK);        
         list.add(Shr5Package.Literals.CRITTER);
         list.add(Shr5Package.Literals.CRITTER_KRAFT);
+        list.add(Shr5Package.Literals.SPEZIES);
         list.add(Shr5Package.Literals.REICHWEITE);
 //        list.add(Shr5Package.Literals.LIFESTYLE_OPTION);
          
