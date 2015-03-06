@@ -234,7 +234,7 @@ Limits
 [template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
 ['_UI_ManagedCharacter_contracts_feature'.localizedString().titelText()/]
 [for (ag : Vertrag | gears)]
-[printTextPlusSpace(ag.getText(),empty)/] [ag.wert/]
+[printTextPlusSpace(ag.getText(),empty)/] [ag.wert.formatMoney()/]
 [/for]
 
 [printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
@@ -313,24 +313,24 @@ calculated costs: [ta.caculatedCosts.formatMoney()/] (incuding [ta.fee/] fee)
 [/template]
 
 [template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]
-[printTextPlusSpace(gegenstand.getText(),empty)/] [gegenstand.wert/]
+[printTextPlusSpace(gegenstand.getText(),empty)/] [gegenstand.wert.formatMoney()/]
 [/template]
 
 [template private printGegenstand(comlink : Commlink,empty :String)]
-[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
 [printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/template]
 
 [template private printGegenstand(comlink : RiggerCommandConsole,empty :String)]
-[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
 [printGeldwertCollection(comlink.storedPrograms,comlink.wert, empty, '- ')/][/template]
 
 [template private printGegenstand(comlink : Cyberdeck,empty :String)]
-[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
 [if (not comlink.storedPrograms->isEmpty())][printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/if][/template]
 
 [template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())
 post(trim())
 ][for (gw : GeldWert | col)]
-[printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert/]
+[printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert.formatMoney()/]
 [/for]
-[printTextPlusSpace('sum :', empty)/] [wert/][/template]
+[printTextPlusSpace('sum :', empty)/] [wert.formatMoney()/][/template]
