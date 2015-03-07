@@ -457,6 +457,10 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         return null;
     }
 
+
+    /**
+     * Get the text from the pdf.
+     */
     private String getTextFromPage(Quelle q, PDDocument pdDocument2) {
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         String id2 = ShadowrunEditingTools.getId(q.getSrcBook());
