@@ -3,7 +3,10 @@ package de.urszeidler.shr5.ecp.views;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import org.apache.pdfbox.exceptions.CryptographyException;
@@ -61,6 +64,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
     private Quelle internalQuelle = Shr5Factory.eINSTANCE.createAutoSoft();
     private Quelle selection = Shr5Factory.eINSTANCE.createAutoSoft();
     private WritableValue displayedText = new WritableValue("", String.class);
+    private Collection<File> workingFiles = Collections.synchronizedCollection(new HashSet<File>()) ;
     private Map<String, String> pageMap = new HashMap<String, String>();
     private Map<File, PDDocument> bookMap = new HashMap<File, PDDocument>();
     private StyledText styledText;
@@ -84,7 +88,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         getSite().getPage().removeSelectionListener(this);
         super.dispose();
     }
-    
+
     /**
      * Create contents of the view part.
      * 
@@ -244,8 +248,9 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                     try {
                         internalQuelle.setSrcBook(selection.getSrcBook());
                         int pageNumber = Integer.parseInt(selection.getPage());
-                        InputDialog inputDialog = new InputDialog(getSite().getShell(), "Jump to page", "Jump to page number.", Integer.toString(pageNumber), null);
-                        if(inputDialog.open()==org.eclipse.jface.dialogs.Dialog.CANCEL)
+                        InputDialog inputDialog = new InputDialog(getSite().getShell(), "Jump to page", "Jump to page number.",
+                                Integer.toString(pageNumber), null);
+                        if (inputDialog.open() == org.eclipse.jface.dialogs.Dialog.CANCEL)
                             return;
                         pageNumber = Integer.parseInt(inputDialog.getValue());
                         internalQuelle.setPage(Integer.toString(pageNumber));
@@ -253,7 +258,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                     } catch (Exception e) {
                     }
                 }
-                
+
             };
             gotoPageAction.setToolTipText("jump to page");
             gotoPageAction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/doc_tab.gif"));
@@ -317,34 +322,46 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         final String key = src.getSrcBook().getName() + src.getPage();
         String text = pageMap.get(key);
         if (text == null) {
-            Job job = new Job("get page text " + key) {
-                @Override
-                protected IStatus run(IProgressMonitor monitor) {
-                    try {
-                        PDDocument pdDocument = getpdfDoc(file, monitor);
-                        if (pdDocument == null)
-                            return Status.OK_STATUS;
-                        final String text1 = getTextFromPage(src, pdDocument);
-                        pageMap.put(key, text1);
-                        Display.getDefault().asyncExec(new Runnable() {
-                            @Override
-                            public void run() {
-                                displayedText.setValue(text1);
-                                processText(text1, src);
-                            }
-                        });
-                    } catch (IOException e) {
-                        Activator.logError(e);
-                    }
-                    return Status.OK_STATUS;
-                }
-            };
-            job.setUser(false);
-            job.schedule();
+            startJob(src, file, key);
         } else {
             displayedText.setValue(text);
             processText(text, src);
         }
+    }
+
+    /**
+     * @param src
+     * @param file
+     * @param key
+     */
+    private void startJob(final Quelle src, final File file, final String key) {
+        if (workingFiles.contains(file))
+            return;
+
+        Job job = new Job("get page text " + key) {
+            @Override
+            protected IStatus run(IProgressMonitor monitor) {
+                try {
+                    PDDocument pdDocument = getpdfDoc(file, monitor);
+                    if (pdDocument == null)
+                        return Status.OK_STATUS;
+                    final String text1 = getTextFromPage(src, pdDocument);
+                    pageMap.put(key, text1);
+                    Display.getDefault().asyncExec(new Runnable() {
+                        @Override
+                        public void run() {
+                            displayedText.setValue(text1);
+                            processText(text1, src);
+                        }
+                    });
+                } catch (IOException e) {
+                    Activator.logError(e);
+                }
+                return Status.OK_STATUS;
+            }
+        };
+        job.setUser(false);
+        job.schedule();
     }
 
     private void processText(String text, Quelle q) {
@@ -370,11 +387,11 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
             styleRange.background = ColorConstants.lightGray;
 
             styledText.setStyleRange(styleRange);
-            if(substring.isEmpty())
+            if (substring.isEmpty())
                 styledText.setTopIndex(0);
             else
                 styledText.setTopIndex(split.length);
-            styledText.setSelection(indexOf, indexOf+ match.getObjectB());
+            styledText.setSelection(indexOf, indexOf + match.getObjectB());
             styledText.showSelection();
         }
     }
@@ -395,7 +412,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                 else
                     return new Duo<Integer, Integer>(indexOf, split[0].length());
             } else if (split.length < 2)
-                return  new Duo<Integer, Integer>(-1, split[0].length());
+                return new Duo<Integer, Integer>(-1, split[0].length());
 
             for (int i = split.length - 1; i > 0; i--) {
                 String searchstring = Joiner.on(" ").join(Arrays.copyOfRange(split, 0, i));
@@ -443,15 +460,19 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
     private String getTextFromPage(Quelle q, PDDocument pdDocument2) {
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         String id2 = ShadowrunEditingTools.getId(q.getSrcBook());
+        
         int offset = store.getInt(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + id2);
         try {
             int page = Integer.parseInt(q.getPage());
-            PDFTextStripper pdfTextStripper = new PDFTextStripper();
-            pdfTextStripper.setStartPage(page + offset);
-            pdfTextStripper.setEndPage(page + offset);
-            pdfTextStripper.setAddMoreFormatting(true);
-
-            String text = pdfTextStripper.getText(pdDocument2).trim();
+            String text;
+            synchronized (pdDocument2) {
+                PDFTextStripper pdfTextStripper = new PDFTextStripper();
+                pdfTextStripper.setStartPage(page + offset);
+                pdfTextStripper.setEndPage(page + offset);
+                pdfTextStripper.setAddMoreFormatting(true);
+                
+                text = pdfTextStripper.getText(pdDocument2).trim();
+            }
             text = text.replaceAll("-\n", "");
 
             text = text.replaceAll("\n\n", "---STOP---");
@@ -477,6 +498,11 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         if (pdDocument != null)
             return pdDocument;
 
+        if(workingFiles.contains(file))
+            return null;
+        else
+            workingFiles.add(file);
+        
         monitor.setTaskName("load ..." + file.getName());
         try {
             pdDocument = PDDocument.load(file);
@@ -493,6 +519,8 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         } catch (CryptographyException e) {
             Activator.logError(e);
             return null;
+        } finally {
+            workingFiles.remove(file);
         }
     }
 
