@@ -190,7 +190,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
      * @param toolbarManager
      * @param object
      */
-    protected void addValidationResult(IToolBarManager toolbarManager, EObject object) {
+    protected void addValidationResult(final IToolBarManager toolbarManager, final EObject object) {
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, createValidationContext());
         if (!validate.getChildren().isEmpty()) {
             final String message = Joiner.on("\n").join(
@@ -204,10 +204,19 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
                 }
 
                 @Override
-                public String getToolTipText() {
-                    return message;
+                public void run() {
+                    Diagnostic validate = Diagnostician.INSTANCE.validate(object, createValidationContext());
+                    if (!validate.getChildren().isEmpty()) {
+                        final String message = Joiner.on("\n").join(
+                                FluentIterable.from(validate.getChildren()).transform(ShadowrunEditingTools.diagnosticToStringTransformer()));
+                        this.setToolTipText(message);
+                    }else{
+                        toolbarManager.remove("validation");
+                    }
                 }
             };
+            action.setToolTipText(message);
+            action.setId("validation");
             toolbarManager.add(action);
         }
     }
@@ -240,7 +249,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     public void selectionChanged(SelectionChangedEvent event) {
         getSite().getSelectionProvider().setSelection(event.getSelection());
     }
-    
+
     protected abstract EditingDomain getEditingDomain();
 
     /**
