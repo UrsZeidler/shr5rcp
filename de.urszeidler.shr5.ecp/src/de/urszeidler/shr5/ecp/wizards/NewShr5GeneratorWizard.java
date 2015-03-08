@@ -27,6 +27,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
@@ -34,6 +35,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * @author urs
@@ -65,6 +67,20 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
     public void init(IWorkbench workbench, IStructuredSelection selection) {
         EditingDomain edtingDomain = Activator.getDefault().getEdtingDomain();
 //        EList<Resource> resources = edtingDomain.getResourceSet().getResources();
+        EObject selected = ShadowrunEditingTools.extractFirstEObject(selection);
+        if (selected instanceof ManagedCharacter) {
+            ManagedCharacter mc = (ManagedCharacter)selected;
+            selected = mc.eContainer();
+        }
+        if (selected instanceof CharacterGroup) {
+            CharacterGroup g = (CharacterGroup)selected;
+            selectedGroup.setValue(g);
+            if (g.eContainer() instanceof PlayerManagement) {
+                PlayerManagement pm = (PlayerManagement)g.eContainer();
+                selectedContainer.setValue(pm);
+            } 
+        }
+        
         container = new ArrayList<EObject>();
         systems = new ArrayList<EObject>();
         groups = new ArrayList<EObject>();
