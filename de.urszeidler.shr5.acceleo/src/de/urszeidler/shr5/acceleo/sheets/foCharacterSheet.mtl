@@ -16,8 +16,10 @@
 [printFoPageStart(aManagedCharacter.getText())/]	
 
 [printCharacterMainInfo(aManagedCharacter)/]
+[printCharacterAttributes(aManagedCharacter)/]
 
-   <fo:table margin="3pt" >
+
+   [comment]<fo:table margin="3pt" >
     <fo:table-column column-width="33%" />
     <fo:table-column column-width="66%" />
     <fo:table-body  >
@@ -32,17 +34,15 @@
 [printSkills(aManagedCharacter)  /]
 		</fo:block  >
       </fo:table-cell>
-<!--
+
       <fo:table-cell>
 		<fo:block  >
 
 		</fo:block  >
       </fo:table-cell>
--->
-
      </fo:table-row>
     </fo:table-body>
-   </fo:table>
+   </fo:table>[/comment]
 
 
    <fo:table margin="3pt" >
@@ -52,11 +52,14 @@
     <fo:table-row >
 <!-- colum one -->
       <fo:table-cell>
-		<fo:block  >
+		[comment]<fo:block  >
 [printAttributes(aManagedCharacter)  /]
-		</fo:block  >
+		</fo:block  >[/comment]
 		<fo:block margin-top="10pt" >
 [printSkills(aManagedCharacter)  /]
+		</fo:block  >
+		<fo:block margin-top="10pt" >
+[printActiveMods(aManagedCharacter.persona)  /]
 		</fo:block  >
 		<fo:block margin-top="10pt" >
 [printConnections(aManagedCharacter)  /]
@@ -157,6 +160,44 @@
 
 [printSimpleFoPageEnd()/]	
 [/file]
+[/template]
+
+[template public printCharacterAttributes (aManagedCharacter : ManagedCharacter)
+{persona : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona) ; }]
+   <fo:table margin="3pt" >
+    <fo:table-column />
+    <fo:table-column column-width="35%" />
+    <fo:table-column column-width="35%" />
+    <fo:table-body  >
+    <fo:table-row >
+      <fo:table-cell number-rows-spanned="2" >
+		<fo:block  >
+[printAttributes(aManagedCharacter)  /]
+		</fo:block  >
+      </fo:table-cell>
+      <fo:table-cell>
+		<fo:block  >
+[printOneSvgMonitorName('Mental', persona.zustandGeistigMax, 3, 25, 25) /]
+		</fo:block  >
+      </fo:table-cell>
+     <fo:table-cell>
+		<fo:block  >
+[printOneSvgMonitorName('Phy', persona.zustandKoerperlichMax, 3, 25, 25) /]
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+
+   <fo:table-row >
+
+      <fo:table-cell number-columns-spanned="2">
+		<fo:block  >
+[printOneSvgMonitorName('overflow', persona.zustandGrenze, 6, 25, 25) /]
+		</fo:block  >
+      </fo:table-cell>
+</fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
 [/template]
 
 [**
@@ -663,6 +704,22 @@
    </fo:table>
 [/template]
 
+[template public printActiveMods(persona : AbstraktPersona) ? (not persona.getModList()->isEmpty())]
+[printSectionTitel('Modifications'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column  />
+    <fo:table-column column-width="30%" />
+    <fo:table-body  >
+[for (t : Sequence(OclAny) | persona.getModList() )]
+     <fo:table-row>
+[printCell(t->at(1).getText())/]
+[printCellRight(t->at(2))/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
 [template public printBioware (persona : KoerperPersona) ? (not persona.koerperMods->selectByType(BioWare)->isEmpty())]
 [printSectionTitel('bioware'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
@@ -711,9 +768,9 @@
      <fo:table-row>
 [printCell('_UI_Fahrzeug_geschwindigkeit_feature'.localizedString())/]
 [printCellRight(vehicle.vehicleSpeed())/]
-     <fo:table-cell number-rows-spanned="5">
+     <fo:table-cell number-rows-spanned="6">
 		<fo:block>
-[printOneSvgMonitor (vehicle.zustandMax,6)/]
+[printOneSvgMonitorName('Vehicle damage'.localizedString(),vehicle.zustandMax,6,20,20)/]
 		</fo:block>
      </fo:table-cell>
 
@@ -772,10 +829,9 @@
 [/for]
 	<fo:table-row>
       <fo:table-cell number-columns-spanned="2">
-       [comment]<fo:block  >
-[printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
        <fo:block  >
-[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+[printOneSvgMonitorName('Matrix damage'.localizedString(),deck.matrixZustandMax,6,20,20)/]
+		</fo:block>
       </fo:table-cell>
 	</fo:table-row>
 
@@ -820,7 +876,7 @@
        [comment]<fo:block  >
 [printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
        <fo:block  >
-[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+[printOneSvgMonitorName ('Matrix'.localizedString(),deck.matrixZustandMax,6,20,20)/]</fo:block>
       </fo:table-cell>
 	</fo:table-row>
 
@@ -851,7 +907,8 @@
        [comment]<fo:block  >
 [printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
        <fo:block  >
-[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+[printOneSvgMonitorName('Matrix damage'.localizedString(),deck.matrixZustandMax,6,20,20)/]
+		</fo:block>
       </fo:table-cell>
 	</fo:table-row>
 
@@ -893,21 +950,30 @@
    </fo:table>
 [/template]
 
-[template private printOneSvgMonitor(value : Integer,rowCount : Integer)
-{width:Integer = rowCount*20; height:Integer= 10+ value.div(rowCount)*20}
+[template private printOneSvgMonitorName(name: String, value : Integer,colCount : Integer,mHeight : Integer,mWidth : Integer)]
+<fo:block  >
+[name/]
+</fo:block>
+[printOneSvgMonitor(value, colCount, mHeight, mWidth)/]
+[/template]
+
+[template private printOneSvgMonitor(value : Integer,colCount : Integer,mHeight : Integer,mWidth : Integer)
+{offset : Integer = 5;
+width:Integer = colCount*(mWidth+offset); 
+height:Integer= (value.div(colCount)+1)*(mHeight+offset);
+}
 ]
-Monitor
-<fo:instream-foreign-object content-width="[200+width/]pt" content-height="[200+height/]pt">
-<svg:svg width="[200+width/]pt" height="[200+height/]pt">
+<fo:instream-foreign-object content-width="[width/]pt" content-height="[height/]pt">
+<svg:svg width="[width/]pt" height="[height/]pt">
    <svg:g >
 [for (it : String | value.createNumberList())]
-[let xpos : Integer = (i-1).mod(rowCount)]
-[let ypos : Integer = (i-1).div(rowCount)]
+[let xpos : Integer = (i-1).mod(colCount)]
+[let ypos : Integer = (i-1).div(colCount)]
    <svg:rect
-         y="[ ypos*25/]"
-         x="[xpos*25  /]"
-         height="20"
-         width="20"
+         y="[ ypos*(mHeight+offset)/]"
+         x="[xpos*(mWidth+offset)  /]"
+         height="[mHeight/]"
+         width="[mWidth/]"
          id="rect-monitorbox-[it/]"
          style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
 [comment][printTextSpan1((25 +  xpos*12), 146+ ypos*12,it,6)/][/comment]
