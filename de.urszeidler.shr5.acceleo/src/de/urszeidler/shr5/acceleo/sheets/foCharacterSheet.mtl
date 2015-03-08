@@ -18,6 +18,34 @@
 [printCharacterMainInfo(aManagedCharacter)/]
 
    <fo:table margin="3pt" >
+    <fo:table-column column-width="33%" />
+    <fo:table-column column-width="66%" />
+    <fo:table-body  >
+    <fo:table-row >
+      <fo:table-cell>
+		<fo:block  >
+[printAttributes(aManagedCharacter)  /]
+		</fo:block  >
+      </fo:table-cell>
+      <fo:table-cell>
+		<fo:block  >
+[printSkills(aManagedCharacter)  /]
+		</fo:block  >
+      </fo:table-cell>
+<!--
+      <fo:table-cell>
+		<fo:block  >
+
+		</fo:block  >
+      </fo:table-cell>
+-->
+
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+
+
+   <fo:table margin="3pt" >
     <fo:table-column column-width="50%" />
     <fo:table-column column-width="50%" />
     <fo:table-body  >
@@ -584,7 +612,7 @@
 [/template]
 [template public printContract(contract : Sin)]
   <fo:table [defaultTableStyle()/]>
-    <fo:table-column column-width="70%" />
+    <fo:table-column  />
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-column  />
@@ -676,12 +704,19 @@
 [template public printVehicle (vehicle : Fahrzeug) ]
 [printSectionTitel(vehicle.getText())/]
   <fo:table [defaultTableStyle()/]>
-    <fo:table-column  />
     <fo:table-column column-width="30%" />
+    <fo:table-column column-width="10%"  />
+    <fo:table-column  />
     <fo:table-body  >
      <fo:table-row>
 [printCell('_UI_Fahrzeug_geschwindigkeit_feature'.localizedString())/]
 [printCellRight(vehicle.vehicleSpeed())/]
+     <fo:table-cell number-rows-spanned="5">
+		<fo:block>
+[printOneSvgMonitor (vehicle.zustandMax,6)/]
+		</fo:block>
+     </fo:table-cell>
+
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_Fahrzeug_beschleunigung_feature'.localizedString())/]
@@ -703,6 +738,8 @@
 [printCell('_UI_Fahrzeug_rumpf_feature'.localizedString())/]
 [printCellRight(vehicle.vehicleBody())/]
      </fo:table-row>
+
+
     </fo:table-body>
    </fo:table>
 [/template]
@@ -733,6 +770,15 @@
 [printCellSpanned(prg.getText(),2)/]
 	</fo:table-row>
 [/for]
+	<fo:table-row>
+      <fo:table-cell number-columns-spanned="2">
+       [comment]<fo:block  >
+[printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
+       <fo:block  >
+[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+      </fo:table-cell>
+	</fo:table-row>
+
 
     </fo:table-body>
    </fo:table>
@@ -769,6 +815,14 @@
 [printCellSpanned(prg.getText(),2)/]
 	</fo:table-row>
 [/for]
+	<fo:table-row>
+      <fo:table-cell number-columns-spanned="2">
+       [comment]<fo:block  >
+[printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
+       <fo:block  >
+[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+      </fo:table-cell>
+	</fo:table-row>
 
     </fo:table-body>
    </fo:table>
@@ -792,6 +846,14 @@
 [printCellSpanned(prg.getText(),2)/]
 	</fo:table-row>
 [/for]
+ 	<fo:table-row>
+      <fo:table-cell number-columns-spanned="2">
+       [comment]<fo:block  >
+[printConditionMonitorBlock(4, deck.matrixZustandMax)/]</fo:block>[/comment]
+       <fo:block  >
+[printOneSvgMonitor (deck.matrixZustandMax,5)/]</fo:block>
+      </fo:table-cell>
+	</fo:table-row>
 
     </fo:table-body>
    </fo:table>
@@ -808,6 +870,88 @@
 [template public printSectionTitel(titel : String)]
  <fo:block font-weight="bold" >
 [escapeXML(titel)/]</fo:block>
+[/template]
+
+
+[template public printConditionMonitorBlock(col:Integer,conditionValue:Integer) ]
+   <fo:table >
+[for (it : String | col.createNumberList())]
+    <fo:table-column />
+[/for]
+    <fo:table-body  >
+[for (it : String | conditionValue.div(col).createNumberList())]
+     <fo:table-row  >
+[for (it : String | col.createNumberList())]
+     <fo:table-cell >
+       <fo:block  >
+[printOneMonitorCell('1',5)/]</fo:block>
+      </fo:table-cell>
+[/for]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template private printOneSvgMonitor(value : Integer,rowCount : Integer)
+{width:Integer = rowCount*20; height:Integer= 10+ value.div(rowCount)*20}
+]
+Monitor
+<fo:instream-foreign-object content-width="[200+width/]pt" content-height="[200+height/]pt">
+<svg:svg width="[200+width/]pt" height="[200+height/]pt">
+   <svg:g >
+[for (it : String | value.createNumberList())]
+[let xpos : Integer = (i-1).mod(rowCount)]
+[let ypos : Integer = (i-1).div(rowCount)]
+   <svg:rect
+         y="[ ypos*25/]"
+         x="[xpos*25  /]"
+         height="20"
+         width="20"
+         id="rect-monitorbox-[it/]"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+[comment][printTextSpan1((25 +  xpos*12), 146+ ypos*12,it,6)/][/comment]
+[if (xpos=1)]
+[comment][printSvgLineValue('-'+(ypos+1)+''  ,115,(32 +  ypos*50 ),18)/][/comment]
+[/if]
+[/let][/let]
+[/for]
+	</svg:g>
+</svg:svg>
+</fo:instream-foreign-object>
+
+[/template]
+
+
+[template public printOneMonitorCell(text : String,margin: Integer)]
+   <fo:table margin="[margin/]pt">
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[comment][printCellAttribute(text,'height="20pt" width="20pt" border-style="solid" text-align="botton" vertical-align="center" ')/][/comment]
+      <fo:table-cell>
+        <fo:block >
+<fo:instream-foreign-object content-width="40pt" content-height="40pt">
+<svg:svg width="10pt" height="10pt">
+  <svg:g >
+  <svg:rect
+         y="0"
+         x="0"
+         height="10"
+         width="10"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </svg:g>
+</svg:svg>
+</fo:instream-foreign-object>
+
+        </fo:block>
+      </fo:table-cell>
+
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
 [/template]
 
 [template public printCredstick(c : Credstick) ]
