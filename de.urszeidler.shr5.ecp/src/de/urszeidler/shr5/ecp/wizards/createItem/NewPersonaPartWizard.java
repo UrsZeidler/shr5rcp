@@ -32,8 +32,10 @@ public class NewPersonaPartWizard extends AbstractNewItemWizard {
         list.add(Shr5Package.Literals.KI_KRAFT);
         list.add(Shr5Package.Literals.ZAUBER);
         list.add(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
-        list.add(Shr5Package.Literals.FERTIGKEIT);
         list.add(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+        list.add(Shr5Package.Literals.FERTIGKEIT);
+        list.add(Shr5Package.Literals.WISSENSFERTIGKEIT);
+        list.add(Shr5Package.Literals.SPRACHFERTIGKEIT);
         list.add(Shr5Package.Literals.META_MAGIE);        
         list.add(Shr5Package.Literals.SCHUTZGEIST);
         list.add(Shr5Package.Literals.KOMPLEXE_FORM);
