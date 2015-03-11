@@ -976,7 +976,6 @@ height:Integer= (value.div(colCount)+1)*(mHeight+offset);
          width="[mWidth/]"
          id="rect-monitorbox-[it/]"
          style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-[comment][printTextSpan1((25 +  xpos*12), 146+ ypos*12,it,6)/][/comment]
 [if (xpos=1)]
 [comment][printSvgLineValue('-'+(ypos+1)+''  ,115,(32 +  ypos*50 ),18)/][/comment]
 [/if]
