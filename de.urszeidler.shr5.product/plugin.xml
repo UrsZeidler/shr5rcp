@@ -90,7 +90,12 @@
             <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
                   icon="icons/save_edit.gif"
+                  id="project.menu.save.id"
                   label="%command.save"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.openWorkspace"
                   style="push">
             </command>
             <separator
