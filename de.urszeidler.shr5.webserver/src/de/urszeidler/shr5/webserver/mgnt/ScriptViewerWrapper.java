@@ -97,9 +97,9 @@ public class ScriptViewerWrapper implements ScriptViewer {
         CommandCallback commandCallback = new CommandCallback() {
 
             @Override
-            public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+            public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
                 if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
-                    return;
+                    return false;
 
                 if (cmd instanceof CombatTurn) {
                     CombatTurn ct = (CombatTurn)cmd;
@@ -120,7 +120,7 @@ public class ScriptViewerWrapper implements ScriptViewer {
                     }
                     waitForPlayers(pml.toArray(new PlayerManager[]{}));
                     sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
-                    return;
+                    return true;
                 }
 
                 PlayerManager playerManager = getPlayerManager(cmd);
@@ -131,7 +131,8 @@ public class ScriptViewerWrapper implements ScriptViewer {
                         createDefaultDialog(cmd, playerManager, eStructuralFeatures);
                 } else
                     sv.getCmdCallback().prepareCommand(cmd, eStructuralFeatures);
-
+                
+                return true;
             }
 
             @Override

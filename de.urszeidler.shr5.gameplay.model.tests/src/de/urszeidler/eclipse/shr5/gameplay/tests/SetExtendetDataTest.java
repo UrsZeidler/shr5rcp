@@ -40,8 +40,8 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 public class SetExtendetDataTest extends TestCase {
     public final class CommandCallbackImplementation implements CommandCallback {
         @Override
-        public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
+        public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+            return true;
         }
 
         @Override

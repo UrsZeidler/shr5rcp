@@ -549,8 +549,8 @@ public class PlacementSimulationPage extends AbstractShr5Page<Placement> {
     private class SimlationCallBack implements CommandCallback {
 
         @Override
-        public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-
+        public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+            return true;
         }
 
         @Override

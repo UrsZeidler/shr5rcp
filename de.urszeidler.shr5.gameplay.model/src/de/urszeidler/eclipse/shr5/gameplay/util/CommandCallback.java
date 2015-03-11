@@ -17,7 +17,7 @@ public interface CommandCallback {
      * @param cmd
      * @param eStructuralFeatures
      */
-    void prepareCommand(Command cmd,EStructuralFeature ... eStructuralFeatures);
+    boolean prepareCommand(Command cmd,EStructuralFeature ... eStructuralFeatures);
     void beforeExecute(Command cmd,EStructuralFeature ... eStructuralFeatures);
     void beforeSubcommands(Command cmd,EStructuralFeature ... eStructuralFeatures);
    

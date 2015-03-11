@@ -1115,17 +1115,17 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
     }
 
     @Override
-    public void prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
+    public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
         if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
-            return;
+            return false;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;
             new CheckInitative(getSite().getShell(), ct).open();
-            return;
+            return true;
         } else if (cmd instanceof MeeleAttackCmd) {
             MeeleAttackCmd mc = (MeeleAttackCmd)cmd;
             if (mc.getSubject() != null && mc.getWeapon() != null && mc.getSkill() != null && mc.getObject() != null)
-                return;
+                return true;
 
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
                     itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
@@ -1137,7 +1137,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
             }
 
-            return;
+            return true;
         } else if (cmd instanceof RangedAttackCmd) {
             RangedAttackCmd rc = (RangedAttackCmd)cmd;
             // if (rc.getSubject() != null && rc.getWeapon() != null && rc.getSkill() != null && rc.getObject() != null)
@@ -1150,7 +1150,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
             // GameplayPackage.Literals.SKILL_TEST_CMD__SKILL, GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT,
             // GameplayPackage.Literals.PROBE_COMMAND__MODS);
             genericEObjectDialog.open();
-            return;
+            return true;
         } else if (cmd instanceof DamageTest) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
                     itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
@@ -1158,23 +1158,23 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.DAMAGE_TEST__DV, GameplayPackage.Literals.PROBE_COMMAND__MODS,
                     GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
             genericEObjectDialog.open();
-            return;
+            return true;
         } else if (cmd instanceof DefensTestCmd) {
             ProbeDialog genericEObjectDialog = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(
                     itemDelegator), Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare,
                     GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT, GameplayPackage.Literals.DEFENS_TEST_CMD__ATTACKERS_HITS,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
             genericEObjectDialog.open();
-            return;
+            return true;
         } else if (cmd instanceof SetFeatureCommand) {
             // SetFeatureCommand sf = (SetFeatureCommand)cmd;
             // ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
             // "prepare", ProbeExecutionState.prepare,eStructuralFeatures);
             // d.open();
-            return;
+            return true;
         } else if (cmd instanceof SetExtendetData) {
             // SetExtendetData new_name = (SetExtendetData)cmd;
-            return;
+            return true;
         } else if (cmd instanceof OpposedSkillTestCmd) {
 
         } else if (cmd instanceof SkillTestCmd) {
@@ -1185,12 +1185,12 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT,
                     GameplayPackage.Literals.COMMAND__HIDDEN);
             d.open();
-            return;
+            return true;
         }
         ProbeDialog d = new ProbeDialog(getSite().getShell(), cmd, labelProvider, itemDelegator, new DefaultReferenceManager(itemDelegator),
                 Messages.RuntimeScriptView_probedialog_titel_prepare_command, ProbeExecutionState.prepare, eStructuralFeatures);
         d.open();
-        return;
+        return true;
         // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
         // new DefaultReferenceManager(itemDelegator));
         // // GenericEObjectDialog genericEObjectDialog = new GenericEObjectDialog(getSite().getShell(), cmd, itemDelegator, labelProvider,
