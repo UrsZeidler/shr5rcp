@@ -1543,14 +1543,14 @@ pos : Integer = length * 12;
 [**
  * Prints a value text at x,y with the size of 12.
 */]
-[template private printSvgLineValue(arg : OclAny,x:Integer,y:Integer,size : Integer)]
-   <text
+[template public printSvgLineValue(arg : OclAny,x:Integer,y:Integer,size : Integer)]
+   <svg:text
        xml:space="preserve"
        style="font-size:[size/]px;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;font-weight:bold;-inkscape-font-specification:Trebuchet MS Bold;font-style:normal;font-stretch:normal;font-variant:normal"
        x="[x/]"
        y="[y/]"
        id="text-[x/]-[y/]"
-       sodipodi:linespacing="125%">[arg.printOutSvgTextLine()/]</text>
+       sodipodi:linespacing="125%">[arg.printOutSvgTextLine()/]</svg:text>
 [/template]
 [**
  * Prints a value text at x,y with the size of 12.
