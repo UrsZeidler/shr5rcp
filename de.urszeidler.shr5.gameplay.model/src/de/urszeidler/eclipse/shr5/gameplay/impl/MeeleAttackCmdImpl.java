@@ -169,7 +169,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
@@ -182,9 +182,9 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
             setLimit(getWeapon().getPraezision());
         }
         if (isSetCmdCallback() && getCmdCallback() != null)
-            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            return getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.MEELE_ATTACK_CMD__WEAPON ,GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-
+        return true;
     }
 
     @Override
@@ -196,7 +196,10 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
 
     @Override
     public void redo() {
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         pushTheLimit();
         if (!isSkipTest()) {

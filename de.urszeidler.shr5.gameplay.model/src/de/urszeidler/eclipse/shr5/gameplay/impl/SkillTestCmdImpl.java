@@ -166,7 +166,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
@@ -174,9 +174,9 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
 
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT, GameplayPackage.Literals.COMMAND__HIDDEN);
-
+        return true;
     }
 
     @Override
@@ -188,7 +188,10 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
 
     @Override
     public void redo() {
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         pushTheLimit();
         if (!isSkipTest()) {

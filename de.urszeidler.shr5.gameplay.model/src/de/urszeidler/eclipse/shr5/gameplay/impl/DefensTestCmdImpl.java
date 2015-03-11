@@ -94,7 +94,10 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
         // getProbeMods().clear();
         mods = mods + GameplayTools.getDefenceMod(getSubject(), getProbeMods());
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         pushTheLimit();
         if (!isSkipTest()) {

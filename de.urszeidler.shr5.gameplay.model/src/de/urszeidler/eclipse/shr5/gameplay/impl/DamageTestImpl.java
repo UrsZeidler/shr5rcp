@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
@@ -277,16 +279,24 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
 
     /**
      * Set the state and call the callback.
+     * @return 
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.DAMAGE_TEST__DAMAGE, GameplayPackage.Literals.DAMAGE_TEST__DV,
                     GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
+        return true;
+    }
 
+    protected void cleanCommand() {
+        EObject eObject = this.eContainer();
+
+        
+        EcoreUtil.delete(this);
     }
 
     @Override
@@ -299,8 +309,10 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     
     @Override
     public void redo() {
-
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
         AbstraktPersona persona = getSubject().getCharacter().getPersona();
         int armor = GameplayTools.getArmorValue(getSubject());
 

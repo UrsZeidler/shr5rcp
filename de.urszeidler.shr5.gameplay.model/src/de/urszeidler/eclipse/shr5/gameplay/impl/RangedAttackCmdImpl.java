@@ -351,7 +351,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
@@ -367,18 +367,23 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
             setSkill(fertigkeit);
             setLimit(getWeapon().getPraezision());
         }
-
+        
+        boolean ret = true;
         if (isSetCmdCallback() && getCmdCallback() != null)
-            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON,  GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
+            ret = getCmdCallback().prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.RANGED_ATTACK_CMD__WEAPON,  GameplayPackage.Literals.SKILL_TEST_CMD__SKILL,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT, GameplayPackage.Literals.RANGED_ATTACK_CMD__RANGE,
                     GameplayPackage.Literals.RANGED_ATTACK_CMD__MODUS, GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
 
         mods = mods + GameplayTools.getRangeMod(getSubject(), getWeapon(), getRange(), getProbeMods());
+        return ret;
     }
 
     @Override
     public void redo() {
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         pushTheLimit();
         if (!isSkipTest()) {

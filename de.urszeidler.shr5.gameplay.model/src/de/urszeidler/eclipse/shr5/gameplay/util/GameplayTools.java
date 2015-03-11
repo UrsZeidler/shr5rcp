@@ -308,6 +308,9 @@ public class GameplayTools {
      */
     public static int getRangeMod(RuntimeCharacter subject, AbstaktFernKampfwaffe weapon, int range, List<ProbeMod> mods) {
         int mod = 0;
+        if(weapon==null)
+            return 0;
+        
         Reichweite reichweite = weapon.getReichweite();
         if (reichweite != null) {
             if (reichweite.getMin() <= range && reichweite.getKurz() > range) {

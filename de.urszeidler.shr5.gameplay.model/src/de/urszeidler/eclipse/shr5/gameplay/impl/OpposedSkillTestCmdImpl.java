@@ -218,21 +218,24 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         getProbe().clear();
         getProbeMods().clear();
         setExecuting(true);
 
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.SUBJECT_COMMAND__SUBJECT,
                     GameplayPackage.Literals.OPPOSED_SKILL_TEST_CMD__OBJECT);
-
+        return true;
     }
 
     
     @Override
     public void redo() {
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         SkillTestCmd subjectCommand = GameplayFactory.eINSTANCE.createSkillTestCmd();
         subjectCommand.setSubject(getSubject());

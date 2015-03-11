@@ -165,13 +165,13 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         setExecuting(true);
         mods = mods + GameplayTools.getWoundMod(getSubject(), getProbeMods());
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SUCCES_TEST_CMD__DICE_POOL,
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS, GameplayPackage.Literals.SUCCES_TEST_CMD__DICE_POOL,
                     GameplayPackage.Literals.PROBE__PUSH_THE_LIMIT);
-
+        return true;
     }
 
     @Override
@@ -186,7 +186,10 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     public void redo() {
         getProbeMods().clear();
         getProbe().clear();
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
         
         pushTheLimit();
         if (!isSkipTest()) {

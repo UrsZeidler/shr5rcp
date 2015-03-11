@@ -16,12 +16,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import com.google.common.base.Predicate;
@@ -29,6 +31,7 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
+import de.urszeidler.eclipse.shr5.gameplay.ExecutionProtocol;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.Initative;
@@ -614,7 +617,10 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
             }
         }
         if (getCmdCallback() != null)
-            getCmdCallback().prepareCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS);
+           if(!getCmdCallback().prepareCommand(this, GameplayPackage.Literals.COMMAND__SUB_COMMANDS)){
+               cleanCombatTurn();
+               return;
+           }
 
         List<InitativePass> phaseCommands = new ArrayList<InitativePass>();
         for (Command command : subCommands) {
@@ -653,6 +659,16 @@ public class CombatTurnImpl extends MinimalEObjectImpl.Container implements Comb
         getActionPhases().addAll(phaseCommands);
         // executed = true;
 
+    }
+
+    private void cleanCombatTurn() {
+        EObject eObject = this.eContainer();
+        if (eObject instanceof ExecutionProtocol) {
+            ExecutionProtocol ep = (ExecutionProtocol)eObject;
+           
+            ep.getCommands().remove(this);
+            EcoreUtil.delete(this);
+        }
     }
 
     /**

@@ -204,7 +204,10 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      */
     public void redo() {
-        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         RuntimeCharacter character = getSubject();
         AbstraktPersona persona = character.getCharacter().getPersona();
@@ -243,11 +246,11 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     /**
      * Set the state and call the callback.
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         setExecuting(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.DRAIN_COMMAND__DAMAGE, GameplayPackage.Literals.DRAIN_COMMAND__DAMAGE_TYPE);
-
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.DRAIN_COMMAND__DAMAGE, GameplayPackage.Literals.DRAIN_COMMAND__DAMAGE_TYPE);
+        return true;
     }
 
     /**

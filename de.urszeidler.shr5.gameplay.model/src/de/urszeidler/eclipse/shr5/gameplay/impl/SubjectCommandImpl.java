@@ -11,10 +11,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -410,13 +412,23 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
 
     /**
      * Set the state and call the callback.
+     * @return 
      */
-    protected void prepareRedo() {
+    protected boolean prepareRedo() {
         setExecuting(true);
         if (isSetCmdCallback() && getCmdCallback() != null)
-            cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
-
+            return cmdCallback.prepareCommand(this, GameplayPackage.Literals.PROBE_COMMAND__MODS);
+        return true;
     }
+    
+    protected void cleanCommand() {
+        EObject eObject = this.eContainer();
+
+        
+        EcoreUtil.delete(this);
+    }
+
+
     
     /**
      * Set the state and calls the callback.
