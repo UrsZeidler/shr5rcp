@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.preferences;
 
+import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.StringFieldEditor;
 import org.eclipse.ui.IWorkbench;
@@ -29,6 +30,10 @@ public class Sr5MainPreferences extends FieldEditorPreferencePage implements IWo
                     StringFieldEditor.VALIDATE_ON_KEY_STROKE, getFieldEditorParent());
             stringFieldEditor.setEmptyStringAllowed(false);
             addField(stringFieldEditor);
+            
+            addField(new ComboFieldEditor(PreferenceConstants.SWITCH_CHARACTERBUILDING_PERSPECTIVE, "Switch to the character building perspective.",
+                    new String[][]{{"ask always", "prompt"}, {"switch always", "always"}, {"dont switch", "never"}}, getFieldEditorParent()));
+
             // stringFieldEditor.setEnabled(false, getFieldEditorParent());
         }
     }

@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -43,7 +44,6 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
     private static final String CHARACTER_PERSPECTIVE = "de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective";
-    private static final String SWITCH_PERSPECTIVE = "SWITCH_PERSPECTIVE"; //$NON-NLS-1$
     protected List<EObject> container;
     protected List<EObject> systems;
     protected List<EObject> groups;
@@ -66,7 +66,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
     @Override
     public void init(IWorkbench workbench, IStructuredSelection selection) {
         EditingDomain edtingDomain = Activator.getDefault().getEdtingDomain();
-//        EList<Resource> resources = edtingDomain.getResourceSet().getResources();
+        // EList<Resource> resources = edtingDomain.getResourceSet().getResources();
         EObject selected = ShadowrunEditingTools.extractFirstEObject(selection);
         if (selected instanceof ManagedCharacter) {
             ManagedCharacter mc = (ManagedCharacter)selected;
@@ -78,9 +78,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
             if (g.eContainer() instanceof PlayerManagement) {
                 PlayerManagement pm = (PlayerManagement)g.eContainer();
                 selectedContainer.setValue(pm);
-            } 
+            }
         }
-        
+
         container = new ArrayList<EObject>();
         systems = new ArrayList<EObject>();
         groups = new ArrayList<EObject>();
@@ -158,7 +158,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
         boolean doSwitch = false;
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-        String value = store.getString(SWITCH_PERSPECTIVE);
+        String value = store.getString(PreferenceConstants.SWITCH_CHARACTERBUILDING_PERSPECTIVE);
         if (MessageDialogWithToggle.ALWAYS.equals(value)) {
             doSwitch();
             return;
@@ -168,7 +168,8 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         }
         MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(),
                 Messages.NewShr5GeneratorWizard_switch_perspective_titel, Messages.NewShr5GeneratorWizard_switch_perspective_message,
-                Messages.NewShr5GeneratorWizard_switch_perspective_not_again_message, false, store, SWITCH_PERSPECTIVE, SWT.NONE);
+                Messages.NewShr5GeneratorWizard_switch_perspective_not_again_message, false, store,
+                PreferenceConstants.SWITCH_CHARACTERBUILDING_PERSPECTIVE, SWT.NONE);
 
         doSwitch = open.getReturnCode() == 2;
         if (doSwitch)
