@@ -403,7 +403,11 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * @generated not
      */
     public void redo() {
-        prepareRedo();
+//        prepareRedo();
+        if(!prepareRedo()){
+            cleanCommand();
+            return;
+        }
 
         executeSubActions();
         setExecuted(true);
@@ -425,7 +429,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
         EObject eObject = this.eContainer();
 
         
-        EcoreUtil.delete(this);
+//        EcoreUtil.delete(this);
     }
 
 

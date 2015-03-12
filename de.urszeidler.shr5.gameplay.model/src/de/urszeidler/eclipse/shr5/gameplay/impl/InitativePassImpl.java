@@ -175,6 +175,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
         } else if (getAction() != null) {
             getAction().setDate(getDate());
             getAction().redo();
+
         }
         
         setExecuted(true);
