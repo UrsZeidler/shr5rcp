@@ -24,8 +24,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
    </configIni>
 
    <launcherArgs>
-      <programArgs>-data shr_workspace/
-      </programArgs>
       <vmArgs>-XX:MaxPermSize=256m
 -Xms240m
 -Xmx768m
@@ -65,7 +63,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 
    <vm>
    </vm>
-
 
    <plugins>
    </plugins>

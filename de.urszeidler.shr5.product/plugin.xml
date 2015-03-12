@@ -95,7 +95,7 @@
                   style="push">
             </command>
             <command
-                  commandId="org.eclipse.ui.file.openWorkspace"
+                  commandId="de.urszeidler.shr5.product.switchWorkspace"
                   style="push">
             </command>
             <separator
@@ -170,5 +170,36 @@
       </menuContribution>
       -->
    </extension>
+  <extension
+        point="org.eclipse.ui.preferencePages">
+    <page
+            name="%PreferencePages.Startup"
+            category="org.eclipse.ui.preferencePages.Workbench"
+            class="de.urszeidler.shr5.product.preferences.pages.IDEStartupPreferencePage"
+            id="org.eclipse.ui.preferencePages.Startup">
+         <keywordReference id="org.eclipse.ui.ide.startupAndShutdown"/>
+      </page>
+     <page
+            name="%PreferencePages.Startup.Workspaces"
+            category="org.eclipse.ui.preferencePages.Startup"
+            class="de.urszeidler.shr5.product.preferences.pages.RecentWorkspacesPreferencePage"
+            id="org.eclipse.ui.preferencePages.Startup.Workspaces">
+         <keywordReference id="org.eclipse.ui.ide.recentWorkspaces"/>
+      </page>
+  </extension>
+  <extension
+        point="org.eclipse.ui.commands">
+     <command
+           id="de.urszeidler.shr5.product.switchWorkspace"
+           name="switch workspace">
+     </command>
+  </extension>
+  <extension
+        point="org.eclipse.ui.handlers">
+     <handler
+           class="de.urszeidler.shr5.product.handler.ApplicationHandler"
+           commandId="de.urszeidler.shr5.product.switchWorkspace">
+     </handler>
+  </extension>
 
 </plugin>

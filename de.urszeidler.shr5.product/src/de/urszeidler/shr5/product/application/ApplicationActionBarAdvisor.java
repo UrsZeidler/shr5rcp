@@ -14,6 +14,8 @@ import org.eclipse.ui.application.IActionBarConfigurer;
  */
 public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
+//    private IWorkbenchAction openWorkspaceAction;
+
     /**
      * Convinient constructor.
      * 
@@ -30,13 +32,17 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     @Override
     protected void makeActions(IWorkbenchWindow window) {
         // nothing todo
+//        openWorkspaceAction = IDEActionFactory.OPEN_WORKSPACE
+//                .create(window);
+//        register(openWorkspaceAction);
     }
 
     /** {@inheritDoc} */
     @Override
     protected void fillMenuBar(IMenuManager menuBar) {
         // nothing todo
-        // menuBar.insertAfter("windows.menu.id", helpMenu);
+//        menuBar.add(openWorkspaceAction);
+//         menuBar.insertAfter("project.menu.id", openWorkspaceAction);
     }
 
 }
