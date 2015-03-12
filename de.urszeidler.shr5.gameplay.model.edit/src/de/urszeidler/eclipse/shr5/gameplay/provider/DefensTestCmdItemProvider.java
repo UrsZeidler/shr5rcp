@@ -16,6 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd} object.
@@ -96,7 +97,7 @@ public class DefensTestCmdItemProvider
 
         String label = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        label = GamplayEditingTools.getLabelForEObject(factory, label, defensTestCmd.getSubject());
+        label = Shr5EditingTools.getLabelForEObject(factory, label, defensTestCmd.getSubject());
 //        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(defensTestCmd.getSubject(), IItemLabelProvider.class);
 //        if (labelprovider != null)
 //            label = labelprovider.getText(defensTestCmd.getSubject());

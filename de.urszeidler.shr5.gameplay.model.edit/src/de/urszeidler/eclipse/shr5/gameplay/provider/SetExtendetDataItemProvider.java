@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SetExtendetData;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData} object.
@@ -325,10 +326,10 @@ public class SetExtendetDataItemProvider
         SetExtendetData setExtendetData = (SetExtendetData)object;
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setExtendetData.getDataAware());
+        String label_subject = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, setExtendetData.getDataAware());
         String label_object = setExtendetData.getValue().toString();
         if (setExtendetData.getValue() instanceof EObject) 
-         label_object = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setExtendetData.getValue());
+         label_object = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setExtendetData.getValue());
             
         return getString("_UI_SetExtendetData_type_text",new Object[]{ label_subject, setExtendetData.getData(), label_object });
     }

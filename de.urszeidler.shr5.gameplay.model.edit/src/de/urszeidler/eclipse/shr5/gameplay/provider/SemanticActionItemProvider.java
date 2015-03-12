@@ -15,6 +15,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SemanticAction;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SemanticAction} object.
@@ -117,7 +118,7 @@ public class SemanticActionItemProvider extends SubjectCommandItemProvider {
         SemanticAction semanticAction = (SemanticAction)object;
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, semanticAction.getSubject());
+        String label_subject = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, semanticAction.getSubject());
 
         return getString("_UI_SemanticAction_type_text",
                 new Object[]{ label_subject, semanticAction.getType(), semanticAction.getMessage() });

@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.gameplay.CombatTurn;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.OpposedSkillTestCmd} object.
@@ -123,9 +124,9 @@ public class OpposedSkillTestCmdItemProvider extends SkillTestCmdItemProvider {
 
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSubject());
-        String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getObject());
-        String label_skill = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSkill());
+        String label_subject = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSubject());
+        String label_opponent = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getObject());
+        String label_skill = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, opposedSkillTestCmd.getSkill());
 
         return getString("_UI_OpposedSkillTestCmd_type_text", new Object[]{ label_subject, label_opponent, label_skill });
     }

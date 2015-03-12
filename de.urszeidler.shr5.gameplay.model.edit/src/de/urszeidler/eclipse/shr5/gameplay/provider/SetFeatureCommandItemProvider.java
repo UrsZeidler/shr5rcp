@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand} object.
@@ -326,11 +327,11 @@ public class SetFeatureCommandItemProvider
         
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getObject());
-        String label_feature = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getFeature());
+        String label_subject = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getObject());
+        String label_feature = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, setFeatureCommand.getFeature());
         String label_object = setFeatureCommand.getValue().toString();
         if (setFeatureCommand.getValue() instanceof EObject) 
-         label_object = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setFeatureCommand.getValue());
+         label_object = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, (EObject)setFeatureCommand.getValue());
 
         return getString("_UI_SetFeatureCommand_type_text",new Object[]{ label_subject,label_feature,label_object });// + " " + setFeatureCommand.isExecuted();
     }

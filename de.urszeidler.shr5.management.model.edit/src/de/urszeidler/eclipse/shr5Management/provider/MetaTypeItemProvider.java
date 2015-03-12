@@ -15,8 +15,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.MetaType} object. <!--
@@ -115,16 +118,12 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider {
     @Override
     public String getText(Object object) {
         MetaType metaType = (MetaType)object;
-
+        
         ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
 
         Spezies spezies = metaType.getChoosableTypes();
         StringBuffer buffer = new StringBuffer(" [");
-        String text = getString("_UI_Unset_text");
-        if (spezies != null) {
-            IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(spezies, IItemLabelProvider.class);
-            text = labelprovider.getText(spezies);
-        }
+        String text = Shr5EditingTools.getLabelForEObject(factory, getString("_UI_Unset_text"), spezies);// labelprovider.getText(spezies);
         buffer.append(text);
         buffer.append("] (");
         buffer.append(metaType.getSpecialPoints());
@@ -133,6 +132,11 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider {
         String label = metaType.getCategorieName();
         if (label == null)
             label = metaType.getCost() + "";
+        else
+            if(metaType.getCost()!=0){
+                buffer.append(" karma: ")
+                .append(metaType.getCost());
+            }
 
         return label == null || label.length() == 0 ? getString("_UI_MetaType_type") : getString("_UI_MetaType_type") + " " + label + buffer;
     }

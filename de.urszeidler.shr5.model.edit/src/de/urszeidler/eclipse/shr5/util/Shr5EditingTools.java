@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.urszeidler.eclipse.shr5.gameplay.provider;
+package de.urszeidler.eclipse.shr5.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -9,8 +9,9 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 
 /**
  * @author urs
+ *
  */
-public class GamplayEditingTools {
+public class Shr5EditingTools {
 
     /**
      * Provide a null safe reflective label for a eobject.

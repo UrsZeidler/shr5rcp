@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd} object.
@@ -108,9 +109,9 @@ public class MeeleAttackCmdItemProvider extends OpposedSkillTestCmdItemProvider 
 
         String defaultVaule = getString("_UI_unset");
         ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String label_subject = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getSubject());
-        String label_opponent = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getObject());
-        String weapon = GamplayEditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getWeapon());
+        String label_subject = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getSubject());
+        String label_opponent = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getObject());
+        String weapon = Shr5EditingTools.getLabelForEObject(factory, defaultVaule, meeleAttackCmd.getWeapon());
 
         return getString("_UI_MeeleAttackCmd_type_text", new Object[]{ label_subject, label_opponent, weapon });
     }
