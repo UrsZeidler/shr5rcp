@@ -238,7 +238,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_XmYeEPMvEeOUu_gj5H6UdA" beschreibung="http://scionhouserules.wordpress.com/2014/06/04/shadowrun-overhaul-alternative-to-priority-table-for-character-creation/" name="karma system roughly by Scion and Shadowrun House Rules" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_XmYeEPMvEeOUu_gj5H6UdA" beschreibung="http://scionhouserules.wordpress.com/2014/06/04/shadowrun-overhaul-alternative-to-priority-table-for-character-creation/" name="karma system roughly by Scion and Shadowrun House Rules" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
         <instructions xmi:id="_XmZFIPMvEeOUu_gj5H6UdA" value="Select the categories and the group."/>
         <instructions xmi:id="_XmZFIfMvEeOUu_gj5H6UdA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_XmZFIvMvEeOUu_gj5H6UdA" key="personaCreated" value="The character is created spend all the values."/>
@@ -544,11 +544,17 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="The buy point system." image="/shr5Resource/images/runFaster.jpg" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="The buy point system." image="/shr5Resource/images/runFaster.jpg" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
         <instructions xmi:id="_8RGg8bL6EeS74JF_046f_w" value="Select the categories and the group."/>
         <instructions xmi:id="_8RGg8rL6EeS74JF_046f_w" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_8RGg87L6EeS74JF_046f_w" key="personaCreated" value="The character is created spend all the values."/>
         <instructions xmi:id="_8RGg9LL6EeS74JF_046f_w" key="commited" value="The character is finshed and commited."/>
+        <lifestyleToStartMoney xmi:id="_Ul3kAMkCEeSkAbRNCR2heA" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+        <lifestyleToStartMoney xmi:id="_Ul3kAckCEeSkAbRNCR2heA" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+        <lifestyleToStartMoney xmi:id="_Ul3kAskCEeSkAbRNCR2heA" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+        <lifestyleToStartMoney xmi:id="_Ul4LEMkCEeSkAbRNCR2heA" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+        <lifestyleToStartMoney xmi:id="_Ul4LEckCEeSkAbRNCR2heA" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+        <lifestyleToStartMoney xmi:id="_Ul4yIMkCEeSkAbRNCR2heA" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9bL6EeS74JF_046f_w" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9rL6EeS74JF_046f_w" cost="40" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg97L6EeS74JF_046f_w" cost="50" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788"/>
@@ -557,6 +563,28 @@
         <priorities xsi:type="shr5mngt:Mudan" xmi:id="_8RGg-rL6EeS74JF_046f_w">
           <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </priorities>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNdxIMjwEeS4RZN4WVpNWA" cost="40" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNdxIcjwEeS4RZN4WVpNWA" cost="40" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNeYMMjwEeS4RZN4WVpNWA" cost="90" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNe_QMjwEeS4RZN4WVpNWA" cost="60" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNe_QcjwEeS4RZN4WVpNWA" cost="70" choosableTypes="5523974a-a069-4806-9de8-c177ec832466"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNfmUMjwEeS4RZN4WVpNWA" cost="80" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNgNYMjwEeS4RZN4WVpNWA" cost="50" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNgNYcjwEeS4RZN4WVpNWA" cost="100" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNg0cMjwEeS4RZN4WVpNWA" cost="70" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNhbgMjwEeS4RZN4WVpNWA" cost="50" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNhbgcjwEeS4RZN4WVpNWA" cost="40" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNiCkMjwEeS4RZN4WVpNWA" cost="40" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNiCkcjwEeS4RZN4WVpNWA" cost="50" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNipoMjwEeS4RZN4WVpNWA" cost="50" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNjQsMjwEeS4RZN4WVpNWA" cost="100" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNjQscjwEeS4RZN4WVpNWA" cost="100" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNke0MjwEeS4RZN4WVpNWA" cost="90" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNke0cjwEeS4RZN4WVpNWA" cost="100" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNlF4MjwEeS4RZN4WVpNWA" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNls8MjwEeS4RZN4WVpNWA" cost="95" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNmUAMjwEeS4RZN4WVpNWA" cost="70" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_dNm7EMjwEeS4RZN4WVpNWA" cost="90" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99"/>
         <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_8RGg-7L6EeS74JF_046f_w" cost="30">
           <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
         </priorities>
@@ -762,6 +790,18 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_4xfZF78qEeShtu44RDLbKg" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_4xfZGL8qEeShtu44RDLbKg" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_4xfZGb8qEeShtu44RDLbKg" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYGU4MjkEeSdDdWak6migg" categorieName="4" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYG78MjkEeSdDdWak6migg" categorieName="4" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYG78cjkEeSdDdWak6migg" categorieName="4" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYHjAMjkEeSdDdWak6migg" categorieName="4" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYHjAcjkEeSdDdWak6migg" categorieName="3" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYIKEMjkEeSdDdWak6migg" categorieName="3" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYIKEcjkEeSdDdWak6migg" categorieName="3" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYIKEsjkEeSdDdWak6migg" categorieName="3" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYIxIMjkEeSdDdWak6migg" categorieName="2" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYIxIcjkEeSdDdWak6migg" categorieName="2" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYJYMMjkEeSdDdWak6migg" categorieName="2" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYJYMcjkEeSdDdWak6migg" categorieName="2" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_4xfZGr8qEeShtu44RDLbKg" cost="4" attibutePoints="24"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_4xfZG78qEeShtu44RDLbKg" cost="3" attibutePoints="20"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_4xfZHL8qEeShtu44RDLbKg" cost="2" attibutePoints="16"/>
@@ -851,20 +891,32 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niUOcbfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niU1gLfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niU1gbfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="8"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niVckLfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="8"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niVckLfAEeSaT8n8-4ZBTA" categorieName="A" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niVckbfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="8"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWDoLfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWDobfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWDoLfAEeSaT8n8-4ZBTA" categorieName="A" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWDobfAEeSaT8n8-4ZBTA" categorieName="A" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWqsLfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWqsbfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niXRwLfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niXRwbfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niX40LfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niX40bfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="7"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4LfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a" specialPoints="5"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4bfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32" specialPoints="5"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4rfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5" specialPoints="5"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niZG8LfAEeSaT8n8-4ZBTA" categorieName="A" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niWqsbfAEeSaT8n8-4ZBTA" categorieName="A" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niXRwLfAEeSaT8n8-4ZBTA" categorieName="A" cost="5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niXRwbfAEeSaT8n8-4ZBTA" categorieName="A" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niX40LfAEeSaT8n8-4ZBTA" categorieName="A" cost="4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niX40bfAEeSaT8n8-4ZBTA" categorieName="A" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4LfAEeSaT8n8-4ZBTA" categorieName="A" cost="2" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4bfAEeSaT8n8-4ZBTA" categorieName="A" cost="12" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niYf4rfAEeSaT8n8-4ZBTA" categorieName="A" cost="2" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niZG8LfAEeSaT8n8-4ZBTA" categorieName="A" cost="2" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYtY4MjkEeSdDdWak6migg" categorieName="A" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYtY4cjkEeSdDdWak6migg" categorieName="A" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYt_8MjkEeSdDdWak6migg" categorieName="A" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYt_8cjkEeSdDdWak6migg" categorieName="A" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYunAMjkEeSdDdWak6migg" categorieName="B" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYunAcjkEeSdDdWak6migg" categorieName="B" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYvOEMjkEeSdDdWak6migg" categorieName="B" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYvOEcjkEeSdDdWak6migg" categorieName="B" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="2"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYv1IMjkEeSdDdWak6migg" categorieName="C" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYv1IcjkEeSdDdWak6migg" categorieName="C" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYwcMMjkEeSdDdWak6migg" categorieName="C" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_xYwcMcjkEeSdDdWak6migg" categorieName="C" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niZG8bfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niZG8rfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niZuALfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
@@ -874,20 +926,20 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niaVEbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="6"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niaVErfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="6"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8ILfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="6"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8IbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8IbfAEeSaT8n8-4ZBTA" categorieName="B" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="6"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8IrfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="6"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8I7fAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nibjMLfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nia8I7fAEeSaT8n8-4ZBTA" categorieName="B" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nibjMLfAEeSaT8n8-4ZBTA" categorieName="B" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="4"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nibjMbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nibjMrfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicKQLfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicKQbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxULfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxUbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="4"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxUrfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYLfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYbfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYrfAEeSaT8n8-4ZBTA" categorieName="B" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nibjMrfAEeSaT8n8-4ZBTA" categorieName="B" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicKQLfAEeSaT8n8-4ZBTA" categorieName="B" cost="5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicKQbfAEeSaT8n8-4ZBTA" categorieName="B" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxULfAEeSaT8n8-4ZBTA" categorieName="B" cost="4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxUbfAEeSaT8n8-4ZBTA" categorieName="B" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nicxUrfAEeSaT8n8-4ZBTA" categorieName="B" cost="12" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYLfAEeSaT8n8-4ZBTA" categorieName="B" cost="12" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYbfAEeSaT8n8-4ZBTA" categorieName="B" cost="2" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nidYYrfAEeSaT8n8-4ZBTA" categorieName="B" cost="2" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nid_cLfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nid_cbfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nid_crfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
@@ -896,23 +948,23 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niemgrfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="4"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nifNkLfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nifNkbfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="3"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nifNkrfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nifNkrfAEeSaT8n8-4ZBTA" categorieName="C" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nifNk7fAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="3"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nif0oLfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="1"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nif0obfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nif0oLfAEeSaT8n8-4ZBTA" categorieName="C" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nif0obfAEeSaT8n8-4ZBTA" categorieName="C" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nif0orfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="1"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsLfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="1"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsbfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsrfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihCwLfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihCwbfAEeSaT8n8-4ZBTA" categorieName="C" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsLfAEeSaT8n8-4ZBTA" categorieName="C" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsbfAEeSaT8n8-4ZBTA" categorieName="C" cost="-5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nigbsrfAEeSaT8n8-4ZBTA" categorieName="C" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihCwLfAEeSaT8n8-4ZBTA" categorieName="C" cost="-4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihCwbfAEeSaT8n8-4ZBTA" categorieName="C" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihCwrfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihp0LfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihp0bfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="2"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nihp0rfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="2"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niiQ4LfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niiQ4bfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niiQ4rfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="5523974a-a069-4806-9de8-c177ec832466"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_niiQ4rfAEeSaT8n8-4ZBTA" categorieName="D" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nii38LfAEeSaT8n8-4ZBTA" categorieName="D" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nii38bfAEeSaT8n8-4ZBTA" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_nijfALfAEeSaT8n8-4ZBTA" categorieName="E" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="1"/>
@@ -981,6 +1033,998 @@
           <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+      </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_-q0IIMjkEeSdDdWak6migg" name="Generators">
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q0IIcjkEeSdDdWak6migg" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q0IIsjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q0II8jkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q0IJMjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q0IJcjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q0IJsjkEeSdDdWak6migg" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q0IJ8jkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q0IKMjkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q0IKcjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q0IKsjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q0IK8jkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <additionalConstrains xmi:id="_-q0ILMjkEeSdDdWak6migg" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+          <additionalConstrains xmi:id="_-q0ILcjkEeSdDdWak6migg" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+          <additionalConstrains xmi:id="_-q0ILsjkEeSdDdWak6migg" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+          <additionalConstrains xmi:id="_-q0IL8jkEeSdDdWak6migg" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0IMMjkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0IMcjkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0IMsjkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0IM8jkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0INMjkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0INcjkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0INsjkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0IN8jkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vMMjkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vMcjkEeSdDdWak6migg" categorieName="B" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vMsjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vM8jkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vNMjkEeSdDdWak6migg" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vNcjkEeSdDdWak6migg" categorieName="C" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vNsjkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vN8jkEeSdDdWak6migg" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vOMjkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vOcjkEeSdDdWak6migg" categorieName="A" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vOsjkEeSdDdWak6migg" categorieName="B" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vO8jkEeSdDdWak6migg" categorieName="C" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vPMjkEeSdDdWak6migg" categorieName="D" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vPcjkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vPsjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vP8jkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vQMjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vQcjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vQsjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vQ8jkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vRMjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vRcjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vRsjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vR8jkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vSMjkEeSdDdWak6migg" categorieName="C" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vScjkEeSdDdWak6migg" categorieName="C" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vSsjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vS8jkEeSdDdWak6migg" categorieName="D" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vTMjkEeSdDdWak6migg" categorieName="D" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vTcjkEeSdDdWak6migg" categorieName="A" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vTsjkEeSdDdWak6migg" categorieName="B" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vT8jkEeSdDdWak6migg" categorieName="C" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vUMjkEeSdDdWak6migg" categorieName="D" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vUcjkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vUsjkEeSdDdWak6migg" categorieName="A" resource="450000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vU8jkEeSdDdWak6migg" categorieName="B" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vVMjkEeSdDdWak6migg" categorieName="C" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vVcjkEeSdDdWak6migg" categorieName="D" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vVsjkEeSdDdWak6migg" categorieName="E" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q0vV8jkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:FreeStyle" xmi:id="_-q0vWMjkEeSdDdWak6migg" name="Free Style Generator" characterAdvancements="_-q0vXcjkEeSdDdWak6migg">
+          <instructions xmi:id="_-q0vWcjkEeSdDdWak6migg" value="Choose the basic Concept"/>
+          <instructions xmi:id="_-q0vWsjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q0vW8jkEeSdDdWak6migg" key="personaCreated" value="The character is created you can comit any time."/>
+          <instructions xmi:id="_-q0vXMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+        </entries>
+        <entries xsi:type="shr5mngt:CharacterAdvancementSystem" xmi:id="_-q0vXcjkEeSdDdWak6migg" name="The basic advancements system.">
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vXsjkEeSdDdWak6migg" karmaFactor="5">
+            <type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vX8jkEeSdDdWak6migg" karmaFactor="2">
+            <type href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vYMjkEeSdDdWak6migg" karmaFactor="1">
+            <type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vYcjkEeSdDdWak6migg" karmaFactor="1">
+            <type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vYsjkEeSdDdWak6migg" karmaFactor="7">
+            <type href="http://urszeidler.de/shr5/1.0#//Spezialisierung"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vY8jkEeSdDdWak6migg" karmaFactor="5">
+            <type href="http://urszeidler.de/shr5/1.0#//PersonaZauber"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vZMjkEeSdDdWak6migg" karmaFactor="5">
+            <type href="http://urszeidler.de/shr5/1.0#//PersonaKomplexForm"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vZcjkEeSdDdWak6migg" karmaFactor="5">
+            <type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vZsjkEeSdDdWak6migg" karmaFactor="2">
+            <type href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
+          </characterAdvancements>
+          <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-q0vZ8jkEeSdDdWak6migg" karmaFactor="13">
+            <type href="http://urszeidler.de/shr5/1.0#//Initation"/>
+          </characterAdvancements>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q0vaMjkEeSdDdWak6migg" name="The streetscum campain EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q0vacjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q0vasjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q0va8jkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q0vbMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q0vbcjkEeSdDdWak6migg" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q0vbsjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q0vb8jkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q0vcMjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q0vccjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q0vcsjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <additionalConstrains xmi:id="_-q0vc8jkEeSdDdWak6migg" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+          <additionalConstrains xmi:id="_-q0vdMjkEeSdDdWak6migg" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+          <additionalConstrains xmi:id="_-q0vdcjkEeSdDdWak6migg" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+          <additionalConstrains xmi:id="_-q0vdsjkEeSdDdWak6migg" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vd8jkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0veMjkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vecjkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vesjkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0ve8jkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vfMjkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vfcjkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vfsjkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vf8jkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vgMjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vgcjkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vgsjkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vg8jkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vhMjkEeSdDdWak6migg" categorieName="A" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vhcjkEeSdDdWak6migg" categorieName="B" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vhsjkEeSdDdWak6migg" categorieName="C" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0vh8jkEeSdDdWak6migg" categorieName="D" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q0viMjkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vicjkEeSdDdWak6migg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0visjkEeSdDdWak6migg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vi8jkEeSdDdWak6migg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vjMjkEeSdDdWak6migg" categorieName="A" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vjcjkEeSdDdWak6migg" categorieName="A" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vjsjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vj8jkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vkMjkEeSdDdWak6migg" categorieName="B" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vkcjkEeSdDdWak6migg" categorieName="B" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vksjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vk8jkEeSdDdWak6migg" categorieName="C" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vlMjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vlcjkEeSdDdWak6migg" categorieName="A" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vlsjkEeSdDdWak6migg" categorieName="B" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vl8jkEeSdDdWak6migg" categorieName="C" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vmMjkEeSdDdWak6migg" categorieName="D" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q0vmcjkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vmsjkEeSdDdWak6migg" categorieName="A" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vm8jkEeSdDdWak6migg" categorieName="B" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vnMjkEeSdDdWak6migg" categorieName="C" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vncjkEeSdDdWak6migg" categorieName="D" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q0vnsjkEeSdDdWak6migg" categorieName="E" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q0vn8jkEeSdDdWak6migg" categorieName="D">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q0voMjkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q0vocjkEeSdDdWak6migg" beschreibung="http://scionhouserules.wordpress.com/2014/06/04/shadowrun-overhaul-alternative-to-priority-table-for-character-creation/" name="karma system roughly by Scion and Shadowrun House Rules" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="750" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+          <instructions xmi:id="_-q0vosjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q0vo8jkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q0vpMjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q0vpcjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vpsjkEeSdDdWak6migg" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vp8jkEeSdDdWak6migg" cost="35" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vqMjkEeSdDdWak6migg" cost="50" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vqcjkEeSdDdWak6migg" cost="55" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q0vqsjkEeSdDdWak6migg" cost="80" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q0vq8jkEeSdDdWak6migg">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vrMjkEeSdDdWak6migg" cost="75">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q0vrcjkEeSdDdWak6migg" cost="125" resonanz="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q0vrsjkEeSdDdWak6migg" cost="100" magic="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q0vr8jkEeSdDdWak6migg" cost="50" magic="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q0vsMjkEeSdDdWak6migg" name="Prime Runner" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="35" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="6" maxResourceToKeep="5000" maxKarmaToResources="25" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q0vscjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q0vssjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q0vs8jkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q0vtMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q0vtcjkEeSdDdWak6migg" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q0vtsjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q1WQMjkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q1WQcjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q1WQsjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q1WQ8jkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WRMjkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WRcjkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WRsjkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WR8jkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WSMjkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WScjkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WSsjkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WS8jkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WTMjkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WTcjkEeSdDdWak6migg" categorieName="B" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WTsjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WT8jkEeSdDdWak6migg" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WUMjkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WUcjkEeSdDdWak6migg" categorieName="C" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WUsjkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WU8jkEeSdDdWak6migg" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WVMjkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WVcjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WVsjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1WV8jkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1WWMjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WWcjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WWsjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WW8jkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1WXMjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1WXcjkEeSdDdWak6migg" categorieName="C" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WXsjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WX8jkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WYMjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1WYcjkEeSdDdWak6migg" categorieName="C" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1WYsjkEeSdDdWak6migg" categorieName="D" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WY8jkEeSdDdWak6migg" categorieName="D" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WZMjkEeSdDdWak6migg" categorieName="A" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WZcjkEeSdDdWak6migg" categorieName="B" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WZsjkEeSdDdWak6migg" categorieName="C" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WZ8jkEeSdDdWak6migg" categorieName="D" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WaMjkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WacjkEeSdDdWak6migg" categorieName="A" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WasjkEeSdDdWak6migg" categorieName="B" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1Wa8jkEeSdDdWak6migg" categorieName="C" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WbMjkEeSdDdWak6migg" categorieName="D" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WbcjkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WbsjkEeSdDdWak6migg" categorieName="A" resource="500000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1Wb8jkEeSdDdWak6migg" categorieName="B" resource="325000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WcMjkEeSdDdWak6migg" categorieName="C" resource="210000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WccjkEeSdDdWak6migg" categorieName="D" resource="150000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WcsjkEeSdDdWak6migg" categorieName="E" resource="100000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q1Wc8jkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q1WdMjkEeSdDdWak6migg" name="Street Level" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="13" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="5" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q1WdcjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q1WdsjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q1Wd8jkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q1WeMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q1WecjkEeSdDdWak6migg" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q1WesjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q1We8jkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q1WfMjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q1WfcjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q1WfsjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1Wf8jkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WgMjkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WgcjkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WgsjkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1Wg8jkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WhMjkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WhcjkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WhsjkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1Wh8jkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WiMjkEeSdDdWak6migg" categorieName="B" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WicjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WisjkEeSdDdWak6migg" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1Wi8jkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WjMjkEeSdDdWak6migg" categorieName="C" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WjcjkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1WjsjkEeSdDdWak6migg" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q1Wj8jkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WkMjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WkcjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1WksjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1Wk8jkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WlMjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WlcjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WlsjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1Wl8jkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1WmMjkEeSdDdWak6migg" categorieName="C" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WmcjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WmsjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1Wm8jkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q1WnMjkEeSdDdWak6migg" categorieName="C" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q1WncjkEeSdDdWak6migg" categorieName="D" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q1WnsjkEeSdDdWak6migg" categorieName="D" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1Wn8jkEeSdDdWak6migg" categorieName="A" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WoMjkEeSdDdWak6migg" categorieName="B" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WocjkEeSdDdWak6migg" categorieName="C" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1WosjkEeSdDdWak6migg" categorieName="D" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q1Wo8jkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WpMjkEeSdDdWak6migg" categorieName="A" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WpcjkEeSdDdWak6migg" categorieName="B" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WpsjkEeSdDdWak6migg" categorieName="C" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1Wp8jkEeSdDdWak6migg" categorieName="D" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q1WqMjkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WqcjkEeSdDdWak6migg" categorieName="A" resource="75000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WqsjkEeSdDdWak6migg" categorieName="B" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1Wq8jkEeSdDdWak6migg" categorieName="C" resource="25000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WrMjkEeSdDdWak6migg" categorieName="D" resource="15000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q1WrcjkEeSdDdWak6migg" categorieName="E" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q1WrsjkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q1Wr8jkEeSdDdWak6migg" name="Standard" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q1WsMjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q1WscjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q1WssjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q1Ws8jkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q1WtMjkEeSdDdWak6migg" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q1WtcjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q1WtsjkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q1Wt8jkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q19UMjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q19UcjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19UsjkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19U8jkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19VMjkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19VcjkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19VsjkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19V8jkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19WMjkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19WcjkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19WsjkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19W8jkEeSdDdWak6migg" categorieName="B" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19XMjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19XcjkEeSdDdWak6migg" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19XsjkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19X8jkEeSdDdWak6migg" categorieName="C" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19YMjkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19YcjkEeSdDdWak6migg" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19YsjkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19Y8jkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19ZMjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19ZcjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19ZsjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19Z8jkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19aMjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19acjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19asjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19a8jkEeSdDdWak6migg" categorieName="C" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19bMjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19bcjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19bsjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19b8jkEeSdDdWak6migg" categorieName="C" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19cMjkEeSdDdWak6migg" categorieName="D" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19ccjkEeSdDdWak6migg" categorieName="D" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19csjkEeSdDdWak6migg" categorieName="A" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19c8jkEeSdDdWak6migg" categorieName="B" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19dMjkEeSdDdWak6migg" categorieName="C" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19dcjkEeSdDdWak6migg" categorieName="D" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19dsjkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19d8jkEeSdDdWak6migg" categorieName="A" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19eMjkEeSdDdWak6migg" categorieName="B" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19ecjkEeSdDdWak6migg" categorieName="C" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19esjkEeSdDdWak6migg" categorieName="D" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19e8jkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19fMjkEeSdDdWak6migg" categorieName="A" resource="450000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19fcjkEeSdDdWak6migg" categorieName="B" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19fsjkEeSdDdWak6migg" categorieName="C" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19f8jkEeSdDdWak6migg" categorieName="D" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19gMjkEeSdDdWak6migg" categorieName="E" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q19gcjkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q19gsjkEeSdDdWak6migg" beschreibung="The buy point system." image="/shr5Resource/images/runFaster.jpg" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2">
+          <instructions xmi:id="_-q19g8jkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q19hMjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q19hcjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q19hsjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19h8jkEeSdDdWak6migg" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19iMjkEeSdDdWak6migg" cost="40" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19icjkEeSdDdWak6migg" cost="50" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19isjkEeSdDdWak6migg" cost="50" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19i8jkEeSdDdWak6migg" cost="90" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q19jMjkEeSdDdWak6migg">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19jcjkEeSdDdWak6migg" cost="30">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19jsjkEeSdDdWak6migg" cost="15" resonanz="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19j8jkEeSdDdWak6migg" cost="35" magic="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19kMjkEeSdDdWak6migg" cost="20" magic="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19kcjkEeSdDdWak6migg" cost="15">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19ksjkEeSdDdWak6migg" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q19k8jkEeSdDdWak6migg" beschreibung="With the default metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system basic" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q19lMjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q19lcjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q19lsjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q19l8jkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q19mMjkEeSdDdWak6migg" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q19mcjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q19msjkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q19m8jkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q19nMjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q19ncjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <additionalConstrains xmi:id="_-q19nsjkEeSdDdWak6migg" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+          <additionalConstrains xmi:id="_-q19n8jkEeSdDdWak6migg" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+          <additionalConstrains xmi:id="_-q19oMjkEeSdDdWak6migg" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+          <additionalConstrains xmi:id="_-q19ocjkEeSdDdWak6migg" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19osjkEeSdDdWak6migg" cost="4" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19o8jkEeSdDdWak6migg" cost="4" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19pMjkEeSdDdWak6migg" cost="4" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19pcjkEeSdDdWak6migg" cost="4" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19psjkEeSdDdWak6migg" cost="4" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19p8jkEeSdDdWak6migg" cost="3" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19qMjkEeSdDdWak6migg" cost="3" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19qcjkEeSdDdWak6migg" cost="3" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19qsjkEeSdDdWak6migg" cost="3" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19q8jkEeSdDdWak6migg" cost="3" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19rMjkEeSdDdWak6migg" cost="2" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19rcjkEeSdDdWak6migg" cost="2" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19rsjkEeSdDdWak6migg" cost="2" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19r8jkEeSdDdWak6migg" cost="2" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19sMjkEeSdDdWak6migg" cost="1" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19scjkEeSdDdWak6migg" cost="1" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q19ssjkEeSdDdWak6migg" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19s8jkEeSdDdWak6migg" cost="4" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19tMjkEeSdDdWak6migg" cost="3" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19tcjkEeSdDdWak6migg" cost="2" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19tsjkEeSdDdWak6migg" cost="1" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q19t8jkEeSdDdWak6migg" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19uMjkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19ucjkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19usjkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19u8jkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19vMjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19vcjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19vsjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19v8jkEeSdDdWak6migg" cost="3" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19wMjkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19wcjkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q19wsjkEeSdDdWak6migg" cost="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19w8jkEeSdDdWak6migg" cost="2" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19xMjkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q19xcjkEeSdDdWak6migg" cost="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q19xsjkEeSdDdWak6migg" cost="1" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19x8jkEeSdDdWak6migg" cost="4" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19yMjkEeSdDdWak6migg" cost="3" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19ycjkEeSdDdWak6migg" cost="2" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19ysjkEeSdDdWak6migg" cost="1" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q19y8jkEeSdDdWak6migg" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19zMjkEeSdDdWak6migg" cost="4" resource="450000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19zcjkEeSdDdWak6migg" cost="3" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19zsjkEeSdDdWak6migg" cost="2" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q19z8jkEeSdDdWak6migg" cost="1" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q190MjkEeSdDdWak6migg" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q190cjkEeSdDdWak6migg">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//SumToTenGenerator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q190sjkEeSdDdWak6migg" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q1908jkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q191MjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q191cjkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q2kYMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q2kYcjkEeSdDdWak6migg" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q2kYsjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q2kY8jkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q2kZMjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q2kZcjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q2kZsjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <additionalConstrains xmi:id="_-q2kZ8jkEeSdDdWak6migg" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+          <additionalConstrains xmi:id="_-q2kaMjkEeSdDdWak6migg" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+          <additionalConstrains xmi:id="_-q2kacjkEeSdDdWak6migg" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+          <additionalConstrains xmi:id="_-q2kasjkEeSdDdWak6migg" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ka8jkEeSdDdWak6migg" cost="4" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kbMjkEeSdDdWak6migg" cost="4" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kbcjkEeSdDdWak6migg" cost="4" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kbsjkEeSdDdWak6migg" cost="4" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kb8jkEeSdDdWak6migg" cost="4" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kcMjkEeSdDdWak6migg" cost="4" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kccjkEeSdDdWak6migg" cost="4" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kcsjkEeSdDdWak6migg" cost="4" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kc8jkEeSdDdWak6migg" cost="4" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kdMjkEeSdDdWak6migg" cost="4" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kdcjkEeSdDdWak6migg" cost="4" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kdsjkEeSdDdWak6migg" cost="4" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kd8jkEeSdDdWak6migg" cost="4" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2keMjkEeSdDdWak6migg" cost="4" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kecjkEeSdDdWak6migg" cost="4" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kesjkEeSdDdWak6migg" cost="4" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ke8jkEeSdDdWak6migg" cost="4" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kfMjkEeSdDdWak6migg" cost="4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kfcjkEeSdDdWak6migg" cost="4" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kfsjkEeSdDdWak6migg" cost="4" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kf8jkEeSdDdWak6migg" cost="4" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kgMjkEeSdDdWak6migg" cost="4" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kgcjkEeSdDdWak6migg" cost="4" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kgsjkEeSdDdWak6migg" cost="3" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kg8jkEeSdDdWak6migg" cost="3" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2khMjkEeSdDdWak6migg" cost="3" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2khcjkEeSdDdWak6migg" cost="3" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2khsjkEeSdDdWak6migg" cost="3" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kh8jkEeSdDdWak6migg" cost="3" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kiMjkEeSdDdWak6migg" cost="3" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kicjkEeSdDdWak6migg" cost="3" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kisjkEeSdDdWak6migg" cost="3" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ki8jkEeSdDdWak6migg" cost="3" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kjMjkEeSdDdWak6migg" cost="3" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kjcjkEeSdDdWak6migg" cost="3" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kjsjkEeSdDdWak6migg" cost="3" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kj8jkEeSdDdWak6migg" cost="3" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kkMjkEeSdDdWak6migg" cost="3" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kkcjkEeSdDdWak6migg" cost="3" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kksjkEeSdDdWak6migg" cost="3" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kk8jkEeSdDdWak6migg" cost="3" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2klMjkEeSdDdWak6migg" cost="3" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2klcjkEeSdDdWak6migg" cost="3" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2klsjkEeSdDdWak6migg" cost="3" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kl8jkEeSdDdWak6migg" cost="3" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kmMjkEeSdDdWak6migg" cost="3" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kmcjkEeSdDdWak6migg" cost="2" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kmsjkEeSdDdWak6migg" cost="2" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2km8jkEeSdDdWak6migg" cost="2" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2knMjkEeSdDdWak6migg" cost="2" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kncjkEeSdDdWak6migg" cost="2" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2knsjkEeSdDdWak6migg" cost="2" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kn8jkEeSdDdWak6migg" cost="2" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2koMjkEeSdDdWak6migg" cost="2" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kocjkEeSdDdWak6migg" cost="2" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kosjkEeSdDdWak6migg" cost="2" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ko8jkEeSdDdWak6migg" cost="2" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kpMjkEeSdDdWak6migg" cost="2" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kpcjkEeSdDdWak6migg" cost="2" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kpsjkEeSdDdWak6migg" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kp8jkEeSdDdWak6migg" cost="2" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kqMjkEeSdDdWak6migg" cost="2" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kqcjkEeSdDdWak6migg" cost="2" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kqsjkEeSdDdWak6migg" cost="2" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kq8jkEeSdDdWak6migg" cost="1" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2krMjkEeSdDdWak6migg" cost="1" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2krcjkEeSdDdWak6migg" cost="1" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2krsjkEeSdDdWak6migg" cost="1" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kr8jkEeSdDdWak6migg" cost="1" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ksMjkEeSdDdWak6migg" cost="1" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kscjkEeSdDdWak6migg" cost="1" choosableTypes="5523974a-a069-4806-9de8-c177ec832466"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kssjkEeSdDdWak6migg" cost="1" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ks8jkEeSdDdWak6migg" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ktMjkEeSdDdWak6migg" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ktcjkEeSdDdWak6migg" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ktsjkEeSdDdWak6migg" categorieName="4" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kt8jkEeSdDdWak6migg" categorieName="4" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kuMjkEeSdDdWak6migg" categorieName="4" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kucjkEeSdDdWak6migg" categorieName="4" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kusjkEeSdDdWak6migg" categorieName="3" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2ku8jkEeSdDdWak6migg" categorieName="3" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kvMjkEeSdDdWak6migg" categorieName="3" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kvcjkEeSdDdWak6migg" categorieName="3" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kvsjkEeSdDdWak6migg" categorieName="2" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kv8jkEeSdDdWak6migg" categorieName="2" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kwMjkEeSdDdWak6migg" categorieName="2" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q2kwcjkEeSdDdWak6migg" categorieName="2" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q2kwsjkEeSdDdWak6migg" cost="4" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q2kw8jkEeSdDdWak6migg" cost="3" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q2kxMjkEeSdDdWak6migg" cost="2" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q2kxcjkEeSdDdWak6migg" cost="1" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q2kxsjkEeSdDdWak6migg" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2kx8jkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2kyMjkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q2kycjkEeSdDdWak6migg" cost="4" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2kysjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2ky8jkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q2kzMjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q2kzcjkEeSdDdWak6migg" cost="3" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2kzsjkEeSdDdWak6migg" cost="3" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2kz8jkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2k0MjkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q2k0cjkEeSdDdWak6migg" cost="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q2k0sjkEeSdDdWak6migg" cost="2" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2k08jkEeSdDdWak6migg" cost="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q2k1MjkEeSdDdWak6migg" cost="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q2k1cjkEeSdDdWak6migg" cost="1" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q2k1sjkEeSdDdWak6migg" cost="4" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q2k18jkEeSdDdWak6migg" cost="3" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q2k2MjkEeSdDdWak6migg" cost="2" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q2k2cjkEeSdDdWak6migg" cost="1" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q2k2sjkEeSdDdWak6migg" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q2k28jkEeSdDdWak6migg" cost="4" resource="450000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q2k3MjkEeSdDdWak6migg" cost="3" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q2k3cjkEeSdDdWak6migg" cost="2" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q2k3sjkEeSdDdWak6migg" cost="1" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q2k38jkEeSdDdWak6migg" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q2k4MjkEeSdDdWak6migg">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//SumToTenGenerator"/>
+        </entries>
+        <entries xsi:type="shr5mngt:Shr5System" xmi:id="_-q3LcMjkEeSdDdWak6migg" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The run faster generator system." page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_-q0vXcjkEeSdDdWak6migg" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+          <instructions xmi:id="_-q3LccjkEeSdDdWak6migg" value="Select the categories and the group."/>
+          <instructions xmi:id="_-q3LcsjkEeSdDdWak6migg" key="readyForCreation" value="All has been set, you can create the character now."/>
+          <instructions xmi:id="_-q3Lc8jkEeSdDdWak6migg" key="personaCreated" value="The character is created spend all the values."/>
+          <instructions xmi:id="_-q3LdMjkEeSdDdWak6migg" key="commited" value="The character is finshed and commited."/>
+          <lifestyleToStartMoney xmi:id="_-q3LdcjkEeSdDdWak6migg" numberOfW="1" moneyFactor="30" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
+          <lifestyleToStartMoney xmi:id="_-q3LdsjkEeSdDdWak6migg" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
+          <lifestyleToStartMoney xmi:id="_-q3Ld8jkEeSdDdWak6migg" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
+          <lifestyleToStartMoney xmi:id="_-q3LeMjkEeSdDdWak6migg" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
+          <lifestyleToStartMoney xmi:id="_-q3LecjkEeSdDdWak6migg" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
+          <lifestyleToStartMoney xmi:id="_-q3LesjkEeSdDdWak6migg" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+          <additionalConstrains xmi:id="_-q3Le8jkEeSdDdWak6migg" source="bea0ded3-821f-449c-9507-815088f68b86" targets="4a4e1079-5872-4f3f-a450-48c30a5504f3 4cef53aa-13ea-4f28-8fbf-e3b254248247"/>
+          <additionalConstrains xmi:id="_-q3LfMjkEeSdDdWak6migg" source="46f80a44-80ae-41d7-a7c8-a119c4cff70f" targets="69ab0255-a76b-4190-a8be-0473fed231ef 841572d6-0785-4a8d-acd3-e106fb464781"/>
+          <additionalConstrains xmi:id="_-q3LfcjkEeSdDdWak6migg" source="b04871a1-6b7b-4a78-89fc-af8ec69bdd3d" targets="_slloQD6kEeSnhdazldEq5w 76523da7-271d-459a-9502-3f7c8d54be6a 2ecc8684-5a9f-4523-beb8-d3abc886a233"/>
+          <additionalConstrains xmi:id="_-q3LfsjkEeSdDdWak6migg" source="6ba5239b-651e-456a-bcc9-f58d975d2397" targets="96e4809a-71e6-4b98-9740-c6c44bc33aa9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lf8jkEeSdDdWak6migg" categorieName="A" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="9"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LgMjkEeSdDdWak6migg" categorieName="A" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LgcjkEeSdDdWak6migg" categorieName="A" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LgsjkEeSdDdWak6migg" categorieName="A" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lg8jkEeSdDdWak6migg" categorieName="A" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LhMjkEeSdDdWak6migg" categorieName="A" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LhcjkEeSdDdWak6migg" categorieName="A" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LhsjkEeSdDdWak6migg" categorieName="A" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lh8jkEeSdDdWak6migg" categorieName="A" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LiMjkEeSdDdWak6migg" categorieName="A" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LicjkEeSdDdWak6migg" categorieName="A" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="8"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LisjkEeSdDdWak6migg" categorieName="A" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Li8jkEeSdDdWak6migg" categorieName="A" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LjMjkEeSdDdWak6migg" categorieName="A" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LjcjkEeSdDdWak6migg" categorieName="A" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LjsjkEeSdDdWak6migg" categorieName="A" cost="5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lj8jkEeSdDdWak6migg" categorieName="A" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LkMjkEeSdDdWak6migg" categorieName="A" cost="4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LkcjkEeSdDdWak6migg" categorieName="A" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LksjkEeSdDdWak6migg" categorieName="A" cost="2" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lk8jkEeSdDdWak6migg" categorieName="A" cost="12" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LlMjkEeSdDdWak6migg" categorieName="A" cost="2" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LlcjkEeSdDdWak6migg" categorieName="A" cost="2" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LlsjkEeSdDdWak6migg" categorieName="A" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Ll8jkEeSdDdWak6migg" categorieName="A" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LmMjkEeSdDdWak6migg" categorieName="A" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LmcjkEeSdDdWak6migg" categorieName="A" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LmsjkEeSdDdWak6migg" categorieName="B" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lm8jkEeSdDdWak6migg" categorieName="B" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LnMjkEeSdDdWak6migg" categorieName="B" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LncjkEeSdDdWak6migg" categorieName="B" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LnsjkEeSdDdWak6migg" categorieName="C" cost="25" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Ln8jkEeSdDdWak6migg" categorieName="C" cost="25" choosableTypes="6d59c1ff-d79a-4f14-8578-3c4c790f2d52"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LoMjkEeSdDdWak6migg" categorieName="C" cost="15" choosableTypes="2f51fff5-131a-465d-b054-b64d54059f28"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LocjkEeSdDdWak6migg" categorieName="C" cost="20" choosableTypes="7a096dc7-b1cb-4df8-b17e-9f28bf8f6d99"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LosjkEeSdDdWak6migg" categorieName="B" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="7"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lo8jkEeSdDdWak6migg" categorieName="B" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LpMjkEeSdDdWak6migg" categorieName="B" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LpcjkEeSdDdWak6migg" categorieName="B" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LpsjkEeSdDdWak6migg" categorieName="B" choosableTypes="77fa1ed8-f4e6-4763-9f0b-f125318b9782"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lp8jkEeSdDdWak6migg" categorieName="B" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LqMjkEeSdDdWak6migg" categorieName="B" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LqcjkEeSdDdWak6migg" categorieName="B" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LqsjkEeSdDdWak6migg" categorieName="B" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lq8jkEeSdDdWak6migg" categorieName="B" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LrMjkEeSdDdWak6migg" categorieName="B" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="6"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LrcjkEeSdDdWak6migg" categorieName="B" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LrsjkEeSdDdWak6migg" categorieName="B" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lr8jkEeSdDdWak6migg" categorieName="B" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LsMjkEeSdDdWak6migg" categorieName="B" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LscjkEeSdDdWak6migg" categorieName="B" cost="5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LssjkEeSdDdWak6migg" categorieName="B" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Ls8jkEeSdDdWak6migg" categorieName="B" cost="4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LtMjkEeSdDdWak6migg" categorieName="B" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LtcjkEeSdDdWak6migg" categorieName="B" cost="12" choosableTypes="9c513d4f-461b-4fe3-8a11-3c9ade9c2b7a"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LtsjkEeSdDdWak6migg" categorieName="B" cost="12" choosableTypes="46dddfad-48d5-425b-9e9a-197f98badc32"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lt8jkEeSdDdWak6migg" categorieName="B" cost="2" choosableTypes="7c6789af-57a4-44ac-8b0b-cf1744166ba5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LuMjkEeSdDdWak6migg" categorieName="B" cost="2" choosableTypes="03ec26af-9eff-4d54-afc2-9bf6267dcaa3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LucjkEeSdDdWak6migg" categorieName="C" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LusjkEeSdDdWak6migg" categorieName="C" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lu8jkEeSdDdWak6migg" categorieName="C" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LvMjkEeSdDdWak6migg" categorieName="C" choosableTypes="8ed6892f-88e6-42d0-a704-b805778ec13e"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LvcjkEeSdDdWak6migg" categorieName="C" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LvsjkEeSdDdWak6migg" categorieName="C" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="4"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lv8jkEeSdDdWak6migg" categorieName="C" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LwMjkEeSdDdWak6migg" categorieName="C" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LwcjkEeSdDdWak6migg" categorieName="C" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LwsjkEeSdDdWak6migg" categorieName="C" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lw8jkEeSdDdWak6migg" categorieName="C" cost="7" choosableTypes="0f5d3d1e-d59e-4bec-ac6c-41320b369a15" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LxMjkEeSdDdWak6migg" categorieName="C" cost="5" choosableTypes="08c7d81a-68e2-4e25-bcfc-a5198f968803" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LxcjkEeSdDdWak6migg" categorieName="C" choosableTypes="2ef1990d-1dec-4852-bb5d-1c02a0e5af9f" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LxsjkEeSdDdWak6migg" categorieName="C" cost="2" choosableTypes="4673c955-147c-4db8-ad96-0e55f2962f4b" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lx8jkEeSdDdWak6migg" categorieName="C" cost="-5" choosableTypes="76f7c36e-584f-4591-a10e-3aa70b6bbf3d"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LyMjkEeSdDdWak6migg" categorieName="C" cost="8" choosableTypes="f9a1d0aa-7757-4d5b-ae91-bece1e8d15a1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LycjkEeSdDdWak6migg" categorieName="C" cost="-4" choosableTypes="f9099985-8f31-4f12-b4cf-7a8608ac5866"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LysjkEeSdDdWak6migg" categorieName="C" cost="10" choosableTypes="160bca5c-349c-4fa7-840d-edf7bf72dbb5"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Ly8jkEeSdDdWak6migg" categorieName="D" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="3"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LzMjkEeSdDdWak6migg" categorieName="D" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LzcjkEeSdDdWak6migg" categorieName="D" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3LzsjkEeSdDdWak6migg" categorieName="D" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="2"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3Lz8jkEeSdDdWak6migg" categorieName="D" choosableTypes="e9ef3273-a7b4-4c19-8e13-12dceaaa2f0b"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L0MjkEeSdDdWak6migg" categorieName="D" choosableTypes="f68e68cb-85ac-41e1-941d-bf2d7af9b91d"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L0cjkEeSdDdWak6migg" categorieName="D" cost="12" choosableTypes="5523974a-a069-4806-9de8-c177ec832466"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L0sjkEeSdDdWak6migg" categorieName="D" choosableTypes="c4ab15e5-b57e-43ad-af5e-020de9839347"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L08jkEeSdDdWak6migg" categorieName="E" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L1MjkEeSdDdWak6migg" categorieName="E" choosableTypes="3e30a537-8d60-4128-8300-99f4ed71efd2" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:MetaType" xmi:id="_-q3L1cjkEeSdDdWak6migg" categorieName="E" choosableTypes="83e0ce27-21ac-407a-bb27-237325c6c026" specialPoints="1"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q3L1sjkEeSdDdWak6migg" categorieName="A" attibutePoints="24"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q3L18jkEeSdDdWak6migg" categorieName="B" attibutePoints="20"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q3L2MjkEeSdDdWak6migg" categorieName="C" attibutePoints="16"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q3L2cjkEeSdDdWak6migg" categorieName="D" attibutePoints="14"/>
+          <priorities xsi:type="shr5mngt:Attributes" xmi:id="_-q3L2sjkEeSdDdWak6migg" categorieName="E" attibutePoints="12"/>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L28jkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L3MjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="6" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q3L3cjkEeSdDdWak6migg" categorieName="A" skillValue="5" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="6" complexForms="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L3sjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L38jkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="4" spellPoints="7">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q3L4MjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="2" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="4" complexForms="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q3L4cjkEeSdDdWak6migg" categorieName="B" skillValue="4" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L4sjkEeSdDdWak6migg" categorieName="B" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="5" spellPoints="10">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L48jkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L5MjkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="5">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_-q3L5cjkEeSdDdWak6migg" categorieName="C" selectableSkills="f338d383-ffd8-4ff8-b99b-cf4c2ed1b159 3a38bbcf-38b0-435b-98f2-4ce8c50e8490 64eed2e9-e61c-4cba-81d4-18a612cf2df6" selectableSkillGroups="_EMFlODnTEeSe6_w6Jrbqxg" resonanz="3" complexForms="1">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q3L5sjkEeSdDdWak6migg" categorieName="C" skillValue="2" skillNumber="1" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L58jkEeSdDdWak6migg" categorieName="C" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="3" spellPoints="6">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Adept" xmi:id="_-q3L6MjkEeSdDdWak6migg" categorieName="D" selectableSkills="a9fa961d-07e5-46da-8edc-403ae3e6cc75 1531b2d8-6116-4be4-87b0-232dba1fc447 f510ccc3-cf95-4461-b2f7-e966daaa5a91 9cff9aa7-d092-4f89-8b7b-3ab835818874 0dbcb9cd-f824-4b5d-a387-90d33318b04c 89ee1730-053a-400f-a13a-4fbadae015f0 23c3320c-5010-4b2e-ac46-76f0a86af0b9 04e1eb3e-e82d-485b-a7fd-1e677df2a070" magic="2">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_-q3L6cjkEeSdDdWak6migg" categorieName="D" selectableSkills="fc89344f-daa6-438e-b61d-23f10dd13e44 dfba7c09-3d95-43fd-be75-39b3e8b22cd3 51e34c6c-b07f-45f4-8a5e-8f2b617ed32f c4367a39-4065-4b1d-aa62-e9dce377e452 3db81bcc-264b-47e1-847c-06bdacd88973" magic="2" spellPoints="4">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+          </priorities>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q3L6sjkEeSdDdWak6migg" categorieName="A" skillPoints="46" groupPoints="10"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q3L68jkEeSdDdWak6migg" categorieName="B" skillPoints="36" groupPoints="5"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q3L7MjkEeSdDdWak6migg" categorieName="C" skillPoints="28" groupPoints="2"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q3L7cjkEeSdDdWak6migg" categorieName="D" skillPoints="22"/>
+          <priorities xsi:type="shr5mngt:Skill" xmi:id="_-q3L7sjkEeSdDdWak6migg" categorieName="E" skillPoints="18"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q3L78jkEeSdDdWak6migg" categorieName="A" resource="450000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q3L8MjkEeSdDdWak6migg" categorieName="B" resource="275000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q3L8cjkEeSdDdWak6migg" categorieName="C" resource="140000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q3L8sjkEeSdDdWak6migg" categorieName="D" resource="50000"/>
+          <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_-q3L88jkEeSdDdWak6migg" categorieName="E" resource="6000"/>
+          <priorities xsi:type="shr5mngt:Mudan" xmi:id="_-q3L9MjkEeSdDdWak6migg" categorieName="E">
+            <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+          </priorities>
+          <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </entries>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
@@ -23734,7 +24778,7 @@
         <members xsi:type="runtime:GruntRuntimeCharacter" xmi:id="_N20ttznqEeSZlrJ9CDZaLA" character="_B1JkAN0CEeOvVYoRsPZlnA" leftHand="_B1KLFd0CEeOvVYoRsPZlnA" inUse="_B1KLFd0CEeOvVYoRsPZlnA _B1KLFt0CEeOvVYoRsPZlnA"/>
       </allTeams>
       <player xmi:id="_CCbvHDnpEeSb-uPPMR9TEw" name="Players">
-        <members xmi:id="_5lBz4JgtEeS4raFL_bi_Cw" character="_BzO4cN0CEeOvVYoRsPZlnA" />
+        <members xmi:id="_5lBz4JgtEeS4raFL_bi_Cw" character="_BzO4cN0CEeOvVYoRsPZlnA"/>
       </player>
       <history xmi:id="_5CypgJgtEeS4raFL_bi_Cw" currentPlacement="_CCbIATnpEeSb-uPPMR9TEw">
         <commandStack xmi:id="_5DAr8JgtEeS4raFL_bi_Cw">
@@ -23752,7 +24796,7 @@
         <members xmi:id="_dugUMD_hEeSuOvfh9dLK7w" mentalDamage="5" character="_uFDVkD_FEeSlOsHYyoPYOQ" rightHand="_IZqZAI2-EeSTOuFR7092Cw" leftHand="_N9bm8D_HEeSlOsHYyoPYOQ" inUse="_N8nHkD_HEeSlOsHYyoPYOQ _N9bm8D_HEeSlOsHYyoPYOQ _OE_ngD_HEeSlOsHYyoPYOQ _yfgOAD_NEeSdXvk3e0TcZw _IZqZAI2-EeSTOuFR7092Cw" armor="_OE_ngD_HEeSlOsHYyoPYOQ"/>
       </allTeams>
       <player xmi:id="_lP63MD_hEeSuOvfh9dLK7w" name="player">
-        <members xmi:id="_l3VLYFDKEeSjN8rIya5QCA" physicalDamage="14" zustand="sterbend" character="_BzO4cN0CEeOvVYoRsPZlnA" />
+        <members xmi:id="_l3VLYFDKEeSjN8rIya5QCA" physicalDamage="14" zustand="sterbend" character="_BzO4cN0CEeOvVYoRsPZlnA"/>
       </player>
       <history xmi:id="_3K2ukI4IEeSNivpsJHp3wQ" currentPlacement="_9PjhID_WEeSQWIeEm8LnkA"/>
     </stories>
