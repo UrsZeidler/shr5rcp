@@ -3,14 +3,14 @@
 	exclude-result-prefixes="uuid">
 	<xsl:output indent="yes" />
 
-	<xsl:template match="quality|metatype">
+	<xsl:template match="quality|metatype|tradition|spell|power">
 		<xsl:copy>
-			<xsl:apply-templates />
 			<xsl:if test="*">
 				<id>
 					<xsl:value-of select="uuid:randomUUID()" />
 				</id>
 			</xsl:if>
+			<xsl:apply-templates />
 		</xsl:copy>
 	</xsl:template>
 

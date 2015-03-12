@@ -35,6 +35,8 @@
 		select="document(concat($path,'/vehicles.xml'),/)" />
 	<xsl:variable name="software"
 		select="document(concat($path,'/programs.xml'),/)" />
+<!-- 	<xsl:variable name="shr5CharacterBuilder" -->
+<!-- 		select="document('/home/urs/etc/chummer_custom/Metavariant_only_priorities.xml')" /> -->
 	<xsl:variable name="shr5CharacterBuilder"
 		select="document(concat($path,'/priorities.xml'),/)" />
 	<xsl:variable name="lifestyle"
