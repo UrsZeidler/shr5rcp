@@ -96,6 +96,7 @@
             </command>
             <command
                   commandId="de.urszeidler.shr5.product.switchWorkspace"
+                  label="%command.switchworkspace"
                   style="push">
             </command>
             <separator
