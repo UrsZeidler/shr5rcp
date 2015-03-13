@@ -28,6 +28,7 @@ public class NewManagementWizard extends AbstractNewItemWizard {
         list.add(Shr5managementPackage.Literals.PACK);
         list.add(Shr5managementPackage.Literals.CHARACTER_ADVANCEMENT_SYSTEM);
         list.add(Shr5managementPackage.Literals.SHR5_SYSTEM);
+        list.add(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM);
         list.add(Shr5managementPackage.Literals.FREE_STYLE);
         list.add(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT);
         list.add(Shr5managementPackage.Literals.PLAYER_MANAGEMENT);

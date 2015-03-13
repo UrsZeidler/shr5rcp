@@ -422,6 +422,16 @@ public class PackItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5managementFactory.eINSTANCE.createLifeModulesSystem()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5managementFactory.eINSTANCE.createLifeModule()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createGegenstand()));
 
         newChildDescriptors.add

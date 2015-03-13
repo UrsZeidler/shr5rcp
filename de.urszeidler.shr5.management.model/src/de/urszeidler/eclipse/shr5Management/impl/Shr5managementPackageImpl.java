@@ -39,9 +39,16 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModuleType;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
+import de.urszeidler.eclipse.shr5Management.ModuleCharacterChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
@@ -392,6 +399,48 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lifeModulesGeneratorEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lifeModulesSystemEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lifeModuleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass moduleChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass moduleCharacterChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass moduleSkillChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -410,6 +459,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EEnum quellenConstrainTypeEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum lifeModuleTypeEEnum = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -2466,6 +2522,186 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLifeModulesGenerator() {
+        return lifeModulesGeneratorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesGenerator_Nationality() {
+        return (EReference)lifeModulesGeneratorEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesGenerator_FormativeYears() {
+        return (EReference)lifeModulesGeneratorEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesGenerator_TeenYears() {
+        return (EReference)lifeModulesGeneratorEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesGenerator_FurtherEducation() {
+        return (EReference)lifeModulesGeneratorEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesGenerator_RealLife() {
+        return (EReference)lifeModulesGeneratorEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLifeModulesSystem() {
+        return lifeModulesSystemEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModulesSystem_Modules() {
+        return (EReference)lifeModulesSystemEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLifeModule() {
+        return lifeModuleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifeModule_KarmaCost() {
+        return (EAttribute)lifeModuleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifeModule_CharacterChanges() {
+        return (EReference)lifeModuleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifeModule_ModuleType() {
+        return (EAttribute)lifeModuleEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifeModule_Time() {
+        return (EAttribute)lifeModuleEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getModuleChange() {
+        return moduleChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getModuleCharacterChange() {
+        return moduleCharacterChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleCharacterChange_CharacterChange() {
+        return (EReference)moduleCharacterChangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getModuleSkillChange() {
+        return moduleSkillChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleSkillChange_Skillgroup() {
+        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleSkillChange_Skill() {
+        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleSkillChange_Specalism() {
+        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2489,6 +2725,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EEnum getQuellenConstrainType() {
         return quellenConstrainTypeEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getLifeModuleType() {
+        return lifeModuleTypeEEnum;
     }
 
     /**
@@ -2784,10 +3029,37 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         sumToTenGeneratorEClass = createEClass(SUM_TO_TEN_GENERATOR);
         createEOperation(sumToTenGeneratorEClass, SUM_TO_TEN_GENERATOR___HAS_SUM_TO_TEN__DIAGNOSTICCHAIN_MAP);
 
+        lifeModulesGeneratorEClass = createEClass(LIFE_MODULES_GENERATOR);
+        createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__NATIONALITY);
+        createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__FORMATIVE_YEARS);
+        createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__TEEN_YEARS);
+        createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__FURTHER_EDUCATION);
+        createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__REAL_LIFE);
+
+        lifeModulesSystemEClass = createEClass(LIFE_MODULES_SYSTEM);
+        createEReference(lifeModulesSystemEClass, LIFE_MODULES_SYSTEM__MODULES);
+
+        lifeModuleEClass = createEClass(LIFE_MODULE);
+        createEAttribute(lifeModuleEClass, LIFE_MODULE__KARMA_COST);
+        createEReference(lifeModuleEClass, LIFE_MODULE__CHARACTER_CHANGES);
+        createEAttribute(lifeModuleEClass, LIFE_MODULE__MODULE_TYPE);
+        createEAttribute(lifeModuleEClass, LIFE_MODULE__TIME);
+
+        moduleChangeEClass = createEClass(MODULE_CHANGE);
+
+        moduleCharacterChangeEClass = createEClass(MODULE_CHARACTER_CHANGE);
+        createEReference(moduleCharacterChangeEClass, MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE);
+
+        moduleSkillChangeEClass = createEClass(MODULE_SKILL_CHANGE);
+        createEReference(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__SKILLGROUP);
+        createEReference(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__SKILL);
+        createEReference(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__SPECALISM);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
         quellenConstrainTypeEEnum = createEEnum(QUELLEN_CONSTRAIN_TYPE);
+        lifeModuleTypeEEnum = createEEnum(LIFE_MODULE_TYPE);
     }
 
 	/**
@@ -2866,6 +3138,12 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         contractPaymentEClass.getESuperTypes().add(this.getDiaryEntry());
         characterChangeEClass.getESuperTypes().add(this.getDiaryEntry());
         sumToTenGeneratorEClass.getESuperTypes().add(this.getShr5Generator());
+        lifeModulesGeneratorEClass.getESuperTypes().add(this.getShr5KarmaGenerator());
+        lifeModulesSystemEClass.getESuperTypes().add(this.getShr5System());
+        lifeModuleEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        lifeModuleEClass.getESuperTypes().add(theShr5Package.getQuelle());
+        moduleCharacterChangeEClass.getESuperTypes().add(this.getModuleChange());
+        moduleSkillChangeEClass.getESuperTypes().add(this.getModuleChange());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3373,6 +3651,32 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+        initEClass(lifeModulesGeneratorEClass, LifeModulesGenerator.class, "LifeModulesGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLifeModulesGenerator_Nationality(), this.getLifeModule(), null, "nationality", null, 1, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifeModulesGenerator_FormativeYears(), this.getLifeModule(), null, "formativeYears", null, 1, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifeModulesGenerator_TeenYears(), this.getLifeModule(), null, "teenYears", null, 1, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifeModulesGenerator_FurtherEducation(), this.getLifeModule(), null, "furtherEducation", null, 0, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifeModulesGenerator_RealLife(), this.getLifeModule(), null, "realLife", null, 1, -1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(lifeModulesSystemEClass, LifeModulesSystem.class, "LifeModulesSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLifeModulesSystem_Modules(), this.getLifeModule(), null, "modules", null, 0, -1, LifeModulesSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(lifeModuleEClass, LifeModule.class, "LifeModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getLifeModule_KarmaCost(), ecorePackage.getEInt(), "karmaCost", null, 1, 1, LifeModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifeModule_CharacterChanges(), this.getModuleChange(), null, "characterChanges", null, 0, -1, LifeModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifeModule_ModuleType(), this.getLifeModuleType(), "moduleType", null, 0, 1, LifeModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifeModule_Time(), ecorePackage.getEInt(), "time", null, 0, 1, LifeModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(moduleChangeEClass, ModuleChange.class, "ModuleChange", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(moduleCharacterChangeEClass, ModuleCharacterChange.class, "ModuleCharacterChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getModuleCharacterChange_CharacterChange(), this.getChanges(), null, "characterChange", null, 1, 1, ModuleCharacterChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(moduleSkillChangeEClass, ModuleSkillChange.class, "ModuleSkillChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getModuleSkillChange_Skillgroup(), theShr5Package.getPersonaFertigkeitsGruppe(), null, "skillgroup", null, 0, 1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getModuleSkillChange_Skill(), theShr5Package.getPersonaFertigkeit(), null, "skill", null, 0, 1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getModuleSkillChange_Specalism(), theShr5Package.getSpezialisierung(), null, "specalism", null, 0, 1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
         addEEnumLiteral(generatorStateEEnum, GeneratorState.NEW);
@@ -3389,6 +3693,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEEnum(quellenConstrainTypeEEnum, QuellenConstrainType.class, "QuellenConstrainType");
         addEEnumLiteral(quellenConstrainTypeEEnum, QuellenConstrainType.NOT_TOGETHER);
         addEEnumLiteral(quellenConstrainTypeEEnum, QuellenConstrainType.NEED_ONE_OF);
+
+        initEEnum(lifeModuleTypeEEnum, LifeModuleType.class, "LifeModuleType");
+        addEEnumLiteral(lifeModuleTypeEEnum, LifeModuleType.NATIONALITY);
+        addEEnumLiteral(lifeModuleTypeEEnum, LifeModuleType.FORMATIVE_YEARS);
+        addEEnumLiteral(lifeModuleTypeEEnum, LifeModuleType.TEEN_YEARS);
+        addEEnumLiteral(lifeModuleTypeEEnum, LifeModuleType.FURTHER_EDUCATION);
+        addEEnumLiteral(lifeModuleTypeEEnum, LifeModuleType.REAL_LIFE);
 
         // Create resource
         createResource(eNS_URI);

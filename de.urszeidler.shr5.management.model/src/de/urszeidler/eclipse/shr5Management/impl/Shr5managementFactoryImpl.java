@@ -124,6 +124,11 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.CONTRACT_PAYMENT: return createContractPayment();
             case Shr5managementPackage.CHARACTER_CHANGE: return createCharacterChange();
             case Shr5managementPackage.SUM_TO_TEN_GENERATOR: return createSumToTenGenerator();
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR: return createLifeModulesGenerator();
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM: return createLifeModulesSystem();
+            case Shr5managementPackage.LIFE_MODULE: return createLifeModule();
+            case Shr5managementPackage.MODULE_CHARACTER_CHANGE: return createModuleCharacterChange();
+            case Shr5managementPackage.MODULE_SKILL_CHANGE: return createModuleSkillChange();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -143,6 +148,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
                 return createSexFromString(eDataType, initialValue);
             case Shr5managementPackage.QUELLEN_CONSTRAIN_TYPE:
                 return createQuellenConstrainTypeFromString(eDataType, initialValue);
+            case Shr5managementPackage.LIFE_MODULE_TYPE:
+                return createLifeModuleTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -162,6 +169,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
                 return convertSexToString(eDataType, instanceValue);
             case Shr5managementPackage.QUELLEN_CONSTRAIN_TYPE:
                 return convertQuellenConstrainTypeToString(eDataType, instanceValue);
+            case Shr5managementPackage.LIFE_MODULE_TYPE:
+                return convertLifeModuleTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -519,6 +528,56 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LifeModulesGenerator createLifeModulesGenerator() {
+        LifeModulesGeneratorImpl lifeModulesGenerator = new LifeModulesGeneratorImpl();
+        return lifeModulesGenerator;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LifeModulesSystem createLifeModulesSystem() {
+        LifeModulesSystemImpl lifeModulesSystem = new LifeModulesSystemImpl();
+        return lifeModulesSystem;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LifeModule createLifeModule() {
+        LifeModuleImpl lifeModule = new LifeModuleImpl();
+        return lifeModule;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModuleCharacterChange createModuleCharacterChange() {
+        ModuleCharacterChangeImpl moduleCharacterChange = new ModuleCharacterChangeImpl();
+        return moduleCharacterChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModuleSkillChange createModuleSkillChange() {
+        ModuleSkillChangeImpl moduleSkillChange = new ModuleSkillChangeImpl();
+        return moduleSkillChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -574,6 +633,26 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * @generated
      */
     public String convertQuellenConstrainTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LifeModuleType createLifeModuleTypeFromString(EDataType eDataType, String initialValue) {
+        LifeModuleType result = LifeModuleType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertLifeModuleTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

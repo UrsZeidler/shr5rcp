@@ -25,6 +25,13 @@
       <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//QuellenConstrainType/notTogether"/>
       <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//QuellenConstrainType/needOneOf"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5Management.ecore#//LifeModuleType">
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//LifeModuleType/nationality"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//LifeModuleType/formativeYears"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//LifeModuleType/teenYears"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//LifeModuleType/furtherEducation"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//LifeModuleType/realLife"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ManagedCharacter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/persona"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/changes"/>
@@ -440,6 +447,31 @@
         <genParameters ecoreParameter="shr5Management.ecore#//SumToTenGenerator/hasSumToTen/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//SumToTenGenerator/hasSumToTen/context"/>
       </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//LifeModulesGenerator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/nationality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/formativeYears"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/teenYears"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/furtherEducation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/realLife"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//LifeModulesSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesSystem/modules"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//LifeModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/karmaCost"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModule/characterChanges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/moduleType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/time"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleCharacterChange">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleCharacterChange/characterChange"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillChange">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/skillgroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/skill"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/specalism"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

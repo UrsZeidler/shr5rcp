@@ -432,12 +432,26 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateCharacterChange((CharacterChange)value, diagnostics, context);
             case Shr5managementPackage.SUM_TO_TEN_GENERATOR:
                 return validateSumToTenGenerator((SumToTenGenerator)value, diagnostics, context);
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR:
+                return validateLifeModulesGenerator((LifeModulesGenerator)value, diagnostics, context);
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM:
+                return validateLifeModulesSystem((LifeModulesSystem)value, diagnostics, context);
+            case Shr5managementPackage.LIFE_MODULE:
+                return validateLifeModule((LifeModule)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_CHANGE:
+                return validateModuleChange((ModuleChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_CHARACTER_CHANGE:
+                return validateModuleCharacterChange((ModuleCharacterChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_SKILL_CHANGE:
+                return validateModuleSkillChange((ModuleSkillChange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
                 return validateSex((Sex)value, diagnostics, context);
             case Shr5managementPackage.QUELLEN_CONSTRAIN_TYPE:
                 return validateQuellenConstrainType((QuellenConstrainType)value, diagnostics, context);
+            case Shr5managementPackage.LIFE_MODULE_TYPE:
+                return validateLifeModuleType((LifeModuleType)value, diagnostics, context);
             default:
                 return true;
         }
@@ -1226,6 +1240,80 @@ public class Shr5managementValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateLifeModulesGenerator(LifeModulesGenerator lifeModulesGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!validate_NoCircularContainment(lifeModulesGenerator, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreMaxAttributes(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(lifeModulesGenerator, diagnostics, context);
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateLifeModulesSystem(LifeModulesSystem lifeModulesSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(lifeModulesSystem, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateLifeModule(LifeModule lifeModule, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(lifeModule, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleChange(ModuleChange moduleChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleCharacterChange(ModuleCharacterChange moduleCharacterChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleCharacterChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleSkillChange(ModuleSkillChange moduleSkillChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleSkillChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1248,6 +1336,15 @@ public class Shr5managementValidator extends EObjectValidator {
      * @generated
      */
     public boolean validateQuellenConstrainType(QuellenConstrainType quellenConstrainType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateLifeModuleType(LifeModuleType lifeModuleType, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return true;
     }
 

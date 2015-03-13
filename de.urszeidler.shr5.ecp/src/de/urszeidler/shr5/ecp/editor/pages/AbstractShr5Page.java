@@ -227,13 +227,22 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
      * @param managedForm
      */
     protected void createFormBuilder(IManagedForm managedForm) {
-        emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+        emfFormBuilder = createConfiguredFormBuilder(managedForm);
+    }
+
+    /**
+     * @param managedForm
+     * @return 
+     */
+    protected EmfFormBuilder createConfiguredFormBuilder(IManagedForm managedForm) {
+        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
                 .getInstance().getLabelProvider(), getEditingDomain());
         emfFormBuilder.setManager(mananger);
         emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
         // emfFormBuilder.setBorderStyle(SWT.NONE);
         emfFormBuilder.setDblListner(this);
         emfFormBuilder.setSelectionChangeListener(this);
+        return emfFormBuilder;
     }
 
     /**

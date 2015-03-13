@@ -18,6 +18,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -164,14 +165,20 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
         
+        if(object instanceof LifeModulesSystem){
+            treeTableWidget = new TreeTableWidget(composite_2, AdapterFactoryUtil.getInstance().getLabelProvider().getText(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM__MODULES), SWT.NONE, object, Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM__MODULES, toolkit, mananger, editingDomain,
+                    this);
+            treeTableWidget.setLayoutData(layoutData);
+            managedForm.getToolkit().adapt(treeTableWidget);
+            managedForm.getToolkit().paintBordersFor(treeTableWidget);
+        }
+
         refname = AdapterFactoryUtil.getInstance().getLabelProvider().getText(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
         treeTableWidget = new TreeTableWidget(composite_2, refname, SWT.NONE, object, Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, toolkit, mananger, editingDomain,
                 this);
         treeTableWidget.setLayoutData(layoutData);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
-        
-       
         
         {
         m_bindingContext = initDataBindings();

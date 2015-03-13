@@ -49,7 +49,9 @@ import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
@@ -72,6 +74,7 @@ import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
+import de.urszeidler.shr5.ecp.editor.pages.ModuleChangePage;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
@@ -644,6 +647,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return this;
             }
 
+            @SuppressWarnings("rawtypes")
             @Override
             public Object caseCharacterGenerator(CharacterGenerator object) {
 
@@ -669,6 +673,26 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     logError("error creating VariousItemsPage", e);//$NON-NLS-1$
                 }
                 return super.casePack(object);
+            }
+            
+            @Override
+            public Object caseLifeModule(LifeModule object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return super.caseLifeModule(object);
+            }
+            
+            @Override
+            public Object caseModuleChange(ModuleChange object) {
+                try {
+                    addPage(new ModuleChangePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return super.caseModuleChange(object);
             }
         };
         shr5managementSwitch.doSwitch(theEObject);

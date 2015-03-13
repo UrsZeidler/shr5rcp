@@ -89,8 +89,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
-                || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature())
-                || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
+                || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature()) || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
             EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
             if (copyAddToPersona != null) {
                 IObservable observable = e.getObservable();
@@ -130,6 +129,30 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         } else if (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())) {
             EObject newWeapon = defaultCreationDialog(e, object);
             setValue(e, newWeapon);
+        } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+            PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
+                    Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
+
+            if (dialog.open() == Dialog.OK)
+                setValue(e, personaFertigkeit);
+            
+            return;
+        }else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())){
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
+            PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
+                    Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
+
+            if (dialog.open() == Dialog.OK)
+                setValue(e, personaFertigkeit);
+            return;
+        }else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
+            EObject defaultCreationDialog = defaultCreationDialog(e, object);
+            if(defaultCreationDialog!=null)
+                setValue(e, defaultCreationDialog);
+            return;
         }
         super.handleManage(e, object);
     }
@@ -139,17 +162,26 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      * 
      * @param e
      * @param dialog
+     * @return
      */
-    protected void setSingleRefernceFromDialog(FormbuilderEntry e, OwnChooseDialog dialog) {
+    protected Object getSingleRefernceFromDialog(OwnChooseDialog dialog) {
         int open = dialog.open();
         if (open == Dialog.OK) {
             Object[] result = dialog.getResult();
-            Object value = null;
             if (result.length > 0)
-                value = result[0];
-
-            setValue(e, value);
+                return result[0];
         }
+        return null;
+    }
+
+    /**
+     * Set the value to the formbuilder entry.
+     * 
+     * @param e
+     * @param dialog
+     */
+    protected void setSingleRefernceFromDialog(FormbuilderEntry e, OwnChooseDialog dialog) {
+        setValue(e, getSingleRefernceFromDialog(dialog));
     }
 
     /**
@@ -185,8 +217,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
                 || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                 || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
-                || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature())
-                || Shr5Package.Literals.FEUERWAFFE__EINBAU.equals(e.getFeature())
+                || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature()) || Shr5Package.Literals.FEUERWAFFE__EINBAU.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
@@ -196,17 +227,16 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             collection = filterProvidedObjects(collection);
             collection = FluentIterable
                     .from(collection)
-                    .filter(Predicates.or(Predicates.instanceOf(Vertrag.class), 
-                            Predicates.instanceOf(AbstraktGegenstand.class),
-                            Predicates.instanceOf(Koerpermods.class),
-                            Predicates.instanceOf(Fahrzeug.class))).toList();
+                    .filter(Predicates.or(Predicates.instanceOf(Vertrag.class), Predicates.instanceOf(AbstraktGegenstand.class),
+                            Predicates.instanceOf(Koerpermods.class), Predicates.instanceOf(Fahrzeug.class))).toList();
 
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                     .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, "Add to "
-                    + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(collection), object,DialogType.simple);
-            
+                    + AdapterFactoryUtil.getInstance().getLabelProvider().getText(object), new ArrayList<EObject>(collection), object,
+                    DialogType.simple);
+
             return copyObjectsFromDialog(dialog);
         } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
@@ -265,18 +295,18 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             final EReference inner_feature = Shr5Package.Literals.GEBUNDENER_GEIST__GEIST;
             return provideInnerObject(e, object, type_lookup_class, inner_feature);
         }
-//        else if (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
-//
-//            EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
-//            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
-//            EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
-//            GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
-//
-//            if (dialog.open() == Dialog.OK)
-//                return eObject;
-//            else
-//                return null;
-//        }
+        // else if (Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
+        //
+        // EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
+        // // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, eClass);
+        // EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
+        // GenericEObjectDialog dialog = new GenericEObjectDialog(this.shadowrunEditor.getSite().getShell(), eObject, itemDelegator, this, this);
+        //
+        // if (dialog.open() == Dialog.OK)
+        // return eObject;
+        // else
+        // return null;
+        // }
         return defaultCreationDialog(e, object);
     }
 
@@ -296,8 +326,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     @Override
                     public void handleManage(FormbuilderEntry e, EObject object) {
                         if (inner_feature.equals(e.getFeature())) {
-                            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject,
-                                    type_lookup_class);
+                            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(contextObject, type_lookup_class);
                             OwnChooseDialog dialog = new OwnChooseDialog(Display.getCurrent().getActiveShell(),
                                     objectsOfType.toArray(new Object[]{}), "Choose connection", "");
                             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());

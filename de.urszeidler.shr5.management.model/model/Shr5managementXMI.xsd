@@ -36,6 +36,15 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="LifeModuleType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="nationality"/>
+      <xsd:enumeration value="formativeYears"/>
+      <xsd:enumeration value="teenYears"/>
+      <xsd:enumeration value="furtherEducation"/>
+      <xsd:enumeration value="realLife"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="ManagedCharacter">
     <xsd:annotation>
       <xsd:documentation>the managed chracter contains the mudan parts of a character.</xsd:documentation>
@@ -1001,4 +1010,85 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="SumToTenGenerator" type="shr5mngt:SumToTenGenerator"/>
+  <xsd:complexType name="LifeModulesGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Shr5KarmaGenerator">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="nationality" type="shr5mngt:LifeModule"/>
+          <xsd:element name="formativeYears" type="shr5mngt:LifeModule"/>
+          <xsd:element name="teenYears" type="shr5mngt:LifeModule"/>
+          <xsd:element name="furtherEducation" type="shr5mngt:LifeModule"/>
+          <xsd:element name="realLife" type="shr5mngt:LifeModule"/>
+        </xsd:choice>
+        <xsd:attribute name="nationality" type="xsd:string"/>
+        <xsd:attribute name="formativeYears" type="xsd:string"/>
+        <xsd:attribute name="teenYears" type="xsd:string"/>
+        <xsd:attribute name="furtherEducation" type="xsd:string"/>
+        <xsd:attribute name="realLife" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LifeModulesGenerator" type="shr5mngt:LifeModulesGenerator"/>
+  <xsd:complexType name="LifeModulesSystem">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Shr5System">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="modules" type="shr5mngt:LifeModule"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LifeModulesSystem" type="shr5mngt:LifeModulesSystem"/>
+  <xsd:complexType name="LifeModule">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="characterChanges" type="shr5mngt:ModuleChange"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="karmaCost" type="xsd:int" use="required"/>
+        <xsd:attribute name="moduleType" type="shr5mngt:LifeModuleType"/>
+        <xsd:attribute name="time" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The time in years, can be zero.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LifeModule" type="shr5mngt:LifeModule"/>
+  <xsd:complexType abstract="true" name="ModuleChange">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="ModuleChange" type="shr5mngt:ModuleChange"/>
+  <xsd:complexType name="ModuleCharacterChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="characterChange" type="shr5mngt:Changes"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleCharacterChange" type="shr5mngt:ModuleCharacterChange"/>
+  <xsd:complexType name="ModuleSkillChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skillgroup" type="shr5:PersonaFertigkeitsGruppe"/>
+          <xsd:element name="skill" type="shr5:PersonaFertigkeit"/>
+          <xsd:element name="specalism" type="shr5:Spezialisierung"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleSkillChange" type="shr5mngt:ModuleSkillChange"/>
 </xsd:schema>

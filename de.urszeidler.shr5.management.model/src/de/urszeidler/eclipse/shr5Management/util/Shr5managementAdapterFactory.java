@@ -291,6 +291,30 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createSumToTenGeneratorAdapter();
             }
             @Override
+            public Adapter caseLifeModulesGenerator(LifeModulesGenerator object) {
+                return createLifeModulesGeneratorAdapter();
+            }
+            @Override
+            public Adapter caseLifeModulesSystem(LifeModulesSystem object) {
+                return createLifeModulesSystemAdapter();
+            }
+            @Override
+            public Adapter caseLifeModule(LifeModule object) {
+                return createLifeModuleAdapter();
+            }
+            @Override
+            public Adapter caseModuleChange(ModuleChange object) {
+                return createModuleChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleCharacterChange(ModuleCharacterChange object) {
+                return createModuleCharacterChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleSkillChange(ModuleSkillChange object) {
+                return createModuleSkillChangeAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -953,6 +977,90 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSumToTenGeneratorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator <em>Life Modules Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator
+     * @generated
+     */
+    public Adapter createLifeModulesGeneratorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem <em>Life Modules System</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesSystem
+     * @generated
+     */
+    public Adapter createLifeModulesSystemAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.LifeModule <em>Life Module</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule
+     * @generated
+     */
+    public Adapter createLifeModuleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleChange <em>Module Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleChange
+     * @generated
+     */
+    public Adapter createModuleChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange <em>Module Character Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleCharacterChange
+     * @generated
+     */
+    public Adapter createModuleCharacterChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange <em>Module Skill Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange
+     * @generated
+     */
+    public Adapter createModuleSkillChangeAdapter() {
         return null;
     }
 

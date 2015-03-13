@@ -25,8 +25,11 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 /**
  * Use for object that is only a {@link Quelle}.
  * @author urs
@@ -176,10 +179,28 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof MagischeTradition) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__ENZUG, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__BESCHWOERBAR, grpGegenstand);
+        }else if (object instanceof LifeModule) {
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__KARMA_COST, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__MODULE_TYPE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__TIME, grpGegenstand);
+            
         }
         addSourceFeature(grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        if (object instanceof LifeModule) {
+            TreeTableWidget treeTableWidget = new TreeTableWidget(grpGegenstand, labelProvider.getText(Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES), SWT.NONE, object, Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES, toolkit, mananger, editingDomain,
+                    this);
+            GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 6, 1);
+            layoutData.heightHint = 250;
+            layoutData.minimumHeight = 250;
+
+            treeTableWidget.setLayoutData(layoutData);
+            managedForm.getToolkit().adapt(treeTableWidget);
+            managedForm.getToolkit().paintBordersFor(treeTableWidget);
+
+        }
+        
         managedForm.reflow(true);
 
     }

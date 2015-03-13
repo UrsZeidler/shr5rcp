@@ -5446,6 +5446,831 @@ public interface Shr5managementPackage extends EPackage {
     int SUM_TO_TEN_GENERATOR_OPERATION_COUNT = SHR5_GENERATOR_OPERATION_COUNT + 1;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl <em>Life Modules Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesGenerator()
+     * @generated
+     */
+    int LIFE_MODULES_GENERATOR = 45;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__CHARACTER = SHR5_KARMA_GENERATOR__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__GENERATOR = SHR5_KARMA_GENERATOR__GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__STATE = SHR5_KARMA_GENERATOR__STATE;
+
+    /**
+     * The feature id for the '<em><b>Selected Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__SELECTED_GROUP = SHR5_KARMA_GENERATOR__SELECTED_GROUP;
+
+    /**
+     * The feature id for the '<em><b>Character Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__CHARACTER_NAME = SHR5_KARMA_GENERATOR__CHARACTER_NAME;
+
+    /**
+     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__CURRENT_INSTRUCTION = SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION;
+
+    /**
+     * The feature id for the '<em><b>Shr5 Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__SHR5_GENERATOR = SHR5_KARMA_GENERATOR__SHR5_GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__ALLOWED_SOURCES = SHR5_KARMA_GENERATOR__ALLOWED_SOURCES;
+
+    /**
+     * The feature id for the '<em><b>Meta Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__META_TYPE = SHR5_KARMA_GENERATOR__META_TYPE;
+
+    /**
+     * The feature id for the '<em><b>Character Concept</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__CHARACTER_CONCEPT = SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__KARMA_TO_RESOURCE = SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE;
+
+    /**
+     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__KARMA_SPEND = SHR5_KARMA_GENERATOR__KARMA_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__RESOURCE_SPEND = SHR5_KARMA_GENERATOR__RESOURCE_SPEND;
+
+    /**
+     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__START_KARMA = SHR5_KARMA_GENERATOR__START_KARMA;
+
+    /**
+     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__START_RESOURCES = SHR5_KARMA_GENERATOR__START_RESOURCES;
+
+    /**
+     * The feature id for the '<em><b>Nationality</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__NATIONALITY = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Formative Years</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__FORMATIVE_YEARS = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Teen Years</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__TEEN_YEARS = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Further Education</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__FURTHER_EDUCATION = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Real Life</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__REAL_LIFE = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 4;
+
+    /**
+     * The number of structural features of the '<em>Life Modules Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR_FEATURE_COUNT = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 5;
+
+    /**
+     * The operation id for the '<em>Has Spend All Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The number of operations of the '<em>Life Modules Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR_OPERATION_COUNT = SHR5_KARMA_GENERATOR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl <em>Life Modules System</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesSystem()
+     * @generated
+     */
+    int LIFE_MODULES_SYSTEM = 46;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__BESCHREIBUNG = SHR5_SYSTEM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__IMAGE = SHR5_SYSTEM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__NAME = SHR5_SYSTEM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__PARENT_ID = SHR5_SYSTEM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__LOCALIZATIONS = SHR5_SYSTEM__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__PAGE = SHR5_SYSTEM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__SRC_BOOK = SHR5_SYSTEM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Instructions</b></em>' map.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__INSTRUCTIONS = SHR5_SYSTEM__INSTRUCTIONS;
+
+    /**
+     * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__LIFESTYLE_TO_START_MONEY = SHR5_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__CHARACTER_ADVANCEMENTS = SHR5_SYSTEM__CHARACTER_ADVANCEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__ADDITIONAL_CONSTRAINS = SHR5_SYSTEM__ADDITIONAL_CONSTRAINS;
+
+    /**
+     * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__PRIORITIES = SHR5_SYSTEM__PRIORITIES;
+
+    /**
+     * The feature id for the '<em><b>Karma Points</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__KARMA_POINTS = SHR5_SYSTEM__KARMA_POINTS;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__KARMA_TO_RESOURCE_FACTOR = SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR;
+
+    /**
+     * The feature id for the '<em><b>Karma To Magic Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__KARMA_TO_MAGIC_FACTOR = SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR;
+
+    /**
+     * The feature id for the '<em><b>Number Of Max Attributes</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES = SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES;
+
+    /**
+     * The feature id for the '<em><b>Knowlege Skill Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_FACTOR = SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR;
+
+    /**
+     * The feature id for the '<em><b>Charisma To Connection Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR = SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR;
+
+    /**
+     * The feature id for the '<em><b>Max Resource To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__MAX_RESOURCE_TO_KEEP = SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP;
+
+    /**
+     * The feature id for the '<em><b>Max Karma To Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__MAX_KARMA_TO_RESOURCES = SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES;
+
+    /**
+     * The feature id for the '<em><b>Max Karma To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__MAX_KARMA_TO_KEEP = SHR5_SYSTEM__MAX_KARMA_TO_KEEP;
+
+    /**
+     * The feature id for the '<em><b>Skill Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__SKILL_MAX = SHR5_SYSTEM__SKILL_MAX;
+
+    /**
+     * The feature id for the '<em><b>Number Of Specalism</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__NUMBER_OF_SPECALISM = SHR5_SYSTEM__NUMBER_OF_SPECALISM;
+
+    /**
+     * The feature id for the '<em><b>Karma To Connection Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__KARMA_TO_CONNECTION_FACTOR = SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR;
+
+    /**
+     * The feature id for the '<em><b>Bound Spritit Service Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__BOUND_SPRITIT_SERVICE_COST = SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST;
+
+    /**
+     * The feature id for the '<em><b>Applicable Generators</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__APPLICABLE_GENERATORS = SHR5_SYSTEM__APPLICABLE_GENERATORS;
+
+    /**
+     * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__MODULES = SHR5_SYSTEM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Life Modules System</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM_FEATURE_COUNT = SHR5_SYSTEM_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Life Modules System</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM_OPERATION_COUNT = SHR5_SYSTEM_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl <em>Life Module</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModule()
+     * @generated
+     */
+    int LIFE_MODULE = 47;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__PARENT_ID = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__LOCALIZATIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__PAGE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__SRC_BOOK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__KARMA_COST = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Character Changes</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__CHARACTER_CHANGES = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Module Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__MODULE_TYPE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Time</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE__TIME = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
+
+    /**
+     * The number of structural features of the '<em>Life Module</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 8;
+
+    /**
+     * The number of operations of the '<em>Life Module</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULE_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl <em>Module Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleChange()
+     * @generated
+     */
+    int MODULE_CHANGE = 48;
+
+    /**
+     * The number of structural features of the '<em>Module Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_CHANGE_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>Module Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_CHANGE_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleCharacterChangeImpl <em>Module Character Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleCharacterChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleCharacterChange()
+     * @generated
+     */
+    int MODULE_CHARACTER_CHANGE = 49;
+
+    /**
+     * The feature id for the '<em><b>Character Change</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE = MODULE_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Module Character Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_CHARACTER_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Module Character Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_CHARACTER_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl <em>Module Skill Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillChange()
+     * @generated
+     */
+    int MODULE_SKILL_CHANGE = 50;
+
+    /**
+     * The feature id for the '<em><b>Skillgroup</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE__SKILLGROUP = MODULE_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE__SKILL = MODULE_CHANGE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Specalism</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE__SPECALISM = MODULE_CHANGE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Module Skill Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Module Skill Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5453,7 +6278,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 45;
+	int GENERATOR_STATE = 51;
 
 
 	/**
@@ -5464,7 +6289,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 46;
+	int SEX = 52;
 
 
 	/**
@@ -5475,7 +6300,18 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 47;
+    int QUELLEN_CONSTRAIN_TYPE = 53;
+
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.LifeModuleType <em>Life Module Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.LifeModuleType
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
+     * @generated
+     */
+    int LIFE_MODULE_TYPE = 54;
 
 
     /**
@@ -7817,6 +8653,220 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator <em>Life Modules Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Life Modules Generator</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator
+     * @generated
+     */
+    EClass getLifeModulesGenerator();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getNationality <em>Nationality</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Nationality</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getNationality()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EReference getLifeModulesGenerator_Nationality();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getFormativeYears <em>Formative Years</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Formative Years</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getFormativeYears()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EReference getLifeModulesGenerator_FormativeYears();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getTeenYears <em>Teen Years</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Teen Years</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getTeenYears()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EReference getLifeModulesGenerator_TeenYears();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getFurtherEducation <em>Further Education</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Further Education</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getFurtherEducation()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EReference getLifeModulesGenerator_FurtherEducation();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getRealLife <em>Real Life</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Real Life</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getRealLife()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EReference getLifeModulesGenerator_RealLife();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem <em>Life Modules System</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Life Modules System</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesSystem
+     * @generated
+     */
+    EClass getLifeModulesSystem();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem#getModules <em>Modules</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Modules</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesSystem#getModules()
+     * @see #getLifeModulesSystem()
+     * @generated
+     */
+    EReference getLifeModulesSystem_Modules();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifeModule <em>Life Module</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Life Module</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule
+     * @generated
+     */
+    EClass getLifeModule();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifeModule#getKarmaCost <em>Karma Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule#getKarmaCost()
+     * @see #getLifeModule()
+     * @generated
+     */
+    EAttribute getLifeModule_KarmaCost();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.LifeModule#getCharacterChanges <em>Character Changes</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Character Changes</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule#getCharacterChanges()
+     * @see #getLifeModule()
+     * @generated
+     */
+    EReference getLifeModule_CharacterChanges();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifeModule#getModuleType <em>Module Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Module Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule#getModuleType()
+     * @see #getLifeModule()
+     * @generated
+     */
+    EAttribute getLifeModule_ModuleType();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifeModule#getTime <em>Time</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Time</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModule#getTime()
+     * @see #getLifeModule()
+     * @generated
+     */
+    EAttribute getLifeModule_Time();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleChange <em>Module Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Module Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleChange
+     * @generated
+     */
+    EClass getModuleChange();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange <em>Module Character Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Module Character Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleCharacterChange
+     * @generated
+     */
+    EClass getModuleCharacterChange();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange#getCharacterChange <em>Character Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Character Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleCharacterChange#getCharacterChange()
+     * @see #getModuleCharacterChange()
+     * @generated
+     */
+    EReference getModuleCharacterChange_CharacterChange();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange <em>Module Skill Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Module Skill Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange
+     * @generated
+     */
+    EClass getModuleSkillChange();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkillgroup <em>Skillgroup</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Skillgroup</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkillgroup()
+     * @see #getModuleSkillChange()
+     * @generated
+     */
+    EReference getModuleSkillChange_Skillgroup();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkill()
+     * @see #getModuleSkillChange()
+     * @generated
+     */
+    EReference getModuleSkillChange_Skill();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSpecalism <em>Specalism</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Specalism</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSpecalism()
+     * @see #getModuleSkillChange()
+     * @generated
+     */
+    EReference getModuleSkillChange_Specalism();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7845,6 +8895,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EEnum getQuellenConstrainType();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.LifeModuleType <em>Life Module Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Life Module Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModuleType
+     * @generated
+     */
+    EEnum getLifeModuleType();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -9720,6 +10780,178 @@ public interface Shr5managementPackage extends EPackage {
         EOperation SUM_TO_TEN_GENERATOR___HAS_SUM_TO_TEN__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSumToTenGenerator__HasSumToTen__DiagnosticChain_Map();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl <em>Life Modules Generator</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesGenerator()
+         * @generated
+         */
+        EClass LIFE_MODULES_GENERATOR = eINSTANCE.getLifeModulesGenerator();
+
+        /**
+         * The meta object literal for the '<em><b>Nationality</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_GENERATOR__NATIONALITY = eINSTANCE.getLifeModulesGenerator_Nationality();
+
+        /**
+         * The meta object literal for the '<em><b>Formative Years</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_GENERATOR__FORMATIVE_YEARS = eINSTANCE.getLifeModulesGenerator_FormativeYears();
+
+        /**
+         * The meta object literal for the '<em><b>Teen Years</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_GENERATOR__TEEN_YEARS = eINSTANCE.getLifeModulesGenerator_TeenYears();
+
+        /**
+         * The meta object literal for the '<em><b>Further Education</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_GENERATOR__FURTHER_EDUCATION = eINSTANCE.getLifeModulesGenerator_FurtherEducation();
+
+        /**
+         * The meta object literal for the '<em><b>Real Life</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_GENERATOR__REAL_LIFE = eINSTANCE.getLifeModulesGenerator_RealLife();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl <em>Life Modules System</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesSystem()
+         * @generated
+         */
+        EClass LIFE_MODULES_SYSTEM = eINSTANCE.getLifeModulesSystem();
+
+        /**
+         * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULES_SYSTEM__MODULES = eINSTANCE.getLifeModulesSystem_Modules();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl <em>Life Module</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModule()
+         * @generated
+         */
+        EClass LIFE_MODULE = eINSTANCE.getLifeModule();
+
+        /**
+         * The meta object literal for the '<em><b>Karma Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFE_MODULE__KARMA_COST = eINSTANCE.getLifeModule_KarmaCost();
+
+        /**
+         * The meta object literal for the '<em><b>Character Changes</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFE_MODULE__CHARACTER_CHANGES = eINSTANCE.getLifeModule_CharacterChanges();
+
+        /**
+         * The meta object literal for the '<em><b>Module Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFE_MODULE__MODULE_TYPE = eINSTANCE.getLifeModule_ModuleType();
+
+        /**
+         * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFE_MODULE__TIME = eINSTANCE.getLifeModule_Time();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl <em>Module Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleChange()
+         * @generated
+         */
+        EClass MODULE_CHANGE = eINSTANCE.getModuleChange();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleCharacterChangeImpl <em>Module Character Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ModuleCharacterChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleCharacterChange()
+         * @generated
+         */
+        EClass MODULE_CHARACTER_CHANGE = eINSTANCE.getModuleCharacterChange();
+
+        /**
+         * The meta object literal for the '<em><b>Character Change</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE = eINSTANCE.getModuleCharacterChange_CharacterChange();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl <em>Module Skill Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillChange()
+         * @generated
+         */
+        EClass MODULE_SKILL_CHANGE = eINSTANCE.getModuleSkillChange();
+
+        /**
+         * The meta object literal for the '<em><b>Skillgroup</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MODULE_SKILL_CHANGE__SKILLGROUP = eINSTANCE.getModuleSkillChange_Skillgroup();
+
+        /**
+         * The meta object literal for the '<em><b>Skill</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MODULE_SKILL_CHANGE__SKILL = eINSTANCE.getModuleSkillChange_Skill();
+
+        /**
+         * The meta object literal for the '<em><b>Specalism</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MODULE_SKILL_CHANGE__SPECALISM = eINSTANCE.getModuleSkillChange_Specalism();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9748,6 +10980,16 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EEnum QUELLEN_CONSTRAIN_TYPE = eINSTANCE.getQuellenConstrainType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.LifeModuleType <em>Life Module Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.LifeModuleType
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
+         * @generated
+         */
+        EEnum LIFE_MODULE_TYPE = eINSTANCE.getLifeModuleType();
 
 	}
 

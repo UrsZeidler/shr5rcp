@@ -938,6 +938,121 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LifeModulesGeneratorItemProvider lifeModulesGeneratorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLifeModulesGeneratorAdapter() {
+        if (lifeModulesGeneratorItemProvider == null) {
+            lifeModulesGeneratorItemProvider = new LifeModulesGeneratorItemProvider(this);
+        }
+
+        return lifeModulesGeneratorItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LifeModulesSystemItemProvider lifeModulesSystemItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLifeModulesSystemAdapter() {
+        if (lifeModulesSystemItemProvider == null) {
+            lifeModulesSystemItemProvider = new LifeModulesSystemItemProvider(this);
+        }
+
+        return lifeModulesSystemItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.LifeModule} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LifeModuleItemProvider lifeModuleItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModule}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLifeModuleAdapter() {
+        if (lifeModuleItemProvider == null) {
+            lifeModuleItemProvider = new LifeModuleItemProvider(this);
+        }
+
+        return lifeModuleItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleCharacterChangeItemProvider moduleCharacterChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleCharacterChangeAdapter() {
+        if (moduleCharacterChangeItemProvider == null) {
+            moduleCharacterChangeItemProvider = new ModuleCharacterChangeItemProvider(this);
+        }
+
+        return moduleCharacterChangeItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleSkillChangeItemProvider moduleSkillChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleSkillChangeAdapter() {
+        if (moduleSkillChangeItemProvider == null) {
+            moduleSkillChangeItemProvider = new ModuleSkillChangeItemProvider(this);
+        }
+
+        return moduleSkillChangeItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1071,6 +1186,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (contractPaymentItemProvider != null) contractPaymentItemProvider.dispose();
         if (characterChangeItemProvider != null) characterChangeItemProvider.dispose();
         if (sumToTenGeneratorItemProvider != null) sumToTenGeneratorItemProvider.dispose();
+        if (lifeModulesGeneratorItemProvider != null) lifeModulesGeneratorItemProvider.dispose();
+        if (lifeModulesSystemItemProvider != null) lifeModulesSystemItemProvider.dispose();
+        if (lifeModuleItemProvider != null) lifeModuleItemProvider.dispose();
+        if (moduleCharacterChangeItemProvider != null) moduleCharacterChangeItemProvider.dispose();
+        if (moduleSkillChangeItemProvider != null) moduleSkillChangeItemProvider.dispose();
     }
 
 	/**
@@ -1294,6 +1414,31 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createSumToTenGenerator()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createLifeModulesGenerator()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createLifeModulesSystem()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createLifeModule()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createModuleCharacterChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createModuleSkillChange()));
 
                 return null;
             }

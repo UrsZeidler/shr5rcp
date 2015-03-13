@@ -329,6 +329,51 @@ public interface Shr5managementFactory extends EFactory {
     SumToTenGenerator createSumToTenGenerator();
 
     /**
+     * Returns a new object of class '<em>Life Modules Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Life Modules Generator</em>'.
+     * @generated
+     */
+    LifeModulesGenerator createLifeModulesGenerator();
+
+    /**
+     * Returns a new object of class '<em>Life Modules System</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Life Modules System</em>'.
+     * @generated
+     */
+    LifeModulesSystem createLifeModulesSystem();
+
+    /**
+     * Returns a new object of class '<em>Life Module</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Life Module</em>'.
+     * @generated
+     */
+    LifeModule createLifeModule();
+
+    /**
+     * Returns a new object of class '<em>Module Character Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Character Change</em>'.
+     * @generated
+     */
+    ModuleCharacterChange createModuleCharacterChange();
+
+    /**
+     * Returns a new object of class '<em>Module Skill Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Skill Change</em>'.
+     * @generated
+     */
+    ModuleSkillChange createModuleSkillChange();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

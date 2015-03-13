@@ -440,6 +440,56 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR: {
+                LifeModulesGenerator lifeModulesGenerator = (LifeModulesGenerator)theEObject;
+                T result = caseLifeModulesGenerator(lifeModulesGenerator);
+                if (result == null) result = caseShr5KarmaGenerator(lifeModulesGenerator);
+                if (result == null) result = caseShr5RuleGenerator(lifeModulesGenerator);
+                if (result == null) result = caseCharacterGenerator(lifeModulesGenerator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM: {
+                LifeModulesSystem lifeModulesSystem = (LifeModulesSystem)theEObject;
+                T result = caseLifeModulesSystem(lifeModulesSystem);
+                if (result == null) result = caseShr5System(lifeModulesSystem);
+                if (result == null) result = casePrioritySystem(lifeModulesSystem);
+                if (result == null) result = caseCharacterGeneratorSystem(lifeModulesSystem);
+                if (result == null) result = caseBeschreibbar(lifeModulesSystem);
+                if (result == null) result = caseQuelle(lifeModulesSystem);
+                if (result == null) result = caseIdentifiable(lifeModulesSystem);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.LIFE_MODULE: {
+                LifeModule lifeModule = (LifeModule)theEObject;
+                T result = caseLifeModule(lifeModule);
+                if (result == null) result = caseBeschreibbar(lifeModule);
+                if (result == null) result = caseQuelle(lifeModule);
+                if (result == null) result = caseIdentifiable(lifeModule);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_CHANGE: {
+                ModuleChange moduleChange = (ModuleChange)theEObject;
+                T result = caseModuleChange(moduleChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_CHARACTER_CHANGE: {
+                ModuleCharacterChange moduleCharacterChange = (ModuleCharacterChange)theEObject;
+                T result = caseModuleCharacterChange(moduleCharacterChange);
+                if (result == null) result = caseModuleChange(moduleCharacterChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_SKILL_CHANGE: {
+                ModuleSkillChange moduleSkillChange = (ModuleSkillChange)theEObject;
+                T result = caseModuleSkillChange(moduleSkillChange);
+                if (result == null) result = caseModuleChange(moduleSkillChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -1116,6 +1166,96 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseSumToTenGenerator(SumToTenGenerator object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Life Modules Generator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Life Modules Generator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLifeModulesGenerator(LifeModulesGenerator object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Life Modules System</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Life Modules System</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLifeModulesSystem(LifeModulesSystem object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Life Module</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Life Module</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLifeModule(LifeModule object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleChange(ModuleChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Character Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Character Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleCharacterChange(ModuleCharacterChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Skill Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Skill Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleSkillChange(ModuleSkillChange object) {
         return null;
     }
 

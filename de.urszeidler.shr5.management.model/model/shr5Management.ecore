@@ -936,4 +936,51 @@
       </eParameters>
     </eOperations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeModulesGenerator" eSuperTypes="#//Shr5KarmaGenerator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nationality" lowerBound="1"
+        eType="#//LifeModule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formativeYears" lowerBound="1"
+        eType="#//LifeModule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teenYears" lowerBound="1"
+        eType="#//LifeModule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="furtherEducation" eType="#//LifeModule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realLife" lowerBound="1"
+        upperBound="-1" eType="#//LifeModule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeModulesSystem" eSuperTypes="#//Shr5System">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="#//LifeModule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeModule" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaCost" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterChanges" upperBound="-1"
+        eType="#//ModuleChange" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleType" eType="#//LifeModuleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The time in years, can be zero."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LifeModuleType">
+    <eLiterals name="nationality"/>
+    <eLiterals name="formativeYears"/>
+    <eLiterals name="teenYears"/>
+    <eLiterals name="furtherEducation"/>
+    <eLiterals name="realLife"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleChange" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleCharacterChange" eSuperTypes="#//ModuleChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterChange" lowerBound="1"
+        eType="#//Changes" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillChange" eSuperTypes="#//ModuleChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skillgroup" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeitsGruppe"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specalism" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezialisierung"
+        containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
