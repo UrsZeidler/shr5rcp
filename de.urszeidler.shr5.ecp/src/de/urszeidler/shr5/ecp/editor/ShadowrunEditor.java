@@ -50,6 +50,7 @@ import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModuleChange;
 import de.urszeidler.eclipse.shr5Management.Pack;
@@ -92,6 +93,7 @@ import de.urszeidler.shr5.ecp.editor.pages.character.CommitedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.character.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.generator.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.generator.FreeStyleGeneratorPage;
+import de.urszeidler.shr5.ecp.editor.pages.generator.LifeModuleGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.generator.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.generator.Shr5KarmaGeneratorPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
@@ -545,6 +547,19 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return super.caseShr5KarmaGenerator(object);
             }
 
+            @Override
+            public Object caseLifeModulesGenerator(LifeModulesGenerator object) {
+                try {
+                    addPage(new LifeModuleGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_Karama_Generator, object, editingDomain,
+                            manager));
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
+                            .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
+                } catch (PartInitException e) {
+                    logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {

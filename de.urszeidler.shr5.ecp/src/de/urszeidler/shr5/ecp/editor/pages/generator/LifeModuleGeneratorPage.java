@@ -43,8 +43,8 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
-import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
@@ -56,10 +56,10 @@ import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 /**
  * @author urs
  */
-public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
+public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
 
     protected static final String EMPTY = ""; //$NON-NLS-1$
-    private Shr5KarmaGenerator object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
+    private LifeModulesGenerator object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
 
@@ -82,7 +82,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     private Group grpResources;
     private Set<String> changeSet;
 
-    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title) {
+    public LifeModuleGeneratorPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
     }
 
@@ -96,7 +96,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
      * @param editingDomain
      * @param manager
      */
-    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title, Shr5KarmaGenerator object, EditingDomain editingDomain,
+    public LifeModuleGeneratorPage(FormEditor editor, String id, String title, LifeModulesGenerator object, EditingDomain editingDomain,
             ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
@@ -292,7 +292,12 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__META_TYPE, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
-        // emfFormBuilder.addSeperatorEntry(compositePrio);
+        emfFormBuilder.addSeperatorEntry(compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__NATIONALITY, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FORMATIVE_YEARS, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__TEEN_YEARS, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FURTHER_EDUCATION, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__REAL_LIFE, compositePrio);
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = 150;

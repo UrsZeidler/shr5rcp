@@ -84,9 +84,9 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      * @param textToShow
      */
     protected void updateDecorator(Set<Integer> newSet, Object featureID, ControlDecoration decoration, String textToShow) {
-        if(decoration.getControl().isDisposed())
+        if (decoration.getControl().isDisposed())
             return;
-            
+
         if (newSet.contains(featureID)) {
             decoration.setDescriptionText(textToShow);
             decoration.setImage(decoratorImage);
@@ -94,7 +94,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             // decoration.showHoverText(textToShow);
         } else if (decoration.getImage() != null) {
             decoration.setDescriptionText(""); //$NON-NLS-1$
-//            decoration.setImage(null);
+            // decoration.setImage(null);
         }
     }
 
@@ -126,22 +126,22 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             return;
         if (!notificationIsRequierd(notification))
             return;
- 
-        if(validating)
+
+        if (validating)
             return;
-        validating= true;
-        
-        Display.getDefault().asyncExec(new Runnable() {            
+        validating = true;
+
+        Display.getDefault().asyncExec(new Runnable() {
             @Override
             public void run() {
                 validateChange();
                 validating = false;
             }
         });
-        
-//        validateChange();
-//        validating = false;
- 
+
+        // validateChange();
+        // validating = false;
+
     }
 
     protected abstract boolean notificationIsRequierd(Notification notification);
@@ -154,8 +154,10 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     @Override
     public void initialize(FormEditor editor) {
         super.initialize(editor);
-        validationService = (ValidationService)editor.getSite().getService(ValidationService.class);
-        store = Activator.getDefault().getPreferenceStore();
+        if (editor.getSite() != null) {
+            validationService = (ValidationService)editor.getSite().getService(ValidationService.class);
+            store = Activator.getDefault().getPreferenceStore();
+        }
     }
 
     /**
@@ -169,12 +171,11 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      */
     protected ManagedCharacter createManagedCharacter(EClass selectableType, Spezies spezies, boolean createPlayer, CharacterGenerator<?> object) {
         ManagedCharacter playerCharacter;
-        if (createPlayer){
+        if (createPlayer) {
             playerCharacter = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
             CharacterDiary diary = Shr5managementFactory.eINSTANCE.createCharacterDiary();
             ((PlayerCharacter)playerCharacter).setDiary(diary);
-        }
-        else
+        } else
             playerCharacter = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
 
         int edge = 0;// metaType.getSpecialPoints();

@@ -119,7 +119,7 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
             stufe = msc.getSkillgroup().getStufe();
         } else if (msc.getSkill() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkill());
-            msc.getSkill().getStufe();
+            stufe = msc.getSkill().getStufe();
         }
 
         return String.format("%s %d", text,stufe);//getString("_UI_ModuleSkillChange_type");

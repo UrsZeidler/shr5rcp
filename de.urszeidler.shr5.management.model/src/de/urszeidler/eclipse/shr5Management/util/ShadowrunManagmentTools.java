@@ -56,6 +56,8 @@ import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModuleType;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -963,12 +965,22 @@ public class ShadowrunManagmentTools {
      * @param state
      * @return
      */
-    public static com.google.common.base.Predicate<ManagedCharacter> characterGeneratorStatePredicate(final GeneratorState state) {
+    public static Predicate<ManagedCharacter> characterGeneratorStatePredicate(final GeneratorState state) {
         return new Predicate<ManagedCharacter>() {
 
             @Override
             public boolean apply(ManagedCharacter input) {
                 return input.getChracterSource() != null && input.getChracterSource().getState() == state;
+            }
+        };
+    }
+
+
+    public static Predicate<? super LifeModule> moduleTypePredicate(final LifeModuleType type) {
+        return new Predicate<LifeModule>() {
+            @Override
+            public boolean apply(LifeModule input) {
+                return input.getModuleType() == type;
             }
         };
     }
