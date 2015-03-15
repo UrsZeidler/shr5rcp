@@ -356,15 +356,6 @@ public interface Shr5managementFactory extends EFactory {
     LifeModule createLifeModule();
 
     /**
-     * Returns a new object of class '<em>Module Character Change</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Module Character Change</em>'.
-     * @generated
-     */
-    ModuleCharacterChange createModuleCharacterChange();
-
-    /**
      * Returns a new object of class '<em>Module Skill Change</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -372,6 +363,42 @@ public interface Shr5managementFactory extends EFactory {
      * @generated
      */
     ModuleSkillChange createModuleSkillChange();
+
+    /**
+     * Returns a new object of class '<em>Module Teachable Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Teachable Change</em>'.
+     * @generated
+     */
+    ModuleTeachableChange createModuleTeachableChange();
+
+    /**
+     * Returns a new object of class '<em>Module Attribute Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Attribute Change</em>'.
+     * @generated
+     */
+    ModuleAttributeChange createModuleAttributeChange();
+
+    /**
+     * Returns a new object of class '<em>Module Feature Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Feature Change</em>'.
+     * @generated
+     */
+    ModuleFeatureChange createModuleFeatureChange();
+
+    /**
+     * Returns a new object of class '<em>Module Skill Group Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Module Skill Group Change</em>'.
+     * @generated
+     */
+    ModuleSkillGroupChange createModuleSkillGroupChange();
 
     /**
      * Returns the package supported by this factory.

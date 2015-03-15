@@ -440,10 +440,16 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateLifeModule((LifeModule)value, diagnostics, context);
             case Shr5managementPackage.MODULE_CHANGE:
                 return validateModuleChange((ModuleChange)value, diagnostics, context);
-            case Shr5managementPackage.MODULE_CHARACTER_CHANGE:
-                return validateModuleCharacterChange((ModuleCharacterChange)value, diagnostics, context);
             case Shr5managementPackage.MODULE_SKILL_CHANGE:
                 return validateModuleSkillChange((ModuleSkillChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_TEACHABLE_CHANGE:
+                return validateModuleTeachableChange((ModuleTeachableChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE:
+                return validateModuleAttributeChange((ModuleAttributeChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_FEATURE_CHANGE:
+                return validateModuleFeatureChange((ModuleFeatureChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE:
+                return validateModuleSkillGroupChange((ModuleSkillGroupChange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1299,8 +1305,8 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateModuleCharacterChange(ModuleCharacterChange moduleCharacterChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(moduleCharacterChange, diagnostics, context);
+    public boolean validateModuleSkillChange(ModuleSkillChange moduleSkillChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleSkillChange, diagnostics, context);
     }
 
     /**
@@ -1308,8 +1314,35 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateModuleSkillChange(ModuleSkillChange moduleSkillChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(moduleSkillChange, diagnostics, context);
+    public boolean validateModuleTeachableChange(ModuleTeachableChange moduleTeachableChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleTeachableChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleAttributeChange(ModuleAttributeChange moduleAttributeChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleAttributeChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleFeatureChange(ModuleFeatureChange moduleFeatureChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleFeatureChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleSkillGroupChange(ModuleSkillGroupChange moduleSkillGroupChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleSkillGroupChange, diagnostics, context);
     }
 
     /**

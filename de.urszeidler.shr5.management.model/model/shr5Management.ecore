@@ -971,16 +971,42 @@
     <eLiterals name="realLife"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleChange" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleCharacterChange" eSuperTypes="#//ModuleChange">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="characterChange" lowerBound="1"
-        eType="#//Changes" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillChange" eSuperTypes="#//ModuleChange">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="skillgroup" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeitsGruppe"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="specalism" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezialisierung"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleTeachableChange" eSuperTypes="#//ModuleChange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Will be used for the quallities, specalism ..."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teachable" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Erlernbar"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Erlernbar"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleAttributeChange" eSuperTypes="#//ModuleChange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Define an attribute change."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleFeatureChange" eSuperTypes="#//ModuleChange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Set a feature like native language to the given value."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillGroupChange" eSuperTypes="#//ModuleChange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skillGroup" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
   </eClassifiers>
 </ecore:EPackage>

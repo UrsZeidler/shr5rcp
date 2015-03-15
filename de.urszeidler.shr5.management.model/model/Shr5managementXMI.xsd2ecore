@@ -347,17 +347,45 @@
     <nested inputs="shr5Management.ecore#//LifeModule" outputs="Shr5managementXMI.xsd#//LifeModule;XSDElementDeclaration=47"/>
     <nested inputs="shr5Management.ecore#//ModuleChange" outputs="Shr5managementXMI.xsd#//ModuleChange;XSDComplexTypeDefinition=48"/>
     <nested inputs="shr5Management.ecore#//ModuleChange" outputs="Shr5managementXMI.xsd#//ModuleChange;XSDElementDeclaration=48"/>
-    <nested inputs="shr5Management.ecore#//ModuleCharacterChange" outputs="Shr5managementXMI.xsd#//ModuleCharacterChange;XSDComplexTypeDefinition=49">
-      <nested inputs="shr5Management.ecore#//ModuleCharacterChange/characterChange"
-          outputs="Shr5managementXMI.xsd#//ModuleCharacterChange;XSDComplexTypeDefinition=49/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5Management.ecore#//ModuleSkillChange" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49">
+      <nested inputs="shr5Management.ecore#//ModuleSkillChange/grade" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillChange/skill" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillChange/skill" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=49/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
-    <nested inputs="shr5Management.ecore#//ModuleCharacterChange" outputs="Shr5managementXMI.xsd#//ModuleCharacterChange;XSDElementDeclaration=49"/>
-    <nested inputs="shr5Management.ecore#//ModuleSkillChange" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=50">
-      <nested inputs="shr5Management.ecore#//ModuleSkillChange/skillgroup" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5Management.ecore#//ModuleSkillChange/skill" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-      <nested inputs="shr5Management.ecore#//ModuleSkillChange/specalism" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5Management.ecore#//ModuleSkillChange" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDElementDeclaration=49"/>
+    <nested inputs="shr5Management.ecore#//ModuleTeachableChange" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50">
+      <nested inputs="shr5Management.ecore#//ModuleTeachableChange/grade" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ModuleTeachableChange/teachable" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ModuleTeachableChange/teachable" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ModuleTeachableChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//ModuleTeachableChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
-    <nested inputs="shr5Management.ecore#//ModuleSkillChange" outputs="Shr5managementXMI.xsd#//ModuleSkillChange;XSDElementDeclaration=50"/>
+    <nested inputs="shr5Management.ecore#//ModuleTeachableChange" outputs="Shr5managementXMI.xsd#//ModuleTeachableChange;XSDElementDeclaration=50"/>
+    <nested inputs="shr5Management.ecore#//ModuleAttributeChange" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51">
+      <nested inputs="shr5Management.ecore#//ModuleAttributeChange/grade" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ModuleAttributeChange/attribute" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ModuleAttributeChange/attribute" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ModuleAttributeChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//ModuleAttributeChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ModuleAttributeChange" outputs="Shr5managementXMI.xsd#//ModuleAttributeChange;XSDElementDeclaration=51"/>
+    <nested inputs="shr5Management.ecore#//ModuleFeatureChange" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDComplexTypeDefinition=52">
+      <nested inputs="shr5Management.ecore#//ModuleFeatureChange/feature" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDComplexTypeDefinition=52/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ModuleFeatureChange/feature" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDComplexTypeDefinition=52/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ModuleFeatureChange/value" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDComplexTypeDefinition=52/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ModuleFeatureChange/value" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDComplexTypeDefinition=52/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ModuleFeatureChange" outputs="Shr5managementXMI.xsd#//ModuleFeatureChange;XSDElementDeclaration=52"/>
+    <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53">
+      <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange/grade" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange/skillGroup" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange/skillGroup" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDComplexTypeDefinition=53/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ModuleSkillGroupChange" outputs="Shr5managementXMI.xsd#//ModuleSkillGroupChange;XSDElementDeclaration=53"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

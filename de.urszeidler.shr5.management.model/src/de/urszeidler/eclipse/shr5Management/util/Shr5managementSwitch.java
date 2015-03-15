@@ -476,17 +476,38 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5managementPackage.MODULE_CHARACTER_CHANGE: {
-                ModuleCharacterChange moduleCharacterChange = (ModuleCharacterChange)theEObject;
-                T result = caseModuleCharacterChange(moduleCharacterChange);
-                if (result == null) result = caseModuleChange(moduleCharacterChange);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
             case Shr5managementPackage.MODULE_SKILL_CHANGE: {
                 ModuleSkillChange moduleSkillChange = (ModuleSkillChange)theEObject;
                 T result = caseModuleSkillChange(moduleSkillChange);
                 if (result == null) result = caseModuleChange(moduleSkillChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_TEACHABLE_CHANGE: {
+                ModuleTeachableChange moduleTeachableChange = (ModuleTeachableChange)theEObject;
+                T result = caseModuleTeachableChange(moduleTeachableChange);
+                if (result == null) result = caseModuleChange(moduleTeachableChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE: {
+                ModuleAttributeChange moduleAttributeChange = (ModuleAttributeChange)theEObject;
+                T result = caseModuleAttributeChange(moduleAttributeChange);
+                if (result == null) result = caseModuleChange(moduleAttributeChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_FEATURE_CHANGE: {
+                ModuleFeatureChange moduleFeatureChange = (ModuleFeatureChange)theEObject;
+                T result = caseModuleFeatureChange(moduleFeatureChange);
+                if (result == null) result = caseModuleChange(moduleFeatureChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: {
+                ModuleSkillGroupChange moduleSkillGroupChange = (ModuleSkillGroupChange)theEObject;
+                T result = caseModuleSkillGroupChange(moduleSkillGroupChange);
+                if (result == null) result = caseModuleChange(moduleSkillGroupChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1230,21 +1251,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Module Character Change</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Module Character Change</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseModuleCharacterChange(ModuleCharacterChange object) {
-        return null;
-    }
-
-    /**
      * Returns the result of interpreting the object as an instance of '<em>Module Skill Change</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
@@ -1256,6 +1262,66 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseModuleSkillChange(ModuleSkillChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Teachable Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Teachable Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleTeachableChange(ModuleTeachableChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Attribute Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Attribute Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleAttributeChange(ModuleAttributeChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Feature Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Feature Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleFeatureChange(ModuleFeatureChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Skill Group Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Skill Group Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModuleSkillGroupChange(ModuleSkillGroupChange object) {
         return null;
     }
 

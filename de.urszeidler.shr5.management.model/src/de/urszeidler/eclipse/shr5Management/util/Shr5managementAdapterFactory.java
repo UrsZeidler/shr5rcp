@@ -307,12 +307,24 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createModuleChangeAdapter();
             }
             @Override
-            public Adapter caseModuleCharacterChange(ModuleCharacterChange object) {
-                return createModuleCharacterChangeAdapter();
-            }
-            @Override
             public Adapter caseModuleSkillChange(ModuleSkillChange object) {
                 return createModuleSkillChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleTeachableChange(ModuleTeachableChange object) {
+                return createModuleTeachableChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleAttributeChange(ModuleAttributeChange object) {
+                return createModuleAttributeChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleFeatureChange(ModuleFeatureChange object) {
+                return createModuleFeatureChangeAdapter();
+            }
+            @Override
+            public Adapter caseModuleSkillGroupChange(ModuleSkillGroupChange object) {
+                return createModuleSkillGroupChangeAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -1037,20 +1049,6 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange <em>Module Character Change</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleCharacterChange
-     * @generated
-     */
-    public Adapter createModuleCharacterChangeAdapter() {
-        return null;
-    }
-
-    /**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange <em>Module Skill Change</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -1061,6 +1059,62 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModuleSkillChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange <em>Module Teachable Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleTeachableChange
+     * @generated
+     */
+    public Adapter createModuleTeachableChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange <em>Module Attribute Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleAttributeChange
+     * @generated
+     */
+    public Adapter createModuleAttributeChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange <em>Module Feature Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleFeatureChange
+     * @generated
+     */
+    public Adapter createModuleFeatureChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange <em>Module Skill Group Change</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange
+     * @generated
+     */
+    public Adapter createModuleSkillGroupChangeAdapter() {
         return null;
     }
 

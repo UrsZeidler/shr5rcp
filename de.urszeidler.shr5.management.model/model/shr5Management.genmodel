@@ -65,7 +65,8 @@
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The defined advacements system for this generator system."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/additionalConstrains"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
@@ -449,11 +450,16 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModulesGenerator">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/nationality"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/formativeYears"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/teenYears"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/furtherEducation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/realLife"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/nationality"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/formativeYears"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/teenYears"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module. (optional)"
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/furtherEducation"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module.(more than one)"
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/realLife"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModulesSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesSystem/modules"/>
@@ -465,13 +471,29 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/time"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleChange"/>
-    <genClasses ecoreClass="shr5Management.ecore#//ModuleCharacterChange">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleCharacterChange/characterChange"/>
-    </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillChange">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/skillgroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleSkillChange/grade"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/skill"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/specalism"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/selectOne"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleTeachableChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTeachableChange/teachable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTeachableChange/selectOne"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleTeachableChange/grade"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleAttributeChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleAttributeChange/grade"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/selectOne"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleFeatureChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/value"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillGroupChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleSkillGroupChange/grade"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillGroupChange/skillGroup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillGroupChange/selectOne"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

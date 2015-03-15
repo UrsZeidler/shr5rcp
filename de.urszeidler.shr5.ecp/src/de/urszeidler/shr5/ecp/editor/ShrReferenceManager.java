@@ -129,31 +129,32 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         } else if (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())) {
             EObject newWeapon = defaultCreationDialog(e, object);
             setValue(e, newWeapon);
-        } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
-            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-            PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
-                    Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
-
-            if (dialog.open() == Dialog.OK)
-                setValue(e, personaFertigkeit);
-            
-            return;
-        }else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())){
+//        } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
+//            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+//            PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+//            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
+//                    Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
+//
+//            if (dialog.open() == Dialog.OK)
+//                setValue(e, personaFertigkeit);
+//            
+//            return;
+        }
+        else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())){
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
-            PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
-                    Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
-
-            if (dialog.open() == Dialog.OK)
-                setValue(e, personaFertigkeit);
-            return;
-        }else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
-            EObject defaultCreationDialog = defaultCreationDialog(e, object);
-            if(defaultCreationDialog!=null)
-                setValue(e, defaultCreationDialog);
+            
+            Object[] choises = NullObject.toChoises(objectsOfType);
+            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select skill", "");
+            dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+            setSingleRefernceFromDialog(e, dialog);
             return;
         }
+//        else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
+//            EObject defaultCreationDialog = defaultCreationDialog(e, object);
+//            if(defaultCreationDialog!=null)
+//                setValue(e, defaultCreationDialog);
+//            return;
+//        }
         super.handleManage(e, object);
     }
 

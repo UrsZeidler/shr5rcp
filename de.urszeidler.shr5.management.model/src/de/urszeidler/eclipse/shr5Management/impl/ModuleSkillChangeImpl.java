@@ -3,20 +3,16 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
-
-import de.urszeidler.eclipse.shr5.Spezialisierung;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +21,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getSkillgroup <em>Skillgroup</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getGrade <em>Grade</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getSkill <em>Skill</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getSpecalism <em>Specalism</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getSelectOne <em>Select One</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,33 +31,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSkillChange {
     /**
-     * The cached value of the '{@link #getSkillgroup() <em>Skillgroup</em>}' containment reference.
+     * The default value of the '{@link #getGrade() <em>Grade</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getSkillgroup()
+     * @see #getGrade()
      * @generated
      * @ordered
      */
-    protected PersonaFertigkeitsGruppe skillgroup;
+    protected static final int GRADE_EDEFAULT = 0;
 
     /**
-     * The cached value of the '{@link #getSkill() <em>Skill</em>}' containment reference.
+     * The cached value of the '{@link #getGrade() <em>Grade</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getGrade()
+     * @generated
+     * @ordered
+     */
+    protected int grade = GRADE_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getSkill() <em>Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getSkill()
      * @generated
      * @ordered
      */
-    protected PersonaFertigkeit skill;
+    protected Fertigkeit skill;
+
     /**
-     * The cached value of the '{@link #getSpecalism() <em>Specalism</em>}' containment reference.
+     * The cached value of the '{@link #getSelectOne() <em>Select One</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getSpecalism()
+     * @see #getSelectOne()
      * @generated
      * @ordered
      */
-    protected Spezialisierung specalism;
+    protected EList<Fertigkeit> selectOne;
 
     /**
      * <!-- begin-user-doc -->
@@ -87,50 +94,15 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaFertigkeitsGruppe getSkillgroup() {
-        return skillgroup;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetSkillgroup(PersonaFertigkeitsGruppe newSkillgroup, NotificationChain msgs) {
-        PersonaFertigkeitsGruppe oldSkillgroup = skillgroup;
-        skillgroup = newSkillgroup;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP, oldSkillgroup, newSkillgroup);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+    public Fertigkeit getSkill() {
+        if (skill != null && skill.eIsProxy()) {
+            InternalEObject oldSkill = (InternalEObject)skill;
+            skill = (Fertigkeit)eResolveProxy(oldSkill);
+            if (skill != oldSkill) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, oldSkill, skill));
+            }
         }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSkillgroup(PersonaFertigkeitsGruppe newSkillgroup) {
-        if (newSkillgroup != skillgroup) {
-            NotificationChain msgs = null;
-            if (skillgroup != null)
-                msgs = ((InternalEObject)skillgroup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP, null, msgs);
-            if (newSkillgroup != null)
-                msgs = ((InternalEObject)newSkillgroup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP, null, msgs);
-            msgs = basicSetSkillgroup(newSkillgroup, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP, newSkillgroup, newSkillgroup));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public PersonaFertigkeit getSkill() {
         return skill;
     }
 
@@ -139,14 +111,20 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSkill(PersonaFertigkeit newSkill, NotificationChain msgs) {
-        PersonaFertigkeit oldSkill = skill;
+    public Fertigkeit basicGetSkill() {
+        return skill;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSkill(Fertigkeit newSkill) {
+        Fertigkeit oldSkill = skill;
         skill = newSkill;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, oldSkill, newSkill);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
-        }
-        return msgs;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, oldSkill, skill));
     }
 
     /**
@@ -154,18 +132,8 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setSkill(PersonaFertigkeit newSkill) {
-        if (newSkill != skill) {
-            NotificationChain msgs = null;
-            if (skill != null)
-                msgs = ((InternalEObject)skill).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, null, msgs);
-            if (newSkill != null)
-                msgs = ((InternalEObject)newSkill).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, null, msgs);
-            msgs = basicSetSkill(newSkill, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL, newSkill, newSkill));
+    public int getGrade() {
+        return grade;
     }
 
     /**
@@ -173,8 +141,11 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
-    public Spezialisierung getSpecalism() {
-        return specalism;
+    public void setGrade(int newGrade) {
+        int oldGrade = grade;
+        grade = newGrade;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE, oldGrade, grade));
     }
 
     /**
@@ -182,51 +153,11 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetSpecalism(Spezialisierung newSpecalism, NotificationChain msgs) {
-        Spezialisierung oldSpecalism = specalism;
-        specalism = newSpecalism;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM, oldSpecalism, newSpecalism);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+    public EList<Fertigkeit> getSelectOne() {
+        if (selectOne == null) {
+            selectOne = new EObjectResolvingEList<Fertigkeit>(Fertigkeit.class, this, Shr5managementPackage.MODULE_SKILL_CHANGE__SELECT_ONE);
         }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSpecalism(Spezialisierung newSpecalism) {
-        if (newSpecalism != specalism) {
-            NotificationChain msgs = null;
-            if (specalism != null)
-                msgs = ((InternalEObject)specalism).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM, null, msgs);
-            if (newSpecalism != null)
-                msgs = ((InternalEObject)newSpecalism).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM, null, msgs);
-            msgs = basicSetSpecalism(newSpecalism, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM, newSpecalism, newSpecalism));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-        switch (featureID) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
-                return basicSetSkillgroup(null, msgs);
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
-                return basicSetSkill(null, msgs);
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
-                return basicSetSpecalism(null, msgs);
-        }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return selectOne;
     }
 
     /**
@@ -237,12 +168,13 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
-                return getSkillgroup();
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE:
+                return getGrade();
             case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
-                return getSkill();
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
-                return getSpecalism();
+                if (resolve) return getSkill();
+                return basicGetSkill();
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__SELECT_ONE:
+                return getSelectOne();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -252,17 +184,19 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
-                setSkillgroup((PersonaFertigkeitsGruppe)newValue);
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE:
+                setGrade((Integer)newValue);
                 return;
             case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
-                setSkill((PersonaFertigkeit)newValue);
+                setSkill((Fertigkeit)newValue);
                 return;
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
-                setSpecalism((Spezialisierung)newValue);
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__SELECT_ONE:
+                getSelectOne().clear();
+                getSelectOne().addAll((Collection<? extends Fertigkeit>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -276,14 +210,14 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
-                setSkillgroup((PersonaFertigkeitsGruppe)null);
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE:
+                setGrade(GRADE_EDEFAULT);
                 return;
             case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
-                setSkill((PersonaFertigkeit)null);
+                setSkill((Fertigkeit)null);
                 return;
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
-                setSpecalism((Spezialisierung)null);
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__SELECT_ONE:
+                getSelectOne().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -297,14 +231,30 @@ public class ModuleSkillChangeImpl extends ModuleChangeImpl implements ModuleSki
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
-                return skillgroup != null;
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE:
+                return grade != GRADE_EDEFAULT;
             case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
                 return skill != null;
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
-                return specalism != null;
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__SELECT_ONE:
+                return selectOne != null && !selectOne.isEmpty();
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy()) return super.toString();
+
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (grade: ");
+        result.append(grade);
+        result.append(')');
+        return result.toString();
     }
 
 } //ModuleSkillChangeImpl

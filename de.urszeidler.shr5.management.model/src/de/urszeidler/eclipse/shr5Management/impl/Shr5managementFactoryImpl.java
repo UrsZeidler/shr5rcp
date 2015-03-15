@@ -127,8 +127,11 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.LIFE_MODULES_GENERATOR: return createLifeModulesGenerator();
             case Shr5managementPackage.LIFE_MODULES_SYSTEM: return createLifeModulesSystem();
             case Shr5managementPackage.LIFE_MODULE: return createLifeModule();
-            case Shr5managementPackage.MODULE_CHARACTER_CHANGE: return createModuleCharacterChange();
             case Shr5managementPackage.MODULE_SKILL_CHANGE: return createModuleSkillChange();
+            case Shr5managementPackage.MODULE_TEACHABLE_CHANGE: return createModuleTeachableChange();
+            case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE: return createModuleAttributeChange();
+            case Shr5managementPackage.MODULE_FEATURE_CHANGE: return createModuleFeatureChange();
+            case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: return createModuleSkillGroupChange();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -561,9 +564,9 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public ModuleCharacterChange createModuleCharacterChange() {
-        ModuleCharacterChangeImpl moduleCharacterChange = new ModuleCharacterChangeImpl();
-        return moduleCharacterChange;
+    public ModuleSkillChange createModuleSkillChange() {
+        ModuleSkillChangeImpl moduleSkillChange = new ModuleSkillChangeImpl();
+        return moduleSkillChange;
     }
 
     /**
@@ -571,9 +574,39 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public ModuleSkillChange createModuleSkillChange() {
-        ModuleSkillChangeImpl moduleSkillChange = new ModuleSkillChangeImpl();
-        return moduleSkillChange;
+    public ModuleTeachableChange createModuleTeachableChange() {
+        ModuleTeachableChangeImpl moduleTeachableChange = new ModuleTeachableChangeImpl();
+        return moduleTeachableChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModuleAttributeChange createModuleAttributeChange() {
+        ModuleAttributeChangeImpl moduleAttributeChange = new ModuleAttributeChangeImpl();
+        return moduleAttributeChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModuleFeatureChange createModuleFeatureChange() {
+        ModuleFeatureChangeImpl moduleFeatureChange = new ModuleFeatureChangeImpl();
+        return moduleFeatureChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModuleSkillGroupChange createModuleSkillGroupChange() {
+        ModuleSkillGroupChangeImpl moduleSkillGroupChange = new ModuleSkillGroupChangeImpl();
+        return moduleSkillGroupChange;
     }
 
     /**

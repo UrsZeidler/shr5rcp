@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
-import de.urszeidler.eclipse.shr5.Spezialisierung;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,9 +14,9 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkillgroup <em>Skillgroup</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getGrade <em>Grade</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkill <em>Skill</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSpecalism <em>Specalism</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSelectOne <em>Select One</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,81 +26,71 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  */
 public interface ModuleSkillChange extends ModuleChange {
     /**
-     * Returns the value of the '<em><b>Skillgroup</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Skillgroup</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Skillgroup</em>' containment reference.
-     * @see #setSkillgroup(PersonaFertigkeitsGruppe)
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleSkillChange_Skillgroup()
-     * @model containment="true"
-     * @generated
-     */
-    PersonaFertigkeitsGruppe getSkillgroup();
-
-    /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkillgroup <em>Skillgroup</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Skillgroup</em>' containment reference.
-     * @see #getSkillgroup()
-     * @generated
-     */
-    void setSkillgroup(PersonaFertigkeitsGruppe value);
-
-    /**
-     * Returns the value of the '<em><b>Skill</b></em>' containment reference.
+     * Returns the value of the '<em><b>Skill</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Skill</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Skill</em>' containment reference.
-     * @see #setSkill(PersonaFertigkeit)
+     * @return the value of the '<em>Skill</em>' reference.
+     * @see #setSkill(Fertigkeit)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleSkillChange_Skill()
-     * @model containment="true"
+     * @model
      * @generated
      */
-    PersonaFertigkeit getSkill();
+    Fertigkeit getSkill();
 
     /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkill <em>Skill</em>}' containment reference.
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSkill <em>Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Skill</em>' containment reference.
+     * @param value the new value of the '<em>Skill</em>' reference.
      * @see #getSkill()
      * @generated
      */
-    void setSkill(PersonaFertigkeit value);
+    void setSkill(Fertigkeit value);
 
     /**
-     * Returns the value of the '<em><b>Specalism</b></em>' containment reference.
+     * Returns the value of the '<em><b>Grade</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Specalism</em>' containment reference isn't clear,
+     * If the meaning of the '<em>Grade</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Specalism</em>' containment reference.
-     * @see #setSpecalism(Spezialisierung)
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleSkillChange_Specalism()
-     * @model containment="true"
+     * @return the value of the '<em>Grade</em>' attribute.
+     * @see #setGrade(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleSkillChange_Grade()
+     * @model
      * @generated
      */
-    Spezialisierung getSpecalism();
+    int getGrade();
 
     /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSpecalism <em>Specalism</em>}' containment reference.
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getGrade <em>Grade</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Specalism</em>' containment reference.
-     * @see #getSpecalism()
+     * @param value the new value of the '<em>Grade</em>' attribute.
+     * @see #getGrade()
      * @generated
      */
-    void setSpecalism(Spezialisierung value);
+    void setGrade(int value);
+
+    /**
+     * Returns the value of the '<em><b>Select One</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Fertigkeit}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Select One</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Select One</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleSkillChange_SelectOne()
+     * @model
+     * @generated
+     */
+    EList<Fertigkeit> getSelectOne();
 
 } // ModuleSkillChange

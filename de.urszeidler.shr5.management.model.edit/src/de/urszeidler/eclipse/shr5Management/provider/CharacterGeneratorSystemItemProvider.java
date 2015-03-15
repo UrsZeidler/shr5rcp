@@ -218,7 +218,7 @@ public class CharacterGeneratorSystemItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_CharacterGeneratorSystem_characterAdvancements_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_CharacterGeneratorSystem_characterAdvancements_feature", "_UI_CharacterGeneratorSystem_type"),
+                 getString("_UI_CharacterGeneratorSystem_characterAdvancements_description"),
                  Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
                  true,
                  false,

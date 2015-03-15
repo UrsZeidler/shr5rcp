@@ -4,10 +4,11 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 import de.urszeidler.eclipse.shr5.Shr5Factory;
-import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,13 +18,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import com.google.common.collect.FluentIterable;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
@@ -31,7 +34,6 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ModuleSkillChangeItemProvider(AdapterFactory adapterFactory) {
@@ -42,7 +44,6 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -50,8 +51,54 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addGradePropertyDescriptor(object);
+            addSelectOnePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Grade feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addGradePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ModuleSkillChange_grade_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillChange_grade_feature", "_UI_ModuleSkillChange_type"),
+                 Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__GRADE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Select One feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSelectOnePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ModuleSkillChange_selectOne_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillChange_selectOne_feature", "_UI_ModuleSkillChange_type"),
+                 Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SELECT_ONE,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
@@ -60,16 +107,13 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP);
             childrenFeatures.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL);
-            childrenFeatures.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SPECALISM);
         }
         return childrenFeatures;
     }
@@ -77,7 +121,6 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -92,7 +135,6 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * This returns ModuleSkillChange.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -113,13 +155,11 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
         ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         String unset = getString("_UI_Unset_text");
         String text = "";
-        int stufe = 0;
-        if (msc.getSkillgroup() != null) {
-            text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkillgroup());
-            stufe = msc.getSkillgroup().getStufe();
-        } else if (msc.getSkill() != null) {
+        int stufe = msc.getGrade();
+        if (msc.getSkill() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkill());
-            stufe = msc.getSkill().getStufe();
+        }else if(!msc.getSelectOne().isEmpty()){
+            text = " on of:";
         }
 
         return String.format("%s %d", text,stufe);//getString("_UI_ModuleSkillChange_type");
@@ -130,7 +170,6 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -138,9 +177,10 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
         updateChildren(notification);
 
         switch (notification.getFeatureID(ModuleSkillChange.class)) {
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILLGROUP:
+            case Shr5managementPackage.MODULE_SKILL_CHANGE__GRADE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
             case Shr5managementPackage.MODULE_SKILL_CHANGE__SKILL:
-            case Shr5managementPackage.MODULE_SKILL_CHANGE__SPECALISM:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -152,21 +192,26 @@ public class ModuleSkillChangeItemProvider extends ModuleChangeItemProvider {
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP,
-                Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL,
+                 Shr5Factory.eINSTANCE.createFertigkeit()));
 
-        newChildDescriptors.add(createChildParameter(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL,
-                Shr5Factory.eINSTANCE.createPersonaFertigkeit()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL,
+                 Shr5Factory.eINSTANCE.createWissensfertigkeit()));
 
-        newChildDescriptors.add(createChildParameter(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SPECALISM,
-                Shr5Factory.eINSTANCE.createSpezialisierung()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL,
+                 Shr5Factory.eINSTANCE.createSprachfertigkeit()));
     }
 
 }

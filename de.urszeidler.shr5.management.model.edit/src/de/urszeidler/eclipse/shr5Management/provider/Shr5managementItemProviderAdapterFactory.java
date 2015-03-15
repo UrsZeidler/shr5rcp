@@ -1007,29 +1007,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected ModuleCharacterChangeItemProvider moduleCharacterChangeItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleCharacterChange}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createModuleCharacterChangeAdapter() {
-        if (moduleCharacterChangeItemProvider == null) {
-            moduleCharacterChangeItemProvider = new ModuleCharacterChangeItemProvider(this);
-        }
-
-        return moduleCharacterChangeItemProvider;
-    }
-
-    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1050,6 +1027,98 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         }
 
         return moduleSkillChangeItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleTeachableChangeItemProvider moduleTeachableChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleTeachableChangeAdapter() {
+        if (moduleTeachableChangeItemProvider == null) {
+            moduleTeachableChangeItemProvider = new ModuleTeachableChangeItemProvider(this);
+        }
+
+        return moduleTeachableChangeItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleAttributeChangeItemProvider moduleAttributeChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleAttributeChangeAdapter() {
+        if (moduleAttributeChangeItemProvider == null) {
+            moduleAttributeChangeItemProvider = new ModuleAttributeChangeItemProvider(this);
+        }
+
+        return moduleAttributeChangeItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleFeatureChangeItemProvider moduleFeatureChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleFeatureChangeAdapter() {
+        if (moduleFeatureChangeItemProvider == null) {
+            moduleFeatureChangeItemProvider = new ModuleFeatureChangeItemProvider(this);
+        }
+
+        return moduleFeatureChangeItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ModuleSkillGroupChangeItemProvider moduleSkillGroupChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createModuleSkillGroupChangeAdapter() {
+        if (moduleSkillGroupChangeItemProvider == null) {
+            moduleSkillGroupChangeItemProvider = new ModuleSkillGroupChangeItemProvider(this);
+        }
+
+        return moduleSkillGroupChangeItemProvider;
     }
 
     /**
@@ -1189,8 +1258,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (lifeModulesGeneratorItemProvider != null) lifeModulesGeneratorItemProvider.dispose();
         if (lifeModulesSystemItemProvider != null) lifeModulesSystemItemProvider.dispose();
         if (lifeModuleItemProvider != null) lifeModuleItemProvider.dispose();
-        if (moduleCharacterChangeItemProvider != null) moduleCharacterChangeItemProvider.dispose();
         if (moduleSkillChangeItemProvider != null) moduleSkillChangeItemProvider.dispose();
+        if (moduleTeachableChangeItemProvider != null) moduleTeachableChangeItemProvider.dispose();
+        if (moduleAttributeChangeItemProvider != null) moduleAttributeChangeItemProvider.dispose();
+        if (moduleFeatureChangeItemProvider != null) moduleFeatureChangeItemProvider.dispose();
+        if (moduleSkillGroupChangeItemProvider != null) moduleSkillGroupChangeItemProvider.dispose();
     }
 
 	/**
@@ -1433,12 +1505,27 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createModuleCharacterChange()));
+                         Shr5managementFactory.eINSTANCE.createModuleSkillChange()));
 
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createModuleSkillChange()));
+                         Shr5managementFactory.eINSTANCE.createModuleTeachableChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createModuleAttributeChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createModuleFeatureChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createModuleSkillGroupChange()));
 
                 return null;
             }

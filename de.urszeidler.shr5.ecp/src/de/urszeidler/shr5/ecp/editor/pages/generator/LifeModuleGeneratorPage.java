@@ -4,8 +4,10 @@
 package de.urszeidler.shr5.ecp.editor.pages.generator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -15,9 +17,10 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
@@ -44,12 +47,17 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
-import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
 
+import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -58,9 +66,12 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
 import de.urszeidler.eclipse.shr5Management.ModuleChange;
-import de.urszeidler.eclipse.shr5Management.ModuleCharacterChange;
+import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -68,6 +79,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 
@@ -369,69 +381,150 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         for (LifeModule lm : object.getRealLife()) {
             list.addAll(lm.getCharacterChanges());
         }
-        ImmutableList<Changes> immutableList = FluentIterable.from(list).filter(ModuleCharacterChange.class)
-                .transform(new Function<ModuleCharacterChange, Changes>() {
+        FluentIterable<ModuleAttributeChange> attributes = FluentIterable.from(list).filter(ModuleAttributeChange.class);
+        FluentIterable<ModuleTeachableChange> teachable = FluentIterable.from(list).filter(ModuleTeachableChange.class);
+        FluentIterable<ModuleFeatureChange> featueChanges = FluentIterable.from(list).filter(ModuleFeatureChange.class);
+        FluentIterable<ModuleSkillGroupChange> skillGroups = FluentIterable.from(list).filter(ModuleSkillGroupChange.class);
+        FluentIterable<ModuleSkillChange> skills = FluentIterable.from(list).filter(ModuleSkillChange.class);
 
-                    @Override
-                    public Changes apply(ModuleCharacterChange input) {
-                        Changes characterChange = input.getCharacterChange();
-                        return characterChange;
-                    }
-                }).toList();
-        for (Changes c : immutableList) {
-            Changes changes = EcoreUtil.copy(c);
-            managedCharacter.getChanges().add(changes);
-            if (changes instanceof AttributeChange) {
-                AttributeChange ac = (AttributeChange)changes;
-                try {
-                    Integer eGet = (Integer)managedCharacter.getPersona().eGet(ac.getAttibute());
-                    ac.setFrom(eGet);
-                    ac.setTo(eGet + ac.getTo());
-                    ac.applyChanges();
-
-                } catch (Exception e) {
-                }
-            } else if (changes instanceof PersonaChange) {
-                PersonaChange pc = (PersonaChange)changes;
-                pc.applyChanges();
-//                pc.setDateApplied(null);
+        createAttributes(managedCharacter, attributes);
+        createSkillGroups(managedCharacter, skillGroups);
+        createSkills(managedCharacter, skills);
+        createTachables(managedCharacter, teachable);
+        // features
+        for (ModuleFeatureChange mfc : featueChanges) {
+            try {
+                managedCharacter.eSet(mfc.getFeature(), mfc.getValue());
+            } catch (Exception e) {
             }
-            changes.setDateApplied(null);
-        }
-
-        ImmutableList<ModuleSkillChange> immutableList2 = FluentIterable.from(list).filter(ModuleSkillChange.class).toList();
-        for (ModuleSkillChange moduleSkillChange : immutableList2) {
-            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
-            managedCharacter.getChanges().add(personaChange);
-            int value = 0;
-            if (moduleSkillChange.getSkill() != null) {
-                PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(moduleSkillChange.getSkill().getFertigkeit(),
-                        managedCharacter.getPersona());
-                if (fertigkeit == null) {
-                    fertigkeit = EcoreUtil.copy(moduleSkillChange.getSkill());
-                    fertigkeit.setStufe(0);
-                }
-                personaChange.setChangeable(fertigkeit);
-                value = moduleSkillChange.getSkill().getStufe();
-            } else if (moduleSkillChange.getSkillgroup() != null) {
-                PersonaFertigkeitsGruppe findGruppe = ShadowrunTools.findGruppe(moduleSkillChange.getSkillgroup().getGruppe(),
-                        managedCharacter.getPersona());
-                if (findGruppe == null) {
-                    findGruppe = EcoreUtil.copy(moduleSkillChange.getSkillgroup());
-                    findGruppe.setStufe(0);
-                }
-                personaChange.setChangeable(findGruppe);
-                value = moduleSkillChange.getSkillgroup().getStufe();
-            }
-            personaChange.setTo(personaChange.getFrom() + value);
-            personaChange.applyChanges();
-            personaChange.setDateApplied(null);
         }
 
         addPersonaPage(object.getCharacter());
-        // createOptionWidgets();
         validateChange();
+    }
 
+    private void createTachables(ManagedCharacter managedCharacter, FluentIterable<ModuleTeachableChange> teachable) {
+        for (ModuleTeachableChange mtc : teachable) {
+            Erlernbar teachable2 = mtc.getTeachable();
+            if (teachable2 instanceof Spezialisierung) {
+                Spezialisierung s = (Spezialisierung)teachable2;
+
+            } else if (teachable2 instanceof PersonaEigenschaft) {
+                PersonaEigenschaft pe = (PersonaEigenschaft)teachable2;
+                EObject withParentId = ShrReferenceManager.copyWithParentId(pe);
+                PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+                managedCharacter.getChanges().add(personaChange);
+                personaChange.setChangeable((Erlernbar)withParentId);
+                personaChange.setTo(1);
+
+                personaChange.applyChanges();
+                personaChange.setDateApplied(null);
+            }
+        }
+    }
+
+    /**
+     * @param managedCharacter
+     * @param skills
+     */
+    private void createSkills(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillChange> skills) {
+        HashMap<Fertigkeit, Integer> hashMap2 = new HashMap<Fertigkeit, Integer>();
+        for (ModuleSkillChange msc : skills) {
+            Fertigkeit skill = msc.getSkill();
+            Integer value = hashMap2.get(skill);
+            if (value == null) {
+                value = 0;
+                hashMap2.put(skill, msc.getGrade());
+            } else {
+                hashMap2.put(skill, value + msc.getGrade());
+            }
+        }
+        Set<Entry<Fertigkeit, Integer>> entrySet2 = hashMap2.entrySet();
+        for (Entry<Fertigkeit, Integer> entry : entrySet2) {
+            if(entry.getKey()==null)
+                continue;
+                
+            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+
+            PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(entry.getKey(), managedCharacter.getPersona());
+            if (fertigkeit == null) {
+                fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+                fertigkeit.setFertigkeit(entry.getKey());
+                fertigkeit.setStufe(0);
+            }
+            managedCharacter.getChanges().add(personaChange);
+            personaChange.setChangeable(fertigkeit);
+            int min = Math.max(ShadowrunTools.findFertigkeitValue(entry.getKey(), managedCharacter.getPersona()),0);
+            personaChange.setTo(min  + entry.getValue());
+
+            personaChange.applyChanges();
+            personaChange.setDateApplied(null);
+        }
+    }
+
+    /**
+     * @param managedCharacter
+     * @param skills
+     */
+    private void createSkillGroups(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillGroupChange> skills) {
+        HashMap<FertigkeitsGruppe, Integer> hashMap2 = new HashMap<FertigkeitsGruppe, Integer>();
+        for (ModuleSkillGroupChange msc : skills) {
+            FertigkeitsGruppe skill = msc.getSkillGroup();
+            Integer value = hashMap2.get(skill);
+            if (value == null) {
+                value = 0;
+                hashMap2.put(skill, msc.getGrade());
+            } else {
+                hashMap2.put(skill, value + msc.getGrade());
+            }
+        }
+        Set<Entry<FertigkeitsGruppe, Integer>> entrySet2 = hashMap2.entrySet();
+        for (Entry<FertigkeitsGruppe, Integer> entry : entrySet2) {
+            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+
+            PersonaFertigkeitsGruppe fertigkeit = ShadowrunTools.findGruppe(entry.getKey(), managedCharacter.getPersona());
+            if (fertigkeit == null) {
+                fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+                fertigkeit.setGruppe(entry.getKey());
+                fertigkeit.setStufe(0);
+            }
+            managedCharacter.getChanges().add(personaChange);
+            personaChange.setChangeable(fertigkeit);
+            personaChange.setTo(fertigkeit.getStufe() + entry.getValue());
+
+            personaChange.applyChanges();
+            personaChange.setDateApplied(null);
+        }
+    }
+
+    /**
+     * @param managedCharacter
+     * @param attributes
+     */
+    private void createAttributes(ManagedCharacter managedCharacter, FluentIterable<ModuleAttributeChange> attributes) {
+        // Attributes
+        HashMap<EAttribute, Integer> hashMap = new HashMap<EAttribute, Integer>();
+        for (ModuleAttributeChange mac : attributes) {
+            EAttribute attribute = mac.getAttribute();
+            Integer value = hashMap.get(attribute);
+            if (value == null) {
+                value = 0;
+                hashMap.put(attribute, mac.getGrade());
+            } else {
+                hashMap.put(attribute, value + mac.getGrade());
+            }
+        }
+        Set<Entry<EAttribute, Integer>> entrySet = hashMap.entrySet();
+        for (Entry<EAttribute, Integer> entry : entrySet) {
+            AttributeChange change = Shr5managementFactory.eINSTANCE.createAttributeChange();
+            change.setAttibute(entry.getKey());
+            managedCharacter.getChanges().add(change);
+            Integer eGet = (Integer)managedCharacter.getPersona().eGet(change.getAttibute());
+            change.setFrom(eGet);
+            change.setTo(eGet + entry.getValue());
+            change.applyChanges();
+            change.setDateApplied(null);
+        }
     }
 
     /**

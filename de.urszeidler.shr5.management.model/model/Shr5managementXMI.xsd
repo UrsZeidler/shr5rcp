@@ -1069,26 +1069,94 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
   </xsd:complexType>
   <xsd:element name="ModuleChange" type="shr5mngt:ModuleChange"/>
-  <xsd:complexType name="ModuleCharacterChange">
-    <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ModuleChange">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="characterChange" type="shr5mngt:Changes"/>
-        </xsd:choice>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="ModuleCharacterChange" type="shr5mngt:ModuleCharacterChange"/>
   <xsd:complexType name="ModuleSkillChange">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:ModuleChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="skillgroup" type="shr5:PersonaFertigkeitsGruppe"/>
-          <xsd:element name="skill" type="shr5:PersonaFertigkeit"/>
-          <xsd:element name="specalism" type="shr5:Spezialisierung"/>
+          <xsd:element name="skill" type="shr5:Fertigkeit"/>
+          <xsd:element name="selectOne" type="shr5:Fertigkeit"/>
         </xsd:choice>
+        <xsd:attribute name="grade" type="xsd:int"/>
+        <xsd:attribute name="skill" type="xsd:string"/>
+        <xsd:attribute name="selectOne" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ModuleSkillChange" type="shr5mngt:ModuleSkillChange"/>
+  <xsd:complexType name="ModuleTeachableChange">
+    <xsd:annotation>
+      <xsd:documentation>Will be used for the quallities, specalism ...</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="teachable" type="shr5:Erlernbar"/>
+          <xsd:element name="selectOne" type="shr5:Erlernbar"/>
+        </xsd:choice>
+        <xsd:attribute name="grade" type="xsd:int"/>
+        <xsd:attribute name="teachable" type="xsd:string"/>
+        <xsd:attribute name="selectOne" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleTeachableChange" type="shr5mngt:ModuleTeachableChange">
+    <xsd:annotation>
+      <xsd:documentation>Will be used for the quallities, specalism ...</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ModuleAttributeChange">
+    <xsd:annotation>
+      <xsd:documentation>Define an attribute change.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="attribute" type="ecore:EAttribute"/>
+          <xsd:element name="selectOne" type="ecore:EAttribute"/>
+        </xsd:choice>
+        <xsd:attribute name="grade" type="xsd:int"/>
+        <xsd:attribute name="attribute" type="xsd:string"/>
+        <xsd:attribute name="selectOne" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleAttributeChange" type="shr5mngt:ModuleAttributeChange">
+    <xsd:annotation>
+      <xsd:documentation>Define an attribute change.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ModuleFeatureChange">
+    <xsd:annotation>
+      <xsd:documentation>Set a feature like native language to the given value.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="feature" type="ecore:EReference"/>
+          <xsd:element name="value" type="ecore:EObject"/>
+        </xsd:choice>
+        <xsd:attribute name="feature" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleFeatureChange" type="shr5mngt:ModuleFeatureChange">
+    <xsd:annotation>
+      <xsd:documentation>Set a feature like native language to the given value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ModuleSkillGroupChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skillGroup" type="shr5:FertigkeitsGruppe"/>
+          <xsd:element name="selectOne" type="shr5:FertigkeitsGruppe"/>
+        </xsd:choice>
+        <xsd:attribute name="grade" type="xsd:int"/>
+        <xsd:attribute name="skillGroup" type="xsd:string"/>
+        <xsd:attribute name="selectOne" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleSkillGroupChange" type="shr5mngt:ModuleSkillGroupChange"/>
 </xsd:schema>

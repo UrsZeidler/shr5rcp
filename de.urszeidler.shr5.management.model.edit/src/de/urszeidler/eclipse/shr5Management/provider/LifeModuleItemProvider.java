@@ -384,12 +384,27 @@ public class LifeModuleItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES,
-                 Shr5managementFactory.eINSTANCE.createModuleCharacterChange()));
+                 Shr5managementFactory.eINSTANCE.createModuleSkillChange()));
 
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES,
-                 Shr5managementFactory.eINSTANCE.createModuleSkillChange()));
+                 Shr5managementFactory.eINSTANCE.createModuleTeachableChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES,
+                 Shr5managementFactory.eINSTANCE.createModuleAttributeChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES,
+                 Shr5managementFactory.eINSTANCE.createModuleFeatureChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.LIFE_MODULE__CHARACTER_CHANGES,
+                 Shr5managementFactory.eINSTANCE.createModuleSkillGroupChange()));
     }
 
     /**
