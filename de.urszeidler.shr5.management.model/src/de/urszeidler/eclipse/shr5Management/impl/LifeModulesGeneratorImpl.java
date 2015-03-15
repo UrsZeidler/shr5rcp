@@ -5,19 +5,22 @@ package de.urszeidler.eclipse.shr5Management.impl;
 
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 import java.util.Collection;
+import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -375,4 +378,33 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
         return super.eIsSet(featureID);
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getKarmaSpend() {
+        if (getShr5Generator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
+                || getCharacter().getPersona() == null)
+            return 0;
+
+        int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
+        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
+        int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
+        if(getNationality()!=null)
+            basicCost += getNationality().getKarmaCost();
+        if(getFormativeYears()!=null)
+            basicCost+= getFormativeYears().getKarmaCost();
+        if(getTeenYears()!=null)
+            basicCost+= getTeenYears().getKarmaCost();
+        if(getFurtherEducation()!=null)
+            basicCost += getFurtherEducation().getKarmaCost();
+        for (LifeModule lm : getRealLife()) {
+            basicCost += lm.getKarmaCost();
+        }
+        return Math.abs(karmaSpend) + basicCost + connectionsSpend + getKarmaToResource();
+    }
+
+     
 } //LifeModulesGeneratorImpl

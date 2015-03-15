@@ -544,20 +544,20 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
-                return super.caseShr5KarmaGenerator(object);
+                return null;
             }
 
             @Override
             public Object caseLifeModulesGenerator(LifeModulesGenerator object) {
                 try {
-                    addPage(new LifeModuleGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_Karama_Generator, object, editingDomain,
+                    addPage(new LifeModuleGeneratorPage(ShadowrunEditor.this, EMPTY, "Life module generator", object, editingDomain,
                             manager));
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
                             .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
-                return null;
+                return object;
             }
             
             @Override

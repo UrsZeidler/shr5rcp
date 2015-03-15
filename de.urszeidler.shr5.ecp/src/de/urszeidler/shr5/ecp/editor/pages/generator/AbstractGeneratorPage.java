@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -209,6 +210,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
         object.setCharacter(null);
         object.setState(GeneratorState.NEW);
+        EcoreUtil.delete(character);
         removePages();
         validateChange();
     }

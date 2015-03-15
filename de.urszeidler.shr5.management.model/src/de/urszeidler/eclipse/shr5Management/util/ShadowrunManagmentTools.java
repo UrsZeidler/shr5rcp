@@ -80,19 +80,18 @@ public class ShadowrunManagmentTools {
         AbstraktPersona persona = managedCharacter.getPersona();
         if (persona == null)
             return 0;
-        
+
         int sum = 0;
         if (persona instanceof KiAdept) {
             KiAdept ka = (KiAdept)persona;
             EList<KiKraft> kikraft = ka.getKikraft();
             for (KiKraft kraft : kikraft) {
                 sum = sum + kraft.getKraftpunkte();
-            }            
+            }
         }
         return sum;
     }
 
-    
     /**
      * Finds the first credstick in the list.
      * 
@@ -219,10 +218,12 @@ public class ShadowrunManagmentTools {
             if (!change.eClass().equals(Shr5managementPackage.Literals.KARMA_GAINT)) {
                 if (change.isChangeApplied()) {
                     if (managedCharacter.getGeneratorSrc() != null) {
-                        if (managedCharacter.getGeneratorSrc().getState() == GeneratorState.COMMITED && change.getDate() != null)
+                        if (managedCharacter.getGeneratorSrc().getState() == GeneratorState.COMMITED && change.getDate() != null
+                                && change.getDateApplied() != null)
                             karmaGaint = karmaGaint + change.getKarmaCost();
                     } else
-                        karmaGaint = karmaGaint + change.getKarmaCost();
+                        if(change.getDateApplied() != null)
+                            karmaGaint = karmaGaint + change.getKarmaCost();
                 }
             }
         }
@@ -974,7 +975,6 @@ public class ShadowrunManagmentTools {
             }
         };
     }
-
 
     public static Predicate<? super LifeModule> moduleTypePredicate(final LifeModuleType type) {
         return new Predicate<LifeModule>() {
