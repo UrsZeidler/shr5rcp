@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -47,8 +48,8 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
+import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
-import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -61,7 +62,6 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
-import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
@@ -78,7 +78,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
@@ -381,11 +383,17 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         for (LifeModule lm : object.getRealLife()) {
             list.addAll(lm.getCharacterChanges());
         }
-        FluentIterable<ModuleAttributeChange> attributes = FluentIterable.from(list).filter(ModuleAttributeChange.class);
-        FluentIterable<ModuleTeachableChange> teachable = FluentIterable.from(list).filter(ModuleTeachableChange.class);
-        FluentIterable<ModuleFeatureChange> featueChanges = FluentIterable.from(list).filter(ModuleFeatureChange.class);
-        FluentIterable<ModuleSkillGroupChange> skillGroups = FluentIterable.from(list).filter(ModuleSkillGroupChange.class);
-        FluentIterable<ModuleSkillChange> skills = FluentIterable.from(list).filter(ModuleSkillChange.class);
+        FluentIterable<ModuleChange> transform = FluentIterable.from(list).transform(new Function<ModuleChange, ModuleChange>() {
+            @Override
+            public ModuleChange apply(ModuleChange input) {
+                return EcoreUtil.copy(input);
+            }
+        });
+        FluentIterable<ModuleAttributeChange> attributes = transform.filter(ModuleAttributeChange.class);
+        FluentIterable<ModuleTeachableChange> teachable = transform.filter(ModuleTeachableChange.class);
+        FluentIterable<ModuleFeatureChange> featueChanges = transform.filter(ModuleFeatureChange.class);
+        FluentIterable<ModuleSkillGroupChange> skillGroups = transform.filter(ModuleSkillGroupChange.class);
+        FluentIterable<ModuleSkillChange> skills = transform.filter(ModuleSkillChange.class);
 
         createAttributes(managedCharacter, attributes);
         createSkillGroups(managedCharacter, skillGroups);
@@ -406,8 +414,11 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
     private void createTachables(ManagedCharacter managedCharacter, FluentIterable<ModuleTeachableChange> teachable) {
         for (ModuleTeachableChange mtc : teachable) {
             Erlernbar teachable2 = mtc.getTeachable();
+            if (teachable2 == null && !mtc.getSelectOne().isEmpty()) {
+                displayChooseDialog(mtc);
+            }
             if (teachable2 instanceof Spezialisierung) {
-                Spezialisierung s = (Spezialisierung)teachable2;
+//                Spezialisierung s = (Spezialisierung)teachable2;
 
             } else if (teachable2 instanceof PersonaEigenschaft) {
                 PersonaEigenschaft pe = (PersonaEigenschaft)teachable2;
@@ -424,10 +435,49 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
     }
 
     /**
+     * Displayes a choose dialog to fill in the objects not defined.
+     * 
+     * @param mtc
+     */
+    private void displayChooseDialog(ModuleChange mc) {
+        if (mc instanceof ModuleAttributeChange) {
+            ModuleAttributeChange ma = (ModuleAttributeChange)mc;
+            OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()));
+            ownChooseDialog.setLabelProvider(labelprovider);
+            if (ownChooseDialog.open() == Dialog.OK) {
+                Object[] result = ownChooseDialog.getResult();
+                ma.setAttribute((EAttribute)result[0]);
+            }
+        } else if (mc instanceof ModuleSkillChange) {
+            ModuleSkillChange ma = (ModuleSkillChange)mc;
+            OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()),"Select a skill","Select a skill 1");
+            ownChooseDialog.setLabelProvider(labelprovider);
+            if (ownChooseDialog.open() == Dialog.OK) {
+                Object[] result = ownChooseDialog.getResult();
+                ma.setSkill((Fertigkeit)result[0]);
+            }
+        }else if (mc instanceof ModuleSkillGroupChange) {
+            ModuleSkillGroupChange ma = (ModuleSkillGroupChange)mc;
+            OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()));
+            ownChooseDialog.setLabelProvider(labelprovider);
+            if (ownChooseDialog.open() == Dialog.OK) {
+                Object[] result = ownChooseDialog.getResult();
+                ma.setSkillGroup((FertigkeitsGruppe)result[0]);
+            }
+        }
+
+    }
+
+    /**
      * @param managedCharacter
      * @param skills
      */
     private void createSkills(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillChange> skills) {
+        for (ModuleSkillChange moduleSkillChange : skills) {
+            if (moduleSkillChange.getSkill() == null && !moduleSkillChange.getSelectOne().isEmpty()) 
+                displayChooseDialog(moduleSkillChange);
+        }
+        
         HashMap<Fertigkeit, Integer> hashMap2 = new HashMap<Fertigkeit, Integer>();
         for (ModuleSkillChange msc : skills) {
             Fertigkeit skill = msc.getSkill();
@@ -441,9 +491,9 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         }
         Set<Entry<Fertigkeit, Integer>> entrySet2 = hashMap2.entrySet();
         for (Entry<Fertigkeit, Integer> entry : entrySet2) {
-            if(entry.getKey()==null)
+            if (entry.getKey() == null)
                 continue;
-                
+
             PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
 
             PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(entry.getKey(), managedCharacter.getPersona());
@@ -454,8 +504,8 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             }
             managedCharacter.getChanges().add(personaChange);
             personaChange.setChangeable(fertigkeit);
-            int min = Math.max(ShadowrunTools.findFertigkeitValue(entry.getKey(), managedCharacter.getPersona()),0);
-            personaChange.setTo(min  + entry.getValue());
+            int min = Math.max(ShadowrunTools.findFertigkeitValue(entry.getKey(), managedCharacter.getPersona()), 0);
+            personaChange.setTo(min + entry.getValue());
 
             personaChange.applyChanges();
             personaChange.setDateApplied(null);
@@ -467,6 +517,11 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param skills
      */
     private void createSkillGroups(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillGroupChange> skills) {
+        for (ModuleSkillGroupChange moduleSkillGroupChange : skills) {
+            if (moduleSkillGroupChange.getSkillGroup() == null && !moduleSkillGroupChange.getSelectOne().isEmpty()) 
+                displayChooseDialog(moduleSkillGroupChange);
+        }
+        
         HashMap<FertigkeitsGruppe, Integer> hashMap2 = new HashMap<FertigkeitsGruppe, Integer>();
         for (ModuleSkillGroupChange msc : skills) {
             FertigkeitsGruppe skill = msc.getSkillGroup();
@@ -502,6 +557,11 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param attributes
      */
     private void createAttributes(ManagedCharacter managedCharacter, FluentIterable<ModuleAttributeChange> attributes) {
+        for (ModuleAttributeChange moduleAttributeChange : attributes) {
+            if (moduleAttributeChange.getAttribute() == null && !moduleAttributeChange.getSelectOne().isEmpty()) {
+                displayChooseDialog(moduleAttributeChange);
+            }
+        }
         // Attributes
         HashMap<EAttribute, Integer> hashMap = new HashMap<EAttribute, Integer>();
         for (ModuleAttributeChange mac : attributes) {
@@ -559,7 +619,8 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         // object.setState(GeneratorState.NEW);
         // else
 
-        if ((object.getCharacterConcept() == null || object.getMetaType() == null))
+        if ((object.getCharacterConcept() == null || object.getMetaType() == null || object.getNationality() == null
+                || object.getFormativeYears()==null) || object.getTeenYears()==null || object.getRealLife().isEmpty())
             object.setState(GeneratorState.NEW);
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)

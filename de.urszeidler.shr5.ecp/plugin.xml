@@ -280,6 +280,17 @@
       </wizard>
       <wizard
             category="de.urszeidler.shr5.ecp.character"
+            class="de.urszeidler.shr5.ecp.wizards.NewLifeModuleGeneratorWizard"
+            descriptionImage="images/LifeModuleGenerator-64.png"
+            icon="images/LifeModuleGenerator-16.png"
+            id="de.urszeidler.shr5.ecp.wizards.NewLifeModuleGeneratorWizard"
+            name="%lifemodule.wizard.name">
+         <description>
+%lifemodule.wizard.description
+         </description>
+      </wizard>
+      <wizard
+            category="de.urszeidler.shr5.ecp.character"
             class="de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard"
             descriptionImage="images/FreestyleGenerator64.png"
             icon="images/FreestyleGenerator16.gif"
