@@ -418,8 +418,16 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
                 displayChooseDialog(mtc);
             }
             if (teachable2 instanceof Spezialisierung) {
-//                Spezialisierung s = (Spezialisierung)teachable2;
+                Spezialisierung s = (Spezialisierung)teachable2;
+                EObject withParentId = ShrReferenceManager.copyWithParentId(s);
+                PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+                               
+                managedCharacter.getChanges().add(personaChange);
+                personaChange.setChangeable((Erlernbar)s);
+                personaChange.setTo(1);
 
+                personaChange.applyChanges();
+                personaChange.setDateApplied(null);
             } else if (teachable2 instanceof PersonaEigenschaft) {
                 PersonaEigenschaft pe = (PersonaEigenschaft)teachable2;
                 EObject withParentId = ShrReferenceManager.copyWithParentId(pe);

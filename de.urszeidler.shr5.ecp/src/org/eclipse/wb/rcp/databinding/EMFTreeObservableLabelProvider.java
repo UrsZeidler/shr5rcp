@@ -11,6 +11,7 @@
 package org.eclipse.wb.rcp.databinding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.set.IObservableSet;
@@ -35,28 +36,54 @@ public class EMFTreeObservableLabelProvider extends LabelProvider {
 	// Constructor
 	//
 	////////////////////////////////////////////////////////////////////////////
-	public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable,
-			EStructuralFeature textProperty,
-			EStructuralFeature imageProperty) {
-		m_observable = allElementsObservable;
-		m_textProperty = textProperty;
-		m_imageProperty = imageProperty;
-		List<EStructuralFeature> properties = new ArrayList<EStructuralFeature>();
-		if (m_textProperty != null) {
-			properties.add(m_textProperty);
-		}
-		if (m_imageProperty != null) {
-			properties.add(m_imageProperty);
-		}
-		m_listenerSupport = new EMFListenerSupport(properties) {
-			@Override
-			protected void fireLabelPropertyChanged(Object element) {
-				fireLabelProviderChanged(new LabelProviderChangedEvent(EMFTreeObservableLabelProvider.this,
-					element));
-			}
-		};
-		m_observable.addSetChangeListener(m_setListener);
-	}
+    public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable,
+            EStructuralFeature textProperty,
+            EStructuralFeature imageProperty) {
+        m_observable = allElementsObservable;
+        m_textProperty = textProperty;
+        m_imageProperty = imageProperty;
+        List<EStructuralFeature> properties = new ArrayList<EStructuralFeature>();
+        if (m_textProperty != null) {
+            properties.add(m_textProperty);
+        }
+        if (m_imageProperty != null) {
+            properties.add(m_imageProperty);
+        }
+        m_listenerSupport = new EMFListenerSupport(properties) {
+            @Override
+            protected void fireLabelPropertyChanged(Object element) {
+                fireLabelProviderChanged(new LabelProviderChangedEvent(EMFTreeObservableLabelProvider.this,
+                    element));
+            }
+        };
+        m_observable.addSetChangeListener(m_setListener);
+    }
+    public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable,            
+            EStructuralFeature imageProperty, List<EStructuralFeature> textProperty) {
+        m_observable = allElementsObservable;
+        if(!textProperty.isEmpty())
+            m_textProperty = textProperty.get(0);
+        else
+            m_textProperty = null;
+        
+        m_imageProperty = imageProperty;
+        List<EStructuralFeature> properties = new ArrayList<EStructuralFeature>();
+//        if (m_textProperty != null) {
+//            properties.add(m_textProperty);
+//        }
+        properties.addAll(textProperty);
+        if (m_imageProperty != null) {
+            properties.add(m_imageProperty);
+        }
+        m_listenerSupport = new EMFListenerSupport(properties) {
+            @Override
+            protected void fireLabelPropertyChanged(Object element) {
+                fireLabelProviderChanged(new LabelProviderChangedEvent(EMFTreeObservableLabelProvider.this,
+                    element));
+            }
+        };
+        m_observable.addSetChangeListener(m_setListener);
+    }
 	////////////////////////////////////////////////////////////////////////////
 	//
 	// LabelProvider

@@ -1,5 +1,8 @@
 package de.urszeidler.shr5.ecp.editor.widgets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.property.list.IListProperty;
 import org.eclipse.emf.databinding.EMFProperties;
@@ -38,6 +41,7 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
@@ -187,17 +191,28 @@ public class TreeTableWidget extends Composite {
         EStructuralFeature imageFeature = null;
 
         EClassifier eType = feature.getEType();
+        List<EStructuralFeature> featureList = new ArrayList<EStructuralFeature>();
         if (eType instanceof EClass) {
             EClass ec = (EClass)eType;
             if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.BESCHREIBBAR)) {
                 nameFeature = Shr5Package.Literals.BESCHREIBBAR__NAME;
                 imageFeature = Shr5Package.Literals.BESCHREIBBAR__IMAGE;
+                featureList.add(nameFeature);
             } else if (ec.equals(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT)) {
                 nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
-            }
+                featureList.add(nameFeature);
+            }else if (ec.equals(Shr5managementPackage.Literals.MODULE_CHANGE)) {
+                nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
+                featureList.add(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__GRADE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL);
+                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__GRADE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP);
+                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__GRADE);
+            }else
+                featureList.addAll(ec.getEAllStructuralFeatures());
         }
-
-        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), nameFeature, imageFeature) {
+        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(),  imageFeature, featureList) {
             @Override
             public String getText(Object element) {
                 return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
