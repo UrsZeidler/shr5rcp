@@ -946,6 +946,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="furtherEducation" eType="#//LifeModule"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realLife" lowerBound="1"
         upperBound="-1" eType="#//LifeModule"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleKarmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifeModulesSystem" eSuperTypes="#//Shr5System">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"

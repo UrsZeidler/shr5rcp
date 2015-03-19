@@ -460,6 +460,8 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/furtherEducation"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The selected life module.(more than one)"
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/realLife"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/moduleKarmaCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/age"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModulesSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesSystem/modules"/>
