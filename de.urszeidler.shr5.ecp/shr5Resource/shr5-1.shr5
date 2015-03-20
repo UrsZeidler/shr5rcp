@@ -1164,6 +1164,13 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_fJMoUMwBEeS7ouzqQX8MhQ" grade="3" skill="_-jRlgMqAEeSFptsUhk0bCw"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_kSHC4MwBEeS7ouzqQX8MhQ" grade="3" skill="_GWd1AMqBEeSFptsUhk0bCw"/>
         </modules>
+        <modules xmi:id="_nVmscMwqEeSWb_nK9CL72Q" name="COMMUNITY COLLEGE (Architecture)" karmaCost="55" moduleType="furtherEducation">
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_IwquAMwrEeSWb_nK9CL72Q" grade="1" skill="2f4c706f-5ac5-4774-8a45-3b4667989a20"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_RKW80MwrEeSWb_nK9CL72Q" teachable="_EMIBcznTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_nJMysMwrEeSWb_nK9CL72Q" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_PRN0cMwsEeSWb_nK9CL72Q" grade="1" skill="935621c5-d384-42f2-a740-1fa349fa85a1"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_p3Zo4MwsEeSWb_nK9CL72Q" grade="5" skill="_jzaGIMwsEeSWb_nK9CL72Q"/>
+        </modules>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
@@ -9374,6 +9381,7 @@
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_UNfBYMtAEeSNYKOZgflKBA" name="Academic Knowledge: [Corporation]">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_jzaGIMwsEeSWb_nK9CL72Q" name="Academic Knowledge: Buildings"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_END1lznTEeSe6_w6Jrbqxg" name="Definitions">
