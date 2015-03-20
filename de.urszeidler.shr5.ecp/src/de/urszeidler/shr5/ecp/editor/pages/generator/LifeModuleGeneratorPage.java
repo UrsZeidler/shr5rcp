@@ -419,7 +419,6 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             }
             if (teachable2 instanceof Spezialisierung) {
                 Spezialisierung s = (Spezialisierung)teachable2;
-                EObject withParentId = ShrReferenceManager.copyWithParentId(s);
                 PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
                                
                 managedCharacter.getChanges().add(personaChange);
