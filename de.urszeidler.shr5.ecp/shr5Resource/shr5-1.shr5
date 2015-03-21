@@ -1088,23 +1088,52 @@
         </priorities>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_AmO4sLL8EeS74JF_046f_w" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//LifeModulesGenerator"/>
-        <modules xmi:id="_L_F_MMl1EeSHR7BAWEdSOg" name="UCAS General" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+        <modules xmi:id="_SOF0wM_bEeSu9qVfM6-lMQ" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS General" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_SOF0wc_bEeSu9qVfM6-lMQ" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0ws_bEeSu9qVfM6-lMQ" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 5fc15c3f-7b1c-4b87-a469-ccefb7d60820"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0w8_bEeSu9qVfM6-lMQ" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0xM_bEeSu9qVfM6-lMQ" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0xc_bEeSu9qVfM6-lMQ" grade="1" skill="_qesuYM_aEeSu9qVfM6-lMQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_SOF0xs_bEeSu9qVfM6-lMQ" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0x8_bEeSu9qVfM6-lMQ" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_SOF0yM_bEeSu9qVfM6-lMQ" grade="2" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_SOF0yc_bEeSu9qVfM6-lMQ" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+        </modules>
+        <modules xmi:id="_L_F_MMl1EeSHR7BAWEdSOg" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS Canada" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
           <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_x52X4MslEeS52O-8wyvWzg" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
             <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
           </characterChanges>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_sFKxkMsnEeS52O-8wyvWzg" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 5fc15c3f-7b1c-4b87-a469-ccefb7d60820"/>
-          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_IjZFsMsoEeS52O-8wyvWzg" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
-          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_NWqAYMsoEeS52O-8wyvWzg" grade="1">
-            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
-          </characterChanges>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_W3WOUMs6EeSWzIpKrpodbg" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_uO_YQMs8EeSh-ajleVIuWA" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
-          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_xNd7kMs8EeSh-ajleVIuWA" grade="1"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_xNd7kMs8EeSh-ajleVIuWA" grade="1" skill="_qesuYM_aEeSu9qVfM6-lMQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_NWqAYMsoEeS52O-8wyvWzg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_yDa2sMs9EeSh-ajleVIuWA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
-          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="__h28UMs-EeSNYKOZgflKBA" grade="2" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd"/>
-          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_M-p4oMs_EeSNYKOZgflKBA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_IjZFsMsoEeS52O-8wyvWzg" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_dvbxAM_bEeSu9qVfM6-lMQ" grade="1" skill="f8037e7f-d48b-452b-8f66-2e0c36677fea"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_k3SkgM_bEeSu9qVfM6-lMQ" grade="1" skill="89ee1730-053a-400f-a13a-4fbadae015f0"/>
         </modules>
-        <modules xmi:id="_FJcEEMl3EeSHR7BAWEdSOg" name="ARCOLOGY LIVING" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears">
+        <modules xmi:id="_ifsWANASEeSAqv2o9Il5Fg" name="CAS General" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_ifsWAdASEeSAqv2o9Il5Fg" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWAtASEeSAqv2o9Il5Fg" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 __sCUYNASEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWA9ASEeSAqv2o9Il5Fg" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWBNASEeSAqv2o9Il5Fg" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWBdASEeSAqv2o9Il5Fg" grade="1" skill="_iS-6QNATEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_ifsWBtASEeSAqv2o9Il5Fg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWB9ASEeSAqv2o9Il5Fg" grade="2" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_ifsWCNASEeSAqv2o9Il5Fg" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+        </modules>
+        <modules xmi:id="_FJcEEMl3EeSHR7BAWEdSOg" name="ARCOLOGY LIVING" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_TkEtcMs_EeSNYKOZgflKBA" grade="1">
             <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
           </characterChanges>
@@ -1130,6 +1159,26 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_87R0QMtBEeSNYKOZgflKBA" grade="2" skill="_5InJ4MpPEeSzH78cIrFicQ"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_FTMhcMtCEeSNYKOZgflKBA" grade="2" skill="_BMp40MpQEeSzH78cIrFicQ"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_UGmEUMtCEeSNYKOZgflKBA" grade="1" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA"/>
+        </modules>
+        <modules xmi:id="_-0OV4NACEeSuYK6CpEIQGA" name="STREET KID" page="72" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_Ivu8wNADEeSuYK6CpEIQGA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_MdwtsNADEeSuYK6CpEIQGA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_Su_bMNADEeSuYK6CpEIQGA" grade="2" skillGroup="_EL0fcDnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V5Y6oNADEeSuYK6CpEIQGA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z9ykMNADEeSuYK6CpEIQGA" grade="1" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_cnCeYNADEeSuYK6CpEIQGA" skill="9de43fad-b365-4e73-bc06-91dd571b858a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_f5DBsNADEeSuYK6CpEIQGA" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jZzysNADEeSuYK6CpEIQGA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_mK-50NADEeSuYK6CpEIQGA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_rzHnANADEeSuYK6CpEIQGA" grade="1" skill="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_vlXwoNADEeSuYK6CpEIQGA" grade="1" skillGroup="_EMEXGDnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_0VNj4NADEeSuYK6CpEIQGA" grade="1" skill="_8ZPEsNADEeSuYK6CpEIQGA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_ozKAgNAEEeSuYK6CpEIQGA" teachable="25356bae-efcc-46c6-9c4f-66909b9b7233"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_sy5zkNAEEeSuYK6CpEIQGA" teachable="_7Dlq8NAEEeSuYK6CpEIQGA"/>
         </modules>
         <modules xmi:id="_wD_8gMpUEeSzH78cIrFicQ" name="COMMUNITY COLLEGE (Business)" page="72" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="55" moduleType="furtherEducation" time="2">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_FkZfwMv-EeS7ouzqQX8MhQ" grade="1">
@@ -9382,6 +9431,23 @@
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_jzaGIMwsEeSWb_nK9CL72Q" name="Academic Knowledge: Buildings"/>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_qesuYM_aEeSu9qVfM6-lMQ" name="Knowledge: UCAS" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_8ZPEsNADEeSuYK6CpEIQGA" name="Street Knowledge: [City]" page="72" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Sprachfertigkeit" xmi:id="__sCUYNASEeSAqv2o9Il5Fg" name="Yiddish">
+          <localizations xmi:id="__sCUYdASEeSAqv2o9Il5Fg" local="de" name="Yiddish"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+          <spezialisierungen xmi:id="__sCUYtASEeSAqv2o9Il5Fg" name="Read/Write"/>
+          <spezialisierungen xmi:id="__sCUY9ASEeSAqv2o9Il5Fg" name="Speak"/>
+          <spezialisierungen xmi:id="__sCUZNASEeSAqv2o9Il5Fg" name="Dialect"/>
+          <spezialisierungen xmi:id="__sCUZdASEeSAqv2o9Il5Fg" name="Lingo"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_iS-6QNATEeSAqv2o9Il5Fg" name="Knowledge: CAS" page="72" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_END1lznTEeSe6_w6Jrbqxg" name="Definitions">
@@ -10332,6 +10398,7 @@
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="add68865-7932-49bb-9f71-310665c464af" name="Signature" page="159" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="-10"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="a7390f3e-6909-4cc4-85b9-ff9b283cf746" name="Vendetta" page="159" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="-7"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="b619f590-c660-4276-b5f2-4b3bfd8ff9fd" name="Wanted" page="159" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="-10"/>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="_7Dlq8NAEEeSuYK6CpEIQGA" name="Enemy" karmaKosten="-10"/>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ENhIkznTEeSe6_w6Jrbqxg" name="lifestyles">
         <entries xsi:type="shr5:Lifestyle" xmi:id="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" name="Street" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="0" faelligkeitsIntervall="1" unit="month">
@@ -22179,6 +22246,7 @@
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_Bz1VYN0CEeOvVYoRsPZlnA" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:20:05.723+0100" from="1" to="2" changeable="_BzaepN0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_zoXVALO0EeSWXbZxnJbnlw" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-13T20:16:46.861+0100" from="2" to="3" changeable="_BzZ3lt0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_40LisLPtEeS1oJwC38P4RQ" date="2075-06-03T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-14T03:05:38.522+0100" karma="7"/>
+        <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_0rFvEM_IEeSkF8bO28Q_sw" date="2075-06-15T17:36:00.000+0200" changeApplied="true" dateApplied="2015-03-21T13:50:50.203+0100" karma="7"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_Bz1VY90CEeOvVYoRsPZlnA" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X9DnTEeSe6_w6Jrbqxg" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" reichweite="1"/>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_JoEq4FDLEeSjN8rIya5QCA" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
           <localizations xmi:id="_JoEq4VDLEeSjN8rIya5QCA" local="de" name="Ares Predator V"/>
@@ -22208,7 +22276,7 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_lswdoVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_evVfwK8WEeS3Wp9Q37-3Qw" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver-1" maxValue="20000">
+        <inventar xsi:type="shr5:Credstick" xmi:id="_evVfwK8WEeS3Wp9Q37-3Qw" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver -1" maxValue="20000">
           <transactionlog xmi:id="_y4WccK8WEeS3Wp9Q37-3Qw" amount="470" date="2075-03-15T00:00:00.000+0100" description="Übertrag"/>
           <transactionlog xmi:id="_4lj24K8WEeS3Wp9Q37-3Qw" amount="10000" date="2075-03-16T00:00:00.000+0100" description="Einnahmen"/>
           <transactionlog xmi:id="_NR3G0K8XEeS3Wp9Q37-3Qw" amount="-20" date="2075-03-20T00:00:00.000+0100" description="Auslagen"/>
@@ -22232,7 +22300,7 @@
           <transactionlog xsi:type="shr5:ShoppingTransaction" xmi:id="_e0vlAMnBEeSjieQ47MGe8A" amount="-125" date="2075-06-04T21:05:35.585+0200" description="Some stuff." items="_q19FYMnHEeSjieQ47MGe8A _q2X8IMnHEeSjieQ47MGe8A _q2yy4MnHEeSjieQ47MGe8A"/>
           <transactionlog xmi:id="_XRtWwMnUEeSjieQ47MGe8A" amount="-100" date="2075-06-03T21:05:35.585+0200" description="trinken mit nowak"/>
         </inventar>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold-1" maxValue="100000">
+        <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold -1" maxValue="100000">
           <transactionlog xmi:id="_jphFUK8XEeS3Wp9Q37-3Qw" amount="12400" date="9999-03-20T00:00:00.000+0100" description="Einnahmen"/>
           <transactionlog xmi:id="_pvqD4K9pEeS769kjC9ygTA" amount="5000" date="2075-03-23T00:00:00.000+0100" description="Vorschuss"/>
           <transactionlog xmi:id="_QP7EsK9qEeS769kjC9ygTA" amount="20000" date="2075-03-29T00:00:00.000+0100" description="Auszahlung"/>
@@ -22292,8 +22360,11 @@
         <inventar xsi:type="shr5:Munition" xmi:id="_NMtTILPPEeSnAumGkho7aw" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_NMtTIbPPEeSnAumGkho7aw" local="de" name="Munition: Gelgeschosse"/>
         </inventar>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_OIWH4MJoEeSTho7TSrzjng" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" name="Gold-2" maxValue="100000"/>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_OIhHAMJoEeSTho7TSrzjng" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver-2" maxValue="20000"/>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_OIWH4MJoEeSTho7TSrzjng" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" name="Gold -2" maxValue="100000">
+          <transactionlog xmi:id="_vZ9XMM_JEeSkF8bO28Q_sw" amount="20000" date="2075-06-15T17:36:00.000+0200" description="Bezahlung Job"/>
+          <transactionlog xmi:id="_1P7FAM_JEeSkF8bO28Q_sw" amount="10000" date="2075-06-15T17:36:00.000+0200" description="No harm Bonus"/>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_OIhHAMJoEeSTho7TSrzjng" parentId="_ELzRUTnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="20" name="Silver- 2" maxValue="20000"/>
         <inventar xsi:type="shr5:Kleidung" xmi:id="_ziYlUMibEeS72f6K4hRbHw" parentId="36a4cd30-c32c-44d0-847a-0c15fb51072a" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
           <localizations xmi:id="_ziYlUcibEeS72f6K4hRbHw" local="de" name="Panzerjacke"/>
         </inventar>
@@ -22338,7 +22409,8 @@
           <entries xmi:id="_AGUd8LPKEeSnAumGkho7aw" date="2057-06-03T02:00:00.000+0200" message="Wir treffen uns wieder.&#xA;bequatschen den Plan.&#xA;&#xA;Um 18:00 sind wir vor dem Supermarkt. Und warten.&#xA;23:10 kommt der erste, 23:15 der zweite Wagen, wir starten.  &#xA;"/>
           <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_-H8iYLPtEeS1oJwC38P4RQ" date="2075-06-03T21:05:35.585+0200" message="Karma Gained : 7" change="_40LisLPtEeS1oJwC38P4RQ"/>
           <entries xmi:id="_IzhZcMnVEeSjieQ47MGe8A" date="2075-06-12T04:00:00.000+0200" message="Wir fahren ins light and dark, nach dem sich Savatichi bei mir gemeldet hat.&#xA;Wir trefen Jane Bond, sie einen Job:&#xA;&#xA;&#xA;Extraktion aus einen Schloss,  eine Wellness Oase von Atztec. Jagschloss Sonnenhof.&#xA;Die Zielperson ist vom 14/15. am Ort. Svetlana Barthava.&#xA;Critter als abschreckung für die Wildschweine. An dem doppelzaun sind Drohnenschienen&#xA;&#xA;Wir kundschaften Astral aus."/>
-          <entries xmi:id="_QjTWUMnaEeSjieQ47MGe8A" date="2075-03-12T17:36:00.000+0100" message="Wir fahren zum Jagschloss Sonnenhof und kundschaften Astral aus.&#xA;Da sind Critter im Doppelzaun, vieleicht Höllenhunde (36), Geister bewohnen die  Umgebung.&#xA;&#xA;&#xA;"/>
+          <entries xmi:id="_QjTWUMnaEeSjieQ47MGe8A" date="2075-06-12T17:36:00.000+0200" message="Wir fahren zum Jagschloss Sonnenhof und kundschaften Astral aus.&#xA;Da sind Critter im Doppelzaun, vieleicht Höllenhunde (36), Geister bewohnen die  Umgebung.&#xA;&#xA;&#xA;"/>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_5vVFAM_IEeSkF8bO28Q_sw" date="2075-06-15T17:36:00.000+0200" message="Karma Gained : 7" change="_0rFvEM_IEeSkF8bO28Q_sw"/>
         </diary>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">

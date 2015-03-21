@@ -34,6 +34,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
@@ -50,6 +51,8 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.actions.DuplicateObjectAction;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -185,6 +188,18 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     }
 
     /**
+     * Add some basic actions to the toolbar.
+     * 
+     * @param toolbarManager
+     * @param object
+     * @param shell 
+     */
+    protected void addFillToolbar(final IToolBarManager toolbarManager, final EObject object, Shell shell) {
+        toolbarManager.add(new ExportObjectAction(shell, object));
+        toolbarManager.add(new DuplicateObjectAction(object));
+    }
+
+    /**
      * Adds a validation button when there are error and displays them as tooltip.
      * 
      * @param toolbarManager
@@ -210,7 +225,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
                         final String message = Joiner.on("\n").join(
                                 FluentIterable.from(validate.getChildren()).transform(ShadowrunEditingTools.diagnosticToStringTransformer()));
                         this.setToolTipText(message);
-                    }else{
+                    } else {
                         toolbarManager.remove("validation");
                     }
                 }
@@ -232,11 +247,11 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
 
     /**
      * @param managedForm
-     * @return 
+     * @return
      */
     protected EmfFormBuilder createConfiguredFormBuilder(IManagedForm managedForm) {
-        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
-                .getInstance().getLabelProvider(), getEditingDomain());
+        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(managedForm.getToolkit(), AdapterFactoryUtil.getInstance().getItemDelegator(),
+                AdapterFactoryUtil.getInstance().getLabelProvider(), getEditingDomain());
         emfFormBuilder.setManager(mananger);
         emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
         // emfFormBuilder.setBorderStyle(SWT.NONE);
@@ -260,6 +275,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     }
 
     protected abstract EditingDomain getEditingDomain();
+
+    // protected abstract A getObject();
 
     /**
      * @param grpWert

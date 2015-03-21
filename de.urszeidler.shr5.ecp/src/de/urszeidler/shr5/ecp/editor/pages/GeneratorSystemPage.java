@@ -79,7 +79,7 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
-        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        addFillToolbar(form.getToolBarManager(), object, form.getShell());
         form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));

@@ -89,6 +89,8 @@ public class SubstancePage extends AbstractShr5Page<Substance> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        addFillToolbar(form.getToolBarManager(), object, form.getShell());
+        form.getToolBarManager().update(true);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);

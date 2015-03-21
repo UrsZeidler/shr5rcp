@@ -76,6 +76,8 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        addFillToolbar(form.getToolBarManager(), object, form.getShell());
+        form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 

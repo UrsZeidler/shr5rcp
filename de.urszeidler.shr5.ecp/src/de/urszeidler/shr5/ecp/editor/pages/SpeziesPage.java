@@ -82,6 +82,8 @@ public class SpeziesPage extends AbstractShr5Page<Spezies> {
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
+        addFillToolbar(form.getToolBarManager(), object, form.getShell());
+        form.getToolBarManager().update(true);
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
