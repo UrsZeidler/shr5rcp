@@ -37,6 +37,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getStartResources <em>Start Resources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl#getChoiseKarmaCost <em>Choise Karma Cost</em>}</li>
  * </ul>
  * </p>
  *
@@ -144,6 +145,16 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     protected int startResources = START_RESOURCES_EDEFAULT;
 
     /**
+     * The default value of the '{@link #getChoiseKarmaCost() <em>Choise Karma Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getChoiseKarmaCost()
+     * @generated
+     * @ordered
+     */
+    protected static final int CHOISE_KARMA_COST_EDEFAULT = 0;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -191,13 +202,15 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setMetaType(MetaType newMetaType) {
         MetaType oldMetaType = metaType;
         metaType = newMetaType;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__META_TYPE, oldMetaType, metaType));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, oldMetaType, metaType));
+        }
     }
 
     /**
@@ -234,8 +247,10 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     public void setCharacterConcept(SpecialType newCharacterConcept) {
         SpecialType oldCharacterConcept = characterConcept;
         characterConcept = newCharacterConcept;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, oldCharacterConcept, characterConcept));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, oldCharacterConcept, characterConcept));
+            }
     }
 
     /**
@@ -279,7 +294,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
-        int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
+        int basicCost = getChoiseKarmaCost();//getMetaType().getCost() + getCharacterConcept().getCost();
         return Math.abs(karmaSpend) + basicCost + connectionsSpend + getKarmaToResource();
     }
 
@@ -338,6 +353,20 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         startResources = newStartResources;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES, oldStartResources, startResources));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getChoiseKarmaCost() {
+        int basicCost = 0;//
+        if(getMetaType()!=null)
+            basicCost += getMetaType().getCost();
+        if(getCharacterConcept()!=null)
+            basicCost += getCharacterConcept().getCost();
+        return basicCost;
     }
 
     /**
@@ -414,6 +443,8 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
                 return getStartKarma();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES:
                 return getStartResources();
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST:
+                return getChoiseKarmaCost();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -494,6 +525,8 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
                 return startKarma != START_KARMA_EDEFAULT;
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES:
                 return startResources != START_RESOURCES_EDEFAULT;
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST:
+                return getChoiseKarmaCost() != CHOISE_KARMA_COST_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

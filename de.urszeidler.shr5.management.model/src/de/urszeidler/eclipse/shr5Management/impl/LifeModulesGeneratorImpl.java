@@ -3,15 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.impl.CredstickImpl;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -478,13 +474,13 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
      * @generated not
      */
     public int getKarmaSpend() {
-        if (getShr5Generator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
+        if (getShr5Generator() == null || getCharacter() == null
                 || getCharacter().getPersona() == null)
             return 0;
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
-        int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
+        int basicCost = getChoiseKarmaCost();
         return Math.abs(karmaSpend) + basicCost+ getModuleKarmaCost() + connectionsSpend + getKarmaToResource();
     }
 

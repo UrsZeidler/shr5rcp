@@ -108,7 +108,7 @@ public class ModuleSkillChangeItemProvider extends ModuleTypeChangeItemProvider 
         final ModuleSkillChange msc = (ModuleSkillChange)object;
         final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         final String unset = getString("_UI_Unset_text");
-        String text = "";
+        String text = getString("_UI_ModuleSkillChange_type");
         int stufe = msc.getGrade();
         if (msc.getSkill() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkill());

@@ -2375,6 +2375,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getShr5KarmaGenerator_ChoiseKarmaCost() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(7);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EOperation getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map() {
         return shr5KarmaGeneratorEClass.getEOperations().get(0);
     }
@@ -3130,6 +3139,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
         createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__START_KARMA);
         createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__START_RESOURCES);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST);
         createEOperation(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP);
 
         quellenConstrainEClass = createEClass(QUELLEN_CONSTRAIN);
@@ -3768,6 +3778,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5KarmaGenerator_ResourceSpend(), ecorePackage.getEInt(), "resourceSpend", null, 0, 1, Shr5KarmaGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5KarmaGenerator_StartKarma(), ecorePackage.getEInt(), "startKarma", null, 0, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5KarmaGenerator_StartResources(), ecorePackage.getEInt(), "startResources", null, 0, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_ChoiseKarmaCost(), ecorePackage.getEInt(), "choiseKarmaCost", null, 0, 1, Shr5KarmaGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         op = initEOperation(getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllKarmaPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);

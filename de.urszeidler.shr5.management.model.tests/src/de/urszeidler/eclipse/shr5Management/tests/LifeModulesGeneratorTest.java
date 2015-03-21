@@ -16,11 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost() <em>Module Karma Cost</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getStartingAge() <em>Starting Age</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost() <em>Module Karma Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getStartingAge() <em>Starting Age</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
@@ -28,7 +27,6 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -39,7 +37,6 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
      * Constructs a new Life Modules Generator test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public LifeModulesGeneratorTest(String name) {
@@ -50,7 +47,6 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
      * Returns the fixture for this Life Modules Generator test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -84,7 +80,6 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

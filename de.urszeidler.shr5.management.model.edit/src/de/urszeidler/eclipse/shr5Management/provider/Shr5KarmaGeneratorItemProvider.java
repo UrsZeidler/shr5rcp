@@ -53,6 +53,7 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
             addResourceSpendPropertyDescriptor(object);
             addStartKarmaPropertyDescriptor(object);
             addStartResourcesPropertyDescriptor(object);
+            addChoiseKarmaCostPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -210,6 +211,28 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
     }
 
     /**
+     * This adds a property descriptor for the Choise Karma Cost feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addChoiseKarmaCostPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5KarmaGenerator_choiseKarmaCost_feature"),
+                 getString("_UI_Shr5KarmaGenerator_choiseKarmaCost_description"),
+                 Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5KarmaGenerator.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -251,6 +274,7 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__RESOURCE_SPEND:
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__START_KARMA:
             case Shr5managementPackage.SHR5_KARMA_GENERATOR__START_RESOURCES:
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

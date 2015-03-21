@@ -4458,13 +4458,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR__START_RESOURCES = SHR5_RULE_GENERATOR_FEATURE_COUNT + 6;
 
     /**
+     * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
+
+    /**
      * The number of structural features of the '<em>Shr5 Karma Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SHR5_KARMA_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
+    int SHR5_KARMA_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 8;
 
     /**
      * The operation id for the '<em>Has Spend All Points</em>' operation.
@@ -5589,6 +5598,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int LIFE_MODULES_GENERATOR__START_RESOURCES = SHR5_KARMA_GENERATOR__START_RESOURCES;
+
+    /**
+     * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__CHOISE_KARMA_COST = SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST;
 
     /**
      * The feature id for the '<em><b>Nationality</b></em>' reference.
@@ -8725,6 +8743,17 @@ public interface Shr5managementPackage extends EPackage {
     EAttribute getShr5KarmaGenerator_StartResources();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost <em>Choise Karma Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Choise Karma Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_ChoiseKarmaCost();
+
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11004,6 +11033,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_KARMA_GENERATOR__START_RESOURCES = eINSTANCE.getShr5KarmaGenerator_StartResources();
+
+        /**
+         * The meta object literal for the '<em><b>Choise Karma Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST = eINSTANCE.getShr5KarmaGenerator_ChoiseKarmaCost();
 
         /**
          * The meta object literal for the '<em><b>Has Spend All Karma Points</b></em>' operation.

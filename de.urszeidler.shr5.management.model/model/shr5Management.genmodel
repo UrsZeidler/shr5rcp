@@ -410,6 +410,8 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/resourceSpend"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startKarma"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startResources"/>
+      <genFeatures createChild="false" propertyDescription="The karma cost of the current selection."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/choiseKarmaCost"/>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/context"/>
@@ -432,13 +434,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterDiary/entries"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//DiaryEntry" labelFeature="#//shr5Management/DiaryEntry/message">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/date"/>
+      <genFeatures createChild="false" propertyDescription="The date of the entry."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/date"/>
       <genFeatures createChild="false" propertyDescription="The message of these diary entry."
           propertyMultiLine="true" ecoreFeature="ecore:EAttribute shr5Management.ecore#//DiaryEntry/message"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ContractPayment">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ContractPayment/contractToPay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ContractPayment/payed"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The contract to pay."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ContractPayment/contractToPay"/>
+      <genFeatures createChild="false" propertyDescription="A flag signaling that the transaction is complete."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ContractPayment/payed"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterChange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterChange/change"/>
@@ -460,16 +465,19 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/furtherEducation"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The selected life module.(more than one)"
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/realLife"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/moduleKarmaCost"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/startingAge"/>
+      <genFeatures createChild="false" propertyDescription="The karma sum of all selected modules."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/moduleKarmaCost"/>
+      <genFeatures createChild="false" propertyDescription="The character age based on the coosen modules."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModulesGenerator/startingAge"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModulesSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesSystem/modules"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModule">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/karmaCost"/>
+      <genFeatures createChild="false" propertyDescription="The karma cost of this module."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/karmaCost"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModule/characterChanges"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/moduleType"/>
+      <genFeatures createChild="false" propertyDescription="The kind of module." ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/moduleType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/time"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleChange"/>
@@ -483,7 +491,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/attribute"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleFeatureChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/feature"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The feature of the character to set."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/feature"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/value"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillGroupChange">
@@ -491,9 +500,11 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleTypeChange">
       <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//ModuleTypeChange/T"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleTypeChange/grade"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selected"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selectOne"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleTypeChange/grade"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected value, can be empty when the list is set."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selected"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="A list of possible values to choose from."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selectOne"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

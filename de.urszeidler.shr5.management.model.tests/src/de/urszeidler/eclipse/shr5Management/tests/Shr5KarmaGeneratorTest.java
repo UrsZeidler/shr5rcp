@@ -43,6 +43,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend() <em>Resource Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost() <em>Choise Karma Cost</em>}</li>
  * </ul>
  * </p>
  * <p>
@@ -251,6 +252,30 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is 100", 100, getFixture().getResourceSpend());
 
     }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost() <em>Choise Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost()
+     * @generated not
+     */
+    public void testGetChoiseKarmaCost() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(30);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getChoiseKarmaCost());
+
+        characterConcept.setCost(10);
+        metaType.setCost(10);
+        assertEquals("20 spend", 20, getFixture().getChoiseKarmaCost());
+      }
 
     /**
      * Tests the '

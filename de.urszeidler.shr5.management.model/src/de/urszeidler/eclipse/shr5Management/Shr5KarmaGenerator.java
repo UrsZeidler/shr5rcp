@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend <em>Resource Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartKarma <em>Start Karma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartResources <em>Start Resources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost <em>Choise Karma Cost</em>}</li>
  * </ul>
  * </p>
  *
@@ -199,6 +200,21 @@ public interface Shr5KarmaGenerator extends Shr5RuleGenerator {
      * @generated
      */
     void setStartResources(int value);
+
+    /**
+     * Returns the value of the '<em><b>Choise Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Choise Karma Cost</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Choise Karma Cost</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5KarmaGenerator_ChoiseKarmaCost()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getChoiseKarmaCost();
 
     /**
      * <!-- begin-user-doc -->

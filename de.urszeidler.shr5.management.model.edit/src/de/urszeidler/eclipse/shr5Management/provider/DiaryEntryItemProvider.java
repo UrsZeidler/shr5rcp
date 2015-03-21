@@ -78,7 +78,7 @@ public class DiaryEntryItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_DiaryEntry_date_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_DiaryEntry_date_feature", "_UI_DiaryEntry_type"),
+                 getString("_UI_DiaryEntry_date_description"),
                  Shr5managementPackage.Literals.DIARY_ENTRY__DATE,
                  true,
                  false,

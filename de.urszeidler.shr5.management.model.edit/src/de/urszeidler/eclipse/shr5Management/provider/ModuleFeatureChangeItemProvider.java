@@ -60,7 +60,7 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleFeatureChange_feature_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleFeatureChange_feature_feature", "_UI_ModuleFeatureChange_type"),
+                 getString("_UI_ModuleFeatureChange_feature_description"),
                  Shr5managementPackage.Literals.MODULE_FEATURE_CHANGE__FEATURE,
                  true,
                  false,

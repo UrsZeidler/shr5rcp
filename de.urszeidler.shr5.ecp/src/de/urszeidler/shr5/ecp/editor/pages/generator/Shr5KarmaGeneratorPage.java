@@ -51,6 +51,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 
 /**
@@ -292,7 +293,9 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__META_TYPE, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
-        // emfFormBuilder.addSeperatorEntry(compositePrio);
+        emfFormBuilder.addSeperatorEntry(compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
+
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = 150;

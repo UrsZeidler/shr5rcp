@@ -8,15 +8,11 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -225,7 +221,7 @@ public class LifeModuleItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_LifeModule_karmaCost_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModule_karmaCost_feature", "_UI_LifeModule_type"),
+                 getString("_UI_LifeModule_karmaCost_description"),
                  Shr5managementPackage.Literals.LIFE_MODULE__KARMA_COST,
                  true,
                  false,
@@ -247,7 +243,7 @@ public class LifeModuleItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_LifeModule_moduleType_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModule_moduleType_feature", "_UI_LifeModule_type"),
+                 getString("_UI_LifeModule_moduleType_description"),
                  Shr5managementPackage.Literals.LIFE_MODULE__MODULE_TYPE,
                  true,
                  false,
