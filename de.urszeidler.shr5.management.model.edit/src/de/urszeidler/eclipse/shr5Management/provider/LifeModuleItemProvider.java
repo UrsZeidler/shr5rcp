@@ -4,9 +4,12 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -16,11 +19,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Image;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModule} object.
@@ -313,10 +314,17 @@ public class LifeModuleItemProvider
      * This returns LifeModule.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar) object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/LifeModule"));
     }
 
@@ -324,14 +332,23 @@ public class LifeModuleItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
     @Override
     public String getText(Object object) {
-        String label = ((LifeModule)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_LifeModule_type") :
-            getString("_UI_LifeModule_type") + " " + label;
+        LifeModule lm = (LifeModule)object;
+        String label = lm.getName();
+        
+        IItemPropertyDescriptor propertyDescriptor = getPropertyDescriptor(object, Shr5managementPackage.Literals.LIFE_MODULE__MODULE_TYPE);
+        String type = getString("_UI_Unset_text");
+        if (propertyDescriptor != null)
+            type = propertyDescriptor.getLabelProvider(object).getText(lm.getModuleType());
+        
+        
+         return String.format(getString("_UI_LifeModule_type_text"), label,type,lm.getKarmaCost(),lm.getTime());
+//                 label == null || label.length() == 0 ?
+//            getString("_UI_LifeModule_type") :
+//            getString("_UI_LifeModule_type") + " " + label;
     }
     
 

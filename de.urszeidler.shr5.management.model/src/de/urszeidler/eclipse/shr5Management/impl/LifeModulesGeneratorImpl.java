@@ -3,16 +3,21 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.impl.CredstickImpl;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -85,6 +90,8 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
      */
     protected EList<LifeModule> realLife;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * The default value of the '{@link #getModuleKarmaCost() <em>Module Karma Cost</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -108,10 +115,32 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected LifeModulesGeneratorImpl() {
         super();
+        
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__NATIONALITY.equals(feature)
+                        || Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FORMATIVE_YEARS.equals(feature)
+                        || Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__TEEN_YEARS.equals(feature)
+                        || Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FURTHER_EDUCATION.equals(feature)
+                        || Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__REAL_LIFE.equals(feature)){
+                    LifeModulesGeneratorImpl.this
+                    .eNotify(new ENotificationImpl(LifeModulesGeneratorImpl.this, Notification.SET, Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST, 1, 2));
+                    LifeModulesGeneratorImpl.this
+                    .eNotify(new ENotificationImpl(LifeModulesGeneratorImpl.this, Notification.SET, Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__STARTING_AGE, 1, 2));
+                }
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**

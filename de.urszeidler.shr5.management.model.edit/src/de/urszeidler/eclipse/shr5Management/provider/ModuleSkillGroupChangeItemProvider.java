@@ -4,15 +4,23 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import com.google.common.base.Function;
+import com.google.common.base.Joiner;
+import com.google.common.collect.FluentIterable;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange} object.
@@ -89,13 +97,23 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleTypeChangeItemProv
     @Override
     public String getText(Object object) {
         ModuleSkillGroupChange moduleSkillGroupChange = (ModuleSkillGroupChange)object;
-        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String unset = getString("_UI_Unset_text");
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");
         String text = "";
         if (moduleSkillGroupChange.getSkillGroup() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, moduleSkillGroupChange.getSkillGroup());
         }else if(!moduleSkillGroupChange.getSelectOne().isEmpty()){
             text = " on of:";
+            text +=  Joiner.on(",").join(
+                    FluentIterable.from(moduleSkillGroupChange.getSelectOne()).transform(new Function<FertigkeitsGruppe, String>() {
+
+                        @Override
+                        public String apply(FertigkeitsGruppe input) {
+                            return Shr5EditingTools.getLabelForEObject(factory, unset, input);
+                        }
+                    })
+                    );
+
         }
         return getString("_UI_ModuleSkillGroupChange_type")+" "+text + " " + moduleSkillGroupChange.getGrade();
     }

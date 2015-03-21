@@ -3,18 +3,25 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import com.google.common.base.Function;
+import com.google.common.base.Joiner;
+import com.google.common.collect.FluentIterable;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange} object.
@@ -98,15 +105,25 @@ public class ModuleSkillChangeItemProvider extends ModuleTypeChangeItemProvider 
      */
     @Override
     public String getText(Object object) {
-        ModuleSkillChange msc = (ModuleSkillChange)object;
-        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String unset = getString("_UI_Unset_text");
+        final ModuleSkillChange msc = (ModuleSkillChange)object;
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");
         String text = "";
         int stufe = msc.getGrade();
         if (msc.getSkill() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkill());
         }else if(!msc.getSelectOne().isEmpty()){
             text = " on of:";
+            text +=  Joiner.on(" ").join(
+                    FluentIterable.from(msc.getSelectOne()).transform(new Function<Fertigkeit, String>() {
+
+                        @Override
+                        public String apply(Fertigkeit input) {
+                            return Shr5EditingTools.getLabelForEObject(factory, unset, input);
+                        }
+                    })
+                    );
+
         }
 
         return String.format("%s %d", text,stufe);//getString("_UI_ModuleSkillChange_type");

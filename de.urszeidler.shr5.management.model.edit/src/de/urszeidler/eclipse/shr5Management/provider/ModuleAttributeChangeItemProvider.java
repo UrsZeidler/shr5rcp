@@ -8,13 +8,19 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+
+import com.google.common.base.Function;
+import com.google.common.base.Joiner;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
 
@@ -100,14 +106,23 @@ public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvi
      */
     @Override
     public String getText(Object object) {
-        ModuleAttributeChange moduleAttributeChange = (ModuleAttributeChange)object;
-        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        String unset = getString("_UI_Unset_text");
+        final ModuleAttributeChange moduleAttributeChange = (ModuleAttributeChange)object;
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");
         String text = "";
         if (moduleAttributeChange.getAttribute() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, moduleAttributeChange.getAttribute());
         }else if(!moduleAttributeChange.getSelectOne().isEmpty()){
             text = " on of:";
+           text +=  Joiner.on(",").join(
+            FluentIterable.from(moduleAttributeChange.getSelectOne()).transform(new Function<EAttribute, String>() {
+
+                @Override
+                public String apply(EAttribute input) {
+                    return Shr5EditingTools.getLabelForEObject(factory, unset, input);
+                }
+            })
+            );
         }
 
         return getString("_UI_ModuleAttributeChange_type")+" "+text + " " + moduleAttributeChange.getGrade();
