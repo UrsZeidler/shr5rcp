@@ -450,6 +450,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateModuleFeatureChange((ModuleFeatureChange)value, diagnostics, context);
             case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE:
                 return validateModuleSkillGroupChange((ModuleSkillGroupChange)value, diagnostics, context);
+            case Shr5managementPackage.MODULE_TYPE_CHANGE:
+                return validateModuleTypeChange((ModuleTypeChange<?>)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1343,6 +1345,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateModuleSkillGroupChange(ModuleSkillGroupChange moduleSkillGroupChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(moduleSkillGroupChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateModuleTypeChange(ModuleTypeChange<?> moduleTypeChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(moduleTypeChange, diagnostics, context);
     }
 
     /**

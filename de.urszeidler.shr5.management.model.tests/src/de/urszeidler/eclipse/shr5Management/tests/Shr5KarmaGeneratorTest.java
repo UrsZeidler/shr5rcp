@@ -64,8 +64,8 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         TestRunner.run(Shr5KarmaGeneratorTest.class);
     }
 
-    private Mudan characterConcept;
-    private MetaType metaType;
+    protected Mudan characterConcept;
+    protected MetaType metaType;
 
     /**
      * Constructs a new Shr5 Karma Generator test case with the given name.

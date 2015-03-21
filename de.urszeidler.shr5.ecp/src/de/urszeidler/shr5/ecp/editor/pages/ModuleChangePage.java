@@ -126,23 +126,23 @@ public class ModuleChangePage extends AbstractShr5Page<ModuleChange> implements 
 
         if (object instanceof ModuleSkillChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__GRADE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SELECT_ONE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE, composite);
         }else if (object instanceof ModuleTeachableChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TEACHABLE_CHANGE__TEACHABLE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TEACHABLE_CHANGE__GRADE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TEACHABLE_CHANGE__SELECT_ONE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE, composite);
         }else if (object instanceof ModuleAttributeChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__GRADE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__SELECT_ONE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE, composite);
         }else if (object instanceof ModuleFeatureChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_FEATURE_CHANGE__FEATURE, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_FEATURE_CHANGE__VALUE, composite);
         }else if (object instanceof ModuleSkillGroupChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__GRADE, composite);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SELECT_ONE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE, composite);
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

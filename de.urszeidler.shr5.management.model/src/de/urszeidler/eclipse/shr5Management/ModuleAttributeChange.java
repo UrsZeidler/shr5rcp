@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 
 /**
@@ -18,9 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getGrade <em>Grade</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getSelectOne <em>Select One</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,33 +25,7 @@ import org.eclipse.emf.ecore.EAttribute;
  * @model
  * @generated
  */
-public interface ModuleAttributeChange extends ModuleChange {
-    /**
-     * Returns the value of the '<em><b>Grade</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Grade</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Grade</em>' attribute.
-     * @see #setGrade(int)
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleAttributeChange_Grade()
-     * @model
-     * @generated
-     */
-    int getGrade();
-
-    /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getGrade <em>Grade</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Grade</em>' attribute.
-     * @see #getGrade()
-     * @generated
-     */
-    void setGrade(int value);
-
+public interface ModuleAttributeChange extends ModuleTypeChange<EAttribute> {
     /**
      * Returns the value of the '<em><b>Attribute</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -80,21 +51,5 @@ public interface ModuleAttributeChange extends ModuleChange {
      * @generated
      */
     void setAttribute(EAttribute value);
-
-    /**
-     * Returns the value of the '<em><b>Select One</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.EAttribute}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Select One</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Select One</em>' reference list.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleAttributeChange_SelectOne()
-     * @model
-     * @generated
-     */
-    EList<EAttribute> getSelectOne();
 
 } // ModuleAttributeChange

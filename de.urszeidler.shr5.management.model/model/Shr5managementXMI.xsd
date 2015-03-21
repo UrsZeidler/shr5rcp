@@ -1071,14 +1071,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   <xsd:element name="ModuleChange" type="shr5mngt:ModuleChange"/>
   <xsd:complexType name="ModuleSkillChange">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ModuleChange">
+      <xsd:extension base="shr5mngt:ModuleTypeChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="skill" type="shr5:Fertigkeit"/>
-          <xsd:element name="selectOne" type="shr5:Fertigkeit"/>
         </xsd:choice>
-        <xsd:attribute name="grade" type="xsd:int"/>
         <xsd:attribute name="skill" type="xsd:string"/>
-        <xsd:attribute name="selectOne" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1088,14 +1085,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>Will be used for the quallities, specalism ...</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ModuleChange">
+      <xsd:extension base="shr5mngt:ModuleTypeChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="teachable" type="shr5:Erlernbar"/>
-          <xsd:element name="selectOne" type="shr5:Erlernbar"/>
         </xsd:choice>
-        <xsd:attribute name="grade" type="xsd:int"/>
         <xsd:attribute name="teachable" type="xsd:string"/>
-        <xsd:attribute name="selectOne" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1109,14 +1103,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>Define an attribute change.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ModuleChange">
+      <xsd:extension base="shr5mngt:ModuleTypeChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="attribute" type="ecore:EAttribute"/>
-          <xsd:element name="selectOne" type="ecore:EAttribute"/>
         </xsd:choice>
-        <xsd:attribute name="grade" type="xsd:int"/>
         <xsd:attribute name="attribute" type="xsd:string"/>
-        <xsd:attribute name="selectOne" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1147,16 +1138,27 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   </xsd:element>
   <xsd:complexType name="ModuleSkillGroupChange">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ModuleChange">
+      <xsd:extension base="shr5mngt:ModuleTypeChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="skillGroup" type="shr5:FertigkeitsGruppe"/>
-          <xsd:element name="selectOne" type="shr5:FertigkeitsGruppe"/>
         </xsd:choice>
-        <xsd:attribute name="grade" type="xsd:int"/>
         <xsd:attribute name="skillGroup" type="xsd:string"/>
-        <xsd:attribute name="selectOne" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ModuleSkillGroupChange" type="shr5mngt:ModuleSkillGroupChange"/>
+  <xsd:complexType abstract="true" name="ModuleTypeChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ModuleChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="selected" type="ecore:EObject"/>
+          <xsd:element name="selectOne" type="ecore:EObject"/>
+        </xsd:choice>
+        <xsd:attribute name="grade" type="xsd:int"/>
+        <xsd:attribute name="selected" type="xsd:string"/>
+        <xsd:attribute name="selectOne" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ModuleTypeChange" type="shr5mngt:ModuleTypeChange"/>
 </xsd:schema>

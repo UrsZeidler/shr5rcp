@@ -66,7 +66,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage
  * @generated
  */
-public class Shr5managementSwitch<T> extends Switch<T> {
+public class Shr5managementSwitch<T1> extends Switch<T1> {
 	/**
      * The cached model package
      * <!-- begin-user-doc -->
@@ -108,17 +108,17 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
+	protected T1 doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
             case Shr5managementPackage.MANAGED_CHARACTER: {
                 ManagedCharacter managedCharacter = (ManagedCharacter)theEObject;
-                T result = caseManagedCharacter(managedCharacter);
+                T1 result = caseManagedCharacter(managedCharacter);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM: {
                 CharacterGeneratorSystem characterGeneratorSystem = (CharacterGeneratorSystem)theEObject;
-                T result = caseCharacterGeneratorSystem(characterGeneratorSystem);
+                T1 result = caseCharacterGeneratorSystem(characterGeneratorSystem);
                 if (result == null) result = caseBeschreibbar(characterGeneratorSystem);
                 if (result == null) result = caseQuelle(characterGeneratorSystem);
                 if (result == null) result = caseIdentifiable(characterGeneratorSystem);
@@ -127,7 +127,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.PRIORITY_SYSTEM: {
                 PrioritySystem prioritySystem = (PrioritySystem)theEObject;
-                T result = casePrioritySystem(prioritySystem);
+                T1 result = casePrioritySystem(prioritySystem);
                 if (result == null) result = caseCharacterGeneratorSystem(prioritySystem);
                 if (result == null) result = caseBeschreibbar(prioritySystem);
                 if (result == null) result = caseQuelle(prioritySystem);
@@ -137,27 +137,27 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.NON_PLAYER_CHARACTER: {
                 NonPlayerCharacter nonPlayerCharacter = (NonPlayerCharacter)theEObject;
-                T result = caseNonPlayerCharacter(nonPlayerCharacter);
+                T1 result = caseNonPlayerCharacter(nonPlayerCharacter);
                 if (result == null) result = caseManagedCharacter(nonPlayerCharacter);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.CHANGES: {
                 Changes changes = (Changes)theEObject;
-                T result = caseChanges(changes);
+                T1 result = caseChanges(changes);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.KARMA_GAINT: {
                 KarmaGaint karmaGaint = (KarmaGaint)theEObject;
-                T result = caseKarmaGaint(karmaGaint);
+                T1 result = caseKarmaGaint(karmaGaint);
                 if (result == null) result = caseChanges(karmaGaint);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.FREE_STYLE: {
                 FreeStyle freeStyle = (FreeStyle)theEObject;
-                T result = caseFreeStyle(freeStyle);
+                T1 result = caseFreeStyle(freeStyle);
                 if (result == null) result = caseCharacterGeneratorSystem(freeStyle);
                 if (result == null) result = caseBeschreibbar(freeStyle);
                 if (result == null) result = caseQuelle(freeStyle);
@@ -167,13 +167,13 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.PRIORITY_CATEGORIE: {
                 PriorityCategorie priorityCategorie = (PriorityCategorie)theEObject;
-                T result = casePriorityCategorie(priorityCategorie);
+                T1 result = casePriorityCategorie(priorityCategorie);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SHR5_SYSTEM: {
                 Shr5System shr5System = (Shr5System)theEObject;
-                T result = caseShr5System(shr5System);
+                T1 result = caseShr5System(shr5System);
                 if (result == null) result = casePrioritySystem(shr5System);
                 if (result == null) result = caseCharacterGeneratorSystem(shr5System);
                 if (result == null) result = caseBeschreibbar(shr5System);
@@ -184,42 +184,42 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.META_TYPE: {
                 MetaType metaType = (MetaType)theEObject;
-                T result = caseMetaType(metaType);
+                T1 result = caseMetaType(metaType);
                 if (result == null) result = casePriorityCategorie(metaType);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.ATTRIBUTES: {
                 Attributes attributes = (Attributes)theEObject;
-                T result = caseAttributes(attributes);
+                T1 result = caseAttributes(attributes);
                 if (result == null) result = casePriorityCategorie(attributes);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SKILL: {
                 Skill skill = (Skill)theEObject;
-                T result = caseSkill(skill);
+                T1 result = caseSkill(skill);
                 if (result == null) result = casePriorityCategorie(skill);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.RESOURCEN: {
                 Resourcen resourcen = (Resourcen)theEObject;
-                T result = caseResourcen(resourcen);
+                T1 result = caseResourcen(resourcen);
                 if (result == null) result = casePriorityCategorie(resourcen);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SPECIAL_TYPE: {
                 SpecialType specialType = (SpecialType)theEObject;
-                T result = caseSpecialType(specialType);
+                T1 result = caseSpecialType(specialType);
                 if (result == null) result = casePriorityCategorie(specialType);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.TECHNOMANCER: {
                 Technomancer technomancer = (Technomancer)theEObject;
-                T result = caseTechnomancer(technomancer);
+                T1 result = caseTechnomancer(technomancer);
                 if (result == null) result = caseSpecialType(technomancer);
                 if (result == null) result = casePriorityCategorie(technomancer);
                 if (result == null) result = defaultCase(theEObject);
@@ -227,7 +227,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.SPELLCASTER: {
                 Spellcaster spellcaster = (Spellcaster)theEObject;
-                T result = caseSpellcaster(spellcaster);
+                T1 result = caseSpellcaster(spellcaster);
                 if (result == null) result = caseAdept(spellcaster);
                 if (result == null) result = caseSpecialType(spellcaster);
                 if (result == null) result = casePriorityCategorie(spellcaster);
@@ -236,7 +236,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.ADEPT: {
                 Adept adept = (Adept)theEObject;
-                T result = caseAdept(adept);
+                T1 result = caseAdept(adept);
                 if (result == null) result = caseSpecialType(adept);
                 if (result == null) result = casePriorityCategorie(adept);
                 if (result == null) result = defaultCase(theEObject);
@@ -244,20 +244,20 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.CHARACTER_GENERATOR: {
                 CharacterGenerator<?> characterGenerator = (CharacterGenerator<?>)theEObject;
-                T result = caseCharacterGenerator(characterGenerator);
+                T1 result = caseCharacterGenerator(characterGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.FREE_STYLE_GENERATOR: {
                 FreeStyleGenerator freeStyleGenerator = (FreeStyleGenerator)theEObject;
-                T result = caseFreeStyleGenerator(freeStyleGenerator);
+                T1 result = caseFreeStyleGenerator(freeStyleGenerator);
                 if (result == null) result = caseCharacterGenerator(freeStyleGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SHR5_GENERATOR: {
                 Shr5Generator shr5Generator = (Shr5Generator)theEObject;
-                T result = caseShr5Generator(shr5Generator);
+                T1 result = caseShr5Generator(shr5Generator);
                 if (result == null) result = caseShr5RuleGenerator(shr5Generator);
                 if (result == null) result = caseCharacterGenerator(shr5Generator);
                 if (result == null) result = defaultCase(theEObject);
@@ -265,7 +265,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.ATTRIBUTE_CHANGE: {
                 AttributeChange attributeChange = (AttributeChange)theEObject;
-                T result = caseAttributeChange(attributeChange);
+                T1 result = caseAttributeChange(attributeChange);
                 if (result == null) result = casePersonaValueChange(attributeChange);
                 if (result == null) result = caseChanges(attributeChange);
                 if (result == null) result = defaultCase(theEObject);
@@ -273,14 +273,14 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.PLAYER_CHARACTER: {
                 PlayerCharacter playerCharacter = (PlayerCharacter)theEObject;
-                T result = casePlayerCharacter(playerCharacter);
+                T1 result = casePlayerCharacter(playerCharacter);
                 if (result == null) result = caseManagedCharacter(playerCharacter);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MUDAN: {
                 Mudan mudan = (Mudan)theEObject;
-                T result = caseMudan(mudan);
+                T1 result = caseMudan(mudan);
                 if (result == null) result = caseSpecialType(mudan);
                 if (result == null) result = casePriorityCategorie(mudan);
                 if (result == null) result = defaultCase(theEObject);
@@ -288,20 +288,20 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.CHARACTER_GROUP: {
                 CharacterGroup characterGroup = (CharacterGroup)theEObject;
-                T result = caseCharacterGroup(characterGroup);
+                T1 result = caseCharacterGroup(characterGroup);
                 if (result == null) result = caseBeschreibbar(characterGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.CONNECTION: {
                 Connection connection = (Connection)theEObject;
-                T result = caseConnection(connection);
+                T1 result = caseConnection(connection);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.PERSONA_CHANGE: {
                 PersonaChange personaChange = (PersonaChange)theEObject;
-                T result = casePersonaChange(personaChange);
+                T1 result = casePersonaChange(personaChange);
                 if (result == null) result = casePersonaValueChange(personaChange);
                 if (result == null) result = caseChanges(personaChange);
                 if (result == null) result = defaultCase(theEObject);
@@ -309,59 +309,59 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.PERSONA_VALUE_CHANGE: {
                 PersonaValueChange personaValueChange = (PersonaValueChange)theEObject;
-                T result = casePersonaValueChange(personaValueChange);
+                T1 result = casePersonaValueChange(personaValueChange);
                 if (result == null) result = caseChanges(personaValueChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: {
                 @SuppressWarnings("unchecked") Map.Entry<GeneratorState, String> generatorStateToEStringMapEntry = (Map.Entry<GeneratorState, String>)theEObject;
-                T result = caseGeneratorStateToEStringMapEntry(generatorStateToEStringMapEntry);
+                T1 result = caseGeneratorStateToEStringMapEntry(generatorStateToEStringMapEntry);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.ADVANCEMENT: {
                 Advancement advancement = (Advancement)theEObject;
-                T result = caseAdvancement(advancement);
+                T1 result = caseAdvancement(advancement);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.INCREASE_CHARACTER_PART: {
                 IncreaseCharacterPart increaseCharacterPart = (IncreaseCharacterPart)theEObject;
-                T result = caseIncreaseCharacterPart(increaseCharacterPart);
+                T1 result = caseIncreaseCharacterPart(increaseCharacterPart);
                 if (result == null) result = caseAdvancement(increaseCharacterPart);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: {
                 LifestyleToStartMoney lifestyleToStartMoney = (LifestyleToStartMoney)theEObject;
-                T result = caseLifestyleToStartMoney(lifestyleToStartMoney);
+                T1 result = caseLifestyleToStartMoney(lifestyleToStartMoney);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.GRUNT_GROUP: {
                 GruntGroup gruntGroup = (GruntGroup)theEObject;
-                T result = caseGruntGroup(gruntGroup);
+                T1 result = caseGruntGroup(gruntGroup);
                 if (result == null) result = caseBeschreibbar(gruntGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.GRUNT_MEMBERS: {
                 GruntMembers gruntMembers = (GruntMembers)theEObject;
-                T result = caseGruntMembers(gruntMembers);
+                T1 result = caseGruntMembers(gruntMembers);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.PLAYER_MANAGEMENT: {
                 PlayerManagement playerManagement = (PlayerManagement)theEObject;
-                T result = casePlayerManagement(playerManagement);
+                T1 result = casePlayerManagement(playerManagement);
                 if (result == null) result = caseBeschreibbar(playerManagement);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT: {
                 GamemasterManagement gamemasterManagement = (GamemasterManagement)theEObject;
-                T result = caseGamemasterManagement(gamemasterManagement);
+                T1 result = caseGamemasterManagement(gamemasterManagement);
                 if (result == null) result = casePlayerManagement(gamemasterManagement);
                 if (result == null) result = caseBeschreibbar(gamemasterManagement);
                 if (result == null) result = defaultCase(theEObject);
@@ -369,21 +369,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM: {
                 CharacterAdvancementSystem characterAdvancementSystem = (CharacterAdvancementSystem)theEObject;
-                T result = caseCharacterAdvancementSystem(characterAdvancementSystem);
+                T1 result = caseCharacterAdvancementSystem(characterAdvancementSystem);
                 if (result == null) result = caseBeschreibbar(characterAdvancementSystem);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SHR5_RULE_GENERATOR: {
                 Shr5RuleGenerator shr5RuleGenerator = (Shr5RuleGenerator)theEObject;
-                T result = caseShr5RuleGenerator(shr5RuleGenerator);
+                T1 result = caseShr5RuleGenerator(shr5RuleGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5RuleGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: {
                 Shr5KarmaGenerator shr5KarmaGenerator = (Shr5KarmaGenerator)theEObject;
-                T result = caseShr5KarmaGenerator(shr5KarmaGenerator);
+                T1 result = caseShr5KarmaGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
                 if (result == null) result = defaultCase(theEObject);
@@ -391,13 +391,13 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.QUELLEN_CONSTRAIN: {
                 QuellenConstrain quellenConstrain = (QuellenConstrain)theEObject;
-                T result = caseQuellenConstrain(quellenConstrain);
+                T1 result = caseQuellenConstrain(quellenConstrain);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.PACK: {
                 Pack pack = (Pack)theEObject;
-                T result = casePack(pack);
+                T1 result = casePack(pack);
                 if (result == null) result = caseBeschreibbar(pack);
                 if (result == null) result = caseQuelle(pack);
                 if (result == null) result = caseGeldWert(pack);
@@ -407,33 +407,33 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.CHARACTER_DIARY: {
                 CharacterDiary characterDiary = (CharacterDiary)theEObject;
-                T result = caseCharacterDiary(characterDiary);
+                T1 result = caseCharacterDiary(characterDiary);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.DIARY_ENTRY: {
                 DiaryEntry diaryEntry = (DiaryEntry)theEObject;
-                T result = caseDiaryEntry(diaryEntry);
+                T1 result = caseDiaryEntry(diaryEntry);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.CONTRACT_PAYMENT: {
                 ContractPayment contractPayment = (ContractPayment)theEObject;
-                T result = caseContractPayment(contractPayment);
+                T1 result = caseContractPayment(contractPayment);
                 if (result == null) result = caseDiaryEntry(contractPayment);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.CHARACTER_CHANGE: {
                 CharacterChange characterChange = (CharacterChange)theEObject;
-                T result = caseCharacterChange(characterChange);
+                T1 result = caseCharacterChange(characterChange);
                 if (result == null) result = caseDiaryEntry(characterChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SUM_TO_TEN_GENERATOR: {
                 SumToTenGenerator sumToTenGenerator = (SumToTenGenerator)theEObject;
-                T result = caseSumToTenGenerator(sumToTenGenerator);
+                T1 result = caseSumToTenGenerator(sumToTenGenerator);
                 if (result == null) result = caseShr5Generator(sumToTenGenerator);
                 if (result == null) result = caseShr5RuleGenerator(sumToTenGenerator);
                 if (result == null) result = caseCharacterGenerator(sumToTenGenerator);
@@ -442,7 +442,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.LIFE_MODULES_GENERATOR: {
                 LifeModulesGenerator lifeModulesGenerator = (LifeModulesGenerator)theEObject;
-                T result = caseLifeModulesGenerator(lifeModulesGenerator);
+                T1 result = caseLifeModulesGenerator(lifeModulesGenerator);
                 if (result == null) result = caseShr5KarmaGenerator(lifeModulesGenerator);
                 if (result == null) result = caseShr5RuleGenerator(lifeModulesGenerator);
                 if (result == null) result = caseCharacterGenerator(lifeModulesGenerator);
@@ -451,7 +451,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.LIFE_MODULES_SYSTEM: {
                 LifeModulesSystem lifeModulesSystem = (LifeModulesSystem)theEObject;
-                T result = caseLifeModulesSystem(lifeModulesSystem);
+                T1 result = caseLifeModulesSystem(lifeModulesSystem);
                 if (result == null) result = caseShr5System(lifeModulesSystem);
                 if (result == null) result = casePrioritySystem(lifeModulesSystem);
                 if (result == null) result = caseCharacterGeneratorSystem(lifeModulesSystem);
@@ -463,7 +463,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.LIFE_MODULE: {
                 LifeModule lifeModule = (LifeModule)theEObject;
-                T result = caseLifeModule(lifeModule);
+                T1 result = caseLifeModule(lifeModule);
                 if (result == null) result = caseBeschreibbar(lifeModule);
                 if (result == null) result = caseQuelle(lifeModule);
                 if (result == null) result = caseIdentifiable(lifeModule);
@@ -472,42 +472,53 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             }
             case Shr5managementPackage.MODULE_CHANGE: {
                 ModuleChange moduleChange = (ModuleChange)theEObject;
-                T result = caseModuleChange(moduleChange);
+                T1 result = caseModuleChange(moduleChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MODULE_SKILL_CHANGE: {
                 ModuleSkillChange moduleSkillChange = (ModuleSkillChange)theEObject;
-                T result = caseModuleSkillChange(moduleSkillChange);
+                T1 result = caseModuleSkillChange(moduleSkillChange);
+                if (result == null) result = caseModuleTypeChange(moduleSkillChange);
                 if (result == null) result = caseModuleChange(moduleSkillChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MODULE_TEACHABLE_CHANGE: {
                 ModuleTeachableChange moduleTeachableChange = (ModuleTeachableChange)theEObject;
-                T result = caseModuleTeachableChange(moduleTeachableChange);
+                T1 result = caseModuleTeachableChange(moduleTeachableChange);
+                if (result == null) result = caseModuleTypeChange(moduleTeachableChange);
                 if (result == null) result = caseModuleChange(moduleTeachableChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE: {
                 ModuleAttributeChange moduleAttributeChange = (ModuleAttributeChange)theEObject;
-                T result = caseModuleAttributeChange(moduleAttributeChange);
+                T1 result = caseModuleAttributeChange(moduleAttributeChange);
+                if (result == null) result = caseModuleTypeChange(moduleAttributeChange);
                 if (result == null) result = caseModuleChange(moduleAttributeChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MODULE_FEATURE_CHANGE: {
                 ModuleFeatureChange moduleFeatureChange = (ModuleFeatureChange)theEObject;
-                T result = caseModuleFeatureChange(moduleFeatureChange);
+                T1 result = caseModuleFeatureChange(moduleFeatureChange);
                 if (result == null) result = caseModuleChange(moduleFeatureChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: {
                 ModuleSkillGroupChange moduleSkillGroupChange = (ModuleSkillGroupChange)theEObject;
-                T result = caseModuleSkillGroupChange(moduleSkillGroupChange);
+                T1 result = caseModuleSkillGroupChange(moduleSkillGroupChange);
+                if (result == null) result = caseModuleTypeChange(moduleSkillGroupChange);
                 if (result == null) result = caseModuleChange(moduleSkillGroupChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.MODULE_TYPE_CHANGE: {
+                ModuleTypeChange<?> moduleTypeChange = (ModuleTypeChange<?>)theEObject;
+                T1 result = caseModuleTypeChange(moduleTypeChange);
+                if (result == null) result = caseModuleChange(moduleTypeChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -526,7 +537,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseManagedCharacter(ManagedCharacter object) {
+	public T1 caseManagedCharacter(ManagedCharacter object) {
         return null;
     }
 
@@ -541,7 +552,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseCharacterGeneratorSystem(CharacterGeneratorSystem object) {
+	public T1 caseCharacterGeneratorSystem(CharacterGeneratorSystem object) {
         return null;
     }
 
@@ -556,7 +567,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T casePrioritySystem(PrioritySystem object) {
+	public T1 casePrioritySystem(PrioritySystem object) {
         return null;
     }
 
@@ -571,7 +582,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseNonPlayerCharacter(NonPlayerCharacter object) {
+	public T1 caseNonPlayerCharacter(NonPlayerCharacter object) {
         return null;
     }
 
@@ -586,7 +597,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseChanges(Changes object) {
+	public T1 caseChanges(Changes object) {
         return null;
     }
 
@@ -601,7 +612,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseKarmaGaint(KarmaGaint object) {
+	public T1 caseKarmaGaint(KarmaGaint object) {
         return null;
     }
 
@@ -616,7 +627,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseFreeStyle(FreeStyle object) {
+	public T1 caseFreeStyle(FreeStyle object) {
         return null;
     }
 
@@ -631,7 +642,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T casePriorityCategorie(PriorityCategorie object) {
+	public T1 casePriorityCategorie(PriorityCategorie object) {
         return null;
     }
 
@@ -646,7 +657,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseShr5System(Shr5System object) {
+	public T1 caseShr5System(Shr5System object) {
         return null;
     }
 
@@ -661,7 +672,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseMetaType(MetaType object) {
+	public T1 caseMetaType(MetaType object) {
         return null;
     }
 
@@ -676,7 +687,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseAttributes(Attributes object) {
+	public T1 caseAttributes(Attributes object) {
         return null;
     }
 
@@ -691,7 +702,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseSkill(Skill object) {
+	public T1 caseSkill(Skill object) {
         return null;
     }
 
@@ -706,7 +717,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseResourcen(Resourcen object) {
+	public T1 caseResourcen(Resourcen object) {
         return null;
     }
 
@@ -721,7 +732,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseSpecialType(SpecialType object) {
+	public T1 caseSpecialType(SpecialType object) {
         return null;
     }
 
@@ -736,7 +747,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseTechnomancer(Technomancer object) {
+	public T1 caseTechnomancer(Technomancer object) {
         return null;
     }
 
@@ -751,7 +762,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseSpellcaster(Spellcaster object) {
+	public T1 caseSpellcaster(Spellcaster object) {
         return null;
     }
 
@@ -766,7 +777,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseAdept(Adept object) {
+	public T1 caseAdept(Adept object) {
         return null;
     }
 
@@ -781,7 +792,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public <G extends CharacterGeneratorSystem> T caseCharacterGenerator(CharacterGenerator<G> object) {
+	public <G extends CharacterGeneratorSystem> T1 caseCharacterGenerator(CharacterGenerator<G> object) {
         return null;
     }
 
@@ -796,7 +807,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseFreeStyleGenerator(FreeStyleGenerator object) {
+	public T1 caseFreeStyleGenerator(FreeStyleGenerator object) {
         return null;
     }
 
@@ -811,7 +822,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseShr5Generator(Shr5Generator object) {
+	public T1 caseShr5Generator(Shr5Generator object) {
         return null;
     }
 
@@ -826,7 +837,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseAttributeChange(AttributeChange object) {
+	public T1 caseAttributeChange(AttributeChange object) {
         return null;
     }
 
@@ -841,7 +852,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T casePlayerCharacter(PlayerCharacter object) {
+	public T1 casePlayerCharacter(PlayerCharacter object) {
         return null;
     }
 
@@ -856,7 +867,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseMudan(Mudan object) {
+	public T1 caseMudan(Mudan object) {
         return null;
     }
 
@@ -871,7 +882,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseCharacterGroup(CharacterGroup object) {
+	public T1 caseCharacterGroup(CharacterGroup object) {
         return null;
     }
 
@@ -886,7 +897,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseConnection(Connection object) {
+	public T1 caseConnection(Connection object) {
         return null;
     }
 
@@ -901,7 +912,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePersonaChange(PersonaChange object) {
+    public T1 casePersonaChange(PersonaChange object) {
         return null;
     }
 
@@ -916,7 +927,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T casePersonaValueChange(PersonaValueChange object) {
+	public T1 casePersonaValueChange(PersonaValueChange object) {
         return null;
     }
 
@@ -931,7 +942,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseGeneratorStateToEStringMapEntry(Map.Entry<GeneratorState, String> object) {
+	public T1 caseGeneratorStateToEStringMapEntry(Map.Entry<GeneratorState, String> object) {
         return null;
     }
 
@@ -946,7 +957,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseAdvancement(Advancement object) {
+	public T1 caseAdvancement(Advancement object) {
         return null;
     }
 
@@ -961,7 +972,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseIncreaseCharacterPart(IncreaseCharacterPart object) {
+	public T1 caseIncreaseCharacterPart(IncreaseCharacterPart object) {
         return null;
     }
 
@@ -976,7 +987,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseLifestyleToStartMoney(LifestyleToStartMoney object) {
+    public T1 caseLifestyleToStartMoney(LifestyleToStartMoney object) {
         return null;
     }
 
@@ -991,7 +1002,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseGruntGroup(GruntGroup object) {
+    public T1 caseGruntGroup(GruntGroup object) {
         return null;
     }
 
@@ -1006,7 +1017,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseGruntMembers(GruntMembers object) {
+    public T1 caseGruntMembers(GruntMembers object) {
         return null;
     }
 
@@ -1021,7 +1032,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePlayerManagement(PlayerManagement object) {
+    public T1 casePlayerManagement(PlayerManagement object) {
         return null;
     }
 
@@ -1036,7 +1047,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseGamemasterManagement(GamemasterManagement object) {
+    public T1 caseGamemasterManagement(GamemasterManagement object) {
         return null;
     }
 
@@ -1051,7 +1062,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCharacterAdvancementSystem(CharacterAdvancementSystem object) {
+    public T1 caseCharacterAdvancementSystem(CharacterAdvancementSystem object) {
         return null;
     }
 
@@ -1066,7 +1077,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseShr5RuleGenerator(Shr5RuleGenerator object) {
+    public T1 caseShr5RuleGenerator(Shr5RuleGenerator object) {
         return null;
     }
 
@@ -1081,7 +1092,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+    public T1 caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
         return null;
     }
 
@@ -1096,7 +1107,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseQuellenConstrain(QuellenConstrain object) {
+    public T1 caseQuellenConstrain(QuellenConstrain object) {
         return null;
     }
 
@@ -1111,7 +1122,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePack(Pack object) {
+    public T1 casePack(Pack object) {
         return null;
     }
 
@@ -1126,7 +1137,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCharacterDiary(CharacterDiary object) {
+    public T1 caseCharacterDiary(CharacterDiary object) {
         return null;
     }
 
@@ -1141,7 +1152,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDiaryEntry(DiaryEntry object) {
+    public T1 caseDiaryEntry(DiaryEntry object) {
         return null;
     }
 
@@ -1156,7 +1167,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseContractPayment(ContractPayment object) {
+    public T1 caseContractPayment(ContractPayment object) {
         return null;
     }
 
@@ -1171,7 +1182,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCharacterChange(CharacterChange object) {
+    public T1 caseCharacterChange(CharacterChange object) {
         return null;
     }
 
@@ -1186,7 +1197,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSumToTenGenerator(SumToTenGenerator object) {
+    public T1 caseSumToTenGenerator(SumToTenGenerator object) {
         return null;
     }
 
@@ -1201,7 +1212,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseLifeModulesGenerator(LifeModulesGenerator object) {
+    public T1 caseLifeModulesGenerator(LifeModulesGenerator object) {
         return null;
     }
 
@@ -1216,7 +1227,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseLifeModulesSystem(LifeModulesSystem object) {
+    public T1 caseLifeModulesSystem(LifeModulesSystem object) {
         return null;
     }
 
@@ -1231,7 +1242,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseLifeModule(LifeModule object) {
+    public T1 caseLifeModule(LifeModule object) {
         return null;
     }
 
@@ -1246,7 +1257,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleChange(ModuleChange object) {
+    public T1 caseModuleChange(ModuleChange object) {
         return null;
     }
 
@@ -1261,7 +1272,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleSkillChange(ModuleSkillChange object) {
+    public T1 caseModuleSkillChange(ModuleSkillChange object) {
         return null;
     }
 
@@ -1276,7 +1287,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleTeachableChange(ModuleTeachableChange object) {
+    public T1 caseModuleTeachableChange(ModuleTeachableChange object) {
         return null;
     }
 
@@ -1291,7 +1302,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleAttributeChange(ModuleAttributeChange object) {
+    public T1 caseModuleAttributeChange(ModuleAttributeChange object) {
         return null;
     }
 
@@ -1306,7 +1317,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleFeatureChange(ModuleFeatureChange object) {
+    public T1 caseModuleFeatureChange(ModuleFeatureChange object) {
         return null;
     }
 
@@ -1321,7 +1332,22 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModuleSkillGroupChange(ModuleSkillGroupChange object) {
+    public T1 caseModuleSkillGroupChange(ModuleSkillGroupChange object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Module Type Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Module Type Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public <T> T1 caseModuleTypeChange(ModuleTypeChange<T> object) {
         return null;
     }
 
@@ -1336,7 +1362,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseBeschreibbar(Beschreibbar object) {
+	public T1 caseBeschreibbar(Beschreibbar object) {
         return null;
     }
 
@@ -1351,7 +1377,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIdentifiable(Identifiable object) {
+    public T1 caseIdentifiable(Identifiable object) {
         return null;
     }
 
@@ -1366,7 +1392,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseQuelle(Quelle object) {
+	public T1 caseQuelle(Quelle object) {
         return null;
     }
 
@@ -1381,7 +1407,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseGeldWert(GeldWert object) {
+    public T1 caseGeldWert(GeldWert object) {
         return null;
     }
 
@@ -1397,7 +1423,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
 	@Override
-	public T defaultCase(EObject object) {
+	public T1 defaultCase(EObject object) {
         return null;
     }
 

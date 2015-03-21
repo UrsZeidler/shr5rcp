@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleAttributeChangeTest extends ModuleChangeTest {
+public class ModuleAttributeChangeTest extends ModuleTypeChangeTest {
 
     /**
      * <!-- begin-user-doc -->

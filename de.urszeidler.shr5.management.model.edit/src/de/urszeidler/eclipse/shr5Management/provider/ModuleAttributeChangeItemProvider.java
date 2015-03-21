@@ -15,7 +15,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
 
@@ -25,7 +24,7 @@ import com.google.common.collect.FluentIterable;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleAttributeChangeItemProvider extends ModuleChangeItemProvider {
+public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -47,33 +46,9 @@ public class ModuleAttributeChangeItemProvider extends ModuleChangeItemProvider 
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addGradePropertyDescriptor(object);
             addAttributePropertyDescriptor(object);
-            addSelectOnePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Grade feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addGradePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ModuleAttributeChange_grade_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleAttributeChange_grade_feature", "_UI_ModuleAttributeChange_type"),
-                 Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__GRADE,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
     }
 
     /**
@@ -104,28 +79,6 @@ public class ModuleAttributeChangeItemProvider extends ModuleChangeItemProvider 
                            ).toList();
                 }
             });
-    }
-
-    /**
-     * This adds a property descriptor for the Select One feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addSelectOnePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ModuleAttributeChange_selectOne_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleAttributeChange_selectOne_feature", "_UI_ModuleAttributeChange_type"),
-                 Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__SELECT_ONE,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
     }
 
     /**
@@ -171,12 +124,6 @@ public class ModuleAttributeChangeItemProvider extends ModuleChangeItemProvider 
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
-
-        switch (notification.getFeatureID(ModuleAttributeChange.class)) {
-            case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE__GRADE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-        }
         super.notifyChanged(notification);
     }
 

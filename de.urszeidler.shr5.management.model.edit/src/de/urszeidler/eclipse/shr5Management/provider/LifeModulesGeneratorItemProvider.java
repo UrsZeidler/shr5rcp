@@ -16,6 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import com.google.common.collect.FluentIterable;
 
 /**
@@ -51,6 +52,8 @@ public class LifeModulesGeneratorItemProvider extends Shr5KarmaGeneratorItemProv
             addTeenYearsPropertyDescriptor(object);
             addFurtherEducationPropertyDescriptor(object);
             addRealLifePropertyDescriptor(object);
+            addModuleKarmaCostPropertyDescriptor(object);
+            addStartingAgePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -180,6 +183,50 @@ public class LifeModulesGeneratorItemProvider extends Shr5KarmaGeneratorItemProv
     }
 
     /**
+     * This adds a property descriptor for the Module Karma Cost feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addModuleKarmaCostPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_LifeModulesGenerator_moduleKarmaCost_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModulesGenerator_moduleKarmaCost_feature", "_UI_LifeModulesGenerator_type"),
+                 Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Starting Age feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addStartingAgePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_LifeModulesGenerator_startingAge_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModulesGenerator_startingAge_feature", "_UI_LifeModulesGenerator_type"),
+                 Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__STARTING_AGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns LifeModulesGenerator.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -214,6 +261,13 @@ public class LifeModulesGeneratorItemProvider extends Shr5KarmaGeneratorItemProv
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(LifeModulesGenerator.class)) {
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST:
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__STARTING_AGE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
         super.notifyChanged(notification);
     }
 

@@ -5636,13 +5636,31 @@ public interface Shr5managementPackage extends EPackage {
     int LIFE_MODULES_GENERATOR__REAL_LIFE = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 4;
 
     /**
+     * The feature id for the '<em><b>Module Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__MODULE_KARMA_COST = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Starting Age</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR__STARTING_AGE = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 6;
+
+    /**
      * The number of structural features of the '<em>Life Modules Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR_FEATURE_COUNT = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 5;
+    int LIFE_MODULES_GENERATOR_FEATURE_COUNT = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 7;
 
     /**
      * The operation id for the '<em>Has Spend All Points</em>' operation.
@@ -6179,6 +6197,61 @@ public interface Shr5managementPackage extends EPackage {
     int MODULE_CHANGE_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl <em>Module Type Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTypeChange()
+     * @generated
+     */
+    int MODULE_TYPE_CHANGE = 54;
+
+    /**
+     * The feature id for the '<em><b>Grade</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TYPE_CHANGE__GRADE = MODULE_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Selected</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TYPE_CHANGE__SELECTED = MODULE_CHANGE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Select One</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TYPE_CHANGE__SELECT_ONE = MODULE_CHANGE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Module Type Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TYPE_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Module Type Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TYPE_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl <em>Module Skill Change</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6195,16 +6268,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_CHANGE__GRADE = MODULE_CHANGE_FEATURE_COUNT + 0;
+    int MODULE_SKILL_CHANGE__GRADE = MODULE_TYPE_CHANGE__GRADE;
 
     /**
-     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * The feature id for the '<em><b>Selected</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_CHANGE__SKILL = MODULE_CHANGE_FEATURE_COUNT + 1;
+    int MODULE_SKILL_CHANGE__SELECTED = MODULE_TYPE_CHANGE__SELECTED;
 
     /**
      * The feature id for the '<em><b>Select One</b></em>' reference list.
@@ -6213,7 +6286,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_CHANGE__SELECT_ONE = MODULE_CHANGE_FEATURE_COUNT + 2;
+    int MODULE_SKILL_CHANGE__SELECT_ONE = MODULE_TYPE_CHANGE__SELECT_ONE;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_CHANGE__SKILL = MODULE_TYPE_CHANGE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Module Skill Change</em>' class.
@@ -6222,7 +6304,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+    int MODULE_SKILL_CHANGE_FEATURE_COUNT = MODULE_TYPE_CHANGE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Module Skill Change</em>' class.
@@ -6231,7 +6313,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+    int MODULE_SKILL_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl <em>Module Teachable Change</em>}' class.
@@ -6244,13 +6326,22 @@ public interface Shr5managementPackage extends EPackage {
     int MODULE_TEACHABLE_CHANGE = 50;
 
     /**
-     * The feature id for the '<em><b>Teachable</b></em>' reference.
+     * The feature id for the '<em><b>Grade</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MODULE_TEACHABLE_CHANGE__TEACHABLE = MODULE_CHANGE_FEATURE_COUNT + 0;
+    int MODULE_TEACHABLE_CHANGE__GRADE = MODULE_TYPE_CHANGE__GRADE;
+
+    /**
+     * The feature id for the '<em><b>Selected</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_TEACHABLE_CHANGE__SELECTED = MODULE_TYPE_CHANGE__SELECTED;
 
     /**
      * The feature id for the '<em><b>Select One</b></em>' reference list.
@@ -6259,16 +6350,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_TEACHABLE_CHANGE__SELECT_ONE = MODULE_CHANGE_FEATURE_COUNT + 1;
+    int MODULE_TEACHABLE_CHANGE__SELECT_ONE = MODULE_TYPE_CHANGE__SELECT_ONE;
 
     /**
-     * The feature id for the '<em><b>Grade</b></em>' attribute.
+     * The feature id for the '<em><b>Teachable</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MODULE_TEACHABLE_CHANGE__GRADE = MODULE_CHANGE_FEATURE_COUNT + 2;
+    int MODULE_TEACHABLE_CHANGE__TEACHABLE = MODULE_TYPE_CHANGE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Module Teachable Change</em>' class.
@@ -6277,7 +6368,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_TEACHABLE_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+    int MODULE_TEACHABLE_CHANGE_FEATURE_COUNT = MODULE_TYPE_CHANGE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Module Teachable Change</em>' class.
@@ -6286,7 +6377,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_TEACHABLE_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+    int MODULE_TEACHABLE_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl <em>Module Attribute Change</em>}' class.
@@ -6305,16 +6396,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_ATTRIBUTE_CHANGE__GRADE = MODULE_CHANGE_FEATURE_COUNT + 0;
+    int MODULE_ATTRIBUTE_CHANGE__GRADE = MODULE_TYPE_CHANGE__GRADE;
 
     /**
-     * The feature id for the '<em><b>Attribute</b></em>' reference.
+     * The feature id for the '<em><b>Selected</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE = MODULE_CHANGE_FEATURE_COUNT + 1;
+    int MODULE_ATTRIBUTE_CHANGE__SELECTED = MODULE_TYPE_CHANGE__SELECTED;
 
     /**
      * The feature id for the '<em><b>Select One</b></em>' reference list.
@@ -6323,7 +6414,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_ATTRIBUTE_CHANGE__SELECT_ONE = MODULE_CHANGE_FEATURE_COUNT + 2;
+    int MODULE_ATTRIBUTE_CHANGE__SELECT_ONE = MODULE_TYPE_CHANGE__SELECT_ONE;
+
+    /**
+     * The feature id for the '<em><b>Attribute</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE = MODULE_TYPE_CHANGE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Module Attribute Change</em>' class.
@@ -6332,7 +6432,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_ATTRIBUTE_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+    int MODULE_ATTRIBUTE_CHANGE_FEATURE_COUNT = MODULE_TYPE_CHANGE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Module Attribute Change</em>' class.
@@ -6341,7 +6441,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_ATTRIBUTE_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+    int MODULE_ATTRIBUTE_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl <em>Module Feature Change</em>}' class.
@@ -6406,16 +6506,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_GROUP_CHANGE__GRADE = MODULE_CHANGE_FEATURE_COUNT + 0;
+    int MODULE_SKILL_GROUP_CHANGE__GRADE = MODULE_TYPE_CHANGE__GRADE;
 
     /**
-     * The feature id for the '<em><b>Skill Group</b></em>' reference.
+     * The feature id for the '<em><b>Selected</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP = MODULE_CHANGE_FEATURE_COUNT + 1;
+    int MODULE_SKILL_GROUP_CHANGE__SELECTED = MODULE_TYPE_CHANGE__SELECTED;
 
     /**
      * The feature id for the '<em><b>Select One</b></em>' reference list.
@@ -6424,7 +6524,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_GROUP_CHANGE__SELECT_ONE = MODULE_CHANGE_FEATURE_COUNT + 2;
+    int MODULE_SKILL_GROUP_CHANGE__SELECT_ONE = MODULE_TYPE_CHANGE__SELECT_ONE;
+
+    /**
+     * The feature id for the '<em><b>Skill Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP = MODULE_TYPE_CHANGE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Module Skill Group Change</em>' class.
@@ -6433,7 +6542,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_GROUP_CHANGE_FEATURE_COUNT = MODULE_CHANGE_FEATURE_COUNT + 3;
+    int MODULE_SKILL_GROUP_CHANGE_FEATURE_COUNT = MODULE_TYPE_CHANGE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Module Skill Group Change</em>' class.
@@ -6442,7 +6551,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODULE_SKILL_GROUP_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
+    int MODULE_SKILL_GROUP_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
@@ -6452,7 +6561,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 54;
+	int GENERATOR_STATE = 55;
 
 
 	/**
@@ -6463,7 +6572,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 55;
+	int SEX = 56;
 
 
 	/**
@@ -6474,7 +6583,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 56;
+    int QUELLEN_CONSTRAIN_TYPE = 57;
 
 
     /**
@@ -6485,7 +6594,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
      * @generated
      */
-    int LIFE_MODULE_TYPE = 57;
+    int LIFE_MODULE_TYPE = 58;
 
 
     /**
@@ -8892,6 +9001,28 @@ public interface Shr5managementPackage extends EPackage {
     EReference getLifeModulesGenerator_RealLife();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost <em>Module Karma Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Module Karma Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EAttribute getLifeModulesGenerator_ModuleKarmaCost();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getStartingAge <em>Starting Age</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Starting Age</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getStartingAge()
+     * @see #getLifeModulesGenerator()
+     * @generated
+     */
+    EAttribute getLifeModulesGenerator_StartingAge();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem <em>Life Modules System</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8998,28 +9129,6 @@ public interface Shr5managementPackage extends EPackage {
     EReference getModuleSkillChange_Skill();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getGrade <em>Grade</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Grade</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getGrade()
-     * @see #getModuleSkillChange()
-     * @generated
-     */
-    EAttribute getModuleSkillChange_Grade();
-
-    /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSelectOne <em>Select One</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Select One</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillChange#getSelectOne()
-     * @see #getModuleSkillChange()
-     * @generated
-     */
-    EReference getModuleSkillChange_SelectOne();
-
-    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange <em>Module Teachable Change</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9041,28 +9150,6 @@ public interface Shr5managementPackage extends EPackage {
     EReference getModuleTeachableChange_Teachable();
 
     /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange#getSelectOne <em>Select One</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Select One</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleTeachableChange#getSelectOne()
-     * @see #getModuleTeachableChange()
-     * @generated
-     */
-    EReference getModuleTeachableChange_SelectOne();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ModuleTeachableChange#getGrade <em>Grade</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Grade</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleTeachableChange#getGrade()
-     * @see #getModuleTeachableChange()
-     * @generated
-     */
-    EAttribute getModuleTeachableChange_Grade();
-
-    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange <em>Module Attribute Change</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9071,17 +9158,6 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EClass getModuleAttributeChange();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getGrade <em>Grade</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Grade</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getGrade()
-     * @see #getModuleAttributeChange()
-     * @generated
-     */
-    EAttribute getModuleAttributeChange_Grade();
 
     /**
      * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getAttribute <em>Attribute</em>}'.
@@ -9093,17 +9169,6 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getModuleAttributeChange_Attribute();
-
-    /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getSelectOne <em>Select One</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Select One</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleAttributeChange#getSelectOne()
-     * @see #getModuleAttributeChange()
-     * @generated
-     */
-    EReference getModuleAttributeChange_SelectOne();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange <em>Module Feature Change</em>}'.
@@ -9148,17 +9213,6 @@ public interface Shr5managementPackage extends EPackage {
     EClass getModuleSkillGroupChange();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange#getGrade <em>Grade</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Grade</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange#getGrade()
-     * @see #getModuleSkillGroupChange()
-     * @generated
-     */
-    EAttribute getModuleSkillGroupChange_Grade();
-
-    /**
      * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange#getSkillGroup <em>Skill Group</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9170,15 +9224,47 @@ public interface Shr5managementPackage extends EPackage {
     EReference getModuleSkillGroupChange_SkillGroup();
 
     /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange#getSelectOne <em>Select One</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ModuleTypeChange <em>Module Type Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Module Type Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleTypeChange
+     * @generated
+     */
+    EClass getModuleTypeChange();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getGrade <em>Grade</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Grade</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getGrade()
+     * @see #getModuleTypeChange()
+     * @generated
+     */
+    EAttribute getModuleTypeChange_Grade();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getSelected <em>Selected</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Selected</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getSelected()
+     * @see #getModuleTypeChange()
+     * @generated
+     */
+    EReference getModuleTypeChange_Selected();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getSelectOne <em>Select One</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the reference list '<em>Select One</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange#getSelectOne()
-     * @see #getModuleSkillGroupChange()
+     * @see de.urszeidler.eclipse.shr5Management.ModuleTypeChange#getSelectOne()
+     * @see #getModuleTypeChange()
      * @generated
      */
-    EReference getModuleSkillGroupChange_SelectOne();
+    EReference getModuleTypeChange_SelectOne();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
@@ -11144,6 +11230,22 @@ public interface Shr5managementPackage extends EPackage {
         EReference LIFE_MODULES_GENERATOR__REAL_LIFE = eINSTANCE.getLifeModulesGenerator_RealLife();
 
         /**
+         * The meta object literal for the '<em><b>Module Karma Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFE_MODULES_GENERATOR__MODULE_KARMA_COST = eINSTANCE.getLifeModulesGenerator_ModuleKarmaCost();
+
+        /**
+         * The meta object literal for the '<em><b>Starting Age</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFE_MODULES_GENERATOR__STARTING_AGE = eINSTANCE.getLifeModulesGenerator_StartingAge();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl <em>Life Modules System</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -11232,22 +11334,6 @@ public interface Shr5managementPackage extends EPackage {
         EReference MODULE_SKILL_CHANGE__SKILL = eINSTANCE.getModuleSkillChange_Skill();
 
         /**
-         * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MODULE_SKILL_CHANGE__GRADE = eINSTANCE.getModuleSkillChange_Grade();
-
-        /**
-         * The meta object literal for the '<em><b>Select One</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference MODULE_SKILL_CHANGE__SELECT_ONE = eINSTANCE.getModuleSkillChange_SelectOne();
-
-        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl <em>Module Teachable Change</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -11266,22 +11352,6 @@ public interface Shr5managementPackage extends EPackage {
         EReference MODULE_TEACHABLE_CHANGE__TEACHABLE = eINSTANCE.getModuleTeachableChange_Teachable();
 
         /**
-         * The meta object literal for the '<em><b>Select One</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference MODULE_TEACHABLE_CHANGE__SELECT_ONE = eINSTANCE.getModuleTeachableChange_SelectOne();
-
-        /**
-         * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MODULE_TEACHABLE_CHANGE__GRADE = eINSTANCE.getModuleTeachableChange_Grade();
-
-        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl <em>Module Attribute Change</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -11292,28 +11362,12 @@ public interface Shr5managementPackage extends EPackage {
         EClass MODULE_ATTRIBUTE_CHANGE = eINSTANCE.getModuleAttributeChange();
 
         /**
-         * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MODULE_ATTRIBUTE_CHANGE__GRADE = eINSTANCE.getModuleAttributeChange_Grade();
-
-        /**
          * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
         EReference MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE = eINSTANCE.getModuleAttributeChange_Attribute();
-
-        /**
-         * The meta object literal for the '<em><b>Select One</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference MODULE_ATTRIBUTE_CHANGE__SELECT_ONE = eINSTANCE.getModuleAttributeChange_SelectOne();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl <em>Module Feature Change</em>}' class.
@@ -11352,14 +11406,6 @@ public interface Shr5managementPackage extends EPackage {
         EClass MODULE_SKILL_GROUP_CHANGE = eINSTANCE.getModuleSkillGroupChange();
 
         /**
-         * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MODULE_SKILL_GROUP_CHANGE__GRADE = eINSTANCE.getModuleSkillGroupChange_Grade();
-
-        /**
          * The meta object literal for the '<em><b>Skill Group</b></em>' reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -11368,12 +11414,38 @@ public interface Shr5managementPackage extends EPackage {
         EReference MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP = eINSTANCE.getModuleSkillGroupChange_SkillGroup();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl <em>Module Type Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTypeChange()
+         * @generated
+         */
+        EClass MODULE_TYPE_CHANGE = eINSTANCE.getModuleTypeChange();
+
+        /**
+         * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MODULE_TYPE_CHANGE__GRADE = eINSTANCE.getModuleTypeChange_Grade();
+
+        /**
+         * The meta object literal for the '<em><b>Selected</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MODULE_TYPE_CHANGE__SELECTED = eINSTANCE.getModuleTypeChange_Selected();
+
+        /**
          * The meta object literal for the '<em><b>Select One</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference MODULE_SKILL_GROUP_CHANGE__SELECT_ONE = eINSTANCE.getModuleSkillGroupChange_SelectOne();
+        EReference MODULE_TYPE_CHANGE__SELECT_ONE = eINSTANCE.getModuleTypeChange_SelectOne();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

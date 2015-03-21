@@ -948,7 +948,7 @@
         upperBound="-1" eType="#//LifeModule"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleKarmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifeModulesSystem" eSuperTypes="#//Shr5System">
@@ -975,30 +975,30 @@
     <eLiterals name="realLife"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleChange" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillChange" eSuperTypes="#//ModuleChange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillChange">
     <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+    <eGenericSuperTypes eClassifier="#//ModuleTypeChange">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+    </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleTeachableChange" eSuperTypes="#//ModuleChange">
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleTeachableChange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Will be used for the quallities, specalism ..."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teachable" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Erlernbar"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Erlernbar"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eGenericSuperTypes eClassifier="#//ModuleTypeChange">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Erlernbar"/>
+    </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleAttributeChange" eSuperTypes="#//ModuleChange">
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleAttributeChange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Define an attribute change."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    <eGenericSuperTypes eClassifier="#//ModuleTypeChange">
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleFeatureChange" eSuperTypes="#//ModuleChange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1007,10 +1007,20 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillGroupChange" eSuperTypes="#//ModuleChange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleSkillGroupChange">
     <eStructuralFeatures xsi:type="ecore:EReference" name="skillGroup" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
+    <eGenericSuperTypes eClassifier="#//ModuleTypeChange">
+      <eTypeArguments eClassifier="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleTypeChange" abstract="true" eSuperTypes="#//ModuleChange">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selected">
+      <eGenericType eTypeParameter="#//ModuleTypeChange/T"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1">
+      <eGenericType eTypeParameter="#//ModuleTypeChange/T"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

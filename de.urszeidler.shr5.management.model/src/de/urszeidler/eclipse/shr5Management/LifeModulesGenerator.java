@@ -18,6 +18,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getTeenYears <em>Teen Years</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getFurtherEducation <em>Further Education</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getRealLife <em>Real Life</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost <em>Module Karma Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getStartingAge <em>Starting Age</em>}</li>
  * </ul>
  * </p>
  *
@@ -145,5 +147,35 @@ public interface LifeModulesGenerator extends Shr5KarmaGenerator {
      * @generated
      */
     EList<LifeModule> getRealLife();
+
+    /**
+     * Returns the value of the '<em><b>Module Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Module Karma Cost</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Module Karma Cost</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_ModuleKarmaCost()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getModuleKarmaCost();
+
+    /**
+     * Returns the value of the '<em><b>Starting Age</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Starting Age</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Starting Age</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_StartingAge()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getStartingAge();
 
 } // LifeModulesGenerator

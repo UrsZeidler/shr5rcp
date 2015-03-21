@@ -27,6 +27,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getTeenYears <em>Teen Years</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getFurtherEducation <em>Further Education</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getRealLife <em>Real Life</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getModuleKarmaCost <em>Module Karma Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getStartingAge <em>Starting Age</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,6 +84,26 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
      * @ordered
      */
     protected EList<LifeModule> realLife;
+
+    /**
+     * The default value of the '{@link #getModuleKarmaCost() <em>Module Karma Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getModuleKarmaCost()
+     * @generated
+     * @ordered
+     */
+    protected static final int MODULE_KARMA_COST_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getStartingAge() <em>Starting Age</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStartingAge()
+     * @generated
+     * @ordered
+     */
+    protected static final int STARTING_AGE_EDEFAULT = 0;
 
     /**
      * <!-- begin-user-doc -->
@@ -269,6 +291,48 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getModuleKarmaCost() {
+        int basicCost = 0;
+        if(getNationality()!=null)
+            basicCost += getNationality().getKarmaCost();
+        if(getFormativeYears()!=null)
+            basicCost+= getFormativeYears().getKarmaCost();
+        if(getTeenYears()!=null)
+            basicCost+= getTeenYears().getKarmaCost();
+        if(getFurtherEducation()!=null)
+            basicCost += getFurtherEducation().getKarmaCost();
+        for (LifeModule lm : getRealLife()) {
+            basicCost += lm.getKarmaCost();
+        }
+        return basicCost;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getStartingAge() {
+        int basicAge = 0;
+        if(getNationality()!=null)
+            basicAge += getNationality().getTime();
+        if(getFormativeYears()!=null)
+            basicAge+= getFormativeYears().getTime();
+        if(getTeenYears()!=null)
+            basicAge+= getTeenYears().getTime();
+        if(getFurtherEducation()!=null)
+            basicAge += getFurtherEducation().getTime();
+        for (LifeModule lm : getRealLife()) {
+            basicAge += lm.getTime();
+        }
+        return basicAge;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -288,6 +352,10 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
                 return basicGetFurtherEducation();
             case Shr5managementPackage.LIFE_MODULES_GENERATOR__REAL_LIFE:
                 return getRealLife();
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST:
+                return getModuleKarmaCost();
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__STARTING_AGE:
+                return getStartingAge();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -366,6 +434,10 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
                 return furtherEducation != null;
             case Shr5managementPackage.LIFE_MODULES_GENERATOR__REAL_LIFE:
                 return realLife != null && !realLife.isEmpty();
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST:
+                return getModuleKarmaCost() != MODULE_KARMA_COST_EDEFAULT;
+            case Shr5managementPackage.LIFE_MODULES_GENERATOR__STARTING_AGE:
+                return getStartingAge() != STARTING_AGE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -384,18 +456,7 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
         int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
-        if(getNationality()!=null)
-            basicCost += getNationality().getKarmaCost();
-        if(getFormativeYears()!=null)
-            basicCost+= getFormativeYears().getKarmaCost();
-        if(getTeenYears()!=null)
-            basicCost+= getTeenYears().getKarmaCost();
-        if(getFurtherEducation()!=null)
-            basicCost += getFurtherEducation().getKarmaCost();
-        for (LifeModule lm : getRealLife()) {
-            basicCost += lm.getKarmaCost();
-        }
-        return Math.abs(karmaSpend) + basicCost + connectionsSpend + getKarmaToResource();
+        return Math.abs(karmaSpend) + basicCost+ getModuleKarmaCost() + connectionsSpend + getKarmaToResource();
     }
 
      

@@ -50,6 +50,7 @@ import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
 import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTypeChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
@@ -460,6 +461,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass moduleSkillGroupChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass moduleTypeChangeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2601,6 +2609,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getLifeModulesGenerator_ModuleKarmaCost() {
+        return (EAttribute)lifeModulesGeneratorEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifeModulesGenerator_StartingAge() {
+        return (EAttribute)lifeModulesGeneratorEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getLifeModulesSystem() {
         return lifeModulesSystemEClass;
     }
@@ -2683,25 +2709,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EReference getModuleSkillChange_Skill() {
-        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EAttribute getModuleSkillChange_Grade() {
-        return (EAttribute)moduleSkillChangeEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getModuleSkillChange_SelectOne() {
-        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(2);
+        return (EReference)moduleSkillChangeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2727,24 +2735,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getModuleTeachableChange_SelectOne() {
-        return (EReference)moduleTeachableChangeEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EAttribute getModuleTeachableChange_Grade() {
-        return (EAttribute)moduleTeachableChangeEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EClass getModuleAttributeChange() {
         return moduleAttributeChangeEClass;
     }
@@ -2754,26 +2744,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getModuleAttributeChange_Grade() {
-        return (EAttribute)moduleAttributeChangeEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getModuleAttributeChange_Attribute() {
-        return (EReference)moduleAttributeChangeEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getModuleAttributeChange_SelectOne() {
-        return (EReference)moduleAttributeChangeEClass.getEStructuralFeatures().get(2);
+        return (EReference)moduleAttributeChangeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2817,17 +2789,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getModuleSkillGroupChange_Grade() {
-        return (EAttribute)moduleSkillGroupChangeEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getModuleSkillGroupChange_SkillGroup() {
-        return (EReference)moduleSkillGroupChangeEClass.getEStructuralFeatures().get(1);
+        return (EReference)moduleSkillGroupChangeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2835,8 +2798,35 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getModuleSkillGroupChange_SelectOne() {
-        return (EReference)moduleSkillGroupChangeEClass.getEStructuralFeatures().get(2);
+    public EClass getModuleTypeChange() {
+        return moduleTypeChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getModuleTypeChange_Grade() {
+        return (EAttribute)moduleTypeChangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleTypeChange_Selected() {
+        return (EReference)moduleTypeChangeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getModuleTypeChange_SelectOne() {
+        return (EReference)moduleTypeChangeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3174,6 +3164,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__TEEN_YEARS);
         createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__FURTHER_EDUCATION);
         createEReference(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__REAL_LIFE);
+        createEAttribute(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__MODULE_KARMA_COST);
+        createEAttribute(lifeModulesGeneratorEClass, LIFE_MODULES_GENERATOR__STARTING_AGE);
 
         lifeModulesSystemEClass = createEClass(LIFE_MODULES_SYSTEM);
         createEReference(lifeModulesSystemEClass, LIFE_MODULES_SYSTEM__MODULES);
@@ -3187,28 +3179,25 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         moduleChangeEClass = createEClass(MODULE_CHANGE);
 
         moduleSkillChangeEClass = createEClass(MODULE_SKILL_CHANGE);
-        createEAttribute(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__GRADE);
         createEReference(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__SKILL);
-        createEReference(moduleSkillChangeEClass, MODULE_SKILL_CHANGE__SELECT_ONE);
 
         moduleTeachableChangeEClass = createEClass(MODULE_TEACHABLE_CHANGE);
         createEReference(moduleTeachableChangeEClass, MODULE_TEACHABLE_CHANGE__TEACHABLE);
-        createEReference(moduleTeachableChangeEClass, MODULE_TEACHABLE_CHANGE__SELECT_ONE);
-        createEAttribute(moduleTeachableChangeEClass, MODULE_TEACHABLE_CHANGE__GRADE);
 
         moduleAttributeChangeEClass = createEClass(MODULE_ATTRIBUTE_CHANGE);
-        createEAttribute(moduleAttributeChangeEClass, MODULE_ATTRIBUTE_CHANGE__GRADE);
         createEReference(moduleAttributeChangeEClass, MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE);
-        createEReference(moduleAttributeChangeEClass, MODULE_ATTRIBUTE_CHANGE__SELECT_ONE);
 
         moduleFeatureChangeEClass = createEClass(MODULE_FEATURE_CHANGE);
         createEReference(moduleFeatureChangeEClass, MODULE_FEATURE_CHANGE__FEATURE);
         createEReference(moduleFeatureChangeEClass, MODULE_FEATURE_CHANGE__VALUE);
 
         moduleSkillGroupChangeEClass = createEClass(MODULE_SKILL_GROUP_CHANGE);
-        createEAttribute(moduleSkillGroupChangeEClass, MODULE_SKILL_GROUP_CHANGE__GRADE);
         createEReference(moduleSkillGroupChangeEClass, MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP);
-        createEReference(moduleSkillGroupChangeEClass, MODULE_SKILL_GROUP_CHANGE__SELECT_ONE);
+
+        moduleTypeChangeEClass = createEClass(MODULE_TYPE_CHANGE);
+        createEAttribute(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__GRADE);
+        createEReference(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__SELECTED);
+        createEReference(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__SELECT_ONE);
 
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
@@ -3245,6 +3234,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         // Create type parameters
         ETypeParameter characterGeneratorEClass_G = addETypeParameter(characterGeneratorEClass, "G");
+        ETypeParameter moduleTypeChangeEClass_T = addETypeParameter(moduleTypeChangeEClass, "T");
 
         // Set bounds for type parameters
         EGenericType g1 = createEGenericType(this.getCharacterGeneratorSystem());
@@ -3297,11 +3287,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         lifeModulesSystemEClass.getESuperTypes().add(this.getShr5System());
         lifeModuleEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         lifeModuleEClass.getESuperTypes().add(theShr5Package.getQuelle());
-        moduleSkillChangeEClass.getESuperTypes().add(this.getModuleChange());
-        moduleTeachableChangeEClass.getESuperTypes().add(this.getModuleChange());
-        moduleAttributeChangeEClass.getESuperTypes().add(this.getModuleChange());
+        g1 = createEGenericType(this.getModuleTypeChange());
+        g2 = createEGenericType(theShr5Package.getFertigkeit());
+        g1.getETypeArguments().add(g2);
+        moduleSkillChangeEClass.getEGenericSuperTypes().add(g1);
+        g1 = createEGenericType(this.getModuleTypeChange());
+        g2 = createEGenericType(theShr5Package.getErlernbar());
+        g1.getETypeArguments().add(g2);
+        moduleTeachableChangeEClass.getEGenericSuperTypes().add(g1);
+        g1 = createEGenericType(this.getModuleTypeChange());
+        g2 = createEGenericType(ecorePackage.getEAttribute());
+        g1.getETypeArguments().add(g2);
+        moduleAttributeChangeEClass.getEGenericSuperTypes().add(g1);
         moduleFeatureChangeEClass.getESuperTypes().add(this.getModuleChange());
-        moduleSkillGroupChangeEClass.getESuperTypes().add(this.getModuleChange());
+        g1 = createEGenericType(this.getModuleTypeChange());
+        g2 = createEGenericType(theShr5Package.getFertigkeitsGruppe());
+        g1.getETypeArguments().add(g2);
+        moduleSkillGroupChangeEClass.getEGenericSuperTypes().add(g1);
+        moduleTypeChangeEClass.getESuperTypes().add(this.getModuleChange());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3815,6 +3818,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getLifeModulesGenerator_TeenYears(), this.getLifeModule(), null, "teenYears", null, 1, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getLifeModulesGenerator_FurtherEducation(), this.getLifeModule(), null, "furtherEducation", null, 0, 1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getLifeModulesGenerator_RealLife(), this.getLifeModule(), null, "realLife", null, 1, -1, LifeModulesGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifeModulesGenerator_ModuleKarmaCost(), ecorePackage.getEInt(), "moduleKarmaCost", null, 0, 1, LifeModulesGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifeModulesGenerator_StartingAge(), ecorePackage.getEInt(), "startingAge", null, 0, 1, LifeModulesGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(lifeModulesSystemEClass, LifeModulesSystem.class, "LifeModulesSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getLifeModulesSystem_Modules(), this.getLifeModule(), null, "modules", null, 0, -1, LifeModulesSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3828,28 +3833,27 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(moduleChangeEClass, ModuleChange.class, "ModuleChange", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(moduleSkillChangeEClass, ModuleSkillChange.class, "ModuleSkillChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getModuleSkillChange_Grade(), ecorePackage.getEInt(), "grade", null, 0, 1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getModuleSkillChange_Skill(), theShr5Package.getFertigkeit(), null, "skill", null, 0, 1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getModuleSkillChange_SelectOne(), theShr5Package.getFertigkeit(), null, "selectOne", null, 0, -1, ModuleSkillChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(moduleTeachableChangeEClass, ModuleTeachableChange.class, "ModuleTeachableChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getModuleTeachableChange_Teachable(), theShr5Package.getErlernbar(), null, "teachable", null, 0, 1, ModuleTeachableChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getModuleTeachableChange_SelectOne(), theShr5Package.getErlernbar(), null, "selectOne", null, 0, -1, ModuleTeachableChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getModuleTeachableChange_Grade(), ecorePackage.getEInt(), "grade", null, 0, 1, ModuleTeachableChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(moduleAttributeChangeEClass, ModuleAttributeChange.class, "ModuleAttributeChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getModuleAttributeChange_Grade(), ecorePackage.getEInt(), "grade", null, 0, 1, ModuleAttributeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getModuleAttributeChange_Attribute(), ecorePackage.getEAttribute(), null, "attribute", null, 1, 1, ModuleAttributeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getModuleAttributeChange_SelectOne(), ecorePackage.getEAttribute(), null, "selectOne", null, 0, -1, ModuleAttributeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(moduleFeatureChangeEClass, ModuleFeatureChange.class, "ModuleFeatureChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getModuleFeatureChange_Feature(), ecorePackage.getEReference(), null, "feature", null, 0, 1, ModuleFeatureChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getModuleFeatureChange_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ModuleFeatureChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(moduleSkillGroupChangeEClass, ModuleSkillGroupChange.class, "ModuleSkillGroupChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getModuleSkillGroupChange_Grade(), ecorePackage.getEInt(), "grade", null, 0, 1, ModuleSkillGroupChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getModuleSkillGroupChange_SkillGroup(), theShr5Package.getFertigkeitsGruppe(), null, "skillGroup", null, 0, 1, ModuleSkillGroupChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getModuleSkillGroupChange_SelectOne(), theShr5Package.getFertigkeitsGruppe(), null, "selectOne", null, 0, -1, ModuleSkillGroupChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(moduleTypeChangeEClass, ModuleTypeChange.class, "ModuleTypeChange", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getModuleTypeChange_Grade(), ecorePackage.getEInt(), "grade", null, 0, 1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(moduleTypeChangeEClass_T);
+        initEReference(getModuleTypeChange_Selected(), g1, null, "selected", null, 0, 1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(moduleTypeChangeEClass_T);
+        initEReference(getModuleTypeChange_SelectOne(), g1, null, "selectOne", null, 0, -1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

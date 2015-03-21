@@ -7,16 +7,12 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange} object.
@@ -24,7 +20,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleSkillGroupChangeItemProvider extends ModuleChangeItemProvider {
+public class ModuleSkillGroupChangeItemProvider extends ModuleTypeChangeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -46,33 +42,9 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleChangeItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addGradePropertyDescriptor(object);
             addSkillGroupPropertyDescriptor(object);
-            addSelectOnePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Grade feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addGradePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ModuleSkillGroupChange_grade_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillGroupChange_grade_feature", "_UI_ModuleSkillGroupChange_type"),
-                 Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__GRADE,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
     }
 
     /**
@@ -89,28 +61,6 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleChangeItemProvider
                  getString("_UI_ModuleSkillGroupChange_skillGroup_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillGroupChange_skillGroup_feature", "_UI_ModuleSkillGroupChange_type"),
                  Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Select One feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addSelectOnePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_ModuleSkillGroupChange_selectOne_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillGroupChange_selectOne_feature", "_UI_ModuleSkillGroupChange_type"),
-                 Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SELECT_ONE,
                  true,
                  false,
                  true,
@@ -161,12 +111,6 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleChangeItemProvider
     @Override
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
-
-        switch (notification.getFeatureID(ModuleSkillGroupChange.class)) {
-            case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE__GRADE:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-        }
         super.notifyChanged(notification);
     }
 

@@ -204,11 +204,11 @@ public class TreeTableWidget extends Composite {
             }else if (ec.equals(Shr5managementPackage.Literals.MODULE_CHANGE)) {
                 nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
                 featureList.add(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE);
-                featureList.add(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__GRADE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECTED);
                 featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL);
-                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__GRADE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE);
                 featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP);
-                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__GRADE);
+                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE);
             }else
                 featureList.addAll(ec.getEAllStructuralFeatures());
         }
