@@ -60,7 +60,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
     protected static final String EMPTY = ""; //$NON-NLS-1$
-    private Shr5KarmaGenerator<Shr5System> object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
+    private Shr5KarmaGenerator object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
 
@@ -97,7 +97,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
      * @param editingDomain
      * @param manager
      */
-    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title, Shr5KarmaGenerator<Shr5System> object, EditingDomain editingDomain,
+    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title, Shr5KarmaGenerator object, EditingDomain editingDomain,
             ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
@@ -291,10 +291,10 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__META_TYPE, compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__META_TYPE, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
 
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
@@ -426,7 +426,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         //
         IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE);
+                Literals.KARMA_GENERATOR__KARMA_TO_RESOURCE);
         UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         bindingContext.bindValue(observeSelectionSpinnerObserveWidget, objectKarmaToResourceObserveValue, modelToTarget, modelToTarget);
         //
@@ -450,7 +450,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         if (resourceGeneratorOption != null)
             resourceGeneratorOption.dispose();
         resourceGeneratorOption = new ResourceGeneratorOption(grpResources, SWT.NONE, resourcen, object.getCharacter(),
-                getManagedForm().getToolkit(), editingDomain, Literals.SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
+                getManagedForm().getToolkit(), editingDomain, Literals.KARMA_GENERATOR__RESOURCE_SPEND);
         resourceGeneratorOption.layout();
 
         optionWidgetsCreated = true;
@@ -459,7 +459,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     private void ownBinding(DataBindingContext bindingContext) {
         IObservableValue observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
         IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.SHR5_KARMA_GENERATOR__KARMA_SPEND);
+                Literals.KARMA_GENERATOR__KARMA_SPEND);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override

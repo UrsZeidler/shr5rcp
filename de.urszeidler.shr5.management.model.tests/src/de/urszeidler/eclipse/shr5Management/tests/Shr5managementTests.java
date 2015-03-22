@@ -46,11 +46,10 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(PlayerCharacterTest.class);
         suite.addTestSuite(MudanTest.class);
         suite.addTestSuite(PersonaChangeTest.class);
-        suite.addTestSuite(Shr5KarmaGeneratorTest.class);
         suite.addTestSuite(PackTest.class);
         suite.addTestSuite(SumToTenGeneratorTest.class);
         suite.addTestSuite(LifeModulesGeneratorTest.class);
-        suite.addTestSuite(KarmaGeneratorTest.class);
+        suite.addTestSuite(Shr5KarmaGeneratorTest.class);
         return suite;
     }
 

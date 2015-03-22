@@ -300,12 +300,12 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS = 25;
 
     /**
-     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Karma Points' of 'Shr5 Karma Generator'.
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Karma Points' of 'Karma Generator'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 26;
+    public static final int KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 26;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Sum To Ten' of 'Sum To Ten Generator'.
@@ -435,8 +435,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateCharacterAdvancementSystem((CharacterAdvancementSystem)value, diagnostics, context);
             case Shr5managementPackage.SHR5_RULE_GENERATOR:
                 return validateShr5RuleGenerator((Shr5RuleGenerator<?>)value, diagnostics, context);
-            case Shr5managementPackage.SHR5_KARMA_GENERATOR:
-                return validateShr5KarmaGenerator((Shr5KarmaGenerator<?>)value, diagnostics, context);
+            case Shr5managementPackage.KARMA_GENERATOR:
+                return validateKarmaGenerator((KarmaGenerator<?>)value, diagnostics, context);
             case Shr5managementPackage.QUELLEN_CONSTRAIN:
                 return validateQuellenConstrain((QuellenConstrain)value, diagnostics, context);
             case Shr5managementPackage.PACK:
@@ -471,8 +471,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateModuleSkillGroupChange((ModuleSkillGroupChange)value, diagnostics, context);
             case Shr5managementPackage.MODULE_TYPE_CHANGE:
                 return validateModuleTypeChange((ModuleTypeChange<?>)value, diagnostics, context);
-            case Shr5managementPackage.KARMA_GENERATOR:
-                return validateKarmaGenerator((KarmaGenerator)value, diagnostics, context);
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR:
+                return validateShr5KarmaGenerator((Shr5KarmaGenerator)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1126,7 +1126,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5KarmaGenerator(Shr5KarmaGenerator<?> shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5KarmaGenerator(Shr5KarmaGenerator shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (!validate_NoCircularContainment(shr5KarmaGenerator, diagnostics, context)) return false;
         boolean result = validate_EveryMultiplicityConforms(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryDataValueConforms(shr5KarmaGenerator, diagnostics, context);
@@ -1146,18 +1146,8 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(shr5KarmaGenerator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
         return result;
-    }
-
-    /**
-     * Validates the hasSpendAllKarmaPoints constraint of '<em>Shr5 Karma Generator</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public boolean validateShr5KarmaGenerator_hasSpendAllKarmaPoints(Shr5KarmaGenerator<?> shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return shr5KarmaGenerator.hasSpendAllKarmaPoints(diagnostics, context);
     }
 
     /**
@@ -1292,7 +1282,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(lifeModulesGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(lifeModulesGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(lifeModulesGenerator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(lifeModulesGenerator, diagnostics, context);
         return result;
     }
 
@@ -1382,7 +1372,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateKarmaGenerator(KarmaGenerator karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateKarmaGenerator(KarmaGenerator<?> karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (!validate_NoCircularContainment(karmaGenerator, diagnostics, context)) return false;
         boolean result = validate_EveryMultiplicityConforms(karmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryDataValueConforms(karmaGenerator, diagnostics, context);
@@ -1402,8 +1392,18 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(karmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(karmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(karmaGenerator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(karmaGenerator, diagnostics, context);
         return result;
+    }
+
+    /**
+     * Validates the hasSpendAllKarmaPoints constraint of '<em>Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateKarmaGenerator_hasSpendAllKarmaPoints(KarmaGenerator<?> karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return karmaGenerator.hasSpendAllKarmaPoints(diagnostics, context);
     }
 
     /**

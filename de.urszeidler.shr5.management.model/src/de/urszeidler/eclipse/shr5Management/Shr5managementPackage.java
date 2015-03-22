@@ -4302,259 +4302,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5KarmaGenerator()
      * @generated
      */
-    int SHR5_KARMA_GENERATOR = 37;
-
-    /**
-     * The feature id for the '<em><b>Character</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__CHARACTER = SHR5_RULE_GENERATOR__CHARACTER;
-
-    /**
-     * The feature id for the '<em><b>Generator</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__GENERATOR = SHR5_RULE_GENERATOR__GENERATOR;
-
-    /**
-     * The feature id for the '<em><b>State</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__STATE = SHR5_RULE_GENERATOR__STATE;
-
-    /**
-     * The feature id for the '<em><b>Selected Group</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__SELECTED_GROUP = SHR5_RULE_GENERATOR__SELECTED_GROUP;
-
-    /**
-     * The feature id for the '<em><b>Character Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__CHARACTER_NAME = SHR5_RULE_GENERATOR__CHARACTER_NAME;
-
-    /**
-     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION = SHR5_RULE_GENERATOR__CURRENT_INSTRUCTION;
-
-    /**
-     * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__ALLOWED_SOURCES = SHR5_RULE_GENERATOR__ALLOWED_SOURCES;
-
-    /**
-     * The feature id for the '<em><b>Meta Type</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__META_TYPE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Character Concept</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 1;
-
-    /**
-     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 2;
-
-    /**
-     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__KARMA_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 3;
-
-    /**
-     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__RESOURCE_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 4;
-
-    /**
-     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__START_KARMA = SHR5_RULE_GENERATOR_FEATURE_COUNT + 5;
-
-    /**
-     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__START_RESOURCES = SHR5_RULE_GENERATOR_FEATURE_COUNT + 6;
-
-    /**
-     * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
-
-    /**
-     * The number of structural features of the '<em>Shr5 Karma Generator</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 8;
-
-    /**
-     * The operation id for the '<em>Has Spend All Points</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Not More Specalism</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Basic Violations</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
-
-    /**
-     * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 0;
-
-    /**
-     * The number of operations of the '<em>Shr5 Karma Generator</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR5_KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
+    int SHR5_KARMA_GENERATOR = 55;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.
@@ -4565,6 +4313,428 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     int QUELLEN_CONSTRAIN = 38;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl <em>Pack</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.PackImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPack()
+     * @generated
+     */
+    int PACK = 39;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl <em>Character Diary</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterDiary()
+     * @generated
+     */
+    int CHARACTER_DIARY = 40;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl <em>Diary Entry</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getDiaryEntry()
+     * @generated
+     */
+    int DIARY_ENTRY = 41;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl <em>Contract Payment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getContractPayment()
+     * @generated
+     */
+    int CONTRACT_PAYMENT = 42;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl <em>Character Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterChange()
+     * @generated
+     */
+    int CHARACTER_CHANGE = 43;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl <em>Sum To Ten Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSumToTenGenerator()
+     * @generated
+     */
+    int SUM_TO_TEN_GENERATOR = 44;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl <em>Life Modules Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesGenerator()
+     * @generated
+     */
+    int LIFE_MODULES_GENERATOR = 45;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl <em>Life Modules System</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesSystem()
+     * @generated
+     */
+    int LIFE_MODULES_SYSTEM = 46;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl <em>Life Module</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModule()
+     * @generated
+     */
+    int LIFE_MODULE = 47;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl <em>Module Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleChange()
+     * @generated
+     */
+    int MODULE_CHANGE = 48;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl <em>Module Type Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTypeChange()
+     * @generated
+     */
+    int MODULE_TYPE_CHANGE = 54;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl <em>Module Skill Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillChange()
+     * @generated
+     */
+    int MODULE_SKILL_CHANGE = 49;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl <em>Module Teachable Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTeachableChange()
+     * @generated
+     */
+    int MODULE_TEACHABLE_CHANGE = 50;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl <em>Module Attribute Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleAttributeChange()
+     * @generated
+     */
+    int MODULE_ATTRIBUTE_CHANGE = 51;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl <em>Module Feature Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleFeatureChange()
+     * @generated
+     */
+    int MODULE_FEATURE_CHANGE = 52;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillGroupChangeImpl <em>Module Skill Group Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillGroupChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillGroupChange()
+     * @generated
+     */
+    int MODULE_SKILL_GROUP_CHANGE = 53;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl <em>Karma Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getKarmaGenerator()
+     * @generated
+     */
+    int KARMA_GENERATOR = 37;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__CHARACTER = SHR5_RULE_GENERATOR__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__GENERATOR = SHR5_RULE_GENERATOR__GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__STATE = SHR5_RULE_GENERATOR__STATE;
+
+    /**
+     * The feature id for the '<em><b>Selected Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__SELECTED_GROUP = SHR5_RULE_GENERATOR__SELECTED_GROUP;
+
+    /**
+     * The feature id for the '<em><b>Character Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__CHARACTER_NAME = SHR5_RULE_GENERATOR__CHARACTER_NAME;
+
+    /**
+     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__CURRENT_INSTRUCTION = SHR5_RULE_GENERATOR__CURRENT_INSTRUCTION;
+
+    /**
+     * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__ALLOWED_SOURCES = SHR5_RULE_GENERATOR__ALLOWED_SOURCES;
+
+    /**
+     * The feature id for the '<em><b>Meta Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__META_TYPE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Character Concept</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__CHARACTER_CONCEPT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__KARMA_TO_RESOURCE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__KARMA_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__RESOURCE_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__START_KARMA = SHR5_RULE_GENERATOR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__START_RESOURCES = SHR5_RULE_GENERATOR_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR__CHOISE_KARMA_COST = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
+
+    /**
+     * The number of structural features of the '<em>Karma Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 8;
+
+    /**
+     * The operation id for the '<em>Has Spend All Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Basic Violations</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Karma Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Source</b></em>' reference.
@@ -4610,16 +4780,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int QUELLEN_CONSTRAIN_OPERATION_COUNT = 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl <em>Pack</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.PackImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPack()
-     * @generated
-     */
-    int PACK = 39;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -4739,16 +4899,6 @@ public interface Shr5managementPackage extends EPackage {
     int PACK_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl <em>Character Diary</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterDiary()
-     * @generated
-     */
-    int CHARACTER_DIARY = 40;
-
-    /**
      * The feature id for the '<em><b>Character Date</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4785,16 +4935,6 @@ public interface Shr5managementPackage extends EPackage {
     int CHARACTER_DIARY_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl <em>Diary Entry</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getDiaryEntry()
-     * @generated
-     */
-    int DIARY_ENTRY = 41;
-
-    /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4829,16 +4969,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int DIARY_ENTRY_OPERATION_COUNT = 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl <em>Contract Payment</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getContractPayment()
-     * @generated
-     */
-    int CONTRACT_PAYMENT = 42;
 
     /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -4895,16 +5025,6 @@ public interface Shr5managementPackage extends EPackage {
     int CONTRACT_PAYMENT_OPERATION_COUNT = DIARY_ENTRY_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl <em>Character Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterChange()
-     * @generated
-     */
-    int CHARACTER_CHANGE = 43;
-
-    /**
      * The feature id for the '<em><b>Date</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4948,16 +5068,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int CHARACTER_CHANGE_OPERATION_COUNT = DIARY_ENTRY_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl <em>Sum To Ten Generator</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.SumToTenGeneratorImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSumToTenGenerator()
-     * @generated
-     */
-    int SUM_TO_TEN_GENERATOR = 44;
 
     /**
      * The feature id for the '<em><b>Character</b></em>' reference.
@@ -5419,23 +5529,13 @@ public interface Shr5managementPackage extends EPackage {
     int SUM_TO_TEN_GENERATOR_OPERATION_COUNT = SHR5_GENERATOR_OPERATION_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl <em>Life Modules Generator</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesGenerator()
-     * @generated
-     */
-    int LIFE_MODULES_GENERATOR = 45;
-
-    /**
      * The feature id for the '<em><b>Character</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__CHARACTER = SHR5_KARMA_GENERATOR__CHARACTER;
+    int LIFE_MODULES_GENERATOR__CHARACTER = KARMA_GENERATOR__CHARACTER;
 
     /**
      * The feature id for the '<em><b>Generator</b></em>' reference.
@@ -5444,7 +5544,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__GENERATOR = SHR5_KARMA_GENERATOR__GENERATOR;
+    int LIFE_MODULES_GENERATOR__GENERATOR = KARMA_GENERATOR__GENERATOR;
 
     /**
      * The feature id for the '<em><b>State</b></em>' attribute.
@@ -5453,7 +5553,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__STATE = SHR5_KARMA_GENERATOR__STATE;
+    int LIFE_MODULES_GENERATOR__STATE = KARMA_GENERATOR__STATE;
 
     /**
      * The feature id for the '<em><b>Selected Group</b></em>' reference.
@@ -5462,7 +5562,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__SELECTED_GROUP = SHR5_KARMA_GENERATOR__SELECTED_GROUP;
+    int LIFE_MODULES_GENERATOR__SELECTED_GROUP = KARMA_GENERATOR__SELECTED_GROUP;
 
     /**
      * The feature id for the '<em><b>Character Name</b></em>' attribute.
@@ -5471,7 +5571,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__CHARACTER_NAME = SHR5_KARMA_GENERATOR__CHARACTER_NAME;
+    int LIFE_MODULES_GENERATOR__CHARACTER_NAME = KARMA_GENERATOR__CHARACTER_NAME;
 
     /**
      * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
@@ -5480,7 +5580,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__CURRENT_INSTRUCTION = SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION;
+    int LIFE_MODULES_GENERATOR__CURRENT_INSTRUCTION = KARMA_GENERATOR__CURRENT_INSTRUCTION;
 
     /**
      * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
@@ -5489,7 +5589,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__ALLOWED_SOURCES = SHR5_KARMA_GENERATOR__ALLOWED_SOURCES;
+    int LIFE_MODULES_GENERATOR__ALLOWED_SOURCES = KARMA_GENERATOR__ALLOWED_SOURCES;
 
     /**
      * The feature id for the '<em><b>Meta Type</b></em>' reference.
@@ -5498,7 +5598,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__META_TYPE = SHR5_KARMA_GENERATOR__META_TYPE;
+    int LIFE_MODULES_GENERATOR__META_TYPE = KARMA_GENERATOR__META_TYPE;
 
     /**
      * The feature id for the '<em><b>Character Concept</b></em>' reference.
@@ -5507,7 +5607,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__CHARACTER_CONCEPT = SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT;
+    int LIFE_MODULES_GENERATOR__CHARACTER_CONCEPT = KARMA_GENERATOR__CHARACTER_CONCEPT;
 
     /**
      * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
@@ -5516,7 +5616,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__KARMA_TO_RESOURCE = SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE;
+    int LIFE_MODULES_GENERATOR__KARMA_TO_RESOURCE = KARMA_GENERATOR__KARMA_TO_RESOURCE;
 
     /**
      * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
@@ -5525,7 +5625,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__KARMA_SPEND = SHR5_KARMA_GENERATOR__KARMA_SPEND;
+    int LIFE_MODULES_GENERATOR__KARMA_SPEND = KARMA_GENERATOR__KARMA_SPEND;
 
     /**
      * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
@@ -5534,7 +5634,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__RESOURCE_SPEND = SHR5_KARMA_GENERATOR__RESOURCE_SPEND;
+    int LIFE_MODULES_GENERATOR__RESOURCE_SPEND = KARMA_GENERATOR__RESOURCE_SPEND;
 
     /**
      * The feature id for the '<em><b>Start Karma</b></em>' attribute.
@@ -5543,7 +5643,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__START_KARMA = SHR5_KARMA_GENERATOR__START_KARMA;
+    int LIFE_MODULES_GENERATOR__START_KARMA = KARMA_GENERATOR__START_KARMA;
 
     /**
      * The feature id for the '<em><b>Start Resources</b></em>' attribute.
@@ -5552,7 +5652,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__START_RESOURCES = SHR5_KARMA_GENERATOR__START_RESOURCES;
+    int LIFE_MODULES_GENERATOR__START_RESOURCES = KARMA_GENERATOR__START_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
@@ -5561,7 +5661,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__CHOISE_KARMA_COST = SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST;
+    int LIFE_MODULES_GENERATOR__CHOISE_KARMA_COST = KARMA_GENERATOR__CHOISE_KARMA_COST;
 
     /**
      * The feature id for the '<em><b>Nationality</b></em>' reference.
@@ -5570,7 +5670,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__NATIONALITY = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 0;
+    int LIFE_MODULES_GENERATOR__NATIONALITY = KARMA_GENERATOR_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Formative Years</b></em>' reference.
@@ -5579,7 +5679,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__FORMATIVE_YEARS = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 1;
+    int LIFE_MODULES_GENERATOR__FORMATIVE_YEARS = KARMA_GENERATOR_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Teen Years</b></em>' reference.
@@ -5588,7 +5688,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__TEEN_YEARS = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 2;
+    int LIFE_MODULES_GENERATOR__TEEN_YEARS = KARMA_GENERATOR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Further Education</b></em>' reference.
@@ -5597,7 +5697,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__FURTHER_EDUCATION = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 3;
+    int LIFE_MODULES_GENERATOR__FURTHER_EDUCATION = KARMA_GENERATOR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Real Life</b></em>' reference list.
@@ -5606,7 +5706,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__REAL_LIFE = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 4;
+    int LIFE_MODULES_GENERATOR__REAL_LIFE = KARMA_GENERATOR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Module Karma Cost</b></em>' attribute.
@@ -5615,7 +5715,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__MODULE_KARMA_COST = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 5;
+    int LIFE_MODULES_GENERATOR__MODULE_KARMA_COST = KARMA_GENERATOR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Starting Age</b></em>' attribute.
@@ -5624,7 +5724,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR__STARTING_AGE = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 6;
+    int LIFE_MODULES_GENERATOR__STARTING_AGE = KARMA_GENERATOR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Life Modules Generator</em>' class.
@@ -5633,7 +5733,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR_FEATURE_COUNT = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 7;
+    int LIFE_MODULES_GENERATOR_FEATURE_COUNT = KARMA_GENERATOR_FEATURE_COUNT + 7;
 
     /**
      * The operation id for the '<em>Has Spend All Points</em>' operation.
@@ -5642,7 +5742,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
@@ -5651,7 +5751,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Skills Over Max</em>' operation.
@@ -5660,7 +5760,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Not More Specalism</em>' operation.
@@ -5669,7 +5769,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
@@ -5678,7 +5778,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
@@ -5687,7 +5787,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
@@ -5696,7 +5796,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
@@ -5705,7 +5805,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
@@ -5714,7 +5814,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Basic Violations</em>' operation.
@@ -5723,7 +5823,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
@@ -5732,7 +5832,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
+    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The number of operations of the '<em>Life Modules Generator</em>' class.
@@ -5741,17 +5841,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFE_MODULES_GENERATOR_OPERATION_COUNT = SHR5_KARMA_GENERATOR_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl <em>Life Modules System</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModulesSystem()
-     * @generated
-     */
-    int LIFE_MODULES_SYSTEM = 46;
+    int LIFE_MODULES_GENERATOR_OPERATION_COUNT = KARMA_GENERATOR_OPERATION_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -6024,16 +6114,6 @@ public interface Shr5managementPackage extends EPackage {
     int LIFE_MODULES_SYSTEM_OPERATION_COUNT = SHR5_SYSTEM_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl <em>Life Module</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModule()
-     * @generated
-     */
-    int LIFE_MODULE = 47;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6151,16 +6231,6 @@ public interface Shr5managementPackage extends EPackage {
     int LIFE_MODULE_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl <em>Module Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleChange()
-     * @generated
-     */
-    int MODULE_CHANGE = 48;
-
-    /**
      * The number of structural features of the '<em>Module Change</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6177,16 +6247,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int MODULE_CHANGE_OPERATION_COUNT = 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl <em>Module Type Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTypeChange()
-     * @generated
-     */
-    int MODULE_TYPE_CHANGE = 54;
 
     /**
      * The feature id for the '<em><b>Grade</b></em>' attribute.
@@ -6232,16 +6292,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int MODULE_TYPE_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl <em>Module Skill Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillChange()
-     * @generated
-     */
-    int MODULE_SKILL_CHANGE = 49;
 
     /**
      * The feature id for the '<em><b>Grade</b></em>' attribute.
@@ -6298,16 +6348,6 @@ public interface Shr5managementPackage extends EPackage {
     int MODULE_SKILL_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl <em>Module Teachable Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleTeachableChange()
-     * @generated
-     */
-    int MODULE_TEACHABLE_CHANGE = 50;
-
-    /**
      * The feature id for the '<em><b>Grade</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6360,16 +6400,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int MODULE_TEACHABLE_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl <em>Module Attribute Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleAttributeChange()
-     * @generated
-     */
-    int MODULE_ATTRIBUTE_CHANGE = 51;
 
     /**
      * The feature id for the '<em><b>Grade</b></em>' attribute.
@@ -6426,16 +6456,6 @@ public interface Shr5managementPackage extends EPackage {
     int MODULE_ATTRIBUTE_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl <em>Module Feature Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleFeatureChange()
-     * @generated
-     */
-    int MODULE_FEATURE_CHANGE = 52;
-
-    /**
      * The feature id for the '<em><b>Feature</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6470,16 +6490,6 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int MODULE_FEATURE_CHANGE_OPERATION_COUNT = MODULE_CHANGE_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillGroupChangeImpl <em>Module Skill Group Change</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ModuleSkillGroupChangeImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getModuleSkillGroupChange()
-     * @generated
-     */
-    int MODULE_SKILL_GROUP_CHANGE = 53;
 
     /**
      * The feature id for the '<em><b>Grade</b></em>' attribute.
@@ -6536,23 +6546,13 @@ public interface Shr5managementPackage extends EPackage {
     int MODULE_SKILL_GROUP_CHANGE_OPERATION_COUNT = MODULE_TYPE_CHANGE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl <em>Karma Generator</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getKarmaGenerator()
-     * @generated
-     */
-    int KARMA_GENERATOR = 55;
-
-    /**
      * The feature id for the '<em><b>Character</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__CHARACTER = SHR5_KARMA_GENERATOR__CHARACTER;
+    int SHR5_KARMA_GENERATOR__CHARACTER = KARMA_GENERATOR__CHARACTER;
 
     /**
      * The feature id for the '<em><b>Generator</b></em>' reference.
@@ -6561,7 +6561,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__GENERATOR = SHR5_KARMA_GENERATOR__GENERATOR;
+    int SHR5_KARMA_GENERATOR__GENERATOR = KARMA_GENERATOR__GENERATOR;
 
     /**
      * The feature id for the '<em><b>State</b></em>' attribute.
@@ -6570,7 +6570,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__STATE = SHR5_KARMA_GENERATOR__STATE;
+    int SHR5_KARMA_GENERATOR__STATE = KARMA_GENERATOR__STATE;
 
     /**
      * The feature id for the '<em><b>Selected Group</b></em>' reference.
@@ -6579,7 +6579,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__SELECTED_GROUP = SHR5_KARMA_GENERATOR__SELECTED_GROUP;
+    int SHR5_KARMA_GENERATOR__SELECTED_GROUP = KARMA_GENERATOR__SELECTED_GROUP;
 
     /**
      * The feature id for the '<em><b>Character Name</b></em>' attribute.
@@ -6588,7 +6588,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__CHARACTER_NAME = SHR5_KARMA_GENERATOR__CHARACTER_NAME;
+    int SHR5_KARMA_GENERATOR__CHARACTER_NAME = KARMA_GENERATOR__CHARACTER_NAME;
 
     /**
      * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
@@ -6597,7 +6597,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__CURRENT_INSTRUCTION = SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION;
+    int SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION = KARMA_GENERATOR__CURRENT_INSTRUCTION;
 
     /**
      * The feature id for the '<em><b>Allowed Sources</b></em>' reference list.
@@ -6606,7 +6606,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__ALLOWED_SOURCES = SHR5_KARMA_GENERATOR__ALLOWED_SOURCES;
+    int SHR5_KARMA_GENERATOR__ALLOWED_SOURCES = KARMA_GENERATOR__ALLOWED_SOURCES;
 
     /**
      * The feature id for the '<em><b>Meta Type</b></em>' reference.
@@ -6615,7 +6615,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__META_TYPE = SHR5_KARMA_GENERATOR__META_TYPE;
+    int SHR5_KARMA_GENERATOR__META_TYPE = KARMA_GENERATOR__META_TYPE;
 
     /**
      * The feature id for the '<em><b>Character Concept</b></em>' reference.
@@ -6624,7 +6624,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__CHARACTER_CONCEPT = SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT;
+    int SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT = KARMA_GENERATOR__CHARACTER_CONCEPT;
 
     /**
      * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
@@ -6633,7 +6633,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__KARMA_TO_RESOURCE = SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE;
+    int SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE = KARMA_GENERATOR__KARMA_TO_RESOURCE;
 
     /**
      * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
@@ -6642,7 +6642,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__KARMA_SPEND = SHR5_KARMA_GENERATOR__KARMA_SPEND;
+    int SHR5_KARMA_GENERATOR__KARMA_SPEND = KARMA_GENERATOR__KARMA_SPEND;
 
     /**
      * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
@@ -6651,7 +6651,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__RESOURCE_SPEND = SHR5_KARMA_GENERATOR__RESOURCE_SPEND;
+    int SHR5_KARMA_GENERATOR__RESOURCE_SPEND = KARMA_GENERATOR__RESOURCE_SPEND;
 
     /**
      * The feature id for the '<em><b>Start Karma</b></em>' attribute.
@@ -6660,7 +6660,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__START_KARMA = SHR5_KARMA_GENERATOR__START_KARMA;
+    int SHR5_KARMA_GENERATOR__START_KARMA = KARMA_GENERATOR__START_KARMA;
 
     /**
      * The feature id for the '<em><b>Start Resources</b></em>' attribute.
@@ -6669,7 +6669,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__START_RESOURCES = SHR5_KARMA_GENERATOR__START_RESOURCES;
+    int SHR5_KARMA_GENERATOR__START_RESOURCES = KARMA_GENERATOR__START_RESOURCES;
 
     /**
      * The feature id for the '<em><b>Choise Karma Cost</b></em>' attribute.
@@ -6678,16 +6678,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR__CHOISE_KARMA_COST = SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST;
+    int SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST = KARMA_GENERATOR__CHOISE_KARMA_COST;
 
     /**
-     * The number of structural features of the '<em>Karma Generator</em>' class.
+     * The number of structural features of the '<em>Shr5 Karma Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR_FEATURE_COUNT = SHR5_KARMA_GENERATOR_FEATURE_COUNT + 0;
+    int SHR5_KARMA_GENERATOR_FEATURE_COUNT = KARMA_GENERATOR_FEATURE_COUNT + 0;
 
     /**
      * The operation id for the '<em>Has Spend All Points</em>' operation.
@@ -6696,7 +6696,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
@@ -6705,7 +6705,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Skills Over Max</em>' operation.
@@ -6714,7 +6714,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Not More Specalism</em>' operation.
@@ -6723,7 +6723,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
@@ -6732,7 +6732,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
@@ -6741,7 +6741,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Lifestyle Choosen</em>' operation.
@@ -6750,7 +6750,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Only Allowed Sources</em>' operation.
@@ -6759,7 +6759,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_ONLY_ALLOWED_SOURCES__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Ki Power Over Limit</em>' operation.
@@ -6768,7 +6768,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_KI_POWER_OVER_LIMIT__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Basic Violations</em>' operation.
@@ -6777,7 +6777,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_BASIC_VIOLATIONS__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
@@ -6786,16 +6786,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
+    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
-     * The number of operations of the '<em>Karma Generator</em>' class.
+     * The number of operations of the '<em>Shr5 Karma Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR_OPERATION_COUNT = SHR5_KARMA_GENERATOR_OPERATION_COUNT + 0;
+    int SHR5_KARMA_GENERATOR_OPERATION_COUNT = KARMA_GENERATOR_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
@@ -8881,104 +8881,6 @@ public interface Shr5managementPackage extends EPackage {
     EClass getShr5KarmaGenerator();
 
     /**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getMetaType <em>Meta Type</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Meta Type</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getMetaType()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EReference getShr5KarmaGenerator_MetaType();
-
-    /**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getCharacterConcept <em>Character Concept</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Character Concept</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getCharacterConcept()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EReference getShr5KarmaGenerator_CharacterConcept();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaToResource <em>Karma To Resource</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Karma To Resource</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaToResource()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_KarmaToResource();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend <em>Karma Spend</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Karma Spend</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_KarmaSpend();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend <em>Resource Spend</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Resource Spend</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_ResourceSpend();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartKarma <em>Start Karma</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Start Karma</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartKarma()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_StartKarma();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartResources <em>Start Resources</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Start Resources</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartResources()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_StartResources();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost <em>Choise Karma Cost</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Choise Karma Cost</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getChoiseKarmaCost()
-     * @see #getShr5KarmaGenerator()
-     * @generated
-     */
-    EAttribute getShr5KarmaGenerator_ChoiseKarmaCost();
-
-    /**
-     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the '<em>Has Spend All Karma Points</em>' operation.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated
-     */
-    EOperation getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
-
-    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9530,6 +9432,104 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EClass getKarmaGenerator();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getMetaType <em>Meta Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Meta Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getMetaType()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EReference getKarmaGenerator_MetaType();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getCharacterConcept <em>Character Concept</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Character Concept</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getCharacterConcept()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EReference getKarmaGenerator_CharacterConcept();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getKarmaToResource <em>Karma To Resource</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma To Resource</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getKarmaToResource()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_KarmaToResource();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getKarmaSpend <em>Karma Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getKarmaSpend()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_KarmaSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getResourceSpend <em>Resource Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Resource Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getResourceSpend()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_ResourceSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getStartKarma <em>Start Karma</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Karma</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getStartKarma()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_StartKarma();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getStartResources <em>Start Resources</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Resources</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getStartResources()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_StartResources();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getChoiseKarmaCost <em>Choise Karma Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Choise Karma Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#getChoiseKarmaCost()
+     * @see #getKarmaGenerator()
+     * @generated
+     */
+    EAttribute getKarmaGenerator_ChoiseKarmaCost();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Spend All Karma Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getKarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
@@ -11207,78 +11207,6 @@ public interface Shr5managementPackage extends EPackage {
         EClass SHR5_KARMA_GENERATOR = eINSTANCE.getShr5KarmaGenerator();
 
         /**
-         * The meta object literal for the '<em><b>Meta Type</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SHR5_KARMA_GENERATOR__META_TYPE = eINSTANCE.getShr5KarmaGenerator_MetaType();
-
-        /**
-         * The meta object literal for the '<em><b>Character Concept</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT = eINSTANCE.getShr5KarmaGenerator_CharacterConcept();
-
-        /**
-         * The meta object literal for the '<em><b>Karma To Resource</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE = eINSTANCE.getShr5KarmaGenerator_KarmaToResource();
-
-        /**
-         * The meta object literal for the '<em><b>Karma Spend</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__KARMA_SPEND = eINSTANCE.getShr5KarmaGenerator_KarmaSpend();
-
-        /**
-         * The meta object literal for the '<em><b>Resource Spend</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__RESOURCE_SPEND = eINSTANCE.getShr5KarmaGenerator_ResourceSpend();
-
-        /**
-         * The meta object literal for the '<em><b>Start Karma</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__START_KARMA = eINSTANCE.getShr5KarmaGenerator_StartKarma();
-
-        /**
-         * The meta object literal for the '<em><b>Start Resources</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__START_RESOURCES = eINSTANCE.getShr5KarmaGenerator_StartResources();
-
-        /**
-         * The meta object literal for the '<em><b>Choise Karma Cost</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST = eINSTANCE.getShr5KarmaGenerator_ChoiseKarmaCost();
-
-        /**
-         * The meta object literal for the '<em><b>Has Spend All Karma Points</b></em>' operation.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EOperation SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
-
-        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -11729,6 +11657,78 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EClass KARMA_GENERATOR = eINSTANCE.getKarmaGenerator();
+
+        /**
+         * The meta object literal for the '<em><b>Meta Type</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference KARMA_GENERATOR__META_TYPE = eINSTANCE.getKarmaGenerator_MetaType();
+
+        /**
+         * The meta object literal for the '<em><b>Character Concept</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference KARMA_GENERATOR__CHARACTER_CONCEPT = eINSTANCE.getKarmaGenerator_CharacterConcept();
+
+        /**
+         * The meta object literal for the '<em><b>Karma To Resource</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__KARMA_TO_RESOURCE = eINSTANCE.getKarmaGenerator_KarmaToResource();
+
+        /**
+         * The meta object literal for the '<em><b>Karma Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__KARMA_SPEND = eINSTANCE.getKarmaGenerator_KarmaSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Resource Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__RESOURCE_SPEND = eINSTANCE.getKarmaGenerator_ResourceSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Start Karma</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__START_KARMA = eINSTANCE.getKarmaGenerator_StartKarma();
+
+        /**
+         * The meta object literal for the '<em><b>Start Resources</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__START_RESOURCES = eINSTANCE.getKarmaGenerator_StartResources();
+
+        /**
+         * The meta object literal for the '<em><b>Choise Karma Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute KARMA_GENERATOR__CHOISE_KARMA_COST = eINSTANCE.getKarmaGenerator_ChoiseKarmaCost();
+
+        /**
+         * The meta object literal for the '<em><b>Has Spend All Karma Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getKarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

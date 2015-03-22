@@ -38,7 +38,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  *
  * @generated
  */
-public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl<LifeModulesSystem> implements LifeModulesGenerator {
+public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSystem> implements LifeModulesGenerator {
     /**
      * The cached value of the '{@link #getNationality() <em>Nationality</em>}' reference.
      * <!-- begin-user-doc -->

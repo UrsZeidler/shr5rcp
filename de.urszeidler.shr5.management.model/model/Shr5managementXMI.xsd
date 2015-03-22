@@ -836,7 +836,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       <xsd:documentation>The shr5 rule generator collects the main rules for all character generation.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:complexType name="Shr5KarmaGenerator">
+  <xsd:complexType abstract="true" name="KarmaGenerator">
     <xsd:annotation>
       <xsd:documentation>The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.</xsd:documentation>
     </xsd:annotation>
@@ -870,7 +870,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator">
+  <xsd:element name="KarmaGenerator" type="shr5mngt:KarmaGenerator">
     <xsd:annotation>
       <xsd:documentation>The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.</xsd:documentation>
     </xsd:annotation>
@@ -1012,7 +1012,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   <xsd:element name="SumToTenGenerator" type="shr5mngt:SumToTenGenerator"/>
   <xsd:complexType name="LifeModulesGenerator">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:Shr5KarmaGenerator">
+      <xsd:extension base="shr5mngt:KarmaGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="nationality" type="shr5mngt:LifeModule"/>
           <xsd:element name="formativeYears" type="shr5mngt:LifeModule"/>
@@ -1162,10 +1162,10 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ModuleTypeChange" type="shr5mngt:ModuleTypeChange"/>
-  <xsd:complexType name="KarmaGenerator">
+  <xsd:complexType name="Shr5KarmaGenerator">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:Shr5KarmaGenerator"/>
+      <xsd:extension base="shr5mngt:KarmaGenerator"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="KarmaGenerator" type="shr5mngt:KarmaGenerator"/>
+  <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator"/>
 </xsd:schema>

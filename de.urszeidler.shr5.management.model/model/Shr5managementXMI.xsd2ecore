@@ -270,18 +270,16 @@
       <nested inputs="shr5Management.ecore#//Shr5RuleGenerator/allowedSources" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDElementDeclaration=36"/>
-    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37">
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/startKarma" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=1"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/startResources" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=2"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=3"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"
-          outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=4"/>
-      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"
-          outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37">
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/karmaToResource" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/startKarma" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/startResources" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/characterConcept" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//KarmaGenerator/characterConcept" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
-    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDElementDeclaration=37"/>
+    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDElementDeclaration=37"/>
     <nested inputs="shr5Management.ecore#//QuellenConstrain" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38">
       <nested inputs="shr5Management.ecore#//QuellenConstrain/constrainType" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDAttributeUse=1"/>
       <nested inputs="shr5Management.ecore#//QuellenConstrain/source" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDAttributeUse=2"/>
@@ -383,8 +381,8 @@
       <nested inputs="shr5Management.ecore#//ModuleTypeChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleTypeChange;XSDComplexTypeDefinition=54/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//ModuleTypeChange" outputs="Shr5managementXMI.xsd#//ModuleTypeChange;XSDElementDeclaration=54"/>
-    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=55"/>
-    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDElementDeclaration=55"/>
+    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=55"/>
+    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDElementDeclaration=55"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

@@ -670,11 +670,6 @@ public class ManagedCharacterItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
-                 Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                  Shr5managementFactory.eINSTANCE.createSumToTenGenerator()));
 
         newChildDescriptors.add
@@ -685,7 +680,7 @@ public class ManagedCharacterItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
-                 Shr5managementFactory.eINSTANCE.createKarmaGenerator()));
+                 Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
     }
 
 	/**

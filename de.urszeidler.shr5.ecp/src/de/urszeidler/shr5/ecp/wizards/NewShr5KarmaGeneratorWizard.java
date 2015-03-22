@@ -27,7 +27,7 @@ public class NewShr5KarmaGeneratorWizard extends NewShr5GeneratorWizard {
 
     @Override
     protected CharacterGenerator<Shr5System> createGenerator() {
-        return Shr5managementFactory.eINSTANCE.createKarmaGenerator();
+        return Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
     }
 
     /**

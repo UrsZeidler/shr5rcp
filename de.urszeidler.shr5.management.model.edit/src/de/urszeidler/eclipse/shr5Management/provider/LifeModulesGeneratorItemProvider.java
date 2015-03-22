@@ -28,7 +28,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LifeModulesGeneratorItemProvider extends Shr5KarmaGeneratorItemProvider {
+public class LifeModulesGeneratorItemProvider extends KarmaGeneratorItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->

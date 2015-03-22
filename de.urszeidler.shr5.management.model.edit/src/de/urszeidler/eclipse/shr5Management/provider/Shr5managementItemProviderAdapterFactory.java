@@ -1124,29 +1124,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.KarmaGenerator} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected KarmaGeneratorItemProvider karmaGeneratorItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.KarmaGenerator}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createKarmaGeneratorAdapter() {
-        if (karmaGeneratorItemProvider == null) {
-            karmaGeneratorItemProvider = new KarmaGeneratorItemProvider(this);
-        }
-
-        return karmaGeneratorItemProvider;
-    }
-
-    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1272,7 +1249,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
         if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
         if (characterAdvancementSystemItemProvider != null) characterAdvancementSystemItemProvider.dispose();
-        if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
         if (quellenConstrainItemProvider != null) quellenConstrainItemProvider.dispose();
         if (packItemProvider != null) packItemProvider.dispose();
         if (characterDiaryItemProvider != null) characterDiaryItemProvider.dispose();
@@ -1288,7 +1264,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (moduleAttributeChangeItemProvider != null) moduleAttributeChangeItemProvider.dispose();
         if (moduleFeatureChangeItemProvider != null) moduleFeatureChangeItemProvider.dispose();
         if (moduleSkillGroupChangeItemProvider != null) moduleSkillGroupChangeItemProvider.dispose();
-        if (karmaGeneratorItemProvider != null) karmaGeneratorItemProvider.dispose();
+        if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
     }
 
 	/**
@@ -1476,11 +1452,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createQuellenConstrain()));
 
                 newChildDescriptors.add
@@ -1556,7 +1527,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createKarmaGenerator()));
+                         Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
 
                 return null;
             }

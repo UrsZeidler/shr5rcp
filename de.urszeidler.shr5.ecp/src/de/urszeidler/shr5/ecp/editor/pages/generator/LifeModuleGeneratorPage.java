@@ -323,15 +323,15 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__META_TYPE, compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__META_TYPE, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__NATIONALITY, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FORMATIVE_YEARS, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__TEEN_YEARS, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FURTHER_EDUCATION, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__REAL_LIFE, compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST, compositePrio, new LabelEntry());
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__STARTING_AGE, compositePrio, new LabelEntry());
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
@@ -702,7 +702,7 @@ LifeModulesSystem shr5System = object.getGenerator();
         //
         IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE);
+                Literals.KARMA_GENERATOR__KARMA_TO_RESOURCE);
         UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         bindingContext.bindValue(observeSelectionSpinnerObserveWidget, objectKarmaToResourceObserveValue, modelToTarget, modelToTarget);
         //
@@ -726,7 +726,7 @@ LifeModulesSystem shr5System = object.getGenerator();
         if (resourceGeneratorOption != null)
             resourceGeneratorOption.dispose();
         resourceGeneratorOption = new ResourceGeneratorOption(grpResources, SWT.NONE, resourcen, object.getCharacter(),
-                getManagedForm().getToolkit(), editingDomain, Literals.SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
+                getManagedForm().getToolkit(), editingDomain, Literals.KARMA_GENERATOR__RESOURCE_SPEND);
         resourceGeneratorOption.layout();
 
         optionWidgetsCreated = true;
@@ -735,7 +735,7 @@ LifeModulesSystem shr5System = object.getGenerator();
     private void ownBinding(DataBindingContext bindingContext) {
         IObservableValue observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
         IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.SHR5_KARMA_GENERATOR__KARMA_SPEND);
+                Literals.KARMA_GENERATOR__KARMA_SPEND);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override

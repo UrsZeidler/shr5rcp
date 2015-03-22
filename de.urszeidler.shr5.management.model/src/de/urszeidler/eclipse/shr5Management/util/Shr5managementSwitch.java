@@ -399,11 +399,11 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5managementPackage.SHR5_KARMA_GENERATOR: {
-                Shr5KarmaGenerator<?> shr5KarmaGenerator = (Shr5KarmaGenerator<?>)theEObject;
-                T1 result = caseShr5KarmaGenerator(shr5KarmaGenerator);
-                if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
-                if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
+            case Shr5managementPackage.KARMA_GENERATOR: {
+                KarmaGenerator<?> karmaGenerator = (KarmaGenerator<?>)theEObject;
+                T1 result = caseKarmaGenerator(karmaGenerator);
+                if (result == null) result = caseShr5RuleGenerator(karmaGenerator);
+                if (result == null) result = caseCharacterGenerator(karmaGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -461,7 +461,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
             case Shr5managementPackage.LIFE_MODULES_GENERATOR: {
                 LifeModulesGenerator lifeModulesGenerator = (LifeModulesGenerator)theEObject;
                 T1 result = caseLifeModulesGenerator(lifeModulesGenerator);
-                if (result == null) result = caseShr5KarmaGenerator(lifeModulesGenerator);
+                if (result == null) result = caseKarmaGenerator(lifeModulesGenerator);
                 if (result == null) result = caseShr5RuleGenerator(lifeModulesGenerator);
                 if (result == null) result = caseCharacterGenerator(lifeModulesGenerator);
                 if (result == null) result = defaultCase(theEObject);
@@ -540,12 +540,12 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5managementPackage.KARMA_GENERATOR: {
-                KarmaGenerator karmaGenerator = (KarmaGenerator)theEObject;
-                T1 result = caseKarmaGenerator(karmaGenerator);
-                if (result == null) result = caseShr5KarmaGenerator(karmaGenerator);
-                if (result == null) result = caseShr5RuleGenerator(karmaGenerator);
-                if (result == null) result = caseCharacterGenerator(karmaGenerator);
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR: {
+                Shr5KarmaGenerator shr5KarmaGenerator = (Shr5KarmaGenerator)theEObject;
+                T1 result = caseShr5KarmaGenerator(shr5KarmaGenerator);
+                if (result == null) result = caseKarmaGenerator(shr5KarmaGenerator);
+                if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
+                if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1119,7 +1119,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public <G extends Shr5System> T1 caseShr5KarmaGenerator(Shr5KarmaGenerator<G> object) {
+    public T1 caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
         return null;
     }
 
@@ -1389,7 +1389,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T1 caseKarmaGenerator(KarmaGenerator object) {
+    public <G extends Shr5System> T1 caseKarmaGenerator(KarmaGenerator<G> object) {
         return null;
     }
 

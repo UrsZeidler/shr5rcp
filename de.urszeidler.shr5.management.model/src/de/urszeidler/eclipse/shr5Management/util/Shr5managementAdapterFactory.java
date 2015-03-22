@@ -277,8 +277,8 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createShr5RuleGeneratorAdapter();
             }
             @Override
-            public <G extends Shr5System> Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator<G> object) {
-                return createShr5KarmaGeneratorAdapter();
+            public <G extends Shr5System> Adapter caseKarmaGenerator(KarmaGenerator<G> object) {
+                return createKarmaGeneratorAdapter();
             }
             @Override
             public Adapter caseQuellenConstrain(QuellenConstrain object) {
@@ -349,8 +349,8 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createModuleTypeChangeAdapter();
             }
             @Override
-            public Adapter caseKarmaGenerator(KarmaGenerator object) {
-                return createKarmaGeneratorAdapter();
+            public Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                return createShr5KarmaGeneratorAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {

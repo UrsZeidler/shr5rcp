@@ -22,7 +22,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * </p>
  * @generated
  */
-public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
+public class LifeModulesGeneratorTest extends KarmaGeneratorTest {
 
     /**
      * <!-- begin-user-doc -->

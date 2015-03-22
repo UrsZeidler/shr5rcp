@@ -818,7 +818,7 @@
       <eTypeArguments eTypeParameter="#//Shr5RuleGenerator/G"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="KarmaGenerator" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama."/>
     </eAnnotations>
@@ -859,7 +859,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="choiseKarmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eGenericSuperTypes eClassifier="#//Shr5RuleGenerator">
-      <eTypeArguments eTypeParameter="#//Shr5KarmaGenerator/G"/>
+      <eTypeArguments eTypeParameter="#//KarmaGenerator/G"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuellenConstrain">
@@ -967,7 +967,7 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eGenericSuperTypes eClassifier="#//Shr5KarmaGenerator">
+    <eGenericSuperTypes eClassifier="#//KarmaGenerator">
       <eTypeArguments eClassifier="#//LifeModulesSystem"/>
     </eGenericSuperTypes>
   </eClassifiers>
@@ -1044,8 +1044,8 @@
       <eGenericType eTypeParameter="#//ModuleTypeChange/T"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KarmaGenerator">
-    <eGenericSuperTypes eClassifier="#//Shr5KarmaGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator">
+    <eGenericSuperTypes eClassifier="#//KarmaGenerator">
       <eTypeArguments eClassifier="#//Shr5System"/>
     </eGenericSuperTypes>
   </eClassifiers>

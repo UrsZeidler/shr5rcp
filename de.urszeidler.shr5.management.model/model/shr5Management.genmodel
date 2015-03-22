@@ -400,22 +400,22 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasBasicViolations/context"/>
       </genOperations>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">
-      <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//Shr5KarmaGenerator/G"/>
+    <genClasses ecoreClass="shr5Management.ecore#//KarmaGenerator">
+      <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//KarmaGenerator/G"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The selected species for the character."
-          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//KarmaGenerator/metaType"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The character concept."
-          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaSpend"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/resourceSpend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startKarma"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startResources"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//KarmaGenerator/characterConcept"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/karmaToResource"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/karmaSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/resourceSpend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/startKarma"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/startResources"/>
       <genFeatures createChild="false" propertyDescription="The karma cost of the current selection."
-          ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/choiseKarmaCost"/>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/context"/>
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGenerator/choiseKarmaCost"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//QuellenConstrain">
@@ -508,6 +508,6 @@
       <genFeatures notify="false" createChild="false" propertyDescription="A list of possible values to choose from."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selectOne"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//KarmaGenerator"/>
+    <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator"/>
   </genPackages>
 </genmodel:GenModel>

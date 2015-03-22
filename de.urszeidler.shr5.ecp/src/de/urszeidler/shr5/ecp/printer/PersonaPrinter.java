@@ -64,7 +64,6 @@ import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -482,7 +481,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator<Shr5System> generator) {
+    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator generator) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
@@ -567,7 +566,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    private Print printShr5KarmaGenerator(Shr5KarmaGenerator<Shr5System> generator, ManagedCharacter character) {
+    private Print printShr5KarmaGenerator(Shr5KarmaGenerator generator, ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint outerGrid = new GridPrint("d,d:g", look);//$NON-NLS-1$
