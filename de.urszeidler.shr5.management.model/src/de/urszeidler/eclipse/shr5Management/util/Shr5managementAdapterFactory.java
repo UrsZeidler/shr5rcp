@@ -4,25 +4,30 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
-import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -31,11 +36,23 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
+import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTypeChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -52,6 +69,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
@@ -255,11 +273,11 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createCharacterAdvancementSystemAdapter();
             }
             @Override
-            public Adapter caseShr5RuleGenerator(Shr5RuleGenerator object) {
+            public <G extends Shr5System> Adapter caseShr5RuleGenerator(Shr5RuleGenerator<G> object) {
                 return createShr5RuleGeneratorAdapter();
             }
             @Override
-            public Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+            public <G extends Shr5System> Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator<G> object) {
                 return createShr5KarmaGeneratorAdapter();
             }
             @Override
@@ -329,6 +347,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public <T> Adapter caseModuleTypeChange(ModuleTypeChange<T> object) {
                 return createModuleTypeChangeAdapter();
+            }
+            @Override
+            public Adapter caseKarmaGenerator(KarmaGenerator object) {
+                return createKarmaGeneratorAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -1133,6 +1155,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModuleTypeChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator <em>Karma Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator
+     * @generated
+     */
+    public Adapter createKarmaGeneratorAdapter() {
         return null;
     }
 

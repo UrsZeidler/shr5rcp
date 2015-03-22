@@ -42,32 +42,9 @@ public class Shr5RuleGeneratorItemProvider extends CharacterGeneratorItemProvide
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addShr5GeneratorPropertyDescriptor(object);
             addAllowedSourcesPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Shr5 Generator feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addShr5GeneratorPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Shr5RuleGenerator_shr5Generator_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5RuleGenerator_shr5Generator_feature", "_UI_Shr5RuleGenerator_type"),
-                 Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR,
-                 false,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
     }
 
     /**
@@ -100,7 +77,7 @@ public class Shr5RuleGeneratorItemProvider extends CharacterGeneratorItemProvide
      */
     @Override
     public String getText(Object object) {
-        String label = ((Shr5RuleGenerator)object).getCharacterName();
+        String label = ((Shr5RuleGenerator<?>)object).getCharacterName();
         return label == null || label.length() == 0 ?
             getString("_UI_Shr5RuleGenerator_type") :
             getString("_UI_Shr5RuleGenerator_type") + " " + label;

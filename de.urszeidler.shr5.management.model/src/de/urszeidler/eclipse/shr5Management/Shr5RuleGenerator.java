@@ -23,7 +23,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator <em>Shr5 Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
@@ -32,25 +31,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * @model abstract="true"
  * @generated
  */
-public interface Shr5RuleGenerator extends CharacterGenerator<Shr5System> {
-    /**
-     * Returns the value of the '<em><b>Shr5 Generator</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Shr5 Generator</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The shr5Generator connects to the system.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Shr5 Generator</em>' reference.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5RuleGenerator_Shr5Generator()
-     * @model transient="true" changeable="false" volatile="true" derived="true"
-     * @generated
-     */
-    Shr5System getShr5Generator();
-
+public interface Shr5RuleGenerator<G extends Shr5System> extends CharacterGenerator<G> {
     /**
      * Returns the value of the '<em><b>Allowed Sources</b></em>' reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.SourceBook}.

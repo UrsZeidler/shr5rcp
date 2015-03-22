@@ -449,7 +449,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         Credstick credstick = ShadowrunManagmentTools.findFirstCedstick(object.getCharacter().getInventar());
 
         Lifestyle choosenLifestyle = object.getCharacter().getChoosenLifestyle();
-        Shr5System shr5System = object.getShr5Generator();
+        Shr5System shr5System = object.getGenerator();
         EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
         LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
 
@@ -638,7 +638,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
-                if (object.getShr5Generator() == null)
+                if (object.getGenerator() == null)
                     return Messages.GeneratorPage_left1;
 
                 return Messages.GeneratorPage_left + (ShadowrunManagmentTools.calcKarmaLeft(object) + EMPTY);
@@ -654,7 +654,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
-                if (object.getShr5Generator() == null || object.getCharacter() == null)
+                if (object.getGenerator() == null || object.getCharacter() == null)
                     return Messages.GeneratorPage_spend;
                 return ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter()) + EMPTY;
             }
@@ -670,9 +670,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
-                if (object.getShr5Generator() == null || object.getCharacter() == null)
+                if (object.getGenerator() == null || object.getCharacter() == null)
                     return "---"; //$NON-NLS-1$
-                return EMPTY + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getShr5Generator());
+                return EMPTY + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getGenerator());
             }
         });
 

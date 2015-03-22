@@ -3,21 +3,20 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl#getModules <em>Modules</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl#getKnowlegeSkillMax <em>Knowlege Skill Max</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,6 +42,25 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
      * @ordered
      */
     protected EList<LifeModule> modules;
+
+    /**
+     * The default value of the '{@link #getKnowlegeSkillMax() <em>Knowlege Skill Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getKnowlegeSkillMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int KNOWLEGE_SKILL_MAX_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getKnowlegeSkillMax() <em>Knowlege Skill Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getKnowlegeSkillMax()
+     * @generated
+     * @ordered
+     */
+    protected int knowlegeSkillMax = KNOWLEGE_SKILL_MAX_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -79,6 +98,27 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getKnowlegeSkillMax() {
+        return knowlegeSkillMax;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setKnowlegeSkillMax(int newKnowlegeSkillMax) {
+        int oldKnowlegeSkillMax = knowlegeSkillMax;
+        knowlegeSkillMax = newKnowlegeSkillMax;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX, oldKnowlegeSkillMax, knowlegeSkillMax));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -98,6 +138,8 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
         switch (featureID) {
             case Shr5managementPackage.LIFE_MODULES_SYSTEM__MODULES:
                 return getModules();
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX:
+                return getKnowlegeSkillMax();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -115,6 +157,9 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
                 getModules().clear();
                 getModules().addAll((Collection<? extends LifeModule>)newValue);
                 return;
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX:
+                setKnowlegeSkillMax((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -130,6 +175,9 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
             case Shr5managementPackage.LIFE_MODULES_SYSTEM__MODULES:
                 getModules().clear();
                 return;
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX:
+                setKnowlegeSkillMax(KNOWLEGE_SKILL_MAX_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -144,8 +192,26 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
         switch (featureID) {
             case Shr5managementPackage.LIFE_MODULES_SYSTEM__MODULES:
                 return modules != null && !modules.isEmpty();
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX:
+                return knowlegeSkillMax != KNOWLEGE_SKILL_MAX_EDEFAULT;
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy()) return super.toString();
+
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (knowlegeSkillMax: ");
+        result.append(knowlegeSkillMax);
+        result.append(')');
+        return result.toString();
     }
 
 } //LifeModulesSystemImpl

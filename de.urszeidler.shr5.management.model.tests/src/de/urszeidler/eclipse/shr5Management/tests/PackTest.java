@@ -4,12 +4,13 @@
 package de.urszeidler.eclipse.shr5Management.tests;
 
 import java.math.BigDecimal;
+
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

@@ -58,6 +58,7 @@ import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModuleType;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -493,7 +494,7 @@ public class ShadowrunManagmentTools {
      * @return
      */
     public static int calcKarmaLeft(Shr5Generator object) {
-        return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+        return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
     }
 
     /**
@@ -568,14 +569,14 @@ public class ShadowrunManagmentTools {
      * @return
      */
     public static int calcKarmaSpendByResources(Shr5Generator generator) {
-        if (generator == null || generator.getShr5Generator() == null)
+        if (generator == null || generator.getGenerator() == null)
             return 0;
 
-        int karmaToResourceFactor = generator.getShr5Generator().getKarmaToResourceFactor();
+        int karmaToResourceFactor = generator.getGenerator().getKarmaToResourceFactor();
         if (karmaToResourceFactor == 0)
             return 0;
         int resource = generator.getResourcen().getResource();
-        int karmaToResources = ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getShr5Generator());
+        int karmaToResources = ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getGenerator());
         return (resource + karmaToResources) / karmaToResourceFactor;
     }
 
@@ -738,8 +739,8 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcKarmaLeft(Shr5KarmaGenerator object) {
-        return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    public static int calcKarmaLeft(Shr5KarmaGenerator<Shr5System> object) {
+        return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
     }
 
     /**
@@ -749,7 +750,7 @@ public class ShadowrunManagmentTools {
      * @return
      */
     public static int calcResourcesLeft(Shr5Generator object) {
-        Shr5System sr5g = object.getShr5Generator();
+        Shr5System sr5g = object.getGenerator();
         if (sr5g == null)
             return 0;
 
@@ -790,8 +791,8 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcResourcesLeft(Shr5KarmaGenerator object) {
-        Shr5System sr5g = object.getShr5Generator();
+    public static int calcResourcesLeft(Shr5KarmaGenerator<Shr5System> object) {
+        Shr5System sr5g = object.getGenerator();
         if (sr5g == null)
             return 0;
 
@@ -983,6 +984,10 @@ public class ShadowrunManagmentTools {
                 return input.getModuleType() == type;
             }
         };
+    }
+
+    public static int calcKarmaLeft(LifeModulesGenerator object) {
+        return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
     }
 
 }

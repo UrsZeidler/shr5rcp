@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -13,6 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -529,7 +531,7 @@ public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
         ArrayList<EObject> list = new ArrayList<EObject>();
         if (object instanceof Shr5Generator) {
             Shr5Generator g = (Shr5Generator)object;
-            EObject container = g.getShr5Generator();
+            EObject container = g.getGenerator();
             if (container != null) {
                 Collection<?> choiceOfValues = choiceOfValues2;
                 for (Object object2 : choiceOfValues) {

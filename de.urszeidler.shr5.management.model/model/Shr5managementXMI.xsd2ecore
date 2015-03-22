@@ -335,6 +335,7 @@
     </nested>
     <nested inputs="shr5Management.ecore#//LifeModulesGenerator" outputs="Shr5managementXMI.xsd#//LifeModulesGenerator;XSDElementDeclaration=45"/>
     <nested inputs="shr5Management.ecore#//LifeModulesSystem" outputs="Shr5managementXMI.xsd#//LifeModulesSystem;XSDComplexTypeDefinition=46">
+      <nested inputs="shr5Management.ecore#//LifeModulesSystem/knowlegeSkillMax" outputs="Shr5managementXMI.xsd#//LifeModulesSystem;XSDComplexTypeDefinition=46/XSDAttributeUse"/>
       <nested inputs="shr5Management.ecore#//LifeModulesSystem/modules" outputs="Shr5managementXMI.xsd#//LifeModulesSystem;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//LifeModulesSystem" outputs="Shr5managementXMI.xsd#//LifeModulesSystem;XSDElementDeclaration=46"/>
@@ -382,6 +383,8 @@
       <nested inputs="shr5Management.ecore#//ModuleTypeChange/selectOne" outputs="Shr5managementXMI.xsd#//ModuleTypeChange;XSDComplexTypeDefinition=54/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//ModuleTypeChange" outputs="Shr5managementXMI.xsd#//ModuleTypeChange;XSDElementDeclaration=54"/>
+    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDComplexTypeDefinition=55"/>
+    <nested inputs="shr5Management.ecore#//KarmaGenerator" outputs="Shr5managementXMI.xsd#//KarmaGenerator;XSDElementDeclaration=55"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

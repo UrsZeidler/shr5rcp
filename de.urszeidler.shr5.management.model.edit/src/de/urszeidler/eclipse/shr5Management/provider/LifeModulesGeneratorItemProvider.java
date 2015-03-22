@@ -3,21 +3,24 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
-import de.urszeidler.eclipse.shr5Management.LifeModuleType;
-import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
-import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import com.google.common.collect.FluentIterable;
+
+import de.urszeidler.eclipse.shr5Management.LifeModuleType;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator} object.

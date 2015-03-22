@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.KiAdept;
@@ -32,6 +34,7 @@ import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
@@ -67,7 +70,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *
  * @generated
  */
-public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Generator {
+public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> implements Shr5Generator {
     /**
      * The cached value of the '{@link #getResourcen() <em>Resourcen</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -503,7 +506,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             }
             sum = (int)Math.floor(sum / 100f);
 
-            karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor() * -1);
+            karmaKosten = karmaKosten + (sum * getGenerator().getKarmaToMagicFactor() * -1);
         }
         if (persona instanceof Zauberer) {
             Zauberer zauberer = (Zauberer)persona;
@@ -512,14 +515,14 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             for (GebundenerGeist gebundenerGeist : gebundeneGeister) {
                 sum = sum + gebundenerGeist.getDienste();
             }
-            karmaKosten = karmaKosten + (sum * getShr5Generator().getBoundSprititServiceCost());
+            karmaKosten = karmaKosten + (sum * getGenerator().getBoundSprititServiceCost());
         }
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter()) * -1;
         karmaKosten = karmaKosten + karmaSpend;
 
         int spendByConnections = 0;
-        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(getCharacter(), getShr5Generator());
+        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(getCharacter(), getGenerator());
         int pointsSpend = getConnectionSpend();
         if (allPoints - pointsSpend < 0)
             spendByConnections = Math.abs(allPoints - pointsSpend);
@@ -723,7 +726,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                         Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, 
                         ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
                                 new Object[]{ doubleStr, EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
-                                Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                                Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }
@@ -736,7 +739,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (!canValidate()||getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
+        if (!canValidate()||getGenerator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
                 || getMagic() == null || getCharacter() == null)
             return true;
 
@@ -775,7 +778,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString("_UI_NotSpendAllPoints",
                                 new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
-                                Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                                Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }
@@ -907,7 +910,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllConnectionPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getCharacter() == null || getShr5Generator() == null)
+        if (getCharacter() == null || getGenerator() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
@@ -918,7 +921,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         if (persona == null)
             return true;
 
-        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(managedCharacter, getShr5Generator());
+        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(managedCharacter, getGenerator());
         int pointsSpend = getConnectionSpend();
 
         int diff = allPoints - pointsSpend;
@@ -928,7 +931,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllConnectionPoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
-                        new Object[]{ this, Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                        new Object[]{ this, Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }
@@ -942,14 +945,14 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getCharacter() == null || getShr5Generator() == null || getResourcen() == null)
+        if (getCharacter() == null || getGenerator() == null || getResourcen() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
 
-        int karma2Res = getKarmaToResource() * getShr5Generator().getKarmaToResourceFactor();
+        int karma2Res = getKarmaToResource() * getGenerator().getKarmaToResourceFactor();
         int diff = karma2Res + getResourcen().getResource() - getResourceSpend();
-        boolean test = getShr5Generator().getMaxResourceToKeep() < diff;
+        boolean test = getGenerator().getMaxResourceToKeep() < diff;
 
         if (test || diff < 0) {
             if (diagnostics != null) {
@@ -1081,15 +1084,15 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getCharacter() == null)
+        if (getGenerator() == null || getCharacter() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
 
-        int karmaPoints = getShr5Generator().getKarmaPoints();
+        int karmaPoints = getGenerator().getKarmaPoints();
         int diff = karmaPoints - getKarmaSpend();
 
-        boolean test = getShr5Generator().getMaxKarmaToKeep() < diff;
+        boolean test = getGenerator().getMaxKarmaToKeep() < diff;
 
         if (test || diff < 0) {
             if (diagnostics != null) {
@@ -1098,7 +1101,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                                 "_UI_NotSpendAllKarmaPoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More"),
                                         "hasSpendAllKarmaPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
-                                Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                                Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }
@@ -1157,7 +1160,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasSpendAllPowerPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMagic() == null || getCharacter() == null || getShr5Generator() == null || getCharacter().getPersona() == null)
+        if (getMagic() == null || getCharacter() == null || getGenerator() == null || getCharacter().getPersona() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
@@ -1202,7 +1205,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      * @generated not
      */
     public boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMagic() == null ||getMetaType() == null || getCharacter() == null || getShr5Generator() == null || getCharacter().getPersona() == null)
+        if (getMagic() == null ||getMetaType() == null || getCharacter() == null || getGenerator() == null || getCharacter().getPersona() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;

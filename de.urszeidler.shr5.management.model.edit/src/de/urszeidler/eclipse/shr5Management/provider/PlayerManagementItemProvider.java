@@ -261,6 +261,11 @@ public class PlayerManagementItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GENERATORS,
+                 Shr5managementFactory.eINSTANCE.createKarmaGenerator()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (Shr5managementPackage.Literals.PLAYER_MANAGEMENT__ENTRIES,
                  Shr5managementFactory.eINSTANCE.createPlayerManagement()));
 

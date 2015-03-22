@@ -4,11 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
-import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -26,6 +21,11 @@ import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableSet;
+
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange} object.

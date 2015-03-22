@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -117,7 +118,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * @generated
      * @ordered
      */
-    protected EList<CharacterGenerator> generators;
+    protected EList<CharacterGenerator<CharacterGeneratorSystem>> generators;
 
     /**
      * The cached value of the '{@link #getEntries() <em>Entries</em>}' containment reference list.
@@ -228,9 +229,9 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CharacterGenerator> getGenerators() {
+    public EList<CharacterGenerator<CharacterGeneratorSystem>> getGenerators() {
         if (generators == null) {
-            generators = new EObjectContainmentEList<CharacterGenerator>(CharacterGenerator.class, this, Shr5managementPackage.PLAYER_MANAGEMENT__GENERATORS);
+            generators = new EObjectContainmentEList<CharacterGenerator<CharacterGeneratorSystem>>(CharacterGenerator.class, this, Shr5managementPackage.PLAYER_MANAGEMENT__GENERATORS);
         }
         return generators;
     }
@@ -313,7 +314,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
                 return;
             case Shr5managementPackage.PLAYER_MANAGEMENT__GENERATORS:
                 getGenerators().clear();
-                getGenerators().addAll((Collection<? extends CharacterGenerator>)newValue);
+                getGenerators().addAll((Collection<? extends CharacterGenerator<CharacterGeneratorSystem>>)newValue);
                 return;
             case Shr5managementPackage.PLAYER_MANAGEMENT__ENTRIES:
                 getEntries().clear();

@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -37,6 +39,7 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModuleType;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
@@ -468,6 +471,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass moduleTypeChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass karmaGeneratorEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2195,17 +2205,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getShr5RuleGenerator_Shr5Generator() {
-        return (EReference)shr5RuleGeneratorEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getShr5RuleGenerator_AllowedSources() {
-        return (EReference)shr5RuleGeneratorEClass.getEStructuralFeatures().get(1);
+        return (EReference)shr5RuleGeneratorEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -2654,6 +2655,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getLifeModulesSystem_KnowlegeSkillMax() {
+        return (EAttribute)lifeModulesSystemEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getLifeModule() {
         return lifeModuleEClass;
     }
@@ -2836,6 +2846,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EReference getModuleTypeChange_SelectOne() {
         return (EReference)moduleTypeChangeEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getKarmaGenerator() {
+        return karmaGeneratorEClass;
     }
 
     /**
@@ -3118,7 +3137,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(characterAdvancementSystemEClass, CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS);
 
         shr5RuleGeneratorEClass = createEClass(SHR5_RULE_GENERATOR);
-        createEReference(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR__SHR5_GENERATOR);
         createEReference(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR__ALLOWED_SOURCES);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
@@ -3179,6 +3197,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         lifeModulesSystemEClass = createEClass(LIFE_MODULES_SYSTEM);
         createEReference(lifeModulesSystemEClass, LIFE_MODULES_SYSTEM__MODULES);
+        createEAttribute(lifeModulesSystemEClass, LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX);
 
         lifeModuleEClass = createEClass(LIFE_MODULE);
         createEAttribute(lifeModuleEClass, LIFE_MODULE__KARMA_COST);
@@ -3208,6 +3227,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__GRADE);
         createEReference(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__SELECTED);
         createEReference(moduleTypeChangeEClass, MODULE_TYPE_CHANGE__SELECT_ONE);
+
+        karmaGeneratorEClass = createEClass(KARMA_GENERATOR);
 
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
@@ -3244,11 +3265,17 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         // Create type parameters
         ETypeParameter characterGeneratorEClass_G = addETypeParameter(characterGeneratorEClass, "G");
+        ETypeParameter shr5RuleGeneratorEClass_G = addETypeParameter(shr5RuleGeneratorEClass, "G");
+        ETypeParameter shr5KarmaGeneratorEClass_G = addETypeParameter(shr5KarmaGeneratorEClass, "G");
         ETypeParameter moduleTypeChangeEClass_T = addETypeParameter(moduleTypeChangeEClass, "T");
 
         // Set bounds for type parameters
         EGenericType g1 = createEGenericType(this.getCharacterGeneratorSystem());
         characterGeneratorEClass_G.getEBounds().add(g1);
+        g1 = createEGenericType(this.getShr5System());
+        shr5RuleGeneratorEClass_G.getEBounds().add(g1);
+        g1 = createEGenericType(this.getShr5System());
+        shr5KarmaGeneratorEClass_G.getEBounds().add(g1);
 
         // Add supertypes to classes
         characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
@@ -3270,7 +3297,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         EGenericType g2 = createEGenericType(this.getFreeStyle());
         g1.getETypeArguments().add(g2);
         freeStyleGeneratorEClass.getEGenericSuperTypes().add(g1);
-        shr5GeneratorEClass.getESuperTypes().add(this.getShr5RuleGenerator());
+        g1 = createEGenericType(this.getShr5RuleGenerator());
+        g2 = createEGenericType(this.getShr5System());
+        g1.getETypeArguments().add(g2);
+        shr5GeneratorEClass.getEGenericSuperTypes().add(g1);
         attributeChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
         playerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
         mudanEClass.getESuperTypes().add(this.getSpecialType());
@@ -3283,17 +3313,23 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
         characterAdvancementSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         g1 = createEGenericType(this.getCharacterGenerator());
-        g2 = createEGenericType(this.getShr5System());
+        g2 = createEGenericType(shr5RuleGeneratorEClass_G);
         g1.getETypeArguments().add(g2);
         shr5RuleGeneratorEClass.getEGenericSuperTypes().add(g1);
-        shr5KarmaGeneratorEClass.getESuperTypes().add(this.getShr5RuleGenerator());
+        g1 = createEGenericType(this.getShr5RuleGenerator());
+        g2 = createEGenericType(shr5KarmaGeneratorEClass_G);
+        g1.getETypeArguments().add(g2);
+        shr5KarmaGeneratorEClass.getEGenericSuperTypes().add(g1);
         packEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         packEClass.getESuperTypes().add(theShr5Package.getQuelle());
         packEClass.getESuperTypes().add(theShr5Package.getGeldWert());
         contractPaymentEClass.getESuperTypes().add(this.getDiaryEntry());
         characterChangeEClass.getESuperTypes().add(this.getDiaryEntry());
         sumToTenGeneratorEClass.getESuperTypes().add(this.getShr5Generator());
-        lifeModulesGeneratorEClass.getESuperTypes().add(this.getShr5KarmaGenerator());
+        g1 = createEGenericType(this.getShr5KarmaGenerator());
+        g2 = createEGenericType(this.getLifeModulesSystem());
+        g1.getETypeArguments().add(g2);
+        lifeModulesGeneratorEClass.getEGenericSuperTypes().add(g1);
         lifeModulesSystemEClass.getESuperTypes().add(this.getShr5System());
         lifeModuleEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         lifeModuleEClass.getESuperTypes().add(theShr5Package.getQuelle());
@@ -3315,12 +3351,19 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         moduleSkillGroupChangeEClass.getEGenericSuperTypes().add(g1);
         moduleTypeChangeEClass.getESuperTypes().add(this.getModuleChange());
+        g1 = createEGenericType(this.getShr5KarmaGenerator());
+        g2 = createEGenericType(this.getShr5System());
+        g1.getETypeArguments().add(g2);
+        karmaGeneratorEClass.getEGenericSuperTypes().add(g1);
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getManagedCharacter_Persona(), theShr5Package.getAbstraktPersona(), null, "persona", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Changes(), this.getChanges(), this.getChanges_Character(), "changes", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getManagedCharacter_ChracterSource(), this.getCharacterGenerator(), this.getCharacterGenerator_Character(), "chracterSource", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(this.getCharacterGenerator());
+        g2 = createEGenericType();
+        g1.getETypeArguments().add(g2);
+        initEReference(getManagedCharacter_ChracterSource(), g1, this.getCharacterGenerator_Character(), "chracterSource", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Inventar(), theShr5Package.getAbstraktGegenstand(), null, "inventar", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Contracts(), theShr5Package.getVertrag(), null, "contracts", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Connections(), this.getConnection(), null, "connections", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3334,7 +3377,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getManagedCharacter_PublicAwareness(), ecorePackage.getEInt(), "publicAwareness", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_KarmaGaint(), ecorePackage.getEInt(), "karmaGaint", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_CurrentKarma(), ecorePackage.getEInt(), "currentKarma", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getManagedCharacter_GeneratorSrc(), this.getCharacterGenerator(), null, "generatorSrc", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(this.getCharacterGenerator());
+        g2 = createEGenericType();
+        g1.getETypeArguments().add(g2);
+        initEReference(getManagedCharacter_GeneratorSrc(), g1, null, "generatorSrc", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_Height(), ecorePackage.getEInt(), "height", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_Dateofbirth(), theShr5Package.getShrDate(), "dateofbirth", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3667,7 +3713,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(playerManagementEClass, PlayerManagement.class, "PlayerManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlayerManagement_Groups(), this.getCharacterGroup(), null, "groups", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getPlayerManagement_Generators(), this.getCharacterGenerator(), null, "generators", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        g1 = createEGenericType(this.getCharacterGenerator());
+        g2 = createEGenericType(this.getCharacterGeneratorSystem());
+        g1.getETypeArguments().add(g2);
+        initEReference(getPlayerManagement_Generators(), g1, null, "generators", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlayerManagement_Entries(), this.getPlayerManagement(), null, "entries", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(gamemasterManagementEClass, GamemasterManagement.class, "GamemasterManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3677,7 +3726,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getCharacterAdvancementSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterAdvancementSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(shr5RuleGeneratorEClass, Shr5RuleGenerator.class, "Shr5RuleGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getShr5RuleGenerator_Shr5Generator(), this.getShr5System(), null, "shr5Generator", null, 0, 1, Shr5RuleGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEReference(getShr5RuleGenerator_AllowedSources(), theShr5Package.getSourceBook(), null, "allowedSources", null, 0, -1, Shr5RuleGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         op = initEOperation(getShr5RuleGenerator__HasSpendAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -3834,6 +3882,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(lifeModulesSystemEClass, LifeModulesSystem.class, "LifeModulesSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getLifeModulesSystem_Modules(), this.getLifeModule(), null, "modules", null, 0, -1, LifeModulesSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifeModulesSystem_KnowlegeSkillMax(), ecorePackage.getEInt(), "knowlegeSkillMax", null, 0, 1, LifeModulesSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(lifeModuleEClass, LifeModule.class, "LifeModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getLifeModule_KarmaCost(), ecorePackage.getEInt(), "karmaCost", null, 1, 1, LifeModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3865,6 +3914,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getModuleTypeChange_Selected(), g1, null, "selected", null, 0, 1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         g1 = createEGenericType(moduleTypeChangeEClass_T);
         initEReference(getModuleTypeChange_SelectOne(), g1, null, "selectOne", null, 0, -1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(karmaGeneratorEClass, KarmaGenerator.class, "KarmaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

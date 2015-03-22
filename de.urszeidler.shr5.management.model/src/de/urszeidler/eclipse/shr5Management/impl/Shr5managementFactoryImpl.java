@@ -3,20 +3,25 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -25,10 +30,21 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModuleType;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
+import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
@@ -43,6 +59,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
@@ -132,6 +149,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.MODULE_ATTRIBUTE_CHANGE: return createModuleAttributeChange();
             case Shr5managementPackage.MODULE_FEATURE_CHANGE: return createModuleFeatureChange();
             case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: return createModuleSkillGroupChange();
+            case Shr5managementPackage.KARMA_GENERATOR: return createKarmaGenerator();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -454,8 +472,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public Shr5KarmaGenerator createShr5KarmaGenerator() {
-        Shr5KarmaGeneratorImpl shr5KarmaGenerator = new Shr5KarmaGeneratorImpl();
+    public <G extends Shr5System> Shr5KarmaGenerator<G> createShr5KarmaGenerator() {
+        Shr5KarmaGeneratorImpl<G> shr5KarmaGenerator = new Shr5KarmaGeneratorImpl<G>();
         return shr5KarmaGenerator;
     }
 
@@ -607,6 +625,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public ModuleSkillGroupChange createModuleSkillGroupChange() {
         ModuleSkillGroupChangeImpl moduleSkillGroupChange = new ModuleSkillGroupChangeImpl();
         return moduleSkillGroupChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public KarmaGenerator createKarmaGenerator() {
+        KarmaGeneratorImpl karmaGenerator = new KarmaGeneratorImpl();
+        return karmaGenerator;
     }
 
     /**

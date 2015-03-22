@@ -11,10 +11,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
         eType="#//Changes" containment="true" eOpposite="#//Changes/character"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chracterSource" lowerBound="1"
-        eType="#//CharacterGenerator" eOpposite="#//CharacterGenerator/character">
+        eOpposite="#//CharacterGenerator/character">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Refers the generator."/>
       </eAnnotations>
+      <eGenericType eClassifier="#//CharacterGenerator">
+        <eTypeArguments/>
+      </eGenericType>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inventar" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"
@@ -62,11 +65,13 @@
         <details key="documentation" value="The complete karma the character has gained over the time."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorSrc" eType="#//CharacterGenerator"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorSrc" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="When commited contains the generator."/>
       </eAnnotations>
+      <eGenericType eClassifier="#//CharacterGenerator">
+        <eTypeArguments/>
+      </eGenericType>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -348,7 +353,7 @@
       <eTypeArguments eClassifier="#//FreeStyle"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator" eSuperTypes="#//Shr5RuleGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This is the core rule generator."/>
     </eAnnotations>
@@ -523,6 +528,9 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eGenericSuperTypes eClassifier="#//Shr5RuleGenerator">
+      <eTypeArguments eClassifier="#//Shr5System"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -654,7 +662,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
         eType="#//CharacterGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generators" upperBound="-1"
-        eType="#//CharacterGenerator" containment="true"/>
+        containment="true">
+      <eGenericType eClassifier="#//CharacterGenerator">
+        <eTypeArguments eClassifier="#//CharacterGeneratorSystem"/>
+      </eGenericType>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
         eType="#//PlayerManagement" containment="true"/>
   </eClassifiers>
@@ -673,6 +685,9 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The shr5 rule generator collects the main rules for all character generation."/>
     </eAnnotations>
+    <eTypeParameters name="G">
+      <eBounds eClassifier="#//Shr5System"/>
+    </eTypeParameters>
     <eOperations name="hasSpendAllPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The basic rule indicating not all is satified."/>
@@ -793,12 +808,6 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="shr5Generator" eType="#//Shr5System"
-        changeable="false" volatile="true" transient="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The shr5Generator connects to the system."/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedSources" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//SourceBook">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -806,13 +815,16 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eGenericSuperTypes eClassifier="#//CharacterGenerator">
-      <eTypeArguments eClassifier="#//Shr5System"/>
+      <eTypeArguments eTypeParameter="#//Shr5RuleGenerator/G"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama."/>
     </eAnnotations>
+    <eTypeParameters name="G">
+      <eBounds eClassifier="#//Shr5System"/>
+    </eTypeParameters>
     <eOperations name="hasSpendAllKarmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Checks if all karma points are spended."/>
@@ -846,6 +858,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="choiseKarmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eGenericSuperTypes eClassifier="#//Shr5RuleGenerator">
+      <eTypeArguments eTypeParameter="#//Shr5KarmaGenerator/G"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuellenConstrain">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -938,7 +953,7 @@
       </eParameters>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LifeModulesGenerator" eSuperTypes="#//Shr5KarmaGenerator">
+  <eClassifiers xsi:type="ecore:EClass" name="LifeModulesGenerator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationality" lowerBound="1"
         eType="#//LifeModule"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formativeYears" lowerBound="1"
@@ -952,10 +967,14 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eGenericSuperTypes eClassifier="#//Shr5KarmaGenerator">
+      <eTypeArguments eClassifier="#//LifeModulesSystem"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifeModulesSystem" eSuperTypes="#//Shr5System">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
         eType="#//LifeModule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="knowlegeSkillMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifeModule" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaCost" lowerBound="1"
@@ -1024,5 +1043,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectOne" upperBound="-1">
       <eGenericType eTypeParameter="#//ModuleTypeChange/T"/>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KarmaGenerator">
+    <eGenericSuperTypes eClassifier="#//Shr5KarmaGenerator">
+      <eTypeArguments eClassifier="#//Shr5System"/>
+    </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

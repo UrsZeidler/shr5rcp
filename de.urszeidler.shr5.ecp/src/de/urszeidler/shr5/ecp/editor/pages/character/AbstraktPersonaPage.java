@@ -110,7 +110,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                 ISelection selection = vol.getViewer().getSelection();
                 if (selection instanceof IStructuredSelection) {
                     IStructuredSelection ss = (IStructuredSelection)selection;
-                    List list = ss.toList();
+                    List<?> list = ss.toList();
                     for (Object object2 : list) {
                         if (object2 instanceof Erlernbar) {
                             ShadowrunManagmentTools.changeErlernbarByAdvacement(character, (Erlernbar)object2);

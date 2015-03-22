@@ -263,7 +263,7 @@ public interface Shr5managementFactory extends EFactory {
      * @return a new object of class '<em>Shr5 Karma Generator</em>'.
      * @generated
      */
-    Shr5KarmaGenerator createShr5KarmaGenerator();
+    <G extends Shr5System> Shr5KarmaGenerator<G> createShr5KarmaGenerator();
 
     /**
      * Returns a new object of class '<em>Quellen Constrain</em>'.
@@ -399,6 +399,15 @@ public interface Shr5managementFactory extends EFactory {
      * @generated
      */
     ModuleSkillGroupChange createModuleSkillGroupChange();
+
+    /**
+     * Returns a new object of class '<em>Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Karma Generator</em>'.
+     * @generated
+     */
+    KarmaGenerator createKarmaGenerator();
 
     /**
      * Returns the package supported by this factory.

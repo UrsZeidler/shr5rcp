@@ -4,8 +4,8 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Collection;
-
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
@@ -91,7 +92,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @generated
      * @ordered
      */
-    protected CharacterGenerator chracterSource;
+    protected CharacterGenerator<?> chracterSource;
 
     /**
      * The cached value of the '{@link #getInventar() <em>Inventar</em>}' containment reference list.
@@ -254,7 +255,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @generated
      * @ordered
      */
-    protected CharacterGenerator generatorSrc;
+    protected CharacterGenerator<?> generatorSrc;
 
     /**
      * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -388,10 +389,11 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    public CharacterGenerator getChracterSource() {
+    @SuppressWarnings("unchecked")
+    public CharacterGenerator<?> getChracterSource() {
         if (chracterSource != null && chracterSource.eIsProxy()) {
             InternalEObject oldChracterSource = (InternalEObject)chracterSource;
-            chracterSource = (CharacterGenerator)eResolveProxy(oldChracterSource);
+            chracterSource = (CharacterGenerator<?>)eResolveProxy(oldChracterSource);
             if (chracterSource != oldChracterSource) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE, oldChracterSource, chracterSource));
@@ -404,7 +406,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    public CharacterGenerator basicGetChracterSource() {
+    public CharacterGenerator<?> basicGetChracterSource() {
         return chracterSource;
     }
 
@@ -412,8 +414,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetChracterSource(CharacterGenerator newChracterSource, NotificationChain msgs) {
-        CharacterGenerator oldChracterSource = chracterSource;
+    public NotificationChain basicSetChracterSource(CharacterGenerator<?> newChracterSource, NotificationChain msgs) {
+        CharacterGenerator<?> oldChracterSource = chracterSource;
         chracterSource = newChracterSource;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE, oldChracterSource, newChracterSource);
@@ -426,7 +428,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    public void setChracterSource(CharacterGenerator newChracterSource) {
+    public void setChracterSource(CharacterGenerator<?> newChracterSource) {
         if (newChracterSource != chracterSource) {
             NotificationChain msgs = null;
             if (chracterSource != null)
@@ -655,16 +657,16 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 Shr5Generator g = (Shr5Generator)getChracterSource();
                 if (getChracterSource().getState() != GeneratorState.COMMITED) {
                     // TODO need to move karma spend in an abstracter way
-                    addKarma = g.getShr5Generator().getKarmaPoints() - g.getKarmaSpend();
+                    addKarma = g.getGenerator().getKarmaPoints() - g.getKarmaSpend();
                     return addKarma;
                 } else {
                     addKarma = g.getStartKarma()+ShadowrunManagmentTools.getKarmaSpend(this);
                     return ShadowrunManagmentTools.getKarmaGaint(this) + addKarma;
                 }
             } else if (getChracterSource() instanceof Shr5KarmaGenerator) {
-                Shr5KarmaGenerator kg = (Shr5KarmaGenerator)getChracterSource();
+                Shr5KarmaGenerator<Shr5System> kg = (Shr5KarmaGenerator<Shr5System>)getChracterSource();
                 if (getChracterSource().getState() != GeneratorState.COMMITED) {
-                    addKarma = kg.getShr5Generator().getKarmaPoints() - kg.getKarmaSpend();
+                    addKarma = kg.getGenerator().getKarmaPoints() - kg.getKarmaSpend();
                     return addKarma;
                 } else {
                     addKarma = kg.getStartKarma();
@@ -680,7 +682,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
-    public CharacterGenerator getGeneratorSrc() {
+    public CharacterGenerator<?> getGeneratorSrc() {
         return generatorSrc;
     }
 
@@ -689,8 +691,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetGeneratorSrc(CharacterGenerator newGeneratorSrc, NotificationChain msgs) {
-        CharacterGenerator oldGeneratorSrc = generatorSrc;
+    public NotificationChain basicSetGeneratorSrc(CharacterGenerator<?> newGeneratorSrc, NotificationChain msgs) {
+        CharacterGenerator<?> oldGeneratorSrc = generatorSrc;
         generatorSrc = newGeneratorSrc;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC, oldGeneratorSrc, newGeneratorSrc);
@@ -704,7 +706,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setGeneratorSrc(CharacterGenerator newGeneratorSrc) {
+    public void setGeneratorSrc(CharacterGenerator<?> newGeneratorSrc) {
         if (newGeneratorSrc != generatorSrc) {
             NotificationChain msgs = null;
             if (generatorSrc != null)
@@ -794,7 +796,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE:
                 if (chracterSource != null)
                     msgs = ((InternalEObject)chracterSource).eInverseRemove(this, Shr5managementPackage.CHARACTER_GENERATOR__CHARACTER, CharacterGenerator.class, msgs);
-                return basicSetChracterSource((CharacterGenerator)otherEnd, msgs);
+                return basicSetChracterSource((CharacterGenerator<?>)otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -896,7 +898,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 getChanges().addAll((Collection<? extends Changes>)newValue);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE:
-                setChracterSource((CharacterGenerator)newValue);
+                setChracterSource((CharacterGenerator<?>)newValue);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__INVENTAR:
                 getInventar().clear();
@@ -930,7 +932,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 setPublicAwareness((Integer)newValue);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
-                setGeneratorSrc((CharacterGenerator)newValue);
+                setGeneratorSrc((CharacterGenerator<?>)newValue);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
                 setHeight((Integer)newValue);
@@ -959,7 +961,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 getChanges().clear();
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE:
-                setChracterSource((CharacterGenerator)null);
+                setChracterSource((CharacterGenerator<?>)null);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__INVENTAR:
                 getInventar().clear();
@@ -989,7 +991,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 setPublicAwareness(PUBLIC_AWARENESS_EDEFAULT);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
-                setGeneratorSrc((CharacterGenerator)null);
+                setGeneratorSrc((CharacterGenerator<?>)null);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__HEIGHT:
                 setHeight(HEIGHT_EDEFAULT);

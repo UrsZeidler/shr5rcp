@@ -225,7 +225,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         character = character2;
         persona = character2.getPersona();
 
-        CharacterGenerator chracterSource = character2.getChracterSource();
+        CharacterGenerator<?> chracterSource = character2.getChracterSource();
         if (chracterSource instanceof Shr5KarmaGenerator) {
             // Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
             karmaMode = true;

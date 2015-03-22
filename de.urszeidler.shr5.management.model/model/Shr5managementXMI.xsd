@@ -1035,6 +1035,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="modules" type="shr5mngt:LifeModule"/>
         </xsd:choice>
+        <xsd:attribute name="knowlegeSkillMax" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1161,4 +1162,10 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ModuleTypeChange" type="shr5mngt:ModuleTypeChange"/>
+  <xsd:complexType name="KarmaGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Shr5KarmaGenerator"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KarmaGenerator" type="shr5mngt:KarmaGenerator"/>
 </xsd:schema>

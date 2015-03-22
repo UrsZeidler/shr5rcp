@@ -3,12 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import de.urszeidler.eclipse.shr5Management.ModuleChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->

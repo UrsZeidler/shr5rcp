@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -15,9 +16,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
@@ -43,7 +46,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *
  * @generated
  */
-public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5KarmaGenerator {
+public class Shr5KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleGeneratorImpl<G> implements Shr5KarmaGenerator<G> {
     /**
      * The cached value of the '{@link #getMetaType() <em>Meta Type</em>}' reference.
      * <!-- begin-user-doc -->
@@ -247,10 +250,8 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     public void setCharacterConcept(SpecialType newCharacterConcept) {
         SpecialType oldCharacterConcept = characterConcept;
         characterConcept = newCharacterConcept;
-        if (eNotificationRequired()){
+        if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT, oldCharacterConcept, characterConcept));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__CHOISE_KARMA_COST, oldCharacterConcept, characterConcept));
-            }
     }
 
     /**
@@ -288,12 +289,12 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * @generated not
      */
     public int getKarmaSpend() {
-        if (getShr5Generator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
+        if (getGenerator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
                 || getCharacter().getPersona() == null)
             return 0;
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
-        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
+        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getGenerator().getKarmaToConnectionFactor();
         int basicCost = getChoiseKarmaCost();//getMetaType().getCost() + getCharacterConcept().getCost();
         return Math.abs(karmaSpend) + basicCost + connectionsSpend + getKarmaToResource();
     }
@@ -384,7 +385,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString("_UI_NotSpendAllPoints",
                                 new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
-                                Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                                Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }
@@ -401,10 +402,10 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         if (!canValidate())
             return true;
 
-        int karmaPoints = getShr5Generator().getKarmaPoints();
+        int karmaPoints = getGenerator().getKarmaPoints();
         int diff = karmaPoints - getKarmaSpend();
 
-        boolean test = getShr5Generator().getMaxKarmaToKeep() < diff;
+        boolean test = getGenerator().getMaxKarmaToKeep() < diff;
 
         if (test || diff < 0) {
             if (diagnostics != null) {
@@ -412,7 +413,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
                         Shr5managementValidator.SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllKarmaPoints", new Object[]{
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More"), diff }),
-                        new Object[]{ this, Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
+                        new Object[]{ this, Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
             return false;
         }

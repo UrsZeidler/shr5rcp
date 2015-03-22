@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -16,13 +17,14 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+
 import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -51,14 +53,13 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5System> implements Shr5RuleGenerator {
+public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends CharacterGeneratorImpl<G> implements Shr5RuleGenerator<G> {
     /**
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
@@ -95,18 +96,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
      * @generated
      */
     @Override
-    public void setGenerator(Shr5System newGenerator) {
+    public void setGenerator(G newGenerator) {
         super.setGenerator(newGenerator);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Shr5System getShr5Generator() {
-        Shr5System shr5Generator = basicGetShr5Generator();
-        return shr5Generator != null && shr5Generator.eIsProxy() ? (Shr5System)eResolveProxy((InternalEObject)shr5Generator) : shr5Generator;
     }
 
     /**
@@ -114,7 +105,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
      * 
      * @generated not
      */
-    public Shr5System basicGetShr5Generator() {
+    public Shr5System basicgetGenerator() {
         if (generator instanceof Shr5System) {
             Shr5System sr5 = (Shr5System)generator;
             return sr5;
@@ -160,7 +151,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         if (spezies == null)
             return true;
 
-        getShr5Generator().getNumberOfMaxAttributes();
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() >= spezies.getKonstitutionMax())
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
@@ -182,11 +172,11 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
 
         String attributes = toAttributeString(list, context);
 
-        if (list.size() > getShr5Generator().getNumberOfMaxAttributes()) {
+        if (list.size() > getGenerator().getNumberOfMaxAttributes()) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotMoreMaxAttributes", new Object[]{ attributes, getShr5Generator().getNumberOfMaxAttributes() }),
+                                "_UI_NotMoreMaxAttributes", new Object[]{ attributes, getGenerator().getNumberOfMaxAttributes() }),
                         new Object[]{ this }));
             }
             return false;
@@ -229,7 +219,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
-            if (personaFertigkeit.getStufe() > getShr5Generator().getSkillMax())
+            if (personaFertigkeit.getStufe() > getGenerator().getSkillMax())
                 list.add(personaFertigkeit.getFertigkeit());
         }
 
@@ -238,7 +228,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX, ModelPlugin.INSTANCE.getString("_UI_NoSkillsOverMax",
-                                new Object[]{ fertigkeitsList, getShr5Generator().getSkillMax() }), new Object[]{ this }));
+                                new Object[]{ fertigkeitsList, getGenerator().getSkillMax() }), new Object[]{ this }));
             }
             return false;
         }
@@ -261,7 +251,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
-            if (personaFertigkeit.getSpezialisierungen().size() > getShr5Generator().getNumberOfSpecalism())
+            if (personaFertigkeit.getSpezialisierungen().size() > getGenerator().getNumberOfSpecalism())
                 list.add(personaFertigkeit.getFertigkeit());
         }
         String fertigkeitsList = ShadowrunManagmentTools.beschreibarListToString(list);
@@ -270,7 +260,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NOT_MORE_SPECALISM, ModelPlugin.INSTANCE.getString("_UI_NotMoreSpecalism",
-                                new Object[]{ fertigkeitsList, getShr5Generator().getNumberOfSpecalism() }), new Object[]{ this }));
+                                new Object[]{ fertigkeitsList, getGenerator().getNumberOfSpecalism() }), new Object[]{ this }));
             }
             return false;
         }
@@ -294,7 +284,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         if (spezies == null)
             return true;
 
-        // getShr5Generator().getNumberOfMaxAttributes();
+        // getGenerator().getNumberOfMaxAttributes();
         // int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() > ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
@@ -333,7 +323,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
      * @return true if validation can be done
      */
     protected boolean canValidate() {
-        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
+        if (getGenerator() == null || getState() == GeneratorState.COMMITED)
             return false;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
@@ -357,7 +347,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
         ManagedCharacter managedCharacter = getCharacter();
         // AbstraktPersona persona = managedCharacter.getPersona();
 
-        EList<QuellenConstrain> additionalConstrains = getShr5Generator().getAdditionalConstrains();
+        EList<QuellenConstrain> additionalConstrains = getGenerator().getAdditionalConstrains();
 
         XMLResource eResource = (XMLResource)managedCharacter.eResource();
         ArrayList<Identifiable> list = new ArrayList<Identifiable>();
@@ -530,9 +520,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
-                return basicGetShr5Generator();
             case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
                 return getAllowedSources();
         }
@@ -579,8 +566,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl<Shr5S
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                return basicGetShr5Generator() != null;
             case Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES:
                 return allowedSources != null && !allowedSources.isEmpty();
         }

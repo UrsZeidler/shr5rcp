@@ -4,24 +4,29 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
-import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -30,11 +35,23 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
+import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTypeChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -51,6 +68,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
@@ -375,14 +393,14 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 return result;
             }
             case Shr5managementPackage.SHR5_RULE_GENERATOR: {
-                Shr5RuleGenerator shr5RuleGenerator = (Shr5RuleGenerator)theEObject;
+                Shr5RuleGenerator<?> shr5RuleGenerator = (Shr5RuleGenerator<?>)theEObject;
                 T1 result = caseShr5RuleGenerator(shr5RuleGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5RuleGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: {
-                Shr5KarmaGenerator shr5KarmaGenerator = (Shr5KarmaGenerator)theEObject;
+                Shr5KarmaGenerator<?> shr5KarmaGenerator = (Shr5KarmaGenerator<?>)theEObject;
                 T1 result = caseShr5KarmaGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
@@ -519,6 +537,15 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 ModuleTypeChange<?> moduleTypeChange = (ModuleTypeChange<?>)theEObject;
                 T1 result = caseModuleTypeChange(moduleTypeChange);
                 if (result == null) result = caseModuleChange(moduleTypeChange);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.KARMA_GENERATOR: {
+                KarmaGenerator karmaGenerator = (KarmaGenerator)theEObject;
+                T1 result = caseKarmaGenerator(karmaGenerator);
+                if (result == null) result = caseShr5KarmaGenerator(karmaGenerator);
+                if (result == null) result = caseShr5RuleGenerator(karmaGenerator);
+                if (result == null) result = caseCharacterGenerator(karmaGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1077,7 +1104,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T1 caseShr5RuleGenerator(Shr5RuleGenerator object) {
+    public <G extends Shr5System> T1 caseShr5RuleGenerator(Shr5RuleGenerator<G> object) {
         return null;
     }
 
@@ -1092,7 +1119,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T1 caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+    public <G extends Shr5System> T1 caseShr5KarmaGenerator(Shr5KarmaGenerator<G> object) {
         return null;
     }
 
@@ -1348,6 +1375,21 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @generated
      */
     public <T> T1 caseModuleTypeChange(ModuleTypeChange<T> object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Karma Generator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T1 caseKarmaGenerator(KarmaGenerator object) {
         return null;
     }
 

@@ -3,23 +3,28 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
-import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
@@ -28,12 +33,25 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModuleType;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
+import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
+import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
+import de.urszeidler.eclipse.shr5Management.ModuleTypeChange;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -52,6 +70,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
@@ -415,9 +434,9 @@ public class Shr5managementValidator extends EObjectValidator {
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM:
                 return validateCharacterAdvancementSystem((CharacterAdvancementSystem)value, diagnostics, context);
             case Shr5managementPackage.SHR5_RULE_GENERATOR:
-                return validateShr5RuleGenerator((Shr5RuleGenerator)value, diagnostics, context);
+                return validateShr5RuleGenerator((Shr5RuleGenerator<?>)value, diagnostics, context);
             case Shr5managementPackage.SHR5_KARMA_GENERATOR:
-                return validateShr5KarmaGenerator((Shr5KarmaGenerator)value, diagnostics, context);
+                return validateShr5KarmaGenerator((Shr5KarmaGenerator<?>)value, diagnostics, context);
             case Shr5managementPackage.QUELLEN_CONSTRAIN:
                 return validateQuellenConstrain((QuellenConstrain)value, diagnostics, context);
             case Shr5managementPackage.PACK:
@@ -452,6 +471,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateModuleSkillGroupChange((ModuleSkillGroupChange)value, diagnostics, context);
             case Shr5managementPackage.MODULE_TYPE_CHANGE:
                 return validateModuleTypeChange((ModuleTypeChange<?>)value, diagnostics, context);
+            case Shr5managementPackage.KARMA_GENERATOR:
+                return validateKarmaGenerator((KarmaGenerator)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -977,7 +998,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (!validate_NoCircularContainment(shr5RuleGenerator, diagnostics, context)) return false;
         boolean result = validate_EveryMultiplicityConforms(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryDataValueConforms(shr5RuleGenerator, diagnostics, context);
@@ -1006,7 +1027,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasSpendAllPoints(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasSpendAllPoints(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasSpendAllPoints(diagnostics, context);
     }
 
@@ -1016,7 +1037,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasNotMoreMaxAttributes(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasNotMoreMaxAttributes(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNotMoreMaxAttributes(diagnostics, context);
     }
 
@@ -1026,7 +1047,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasNoSkillsOverMax(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasNoSkillsOverMax(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNoSkillsOverMax(diagnostics, context);
     }
 
@@ -1036,7 +1057,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasNotMoreSpecalism(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasNotMoreSpecalism(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNotMoreSpecalism(diagnostics, context);
     }
 
@@ -1046,7 +1067,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNoAttributesOverSpeciesAtt(diagnostics, context);
     }
 
@@ -1056,7 +1077,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasNoConstrainVoilation(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasNoConstrainVoilation(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNoConstrainVoilation(diagnostics, context);
     }
 
@@ -1066,7 +1087,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasLifestyleChoosen(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasLifestyleChoosen(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasLifestyleChoosen(diagnostics, context);
     }
 
@@ -1076,7 +1097,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasOnlyAllowedSources(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasOnlyAllowedSources(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasOnlyAllowedSources(diagnostics, context);
     }
 
@@ -1086,7 +1107,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasKiPowerOverLimit(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasKiPowerOverLimit(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasKiPowerOverLimit(diagnostics, context);
     }
 
@@ -1096,7 +1117,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5RuleGenerator_hasBasicViolations(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5RuleGenerator_hasBasicViolations(Shr5RuleGenerator<?> shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasBasicViolations(diagnostics, context);
     }
 
@@ -1105,7 +1126,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5KarmaGenerator(Shr5KarmaGenerator shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5KarmaGenerator(Shr5KarmaGenerator<?> shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (!validate_NoCircularContainment(shr5KarmaGenerator, diagnostics, context)) return false;
         boolean result = validate_EveryMultiplicityConforms(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryDataValueConforms(shr5KarmaGenerator, diagnostics, context);
@@ -1135,7 +1156,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateShr5KarmaGenerator_hasSpendAllKarmaPoints(Shr5KarmaGenerator shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean validateShr5KarmaGenerator_hasSpendAllKarmaPoints(Shr5KarmaGenerator<?> shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5KarmaGenerator.hasSpendAllKarmaPoints(diagnostics, context);
     }
 
@@ -1354,6 +1375,35 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateModuleTypeChange(ModuleTypeChange<?> moduleTypeChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(moduleTypeChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateKarmaGenerator(KarmaGenerator karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!validate_NoCircularContainment(karmaGenerator, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreMaxAttributes(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoConstrainVoilation(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasLifestyleChoosen(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasOnlyAllowedSources(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(karmaGenerator, diagnostics, context);
+        return result;
     }
 
     /**

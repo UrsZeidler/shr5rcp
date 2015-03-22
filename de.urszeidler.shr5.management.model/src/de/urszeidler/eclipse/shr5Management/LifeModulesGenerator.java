@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface LifeModulesGenerator extends Shr5KarmaGenerator {
+public interface LifeModulesGenerator extends Shr5KarmaGenerator<LifeModulesSystem> {
     /**
      * Returns the value of the '<em><b>Nationality</b></em>' reference.
      * <!-- begin-user-doc -->

@@ -64,6 +64,7 @@ import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -157,6 +158,7 @@ public class PersonaPrinter extends BasicPrinter {
                         return createPagePrint(printShr5GeneratorSheet(object));
                     }
 
+                    @SuppressWarnings("rawtypes")
                     @Override
                     public Print caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                         return createPagePrint(printShr5GeneratorSheet(object));
@@ -447,7 +449,7 @@ public class PersonaPrinter extends BasicPrinter {
         // grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
         // grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
         // grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
-        // int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
+        // int KarmaToRes = generator.getKarmaToResource() * generator.getGenerator().getKarmaToResourceFactor();
         // grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
         //
         outerGrid.add(grid);
@@ -480,7 +482,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator generator) {
+    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator<Shr5System> generator) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
@@ -565,7 +567,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    private Print printShr5KarmaGenerator(Shr5KarmaGenerator generator, ManagedCharacter character) {
+    private Print printShr5KarmaGenerator(Shr5KarmaGenerator<Shr5System> generator, ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint outerGrid = new GridPrint("d,d:g", look);//$NON-NLS-1$
@@ -583,7 +585,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(printString(generator.getCharacterName()), attributeFont));
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
-        grid.add(new TextPrint(toName(generator.getShr5Generator()), attributeFont));
+        grid.add(new TextPrint(toName(generator.getGenerator()), attributeFont));
 
         grid.add(new TextPrint("Metatype", attributeFont));
         grid.add(new TextPrint(toName(generator.getMetaType()), attributeFont), GridPrint.REMAINDER);
@@ -591,12 +593,12 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(toName(generator.getCharacterConcept()), attributeFont), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_spend, attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getShr5Generator().getKarmaPoints()), attributeFont), GridPrint.REMAINDER);
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getGenerator().getKarmaPoints()), attributeFont), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
         grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
         grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
-        int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
+        int KarmaToRes = generator.getKarmaToResource() * generator.getGenerator().getKarmaToResourceFactor();
         grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
 
         outerGrid.add(grid);
@@ -670,7 +672,7 @@ public class PersonaPrinter extends BasicPrinter {
         characterConnections.add(
                 SWT.RIGHT,
                 new TextPrint(printInteger(generator.getConnectionSpend()
-                        - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())), attributeFont));
+                        - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getGenerator())), attributeFont));
 
         grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
         grid.add(new BorderPrint(printCalculatedKarma(character), border), GridPrint.REMAINDER);
@@ -894,7 +896,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
         grid.add(new TextPrint(printString(generator.getCharacterName()), attributeFont));
         grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
-        grid.add(new TextPrint(toName(generator.getShr5Generator()), attributeFont));
+        grid.add(new TextPrint(toName(generator.getGenerator()), attributeFont));
 
         grid.add(new TextPrint(Messages.PersonaPrinter_attributes, attributeFont));
         grid.add(new TextPrint(toName(generator.getAttribute()), attributeFont), GridPrint.REMAINDER);
@@ -912,7 +914,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(toName(generator.getResourcen()), attributeFont), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_spend, attributeFont));
-        grid.add(new TextPrint(printInteger(generator.getShr5Generator().getKarmaPoints()), attributeFont), GridPrint.REMAINDER);
+        grid.add(new TextPrint(printInteger(generator.getGenerator().getKarmaPoints()), attributeFont), GridPrint.REMAINDER);
 
         outerGrid.add(grid);
 
@@ -922,19 +924,19 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
         grid.add(SWT.RIGHT,
                 new TextPrint(
-                        printIntegerMoney(new BigDecimal(ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getShr5Generator()))),
+                        printIntegerMoney(new BigDecimal(ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getGenerator()))),
                         attributeFont));
         grid.add(new TextPrint(Messages.PersonaPrinter_Resources_at_all, attributeFont));
         grid.add(
                 SWT.RIGHT,
                 new TextPrint(printIntegerMoney(new BigDecimal(generator.getResourcen().getResource()
-                        + ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getShr5Generator()))), attributeFont));
+                        + ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getGenerator()))), attributeFont));
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Connection_with_karma, attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())),
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getGenerator())),
                 attributeFont));
         grid.add(new TextPrint(Messages.PersonaPrinter_Kownlege_skills, attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKnownlegeSkillPoints(character, generator.getShr5Generator())),
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKnownlegeSkillPoints(character, generator.getGenerator())),
                 attributeFont));
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Start_Karma, attributeFont));

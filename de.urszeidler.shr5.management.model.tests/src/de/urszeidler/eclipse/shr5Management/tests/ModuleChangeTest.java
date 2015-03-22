@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
-import de.urszeidler.eclipse.shr5Management.ModuleChange;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5Management.ModuleChange;
 
 /**
  * <!-- begin-user-doc -->

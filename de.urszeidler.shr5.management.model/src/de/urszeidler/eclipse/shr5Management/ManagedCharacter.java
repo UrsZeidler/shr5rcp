@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,7 +14,6 @@ import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Vertrag;
-import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,7 +118,7 @@ public interface ManagedCharacter extends EObject {
      * @model opposite="character" required="true"
      * @generated
      */
-	CharacterGenerator getChracterSource();
+	CharacterGenerator<?> getChracterSource();
 
 	/**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getChracterSource <em>Chracter Source</em>}' reference.
@@ -127,7 +128,7 @@ public interface ManagedCharacter extends EObject {
      * @see #getChracterSource()
      * @generated
      */
-	void setChracterSource(CharacterGenerator value);
+	void setChracterSource(CharacterGenerator<?> value);
 
 	/**
      * Returns the value of the '<em><b>Inventar</b></em>' containment reference list.
@@ -418,7 +419,7 @@ public interface ManagedCharacter extends EObject {
      * @model containment="true"
      * @generated
      */
-    CharacterGenerator getGeneratorSrc();
+    CharacterGenerator<?> getGeneratorSrc();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc <em>Generator Src</em>}' containment reference.
@@ -428,7 +429,7 @@ public interface ManagedCharacter extends EObject {
      * @see #getGeneratorSrc()
      * @generated
      */
-    void setGeneratorSrc(CharacterGenerator value);
+    void setGeneratorSrc(CharacterGenerator<?> value);
 
     /**
      * Returns the value of the '<em><b>Height</b></em>' attribute.

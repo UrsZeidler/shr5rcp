@@ -48,7 +48,7 @@ public interface PlayerManagement extends Beschreibbar {
 
     /**
      * Returns the value of the '<em><b>Generators</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.CharacterGenerator}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.CharacterGenerator}&lt;de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem>.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Generators</em>' containment reference list isn't clear,
@@ -60,7 +60,7 @@ public interface PlayerManagement extends Beschreibbar {
      * @model containment="true"
      * @generated
      */
-    EList<CharacterGenerator> getGenerators();
+    EList<CharacterGenerator<CharacterGeneratorSystem>> getGenerators();
 
     /**
      * Returns the value of the '<em><b>Entries</b></em>' containment reference list.

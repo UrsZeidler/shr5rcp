@@ -3,10 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

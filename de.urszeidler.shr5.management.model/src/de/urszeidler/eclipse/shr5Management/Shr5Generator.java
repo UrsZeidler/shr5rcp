@@ -44,7 +44,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @model
  * @generated
  */
-public interface Shr5Generator extends Shr5RuleGenerator {
+public interface Shr5Generator extends Shr5RuleGenerator<Shr5System> {
 	/**
      * Returns the value of the '<em><b>Resourcen</b></em>' reference.
      * <!-- begin-user-doc -->

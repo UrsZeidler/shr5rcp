@@ -45,13 +45,13 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
-import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page.LabelEntry;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 
 /**
@@ -60,7 +60,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
     protected static final String EMPTY = ""; //$NON-NLS-1$
-    private Shr5KarmaGenerator object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
+    private Shr5KarmaGenerator<Shr5System> object;// = Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator();
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
 
@@ -97,7 +97,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
      * @param editingDomain
      * @param manager
      */
-    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title, Shr5KarmaGenerator object, EditingDomain editingDomain,
+    public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title, Shr5KarmaGenerator<Shr5System> object, EditingDomain editingDomain,
             ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
@@ -464,7 +464,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
-                if (object.getShr5Generator() == null)
+                if (object.getGenerator() == null)
                     return Messages.GeneratorPage_left1;
 
                 return Messages.GeneratorPage_left + (ShadowrunManagmentTools.calcKarmaLeft(object) + EMPTY);

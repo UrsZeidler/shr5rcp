@@ -85,29 +85,19 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * @generated
      */
     @Override
-    protected Shr5KarmaGenerator getFixture() {
-        return (Shr5KarmaGenerator)fixture;
+    protected Shr5KarmaGenerator<?> getFixture() {
+        return (Shr5KarmaGenerator<?>)fixture;
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated not
+     * @generated
      */
     @Override
     protected void setUp() throws Exception {
         setFixture(Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator());
-        Shr5System system = Shr5managementFactory.eINSTANCE.createShr5System();
-        system.setKarmaPoints(20);
-        getFixture().setGenerator(system);
-
-        characterConcept = Shr5managementFactory.eINSTANCE.createMudan();
-        characterConcept.setCost(0);
-        metaType = Shr5managementFactory.eINSTANCE.createMetaType();
-        getFixture().setCharacterConcept(characterConcept);
-        getFixture().setMetaType(metaType);
-
     }
 
     /**
@@ -120,6 +110,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     protected void tearDown() throws Exception {
         setFixture(null);
     }
+    
+    @SuppressWarnings("unchecked")
+    protected void createBasicCategories() {
+        shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
+        ((Shr5KarmaGenerator<Shr5System>)getFixture()).setGenerator(shr5System);
+    }
+
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
@@ -131,13 +128,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testGetKarmaSpend() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
@@ -166,13 +163,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testGetKarmaSpend_concept_type() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(30);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(30);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
@@ -204,12 +201,12 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testGetKarmaSpend_connections() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
         shr5System.setKarmaToConnectionFactor(2);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
@@ -262,13 +259,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testGetChoiseKarmaCost() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(30);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(30);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getChoiseKarmaCost());
 
@@ -290,13 +287,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     @SuppressWarnings("unchecked")
     public void testHasSpendAllKarmaPoints__DiagnosticChain_Map() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
@@ -315,7 +312,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is false", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
-        getFixture().getShr5Generator().setMaxKarmaToKeep(0);
+        getFixture().getGenerator().setMaxKarmaToKeep(0);
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
     }
@@ -333,13 +330,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
@@ -358,7 +355,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is false", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
-        getFixture().getShr5Generator().setMaxKarmaToKeep(0);
+        getFixture().getGenerator().setMaxKarmaToKeep(0);
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
     }
@@ -373,13 +370,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeFertigkeitByAdvacement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -407,13 +404,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeFertigkeitsGruppeByAdvacement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -441,13 +438,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeAttributeByAdvacement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -483,13 +480,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeQuallityByAdvancement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -502,7 +499,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         //koerperPersona.getEigenschaften().add(personaEigenschaft);
         assertEquals("20 spend", 20,
-                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertTrue(koerperPersona.getEigenschaften().contains(personaEigenschaft));
         PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaEigenschaft);
@@ -511,7 +508,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaEigenschaft);
         
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertFalse(koerperPersona.getEigenschaften().contains(personaEigenschaft));
         advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaEigenschaft);
@@ -529,13 +526,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeSpellByAdvancement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createZaubererCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -549,7 +546,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         //koerperPersona.getEigenschaften().add(personaEigenschaft);
         assertEquals("5 spend", 5,
-                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertTrue(koerperPersona.getZauber().contains(personaZauber));
         PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
@@ -558,7 +555,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
         
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertFalse(koerperPersona.getZauber().contains(personaZauber));
         advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
@@ -576,13 +573,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testChangeComplexformByAdvancement() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createTechnoCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -596,7 +593,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         //koerperPersona.getEigenschaften().add(personaEigenschaft);
         assertEquals("5 spend", 5,
-                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertTrue(koerperPersona.getComplexForms().contains(personaZauber));
         PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
@@ -605,7 +602,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
         
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         assertFalse(koerperPersona.getComplexForms().contains(personaZauber));
         advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
@@ -624,17 +621,17 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Attribute() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         AbstraktPersona persona = playerCharacter.getPersona();
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 5);
@@ -642,7 +639,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, persona.getKonstitutionBasis());
         assertEquals("75 spend", 75, getFixture().getKarmaSpend());
         assertEquals("75 spend", 75,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
 
@@ -653,14 +650,14 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 6, persona.getKonstitutionBasis());
         assertEquals("90 spend", 90, getFixture().getKarmaSpend());
         assertEquals("90 spend", 90,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
         assertEquals("2 spend", 2, persona.getKonstitutionBasis());
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         assertNull(ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS));
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -674,23 +671,23 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Attribute1() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         AbstraktPersona persona = playerCharacter.getPersona();
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 5);
 
         assertEquals("75 spend", 75,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
 
@@ -699,21 +696,21 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         persona.getSpezies().setKonstitutionMin(2);
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 6);
         assertEquals("90 spend", 90,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
         assertNull(ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS));
         assertEquals("0 spend", 0,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         ShadowrunManagmentTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 6);
         assertEquals("90 spend", 90,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         persona.getSpezies().setIntuitionMin(1);
         persona.setIntuitionBasis(6);
         assertEquals("190 spend", 190,
-                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByAttributes(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -727,13 +724,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Fertigkeit() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -744,11 +741,11 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("30 spend", 30, getFixture().getKarmaSpend());
         assertEquals("30 spend", 30,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         findFertigkeit.setStufe(6);
         assertEquals("42 spend", 42,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -762,13 +759,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Fertigkeit1() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -779,11 +776,11 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("30 spend", 30, getFixture().getKarmaSpend());
         assertEquals("30 spend", 30,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         findFertigkeit.setStufe(6);
         assertEquals("42 spend", 42,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
 
@@ -791,10 +788,10 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         findFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("72 spend", 72,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         findFertigkeit.setStufe(6);
         assertEquals("84 spend", 84,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -808,13 +805,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Specalism() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -825,14 +822,14 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("30 spend", 30, getFixture().getKarmaSpend());
         assertEquals("30 spend", 30,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         findFertigkeit.setStufe(6);
         assertEquals("42 spend", 42,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         findFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         assertEquals("7 spend", 7,
-                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
 
@@ -841,10 +838,10 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
          findFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         assertEquals("14 spend", 14,
-                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         findFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         assertEquals("21 spend", 21,
-                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
       
     }
 
@@ -858,13 +855,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4FertigkeitsGruppe() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -875,11 +872,11 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("75 spend", 75, getFixture().getKarmaSpend());
         assertEquals("75 spend", 75,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         findFertigkeit.setStufe(6);
         assertEquals("105 spend", 105,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -893,13 +890,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4FertigkeitsGruppe1() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -910,11 +907,11 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("75 spend", 75, getFixture().getKarmaSpend());
         assertEquals("75 spend", 75,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         findFertigkeit.setStufe(6);
         assertEquals("105 spend", 105,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         fertigkeit = Shr5Factory.eINSTANCE.createFertigkeitsGruppe();
 
@@ -922,10 +919,10 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         findFertigkeit = ShadowrunTools.findGruppe(fertigkeit, persona);
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
         assertEquals("180 spend", 180,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
         findFertigkeit.setStufe(6);
         assertEquals("210 spend", 210,
-                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -939,13 +936,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Quallity() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -956,7 +953,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         personaEigenschaft.setKarmaKosten(10);
         assertEquals("20 spend", 20,
-                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -970,13 +967,13 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarma4Quallity1() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
-        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
-        getFixture().getShr5Generator().setKarmaPoints(3);
+        getFixture().getGenerator().setMaxKarmaToKeep(1);
+        getFixture().getGenerator().setKarmaPoints(3);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         AbstraktPersona persona = playerCharacter.getPersona();
@@ -987,7 +984,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         personaEigenschaft.setKarmaKosten(10);
         assertEquals("20 spend", 20,
-                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
         personaEigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         koerperPersona = (KoerperPersona)persona;
@@ -995,7 +992,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
         personaEigenschaft.setKarmaKosten(10);
         assertEquals("40 spend", 40,
-                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getGenerator().getCharacterAdvancements()));
 
     }
 
@@ -1009,12 +1006,12 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      */
     public void testCalcKarmaSpend_connections() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
-        shr5System = getFixture().getShr5Generator();
+        shr5System = getFixture().getGenerator();
         getFixture().setCharacter(playerCharacter);
         shr5System.setKarmaToConnectionFactor(2);
 
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 

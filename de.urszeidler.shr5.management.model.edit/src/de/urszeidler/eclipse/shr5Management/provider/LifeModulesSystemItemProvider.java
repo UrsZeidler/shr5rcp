@@ -4,20 +4,20 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
-import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem} object.
@@ -47,8 +47,31 @@ public class LifeModulesSystemItemProvider extends Shr5SystemItemProvider {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addKnowlegeSkillMaxPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Knowlege Skill Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addKnowlegeSkillMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_LifeModulesSystem_knowlegeSkillMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModulesSystem_knowlegeSkillMax_feature", "_UI_LifeModulesSystem_type"),
+                 Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -119,6 +142,9 @@ public class LifeModulesSystemItemProvider extends Shr5SystemItemProvider {
         updateChildren(notification);
 
         switch (notification.getFeatureID(LifeModulesSystem.class)) {
+            case Shr5managementPackage.LIFE_MODULES_SYSTEM__KNOWLEGE_SKILL_MAX:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
             case Shr5managementPackage.LIFE_MODULES_SYSTEM__MODULES:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;

@@ -160,7 +160,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
         int magicDefault = 0;
         int magicSpend = 0;
 
-        CharacterGenerator generator = context.getChracterSource();
+        CharacterGenerator<?> generator = context.getChracterSource();
 
         if (generator instanceof Shr5Generator) {
             Shr5Generator shr5 = (Shr5Generator)generator;

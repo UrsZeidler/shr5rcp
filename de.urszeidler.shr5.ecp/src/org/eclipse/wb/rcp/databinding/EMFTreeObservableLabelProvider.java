@@ -11,7 +11,6 @@
 package org.eclipse.wb.rcp.databinding;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.set.IObservableSet;
@@ -58,6 +57,7 @@ public class EMFTreeObservableLabelProvider extends LabelProvider {
         };
         m_observable.addSetChangeListener(m_setListener);
     }
+    
     public EMFTreeObservableLabelProvider(IObservableSet allElementsObservable,            
             EStructuralFeature imageProperty, List<EStructuralFeature> textProperty) {
         m_observable = allElementsObservable;

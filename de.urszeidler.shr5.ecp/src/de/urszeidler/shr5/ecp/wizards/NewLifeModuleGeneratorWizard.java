@@ -9,6 +9,7 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -26,7 +27,7 @@ public class NewLifeModuleGeneratorWizard extends NewShr5GeneratorWizard {
     }
 
     @Override
-    protected CharacterGenerator<Shr5System> createGenerator() {
+    protected CharacterGenerator<LifeModulesSystem> createGenerator() {
         return Shr5managementFactory.eINSTANCE.createLifeModulesGenerator();
     }
 

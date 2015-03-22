@@ -34,7 +34,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @model
  * @generated
  */
-public interface Shr5KarmaGenerator extends Shr5RuleGenerator {
+public interface Shr5KarmaGenerator<G extends Shr5System> extends Shr5RuleGenerator<G> {
     /**
      * Returns the value of the '<em><b>Meta Type</b></em>' reference.
      * <!-- begin-user-doc -->

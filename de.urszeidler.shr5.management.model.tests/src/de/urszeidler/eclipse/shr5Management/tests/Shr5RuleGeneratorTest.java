@@ -33,12 +33,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * A test case for the model object '<em><b>Shr5 Rule Generator</b></em>'.
  * <!-- end-user-doc -->
  * <p>
- * The following features are tested:
- * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}</li>
- * </ul>
- * </p>
- * <p>
  * The following operations are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Points</em>}</li>
@@ -79,19 +73,19 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * @generated
      */
     @Override
-    protected Shr5RuleGenerator getFixture() {
-        return (Shr5RuleGenerator)fixture;
+    protected Shr5RuleGenerator<?> getFixture() {
+        return (Shr5RuleGenerator<?>)fixture;
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getGenerator() <em>Shr5 Generator</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator()
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getGenerator()
      * @generated not
      */
-    public void testGetShr5Generator() {
+    public void testgetGenerator() {
     }
 
     /**
@@ -150,10 +144,11 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         getFixture().setCharacter(character);
     }
 
-    private void createBasicCategories() {
-        shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
-        getFixture().setGenerator(shr5System);
-    }
+protected abstract void createBasicCategories();
+//{
+//        shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
+//        getFixture().setGenerator(shr5System);
+//    }
 
     /**
      * Tests the '
@@ -168,7 +163,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
     @SuppressWarnings("unchecked")
     public void testHasNoSkillsOverMax__DiagnosticChain_Map() {
         int max = 10;
-        getFixture().getShr5Generator().setSkillMax(max);
+        getFixture().getGenerator().setSkillMax(max);
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
@@ -183,7 +178,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
         personaFertigkeit.setStufe(max);
         assertEquals(true, getFixture().hasNoSkillsOverMax(diagnostics, context));
-        getFixture().getShr5Generator().setSkillMax(max - 1);
+        getFixture().getGenerator().setSkillMax(max - 1);
         assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
     }
 
@@ -199,7 +194,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      */
     @SuppressWarnings("unchecked")
     public void testHasNotMoreSpecalism__DiagnosticChain_Map() {
-        getFixture().getShr5Generator().setNumberOfSpecalism(1);
+        getFixture().getGenerator().setNumberOfSpecalism(1);
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
@@ -215,7 +210,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
         personaFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         assertEquals(false, getFixture().hasNotMoreSpecalism(diagnostics, context));
-        getFixture().getShr5Generator().setNumberOfSpecalism(2);
+        getFixture().getGenerator().setNumberOfSpecalism(2);
         assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
     }
 
@@ -314,7 +309,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         eigenschaft1.setParentId("id2");
         quellenConstrain.getTargets().add(eigenschaft1);
         
-        getFixture().getShr5Generator().getAdditionalConstrains().add(quellenConstrain);
+        getFixture().getGenerator().getAdditionalConstrains().add(quellenConstrain);
         
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft1);

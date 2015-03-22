@@ -3,12 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
-import de.urszeidler.eclipse.shr5.Fertigkeit;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
-import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
-import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -22,6 +16,12 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import com.google.common.collect.FluentIterable;
+
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
+import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillChange} object.

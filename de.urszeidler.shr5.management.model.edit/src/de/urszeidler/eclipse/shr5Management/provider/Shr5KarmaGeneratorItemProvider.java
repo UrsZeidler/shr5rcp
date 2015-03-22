@@ -16,6 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
@@ -251,7 +252,7 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
      */
     @Override
     public String getText(Object object) {
-        String label = ((Shr5KarmaGenerator)object).getCharacterName();
+        String label = ((Shr5KarmaGenerator<?>)object).getCharacterName();
         return label == null || label.length() == 0 ?
             getString("_UI_Shr5KarmaGenerator_type") :
             getString("_UI_Shr5KarmaGenerator_type") + " " + label;
@@ -303,8 +304,8 @@ public class Shr5KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvide
     protected Collection<?> filterPrioityChoices(Object object, Collection<?> choiceOfValues2) {
         ArrayList<EObject> list = new ArrayList<EObject>();
         if (object instanceof Shr5KarmaGenerator) {
-            Shr5KarmaGenerator g = (Shr5KarmaGenerator)object;
-            EObject container = g.getShr5Generator();
+            Shr5KarmaGenerator<Shr5System> g = (Shr5KarmaGenerator<Shr5System>)object;
+            EObject container = g.getGenerator();
             if (container != null) {
                 Collection<?> choiceOfValues = choiceOfValues2;
                 for (Object object2 : choiceOfValues) {

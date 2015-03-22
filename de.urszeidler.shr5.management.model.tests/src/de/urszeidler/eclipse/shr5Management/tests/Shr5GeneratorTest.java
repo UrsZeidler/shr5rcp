@@ -192,7 +192,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();// .createMudanCharacter();
         getFixture().setCharacter(character);
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
 
         assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
@@ -221,7 +221,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();// .createMudanCharacter();
         getFixture().setCharacter(character);
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
 
         assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
@@ -250,7 +250,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();
         getFixture().setCharacter(character);
         shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
-        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
 
 
         assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
@@ -371,15 +371,15 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
     }
 
     /**
-     * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator()
+     * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGenerator()
      * <em>Shr5 Generator</em>}' feature getter. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator()
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getGenerator()
      * @generated not
      */
 
-    public void testGetShr5Generator() {
+    public void testgetGenerator() {
 
     }
 
@@ -441,7 +441,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
-        getFixture().getShr5Generator().setCharismaToConnectionFactor(3);
+        getFixture().getGenerator().setCharismaToConnectionFactor(3);
 
         Connection connection = Shr5managementFactory.eINSTANCE.createConnection();
         getFixture().getCharacter().getConnections().add(connection);
@@ -989,7 +989,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
-        getFixture().getShr5Generator().setCharismaToConnectionFactor(3);
+        getFixture().getGenerator().setCharismaToConnectionFactor(3);
         assertEquals("is true", true, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
 
         assertMudanOptions(character);
@@ -1022,7 +1022,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
-        getFixture().getShr5Generator().setMaxResourceToKeep(1);
+        getFixture().getGenerator().setMaxResourceToKeep(1);
         resourcen.setResource(100);
         assertEquals("is false", false, getFixture().hasSpendAllResourcePoints(diagnostics, context));
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
@@ -1196,7 +1196,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
-        getFixture().getShr5Generator().setKarmaPoints(10);
+        getFixture().getGenerator().setKarmaPoints(10);
 
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         getFixture().setKarmaToResource(10);

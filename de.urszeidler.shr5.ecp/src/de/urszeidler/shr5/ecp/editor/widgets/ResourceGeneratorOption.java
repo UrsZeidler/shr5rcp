@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
@@ -143,14 +144,15 @@ public class ResourceGeneratorOption extends Composite {
 
         modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @SuppressWarnings("unchecked")
             @Override
             public Object convert(Object fromObject) {
-                CharacterGenerator generator = context.getChracterSource();
+                CharacterGenerator<?> generator = context.getChracterSource();
                 if (generator instanceof Shr5Generator) {
                     Shr5Generator sr5g = (Shr5Generator)generator;
                     return ShadowrunManagmentTools.calcResourcesLeft(sr5g) + EMPTY;
                 } else if (generator instanceof Shr5KarmaGenerator) {
-                    Shr5KarmaGenerator kg = (Shr5KarmaGenerator)generator;
+                    Shr5KarmaGenerator<Shr5System> kg = (Shr5KarmaGenerator<Shr5System>)generator;
                     return ShadowrunManagmentTools.calcResourcesLeft(kg) + EMPTY;
                 }
                 return 0 + EMPTY;

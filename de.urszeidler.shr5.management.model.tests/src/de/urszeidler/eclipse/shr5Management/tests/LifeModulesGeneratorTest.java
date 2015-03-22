@@ -3,11 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +32,8 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
     public static void main(String[] args) {
         TestRunner.run(LifeModulesGeneratorTest.class);
     }
+
+    private LifeModulesSystem lmSystem;
 
     /**
      * Constructs a new Life Modules Generator test case with the given name.
@@ -65,7 +67,7 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
     protected void setUp() throws Exception {
         setFixture(Shr5managementFactory.eINSTANCE.createLifeModulesGenerator());
         
-        Shr5System system = Shr5managementFactory.eINSTANCE.createShr5System();
+        LifeModulesSystem system = Shr5managementFactory.eINSTANCE.createLifeModulesSystem();
         system.setKarmaPoints(20);
         getFixture().setGenerator(system);
 
@@ -88,6 +90,12 @@ public class LifeModulesGeneratorTest extends Shr5KarmaGeneratorTest {
         setFixture(null);
     }
 
+    protected void createBasicCategories() {
+        shr5System = Shr5managementFactory.eINSTANCE.createLifeModulesSystem();
+        getFixture().setGenerator((LifeModulesSystem)shr5System);
+    }
+
+    
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.LifeModulesGenerator#getModuleKarmaCost() <em>Module Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->

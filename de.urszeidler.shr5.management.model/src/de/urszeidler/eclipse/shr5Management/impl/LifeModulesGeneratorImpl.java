@@ -3,11 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5Management.LifeModule;
-import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -15,6 +12,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import de.urszeidler.eclipse.shr5Management.LifeModule;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements LifeModulesGenerator {
+public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl<LifeModulesSystem> implements LifeModulesGenerator {
     /**
      * The cached value of the '{@link #getNationality() <em>Nationality</em>}' reference.
      * <!-- begin-user-doc -->
@@ -474,12 +477,12 @@ public class LifeModulesGeneratorImpl extends Shr5KarmaGeneratorImpl implements 
      * @generated not
      */
     public int getKarmaSpend() {
-        if (getShr5Generator() == null || getCharacter() == null
+        if (getGenerator() == null || getCharacter() == null
                 || getCharacter().getPersona() == null)
             return 0;
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
-        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
+        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getGenerator().getKarmaToConnectionFactor();
         int basicCost = getChoiseKarmaCost();
         return Math.abs(karmaSpend) + basicCost+ getModuleKarmaCost() + connectionsSpend + getKarmaToResource();
     }

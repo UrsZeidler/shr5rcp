@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
+
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -33,6 +34,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -1122,6 +1124,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.KarmaGenerator} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected KarmaGeneratorItemProvider karmaGeneratorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.KarmaGenerator}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createKarmaGeneratorAdapter() {
+        if (karmaGeneratorItemProvider == null) {
+            karmaGeneratorItemProvider = new KarmaGeneratorItemProvider(this);
+        }
+
+        return karmaGeneratorItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1263,6 +1288,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (moduleAttributeChangeItemProvider != null) moduleAttributeChangeItemProvider.dispose();
         if (moduleFeatureChangeItemProvider != null) moduleFeatureChangeItemProvider.dispose();
         if (moduleSkillGroupChangeItemProvider != null) moduleSkillGroupChangeItemProvider.dispose();
+        if (karmaGeneratorItemProvider != null) karmaGeneratorItemProvider.dispose();
     }
 
 	/**
@@ -1526,6 +1552,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createModuleSkillGroupChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createKarmaGenerator()));
 
                 return null;
             }

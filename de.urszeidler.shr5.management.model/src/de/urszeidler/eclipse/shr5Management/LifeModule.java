@@ -3,10 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import org.eclipse.emf.common.util.EList;
+
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
-
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

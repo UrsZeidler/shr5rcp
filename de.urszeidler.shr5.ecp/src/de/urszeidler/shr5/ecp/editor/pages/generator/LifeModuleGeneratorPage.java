@@ -59,12 +59,14 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
 import de.urszeidler.eclipse.shr5Management.ModuleChange;
@@ -423,7 +425,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             if (teachable2 instanceof Spezialisierung) {
                 Spezialisierung s = (Spezialisierung)teachable2;
                 PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
-                               
+
                 managedCharacter.getChanges().add(personaChange);
                 personaChange.setChangeable((Erlernbar)s);
                 personaChange.setTo(1);
@@ -461,14 +463,15 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             }
         } else if (mc instanceof ModuleSkillChange) {
             ModuleSkillChange ma = (ModuleSkillChange)mc;
-            OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()),"Select a skill","Select a skill 1");
+            OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()), "Select a skill",
+                    "Select a skill 1");
             ownChooseDialog.setLabelProvider(labelprovider);
             if (ownChooseDialog.open() == Dialog.OK) {
                 Object[] result = ownChooseDialog.getResult();
                 ma.setSkill((Fertigkeit)result[0]);
                 ma.setSelected((Fertigkeit)result[0]);
             }
-        }else if (mc instanceof ModuleSkillGroupChange) {
+        } else if (mc instanceof ModuleSkillGroupChange) {
             ModuleSkillGroupChange ma = (ModuleSkillGroupChange)mc;
             OwnChooseDialog ownChooseDialog = new OwnChooseDialog(getSite().getShell(), NullObject.toChoises(ma.getSelectOne()));
             ownChooseDialog.setLabelProvider(labelprovider);
@@ -486,19 +489,19 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param skills
      */
     private void createSkills(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillChange> skills) {
-//        for (ModuleSkillChange moduleSkillChange : skills) {
-//            if (moduleSkillChange.getSkill() == null && !moduleSkillChange.getSelectOne().isEmpty()) 
-//                displayChooseDialog(moduleSkillChange);
-//        }
-        
+        // for (ModuleSkillChange moduleSkillChange : skills) {
+        // if (moduleSkillChange.getSkill() == null && !moduleSkillChange.getSelectOne().isEmpty())
+        // displayChooseDialog(moduleSkillChange);
+        // }
+
         HashMap<Fertigkeit, Integer> hashMap2 = new HashMap<Fertigkeit, Integer>();
         for (ModuleSkillChange msc : skills) {
             Fertigkeit skill = msc.getSkill();
-            if(skill==null && !msc.getSelectOne().isEmpty()){
+            if (skill == null && !msc.getSelectOne().isEmpty()) {
                 displayChooseDialog(msc);
                 skill = msc.getSkill();
             }
-                
+
             Integer value = hashMap2.get(skill);
             if (value == null) {
                 value = 0;
@@ -523,8 +526,15 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             managedCharacter.getChanges().add(personaChange);
             personaChange.setChangeable(fertigkeit);
             int min = Math.max(ShadowrunTools.findFertigkeitValue(entry.getKey(), managedCharacter.getPersona()), 0);
-            personaChange.setTo(min + entry.getValue());
+//            personaChange.setTo(min + entry.getValue());
 
+            if (entry.getKey() instanceof Wissensfertigkeit) {
+                personaChange.setTo(Math.min(object.getGenerator().getKnowlegeSkillMax(), min + entry.getValue()));
+            }else{
+                personaChange.setTo(Math.min(object.getGenerator().getSkillMax(),  min + entry.getValue()) );
+            }
+
+            
             personaChange.applyChanges();
             personaChange.setDateApplied(null);
         }
@@ -535,15 +545,16 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param skills
      */
     private void createSkillGroups(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillGroupChange> skills) {
-//        for (ModuleSkillGroupChange moduleSkillGroupChange : skills) {
-//            if (moduleSkillGroupChange.getSkillGroup() == null && !moduleSkillGroupChange.getSelectOne().isEmpty()) 
-//                displayChooseDialog(moduleSkillGroupChange);
-//        }
+        // for (ModuleSkillGroupChange moduleSkillGroupChange : skills) {
+        // if (moduleSkillGroupChange.getSkillGroup() == null && !moduleSkillGroupChange.getSelectOne().isEmpty())
+        // displayChooseDialog(moduleSkillGroupChange);
+        // }
+LifeModulesSystem shr5System = object.getGenerator();
         
         HashMap<FertigkeitsGruppe, Integer> hashMap2 = new HashMap<FertigkeitsGruppe, Integer>();
         for (ModuleSkillGroupChange msc : skills) {
             FertigkeitsGruppe skill = msc.getSkillGroup();
-            if(skill==null && !msc.getSelectOne().isEmpty()){
+            if (skill == null && !msc.getSelectOne().isEmpty()) {
                 displayChooseDialog(msc);
                 skill = msc.getSkillGroup();
             }
@@ -567,8 +578,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             }
             managedCharacter.getChanges().add(personaChange);
             personaChange.setChangeable(fertigkeit);
-            personaChange.setTo(fertigkeit.getStufe() + entry.getValue());
-
+            personaChange.setTo(Math.min(shr5System.getSkillMax(),  fertigkeit.getStufe() + entry.getValue()) );
             personaChange.applyChanges();
             personaChange.setDateApplied(null);
         }
@@ -588,7 +598,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         HashMap<EAttribute, Integer> hashMap = new HashMap<EAttribute, Integer>();
         for (ModuleAttributeChange mac : attributes) {
             EAttribute attribute = mac.getAttribute();
-            if(attribute==null && !mac.getSelectOne().isEmpty()){
+            if (attribute == null && !mac.getSelectOne().isEmpty()) {
                 displayChooseDialog(mac);
                 attribute = mac.getAttribute();
             }
@@ -645,8 +655,8 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         // object.setState(GeneratorState.NEW);
         // else
 
-        if ((object.getCharacterConcept() == null || object.getMetaType() == null || object.getNationality() == null
-                || object.getFormativeYears()==null) || object.getTeenYears()==null || object.getRealLife().isEmpty())
+        if ((object.getCharacterConcept() == null || object.getMetaType() == null || object.getNationality() == null || object.getFormativeYears() == null)
+                || object.getTeenYears() == null || object.getRealLife().isEmpty())
             object.setState(GeneratorState.NEW);
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)
@@ -730,7 +740,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
-                if (object.getShr5Generator() == null)
+                if (object.getGenerator() == null)
                     return Messages.GeneratorPage_left1;
 
                 return Messages.GeneratorPage_left + (ShadowrunManagmentTools.calcKarmaLeft(object) + EMPTY);

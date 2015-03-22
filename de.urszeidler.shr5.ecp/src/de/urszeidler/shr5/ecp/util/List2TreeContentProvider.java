@@ -15,7 +15,7 @@ public class List2TreeContentProvider implements ITreeContentProvider {
      @Override
      public Object[] getElements(Object inputElement) {
        if (inputElement instanceof List<?>)
-         return ((List) inputElement).toArray();
+         return ((List<?>) inputElement).toArray();
        else
          return EMPTY_ARRAY;
      }

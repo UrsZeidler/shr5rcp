@@ -4,15 +4,14 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator} object.
