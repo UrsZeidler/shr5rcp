@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -10,7 +12,6 @@ import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import java.math.BigDecimal;
 
 /**
  * <!-- begin-user-doc -->

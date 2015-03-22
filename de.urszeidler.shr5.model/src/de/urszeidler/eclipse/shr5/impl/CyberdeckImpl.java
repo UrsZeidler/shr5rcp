@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Collection;
 
@@ -31,7 +32,6 @@ import de.urszeidler.eclipse.shr5.MatrixProgram;
 import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->

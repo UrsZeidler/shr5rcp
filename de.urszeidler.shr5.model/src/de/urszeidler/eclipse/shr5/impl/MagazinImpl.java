@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.Capacity;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->

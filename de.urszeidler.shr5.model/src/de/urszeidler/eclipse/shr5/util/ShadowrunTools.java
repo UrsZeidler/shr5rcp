@@ -15,8 +15,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.swing.text.NumberFormatter;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -29,7 +27,6 @@ import com.google.common.collect.Collections2;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;

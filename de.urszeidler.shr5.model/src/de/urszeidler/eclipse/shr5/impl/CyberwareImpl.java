@@ -2,8 +2,10 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Cyberware;
@@ -24,7 +27,6 @@ import de.urszeidler.eclipse.shr5.DefaultWifi;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,10 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.GeldWert;
-import de.urszeidler.eclipse.shr5.ShoppingTransaction;
-import de.urszeidler.eclipse.shr5.Shr5Package;
-
 import java.math.BigDecimal;
 import java.util.Collection;
 
@@ -16,6 +12,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.ShoppingTransaction;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->

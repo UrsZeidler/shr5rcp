@@ -3,6 +3,7 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;

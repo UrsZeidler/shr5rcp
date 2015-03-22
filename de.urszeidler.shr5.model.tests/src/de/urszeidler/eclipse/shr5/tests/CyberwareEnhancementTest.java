@@ -5,10 +5,10 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
 
-import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
  * <!-- begin-user-doc -->
