@@ -77,6 +77,14 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         this.editingDomain = editingDomain;
     }
 
+    @Override
+    public Object handleAdd(FormbuilderEntry e, EObject object) {
+        Object handleAdd = super.handleAdd(e, object);
+        if(handleAdd!=null && handleAdd instanceof EObject)
+            ShadowrunEditingTools.openEObject((EObject)handleAdd);
+        return handleAdd;
+    }
+    
     public void handleManage(FormbuilderEntry e, EObject object) {
         if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
             Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(Shr5managementFactory.eINSTANCE.createPlayerCharacter(),

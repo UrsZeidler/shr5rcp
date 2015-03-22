@@ -1034,7 +1034,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_HU-ZcMl1EeSHR7BAWEdSOg" name="testLifeModuleSystem" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="6" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_HU-ZcMl1EeSHR7BAWEdSOg" name="testLifeModuleSystem" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" knowlegeSkillMax="9">
         <lifestyleToStartMoney xmi:id="_Ul3kAMkCEeSkAbRNCR2heA" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
         <lifestyleToStartMoney xmi:id="_Ul3kAckCEeSkAbRNCR2heA" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
         <lifestyleToStartMoney xmi:id="_Ul3kAskCEeSkAbRNCR2heA" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
@@ -1396,6 +1396,27 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_NWf1ANDeEeSE04Z2r82obQ" grade="1" skill="f8037e7f-d48b-452b-8f66-2e0c36677fea"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_QDwFcNDeEeSE04Z2r82obQ" grade="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_iCVK4NDeEeSE04Z2r82obQ" grade="5" skill="_WJKkgNDeEeSE04Z2r82obQ"/>
+        </modules>
+        <modules xmi:id="_6aP0INDiEeSofdQ09OUodg" name="LAW ENFORCEMENT (Cyber Crime)" karmaCost="100" moduleType="realLife" time="4">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_6aP0IdDiEeSofdQ09OUodg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_6aP0ItDiEeSofdQ09OUodg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_6aP0I9DiEeSofdQ09OUodg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0JNDiEeSofdQ09OUodg" grade="1" skill="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0JdDiEeSofdQ09OUodg" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0JtDiEeSofdQ09OUodg" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0J9DiEeSofdQ09OUodg" grade="1" skill="963a548d-c629-4a13-a3e3-31b085a42e20"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0KNDiEeSofdQ09OUodg" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0KdDiEeSofdQ09OUodg" grade="1" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_6aP0KtDiEeSofdQ09OUodg" grade="3" skill="_0MttINDdEeSE04Z2r82obQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_-Kr_4NDiEeSofdQ09OUodg" grade="1" skillGroup="_EL7NKznTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_CQhM0NDjEeSofdQ09OUodg" grade="1" skillGroup="_EL8bQznTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_YjeRgNDjEeSofdQ09OUodg" grade="5" skill="_OQ7DoNDjEeSofdQ09OUodg"/>
         </modules>
         <modules xmi:id="_xRRPINBuEeSX5PKgPhCdqw" name="STATE UNIVERSITY/COLLEGE" karmaCost="65" moduleType="furtherEducation" time="2">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_7kl5ENBuEeSX5PKgPhCdqw" grade="1">
@@ -9691,6 +9712,9 @@
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_WJKkgNDeEeSE04Z2r82obQ" name="Professional Knowledge: [City]" page="78" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_OQ7DoNDjEeSofdQ09OUodg" name="Professional Knowledge: Matrix Criminals" page="78" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
       </entries>
