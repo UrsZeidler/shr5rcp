@@ -35,7 +35,7 @@ public class ModuleChangePage extends AbstractShr5Page<ModuleChange> implements 
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
-    private Group grpChangeDefinition;
+//    private Group grpChangeDefinition;
     private Composite composite_1;
     private EmfFormBuilder detailBuilder;
 
@@ -109,17 +109,17 @@ public class ModuleChangePage extends AbstractShr5Page<ModuleChange> implements 
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
 
-        grpChangeDefinition = new Group(managedForm.getForm().getBody(), SWT.NONE);
-        grpChangeDefinition.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpChangeDefinition.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        grpChangeDefinition.setText("change definition");
-        managedForm.getToolkit().adapt(grpChangeDefinition);
-        managedForm.getToolkit().paintBordersFor(grpChangeDefinition);
-
-        composite_1 = new Composite(grpChangeDefinition, SWT.NONE);
-        managedForm.getToolkit().adapt(composite_1);
-        managedForm.getToolkit().paintBordersFor(composite_1);
-        composite_1.setLayout(new GridLayout(3, false));
+//        grpChangeDefinition = new Group(managedForm.getForm().getBody(), SWT.NONE);
+//        grpChangeDefinition.setLayout(new FillLayout(SWT.HORIZONTAL));
+//        grpChangeDefinition.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+//        grpChangeDefinition.setText("change definition");
+//        managedForm.getToolkit().adapt(grpChangeDefinition);
+//        managedForm.getToolkit().paintBordersFor(grpChangeDefinition);
+//
+//        composite_1 = new Composite(grpChangeDefinition, SWT.NONE);
+//        managedForm.getToolkit().adapt(composite_1);
+//        managedForm.getToolkit().paintBordersFor(composite_1);
+//        composite_1.setLayout(new GridLayout(3, false));
 
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
@@ -165,10 +165,10 @@ public class ModuleChangePage extends AbstractShr5Page<ModuleChange> implements 
         if (composite_1 != null)
             composite_1.dispose();
 
-        composite_1 = new Composite(grpChangeDefinition, SWT.NONE);
-        managedForm.getToolkit().adapt(composite_1);
-        managedForm.getToolkit().paintBordersFor(composite_1);
-        composite_1.setLayout(new GridLayout(3, false));
+//        composite_1 = new Composite(grpChangeDefinition, SWT.NONE);
+//        managedForm.getToolkit().adapt(composite_1);
+//        managedForm.getToolkit().paintBordersFor(composite_1);
+//        composite_1.setLayout(new GridLayout(3, false));
 
         EObject detailObject = null;
         detailBuilder = createConfiguredFormBuilder(managedForm);
@@ -197,7 +197,7 @@ public class ModuleChangePage extends AbstractShr5Page<ModuleChange> implements 
 //            }
 //        }
         detailBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), detailObject);
-        grpChangeDefinition.layout(true);
+//        grpChangeDefinition.layout(true);
         managedForm.getForm().reflow(true);
     }
 

@@ -15,14 +15,17 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
+import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableSet;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleAttributeChange} object.
@@ -69,7 +72,7 @@ public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvi
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleAttributeChange_attribute_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleAttributeChange_attribute_feature", "_UI_ModuleAttributeChange_type"),
+                 getString("_UI_ModuleAttributeChange_attribute_description"),
                  Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE,
                  true,
                  false,
@@ -80,8 +83,17 @@ public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvi
                 
                 @Override
                 protected Collection<?> getComboBoxObjects(Object object) {
+                   ImmutableSet<EAttribute> a = FluentIterable.from( Shr5Package.Literals.MUDAN_PERSONA.getEAllAttributes())
+                    .filter(new Predicate<EAttribute>() {
+
+                        @Override
+                        public boolean apply(EAttribute input) {
+                            return input.isChangeable() && !input.isMany() && input.getEAttributeType().equals(EcorePackage.Literals.EINT);
+                        }
+                    }).toSet();
+                    
                     return    FluentIterable.from(super.getComboBoxObjects(object)).filter(
-                                   Predicates.in((Collection<?>)Shr5Package.Literals.MUDAN_PERSONA.getEAllAttributes())
+                                   Predicates.in((Collection<?>)a)
                            ).toList();
                 }
             });

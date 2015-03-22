@@ -7,12 +7,18 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+
+import com.google.common.base.Predicates;
+import com.google.common.collect.FluentIterable;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange} object.
@@ -52,11 +58,11 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
      * This adds a property descriptor for the Feature feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addFeaturePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleFeatureChange_feature_feature"),
@@ -67,7 +73,15 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                  return  FluentIterable.from(super.getComboBoxObjects(object)).filter(
+                            Predicates.in((Collection<?>)Shr5managementPackage.Literals.MANAGED_CHARACTER.getEAllStructuralFeatures())
+                    ).toList();
+//                    return super.getComboBoxObjects(object);
+                }
+            });
     }
 
     /**

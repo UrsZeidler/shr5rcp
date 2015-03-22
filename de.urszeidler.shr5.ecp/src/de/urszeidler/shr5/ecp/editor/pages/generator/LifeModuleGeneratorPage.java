@@ -457,6 +457,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             if (ownChooseDialog.open() == Dialog.OK) {
                 Object[] result = ownChooseDialog.getResult();
                 ma.setAttribute((EAttribute)result[0]);
+                ma.setSelected((EAttribute)result[0]);
             }
         } else if (mc instanceof ModuleSkillChange) {
             ModuleSkillChange ma = (ModuleSkillChange)mc;
@@ -465,6 +466,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             if (ownChooseDialog.open() == Dialog.OK) {
                 Object[] result = ownChooseDialog.getResult();
                 ma.setSkill((Fertigkeit)result[0]);
+                ma.setSelected((Fertigkeit)result[0]);
             }
         }else if (mc instanceof ModuleSkillGroupChange) {
             ModuleSkillGroupChange ma = (ModuleSkillGroupChange)mc;
@@ -473,6 +475,7 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
             if (ownChooseDialog.open() == Dialog.OK) {
                 Object[] result = ownChooseDialog.getResult();
                 ma.setSkillGroup((FertigkeitsGruppe)result[0]);
+                ma.setSelected((FertigkeitsGruppe)result[0]);
             }
         }
 
@@ -483,14 +486,19 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param skills
      */
     private void createSkills(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillChange> skills) {
-        for (ModuleSkillChange moduleSkillChange : skills) {
-            if (moduleSkillChange.getSkill() == null && !moduleSkillChange.getSelectOne().isEmpty()) 
-                displayChooseDialog(moduleSkillChange);
-        }
+//        for (ModuleSkillChange moduleSkillChange : skills) {
+//            if (moduleSkillChange.getSkill() == null && !moduleSkillChange.getSelectOne().isEmpty()) 
+//                displayChooseDialog(moduleSkillChange);
+//        }
         
         HashMap<Fertigkeit, Integer> hashMap2 = new HashMap<Fertigkeit, Integer>();
         for (ModuleSkillChange msc : skills) {
             Fertigkeit skill = msc.getSkill();
+            if(skill==null && !msc.getSelectOne().isEmpty()){
+                displayChooseDialog(msc);
+                skill = msc.getSkill();
+            }
+                
             Integer value = hashMap2.get(skill);
             if (value == null) {
                 value = 0;
@@ -527,14 +535,18 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
      * @param skills
      */
     private void createSkillGroups(ManagedCharacter managedCharacter, FluentIterable<ModuleSkillGroupChange> skills) {
-        for (ModuleSkillGroupChange moduleSkillGroupChange : skills) {
-            if (moduleSkillGroupChange.getSkillGroup() == null && !moduleSkillGroupChange.getSelectOne().isEmpty()) 
-                displayChooseDialog(moduleSkillGroupChange);
-        }
+//        for (ModuleSkillGroupChange moduleSkillGroupChange : skills) {
+//            if (moduleSkillGroupChange.getSkillGroup() == null && !moduleSkillGroupChange.getSelectOne().isEmpty()) 
+//                displayChooseDialog(moduleSkillGroupChange);
+//        }
         
         HashMap<FertigkeitsGruppe, Integer> hashMap2 = new HashMap<FertigkeitsGruppe, Integer>();
         for (ModuleSkillGroupChange msc : skills) {
             FertigkeitsGruppe skill = msc.getSkillGroup();
+            if(skill==null && !msc.getSelectOne().isEmpty()){
+                displayChooseDialog(msc);
+                skill = msc.getSkillGroup();
+            }
             Integer value = hashMap2.get(skill);
             if (value == null) {
                 value = 0;
@@ -576,6 +588,10 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         HashMap<EAttribute, Integer> hashMap = new HashMap<EAttribute, Integer>();
         for (ModuleAttributeChange mac : attributes) {
             EAttribute attribute = mac.getAttribute();
+            if(attribute==null && !mac.getSelectOne().isEmpty()){
+                displayChooseDialog(mac);
+                attribute = mac.getAttribute();
+            }
             Integer value = hashMap.get(attribute);
             if (value == null) {
                 value = 0;

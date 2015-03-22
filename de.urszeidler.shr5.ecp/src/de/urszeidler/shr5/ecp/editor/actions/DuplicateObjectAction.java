@@ -14,7 +14,7 @@ public class DuplicateObjectAction extends Action {
     public DuplicateObjectAction(EObject object) {
         this.theObject = object;
         setToolTipText("Create a copy of the object in this container.");
-        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/print_edit.gif"));
+        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/copy_edit.gif"));
     }
 
     @Override
