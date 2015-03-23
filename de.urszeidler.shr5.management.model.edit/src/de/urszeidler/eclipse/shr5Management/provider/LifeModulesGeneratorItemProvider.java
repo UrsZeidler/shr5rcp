@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -154,7 +155,9 @@ public class LifeModulesGeneratorItemProvider extends KarmaGeneratorItemProvider
                         Shr5System generator = ((LifeModulesGenerator)object).getGenerator();
                         if (generator instanceof LifeModulesSystem) {
                             LifeModulesSystem lms = (LifeModulesSystem)generator;
-                            return FluentIterable.from(lms.getModules()).filter(ShadowrunManagmentTools.moduleTypePredicate(LifeModuleType.FURTHER_EDUCATION) ).toList();
+                            ArrayList<?> arrayList = new ArrayList<Object>( FluentIterable.from(lms.getModules()).filter(ShadowrunManagmentTools.moduleTypePredicate(LifeModuleType.FURTHER_EDUCATION) ).toList());
+                            arrayList.add(null);
+                            return arrayList;//  .toList().;
                         } 
                         return super.getComboBoxObjects(object);
                     }

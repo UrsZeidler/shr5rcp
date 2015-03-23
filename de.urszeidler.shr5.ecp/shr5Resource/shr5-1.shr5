@@ -1418,6 +1418,42 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_CQhM0NDjEeSofdQ09OUodg" grade="1" skillGroup="_EL8bQznTEeSe6_w6Jrbqxg"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_YjeRgNDjEeSofdQ09OUodg" grade="5" skill="_OQ7DoNDjEeSofdQ09OUodg"/>
         </modules>
+        <modules xmi:id="_1vbVcNF_EeSOfJEsyQciNA" name="SHADOW WORK (Face)" karmaCost="100" moduleType="realLife" time="4">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_1vbVcdF_EeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_AeW9UNGAEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_F7vzENGAEeSOfJEsyQciNA" grade="1" skill="6d7f48d3-84a1-4fce-90d3-58d566f70fa6"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_I--TgNGAEeSOfJEsyQciNA" grade="3" skillGroup="_EL-3hjnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_L-pwsNGAEeSOfJEsyQciNA" grade="1" skill="9de43fad-b365-4e73-bc06-91dd571b858a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_N5gT0NGAEeSOfJEsyQciNA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_RudMINGAEeSOfJEsyQciNA" grade="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V8bBYNGAEeSOfJEsyQciNA" grade="1" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_YY98UNGAEeSOfJEsyQciNA" teachable="9f25cc0a-c47c-49dd-953c-8fe60628bae8"/>
+        </modules>
+        <modules xmi:id="_ZsjOoNGBEeSOfJEsyQciNA" name="TOUR OF DUTY: MERCENARY (Air Force)" karmaCost="100" moduleType="realLife" time="4">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_ZsjOodGBEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_ZsjOotGBEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_ZsjOo9GBEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_ZsjOpNGBEeSOfJEsyQciNA" grade="1" skillGroup="_EL9paTnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ZsjOpdGBEeSOfJEsyQciNA" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ZsjOptGBEeSOfJEsyQciNA" grade="1" skill="f8037e7f-d48b-452b-8f66-2e0c36677fea"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ZsjOp9GBEeSOfJEsyQciNA" grade="3" skill="_KKX6MNGBEeSOfJEsyQciNA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_fBR3oNGBEeSOfJEsyQciNA" grade="1" skill="b52f7575-eebf-41c4-938d-df3397b5ee68"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_igqvoNGBEeSOfJEsyQciNA" grade="1" skill="ada6d9b2-e451-4289-be45-7085fa34a51a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_lWMLQNGBEeSOfJEsyQciNA" grade="1" skill="f510ccc3-cf95-4461-b2f7-e966daaa5a91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_m2_2sNGBEeSOfJEsyQciNA" grade="1" skill="58452cff-44ea-41c6-a554-28a869149b27"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_qJAaANGBEeSOfJEsyQciNA" grade="2" skill="10d5c887-a1e5-4cca-8613-3a28f1aab810"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_tibM4NGBEeSOfJEsyQciNA" grade="1" skill="89ee1730-053a-400f-a13a-4fbadae015f0"/>
+        </modules>
         <modules xmi:id="_xRRPINBuEeSX5PKgPhCdqw" name="STATE UNIVERSITY/COLLEGE" karmaCost="65" moduleType="furtherEducation" time="2">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_7kl5ENBuEeSX5PKgPhCdqw" grade="1">
             <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
@@ -1473,6 +1509,26 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ja25gNDdEeSE04Z2r82obQ" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_nEMXsNDdEeSE04Z2r82obQ" grade="1" skill="adf31a50-b228-4e09-a09c-46ab9f5e59a1"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_9imecNDdEeSE04Z2r82obQ" grade="3" skill="_0MttINDdEeSE04Z2r82obQ"/>
+        </modules>
+        <modules xmi:id="_fuWD4NF_EeSOfJEsyQciNA" name="SHADOW WORK" karmaCost="100" moduleType="realLife" time="4">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_yl28cNF_EeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+        </modules>
+        <modules xmi:id="_r9V64NGAEeSOfJEsyQciNA" name="TOUR OF DUTY: MERCENARY" karmaCost="100" moduleType="realLife" time="4">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_zuVyANGAEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_3wv3gNGAEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_5l0iwNGAEeSOfJEsyQciNA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_7w9koNGAEeSOfJEsyQciNA" grade="1" skillGroup="_EL9paTnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="__vkIMNGAEeSOfJEsyQciNA" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_B2h0sNGBEeSOfJEsyQciNA" grade="1" skill="f8037e7f-d48b-452b-8f66-2e0c36677fea"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_QGYloNGBEeSOfJEsyQciNA" grade="3" skill="_KKX6MNGBEeSOfJEsyQciNA"/>
         </modules>
       </entries>
     </entries>
@@ -9715,6 +9771,9 @@
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_OQ7DoNDjEeSofdQ09OUodg" name="Professional Knowledge: Matrix Criminals" page="78" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_KKX6MNGBEeSOfJEsyQciNA" name="Professional Knowledge: Foreign Military" page="82" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
       </entries>
