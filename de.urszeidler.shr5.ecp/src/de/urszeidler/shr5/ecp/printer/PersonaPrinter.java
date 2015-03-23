@@ -61,9 +61,9 @@ import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -159,7 +159,7 @@ public class PersonaPrinter extends BasicPrinter {
 
                     @SuppressWarnings("rawtypes")
                     @Override
-                    public Print caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                    public Print caseKarmaGenerator(KarmaGenerator object) {
                         return createPagePrint(printShr5GeneratorSheet(object));
                     }
 
@@ -481,7 +481,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator generator) {
+    protected Print printShr5GeneratorSheet(KarmaGenerator<?> generator) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
@@ -566,7 +566,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
-    private Print printShr5KarmaGenerator(Shr5KarmaGenerator generator, ManagedCharacter character) {
+    private Print printShr5KarmaGenerator(KarmaGenerator<?> generator, ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint outerGrid = new GridPrint("d,d:g", look);//$NON-NLS-1$
