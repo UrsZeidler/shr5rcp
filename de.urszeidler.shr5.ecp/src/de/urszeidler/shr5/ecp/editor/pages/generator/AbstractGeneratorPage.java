@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.editor.pages.generator;
 
+import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Set;
 
@@ -7,6 +8,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -22,6 +24,10 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
+import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
@@ -31,8 +37,12 @@ import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
@@ -43,6 +53,7 @@ import de.urszeidler.shr5.ecp.editor.pages.character.CharacterAdvancementPage;
 import de.urszeidler.shr5.ecp.editor.pages.character.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.service.ValidationService;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.gameplay.dice.IniDice;
 
 /**
@@ -320,6 +331,39 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_commit_titel,
                 Messages.AbstractGeneratorPage_dlg_commit_message);
         return openConfirm;
+    }
+
+    /**
+     * @param calcResourcesLeft
+     * @param startMoney
+     * @return
+     */
+    protected int lifeStyleToStartMoneyDialog(final int calcResourcesLeft, int startMoney, Shr5RuleGenerator<? extends Shr5System> object2) {
+        Credstick credstick = ShadowrunManagmentTools.findFirstCedstick(object2.getCharacter().getInventar());
+    
+        Lifestyle choosenLifestyle = object2.getCharacter().getChoosenLifestyle();
+        Shr5System shr5System = object2.getGenerator();
+        EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
+        LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
+    
+        if (lifestyleToMoney != null) {
+            InputDialog inputDialog = createLifestyle2MoneyDialog(calcResourcesLeft, lifestyleToMoney);
+            int open = inputDialog.open();
+            if (open != InputDialog.OK)
+                return -1;
+    
+            String value = inputDialog.getValue();
+            startMoney = Integer.parseInt(value);
+            
+            if (credstick != null) {
+                CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
+                transaction.setAmount(new BigDecimal(startMoney));
+                transaction.setDescription(String.format(Messages.Shr5GeneratorPage_initial_transaction_message0, startMoney));
+                credstick.getTransactionlog().add(transaction);
+            }
+    
+        }
+        return startMoney;
     }
 
 }

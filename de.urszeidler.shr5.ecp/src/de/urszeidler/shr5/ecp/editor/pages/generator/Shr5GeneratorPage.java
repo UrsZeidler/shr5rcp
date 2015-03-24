@@ -3,7 +3,6 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages.generator;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -15,7 +14,6 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
@@ -24,7 +22,6 @@ import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -47,21 +44,15 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
-import de.urszeidler.eclipse.shr5.Credstick;
-import de.urszeidler.eclipse.shr5.CredstickTransaction;
-import de.urszeidler.eclipse.shr5.Lifestyle;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
-import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
@@ -77,7 +68,6 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
-import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * @author urs
@@ -446,22 +436,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     protected void commitCharacter() {
         final int calcResourcesLeft = ShadowrunManagmentTools.calcResourcesLeft(object);
         int startMoney = calcResourcesLeft;
-        Credstick credstick = ShadowrunManagmentTools.findFirstCedstick(object.getCharacter().getInventar());
-
-        Lifestyle choosenLifestyle = object.getCharacter().getChoosenLifestyle();
-        Shr5System shr5System = object.getGenerator();
-        EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
-        LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
-
-        if (lifestyleToMoney != null) {
-            InputDialog inputDialog = createLifestyle2MoneyDialog(calcResourcesLeft, lifestyleToMoney);
-            int open = inputDialog.open();
-            if (open != InputDialog.OK)
-                return;
-
-            String value = inputDialog.getValue();
-            startMoney = Integer.parseInt(value);
-        }
+        startMoney = lifeStyleToStartMoneyDialog(calcResourcesLeft, startMoney,object);
+        if(startMoney==-1)
+            return;
 
         CompoundCommand command = new CompoundCommand();
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
@@ -472,12 +449,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                 object));
 
-        if (credstick != null) {
-            CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
-            transaction.setAmount(new BigDecimal(startMoney));
-            transaction.setDescription(String.format(Messages.Shr5GeneratorPage_initial_transaction_message0, startMoney));
-            command.append(AddCommand.create(getEditingDomain(), credstick, Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, transaction));
-        }
 
         getEditingDomain().getCommandStack().execute(command);
         validateChange();
@@ -533,9 +504,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
         grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
-
-        // diagnosticComposite.setDiagnostic(validate);
-        // diagnosticComposite.update();
+        restItem.setEnabled(object.getCharacter()!=null);
 
         validationService.updateValidation(object, validate);
     }

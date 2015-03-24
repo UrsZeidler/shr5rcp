@@ -791,7 +791,7 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcResourcesLeft(KarmaGenerator<Shr5System> object) {
+    public static int calcResourcesLeft(KarmaGenerator<? extends Shr5System> object) {
         Shr5System sr5g = object.getGenerator();
         if (sr5g == null)
             return 0;

@@ -317,7 +317,10 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
-        if (!openDefaultCommitMessageDialog())
+        final int calcResourcesLeft = ShadowrunManagmentTools.calcResourcesLeft(object);
+        int startMoney = calcResourcesLeft;
+        startMoney = lifeStyleToStartMoneyDialog(calcResourcesLeft, startMoney,object);
+        if(startMoney==-1)
             return;
 
         moveGeneratorToCharacterCommit();
@@ -374,11 +377,6 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         if (newChangeset.equals(changeSet))
             return;
         changeSet = newChangeset;
-        // if (object.getCharacterConcept() == null && object.getMetaType() == null)
-        // object.setState(GeneratorState.NEW);
-        // else if ((object.getCharacterConcept() != null && object.getMetaType() != null))
-        // object.setState(GeneratorState.NEW);
-        // else
 
         if ((object.getCharacterConcept() == null || object.getMetaType() == null))
             object.setState(GeneratorState.NEW);
@@ -392,6 +390,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
+        restItem.setEnabled(object.getCharacter()!=null);
 
         validationService.updateValidation(object, validate);
     }
