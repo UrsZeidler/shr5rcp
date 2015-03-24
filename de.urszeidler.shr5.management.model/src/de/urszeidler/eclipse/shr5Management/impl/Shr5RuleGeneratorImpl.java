@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -19,9 +20,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+
 import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -32,6 +35,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
@@ -50,7 +54,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,6 +65,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAllowedSources()
      * @generated
      * @ordered
@@ -70,6 +75,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -79,6 +85,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -90,6 +97,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * This is specialized for the more specific type known in this context.
+     * 
      * @generated
      */
     @Override
@@ -113,6 +121,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<SourceBook> getAllowedSources() {
@@ -403,19 +412,18 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * 
      * @generated not
      */
-    public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics,final Map<Object, Object> context) {
+    public boolean hasOnlyAllowedSources(DiagnosticChain diagnostics, final Map<Object, Object> context) {
         if (!canValidate() || getAllowedSources().isEmpty())
             return true;
 
         final ManagedCharacter managedCharacter = getCharacter();
 
         ImmutableList<String> list = FluentIterable.from(ShadowrunTools.toIterable(managedCharacter.eAllContents()))
-                .filter(ShadowrunTools.notAllowedSourcePredicate(getAllowedSources()))
-                .transform(new Function<EObject, String>() {
+                .filter(ShadowrunTools.notAllowedSourcePredicate(getAllowedSources())).transform(new Function<EObject, String>() {
 
                     @Override
                     public String apply(EObject input) {
-                        return  EObjectValidator.getObjectLabel(input, context);
+                        return EObjectValidator.getObjectLabel(input, context);
                     }
                 }).toList();
 
@@ -423,8 +431,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_ONLY_ALLOWED_SOURCES, ModelPlugin.INSTANCE.getString(
-                                "_UI_hasOnlyAllowedSources",
-                                new Object[]{ list.toString() }), new Object[]{ this }));
+                                "_UI_hasOnlyAllowedSources", new Object[]{ list.toString() }), new Object[]{ this }));
             }
             return false;
         }
@@ -434,10 +441,11 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasKiPowerOverLimit(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if( getCharacter() == null || getCharacter().getPersona() == null)
+        if (getCharacter() == null || getCharacter().getPersona() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
@@ -446,20 +454,16 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
         AbstraktPersona persona = getCharacter().getPersona();
         if (persona instanceof KiAdept) {
             KiAdept ka = (KiAdept)persona;
-            int calcPowerPointsSpend = ShadowrunManagmentTools.calcPowerPointsSpend(getCharacter())*-1;
-             int magie = ka.getMagie();
-             check = calcPowerPointsSpend>magie*100;
+            int calcPowerPointsSpend = ShadowrunManagmentTools.calcPowerPointsSpend(getCharacter()) * -1;
+            int magie = ka.getMagie();
+            check = calcPowerPointsSpend > magie * 100;
         }
-        
+
         if (check) {
             if (diagnostics != null) {
-                diagnostics.add
-                    (new BasicDiagnostic
-                        (Diagnostic.ERROR,
-                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_KI_POWER_OVER_LIMIT,
-                         ModelPlugin.INSTANCE.getString("_UI_hasKiPowerOverLimit", new Object[] { EObjectValidator.getObjectLabel(this, context) }),
-                         new Object [] { this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_KI_POWER_OVER_LIMIT, ModelPlugin.INSTANCE.getString(
+                                "_UI_hasKiPowerOverLimit", new Object[]{ EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
@@ -469,22 +473,47 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context) {
-//        if (false) {
-//            if (diagnostics != null) {
-//                diagnostics.add
-//                    (new BasicDiagnostic
-//                        (Diagnostic.ERROR,
-//                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
-//                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS,
-//                         EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasBasicViolations", EObjectValidator.getObjectLabel(this, context) }),
-//                         new Object [] { this }));
-//            }
-//            return false;
-//        }
-        return true;
+        if (!canValidate())
+            return true;
+
+        boolean isOk = true;
+        ArrayList<Connection> list = new ArrayList<Connection>();
+        EList<Connection> connections = getCharacter().getConnections();
+        for (Connection connection : connections) {
+            if (connection.getInfluence() > getGenerator().getMaxConnectionRating())
+                list.add(connection);
+            if (connection.getLoyality() > getGenerator().getMaxConnectionRating())
+                list.add(connection);
+        }
+
+        if (list.size() > 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS, ModelPlugin.INSTANCE.getString(
+                                "_UI_Connection_rating_over_limit",
+                                new Object[]{ShadowrunManagmentTools.eobjectsToSting(list, ",", context) , EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            isOk = false;
+        }
+
+        // if (false) {
+        // if (diagnostics != null) {
+        // diagnostics.add
+        // (new BasicDiagnostic
+        // (Diagnostic.ERROR,
+        // Shr5managementValidator.DIAGNOSTIC_SOURCE,
+        // Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS,
+        // EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasBasicViolations",
+        // EObjectValidator.getObjectLabel(this, context) }),
+        // new Object [] { this }));
+        // }
+        // return false;
+        // }
+        return isOk;
     }
 
     /**
@@ -512,6 +541,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -526,6 +556,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -543,6 +574,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -558,6 +590,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -572,6 +605,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

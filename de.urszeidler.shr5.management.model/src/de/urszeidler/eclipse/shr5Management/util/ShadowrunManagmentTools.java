@@ -4,10 +4,13 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -16,8 +19,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import com.google.common.base.Function;
+import com.google.common.base.Joiner;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
@@ -819,6 +824,22 @@ public class ShadowrunManagmentTools {
         return buffer.toString();
     }
 
+    /**
+     * Uses the validation context to generate a string from a list of eobjects.
+     * @param collection
+     * @param separator
+     * @param context
+     * @return
+     */
+    public static String eobjectsToSting(Collection<? extends EObject> collection,String separator, final Map<Object, Object> context) {
+        return Joiner.on(separator).join(FluentIterable.from(collection).transform(new Function<EObject, String>() {
+            @Override
+            public String apply(EObject input) {
+                return EObjectValidator.getObjectLabel(input, context);
+            }
+        }));
+    }
+    
     /**
      * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
      * 

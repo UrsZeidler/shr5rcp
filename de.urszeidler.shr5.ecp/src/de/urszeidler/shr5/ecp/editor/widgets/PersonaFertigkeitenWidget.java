@@ -61,8 +61,8 @@ import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -226,7 +226,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         persona = character2.getPersona();
 
         CharacterGenerator<?> chracterSource = character2.getChracterSource();
-        if (chracterSource instanceof Shr5KarmaGenerator) {
+        if (chracterSource instanceof KarmaGenerator) {
             // Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
             karmaMode = true;
         }
