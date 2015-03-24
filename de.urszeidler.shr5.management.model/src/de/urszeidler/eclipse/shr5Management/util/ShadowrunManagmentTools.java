@@ -56,6 +56,7 @@ import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModuleType;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
@@ -63,7 +64,6 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -739,7 +739,7 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcKarmaLeft(Shr5KarmaGenerator object) {
+    public static int calcKarmaLeft(KarmaGenerator<Shr5System> object) {
         return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
     }
 
@@ -791,7 +791,7 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcResourcesLeft(Shr5KarmaGenerator object) {
+    public static int calcResourcesLeft(KarmaGenerator<Shr5System> object) {
         Shr5System sr5g = object.getGenerator();
         if (sr5g == null)
             return 0;
