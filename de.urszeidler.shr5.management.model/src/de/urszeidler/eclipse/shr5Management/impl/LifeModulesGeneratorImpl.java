@@ -3,9 +3,15 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,11 +19,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -487,5 +500,44 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
         return Math.abs(karmaSpend) + basicCost+ getModuleKarmaCost() + connectionsSpend + getKarmaToResource();
     }
 
-     
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNoSkillsOverMax(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!canValidate())
+            return true;
+
+        ManagedCharacter managedCharacter = getCharacter();
+        AbstraktPersona persona = managedCharacter.getPersona();
+
+        List<Fertigkeit> list = new ArrayList<Fertigkeit>();
+        List<Wissensfertigkeit> list1 = new ArrayList<Wissensfertigkeit>();
+        EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            if (personaFertigkeit.getFertigkeit() instanceof Wissensfertigkeit) {
+                if (personaFertigkeit.getStufe() > getGenerator().getKnowlegeSkillMax())
+                    list1.add((Wissensfertigkeit)personaFertigkeit.getFertigkeit());
+            } else if (personaFertigkeit.getStufe() > getGenerator().getSkillMax())
+                list.add(personaFertigkeit.getFertigkeit());
+        }
+
+        if (list.size() != 0 || list1.size() !=0) {
+            if (diagnostics != null) {
+                if (list.size() != 0)
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX, ModelPlugin.INSTANCE.getString("_UI_NoSkillsOverMax",
+                                new Object[]{ ShadowrunManagmentTools.beschreibarListToString(list), getGenerator().getSkillMax() }), new Object[]{ this }));
+                if (list1.size() != 0)
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX, ModelPlugin.INSTANCE.getString("_UI_NoSkillsOverMax",
+                                new Object[]{ ShadowrunManagmentTools.beschreibarListToString(list1), getGenerator().getKnowlegeSkillMax() }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
 } //LifeModulesGeneratorImpl
