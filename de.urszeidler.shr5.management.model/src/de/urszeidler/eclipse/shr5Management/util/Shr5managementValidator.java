@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -308,12 +309,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 26;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Resources' of 'Karma Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int KARMA_GENERATOR__HAS_SPEND_ALL_RESOURCES = 27;
+
+    /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Sum To Ten' of 'Sum To Ten Generator'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SUM_TO_TEN_GENERATOR__HAS_SUM_TO_TEN = 27;
+    public static final int SUM_TO_TEN_GENERATOR__HAS_SUM_TO_TEN = 28;
 
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -321,7 +330,7 @@ public class Shr5managementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 27;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 28;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -1147,6 +1156,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllResources(shr5KarmaGenerator, diagnostics, context);
         return result;
     }
 
@@ -1283,6 +1293,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(lifeModulesGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(lifeModulesGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(lifeModulesGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllResources(lifeModulesGenerator, diagnostics, context);
         return result;
     }
 
@@ -1393,6 +1404,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasKiPowerOverLimit(karmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasBasicViolations(karmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(karmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllResources(karmaGenerator, diagnostics, context);
         return result;
     }
 
@@ -1404,6 +1416,16 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateKarmaGenerator_hasSpendAllKarmaPoints(KarmaGenerator<?> karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return karmaGenerator.hasSpendAllKarmaPoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasSpendAllResources constraint of '<em>Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateKarmaGenerator_hasSpendAllResources(KarmaGenerator<?> karmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return karmaGenerator.hasSpendAllResources(diagnostics, context);
     }
 
     /**

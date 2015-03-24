@@ -1340,13 +1340,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__APPLICABLE_GENERATORS = PRIORITY_SYSTEM_FEATURE_COUNT + 12;
 
     /**
+     * The feature id for the '<em><b>Max Connection Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__MAX_CONNECTION_RATING = PRIORITY_SYSTEM_FEATURE_COUNT + 13;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 13;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 14;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -4728,13 +4737,22 @@ public interface Shr5managementPackage extends EPackage {
     int KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 0;
 
     /**
+     * The operation id for the '<em>Has Spend All Resources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
+
+    /**
      * The number of operations of the '<em>Karma Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
+    int KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Source</b></em>' reference.
@@ -5835,6 +5853,15 @@ public interface Shr5managementPackage extends EPackage {
     int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
+     * The operation id for the '<em>Has Spend All Resources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The number of operations of the '<em>Life Modules Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6076,6 +6103,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int LIFE_MODULES_SYSTEM__APPLICABLE_GENERATORS = SHR5_SYSTEM__APPLICABLE_GENERATORS;
+
+    /**
+     * The feature id for the '<em><b>Max Connection Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__MAX_CONNECTION_RATING = SHR5_SYSTEM__MAX_CONNECTION_RATING;
 
     /**
      * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -6789,6 +6825,15 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP;
 
     /**
+     * The operation id for the '<em>Has Spend All Resources</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP = KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The number of operations of the '<em>Shr5 Karma Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7457,6 +7502,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getShr5System_ApplicableGenerators();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating <em>Max Connection Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Connection Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_MaxConnectionRating();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
@@ -9532,6 +9588,16 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getKarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllResources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resources</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Spend All Resources</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllResources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getKarmaGenerator__HasSpendAllResources__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10067,6 +10133,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference SHR5_SYSTEM__APPLICABLE_GENERATORS = eINSTANCE.getShr5System_ApplicableGenerators();
+
+        /**
+         * The meta object literal for the '<em><b>Max Connection Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__MAX_CONNECTION_RATING = eINSTANCE.getShr5System_MaxConnectionRating();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.
@@ -11729,6 +11803,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getKarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Spend All Resources</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getKarmaGenerator__HasSpendAllResources__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

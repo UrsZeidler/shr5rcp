@@ -53,8 +53,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
 
     protected Shr5System shr5System;
     protected BasicDiagnostic diagnostics;
-    @SuppressWarnings("rawtypes")
-    protected Map context;
+    protected Map<Object,Object> context;
 
     /**
      * Constructs a new Shr5 Rule Generator test case with the given name.
@@ -160,7 +159,6 @@ protected abstract void createBasicCategories();
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasNoSkillsOverMax__DiagnosticChain_Map() {
         int max = 10;
         getFixture().getGenerator().setSkillMax(max);
@@ -192,7 +190,6 @@ protected abstract void createBasicCategories();
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasNotMoreSpecalism__DiagnosticChain_Map() {
         getFixture().getGenerator().setNumberOfSpecalism(1);
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -225,7 +222,6 @@ protected abstract void createBasicCategories();
      * java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasNoAttributesOverSpeciesAtt__DiagnosticChain_Map() {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -290,7 +286,6 @@ protected abstract void createBasicCategories();
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasNoConstrainVoilation__DiagnosticChain_Map() {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -422,7 +417,6 @@ protected abstract void createBasicCategories();
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasLifestyleChoosen__DiagnosticChain_Map() {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);

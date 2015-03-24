@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
@@ -423,6 +424,36 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean hasSpendAllResources(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!canValidate())
+            return true;
+
+        int resourceSpend = getResourceSpend();
+        int avail = getKarmaToResource() * getGenerator().getKarmaToResourceFactor();
+        
+        int diff = avail - resourceSpend;
+        boolean test = getGenerator().getMaxResourceToKeep() < diff;
+        if (test || diff < 0) {
+            if (diagnostics != null) {
+                diagnostics.add
+                    (new BasicDiagnostic
+                        (Diagnostic.ERROR,
+                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                         Shr5managementValidator.KARMA_GENERATOR__HAS_SPEND_ALL_RESOURCES,
+                         ModelPlugin.INSTANCE.getString("_UI_hasSpendAllResources", new Object[] { diff,
+                                 diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
+                         new Object [] { this,Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -543,6 +574,8 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
         switch (operationID) {
             case Shr5managementPackage.KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasSpendAllKarmaPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.KARMA_GENERATOR___HAS_SPEND_ALL_RESOURCES__DIAGNOSTICCHAIN_MAP:
+                return hasSpendAllResources((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

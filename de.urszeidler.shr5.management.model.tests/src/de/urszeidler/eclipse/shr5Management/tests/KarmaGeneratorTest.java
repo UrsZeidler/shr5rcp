@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.tests;
 import java.math.BigDecimal;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
@@ -49,6 +50,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * The following operations are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllResources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resources</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -79,7 +81,6 @@ public abstract class KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         return (KarmaGenerator<?>)fixture;
     }
 
-    @SuppressWarnings("unchecked")
     protected void createBasicCategories() {
         shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
         ((Shr5KarmaGenerator)getFixture()).setGenerator(shr5System);
@@ -252,7 +253,6 @@ public abstract class KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllKarmaPoints__DiagnosticChain_Map() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
         shr5System = getFixture().getGenerator();
@@ -286,6 +286,31 @@ public abstract class KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     }
 
     /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllResources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resources</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.KarmaGenerator#hasSpendAllResources(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasSpendAllResources__DiagnosticChain_Map() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getGenerator();
+        getFixture().setCharacter(playerCharacter);
+        assertEquals("Should be 0", 0, getFixture().getResourceSpend());
+        getFixture().getGenerator().setKarmaToResourceFactor(10);
+        getFixture().setKarmaToResource(1);
+        
+        assertEquals("is false", false, getFixture().hasSpendAllResources(diagnostics, context));
+
+        Credstick credstick = Shr5Factory.eINSTANCE.createCredstick();
+        credstick.setWertValue(new BigDecimal(10));
+        playerCharacter.getInventar().add(credstick);
+        
+        assertEquals("Should be 10", 10, getFixture().getResourceSpend());
+        assertEquals("is true", true, getFixture().hasSpendAllResources(diagnostics, context));
+    }
+
+    /**
      * Tests the '
      * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Spend All Points</em>}' operation.
@@ -295,7 +320,6 @@ public abstract class KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
         shr5System = getFixture().getGenerator();

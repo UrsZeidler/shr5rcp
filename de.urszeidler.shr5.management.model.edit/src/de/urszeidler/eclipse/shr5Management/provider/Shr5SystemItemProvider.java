@@ -62,6 +62,7 @@ public class Shr5SystemItemProvider
             addKarmaToConnectionFactorPropertyDescriptor(object);
             addBoundSprititServiceCostPropertyDescriptor(object);
             addApplicableGeneratorsPropertyDescriptor(object);
+            addMaxConnectionRatingPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -353,6 +354,28 @@ public class Shr5SystemItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Max Connection Rating feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMaxConnectionRatingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_maxConnectionRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxConnectionRating_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_CONNECTION_RATING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -408,6 +431,7 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

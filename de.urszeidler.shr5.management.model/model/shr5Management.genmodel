@@ -120,6 +120,7 @@
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/boundSprititServiceCost"/>
       <genFeatures notify="false" createChild="false" propertyDescription="A list of generators which can be used together with this system."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5System/applicableGenerators"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxConnectionRating"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//MetaType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
@@ -416,6 +417,10 @@
       <genOperations ecoreOperation="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints">
         <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllKarmaPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//KarmaGenerator/hasSpendAllResources">
+        <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllResources/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//KarmaGenerator/hasSpendAllResources/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//QuellenConstrain">

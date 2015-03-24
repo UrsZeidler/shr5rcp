@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getApplicableGenerators <em>Applicable Generators</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
  * </ul>
  * </p>
  *
@@ -414,4 +415,30 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     EList<EClass> getApplicableGenerators();
+
+    /**
+     * Returns the value of the '<em><b>Max Connection Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Max Connection Rating</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Max Connection Rating</em>' attribute.
+     * @see #setMaxConnectionRating(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxConnectionRating()
+     * @model
+     * @generated
+     */
+    int getMaxConnectionRating();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating <em>Max Connection Rating</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Max Connection Rating</em>' attribute.
+     * @see #getMaxConnectionRating()
+     * @generated
+     */
+    void setMaxConnectionRating(int value);
 } // Shr5System

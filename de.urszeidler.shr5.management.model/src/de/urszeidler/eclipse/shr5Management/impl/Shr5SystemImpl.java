@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getApplicableGenerators <em>Applicable Generators</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
  * </ul>
  * </p>
  *
@@ -273,6 +274,25 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected EList<EClass> applicableGenerators;
+
+    /**
+     * The default value of the '{@link #getMaxConnectionRating() <em>Max Connection Rating</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxConnectionRating()
+     * @generated
+     * @ordered
+     */
+    protected static final int MAX_CONNECTION_RATING_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getMaxConnectionRating() <em>Max Connection Rating</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxConnectionRating()
+     * @generated
+     * @ordered
+     */
+    protected int maxConnectionRating = MAX_CONNECTION_RATING_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -559,6 +579,27 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getMaxConnectionRating() {
+        return maxConnectionRating;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMaxConnectionRating(int newMaxConnectionRating) {
+        int oldMaxConnectionRating = maxConnectionRating;
+        maxConnectionRating = newMaxConnectionRating;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING, oldMaxConnectionRating, maxConnectionRating));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -591,6 +632,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getBoundSprititServiceCost();
             case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
                 return getApplicableGenerators();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
+                return getMaxConnectionRating();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -644,6 +687,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 getApplicableGenerators().clear();
                 getApplicableGenerators().addAll((Collection<? extends EClass>)newValue);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
+                setMaxConnectionRating((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -695,6 +741,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
                 getApplicableGenerators().clear();
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
+                setMaxConnectionRating(MAX_CONNECTION_RATING_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -733,6 +782,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return boundSprititServiceCost != BOUND_SPRITIT_SERVICE_COST_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
                 return applicableGenerators != null && !applicableGenerators.isEmpty();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
+                return maxConnectionRating != MAX_CONNECTION_RATING_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -771,6 +822,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(karmaToConnectionFactor);
         result.append(", boundSprititServiceCost: ");
         result.append(boundSprititServiceCost);
+        result.append(", maxConnectionRating: ");
+        result.append(maxConnectionRating);
         result.append(')');
         return result.toString();
     }

@@ -220,4 +220,12 @@ public interface KarmaGenerator<G extends Shr5System> extends Shr5RuleGenerator<
      * @generated
      */
     boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasSpendAllResources(DiagnosticChain diagnostics, Map<Object, Object> context);
 } // KarmaGenerator

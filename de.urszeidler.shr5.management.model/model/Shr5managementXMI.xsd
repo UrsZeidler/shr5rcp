@@ -332,6 +332,7 @@ Used by the Shr5KarmaGenerator.</xsd:documentation>
             <xsd:documentation>THis is the cost for a service of a bound spirit at chracter creation.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="maxConnectionRating" type="xsd:int"/>
         <xsd:attribute name="applicableGenerators" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
