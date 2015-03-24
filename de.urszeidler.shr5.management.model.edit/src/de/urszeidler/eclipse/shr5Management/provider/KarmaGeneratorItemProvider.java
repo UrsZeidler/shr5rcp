@@ -305,7 +305,7 @@ public class KarmaGeneratorItemProvider extends Shr5RuleGeneratorItemProvider {
     @SuppressWarnings("unchecked")
     protected Collection<?> filterPrioityChoices(Object object, Collection<?> choiceOfValues2) {
         ArrayList<EObject> list = new ArrayList<EObject>();
-        if (object instanceof Shr5KarmaGenerator) {
+        if (object instanceof KarmaGenerator) {
             KarmaGenerator<Shr5System> g = (KarmaGenerator<Shr5System>)object;
             EObject container = g.getGenerator();
             if (container != null) {
