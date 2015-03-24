@@ -202,6 +202,7 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES, grpConstraint);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM, grpConstraint);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__SKILL_MAX, grpConstraint);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_CONNECTION_RATING, grpConstraint);
 
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__APPLICABLE_GENERATORS, composite_1);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY, composite_1);
