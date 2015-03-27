@@ -99,6 +99,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         imageMap.put(Messages.ModelToTextExportDialog_tf_BBcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        imageMap.put("Generator system", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
         
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
@@ -106,6 +107,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBcs, Messages.ModelToTextExportDialog_tf_BBcs_desc);
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
+        descriptionMap.put("Generator system", "A simple text export for the generator system");
         
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
@@ -121,12 +123,12 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         transformerMap.put(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT, hashMap);
 
         hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("Lifstyle system", new GeneratorSystemBoardSheet());
+        hashMap1.put("Generator system", new GeneratorSystemBoardSheet());
+        transformerMap.put(Shr5managementPackage.Literals.SHR5_SYSTEM, hashMap1);
         transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM, hashMap1);
 
 
         dialogSettings = Activator.getDefault().getDialogSettings();
-
     }
 
     /**

@@ -10,44 +10,56 @@
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 
-[template public generatorSystemBoardSheet(element : LifeModulesSystem)]
+[template public generatorSystemBoardSheet(element : Shr5System)]
 	
 	[comment @main /]
 [file (element.name.concat('.txt'), false, 'UTF-8')]
-[printLifeModuleSystem(element)/]
+[printSystem(element)/]
 [/file]
 	
 [/template]
 
-[template public printLifeModuleSystem (aLifeModulesSystem : LifeModulesSystem) ]
-[aLifeModulesSystem.name/]
+[template public printSystem (aLifeModulesSystem : LifeModulesSystem) ]
+[printSystemHeader(aLifeModulesSystem)/]
 
 [printConstrainValues(aLifeModulesSystem)/]
-
-[comment][for (lm : LifeModule | aLifeModulesSystem.modules ->asSequence() -> sortedBy(lmtOrder(moduleType)))]
-[lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/]
-[/for][/comment]
+[printPriorities(aLifeModulesSystem)/]
 [printLifeModules(aLifeModulesSystem)/]
-
 [/template]
+
+[template public printSystem (aLifeModulesSystem : Shr5System) ]
+[printSystemHeader(aLifeModulesSystem)/]
+
+[printConstrainValues(aLifeModulesSystem)/]
+[printPriorities(aLifeModulesSystem)/]
+[/template]
+
+[template public printSystemHeader(system : Shr5System)]
+[system.name/] [printSource(system)/]
+Usable with: [system.applicableGenerators.getText()/]
+
+[system.beschreibung/]
+[/template]
+
+
 
 [template public printConstrainValues(s5s : Shr5System)]
 ['_UI_PrioritySystem_karmaPoints_feature'.localizedString()/]:  [s5s.karmaPoints/]
 ['_UI_Shr5System_maxKarmaToKeep_feature'.localizedString()/]:  [s5s.maxKarmaToKeep/]
 ['_UI_Shr5System_maxKarmaToResources_feature'.localizedString()/]:  [s5s.maxKarmaToResources/]
-[s5s.maxResourceToKeep/]
-[s5s.karmaToConnectionFactor/]
-[s5s.karmaToResourceFactor/]
-[s5s.karmaToMagicFactor/]
+['_UI_Shr5System_maxResourceToKeep_feature'.localizedString()/]:  [s5s.maxResourceToKeep/]
+['_UI_Shr5System_karmaToConnectionFactor_feature'.localizedString()/]:  [s5s.karmaToConnectionFactor/]
+['_UI_Shr5System_karmaToResourceFactor_feature'.localizedString()/]:  [s5s.karmaToResourceFactor/]
+['_UI_Shr5System_karmaToMagicFactor_feature'.localizedString()/]:  [s5s.karmaToMagicFactor/]
 
-[s5s.numberOfMaxAttributes/]
-[s5s.numberOfSpecalism/]
-[s5s.skillMax/]
-[s5s.maxConnectionRating/]
+['_UI_Shr5System_numberOfMaxAttributes_feature'.localizedString()/]:  [s5s.numberOfMaxAttributes/]
+['_UI_Shr5System_numberOfSpecalism_feature'.localizedString()/]:  [s5s.numberOfSpecalism/]
+['_UI_Shr5System_skillMax_feature'.localizedString()/]:  [s5s.skillMax/]
+['_UI_Shr5System_maxConnectionRating_feature'.localizedString()/]:  [s5s.maxConnectionRating/]
 
-[s5s.charismaToConnectionFactor/]
-[s5s.knowlegeSkillFactor/]
-[s5s.boundSprititServiceCost/]
+['_UI_Shr5System_charismaToConnectionFactor_feature'.localizedString()/]:  [s5s.charismaToConnectionFactor/]
+['_UI_Shr5System_knowlegeSkillFactor_feature'.localizedString()/]:  [s5s.knowlegeSkillFactor/]
+['_UI_Shr5System_boundSprititServiceCost_feature'.localizedString()/]:  [s5s.boundSprititServiceCost/]
 
 [/template]
 
@@ -56,7 +68,7 @@
 [lmt.toString()/]
 [for (lm : LifeModule | aLifeModulesSystem.modules ->asSequence() -> sortedBy(lmtOrder(moduleType)))]
 [if (lm.moduleType=lmt)]
-  [lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/]
+  [lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/] ([printSource(lm)/])
 [/if]
 [/for]
 
@@ -77,3 +89,61 @@ endif
 endif
 endif
  /]
+
+[template public printSource(src : Quelle)]
+[src.srcBook.getText()/] page [src.page/]
+[/template]
+
+[template public printPriorities (aLifeModulesSystem : Shr5System) ]
+Attribute
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(Attributes))]
+[printPriority(p)/]
+[/for]
+
+Skills
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(Skill))]
+[printPriority(p)/]
+[/for]
+
+Metatype
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByType(MetaType))]
+[printPriority(p)/]
+[/for]
+
+Concept
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(SpecialType))]
+[printPriority(p)/]
+[/for]
+
+Resouces
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(Resourcen))]
+[printPriority(p)/]
+[/for]
+[/template]
+
+[template public printPriorities (aLifeModulesSystem : LifeModulesSystem) ]
+Metatype
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByType(MetaType))]
+[printPriority(p)/]
+[/for]
+
+Concept
+[for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(SpecialType))]
+[printPriority(p)/]
+[/for]
+[/template]
+
+[template public printPriority (aPriorityCategorie : PriorityCategorie) ]
+ [aPriorityCategorie.getText()/] 
+[/template]
+
+[comment][template public printPriority (aPriorityCategorie : MetaType) ]
+ [aPriorityCategorie.categorieName/] [aPriorityCategorie.choosableTypes.getText()/] ([aPriorityCategorie.cost/])
+[/template]
+[template public printPriority (aPriorityCategorie : Resourcen) ]
+ [aPriorityCategorie.categorieName/] [aPriorityCategorie.resource/]
+[/template]
+
+[template public printPriority (aPriorityCategorie : SpecialType) ]
+[aPriorityCategorie.getText() /]
+[/template][/comment]
