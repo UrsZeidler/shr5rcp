@@ -1,0 +1,79 @@
+[comment encoding = UTF-8 /]
+[module generatorSystemBoardSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public generatorSystemBoardSheet(element : LifeModulesSystem)]
+	
+	[comment @main /]
+[file (element.name.concat('.txt'), false, 'UTF-8')]
+[printLifeModuleSystem(element)/]
+[/file]
+	
+[/template]
+
+[template public printLifeModuleSystem (aLifeModulesSystem : LifeModulesSystem) ]
+[aLifeModulesSystem.name/]
+
+[printConstrainValues(aLifeModulesSystem)/]
+
+[comment][for (lm : LifeModule | aLifeModulesSystem.modules ->asSequence() -> sortedBy(lmtOrder(moduleType)))]
+[lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/]
+[/for][/comment]
+[printLifeModules(aLifeModulesSystem)/]
+
+[/template]
+
+[template public printConstrainValues(s5s : Shr5System)]
+['_UI_PrioritySystem_karmaPoints_feature'.localizedString()/]:  [s5s.karmaPoints/]
+['_UI_Shr5System_maxKarmaToKeep_feature'.localizedString()/]:  [s5s.maxKarmaToKeep/]
+['_UI_Shr5System_maxKarmaToResources_feature'.localizedString()/]:  [s5s.maxKarmaToResources/]
+[s5s.maxResourceToKeep/]
+[s5s.karmaToConnectionFactor/]
+[s5s.karmaToResourceFactor/]
+[s5s.karmaToMagicFactor/]
+
+[s5s.numberOfMaxAttributes/]
+[s5s.numberOfSpecalism/]
+[s5s.skillMax/]
+[s5s.maxConnectionRating/]
+
+[s5s.charismaToConnectionFactor/]
+[s5s.knowlegeSkillFactor/]
+[s5s.boundSprititServiceCost/]
+
+[/template]
+
+[template public printLifeModules(aLifeModulesSystem : LifeModulesSystem)]
+[for (lmt : LifeModuleType | allLifeModuleTypes(LifeModuleType))]
+[lmt.toString()/]
+[for (lm : LifeModule | aLifeModulesSystem.modules ->asSequence() -> sortedBy(lmtOrder(moduleType)))]
+[if (lm.moduleType=lmt)]
+  [lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/]
+[/if]
+[/for]
+
+[/for]
+[/template]
+
+[query public allLifeModuleTypes(arg : OclAny) : Sequence(LifeModuleType) = Sequence{LifeModuleType::nationality,
+LifeModuleType::formativeYears,LifeModuleType::teenYears,LifeModuleType::furtherEducation,LifeModuleType::realLife} /]
+
+
+[query public lmtOrder(lmt : LifeModuleType) : String = if lmt=LifeModuleType::nationality then '1' else 
+if lmt=LifeModuleType::formativeYears then '2' else 
+if lmt=LifeModuleType::teenYears then '3' else 
+if lmt=LifeModuleType::furtherEducation then '4' else 
+'5'
+endif
+endif
+endif
+endif
+ /]
