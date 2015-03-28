@@ -113,8 +113,8 @@ public class ModuleSkillChangeItemProvider extends ModuleTypeChangeItemProvider 
         if (msc.getSkill() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, msc.getSkill());
         }else if(!msc.getSelectOne().isEmpty()){
-            text = " on of:";
-            text +=  Joiner.on(" ").join(
+            text = getString("_UI_ModuleChange_SelectOneOf");
+            text +=  Joiner.on(",").join(
                     FluentIterable.from(msc.getSelectOne()).transform(new Function<Fertigkeit, String>() {
 
                         @Override

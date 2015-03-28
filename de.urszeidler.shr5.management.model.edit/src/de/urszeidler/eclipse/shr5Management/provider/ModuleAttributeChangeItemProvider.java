@@ -125,7 +125,7 @@ public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvi
         if (moduleAttributeChange.getAttribute() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, moduleAttributeChange.getAttribute());
         }else if(!moduleAttributeChange.getSelectOne().isEmpty()){
-            text = " on of:";
+            text = getString("_UI_ModuleChange_SelectOneOf");
            text +=  Joiner.on(",").join(
             FluentIterable.from(moduleAttributeChange.getSelectOne()).transform(new Function<EAttribute, String>() {
 

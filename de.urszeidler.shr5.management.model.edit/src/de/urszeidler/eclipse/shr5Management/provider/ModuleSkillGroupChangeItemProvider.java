@@ -102,7 +102,7 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleTypeChangeItemProv
         if (moduleSkillGroupChange.getSkillGroup() != null) {
             text = Shr5EditingTools.getLabelForEObject(factory, unset, moduleSkillGroupChange.getSkillGroup());
         }else if(!moduleSkillGroupChange.getSelectOne().isEmpty()){
-            text = " on of:";
+            text = getString("_UI_ModuleChange_SelectOneOf");
             text +=  Joiner.on(",").join(
                     FluentIterable.from(moduleSkillGroupChange.getSelectOne()).transform(new Function<FertigkeitsGruppe, String>() {
 
