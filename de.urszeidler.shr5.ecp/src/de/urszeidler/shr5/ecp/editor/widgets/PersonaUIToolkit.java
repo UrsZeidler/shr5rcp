@@ -160,7 +160,7 @@ public class PersonaUIToolkit {
     private void createAttributeWidget(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        Text text = getToolkit().createText(client, "__", SWT.BORDER);//$NON-NLS-1$ 
+        final Text text = getToolkit().createText(client, "__", SWT.BORDER);//$NON-NLS-1$ 
         setDefaultLayout(text);
 
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
@@ -168,7 +168,8 @@ public class PersonaUIToolkit {
         if (karmaMode)
             updateStrategie = new EMFUpdateValueStrategy() {
                 protected IStatus doSet(IObservableValue observableValue, Object value) {
-                    ShadowrunManagmentTools.changeAttributeByAdvacement(character, basefeature, (Integer)value);// (Integer)value);
+                    int aValue = ShadowrunManagmentTools.changeAttributeByAdvacement(character, basefeature, (Integer)value);// (Integer)value);
+                    text.setText(Integer.toString(aValue));
                     return Status.OK_STATUS;
                 }
 

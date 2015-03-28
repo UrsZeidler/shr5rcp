@@ -348,6 +348,7 @@ public class ShadowrunManagmentTools {
 
         EList<Changes> changes = character.getChanges();
         for (Changes change : changes) {
+            if(change.getDateApplied()!=null)
             if (change instanceof AttributeChange) {
                 AttributeChange pc = (AttributeChange)change;
                 if (attribute.equals(pc.getAttibute()))
@@ -370,6 +371,7 @@ public class ShadowrunManagmentTools {
 
         EList<Changes> changes = character.getChanges();
         for (Changes change : changes) {
+            if(change.getDateApplied()!=null)
             if (change instanceof PersonaChange) {
                 PersonaChange pc = (PersonaChange)change;
                 if (steigerbar.equals(pc.getChangeable()))
@@ -392,6 +394,7 @@ public class ShadowrunManagmentTools {
 
         EList<Changes> changes = character.getChanges();
         for (Changes change : changes) {
+//            if(change.getDateApplied()!=null)
             if (change instanceof PersonaChange) {
                 PersonaChange pc = (PersonaChange)change;
                 if (steigerbar.equals(pc.getChangeable()))
@@ -839,6 +842,8 @@ public class ShadowrunManagmentTools {
             }
         }));
     }
+ 
+    
     
     /**
      * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
@@ -887,38 +892,41 @@ public class ShadowrunManagmentTools {
      * @param fertigkeitsGruppe
      * @param value
      */
-    public static void changeAttributeByAdvacement(ManagedCharacter character, EAttribute attribute, Integer value) {
+    public static int changeAttributeByAdvacement(ManagedCharacter character, EAttribute attribute, Integer value) {
         final AbstraktPersona persona = character.getPersona();
         EAttribute speciesMin = ShadowrunTools.base2SpeciesMin(attribute);
 
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
-            return;
+            return -1;
 
         Integer eGet = (Integer)spezies.eGet(speciesMin);
         if (value < eGet)
             value = eGet;
-
+        
+        int rValue = value;
         AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
         if (attributeChange == null) {
             if (value == eGet)
-                return;
+                return value;
             attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
-            attributeChange.setAttibute(attribute);
             character.getChanges().add(attributeChange);
-            attributeChange.setFrom((Integer)eGet);
-            attributeChange.setTo(value);
+            attributeChange.setAttibute(attribute);
+            if(attributeChange.getFrom()==0)
+                attributeChange.setFrom((Integer)eGet);
+            attributeChange.setTo(Math.max(attributeChange.getFrom(),(Integer)value));
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
+            rValue = attributeChange.getTo();
         } else if (eGet == value) {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
+            rValue = eGet;
         } else {
-            attributeChange.setTo((Integer)value);
+            attributeChange.setTo(Math.max(attributeChange.getFrom(),(Integer)value));
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
+            rValue = attributeChange.getTo();
         }
-
+        return rValue;
     }
 
     /**
@@ -966,8 +974,9 @@ public class ShadowrunManagmentTools {
      * 
      * @param character
      * @param erlernbar
+     * @return 
      */
-    public static void changeErlernbarByAdvacement(ManagedCharacter character, Erlernbar erlernbar) {
+    public static boolean changeErlernbarByAdvacement(ManagedCharacter character, Erlernbar erlernbar) {
         PersonaChange advancements = ShadowrunManagmentTools.findCharacterAdvacements(character, erlernbar);
         if (advancements == null) {
             PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
@@ -975,11 +984,14 @@ public class ShadowrunManagmentTools {
             personaChange.setChangeable(erlernbar);
             personaChange.applyChanges();
         } else {
+            if(advancements.getDateApplied()==null)
+                return false;
+            
             advancements.setTo(0);
             advancements.applyChanges();
             character.getChanges().remove(advancements);
         }
-
+        return true;
     }
 
     /**

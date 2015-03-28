@@ -209,6 +209,9 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
 
         // Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
         getCharacter().getPersona().eSet(getAttibute(), getTo());
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl((InternalEObject)getCharacter().getPersona(), Notification.SET, getAttibute(), 0, 1));
+
     }
 
 } // AttributeChangeImpl

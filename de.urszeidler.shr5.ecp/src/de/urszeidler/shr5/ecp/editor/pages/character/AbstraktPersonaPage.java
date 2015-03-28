@@ -105,6 +105,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         @Override
         public void handleRemove(FormbuilderEntry e, EObject object) {
             IObservable uiObservable = e.getUiObservable();
+            boolean remove = true;
             if (uiObservable instanceof IViewerObservableList) {
                 IViewerObservableList vol = (IViewerObservableList)uiObservable;
                 ISelection selection = vol.getViewer().getSelection();
@@ -113,12 +114,13 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                     List<?> list = ss.toList();
                     for (Object object2 : list) {
                         if (object2 instanceof Erlernbar) {
-                            ShadowrunManagmentTools.changeErlernbarByAdvacement(character, (Erlernbar)object2);
+                           remove &= ShadowrunManagmentTools.changeErlernbarByAdvacement(character, (Erlernbar)object2);
                         }
                     }
                 }
             }
-            super.handleRemove(e, object);
+            if(remove)
+                super.handleRemove(e, object);
         }
 
         /**
