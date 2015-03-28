@@ -16,7 +16,7 @@
       <entries xsi:type="shr5:SourceBook" xmi:id="abb9ec78-b430-4ea9-8531-95b004a1b9d9" beschreibung="" name="Shadow Spells" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsbF1N0CEeOvVYoRsPZlnA" name="Generators">
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_BtO-IN0CEeOvVYoRsPZlnA" value="Select the categories and the group."/>
         <instructions xmi:id="_BtO-Id0CEeOvVYoRsPZlnA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_BtO-It0CEeOvVYoRsPZlnA" key="personaCreated" value="The character is created spend all the values."/>
@@ -151,7 +151,7 @@
           <type href="http://urszeidler.de/shr5/1.0#//Initation"/>
         </characterAdvancements>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_djpB4eJ0EeOht_G61YAQvg" value="Select the categories and the group."/>
         <instructions xmi:id="_djpB4uJ0EeOht_G61YAQvg" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_djpB4-J0EeOht_G61YAQvg" key="personaCreated" value="The character is created spend all the values."/>
@@ -238,7 +238,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_XmYeEPMvEeOUu_gj5H6UdA" beschreibung="http://scionhouserules.wordpress.com/2014/06/04/shadowrun-overhaul-alternative-to-priority-table-for-character-creation/" name="karma system roughly by Scion and Shadowrun House Rules" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_XmYeEPMvEeOUu_gj5H6UdA" beschreibung="http://scionhouserules.wordpress.com/2014/06/04/shadowrun-overhaul-alternative-to-priority-table-for-character-creation/" name="karma system roughly by Scion and Shadowrun House Rules" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_XmZFIPMvEeOUu_gj5H6UdA" value="Select the categories and the group."/>
         <instructions xmi:id="_XmZFIfMvEeOUu_gj5H6UdA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_XmZFIvMvEeOUu_gj5H6UdA" key="personaCreated" value="The character is created spend all the values."/>
@@ -265,7 +265,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="5b1281c0-466d-441d-a844-5a2bc93d9843" name="Prime Runner" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="35" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="6" maxResourceToKeep="5000" maxKarmaToResources="25" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="5b1281c0-466d-441d-a844-5a2bc93d9843" name="Prime Runner" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="35" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="6" maxResourceToKeep="5000" maxKarmaToResources="25" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_F-yDMKSBEeS77cLMHV173Q" value="Select the categories and the group."/>
         <instructions xmi:id="_F-yDMaSBEeS77cLMHV173Q" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_F-yDMqSBEeS77cLMHV173Q" key="personaCreated" value="The character is created spend all the values."/>
@@ -358,7 +358,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="def8a6aa-4bfa-4c73-a20f-2a8e80d2b1df" name="Street Level" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="13" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="5" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="def8a6aa-4bfa-4c73-a20f-2a8e80d2b1df" name="Street Level" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="13" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="5" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_F_mikKSBEeS77cLMHV173Q" value="Select the categories and the group."/>
         <instructions xmi:id="_F_mikaSBEeS77cLMHV173Q" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_F_mikqSBEeS77cLMHV173Q" key="personaCreated" value="The character is created spend all the values."/>
@@ -451,7 +451,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="054559be-d80a-42b9-a0a9-d6957d2b3c55" name="Standard" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="054559be-d80a-42b9-a0a9-d6957d2b3c55" name="Standard" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_F9UDkKSBEeS77cLMHV173Q" value="Select the categories and the group."/>
         <instructions xmi:id="_F9UDkaSBEeS77cLMHV173Q" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_F9UDkqSBEeS77cLMHV173Q" key="personaCreated" value="The character is created spend all the values."/>
@@ -544,7 +544,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="The buy point system." image="/shr5Resource/images/runFaster.jpg" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_8RGg8LL6EeS74JF_046f_w" beschreibung="The buy point system." image="/shr5Resource/images/runFaster.jpg" name="karma system run faster" page="64" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="800" karmaToResourceFactor="2500" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_8RGg8bL6EeS74JF_046f_w" value="Select the categories and the group."/>
         <instructions xmi:id="_8RGg8rL6EeS74JF_046f_w" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_8RGg87L6EeS74JF_046f_w" key="personaCreated" value="The character is created spend all the values."/>
@@ -603,7 +603,7 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_AmO4sLL8EeS74JF_046f_w" cost="60" choosableTypes="8768ec05-4fbb-43ae-b3ba-94ba57610069"/>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0C2eOvV1oRsPZlnB" beschreibung="With the default metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system basic" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0C2eOvV1oRsPZlnB" beschreibung="With the default metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system basic" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_HDB8gLuNEeSRAqXqy-AeKA" value="Select the categories and the group."/>
         <instructions xmi:id="_HDB8gbuNEeSRAqXqy-AeKA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_HDB8gruNEeSRAqXqy-AeKA" key="personaCreated" value="The character is created spend all the values."/>
@@ -700,7 +700,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//SumToTenGenerator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_4xfYwL8qEeShtu44RDLbKg" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_4xfYwL8qEeShtu44RDLbKg" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The sum to ten system" page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_4xfYwb8qEeShtu44RDLbKg" value="Select the categories and the group."/>
         <instructions xmi:id="_4xfYwr8qEeShtu44RDLbKg" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_4xfYw78qEeShtu44RDLbKg" key="personaCreated" value="The character is created spend all the values."/>
@@ -867,7 +867,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//SumToTenGenerator"/>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_FhZGwLfAEeSzv7cdcloROA" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The run faster generator system." page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_FhZGwLfAEeSzv7cdcloROA" beschreibung="Contains the additional metatypes." image="/shr5Resource/images/runFaster.jpg" name="The run faster generator system." page="62" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_FhZGwbfAEeSzv7cdcloROA" value="Select the categories and the group."/>
         <instructions xmi:id="_FhZGwrfAEeSzv7cdcloROA" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_FhZGw7fAEeSzv7cdcloROA" key="personaCreated" value="The character is created spend all the values."/>
@@ -1034,7 +1034,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_9ljvUNHvEeS4ndSijGfJ0Q" name="Building the lifemodule system" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" knowlegeSkillMax="9">
+      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_9ljvUNHvEeS4ndSijGfJ0Q" name="Building the lifemodule system" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" knowlegeSkillMax="9">
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//LifeModulesGenerator"/>
         <modules xmi:id="_SOF0wM_bEeSu9qVfM6-lMQ" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS " page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
           <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_SOF0wc_bEeSu9qVfM6-lMQ" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
@@ -1140,7 +1140,7 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_9lkWvNHvEeS4ndSijGfJ0Q" grade="3" skill="_KKX6MNGBEeSOfJEsyQciNA"/>
         </modules>
       </entries>
-      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_HU-ZcMl1EeSHR7BAWEdSOg" name="testLifeModuleSystem" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" knowlegeSkillMax="9">
+      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_HU-ZcMl1EeSHR7BAWEdSOg" name="testLifeModuleSystem" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" knowlegeSkillMax="9">
         <lifestyleToStartMoney xmi:id="_Ul3kAMkCEeSkAbRNCR2heA" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
         <lifestyleToStartMoney xmi:id="_Ul3kAckCEeSkAbRNCR2heA" numberOfW="2" moneyFactor="40" lifeStyles="b46c5d66-940f-42c4-a8cb-a055f459bbb4"/>
         <lifestyleToStartMoney xmi:id="_Ul3kAskCEeSkAbRNCR2heA" numberOfW="3" moneyFactor="60" lifeStyles="e8e2f128-6f09-4e5f-bd7d-fce7b9766225"/>
