@@ -5,7 +5,6 @@
 [module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 
-
 [**
  * Get the text from the item descriptor.
  */]
@@ -115,3 +114,10 @@ aFahrzeug.rumpf.toString()
 
 [template public printStrength (persona : AbstraktPersona) ]
 [persona.staerkeBasis/][if(not (persona.staerkeBasis=persona.staerke))]([persona.staerke/])[/if][/template]
+
+
+[template public printSource(src : Quelle)]
+[src.srcBook.getText()/] page [src.page/]
+[/template]
+
+

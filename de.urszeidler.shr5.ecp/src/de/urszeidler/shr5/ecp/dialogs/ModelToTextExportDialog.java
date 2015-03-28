@@ -41,6 +41,7 @@ import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet;
+import de.urszeidler.shr5.acceleo.sheets.GenerateLifeModuleBoardSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet;
 import de.urszeidler.shr5.acceleo.sheets.GeneratorSystemBoardSheet;
@@ -126,6 +127,10 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap1.put("Generator system", new GeneratorSystemBoardSheet());
         transformerMap.put(Shr5managementPackage.Literals.SHR5_SYSTEM, hashMap1);
         transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM, hashMap1);
+
+        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+        hashMap1.put("Life Module", new GenerateLifeModuleBoardSheet());
+        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULE, hashMap1);
 
 
         dialogSettings = Activator.getDefault().getDialogSettings();

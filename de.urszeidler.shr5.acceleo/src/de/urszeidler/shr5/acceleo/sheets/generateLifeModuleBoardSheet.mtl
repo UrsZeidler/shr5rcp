@@ -1,0 +1,51 @@
+[comment encoding = UTF-8 /]
+[module generateLifeModuleBoardSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public generateLifeModuleBoardSheet(lm : LifeModule)]
+	
+[comment @main /]
+[file (lm.name.concat('.txt'), false, 'UTF-8')]
+[lm.name/] [lm.moduleType/] Karma: [lm.karmaCost /] time: [lm.time/] ([printSource(lm)/])
+
+[for (cc : ModuleChange | lm.characterChanges)]
+[printModuleChange(cc)/]
+[/for]
+[/file]
+	
+[/template]
+
+[template public printModuleChange (aModuleChange : ModuleChange) ]
+[aModuleChange.getText()/]
+[/template]
+
+
+[comment][template public printModuleChange (aModuleChange : ModuleAttributeChange) ]
+[aModuleChange.attribute.getText()/] [aModuleChange.grade/]
+[printSelectOne(aModuleChange.selectOne)/]
+[/template]
+
+[template public printModuleChange (aModuleChange : ModuleSkillChange) ]
+[aModuleChange.skill.getText()/] [aModuleChange.grade/]
+[printSelectOne(aModuleChange.selectOne)/]
+[/template]
+
+[template public printModuleChange (aModuleChange : ModuleSkillGroupChange) ]
+[aModuleChange.skillGroup.getText()/] [aModuleChange.grade/]
+[printSelectOne(aModuleChange.selectOne)/]
+[/template]
+
+
+[template public printSelectOne (aModuleAttributeChange : OrderedSet(OclAny)) ]
+[for (it : OclAny | aModuleAttributeChange)]
+[it.getText()/]	
+[/for]
+[/template][/comment]

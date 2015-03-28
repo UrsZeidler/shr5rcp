@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 /**
@@ -87,6 +88,9 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        if (object instanceof LifeModule) {
+            form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        }
         addFillToolbar(form.getToolBarManager(), object, form.getShell());
         form.getToolBarManager().update(true);
         

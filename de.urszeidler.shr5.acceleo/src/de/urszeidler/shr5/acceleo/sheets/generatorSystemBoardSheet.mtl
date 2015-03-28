@@ -89,11 +89,6 @@ endif
 endif
 endif
  /]
-
-[template public printSource(src : Quelle)]
-[src.srcBook.getText()/] page [src.page/]
-[/template]
-
 [template public printPriorities (aLifeModulesSystem : Shr5System) ]
 Attribute
 [for (p : PriorityCategorie | aLifeModulesSystem.priorities->selectByKind(Attributes))]
