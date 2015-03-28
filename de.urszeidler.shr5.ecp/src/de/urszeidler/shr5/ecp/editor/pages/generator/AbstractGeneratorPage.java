@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -12,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -23,19 +25,28 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.wb.swt.ResourceManager;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
@@ -340,30 +351,95 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      */
     protected int lifeStyleToStartMoneyDialog(final int calcResourcesLeft, int startMoney, Shr5RuleGenerator<? extends Shr5System> object2) {
         Credstick credstick = ShadowrunManagmentTools.findFirstCedstick(object2.getCharacter().getInventar());
-    
+
         Lifestyle choosenLifestyle = object2.getCharacter().getChoosenLifestyle();
         Shr5System shr5System = object2.getGenerator();
         EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
         LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
-    
+
         if (lifestyleToMoney != null) {
             InputDialog inputDialog = createLifestyle2MoneyDialog(calcResourcesLeft, lifestyleToMoney);
             int open = inputDialog.open();
             if (open != InputDialog.OK)
                 return -1;
-    
+
             String value = inputDialog.getValue();
             startMoney = Integer.parseInt(value);
-            
+
             if (credstick != null) {
                 CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
                 transaction.setAmount(new BigDecimal(startMoney));
                 transaction.setDescription(String.format(Messages.Shr5GeneratorPage_initial_transaction_message0, startMoney));
                 credstick.getTransactionlog().add(transaction);
             }
-    
+
         }
         return startMoney;
+    }
+
+    /**
+     * @param object2 the generator object to move
+     */
+    protected void moveGeneratorToCharacterCommit(CharacterGenerator<? extends CharacterGeneratorSystem> object2) {
+        cleanCharacterBeforeCommit(object2.getCharacter());
+
+        CompoundCommand command = new CompoundCommand();
+        command.append(SetCommand.create(getEditingDomain(), object2, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
+                GeneratorState.COMMITED));
+        command.append(SetCommand.create(getEditingDomain(), object2.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                object2));
+
+        getEditingDomain().getCommandStack().execute(command);
+    }
+
+    /**
+     * Remove all unnessesary editing fragments.
+     * 
+     * @param character
+     */
+    protected void cleanCharacterBeforeCommit(ManagedCharacter character) {
+        if(character==null)
+            return;
+        EList<Changes> changes = character.getChanges();
+        ImmutableList<PersonaChange> list = FluentIterable.from(character.getChanges()).filter(new Predicate<Changes>() {
+
+            @Override
+            public boolean apply(Changes input) {
+                return input.getDateApplied()!=null;
+            }
+        }).filter(PersonaChange.class)
+        .filter(new Predicate<PersonaChange>() {
+
+            @Override
+            public boolean apply(PersonaChange input) {
+                
+                return input.getTo()<=input.getFrom();
+            }
+        }).toList();
+        changes.removeAll(list);
+          
+        AbstraktPersona ap = character.getPersona();
+        if(ap!=null){
+            EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = ap.getFertigkeitsGruppen();
+            ImmutableList<PersonaFertigkeitsGruppe> list2 = FluentIterable.from(ap.getFertigkeitsGruppen()).filter(new Predicate<PersonaFertigkeitsGruppe>() {
+
+                @Override
+                public boolean apply(PersonaFertigkeitsGruppe input) {
+                    return input.getStufe()==0;
+                }
+            }).toList();
+            fertigkeitsGruppen.removeAll(list2);
+            
+            EList<PersonaFertigkeit> fertigkeiten = ap.getFertigkeiten();
+            ImmutableList<PersonaFertigkeit> list3 = FluentIterable.from(ap.getFertigkeiten()).filter(new Predicate<PersonaFertigkeit>() {
+
+                @Override
+                public boolean apply(PersonaFertigkeit input) {
+                    return input.getStufe()==0;
+                }
+            }).toList();
+            fertigkeiten.removeAll(list3);
+        }
     }
 
 }

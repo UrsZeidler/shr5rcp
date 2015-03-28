@@ -440,17 +440,18 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         if(startMoney==-1)
             return;
 
-        CompoundCommand command = new CompoundCommand();
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
-                GeneratorState.COMMITED));
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
-                ShadowrunManagmentTools.calcKarmaLeft(object)));
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES, startMoney));
-        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
-                object));
-
-
-        getEditingDomain().getCommandStack().execute(command);
+        moveGeneratorToCharacterCommit(object);
+//        CompoundCommand command = new CompoundCommand();
+//        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
+//                GeneratorState.COMMITED));
+//        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
+//                ShadowrunManagmentTools.calcKarmaLeft(object)));
+//        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES, startMoney));
+//        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+//                object));
+//
+//
+//        getEditingDomain().getCommandStack().execute(command);
         validateChange();
     }
 

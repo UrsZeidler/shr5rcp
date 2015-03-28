@@ -360,23 +360,23 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         if(startMoney==-1)
             return;
 
-        moveGeneratorToCharacterCommit();
+        moveGeneratorToCharacterCommit(object);
         validateChange();
 
     }
 
-    /**
-     * 
-     */
-    protected void moveGeneratorToCharacterCommit() {
-        CompoundCommand command = new CompoundCommand();
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
-                GeneratorState.COMMITED));
-        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
-                object));
-
-        getEditingDomain().getCommandStack().execute(command);
-    }
+//    /**
+//     * 
+//     */
+//    protected void moveGeneratorToCharacterCommit() {
+//        CompoundCommand command = new CompoundCommand();
+//        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
+//                GeneratorState.COMMITED));
+//        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+//                object));
+//
+//        getEditingDomain().getCommandStack().execute(command);
+//    }
 
     protected void createManagedCharacter() {
         ManagedCharacter managedCharacter = createManagedCharacter(object.getCharacterConcept().getSelectableTypes(), object.getMetaType()

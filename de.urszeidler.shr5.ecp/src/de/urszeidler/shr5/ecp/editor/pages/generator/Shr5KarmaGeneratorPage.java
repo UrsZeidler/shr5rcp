@@ -11,13 +11,11 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.fieldassist.ControlDecoration;
@@ -323,22 +321,8 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         if(startMoney==-1)
             return;
 
-        moveGeneratorToCharacterCommit();
+        moveGeneratorToCharacterCommit(object);
         validateChange();
-
-    }
-
-    /**
-     * 
-     */
-    protected void moveGeneratorToCharacterCommit() {
-        CompoundCommand command = new CompoundCommand();
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
-                GeneratorState.COMMITED));
-        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
-                object));
-
-        getEditingDomain().getCommandStack().execute(command);
     }
 
     protected void createManagedCharacter() {
@@ -347,8 +331,6 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         addPersonaPage(object.getCharacter());
 //        createOptionWidgets();
         validateChange();
-
-
     }
 
     /**
