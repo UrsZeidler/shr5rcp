@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.ecp.feature"
       label="collecting ecp Feature"
-      version="0.2.6.qualifier">
+      version="0.2.7.qualifier">
 
    <description url="http://www.example.com/description">
       A collection of ecp plugins.
