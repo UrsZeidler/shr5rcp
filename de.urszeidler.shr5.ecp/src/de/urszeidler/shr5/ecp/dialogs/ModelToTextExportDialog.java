@@ -101,6 +101,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         imageMap.put("Generator system", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+        imageMap.put("Life Module", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
         
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
@@ -109,6 +110,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
         descriptionMap.put("Generator system", "A simple text export for the generator system");
+        descriptionMap.put("Life Module", "A simple text export for the a life module.");
         
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
@@ -217,7 +219,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         }
         String trans = dialogSettings.get("m2t.transformation");//$NON-NLS-1$
         if (trans != null)
-            combo.setText(trans);
+            if(map.containsKey(trans))
+                combo.setText(trans);
         
         setMessage(String.format(Messages.ModelToTextExportDialog_default_message, AdapterFactoryUtil.getInstance().getLabelProvider().getText(object)));
         return area;
