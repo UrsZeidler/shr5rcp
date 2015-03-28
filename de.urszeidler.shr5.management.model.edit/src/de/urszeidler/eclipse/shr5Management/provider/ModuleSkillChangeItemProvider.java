@@ -126,7 +126,7 @@ public class ModuleSkillChangeItemProvider extends ModuleTypeChangeItemProvider 
 
         }
 
-        return String.format("%s %d", text,stufe);//getString("_UI_ModuleSkillChange_type");
+        return String.format("%s %d", text.substring(0, Math.min(text.length(), 80)),stufe);//getString("_UI_ModuleSkillChange_type");
     }
 
     /**

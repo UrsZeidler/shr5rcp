@@ -114,7 +114,7 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleTypeChangeItemProv
                     );
 
         }
-        return getString("_UI_ModuleSkillGroupChange_type")+" "+text + " " + moduleSkillGroupChange.getGrade();
+        return String.format("%s %d", text.substring(0, Math.min(text.length(), 80)),moduleSkillGroupChange.getGrade());//getString("_UI_ModuleSkillGroupChange_type")+" "+text + " " + moduleSkillGroupChange.getGrade();
     }
     
 

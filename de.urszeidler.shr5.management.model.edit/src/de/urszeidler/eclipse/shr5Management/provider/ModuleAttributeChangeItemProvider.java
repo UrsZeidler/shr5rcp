@@ -137,7 +137,7 @@ public class ModuleAttributeChangeItemProvider extends ModuleTypeChangeItemProvi
             );
         }
 
-        return getString("_UI_ModuleAttributeChange_type")+" "+text + " " + moduleAttributeChange.getGrade();
+        return String.format("%s %d", text.substring(0, Math.min(text.length(), 80)),moduleAttributeChange.getGrade());//getString("_UI_ModuleAttributeChange_type")+" "+text + " " + moduleAttributeChange.getGrade();
     }
     
 

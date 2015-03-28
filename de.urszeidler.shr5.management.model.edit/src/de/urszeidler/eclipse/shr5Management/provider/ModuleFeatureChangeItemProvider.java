@@ -88,11 +88,11 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
      * This adds a property descriptor for the Value feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addValuePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleFeatureChange_value_feature"),
@@ -103,7 +103,17 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                protected Collection<?> getComboBoxObjects(Object object) {
+                    ModuleFeatureChange moduleAttributeChange = (ModuleFeatureChange)object;
+                    if(moduleAttributeChange.getFeature()!=null)
+                        return getReachableObjectsOfType(moduleAttributeChange, moduleAttributeChange.getFeature().getEType());
+                    
+                    return super.getComboBoxObjects(object);
+                }
+                
+            });
     }
 
     /**
@@ -136,7 +146,7 @@ public class ModuleFeatureChangeItemProvider extends ModuleChangeItemProvider {
             text = text+":"+ Shr5EditingTools.getLabelForEObject(factory, unset, moduleAttributeChange.getValue());
         }
         
-        return getString("_UI_ModuleFeatureChange_type")+" "+text;
+        return String.format("%s", text.substring(0, Math.min(text.length(), 80)));// getString("_UI_ModuleFeatureChange_type")+" "+text;
     }
     
 
