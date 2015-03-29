@@ -236,7 +236,7 @@ public class ShadowrunEditingTools {
             PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
             character.getChanges().add(personaChange);
             personaChange.setChangeable(pf);
-            personaChange.setFrom(0);
+//            personaChange.setFrom(0);
             personaChange.setTo((Integer)value);
             personaChange.applyChanges();
         } else {

@@ -62,6 +62,8 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
+import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
@@ -191,6 +193,7 @@ public class PersonaFertigkeitenWidget extends Composite {
     private boolean filterOnlyPersona;
     private String stringFilter;
     private boolean readOnly = false;
+    private boolean skillsFixedByGroup = true;
 
     /**
      * Create the composite.
@@ -229,6 +232,9 @@ public class PersonaFertigkeitenWidget extends Composite {
         if (chracterSource instanceof KarmaGenerator) {
             // Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
             karmaMode = true;
+            if (chracterSource instanceof LifeModulesGenerator) {
+                skillsFixedByGroup = false;
+            }
         }
 
         createWidgets();
@@ -406,7 +412,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
             @Override
             protected boolean canEdit(Object element) {
-                if(readOnly)
+                if (readOnly)
                     return false;
                 if (element instanceof Fertigkeit) {
                     Fertigkeit fertigkeit = (Fertigkeit)element;// for #196
@@ -479,17 +485,18 @@ public class PersonaFertigkeitenWidget extends Composite {
         });
         treeViewerValueColumn.setEditingSupport(new EditingSupport(treeViewer) {
             protected boolean canEdit(Object element) {
-                if(readOnly)
+                if (readOnly)
                     return false;
-                
+
                 if (element instanceof GroupWrapper) {
                     return false;
-                }//  for #196
-                if (element instanceof Fertigkeit)
-                    if (((Fertigkeit)element).eContainer() instanceof FertigkeitsGruppe) {
-                        FertigkeitsGruppe fg = (FertigkeitsGruppe)((Fertigkeit)element).eContainer();
-                        return ShadowrunTools.findGruppe(fg, persona) == null;
-                    }
+                }// for #196
+                if (skillsFixedByGroup)
+                    if (element instanceof Fertigkeit)
+                        if (((Fertigkeit)element).eContainer() instanceof FertigkeitsGruppe) {
+                            FertigkeitsGruppe fg = (FertigkeitsGruppe)((Fertigkeit)element).eContainer();
+                            return ShadowrunTools.findGruppe(fg, persona) == null;
+                        }
                 return true;
             }
 

@@ -131,6 +131,16 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
 
                 @Override
+                public Object casePersonaFertigkeit(PersonaFertigkeit object) {
+                    Integer fromValue = object.getStufe();
+                    if(object.getFertigkeit()!=null && getCharacter()!=null && getCharacter().getPersona()!=null)
+                        fromValue = Math.max(object.getStufe() ,ShadowrunTools.findFertigkeitValue(object.getFertigkeit(), getCharacter().getPersona()));
+                    setFrom(fromValue);
+                    setTo(fromValue + 1);
+                    return object;
+                }
+                
+                @Override
                 public Object casePersonaEigenschaft(PersonaEigenschaft object) {
                     if (ShadowrunManagmentTools.hasEigenschaft(getCharacter(), object)) {
                         setFrom(1);
@@ -243,7 +253,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
 
             @Override
             public Object casePersonaFertigkeit(PersonaFertigkeit object) {
-                if (getFrom() == 0) {
+                if (ShadowrunTools.findFertigkeit(object.getFertigkeit(), getCharacter().getPersona()) == null) {
                     getCharacter().getPersona().getFertigkeiten().add(object);
                     object.setStufe(getTo());
                     return object;
