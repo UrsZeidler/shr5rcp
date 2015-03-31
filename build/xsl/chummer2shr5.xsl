@@ -69,6 +69,7 @@
 
 
 	<xsl:include href="shr5-functions.xsl" />
+	<xsl:include href="base-shr5-functions.xsl" />
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -753,110 +754,6 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template name="mods">
-		<xsl:for-each select="qualities/positive/*">
-			<xsl:choose>
-				<xsl:when test="text()='Thermographic Vision'">
-					<mods wert="1"
-						attribut="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot" />
-				</xsl:when>
-				<xsl:when test="text()='Low-Light Vision'">
-					<mods wert="1"
-						attribut="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung" />
-				</xsl:when>
-			</xsl:choose>
-
-		</xsl:for-each>
-		<xsl:for-each select="bonus/*">
-			<xsl:choose>
-				<xsl:when test="name()='limitmodifier'">
-					<mods>
-						<xsl:if test="number(value/text())">
-							<xsl:attribute name="wert">
-				<xsl:value-of select="number(value/text())" />
-				</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
-						<xsl:attribute name="attribut">
-						<xsl:choose>
-								<xsl:when test="limit/text()='Social'">
-									<xsl:value-of
-							select="'http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial'" />
-								</xsl:when>
-								<xsl:when test="limit/text()='Physical'">
-									<xsl:value-of
-							select="'http://urszeidler.de/shr5/1.0#//ChrakterLimits/koerperlich'" />
-								</xsl:when>
-								
-							</xsl:choose>
-						</xsl:attribute>
-						<!-- </attribut> -->
-					</mods>
-				</xsl:when>
-				<xsl:when test="name()='reach'">
-					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-				<xsl:value-of select="number(text())" />
-				</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
-						<xsl:attribute name="attribut">
-							<xsl:value-of
-							select="'http://urszeidler.de/shr5/1.0#//Nahkampfwaffe/reichweite'" />
-					</xsl:attribute>
-						<!-- </attribut> -->
-					</mods>
-				</xsl:when>
-				<xsl:when test="name()='initiativedice' or name()='initiative'">
-					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-				<xsl:value-of select="number(text())" />
-				</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
-						<xsl:attribute name="attribut">
-							<xsl:value-of
-							select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel'" />
-					</xsl:attribute>
-						<!-- </attribut> -->
-					</mods>
-				</xsl:when>
-				<xsl:when test="name()='armor' or  name()='armorvalue' ">
-					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-				<xsl:value-of select="number(text())" />
-				</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
-						<xsl:attribute name="attribut">
-							<xsl:value-of
-							select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
-					</xsl:attribute>
-						<!-- </attribut> -->
-					</mods>
-				</xsl:when>
-				<xsl:when test="name()='specificattribute'">
-					<mods>
-						<xsl:if test="number(text())">
-							<xsl:attribute name="wert">
-						<xsl:value-of select="number(val/text())" />
-					</xsl:attribute>
-						</xsl:if>
-						<!-- <attribut> -->
-						<xsl:attribute name="attribut">
-			<xsl:call-template name="MATCH">
-         <xsl:with-param name="matchingName" select="name/text()" />
-      </xsl:call-template>
-					</xsl:attribute>
-						<!-- </attribut> -->
-					</mods>
-				</xsl:when>
-			</xsl:choose>
-		</xsl:for-each>
-	</xsl:template>
 	<xsl:template name="skill">
 		<xsl:attribute name="ausweichen">
 			<xsl:choose>

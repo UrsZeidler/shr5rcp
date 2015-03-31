@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.actions.ImportChummerAction;
 import de.urszeidler.shr5.ecp.editor.actions.ImportObjectAction;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
@@ -94,6 +95,7 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
         form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
         form.getToolBarManager().add(new ImportObjectAction(form.getShell(), object));
+        form.getToolBarManager().add(new ImportChummerAction(form.getShell(), object));
         addValidationResult(form.getToolBarManager(), object);
         form.getToolBarManager().update(true);
 

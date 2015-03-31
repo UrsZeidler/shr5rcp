@@ -7,16 +7,25 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DirectColorModel;
 import java.awt.image.IndexColorModel;
 import java.awt.image.WritableRaster;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -24,11 +33,15 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -38,12 +51,16 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Shell;
 
 import com.google.common.base.Function;
+import com.google.common.base.Optional;
+import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -52,6 +69,7 @@ import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
@@ -65,11 +83,15 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.shr5.ecp.Activator;
@@ -217,8 +239,8 @@ public class ShadowrunEditingTools {
         };
         return transformer;
     }
-    
-    //TODO : these methods belong to the shadowrunManagementTools
+
+    // TODO : these methods belong to the shadowrunManagementTools
     /**
      * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
      * 
@@ -236,7 +258,7 @@ public class ShadowrunEditingTools {
             PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
             character.getChanges().add(personaChange);
             personaChange.setChangeable(pf);
-//            personaChange.setFrom(0);
+            // personaChange.setFrom(0);
             personaChange.setTo((Integer)value);
             personaChange.applyChanges();
         } else {
@@ -248,12 +270,12 @@ public class ShadowrunEditingTools {
             } else {
                 PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeit);
                 if (advacements != null) {
-                    advacements.setTo(Math.max(advacements.getFrom(),(Integer)value));
+                    advacements.setTo(Math.max(advacements.getFrom(), (Integer)value));
                     advacements.applyChanges();
 
                     persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
                             Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
-                }else if(advacements==null){
+                } else if (advacements == null) {
                     PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
                     character.getChanges().add(personaChange);
                     personaChange.setChangeable(personaFertigkeit);
@@ -271,7 +293,8 @@ public class ShadowrunEditingTools {
      * @param character
      * @param fertigkeitsGruppe
      * @param value
-     * @deprecated use de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools#changeAttributeByAdvacement(ManagedCharacter, EAttribute, Integer)
+     * @deprecated use de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools#changeAttributeByAdvacement(ManagedCharacter, EAttribute,
+     * Integer)
      */
     @Deprecated()
     public static void changeAttributeByAdvacement(ManagedCharacter character, EAttribute attribute, Integer value) {
@@ -291,7 +314,7 @@ public class ShadowrunEditingTools {
             attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
             character.getChanges().add(attributeChange);
             attributeChange.setAttibute(attribute);
-//            attributeChange.setFrom((Integer)eGet);
+            // attributeChange.setFrom((Integer)eGet);
             attributeChange.setTo(value);
             attributeChange.applyChanges();
             persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
@@ -299,7 +322,7 @@ public class ShadowrunEditingTools {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
         } else {
-            attributeChange.setTo(Math.max(attributeChange.getFrom(),(Integer)value));
+            attributeChange.setTo(Math.max(attributeChange.getFrom(), (Integer)value));
             attributeChange.applyChanges();
             persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
         }
@@ -335,12 +358,12 @@ public class ShadowrunEditingTools {
             } else {
                 PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeitsGruppe);
                 if (advacements != null) {
-                    advacements.setTo(Math.max(advacements.getFrom(),(Integer)value));
+                    advacements.setTo(Math.max(advacements.getFrom(), (Integer)value));
                     advacements.applyChanges();
 
                     persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
                             Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
-                }else if(advacements==null){
+                } else if (advacements == null) {
                     PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
                     character.getChanges().add(personaChange);
                     personaChange.setChangeable(personaFertigkeitsGruppe);
@@ -351,7 +374,8 @@ public class ShadowrunEditingTools {
         }
 
     }
-    //TODO : move the transformer to the ShadowrunTools
+
+    // TODO : move the transformer to the ShadowrunTools
     /**
      * Creates a transformer to make a {@link Fertigkeit} object to a {@link PersonaFertigkeit} object referencing the {@link Fertigkeit}. It creates
      * the {@link PersonaFertigkeit} or returns the found one.
@@ -447,6 +471,247 @@ public class ShadowrunEditingTools {
      */
     public static String powerPointsToFloat(int essenz) {
         return essenzToFloat(essenz);
+    }
+
+    /**
+     * Lookup a skill from the reource set by name.
+     * 
+     * @param sb
+     * @return
+     */
+    public static String findObject(final String sb) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof Beschreibbar) {
+                        if (sb.equals(((Beschreibbar)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    /**
+     * Lookup a skill from the reource set by name.
+     * 
+     * @param sb
+     * @return
+     */
+    public static String findSkill(final String sb) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof Fertigkeit) {
+                        if (sb.equals(((Fertigkeit)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    public static String findSkillGroup(final String sb) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof FertigkeitsGruppe) {
+                        if (sb.equals(((FertigkeitsGruppe)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    public static String findSpecies(final String sb) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof Spezies) {
+                        if (sb.equals(((Spezies)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    public static String findSourceBook(final String sb) {
+        if ("SR5".equals(sb))
+            return "f5ec713c-98cd-41f6-a0a4-4a8eaed55b66";
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof SourceBook) {
+                        if (sb.equals(((SourceBook)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    public static String findPersonaType(String adept,String magician,String technomancer) {
+        if("true".equals(adept.toLowerCase())&& "true".equals(magician.toLowerCase()))
+            return "shr5:"+ Shr5Package.Literals.MYSTIC_ADEPT.getName();
+        if("true".equals(adept.toLowerCase()))
+            return "shr5:"+ Shr5Package.Literals.KI_ADEPT.getName();
+        if("true".equals(magician.toLowerCase()))
+            return "shr5:"+ Shr5Package.Literals.ZAUBER.getName();
+        return "shr5:"+ Shr5Package.Literals.MUDAN_PERSONA.getName();
+    }
+    
+    public static String findPriority(final String priorityName,final String systemName, String categoryName) {
+        final EClass eclass;
+        if("resources".equals(categoryName))
+            eclass = Shr5managementPackage.Literals.RESOURCEN;
+        else if ("skills".equals(categoryName))
+            eclass = Shr5managementPackage.Literals.SKILL;
+        else if ("attribute".equals(categoryName))
+            eclass = Shr5managementPackage.Literals.ATTRIBUTES;
+        else
+            eclass = Shr5managementPackage.Literals.RESOURCEN;
+            
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (systemName != null)
+                    if (input instanceof Shr5System) {
+                        if (systemName.equals(((Shr5System)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext()){
+            
+            Shr5System eObject = (Shr5System)iterator.next();
+            Optional<PriorityCategorie> firstMatch = FluentIterable.from(eObject.getPriorities()).firstMatch(new com.google.common.base.Predicate<PriorityCategorie>() {
+
+                @Override
+                public boolean apply(PriorityCategorie input) {
+                    return  input.eClass().equals(eclass) && priorityName.substring(0,1).equals(input.getCategorieName());
+                }
+            });
+            if (firstMatch.isPresent())
+                return getId(firstMatch.get());
+        }
+//            return getId(iterator.next());
+        return "";
+    }
+
+    /**
+     * Copies the object with the id or the name and serialize it as xml.
+     * 
+     * @param name
+     * @param id
+     * @param nodeName
+     * @return
+     */
+    public static String copyObject(final String name, final String id, String nodeName) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (name != null)
+                    if (input instanceof Beschreibbar) {
+                        Beschreibbar input2 = (Beschreibbar)input;
+                        if (getId(input2).equals(id))
+                            return true;
+
+                        if (name.equals(input2.getName()))
+                            return true;
+
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext()) {
+            EObject eobject = iterator.next();
+
+            Map<Object, Object> options = new HashMap<Object, Object>();
+            // options.put(XMIResource.OPTION_SUPPRESS_XMI, true);
+            options.put(XMIResource.NO_NAMESPACE_SCHEMA_LOCATION, true);
+            options.put(XMIResource.OPTION_ENCODING, "UTF-8");
+            options.put(XMIResource.OPTION_SCHEMA_LOCATION, false);
+            options.put(XMIResource.OPTION_DECLARE_XML, false);
+            options.put(XMIResource.SCHEMA_LOCATION, false);
+
+            EObject copyWithParentId = copyWithParentId(eobject);
+            try {
+                String type = copyWithParentId.eClass().getName();
+                final Shr5ResourceFactoryImpl resourceSet = new Shr5ResourceFactoryImpl();
+                final XMIResource resource = (XMIResource)resourceSet.createResource(URI.createURI("http:///My.xml"));
+                resource.getContents().add(copyWithParentId);
+                StringWriter out = new StringWriter();
+                resource.save(out, options);
+                return out.toString()
+                        //
+                        .replaceFirst("^<.* xmlns:shr5=\"http://urszeidler.de/shr5/1.0\"", "\n<" + nodeName + " xsi:type=\"shr5:" + type + "\" ")
+                        .replaceAll("</shr5:.*>", "</" + nodeName + ">");
+            } catch (final IOException e) {
+            }
+
+        }
+        return "";
+    }
+
+    /**
+     * Creates a copy of the eobject, when it is an {@link Identifiable} the parent id will be set to the id of the org object when the org object has
+     * no parentId set. So the copied object has the org id as parentId or the parentId.
+     * 
+     * @param eo the org {@link EObject}
+     * @return the copy
+     */
+    public static EObject copyWithParentId(EObject eo) {
+        EObject copy = EcoreUtil.copy(eo);
+        if (eo.eResource() instanceof XMLResource) {
+            XMLResource xmlRes = (XMLResource)eo.eResource();
+            String id = xmlRes.getID(eo);
+            if (copy instanceof Identifiable) {
+                String parentId = ((Identifiable)eo).getParentId();
+                if (parentId != null && !parentId.isEmpty())
+                    id = parentId;
+
+                Identifiable iden = (Identifiable)copy;
+                iden.setParentId(id);
+            }
+        }
+        return copy;
     }
 
     /**

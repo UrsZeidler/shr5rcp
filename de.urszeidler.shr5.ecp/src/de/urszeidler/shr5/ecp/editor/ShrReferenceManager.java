@@ -496,20 +496,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      * @return the copy
      */
     public static EObject copyWithParentId(EObject eo) {
-        EObject copy = EcoreUtil.copy(eo);
-        if (eo.eResource() instanceof XMLResource) {
-            XMLResource xmlRes = (XMLResource)eo.eResource();
-            String id = xmlRes.getID(eo);
-            if (copy instanceof Identifiable) {
-                String parentId = ((Identifiable)eo).getParentId();
-                if (parentId != null && !parentId.isEmpty())
-                    id = parentId;
-
-                Identifiable iden = (Identifiable)copy;
-                iden.setParentId(id);
-            }
-        }
-        return copy;
-    }
+       return ShadowrunEditingTools.copyWithParentId(eo);
+     }
 
 }
