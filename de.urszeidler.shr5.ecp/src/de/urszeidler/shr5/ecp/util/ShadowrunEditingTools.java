@@ -16,10 +16,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.Map.Entry;
 
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -33,15 +30,12 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -56,6 +50,7 @@ import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -63,6 +58,7 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
@@ -504,6 +500,31 @@ public class ShadowrunEditingTools {
      * @param sb
      * @return
      */
+    public static String findTradition(final String sb) {
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (sb != null)
+                    if (input instanceof MagischeTradition) {
+                        if (sb.equals(((MagischeTradition)input).getName()))
+                            return true;
+                    }
+                return false;
+            }
+        });
+        Iterator<EObject> iterator = filteredObject.iterator();
+        if (iterator.hasNext())
+            return getId(iterator.next());
+        return "";
+    }
+
+    /**
+     * Lookup a skill from the reource set by name.
+     * 
+     * @param sb
+     * @return
+     */
     public static String findSkill(final String sb) {
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
@@ -588,7 +609,7 @@ public class ShadowrunEditingTools {
         if("true".equals(adept.toLowerCase()))
             return "shr5:"+ Shr5Package.Literals.KI_ADEPT.getName();
         if("true".equals(magician.toLowerCase()))
-            return "shr5:"+ Shr5Package.Literals.ZAUBER.getName();
+            return "shr5:"+ Shr5Package.Literals.MAGIER.getName();
         return "shr5:"+ Shr5Package.Literals.MUDAN_PERSONA.getName();
     }
     
@@ -641,7 +662,7 @@ public class ShadowrunEditingTools {
      * @param nodeName
      * @return
      */
-    public static String copyObject(final String name, final String id, String nodeName) {
+    public static String copyObject(final String name, final String id,final String nodeName) {
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -649,6 +670,10 @@ public class ShadowrunEditingTools {
                 if (name != null)
                     if (input instanceof Beschreibbar) {
                         Beschreibbar input2 = (Beschreibbar)input;
+                        if("inventar".equals(nodeName))
+                            if (!(input2 instanceof AbstraktGegenstand)) 
+                                return false;
+                        
                         if (getId(input2).equals(id))
                             return true;
 

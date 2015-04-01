@@ -43,7 +43,6 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;

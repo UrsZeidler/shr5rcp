@@ -63,7 +63,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
-import de.urszeidler.eclipse.shr5Management.LifeModulesSystem;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;

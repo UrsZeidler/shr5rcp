@@ -11,16 +11,12 @@ import java.util.Map;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
@@ -39,7 +35,6 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.ResourceManager;
@@ -47,7 +42,6 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl;
 import de.urszeidler.shr5.ecp.Activator;
-import de.urszeidler.shr5.ecp.service.ScriptServiceImpl;
 
 /**
  * @author urs
@@ -99,36 +93,22 @@ public class ImportChummerAction extends Action {
         final File file = new File(filename);
         dialogSettings.put("PATH_OPEN_CHUMMER", file.getParentFile().getAbsolutePath());
 
-//        File stylesheet = new File("/home/urs/git/shr5rcp/build/xsl/ch2shr5Character.xsl");
+        // File stylesheet = new File("/home/urs/git/shr5rcp/build/xsl/ch2shr5Character.xsl");
         File outFile;
         try {
             outFile = File.createTempFile("charcter-import", "xmi");
 
             StreamSource stylesource = new StreamSource(this.getClass().getResourceAsStream("ch2shr5Character.xsl"));
-
             Transformer transformer;
-            try {
-                transformer = TransformerFactory.newInstance().newTransformer(stylesource);
+            transformer = TransformerFactory.newInstance().newTransformer(stylesource);
 
-                Source xmlInput = new StreamSource(file);
-                Result xmlOutput = new StreamResult(outFile);// new DOMResult();
-                transformer.transform(xmlInput, xmlOutput);
-            } catch (TransformerConfigurationException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (TransformerFactoryConfigurationError e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (TransformerException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-
+            Source xmlInput = new StreamSource(file);
+            Result xmlOutput = new StreamResult(outFile);// new DOMResult();
+            transformer.transform(xmlInput, xmlOutput);
             // doAction(new NullProgressMonitor());
 
             final URI uri = URI.createFileURI(outFile.getAbsolutePath());
-            boolean imported = false;
-            Map<?, ?> options = new HashMap<Object, Object>();
+            Map<Object, Object> options = new HashMap<Object, Object>();
 
             final Shr5ResourceFactoryImpl resourceSet = new Shr5ResourceFactoryImpl();
             final XMIResource resource = (XMIResource)resourceSet.createResource(uri);
@@ -144,12 +124,11 @@ public class ImportChummerAction extends Action {
                     } else {
                         editingDomain.getCommandStack().execute(new SetCommand(editingDomain, currentEObject, eReference, eObjectImport));
                     }
-                    imported = true;
                     break;
                 }
             }
 
-        } catch (IOException e1) {
+        } catch (Exception e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }

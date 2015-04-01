@@ -29,7 +29,6 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.ResourceManager;
@@ -37,7 +36,6 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl;
 import de.urszeidler.shr5.ecp.Activator;
-import de.urszeidler.shr5.ecp.service.ScriptServiceImpl;
 
 /**
  * @author urs

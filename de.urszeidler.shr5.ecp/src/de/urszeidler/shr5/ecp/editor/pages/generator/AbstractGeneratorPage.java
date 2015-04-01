@@ -48,7 +48,6 @@ import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
