@@ -42,6 +42,7 @@ public class ShadowrunTextTools {
     private static NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
     private static Feuerwaffe fiereweapon = Shr5Factory.eINSTANCE.createFeuerwaffe();
     private static DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
+    private static DateFormat dateTimeFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
     /**
      * Returns the localized feature name.
@@ -144,6 +145,13 @@ public class ShadowrunTextTools {
             return "unset";
         
         return dateFormat.format(date);
+     }
+    
+    public static String formatDateTime(Date date) {
+        if(date==null)
+            return "unset";
+        
+        return dateTimeFormat.format(date);
      }
      
     /**

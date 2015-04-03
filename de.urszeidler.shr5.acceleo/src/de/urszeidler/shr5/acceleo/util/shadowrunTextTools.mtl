@@ -28,6 +28,9 @@
 [query public formatDate(object : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDate(java.util.Date)', Sequence{object})
 /]
+[query public formatDateTime(object : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDateTime(java.util.Date)', Sequence{object})
+/]
 
 [query public createNumberList(count : Integer) : OrderedSet(String)
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'createNumberList(java.lang.Integer)', Sequence{count})
