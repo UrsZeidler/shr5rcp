@@ -1337,6 +1337,35 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ifsWB9ASEeSAqv2o9Il5Fg" grade="2" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
           <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_ifsWCNASEeSAqv2o9Il5Fg" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
         </modules>
+        <modules xmi:id="_Y7R8cNrGEeSal4EDlaUr4w" name="CAS Denver" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_Y7R8cdrGEeSal4EDlaUr4w" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Y7R8ctrGEeSal4EDlaUr4w" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 __sCUYNASEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Y7R8c9rGEeSal4EDlaUr4w" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Y7R8dNrGEeSal4EDlaUr4w" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Y7R8ddrGEeSal4EDlaUr4w" grade="1" skill="_iS-6QNATEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_mcykMNrHEeSal4EDlaUr4w" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_pBJXUNrHEeSal4EDlaUr4w" grade="1" skill="4952de53-b333-45cd-bceb-cffe57b1e5a6"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_rvhCENrHEeSal4EDlaUr4w" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_uI4tMNrHEeSal4EDlaUr4w" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_xABSYNrHEeSal4EDlaUr4w" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+        </modules>
+        <modules xmi:id="_4TDbINrHEeSal4EDlaUr4w" name="CAS SINless" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_4TDbIdrHEeSal4EDlaUr4w" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4TDbItrHEeSal4EDlaUr4w" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 __sCUYNASEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4TDbI9rHEeSal4EDlaUr4w" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4TDbJNrHEeSal4EDlaUr4w" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4TDbJdrHEeSal4EDlaUr4w" grade="1" skill="_iS-6QNATEeSAqv2o9Il5Fg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_7vcCcNrHEeSal4EDlaUr4w" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_-l9joNrHEeSal4EDlaUr4w" grade="1" selectOne="_xbApcNrAEeSal4EDlaUr4w"/>
+        </modules>
         <modules xmi:id="_cBxawNGbEeS4ndSijGfJ0Q" name="NAN (Algonkian-Manitou Council)" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
           <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_cBxawdGbEeS4ndSijGfJ0Q" value="_vsYkMNGbEeS4ndSijGfJ0Q">
             <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
@@ -10088,6 +10117,9 @@
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_cDa04NWeEeSzd99pVrWJLg" name="Academic Knowledge: Mathematics" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_xbApcNrAEeSal4EDlaUr4w" name="Knowledge: Denver" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
         </entries>
       </entries>
     </entries>
