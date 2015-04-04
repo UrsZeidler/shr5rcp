@@ -172,6 +172,17 @@
       <xsd:enumeration value="wil_int"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="armorModificationType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="ChemicalProtection"/>
+      <xsd:enumeration value="ChemicalSeal"/>
+      <xsd:enumeration value="FireResistance"/>
+      <xsd:enumeration value="Insulation"/>
+      <xsd:enumeration value="Nonconductivity"/>
+      <xsd:enumeration value="ShockFrills"/>
+      <xsd:enumeration value="ThermalDamping"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -792,6 +803,9 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="kmods" type="shr5:KleindungsModifikator"/>
+        </xsd:choice>
         <xsd:attribute name="ruestung" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -2431,4 +2445,30 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="TransferAmount" type="shr5:TransferAmount"/>
+  <xsd:complexType name="KleindungsModifikator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="rating" type="xsd:int"/>
+        <xsd:attribute name="type" type="shr5:armorModificationType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KleindungsModifikator" type="shr5:KleindungsModifikator"/>
 </xsd:schema>

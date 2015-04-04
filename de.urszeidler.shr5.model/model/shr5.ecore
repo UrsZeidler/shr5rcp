@@ -364,11 +364,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="kikraft" upperBound="-1"
         eType="#//KiKraft" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Kleidung" eSuperTypes="#//AbstraktGegenstand">
+  <eClassifiers xsi:type="ecore:EClass" name="Kleidung" eSuperTypes="#//AbstraktGegenstand #//Capacity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Defines the clothes and armor."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruestung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kmods" upperBound="-1"
+        eType="#//KleindungsModifikator" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffeModifikator" eSuperTypes="#//AbstraktModifikatoren #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ep" eType="#//FeuwerwaffenErweiterung"/>
@@ -1214,5 +1216,20 @@
         eType="#//Credstick"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" lowerBound="1" eType="#//Credstick"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="amountToTransfer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KleindungsModifikator" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//armorModificationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="armorModificationType">
+    <eLiterals name="ChemicalProtection"/>
+    <eLiterals name="ChemicalSeal"/>
+    <eLiterals name="FireResistance"/>
+    <eLiterals name="Insulation"/>
+    <eLiterals name="Nonconductivity"/>
+    <eLiterals name="ShockFrills"/>
+    <eLiterals name="ThermalDamping"/>
   </eClassifiers>
 </ecore:EPackage>

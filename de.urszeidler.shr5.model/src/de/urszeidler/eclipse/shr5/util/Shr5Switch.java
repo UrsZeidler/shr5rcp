@@ -481,6 +481,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 Kleidung kleidung = (Kleidung)theEObject;
                 T result = caseKleidung(kleidung);
                 if (result == null) result = caseAbstraktGegenstand(kleidung);
+                if (result == null) result = caseCapacity(kleidung);
                 if (result == null) result = caseQuelle(kleidung);
                 if (result == null) result = caseGeldWert(kleidung);
                 if (result == null) result = caseBeschreibbar(kleidung);
@@ -1544,6 +1545,16 @@ public class Shr5Switch<T> extends Switch<T> {
                 TransferAmount transferAmount = (TransferAmount)theEObject;
                 T result = caseTransferAmount(transferAmount);
                 if (result == null) result = caseCredstickTransaction(transferAmount);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KLEINDUNGS_MODIFIKATOR: {
+                KleindungsModifikator kleindungsModifikator = (KleindungsModifikator)theEObject;
+                T result = caseKleindungsModifikator(kleindungsModifikator);
+                if (result == null) result = caseBeschreibbar(kleindungsModifikator);
+                if (result == null) result = caseQuelle(kleindungsModifikator);
+                if (result == null) result = caseGeldWert(kleindungsModifikator);
+                if (result == null) result = caseIdentifiable(kleindungsModifikator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -3303,6 +3314,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseTransferAmount(TransferAmount object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Kleindungs Modifikator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Kleindungs Modifikator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseKleindungsModifikator(KleindungsModifikator object) {
         return null;
     }
 

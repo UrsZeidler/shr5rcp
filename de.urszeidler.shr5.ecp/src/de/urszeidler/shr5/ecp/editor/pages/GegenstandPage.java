@@ -160,6 +160,8 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEGENSTAND__STUFE, grpGegenstand);
         } else if (object instanceof Kleidung) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__RUESTUNG, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, grpGegenstand, new LabelEntry());
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__KMODS, grpGegenstand);
         } else if (object instanceof Credstick) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand, new LabelMoneyEntry());

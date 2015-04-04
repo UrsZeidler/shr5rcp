@@ -8133,6 +8133,13 @@
             <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
           </mods>
         </entries>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_SnkHkNsGEeSdR_XH9T_xQQ" name="Chemical Protection" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="250" rating="1"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_vBOwANr_EeSbhrVg2w5wvA" name="Chemical Seal" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12R" wertValue="3000" rating="1" type="ChemicalSeal"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_z7kjENr_EeSbhrVg2w5wvA" name="Fire Resistance" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="250" rating="1" type="FireResistance"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_Htq0kNsAEeSbhrVg2w5wvA" name="Insulation" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="250" rating="1" type="FireResistance"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_cgUVYNsGEeSdR_XH9T_xQQ" name="Nonconductivity" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6" wertValue="250" rating="1" type="Nonconductivity"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_mUlr0NsGEeSdR_XH9T_xQQ" name="Shock Frills" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="250" rating="1" type="ShockFrills"/>
+        <entries xsi:type="shr5:KleindungsModifikator" xmi:id="_tq3V0NsGEeSdR_XH9T_xQQ" name="Thermal Damping" page="438" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10R" wertValue="500" rating="1" type="ThermalDamping"/>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ELl18DnTEeSe6_w6Jrbqxg" name="vehicles">
         <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="c0d3e7fd-d5fd-48c4-b49d-0c7dea26895d" name="Dodge Scoot (Scooter)" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="3000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="4" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="4" sitze="1" handlingGelaende="3"/>

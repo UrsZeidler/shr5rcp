@@ -614,6 +614,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createTransferAmountAdapter();
             }
             @Override
+            public Adapter caseKleindungsModifikator(KleindungsModifikator object) {
+                return createKleindungsModifikatorAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2268,6 +2272,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createTransferAmountAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.KleindungsModifikator <em>Kleindungs Modifikator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.KleindungsModifikator
+     * @generated
+     */
+    public Adapter createKleindungsModifikatorAdapter() {
         return null;
     }
 

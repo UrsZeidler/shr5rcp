@@ -17,6 +17,7 @@ import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
+import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -147,6 +148,10 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,controlGridData);
         }else if (object instanceof FernkampfwaffeModifikator) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
+        }else if (object instanceof KleindungsModifikator) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__CAPACITY, grpGegenstand,new LabelEntry());
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__TYPE, grpGegenstand);
         }
         
         

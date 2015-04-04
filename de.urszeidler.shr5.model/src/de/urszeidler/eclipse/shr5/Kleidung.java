@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +18,7 @@ package de.urszeidler.eclipse.shr5;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Kleidung#getRuestung <em>Ruestung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Kleidung#getKmods <em>Kmods</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,7 +26,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Kleidung extends AbstraktGegenstand {
+public interface Kleidung extends AbstraktGegenstand, Capacity {
 	/**
      * Returns the value of the '<em><b>Ruestung</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -49,5 +52,21 @@ public interface Kleidung extends AbstraktGegenstand {
      * @generated
      */
 	void setRuestung(int value);
+
+    /**
+     * Returns the value of the '<em><b>Kmods</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.KleindungsModifikator}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Kmods</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Kmods</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKleidung_Kmods()
+     * @model containment="true"
+     * @generated
+     */
+    EList<KleindungsModifikator> getKmods();
 
 } // Kleidung

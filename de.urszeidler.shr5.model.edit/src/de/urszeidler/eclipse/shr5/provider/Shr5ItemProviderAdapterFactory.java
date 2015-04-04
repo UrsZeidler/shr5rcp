@@ -2035,6 +2035,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KleindungsModifikator} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected KleindungsModifikatorItemProvider kleindungsModifikatorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KleindungsModifikator}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createKleindungsModifikatorAdapter() {
+        if (kleindungsModifikatorItemProvider == null) {
+            kleindungsModifikatorItemProvider = new KleindungsModifikatorItemProvider(this);
+        }
+
+        return kleindungsModifikatorItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2216,6 +2239,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (magischeTraditionItemProvider != null) magischeTraditionItemProvider.dispose();
         if (shoppingTransactionItemProvider != null) shoppingTransactionItemProvider.dispose();
         if (transferAmountItemProvider != null) transferAmountItemProvider.dispose();
+        if (kleindungsModifikatorItemProvider != null) kleindungsModifikatorItemProvider.dispose();
     }
 
     @Override

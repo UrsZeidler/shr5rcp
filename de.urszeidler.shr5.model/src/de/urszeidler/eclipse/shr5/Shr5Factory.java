@@ -769,6 +769,15 @@ public interface Shr5Factory extends EFactory {
     TransferAmount createTransferAmount();
 
     /**
+     * Returns a new object of class '<em>Kleindungs Modifikator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Kleindungs Modifikator</em>'.
+     * @generated
+     */
+    KleindungsModifikator createKleindungsModifikator();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

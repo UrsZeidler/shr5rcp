@@ -140,6 +140,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.MAGISCHE_TRADITION: return createMagischeTradition();
             case Shr5Package.SHOPPING_TRANSACTION: return createShoppingTransaction();
             case Shr5Package.TRANSFER_AMOUNT: return createTransferAmount();
+            case Shr5Package.KLEINDUNGS_MODIFIKATOR: return createKleindungsModifikator();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -197,6 +198,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createCyberwareTypeFromString(eDataType, initialValue);
             case Shr5Package.ENZUG:
                 return createEnzugFromString(eDataType, initialValue);
+            case Shr5Package.ARMOR_MODIFICATION_TYPE:
+                return createarmorModificationTypeFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -256,6 +259,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertCyberwareTypeToString(eDataType, instanceValue);
             case Shr5Package.ENZUG:
                 return convertEnzugToString(eDataType, instanceValue);
+            case Shr5Package.ARMOR_MODIFICATION_TYPE:
+                return convertarmorModificationTypeToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -1095,6 +1100,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public KleindungsModifikator createKleindungsModifikator() {
+        KleindungsModifikatorImpl kleindungsModifikator = new KleindungsModifikatorImpl();
+        return kleindungsModifikator;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1530,6 +1545,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertEnzugToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public armorModificationType createarmorModificationTypeFromString(EDataType eDataType, String initialValue) {
+        armorModificationType result = armorModificationType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertarmorModificationTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

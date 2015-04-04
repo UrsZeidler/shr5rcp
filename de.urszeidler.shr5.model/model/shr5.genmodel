@@ -130,6 +130,15 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//Enzug/wil_cha"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//Enzug/wil_int"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//armorModificationType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/ChemicalProtection"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/ChemicalSeal"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/FireResistance"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/Insulation"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/Nonconductivity"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/ShockFrills"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//armorModificationType/ThermalDamping"/>
+    </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
@@ -352,6 +361,7 @@
     <genClasses ecoreClass="shr5.ecore#//Kleidung">
       <genFeatures createChild="false" propertyDescription="The armor value of the cloth."
           ecoreFeature="ecore:EAttribute shr5.ecore#//Kleidung/ruestung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Kleidung/kmods"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FernkampfwaffeModifikator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffeModifikator/ep"/>
@@ -759,6 +769,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//TransferAmount/dest"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//TransferAmount/amountToTransfer"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//KleindungsModifikator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/rating"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
