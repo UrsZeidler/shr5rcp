@@ -111,6 +111,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
         descriptionMap.put("Generator system", "A simple text export for the generator system");
         descriptionMap.put("Life Module", "A simple text export for the a life module.");
+        descriptionMap.put("Fo Character sheet", "A pdf based character sheet containing most infos.");
+        descriptionMap.put("Bound Spirits", "A pdf sheet for the bound spirits of a character.");
         
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
