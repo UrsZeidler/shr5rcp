@@ -3,6 +3,7 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import de.urszeidler.eclipse.shr5.Capacity;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -11,13 +12,16 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+
 import java.lang.reflect.InvocationTargetException;
+import java.math.BigDecimal;
 import java.util.Collection;
 
 /**
@@ -372,6 +376,19 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
         result.append(ruestung);
         result.append(')');
         return result.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        if(getWertValue()==null)
+            return new BigDecimal(0);
+        
+        BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getKmods());
+        return getWertValue().add(calcListenWert);
     }
 
 } //KleidungImpl

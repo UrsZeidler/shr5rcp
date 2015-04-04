@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
@@ -153,6 +155,25 @@ public class KleidungTest extends AbstraktGegenstandTest {
         
         e.setType(armorModificationType.SHOCK_FRILLS);
         assertEquals(4, getFixture().getCapacityRemains());
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
+     * @generated not 
+     */
+    public void testGetCapacityRemains_sum() {
+        getFixture().setWertValue(new BigDecimal(1));
+        assertEquals(1, getFixture().getWert().intValue());
+
+        KleindungsModifikator e = Shr5Factory.eINSTANCE.createKleindungsModifikator();
+        e.setWertValue(new BigDecimal(1));
+        e.setRating(1);
+        getFixture().getKmods().add(e);
+        assertEquals(2, getFixture().getWert().intValue());
+
+  
     }
 
     /**
