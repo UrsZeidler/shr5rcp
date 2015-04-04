@@ -97,6 +97,8 @@
     </fo:table-body>
    </fo:table>
 
+[comment][printRiggerSection(aManagedCharacter)/][/comment]
+
 [printSinLicense(aManagedCharacter)/]
 
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer) and not aManagedCharacter.persona.oclAsType(Zauberer).zauber->isEmpty())]
@@ -122,7 +124,7 @@
 <!-- colum one -->
  <fo:table-cell>
 [if (not aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->isEmpty())]
-[printSectionTitel('Meele'.localizedString())/]
+[printSectionTitel('_UI_Nahkampfwaffe_type'.localizedString())/]
 [for (n : Nahkampfwaffe | aManagedCharacter.inventar->selectByKind(Nahkampfwaffe))]
 		<fo:block margin-top="10pt" >
 [printMeleeWeapon(n)  /]
@@ -131,7 +133,7 @@
 [/if]
 [if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
 <fo:block margin-top="10pt" ></fo:block  >
-[printSectionTitel('Amonition'.localizedString())/]
+[printSectionTitel('_UI_Munition_type'.localizedString())/]
 [for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
 		<fo:block font-size="small"  >
 [m.name  /] [m.type.getText()/] [m.anzahl/]
@@ -140,17 +142,26 @@
 [/if]
 [if (not aManagedCharacter.inventar->selectByKind(Magazin)->isEmpty())]
 <fo:block margin-top="10pt" ></fo:block  >
-[printSectionTitel('Magazin'.localizedString())/]
+[printSectionTitel('_UI_Magazin_type'.localizedString())/]
 [for (m : Magazin | aManagedCharacter.inventar->selectByKind(Magazin))]
 		<fo:block font-size="small"  >
 [m.getText()  /]
 		</fo:block  >
 [/for]
 [/if]
+[if (not aManagedCharacter.inventar->selectByKind(Kleidung)->isEmpty())]
+<fo:block margin-top="10pt" ></fo:block  >
+[printSectionTitel('_UI_Kleidung_type'.localizedString())/]
+[for (m : Kleidung | aManagedCharacter.inventar->selectByKind(Kleidung))]
+		<fo:block font-size="small"  >
+[m.getText()  /] [m.ruestung/]
+		</fo:block  >
+[/for]
+[/if]
 
 </fo:table-cell>
 <fo:table-cell number-columns-spanned="2">
-[printSectionTitel('Ranged'.localizedString())/]
+[printSectionTitel('_UI_AbstaktFernKampfwaffe_type'.localizedString())/]
 [for (fk : AbstaktFernKampfwaffe | aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe))]
 		<fo:block margin-top="10pt" keep-together="always">
 [printRangeWeapon(fk)/]
@@ -198,8 +209,37 @@
 [/file]
 [/template]
 
+[template public printRiggerSection (character : ManagedCharacter) ]
+<!-- Rigger stuff -->
+<fo:block margin-top="10pt" ></fo:block  >
+  <fo:table margin="3pt" >
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell>
+[for (cy : RiggerCommandConsole | character.inventar->selectByType(RiggerCommandConsole))]
+        <fo:block margin-top="10pt" keep-together="always">
+[printRiggerConsoleDetail(cy) /]
+
+		</fo:block  >
+[/for]
+		<fo:block margin-top="10pt" >
+[for (f : Fahrzeug | character.vehicels->selectByKind(Drohne))]
+[printVehicle(f)/]
+[/for]
+		</fo:block  >
+
+
+
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
 [template public printCharacterChanges (aManagedCharacter : ManagedCharacter) ]
-[printSectionTitel('changes'.localizedString())/]
+[printSectionTitel('_UI_Changes_type'.localizedString())/]
  <fo:table font-size="small">
     <fo:table-column column-width="10%" />
    <fo:table-column column-width="10%" />
@@ -207,10 +247,10 @@
    <fo:table-column column-width="10%" />
     <fo:table-body  >
      	<fo:table-row>
-[printCellAttribute('game date'.localizedString(),'  font-style="italic" ')/]	
-[printCellAttribute('applied'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('change'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttRight('karma'.localizedString(),' font-size="small" font-style="italic" ')/]	
+[printCellAttribute('_UI_Changes_date_feature'.localizedString(),'  font-style="italic" ')/]	
+[printCellAttribute('_UI_Changes_changeApplied_feature'.localizedString(),' font-size="small" font-style="italic" ')/]	
+[printCellAttribute('_UI_CharacterChange_type'.localizedString(),' font-size="small" font-style="italic" ')/]	
+[printCellAttRight('_UI_Changes_karmaCost_feature'.localizedString(),' font-size="small" font-style="italic" ')/]	
 		</fo:table-row>
 [for (c : Changes | aManagedCharacter.changes)]
      	<fo:table-row>
@@ -223,6 +263,15 @@
   	 </fo:table-body>
   	 </fo:table>
 
+[/template]
+
+[template public printWeapon(m : AbstaktWaffe)]
+[if (m.oclIsKindOf(Nahkampfwaffe))]
+[printMeleeWeapon(m.oclAsType(Nahkampfwaffe))/]
+[/if]
+[if (m.oclIsKindOf(AbstaktFernKampfwaffe))]
+[printRangeWeapon(m.oclAsType(AbstaktFernKampfwaffe))/]
+[/if]
 [/template]
 
 [template public printMeleeWeapon(m : Nahkampfwaffe)]
@@ -437,12 +486,12 @@
    <fo:table-row >
       <fo:table-cell>
 		<fo:block  >
-[printOneSvgMonitorName('Phy', persona.zustandKoerperlichMax, 3, 25, 25) /]
+[printOneSvgMonitorName('_UI_KoerperPersona_zustandKoerperlich_feature'.localizedString(), persona.zustandKoerperlichMax, 3, 25, 25) /]
 		</fo:block  >
       </fo:table-cell>
      <fo:table-cell>
 		<fo:block  >
-[printOneSvgMonitorName('Mental', persona.zustandGeistigMax, 3, 25, 25) /]
+[printOneSvgMonitorName('_UI_KoerperPersona_zustandGeistig_feature'.localizedString(), persona.zustandGeistigMax, 3, 25, 25) /]
 		</fo:block  >
       </fo:table-cell>
 	</fo:table-row>
@@ -740,11 +789,21 @@
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-column column-width="30%" />
+    <fo:table-column column-width="64px"  />
     <fo:table-body  >
 
      <fo:table-row>
 [printCellSpanned(aManagedCharacter.persona.name,3)/]
 [printCellRight(aManagedCharacter.persona.spezies.getText())/]
+     <fo:table-cell number-rows-spanned="6">
+       <fo:block margin-left="5px" display-align="right" text-align="right">
+[if (not aManagedCharacter.persona.image.oclIsUndefined())]
+<fo:external-graphic  src="url([aManagedCharacter.persona.toBase64Image()/])"/>
+[/if]
+       </fo:block >
+     </fo:table-cell>
+
+
      </fo:table-row>
      <fo:table-row>
 [printCell('type'.localizedString())/]
@@ -766,9 +825,9 @@
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_height_feature'.localizedString())/]
-[printCell(aManagedCharacter.height)/]
+[printCell(aManagedCharacter.height+' cm')/] 
 [printCell('_UI_ManagedCharacter_weight_feature'.localizedString())/]
-[printCell(aManagedCharacter.weight)/]
+[printCell(aManagedCharacter.weight+' kg')/] 
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_karmaGaint_feature'.localizedString())/]
@@ -1042,10 +1101,17 @@
     <fo:table-column column-width="10%"  />
     <fo:table-column  />
     <fo:table-body  >
+[printVehicleAttributes(vehicle)/]
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printVehicleAttributes (vehicle : Fahrzeug) ]
      <fo:table-row>
 [printCell('_UI_Fahrzeug_geschwindigkeit_feature'.localizedString())/]
 [printCellRight(vehicle.vehicleSpeed())/]
-     <fo:table-cell number-rows-spanned="6">
+     <fo:table-cell number-rows-spanned="7">
 		<fo:block>
 [printOneSvgMonitorName('Vehicle damage'.localizedString(),vehicle.zustandMax,6,20,20)/]
 		</fo:block>
@@ -1072,10 +1138,53 @@
 [printCell('_UI_Fahrzeug_rumpf_feature'.localizedString())/]
 [printCellRight(vehicle.vehicleBody())/]
      </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_Fahrzeug_panzer_feature'.localizedString())/]
+[printCellRight(vehicle.panzer)/]
+     </fo:table-row>
 
+[/template]
+
+[template public printVehicle (vehicle : Drohne) ]
+[printSectionTitel(vehicle.getText())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="30%" />
+    <fo:table-column column-width="10%"  />
+    <fo:table-column  />
+    <fo:table-body  >
+[printVehicleAttributes(vehicle)/]
+
+[for (fm : FahrzeugModifikation | vehicle.modifizierungen)]
+    <fo:table-row>
+[printFahrzeugModifikation(fm)/]
+     </fo:table-row>
+[/for]
+[for (prg : RiggerProgram | vehicle.storedPrograms)]
+     <fo:table-row>
+[printCellSpanned(prg.getText(),3)/]
+	</fo:table-row>
+[/for]
 
     </fo:table-body>
    </fo:table>
+[/template]
+
+[template public printFahrzeugModifikation (fm : FahrzeugModifikation) ]
+[printCellSpanned(fm.getText(),3)/]
+[/template]
+
+[template public printFahrzeugModifikation (fm : WeaponMount) ]
+    <fo:table-cell number-columns-spanned="3">
+       <fo:block >
+['_UI_WeaponMount_type'.localizedString()/]
+       </fo:block >
+       <fo:block >
+[printWeapon(fm.weapon)/]
+       </fo:block >
+     </fo:table-cell>
+
+
+
 [/template]
 
 [template public printCyberdeckDetail (deck : Cyberdeck) ]
@@ -1391,6 +1500,21 @@ font-size="small"
 [escapeXML(expression)/]</fo:block>
       </fo:table-cell>
 [/template]
+
+
+[template public defaultBorderAll(arg : OclAny)]
+ border-right-style="outset" border-left-style="outset" 
+border-top-color="rgb(0,0,0)" 
+border-bottom-width="1pt" border-bottom-style="outset" 
+border-top-style="outset" border-left-width="1pt" border-top-width="1pt" 
+border-left-color="rgb(0,0,0)" border-right-color="rgb(0,0,0)" 
+border-bottom-color="rgb(0,0,0)" border-right-width="1pt"
+[/template]
+
+[template public defaultBorderTop(arg : OclAny)]
+border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt" 
+[/template]
+
 
 [**
  * Print the simple end.

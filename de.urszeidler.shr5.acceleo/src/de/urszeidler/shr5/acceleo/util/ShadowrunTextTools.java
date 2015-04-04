@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.acceleo.util;
 
+import java.io.ByteArrayOutputStream;
 import java.math.BigDecimal;
 import java.text.CharacterIterator;
 import java.text.DateFormat;
@@ -13,13 +14,19 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.commons.codec.binary.Base64;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.graphics.ImageLoader;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -58,6 +65,22 @@ public class ShadowrunTextTools {
 
     public static String getObjectText(Object element) {
         return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
+    }
+
+    public static String getImageBase64(Object element) {
+        if (element instanceof Beschreibbar) {
+            Beschreibbar b = (Beschreibbar)element;
+            Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(64f, b.getImage());
+           ImageLoader imageLoader = new ImageLoader();
+           imageLoader.data = new ImageData[] {imageScaledBy.getImageData()};
+           ByteArrayOutputStream stream = new ByteArrayOutputStream(500);
+           imageLoader.save(stream,SWT.IMAGE_PNG);
+
+        String encodeBase64String = Base64.encodeBase64String(stream.toByteArray());
+        return "data:image/png;base64,"+encodeBase64String;
+        }
+        
+        return null;
     }
 
     /**
@@ -140,6 +163,8 @@ public class ShadowrunTextTools {
         return String.format("%,.0f %s" , decimal, "¥");//TODO: need to use the prefs when able
      }
      
+    
+    
     public static String formatDate(Date date) {
         if(date==null)
             return "unset";

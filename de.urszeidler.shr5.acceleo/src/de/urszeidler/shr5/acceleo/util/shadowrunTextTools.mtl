@@ -9,6 +9,10 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toName(java.lang.Object, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1, arg2})
 /]
 
+[query public toBase64Image(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getImageBase64(java.lang.Object)', Sequence{arg0})
+/]
+
 [query public zauberArtToName(arg0 : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(java.lang.Object)', Sequence{arg0})
 /]
