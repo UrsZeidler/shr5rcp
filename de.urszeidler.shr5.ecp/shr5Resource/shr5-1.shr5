@@ -1278,6 +1278,51 @@
             <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/inventar"/>
           </characterChanges>
         </modules>
+        <modules xmi:id="_jC7woNrAEeSal4EDlaUr4w" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS Denver (UCAS sector)" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_jC7wodrAEeSal4EDlaUr4w" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jC7wotrAEeSal4EDlaUr4w" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 5fc15c3f-7b1c-4b87-a469-ccefb7d60820"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jC7wo9rAEeSal4EDlaUr4w" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jC7wpNrAEeSal4EDlaUr4w" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jC7wpdrAEeSal4EDlaUr4w" grade="1" skill="_qesuYM_aEeSu9qVfM6-lMQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_rpogsNrAEeSal4EDlaUr4w" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_1DKb4NrAEeSal4EDlaUr4w" grade="2" skill="_xbApcNrAEeSal4EDlaUr4w"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4y-8kNrAEeSal4EDlaUr4w" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="__sIlsNrAEeSal4EDlaUr4w" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_E6EDINrBEeSal4EDlaUr4w" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+        </modules>
+        <modules xmi:id="_OzMEYNrBEeSal4EDlaUr4w" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS Seattle" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_OzMEYdrBEeSal4EDlaUr4w" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_OzMEYtrBEeSal4EDlaUr4w" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 5fc15c3f-7b1c-4b87-a469-ccefb7d60820"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_OzMEY9rBEeSal4EDlaUr4w" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_OzMEZNrBEeSal4EDlaUr4w" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_OzMEZdrBEeSal4EDlaUr4w" grade="1" skill="_qesuYM_aEeSu9qVfM6-lMQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_USdJcNrBEeSal4EDlaUr4w" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_XCBuENrBEeSal4EDlaUr4w" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ZDyKcNrBEeSal4EDlaUr4w" skill="9de43fad-b365-4e73-bc06-91dd571b858a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_cEgJcNrBEeSal4EDlaUr4w" grade="2" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_fe-sQNrBEeSal4EDlaUr4w" teachable="9ac85feb-ae1e-4996-8514-3570d411e1d5"/>
+        </modules>
+        <modules xmi:id="_ydRiQNrBEeSal4EDlaUr4w" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS SINless" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
+          <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_ydRiQdrBEeSal4EDlaUr4w" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
+            <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ydRiQtrBEeSal4EDlaUr4w" grade="1" selectOne="b6aa3faa-64e0-4323-9617-49add784064a a72084f6-3a4c-4c23-82aa-4697e543ee0b 87627536-a185-427a-bb14-54a4ff89901c 026062e0-9bdd-4a06-9cca-c3640c634cfd 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 5fc15c3f-7b1c-4b87-a469-ccefb7d60820"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ydRiQ9rBEeSal4EDlaUr4w" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ydRiRNrBEeSal4EDlaUr4w" grade="1" skill="a68b4d38-9e7b-4f0d-be04-d28d2bec3803"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ydRiRdrBEeSal4EDlaUr4w" grade="1" skill="_qesuYM_aEeSu9qVfM6-lMQ"/>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_2EIUMNrBEeSal4EDlaUr4w" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/geschicklichkeitBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_5jZ3cNrBEeSal4EDlaUr4w" grade="1" selectOne="3ea2eb75-69d3-4ecd-9f63-6dfc690cadf8 c8b1f29f-38d7-4364-b160-7b163f6bf715 4952de53-b333-45cd-bceb-cffe57b1e5a6 eec57f7e-0e91-4a58-8b0e-5d3de98b7b44 f9f9badb-0f5e-4662-8b34-fdd8e2994caa 822b059f-c132-45ee-8c0b-df6912d5c862"/>
+        </modules>
         <modules xmi:id="_ifsWANASEeSAqv2o9Il5Fg" name="CAS General" page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
           <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_ifsWAdASEeSAqv2o9Il5Fg" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
             <feature href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/nativeLanguage"/>
