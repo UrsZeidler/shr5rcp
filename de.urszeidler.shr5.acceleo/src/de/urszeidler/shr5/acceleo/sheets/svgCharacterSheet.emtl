@@ -10,11 +10,11 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <imports href="../common/ShadowrunTools.emtl#/0"/>
-    <imports href="../common/ShadowrunManagmentTools.emtl#/0"/>
-    <imports href="../common/ShadowrunSheetTools.emtl#/0"/>
-    <imports href="../common/shr5EEnumhelper.emtl#/0"/>
-    <imports href="../common/shr5ManagementEEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5EEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0"/>
     <imports href="../util/shadowrunTextTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="svgCharacterSheetManagedCharacter" visibility="Public" main="true">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
@@ -244,7 +244,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                  <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="cs" referredVariable="/0/printVariousSheetPageThree/%/%.7/cs">
                     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Credstick"/>
                   </argument>
@@ -575,7 +575,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="cs" referredVariable="/0/printVariousSheetPageThree/%/%.14/cs">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Sin"/>
                 </argument>
@@ -684,7 +684,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="cs" referredVariable="/0/printVariousSheetPageThree/%/%.15/cs">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Lizenz"/>
                 </argument>
@@ -856,7 +856,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Lifestyle"/>
               <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printVariousSheetPageThree/aManagedCharacter">
@@ -914,7 +914,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                  <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="cs" referredVariable="/0/printVariousSheetPageThree/%/%.26/cs">
                     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Lifestyle"/>
                   </argument>
@@ -1140,7 +1140,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printVariousSheetPageThree/%/%.35/c">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Changes"/>
                 </argument>
@@ -1411,7 +1411,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Zauber"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="pz" referredVariable="/0/printSpellcasterSheetPageTwo/%/%.7/pz">
@@ -1438,7 +1438,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -1541,7 +1541,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Geist"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="gb" referredVariable="/0/printSpellcasterSheetPageTwo/%/%.15/gb">
@@ -1699,7 +1699,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                  <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printSpellcasterSheetPageTwo/%/%.29/k">
                     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktGegenstand"/>
                   </argument>
@@ -3111,7 +3111,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="vehicle" referredVariable="/0/printVehicleDetail/vehicle">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
           </argument>
@@ -3158,7 +3158,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/vehicleSpeed"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleSpeed"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="vehicle" referredVariable="/0/printVehicleDetail/vehicle">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
           </argument>
@@ -3266,7 +3266,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/vehicleHandling.1"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleHandling.1"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="vehicle" referredVariable="/0/printVehicleDetail/vehicle">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
           </argument>
@@ -3428,7 +3428,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/vehicleBody"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleBody"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="vehicle" referredVariable="/0/printVehicleDetail/vehicle">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
           </argument>
@@ -3536,7 +3536,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printContractBlock/%.5/k">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Vertrag"/>
                 </argument>
@@ -3884,7 +3884,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printComlinkDetail/deck">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Commlink"/>
           </argument>
@@ -3990,7 +3990,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="prg" referredVariable="/0/printComlinkDetail/%.13/prg">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//BasicProgram"/>
             </argument>
@@ -4142,7 +4142,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printRiggerConsoleDetail/deck">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//RiggerCommandConsole"/>
           </argument>
@@ -4418,7 +4418,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="prg" referredVariable="/0/printRiggerConsoleDetail/%.25/prg">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//RiggerProgram"/>
             </argument>
@@ -4731,7 +4731,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printCyberdeckDetail/deck">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Cyberdeck"/>
           </argument>
@@ -4778,7 +4778,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/cyberDeckAttributes"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/cyberDeckAttributes"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printCyberdeckDetail/deck">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Cyberdeck"/>
           </argument>
@@ -4949,7 +4949,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="prg" referredVariable="/0/printCyberdeckDetail/%.19/prg">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//MatrixProgram"/>
             </argument>
@@ -5888,7 +5888,7 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                     <source xsi:type="mtl:QueryInvocation" eType="/7/Sequence(Beschreibbar)">
-                      <definition href="../common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
+                      <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
                       <argument xsi:type="ocl.ecore:PropertyCallExp">
                         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
                         <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printNewCharacterSheetPageOne/aManagedCharacter">
@@ -6764,7 +6764,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printGearsBlock/%.5/k">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktGegenstand"/>
                 </argument>
@@ -6974,7 +6974,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KomplexeForm"/>
               <source xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printComplexFormsPowerBlock/%.5/k">
@@ -7153,7 +7153,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Zauber"/>
               <source xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printSpellPowerBlock/%.5/k">
@@ -7593,7 +7593,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printWaresBlock/%.5/k">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Koerpermods"/>
             </argument>
@@ -7636,7 +7636,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
             <source xsi:type="mtl:QueryInvocation">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-              <definition href="../common/ShadowrunTools.emtl#/0/getEssencesValue"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getEssencesValue"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printWaresBlock/%.5/k">
                 <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Koerpermods"/>
               </argument>
@@ -7771,7 +7771,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="k" referredVariable="/0/printKiPowerBlock/%.5/k">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KiKraft"/>
             </argument>
@@ -8592,7 +8592,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="rw" referredVariable="/0/printWeaponDetailBlock/%.9/rw">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Kleidung"/>
             </argument>
@@ -8886,7 +8886,7 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="mw" referredVariable="/0/printNahkampfWaffeDetail/mw">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe"/>
           </argument>
@@ -8914,7 +8914,7 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="mw" referredVariable="/0/printNahkampfWaffeDetail/mw">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe"/>
           </argument>
@@ -9005,7 +9005,7 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="fw" referredVariable="/0/printFerkampfWaffeDetail/fw">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
           </argument>
@@ -9025,7 +9025,7 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
             <source xsi:type="ocl.ecore:VariableExp" name="fw" referredVariable="/0/printFerkampfWaffeDetail/fw">
@@ -9533,7 +9533,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
               <source xsi:type="ocl.ecore:VariableExp" name="cred" eType="/7/Sequence(OclAny)" referredVariable="/0/printActiveModsBlock/%.5/cred"/>
@@ -9715,7 +9715,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Lifestyle"/>
             <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printLifestyleBlock/aManagedCharacter">
@@ -9796,7 +9796,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="cred" referredVariable="/0/printLifestyleBlock/%.9/cred">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Credstick"/>
             </argument>
@@ -10099,7 +10099,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Spezies"/>
             <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printPersonalDataBlock/@init/@variable.0">
@@ -10171,7 +10171,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
             <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printPersonalDataBlock/aManagedCharacter">
@@ -10630,7 +10630,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="pe" referredVariable="/0/printQuallitiesBlock/%.5/pe">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
             </argument>
@@ -10698,7 +10698,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/quallityType"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/quallityType"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="pe" referredVariable="/0/printQuallitiesBlock/%.5/pe">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
             </argument>
@@ -10840,7 +10840,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="b" referredVariable="/0/printSkillBlock/%.5/%/b">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Beschreibbar"/>
                 </argument>
@@ -10876,7 +10876,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                 <source xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeitsGruppe"/>
-                  <definition href="../common/ShadowrunTools.emtl#/0/findGruppe"/>
+                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/findGruppe"/>
                   <argument xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="b" referredVariable="/0/printSkillBlock/%.5/%/b">
@@ -10966,7 +10966,7 @@
                       <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                       <argument xsi:type="mtl:QueryInvocation">
                         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                        <definition href="../common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
+                        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
                         <argument xsi:type="ocl.ecore:OperationCallExp">
                           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
                           <source xsi:type="ocl.ecore:VariableExp" name="b" referredVariable="/0/printSkillBlock/%.5/%/b">
@@ -11112,7 +11112,7 @@
                       <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                       <initExpression xsi:type="mtl:QueryInvocation">
                         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                        <definition href="../common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
+                        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
                         <argument xsi:type="ocl.ecore:OperationCallExp">
                           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
                           <source xsi:type="ocl.ecore:VariableExp" name="b" referredVariable="/0/printSkillBlock/%.5/%/b">
@@ -11133,7 +11133,7 @@
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                     <initExpression xsi:type="mtl:QueryInvocation">
                       <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                      <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                      <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                       <argument xsi:type="ocl.ecore:PropertyCallExp">
                         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
                         <source xsi:type="ocl.ecore:OperationCallExp">
@@ -11155,7 +11155,7 @@
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <initExpression xsi:type="mtl:QueryInvocation">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                    <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                    <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                     <argument xsi:type="ocl.ecore:VariableExp" name="b" referredVariable="/0/printSkillBlock/%.5/%/b">
                       <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Beschreibbar"/>
                     </argument>
@@ -11168,7 +11168,7 @@
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Beschreibbar"/>
           </loopVariable>
           <iterSet xsi:type="mtl:QueryInvocation" eType="/7/Sequence(Beschreibbar)">
-            <definition href="../common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printSkillBlock/@init/@variable.0">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
             </argument>
@@ -11377,7 +11377,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <initExpression xsi:type="mtl:QueryInvocation">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                  <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                  <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                   <argument xsi:type="ocl.ecore:PropertyCallExp">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
                     <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -11396,7 +11396,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <initExpression xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
                 <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="pfg" referredVariable="/0/printSkillBlock/%.5/%.2/pfg">
@@ -11461,7 +11461,7 @@
           <initExpression xsi:type="ocl.ecore:OperationCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
             <source xsi:type="mtl:QueryInvocation" eType="/7/Sequence(Beschreibbar)">
-              <definition href="../common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printSkillBlock/@init/@variable.0">
                 <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
               </argument>
@@ -11555,7 +11555,7 @@
           <body xsi:type="mtl:TemplateInvocation" definition="/0/printSvgLineValue">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="mtl:QueryInvocation" eType="/7/Sequence(OclAny)">
-              <definition href="../common/ShadowrunTools.emtl#/0/attributeValue"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/attributeValue"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeBlock/@init/@variable.0">
                 <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
               </argument>
@@ -11592,10 +11592,10 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <initExpression xsi:type="mtl:QueryInvocation">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
               <argument xsi:type="mtl:QueryInvocation">
                 <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
-                <definition href="../common/ShadowrunTools.emtl#/0/base2Calced"/>
+                <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/base2Calced"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/printAttributeBlock/%.5/ea">
                   <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
                 </argument>
@@ -11607,7 +11607,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
         </loopVariable>
         <iterSet xsi:type="mtl:QueryInvocation" eType="/7/Sequence(EAttribute)">
-          <definition href="../common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeBlock/@init/@variable.0">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
           </argument>
@@ -11751,7 +11751,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                   <source xsi:type="mtl:QueryInvocation" eType="/7/Sequence(EAttribute)">
-                    <definition href="../common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
+                    <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
                     <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeBlock/@init/@variable.0">
                       <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
                     </argument>
@@ -12274,7 +12274,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/liftCarry"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/liftCarry"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeBlock/@init/@variable.0">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
           </argument>
@@ -12345,7 +12345,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/movement"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/movement"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeBlock/@init/@variable.0">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
           </argument>
@@ -13015,10 +13015,10 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
           <argument xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="arg" referredVariable="/0/printOutSvgTextLine/arg">
               <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
             </argument>
@@ -13044,7 +13044,7 @@
         <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="arg" referredVariable="/0/printOutSvgTextLine.1/arg">
             <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
           </argument>
@@ -14098,9 +14098,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:SequenceType" href="../common/ShadowrunTools.emtl#/3/Sequence(EAttribute)"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(EAttribute)"/>
         <eParameters name="arg0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </eParameters>
@@ -14110,7 +14110,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/base2Calced"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/base2Calced"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
         <eParameters name="arg0">
@@ -14122,9 +14122,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/attributeValue"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/attributeValue"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:SequenceType" href="../common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
         <eParameters name="persona">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </eParameters>
@@ -14137,9 +14137,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitsGruppenToFertigkeiten"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:SequenceType" href="../common/ShadowrunTools.emtl#/3/Sequence(Beschreibbar)"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(Beschreibbar)"/>
         <eParameters name="persona">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </eParameters>
@@ -14149,7 +14149,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/getEssencesValue"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/getEssencesValue"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -14161,7 +14161,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/findGruppe"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/findGruppe"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeitsGruppe"/>
         <eParameters name="arg0">
@@ -14176,7 +14176,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/findFertigkeitValue.1"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -14191,7 +14191,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="anOclAny">
@@ -14203,7 +14203,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="text">
@@ -14218,7 +14218,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/quallityType"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/quallityType"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="qua">
@@ -14230,7 +14230,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/liftCarry"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/liftCarry"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="persona">
@@ -14242,7 +14242,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/cyberDeckAttributes"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/cyberDeckAttributes"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="deck">
@@ -14254,7 +14254,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/movement"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/movement"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="persona">
@@ -14266,7 +14266,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/vehicleHandling.1"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleHandling.1"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aFahrzeug">
@@ -14278,7 +14278,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/vehicleSpeed"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleSpeed"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aFahrzeug">
@@ -14290,7 +14290,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/vehicleBody"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/vehicleBody"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aFahrzeug">
@@ -14510,7 +14510,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(OclAny)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="../common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe_Class">
@@ -14545,7 +14545,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaEigenschaft)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="../common/ShadowrunSheetTools.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PersonaEigenschaft_Class">
