@@ -1418,6 +1418,39 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_au_DkNGjEeS4ndSijGfJ0Q" grade="1" skill="935621c5-d384-42f2-a740-1fa349fa85a1"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_nGrZANGjEeS4ndSijGfJ0Q" grade="5" skill="_hUibQNGjEeS4ndSijGfJ0Q"/>
         </modules>
+        <modules xmi:id="_jdXeQNuOEeSvNKxS3WXWXg" name="FUGITIVE" page="68" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_nXMPgNuOEeSvNKxS3WXWXg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_pWE-ENuOEeSvNKxS3WXWXg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_rkG74NuOEeSvNKxS3WXWXg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_uOKHUNuOEeSvNKxS3WXWXg" teachable="2e4ce871-fab1-4b36-bd15-bcb04e02a977"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_wZFt0NuOEeSvNKxS3WXWXg" teachable="d9479e5c-d44a-45b9-8fb4-d1e08a9487b2"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_zaC9YNuOEeSvNKxS3WXWXg" teachable="25356bae-efcc-46c6-9c4f-66909b9b7233"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4rKRsNuOEeSvNKxS3WXWXg" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_8JD78NuOEeSvNKxS3WXWXg" grade="2" skillGroup="_EL0fcDnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="__G8CUNuOEeSvNKxS3WXWXg" grade="1" skill="_8ZPEsNADEeSuYK6CpEIQGA"/>
+        </modules>
+        <modules xmi:id="_4EmLgNuPEeSvNKxS3WXWXg" name="ISOLATED RURAL UPBRINGING" page="68" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_9Eo98NuPEeSvNKxS3WXWXg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="__g_EkNuPEeSvNKxS3WXWXg" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_DeOWMNuQEeSvNKxS3WXWXg" teachable="f0873c37-4f09-41cd-be81-88e8df5b42ae"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_GD6mENuQEeSvNKxS3WXWXg" teachable="d8362a78-54e9-4dbe-8388-6ba0a7b9df31"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_JGUnINuQEeSvNKxS3WXWXg" teachable="00cc6499-db13-447e-8116-278d317a9e31"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_LwGFwNuQEeSvNKxS3WXWXg" grade="1" skill="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_ODmZcNuQEeSvNKxS3WXWXg" grade="2" skillGroup="_EMB61DnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_RTigMNuQEeSvNKxS3WXWXg" grade="1" skill="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_UQD7sNuQEeSvNKxS3WXWXg" grade="1" skill="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_fO8EENuQEeSvNKxS3WXWXg" grade="2" skill="_hUibQNGjEeS4ndSijGfJ0Q"/>
+        </modules>
         <modules xmi:id="_Mzo_gMpPEeSzH78cIrFicQ" name="CORPORATE EDUCATION" karmaCost="50" moduleType="teenYears" time="7">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_kC5a4MtAEeSNYKOZgflKBA" grade="1">
             <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
