@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -92,13 +93,36 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
      */
     protected EList<KleindungsModifikator> kmods;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	protected KleidungImpl() {
         super();
+        
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.KLEIDUNG__KMODS.equals(feature) || Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__RATING.equals(feature)){
+                    KleidungImpl.this
+                    .eNotify(new ENotificationImpl(KleidungImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+                    KleidungImpl.this
+                    .eNotify(new ENotificationImpl(KleidungImpl.this, Notification.SET, Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, 1, 2));
+                    
+                }
+                
+  
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
 	/**
