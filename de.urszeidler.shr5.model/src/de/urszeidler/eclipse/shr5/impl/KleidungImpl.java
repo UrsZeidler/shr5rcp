@@ -2,7 +2,9 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.Capacity;
+import java.lang.reflect.InvocationTargetException;
+import java.math.BigDecimal;
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -16,14 +18,11 @@ import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-
-import java.lang.reflect.InvocationTargetException;
-import java.math.BigDecimal;
-import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,11 +5,11 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.armorModificationType;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
