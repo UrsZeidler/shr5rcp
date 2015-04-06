@@ -12,6 +12,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -349,6 +350,18 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 return createShr5KarmaGeneratorAdapter();
+            }
+            @Override
+            public Adapter caseTrainingRate(TrainingRate object) {
+                return createTrainingRateAdapter();
+            }
+            @Override
+            public Adapter caseRangeTableEntry(RangeTableEntry object) {
+                return createRangeTableEntryAdapter();
+            }
+            @Override
+            public <E extends RangeTableEntry> Adapter caseRangeTable(RangeTable<E> object) {
+                return createRangeTableAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -915,6 +928,48 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createShr5KarmaGeneratorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.TrainingRate <em>Training Rate</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRate
+     * @generated
+     */
+    public Adapter createTrainingRateAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry <em>Range Table Entry</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry
+     * @generated
+     */
+    public Adapter createRangeTableEntryAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.RangeTable <em>Range Table</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTable
+     * @generated
+     */
+    public Adapter createRangeTableAdapter() {
         return null;
     }
 

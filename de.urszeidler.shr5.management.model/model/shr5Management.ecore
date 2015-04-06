@@ -603,11 +603,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaFactor" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IncreaseCharacterPart" eSuperTypes="#//Advancement">
+  <eClassifiers xsi:type="ecore:EClass" name="IncreaseCharacterPart">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The type is defined by the eclass of the persona part and need to be a Erlernbar or an attribute.   "/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eGenericSuperTypes eClassifier="#//Advancement"/>
+    <eGenericSuperTypes eClassifier="#//RangeTable">
+      <eTypeArguments eClassifier="#//TrainingRate"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifestyleToStartMoney">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -1058,5 +1062,28 @@
     <eGenericSuperTypes eClassifier="#//KarmaGenerator">
       <eTypeArguments eClassifier="#//Shr5System"/>
     </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainingRate" eSuperTypes="#//RangeTableEntry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeUnit" eType="ecore:EEnum ../../de.urszeidler.shr5.model/model/shr5.ecore#//TimeUnits"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RangeTableEntry" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Represents an entrie in a ranged table. A ranged is based on an value"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RangeTable" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Repesents a table from ranged entries, the entries must extend the RangeTabelEntry contract.&#xA;One entrie may be effective for a defined value.&#xA;"/>
+    </eAnnotations>
+    <eTypeParameters name="E">
+      <eBounds eClassifier="#//RangeTableEntry"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rangeTableEntries" upperBound="-1"
+        containment="true">
+      <eGenericType eTypeParameter="#//RangeTable/E"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

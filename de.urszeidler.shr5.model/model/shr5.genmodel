@@ -773,6 +773,7 @@
     <genClasses ecoreClass="shr5.ecore#//KleindungsModifikator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/rating"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/type"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/capacity"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

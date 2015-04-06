@@ -65,6 +65,8 @@ import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.PrioritySystem;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrainType;
+import de.urszeidler.eclipse.shr5Management.RangeTable;
+import de.urszeidler.eclipse.shr5Management.RangeTableEntry;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
@@ -78,6 +80,7 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 /**
@@ -352,6 +355,27 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass shr5KarmaGeneratorEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass trainingRateEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass rangeTableEntryEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass rangeTableEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2322,6 +2346,78 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getTrainingRate() {
+        return trainingRateEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingRate_Factor() {
+        return (EAttribute)trainingRateEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingRate_TimeUnit() {
+        return (EAttribute)trainingRateEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getRangeTableEntry() {
+        return rangeTableEntryEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRangeTableEntry_From() {
+        return (EAttribute)rangeTableEntryEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRangeTableEntry_To() {
+        return (EAttribute)rangeTableEntryEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getRangeTable() {
+        return rangeTableEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getRangeTable_RangeTableEntries() {
+        return (EReference)rangeTableEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getQuellenConstrain() {
         return quellenConstrainEClass;
     }
@@ -3250,6 +3346,17 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         shr5KarmaGeneratorEClass = createEClass(SHR5_KARMA_GENERATOR);
 
+        trainingRateEClass = createEClass(TRAINING_RATE);
+        createEAttribute(trainingRateEClass, TRAINING_RATE__FACTOR);
+        createEAttribute(trainingRateEClass, TRAINING_RATE__TIME_UNIT);
+
+        rangeTableEntryEClass = createEClass(RANGE_TABLE_ENTRY);
+        createEAttribute(rangeTableEntryEClass, RANGE_TABLE_ENTRY__FROM);
+        createEAttribute(rangeTableEntryEClass, RANGE_TABLE_ENTRY__TO);
+
+        rangeTableEClass = createEClass(RANGE_TABLE);
+        createEReference(rangeTableEClass, RANGE_TABLE__RANGE_TABLE_ENTRIES);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -3288,6 +3395,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         ETypeParameter shr5RuleGeneratorEClass_G = addETypeParameter(shr5RuleGeneratorEClass, "G");
         ETypeParameter karmaGeneratorEClass_G = addETypeParameter(karmaGeneratorEClass, "G");
         ETypeParameter moduleTypeChangeEClass_T = addETypeParameter(moduleTypeChangeEClass, "T");
+        ETypeParameter rangeTableEClass_E = addETypeParameter(rangeTableEClass, "E");
 
         // Set bounds for type parameters
         EGenericType g1 = createEGenericType(this.getCharacterGeneratorSystem());
@@ -3296,6 +3404,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         shr5RuleGeneratorEClass_G.getEBounds().add(g1);
         g1 = createEGenericType(this.getShr5System());
         karmaGeneratorEClass_G.getEBounds().add(g1);
+        g1 = createEGenericType(this.getRangeTableEntry());
+        rangeTableEClass_E.getEBounds().add(g1);
 
         // Add supertypes to classes
         characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
@@ -3327,7 +3437,12 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         characterGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         personaChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
         personaValueChangeEClass.getESuperTypes().add(this.getChanges());
-        increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
+        g1 = createEGenericType(this.getAdvancement());
+        increaseCharacterPartEClass.getEGenericSuperTypes().add(g1);
+        g1 = createEGenericType(this.getRangeTable());
+        g2 = createEGenericType(this.getTrainingRate());
+        g1.getETypeArguments().add(g2);
+        increaseCharacterPartEClass.getEGenericSuperTypes().add(g1);
         gruntGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         playerManagementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
@@ -3375,6 +3490,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g2 = createEGenericType(this.getShr5System());
         g1.getETypeArguments().add(g2);
         shr5KarmaGeneratorEClass.getEGenericSuperTypes().add(g1);
+        trainingRateEClass.getESuperTypes().add(this.getRangeTableEntry());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3946,6 +4062,18 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getModuleTypeChange_SelectOne(), g1, null, "selectOne", null, 0, -1, ModuleTypeChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(shr5KarmaGeneratorEClass, Shr5KarmaGenerator.class, "Shr5KarmaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(trainingRateEClass, TrainingRate.class, "TrainingRate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTrainingRate_Factor(), ecorePackage.getEInt(), "factor", null, 0, 1, TrainingRate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingRate_TimeUnit(), theShr5Package.getTimeUnits(), "timeUnit", null, 0, 1, TrainingRate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(rangeTableEntryEClass, RangeTableEntry.class, "RangeTableEntry", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRangeTableEntry_From(), ecorePackage.getEInt(), "from", null, 0, 1, RangeTableEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRangeTableEntry_To(), ecorePackage.getEInt(), "to", null, 0, 1, RangeTableEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(rangeTableEClass, RangeTable.class, "RangeTable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        g1 = createEGenericType(rangeTableEClass_E);
+        initEReference(getRangeTable_RangeTableEntries(), g1, null, "rangeTableEntries", null, 0, -1, RangeTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

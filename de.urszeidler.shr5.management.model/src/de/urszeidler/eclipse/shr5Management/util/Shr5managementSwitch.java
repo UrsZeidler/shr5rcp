@@ -11,6 +11,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -346,6 +347,7 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 IncreaseCharacterPart increaseCharacterPart = (IncreaseCharacterPart)theEObject;
                 T1 result = caseIncreaseCharacterPart(increaseCharacterPart);
                 if (result == null) result = caseAdvancement(increaseCharacterPart);
+                if (result == null) result = caseRangeTable(increaseCharacterPart);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -544,6 +546,25 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 if (result == null) result = caseKarmaGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.TRAINING_RATE: {
+                TrainingRate trainingRate = (TrainingRate)theEObject;
+                T1 result = caseTrainingRate(trainingRate);
+                if (result == null) result = caseRangeTableEntry(trainingRate);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.RANGE_TABLE_ENTRY: {
+                RangeTableEntry rangeTableEntry = (RangeTableEntry)theEObject;
+                T1 result = caseRangeTableEntry(rangeTableEntry);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.RANGE_TABLE: {
+                RangeTable<?> rangeTable = (RangeTable<?>)theEObject;
+                T1 result = caseRangeTable(rangeTable);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1118,6 +1139,51 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @generated
      */
     public T1 caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Training Rate</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Training Rate</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T1 caseTrainingRate(TrainingRate object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Range Table Entry</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Range Table Entry</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T1 caseRangeTableEntry(RangeTableEntry object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Range Table</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Range Table</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public <E extends RangeTableEntry> T1 caseRangeTable(RangeTable<E> object) {
         return null;
     }
 

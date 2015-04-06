@@ -229,8 +229,9 @@
     <nested inputs="shr5Management.ecore#//Advancement" outputs="Shr5managementXMI.xsd#//Advancement;XSDElementDeclaration=28"/>
     <nested inputs="shr5Management.ecore#//IncreaseCharacterPart" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29">
       <nested inputs="shr5Management.ecore#//IncreaseCharacterPart/type" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDAttributeUse"/>
-      <nested inputs="shr5Management.ecore#//IncreaseCharacterPart/type" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//IncreaseCharacterPart/type" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
+    <nested inputs="shr5Management.ecore#//RangeTable/rangeTableEntries" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5Management.ecore#//IncreaseCharacterPart" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDElementDeclaration=29"/>
     <nested inputs="shr5Management.ecore#//LifestyleToStartMoney" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30">
       <nested inputs="shr5Management.ecore#//LifestyleToStartMoney/numberOfW" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30/XSDAttributeUse=1"/>
@@ -384,6 +385,20 @@
     <nested inputs="shr5Management.ecore#//ModuleTypeChange" outputs="Shr5managementXMI.xsd#//ModuleTypeChange;XSDElementDeclaration=54"/>
     <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=55"/>
     <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDElementDeclaration=55"/>
+    <nested inputs="shr5Management.ecore#//TrainingRate" outputs="Shr5managementXMI.xsd#//TrainingRate;XSDComplexTypeDefinition=56">
+      <nested inputs="shr5Management.ecore#//TrainingRate/factor" outputs="Shr5managementXMI.xsd#//TrainingRate;XSDComplexTypeDefinition=56/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//TrainingRate/timeUnit" outputs="Shr5managementXMI.xsd#//TrainingRate;XSDComplexTypeDefinition=56/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//TrainingRate" outputs="Shr5managementXMI.xsd#//TrainingRate;XSDElementDeclaration=56"/>
+    <nested inputs="shr5Management.ecore#//RangeTableEntry" outputs="Shr5managementXMI.xsd#//RangeTableEntry;XSDComplexTypeDefinition=57">
+      <nested inputs="shr5Management.ecore#//RangeTableEntry/from" outputs="Shr5managementXMI.xsd#//RangeTableEntry;XSDComplexTypeDefinition=57/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//RangeTableEntry/to" outputs="Shr5managementXMI.xsd#//RangeTableEntry;XSDComplexTypeDefinition=57/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//RangeTableEntry" outputs="Shr5managementXMI.xsd#//RangeTableEntry;XSDElementDeclaration=57"/>
+    <nested inputs="shr5Management.ecore#//RangeTable" outputs="Shr5managementXMI.xsd#//RangeTable;XSDComplexTypeDefinition=58">
+      <nested inputs="shr5Management.ecore#//RangeTable/rangeTableEntries" outputs="Shr5managementXMI.xsd#//RangeTable;XSDComplexTypeDefinition=58/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//RangeTable" outputs="Shr5managementXMI.xsd#//RangeTable;XSDElementDeclaration=58"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

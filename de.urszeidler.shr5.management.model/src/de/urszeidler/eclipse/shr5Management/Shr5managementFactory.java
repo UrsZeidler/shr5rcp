@@ -266,6 +266,15 @@ public interface Shr5managementFactory extends EFactory {
     Shr5KarmaGenerator createShr5KarmaGenerator();
 
     /**
+     * Returns a new object of class '<em>Training Rate</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Training Rate</em>'.
+     * @generated
+     */
+    TrainingRate createTrainingRate();
+
+    /**
      * Returns a new object of class '<em>Quellen Constrain</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

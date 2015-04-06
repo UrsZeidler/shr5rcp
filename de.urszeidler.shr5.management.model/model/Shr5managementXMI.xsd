@@ -673,6 +673,7 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Advancement">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="rangeTableEntries" type="shr5mngt:RangeTableEntry"/>
           <xsd:element name="type" type="ecore:EClass"/>
         </xsd:choice>
         <xsd:attribute name="type" type="xsd:string"/>
@@ -1169,4 +1170,50 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator"/>
+  <xsd:complexType name="TrainingRate">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:RangeTableEntry">
+        <xsd:attribute name="factor" type="xsd:int"/>
+        <xsd:attribute name="timeUnit" type="shr5:TimeUnits"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TrainingRate" type="shr5mngt:TrainingRate"/>
+  <xsd:complexType abstract="true" name="RangeTableEntry">
+    <xsd:annotation>
+      <xsd:documentation>Represents an entrie in a ranged table. A ranged is based on an value</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="from" type="xsd:int"/>
+    <xsd:attribute name="to" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="RangeTableEntry" type="shr5mngt:RangeTableEntry">
+    <xsd:annotation>
+      <xsd:documentation>Represents an entrie in a ranged table. A ranged is based on an value</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="RangeTable">
+    <xsd:annotation>
+      <xsd:documentation>Repesents a table from ranged entries, the entries must extend the RangeTabelEntry contract.
+One entrie may be effective for a defined value.
+</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="rangeTableEntries" type="shr5mngt:RangeTableEntry"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="RangeTable" type="shr5mngt:RangeTable">
+    <xsd:annotation>
+      <xsd:documentation>Repesents a table from ranged entries, the entries must extend the RangeTabelEntry contract.
+One entrie may be effective for a defined value.
+</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

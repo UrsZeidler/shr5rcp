@@ -9,24 +9,19 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-
 import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -56,7 +51,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,7 +62,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * The cached value of the '{@link #getAllowedSources() <em>Allowed Sources</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAllowedSources()
      * @generated
      * @ordered
@@ -77,7 +71,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -87,7 +80,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -99,7 +91,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * This is specialized for the more specific type known in this context.
-     * 
      * @generated
      */
     @Override
@@ -123,7 +114,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<SourceBook> getAllowedSources() {
@@ -554,7 +544,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -569,7 +558,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -587,7 +575,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -603,7 +590,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -618,7 +604,6 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

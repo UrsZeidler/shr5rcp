@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  * @model
  * @generated
  */
-public interface IncreaseCharacterPart extends Advancement {
+public interface IncreaseCharacterPart extends Advancement, RangeTable<TrainingRate> {
 	/**
      * Returns the value of the '<em><b>Type</b></em>' reference.
      * <!-- begin-user-doc -->

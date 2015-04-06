@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -146,6 +147,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.MODULE_FEATURE_CHANGE: return createModuleFeatureChange();
             case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: return createModuleSkillGroupChange();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
+            case Shr5managementPackage.TRAINING_RATE: return createTrainingRate();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -471,6 +473,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public Shr5KarmaGenerator createShr5KarmaGenerator() {
         Shr5KarmaGeneratorImpl shr5KarmaGenerator = new Shr5KarmaGeneratorImpl();
         return shr5KarmaGenerator;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TrainingRate createTrainingRate() {
+        TrainingRateImpl trainingRate = new TrainingRateImpl();
+        return trainingRate;
     }
 
     /**

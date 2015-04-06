@@ -27,7 +27,7 @@ public class Shr5managementTests extends TestSuite {
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public static Test suite() {
         TestSuite suite = new Shr5managementTests("shr5Management Tests");
@@ -50,6 +50,9 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(SumToTenGeneratorTest.class);
         suite.addTestSuite(LifeModulesGeneratorTest.class);
         suite.addTestSuite(Shr5KarmaGeneratorTest.class);
+        suite.addTestSuite(IncreaseCharacterPartTest.class);
+        
+        
         return suite;
     }
 

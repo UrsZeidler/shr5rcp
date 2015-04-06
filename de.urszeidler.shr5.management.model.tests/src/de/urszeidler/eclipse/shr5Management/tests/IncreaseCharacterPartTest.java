@@ -4,8 +4,11 @@
 package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.TimeUnits;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,4 +70,26 @@ public class IncreaseCharacterPartTest extends AdvancementTest {
         setFixture(null);
     }
 
+	
+    public void testInRange() throws Exception {
+        TrainingRate tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
+        tr.setFactor(1);
+        tr.setFrom(1);
+        tr.setTo(4);
+        tr.setTimeUnit(TimeUnits.WEEK);
+        getFixture().getRangeTableEntries().add(tr);
+        
+        tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
+        tr.setFactor(1);
+        tr.setFrom(5);
+        tr.setTo(8);
+        tr.setTimeUnit(TimeUnits.MONTH);
+        getFixture().getRangeTableEntries().add(tr);
+        
+
+        TrainingRate findMatchingRange = (TrainingRate)ShadowrunManagmentTools.findMatchingRange(3,getFixture().getRangeTableEntries());
+         assertEquals(TimeUnits.WEEK, findMatchingRange.getTimeUnit()); 
+         findMatchingRange = (TrainingRate)ShadowrunManagmentTools.findMatchingRange(5,getFixture().getRangeTableEntries());
+         assertEquals(TimeUnits.MONTH, findMatchingRange.getTimeUnit()); 
+    }
 } //IncreaseCharacterPartTest

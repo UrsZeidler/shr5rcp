@@ -3857,13 +3857,22 @@ public interface Shr5managementPackage extends EPackage {
 	int INCREASE_CHARACTER_PART__KARMA_FACTOR = ADVANCEMENT__KARMA_FACTOR;
 
 	/**
+     * The feature id for the '<em><b>Range Table Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INCREASE_CHARACTER_PART__RANGE_TABLE_ENTRIES = ADVANCEMENT_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Type</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int INCREASE_CHARACTER_PART__TYPE = ADVANCEMENT_FEATURE_COUNT + 0;
+	int INCREASE_CHARACTER_PART__TYPE = ADVANCEMENT_FEATURE_COUNT + 1;
 
 	/**
      * The number of structural features of the '<em>Increase Character Part</em>' class.
@@ -3872,7 +3881,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int INCREASE_CHARACTER_PART_FEATURE_COUNT = ADVANCEMENT_FEATURE_COUNT + 1;
+	int INCREASE_CHARACTER_PART_FEATURE_COUNT = ADVANCEMENT_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Increase Character Part</em>' class.
@@ -6843,6 +6852,153 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR_OPERATION_COUNT = KARMA_GENERATOR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry <em>Range Table Entry</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getRangeTableEntry()
+     * @generated
+     */
+    int RANGE_TABLE_ENTRY = 57;
+
+    /**
+     * The feature id for the '<em><b>From</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_ENTRY__FROM = 0;
+
+    /**
+     * The feature id for the '<em><b>To</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_ENTRY__TO = 1;
+
+    /**
+     * The number of structural features of the '<em>Range Table Entry</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_ENTRY_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Range Table Entry</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_ENTRY_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl <em>Training Rate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getTrainingRate()
+     * @generated
+     */
+    int TRAINING_RATE = 56;
+
+    /**
+     * The feature id for the '<em><b>From</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE__FROM = RANGE_TABLE_ENTRY__FROM;
+
+    /**
+     * The feature id for the '<em><b>To</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE__TO = RANGE_TABLE_ENTRY__TO;
+
+    /**
+     * The feature id for the '<em><b>Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE__FACTOR = RANGE_TABLE_ENTRY_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Time Unit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE__TIME_UNIT = RANGE_TABLE_ENTRY_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Training Rate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE_FEATURE_COUNT = RANGE_TABLE_ENTRY_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Training Rate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RATE_OPERATION_COUNT = RANGE_TABLE_ENTRY_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.RangeTable <em>Range Table</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.RangeTable
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getRangeTable()
+     * @generated
+     */
+    int RANGE_TABLE = 58;
+
+    /**
+     * The feature id for the '<em><b>Range Table Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE__RANGE_TABLE_ENTRIES = 0;
+
+    /**
+     * The number of structural features of the '<em>Range Table</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Range Table</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RANGE_TABLE_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6850,7 +7006,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 56;
+	int GENERATOR_STATE = 59;
 
 
 	/**
@@ -6861,7 +7017,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 57;
+	int SEX = 60;
 
 
 	/**
@@ -6872,7 +7028,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 58;
+    int QUELLEN_CONSTRAIN_TYPE = 61;
 
 
     /**
@@ -6883,7 +7039,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
      * @generated
      */
-    int LIFE_MODULE_TYPE = 59;
+    int LIFE_MODULE_TYPE = 62;
 
 
     /**
@@ -8935,6 +9091,91 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EClass getShr5KarmaGenerator();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.TrainingRate <em>Training Rate</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Training Rate</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRate
+     * @generated
+     */
+    EClass getTrainingRate();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.TrainingRate#getFactor <em>Factor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Factor</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRate#getFactor()
+     * @see #getTrainingRate()
+     * @generated
+     */
+    EAttribute getTrainingRate_Factor();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.TrainingRate#getTimeUnit <em>Time Unit</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Time Unit</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRate#getTimeUnit()
+     * @see #getTrainingRate()
+     * @generated
+     */
+    EAttribute getTrainingRate_TimeUnit();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry <em>Range Table Entry</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Range Table Entry</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry
+     * @generated
+     */
+    EClass getRangeTableEntry();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry#getFrom <em>From</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>From</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry#getFrom()
+     * @see #getRangeTableEntry()
+     * @generated
+     */
+    EAttribute getRangeTableEntry_From();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry#getTo <em>To</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>To</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry#getTo()
+     * @see #getRangeTableEntry()
+     * @generated
+     */
+    EAttribute getRangeTableEntry_To();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.RangeTable <em>Range Table</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Range Table</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTable
+     * @generated
+     */
+    EClass getRangeTable();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.RangeTable#getRangeTableEntries <em>Range Table Entries</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Range Table Entries</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.RangeTable#getRangeTableEntries()
+     * @see #getRangeTable()
+     * @generated
+     */
+    EReference getRangeTable_RangeTableEntries();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
@@ -11279,6 +11520,76 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EClass SHR5_KARMA_GENERATOR = eINSTANCE.getShr5KarmaGenerator();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl <em>Training Rate</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getTrainingRate()
+         * @generated
+         */
+        EClass TRAINING_RATE = eINSTANCE.getTrainingRate();
+
+        /**
+         * The meta object literal for the '<em><b>Factor</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRAINING_RATE__FACTOR = eINSTANCE.getTrainingRate_Factor();
+
+        /**
+         * The meta object literal for the '<em><b>Time Unit</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRAINING_RATE__TIME_UNIT = eINSTANCE.getTrainingRate_TimeUnit();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry <em>Range Table Entry</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.RangeTableEntry
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getRangeTableEntry()
+         * @generated
+         */
+        EClass RANGE_TABLE_ENTRY = eINSTANCE.getRangeTableEntry();
+
+        /**
+         * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RANGE_TABLE_ENTRY__FROM = eINSTANCE.getRangeTableEntry_From();
+
+        /**
+         * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute RANGE_TABLE_ENTRY__TO = eINSTANCE.getRangeTableEntry_To();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.RangeTable <em>Range Table</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.RangeTable
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getRangeTable()
+         * @generated
+         */
+        EClass RANGE_TABLE = eINSTANCE.getRangeTable();
+
+        /**
+         * The meta object literal for the '<em><b>Range Table Entries</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference RANGE_TABLE__RANGE_TABLE_ENTRIES = eINSTANCE.getRangeTable_RangeTableEntries();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.

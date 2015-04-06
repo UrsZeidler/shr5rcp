@@ -482,6 +482,12 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateModuleTypeChange((ModuleTypeChange<?>)value, diagnostics, context);
             case Shr5managementPackage.SHR5_KARMA_GENERATOR:
                 return validateShr5KarmaGenerator((Shr5KarmaGenerator)value, diagnostics, context);
+            case Shr5managementPackage.TRAINING_RATE:
+                return validateTrainingRate((TrainingRate)value, diagnostics, context);
+            case Shr5managementPackage.RANGE_TABLE_ENTRY:
+                return validateRangeTableEntry((RangeTableEntry)value, diagnostics, context);
+            case Shr5managementPackage.RANGE_TABLE:
+                return validateRangeTable((RangeTable<?>)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1158,6 +1164,33 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateKarmaGenerator_hasSpendAllResources(shr5KarmaGenerator, diagnostics, context);
         return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateTrainingRate(TrainingRate trainingRate, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(trainingRate, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateRangeTableEntry(RangeTableEntry rangeTableEntry, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(rangeTableEntry, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateRangeTable(RangeTable<?> rangeTable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(rangeTable, diagnostics, context);
     }
 
     /**

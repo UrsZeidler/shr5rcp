@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
@@ -68,10 +69,12 @@ import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.RangeTableEntry;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
 
 /**
  * @author urs
@@ -1021,6 +1024,15 @@ public class ShadowrunManagmentTools {
 
     public static int calcKarmaLeft(LifeModulesGenerator object) {
         return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
+    }
+
+    public static RangeTableEntry findMatchingRange(final int value, EList<? extends RangeTableEntry> rangeTableEntries) {
+      return  FluentIterable.from(rangeTableEntries).firstMatch(new Predicate<RangeTableEntry>() {
+            @Override
+            public boolean apply(RangeTableEntry input) {
+                return input.getFrom()<=value && input.getTo()>=value;
+            }
+            }).orNull();
     }
 
 }

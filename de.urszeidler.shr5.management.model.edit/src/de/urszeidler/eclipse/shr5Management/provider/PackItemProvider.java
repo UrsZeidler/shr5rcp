@@ -724,6 +724,11 @@ public class PackItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createMagischeTradition()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createKleindungsModifikator()));
     }
 
     /**

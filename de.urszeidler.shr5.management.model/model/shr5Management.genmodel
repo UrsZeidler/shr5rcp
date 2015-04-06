@@ -514,5 +514,17 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selectOne"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator"/>
+    <genClasses ecoreClass="shr5Management.ecore#//TrainingRate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/timeUnit"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//RangeTableEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/to"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//RangeTable">
+      <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//RangeTable/E"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//RangeTable/rangeTableEntries"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
