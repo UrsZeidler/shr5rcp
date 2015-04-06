@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
 import com.google.common.base.Function;
+import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
 
@@ -387,12 +389,23 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
                             }
                         }
                     } else if (quellenConstrain.getConstrainType() == QuellenConstrainType.NEED_ONE_OF) {
-
+                        
                     }
                 }
             }
 
         }
+
+//        TreeIterator<EObject> eAllContents = this.eAllContents();
+//        ShadowrunTools.toIterable(eAllContents);
+//        ArrayList<EObject> q = new ArrayList<EObject>();
+//        for (QuellenConstrain quellenConstrain : additionalConstrains) {
+//            if (quellenConstrain.getConstrainType() == QuellenConstrainType.NEED_ONE_OF) {
+//                EList<Quelle> targets = quellenConstrain.getTargets();
+//                q.addAll(FluentIterable.from(ShadowrunTools.toIterable(eAllContents))
+//                        .filter(ShadowrunTools.isASameBPredicate(quellenConstrain.getSource())).toList());
+//            }
+//        }
 
         if (!arrayList.isEmpty()) {
             if (diagnostics != null) {

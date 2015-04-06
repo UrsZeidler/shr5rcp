@@ -21,6 +21,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import com.google.common.base.Function;
+import com.google.common.base.Joiner;
+import com.google.common.collect.FluentIterable;
+
+import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrainType;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -148,15 +154,26 @@ public class QuellenConstrainItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        QuellenConstrainType labelValue = ((QuellenConstrain)object).getConstrainType();
+        QuellenConstrain qc = (QuellenConstrain)object;
+        final ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        
+        final String unset = getString("_UI_Unset_text");
+        String source = Shr5EditingTools.getLabelForEObject(factory, unset, qc.getSource());
+        String target = Joiner.on(",").join(FluentIterable.from(qc.getTargets()).transform(new Function<Quelle, String>() {
+
+            @Override
+            public String apply(Quelle input) {
+                return Shr5EditingTools.getLabelForEObject(factory, unset, input);
+            }
+        }));
+        
+        QuellenConstrainType labelValue = qc.getConstrainType();
         String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-            getString("_UI_QuellenConstrain_type") :
-            getString("_UI_QuellenConstrain_type") + " " + label;
+        return source.substring(0,Math.min(50, source.length()))+" "+label+": "+target.substring(0,Math.min(60, target.length()));
     }
 
     /**

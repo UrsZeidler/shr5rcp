@@ -1009,4 +1009,19 @@ public class ShadowrunTools {
             }
         };
     }
+
+    /**
+     * A predicate to check isASameB
+     * @param source
+     * @return
+     */
+    public static Predicate<? super EObject> isASameBPredicate(final Quelle source) {
+        return new Predicate<EObject>() {
+
+            @Override
+            public boolean apply(EObject input) {
+                return ShadowrunTools.isASameB(input, source);
+            }
+        };
+    }
 }
