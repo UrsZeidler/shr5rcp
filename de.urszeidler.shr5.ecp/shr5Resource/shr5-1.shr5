@@ -1189,6 +1189,21 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_VkLKQNWCEeSzd99pVrWJLg" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z1AGQNWCEeSzd99pVrWJLg" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
         </modules>
+        <modules xmi:id="_Z-b64NwsEeSfsbuIbqNZtw" name="MAGICAL EDUCATION" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_Z-b64dwsEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_Z-b64twsEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_Z-b649wsEeSfsbuIbqNZtw" teachable="318d2edd-833b-48c5-a3e1-343bf03848a5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b65NwsEeSfsbuIbqNZtw" grade="2" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b65dwsEeSfsbuIbqNZtw" grade="5" skill="_b2khINWdEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b65twsEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b659wsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b66NwsEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z-b66dwsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+        </modules>
       </entries>
       <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_HU-ZcMl1EeSHR7BAWEdSOg" name="testLifeModuleSystem" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" knowlegeSkillMax="9">
         <lifestyleToStartMoney xmi:id="_Ul3kAMkCEeSkAbRNCR2heA" numberOfW="1" moneyFactor="20" lifeStyles="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590"/>
@@ -1197,6 +1212,7 @@
         <lifestyleToStartMoney xmi:id="_Ul4LEMkCEeSkAbRNCR2heA" numberOfW="4" moneyFactor="100" lifeStyles="90f6f4c2-9968-42e1-ba79-e2bf530de32e"/>
         <lifestyleToStartMoney xmi:id="_Ul4LEckCEeSkAbRNCR2heA" numberOfW="5" moneyFactor="500" lifeStyles="619be8b8-52a0-46b0-9566-a4102bd2040a"/>
         <lifestyleToStartMoney xmi:id="_Ul4yIMkCEeSkAbRNCR2heA" numberOfW="6" moneyFactor="1000" lifeStyles="ebb68d2c-a882-4356-8031-2f62d3f6d064"/>
+        <additionalConstrains xmi:id="_-q1fcNwuEeSfsbuIbqNZtw" source="_lcQegNwrEeSfsbuIbqNZtw" targets="_XK5WoNCDEeSX5PKgPhCdqw" constrainType="needOneOf"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9bL6EeS74JF_046f_w" choosableTypes="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg9rL6EeS74JF_046f_w" cost="40" choosableTypes="b3259991-b315-4dbe-ae3c-51f71a1116e2"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_8RGg97L6EeS74JF_046f_w" cost="50" choosableTypes="08f2c9cc-f9f8-4f1a-9efb-63555af71788"/>
@@ -1532,7 +1548,129 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_u-qx5tvIEeSfsbuIbqNZtw" grade="2" skill="b693f3bf-48dc-4570-9743-d94d14ee698b"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_u-qx59vIEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_u-qx6NvIEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
-          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_u-qx6dvIEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 3ea2eb75-69d3-4ecd-9f63-6dfc690cadf8 f9f9badb-0f5e-4662-8b34-fdd8e2994caa d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_u-qx6dvIEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+        </modules>
+        <modules xmi:id="_xdYY8NwpEeSfsbuIbqNZtw" name="ISOLATED RURAL UPBRINGING" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_xdYY8dwpEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_xdYY8twpEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_6AMHgNwpEeSfsbuIbqNZtw" teachable="_I4Pg4NwqEeSfsbuIbqNZtw"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_TIJDYNwqEeSfsbuIbqNZtw" grade="1" skill="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_WAr90NwqEeSfsbuIbqNZtw" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_YY9cwNwqEeSfsbuIbqNZtw" grade="1" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_arrtUNwqEeSfsbuIbqNZtw" grade="1" skill="64088b25-de37-4d71-8800-4a430fde08af"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_dGh_INwqEeSfsbuIbqNZtw" grade="2" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_gm_1MNwqEeSfsbuIbqNZtw" grade="1" skillGroup="_EMB61DnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_i1a0kNwqEeSfsbuIbqNZtw" grade="1" skill="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_n6c0sNwqEeSfsbuIbqNZtw" grade="2" skill="_vAPLoNwqEeSfsbuIbqNZtw"/>
+        </modules>
+        <modules xmi:id="_lcQegNwrEeSfsbuIbqNZtw" name="MAGICAL EDUCATION (Magician)" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_p5F2MNwrEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_rzFdsNwrEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_t1GYwNwrEeSfsbuIbqNZtw" teachable="318d2edd-833b-48c5-a3e1-343bf03848a5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_xDLeUNwrEeSfsbuIbqNZtw" grade="2" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_zKP4gNwrEeSfsbuIbqNZtw" grade="5" skill="_b2khINWdEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_G8Vi8NwsEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_QgfZwNwsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_TerCINwsEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V_9TINwsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_e2-XINwsEeSfsbuIbqNZtw" grade="1" selectOne="_EMDwADnTEeSe6_w6Jrbqxg _EL5_BjnTEeSe6_w6Jrbqxg _EL9CVTnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_qJAsENwsEeSfsbuIbqNZtw" grade="1" selectOne="_EMDwADnTEeSe6_w6Jrbqxg _EL5_BjnTEeSe6_w6Jrbqxg _EL9CVTnTEeSe6_w6Jrbqxg"/>
+        </modules>
+        <modules xmi:id="_4wLJwNwsEeSfsbuIbqNZtw" name="MAGICAL EDUCATION (Adept)" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_4wLJwdwsEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_4wLJwtwsEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_4wLJw9wsEeSfsbuIbqNZtw" teachable="318d2edd-833b-48c5-a3e1-343bf03848a5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJxNwsEeSfsbuIbqNZtw" grade="2" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJxdwsEeSfsbuIbqNZtw" grade="5" skill="_b2khINWdEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJxtwsEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJx9wsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJyNwsEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4wLJydwsEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="__-GwENwsEeSfsbuIbqNZtw" grade="1" selectOne="_EL5X8DnTEeSe6_w6Jrbqxg _EL9paTnTEeSe6_w6Jrbqxg _EMEXGDnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_ErPNkNwtEeSfsbuIbqNZtw" grade="1" selectOne="_EL5X8DnTEeSe6_w6Jrbqxg _EL9paTnTEeSe6_w6Jrbqxg _EMEXGDnTEeSe6_w6Jrbqxg"/>
+        </modules>
+        <modules xmi:id="_4ZVhoNwtEeSfsbuIbqNZtw" name="MAGICAL EDUCATION (Aspected Magician)" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_4ZVhodwtEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_4ZVhotwtEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_4ZVho9wtEeSfsbuIbqNZtw" teachable="318d2edd-833b-48c5-a3e1-343bf03848a5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhpNwtEeSfsbuIbqNZtw" grade="2" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhpdwtEeSfsbuIbqNZtw" grade="5" skill="_b2khINWdEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhptwtEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhp9wtEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhqNwtEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_4ZVhqdwtEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_FqWEsNwuEeSfsbuIbqNZtw" grade="1" selectOne="_EMDwADnTEeSe6_w6Jrbqxg _EL5_BjnTEeSe6_w6Jrbqxg _EL9CVTnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_J2n34NwuEeSfsbuIbqNZtw" grade="1" selectOne="74a68a9e-8c5b-4998-8dbb-08c1e768afc3 59318078-e071-411b-9194-7222560e9f4a b7599a42-ceed-4558-b357-865aa3e317f5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_PKu10NwuEeSfsbuIbqNZtw" grade="1" selectOne="74a68a9e-8c5b-4998-8dbb-08c1e768afc3 59318078-e071-411b-9194-7222560e9f4a b7599a42-ceed-4558-b357-865aa3e317f5"/>
+        </modules>
+        <modules xmi:id="_aR9o8NwuEeSfsbuIbqNZtw" name="MAGICAL EDUCATION (Mystic Adept)" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_aR9o8dwuEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_aR9o8twuEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_aR9o89wuEeSfsbuIbqNZtw" teachable="318d2edd-833b-48c5-a3e1-343bf03848a5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o9NwuEeSfsbuIbqNZtw" grade="2" skill="74a68a9e-8c5b-4998-8dbb-08c1e768afc3"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o9dwuEeSfsbuIbqNZtw" grade="5" skill="_b2khINWdEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o9twuEeSfsbuIbqNZtw" grade="2" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o99wuEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o-NwuEeSfsbuIbqNZtw" grade="3" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aR9o-dwuEeSfsbuIbqNZtw" grade="4" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_iq_JYNwuEeSfsbuIbqNZtw" grade="1" selectOne="_EL5X8DnTEeSe6_w6Jrbqxg _EMEXGDnTEeSe6_w6Jrbqxg _EL9paTnTEeSe6_w6Jrbqxg _EL5_BjnTEeSe6_w6Jrbqxg _EL9CVTnTEeSe6_w6Jrbqxg _EMDwADnTEeSe6_w6Jrbqxg"/>
+        </modules>
+        <modules xmi:id="_YOkYYNwvEeSfsbuIbqNZtw" name="MILITARY SCHOOL" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_dtWVQNwvEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_gEucUNwvEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_iKMUANwvEeSfsbuIbqNZtw" teachable="dda02333-10e3-4295-9392-691ff3a7bd4a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_pv9ykNwvEeSfsbuIbqNZtw"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_AdWwgNwwEeSfsbuIbqNZtw" grade="1" skill="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_CHG8kNwwEeSfsbuIbqNZtw" grade="1" skillGroup="_EL8bQznTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_D2kvENwwEeSfsbuIbqNZtw" grade="1" skillGroup="_EL9paTnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_HsEZ8NwwEeSfsbuIbqNZtw" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_J6NsgNwwEeSfsbuIbqNZtw" grade="1" skill="963a548d-c629-4a13-a3e3-31b085a42e20"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_NB52MNwwEeSfsbuIbqNZtw" grade="1" skill="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Php2INwwEeSfsbuIbqNZtw" grade="1" skill="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Rp24wNwwEeSfsbuIbqNZtw" grade="1" skill="0dbcb9cd-f824-4b5d-a387-90d33318b04c"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_UqjpoNwwEeSfsbuIbqNZtw" grade="3" skill="_6wYd0NVkEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_YHcAMNwwEeSfsbuIbqNZtw" grade="3" skill="_uRgiUNVkEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_cmPGwNwwEeSfsbuIbqNZtw" grade="1" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_iK1XwNwwEeSfsbuIbqNZtw" grade="1" skill="_mw15kNwwEeSfsbuIbqNZtw"/>
+        </modules>
+        <modules xmi:id="_iAyOcNwxEeSfsbuIbqNZtw" name="PREPARATORY SCHOOL" page="71" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_nZUZYNwxEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_qtNzENwxEeSfsbuIbqNZtw" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_sPihcNwxEeSfsbuIbqNZtw" teachable="9f25cc0a-c47c-49dd-953c-8fe60628bae8"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Ez95gNwyEeSfsbuIbqNZtw" grade="1" skill="bd4d977a-cbd4-4289-99bb-896caed6786a"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_HIRecNwyEeSfsbuIbqNZtw" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_JjyeoNwyEeSfsbuIbqNZtw" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_MiV6cNwyEeSfsbuIbqNZtw" grade="1" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Ox6JUNwyEeSfsbuIbqNZtw" grade="1" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA _jzaGIMwsEeSWb_nK9CL72Q _7CFEENB9EeSX5PKgPhCdqw _uRgiUNVkEeSzd99pVrWJLg _b2khINWdEeSzd99pVrWJLg _fBvcoNWdEeSzd99pVrWJLg _cDa04NWeEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Q7_bQNwyEeSfsbuIbqNZtw" grade="1" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
         </modules>
         <modules xmi:id="_-0OV4NACEeSuYK6CpEIQGA" name="STREET KID" page="72" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_Ivu8wNADEeSuYK6CpEIQGA" grade="1">
@@ -10230,6 +10368,15 @@
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_xbApcNrAEeSal4EDlaUr4w" name="Knowledge: Denver" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
         </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="__xjdENvEEeSfsbuIbqNZtw" name="Interest Knowledge" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_vAPLoNwqEeSfsbuIbqNZtw" name="Street Knowledge: Critters" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_mw15kNwwEeSfsbuIbqNZtw" name="Professional Knowledge: Strategy" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_END1lznTEeSe6_w6Jrbqxg" name="Definitions">
@@ -11181,6 +11328,9 @@
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="a7390f3e-6909-4cc4-85b9-ff9b283cf746" name="Vendetta" page="159" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="-7"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="b619f590-c660-4276-b5f2-4b3bfd8ff9fd" name="Wanted" page="159" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="-10"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="_7Dlq8NAEEeSuYK6CpEIQGA" name="Enemy" karmaKosten="-10"/>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="_I4Pg4NwqEeSfsbuIbqNZtw" name="Incompetent Electronics" page="81" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="-5">
+          <localizations xmi:id="_I4Pg4dwqEeSfsbuIbqNZtw" local="de" name="Inkompetenz Elektronik"/>
+        </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ENhIkznTEeSe6_w6Jrbqxg" name="lifestyles">
         <entries xsi:type="shr5:Lifestyle" xmi:id="c939f8e8-bee5-4d8a-b3c7-5be9d5f1f590" name="Street" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="0" faelligkeitsIntervall="1" unit="month">
