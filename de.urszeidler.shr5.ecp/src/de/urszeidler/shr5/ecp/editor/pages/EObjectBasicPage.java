@@ -14,6 +14,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
 import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
@@ -21,10 +22,11 @@ import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
 import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
-public class ModuleChangePage extends AbstractShr5Page<EObject> {
+public class EObjectBasicPage extends AbstractShr5Page<EObject> {
     private EObject object;
     private EditingDomain editingDomain;
 
@@ -36,7 +38,7 @@ public class ModuleChangePage extends AbstractShr5Page<EObject> {
      * @param id
      * @param title
      */
-    public ModuleChangePage(String id, String title) {
+    public EObjectBasicPage(String id, String title) {
         super(id, title);
     }
 
@@ -50,17 +52,17 @@ public class ModuleChangePage extends AbstractShr5Page<EObject> {
      * @wbp.eval.method.parameter id "Some id"
      * @wbp.eval.method.parameter title "Some title"
      */
-    public ModuleChangePage(FormEditor editor, String id, String title) {
+    public EObjectBasicPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
     }
 
-    public ModuleChangePage(FormEditor editor, String id, String title, EObject object) {
+    public EObjectBasicPage(FormEditor editor, String id, String title, EObject object) {
         super(editor, id, title);
         this.object = object;
 
     }
 
-    public ModuleChangePage(FormEditor editor, String id, String title, EObject object, EditingDomain editingDomain, ReferenceManager manager) {
+    public EObjectBasicPage(FormEditor editor, String id, String title, EObject object, EditingDomain editingDomain, ReferenceManager manager) {
         super(editor, id, title, manager);
         this.object = object;
         this.editingDomain = editingDomain;
@@ -116,6 +118,15 @@ public class ModuleChangePage extends AbstractShr5Page<EObject> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.QUELLEN_CONSTRAIN__SOURCE, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.QUELLEN_CONSTRAIN__CONSTRAIN_TYPE, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.QUELLEN_CONSTRAIN__TARGETS, composite);
+        } else if (object instanceof IncreaseCharacterPart) {
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.INCREASE_CHARACTER_PART__TYPE, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ADVANCEMENT__KARMA_FACTOR, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.RANGE_TABLE__RANGE_TABLE_ENTRIES, composite);
+        }else if (object instanceof TrainingRate) {
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.RANGE_TABLE_ENTRY__FROM, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.RANGE_TABLE_ENTRY__TO, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__FACTOR, composite);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__TIME_UNIT, composite);
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
@@ -23,7 +22,6 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
@@ -74,7 +72,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.TrainingRate;
 
 /**
  * @author urs
@@ -1027,7 +1024,10 @@ public class ShadowrunManagmentTools {
     }
 
     public static RangeTableEntry findMatchingRange(final int value, EList<? extends RangeTableEntry> rangeTableEntries) {
-      return  FluentIterable.from(rangeTableEntries).firstMatch(new Predicate<RangeTableEntry>() {
+      if(rangeTableEntries.size()==1)
+          return rangeTableEntries.get(0);
+        
+        return  FluentIterable.from(rangeTableEntries).firstMatch(new Predicate<RangeTableEntry>() {
             @Override
             public boolean apply(RangeTableEntry input) {
                 return input.getFrom()<=value && input.getTo()>=value;

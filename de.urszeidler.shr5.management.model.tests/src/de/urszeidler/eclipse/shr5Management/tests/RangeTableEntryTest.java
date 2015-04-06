@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
-import de.urszeidler.eclipse.shr5Management.RangeTableEntry;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5Management.RangeTableEntry;
 
 /**
  * <!-- begin-user-doc -->

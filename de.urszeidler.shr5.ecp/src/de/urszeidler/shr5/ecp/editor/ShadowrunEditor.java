@@ -44,12 +44,14 @@ import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -64,10 +66,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ContractPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
+import de.urszeidler.shr5.ecp.editor.pages.EObjectBasicPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
@@ -77,7 +81,6 @@ import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
-import de.urszeidler.shr5.ecp.editor.pages.ModuleChangePage;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
@@ -674,7 +677,7 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return this;
             }
 
-            @SuppressWarnings("rawtypes")
+            @SuppressWarnings({ "rawtypes", "unchecked" })
             @Override
             public Object caseCharacterGenerator(CharacterGenerator object) {
 
@@ -715,9 +718,9 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseModuleChange(ModuleChange object) {
                 try {
-                    addPage(new ModuleChangePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
                 }
                 return super.caseModuleChange(object);
             }
@@ -725,11 +728,42 @@ public class ShadowrunEditor extends AbstractShr5Editor {
             @Override
             public Object caseQuellenConstrain(QuellenConstrain object) {
                 try {
-                    addPage(new ModuleChangePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
                 }
                 return super.caseQuellenConstrain(object);
+            }
+            
+            @Override
+            public Object caseIncreaseCharacterPart(IncreaseCharacterPart object) {
+                try {
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
+                }
+               return super.caseIncreaseCharacterPart(object);
+            }
+            
+            @Override
+            public Object caseTrainingRate(TrainingRate object) {
+                try {
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
+                }
+                return super.caseTrainingRate(object);
+            }
+            
+            @Override
+            public Object caseCharacterAdvancementSystem(CharacterAdvancementSystem object) {
+                try {
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager, Shr5managementPackage.Literals.CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS));
+                } catch (PartInitException e) {
+                    logError("error creating BeschreibbarContainterPage", e);//$NON-NLS-1$
+                }
+                return this;
             }
         };
         shr5managementSwitch.doSwitch(theEObject);

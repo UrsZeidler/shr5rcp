@@ -12,8 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -119,12 +120,17 @@ public class IncreaseCharacterPartItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public String getText(Object object) {
         IncreaseCharacterPart increaseCharacterPart = (IncreaseCharacterPart)object;
-        return getString("_UI_IncreaseCharacterPart_type") + " " + increaseCharacterPart.getKarmaFactor();
+        
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");
+        String labelForEObject = Shr5EditingTools.getLabelForEObject(factory, unset, increaseCharacterPart.getType());
+        
+        return getString("_UI_IncreaseCharacterPart_type") + " [" +labelForEObject+"] cost: "+ increaseCharacterPart.getKarmaFactor();
     }
 
 	/**
