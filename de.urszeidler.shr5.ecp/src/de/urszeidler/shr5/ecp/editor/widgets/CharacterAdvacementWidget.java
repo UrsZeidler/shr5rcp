@@ -352,7 +352,7 @@ public class CharacterAdvacementWidget extends Composite {
         composite_ValueChange.setLayout(gl_composite_ValueChange);
 
         Composite composite_type = toolkit.createComposite(composite_ValueChange, SWT.NONE);
-        composite_type.setLayout(new GridLayout(3, false));
+        composite_type.setLayout(new GridLayout(6, false));
         composite_type.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.paintBordersFor(composite_type);
 
@@ -433,7 +433,7 @@ public class CharacterAdvacementWidget extends Composite {
         emfFormBuilder.setBorderStyle(SWT.NONE);
 
         if (currentChange instanceof AttributeChange) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_type);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_type);           
         } else if (currentChange instanceof PersonaChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite_type);
         }

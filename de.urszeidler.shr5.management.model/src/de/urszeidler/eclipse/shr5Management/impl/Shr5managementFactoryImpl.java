@@ -61,6 +61,7 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -150,6 +151,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.MODULE_SKILL_GROUP_CHANGE: return createModuleSkillGroupChange();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
             case Shr5managementPackage.TRAINING_RATE: return createTrainingRate();
+            case Shr5managementPackage.TRAININGS_TIME: return createTrainingsTime();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -485,6 +487,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public TrainingRate createTrainingRate() {
         TrainingRateImpl trainingRate = new TrainingRateImpl();
         return trainingRate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TrainingsTime createTrainingsTime() {
+        TrainingsTimeImpl trainingsTime = new TrainingsTimeImpl();
+        return trainingsTime;
     }
 
     /**

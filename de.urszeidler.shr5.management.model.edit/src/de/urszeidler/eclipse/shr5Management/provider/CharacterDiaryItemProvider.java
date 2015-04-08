@@ -193,6 +193,11 @@ public class CharacterDiaryItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES,
                  Shr5managementFactory.eINSTANCE.createCharacterChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES,
+                 Shr5managementFactory.eINSTANCE.createTrainingsTime()));
     }
 
     /**

@@ -74,6 +74,7 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -366,6 +367,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public <E extends RangeTableEntry> Adapter caseRangeTable(RangeTable<E> object) {
                 return createRangeTableAdapter();
+            }
+            @Override
+            public Adapter caseTrainingsTime(TrainingsTime object) {
+                return createTrainingsTimeAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -974,6 +979,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createRangeTableAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime <em>Trainings Time</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime
+     * @generated
+     */
+    public Adapter createTrainingsTimeAdapter() {
         return null;
     }
 

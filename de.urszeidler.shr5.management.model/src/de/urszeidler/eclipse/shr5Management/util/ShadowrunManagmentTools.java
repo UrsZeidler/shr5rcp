@@ -47,6 +47,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.TimeUnits;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -72,6 +73,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingRate;
 
 /**
  * @author urs
@@ -415,7 +417,7 @@ public class ShadowrunManagmentTools {
         for (Advancement advancement : characterAdvancements) {
             if (advancement instanceof IncreaseCharacterPart) {
                 IncreaseCharacterPart icp = (IncreaseCharacterPart)advancement;
-                if (icp.getType().equals(eClass))
+                if (icp.getType() != null && icp.getType().equals(eClass))
                     return icp;
             }
         }
@@ -1023,6 +1025,12 @@ public class ShadowrunManagmentTools {
         return object.getGenerator().getKarmaPoints() - object.getKarmaSpend();
     }
 
+    /**
+     * Find the matching entry in the ranged table. 
+     * @param value
+     * @param rangeTableEntries
+     * @return
+     */
     public static RangeTableEntry findMatchingRange(final int value, EList<? extends RangeTableEntry> rangeTableEntries) {
       if(rangeTableEntries.size()==1)
           return rangeTableEntries.get(0);
@@ -1033,6 +1041,33 @@ public class ShadowrunManagmentTools {
                 return input.getFrom()<=value && input.getTo()>=value;
             }
             }).orNull();
+    }
+    
+    /**
+     * Calc the days for a training time.
+     * @param tr
+     * @return 
+     */
+    public static int calcDays(TrainingRate tr) {
+        if(tr==null || tr.getTimeUnit()==null)
+            return -1;
+       TimeUnits timeUnit = tr.getTimeUnit();
+       int days = 0;
+       switch (timeUnit) {
+           case DAY:
+               days = 1;
+               break;
+           case WEEK:
+               days = 7;
+               break;
+           case MONTH:
+               days = 30;
+               break;
+
+        default:
+            break;
+    }
+      return days * tr.getFactor(); 
     }
 
 }

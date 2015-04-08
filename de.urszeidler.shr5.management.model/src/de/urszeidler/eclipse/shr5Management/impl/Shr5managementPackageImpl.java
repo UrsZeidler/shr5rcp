@@ -81,6 +81,7 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 /**
@@ -376,6 +377,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass rangeTableEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass trainingsTimeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2418,6 +2426,42 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getTrainingsTime() {
+        return trainingsTimeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingsTime_DaysTrained() {
+        return (EAttribute)trainingsTimeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingsTime_DaysRemains() {
+        return (EAttribute)trainingsTimeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingsTime_TrainingComplete() {
+        return (EAttribute)trainingsTimeEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getQuellenConstrain() {
         return quellenConstrainEClass;
     }
@@ -3357,6 +3401,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         rangeTableEClass = createEClass(RANGE_TABLE);
         createEReference(rangeTableEClass, RANGE_TABLE__RANGE_TABLE_ENTRIES);
 
+        trainingsTimeEClass = createEClass(TRAININGS_TIME);
+        createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_TRAINED);
+        createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_REMAINS);
+        createEAttribute(trainingsTimeEClass, TRAININGS_TIME__TRAINING_COMPLETE);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -3491,6 +3540,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         shr5KarmaGeneratorEClass.getEGenericSuperTypes().add(g1);
         trainingRateEClass.getESuperTypes().add(this.getRangeTableEntry());
+        trainingsTimeEClass.getESuperTypes().add(this.getCharacterChange());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4074,6 +4124,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(rangeTableEClass, RangeTable.class, "RangeTable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         g1 = createEGenericType(rangeTableEClass_E);
         initEReference(getRangeTable_RangeTableEntries(), g1, null, "rangeTableEntries", null, 0, -1, RangeTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(trainingsTimeEClass, TrainingsTime.class, "TrainingsTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingsTime_DaysRemains(), ecorePackage.getEInt(), "daysRemains", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingsTime_TrainingComplete(), ecorePackage.getEBoolean(), "trainingComplete", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

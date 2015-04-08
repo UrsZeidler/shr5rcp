@@ -8,6 +8,7 @@ import org.eclipse.core.databinding.observable.IObservable;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -22,12 +23,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
@@ -45,10 +49,19 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.AttributeChange;
+import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
@@ -154,6 +167,14 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             setSingleRefernceFromDialog(e, dialog);
             return;
+        } else if (Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE.equals(e.getFeature())) {
+            if (object instanceof TrainingsTime) {
+                TrainingsTime tt = (TrainingsTime)object;
+//                if (tt.getChange() == null) {
+                    createTrainingsTimes(tt,e);
+//                }
+                return;
+            }
         }
 //        else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
 //            EObject defaultCreationDialog = defaultCreationDialog(e, object);
@@ -162,6 +183,62 @@ public class ShrReferenceManager extends DefaultReferenceManager {
 //            return;
 //        }
         super.handleManage(e, object);
+    }
+
+    /**
+     * Creates a set of possible trainig times to choose from
+     * @param tt
+     * @param e 
+     */
+    private void createTrainingsTimes(TrainingsTime tt, FormbuilderEntry e) {
+        EObject eContainer = tt.eContainer();
+        if(eContainer instanceof CharacterDiary && eContainer.eContainer() instanceof ManagedCharacter ){
+            final ManagedCharacter character = (ManagedCharacter) eContainer.eContainer();
+            AbstraktPersona p= character.getPersona();
+            List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedAttibutes(p);
+            orderedAttibutes.remove(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
+            orderedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
+            
+            ImmutableList<AttributeChange> list = FluentIterable.from(orderedAttibutes).filter(new Predicate<EAttribute>(){
+
+                @Override
+                public boolean apply(EAttribute input) {
+                  
+                  int base=  (Integer)character.getPersona().getSpezies().eGet( ShadowrunTools.base2SpeciesMax(input));
+                  Integer eGet = (Integer)character.getPersona().eGet(input);
+                    return 1+ eGet<base*1.5;
+                }
+                
+                
+            }).transform(new Function<EAttribute, AttributeChange>() {
+
+                @Override
+                public AttributeChange apply(EAttribute input) {
+                    AttributeChange attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
+                    attributeChange.setAttibute(input);
+                    Integer eGet = (Integer)character.getPersona().eGet(input);
+
+                    attributeChange.setFrom(eGet);
+                    attributeChange.setTo(eGet + 1);
+                    return attributeChange;
+                }
+            }).toList();
+            
+          ArrayList<PersonaValueChange> a = new ArrayList<PersonaValueChange>();
+          PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+          a.add(personaChange);
+          a.addAll(list);
+            
+            Object[] choises = NullObject.toChoises(a);
+            OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select Training", "");
+            dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+            PersonaValueChange singleRefernceFromDialog = (PersonaValueChange)getSingleRefernceFromDialog(dialog);
+            Changes oldChanges = tt.getChange();
+            setValue(e, singleRefernceFromDialog);
+            character.getChanges().remove(oldChanges);
+            character.getChanges().add(singleRefernceFromDialog);
+
+        }
     }
 
     /**

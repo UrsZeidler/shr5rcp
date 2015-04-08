@@ -47,6 +47,7 @@ import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -753,6 +754,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
                 }
                 return super.caseTrainingRate(object);
+            }
+            
+            @Override
+            public Object caseDiaryEntry(DiaryEntry object) {
+                try {
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
+                }
+                return super.caseDiaryEntry(object);
             }
             
             @Override

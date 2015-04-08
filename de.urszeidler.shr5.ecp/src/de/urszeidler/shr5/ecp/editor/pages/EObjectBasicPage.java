@@ -14,7 +14,12 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.CharacterChange;
+import de.urszeidler.eclipse.shr5Management.CharacterDiary;
+import de.urszeidler.eclipse.shr5Management.ContractPayment;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModuleAttributeChange;
 import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
@@ -23,6 +28,8 @@ import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -127,7 +134,28 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.RANGE_TABLE_ENTRY__TO, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__FACTOR, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__TIME_UNIT, composite);
+        }else if (object instanceof DiaryEntry) {
+            DiaryEntry de = (DiaryEntry)object;
+            EObject eContainer = de.eContainer();
+            if (de.getDate() == null && eContainer instanceof CharacterDiary && eContainer.eContainer() instanceof ManagedCharacter )
+                de.setDate(ShadowrunManagmentTools.findCorrenspondingDate((ManagedCharacter)eContainer.eContainer()));
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite );
+            if (object instanceof CharacterChange) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);
+            }
+            if (object instanceof ContractPayment) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__CONTRACT_TO_PAY, composite);
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__PAYED, composite);
+            }
+            if (object instanceof TrainingsTime) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, composite);
+//                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, composite, new LabelEntry());
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
+                
+            }
         }
+        
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
     }

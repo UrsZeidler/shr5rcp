@@ -51,6 +51,7 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(LifeModulesGeneratorTest.class);
         suite.addTestSuite(Shr5KarmaGeneratorTest.class);
         suite.addTestSuite(IncreaseCharacterPartTest.class);
+        suite.addTestSuite(TrainingsTimeTest.class);
         
         
         return suite;

@@ -275,6 +275,15 @@ public interface Shr5managementFactory extends EFactory {
     TrainingRate createTrainingRate();
 
     /**
+     * Returns a new object of class '<em>Trainings Time</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Trainings Time</em>'.
+     * @generated
+     */
+    TrainingsTime createTrainingsTime();
+
+    /**
      * Returns a new object of class '<em>Quellen Constrain</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

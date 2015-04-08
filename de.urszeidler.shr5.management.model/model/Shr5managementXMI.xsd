@@ -1216,4 +1216,13 @@ One entrie may be effective for a defined value.
 </xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="TrainingsTime">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterChange">
+        <xsd:attribute name="daysTrained" type="xsd:int"/>
+        <xsd:attribute name="trainingComplete" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TrainingsTime" type="shr5mngt:TrainingsTime"/>
 </xsd:schema>

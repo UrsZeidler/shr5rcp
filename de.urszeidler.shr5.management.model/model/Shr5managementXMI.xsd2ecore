@@ -399,6 +399,11 @@
       <nested inputs="shr5Management.ecore#//RangeTable/rangeTableEntries" outputs="Shr5managementXMI.xsd#//RangeTable;XSDComplexTypeDefinition=58/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//RangeTable" outputs="Shr5managementXMI.xsd#//RangeTable;XSDElementDeclaration=58"/>
+    <nested inputs="shr5Management.ecore#//TrainingsTime" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59">
+      <nested inputs="shr5Management.ecore#//TrainingsTime/daysTrained" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//TrainingsTime/trainingComplete" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//TrainingsTime" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDElementDeclaration=59"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

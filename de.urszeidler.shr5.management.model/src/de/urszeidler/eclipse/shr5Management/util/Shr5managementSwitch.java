@@ -73,6 +73,7 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -569,6 +570,14 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
             case Shr5managementPackage.RANGE_TABLE: {
                 RangeTable<?> rangeTable = (RangeTable<?>)theEObject;
                 T1 result = caseRangeTable(rangeTable);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.TRAININGS_TIME: {
+                TrainingsTime trainingsTime = (TrainingsTime)theEObject;
+                T1 result = caseTrainingsTime(trainingsTime);
+                if (result == null) result = caseCharacterChange(trainingsTime);
+                if (result == null) result = caseDiaryEntry(trainingsTime);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1188,6 +1197,21 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @generated
      */
     public <E extends RangeTableEntry> T1 caseRangeTable(RangeTable<E> object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Trainings Time</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Trainings Time</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T1 caseTrainingsTime(TrainingsTime object) {
         return null;
     }
 

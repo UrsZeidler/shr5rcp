@@ -75,6 +75,7 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -490,6 +491,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateRangeTableEntry((RangeTableEntry)value, diagnostics, context);
             case Shr5managementPackage.RANGE_TABLE:
                 return validateRangeTable((RangeTable<?>)value, diagnostics, context);
+            case Shr5managementPackage.TRAININGS_TIME:
+                return validateTrainingsTime((TrainingsTime)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1193,6 +1196,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateRangeTable(RangeTable<?> rangeTable, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(rangeTable, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateTrainingsTime(TrainingsTime trainingsTime, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(trainingsTime, diagnostics, context);
     }
 
     /**

@@ -6999,6 +6999,88 @@ public interface Shr5managementPackage extends EPackage {
     int RANGE_TABLE_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl <em>Trainings Time</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getTrainingsTime()
+     * @generated
+     */
+    int TRAININGS_TIME = 59;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__DATE = CHARACTER_CHANGE__DATE;
+
+    /**
+     * The feature id for the '<em><b>Message</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__MESSAGE = CHARACTER_CHANGE__MESSAGE;
+
+    /**
+     * The feature id for the '<em><b>Change</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__CHANGE = CHARACTER_CHANGE__CHANGE;
+
+    /**
+     * The feature id for the '<em><b>Days Trained</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__DAYS_TRAINED = CHARACTER_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Days Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__DAYS_REMAINS = CHARACTER_CHANGE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Training Complete</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME__TRAINING_COMPLETE = CHARACTER_CHANGE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Trainings Time</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME_FEATURE_COUNT = CHARACTER_CHANGE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Trainings Time</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME_OPERATION_COUNT = CHARACTER_CHANGE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7006,7 +7088,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 59;
+	int GENERATOR_STATE = 60;
 
 
 	/**
@@ -7017,7 +7099,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 60;
+	int SEX = 61;
 
 
 	/**
@@ -7028,7 +7110,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 61;
+    int QUELLEN_CONSTRAIN_TYPE = 62;
 
 
     /**
@@ -7039,7 +7121,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
      * @generated
      */
-    int LIFE_MODULE_TYPE = 62;
+    int LIFE_MODULE_TYPE = 63;
 
 
     /**
@@ -9176,6 +9258,49 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getRangeTable_RangeTableEntries();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime <em>Trainings Time</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Trainings Time</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime
+     * @generated
+     */
+    EClass getTrainingsTime();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysTrained <em>Days Trained</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Days Trained</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysTrained()
+     * @see #getTrainingsTime()
+     * @generated
+     */
+    EAttribute getTrainingsTime_DaysTrained();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains <em>Days Remains</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Days Remains</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @see #getTrainingsTime()
+     * @generated
+     */
+    EAttribute getTrainingsTime_DaysRemains();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#isTrainingComplete <em>Training Complete</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Training Complete</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#isTrainingComplete()
+     * @see #getTrainingsTime()
+     * @generated
+     */
+    EAttribute getTrainingsTime_TrainingComplete();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
@@ -11590,6 +11715,40 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference RANGE_TABLE__RANGE_TABLE_ENTRIES = eINSTANCE.getRangeTable_RangeTableEntries();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl <em>Trainings Time</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getTrainingsTime()
+         * @generated
+         */
+        EClass TRAININGS_TIME = eINSTANCE.getTrainingsTime();
+
+        /**
+         * The meta object literal for the '<em><b>Days Trained</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRAININGS_TIME__DAYS_TRAINED = eINSTANCE.getTrainingsTime_DaysTrained();
+
+        /**
+         * The meta object literal for the '<em><b>Days Remains</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRAININGS_TIME__DAYS_REMAINS = eINSTANCE.getTrainingsTime_DaysRemains();
+
+        /**
+         * The meta object literal for the '<em><b>Training Complete</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TRAININGS_TIME__TRAINING_COMPLETE = eINSTANCE.getTrainingsTime_TrainingComplete();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.
