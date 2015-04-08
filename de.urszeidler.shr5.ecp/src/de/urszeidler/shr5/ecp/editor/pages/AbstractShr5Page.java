@@ -7,9 +7,14 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.observable.value.IValueChangeListener;
+import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
+import org.eclipse.core.databinding.property.value.IValueProperty;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.Diagnostician;
@@ -39,6 +44,7 @@ import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ImageHyperlink;
 import org.eclipse.wb.swt.ResourceManager;
 
 import com.google.common.base.Joiner;
@@ -121,6 +127,20 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         }
     }
 
+    public final class ReadOnlyLinkEntry implements EntryFactory {
+        private final FormToolkit formToolkit;
+
+        public ReadOnlyLinkEntry(FormToolkit formToolkit) {
+            super();
+            this.formToolkit = formToolkit;
+        }
+        @Override
+        public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+            createLinkRO(formToolkit, container, entry, object, emfFormBuilder);
+        }
+    };
+
+    
     /**
      * A emf form factory to create and bind a date widget.
      */
@@ -306,4 +326,46 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         return context;
     }
 
+    /**
+     * @param toolkit
+     * @param container
+     * @param e
+     * @param object
+     * @param emfFormBuilder
+     */
+    private void createLinkRO(final FormToolkit toolkit, Composite container, FormbuilderEntry e, EObject object, EmfFormBuilder emfFormBuilder) {
+        Label label = emfFormBuilder.createConfiguredLable(container, e, object);
+//        label.setText(featureName(e.getFeature()));
+
+        final ImageHyperlink srcLink = toolkit.createImageHyperlink(container, SWT.NONE);
+        toolkit.paintBordersFor(srcLink);
+        srcLink.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 2, 1));
+
+        Object value = object.eGet(e.getFeature());
+
+        final String nullString = Messages.EmfFormbuilder_non_selected;
+        String element = value == null ? nullString : labelprovider.getText(value);
+        srcLink.setText(element);
+        srcLink.setImage(labelprovider.getImage(value));
+
+        // ISWTObservableValue uiObs = SWTObservables.observeText(srcLink);
+        IValueProperty property = null;
+        if (getEditingDomain() != null)
+            property = EMFEditProperties.value(getEditingDomain(), e.getFeature());
+        else
+            property = EMFProperties.value(e.getFeature());
+
+        final IObservableValue mObs = property.observe(object);
+        e.setObservable(mObs);
+        mObs.addValueChangeListener(new IValueChangeListener() {
+            @Override
+            public void handleValueChange(ValueChangeEvent event) {
+                Object value = event.getObservableValue().getValue();
+                srcLink.setText(value == null ? nullString : labelprovider.getText(value));
+                srcLink.setImage(labelprovider.getImage(value));
+            }
+        });
+    }
+
+    
 }

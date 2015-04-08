@@ -204,13 +204,13 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         createFormBuilder(managedForm);
         gd_grpSkills.heightHint = grpAttributes.getBounds().height;
 
-        EntryFactory linkLabelEntryFactory = new EntryFactory() {
-
-            @Override
-            public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
-                createLinkRO(toolkit, container, entry, object, emfFormBuilder);
-            }
-        };
+        EntryFactory linkLabelEntryFactory = new ReadOnlyLinkEntry(toolkit);// EntryFactory() {
+//
+//            @Override
+//            public void createEntry(Composite container, FormbuilderEntry entry, EObject object, DataBindingContext dbc, EmfFormBuilder emfFormBuilder) {
+//                createLinkRO(toolkit, container, entry, object, emfFormBuilder);
+//            }
+//        };
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, composite, linkLabelEntryFactory);
         if (persona instanceof Zauberer) {
