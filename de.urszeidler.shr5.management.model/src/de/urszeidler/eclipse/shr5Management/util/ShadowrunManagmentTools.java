@@ -715,7 +715,7 @@ public class ShadowrunManagmentTools {
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             sum = sum + personaFertigkeit.getSpezialisierungen().size();
         }
-        IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), null);
+        IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), Shr5Package.Literals.SPEZIALISIERUNG);
         if (advancment != null)
             return sum * advancment.getKarmaFactor();
 
@@ -1068,6 +1068,23 @@ public class ShadowrunManagmentTools {
             break;
     }
       return days * tr.getFactor(); 
+    }
+
+    /**
+     * Finds the advacements for an erlernbar (Fertigkeit/PersonaFertigkeit).
+     * @param characterAdvancements
+     * @param changeable
+     * @return
+     */
+    public static IncreaseCharacterPart findAdvancment(EList<Advancement> characterAdvancements, Erlernbar changeable) {
+        if (changeable instanceof PersonaFertigkeitsGruppe) {
+            PersonaFertigkeitsGruppe pfg = (PersonaFertigkeitsGruppe)changeable;
+            return findAdvancment(characterAdvancements, pfg.getGruppe().eClass());
+        } else if (changeable instanceof PersonaFertigkeit) {
+            PersonaFertigkeit pf = (PersonaFertigkeit)changeable;
+            return findAdvancment(characterAdvancements, pf.getFertigkeit().eClass());
+        }
+        return null;
     }
 
 }

@@ -8,6 +8,7 @@ import junit.textui.TestRunner;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.TimeUnits;
@@ -29,10 +30,9 @@ import de.urszeidler.eclipse.shr5Management.TrainingsTime;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class TrainingsTimeTest extends CharacterChangeTest {
@@ -40,7 +40,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -51,7 +50,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
      * Constructs a new Trainings Time test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public TrainingsTimeTest(String name) {
@@ -62,7 +60,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
      * Returns the fixture for this Trainings Time test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -73,7 +70,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -85,7 +81,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -183,6 +178,58 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     }
 
     /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @generated not
+     */
+    public void testGetDaysRemains_SkillGroup_1() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PersonaFertigkeitsGruppe pf = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+        pf.setGruppe(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
+        character.getPersona().getFertigkeitsGruppen().add(pf);
+
+        createAdvacementSystem(character);
+
+        PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        attributeChange.setChangeable(pf);
+
+        attributeChange.setFrom(0);
+        attributeChange.setTo(1);
+
+        getFixture().setChange(attributeChange);
+        assertEquals(7, getFixture().getDaysRemains());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @generated not
+     */
+    public void testGetDaysRemains_SkillGroup_2() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PersonaFertigkeitsGruppe pf = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+        pf.setGruppe(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
+        character.getPersona().getFertigkeitsGruppen().add(pf);
+
+        createAdvacementSystem(character);
+
+        PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        attributeChange.setChangeable(pf);
+
+        attributeChange.setFrom(4);
+        attributeChange.setTo(5);
+
+        getFixture().setChange(attributeChange);
+        assertEquals(70, getFixture().getDaysRemains());
+    }
+
+    /**
      * @param character
      */
     private void createAdvacementSystem(PlayerCharacter character) {
@@ -202,7 +249,7 @@ public class TrainingsTimeTest extends CharacterChangeTest {
 
         a = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         a.setKarmaFactor(1);
-        a.setType(Shr5Package.Literals.PERSONA_FERTIGKEIT);
+        a.setType(Shr5Package.Literals.FERTIGKEIT);
         tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
         tr.setFactor(1);
         tr.setTimeUnit(TimeUnits.DAY);
@@ -212,6 +259,24 @@ public class TrainingsTimeTest extends CharacterChangeTest {
         tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
         tr.setFactor(2);
         tr.setTimeUnit(TimeUnits.DAY);
+        tr.setFrom(5);
+        tr.setTo(8);
+        a.getRangeTableEntries().add(tr);
+        system.getCharacterAdvancements().getCharacterAdvancements().add(a);
+        
+
+        a = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        a.setKarmaFactor(1);
+        a.setType(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+        tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
+        tr.setFactor(1);
+        tr.setTimeUnit(TimeUnits.WEEK);
+        tr.setFrom(1);
+        tr.setTo(4);
+        a.getRangeTableEntries().add(tr);
+        tr = Shr5managementFactory.eINSTANCE.createTrainingRate();
+        tr.setFactor(2);
+        tr.setTimeUnit(TimeUnits.WEEK);
         tr.setFrom(5);
         tr.setTo(8);
         a.getRangeTableEntries().add(tr);

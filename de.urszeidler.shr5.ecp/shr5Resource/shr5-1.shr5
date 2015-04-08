@@ -131,9 +131,15 @@
           <type href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
         </characterAdvancements>
         <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_BtakUt0CEeOvVYoRsPZlnA" karmaFactor="1">
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_c-bygN4sEeSgQtcoHCpSOA" from="1" to="4" factor="1" timeUnit="day"/>
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_dx86IN4sEeSgQtcoHCpSOA" from="5" to="8" factor="1" timeUnit="week"/>
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_ebwsIN4sEeSgQtcoHCpSOA" from="9" to="13" factor="2" timeUnit="week"/>
           <type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
         </characterAdvancements>
         <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_BtbLYN0CEeOvVYoRsPZlnA" karmaFactor="1">
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_h0MnkN4sEeSgQtcoHCpSOA" from="1" to="4" factor="1" timeUnit="day"/>
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_idpNMN4sEeSgQtcoHCpSOA" from="5" to="8" factor="1" timeUnit="week"/>
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_jAA6cN4sEeSgQtcoHCpSOA" from="9" to="13" factor="2" timeUnit="week"/>
           <type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
         </characterAdvancements>
         <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_BtbLYd0CEeOvVYoRsPZlnA" karmaFactor="7">

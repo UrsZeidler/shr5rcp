@@ -51,7 +51,6 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
-import de.urszeidler.eclipse.shr5Management.CharacterChange;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -61,7 +60,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
@@ -91,11 +89,11 @@ public class ShrReferenceManager extends DefaultReferenceManager {
     @Override
     public Object handleAdd(FormbuilderEntry e, EObject object) {
         Object handleAdd = super.handleAdd(e, object);
-        if(handleAdd!=null && handleAdd instanceof EObject)
+        if (handleAdd != null && handleAdd instanceof EObject)
             ShadowrunEditingTools.openEObject((EObject)handleAdd);
         return handleAdd;
     }
-    
+
     public void handleManage(FormbuilderEntry e, EObject object) {
         if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
             Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(Shr5managementFactory.eINSTANCE.createPlayerCharacter(),
@@ -148,20 +146,19 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         } else if (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())) {
             EObject newWeapon = defaultCreationDialog(e, object);
             setValue(e, newWeapon);
-//        } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
-//            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-//            PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-//            ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
-//                    Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
-//
-//            if (dialog.open() == Dialog.OK)
-//                setValue(e, personaFertigkeit);
-//            
-//            return;
-        }
-        else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())){
+            // } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
+            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+            // PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+            // ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
+            // Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
+            //
+            // if (dialog.open() == Dialog.OK)
+            // setValue(e, personaFertigkeit);
+            //
+            // return;
+        } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
-            
+
             Object[] choises = NullObject.toChoises(objectsOfType);
             OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select skill", "");
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
@@ -170,46 +167,44 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         } else if (Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE.equals(e.getFeature())) {
             if (object instanceof TrainingsTime) {
                 TrainingsTime tt = (TrainingsTime)object;
-//                if (tt.getChange() == null) {
-                    createTrainingsTimes(tt,e);
-//                }
+                if (tt.getDaysTrained() == 0)
+                    createTrainingsTimes(tt, e);
                 return;
             }
         }
-//        else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
-//            EObject defaultCreationDialog = defaultCreationDialog(e, object);
-//            if(defaultCreationDialog!=null)
-//                setValue(e, defaultCreationDialog);
-//            return;
-//        }
+        // else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
+        // EObject defaultCreationDialog = defaultCreationDialog(e, object);
+        // if(defaultCreationDialog!=null)
+        // setValue(e, defaultCreationDialog);
+        // return;
+        // }
         super.handleManage(e, object);
     }
 
     /**
      * Creates a set of possible trainig times to choose from
+     * 
      * @param tt
-     * @param e 
+     * @param e
      */
     private void createTrainingsTimes(TrainingsTime tt, FormbuilderEntry e) {
         EObject eContainer = tt.eContainer();
-        if(eContainer instanceof CharacterDiary && eContainer.eContainer() instanceof ManagedCharacter ){
-            final ManagedCharacter character = (ManagedCharacter) eContainer.eContainer();
-            AbstraktPersona p= character.getPersona();
+        if (eContainer instanceof CharacterDiary && eContainer.eContainer() instanceof ManagedCharacter) {
+            final ManagedCharacter character = (ManagedCharacter)eContainer.eContainer();
+            AbstraktPersona p = character.getPersona();
             List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedAttibutes(p);
             orderedAttibutes.remove(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
             orderedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
-            
-            ImmutableList<AttributeChange> list = FluentIterable.from(orderedAttibutes).filter(new Predicate<EAttribute>(){
+
+            ImmutableList<AttributeChange> list = FluentIterable.from(orderedAttibutes).filter(new Predicate<EAttribute>() {
 
                 @Override
                 public boolean apply(EAttribute input) {
-                  
-                  int base=  (Integer)character.getPersona().getSpezies().eGet( ShadowrunTools.base2SpeciesMax(input));
-                  Integer eGet = (Integer)character.getPersona().eGet(input);
-                    return 1+ eGet<base*1.5;
+                    int base = (Integer)character.getPersona().getSpezies().eGet(ShadowrunTools.base2SpeciesMax(input));
+                    Integer eGet = (Integer)character.getPersona().eGet(input);
+                    return 1 + eGet < base * 1.5;
                 }
-                
-                
+
             }).transform(new Function<EAttribute, AttributeChange>() {
 
                 @Override
@@ -223,16 +218,44 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     return attributeChange;
                 }
             }).toList();
-            
-          ArrayList<PersonaValueChange> a = new ArrayList<PersonaValueChange>();
-          PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
-          a.add(personaChange);
-          a.addAll(list);
-            
+
+            ImmutableList<PersonaChange> list2 = FluentIterable.from(p.getFertigkeitsGruppen())
+                    .transform(new Function<PersonaFertigkeitsGruppe, PersonaChange>() {
+
+                        @Override
+                        public PersonaChange apply(PersonaFertigkeitsGruppe input) {
+                            PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+                            attributeChange.setChangeable(input);
+
+                            attributeChange.setFrom(input.getStufe());
+                            attributeChange.setTo(input.getStufe() + 1);
+                            return attributeChange;
+                        }
+                    }).toList();
+            ImmutableList<PersonaChange> list3 = FluentIterable.from(p.getFertigkeiten()).transform(new Function<PersonaFertigkeit, PersonaChange>() {
+
+                @Override
+                public PersonaChange apply(PersonaFertigkeit input) {
+                    PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+                    attributeChange.setChangeable(input);
+
+                    attributeChange.setFrom(input.getStufe());
+                    attributeChange.setTo(input.getStufe() + 1);
+                    return attributeChange;
+                }
+            }).toList();
+
+            ArrayList<PersonaValueChange> a = new ArrayList<PersonaValueChange>();
+            a.addAll(list);
+            a.addAll(list2);
+            a.addAll(list3);
+
             Object[] choises = NullObject.toChoises(a);
             OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select Training", "");
             dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
             PersonaValueChange singleRefernceFromDialog = (PersonaValueChange)getSingleRefernceFromDialog(dialog);
+            if (singleRefernceFromDialog == null)
+                return;
             Changes oldChanges = tt.getChange();
             setValue(e, singleRefernceFromDialog);
             character.getChanges().remove(oldChanges);
@@ -301,8 +324,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
                 || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                 || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
-                || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature()) 
-                || Shr5Package.Literals.FEUERWAFFE__EINBAU.equals(e.getFeature())
+                || Shr5Package.Literals.CYBERWARE__EINBAU.equals(e.getFeature()) || Shr5Package.Literals.FEUERWAFFE__EINBAU.equals(e.getFeature())
                 || Shr5Package.Literals.KLEIDUNG__KMODS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                 || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
@@ -573,7 +595,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      * @return the copy
      */
     public static EObject copyWithParentId(EObject eo) {
-       return ShadowrunEditingTools.copyWithParentId(eo);
-     }
+        return ShadowrunEditingTools.copyWithParentId(eo);
+    }
 
 }

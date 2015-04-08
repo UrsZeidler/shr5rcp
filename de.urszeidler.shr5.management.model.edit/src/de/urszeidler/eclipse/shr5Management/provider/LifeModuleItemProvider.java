@@ -267,7 +267,7 @@ public class LifeModuleItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_LifeModule_time_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_LifeModule_time_feature", "_UI_LifeModule_type"),
+                 getString("_UI_LifeModule_time_description"),
                  Shr5managementPackage.Literals.LIFE_MODULE__TIME,
                  true,
                  false,

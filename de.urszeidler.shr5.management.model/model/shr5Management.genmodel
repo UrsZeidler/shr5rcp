@@ -485,14 +485,16 @@
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/karmaCost"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModule/characterChanges"/>
       <genFeatures createChild="false" propertyDescription="The kind of module." ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/moduleType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/time"/>
+      <genFeatures createChild="false" propertyDescription="The time the module need if any."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifeModule/time"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleChange"/>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillChange">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillChange/skill"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleTeachableChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTeachableChange/teachable"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="Is a Quallity or a Spec."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTeachableChange/teachable"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleAttributeChange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/attribute"/>
@@ -515,21 +517,27 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator"/>
     <genClasses ecoreClass="shr5Management.ecore#//TrainingRate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/factor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/timeUnit"/>
+      <genFeatures createChild="false" propertyDescription="The factor for the time units."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/factor"/>
+      <genFeatures createChild="false" propertyDescription="The time units defines the basic trainig time. "
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRate/timeUnit"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//RangeTableEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/from"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/to"/>
+      <genFeatures createChild="false" propertyDescription="The starting value." ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/from"/>
+      <genFeatures createChild="false" propertyDescription="The end value of this range."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//RangeTableEntry/to"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//RangeTable">
       <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//RangeTable/E"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//RangeTable/rangeTableEntries"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//TrainingsTime">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/daysTrained"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/daysRemains"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
+      <genFeatures createChild="false" propertyDescription="The number of days the character has trained."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/daysTrained"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The days the character need to train befor complete."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/daysRemains"/>
+      <genFeatures createChild="false" propertyDescription="Marker when the training is done."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

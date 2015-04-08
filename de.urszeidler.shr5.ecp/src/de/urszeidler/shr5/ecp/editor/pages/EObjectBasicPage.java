@@ -139,20 +139,25 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
             EObject eContainer = de.eContainer();
             if (de.getDate() == null && eContainer instanceof CharacterDiary && eContainer.eContainer() instanceof ManagedCharacter )
                 de.setDate(ShadowrunManagmentTools.findCorrenspondingDate((ManagedCharacter)eContainer.eContainer()));
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite );
-            if (object instanceof CharacterChange) {
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);
-            }
-            if (object instanceof ContractPayment) {
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__CONTRACT_TO_PAY, composite);
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__PAYED, composite);
-            }
+            
             if (object instanceof TrainingsTime) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);
+                emfFormBuilder.addTextEntry("Training Start",Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, composite);
-//                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, composite, new LabelEntry());
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, composite, new LabelEntry());
+//                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
                 
+            } else if (object instanceof CharacterChange) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);
+            }else  if (object instanceof ContractPayment) {
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite );
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__CONTRACT_TO_PAY, composite, new ReadOnlyLinkEntry(toolkit));
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__PAYED, composite);
+            }else{
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite,createControllGridData(300) );
             }
         }
         

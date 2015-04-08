@@ -30,10 +30,12 @@ import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.dialogs.PayFineDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
@@ -118,6 +120,15 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
             }
         };
         action.setToolTipText("Pay all contracts.");
+        Action syncDiaryAction = new Action(null,ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/sync-time.png")) {
+            @Override
+            public void run() {
+                ManagedCharacter character = (ManagedCharacter)object.eContainer();
+                object.setCharacterDate(ShadowrunManagmentTools.findCorrenspondingDate(character));
+            }
+        };
+        syncDiaryAction.setToolTipText("Sync the diary Date.");
+        form.getToolBarManager().add(syncDiaryAction);
         form.getToolBarManager().add(action);
         form.getToolBarManager().update(true);
 
@@ -141,9 +152,7 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         createFormBuilder(managedForm);
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__CHARACTER_DATE, grpCurrentDate, new DateEntryFactory(toolkit));
-        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
-        controlGridData.heightHint = 250;
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES, grpCurrentDate, controlGridData);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES, grpCurrentDate, createControllGridData(300));
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);

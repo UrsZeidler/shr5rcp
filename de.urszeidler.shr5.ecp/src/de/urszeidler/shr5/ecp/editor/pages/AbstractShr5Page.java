@@ -326,6 +326,12 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         return context;
     }
 
+    protected GridData createControllGridData(int height) {
+        GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
+        controlGridData.heightHint = height;
+        return controlGridData;
+    }
+    
     /**
      * @param toolkit
      * @param container
@@ -334,8 +340,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
      * @param emfFormBuilder
      */
     private void createLinkRO(final FormToolkit toolkit, Composite container, FormbuilderEntry e, EObject object, EmfFormBuilder emfFormBuilder) {
-        Label label = emfFormBuilder.createConfiguredLable(container, e, object);
-//        label.setText(featureName(e.getFeature()));
+        emfFormBuilder.createConfiguredLable(container, e, object);
 
         final ImageHyperlink srcLink = toolkit.createImageHyperlink(container, SWT.NONE);
         toolkit.paintBordersFor(srcLink);

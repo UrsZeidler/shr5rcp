@@ -120,15 +120,25 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setDaysTrained(int newDaysTrained) {
         int oldDaysTrained = daysTrained;
         daysTrained = newDaysTrained;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAININGS_TIME__DAYS_TRAINED, oldDaysTrained, daysTrained));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAININGS_TIME__DAYS_REMAINS, 1, 2));
     }
 
+    @Override
+    public void setChange(Changes newChange) {
+        super.setChange(newChange);
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAININGS_TIME__DAYS_REMAINS, 1, 2));
+
+    }
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -147,7 +157,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                 PersonaChange pc = (PersonaChange)change2;
                 Erlernbar changeable = pc.getChangeable();
                 part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
-                        .getCharacterAdvancements(), changeable.eClass());
+                        .getCharacterAdvancements(), changeable);
                 
             }else if (change2 instanceof AttributeChange) {
                 part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
