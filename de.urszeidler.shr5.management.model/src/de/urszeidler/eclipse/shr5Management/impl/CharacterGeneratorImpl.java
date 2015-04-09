@@ -129,7 +129,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 
 		public void notifyChanged(Notification notification) {
 		    super.notifyChanged(notification);
-		    
+		    if(getState()==GeneratorState.COMMITED)
+		        return;
 		    Object notifier = notification.getNotifier();
 		    if(notifier==CharacterGeneratorImpl.this)
 		        return;

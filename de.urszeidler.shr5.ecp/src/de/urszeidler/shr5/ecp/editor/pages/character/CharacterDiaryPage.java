@@ -30,7 +30,6 @@ import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Vertrag;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;

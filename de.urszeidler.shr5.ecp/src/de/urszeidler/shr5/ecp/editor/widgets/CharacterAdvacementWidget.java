@@ -7,6 +7,7 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -41,6 +43,11 @@ import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
@@ -62,6 +69,7 @@ import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterChange;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
@@ -70,6 +78,7 @@ import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
@@ -84,6 +93,7 @@ public class CharacterAdvacementWidget extends Composite {
         EClass type;
         EStructuralFeature feature;
         boolean add = true;
+        Changes changeToApply;
 
     }
 
@@ -191,6 +201,7 @@ public class CharacterAdvacementWidget extends Composite {
     private ToolItem tltmCommit;
     private ToolItem tltmCancel;
     private Label lblInstruction;
+    private EContentAdapter contentAdapter;
 
     /**
      * Create the composite.
@@ -230,6 +241,12 @@ public class CharacterAdvacementWidget extends Composite {
 
     }
 
+    @Override
+    public void dispose() {
+        contentAdapter.unsetTarget(character);
+        super.dispose();
+    }
+
     /**
      * Creates the necessary parts for this widget.
      */
@@ -247,12 +264,14 @@ public class CharacterAdvacementWidget extends Composite {
         Label lblAdvacement = toolkit.createLabel(composite, Messages.CharacterAdvacementWidget_advacment_type, SWT.NONE);
         lblAdvacement.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
-        ComboViewer comboViewer = new ComboViewer(composite, SWT.READ_ONLY);
+        final ComboViewer comboViewer = new ComboViewer(composite, SWT.READ_ONLY);
         comboViewer.setLabelProvider(new LabelProvider() {
             @Override
             public String getText(Object element) {
                 ChangeOperation element2 = (ChangeOperation)element;
                 String typeName = AdapterFactoryUtil.getInstance().getLabelProvider().getText(element2.type);
+                if (element2.changeToApply != null)
+                    return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element2.changeToApply);
                 if (element2.feature != null) {
                     String featureName = AdapterFactoryUtil.getInstance().getLabelProvider().getText(element2.feature);
                     typeName = typeName + " " + featureName; //$NON-NLS-1$
@@ -269,7 +288,7 @@ public class CharacterAdvacementWidget extends Composite {
                 StructuredSelection ss = (StructuredSelection)event.getSelection();
                 ChangeOperation co = (ChangeOperation)ss.getFirstElement();
                 currentOperation = co;
-                if(co.type!=null)
+                if (co.type != null)
                     handleSelect(co.type);
             }
         });
@@ -337,7 +356,23 @@ public class CharacterAdvacementWidget extends Composite {
         // createPersonaValueChangeWidget(composite_form);
         // createComposite();
         // Composite composite_descr = createPersonaValueChangeWidget();
+
         updateToolbars();
+        contentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                Object feature = notification.getFeature();
+                if (// Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES.equals(feature)
+                Shr5managementPackage.Literals.CHANGES__DATE_APPLIED.equals(feature)
+                        || Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED.equals(feature)
+                        || Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE.equals(feature)
+                        || Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES.equals(feature)) {
+                    initalizeData();
+                    comboViewer.setInput(selectableChanges);
+                }
+            }
+        };
+        contentAdapter.setTarget(character);
     }
 
     /**
@@ -433,7 +468,7 @@ public class CharacterAdvacementWidget extends Composite {
         emfFormBuilder.setBorderStyle(SWT.NONE);
 
         if (currentChange instanceof AttributeChange) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_type);           
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_type);
         } else if (currentChange instanceof PersonaChange) {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite_type);
         }
@@ -485,7 +520,8 @@ public class CharacterAdvacementWidget extends Composite {
 
     protected void cancelChange() {
         clearChangeWidget();
-        character.getChanges().remove(currentChange);
+        if (currentOperation.changeToApply == null)
+            character.getChanges().remove(currentChange);
         currentChange = null;
         updateToolbars();
     }
@@ -506,14 +542,14 @@ public class CharacterAdvacementWidget extends Composite {
         clearChangeWidget();
         if (currentChange != null) {
             currentChange.applyChanges();
-            if (character instanceof PlayerCharacter) {
+            if (character instanceof PlayerCharacter && currentOperation.changeToApply == null) {
                 PlayerCharacter pl = (PlayerCharacter)character;
                 CharacterChange characterChange = Shr5managementFactory.eINSTANCE.createCharacterChange();
                 characterChange.setChange(currentChange);
                 characterChange.setDate(currentChange.getDate());
                 characterChange.setMessage(String.format("%s", AdapterFactoryUtil.getInstance().getLabelProvider().getText(currentChange)));
                 CharacterDiary diary = pl.getDiary();
-                if(diary!=null)
+                if (diary != null)
                     diary.getEntries().add(characterChange);
             }
         }
@@ -531,8 +567,12 @@ public class CharacterAdvacementWidget extends Composite {
         toolkit.paintBordersFor(composite_form);
         combo.setEnabled(false);
 
-        currentChange = (Changes)eClass.getEPackage().getEFactoryInstance().create(eClass);
-        character.getChanges().add(currentChange);
+        if (currentOperation.changeToApply != null)
+            currentChange = currentOperation.changeToApply;
+        else {
+            currentChange = (Changes)eClass.getEPackage().getEFactoryInstance().create(eClass);
+            character.getChanges().add(currentChange);
+        }
 
         currentChange.setDate(ShadowrunManagmentTools.findCorrenspondingDate(character));
         if (currentChange instanceof PersonaValueChange) {
@@ -584,9 +624,13 @@ public class CharacterAdvacementWidget extends Composite {
         ChangeOperation op = new ChangeOperation();
         op.type = Shr5managementPackage.Literals.KARMA_GAINT;
         selectableChanges.add(op);
-        op = new ChangeOperation();
-        op.type = Shr5managementPackage.Literals.ATTRIBUTE_CHANGE;
-        selectableChanges.add(op);
+        if (character instanceof PlayerCharacter) {
+            addPlayerChanges(selectableChanges);
+        } else {
+            op = new ChangeOperation();
+            op.type = Shr5managementPackage.Literals.ATTRIBUTE_CHANGE;
+            selectableChanges.add(op);
+        }
 
         EClass eClass = character.getPersona().eClass();
         EList<EReference> eAllContainments = eClass.getEAllContainments();
@@ -624,6 +668,34 @@ public class CharacterAdvacementWidget extends Composite {
             selectableChanges.add(op);
         }
 
+    }
+
+    /**
+     * Add the possible changes for a player character.
+     * 
+     * @param selectableChanges2
+     */
+    private void addPlayerChanges(Collection<ChangeOperation> selectableChanges2) {
+        PlayerCharacter pc = (PlayerCharacter)character;
+        EList<DiaryEntry> entries = pc.getDiary().getEntries();
+        ImmutableList<ChangeOperation> list = FluentIterable.from(entries).filter(TrainingsTime.class).filter(new Predicate<TrainingsTime>() {
+
+            @Override
+            public boolean apply(TrainingsTime input) {
+                return !input.getChange().isChangeApplied() && input.getDaysRemains() == 0;
+            }
+        }).transform(new Function<TrainingsTime, ChangeOperation>() {
+
+            @Override
+            public ChangeOperation apply(TrainingsTime input) {
+                ChangeOperation op = new ChangeOperation();
+                op.type = Shr5managementPackage.Literals.PERSONA_CHANGE;
+                op.add = true;
+                op.changeToApply = input.getChange();
+                return op;
+            }
+        }).toList();
+        selectableChanges2.addAll(list);
     }
 
     protected DataBindingContext initDataBindings() {

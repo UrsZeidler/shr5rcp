@@ -4,8 +4,8 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import java.text.DateFormat;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -15,6 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
+import de.urszeidler.eclipse.shr5Management.DiaryEntry;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
@@ -134,15 +136,22 @@ public class TrainingsTimeItemProvider extends CharacterChangeItemProvider {
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Date labelValue = ((TrainingsTime)object).getDate();
-        String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-            getString("_UI_TrainingsTime_type") :
-            getString("_UI_TrainingsTime_type") + " " + label;
+        TrainingsTime tt = (TrainingsTime)object;
+        String format = "";
+        if (((DiaryEntry)object).getDate()!=null)
+            format = DateFormat.getDateInstance(DateFormat.SHORT).format(((DiaryEntry)object).getDate());
+
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");      
+        String text = Shr5EditingTools.getLabelForEObject(factory, unset, tt.getChange());
+        if(tt.getDaysRemains()>0)
+            return String.format("%s: %s days to train: %d", format,text,tt.getDaysRemains());
+        else
+            return String.format("%s: %s", format,text);
     }
     
 

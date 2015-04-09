@@ -135,7 +135,7 @@ public class DiaryEntryItemProvider
             format = DateFormat.getDateInstance(DateFormat.SHORT).format(((DiaryEntry)object).getDate());
         return label == null || label.length() == 0 ?
             getString("_UI_DiaryEntry_type") :
-            getString("_UI_DiaryEntry_type") +" "+format+ ": " + label;
+            format+ ": " + label;
     }
     
 
