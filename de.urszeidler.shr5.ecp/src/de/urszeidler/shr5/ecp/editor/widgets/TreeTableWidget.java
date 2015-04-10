@@ -1,10 +1,12 @@
 package de.urszeidler.shr5.ecp.editor.widgets;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.property.list.IListProperty;
+import org.eclipse.emf.codegen.ecore.templates.edit.ItemProviderAdapterFactory;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EClass;
@@ -14,6 +16,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProvider;
 import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
@@ -41,10 +45,12 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class TreeTableWidget extends Composite {
 
@@ -125,7 +131,8 @@ public class TreeTableWidget extends Composite {
     }
 
     public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
-            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener, IDoubleClickListener dblListner, boolean readOnly) {
+            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener,
+            IDoubleClickListener dblListner, boolean readOnly) {
         super(parent, style);
         this.toolkit = toolkit;
         this.object = object;
@@ -187,7 +194,6 @@ public class TreeTableWidget extends Composite {
         EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
         ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, null);
 
-        EStructuralFeature nameFeature = null;
         EStructuralFeature imageFeature = null;
 
         EClassifier eType = feature.getEType();
@@ -195,24 +201,15 @@ public class TreeTableWidget extends Composite {
         if (eType instanceof EClass) {
             EClass ec = (EClass)eType;
             if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.BESCHREIBBAR)) {
-                nameFeature = Shr5Package.Literals.BESCHREIBBAR__NAME;
                 imageFeature = Shr5Package.Literals.BESCHREIBBAR__IMAGE;
-                featureList.add(nameFeature);
-            } else if (ec.equals(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT)) {
-                nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
-                featureList.add(nameFeature);
-            }else if (ec.equals(Shr5managementPackage.Literals.MODULE_CHANGE)) {
-                nameFeature = Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT;
-                featureList.add(Shr5managementPackage.Literals.MODULE_ATTRIBUTE_CHANGE__ATTRIBUTE);
-                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECTED);
-                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL);
-                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE);
-                featureList.add(Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP);
-                featureList.add(Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__SELECT_ONE);
-            }else
-                featureList.addAll(ec.getEAllStructuralFeatures());
+            }
+
+            Collection<EClass> provideNewClassTypes = ShadowrunEditingTools.provideNewClassTypes(object, feature, editingDomain);
+            for (EClass eClass : provideNewClassTypes) {
+                featureList.addAll(eClass.getEAllStructuralFeatures());
+            }
         }
-        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(),  imageFeature, featureList) {
+        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), imageFeature, featureList) {
             @Override
             public String getText(Object element) {
                 return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
@@ -227,7 +224,6 @@ public class TreeTableWidget extends Composite {
 
         treeViewer.setContentProvider(treeContentProvider);
         IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
-        
 
         optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         // toolkit.adapt(optionalToolbar);

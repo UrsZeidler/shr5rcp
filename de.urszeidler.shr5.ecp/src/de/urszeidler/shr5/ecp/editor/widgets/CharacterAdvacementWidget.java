@@ -8,6 +8,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
@@ -215,6 +216,11 @@ public class CharacterAdvacementWidget extends Composite {
         addDisposeListener(new DisposeListener() {
             public void widgetDisposed(DisposeEvent e) {
                 toolkit.dispose();
+                if (character instanceof PlayerCharacter) {
+                    PlayerCharacter pl = (PlayerCharacter)character;
+                    contentAdapter.unsetTarget(pl);
+                }
+
             }
         });
         character = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
@@ -231,20 +237,26 @@ public class CharacterAdvacementWidget extends Composite {
      * @param parent
      * @param style
      */
-    public CharacterAdvacementWidget(Composite parent, int style, EditingDomain editingDomain, ManagedCharacter character, FormToolkit toolkit2) {
+    public CharacterAdvacementWidget(Composite parent, int style, EditingDomain editingDomain, ManagedCharacter character1, FormToolkit toolkit2) {
         super(parent, style);
         toolkit = toolkit2;
-        this.character = character;
+        this.character = character1;
         this.editingDomain = editingDomain;
+        
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                if (character instanceof PlayerCharacter) {
+                    PlayerCharacter pl = (PlayerCharacter)character;
+                    contentAdapter.unsetTarget(pl);
+                    pl.eAdapters().remove(contentAdapter);
+                }
+
+            }
+        });
+
         initalizeData();
         createParts();
 
-    }
-
-    @Override
-    public void dispose() {
-        contentAdapter.unsetTarget(character);
-        super.dispose();
     }
 
     /**
@@ -359,8 +371,17 @@ public class CharacterAdvacementWidget extends Composite {
 
         updateToolbars();
         contentAdapter = new EContentAdapter() {
+
+            @Override
+            protected void addAdapter(Notifier notifier) {
+                // TODO Auto-generated method stub
+                super.addAdapter(notifier);
+            }
+            
             @Override
             public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                
                 Object feature = notification.getFeature();
                 if (// Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES.equals(feature)
                 Shr5managementPackage.Literals.CHANGES__DATE_APPLIED.equals(feature)
@@ -372,7 +393,11 @@ public class CharacterAdvacementWidget extends Composite {
                 }
             }
         };
-        contentAdapter.setTarget(character);
+        if (character instanceof PlayerCharacter) {
+            PlayerCharacter pl = (PlayerCharacter)character;
+            contentAdapter.setTarget(pl);
+            pl.eAdapters().add(contentAdapter);
+        }
     }
 
     /**
@@ -682,7 +707,7 @@ public class CharacterAdvacementWidget extends Composite {
 
             @Override
             public boolean apply(TrainingsTime input) {
-                return !input.getChange().isChangeApplied() && input.getDaysRemains() == 0;
+                return input.getChange()!=null && !input.getChange().isChangeApplied() && input.getDaysRemains() == 0;
             }
         }).transform(new Function<TrainingsTime, ChangeOperation>() {
 

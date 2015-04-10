@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -115,7 +114,7 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      */
 	protected static final String CURRENT_INSTRUCTION_EDEFAULT = null;
 
-	private Adapter adapter = new EContentAdapter() {
+	private EContentAdapter adapter = new EContentAdapter() {
 
 //		private Notifier myTarger;
 //
@@ -127,6 +126,11 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 //			return false;
 //		}
 
+	    protected void addAdapter(org.eclipse.emf.common.notify.Notifier notifier) {
+	        super.addAdapter(notifier);
+	        
+	    };
+	    
 		public void notifyChanged(Notification notification) {
 		    super.notifyChanged(notification);
 		    if(getState()==GeneratorState.COMMITED)
@@ -174,6 +178,7 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 	protected CharacterGeneratorImpl() {
 		super();
 		adapter.setTarget(this);
+		this.eAdapters().add(adapter);
 	}
 
 	/**
@@ -225,8 +230,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 		}
 		if (newCharacter != null) {
 			newCharacter.eAdapters().add(adapter);
-//			if (newCharacter.getPersona() != null)
-//				newCharacter.getPersona().eAdapters().add(adapter);
+			if (newCharacter.getPersona() != null)
+				newCharacter.getPersona().eAdapters().add(adapter);
 		}
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -318,6 +323,19 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 						Shr5managementPackage.CHARACTER_GENERATOR__CURRENT_INSTRUCTION, 0, 1));
 
 		}
+		if(newState==GeneratorState.COMMITED){
+		    adapter.unsetTarget(this);
+		    this.eAdapters().remove(adapter);
+		    getCharacter().eAdapters().remove(adapter);
+		    getCharacter().getPersona().eAdapters().remove(adapter);
+		}
+//		else
+//		if(newState!= STATE_EDEFAULT){
+//		      adapter.setTarget(this);
+//		      if(!this.eAdapters().contains(adapter))
+//		          this.eAdapters().add(adapter);
+//
+//		}
 	}
 
 	/**

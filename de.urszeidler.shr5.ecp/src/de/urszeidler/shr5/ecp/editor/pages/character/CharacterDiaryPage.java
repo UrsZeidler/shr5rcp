@@ -12,6 +12,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -38,6 +39,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.dialogs.PayFineDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 /**
  * @author urs
@@ -151,8 +153,21 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         createFormBuilder(managedForm);
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__CHARACTER_DATE, grpCurrentDate, new DateEntryFactory(toolkit));
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES, grpCurrentDate, createControllGridData(300));
+//        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES, grpCurrentDate, createControllGridData(300));
+        
+        Composite compositeEigenschaften = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        compositeEigenschaften.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+        compositeEigenschaften.setLayout(new FillLayout(SWT.HORIZONTAL));
+        toolkit.adapt(compositeEigenschaften);
+        toolkit.paintBordersFor(compositeEigenschaften);
 
+        
+        TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften,labelprovider.getText(object.eClass()),
+                SWT.NONE, object, Shr5managementPackage.Literals.CHARACTER_DIARY__ENTRIES, toolkit, mananger, editingDomain, this,this);
+        managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
+        managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
+        
+        
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
     }
