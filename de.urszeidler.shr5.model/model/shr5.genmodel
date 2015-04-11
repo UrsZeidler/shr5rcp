@@ -448,6 +448,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/modifizierungen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/panzer"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/weaponMounts"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/sensorArray"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/handlingGelaende"/>
@@ -777,5 +778,14 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/capacity"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Modifyable"/>
+    <genClasses ecoreClass="shr5.ecore#//Sensor">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Sensor/functions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sensor/rating"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sensor/capacityValue"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//SensorArray"/>
+    <genClasses ecoreClass="shr5.ecore#//SensorFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SensorFunction/maxRange"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

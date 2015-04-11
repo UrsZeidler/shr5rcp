@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.SensorArray;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
@@ -64,6 +65,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensorArray <em>Sensor Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -461,6 +463,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected static final int WEAPON_MOUNTS_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getSensorArray() <em>Sensor Array</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSensorArray()
+     * @generated
+     * @ordered
+     */
+    protected SensorArray sensorArray;
 
     /**
      * <!-- begin-user-doc -->
@@ -1003,6 +1015,49 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public SensorArray getSensorArray() {
+        return sensorArray;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetSensorArray(SensorArray newSensorArray, NotificationChain msgs) {
+        SensorArray oldSensorArray = sensorArray;
+        sensorArray = newSensorArray;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__SENSOR_ARRAY, oldSensorArray, newSensorArray);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSensorArray(SensorArray newSensorArray) {
+        if (newSensorArray != sensorArray) {
+            NotificationChain msgs = null;
+            if (sensorArray != null)
+                msgs = ((InternalEObject)sensorArray).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.FAHRZEUG__SENSOR_ARRAY, null, msgs);
+            if (newSensorArray != null)
+                msgs = ((InternalEObject)newSensorArray).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.FAHRZEUG__SENSOR_ARRAY, null, msgs);
+            msgs = basicSetSensorArray(newSensorArray, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__SENSOR_ARRAY, newSensorArray, newSensorArray));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -1027,6 +1082,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 return ((InternalEList<?>)getModifizierungen()).basicRemove(otherEnd, msgs);
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
+                return basicSetSensorArray(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -1090,6 +1147,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getPanzer();
             case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
                 return getWeaponMounts();
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
+                return getSensorArray();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1169,6 +1228,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__PANZER:
                 setPanzer((Integer)newValue);
                 return;
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
+                setSensorArray((SensorArray)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1244,6 +1306,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__PANZER:
                 setPanzer(PANZER_EDEFAULT);
                 return;
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
+                setSensorArray((SensorArray)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -1304,6 +1369,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return panzer != PANZER_EDEFAULT;
             case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
                 return getWeaponMounts() != WEAPON_MOUNTS_EDEFAULT;
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
+                return sensorArray != null;
         }
         return super.eIsSet(featureID);
     }

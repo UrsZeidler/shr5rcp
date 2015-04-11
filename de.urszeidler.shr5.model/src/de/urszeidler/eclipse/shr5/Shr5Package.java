@@ -9832,13 +9832,22 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 20;
 
     /**
+     * The feature id for the '<em><b>Sensor Array</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__SENSOR_ARRAY = BESCHREIBBAR_FEATURE_COUNT + 21;
+
+    /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 21;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 22;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -10064,6 +10073,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int PASSAGIER_FAHRZEUG__WEAPON_MOUNTS = FAHRZEUG__WEAPON_MOUNTS;
+
+    /**
+     * The feature id for the '<em><b>Sensor Array</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__SENSOR_ARRAY = FAHRZEUG__SENSOR_ARRAY;
 
     /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
@@ -10307,6 +10325,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int BODENFAHRZEUG__WEAPON_MOUNTS = PASSAGIER_FAHRZEUG__WEAPON_MOUNTS;
+
+    /**
+     * The feature id for the '<em><b>Sensor Array</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__SENSOR_ARRAY = PASSAGIER_FAHRZEUG__SENSOR_ARRAY;
 
     /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
@@ -10568,6 +10595,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int DROHNE__WEAPON_MOUNTS = FAHRZEUG__WEAPON_MOUNTS;
+
+    /**
+     * The feature id for the '<em><b>Sensor Array</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__SENSOR_ARRAY = FAHRZEUG__SENSOR_ARRAY;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -20451,7 +20487,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 139;
+	int FEUER_MODUS = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20461,7 +20497,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 140;
+	int SCHADENS_TYP = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20471,7 +20507,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 141;
+	int MAGAZIN_TYP = 144;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20481,7 +20517,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 142;
+	int FEUWERWAFFEN_ERWEITERUNG = 145;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20491,7 +20527,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 143;
+	int MODIFIKATOR_TYPE = 146;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20501,7 +20537,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 144;
+	int SMARTGUN_TYPE = 147;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20511,7 +20547,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 145;
+	int ZAUBER_ART = 148;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20521,7 +20557,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 146;
+	int ZAUBER_REICHWEITE = 149;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20531,7 +20567,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 147;
+	int ZAUBER_DAUER = 150;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
@@ -20980,6 +21016,468 @@ public interface Shr5Package extends EPackage {
     int MODIFYABLE_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SensorImpl <em>Sensor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SensorImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensor()
+     * @generated
+     */
+    int SENSOR = 139;
+
+    /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__CAPACITY_FEATURE = CAPACITY__CAPACITY_FEATURE;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__CAPACITY = CAPACITY__CAPACITY;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__CAPACITY_REMAINS = CAPACITY__CAPACITY_REMAINS;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__BESCHREIBUNG = CAPACITY_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__IMAGE = CAPACITY_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__NAME = CAPACITY_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__PARENT_ID = CAPACITY_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__LOCALIZATIONS = CAPACITY_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__PAGE = CAPACITY_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__SRC_BOOK = CAPACITY_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__WERT = CAPACITY_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__VERFUEGBARKEIT = CAPACITY_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__WERT_VALUE = CAPACITY_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__FUNCTIONS = CAPACITY_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__RATING = CAPACITY_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Capacity Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR__CAPACITY_VALUE = CAPACITY_FEATURE_COUNT + 12;
+
+    /**
+     * The number of structural features of the '<em>Sensor</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FEATURE_COUNT = CAPACITY_FEATURE_COUNT + 13;
+
+    /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR___CAN_ADD__EOBJECT = CAPACITY___CAN_ADD__EOBJECT;
+
+    /**
+     * The number of operations of the '<em>Sensor</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_OPERATION_COUNT = CAPACITY_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SensorArrayImpl <em>Sensor Array</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SensorArrayImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensorArray()
+     * @generated
+     */
+    int SENSOR_ARRAY = 140;
+
+    /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__CAPACITY_FEATURE = SENSOR__CAPACITY_FEATURE;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__CAPACITY = SENSOR__CAPACITY;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__CAPACITY_REMAINS = SENSOR__CAPACITY_REMAINS;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__BESCHREIBUNG = SENSOR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__IMAGE = SENSOR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__NAME = SENSOR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__PARENT_ID = SENSOR__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__LOCALIZATIONS = SENSOR__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__PAGE = SENSOR__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__SRC_BOOK = SENSOR__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__WERT = SENSOR__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__VERFUEGBARKEIT = SENSOR__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__WERT_VALUE = SENSOR__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__FUNCTIONS = SENSOR__FUNCTIONS;
+
+    /**
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__RATING = SENSOR__RATING;
+
+    /**
+     * The feature id for the '<em><b>Capacity Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY__CAPACITY_VALUE = SENSOR__CAPACITY_VALUE;
+
+    /**
+     * The number of structural features of the '<em>Sensor Array</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY___CAN_ADD__EOBJECT = SENSOR___CAN_ADD__EOBJECT;
+
+    /**
+     * The number of operations of the '<em>Sensor Array</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_ARRAY_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SensorFunctionImpl <em>Sensor Function</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SensorFunctionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensorFunction()
+     * @generated
+     */
+    int SENSOR_FUNCTION = 141;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Max Range</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION__MAX_RANGE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The number of structural features of the '<em>Sensor Function</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The number of operations of the '<em>Sensor Function</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SENSOR_FUNCTION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20987,7 +21485,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 148;
+	int CRITTER_HANDLUNG = 151;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -20997,7 +21495,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 149;
+	int CRITTER_REICHWEITE = 152;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -21007,7 +21505,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 150;
+	int CRITTER_DAUER = 153;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -21017,7 +21515,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 151;
+	int RESONANZ_ZIEL = 154;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -21027,7 +21525,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 152;
+    int INTERFACE_MODUS = 155;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -21037,7 +21535,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 153;
+    int PROGRAM_TYPE = 156;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -21047,7 +21545,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 154;
+    int MATRIX_PROGRAM_TYPE = 157;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -21057,7 +21555,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 155;
+    int SUBSTANCE_VECTOR = 158;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -21067,7 +21565,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 156;
+    int SUBSTANCE_EFFECT = 159;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -21077,7 +21575,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 157;
+    int ADDICTION_TYPE = 160;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -21087,7 +21585,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 158;
+    int TIME_UNITS = 161;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
@@ -21097,7 +21595,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
      * @generated
      */
-    int CYBERWARE_TYPE = 159;
+    int CYBERWARE_TYPE = 162;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
@@ -21107,7 +21605,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
      * @generated
      */
-    int ENZUG = 160;
+    int ENZUG = 163;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.armorModificationType <em>armor Modification Type</em>}' enum.
@@ -21117,7 +21615,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getarmorModificationType()
      * @generated
      */
-    int ARMOR_MODIFICATION_TYPE = 161;
+    int ARMOR_MODIFICATION_TYPE = 164;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -21127,7 +21625,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 162;
+	int SHR_DATE = 165;
 
 
 	/**
@@ -21138,7 +21636,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 163;
+	int MODIFICATION_MANAGER = 166;
 
 
 	/**
@@ -23733,6 +24231,17 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getFahrzeug_WeaponMounts();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.Fahrzeug#getSensorArray <em>Sensor Array</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Sensor Array</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fahrzeug#getSensorArray()
+     * @see #getFahrzeug()
+     * @generated
+     */
+    EReference getFahrzeug_SensorArray();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug <em>Bodenfahrzeug</em>}'.
@@ -26350,6 +26859,80 @@ public interface Shr5Package extends EPackage {
     EClass getModifyable();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Sensor <em>Sensor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Sensor</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sensor
+     * @generated
+     */
+    EClass getSensor();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Sensor#getFunctions <em>Functions</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Functions</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sensor#getFunctions()
+     * @see #getSensor()
+     * @generated
+     */
+    EReference getSensor_Functions();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Sensor#getRating <em>Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sensor#getRating()
+     * @see #getSensor()
+     * @generated
+     */
+    EAttribute getSensor_Rating();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Sensor#getCapacityValue <em>Capacity Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Capacity Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sensor#getCapacityValue()
+     * @see #getSensor()
+     * @generated
+     */
+    EAttribute getSensor_CapacityValue();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SensorArray <em>Sensor Array</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Sensor Array</em>'.
+     * @see de.urszeidler.eclipse.shr5.SensorArray
+     * @generated
+     */
+    EClass getSensorArray();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SensorFunction <em>Sensor Function</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Sensor Function</em>'.
+     * @see de.urszeidler.eclipse.shr5.SensorFunction
+     * @generated
+     */
+    EClass getSensorFunction();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.SensorFunction#getMaxRange <em>Max Range</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Range</em>'.
+     * @see de.urszeidler.eclipse.shr5.SensorFunction#getMaxRange()
+     * @see #getSensorFunction()
+     * @generated
+     */
+    EAttribute getSensorFunction_MaxRange();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -28579,6 +29162,14 @@ public interface Shr5Package extends EPackage {
         EAttribute FAHRZEUG__WEAPON_MOUNTS = eINSTANCE.getFahrzeug_WeaponMounts();
 
         /**
+         * The meta object literal for the '<em><b>Sensor Array</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FAHRZEUG__SENSOR_ARRAY = eINSTANCE.getFahrzeug_SensorArray();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl <em>Bodenfahrzeug</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -30725,6 +31316,68 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass MODIFYABLE = eINSTANCE.getModifyable();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SensorImpl <em>Sensor</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SensorImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensor()
+         * @generated
+         */
+        EClass SENSOR = eINSTANCE.getSensor();
+
+        /**
+         * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SENSOR__FUNCTIONS = eINSTANCE.getSensor_Functions();
+
+        /**
+         * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SENSOR__RATING = eINSTANCE.getSensor_Rating();
+
+        /**
+         * The meta object literal for the '<em><b>Capacity Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SENSOR__CAPACITY_VALUE = eINSTANCE.getSensor_CapacityValue();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SensorArrayImpl <em>Sensor Array</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SensorArrayImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensorArray()
+         * @generated
+         */
+        EClass SENSOR_ARRAY = eINSTANCE.getSensorArray();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SensorFunctionImpl <em>Sensor Function</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SensorFunctionImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSensorFunction()
+         * @generated
+         */
+        EClass SENSOR_FUNCTION = eINSTANCE.getSensorFunction();
+
+        /**
+         * The meta object literal for the '<em><b>Max Range</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SENSOR_FUNCTION__MAX_RANGE = eINSTANCE.getSensorFunction_MaxRange();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

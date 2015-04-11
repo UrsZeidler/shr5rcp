@@ -778,6 +778,33 @@ public interface Shr5Factory extends EFactory {
     KleindungsModifikator createKleindungsModifikator();
 
     /**
+     * Returns a new object of class '<em>Sensor</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Sensor</em>'.
+     * @generated
+     */
+    Sensor createSensor();
+
+    /**
+     * Returns a new object of class '<em>Sensor Array</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Sensor Array</em>'.
+     * @generated
+     */
+    SensorArray createSensorArray();
+
+    /**
+     * Returns a new object of class '<em>Sensor Function</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Sensor Function</em>'.
+     * @generated
+     */
+    SensorFunction createSensorFunction();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

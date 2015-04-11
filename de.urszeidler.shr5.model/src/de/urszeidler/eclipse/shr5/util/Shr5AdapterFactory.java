@@ -622,6 +622,18 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createModifyableAdapter();
             }
             @Override
+            public Adapter caseSensor(Sensor object) {
+                return createSensorAdapter();
+            }
+            @Override
+            public Adapter caseSensorArray(SensorArray object) {
+                return createSensorArrayAdapter();
+            }
+            @Override
+            public Adapter caseSensorFunction(SensorFunction object) {
+                return createSensorFunctionAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2304,6 +2316,48 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModifyableAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Sensor <em>Sensor</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Sensor
+     * @generated
+     */
+    public Adapter createSensorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SensorArray <em>Sensor Array</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SensorArray
+     * @generated
+     */
+    public Adapter createSensorArrayAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SensorFunction <em>Sensor Function</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SensorFunction
+     * @generated
+     */
+    public Adapter createSensorFunctionAdapter() {
         return null;
     }
 

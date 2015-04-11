@@ -860,6 +860,27 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass sensorEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass sensorArrayEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass sensorFunctionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -3402,6 +3423,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFahrzeug_SensorArray() {
+        return (EReference)fahrzeugEClass.getEStructuralFeatures().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5616,6 +5646,69 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSensor() {
+        return sensorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSensor_Functions() {
+        return (EReference)sensorEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSensor_Rating() {
+        return (EAttribute)sensorEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSensor_CapacityValue() {
+        return (EAttribute)sensorEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSensorArray() {
+        return sensorArrayEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSensorFunction() {
+        return sensorFunctionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSensorFunction_MaxRange() {
+        return (EAttribute)sensorFunctionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -6084,6 +6177,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(fahrzeugEClass, FAHRZEUG__MODIFIZIERUNGEN);
         createEAttribute(fahrzeugEClass, FAHRZEUG__PANZER);
         createEAttribute(fahrzeugEClass, FAHRZEUG__WEAPON_MOUNTS);
+        createEReference(fahrzeugEClass, FAHRZEUG__SENSOR_ARRAY);
 
         bodenfahrzeugEClass = createEClass(BODENFAHRZEUG);
         createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__HANDLING_GELAENDE);
@@ -6403,6 +6497,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         modifyableEClass = createEClass(MODIFYABLE);
 
+        sensorEClass = createEClass(SENSOR);
+        createEReference(sensorEClass, SENSOR__FUNCTIONS);
+        createEAttribute(sensorEClass, SENSOR__RATING);
+        createEAttribute(sensorEClass, SENSOR__CAPACITY_VALUE);
+
+        sensorArrayEClass = createEClass(SENSOR_ARRAY);
+
+        sensorFunctionEClass = createEClass(SENSOR_FUNCTION);
+        createEAttribute(sensorFunctionEClass, SENSOR_FUNCTION__MAX_RANGE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6658,6 +6762,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         kleindungsModifikatorEClass.getESuperTypes().add(this.getBeschreibbar());
         kleindungsModifikatorEClass.getESuperTypes().add(this.getQuelle());
         kleindungsModifikatorEClass.getESuperTypes().add(this.getGeldWert());
+        sensorEClass.getESuperTypes().add(this.getCapacity());
+        sensorEClass.getESuperTypes().add(this.getBeschreibbar());
+        sensorEClass.getESuperTypes().add(this.getQuelle());
+        sensorEClass.getESuperTypes().add(this.getGeldWert());
+        sensorArrayEClass.getESuperTypes().add(this.getSensor());
+        sensorFunctionEClass.getESuperTypes().add(this.getBeschreibbar());
+        sensorFunctionEClass.getESuperTypes().add(this.getQuelle());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6958,6 +7069,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getFahrzeug_Modifizierungen(), this.getFahrzeugModifikation(), null, "modifizierungen", null, 0, -1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFahrzeug_Panzer(), ecorePackage.getEInt(), "panzer", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFahrzeug_WeaponMounts(), ecorePackage.getEInt(), "weaponMounts", null, 0, 1, Fahrzeug.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFahrzeug_SensorArray(), this.getSensorArray(), null, "sensorArray", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(bodenfahrzeugEClass, Bodenfahrzeug.class, "Bodenfahrzeug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getBodenfahrzeug_HandlingGelaende(), ecorePackage.getEInt(), "handlingGelaende", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7278,6 +7390,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getKleindungsModifikator_Capacity(), ecorePackage.getEInt(), "capacity", null, 0, 1, KleindungsModifikator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         initEClass(modifyableEClass, Modifyable.class, "Modifyable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(sensorEClass, Sensor.class, "Sensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSensor_Functions(), this.getSensorFunction(), null, "functions", null, 0, -1, Sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSensor_Rating(), ecorePackage.getEInt(), "rating", null, 0, 1, Sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSensor_CapacityValue(), ecorePackage.getEInt(), "capacityValue", null, 0, 1, Sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(sensorArrayEClass, SensorArray.class, "SensorArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(sensorFunctionEClass, SensorFunction.class, "SensorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSensorFunction_MaxRange(), ecorePackage.getEInt(), "maxRange", null, 0, 1, SensorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

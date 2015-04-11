@@ -1569,6 +1569,38 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.SENSOR: {
+                Sensor sensor = (Sensor)theEObject;
+                T result = caseSensor(sensor);
+                if (result == null) result = caseCapacity(sensor);
+                if (result == null) result = caseBeschreibbar(sensor);
+                if (result == null) result = caseQuelle(sensor);
+                if (result == null) result = caseGeldWert(sensor);
+                if (result == null) result = caseIdentifiable(sensor);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SENSOR_ARRAY: {
+                SensorArray sensorArray = (SensorArray)theEObject;
+                T result = caseSensorArray(sensorArray);
+                if (result == null) result = caseSensor(sensorArray);
+                if (result == null) result = caseCapacity(sensorArray);
+                if (result == null) result = caseBeschreibbar(sensorArray);
+                if (result == null) result = caseQuelle(sensorArray);
+                if (result == null) result = caseGeldWert(sensorArray);
+                if (result == null) result = caseIdentifiable(sensorArray);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SENSOR_FUNCTION: {
+                SensorFunction sensorFunction = (SensorFunction)theEObject;
+                T result = caseSensorFunction(sensorFunction);
+                if (result == null) result = caseBeschreibbar(sensorFunction);
+                if (result == null) result = caseQuelle(sensorFunction);
+                if (result == null) result = caseIdentifiable(sensorFunction);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -3355,6 +3387,51 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseModifyable(Modifyable object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Sensor</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sensor</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSensor(Sensor object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Sensor Array</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sensor Array</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSensorArray(SensorArray object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Sensor Function</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sensor Function</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSensorFunction(SensorFunction object) {
         return null;
     }
 

@@ -141,6 +141,9 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.SHOPPING_TRANSACTION: return createShoppingTransaction();
             case Shr5Package.TRANSFER_AMOUNT: return createTransferAmount();
             case Shr5Package.KLEINDUNGS_MODIFIKATOR: return createKleindungsModifikator();
+            case Shr5Package.SENSOR: return createSensor();
+            case Shr5Package.SENSOR_ARRAY: return createSensorArray();
+            case Shr5Package.SENSOR_FUNCTION: return createSensorFunction();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1106,6 +1109,36 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public KleindungsModifikator createKleindungsModifikator() {
         KleindungsModifikatorImpl kleindungsModifikator = new KleindungsModifikatorImpl();
         return kleindungsModifikator;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Sensor createSensor() {
+        SensorImpl sensor = new SensorImpl();
+        return sensor;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SensorArray createSensorArray() {
+        SensorArrayImpl sensorArray = new SensorArrayImpl();
+        return sensorArray;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SensorFunction createSensorFunction() {
+        SensorFunctionImpl sensorFunction = new SensorFunctionImpl();
+        return sensorFunction;
     }
 
     /**

@@ -2058,6 +2058,75 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sensor} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SensorItemProvider sensorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sensor}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSensorAdapter() {
+        if (sensorItemProvider == null) {
+            sensorItemProvider = new SensorItemProvider(this);
+        }
+
+        return sensorItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SensorArray} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SensorArrayItemProvider sensorArrayItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SensorArray}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSensorArrayAdapter() {
+        if (sensorArrayItemProvider == null) {
+            sensorArrayItemProvider = new SensorArrayItemProvider(this);
+        }
+
+        return sensorArrayItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SensorFunction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SensorFunctionItemProvider sensorFunctionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SensorFunction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSensorFunctionAdapter() {
+        if (sensorFunctionItemProvider == null) {
+            sensorFunctionItemProvider = new SensorFunctionItemProvider(this);
+        }
+
+        return sensorFunctionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2240,6 +2309,9 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (shoppingTransactionItemProvider != null) shoppingTransactionItemProvider.dispose();
         if (transferAmountItemProvider != null) transferAmountItemProvider.dispose();
         if (kleindungsModifikatorItemProvider != null) kleindungsModifikatorItemProvider.dispose();
+        if (sensorItemProvider != null) sensorItemProvider.dispose();
+        if (sensorArrayItemProvider != null) sensorArrayItemProvider.dispose();
+        if (sensorFunctionItemProvider != null) sensorFunctionItemProvider.dispose();
     }
 
     @Override

@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getModifizierungen <em>Modifizierungen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getPanzer <em>Panzer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts <em>Weapon Mounts</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getSensorArray <em>Sensor Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -272,5 +273,31 @@ public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Mod
      * @generated
      */
     int getWeaponMounts();
+
+    /**
+     * Returns the value of the '<em><b>Sensor Array</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Sensor Array</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Sensor Array</em>' containment reference.
+     * @see #setSensorArray(SensorArray)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getFahrzeug_SensorArray()
+     * @model containment="true"
+     * @generated
+     */
+    SensorArray getSensorArray();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Fahrzeug#getSensorArray <em>Sensor Array</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Sensor Array</em>' containment reference.
+     * @see #getSensorArray()
+     * @generated
+     */
+    void setSensorArray(SensorArray value);
 
 } // Fahrzeug

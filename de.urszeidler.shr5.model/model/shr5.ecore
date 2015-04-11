@@ -549,6 +549,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="panzer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weaponMounts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensorArray" eType="#//SensorArray"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug" eSuperTypes="#//PassagierFahrzeug">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1234,4 +1236,14 @@
     <eLiterals name="ThermalDamping"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Modifyable" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Capacity #//Beschreibbar #//Quelle #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//SensorFunction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensorArray" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SensorFunction" eSuperTypes="#//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxRange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
 </ecore:EPackage>

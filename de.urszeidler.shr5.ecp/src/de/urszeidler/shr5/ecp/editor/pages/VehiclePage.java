@@ -134,6 +134,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__HANDLING_GELAENDE, grpGegenstand);
         }
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__WEAPON_MOUNTS, grpGegenstand, new LabelEntry());
 
         addWertFeatures(grpWert);
         addSourceFeature(grpQuelle);

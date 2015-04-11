@@ -538,6 +538,7 @@
       <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=13"/>
       <nested inputs="shr5.ecore#//Fahrzeug/panzer" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=14"/>
       <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=5"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/sensorArray" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=6"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle"/>
@@ -1031,5 +1032,32 @@
     <nested inputs="shr5.ecore#//KleindungsModifikator" outputs="Shr5XMI.xsd#//KleindungsModifikator;XSDElementDeclaration=137"/>
     <nested inputs="shr5.ecore#//Modifyable" outputs="Shr5XMI.xsd#//Modifyable;XSDComplexTypeDefinition=138"/>
     <nested inputs="shr5.ecore#//Modifyable" outputs="Shr5XMI.xsd#//Modifyable;XSDElementDeclaration=138"/>
+    <nested inputs="shr5.ecore#//Sensor" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139">
+      <nested inputs="shr5.ecore#//Sensor/rating" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=8"/>
+      <nested inputs="shr5.ecore#//Sensor/capacityValue" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=9"/>
+      <nested inputs="shr5.ecore#//Sensor/functions" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=4"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=5"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=6"/>
+    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=7"/>
+    <nested inputs="shr5.ecore#//Sensor" outputs="Shr5XMI.xsd#//Sensor;XSDElementDeclaration=139"/>
+    <nested inputs="shr5.ecore#//SensorArray" outputs="Shr5XMI.xsd#//SensorArray;XSDComplexTypeDefinition=140"/>
+    <nested inputs="shr5.ecore#//SensorArray" outputs="Shr5XMI.xsd#//SensorArray;XSDElementDeclaration=140"/>
+    <nested inputs="shr5.ecore#//SensorFunction" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141">
+      <nested inputs="shr5.ecore#//SensorFunction/maxRange" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDAttributeUse=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//SensorFunction" outputs="Shr5XMI.xsd#//SensorFunction;XSDElementDeclaration=141"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

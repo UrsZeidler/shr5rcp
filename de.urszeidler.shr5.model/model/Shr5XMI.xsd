@@ -1120,6 +1120,7 @@
           </xsd:element>
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
           <xsd:element name="modifizierungen" type="shr5:FahrzeugModifikation"/>
+          <xsd:element name="sensorArray" type="shr5:SensorArray"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
@@ -2481,4 +2482,55 @@
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
   </xsd:complexType>
   <xsd:element name="Modifyable" type="shr5:Modifyable"/>
+  <xsd:complexType name="Sensor">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Capacity">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="functions" type="shr5:SensorFunction"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="rating" type="xsd:int"/>
+        <xsd:attribute name="capacityValue" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sensor" type="shr5:Sensor"/>
+  <xsd:complexType name="SensorArray">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Sensor"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SensorArray" type="shr5:SensorArray"/>
+  <xsd:complexType name="SensorFunction">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="maxRange" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SensorFunction" type="shr5:SensorFunction"/>
 </xsd:schema>

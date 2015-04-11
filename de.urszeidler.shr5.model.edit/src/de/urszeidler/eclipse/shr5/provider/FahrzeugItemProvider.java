@@ -81,6 +81,7 @@ public class FahrzeugItemProvider
             addFahrzeugTypPropertyDescriptor(object);
             addPanzerPropertyDescriptor(object);
             addWeaponMountsPropertyDescriptor(object);
+            addSensorArrayPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -548,6 +549,28 @@ public class FahrzeugItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Sensor Array feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSensorArrayPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fahrzeug_sensorArray_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fahrzeug_sensorArray_feature", "_UI_Fahrzeug_type"),
+                 Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -562,6 +585,7 @@ public class FahrzeugItemProvider
             childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
             childrenFeatures.add(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN);
+            childrenFeatures.add(Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY);
         }
         return childrenFeatures;
     }
@@ -628,6 +652,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__LOCALIZATIONS:
             case Shr5Package.FAHRZEUG__MODS:
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
+            case Shr5Package.FAHRZEUG__SENSOR_ARRAY:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -659,6 +684,11 @@ public class FahrzeugItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN,
                  Shr5Factory.eINSTANCE.createWeaponMount()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY,
+                 Shr5Factory.eINSTANCE.createSensorArray()));
     }
 
 	/**

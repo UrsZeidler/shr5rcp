@@ -75,7 +75,9 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(ShoppingTransactionTest.class);
         suite.addTestSuite(KleidungTest.class);
         suite.addTestSuite(KleindungsModifikatorTest.class);
-        
+        suite.addTestSuite(SensorArrayTest.class);
+        suite.addTestSuite(SensorTest.class);
+               
         // suite.addTestSuite(HostTest.class);
 
         return suite;
