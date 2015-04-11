@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.Modifyable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -498,6 +499,11 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
                 default: return -1;
             }
         }
+        if (baseClass == Modifyable.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -523,6 +529,11 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
             }
         }
         if (baseClass == Erlernbar.class) {
+            switch (baseFeatureID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifyable.class) {
             switch (baseFeatureID) {
                 default: return -1;
             }

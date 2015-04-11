@@ -11,6 +11,7 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.nebula.paperclips.core.BreakPrint;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
@@ -1062,8 +1063,8 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_Active_Modification, headFontData), 2);
         ModSetter modManager = persona.getModManager();
-        Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
-        for (Entry<EAttribute, Integer> entry : set) {
+        Set<Entry<EObject, Integer>> set = modManager.getModificatorMap().entrySet();
+        for (Entry<EObject, Integer> entry : set) {
             grid.add(new TextPrint(toName(entry.getKey()), attributeFont));
             grid.add(new TextPrint(printInteger(entry.getValue()), attributeFont));
         }

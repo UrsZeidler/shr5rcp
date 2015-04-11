@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
+import de.urszeidler.eclipse.shr5.Modifyable;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -25,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getAttribut <em>Attribut</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getModifiziertes <em>Modifiziertes</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getModifyable <em>Modifyable</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,6 +64,16 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	protected int wert = WERT_EDEFAULT;
 
 	/**
+     * The cached value of the '{@link #getModifyable() <em>Modifyable</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getModifyable()
+     * @generated
+     * @ordered
+     */
+    protected Modifyable modifyable;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -116,6 +128,9 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 		attribut = newAttribut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__ATTRIBUT, oldAttribut, attribut));
+		
+		if(newAttribut!=null)
+		    setModifyable(null);
 	}
 
 	/**
@@ -182,6 +197,46 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Modifyable getModifyable() {
+        if (modifyable != null && modifyable.eIsProxy()) {
+            InternalEObject oldModifyable = (InternalEObject)modifyable;
+            modifyable = (Modifyable)eResolveProxy(oldModifyable);
+            if (modifyable != oldModifyable) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE, oldModifyable, modifyable));
+            }
+        }
+        return modifyable;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Modifyable basicGetModifyable() {
+        return modifyable;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public void setModifyable(Modifyable newModifyable) {
+        Modifyable oldModifyable = modifyable;
+        modifyable = newModifyable;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE, oldModifyable, modifyable));
+        if(newModifyable!=null)
+            setAttribut(null);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -239,6 +294,9 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
                 return getWert();
             case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES:
                 return getModifiziertes();
+            case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE:
+                if (resolve) return getModifyable();
+                return basicGetModifyable();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -259,6 +317,9 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
                 return;
             case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES:
                 setModifiziertes((Modifizierbar)newValue);
+                return;
+            case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE:
+                setModifyable((Modifyable)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -281,6 +342,9 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
             case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES:
                 setModifiziertes((Modifizierbar)null);
                 return;
+            case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE:
+                setModifyable((Modifyable)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -299,6 +363,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
                 return wert != WERT_EDEFAULT;
             case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES:
                 return getModifiziertes() != null;
+            case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE:
+                return modifyable != null;
         }
         return super.eIsSet(featureID);
     }

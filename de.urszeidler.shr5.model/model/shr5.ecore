@@ -105,6 +105,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wert" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modifiziertes" eType="#//Modifizierbar"
         eOpposite="#//Modifizierbar/mods"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifyable" eType="#//Modifyable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Modifizierbar" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mods" upperBound="-1" eType="#//AttributModifikatorWert"
@@ -204,11 +205,11 @@
     <eLiterals name="Unten" value="1"/>
     <eLiterals name="Oben" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe" eSuperTypes="#//Beschreibbar #//Quelle">
+  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe" eSuperTypes="#//Beschreibbar #//Quelle #//Modifyable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeiten" upperBound="-1"
         eType="#//Fertigkeit" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fertigkeit" eSuperTypes="#//Beschreibbar #//Quelle">
+  <eClassifiers xsi:type="ecore:EClass" name="Fertigkeit" eSuperTypes="#//Beschreibbar #//Quelle #//Modifyable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ausweichen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribut" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
@@ -792,7 +793,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Spezialisierung" eSuperTypes="#//Beschreibbar #//Quelle #//Erlernbar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Spezialisierung" eSuperTypes="#//Beschreibbar #//Quelle #//Erlernbar #//Modifyable"/>
   <eClassifiers xsi:type="ecore:EClass" name="MatrixAttributes" abstract="true" interface="true"
       eSuperTypes="#//MatixConditionMonitor">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1232,4 +1233,5 @@
     <eLiterals name="ShockFrills"/>
     <eLiterals name="ThermalDamping"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modifyable" abstract="true" interface="true"/>
 </ecore:EPackage>

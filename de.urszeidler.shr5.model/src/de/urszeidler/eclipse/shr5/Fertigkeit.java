@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EAttribute;
  * @model
  * @generated
  */
-public interface Fertigkeit extends Beschreibbar, Quelle {
+public interface Fertigkeit extends Beschreibbar, Quelle, Modifyable {
 	/**
      * Returns the value of the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->

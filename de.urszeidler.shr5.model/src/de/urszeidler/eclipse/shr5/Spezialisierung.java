@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Spezialisierung extends Beschreibbar, Quelle, Erlernbar {
+public interface Spezialisierung extends Beschreibbar, Quelle, Erlernbar, Modifyable {
 } // Spezialisierung

@@ -10612,12 +10612,14 @@
           <localizations xmi:id="_a2MGkj5dEeSnhdazldEq5w" local="de" name="Unauffälligkeit"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="84305e09-f8d5-4a82-8257-0119b8c3f926" name="Catlike" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="7">
+          <mods xmi:id="_ODAUcOAuEeSy2vqMyscHUg" wert="2" modifyable="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
           <localizations xmi:id="_a2MGkz5dEeSnhdazldEq5w" local="de" name="Katzenhaft"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="41cc3e26-ae55-4e28-bd6a-b08866c21424" name="Codeslinger" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
           <localizations xmi:id="_a2MGlD5dEeSnhdazldEq5w" local="de" name="Programmier-Genie"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="db579224-99c7-48e0-84ab-77a987a84f4a" name="Double Jointed" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="6">
+          <mods xmi:id="_WKpxAOAuEeSy2vqMyscHUg" wert="2" modifyable="3f93335c-49d6-4904-a97e-4c942ab05b59"/>
           <localizations xmi:id="_a2MGlT5dEeSnhdazldEq5w" local="de" name="Gummigelenke"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="2ac8a95a-a4d0-4bef-a2f2-dcde020258cf" name="Exceptional Attribute" page="72" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="14">
@@ -10666,19 +10668,30 @@
           <localizations xmi:id="_a2N7wz5dEeSnhdazldEq5w" local="de" name="Menschliches Aussehen"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="0f3a0971-1cc5-47d6-a32d-d098ecdfb4d9" name="Indomitable (Mental)" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="8">
+          <mods xmi:id="_sA9V8OAuEeSy2vqMyscHUg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/geistig"/>
+          </mods>
           <localizations xmi:id="_a2N7xD5dEeSnhdazldEq5w" local="de" name="Durchsetzungskraft (Mental)" page="75"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="58e6a651-cdd7-4144-a2cc-4cee24526e92" name="Indomitable (Physical)" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="8">
+          <mods xmi:id="_vFHDcOAuEeSy2vqMyscHUg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/koerperlich"/>
+          </mods>
           <localizations xmi:id="_a2N7xT5dEeSnhdazldEq5w" local="de" name="Durchsetzungskraft (Physisch)" page="75"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="b9f1dbeb-1728-4250-a066-4773f758fe6a" name="Indomitable (Social)" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="8">
+          <mods xmi:id="_yS8RYOAuEeSy2vqMyscHUg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial"/>
+          </mods>
           <localizations xmi:id="_a2Oi0D5dEeSnhdazldEq5w" local="de" name="Durchsetzungskraft (Sozial)" page="75"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="27c7ea84-bfe4-47e1-8382-38d9a5c8e680" name="Juryrigger" page="75" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
           <localizations xmi:id="_a2Oi0T5dEeSnhdazldEq5w" local="de" name="Technisches Improvisationstalent"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="78f7456d-78b8-461e-a2b2-bd0d63c48712" name="Lucky" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="12">
-          <mods xmi:id="_a2Oi0j5dEeSnhdazldEq5w"/>
+          <mods xmi:id="_a2Oi0j5dEeSnhdazldEq5w" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Spezies/edgeMax"/>
+          </mods>
           <localizations xmi:id="_a2Oi0z5dEeSnhdazldEq5w" local="de" name="Glück"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="f80ef6fc-e844-441c-81e3-b1264b34a4e7" name="Magic Resistance (Rating 1)" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="6">
@@ -10697,6 +10710,8 @@
           <localizations xmi:id="_a2PJ4j5dEeSnhdazldEq5w" local="de" name="Schutzgeist"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="225f0d31-8c03-4283-9a22-558ab01a6c47" name="Natural Athlete" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="7">
+          <mods xmi:id="_BSL34OAvEeSy2vqMyscHUg" wert="2" modifyable="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <mods xmi:id="_E8jQ0OAvEeSy2vqMyscHUg" wert="2" modifyable="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
           <localizations xmi:id="_a2PJ4z5dEeSnhdazldEq5w" local="de" name="Natürlicher Athlet" page="76"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="52648a83-1d2a-4b04-b7fc-ee5a62bce4f7" name="Natural Hardening" page="76" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="10">
@@ -10853,6 +10868,9 @@
           <localizations xmi:id="_a2UCYj5dEeSnhdazldEq5w" local="de" name="Unglück"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="25356bae-efcc-46c6-9c4f-66909b9b7233" name="Bad Rep" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="-7">
+          <mods xmi:id="_oQ02wOAvEeSy2vqMyscHUg" wert="3">
+            <attribut href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/notoriety"/>
+          </mods>
           <localizations xmi:id="_a2UCYz5dEeSnhdazldEq5w" local="de" name="Berüchtigt"/>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="dda02333-10e3-4295-9392-691ff3a7bd4a" name="Code of Honor" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" karmaKosten="-15">
@@ -11118,8 +11136,10 @@
           </mods>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="ee214687-70a0-4216-b3b6-66f21ad69d0f" name="Friends in High Places" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="8"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="9254db9d-7d6c-4f20-b5bb-3c4af854a8a5" name="Hawk Eye" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="3"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="950d9a9d-c4a9-4b03-9d4d-8542f8fd2be2" name="Inspired.RF" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="4"/>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="9254db9d-7d6c-4f20-b5bb-3c4af854a8a5" name="Hawk Eye" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="3">
+          <mods xmi:id="_J0aiMOAwEeSy2vqMyscHUg" wert="1" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+        </entries>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="950d9a9d-c4a9-4b03-9d4d-8542f8fd2be2" name="Inspired" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="4"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="8b1cccd4-d94b-4280-97e8-3774b830a613" name="Jack of All Trades Master of None" page="147" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="2"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="011890dc-0c33-4e9b-aab6-e4bd57cf12d9" name="Lightning Reflexes" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="20">
           <mods xmi:id="_UnKDkLYhEeSwtr65kYsBIA" wert="1">
@@ -11128,12 +11148,22 @@
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="72774a4b-4913-4296-aa13-91374437aeb7" name="Linguist" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="4"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="9aa922f4-46ae-4145-871a-28b3c8211a66" name="Made Man" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="e6109f18-1ff6-45f5-8b9f-a716fd50eb66" name="Night Vision" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="2"/>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="e6109f18-1ff6-45f5-8b9f-a716fd50eb66" name="Night Vision" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="2">
+          <mods xmi:id="_YJdVIOAwEeSy2vqMyscHUg">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+          </mods>
+        </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="f752a3f2-9e3c-433f-a48a-7f23796399a8" name="Outdoorsman" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="3"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="2ebdf5ef-a1ec-448d-a74d-03525d6b0d33" name="Overclocker" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="14f1c465-6017-4881-a7db-4ed16f420b9e" name="Perceptive I" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="961e7790-3433-4d70-be57-1f5153c9d198" name="Perceptive II" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="10"/>
-        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="6213154e-ce4a-4865-870c-0bdfc067dbd2" name="Perfect Time" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5"/>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="14f1c465-6017-4881-a7db-4ed16f420b9e" name="Perceptive I" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5">
+          <mods xmi:id="_kkXWoOAwEeSy2vqMyscHUg" wert="1" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+        </entries>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="961e7790-3433-4d70-be57-1f5153c9d198" name="Perceptive II" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="10">
+          <mods xmi:id="_m8HRIOAwEeSy2vqMyscHUg" wert="2" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+        </entries>
+        <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="6213154e-ce4a-4865-870c-0bdfc067dbd2" name="Perfect Time" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5">
+          <mods xmi:id="_twXMIOAwEeSy2vqMyscHUg" wert="1" modifyable="53f96d6a-363b-4c14-be1d-68e74930c67b"/>
+        </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="1e0c5aef-b9ea-4395-bf57-85ed1b81c07e" name="Poor Link" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="8"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="4b5cfba2-e4a8-4a04-82b0-edd0c11275ea" name="Privileged Family Name" page="149" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="7"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="28862cbc-a9ca-492c-bdff-c4e6fbe8ed82" name="Restricted Gear" page="149" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="10"/>

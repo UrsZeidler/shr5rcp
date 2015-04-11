@@ -195,6 +195,8 @@
       <nested inputs="shr5.ecore#//AttributModifikatorWert/attribut" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//AttributModifikatorWert/modifiziertes" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDAttributeUse=3"/>
       <nested inputs="shr5.ecore#//AttributModifikatorWert/modifiziertes" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//AttributModifikatorWert/modifyable" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//AttributModifikatorWert/modifyable" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//AttributModifikatorWert" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDElementDeclaration=7"/>
     <nested inputs="shr5.ecore#//Modifizierbar" outputs="Shr5XMI.xsd#//Modifizierbar;XSDComplexTypeDefinition=8">
@@ -1027,5 +1029,7 @@
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//KleindungsModifikator;XSDComplexTypeDefinition=137/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//KleindungsModifikator;XSDComplexTypeDefinition=137/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//KleindungsModifikator" outputs="Shr5XMI.xsd#//KleindungsModifikator;XSDElementDeclaration=137"/>
+    <nested inputs="shr5.ecore#//Modifyable" outputs="Shr5XMI.xsd#//Modifyable;XSDComplexTypeDefinition=138"/>
+    <nested inputs="shr5.ecore#//Modifyable" outputs="Shr5XMI.xsd#//Modifyable;XSDElementDeclaration=138"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

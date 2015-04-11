@@ -16,6 +16,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -24,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @author urs
  */
 public class ModSetter implements Adapter {
-    private Map<EAttribute, Integer> fMap = new HashMap<EAttribute, Integer>();
+    private Map<EObject, Integer> fMap = new HashMap<EObject, Integer>();
     private AbstraktPersona persona;
     private boolean dirty = true;
 
@@ -90,11 +91,18 @@ public class ModSetter implements Adapter {
                 }
                 value = value + wert.getWert();
                 fMap.put(wert.getAttribut(), value);
+            }else if(wert.getModifiziertes() !=null ){
+                Integer value = fMap.get(wert.getModifiziertes());
+                if (value == null) {
+                    value = new Integer(0);
+                }
+                value = value + wert.getWert();
+                fMap.put(wert.getModifiziertes(), value);
             }
         }
     }
 
-    public int getmodWert(EAttribute feature) {
+    public int getmodWert(EObject feature) {
         if (dirty)
             setModvalues();
 
@@ -205,7 +213,7 @@ public class ModSetter implements Adapter {
      * 
      * @return
      */
-    public Map<EAttribute, Integer> getModificatorMap() {
+    public Map<EObject, Integer> getModificatorMap() {
         return Collections.unmodifiableMap(fMap);
     }
 }

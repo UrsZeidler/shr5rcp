@@ -853,6 +853,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass modifyableEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1585,6 +1592,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAttributModifikatorWert_Modifyable() {
+        return (EReference)attributModifikatorWertEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -5591,6 +5607,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getModifyable() {
+        return modifyableEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5808,6 +5833,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(attributModifikatorWertEClass, ATTRIBUT_MODIFIKATOR_WERT__ATTRIBUT);
         createEAttribute(attributModifikatorWertEClass, ATTRIBUT_MODIFIKATOR_WERT__WERT);
         createEReference(attributModifikatorWertEClass, ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+        createEReference(attributModifikatorWertEClass, ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE);
 
         modifizierbarEClass = createEClass(MODIFIZIERBAR);
         createEReference(modifizierbarEClass, MODIFIZIERBAR__MODS);
@@ -6375,6 +6401,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(kleindungsModifikatorEClass, KLEINDUNGS_MODIFIKATOR__TYPE);
         createEAttribute(kleindungsModifikatorEClass, KLEINDUNGS_MODIFIKATOR__CAPACITY);
 
+        modifyableEClass = createEClass(MODIFYABLE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6461,8 +6489,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         projektilwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
         fertigkeitsGruppeEClass.getESuperTypes().add(this.getBeschreibbar());
         fertigkeitsGruppeEClass.getESuperTypes().add(this.getQuelle());
+        fertigkeitsGruppeEClass.getESuperTypes().add(this.getModifyable());
         fertigkeitEClass.getESuperTypes().add(this.getBeschreibbar());
         fertigkeitEClass.getESuperTypes().add(this.getQuelle());
+        fertigkeitEClass.getESuperTypes().add(this.getModifyable());
         personaFertigkeitEClass.getESuperTypes().add(this.getSteigerbar());
         personaFertigkeitsGruppeEClass.getESuperTypes().add(this.getSteigerbar());
         cyberwareEClass.getESuperTypes().add(this.getKoerpermods());
@@ -6564,6 +6594,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         spezialisierungEClass.getESuperTypes().add(this.getBeschreibbar());
         spezialisierungEClass.getESuperTypes().add(this.getQuelle());
         spezialisierungEClass.getESuperTypes().add(this.getErlernbar());
+        spezialisierungEClass.getESuperTypes().add(this.getModifyable());
         matrixAttributesEClass.getESuperTypes().add(this.getMatixConditionMonitor());
         activeMatixDeviceEClass.getESuperTypes().add(this.getMatrixAttributes());
         commlinkEClass.getESuperTypes().add(this.getAbstractMatrixDevice());
@@ -6676,6 +6707,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getAttributModifikatorWert_Attribut(), ecorePackage.getEAttribute(), null, "attribut", null, 0, 1, AttributModifikatorWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getAttributModifikatorWert_Wert(), ecorePackage.getEInt(), "wert", null, 0, 1, AttributModifikatorWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getAttributModifikatorWert_Modifiziertes(), this.getModifizierbar(), this.getModifizierbar_Mods(), "modifiziertes", null, 0, 1, AttributModifikatorWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAttributModifikatorWert_Modifyable(), this.getModifyable(), null, "modifyable", null, 0, 1, AttributModifikatorWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(modifizierbarEClass, Modifizierbar.class, "Modifizierbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getModifizierbar_Mods(), this.getAttributModifikatorWert(), this.getAttributModifikatorWert_Modifiziertes(), "mods", null, 0, -1, Modifizierbar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7244,6 +7276,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getKleindungsModifikator_Rating(), ecorePackage.getEInt(), "rating", null, 0, 1, KleindungsModifikator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getKleindungsModifikator_Type(), this.getarmorModificationType(), "type", null, 0, 1, KleindungsModifikator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getKleindungsModifikator_Capacity(), ecorePackage.getEInt(), "capacity", null, 0, 1, KleindungsModifikator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        initEClass(modifyableEClass, Modifyable.class, "Modifyable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -618,6 +618,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createKleindungsModifikatorAdapter();
             }
             @Override
+            public Adapter caseModifyable(Modifyable object) {
+                return createModifyableAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2286,6 +2290,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createKleindungsModifikatorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Modifyable <em>Modifyable</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Modifyable
+     * @generated
+     */
+    public Adapter createModifyableAdapter() {
         return null;
     }
 

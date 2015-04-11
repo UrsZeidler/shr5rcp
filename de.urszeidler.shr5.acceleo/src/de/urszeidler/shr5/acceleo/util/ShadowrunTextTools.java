@@ -99,9 +99,9 @@ public class ShadowrunTextTools {
      */
     public static List<List<Object>> getModList(AbstraktPersona persona) {
         ModSetter modManager = persona.getModManager();
-        Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
+        Set<Entry<EObject, Integer>> set = modManager.getModificatorMap().entrySet();
         ArrayList<List<Object>> list = new ArrayList<List<Object>>(set.size());
-        for (Entry<EAttribute, Integer> entry : set) {
+        for (Entry<EObject, Integer> entry : set) {
             ArrayList<Object> arrayList = new ArrayList<Object>(2);
             arrayList.add(entry.getKey());
             arrayList.add(entry.getValue());

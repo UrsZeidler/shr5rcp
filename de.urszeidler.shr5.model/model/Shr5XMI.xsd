@@ -330,6 +330,7 @@
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="attribut" type="ecore:EAttribute"/>
       <xsd:element name="modifiziertes" type="shr5:Modifizierbar"/>
+      <xsd:element name="modifyable" type="shr5:Modifyable"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -337,6 +338,7 @@
     <xsd:attribute name="wert" type="xsd:int"/>
     <xsd:attribute name="attribut" type="xsd:string"/>
     <xsd:attribute name="modifiziertes" type="xsd:string"/>
+    <xsd:attribute name="modifyable" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="AttributModifikatorWert" type="shr5:AttributModifikatorWert">
     <xsd:annotation>
@@ -2471,4 +2473,12 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="KleindungsModifikator" type="shr5:KleindungsModifikator"/>
+  <xsd:complexType abstract="true" name="Modifyable">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Modifyable" type="shr5:Modifyable"/>
 </xsd:schema>

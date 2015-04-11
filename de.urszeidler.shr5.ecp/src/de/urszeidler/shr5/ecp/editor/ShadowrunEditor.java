@@ -10,6 +10,7 @@ import de.urszeidler.eclipse.shr5.AbstraktFokus;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Drug;
@@ -499,6 +500,17 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return super.caseModifizierbar(object);
             }
 
+            @Override
+            public Object caseAttributModifikatorWert(AttributModifikatorWert object) {
+                try {
+                    addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
+                }
+
+                return super.caseAttributModifikatorWert(object);
+            }
+            
             @Override
             public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
                 try {

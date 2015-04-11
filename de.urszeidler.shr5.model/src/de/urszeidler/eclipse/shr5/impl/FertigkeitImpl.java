@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.Modifyable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -693,6 +694,11 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
                 default: return -1;
             }
         }
+        if (baseClass == Modifyable.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -714,6 +720,11 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.FERTIGKEIT__PAGE;
                 case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.FERTIGKEIT__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifyable.class) {
+            switch (baseFeatureID) {
                 default: return -1;
             }
         }

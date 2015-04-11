@@ -192,6 +192,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/attribut"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AttributModifikatorWert/wert"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifiziertes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifyable"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Modifizierbar">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Modifizierbar/mods"/>
@@ -775,5 +776,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/type"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KleindungsModifikator/capacity"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Modifyable"/>
   </genPackages>
 </genmodel:GenModel>

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getAttribut <em>Attribut</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getModifiziertes <em>Modifiziertes</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getModifyable <em>Modifyable</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,5 +110,31 @@ public interface AttributModifikatorWert extends EObject {
      * @generated
      */
 	void setModifiziertes(Modifizierbar value);
+
+    /**
+     * Returns the value of the '<em><b>Modifyable</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Modifyable</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Modifyable</em>' reference.
+     * @see #setModifyable(Modifyable)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getAttributModifikatorWert_Modifyable()
+     * @model
+     * @generated
+     */
+    Modifyable getModifyable();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getModifyable <em>Modifyable</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Modifyable</em>' reference.
+     * @see #getModifyable()
+     * @generated
+     */
+    void setModifyable(Modifyable value);
 
 } // AttributModifikatorWert

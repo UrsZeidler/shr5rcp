@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a
@@ -64,6 +65,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 
             addAttributPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
+            addModifyablePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -91,7 +93,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							ArrayList<Object> arrayList = new ArrayList<Object>();
 							arrayList.addAll(Shr5Package.Literals.GEGENSTAND_STUFEN.getEAttributes());
 							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
-
+							arrayList.add(null);
 							return arrayList;
 
 						}
@@ -99,7 +101,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							ArrayList<Object> arrayList = new ArrayList<Object>();
 							arrayList.addAll(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
 							arrayList.addAll(Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
-
+							arrayList.add(null);
 							return arrayList;
 
 						}
@@ -107,7 +109,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 						if (modifiziertes instanceof FernkampfwaffeModifikator) {
 							ArrayList<Object> arrayList = new ArrayList<Object>();
 							arrayList.addAll(Shr5Package.Literals.FERNKAMPFWAFFEN_MODIFIKATOREN.getEAttributes());
-
+							arrayList.add(null);
 							return arrayList;
 
 						}
@@ -129,7 +131,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
                             arrayList.add(Shr5Package.Literals.SPEZIES__INTUITION_MAX);
                             arrayList.add(Shr5Package.Literals.SPEZIES__LOGIK_MAX);
                             arrayList.add(Shr5Package.Literals.SPEZIES__EDGE_MAX);
-
+                            arrayList.add(null);
 							return arrayList;
 
 						}
@@ -147,6 +149,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
                             arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX);
                             arrayList.add(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX);
                             arrayList.addAll(Shr5Package.Literals.GEGENSTAND_STUFEN.getEAttributes());
+                            arrayList.add(null);
 							return arrayList;
 
 						}
@@ -169,7 +172,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
                             arrayList.add(Shr5Package.Literals.SPEZIES__INTUITION_MAX);
                             arrayList.add(Shr5Package.Literals.SPEZIES__LOGIK_MAX);
                             arrayList.add(Shr5Package.Literals.SPEZIES__EDGE_MAX);
-
+                            arrayList.add(null);
 							return arrayList;
 						}
 						return super.getChoiceOfValues(object);
@@ -201,6 +204,29 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
     }
 
 	/**
+     * This adds a property descriptor for the Modifyable feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addModifyablePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AttributModifikatorWert_modifyable_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AttributModifikatorWert_modifyable_feature", "_UI_AttributModifikatorWert_type"),
+                 Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+
+    /**
      * This returns AttributModifikatorWert.gif.
      * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
@@ -221,15 +247,14 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 	public String getText(Object object) {
 		AttributModifikatorWert attributModifikatorWert = (AttributModifikatorWert) object;
 		ComposeableAdapterFactory factory = ((Shr5ItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+		final String unset = getString("_UI_Unset_text");      
 		String attName = "";
 		if (factory != null && attributModifikatorWert.getAttribut() != null) {
-			IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(attributModifikatorWert.getAttribut(),
-					IItemLabelProvider.class);
-			if (labelprovider != null)
-				attName = labelprovider.getText(attributModifikatorWert.getAttribut()) + " : ";// getString("_UI_AttributModifikatorWert_type")
+		    attName = Shr5EditingTools.getLabelForEObject(factory, unset, attributModifikatorWert.getAttribut());
+		}else if(factory != null &&  attributModifikatorWert.getModifyable() != null) {
+		    attName = Shr5EditingTools.getLabelForEObject(factory, unset, attributModifikatorWert.getModifyable());
 		}
-
-		return attName + attributModifikatorWert.getWert();
+		return String.format("%s: %d", attName, attributModifikatorWert.getWert());
 	}
 
 	/**

@@ -31,6 +31,7 @@ import org.eclipse.swt.widgets.Text;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
+import de.urszeidler.eclipse.shr5.Modifyable;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.binding.BindingToolkit;
@@ -91,6 +92,33 @@ public class CreateAttributModifikatorDialog extends SimpleEObjectDialog {
             protected void createContent(BindingToolkit bindingToolkit) {
                 createattributContent(bindingToolkit);
                 createwertContent(bindingToolkit);
+                createmodifiziertesContent(bindingToolkit);
+            }
+
+            @Override
+            protected void handlemodifiziertesChooseBtnClick() {
+                ((AttributModifikatorWert)eObject).setModifiziertes(modifizierbar);
+
+                Adapter pd = AdapterFactoryUtil.getInstance().getAdapterFactory().adapt(eObject, IItemPropertySource.class);
+                ItemProviderAdapter ipd = (ItemProviderAdapter)pd;
+                IItemPropertyDescriptor itemPropertyDescriptor = ipd.getPropertyDescriptor(eObject,
+                        Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE);
+
+                Object[] array = NullObject.toChoises(itemPropertyDescriptor.getChoiceOfValues(eObject));
+
+                OwnChooseDialog dialog = new OwnChooseDialog(getShell(), array);
+                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                int open = dialog.open();
+                if (open == Dialog.OK) {
+                    Object[] result = dialog.getResult();
+                    if (result.length > 0)
+                        ((AttributModifikatorWert)eObject).setModifyable(result[0] instanceof NullObject ? null:  (Modifyable)result[0]);
+                    else
+                        ((AttributModifikatorWert)eObject).setModifiziertes(null);
+
+                    // Notification notification = new NotificationImpl(Notification.SET, true, false);
+                    // eObject.eNotify(notification);
+                }
             }
 
             @Override

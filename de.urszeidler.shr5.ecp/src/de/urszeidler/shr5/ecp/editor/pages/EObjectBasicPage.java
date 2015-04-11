@@ -13,6 +13,8 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterChange;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
@@ -134,6 +136,10 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.RANGE_TABLE_ENTRY__TO, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__FACTOR, composite);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RATE__TIME_UNIT, composite);
+        }else if (object instanceof AttributModifikatorWert) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__ATTRIBUT, composite);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE, composite);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__WERT, composite);
         }else if (object instanceof DiaryEntry) {
             DiaryEntry de = (DiaryEntry)object;
             EObject eContainer = de.eContainer();

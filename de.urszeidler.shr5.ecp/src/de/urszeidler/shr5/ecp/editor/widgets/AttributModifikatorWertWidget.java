@@ -104,7 +104,7 @@ public class AttributModifikatorWertWidget extends Composite {
         Label label;
 
         label = new Label(this, SWT.NONE);
-        label.setText("modifiziertes"); //$NON-NLS-1$
+        label.setText("modifyable"); //$NON-NLS-1$
 
         gridData = new GridData();
         gridData.horizontalAlignment = GridData.FILL;
@@ -125,7 +125,7 @@ public class AttributModifikatorWertWidget extends Composite {
             }
         });
 
-        bindingToolkit.bindFeature(modifiziertesComp, Shr5Package.eINSTANCE.getAttributModifikatorWert_Modifiziertes());
+        bindingToolkit.bindFeature(modifiziertesComp, Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE);
 
     }
 

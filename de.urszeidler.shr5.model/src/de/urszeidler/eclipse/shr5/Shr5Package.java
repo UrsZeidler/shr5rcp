@@ -1948,13 +1948,22 @@ public interface Shr5Package extends EPackage {
 	int ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES = 2;
 
     /**
+     * The feature id for the '<em><b>Modifyable</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE = 3;
+
+    /**
      * The number of structural features of the '<em>Attribut Modifikator Wert</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ATTRIBUT_MODIFIKATOR_WERT_FEATURE_COUNT = 3;
+	int ATTRIBUT_MODIFIKATOR_WERT_FEATURE_COUNT = 4;
 
     /**
      * The number of operations of the '<em>Attribut Modifikator Wert</em>' class.
@@ -20442,7 +20451,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 138;
+	int FEUER_MODUS = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20452,7 +20461,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 139;
+	int SCHADENS_TYP = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20462,7 +20471,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 140;
+	int MAGAZIN_TYP = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20472,7 +20481,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 141;
+	int FEUWERWAFFEN_ERWEITERUNG = 142;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20482,7 +20491,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 142;
+	int MODIFIKATOR_TYPE = 143;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20492,7 +20501,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 143;
+	int SMARTGUN_TYPE = 144;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20502,7 +20511,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 144;
+	int ZAUBER_ART = 145;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20512,7 +20521,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 145;
+	int ZAUBER_REICHWEITE = 146;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20522,7 +20531,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 146;
+	int ZAUBER_DAUER = 147;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
@@ -20943,6 +20952,34 @@ public interface Shr5Package extends EPackage {
     int KLEINDUNGS_MODIFIKATOR_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Modifyable <em>Modifyable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Modifyable
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifyable()
+     * @generated
+     */
+    int MODIFYABLE = 138;
+
+    /**
+     * The number of structural features of the '<em>Modifyable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODIFYABLE_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>Modifyable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODIFYABLE_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20950,7 +20987,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 147;
+	int CRITTER_HANDLUNG = 148;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -20960,7 +20997,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 148;
+	int CRITTER_REICHWEITE = 149;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -20970,7 +21007,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 149;
+	int CRITTER_DAUER = 150;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -20980,7 +21017,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 150;
+	int RESONANZ_ZIEL = 151;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -20990,7 +21027,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 151;
+    int INTERFACE_MODUS = 152;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -21000,7 +21037,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 152;
+    int PROGRAM_TYPE = 153;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -21010,7 +21047,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 153;
+    int MATRIX_PROGRAM_TYPE = 154;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -21020,7 +21057,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 154;
+    int SUBSTANCE_VECTOR = 155;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -21030,7 +21067,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 155;
+    int SUBSTANCE_EFFECT = 156;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -21040,7 +21077,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 156;
+    int ADDICTION_TYPE = 157;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -21050,7 +21087,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 157;
+    int TIME_UNITS = 158;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
@@ -21060,7 +21097,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
      * @generated
      */
-    int CYBERWARE_TYPE = 158;
+    int CYBERWARE_TYPE = 159;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
@@ -21070,7 +21107,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
      * @generated
      */
-    int ENZUG = 159;
+    int ENZUG = 160;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.armorModificationType <em>armor Modification Type</em>}' enum.
@@ -21080,7 +21117,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getarmorModificationType()
      * @generated
      */
-    int ARMOR_MODIFICATION_TYPE = 160;
+    int ARMOR_MODIFICATION_TYPE = 161;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -21090,7 +21127,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 161;
+	int SHR_DATE = 162;
 
 
 	/**
@@ -21101,7 +21138,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 162;
+	int MODIFICATION_MANAGER = 163;
 
 
 	/**
@@ -21537,6 +21574,17 @@ public interface Shr5Package extends EPackage {
 	EReference getAttributModifikatorWert_Modifiziertes();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.AttributModifikatorWert#getModifyable <em>Modifyable</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Modifyable</em>'.
+     * @see de.urszeidler.eclipse.shr5.AttributModifikatorWert#getModifyable()
+     * @see #getAttributModifikatorWert()
+     * @generated
+     */
+    EReference getAttributModifikatorWert_Modifyable();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Modifizierbar <em>Modifizierbar</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26292,6 +26340,16 @@ public interface Shr5Package extends EPackage {
     EAttribute getKleindungsModifikator_Capacity();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Modifyable <em>Modifyable</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Modifyable</em>'.
+     * @see de.urszeidler.eclipse.shr5.Modifyable
+     * @generated
+     */
+    EClass getModifyable();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26813,6 +26871,14 @@ public interface Shr5Package extends EPackage {
 		EReference ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES = eINSTANCE.getAttributModifikatorWert_Modifiziertes();
 
 		/**
+         * The meta object literal for the '<em><b>Modifyable</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE = eINSTANCE.getAttributModifikatorWert_Modifyable();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Modifizierbar <em>Modifizierbar</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -30649,6 +30715,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute KLEINDUNGS_MODIFIKATOR__CAPACITY = eINSTANCE.getKleindungsModifikator_Capacity();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Modifyable <em>Modifyable</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Modifyable
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifyable()
+         * @generated
+         */
+        EClass MODIFYABLE = eINSTANCE.getModifyable();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

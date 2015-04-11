@@ -262,6 +262,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseFertigkeitsGruppe(fertigkeitsGruppe);
                 if (result == null) result = caseBeschreibbar(fertigkeitsGruppe);
                 if (result == null) result = caseQuelle(fertigkeitsGruppe);
+                if (result == null) result = caseModifyable(fertigkeitsGruppe);
                 if (result == null) result = caseIdentifiable(fertigkeitsGruppe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -271,6 +272,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseFertigkeit(fertigkeit);
                 if (result == null) result = caseBeschreibbar(fertigkeit);
                 if (result == null) result = caseQuelle(fertigkeit);
+                if (result == null) result = caseModifyable(fertigkeit);
                 if (result == null) result = caseIdentifiable(fertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -837,6 +839,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseFertigkeit(wissensfertigkeit);
                 if (result == null) result = caseBeschreibbar(wissensfertigkeit);
                 if (result == null) result = caseQuelle(wissensfertigkeit);
+                if (result == null) result = caseModifyable(wissensfertigkeit);
                 if (result == null) result = caseIdentifiable(wissensfertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -848,6 +851,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseFertigkeit(sprachfertigkeit);
                 if (result == null) result = caseBeschreibbar(sprachfertigkeit);
                 if (result == null) result = caseQuelle(sprachfertigkeit);
+                if (result == null) result = caseModifyable(sprachfertigkeit);
                 if (result == null) result = caseIdentifiable(sprachfertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1023,6 +1027,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(spezialisierung);
                 if (result == null) result = caseQuelle(spezialisierung);
                 if (result == null) result = caseErlernbar(spezialisierung);
+                if (result == null) result = caseModifyable(spezialisierung);
                 if (result == null) result = caseIdentifiable(spezialisierung);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1555,6 +1560,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(kleindungsModifikator);
                 if (result == null) result = caseGeldWert(kleindungsModifikator);
                 if (result == null) result = caseIdentifiable(kleindungsModifikator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MODIFYABLE: {
+                Modifyable modifyable = (Modifyable)theEObject;
+                T result = caseModifyable(modifyable);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -3329,6 +3340,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseKleindungsModifikator(KleindungsModifikator object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Modifyable</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Modifyable</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModifyable(Modifyable object) {
         return null;
     }
 
