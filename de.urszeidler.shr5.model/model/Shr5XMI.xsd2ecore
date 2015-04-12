@@ -1035,6 +1035,7 @@
     <nested inputs="shr5.ecore#//Sensor" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139">
       <nested inputs="shr5.ecore#//Sensor/rating" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=8"/>
       <nested inputs="shr5.ecore#//Sensor/capacityValue" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=9"/>
+      <nested inputs="shr5.ecore#//Sensor/functions" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse=10"/>
       <nested inputs="shr5.ecore#//Sensor/functions" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Sensor;XSDComplexTypeDefinition=139/XSDAttributeUse"/>

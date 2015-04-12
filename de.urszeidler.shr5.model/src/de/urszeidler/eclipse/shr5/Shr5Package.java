@@ -21143,7 +21143,7 @@ public interface Shr5Package extends EPackage {
     int SENSOR__WERT_VALUE = CAPACITY_FEATURE_COUNT + 9;
 
     /**
-     * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+     * The feature id for the '<em><b>Functions</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -21324,7 +21324,7 @@ public interface Shr5Package extends EPackage {
     int SENSOR_ARRAY__WERT_VALUE = SENSOR__WERT_VALUE;
 
     /**
-     * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+     * The feature id for the '<em><b>Functions</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -26869,10 +26869,10 @@ public interface Shr5Package extends EPackage {
     EClass getSensor();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Sensor#getFunctions <em>Functions</em>}'.
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Sensor#getFunctions <em>Functions</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Functions</em>'.
+     * @return the meta object for the reference list '<em>Functions</em>'.
      * @see de.urszeidler.eclipse.shr5.Sensor#getFunctions()
      * @see #getSensor()
      * @generated
@@ -31328,7 +31328,7 @@ public interface Shr5Package extends EPackage {
         EClass SENSOR = eINSTANCE.getSensor();
 
         /**
-         * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Functions</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated

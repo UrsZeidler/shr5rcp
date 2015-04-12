@@ -239,9 +239,9 @@ public class ManagedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite_left);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__DATEOFBIRTH, composite_left, new DateEntryFactory(toolkit));
         
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite_right, new LabelEntry());
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite_right, new LabelEntry());
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite_right, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite_right, labelEntryFactory);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite_right, labelEntryFactory);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite_right, labelEntryFactory);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__HEIGHT, composite_right);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__WEIGHT, composite_right);
 

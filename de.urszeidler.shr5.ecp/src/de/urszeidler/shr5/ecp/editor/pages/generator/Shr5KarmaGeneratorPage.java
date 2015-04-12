@@ -291,7 +291,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__META_TYPE, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHARACTER_CONCEPT, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, labelEntryFactory);
 
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);

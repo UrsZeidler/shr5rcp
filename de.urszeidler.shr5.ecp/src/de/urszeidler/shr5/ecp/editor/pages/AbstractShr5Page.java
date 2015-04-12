@@ -177,6 +177,8 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected ILabelProvider labelprovider = new DefaultLabelProvider();
     protected IPreferenceStore store;
 
+    protected LabelEntry labelEntryFactory = new LabelEntry();
+    
     public AbstractShr5Page(String id, String title) {
         super(id, title);
     }

@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
+import de.urszeidler.eclipse.shr5.Sensor;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.WeaponMount;
@@ -143,15 +144,18 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof PercentLifestyleOption) {
             
         }else if (object instanceof Pack) {
-            GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
-            controlGridData.heightHint = 150;
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,controlGridData);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PACK__ITEMS, grpGegenstand,createControllGridData(150));
         }else if (object instanceof FernkampfwaffeModifikator) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpGegenstand);
         }else if (object instanceof KleindungsModifikator) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__RATING, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__CAPACITY, grpGegenstand,new LabelEntry());
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__CAPACITY, grpGegenstand,labelEntryFactory);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEINDUNGS_MODIFIKATOR__TYPE, grpGegenstand);
+        }else if (object instanceof Sensor) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR__RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR__CAPACITY_VALUE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR__FUNCTIONS, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, grpGegenstand, labelEntryFactory);
         }
         
         

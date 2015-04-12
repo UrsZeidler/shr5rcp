@@ -20972,15 +20972,22 @@
           <localizations xmi:id="_lk0VoEzFEeS5AK9kA4rl5g" local="de" name="Gefahrensinn"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_lk0VoUzFEeS5AK9kA4rl5g" name="Enhanced Perception 1" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_F3hfwOA5EeSy2vqMyscHUg" wert="1" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <mods xmi:id="_JIHGwOA5EeSy2vqMyscHUg" wert="1" modifyable="59318078-e071-411b-9194-7222560e9f4a"/>
           <localizations xmi:id="_lk0VokzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 1"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_lk0Vo0zFEeS5AK9kA4rl5g" name="Enhanced Perception 2" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <mods xmi:id="_MOmWkOA5EeSy2vqMyscHUg" wert="2" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
           <localizations xmi:id="_lk0VpEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 2"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_lk0VpUzFEeS5AK9kA4rl5g" name="Enhanced Perception 3" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-150">
+          <mods xmi:id="_QyHlEOA5EeSy2vqMyscHUg" wert="3" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <mods xmi:id="_Ok0nEOA5EeSy2vqMyscHUg" wert="3" modifyable="59318078-e071-411b-9194-7222560e9f4a"/>
           <localizations xmi:id="_lk0VpkzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 3"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_lk0Vp0zFEeS5AK9kA4rl5g" name="Enhanced Perception 4" parentId="974d2aba-1772-474b-aaff-c84a12766e5f" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-200">
+          <mods xmi:id="_d40VkOA5EeSy2vqMyscHUg" wert="4" modifyable="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <mods xmi:id="_fTzs4OA5EeSy2vqMyscHUg" wert="4" modifyable="59318078-e071-411b-9194-7222560e9f4a"/>
           <localizations xmi:id="_lk0VqEzFEeS5AK9kA4rl5g" local="de" name="Verbesserte Wahrnehmung 4"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="974d2aba-1772-474b-aaff-c84a12766e5f" name="Enhanced Perception" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">

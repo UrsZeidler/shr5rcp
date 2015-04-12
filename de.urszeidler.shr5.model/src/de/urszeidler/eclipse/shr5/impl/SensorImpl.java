@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -249,7 +250,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
     protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
+     * The cached value of the '{@link #getFunctions() <em>Functions</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getFunctions()
@@ -554,13 +555,15 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SENSOR__WERT_VALUE, oldWertValue, wertValue));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SENSOR__WERT, oldWertValue, wertValue));
     }
 
     /**
@@ -570,7 +573,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      */
     public EList<SensorFunction> getFunctions() {
         if (functions == null) {
-            functions = new EObjectContainmentEList<SensorFunction>(SensorFunction.class, this, Shr5Package.SENSOR__FUNCTIONS);
+            functions = new EObjectResolvingEList<SensorFunction>(SensorFunction.class, this, Shr5Package.SENSOR__FUNCTIONS);
         }
         return functions;
     }
@@ -587,13 +590,15 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setRating(int newRating) {
         int oldRating = rating;
         rating = newRating;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SENSOR__RATING, oldRating, rating));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SENSOR__WERT, oldRating, rating));
     }
 
     /**
@@ -636,8 +641,6 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
         switch (featureID) {
             case Shr5Package.SENSOR__LOCALIZATIONS:
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
-            case Shr5Package.SENSOR__FUNCTIONS:
-                return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }

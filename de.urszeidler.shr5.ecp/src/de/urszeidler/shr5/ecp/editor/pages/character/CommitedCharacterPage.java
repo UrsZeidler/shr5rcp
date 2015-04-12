@@ -271,13 +271,13 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         // emfFormBuilder.setBorderStyle(SWT.NONE);
         emfFormBuilder1.setDblListner(this);
 
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite, new LabelEntry());
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite, new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, composite, labelEntryFactory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA, composite, labelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, composite, linkLabelEntryFactory);
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite, new LabelEntry());
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__PUBLIC_AWARENESS, composite, new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, composite, labelEntryFactory);
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__PUBLIC_AWARENESS, composite, labelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, composite, linkLabelEntryFactory);
-        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite, new LabelEntry());
+        emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__STREET_CRED, composite, labelEntryFactory);
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, composite, new LabelEnumEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__HEIGHT, composite, new LabelEnumEntry());
         emfFormBuilder1.addTextEntry(Shr5managementPackage.Literals.MANAGED_CHARACTER__WEIGHT, composite, new LabelEnumEntry());

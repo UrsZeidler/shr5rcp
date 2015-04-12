@@ -779,7 +779,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Modifyable"/>
     <genClasses ecoreClass="shr5.ecore#//Sensor">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Sensor/functions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Sensor/functions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sensor/rating"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sensor/capacityValue"/>
     </genClasses>

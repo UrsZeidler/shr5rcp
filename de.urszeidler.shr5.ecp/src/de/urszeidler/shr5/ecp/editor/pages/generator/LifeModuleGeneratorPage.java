@@ -329,9 +329,9 @@ public class LifeModuleGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__TEEN_YEARS, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__FURTHER_EDUCATION, compositePrio);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__REAL_LIFE, compositePrio);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, new LabelEntry());
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST, compositePrio, new LabelEntry());
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__STARTING_AGE, compositePrio, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GENERATOR__CHOISE_KARMA_COST, compositePrio, labelEntryFactory);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__MODULE_KARMA_COST, compositePrio, labelEntryFactory);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULES_GENERATOR__STARTING_AGE, compositePrio, labelEntryFactory);
         // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = 150;

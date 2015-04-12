@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Sensor extends Capacity, Beschreibbar, Quelle, GeldWert {
     /**
-     * Returns the value of the '<em><b>Functions</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Functions</b></em>' reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.SensorFunction}.
      * <!-- begin-user-doc -->
      * <p>
@@ -33,9 +33,9 @@ public interface Sensor extends Capacity, Beschreibbar, Quelle, GeldWert {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Functions</em>' containment reference list.
+     * @return the value of the '<em>Functions</em>' reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getSensor_Functions()
-     * @model containment="true"
+     * @model
      * @generated
      */
     EList<SensorFunction> getFunctions();

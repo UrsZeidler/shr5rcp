@@ -1238,7 +1238,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Modifyable" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Capacity #//Beschreibbar #//Quelle #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
-        eType="#//SensorFunction" containment="true"/>
+        eType="#//SensorFunction"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>

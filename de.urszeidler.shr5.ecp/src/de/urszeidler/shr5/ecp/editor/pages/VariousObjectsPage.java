@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.SensorFunction;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Zauber;
@@ -190,6 +191,9 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__KARMA_COST, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__MODULE_TYPE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.LIFE_MODULE__TIME, grpGegenstand);
+            
+        }else if (object instanceof SensorFunction) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR_FUNCTION__MAX_RANGE, grpGegenstand);
             
         }
         addSourceFeature(grpQuelle);

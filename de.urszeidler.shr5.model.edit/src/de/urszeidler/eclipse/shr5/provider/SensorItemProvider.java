@@ -423,7 +423,6 @@ public class SensorItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
-            childrenFeatures.add(Shr5Package.Literals.SENSOR__FUNCTIONS);
         }
         return childrenFeatures;
     }
@@ -494,7 +493,6 @@ public class SensorItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.SENSOR__LOCALIZATIONS:
-            case Shr5Package.SENSOR__FUNCTIONS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -516,11 +514,6 @@ public class SensorItemProvider
             (createChildParameter
                 (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
                  Shr5Factory.eINSTANCE.createLocalization()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.SENSOR__FUNCTIONS,
-                 Shr5Factory.eINSTANCE.createSensorFunction()));
     }
 
     /**

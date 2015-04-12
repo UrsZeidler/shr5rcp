@@ -121,6 +121,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__PANZER, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__SENSOR, grpGegenstand);
         // emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN, grpGegenstand);
 
         if (object instanceof Drohne) {
@@ -134,7 +135,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__HANDLING_GELAENDE, grpGegenstand);
         }
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__WEAPON_MOUNTS, grpGegenstand, new LabelEntry());
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__WEAPON_MOUNTS, grpGegenstand, labelEntryFactory);
 
         addWertFeatures(grpWert);
         addSourceFeature(grpQuelle);

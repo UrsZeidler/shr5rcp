@@ -2508,6 +2508,7 @@
         </xsd:attribute>
         <xsd:attribute name="rating" type="xsd:int"/>
         <xsd:attribute name="capacityValue" type="xsd:int"/>
+        <xsd:attribute name="functions" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

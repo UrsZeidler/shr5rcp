@@ -33,6 +33,8 @@ import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
+import de.urszeidler.eclipse.shr5.Sensor;
+import de.urszeidler.eclipse.shr5.SensorFunction;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
@@ -401,6 +403,27 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return null;
             }
 
+            @Override
+            public Object caseSensor(Sensor object) {
+                try {
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
+            @Override
+            public Object caseSensorFunction(SensorFunction object) {
+                try {
+                    addPage(new VariousObjectsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousObjectsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseMetaMagie(MetaMagie object) {
                 try {
