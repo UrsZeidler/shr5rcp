@@ -4,9 +4,9 @@
 	xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
 	<xsl:strip-space elements="*" />
-	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
+	<xsl:param name="path" select="'/home/urs/git/chummer5a/Chummer/data'" />
 	<xsl:param name="loc_path"
-		select="'/home/urs/eclipse_workspaces/workspace_E4.3_shr_git/chummer-data/lang/de_data.xml'" />
+		select="'/home/urs/git/chummer5a/Chummer/lang/de_data.xml'" />
 	<xsl:param name="do_localization" select="true" />
 	<!-- resources -->
 	<xsl:variable name="loc_data" select="document($loc_path,/)" />
@@ -69,7 +69,7 @@
 
 
 	<xsl:include href="shr5-functions.xsl" />
-	<xsl:include href="base-shr5-functions.xsl" />
+<!-- 	<xsl:include href="base-shr5-functions.xsl" /> -->
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -1630,6 +1630,24 @@
 			<xsl:when test="category/text()='DocWagon Contract'">
 				<entries xsi:type="shr5:IntervallVertrag" unit="year"
 					faelligkeitsIntervall="1">
+					<!-- <xsl:attribute name="programType"> -->
+					<!-- <xsl:value-of select="category/text()" /> -->
+					<!-- </xsl:attribute> -->
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Sensor Functions'">
+				<entries xsi:type="shr5:SensorFunction" >
+					<!-- <xsl:attribute name="programType"> -->
+					<!-- <xsl:value-of select="category/text()" /> -->
+					<!-- </xsl:attribute> -->
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Sensors'">
+				<entries xsi:type="shr5:Sensor" >
 					<!-- <xsl:attribute name="programType"> -->
 					<!-- <xsl:value-of select="category/text()" /> -->
 					<!-- </xsl:attribute> -->

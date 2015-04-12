@@ -21387,9 +21387,11 @@
           <localizations xmi:id="_llCYHUzFEeS5AK9kA4rl5g" local="de" name="Freier Fall"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_llC_IEzFEeS5AK9kA4rl5g" name="Hang Time 1" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-25">
+          <mods xmi:id="_HsiEIOA6EeSy2vqMyscHUg" wert="1" modifyable="_EL27uDnTEeSe6_w6Jrbqxg"/>
           <localizations xmi:id="_llC_IUzFEeS5AK9kA4rl5g" local="de" name="Hang Time 1"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_llC_IkzFEeS5AK9kA4rl5g" name="Hang Time 2" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-50">
+          <mods xmi:id="_LvTWAOA6EeSy2vqMyscHUg" wert="2" modifyable="_EL27uDnTEeSe6_w6Jrbqxg"/>
           <localizations xmi:id="_llC_I0zFEeS5AK9kA4rl5g" local="de" name="Hang Time 2"/>
         </entries>
         <entries xsi:type="shr5:KiKraft" xmi:id="_llC_JEzFEeS5AK9kA4rl5g" name="Hang Time 3" parentId="c59c1bb0-9b3e-41be-9079-8982b451fe45" page="171" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" kraftpunkte="-75">
@@ -23136,6 +23138,51 @@
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
       <entries xsi:type="shr5:Gegenstand" xmi:id="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
+      <entries xsi:type="shr5:ShrList" xmi:id="_N5FOQODwEeS53L70HY3q5Q" name="Sensors">
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" name="Ultrasound" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVuDvEeSEl6fXajKS9w" local="de" name="Ultraschall"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" name="Radio Signal Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVeDvEeSEl6fXajKS9w" local="de" name="Radiosignalscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" name="Omni-directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVODvEeSEl6fXajKS9w" local="de" name="Mikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" name="Olfactory Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtU-DvEeSEl6fXajKS9w" local="de" name="Geruchsscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" name="Motion Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUuDvEeSEl6fXajKS9w" local="de" name="Bewegungsmelder"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" name="MAD Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUeDvEeSEl6fXajKS9w" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" name="Laser Range Finder" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUODvEeSEl6fXajKS9w" local="de" name="Laser-Entfernungsmesser"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" name="Laser Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGRODvEeSEl6fXajKS9w" local="de" name="Lasermikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="d98f419f-7625-4228-9723-0217950d8155" name="Geiger Counter" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQ-DvEeSEl6fXajKS9w" local="de" name="Geigerzähler"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" name="Directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQuDvEeSEl6fXajKS9w" local="de" name="Richtmikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" name="Cyberware Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQeDvEeSEl6fXajKS9w" local="de" name="Cyberwarescanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" name="Camera" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5">
+          <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" name="Sensor Array" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7">
+          <localizations xmi:id="_thh4IODvEeSEl6fXajKS9w" local="de" name="Sensorarray"/>
+        </entries>
+      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
