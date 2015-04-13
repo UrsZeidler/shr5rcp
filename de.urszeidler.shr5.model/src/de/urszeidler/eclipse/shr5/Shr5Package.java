@@ -9742,13 +9742,40 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG__ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__CAPACITY_FEATURE = BESCHREIBBAR_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__CAPACITY = BESCHREIBBAR_FEATURE_COUNT + 12;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__CAPACITY_REMAINS = BESCHREIBBAR_FEATURE_COUNT + 13;
+
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
@@ -9757,7 +9784,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 15;
 
     /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
@@ -9766,7 +9793,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 16;
 
     /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
@@ -9775,7 +9802,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 17;
 
     /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
@@ -9784,7 +9811,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 18;
 
     /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -9793,7 +9820,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 16;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 19;
 
     /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
@@ -9802,7 +9829,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 17;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 20;
 
     /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
@@ -9811,7 +9838,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 18;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 21;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -9820,7 +9847,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 19;
+    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 22;
 
     /**
      * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
@@ -9829,7 +9856,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 20;
+    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 23;
 
     /**
      * The feature id for the '<em><b>Sensor Array</b></em>' containment reference.
@@ -9838,7 +9865,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__SENSOR_ARRAY = BESCHREIBBAR_FEATURE_COUNT + 21;
+    int FAHRZEUG__SENSOR_ARRAY = BESCHREIBBAR_FEATURE_COUNT + 24;
 
     /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
@@ -9847,7 +9874,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 22;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 25;
+
+    /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG___CAN_ADD__EOBJECT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -9856,7 +9892,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+	int FAHRZEUG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -9985,6 +10021,33 @@ public interface Shr5Package extends EPackage {
     int PASSAGIER_FAHRZEUG__ZUSTAND_MAX = FAHRZEUG__ZUSTAND_MAX;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__CAPACITY_FEATURE = FAHRZEUG__CAPACITY_FEATURE;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__CAPACITY = FAHRZEUG__CAPACITY;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__CAPACITY_REMAINS = FAHRZEUG__CAPACITY_REMAINS;
+
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10100,6 +10163,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int PASSAGIER_FAHRZEUG_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG___CAN_ADD__EOBJECT = FAHRZEUG___CAN_ADD__EOBJECT;
 
     /**
      * The number of operations of the '<em>Passagier Fahrzeug</em>' class.
@@ -10237,6 +10309,33 @@ public interface Shr5Package extends EPackage {
     int BODENFAHRZEUG__ZUSTAND_MAX = PASSAGIER_FAHRZEUG__ZUSTAND_MAX;
 
     /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__CAPACITY_FEATURE = PASSAGIER_FAHRZEUG__CAPACITY_FEATURE;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__CAPACITY = PASSAGIER_FAHRZEUG__CAPACITY;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__CAPACITY_REMAINS = PASSAGIER_FAHRZEUG__CAPACITY_REMAINS;
+
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10372,6 +10471,15 @@ public interface Shr5Package extends EPackage {
 	int BODENFAHRZEUG_FEATURE_COUNT = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 2;
 
     /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG___CAN_ADD__EOBJECT = PASSAGIER_FAHRZEUG___CAN_ADD__EOBJECT;
+
+    /**
      * The number of operations of the '<em>Bodenfahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10505,6 +10613,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int DROHNE__ZUSTAND_MAX = FAHRZEUG__ZUSTAND_MAX;
+
+    /**
+     * The feature id for the '<em><b>Capacity Feature</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__CAPACITY_FEATURE = FAHRZEUG__CAPACITY_FEATURE;
+
+    /**
+     * The feature id for the '<em><b>Capacity</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__CAPACITY = FAHRZEUG__CAPACITY;
+
+    /**
+     * The feature id for the '<em><b>Capacity Remains</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__CAPACITY_REMAINS = FAHRZEUG__CAPACITY_REMAINS;
 
     /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -10685,6 +10820,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 8;
+
+    /**
+     * The operation id for the '<em>Can Add</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE___CAN_ADD__EOBJECT = FAHRZEUG___CAN_ADD__EOBJECT;
 
     /**
      * The number of operations of the '<em>Drohne</em>' class.

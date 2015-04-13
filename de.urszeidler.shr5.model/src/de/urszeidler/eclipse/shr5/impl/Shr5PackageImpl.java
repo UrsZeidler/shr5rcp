@@ -6654,6 +6654,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fahrzeugEClass.getESuperTypes().add(this.getAnwendbar());
         fahrzeugEClass.getESuperTypes().add(this.getModifizierbar());
         fahrzeugEClass.getESuperTypes().add(this.getFahrzeugZustand());
+        fahrzeugEClass.getESuperTypes().add(this.getCapacity());
         bodenfahrzeugEClass.getESuperTypes().add(this.getPassagierFahrzeug());
         passagierFahrzeugEClass.getESuperTypes().add(this.getFahrzeug());
         drohneEClass.getESuperTypes().add(this.getFahrzeug());

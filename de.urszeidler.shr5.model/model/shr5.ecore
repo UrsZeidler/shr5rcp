@@ -533,7 +533,7 @@
     <eLiterals name="permanent" value="3"/>
     <eLiterals name="speziell" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar #//FahrzeugZustand">
+  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar #//FahrzeugZustand #//Capacity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The basic vehicle type."/>
     </eAnnotations>

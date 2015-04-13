@@ -682,6 +682,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAnwendbar(fahrzeug);
                 if (result == null) result = caseModifizierbar(fahrzeug);
                 if (result == null) result = caseFahrzeugZustand(fahrzeug);
+                if (result == null) result = caseCapacity(fahrzeug);
                 if (result == null) result = caseIdentifiable(fahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -697,6 +698,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAnwendbar(bodenfahrzeug);
                 if (result == null) result = caseModifizierbar(bodenfahrzeug);
                 if (result == null) result = caseFahrzeugZustand(bodenfahrzeug);
+                if (result == null) result = caseCapacity(bodenfahrzeug);
                 if (result == null) result = caseIdentifiable(bodenfahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -711,6 +713,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAnwendbar(passagierFahrzeug);
                 if (result == null) result = caseModifizierbar(passagierFahrzeug);
                 if (result == null) result = caseFahrzeugZustand(passagierFahrzeug);
+                if (result == null) result = caseCapacity(passagierFahrzeug);
                 if (result == null) result = caseIdentifiable(passagierFahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -726,6 +729,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAnwendbar(drohne);
                 if (result == null) result = caseModifizierbar(drohne);
                 if (result == null) result = caseFahrzeugZustand(drohne);
+                if (result == null) result = caseCapacity(drohne);
                 if (result == null) result = caseMatixConditionMonitor(drohne);
                 if (result == null) result = caseIdentifiable(drohne);
                 if (result == null) result = defaultCase(theEObject);

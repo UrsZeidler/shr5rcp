@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Collection;
 
@@ -9,6 +10,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,6 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Anwendbar;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Capacity;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.FahrzeugZustand;
@@ -55,6 +59,9 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSpezialisierung <em>Spezialisierung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getCapacity <em>Capacity</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getCapacityRemains <em>Capacity Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
@@ -281,6 +288,26 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected static final int ZUSTAND_MAX_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacity()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCapacityRemains() <em>Capacity Remains</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityRemains()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_REMAINS_EDEFAULT = 0;
 
     /**
      * The default value of the '{@link #getHandling() <em>Handling</em>}' attribute.
@@ -825,6 +852,44 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getCapacityFeature() {
+        EReference capacityFeature = basicGetCapacityFeature();
+        return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated no
+     */
+    public EReference basicGetCapacityFeature() {
+        return Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getCapacity() {
+        return getWeaponMounts();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getCapacityRemains() {
+        int capacity = getCapacity();
+        return capacity-getModifizierungen().size();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getHandling() {
         return handling;
     }
@@ -1056,6 +1121,15 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public boolean canAdd(EObject object) {
+        return getCapacityRemains()>0;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1127,6 +1201,13 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getMods();
             case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
                 return getZustandMax();
+            case Shr5Package.FAHRZEUG__CAPACITY_FEATURE:
+                if (resolve) return getCapacityFeature();
+                return basicGetCapacityFeature();
+            case Shr5Package.FAHRZEUG__CAPACITY:
+                return getCapacity();
+            case Shr5Package.FAHRZEUG__CAPACITY_REMAINS:
+                return getCapacityRemains();
             case Shr5Package.FAHRZEUG__HANDLING:
                 return getHandling();
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -1349,6 +1430,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return mods != null && !mods.isEmpty();
             case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
                 return getZustandMax() != ZUSTAND_MAX_EDEFAULT;
+            case Shr5Package.FAHRZEUG__CAPACITY_FEATURE:
+                return basicGetCapacityFeature() != null;
+            case Shr5Package.FAHRZEUG__CAPACITY:
+                return getCapacity() != CAPACITY_EDEFAULT;
+            case Shr5Package.FAHRZEUG__CAPACITY_REMAINS:
+                return getCapacityRemains() != CAPACITY_REMAINS_EDEFAULT;
             case Shr5Package.FAHRZEUG__HANDLING:
                 return handling != HANDLING_EDEFAULT;
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -1423,6 +1510,14 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 default: return -1;
             }
         }
+        if (baseClass == Capacity.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.FAHRZEUG__CAPACITY_FEATURE: return Shr5Package.CAPACITY__CAPACITY_FEATURE;
+                case Shr5Package.FAHRZEUG__CAPACITY: return Shr5Package.CAPACITY__CAPACITY;
+                case Shr5Package.FAHRZEUG__CAPACITY_REMAINS: return Shr5Package.CAPACITY__CAPACITY_REMAINS;
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -1474,7 +1569,75 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 default: return -1;
             }
         }
+        if (baseClass == Capacity.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.CAPACITY__CAPACITY_FEATURE: return Shr5Package.FAHRZEUG__CAPACITY_FEATURE;
+                case Shr5Package.CAPACITY__CAPACITY: return Shr5Package.FAHRZEUG__CAPACITY;
+                case Shr5Package.CAPACITY__CAPACITY_REMAINS: return Shr5Package.FAHRZEUG__CAPACITY_REMAINS;
+                default: return -1;
+            }
+        }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == Quelle.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == GeldWert.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == Anwendbar.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifizierbar.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == FahrzeugZustand.class) {
+            switch (baseOperationID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == Capacity.class) {
+            switch (baseOperationID) {
+                case Shr5Package.CAPACITY___CAN_ADD__EOBJECT: return Shr5Package.FAHRZEUG___CAN_ADD__EOBJECT;
+                default: return -1;
+            }
+        }
+        return super.eDerivedOperationID(baseOperationID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+        switch (operationID) {
+            case Shr5Package.FAHRZEUG___CAN_ADD__EOBJECT:
+                return canAdd((EObject)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
     }
 
     /**

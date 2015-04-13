@@ -34,7 +34,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Modifizierbar, FahrzeugZustand {
+public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Modifizierbar, FahrzeugZustand, Capacity {
 	/**
      * Returns the value of the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
