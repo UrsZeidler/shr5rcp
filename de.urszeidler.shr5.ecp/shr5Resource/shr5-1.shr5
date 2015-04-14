@@ -1480,6 +1480,59 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_UQD7sNuQEeSvNKxS3WXWXg" grade="1" skill="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_fO8EENuQEeSvNKxS3WXWXg" grade="2" skill="_hUibQNGjEeS4ndSijGfJ0Q"/>
         </modules>
+        <modules xmi:id="__5kV8OLdEeSucszYQrVpzA" name="MILITARY BRAT" page="69" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="__5kV8uLdEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_P3oVIOLeEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="__5k9AOLdEeSucszYQrVpzA" teachable="f0873c37-4f09-41cd-be81-88e8df5b42ae"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_S27-4OLeEeSucszYQrVpzA" grade="2" skillGroup="_EL5X8DnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_VWysgOLeEeSucszYQrVpzA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_X0Ue4OLeEeSucszYQrVpzA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_aUJXUOLeEeSucszYQrVpzA" grade="3" skill="_6wYd0NVkEeSzd99pVrWJLg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_2O4j4OLeEeSucszYQrVpzA" grade="2" skill="_wWqMQOLeEeSucszYQrVpzA"/>
+        </modules>
+        <modules xmi:id="_8NeCMOLeEeSucszYQrVpzA" name="ORPHAN" page="69" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_AL4YgOLfEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_CLSEcOLfEeSucszYQrVpzA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_EMr7gOLfEeSucszYQrVpzA" grade="2" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_GTDLEOLfEeSucszYQrVpzA" grade="2" skill="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_IBH2cOLfEeSucszYQrVpzA" grade="1" skill="89ee1730-053a-400f-a13a-4fbadae015f0"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_J_0-0OLfEeSucszYQrVpzA" grade="3" skill="_8ZPEsNADEeSuYK6CpEIQGA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_NsCx4OLfEeSucszYQrVpzA" grade="3" skill="_QsRBoOLfEeSucszYQrVpzA"/>
+        </modules>
+        <modules xmi:id="_i9FtoOLfEeSucszYQrVpzA" name="RICH KID" page="69" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_u7tbwOLfEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_xXMmwOLfEeSucszYQrVpzA" teachable="bdf94cb4-2b36-47fc-b748-fa3abaf44517"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_3wMJIOLfEeSucszYQrVpzA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Tsp0AOLgEeSucszYQrVpzA" grade="1" skill="2f4c706f-5ac5-4774-8a45-3b4667989a20"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_WetE4OLgEeSucszYQrVpzA" grade="2" skill="963a548d-c629-4a13-a3e3-31b085a42e20"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_bElq4OLgEeSucszYQrVpzA" grade="2" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_fDkB4OLgEeSucszYQrVpzA" grade="3" selectOne="__xjdENvEEeSfsbuIbqNZtw _wWqMQOLeEeSucszYQrVpzA"/>
+        </modules>
+        <modules xmi:id="_D35FUOLhEeSucszYQrVpzA" name="STREET URCHIN" page="69" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_REH2EOLhEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_UIDhIOLhEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_bsKLwOLhEeSucszYQrVpzA" teachable="2e4ce871-fab1-4b36-bd15-bcb04e02a977"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_jq5j8OLhEeSucszYQrVpzA" teachable="cded1c3f-c169-4e3a-8a8e-af786a5ab76c"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_ol1M4OLhEeSucszYQrVpzA" teachable="d8362a78-54e9-4dbe-8388-6ba0a7b9df31"/>
+          <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_tpwZwOLhEeSucszYQrVpzA" teachable="00cc6499-db13-447e-8116-278d317a9e31"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_yM2KcOLhEeSucszYQrVpzA" grade="2" skillGroup="_EL5X8DnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_0oJvQOLhEeSucszYQrVpzA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="__-BbUOLhEeSucszYQrVpzA" grade="1" skill="1531b2d8-6116-4be4-87b0-232dba1fc447"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_EfbxAOLiEeSucszYQrVpzA" grade="1" skill="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_GcbCIOLiEeSucszYQrVpzA" grade="3" skill="_8ZPEsNADEeSuYK6CpEIQGA"/>
+        </modules>
         <modules xmi:id="_Mzo_gMpPEeSzH78cIrFicQ" name="CORPORATE EDUCATION" page="70" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_kC5a4MtAEeSNYKOZgflKBA" grade="1">
             <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
@@ -1493,6 +1546,17 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_87R0QMtBEeSNYKOZgflKBA" grade="2" skill="_5InJ4MpPEeSzH78cIrFicQ"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_FTMhcMtCEeSNYKOZgflKBA" grade="2" skill="_BMp40MpQEeSzH78cIrFicQ"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_UGmEUMtCEeSNYKOZgflKBA" grade="1" selectOne="_TxMYwMpVEeSzH78cIrFicQ _UNfBYMtAEeSNYKOZgflKBA"/>
+        </modules>
+        <modules xmi:id="_2Yen8OLiEeSucszYQrVpzA" name="WHITE COLLAR" page="69" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="formativeYears" time="10">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_9SsoEOLiEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="__FxIMOLiEeSucszYQrVpzA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_HQH6gOLjEeSucszYQrVpzA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ObBa8OLjEeSucszYQrVpzA" grade="3" selectOne="__xjdENvEEeSfsbuIbqNZtw _wWqMQOLeEeSucszYQrVpzA"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Sc1qkOLjEeSucszYQrVpzA" grade="3" selectOne="05eb2251-81aa-4dfb-8619-75102fc7b895 d6e4efdd-d0a2-4727-8425-b43e480b3256 a621ba8f-92e9-4032-b506-c1b2408dfa4e dcf38896-6054-4ece-90e1-901352eb0201 17c50e74-f009-4794-9dda-19062abb1d90 878181d4-2f54-4993-ae30-06c9bf1ee11b 907a3a8f-2c40-4543-a5a9-891bcde41f6b 026062e0-9bdd-4a06-9cca-c3640c634cfd a72084f6-3a4c-4c23-82aa-4697e543ee0b b4d3d48a-bff1-4303-ac69-4dd9269d1b2c 406ddc53-6635-4cd7-8ad0-90024b683492 a03b153c-1f16-484c-b229-1090e61c1f92 87627536-a185-427a-bb14-54a4ff89901c f876953e-a14e-4ca5-b454-b0090907da28 0ecbddff-4e99-485b-b54a-6c087c03f07b bcf6bfe5-a454-43b3-9de0-bbdc7e18b5a5 7f7fea00-e656-4c7c-afd3-03f34aafa9f4 3057f850-d7d8-4c5d-9315-556ebb12f0e1 004ef112-3f24-4ca1-bc9c-b0e4229fc3b6 5fc15c3f-7b1c-4b87-a469-ccefb7d60820 d11e8181-215e-41b3-8775-521b1d629123 a8187f25-74d6-43f5-9a43-8d03cef04a6e 7ba1f555-f6b5-4d3a-b0f6-38f9a030b661 083e28e0-885a-4123-a8db-847c3509d14a b6aa3faa-64e0-4323-9617-49add784064a a364caab-f0bd-49b8-859e-1fa0d73c3c53 bb231493-bc95-4783-8ad9-e66078ee31ef dad44f50-efc1-4dc9-a1ac-ca7d89a18218 20041f7e-7725-403e-8771-0904090bdfd1 ea024ba4-dabf-4da5-be96-a1bccfead27e __sCUYNASEeSAqv2o9Il5Fg _vsYkMNGbEeS4ndSijGfJ0Q"/>
         </modules>
         <modules xmi:id="_NIyZYNvEEeSfsbuIbqNZtw" name="FARM LIVING" page="70" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="50" moduleType="teenYears" time="7">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_NIyZYdvEEeSfsbuIbqNZtw" grade="1">
@@ -1932,6 +1996,75 @@
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_qvSLNdWEEeSzd99pVrWJLg" grade="1" skill="2f4c706f-5ac5-4774-8a45-3b4667989a20"/>
           <characterChanges xsi:type="shr5mngt:ModuleTeachableChange" xmi:id="_qvSLNtWEEeSzd99pVrWJLg" teachable="_EMIBcznTEeSe6_w6Jrbqxg"/>
           <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_qvSLN9WEEeSzd99pVrWJLg" grade="4" skill="_cii_sNWEEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_V6uz4OEZEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Journalist)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_V6uz4eEZEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V6uz4uEZEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V6uz4-EZEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_V6uz5OEZEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_as9MwOEZEeSVJeW4OKf1tA" grade="1" skill="6d7f48d3-84a1-4fce-90d3-58d566f70fa6"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_eNsvoOEZEeSVJeW4OKf1tA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_gT7cUOEZEeSVJeW4OKf1tA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_jCIvAOEZEeSVJeW4OKf1tA" grade="4" skill="_9nvAcNWbEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_tBbCoOEZEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Lawyer)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_tBbCoeEZEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_tBbCouEZEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_tBbCo-EZEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_tBbCpOEZEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_v6jy8OEZEeSVJeW4OKf1tA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_ygKjQOEZEeSVJeW4OKf1tA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_1WAH8OEZEeSVJeW4OKf1tA" grade="1" skill="53f96d6a-363b-4c14-be1d-68e74930c67b"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_5nfLQOEZEeSVJeW4OKf1tA" grade="4" skill="_DjDvYNWcEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_KQJmoOEaEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Mechanic)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_KQJmoeEaEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_KQJmouEaEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_KQJmo-EaEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_KQJmpOEaEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_NY5gQOEaEeSVJeW4OKf1tA" grade="2" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_P71-IOEaEeSVJeW4OKf1tA" grade="1" skillGroup="_EMAFpDnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_TF9JsOEaEeSVJeW4OKf1tA" grade="3" skill="_kVS2YNWcEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_Z8F7EOEaEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Media Studies)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_Z8F7EeEaEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z8F7EuEaEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z8F7E-EaEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Z8F7FOEaEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_e0o-YOEaEeSVJeW4OKf1tA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_hATksOEaEeSVJeW4OKf1tA" grade="1" skill="729c9cee-ef8f-492d-aa7f-17ec1bc3816e"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_nKFmYOEaEeSVJeW4OKf1tA" grade="6" skill="_uxOpwNWcEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_rCJdEOEaEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Nurse)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_rCJdEeEaEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_rCJdEuEaEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_rCJdE-EaEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_rCJdFOEaEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillGroupChange" xmi:id="_uDl00OEaEeSVJeW4OKf1tA" grade="1" skillGroup="_EL4J0DnTEeSe6_w6Jrbqxg"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_w43_4OEaEeSVJeW4OKf1tA" grade="1" skill="b20acd11-f102-40f3-a641-e3c420fbdb91"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_zZil0OEaEeSVJeW4OKf1tA" grade="3" skill="_8ymSwNWcEeSzd99pVrWJLg"/>
+        </modules>
+        <modules xmi:id="_43XgcOEaEeSVJeW4OKf1tA" name="TRADE SCHOOL/TECHNICAL COLLEGE (Tradesman)" page="75" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="40" moduleType="furtherEducation" time="2">
+          <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_43XgceEaEeSVJeW4OKf1tA" grade="1">
+            <attribute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+          </characterChanges>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_43XgcuEaEeSVJeW4OKf1tA" grade="1" skill="1c14bf0d-cc69-4126-9a95-1f2429c11aa5"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_43Xgc-EaEeSVJeW4OKf1tA" grade="2" skill="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_43XgdOEaEeSVJeW4OKf1tA" grade="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_-_rigOEaEeSVJeW4OKf1tA" grade="1" skill="5e5f2f7f-f63b-4f65-a65d-91b3d4523c6f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_BNMi8OEbEeSVJeW4OKf1tA" grade="1" skill="47cb1e8b-c285-4c54-9aaa-75305ad6dd4f"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_DbveIOEbEeSVJeW4OKf1tA" grade="1" skill="935621c5-d384-42f2-a740-1fa349fa85a1"/>
+          <characterChanges xsi:type="shr5mngt:ModuleSkillChange" xmi:id="_Fx3oAOEbEeSVJeW4OKf1tA" grade="4" skill="_Hv9YMNWdEeSzd99pVrWJLg"/>
         </modules>
         <modules xmi:id="_F4L6MMpYEeSFptsUhk0bCw" name="BOUNTY HUNTER" page="76" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="100" moduleType="realLife" time="4">
           <characterChanges xsi:type="shr5mngt:ModuleAttributeChange" xmi:id="_c1FikMv_EeS7ouzqQX8MhQ" grade="1">
@@ -10388,6 +10521,12 @@
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_mw15kNwwEeSfsbuIbqNZtw" name="Professional Knowledge: Strategy" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_wWqMQOLeEeSucszYQrVpzA" name="Interest Knowledge: Military" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </entries>
+        <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_QsRBoOLfEeSucszYQrVpzA" name="Professional Knowledge: Foster System" page="67" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
         </entries>
       </entries>
@@ -23082,6 +23221,60 @@
           <localizations xmi:id="_EWF1xTnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level III (ComPac-Esprit General)" page="105"/>
         </entries>
       </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_N5FOQODwEeS53L70HY3q5Q" name="Sensors">
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" name="Ultrasound" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVuDvEeSEl6fXajKS9w" local="de" name="Ultraschall"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" name="Radio Signal Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVeDvEeSEl6fXajKS9w" local="de" name="Radiosignalscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" name="Omni-directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVODvEeSEl6fXajKS9w" local="de" name="Mikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" name="Olfactory Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtU-DvEeSEl6fXajKS9w" local="de" name="Geruchsscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" name="Motion Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUuDvEeSEl6fXajKS9w" local="de" name="Bewegungsmelder"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" name="MAD Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUeDvEeSEl6fXajKS9w" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" name="Laser Range Finder" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUODvEeSEl6fXajKS9w" local="de" name="Laser-Entfernungsmesser"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" name="Laser Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGRODvEeSEl6fXajKS9w" local="de" name="Lasermikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="d98f419f-7625-4228-9723-0217950d8155" name="Geiger Counter" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQ-DvEeSEl6fXajKS9w" local="de" name="Geigerzähler"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" name="Directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQuDvEeSEl6fXajKS9w" local="de" name="Richtmikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" name="Cyberware Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQeDvEeSEl6fXajKS9w" local="de" name="Cyberwarescanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" name="Camera" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="2" capacityValue="1">
+          <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_AZrV8OEIEeSMM7_8sN0WSw" name="Sensor Array 2" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="2" capacityValue="6">
+          <localizations xmi:id="_thh4IODvEeSEl6fXajKS9w" local="de" name="Sensorarray"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_jmFZUOEIEeSMM7_8sN0WSw" name="Sensor Array 3" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="3" capacityValue="6">
+          <localizations xmi:id="_jmFZUeEIEeSMM7_8sN0WSw" local="de" name="Sensorarray"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_sPvWwOEIEeSMM7_8sN0WSw" name="Sensor Array 4" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="4" capacityValue="6">
+          <localizations xmi:id="_sPvWweEIEeSMM7_8sN0WSw" local="de" name="Sensorarray"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" functions="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" rating="3" capacityValue="1">
+          <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor"/>
+        </entries>
+      </entries>
       <entries xsi:type="shr5:Cyberdeck" xmi:id="_EWAWMTnTEeSe6_w6Jrbqxg" page="227" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3R" wertValue="49500" name="Erika MCD-1" deviceRating="1" programSlots="1" attribute1="4" attribute2="3" attribute3="2" attribute4="1">
         <mods xmi:id="_EWAWMjnTEeSe6_w6Jrbqxg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
@@ -23138,51 +23331,6 @@
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
       <entries xsi:type="shr5:Gegenstand" xmi:id="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
-      <entries xsi:type="shr5:ShrList" xmi:id="_N5FOQODwEeS53L70HY3q5Q" name="Sensors">
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" name="Ultrasound" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVuDvEeSEl6fXajKS9w" local="de" name="Ultraschall"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" name="Radio Signal Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVeDvEeSEl6fXajKS9w" local="de" name="Radiosignalscanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" name="Omni-directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVODvEeSEl6fXajKS9w" local="de" name="Mikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" name="Olfactory Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtU-DvEeSEl6fXajKS9w" local="de" name="Geruchsscanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" name="Motion Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUuDvEeSEl6fXajKS9w" local="de" name="Bewegungsmelder"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" name="MAD Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUeDvEeSEl6fXajKS9w" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" name="Laser Range Finder" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUODvEeSEl6fXajKS9w" local="de" name="Laser-Entfernungsmesser"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" name="Laser Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGRODvEeSEl6fXajKS9w" local="de" name="Lasermikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="d98f419f-7625-4228-9723-0217950d8155" name="Geiger Counter" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQ-DvEeSEl6fXajKS9w" local="de" name="Geigerzähler"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" name="Directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQuDvEeSEl6fXajKS9w" local="de" name="Richtmikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" name="Cyberware Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQeDvEeSEl6fXajKS9w" local="de" name="Cyberwarescanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" name="Camera" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
-        </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5">
-          <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
-        </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" name="Sensor Array" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7">
-          <localizations xmi:id="_thh4IODvEeSEl6fXajKS9w" local="de" name="Sensorarray"/>
-        </entries>
-      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
