@@ -169,6 +169,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/fertigkeitsGruppen"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/spezies"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/modManager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/martialartStyles"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Gegenstand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/kategorie"/>
@@ -583,7 +584,9 @@
           ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/date"/>
       <genFeatures createChild="false" propertyDescription="A description." ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//Spezialisierung"/>
+    <genClasses ecoreClass="shr5.ecore#//Spezialisierung">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//Spezialisierung/fertigkeit"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatrixAttributes">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/geraetestufe"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/firewall"/>
@@ -786,6 +789,18 @@
     <genClasses ecoreClass="shr5.ecore#//SensorArray"/>
     <genClasses ecoreClass="shr5.ecore#//SensorFunction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SensorFunction/maxRange"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MartialartStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MartialartStyle/techniques"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MartialartStyle/usableWith"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MartialartTechnique"/>
+    <genClasses ecoreClass="shr5.ecore#//PersonaMartialartStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaMartialartStyle/style"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaMartialartStyle/techniques"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonaMartialartTechnique">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaMartialartTechnique/technique"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

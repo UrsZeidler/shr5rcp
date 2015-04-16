@@ -13,9 +13,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Modifyable;
@@ -38,6 +40,7 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  * </ul>
  * </p>
  *
@@ -343,13 +346,86 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    public Fertigkeit getFertigkeit() {
+        if (eContainerFeatureID() != Shr5Package.SPEZIALISIERUNG__FERTIGKEIT) return null;
+        return (Fertigkeit)eInternalContainer();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetFertigkeit(Fertigkeit newFertigkeit, NotificationChain msgs) {
+        msgs = eBasicSetContainer((InternalEObject)newFertigkeit, Shr5Package.SPEZIALISIERUNG__FERTIGKEIT, msgs);
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setFertigkeit(Fertigkeit newFertigkeit) {
+        if (newFertigkeit != eInternalContainer() || (eContainerFeatureID() != Shr5Package.SPEZIALISIERUNG__FERTIGKEIT && newFertigkeit != null)) {
+            if (EcoreUtil.isAncestor(this, newFertigkeit))
+                throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+            NotificationChain msgs = null;
+            if (eInternalContainer() != null)
+                msgs = eBasicRemoveFromContainer(msgs);
+            if (newFertigkeit != null)
+                msgs = ((InternalEObject)newFertigkeit).eInverseAdd(this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN, Fertigkeit.class, msgs);
+            msgs = basicSetFertigkeit(newFertigkeit, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SPEZIALISIERUNG__FERTIGKEIT, newFertigkeit, newFertigkeit));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                if (eInternalContainer() != null)
+                    msgs = eBasicRemoveFromContainer(msgs);
+                return basicSetFertigkeit((Fertigkeit)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.SPEZIALISIERUNG__LOCALIZATIONS:
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                return basicSetFertigkeit(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+        switch (eContainerFeatureID()) {
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                return eInternalContainer().eInverseRemove(this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN, Fertigkeit.class, msgs);
+        }
+        return super.eBasicRemoveFromContainerFeature(msgs);
     }
 
     /**
@@ -375,6 +451,8 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
             case Shr5Package.SPEZIALISIERUNG__SRC_BOOK:
                 if (resolve) return getSrcBook();
                 return basicGetSrcBook();
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                return getFertigkeit();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -410,6 +488,9 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
             case Shr5Package.SPEZIALISIERUNG__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                setFertigkeit((Fertigkeit)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -443,6 +524,9 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
             case Shr5Package.SPEZIALISIERUNG__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                setFertigkeit((Fertigkeit)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -469,6 +553,8 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SPEZIALISIERUNG__SRC_BOOK:
                 return srcBook != null;
+            case Shr5Package.SPEZIALISIERUNG__FERTIGKEIT:
+                return getFertigkeit() != null;
         }
         return super.eIsSet(featureID);
     }

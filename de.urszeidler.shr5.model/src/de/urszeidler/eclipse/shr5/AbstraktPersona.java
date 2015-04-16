@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getSpezies <em>Spezies</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getModManager <em>Mod Manager</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getMartialartStyles <em>Martialart Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -324,5 +325,21 @@ public interface AbstraktPersona extends Beschreibbar, KoerperlicheAttribute, Sp
      * @generated
      */
 	ModSetter getModManager();
+
+    /**
+     * Returns the value of the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Martialart Styles</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Martialart Styles</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona_MartialartStyles()
+     * @model containment="true"
+     * @generated
+     */
+    EList<PersonaMartialartStyle> getMartialartStyles();
 
 } // AbstraktPersona

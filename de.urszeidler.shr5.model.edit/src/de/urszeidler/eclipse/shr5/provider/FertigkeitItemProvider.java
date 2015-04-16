@@ -402,6 +402,11 @@ public class FertigkeitItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
                  Shr5Factory.eINSTANCE.createSpezialisierung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
+                 Shr5Factory.eINSTANCE.createPersonaMartialartStyle()));
     }
 
 	/**

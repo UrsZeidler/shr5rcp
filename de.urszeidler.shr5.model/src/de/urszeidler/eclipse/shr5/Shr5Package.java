@@ -1444,13 +1444,22 @@ public interface Shr5Package extends EPackage {
 	int ABSTRAKT_PERSONA__MOD_MANAGER = BESCHREIBBAR_FEATURE_COUNT + 28;
 
     /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_PERSONA__MARTIALART_STYLES = BESCHREIBBAR_FEATURE_COUNT + 29;
+
+    /**
      * The number of structural features of the '<em>Abstrakt Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_PERSONA_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 29;
+	int ABSTRAKT_PERSONA_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 30;
 
     /**
      * The number of operations of the '<em>Abstrakt Persona</em>' class.
@@ -4585,6 +4594,15 @@ public interface Shr5Package extends EPackage {
 	int KOERPER_PERSONA__MOD_MANAGER = ABSTRAKT_PERSONA__MOD_MANAGER;
 
     /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPER_PERSONA__MARTIALART_STYLES = ABSTRAKT_PERSONA__MARTIALART_STYLES;
+
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4988,6 +5006,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int MUDAN_PERSONA__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
+
+    /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUDAN_PERSONA__MARTIALART_STYLES = KOERPER_PERSONA__MARTIALART_STYLES;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -5582,6 +5609,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int MAGISCHE_PERSONA__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
+
+    /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_PERSONA__MARTIALART_STYLES = KOERPER_PERSONA__MARTIALART_STYLES;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -6619,6 +6655,15 @@ public interface Shr5Package extends EPackage {
 	int KI_ADEPT__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
 
     /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_ADEPT__MARTIALART_STYLES = MAGISCHE_PERSONA__MARTIALART_STYLES;
+
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7573,6 +7618,15 @@ public interface Shr5Package extends EPackage {
 	int MAGIER__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
 
     /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__MARTIALART_STYLES = MAGISCHE_PERSONA__MARTIALART_STYLES;
+
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8201,6 +8255,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int MYSTIC_ADEPT__MOD_MANAGER = KI_ADEPT__MOD_MANAGER;
+
+    /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__MARTIALART_STYLES = KI_ADEPT__MARTIALART_STYLES;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -8957,6 +9020,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int ASPEKT_MAGIER__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
+
+    /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__MARTIALART_STYLES = MAGISCHE_PERSONA__MARTIALART_STYLES;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -11234,6 +11306,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int TECHNOMANCER__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
+
+    /**
+     * The feature id for the '<em><b>Martialart Styles</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TECHNOMANCER__MARTIALART_STYLES = KOERPER_PERSONA__MARTIALART_STYLES;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -14915,13 +14996,22 @@ public interface Shr5Package extends EPackage {
     int SPEZIALISIERUNG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Spezialisierung</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SPEZIALISIERUNG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+    int SPEZIALISIERUNG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Spezialisierung</em>' class.
@@ -20631,7 +20721,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 142;
+	int FEUER_MODUS = 146;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20641,7 +20731,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 143;
+	int SCHADENS_TYP = 147;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20651,7 +20741,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 144;
+	int MAGAZIN_TYP = 148;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20661,7 +20751,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 145;
+	int FEUWERWAFFEN_ERWEITERUNG = 149;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20671,7 +20761,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 146;
+	int MODIFIKATOR_TYPE = 150;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20681,7 +20771,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 147;
+	int SMARTGUN_TYPE = 151;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20691,7 +20781,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 148;
+	int ZAUBER_ART = 152;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20701,7 +20791,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 149;
+	int ZAUBER_REICHWEITE = 153;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20711,7 +20801,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 150;
+	int ZAUBER_DAUER = 154;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
@@ -21622,6 +21712,361 @@ public interface Shr5Package extends EPackage {
     int SENSOR_FUNCTION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MartialartStyleImpl <em>Martialart Style</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MartialartStyleImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMartialartStyle()
+     * @generated
+     */
+    int MARTIALART_STYLE = 142;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Techniques</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__TECHNIQUES = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Usable With</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE__USABLE_WITH = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Martialart Style</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The number of operations of the '<em>Martialart Style</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_STYLE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl <em>Martialart Technique</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMartialartTechnique()
+     * @generated
+     */
+    int MARTIALART_TECHNIQUE = 143;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of structural features of the '<em>Martialart Technique</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The number of operations of the '<em>Martialart Technique</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MARTIALART_TECHNIQUE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl <em>Persona Martialart Style</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaMartialartStyle()
+     * @generated
+     */
+    int PERSONA_MARTIALART_STYLE = 144;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__BESCHREIBUNG = SPEZIALISIERUNG__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__IMAGE = SPEZIALISIERUNG__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__NAME = SPEZIALISIERUNG__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__PARENT_ID = SPEZIALISIERUNG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__LOCALIZATIONS = SPEZIALISIERUNG__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__PAGE = SPEZIALISIERUNG__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__SRC_BOOK = SPEZIALISIERUNG__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__FERTIGKEIT = SPEZIALISIERUNG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Style</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__STYLE = SPEZIALISIERUNG_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Techniques</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE__TECHNIQUES = SPEZIALISIERUNG_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Persona Martialart Style</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE_FEATURE_COUNT = SPEZIALISIERUNG_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Persona Martialart Style</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_STYLE_OPERATION_COUNT = SPEZIALISIERUNG_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartTechniqueImpl <em>Persona Martialart Technique</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaMartialartTechniqueImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaMartialartTechnique()
+     * @generated
+     */
+    int PERSONA_MARTIALART_TECHNIQUE = 145;
+
+    /**
+     * The feature id for the '<em><b>Technique</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_TECHNIQUE__TECHNIQUE = ERLERNBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Persona Martialart Technique</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_TECHNIQUE_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Persona Martialart Technique</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIALART_TECHNIQUE_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21629,7 +22074,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 151;
+	int CRITTER_HANDLUNG = 155;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -21639,7 +22084,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 152;
+	int CRITTER_REICHWEITE = 156;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -21649,7 +22094,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 153;
+	int CRITTER_DAUER = 157;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -21659,7 +22104,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 154;
+	int RESONANZ_ZIEL = 158;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -21669,7 +22114,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 155;
+    int INTERFACE_MODUS = 159;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -21679,7 +22124,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 156;
+    int PROGRAM_TYPE = 160;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -21689,7 +22134,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 157;
+    int MATRIX_PROGRAM_TYPE = 161;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -21699,7 +22144,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 158;
+    int SUBSTANCE_VECTOR = 162;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -21709,7 +22154,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 159;
+    int SUBSTANCE_EFFECT = 163;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -21719,7 +22164,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 160;
+    int ADDICTION_TYPE = 164;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -21729,7 +22174,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 161;
+    int TIME_UNITS = 165;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
@@ -21739,7 +22184,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
      * @generated
      */
-    int CYBERWARE_TYPE = 162;
+    int CYBERWARE_TYPE = 166;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
@@ -21749,7 +22194,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
      * @generated
      */
-    int ENZUG = 163;
+    int ENZUG = 167;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.armorModificationType <em>armor Modification Type</em>}' enum.
@@ -21759,7 +22204,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getarmorModificationType()
      * @generated
      */
-    int ARMOR_MODIFICATION_TYPE = 164;
+    int ARMOR_MODIFICATION_TYPE = 168;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -21769,7 +22214,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 165;
+	int SHR_DATE = 169;
 
 
 	/**
@@ -21780,7 +22225,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 166;
+	int MODIFICATION_MANAGER = 170;
 
 
 	/**
@@ -22033,6 +22478,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getAbstraktPersona_ModManager();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getMartialartStyles <em>Martialart Styles</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Martialart Styles</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbstraktPersona#getMartialartStyles()
+     * @see #getAbstraktPersona()
+     * @generated
+     */
+    EReference getAbstraktPersona_MartialartStyles();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Gegenstand <em>Gegenstand</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -25412,6 +25868,17 @@ public interface Shr5Package extends EPackage {
     EClass getSpezialisierung();
 
     /**
+     * Returns the meta object for the container reference '{@link de.urszeidler.eclipse.shr5.Spezialisierung#getFertigkeit <em>Fertigkeit</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the container reference '<em>Fertigkeit</em>'.
+     * @see de.urszeidler.eclipse.shr5.Spezialisierung#getFertigkeit()
+     * @see #getSpezialisierung()
+     * @generated
+     */
+    EReference getSpezialisierung_Fertigkeit();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -27077,6 +27544,101 @@ public interface Shr5Package extends EPackage {
     EAttribute getSensorFunction_MaxRange();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MartialartStyle <em>Martialart Style</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Martialart Style</em>'.
+     * @see de.urszeidler.eclipse.shr5.MartialartStyle
+     * @generated
+     */
+    EClass getMartialartStyle();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.MartialartStyle#getTechniques <em>Techniques</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Techniques</em>'.
+     * @see de.urszeidler.eclipse.shr5.MartialartStyle#getTechniques()
+     * @see #getMartialartStyle()
+     * @generated
+     */
+    EReference getMartialartStyle_Techniques();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.MartialartStyle#getUsableWith <em>Usable With</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Usable With</em>'.
+     * @see de.urszeidler.eclipse.shr5.MartialartStyle#getUsableWith()
+     * @see #getMartialartStyle()
+     * @generated
+     */
+    EReference getMartialartStyle_UsableWith();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MartialartTechnique <em>Martialart Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Martialart Technique</em>'.
+     * @see de.urszeidler.eclipse.shr5.MartialartTechnique
+     * @generated
+     */
+    EClass getMartialartTechnique();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle <em>Persona Martialart Style</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Persona Martialart Style</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartStyle
+     * @generated
+     */
+    EClass getPersonaMartialartStyle();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle#getStyle <em>Style</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Style</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartStyle#getStyle()
+     * @see #getPersonaMartialartStyle()
+     * @generated
+     */
+    EReference getPersonaMartialartStyle_Style();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle#getTechniques <em>Techniques</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Techniques</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartStyle#getTechniques()
+     * @see #getPersonaMartialartStyle()
+     * @generated
+     */
+    EReference getPersonaMartialartStyle_Techniques();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique <em>Persona Martialart Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Persona Martialart Technique</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartTechnique
+     * @generated
+     */
+    EClass getPersonaMartialartTechnique();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique#getTechnique <em>Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Technique</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartTechnique#getTechnique()
+     * @see #getPersonaMartialartTechnique()
+     * @generated
+     */
+    EReference getPersonaMartialartTechnique_Technique();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -27454,6 +28016,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute ABSTRAKT_PERSONA__MOD_MANAGER = eINSTANCE.getAbstraktPersona_ModManager();
 
 		/**
+         * The meta object literal for the '<em><b>Martialart Styles</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ABSTRAKT_PERSONA__MARTIALART_STYLES = eINSTANCE.getAbstraktPersona_MartialartStyles();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.GegenstandImpl <em>Gegenstand</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -30146,6 +30716,14 @@ public interface Shr5Package extends EPackage {
         EClass SPEZIALISIERUNG = eINSTANCE.getSpezialisierung();
 
         /**
+         * The meta object literal for the '<em><b>Fertigkeit</b></em>' container reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SPEZIALISIERUNG__FERTIGKEIT = eINSTANCE.getSpezialisierung_Fertigkeit();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -31522,6 +32100,86 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute SENSOR_FUNCTION__MAX_RANGE = eINSTANCE.getSensorFunction_MaxRange();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MartialartStyleImpl <em>Martialart Style</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MartialartStyleImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMartialartStyle()
+         * @generated
+         */
+        EClass MARTIALART_STYLE = eINSTANCE.getMartialartStyle();
+
+        /**
+         * The meta object literal for the '<em><b>Techniques</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MARTIALART_STYLE__TECHNIQUES = eINSTANCE.getMartialartStyle_Techniques();
+
+        /**
+         * The meta object literal for the '<em><b>Usable With</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MARTIALART_STYLE__USABLE_WITH = eINSTANCE.getMartialartStyle_UsableWith();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl <em>Martialart Technique</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMartialartTechnique()
+         * @generated
+         */
+        EClass MARTIALART_TECHNIQUE = eINSTANCE.getMartialartTechnique();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl <em>Persona Martialart Style</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaMartialartStyle()
+         * @generated
+         */
+        EClass PERSONA_MARTIALART_STYLE = eINSTANCE.getPersonaMartialartStyle();
+
+        /**
+         * The meta object literal for the '<em><b>Style</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_MARTIALART_STYLE__STYLE = eINSTANCE.getPersonaMartialartStyle_Style();
+
+        /**
+         * The meta object literal for the '<em><b>Techniques</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_MARTIALART_STYLE__TECHNIQUES = eINSTANCE.getPersonaMartialartStyle_Techniques();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartTechniqueImpl <em>Persona Martialart Technique</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.PersonaMartialartTechniqueImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaMartialartTechnique()
+         * @generated
+         */
+        EClass PERSONA_MARTIALART_TECHNIQUE = eINSTANCE.getPersonaMartialartTechnique();
+
+        /**
+         * The meta object literal for the '<em><b>Technique</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_MARTIALART_TECHNIQUE__TECHNIQUE = eINSTANCE.getPersonaMartialartTechnique_Technique();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

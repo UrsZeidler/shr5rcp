@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SpezielleAttribute;
 import de.urszeidler.eclipse.shr5.Spezies;
@@ -64,6 +65,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getSpezies <em>Spezies</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getModManager <em>Mod Manager</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getMartialartStyles <em>Martialart Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -501,6 +503,16 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 	protected ModSetter modManager = new ModSetter();
 
 	/**
+     * The cached value of the '{@link #getMartialartStyles() <em>Martialart Styles</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMartialartStyles()
+     * @generated
+     * @ordered
+     */
+    protected EList<PersonaMartialartStyle> martialartStyles;
+
+    /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated not
@@ -1046,6 +1058,18 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<PersonaMartialartStyle> getMartialartStyles() {
+        if (martialartStyles == null) {
+            martialartStyles = new EObjectContainmentEList<PersonaMartialartStyle>(PersonaMartialartStyle.class, this, Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES);
+        }
+        return martialartStyles;
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -1056,6 +1080,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
                 return ((InternalEList<?>)getFertigkeiten()).basicRemove(otherEnd, msgs);
             case Shr5Package.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN:
                 return ((InternalEList<?>)getFertigkeitsGruppen()).basicRemove(otherEnd, msgs);
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
+                return ((InternalEList<?>)getMartialartStyles()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -1132,6 +1158,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
                 return basicGetSpezies();
             case Shr5Package.ABSTRAKT_PERSONA__MOD_MANAGER:
                 return getModManager();
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
+                return getMartialartStyles();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1191,6 +1219,10 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
             case Shr5Package.ABSTRAKT_PERSONA__SPEZIES:
                 setSpezies((Spezies)newValue);
                 return;
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
+                getMartialartStyles().clear();
+                getMartialartStyles().addAll((Collection<? extends PersonaMartialartStyle>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1246,6 +1278,9 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
                 return;
             case Shr5Package.ABSTRAKT_PERSONA__SPEZIES:
                 setSpezies((Spezies)null);
+                return;
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
+                getMartialartStyles().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -1322,6 +1357,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
                 return spezies != null;
             case Shr5Package.ABSTRAKT_PERSONA__MOD_MANAGER:
                 return MOD_MANAGER_EDEFAULT == null ? modManager != null : !MOD_MANAGER_EDEFAULT.equals(modManager);
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
+                return martialartStyles != null && !martialartStyles.isEmpty();
         }
         return super.eIsSet(featureID);
     }

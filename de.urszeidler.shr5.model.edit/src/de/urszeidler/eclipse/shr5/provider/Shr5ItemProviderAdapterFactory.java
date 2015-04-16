@@ -2127,6 +2127,98 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MartialartStyle} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MartialartStyleItemProvider martialartStyleItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MartialartStyle}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMartialartStyleAdapter() {
+        if (martialartStyleItemProvider == null) {
+            martialartStyleItemProvider = new MartialartStyleItemProvider(this);
+        }
+
+        return martialartStyleItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MartialartTechnique} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MartialartTechniqueItemProvider martialartTechniqueItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MartialartTechnique}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMartialartTechniqueAdapter() {
+        if (martialartTechniqueItemProvider == null) {
+            martialartTechniqueItemProvider = new MartialartTechniqueItemProvider(this);
+        }
+
+        return martialartTechniqueItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PersonaMartialartStyleItemProvider personaMartialartStyleItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPersonaMartialartStyleAdapter() {
+        if (personaMartialartStyleItemProvider == null) {
+            personaMartialartStyleItemProvider = new PersonaMartialartStyleItemProvider(this);
+        }
+
+        return personaMartialartStyleItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PersonaMartialartTechniqueItemProvider personaMartialartTechniqueItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPersonaMartialartTechniqueAdapter() {
+        if (personaMartialartTechniqueItemProvider == null) {
+            personaMartialartTechniqueItemProvider = new PersonaMartialartTechniqueItemProvider(this);
+        }
+
+        return personaMartialartTechniqueItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2312,6 +2404,10 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (sensorItemProvider != null) sensorItemProvider.dispose();
         if (sensorArrayItemProvider != null) sensorArrayItemProvider.dispose();
         if (sensorFunctionItemProvider != null) sensorFunctionItemProvider.dispose();
+        if (martialartStyleItemProvider != null) martialartStyleItemProvider.dispose();
+        if (martialartTechniqueItemProvider != null) martialartTechniqueItemProvider.dispose();
+        if (personaMartialartStyleItemProvider != null) personaMartialartStyleItemProvider.dispose();
+        if (personaMartialartTechniqueItemProvider != null) personaMartialartTechniqueItemProvider.dispose();
     }
 
     @Override

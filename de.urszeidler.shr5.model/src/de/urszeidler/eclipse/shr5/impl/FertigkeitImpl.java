@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -489,12 +490,27 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	public EList<Spezialisierung> getSpezialisierungen() {
         if (spezialisierungen == null) {
-            spezialisierungen = new EObjectContainmentEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN);
+            spezialisierungen = new EObjectContainmentWithInverseEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN, Shr5Package.SPEZIALISIERUNG__FERTIGKEIT);
         }
         return spezialisierungen;
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getSpezialisierungen()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

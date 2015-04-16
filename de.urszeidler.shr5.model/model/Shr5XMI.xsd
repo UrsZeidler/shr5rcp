@@ -238,6 +238,7 @@
               <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="martialartStyles" type="shr5:PersonaMartialartStyle"/>
         </xsd:choice>
         <xsd:attribute name="edgeBasis" type="xsd:int"/>
         <xsd:attribute name="konstitutionBasis" type="xsd:int"/>
@@ -1671,10 +1672,12 @@
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2534,4 +2537,59 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="SensorFunction" type="shr5:SensorFunction"/>
+  <xsd:complexType name="MartialartStyle">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="techniques" type="shr5:MartialartTechnique"/>
+          <xsd:element name="usableWith" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="techniques" type="xsd:string"/>
+        <xsd:attribute name="usableWith" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MartialartStyle" type="shr5:MartialartStyle"/>
+  <xsd:complexType name="MartialartTechnique">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MartialartTechnique" type="shr5:MartialartTechnique"/>
+  <xsd:complexType name="PersonaMartialartStyle">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Spezialisierung">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="style" type="shr5:MartialartStyle"/>
+          <xsd:element name="techniques" type="shr5:PersonaMartialartTechnique"/>
+        </xsd:choice>
+        <xsd:attribute name="style" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaMartialartStyle" type="shr5:PersonaMartialartStyle"/>
+  <xsd:complexType name="PersonaMartialartTechnique">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Erlernbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="technique" type="shr5:MartialartTechnique"/>
+        </xsd:choice>
+        <xsd:attribute name="technique" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaMartialartTechnique" type="shr5:PersonaMartialartTechnique"/>
 </xsd:schema>

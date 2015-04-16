@@ -100,6 +100,19 @@
 	</xsl:template>
 
 
+	<xsl:template name="findMartialTechnique">
+		<xsl:param name="name" />
+		<xsl:for-each select="$martialarts">
+			<xsl:for-each select="chummer/techniques/*">
+				<xsl:if test="name/text()=$name">
+					<xsl:variable name="id_name" select="id/text()" />
+					<xsl:value-of select="$id_name" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
+
+
 	<xsl:template name="generator-instructions">
 		<instructions key="new" value="Select the categories and the group." />
 		<instructions key="readyForCreation"

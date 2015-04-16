@@ -144,6 +144,10 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.SENSOR: return createSensor();
             case Shr5Package.SENSOR_ARRAY: return createSensorArray();
             case Shr5Package.SENSOR_FUNCTION: return createSensorFunction();
+            case Shr5Package.MARTIALART_STYLE: return createMartialartStyle();
+            case Shr5Package.MARTIALART_TECHNIQUE: return createMartialartTechnique();
+            case Shr5Package.PERSONA_MARTIALART_STYLE: return createPersonaMartialartStyle();
+            case Shr5Package.PERSONA_MARTIALART_TECHNIQUE: return createPersonaMartialartTechnique();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1139,6 +1143,46 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public SensorFunction createSensorFunction() {
         SensorFunctionImpl sensorFunction = new SensorFunctionImpl();
         return sensorFunction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MartialartStyle createMartialartStyle() {
+        MartialartStyleImpl martialartStyle = new MartialartStyleImpl();
+        return martialartStyle;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MartialartTechnique createMartialartTechnique() {
+        MartialartTechniqueImpl martialartTechnique = new MartialartTechniqueImpl();
+        return martialartTechnique;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonaMartialartStyle createPersonaMartialartStyle() {
+        PersonaMartialartStyleImpl personaMartialartStyle = new PersonaMartialartStyleImpl();
+        return personaMartialartStyle;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonaMartialartTechnique createPersonaMartialartTechnique() {
+        PersonaMartialartTechniqueImpl personaMartialartTechnique = new PersonaMartialartTechniqueImpl();
+        return personaMartialartTechnique;
     }
 
     /**

@@ -166,6 +166,7 @@
       <nested inputs="shr5.ecore#//AbstraktPersona/fertigkeitsGruppen" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=1"/>
       <nested inputs="shr5.ecore#//AbstraktPersona/spezies" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDAttributeUse=9"/>
       <nested inputs="shr5.ecore#//AbstraktPersona/spezies" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//AbstraktPersona/martialartStyles" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//AbstraktPersona" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDElementDeclaration=3"/>
@@ -735,7 +736,10 @@
       <nested inputs="shr5.ecore#//CredstickTransaction/description" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88/XSDAttributeUse=3"/>
     </nested>
     <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDElementDeclaration=88"/>
-    <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89"/>
+    <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89">
+      <nested inputs="shr5.ecore#//Spezialisierung/fertigkeit" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Spezialisierung/fertigkeit" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=1"/>
@@ -1060,5 +1064,35 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SensorFunction;XSDComplexTypeDefinition=141/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//SensorFunction" outputs="Shr5XMI.xsd#//SensorFunction;XSDElementDeclaration=141"/>
+    <nested inputs="shr5.ecore#//MartialartStyle" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142">
+      <nested inputs="shr5.ecore#//MartialartStyle/techniques" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//MartialartStyle/techniques" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//MartialartStyle/usableWith" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//MartialartStyle/usableWith" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MartialartStyle;XSDComplexTypeDefinition=142/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//MartialartStyle" outputs="Shr5XMI.xsd#//MartialartStyle;XSDElementDeclaration=142"/>
+    <nested inputs="shr5.ecore#//MartialartTechnique" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDComplexTypeDefinition=143/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//MartialartTechnique" outputs="Shr5XMI.xsd#//MartialartTechnique;XSDElementDeclaration=143"/>
+    <nested inputs="shr5.ecore#//PersonaMartialartStyle" outputs="Shr5XMI.xsd#//PersonaMartialartStyle;XSDComplexTypeDefinition=144">
+      <nested inputs="shr5.ecore#//PersonaMartialartStyle/style" outputs="Shr5XMI.xsd#//PersonaMartialartStyle;XSDComplexTypeDefinition=144/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//PersonaMartialartStyle/style" outputs="Shr5XMI.xsd#//PersonaMartialartStyle;XSDComplexTypeDefinition=144/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//PersonaMartialartStyle/techniques" outputs="Shr5XMI.xsd#//PersonaMartialartStyle;XSDComplexTypeDefinition=144/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//PersonaMartialartStyle" outputs="Shr5XMI.xsd#//PersonaMartialartStyle;XSDElementDeclaration=144"/>
+    <nested inputs="shr5.ecore#//PersonaMartialartTechnique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDComplexTypeDefinition=145">
+      <nested inputs="shr5.ecore#//PersonaMartialartTechnique/technique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDComplexTypeDefinition=145/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//PersonaMartialartTechnique/technique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDComplexTypeDefinition=145/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//PersonaMartialartTechnique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDElementDeclaration=145"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

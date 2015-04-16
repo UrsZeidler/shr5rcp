@@ -106,6 +106,7 @@ public interface Fertigkeit extends Beschreibbar, Quelle, Modifyable {
 	/**
      * Returns the value of the '<em><b>Spezialisierungen</b></em>' containment reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.Spezialisierung}.
+     * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5.Spezialisierung#getFertigkeit <em>Fertigkeit</em>}'.
      * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Spezialisierungen</em>' attribute list isn't clear,
@@ -114,7 +115,8 @@ public interface Fertigkeit extends Beschreibbar, Quelle, Modifyable {
 	 * <!-- end-user-doc -->
      * @return the value of the '<em>Spezialisierungen</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getFertigkeit_Spezialisierungen()
-     * @model containment="true"
+     * @see de.urszeidler.eclipse.shr5.Spezialisierung#getFertigkeit
+     * @model opposite="fertigkeit" containment="true"
      * @generated
      */
 	EList<Spezialisierung> getSpezialisierungen();

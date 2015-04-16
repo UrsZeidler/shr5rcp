@@ -768,6 +768,7 @@ public class AbstraktPersonaItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN);
             childrenFeatures.add(Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN);
+            childrenFeatures.add(Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES);
         }
         return childrenFeatures;
     }
@@ -844,6 +845,7 @@ public class AbstraktPersonaItemProvider
                 return;
             case Shr5Package.ABSTRAKT_PERSONA__FERTIGKEITEN:
             case Shr5Package.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN:
+            case Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -870,6 +872,11 @@ public class AbstraktPersonaItemProvider
             (createChildParameter
                 (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN,
                  Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES,
+                 Shr5Factory.eINSTANCE.createPersonaMartialartStyle()));
     }
 
 	/**

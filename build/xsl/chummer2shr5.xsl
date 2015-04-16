@@ -55,6 +55,8 @@
 		select="document(concat($path,'/traditions.xml'),/)" />
 	<xsl:variable name="books"
 		select="document(concat($path,'/books.xml'),/)" />
+	<xsl:variable name="martialarts"
+		select="document(concat($path,'/martialarts.xml'),/)" />
 	<!-- basic definition -->
 	<xsl:variable name="source_cr"
 		select="'f5ec713c-98cd-41f6-a0a4-4a8eaed55b66'" />
@@ -86,6 +88,11 @@
 								<xsl:call-template name="beschreibbar" />
 							</entries>
 						</xsl:for-each>
+					</xsl:for-each>
+				</entries>
+				<entries xsi:type="shr5:ShrList" name="MartialArts">
+					<xsl:for-each select="$martialarts">
+						<xsl:apply-templates select="node()" />
 					</xsl:for-each>
 				</entries>
 				<entries xsi:type="shr5:ShrList" name="generators">
@@ -333,7 +340,8 @@
 	</xsl:template>
 	<xsl:template match="categories|version" mode="critter" />
 	<xsl:template
-		match="categories|version|accessories|grades|modcategories|enhancements|enhancement" />
+		match="categories|version|accessories|grades|modcategories|enhancements|enhancement
+		" />
 	<xsl:template match="priority|mods|limits|arts|art" />
 	<xsl:template mode="lifestyle"
 		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
@@ -603,6 +611,35 @@
 			</entries>
 		</entries>
 	</xsl:template>
+	<!--  martial arts -->
+	<xsl:template match="martialart">
+      <entries xsi:type="shr5:MartialartStyle" >
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="set_id" />
+			<xsl:call-template name="quelle" />
+			
+			<xsl:for-each select="techniques/*">
+			
+			<techniques>
+			<xsl:attribute name="href">
+			<xsl:value-of select="'#'" />
+				<xsl:call-template name="findMartialTechnique">
+					<xsl:with-param name="name" select="name/text()" />
+				</xsl:call-template>
+				</xsl:attribute>
+			</techniques>
+			</xsl:for-each>
+	  </entries>
+	</xsl:template>
+	<xsl:template match="technique">
+      <entries xsi:type="shr5:MartialartTechnique" >
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="set_id" />
+			<xsl:call-template name="quelle" />
+	
+	  </entries>
+	</xsl:template>
+	
 	<!-- vehicle -->
 	<xsl:template name="examples">
 	</xsl:template>

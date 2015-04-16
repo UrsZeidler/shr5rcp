@@ -881,6 +881,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass martialartStyleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass martialartTechniqueEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass personaMartialartStyleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass personaMartialartTechniqueEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1460,6 +1488,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAbstraktPersona_MartialartStyles() {
+        return (EReference)abstraktPersonaEClass.getEStructuralFeatures().get(12);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4299,6 +4336,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getSpezialisierung_Fertigkeit() {
+        return (EReference)spezialisierungEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getMatrixAttributes() {
         return matrixAttributesEClass;
     }
@@ -5709,6 +5755,87 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMartialartStyle() {
+        return martialartStyleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMartialartStyle_Techniques() {
+        return (EReference)martialartStyleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMartialartStyle_UsableWith() {
+        return (EReference)martialartStyleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMartialartTechnique() {
+        return martialartTechniqueEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getPersonaMartialartStyle() {
+        return personaMartialartStyleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonaMartialartStyle_Style() {
+        return (EReference)personaMartialartStyleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonaMartialartStyle_Techniques() {
+        return (EReference)personaMartialartStyleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getPersonaMartialartTechnique() {
+        return personaMartialartTechniqueEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonaMartialartTechnique_Technique() {
+        return (EReference)personaMartialartTechniqueEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5905,6 +6032,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(abstraktPersonaEClass, ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN);
         createEReference(abstraktPersonaEClass, ABSTRAKT_PERSONA__SPEZIES);
         createEAttribute(abstraktPersonaEClass, ABSTRAKT_PERSONA__MOD_MANAGER);
+        createEReference(abstraktPersonaEClass, ABSTRAKT_PERSONA__MARTIALART_STYLES);
 
         gegenstandEClass = createEClass(GEGENSTAND);
         createEAttribute(gegenstandEClass, GEGENSTAND__KATEGORIE);
@@ -6306,6 +6434,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__DESCRIPTION);
 
         spezialisierungEClass = createEClass(SPEZIALISIERUNG);
+        createEReference(spezialisierungEClass, SPEZIALISIERUNG__FERTIGKEIT);
 
         matrixAttributesEClass = createEClass(MATRIX_ATTRIBUTES);
         createEAttribute(matrixAttributesEClass, MATRIX_ATTRIBUTES__GERAETESTUFE);
@@ -6506,6 +6635,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         sensorFunctionEClass = createEClass(SENSOR_FUNCTION);
         createEAttribute(sensorFunctionEClass, SENSOR_FUNCTION__MAX_RANGE);
+
+        martialartStyleEClass = createEClass(MARTIALART_STYLE);
+        createEReference(martialartStyleEClass, MARTIALART_STYLE__TECHNIQUES);
+        createEReference(martialartStyleEClass, MARTIALART_STYLE__USABLE_WITH);
+
+        martialartTechniqueEClass = createEClass(MARTIALART_TECHNIQUE);
+
+        personaMartialartStyleEClass = createEClass(PERSONA_MARTIALART_STYLE);
+        createEReference(personaMartialartStyleEClass, PERSONA_MARTIALART_STYLE__STYLE);
+        createEReference(personaMartialartStyleEClass, PERSONA_MARTIALART_STYLE__TECHNIQUES);
+
+        personaMartialartTechniqueEClass = createEClass(PERSONA_MARTIALART_TECHNIQUE);
+        createEReference(personaMartialartTechniqueEClass, PERSONA_MARTIALART_TECHNIQUE__TECHNIQUE);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -6770,6 +6912,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         sensorArrayEClass.getESuperTypes().add(this.getSensor());
         sensorFunctionEClass.getESuperTypes().add(this.getBeschreibbar());
         sensorFunctionEClass.getESuperTypes().add(this.getQuelle());
+        martialartStyleEClass.getESuperTypes().add(this.getBeschreibbar());
+        martialartStyleEClass.getESuperTypes().add(this.getQuelle());
+        martialartTechniqueEClass.getESuperTypes().add(this.getBeschreibbar());
+        martialartTechniqueEClass.getESuperTypes().add(this.getQuelle());
+        personaMartialartStyleEClass.getESuperTypes().add(this.getSpezialisierung());
+        personaMartialartTechniqueEClass.getESuperTypes().add(this.getErlernbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6798,6 +6946,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getAbstraktPersona_FertigkeitsGruppen(), this.getPersonaFertigkeitsGruppe(), null, "fertigkeitsGruppen", null, 0, -1, AbstraktPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getAbstraktPersona_Spezies(), this.getSpezies(), null, "spezies", null, 1, 1, AbstraktPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getAbstraktPersona_ModManager(), this.getModificationManager(), "modManager", null, 1, 1, AbstraktPersona.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAbstraktPersona_MartialartStyles(), this.getPersonaMartialartStyle(), null, "martialartStyles", null, 0, -1, AbstraktPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(gegenstandEClass, Gegenstand.class, "Gegenstand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getGegenstand_Kategorie(), ecorePackage.getEString(), "kategorie", null, 0, 1, Gegenstand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6876,7 +7025,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFertigkeit_Kategorie(), ecorePackage.getEString(), "kategorie", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFertigkeit_Ausweichen(), ecorePackage.getEBoolean(), "ausweichen", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFertigkeit_Attribut(), ecorePackage.getEAttribute(), null, "attribut", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getFertigkeit_Spezialisierungen(), this.getSpezialisierung(), null, "spezialisierungen", null, 0, -1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFertigkeit_Spezialisierungen(), this.getSpezialisierung(), this.getSpezialisierung_Fertigkeit(), "spezialisierungen", null, 0, -1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaFertigkeitEClass, PersonaFertigkeit.class, "PersonaFertigkeit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaFertigkeit_Fertigkeit(), this.getFertigkeit(), null, "fertigkeit", null, 0, 1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7199,6 +7348,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getCredstickTransaction_Description(), ecorePackage.getEString(), "description", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(spezialisierungEClass, Spezialisierung.class, "Spezialisierung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSpezialisierung_Fertigkeit(), this.getFertigkeit(), this.getFertigkeit_Spezialisierungen(), "fertigkeit", null, 0, 1, Spezialisierung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(matrixAttributesEClass, MatrixAttributes.class, "MatrixAttributes", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMatrixAttributes_Geraetestufe(), ecorePackage.getEInt(), "geraetestufe", null, 0, 1, MatrixAttributes.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7401,6 +7551,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(sensorFunctionEClass, SensorFunction.class, "SensorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSensorFunction_MaxRange(), ecorePackage.getEInt(), "maxRange", null, 0, 1, SensorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(martialartStyleEClass, MartialartStyle.class, "MartialartStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getMartialartStyle_Techniques(), this.getMartialartTechnique(), null, "techniques", null, 0, -1, MartialartStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getMartialartStyle_UsableWith(), this.getFertigkeit(), null, "usableWith", null, 0, -1, MartialartStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(martialartTechniqueEClass, MartialartTechnique.class, "MartialartTechnique", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(personaMartialartStyleEClass, PersonaMartialartStyle.class, "PersonaMartialartStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPersonaMartialartStyle_Style(), this.getMartialartStyle(), null, "style", null, 1, 1, PersonaMartialartStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPersonaMartialartStyle_Techniques(), this.getPersonaMartialartTechnique(), null, "techniques", null, 0, -1, PersonaMartialartStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(personaMartialartTechniqueEClass, PersonaMartialartTechnique.class, "PersonaMartialartTechnique", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPersonaMartialartTechnique_Technique(), this.getMartialartTechnique(), null, "technique", null, 1, 1, PersonaMartialartTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

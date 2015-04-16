@@ -1605,6 +1605,43 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.MARTIALART_STYLE: {
+                MartialartStyle martialartStyle = (MartialartStyle)theEObject;
+                T result = caseMartialartStyle(martialartStyle);
+                if (result == null) result = caseBeschreibbar(martialartStyle);
+                if (result == null) result = caseQuelle(martialartStyle);
+                if (result == null) result = caseIdentifiable(martialartStyle);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MARTIALART_TECHNIQUE: {
+                MartialartTechnique martialartTechnique = (MartialartTechnique)theEObject;
+                T result = caseMartialartTechnique(martialartTechnique);
+                if (result == null) result = caseBeschreibbar(martialartTechnique);
+                if (result == null) result = caseQuelle(martialartTechnique);
+                if (result == null) result = caseIdentifiable(martialartTechnique);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_MARTIALART_STYLE: {
+                PersonaMartialartStyle personaMartialartStyle = (PersonaMartialartStyle)theEObject;
+                T result = casePersonaMartialartStyle(personaMartialartStyle);
+                if (result == null) result = caseSpezialisierung(personaMartialartStyle);
+                if (result == null) result = caseBeschreibbar(personaMartialartStyle);
+                if (result == null) result = caseQuelle(personaMartialartStyle);
+                if (result == null) result = caseErlernbar(personaMartialartStyle);
+                if (result == null) result = caseModifyable(personaMartialartStyle);
+                if (result == null) result = caseIdentifiable(personaMartialartStyle);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_MARTIALART_TECHNIQUE: {
+                PersonaMartialartTechnique personaMartialartTechnique = (PersonaMartialartTechnique)theEObject;
+                T result = casePersonaMartialartTechnique(personaMartialartTechnique);
+                if (result == null) result = caseErlernbar(personaMartialartTechnique);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -3436,6 +3473,66 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseSensorFunction(SensorFunction object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Martialart Style</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Martialart Style</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMartialartStyle(MartialartStyle object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Martialart Technique</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Martialart Technique</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMartialartTechnique(MartialartTechnique object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Persona Martialart Style</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Martialart Style</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePersonaMartialartStyle(PersonaMartialartStyle object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Persona Martialart Technique</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Martialart Technique</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePersonaMartialartTechnique(PersonaMartialartTechnique object) {
         return null;
     }
 

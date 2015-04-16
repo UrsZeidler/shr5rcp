@@ -634,6 +634,22 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createSensorFunctionAdapter();
             }
             @Override
+            public Adapter caseMartialartStyle(MartialartStyle object) {
+                return createMartialartStyleAdapter();
+            }
+            @Override
+            public Adapter caseMartialartTechnique(MartialartTechnique object) {
+                return createMartialartTechniqueAdapter();
+            }
+            @Override
+            public Adapter casePersonaMartialartStyle(PersonaMartialartStyle object) {
+                return createPersonaMartialartStyleAdapter();
+            }
+            @Override
+            public Adapter casePersonaMartialartTechnique(PersonaMartialartTechnique object) {
+                return createPersonaMartialartTechniqueAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2358,6 +2374,62 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSensorFunctionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MartialartStyle <em>Martialart Style</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MartialartStyle
+     * @generated
+     */
+    public Adapter createMartialartStyleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MartialartTechnique <em>Martialart Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MartialartTechnique
+     * @generated
+     */
+    public Adapter createMartialartTechniqueAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle <em>Persona Martialart Style</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartStyle
+     * @generated
+     */
+    public Adapter createPersonaMartialartStyleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique <em>Persona Martialart Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.PersonaMartialartTechnique
+     * @generated
+     */
+    public Adapter createPersonaMartialartTechniqueAdapter() {
         return null;
     }
 

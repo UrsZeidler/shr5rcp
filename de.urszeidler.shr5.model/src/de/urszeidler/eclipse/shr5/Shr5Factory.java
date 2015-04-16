@@ -805,6 +805,42 @@ public interface Shr5Factory extends EFactory {
     SensorFunction createSensorFunction();
 
     /**
+     * Returns a new object of class '<em>Martialart Style</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Martialart Style</em>'.
+     * @generated
+     */
+    MartialartStyle createMartialartStyle();
+
+    /**
+     * Returns a new object of class '<em>Martialart Technique</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Martialart Technique</em>'.
+     * @generated
+     */
+    MartialartTechnique createMartialartTechnique();
+
+    /**
+     * Returns a new object of class '<em>Persona Martialart Style</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona Martialart Style</em>'.
+     * @generated
+     */
+    PersonaMartialartStyle createPersonaMartialartStyle();
+
+    /**
+     * Returns a new object of class '<em>Persona Martialart Technique</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona Martialart Technique</em>'.
+     * @generated
+     */
+    PersonaMartialartTechnique createPersonaMartialartTechnique();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
