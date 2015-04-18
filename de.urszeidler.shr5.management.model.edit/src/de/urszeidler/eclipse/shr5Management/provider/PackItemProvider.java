@@ -729,6 +729,36 @@ public class PackItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createKleindungsModifikator()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSensor()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSensorArray()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSensorFunction()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createMartialartStyle()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createMartialartTechnique()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createPersonaMartialartStyle()));
     }
 
     /**

@@ -1136,6 +1136,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_FreeMartialArtTechniques() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(14);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_MaxMartialArtStyles() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(15);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3145,6 +3163,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST);
         createEReference(shr5SystemEClass, SHR5_SYSTEM__APPLICABLE_GENERATORS);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_CONNECTION_RATING);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES);
 
         metaTypeEClass = createEClass(META_TYPE);
         createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
@@ -3616,6 +3636,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5System_BoundSprititServiceCost(), ecorePackage.getEInt(), "boundSprititServiceCost", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getShr5System_ApplicableGenerators(), ecorePackage.getEClass(), null, "applicableGenerators", null, 0, -1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_MaxConnectionRating(), ecorePackage.getEInt(), "maxConnectionRating", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_FreeMartialArtTechniques(), ecorePackage.getEInt(), "freeMartialArtTechniques", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_MaxMartialArtStyles(), ecorePackage.getEInt(), "maxMartialArtStyles", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

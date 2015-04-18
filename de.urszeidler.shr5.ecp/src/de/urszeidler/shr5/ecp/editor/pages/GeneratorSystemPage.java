@@ -190,6 +190,8 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
 
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR, grpPrioritySytem);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR, grpPrioritySytem);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES, grpPrioritySytem);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES, grpPrioritySytem);
             emfFormBuilder.addSeperatorEntry(grpPrioritySytem);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST, grpPrioritySytem);
 

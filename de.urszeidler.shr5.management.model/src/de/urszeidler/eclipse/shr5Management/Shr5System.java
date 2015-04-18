@@ -35,6 +35,8 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getApplicableGenerators <em>Applicable Generators</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getFreeMartialArtTechniques <em>Free Martial Art Techniques</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -441,4 +443,54 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setMaxConnectionRating(int value);
+
+    /**
+     * Returns the value of the '<em><b>Free Martial Art Techniques</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of techniques the character gets without karma costs.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Free Martial Art Techniques</em>' attribute.
+     * @see #setFreeMartialArtTechniques(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_FreeMartialArtTechniques()
+     * @model
+     * @generated
+     */
+    int getFreeMartialArtTechniques();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getFreeMartialArtTechniques <em>Free Martial Art Techniques</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Free Martial Art Techniques</em>' attribute.
+     * @see #getFreeMartialArtTechniques()
+     * @generated
+     */
+    void setFreeMartialArtTechniques(int value);
+
+    /**
+     * Returns the value of the '<em><b>Max Martial Art Styles</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The max style a character can choose at creatation.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Max Martial Art Styles</em>' attribute.
+     * @see #setMaxMartialArtStyles(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxMartialArtStyles()
+     * @model
+     * @generated
+     */
+    int getMaxMartialArtStyles();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Max Martial Art Styles</em>' attribute.
+     * @see #getMaxMartialArtStyles()
+     * @generated
+     */
+    void setMaxMartialArtStyles(int value);
 } // Shr5System

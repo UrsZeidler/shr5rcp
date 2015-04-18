@@ -35,6 +35,8 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getApplicableGenerators <em>Applicable Generators</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getFreeMartialArtTechniques <em>Free Martial Art Techniques</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -293,6 +295,43 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int maxConnectionRating = MAX_CONNECTION_RATING_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getFreeMartialArtTechniques() <em>Free Martial Art Techniques</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getFreeMartialArtTechniques()
+     * @generated
+     * @ordered
+     */
+    protected static final int FREE_MARTIAL_ART_TECHNIQUES_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getFreeMartialArtTechniques() <em>Free Martial Art Techniques</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getFreeMartialArtTechniques()
+     * @generated
+     * @ordered
+     */
+    protected int freeMartialArtTechniques = FREE_MARTIAL_ART_TECHNIQUES_EDEFAULT;
+    /**
+     * The default value of the '{@link #getMaxMartialArtStyles() <em>Max Martial Art Styles</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxMartialArtStyles()
+     * @generated
+     * @ordered
+     */
+    protected static final int MAX_MARTIAL_ART_STYLES_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getMaxMartialArtStyles() <em>Max Martial Art Styles</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxMartialArtStyles()
+     * @generated
+     * @ordered
+     */
+    protected int maxMartialArtStyles = MAX_MARTIAL_ART_STYLES_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -600,6 +639,48 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getFreeMartialArtTechniques() {
+        return freeMartialArtTechniques;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setFreeMartialArtTechniques(int newFreeMartialArtTechniques) {
+        int oldFreeMartialArtTechniques = freeMartialArtTechniques;
+        freeMartialArtTechniques = newFreeMartialArtTechniques;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES, oldFreeMartialArtTechniques, freeMartialArtTechniques));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getMaxMartialArtStyles() {
+        return maxMartialArtStyles;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMaxMartialArtStyles(int newMaxMartialArtStyles) {
+        int oldMaxMartialArtStyles = maxMartialArtStyles;
+        maxMartialArtStyles = newMaxMartialArtStyles;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES, oldMaxMartialArtStyles, maxMartialArtStyles));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -634,6 +715,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getApplicableGenerators();
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
                 return getMaxConnectionRating();
+            case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
+                return getFreeMartialArtTechniques();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
+                return getMaxMartialArtStyles();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -690,6 +775,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
                 setMaxConnectionRating((Integer)newValue);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
+                setFreeMartialArtTechniques((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
+                setMaxMartialArtStyles((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -744,6 +835,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
                 setMaxConnectionRating(MAX_CONNECTION_RATING_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
+                setFreeMartialArtTechniques(FREE_MARTIAL_ART_TECHNIQUES_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
+                setMaxMartialArtStyles(MAX_MARTIAL_ART_STYLES_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -784,6 +881,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return applicableGenerators != null && !applicableGenerators.isEmpty();
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
                 return maxConnectionRating != MAX_CONNECTION_RATING_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
+                return freeMartialArtTechniques != FREE_MARTIAL_ART_TECHNIQUES_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
+                return maxMartialArtStyles != MAX_MARTIAL_ART_STYLES_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -824,6 +925,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(boundSprititServiceCost);
         result.append(", maxConnectionRating: ");
         result.append(maxConnectionRating);
+        result.append(", freeMartialArtTechniques: ");
+        result.append(freeMartialArtTechniques);
+        result.append(", maxMartialArtStyles: ");
+        result.append(maxMartialArtStyles);
         result.append(')');
         return result.toString();
     }

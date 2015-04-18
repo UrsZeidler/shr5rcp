@@ -63,6 +63,8 @@ public class Shr5SystemItemProvider
             addBoundSprititServiceCostPropertyDescriptor(object);
             addApplicableGeneratorsPropertyDescriptor(object);
             addMaxConnectionRatingPropertyDescriptor(object);
+            addFreeMartialArtTechniquesPropertyDescriptor(object);
+            addMaxMartialArtStylesPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -376,6 +378,50 @@ public class Shr5SystemItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Free Martial Art Techniques feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addFreeMartialArtTechniquesPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_freeMartialArtTechniques_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_freeMartialArtTechniques_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Max Martial Art Styles feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMaxMartialArtStylesPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_maxMartialArtStyles_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxMartialArtStyles_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -432,6 +478,8 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
+            case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
