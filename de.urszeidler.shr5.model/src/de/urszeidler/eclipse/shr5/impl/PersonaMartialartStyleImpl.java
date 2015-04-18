@@ -102,13 +102,20 @@ public class PersonaMartialartStyleImpl extends SpezialisierungImpl implements P
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void setStyle(MartialartStyle newStyle) {
         MartialartStyle oldStyle = style;
         style = newStyle;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_MARTIALART_STYLE__STYLE, oldStyle, style));
+
+        if (newStyle != null) {
+            beschreibung = newStyle.getBeschreibung();
+            page = newStyle.getPage();
+            setName(newStyle.getName());
+        }
     }
 
     /**

@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.PersonaMartialartStyle} object.
@@ -118,14 +119,14 @@ public class PersonaMartialartStyleItemProvider extends SpezialisierungItemProvi
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((PersonaMartialartStyle)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_PersonaMartialartStyle_type") :
-            getString("_UI_PersonaMartialartStyle_type") + " " + label;
+        PersonaMartialartStyle martialartStyle = (PersonaMartialartStyle)object;
+        final ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");      
+        return Shr5EditingTools.getLabelForEObject(factory, unset, martialartStyle.getStyle());
     }
     
 

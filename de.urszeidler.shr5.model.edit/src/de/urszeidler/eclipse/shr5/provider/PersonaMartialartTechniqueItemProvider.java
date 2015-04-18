@@ -19,7 +19,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
+import de.urszeidler.eclipse.shr5.PersonaMartialartTechnique;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.PersonaMartialartTechnique} object.
@@ -98,11 +100,14 @@ public class PersonaMartialartTechniqueItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_PersonaMartialartTechnique_type");
+        PersonaMartialartTechnique pas = (PersonaMartialartTechnique)object;
+        final ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");      
+        return Shr5EditingTools.getLabelForEObject(factory, unset, pas.getTechnique());
     }
     
 
