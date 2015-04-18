@@ -14,6 +14,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterChange;
@@ -165,6 +166,10 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite,createControllGridData(300) );
             }
+        }else if (object instanceof PersonaMartialartStyle) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.PERSONA_MARTIALART_STYLE__STYLE, composite,new ReadOnlyLinkEntry(toolkit));
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.PERSONA_MARTIALART_STYLE__TECHNIQUES, composite,createControllGridData(100));
+            
         }
         
 

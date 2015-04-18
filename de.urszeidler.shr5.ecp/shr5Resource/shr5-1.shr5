@@ -162,6 +162,14 @@
         <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_Btbycd0CEeOvVYoRsPZlnA" karmaFactor="13">
           <type href="http://urszeidler.de/shr5/1.0#//Initation"/>
         </characterAdvancements>
+        <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_quuTwOWZEeSGkLq8lXS8nw" karmaFactor="7">
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_zBuEsOWZEeSGkLq8lXS8nw" factor="1" timeUnit="month"/>
+          <type href="http://urszeidler.de/shr5/1.0#//PersonaMartialartStyle"/>
+        </characterAdvancements>
+        <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" xmi:id="_-9ViIOWZEeSGkLq8lXS8nw" karmaFactor="5">
+          <rangeTableEntries xsi:type="shr5mngt:TrainingRate" xmi:id="_IMnVIOWaEeSGkLq8lXS8nw" factor="2" timeUnit="week"/>
+          <type href="http://urszeidler.de/shr5/1.0#//PersonaMartialartTechnique"/>
+        </characterAdvancements>
       </entries>
       <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
         <instructions xmi:id="_djpB4eJ0EeOht_G61YAQvg" value="Select the categories and the group."/>

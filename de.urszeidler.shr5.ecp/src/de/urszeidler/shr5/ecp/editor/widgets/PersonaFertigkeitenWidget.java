@@ -7,6 +7,7 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.celleditor.ExtendedDialogCellEditor;
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.command.ReplaceCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -47,11 +49,16 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
@@ -390,14 +397,23 @@ public class PersonaFertigkeitenWidget extends Composite {
 
                         @Override
                         protected Object openDialogBox(Control cellEditorWindow) {
+                            List<Spezialisierung> arrayList = new ArrayList<Spezialisierung>(fertigkeit.getSpezialisierungen());
+                            ImmutableList<PersonaMartialartStyle> list2 = FluentIterable.from(persona.getMartialartStyles()).filter(new Predicate<PersonaMartialartStyle>() {
+
+                                @Override
+                                public boolean apply(PersonaMartialartStyle input) {
+                                    return  input!=null && input.getStyle()!=null && input.getStyle().getUsableWith().contains(fertigkeit);
+                                }
+                            }).toList();
+                            arrayList.addAll(list2);
                             FeatureEditorDialog featureEditorDialog = new FeatureEditorDialog(getShell(), AdapterFactoryUtil.getInstance()
                                     .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
-                                    Messages.PersonaFertigkeitenWidget_select_specialism, fertigkeit.getSpezialisierungen());
+                                    Messages.PersonaFertigkeitenWidget_select_specialism, arrayList);
                             int result = featureEditorDialog.open();
                             if (result == Window.OK) {
                                 EList<?> list = featureEditorDialog.getResult();
                                 if (list.size() > 0) {
-                                    return list.get(0);
+                                    return list;
                                 }
                             }
                             return null;
@@ -450,10 +466,26 @@ public class PersonaFertigkeitenWidget extends Composite {
                     Fertigkeit fertigkeit = (Fertigkeit)element;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null) {
-
-                        Command command = AddCommand.create(editingDomain, personaFertigkeit,
-                                Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
-                        editingDomain.getCommandStack().execute(command);
+                        
+                        CompoundCommand compoundCommand = new CompoundCommand();
+                        if (value instanceof Collection) {
+                        Collection<?> c = (Collection<?>)value;
+                        Command create = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, c);
+                        editingDomain.getCommandStack().execute(create);
+                        
+//                        EList<Object> ownerList = SetCommand.getOwnerList(personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
+//                        ownerList.clear();
+//                        ownerList.addAll(c);
+                        
+//                            for (Object object : c) {
+//                                if(!ownerList.contains(c)){
+//                                Command command = AddCommand.create(editingDomain, personaFertigkeit,
+//                                        Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, object);
+//                                compoundCommand.append(command);
+//                                }
+//                            }
+                        }
+//                        editingDomain.getCommandStack().execute(compoundCommand);
                     }
                 }
                 treeViewer.refresh(true);
@@ -644,7 +676,15 @@ public class PersonaFertigkeitenWidget extends Composite {
     private void changeFertigkeitsValueByAdvacement(Object element, Object value) {
         if (element instanceof Fertigkeit) {
             Fertigkeit f = (Fertigkeit)element;
-            if (value instanceof Spezialisierung) {
+            if (value instanceof Collection<?>) {
+                Collection<?> c = (Collection<?>)value;
+                for (Object object : c) {
+                    if (object instanceof Spezialisierung) {
+                        Spezialisierung s = (Spezialisierung)object;
+                        ShadowrunManagmentTools.changeErlernbarByAdvacement(character, s);
+                    }                    
+                }
+            }else if (value instanceof Spezialisierung) {
                 Spezialisierung s = (Spezialisierung)value;
                 ShadowrunManagmentTools.changeErlernbarByAdvacement(character, s);
             } else

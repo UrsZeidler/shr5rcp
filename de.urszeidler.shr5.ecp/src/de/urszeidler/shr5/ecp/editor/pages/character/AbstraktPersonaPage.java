@@ -349,7 +349,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         int height = 200;
         if (object instanceof KoerperPersona) {
             Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
-            grpFertigkeitGruppe.setLayout(new GridLayout(2, true));
+            grpFertigkeitGruppe.setLayout(new GridLayout(3, true));
             final GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
             gd_grpFertigkeitGruppe.heightHint = height;
             grpFertigkeitGruppe.setLayoutData(gd_grpFertigkeitGruppe);
@@ -379,6 +379,17 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
             TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, Messages.AbstraktPersonaPage_sct_Augmentation, SWT.NONE,
                     object, Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain, this,this);
+            managedForm.getToolkit().adapt(treeTableWidgetInventar);
+            managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
+
+            Composite compositeWares1 = new Composite(grpFertigkeitGruppe, SWT.NONE);
+            compositeWares1.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+            compositeWares1.setLayout(new FillLayout(SWT.HORIZONTAL));
+            toolkit.adapt(compositeWares1);
+            toolkit.paintBordersFor(compositeWares1);
+
+            treeTableWidgetInventar = new TreeTableWidget(compositeWares1, labelprovider.getText(Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES), SWT.NONE,
+                    object, Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES, toolkit, mananger, editingDomain, this,this);
             managedForm.getToolkit().adapt(treeTableWidgetInventar);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
 

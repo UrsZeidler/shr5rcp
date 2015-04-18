@@ -59,9 +59,13 @@ import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
+import de.urszeidler.eclipse.shr5.MartialartStyle;
+import de.urszeidler.eclipse.shr5.MartialartTechnique;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
+import de.urszeidler.eclipse.shr5.PersonaMartialartTechnique;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -603,19 +607,19 @@ public class ShadowrunEditingTools {
         return "";
     }
 
-    public static String findPersonaType(String adept,String magician,String technomancer) {
-        if("true".equals(adept.toLowerCase())&& "true".equals(magician.toLowerCase()))
-            return "shr5:"+ Shr5Package.Literals.MYSTIC_ADEPT.getName();
-        if("true".equals(adept.toLowerCase()))
-            return "shr5:"+ Shr5Package.Literals.KI_ADEPT.getName();
-        if("true".equals(magician.toLowerCase()))
-            return "shr5:"+ Shr5Package.Literals.MAGIER.getName();
-        return "shr5:"+ Shr5Package.Literals.MUDAN_PERSONA.getName();
+    public static String findPersonaType(String adept, String magician, String technomancer) {
+        if ("true".equals(adept.toLowerCase()) && "true".equals(magician.toLowerCase()))
+            return "shr5:" + Shr5Package.Literals.MYSTIC_ADEPT.getName();
+        if ("true".equals(adept.toLowerCase()))
+            return "shr5:" + Shr5Package.Literals.KI_ADEPT.getName();
+        if ("true".equals(magician.toLowerCase()))
+            return "shr5:" + Shr5Package.Literals.MAGIER.getName();
+        return "shr5:" + Shr5Package.Literals.MUDAN_PERSONA.getName();
     }
-    
-    public static String findPriority(final String priorityName,final String systemName, String categoryName) {
+
+    public static String findPriority(final String priorityName, final String systemName, String categoryName) {
         final EClass eclass;
-        if("resources".equals(categoryName))
+        if ("resources".equals(categoryName))
             eclass = Shr5managementPackage.Literals.RESOURCEN;
         else if ("skills".equals(categoryName))
             eclass = Shr5managementPackage.Literals.SKILL;
@@ -623,7 +627,7 @@ public class ShadowrunEditingTools {
             eclass = Shr5managementPackage.Literals.ATTRIBUTES;
         else
             eclass = Shr5managementPackage.Literals.RESOURCEN;
-            
+
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -637,20 +641,21 @@ public class ShadowrunEditingTools {
             }
         });
         Iterator<EObject> iterator = filteredObject.iterator();
-        if (iterator.hasNext()){
-            
-            Shr5System eObject = (Shr5System)iterator.next();
-            Optional<PriorityCategorie> firstMatch = FluentIterable.from(eObject.getPriorities()).firstMatch(new com.google.common.base.Predicate<PriorityCategorie>() {
+        if (iterator.hasNext()) {
 
-                @Override
-                public boolean apply(PriorityCategorie input) {
-                    return  input.eClass().equals(eclass) && priorityName.substring(0,1).equals(input.getCategorieName());
-                }
-            });
+            Shr5System eObject = (Shr5System)iterator.next();
+            Optional<PriorityCategorie> firstMatch = FluentIterable.from(eObject.getPriorities()).firstMatch(
+                    new com.google.common.base.Predicate<PriorityCategorie>() {
+
+                        @Override
+                        public boolean apply(PriorityCategorie input) {
+                            return input.eClass().equals(eclass) && priorityName.substring(0, 1).equals(input.getCategorieName());
+                        }
+                    });
             if (firstMatch.isPresent())
                 return getId(firstMatch.get());
         }
-//            return getId(iterator.next());
+        // return getId(iterator.next());
         return "";
     }
 
@@ -662,7 +667,7 @@ public class ShadowrunEditingTools {
      * @param nodeName
      * @return
      */
-    public static String copyObject(final String name, final String id,final String nodeName) {
+    public static String copyObject(final String name, final String id, final String nodeName) {
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -670,10 +675,10 @@ public class ShadowrunEditingTools {
                 if (name != null)
                     if (input instanceof Beschreibbar) {
                         Beschreibbar input2 = (Beschreibbar)input;
-                        if("inventar".equals(nodeName))
-                            if (!(input2 instanceof AbstraktGegenstand)) 
+                        if ("inventar".equals(nodeName))
+                            if (!(input2 instanceof AbstraktGegenstand))
                                 return false;
-                        
+
                         if (getId(input2).equals(id))
                             return true;
 
@@ -939,4 +944,27 @@ public class ShadowrunEditingTools {
         return descriptor.getDisplayName(eAttribute);
     }
 
+    public static Transformer<MartialartStyle, PersonaMartialartStyle> martialArt2PersonaMartialArtTransformer() {
+        return new Transformer<MartialartStyle, PersonaMartialartStyle>() {
+
+            @Override
+            public PersonaMartialartStyle transform(MartialartStyle input) {
+                PersonaMartialartStyle style = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+                style.setStyle(input);
+                return style;
+            }
+        };
+    }
+
+    public static Transformer<MartialartTechnique, PersonaMartialartTechnique> martialArtTechnique2PersonaMartialArtTransformer() {
+        return new Transformer<MartialartTechnique, PersonaMartialartTechnique>() {
+
+            @Override
+            public PersonaMartialartTechnique transform(MartialartTechnique input) {
+                PersonaMartialartTechnique technique = Shr5Factory.eINSTANCE.createPersonaMartialartTechnique();
+                technique.setTechnique(input);
+                return technique;
+            }
+        };
+    }
 }

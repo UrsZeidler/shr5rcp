@@ -19,6 +19,8 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
+import de.urszeidler.eclipse.shr5.MartialartStyle;
+import de.urszeidler.eclipse.shr5.MartialartTechnique;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.SensorFunction;
@@ -180,10 +182,7 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__ZIEL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__SCHWUND, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KOMPLEXE_FORM__DAUER, grpGegenstand);
-            
         }else if (object instanceof MetaMagie) {
-          
-            
         }else if (object instanceof MagischeTradition) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__ENZUG, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_TRADITION__BESCHWOERBAR, grpGegenstand);
@@ -195,7 +194,13 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         }else if (object instanceof SensorFunction) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR_FUNCTION__MAX_RANGE, grpGegenstand);
             
+        } else if (object instanceof MartialartStyle) {
+            grpGegenstand.setLayout(new GridLayout(3, false));
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__USABLE_WITH, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__TECHNIQUES, grpGegenstand,createControllGridData(100));
+        }else if (object instanceof MartialartTechnique) {
         }
+        
         addSourceFeature(grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

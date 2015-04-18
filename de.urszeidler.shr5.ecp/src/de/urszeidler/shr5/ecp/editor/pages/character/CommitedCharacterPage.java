@@ -372,6 +372,15 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
                 managedForm.getToolkit().adapt(treeTableWidgetInventar);
                 managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
             }
+            if (!kp.getMartialartStyles().isEmpty()) {
+                SimpleTreeTableWidget treeTableWidgetInventar = new SimpleTreeTableWidget(composite_3, Messages.AbstraktPersonaPage_sct_Augmentation,
+                        SWT.NONE, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES, toolkit, mananger, editingDomain, this, this);
+                GridData layoutData2 = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+                layoutData2.heightHint = 150;
+                treeTableWidgetInventar.setLayoutData(layoutData2);
+                managedForm.getToolkit().adapt(treeTableWidgetInventar);
+                managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
+            }
         }
         if (persona instanceof BaseMagischePersona) {
             BaseMagischePersona bm = (BaseMagischePersona)persona;
