@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezies;
@@ -159,6 +160,8 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         return character;
     }
 
+    
+    
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -291,6 +294,64 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("4 spend", -4, getFixture().getKarmaSpend());
 
+    }
+    
+    /**
+     * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * <em>Karma Spend</em>}' feature getter. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * @generated not
+     */
+    public void testGetKarmaSpend_MAstyle() {
+        createBasicCategories();
+        PlayerCharacter playerCharacter = createMudanCharacter();
+        getFixture().setCharacter(playerCharacter);
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getGenerator());
+        
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        PersonaMartialartStyle pmas = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+        
+        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        playerCharacter.getPersona().getMartialartStyles().add(pmas);
+        playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
+        fertigkeit.getSpezialisierungen().add(pmas);
+        assertEquals("7 spend", 7, getFixture().getKarmaSpend());
+    }
+
+    /**
+     * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * <em>Karma Spend</em>}' feature getter. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * @generated not
+     */
+    public void testGetKarmaSpend_MAtechnique() {
+        createBasicCategories();
+        PlayerCharacter playerCharacter = createMudanCharacter();
+        getFixture().setCharacter(playerCharacter);
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        shr5System.setFreeMartialArtTechniques(1);
+        ChangesTest.createAdvacements(getFixture().getGenerator());
+        
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        PersonaMartialartStyle pmas = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+        
+        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        playerCharacter.getPersona().getMartialartStyles().add(pmas);
+        playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
+        fertigkeit.getSpezialisierungen().add(pmas);
+        assertEquals("7 spend", 7, getFixture().getKarmaSpend());
+        
+        pmas.getTechniques().add(Shr5Factory.eINSTANCE.createPersonaMartialartTechnique());
+        assertEquals("7 spend", 7, getFixture().getKarmaSpend());
+        pmas.getTechniques().add(Shr5Factory.eINSTANCE.createPersonaMartialartTechnique());
+        assertEquals("12 spend",12, getFixture().getKarmaSpend());
+      
+        
     }
 
     /**
@@ -655,7 +716,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     }
 
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map_KiAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
@@ -681,7 +741,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map_Magier() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();
@@ -717,7 +776,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map_MysticAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
@@ -758,7 +816,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPoints__DiagnosticChain_Map_Technomancer() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();
@@ -860,7 +917,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllAttributesPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -886,7 +942,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllSkillPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -984,7 +1039,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllConnectionPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1016,7 +1070,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllResourcePoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1043,7 +1096,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1087,7 +1139,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllMagicPoints__DiagnosticChain_Map_KiAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
@@ -1117,7 +1168,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllGroupPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1153,7 +1203,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllKnowlegeSkillPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1190,7 +1239,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllKarmaPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1215,7 +1263,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllSpellPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1234,7 +1281,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPowerPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
@@ -1253,7 +1299,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPowerPoints__DiagnosticChain_MapAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
@@ -1287,7 +1332,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllPowerPoints__DiagnosticChain_MapMysticAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
@@ -1320,7 +1364,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllSpellPoints__DiagnosticChain_Map_MysticAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
@@ -1353,7 +1396,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllSpellPoints__DiagnosticChain_Map_Magier() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();
@@ -1384,7 +1426,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasSpendAllSpellPoints__DiagnosticChain_Map_Technomacher() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();

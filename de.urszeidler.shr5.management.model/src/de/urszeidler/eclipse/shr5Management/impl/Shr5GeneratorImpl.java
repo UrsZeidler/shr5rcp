@@ -524,7 +524,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
             }
             karmaKosten = karmaKosten + (sum * getGenerator().getBoundSprititServiceCost());
         }
-        if (!persona.getMartialartStyles().isEmpty()) {
+        if (!persona.getMartialartStyles().isEmpty() && getGenerator().getCharacterAdvancements() != null) {
             int style = 0;
             int tequ = 0;
             IncreaseCharacterPart mas = ShadowrunManagmentTools.findAdvancment(getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
@@ -537,7 +537,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
                     ImmutableList<PersonaMartialartStyle> list = FluentIterable.from(pf.getSpezialisierungen()).filter(PersonaMartialartStyle.class)
                             .toList();
                     for (PersonaMartialartStyle ms : list) {
-                        tequ += ms.getTechniques().size()-getGenerator().getFreeMartialArtTechniques();
+                        tequ += Math.max(ms.getTechniques().size()-getGenerator().getFreeMartialArtTechniques(),0);
                     }
                     style += list.size();
                 }
@@ -1198,13 +1198,12 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
             KiAdept ka = (KiAdept)getCharacter().getPersona();
             int magieBasis = ka.getMagieBasis() * 100;
-            // adept.calcPowerPointsSpend()
 
             hasSpendAll = magieBasis - Math.abs(calcPowerPointsSpend) == 0;
 
         } else if (getMagic().eClass().equals(Shr5managementPackage.Literals.SPELLCASTER)) {
             if (getCharacter().getPersona() instanceof MysticAdept) {
-                MysticAdept ma = (MysticAdept)getCharacter().getPersona();
+//                MysticAdept ma = (MysticAdept)getCharacter().getPersona();
 
             }
 

@@ -33,8 +33,6 @@ public class LifeModulesGeneratorTest extends KarmaGeneratorTest {
         TestRunner.run(LifeModulesGeneratorTest.class);
     }
 
-    private LifeModulesSystem lmSystem;
-
     /**
      * Constructs a new Life Modules Generator test case with the given name.
      * <!-- begin-user-doc -->

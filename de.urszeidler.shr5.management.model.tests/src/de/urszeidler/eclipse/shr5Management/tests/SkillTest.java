@@ -174,7 +174,6 @@ public class SkillTest extends PriorityCategorieTest {
 	 */
 	public void testCalcKnowledgeSkillPoints__ManagedCharacter() {
 		PlayerCharacter character = createMudanCharacter();
-		Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createWissensfertigkeit();
 		
 		assertEquals("0 points", 0,getFixture().calcKnowledgeSkillPoints(character));
 		character.getPersona().setLogikBasis(1);

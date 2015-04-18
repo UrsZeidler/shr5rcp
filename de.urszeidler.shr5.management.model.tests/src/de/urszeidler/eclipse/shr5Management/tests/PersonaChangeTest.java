@@ -266,6 +266,51 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
     }
 
+//    /**
+//     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+//     * @generated not
+//     */
+//    public void testApplyChanges_MartialArtStyle_Add() {
+//        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+//        PersonaMartialartStyle pmas = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+//
+//        getFixture().setChangeable(pmas);
+//
+//        playerCharacter.getChanges().add(getFixture());
+//        assertEquals(-7, getFixture().getKarmaCost());
+//        assertEquals(getFixture().getFrom(), 0);
+//        assertEquals(getFixture().getTo(), 1);
+//
+//        getFixture().applyChanges();
+//        assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(pmas));
+//        assertEquals(true, getFixture().isChangeApplied());
+//        assertNotNull(getFixture().getDateApplied());
+//    }
+//
+//    /**
+//     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+//     * @generated not
+//     */
+//    public void testApplyChanges_MartialArtTechnique_Add() {
+//        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+//        PersonaMartialartStyle pmas = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+//        PersonaMartialartTechnique technique = Shr5Factory.eINSTANCE.createPersonaMartialartTechnique();
+//        personaFertigkeit.getSpezialisierungen().add(pmas);
+//        
+//        getFixture().setChangeable(technique);
+//
+//        playerCharacter.getChanges().add(getFixture());
+//        assertEquals(-5, getFixture().getKarmaCost());
+//        assertEquals(getFixture().getFrom(), 0);
+//        assertEquals(getFixture().getTo(), 1);
+//
+//        getFixture().applyChanges();
+//        assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(pmas));
+//        assertEquals(true, getFixture().isChangeApplied());
+//        assertNotNull(getFixture().getDateApplied());
+//    }
+
+    
     /**
      * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
      * @generated not
