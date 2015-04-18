@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.MartialartStyle;
+import de.urszeidler.eclipse.shr5.MartialartTechnique;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -300,7 +301,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return super.caseSpezialisierung(object);
             }
-
+            
             @Override
             public Object caseSteigerbar(Steigerbar object) {
                 object.setStufe(getTo());
