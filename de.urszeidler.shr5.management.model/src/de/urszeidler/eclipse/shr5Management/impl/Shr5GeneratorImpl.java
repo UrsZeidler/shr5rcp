@@ -528,9 +528,9 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
             int style = 0;
             int tequ = 0;
             IncreaseCharacterPart mas = ShadowrunManagmentTools.findAdvancment(getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
-                    Shr5Package.Literals.MARTIALART_STYLE);
+                    Shr5Package.Literals.PERSONA_MARTIALART_STYLE);
             IncreaseCharacterPart mat = ShadowrunManagmentTools.findAdvancment(getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
-                    Shr5Package.Literals.MARTIALART_TECHNIQUE);
+                    Shr5Package.Literals.PERSONA_MARTIALART_TECHNIQUE);
 
             if (mas != null && mat != null) {
                 for (PersonaFertigkeit pf : persona.getFertigkeiten()) {

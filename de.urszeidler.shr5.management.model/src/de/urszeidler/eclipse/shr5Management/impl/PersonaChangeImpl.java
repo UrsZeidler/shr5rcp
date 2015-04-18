@@ -21,10 +21,13 @@ import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.MartialartStyle;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
+import de.urszeidler.eclipse.shr5.PersonaMartialartTechnique;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
@@ -47,7 +50,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +61,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * The cached value of the '{@link #getChangeable() <em>Changeable</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getChangeable()
      * @generated
      * @ordered
@@ -67,6 +71,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PersonaChangeImpl() {
@@ -76,6 +81,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -86,6 +92,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar getChangeable() {
@@ -94,7 +101,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             changeable = (Erlernbar)eResolveProxy(oldChangeable);
             if (changeable != oldChangeable) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable, changeable));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable,
+                            changeable));
             }
         }
         return changeable;
@@ -103,6 +111,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar basicGetChangeable() {
@@ -133,13 +142,14 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 @Override
                 public Object casePersonaFertigkeit(PersonaFertigkeit object) {
                     Integer fromValue = object.getStufe();
-                    if(object.getFertigkeit()!=null && getCharacter()!=null && getCharacter().getPersona()!=null)
-                        fromValue = Math.max(object.getStufe() ,ShadowrunTools.findFertigkeitValue(object.getFertigkeit(), getCharacter().getPersona()));
+                    if (object.getFertigkeit() != null && getCharacter() != null && getCharacter().getPersona() != null)
+                        fromValue = Math.max(object.getStufe(),
+                                ShadowrunTools.findFertigkeitValue(object.getFertigkeit(), getCharacter().getPersona()));
                     setFrom(fromValue);
                     setTo(fromValue + 1);
                     return object;
                 }
-                
+
                 @Override
                 public Object casePersonaEigenschaft(PersonaEigenschaft object) {
                     if (ShadowrunManagmentTools.hasEigenschaft(getCharacter(), object)) {
@@ -171,13 +181,15 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE:
-                if (resolve) return getChangeable();
+                if (resolve)
+                    return getChangeable();
                 return basicGetChangeable();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -186,6 +198,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -201,6 +214,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -216,6 +230,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -263,11 +278,25 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
 
             @Override
             public Object caseSpezialisierung(Spezialisierung object) {
-                EObject eContainer2 = object.eContainer();
-                if (eContainer2 instanceof Fertigkeit) {
-                    Fertigkeit f = (Fertigkeit)eContainer2;
-                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(f, getCharacter().getPersona());
-                    personaFertigkeit.getSpezialisierungen().add(object);
+                if (object instanceof PersonaMartialartStyle) {
+                    PersonaMartialartStyle pmas = (PersonaMartialartStyle)object;
+                    getCharacter().getPersona().getMartialartStyles().add(pmas);
+                    MartialartStyle style = pmas.getStyle();
+                    if (style != null) {
+                        EList<Fertigkeit> usableWith = style.getUsableWith();
+                        if (usableWith.size() == 1) {
+                            Fertigkeit fertigkeit = usableWith.get(0);
+                            PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, getCharacter().getPersona());
+                            personaFertigkeit.getSpezialisierungen().add(object);
+                        }
+                    }
+                } else {
+                    EObject eContainer2 = object.eContainer();
+                    if (eContainer2 instanceof Fertigkeit) {
+                        Fertigkeit f = (Fertigkeit)eContainer2;
+                        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(f, getCharacter().getPersona());
+                        personaFertigkeit.getSpezialisierungen().add(object);
+                    }
                 }
                 return super.caseSpezialisierung(object);
             }
@@ -342,6 +371,15 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return object;
             }
+
+            // @Override
+            // public Object casePersonaMartialartStyle(PersonaMartialartStyle object) {
+            // MartialartStyle style = object.getStyle();
+            //
+            // EList<Fertigkeit> usableWith = style.getUsableWith();
+            // return super.casePersonaMartialartStyle(object);
+            // }
+
         };
         shr5Switch.doSwitch(getChangeable());
 
@@ -387,6 +425,16 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
 
             @Override
             public Integer casePersonaKomplexForm(PersonaKomplexForm object) {
+                return getKarmaCostAdd(object);
+            }
+
+            @Override
+            public Integer casePersonaMartialartStyle(PersonaMartialartStyle object) {
+                return getKarmaCostAdd(object);
+            }
+
+            @Override
+            public Integer casePersonaMartialartTechnique(PersonaMartialartTechnique object) {
                 return getKarmaCostAdd(object);
             }
 

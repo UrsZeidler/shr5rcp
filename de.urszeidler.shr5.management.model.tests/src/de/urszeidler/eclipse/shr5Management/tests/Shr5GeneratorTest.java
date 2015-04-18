@@ -339,6 +339,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
         PersonaMartialartStyle pmas = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
+        pmas.setStyle(Shr5Factory.eINSTANCE.createMartialartStyle());
         
         PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         playerCharacter.getPersona().getMartialartStyles().add(pmas);

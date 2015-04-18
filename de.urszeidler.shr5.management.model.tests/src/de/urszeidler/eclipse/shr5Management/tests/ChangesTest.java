@@ -127,12 +127,12 @@ public abstract class ChangesTest extends TestCase {
         
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(7);
-        part.setType(Shr5Package.Literals.MARTIALART_STYLE);
+        part.setType(Shr5Package.Literals.PERSONA_MARTIALART_STYLE);
         shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
         
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(5);
-        part.setType(Shr5Package.Literals.MARTIALART_TECHNIQUE);
+        part.setType(Shr5Package.Literals.PERSONA_MARTIALART_TECHNIQUE);
         shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
 }
