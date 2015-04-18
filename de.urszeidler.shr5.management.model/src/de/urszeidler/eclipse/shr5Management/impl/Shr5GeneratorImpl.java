@@ -19,16 +19,25 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.MysticAdept;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
@@ -48,23 +57,23 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourcen <em>Resourcen</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkills <em>Skills</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getAttribute <em>Attribute</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getMetaType <em>Meta Type</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getMagic <em>Magic</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaToResource <em>Karma To Resource</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaSpend <em>Karma Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getAttributeSpend <em>Attribute Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getConnectionSpend <em>Connection Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkillPointSpend <em>Skill Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpecialPointSpend <em>Special Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getGroupPointSpend <em>Group Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpellPointSpend <em>Spell Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartResources <em>Start Resources</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourcen <em>Resourcen</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkills <em>Skills</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getAttribute <em>Attribute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getMetaType <em>Meta Type</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getMagic <em>Magic</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaToResource <em>Karma To Resource</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaSpend <em>Karma Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getAttributeSpend <em>Attribute Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getConnectionSpend <em>Connection Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkillPointSpend <em>Skill Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpecialPointSpend <em>Special Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getGroupPointSpend <em>Group Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpellPointSpend <em>Spell Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartResources <em>Start Resources</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,6 +83,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The cached value of the '{@link #getResourcen() <em>Resourcen</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getResourcen()
      * @generated
      * @ordered
@@ -83,6 +93,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The cached value of the '{@link #getSkills() <em>Skills</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getSkills()
      * @generated
      * @ordered
@@ -92,6 +103,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getAttribute()
      * @generated
      * @ordered
@@ -101,6 +113,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The cached value of the '{@link #getMetaType() <em>Meta Type</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getMetaType()
      * @generated
      * @ordered
@@ -110,6 +123,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The cached value of the '{@link #getMagic() <em>Magic</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getMagic()
      * @generated
      * @ordered
@@ -120,6 +134,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @see #getKarmaToResource()
      * @generated
      * @ordered
@@ -130,6 +145,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The cached value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @see #getKarmaToResource()
      * @generated
      * @ordered
@@ -139,6 +155,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * The default value of the '{@link #getKarmaSpend() <em>Karma Spend</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getKarmaSpend()
      * @generated
      * @ordered
@@ -149,6 +166,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getAttributeSpend() <em>Attribute Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttributeSpend()
      * @generated
      * @ordered
@@ -159,6 +177,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getResourceSpend() <em>Resource Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getResourceSpend()
      * @generated
      * @ordered
@@ -169,6 +188,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getConnectionSpend() <em>Connection Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getConnectionSpend()
      * @generated
      * @ordered
@@ -179,6 +199,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getSkillPointSpend() <em>Skill Point Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSkillPointSpend()
      * @generated
      * @ordered
@@ -189,6 +210,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getSpecialPointSpend() <em>Special Point Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSpecialPointSpend()
      * @generated
      * @ordered
@@ -199,6 +221,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getGroupPointSpend() <em>Group Point Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getGroupPointSpend()
      * @generated
      * @ordered
@@ -209,6 +232,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getKnownlegePointSpend() <em>Knownlege Point Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getKnownlegePointSpend()
      * @generated
      * @ordered
@@ -219,6 +243,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getSpellPointSpend() <em>Spell Point Spend</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSpellPointSpend()
      * @generated
      * @ordered
@@ -229,6 +254,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getStartKarma()
      * @generated
      * @ordered
@@ -239,6 +265,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The cached value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getStartKarma()
      * @generated
      * @ordered
@@ -249,6 +276,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The default value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getStartResources()
      * @generated
      * @ordered
@@ -259,6 +287,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * The cached value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getStartResources()
      * @generated
      * @ordered
@@ -267,6 +296,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5GeneratorImpl() {
@@ -275,6 +305,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -284,6 +315,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Resourcen getResourcen() {
@@ -292,7 +324,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
             resourcen = (Resourcen)eResolveProxy(oldResourcen);
             if (resourcen != oldResourcen) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen, resourcen));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen,
+                            resourcen));
             }
         }
         return resourcen;
@@ -300,6 +333,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Resourcen basicGetResourcen() {
@@ -308,6 +342,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setResourcen(Resourcen newResourcen) {
@@ -319,6 +354,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Skill getSkills() {
@@ -335,6 +371,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Skill basicGetSkills() {
@@ -343,6 +380,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSkills(Skill newSkills) {
@@ -354,6 +392,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Attributes getAttribute() {
@@ -362,7 +401,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
             attribute = (Attributes)eResolveProxy(oldAttribute);
             if (attribute != oldAttribute) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute, attribute));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute,
+                            attribute));
             }
         }
         return attribute;
@@ -370,6 +410,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Attributes basicGetAttribute() {
@@ -378,6 +419,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setAttribute(Attributes newAttribute) {
@@ -389,6 +431,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public MetaType getMetaType() {
@@ -405,6 +448,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public MetaType basicGetMetaType() {
@@ -413,6 +457,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setMetaType(MetaType newMetaType) {
@@ -424,6 +469,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public SpecialType getMagic() {
@@ -440,6 +486,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public SpecialType basicGetMagic() {
@@ -448,6 +495,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setMagic(SpecialType newMagic) {
@@ -459,6 +507,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getKarmaToResource() {
@@ -516,6 +565,26 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
                 sum = sum + gebundenerGeist.getDienste();
             }
             karmaKosten = karmaKosten + (sum * getGenerator().getBoundSprititServiceCost());
+        }
+        if (!persona.getMartialartStyles().isEmpty()) {
+            int style = 0;
+            int tequ = 0;
+            IncreaseCharacterPart mas = ShadowrunManagmentTools.findAdvancment(getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
+                    Shr5Package.Literals.MARTIALART_STYLE);
+            IncreaseCharacterPart mat = ShadowrunManagmentTools.findAdvancment(getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
+                    Shr5Package.Literals.MARTIALART_TECHNIQUE);
+
+            if (mas != null && mat != null) {
+                for (PersonaFertigkeit pf : persona.getFertigkeiten()) {
+                    ImmutableList<PersonaMartialartStyle> list = FluentIterable.from(pf.getSpezialisierungen()).filter(PersonaMartialartStyle.class)
+                            .toList();
+                    for (PersonaMartialartStyle ms : list) {//TODO :free factor in system
+                        tequ += ms.getTechniques().size();
+                    }
+                    style += list.size();
+                }
+                karmaKosten += mas.getKarmaFactor() * style + mat.getKarmaFactor() * tequ;
+            }
         }
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter()) * -1;
@@ -647,6 +716,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getStartKarma() {
@@ -656,6 +726,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setStartKarma(int newStartKarma) {
@@ -668,6 +739,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getStartResources() {
@@ -677,13 +749,15 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setStartResources(int newStartResources) {
         int oldStartResources = startResources;
         startResources = newStartResources;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES, oldStartResources, startResources));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES, oldStartResources,
+                    startResources));
     }
 
     /**
@@ -700,31 +774,30 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
         if (getMetaType() != null)
             set.add(getMetaType().getCategorieName());
         if (getAttribute() != null)
-            if(!set.add(getAttribute().getCategorieName())){
+            if (!set.add(getAttribute().getCategorieName())) {
                 doubles.add(getAttribute().getCategorieName());
             }
         if (getMagic() != null)
-            if(!set.add(getMagic().getCategorieName())){
+            if (!set.add(getMagic().getCategorieName())) {
                 doubles.add(getMagic().getCategorieName());
             }
         if (getSkills() != null)
-            if(!set.add(getSkills().getCategorieName())){
+            if (!set.add(getSkills().getCategorieName())) {
                 doubles.add(getSkills().getCategorieName());
             }
         if (getResourcen() != null)
-            if(!set.add(getResourcen().getCategorieName())){
+            if (!set.add(getResourcen().getCategorieName())) {
                 doubles.add(getResourcen().getCategorieName());
             }
-        
+
         String doubleStr = "";
-        if(!doubles.isEmpty())
-            doubleStr = "Categories choosen twice: "+doubles.toString();
-            
+        if (!doubles.isEmpty())
+            doubleStr = "Categories choosen twice: " + doubles.toString();
+
         if (set.size() != 5) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, 
-                        ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
                                 new Object[]{ doubleStr, EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
                                 Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR }));
             }
@@ -739,15 +812,15 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (!canValidate()||getGenerator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
-                || getMagic() == null || getCharacter() == null)
+        if (!canValidate() || getGenerator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null
+                || getMetaType() == null || getMagic() == null || getCharacter() == null)
             return true;
 
         boolean spendAll = hasSpendAllAttributesPoints(null, null) && hasSpendAllConnectionPoints(null, null) && hasSpendAllGroupPoints(null, null)
                 && hasSpendAllKarmaPoints(null, null) && hasSpendAllKnowlegeSkillPoints(null, null) && hasSpendAllMagicPoints(null, null)
                 && hasSpendAllMagicSkillsPoints(null, null) && hasSpendAllResourcePoints(null, null) && hasSpendAllSkillPoints(null, null)
                 && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null) && hasSpendAllSpellPoints(null, null)
-                && hasOnlyAllowedSources(null,null);
+                && hasOnlyAllowedSources(null, null);
 
         // int karmaPoints = getShr5Generator().getKarmaPoints();
         //
@@ -1124,7 +1197,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
         boolean hasSpendAllPoints = false;
         if (getMagic() instanceof Spellcaster) {
             Spellcaster sc = (Spellcaster)magic;
-            int diff =  sc.getSpellPoints()- sc.calcSpellPointsSpend(getCharacter());
+            int diff = sc.getSpellPoints() - sc.calcSpellPointsSpend(getCharacter());
             if (sc.calcSpellPointsSpend(getCharacter()) == sc.getSpellPoints())
                 hasSpendAllPoints = true;
 
@@ -1132,7 +1205,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
                     new Object[]{ diff, diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") });
         } else if (getMagic() instanceof Technomancer) {
             Technomancer tm = (Technomancer)magic;
-            int diff = tm.getComplexForms()-tm.calcComplexFormsSpend(getCharacter());
+            int diff = tm.getComplexForms() - tm.calcComplexFormsSpend(getCharacter());
             if (tm.calcComplexFormsSpend(getCharacter()) == tm.getComplexForms())
                 hasSpendAllPoints = true;
 
@@ -1202,53 +1275,56 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasBasicViolations(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMagic() == null ||getMetaType() == null || getCharacter() == null || getGenerator() == null || getCharacter().getPersona() == null)
+        if (getMagic() == null || getMetaType() == null || getCharacter() == null || getGenerator() == null || getCharacter().getPersona() == null)
             return true;
         if (state == GeneratorState.COMMITED)
             return true;
 
         boolean sameSpecies = getMetaType().getChoosableTypes().equals(getCharacter().getPersona().getSpezies());
-        
+
         if (!sameSpecies) {
             if (diagnostics != null) {
-                diagnostics.add
-                    (new BasicDiagnostic
-                        (Diagnostic.ERROR,
-                         Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS,
-                         ModelPlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "hasBasicViolations", EObjectValidator.getObjectLabel(this, context) }),
-                         new Object [] { this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_BASIC_VIOLATIONS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasBasicViolations", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
         return true;
     }
 
-    
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
-                if (resolve) return getResourcen();
+                if (resolve)
+                    return getResourcen();
                 return basicGetResourcen();
             case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
-                if (resolve) return getSkills();
+                if (resolve)
+                    return getSkills();
                 return basicGetSkills();
             case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
-                if (resolve) return getAttribute();
+                if (resolve)
+                    return getAttribute();
                 return basicGetAttribute();
             case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
-                if (resolve) return getMetaType();
+                if (resolve)
+                    return getMetaType();
                 return basicGetMetaType();
             case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
-                if (resolve) return getMagic();
+                if (resolve)
+                    return getMagic();
                 return basicGetMagic();
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
                 return getKarmaToResource();
@@ -1280,6 +1356,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1315,6 +1392,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1350,6 +1428,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1395,6 +1474,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1435,11 +1515,13 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (karmaToResource: ");

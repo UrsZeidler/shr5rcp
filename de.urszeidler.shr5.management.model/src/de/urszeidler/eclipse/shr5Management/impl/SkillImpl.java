@@ -10,8 +10,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.FluentIterable;
+
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
@@ -157,7 +161,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
         EList<PersonaFertigkeit> fertigkeiten = context.getPersona().getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if (personaFertigkeit.getFertigkeit() != null && personaFertigkeit.getFertigkeit().getClass().equals(FertigkeitImpl.class)){
-                kosten = kosten + personaFertigkeit.getStufe() + personaFertigkeit.getSpezialisierungen().size();
+                kosten = kosten + personaFertigkeit.getStufe() + FluentIterable.from(personaFertigkeit.getSpezialisierungen()).filter(Predicates.not(Predicates.instanceOf(PersonaMartialartStyle.class))).size();
                 //specCost = specCost + personaFertigkeit.getSpezialisierungen().size();
             }
         }
