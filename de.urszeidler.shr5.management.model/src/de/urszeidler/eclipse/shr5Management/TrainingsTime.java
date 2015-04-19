@@ -96,6 +96,7 @@ public interface TrainingsTime extends CharacterChange {
     /**
      * Returns the value of the '<em><b>Training</b></em>' containment reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.TrainingRange}.
+     * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime <em>Training Time</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Training</em>' containment reference list isn't clear,
@@ -104,7 +105,8 @@ public interface TrainingsTime extends CharacterChange {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Training</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTrainingsTime_Training()
-     * @model containment="true"
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime
+     * @model opposite="trainingTime" containment="true"
      * @generated
      */
     EList<TrainingRange> getTraining();

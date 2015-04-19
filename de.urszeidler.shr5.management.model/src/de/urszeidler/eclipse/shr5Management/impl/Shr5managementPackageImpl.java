@@ -2568,6 +2568,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getTrainingRange_TrainingTime() {
+        return (EReference)trainingRangeEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getQuellenConstrain() {
         return quellenConstrainEClass;
     }
@@ -3523,6 +3532,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(trainingRangeEClass, TRAINING_RANGE__START);
         createEAttribute(trainingRangeEClass, TRAINING_RANGE__END);
         createEAttribute(trainingRangeEClass, TRAINING_RANGE__DAYS_TRAINED);
+        createEReference(trainingRangeEClass, TRAINING_RANGE__TRAINING_TIME);
 
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
@@ -4250,7 +4260,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_DaysRemains(), ecorePackage.getEInt(), "daysRemains", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_TrainingComplete(), ecorePackage.getEBoolean(), "trainingComplete", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getTrainingsTime_Training(), this.getTrainingRange(), null, "training", null, 0, -1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getTrainingsTime_Training(), this.getTrainingRange(), this.getTrainingRange_TrainingTime(), "training", null, 0, -1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaMartialArtChangeEClass, PersonaMartialArtChange.class, "PersonaMartialArtChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaMartialArtChange_Style(), theShr5Package.getMartialartStyle(), null, "style", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4260,6 +4270,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getTrainingRange_Start(), theShr5Package.getShrDate(), "start", null, 0, 1, TrainingRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingRange_End(), theShr5Package.getShrDate(), "end", null, 0, 1, TrainingRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingRange_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingRange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getTrainingRange_TrainingTime(), this.getTrainingsTime(), this.getTrainingsTime_Training(), "trainingTime", null, 0, 1, TrainingRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

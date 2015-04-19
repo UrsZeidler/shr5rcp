@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import java.util.Calendar;
+
 import junit.textui.TestRunner;
 
 import org.eclipse.emf.ecore.EcorePackage;
@@ -25,6 +27,7 @@ import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
@@ -300,6 +303,85 @@ public class TrainingsTimeTest extends CharacterChangeTest {
         assertEquals(14, getFixture().getDaysRemains());
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @generated not
+     */
+    public void testGetDaysRemains_Range() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        pf.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+        character.getPersona().getFertigkeiten().add(pf);
+
+        createAdvacementSystem(character);
+
+        PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        attributeChange.setChangeable(pf);
+
+        attributeChange.setFrom(4);
+        attributeChange.setTo(5);
+
+        getFixture().setChange(attributeChange);
+        assertEquals(10, getFixture().getDaysRemains());
+        
+        Calendar calendar = Calendar.getInstance();
+        TrainingRange tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        tr.setStart(calendar.getTime());
+        getFixture().getTraining().add(tr);
+        
+        assertEquals(10, getFixture().getDaysRemains());
+        tr.setEnd(calendar.getTime());
+        assertEquals(9, getFixture().getDaysRemains());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @generated not
+     */
+    public void testGetDaysRemains_Range1() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        pf.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+        character.getPersona().getFertigkeiten().add(pf);
+
+        createAdvacementSystem(character);
+
+        PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        attributeChange.setChangeable(pf);
+
+        attributeChange.setFrom(4);
+        attributeChange.setTo(5);
+
+        getFixture().setChange(attributeChange);
+        assertEquals(10, getFixture().getDaysRemains());
+        
+        Calendar calendar = Calendar.getInstance();
+        TrainingRange tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        tr.setStart(calendar.getTime());
+        getFixture().getTraining().add(tr);
+        
+        assertEquals(10, getFixture().getDaysRemains());
+        tr.setEnd(calendar.getTime());
+        assertEquals(9, getFixture().getDaysRemains());
+        
+        tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        tr.setStart(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, 1);
+        tr.setEnd(calendar.getTime());
+        getFixture().getTraining().add(tr);
+        assertEquals(7, getFixture().getDaysRemains());
+    }
+
+
+    
     /**
      * @param character
      */

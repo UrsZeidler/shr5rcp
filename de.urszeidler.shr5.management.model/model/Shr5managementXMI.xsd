@@ -1310,12 +1310,14 @@ For a style select the skill as changeabel and the style, for a technique the te
   </xsd:element>
   <xsd:complexType name="TrainingRange">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="trainingTime" type="shr5mngt:TrainingsTime"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
     <xsd:attribute name="start" type="xsd:string"/>
     <xsd:attribute name="end" type="xsd:string"/>
+    <xsd:attribute name="trainingTime" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="TrainingRange" type="shr5mngt:TrainingRange"/>
 </xsd:schema>

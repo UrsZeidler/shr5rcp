@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getStart <em>Start</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getEnd <em>End</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getDaysTrained <em>Days Trained</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime <em>Training Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,5 +93,33 @@ public interface TrainingRange extends EObject {
      * @generated
      */
     int getDaysTrained();
+
+    /**
+     * Returns the value of the '<em><b>Training Time</b></em>' container reference.
+     * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getTraining <em>Training</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Training Time</em>' container reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Training Time</em>' container reference.
+     * @see #setTrainingTime(TrainingsTime)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTrainingRange_TrainingTime()
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getTraining
+     * @model opposite="training" transient="false"
+     * @generated
+     */
+    TrainingsTime getTrainingTime();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime <em>Training Time</em>}' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Training Time</em>' container reference.
+     * @see #getTrainingTime()
+     * @generated
+     */
+    void setTrainingTime(TrainingsTime value);
 
 } // TrainingRange

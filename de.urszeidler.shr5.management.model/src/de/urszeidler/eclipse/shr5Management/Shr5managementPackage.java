@@ -7290,13 +7290,22 @@ public interface Shr5managementPackage extends EPackage {
     int TRAINING_RANGE__DAYS_TRAINED = 2;
 
     /**
+     * The feature id for the '<em><b>Training Time</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAINING_RANGE__TRAINING_TIME = 3;
+
+    /**
      * The number of structural features of the '<em>Training Range</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRAINING_RANGE_FEATURE_COUNT = 3;
+    int TRAINING_RANGE_FEATURE_COUNT = 4;
 
     /**
      * The number of operations of the '<em>Training Range</em>' class.
@@ -9636,6 +9645,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getTrainingRange_DaysTrained();
+
+    /**
+     * Returns the meta object for the container reference '{@link de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime <em>Training Time</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the container reference '<em>Training Time</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRange#getTrainingTime()
+     * @see #getTrainingRange()
+     * @generated
+     */
+    EReference getTrainingRange_TrainingTime();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
@@ -12168,6 +12188,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute TRAINING_RANGE__DAYS_TRAINED = eINSTANCE.getTrainingRange_DaysTrained();
+
+        /**
+         * The meta object literal for the '<em><b>Training Time</b></em>' container reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference TRAINING_RANGE__TRAINING_TIME = eINSTANCE.getTrainingRange_TrainingTime();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.

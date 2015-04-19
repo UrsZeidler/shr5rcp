@@ -4,8 +4,8 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import java.text.DateFormat;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -148,15 +148,20 @@ public class TrainingRangeItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Date labelValue = ((TrainingRange)object).getStart();
-        String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-            getString("_UI_TrainingRange_type") :
-            getString("_UI_TrainingRange_type") + " " + label;
+        TrainingRange tr = (TrainingRange)object;
+        
+        String start="";
+        String end ="";
+        if (tr.getStart()!=null)
+            start = DateFormat.getDateInstance(DateFormat.SHORT).format(tr.getStart());
+        if (tr.getEnd()!=null)
+            end = DateFormat.getDateInstance(DateFormat.SHORT).format(tr.getEnd());
+
+        return String.format("[%s - %s] %d days", start,end,tr.getDaysTrained());
     }
     
 

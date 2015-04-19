@@ -1123,7 +1123,7 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainingComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="training" upperBound="-1"
-        eType="#//TrainingRange" containment="true"/>
+        eType="#//TrainingRange" containment="true" eOpposite="#//TrainingRange/trainingTime"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaMartialArtChange" eSuperTypes="#//PersonaChange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1145,5 +1145,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="daysTrained" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingTime" eType="#//TrainingsTime"
+        eOpposite="#//TrainingsTime/training"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -3,10 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
-
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -22,6 +20,7 @@ import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -29,6 +28,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvider {
@@ -36,6 +36,7 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public PersonaMartialArtChangeItemProvider(AdapterFactory adapterFactory) {
@@ -46,6 +47,7 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -63,6 +65,7 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This adds a property descriptor for the Changeable feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     protected void addChangeablePropertyDescriptor(Object object) {
@@ -79,7 +82,7 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
                             .filter(Predicates.in(persona.getFertigkeiten())).filter(new Predicate<PersonaFertigkeit>() {
                                 @Override
                                 public boolean apply(PersonaFertigkeit input) {
-                                    if(pmc.getStyle()!=null)
+                                    if (pmc.getStyle() != null)
                                         return pmc.getStyle().getUsableWith().contains(input.getFertigkeit());
                                     else
                                         return true;
@@ -92,87 +95,72 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
             }
         });
     }
-    
+
     /**
      * This adds a property descriptor for the Style feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     protected void addStylePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (new ItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_PersonaMartialArtChange_style_feature"),
-                 getString("_UI_PersonaMartialArtChange_style_description"),
-                 Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null){
-                
-                @Override
-                protected Collection<?> getComboBoxObjects(Object object) {
-                    final PersonaMartialArtChange pmc = (PersonaMartialArtChange)object;
-//                    if(pmc.getChangeable()!=null){
-//                        ImmutableList<?> list = FluentIterable.from(super.getComboBoxObjects(object)).filter(new Predicate<Object>() {
-//
-//                            @Override
-//                            public boolean apply(Object input) {
-//                                if (input instanceof MartialartStyle) {
-//                                    MartialartStyle ms = (MartialartStyle)input;
-//                                    return ms.getUsableWith().contains(pmc.getChangeable());
-//                                }
-//                                return false;
-//                            }
-//                        }).toList();
-//                        
-//                        return new ArrayList<Object>(list);
-//                    }                    
-                    return super.getComboBoxObjects(object);
-                }
-            });
+        itemPropertyDescriptors.add(new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_PersonaMartialArtChange_style_feature"),
+                getString("_UI_PersonaMartialArtChange_style_description"), Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE, true,
+                false, true, null, null, null) {
+
+            @Override
+            protected Collection<?> getComboBoxObjects(Object object) {
+                final PersonaMartialArtChange pmc = (PersonaMartialArtChange)object;
+                // if(pmc.getChangeable()!=null){
+                // ImmutableList<?> list = FluentIterable.from(super.getComboBoxObjects(object)).filter(new Predicate<Object>() {
+                //
+                // @Override
+                // public boolean apply(Object input) {
+                // if (input instanceof MartialartStyle) {
+                // MartialartStyle ms = (MartialartStyle)input;
+                // return ms.getUsableWith().contains(pmc.getChangeable());
+                // }
+                // return false;
+                // }
+                // }).toList();
+                //
+                // return new ArrayList<Object>(list);
+                // }
+                return super.getComboBoxObjects(object);
+            }
+        });
     }
 
     /**
      * This adds a property descriptor for the Technique feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     protected void addTechniquePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (new ItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_PersonaMartialArtChange_technique_feature"),
-                 getString("_UI_PersonaMartialArtChange_technique_description"),
-                 Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null){
-                @Override
-                protected Collection<?> getComboBoxObjects(Object object) {
-                   PersonaMartialArtChange pmc = (PersonaMartialArtChange)object;
-                   if(pmc.getStyle()!=null){
-                       return pmc.getStyle().getTechniques();
-                   }
-                    return super.getComboBoxObjects(object);
+        itemPropertyDescriptors.add(new ItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_PersonaMartialArtChange_technique_feature"),
+                getString("_UI_PersonaMartialArtChange_technique_description"), Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE,
+                true, false, true, null, null, null) {
+            @Override
+            protected Collection<?> getComboBoxObjects(Object object) {
+                PersonaMartialArtChange pmc = (PersonaMartialArtChange)object;
+                if (pmc.getStyle() != null) {
+                    return pmc.getStyle().getTechniques();
                 }
-                
-            });
+                return super.getComboBoxObjects(object);
+            }
+
+        });
     }
 
     /**
      * This returns PersonaMartialArtChange.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -184,23 +172,34 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        Date labelValue = ((PersonaMartialArtChange)object).getDate();
-        String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-            getString("_UI_PersonaMartialArtChange_type") :
-            getString("_UI_PersonaMartialArtChange_type") + " " + label;
+        PersonaMartialArtChange mac = (PersonaMartialArtChange)object;
+        if (mac.getStyle() == null && mac.getTechnique() == null && mac.getChangeable() == null)
+            return getString("_UI_PersonaMartialArtChange_type");
+
+        final ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+
+        final String unset = getString("_UI_Unset_text");
+        String style = Shr5EditingTools.getLabelForEObject(factory, unset, mac.getStyle());
+        String technique = Shr5EditingTools.getLabelForEObject(factory, unset, mac.getTechnique());
+        String fertigkeit = Shr5EditingTools.getLabelForEObject(factory, unset, mac.getChangeable());
+
+        if (mac.getChangeable() == null)
+            return String.format("learn %s for %s", technique,style);
+        else
+            return String.format("learn %s and %s for %s", style, technique, fertigkeit);
     }
-    
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -214,6 +213,7 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

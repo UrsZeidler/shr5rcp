@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
@@ -200,10 +200,18 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
             TrainingRate tr = (TrainingRate)ShadowrunManagmentTools.findMatchingRange(to, part.getRangeTableEntries());
             
             int calcDays = ShadowrunManagmentTools.calcDays(tr);
-            return (calcDays*to) - getDaysTrained();
+            return (calcDays*to) - (getDaysTrained()+calcTrainDays());
             }
         }
         return -1;
+    }
+
+    private int calcTrainDays() {
+        int t = 0;
+        for (TrainingRange trainingRange : getTraining()) {
+            t += trainingRange.getDaysTrained();
+        }
+        return t;
     }
 
     /**
@@ -234,9 +242,24 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      */
     public EList<TrainingRange> getTraining() {
         if (training == null) {
-            training = new EObjectContainmentEList<TrainingRange>(TrainingRange.class, this, Shr5managementPackage.TRAININGS_TIME__TRAINING);
+            training = new EObjectContainmentWithInverseEList<TrainingRange>(TrainingRange.class, this, Shr5managementPackage.TRAININGS_TIME__TRAINING, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME);
         }
         return training;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getTraining()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**

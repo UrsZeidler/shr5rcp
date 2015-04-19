@@ -418,6 +418,8 @@
     <nested inputs="shr5Management.ecore#//TrainingRange" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61">
       <nested inputs="shr5Management.ecore#//TrainingRange/start" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDAttributeUse=1"/>
       <nested inputs="shr5Management.ecore#//TrainingRange/end" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//TrainingRange/trainingTime" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//TrainingRange/trainingTime" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//TrainingRange" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDElementDeclaration=61"/>
   </nested>

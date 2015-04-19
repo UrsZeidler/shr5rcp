@@ -558,6 +558,7 @@
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRange/end"/>
       <genFeatures property="Readonly" createChild="false" propertyDescription="The days trained, a training where start and end are the same cont as one."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRange/daysTrained"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//TrainingRange/trainingTime"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

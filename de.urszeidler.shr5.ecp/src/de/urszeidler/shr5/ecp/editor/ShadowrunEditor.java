@@ -73,6 +73,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
@@ -825,6 +826,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                     logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
                 }
                 return super.caseTrainingRate(object);
+            }
+            
+            @Override
+            public Object caseTrainingRange(TrainingRange object) {
+                    try {
+                        addPage(new EObjectBasicPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    } catch (PartInitException e) {
+                        logError("error creating EObjectBasicPage", e);//$NON-NLS-1$
+                    }
+                return super.caseTrainingRange(object);
             }
             
             @Override
