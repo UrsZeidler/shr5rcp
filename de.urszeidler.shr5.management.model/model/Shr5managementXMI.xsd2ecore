@@ -407,6 +407,13 @@
       <nested inputs="shr5Management.ecore#//TrainingsTime/trainingComplete" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//TrainingsTime" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDElementDeclaration=59"/>
+    <nested inputs="shr5Management.ecore#//PersonaMartialArtChange" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60">
+      <nested inputs="shr5Management.ecore#//PersonaMartialArtChange/style" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//PersonaMartialArtChange/style" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//PersonaMartialArtChange/technique" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//PersonaMartialArtChange/technique" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PersonaMartialArtChange" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDElementDeclaration=60"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

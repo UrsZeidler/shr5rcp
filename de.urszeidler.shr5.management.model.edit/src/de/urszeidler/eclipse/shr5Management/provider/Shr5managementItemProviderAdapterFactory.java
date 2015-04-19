@@ -825,6 +825,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PersonaMartialArtChangeItemProvider personaMartialArtChangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPersonaMartialArtChangeAdapter() {
+        if (personaMartialArtChangeItemProvider == null) {
+            personaMartialArtChangeItemProvider = new PersonaMartialArtChangeItemProvider(this);
+        }
+
+        return personaMartialArtChangeItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.QuellenConstrain} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1313,6 +1336,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
         if (trainingRateItemProvider != null) trainingRateItemProvider.dispose();
         if (trainingsTimeItemProvider != null) trainingsTimeItemProvider.dispose();
+        if (personaMartialArtChangeItemProvider != null) personaMartialArtChangeItemProvider.dispose();
     }
 
 	/**
@@ -1586,6 +1610,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createTrainingsTime()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createPersonaMartialArtChange()));
 
                 return null;
             }

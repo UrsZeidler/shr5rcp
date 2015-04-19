@@ -2,6 +2,7 @@ package de.urszeidler.shr5.ecp.editor;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.IObservable;
@@ -35,6 +36,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.MartialartStyle;
@@ -246,8 +248,25 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     attributeChange.setTo(input.getStufe() + 1);
                     return attributeChange;
                 }
-            }).toList();
-
+            }).toList();//TODO
+//            Collection<EObject> mss = ItemPropertyDescriptor.getReachableObjectsOfType(p, Shr5Package.Literals.MARTIALART_STYLE);
+//            HashMap<Fertigkeit, List<MartialartStyle>> map = new HashMap<Fertigkeit, List<MartialartStyle>>();
+//            for (EObject eObject : mss) {
+//                if (eObject instanceof MartialartStyle) {
+//                    MartialartStyle ms = (MartialartStyle)eObject;
+//                    EList<Fertigkeit> usableWith = ms.getUsableWith();
+//                    for (Fertigkeit fertigkeit : usableWith) {
+//                        List<MartialartStyle> wl = map.get(fertigkeit);
+//                        if (wl == null) {
+//                            wl = new ArrayList<MartialartStyle>();
+//                            map.put(fertigkeit, wl);
+//                        }
+//                        wl.add(ms);
+//                    }
+//                }
+//            }
+//            FluentIterable.from(p.getFertigkeiten()).filter(type)
+            
             ArrayList<PersonaValueChange> a = new ArrayList<PersonaValueChange>();
             a.addAll(list);
             a.addAll(list2);
@@ -373,25 +392,26 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             else
                 return null;
 
-        } else if(Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES.equals(e.getFeature())){
+        } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__MARTIALART_STYLES.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.MARTIALART_STYLE);
             return provideTransformendObjects(object, objectsOfType, ShadowrunEditingTools.martialArt2PersonaMartialArtTransformer());
-         } else if(Shr5Package.Literals.PERSONA_MARTIALART_STYLE__TECHNIQUES.equals(e.getFeature())){
-             if (object instanceof PersonaMartialartStyle) {
-                 PersonaMartialartStyle mt = (PersonaMartialartStyle)object;
+        } else if (Shr5Package.Literals.PERSONA_MARTIALART_STYLE__TECHNIQUES.equals(e.getFeature())) {
+            if (object instanceof PersonaMartialartStyle) {
+                PersonaMartialartStyle mt = (PersonaMartialartStyle)object;
                 MartialartStyle technique = mt.getStyle();
-                if(technique!=null)
-                return provideTransformendObjects(object, new ArrayList<EObject>(technique.getTechniques()), ShadowrunEditingTools.martialArtTechnique2PersonaMartialArtTransformer());
+                if (technique != null)
+                    return provideTransformendObjects(object, new ArrayList<EObject>(technique.getTechniques()),
+                            ShadowrunEditingTools.martialArtTechnique2PersonaMartialArtTransformer());
 
             }
-             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.MARTIALART_TECHNIQUE);
-             return provideTransformendObjects(object, objectsOfType, ShadowrunEditingTools.martialArtTechnique2PersonaMartialArtTransformer());
-          } else if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(e.getFeature())) {
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.MARTIALART_TECHNIQUE);
+            return provideTransformendObjects(object, objectsOfType, ShadowrunEditingTools.martialArtTechnique2PersonaMartialArtTransformer());
+        } else if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.ZAUBER);
 
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
             Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
-            
+
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                     .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells,
                     new ArrayList<EObject>(objectsOfType), object);
@@ -439,8 +459,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
      * @return
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    private List<EObject> provideTransformendObjects(EObject object, Collection<EObject> objectsOfType,
-            Transformer transformer) {
+    private List<EObject> provideTransformendObjects(EObject object, Collection<EObject> objectsOfType, Transformer transformer) {
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(this.shadowrunEditor.getSite().getShell(), AdapterFactoryUtil.getInstance()
                 .getLabelProvider(), basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells,

@@ -45,6 +45,7 @@ import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
@@ -152,6 +153,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
             case Shr5managementPackage.TRAINING_RATE: return createTrainingRate();
             case Shr5managementPackage.TRAININGS_TIME: return createTrainingsTime();
+            case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE: return createPersonaMartialArtChange();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -497,6 +499,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public TrainingsTime createTrainingsTime() {
         TrainingsTimeImpl trainingsTime = new TrainingsTimeImpl();
         return trainingsTime;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonaMartialArtChange createPersonaMartialArtChange() {
+        PersonaMartialArtChangeImpl personaMartialArtChange = new PersonaMartialArtChangeImpl();
+        return personaMartialArtChange;
     }
 
     /**

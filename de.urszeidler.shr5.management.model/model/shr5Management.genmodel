@@ -541,5 +541,9 @@
       <genFeatures createChild="false" propertyDescription="Marker when the training is done."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
     </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//PersonaMartialArtChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/style"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/technique"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

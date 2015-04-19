@@ -529,6 +529,11 @@ public class ManagedCharacterItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
+                 Shr5managementFactory.eINSTANCE.createPersonaMartialArtChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR,
                  Shr5Factory.eINSTANCE.createGegenstand()));
 

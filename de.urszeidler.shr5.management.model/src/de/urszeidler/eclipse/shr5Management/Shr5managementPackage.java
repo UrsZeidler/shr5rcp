@@ -7117,6 +7117,133 @@ public interface Shr5managementPackage extends EPackage {
     int TRAININGS_TIME_OPERATION_COUNT = CHARACTER_CHANGE_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl <em>Persona Martial Art Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPersonaMartialArtChange()
+     * @generated
+     */
+    int PERSONA_MARTIAL_ART_CHANGE = 60;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__DATE = PERSONA_CHANGE__DATE;
+
+    /**
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__KARMA_COST = PERSONA_CHANGE__KARMA_COST;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__CHARACTER = PERSONA_CHANGE__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Change Applied</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__CHANGE_APPLIED = PERSONA_CHANGE__CHANGE_APPLIED;
+
+    /**
+     * The feature id for the '<em><b>Date Applied</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__DATE_APPLIED = PERSONA_CHANGE__DATE_APPLIED;
+
+    /**
+     * The feature id for the '<em><b>From</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__FROM = PERSONA_CHANGE__FROM;
+
+    /**
+     * The feature id for the '<em><b>To</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__TO = PERSONA_CHANGE__TO;
+
+    /**
+     * The feature id for the '<em><b>Changeable</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__CHANGEABLE = PERSONA_CHANGE__CHANGEABLE;
+
+    /**
+     * The feature id for the '<em><b>Style</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__STYLE = PERSONA_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Technique</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE = PERSONA_CHANGE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Persona Martial Art Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE_FEATURE_COUNT = PERSONA_CHANGE_FEATURE_COUNT + 2;
+
+    /**
+     * The operation id for the '<em>Apply Changes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE___APPLY_CHANGES = PERSONA_CHANGE___APPLY_CHANGES;
+
+    /**
+     * The number of operations of the '<em>Persona Martial Art Change</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_MARTIAL_ART_CHANGE_OPERATION_COUNT = PERSONA_CHANGE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7124,7 +7251,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 60;
+	int GENERATOR_STATE = 61;
 
 
 	/**
@@ -7135,7 +7262,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 61;
+	int SEX = 62;
 
 
 	/**
@@ -7146,7 +7273,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
      * @generated
      */
-    int QUELLEN_CONSTRAIN_TYPE = 62;
+    int QUELLEN_CONSTRAIN_TYPE = 63;
 
 
     /**
@@ -7157,7 +7284,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifeModuleType()
      * @generated
      */
-    int LIFE_MODULE_TYPE = 63;
+    int LIFE_MODULE_TYPE = 64;
 
 
     /**
@@ -9359,6 +9486,38 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getTrainingsTime_TrainingComplete();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange <em>Persona Martial Art Change</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Persona Martial Art Change</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange
+     * @generated
+     */
+    EClass getPersonaMartialArtChange();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange#getStyle <em>Style</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Style</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange#getStyle()
+     * @see #getPersonaMartialArtChange()
+     * @generated
+     */
+    EReference getPersonaMartialArtChange_Style();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange#getTechnique <em>Technique</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Technique</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange#getTechnique()
+     * @see #getPersonaMartialArtChange()
+     * @generated
+     */
+    EReference getPersonaMartialArtChange_Technique();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
@@ -11823,6 +11982,32 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute TRAININGS_TIME__TRAINING_COMPLETE = eINSTANCE.getTrainingsTime_TrainingComplete();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl <em>Persona Martial Art Change</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPersonaMartialArtChange()
+         * @generated
+         */
+        EClass PERSONA_MARTIAL_ART_CHANGE = eINSTANCE.getPersonaMartialArtChange();
+
+        /**
+         * The meta object literal for the '<em><b>Style</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_MARTIAL_ART_CHANGE__STYLE = eINSTANCE.getPersonaMartialArtChange_Style();
+
+        /**
+         * The meta object literal for the '<em><b>Technique</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE = eINSTANCE.getPersonaMartialArtChange_Technique();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.

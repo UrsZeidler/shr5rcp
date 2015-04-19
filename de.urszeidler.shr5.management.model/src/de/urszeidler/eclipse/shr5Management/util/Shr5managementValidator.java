@@ -53,6 +53,7 @@ import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
@@ -493,6 +494,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateRangeTable((RangeTable<?>)value, diagnostics, context);
             case Shr5managementPackage.TRAININGS_TIME:
                 return validateTrainingsTime((TrainingsTime)value, diagnostics, context);
+            case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE:
+                return validatePersonaMartialArtChange((PersonaMartialArtChange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1205,6 +1208,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateTrainingsTime(TrainingsTime trainingsTime, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(trainingsTime, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validatePersonaMartialArtChange(PersonaMartialArtChange personaMartialArtChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(personaMartialArtChange, diagnostics, context);
     }
 
     /**

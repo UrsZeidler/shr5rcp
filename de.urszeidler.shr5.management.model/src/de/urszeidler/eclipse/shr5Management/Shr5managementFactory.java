@@ -284,6 +284,15 @@ public interface Shr5managementFactory extends EFactory {
     TrainingsTime createTrainingsTime();
 
     /**
+     * Returns a new object of class '<em>Persona Martial Art Change</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona Martial Art Change</em>'.
+     * @generated
+     */
+    PersonaMartialArtChange createPersonaMartialArtChange();
+
+    /**
      * Returns a new object of class '<em>Quellen Constrain</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

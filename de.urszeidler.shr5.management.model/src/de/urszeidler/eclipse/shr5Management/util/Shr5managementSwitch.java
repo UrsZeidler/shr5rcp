@@ -53,6 +53,7 @@ import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
@@ -578,6 +579,15 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
                 T1 result = caseTrainingsTime(trainingsTime);
                 if (result == null) result = caseCharacterChange(trainingsTime);
                 if (result == null) result = caseDiaryEntry(trainingsTime);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE: {
+                PersonaMartialArtChange personaMartialArtChange = (PersonaMartialArtChange)theEObject;
+                T1 result = casePersonaMartialArtChange(personaMartialArtChange);
+                if (result == null) result = casePersonaChange(personaMartialArtChange);
+                if (result == null) result = casePersonaValueChange(personaMartialArtChange);
+                if (result == null) result = caseChanges(personaMartialArtChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1212,6 +1222,21 @@ public class Shr5managementSwitch<T1> extends Switch<T1> {
      * @generated
      */
     public T1 caseTrainingsTime(TrainingsTime object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Persona Martial Art Change</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Martial Art Change</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T1 casePersonaMartialArtChange(PersonaMartialArtChange object) {
         return null;
     }
 

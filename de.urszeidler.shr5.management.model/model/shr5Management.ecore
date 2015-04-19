@@ -1103,4 +1103,15 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainingComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaMartialArtChange" eSuperTypes="#//PersonaChange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A persona martialart change manage the gain of a style or a technique.&#xA;For a style select the skill as changeabel and the style, for a technique the technique and the stlye. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MartialartStyle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When technique is null the style is learned as spec for the selected changeable."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="technique" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MartialartTechnique"/>
+  </eClassifiers>
 </ecore:EPackage>

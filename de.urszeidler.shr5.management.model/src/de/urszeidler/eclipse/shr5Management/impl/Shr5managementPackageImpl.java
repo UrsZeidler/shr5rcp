@@ -58,6 +58,7 @@ import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Pack;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
@@ -384,6 +385,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass trainingsTimeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass personaMartialArtChangeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2480,6 +2488,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getPersonaMartialArtChange() {
+        return personaMartialArtChangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonaMartialArtChange_Style() {
+        return (EReference)personaMartialArtChangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonaMartialArtChange_Technique() {
+        return (EReference)personaMartialArtChangeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getQuellenConstrain() {
         return quellenConstrainEClass;
     }
@@ -3426,6 +3461,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_REMAINS);
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__TRAINING_COMPLETE);
 
+        personaMartialArtChangeEClass = createEClass(PERSONA_MARTIAL_ART_CHANGE);
+        createEReference(personaMartialArtChangeEClass, PERSONA_MARTIAL_ART_CHANGE__STYLE);
+        createEReference(personaMartialArtChangeEClass, PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -3561,6 +3600,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         shr5KarmaGeneratorEClass.getEGenericSuperTypes().add(g1);
         trainingRateEClass.getESuperTypes().add(this.getRangeTableEntry());
         trainingsTimeEClass.getESuperTypes().add(this.getCharacterChange());
+        personaMartialArtChangeEClass.getESuperTypes().add(this.getPersonaChange());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4151,6 +4191,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_DaysRemains(), ecorePackage.getEInt(), "daysRemains", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_TrainingComplete(), ecorePackage.getEBoolean(), "trainingComplete", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(personaMartialArtChangeEClass, PersonaMartialArtChange.class, "PersonaMartialArtChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPersonaMartialArtChange_Style(), theShr5Package.getMartialartStyle(), null, "style", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPersonaMartialArtChange_Technique(), theShr5Package.getMartialartTechnique(), null, "technique", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

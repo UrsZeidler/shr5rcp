@@ -1235,4 +1235,34 @@ One entrie may be effective for a defined value.
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="TrainingsTime" type="shr5mngt:TrainingsTime"/>
+  <xsd:complexType name="PersonaMartialArtChange">
+    <xsd:annotation>
+      <xsd:documentation>A persona martialart change manage the gain of a style or a technique.
+For a style select the skill as changeabel and the style, for a technique the technique and the stlye. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PersonaChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="style" type="shr5:MartialartStyle">
+            <xsd:annotation>
+              <xsd:documentation>When technique is null the style is learned as spec for the selected changeable.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="technique" type="shr5:MartialartTechnique"/>
+        </xsd:choice>
+        <xsd:attribute name="style" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>When technique is null the style is learned as spec for the selected changeable.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="technique" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaMartialArtChange" type="shr5mngt:PersonaMartialArtChange">
+    <xsd:annotation>
+      <xsd:documentation>A persona martialart change manage the gain of a style or a technique.
+For a style select the skill as changeabel and the style, for a technique the technique and the stlye. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>
