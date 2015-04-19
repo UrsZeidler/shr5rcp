@@ -34,7 +34,7 @@ public interface PersonaMartialArtChange extends PersonaChange {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * When technique is null the style is learned as spec for the selected changeable.
+     * When the changeable skill is not null the style is learned as spec for the selected skill.
      * <!-- end-model-doc -->
      * @return the value of the '<em>Style</em>' reference.
      * @see #setStyle(MartialartStyle)
@@ -62,6 +62,9 @@ public interface PersonaMartialArtChange extends PersonaChange {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Technique</em>' reference.
      * @see #setTechnique(MartialartTechnique)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaMartialArtChange_Technique()

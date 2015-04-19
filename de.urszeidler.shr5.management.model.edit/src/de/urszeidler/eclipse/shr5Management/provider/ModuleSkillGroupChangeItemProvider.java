@@ -66,7 +66,7 @@ public class ModuleSkillGroupChangeItemProvider extends ModuleTypeChangeItemProv
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleSkillGroupChange_skillGroup_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleSkillGroupChange_skillGroup_feature", "_UI_ModuleSkillGroupChange_type"),
+                 getString("_UI_ModuleSkillGroupChange_skillGroup_description"),
                  Shr5managementPackage.Literals.MODULE_SKILL_GROUP_CHANGE__SKILL_GROUP,
                  true,
                  false,

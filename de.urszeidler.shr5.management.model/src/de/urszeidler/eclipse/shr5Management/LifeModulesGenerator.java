@@ -36,6 +36,9 @@ public interface LifeModulesGenerator extends KarmaGenerator<LifeModulesSystem> 
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The selected nationality module, it is requiered.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Nationality</em>' reference.
      * @see #setNationality(LifeModule)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_Nationality()
@@ -62,6 +65,9 @@ public interface LifeModulesGenerator extends KarmaGenerator<LifeModulesSystem> 
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The selected formative years module, it is requiered.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Formative Years</em>' reference.
      * @see #setFormativeYears(LifeModule)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_FormativeYears()
@@ -88,6 +94,9 @@ public interface LifeModulesGenerator extends KarmaGenerator<LifeModulesSystem> 
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The selected teen years module, it is requiered.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Teen Years</em>' reference.
      * @see #setTeenYears(LifeModule)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_TeenYears()
@@ -114,6 +123,9 @@ public interface LifeModulesGenerator extends KarmaGenerator<LifeModulesSystem> 
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Further Education</em>' reference.
      * @see #setFurtherEducation(LifeModule)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_FurtherEducation()
@@ -171,6 +183,9 @@ public interface LifeModulesGenerator extends KarmaGenerator<LifeModulesSystem> 
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The calculated age the character is starting with.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Starting Age</em>' attribute.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesGenerator_StartingAge()
      * @model transient="true" changeable="false" volatile="true" derived="true"

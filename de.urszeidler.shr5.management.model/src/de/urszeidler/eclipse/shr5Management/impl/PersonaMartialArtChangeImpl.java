@@ -30,8 +30,8 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getStyle <em>Style</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getTechnique <em>Technique</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getStyle <em>Style</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getTechnique <em>Technique</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,7 +42,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStyle()
      * @generated
      * @ordered
@@ -53,7 +52,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * The cached value of the '{@link #getTechnique() <em>Technique</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getTechnique()
      * @generated
      * @ordered
@@ -63,7 +61,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaMartialArtChangeImpl() {
@@ -73,7 +70,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -84,7 +80,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MartialartStyle getStyle() {
@@ -93,8 +88,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
             style = (MartialartStyle)eResolveProxy(oldStyle);
             if (style != oldStyle) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__STYLE, oldStyle,
-                            style));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__STYLE, oldStyle, style));
             }
         }
         return style;
@@ -103,7 +97,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MartialartStyle basicGetStyle() {
@@ -114,19 +107,25 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setStyle(MartialartStyle newStyle) {
         MartialartStyle oldStyle = style;
         style = newStyle;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__STYLE, oldStyle, style));
+        if (newStyle != null){
+            if (!newStyle.getTechniques().contains(getTechnique()))
+                setTechnique(null);
+            if(getChangeable() instanceof PersonaFertigkeit)
+                if(!newStyle.getUsableWith().contains(((PersonaFertigkeit)getChangeable()).getFertigkeit()))
+                    setChangeable(null);
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MartialartTechnique getTechnique() {
@@ -135,8 +134,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
             technique = (MartialartTechnique)eResolveProxy(oldTechnique);
             if (technique != oldTechnique) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE,
-                            oldTechnique, technique));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE, oldTechnique, technique));
             }
         }
         return technique;
@@ -145,7 +143,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MartialartTechnique basicGetTechnique() {
@@ -155,33 +152,28 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setTechnique(MartialartTechnique newTechnique) {
         MartialartTechnique oldTechnique = technique;
         technique = newTechnique;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE, oldTechnique,
-                    technique));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE, oldTechnique, technique));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__STYLE:
-                if (resolve)
-                    return getStyle();
+                if (resolve) return getStyle();
                 return basicGetStyle();
             case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE:
-                if (resolve)
-                    return getTechnique();
+                if (resolve) return getTechnique();
                 return basicGetTechnique();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -190,7 +182,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -209,7 +200,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -228,7 +218,6 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

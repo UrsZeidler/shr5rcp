@@ -1,6 +1,9 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -28,19 +31,23 @@ import de.urszeidler.eclipse.shr5Management.ModuleFeatureChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillChange;
 import de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange;
 import de.urszeidler.eclipse.shr5Management.ModuleTeachableChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
-public class EObjectBasicPage extends AbstractShr5Page<EObject> {
+public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapter {
     private EObject object;
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
+    private Composite compositedetail_1;
+    private EmfFormBuilder changeFormBuilder;
 
     /**
      * Create the form page.
@@ -79,8 +86,20 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
 
 //        if (!object.eAdapters().contains(this))
 //            object.eAdapters().add(this);
+        object.eAdapters().add(this);
     }
 
+    @Override
+    public void dispose() {
+        if(object.eAdapters().contains(this))
+            object.eAdapters().remove(this);
+        
+        if(changeFormBuilder!=null)
+            changeFormBuilder.dispose();
+        
+        super.dispose();
+    }
+    
     /**
      * Create contents of the form.
      * 
@@ -101,6 +120,12 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
         composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
+
+        compositedetail_1 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        compositedetail_1.setLayout(new GridLayout(3, false));
+        compositedetail_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        managedForm.getToolkit().adapt(compositedetail_1);
+        managedForm.getToolkit().paintBordersFor(compositedetail_1);
 
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
@@ -153,6 +178,11 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, composite);
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, composite, labelEntryFactory);
 //                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
+                TrainingsTime tt = (TrainingsTime)object;
+                if (tt.getChange() instanceof PersonaMartialArtChange) {
+                    PersonaMartialArtChange pmac = (PersonaMartialArtChange)tt.getChange();
+                    compositedetail_1 = createChangeDetail(managedForm,pmac,compositedetail_1);
+                }
                 
             } else if (object instanceof CharacterChange) {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, new DateEntryFactory(toolkit));
@@ -176,6 +206,27 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
     }
 
+    private Composite createChangeDetail(IManagedForm managedForm, PersonaMartialArtChange pmac, Composite compositedetail_12) {
+        if(changeFormBuilder!=null)
+            changeFormBuilder.dispose();
+
+        compositedetail_12.dispose();
+        Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite.setLayout(new GridLayout(3, false));
+        composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        managedForm.getToolkit().adapt(composite);
+        managedForm.getToolkit().paintBordersFor(composite);
+
+        changeFormBuilder = createConfiguredFormBuilder(managedForm);
+        changeFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite);
+        changeFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE, composite);
+        changeFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE, composite);
+        
+        changeFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), pmac);
+        composite.getParent().layout(true);
+        return composite;
+    }
+
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
@@ -189,5 +240,32 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> {
 
     protected String featureName(EStructuralFeature feature) {
         return ShadowrunEditingTools.toFeatureName(object, feature);
+    }
+
+    @Override
+    public void notifyChanged(Notification notification) {
+        Object feature = notification.getFeature();
+        if (Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE.equals(feature)) {
+            if(((TrainingsTime)object).getChange() instanceof  PersonaMartialArtChange)
+                compositedetail_1 = createChangeDetail(getManagedForm(), (PersonaMartialArtChange)((TrainingsTime)object).getChange(), compositedetail_1);
+            else
+                compositedetail_1.dispose();
+        }
+        
+    }
+
+    @Override
+    public Notifier getTarget() {
+        return null;
+    }
+
+    @Override
+    public void setTarget(Notifier newTarget) {
+        
+    }
+
+    @Override
+    public boolean isAdapterForType(Object type) {
+        return false;
     }
 }

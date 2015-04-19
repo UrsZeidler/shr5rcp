@@ -35,10 +35,9 @@ import de.urszeidler.eclipse.shr5Management.TrainingsTime;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class TrainingsTimeTest extends CharacterChangeTest {
@@ -46,7 +45,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -57,7 +55,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
      * Constructs a new Trainings Time test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public TrainingsTimeTest(String name) {
@@ -68,7 +65,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
      * Returns the fixture for this Trainings Time test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -79,7 +75,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -91,7 +86,6 @@ public class TrainingsTimeTest extends CharacterChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

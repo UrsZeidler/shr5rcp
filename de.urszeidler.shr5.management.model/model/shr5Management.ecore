@@ -980,18 +980,38 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifeModulesGenerator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationality" lowerBound="1"
-        eType="#//LifeModule"/>
+        eType="#//LifeModule">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The selected nationality module, it is requiered."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formativeYears" lowerBound="1"
-        eType="#//LifeModule"/>
+        eType="#//LifeModule">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The selected formative years module, it is requiered."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teenYears" lowerBound="1"
-        eType="#//LifeModule"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="furtherEducation" eType="#//LifeModule"/>
+        eType="#//LifeModule">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The selected teen years module, it is requiered."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="furtherEducation" eType="#//LifeModule">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realLife" lowerBound="1"
         upperBound="-1" eType="#//LifeModule"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleKarmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true" derived="true"/>
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The calculated age the character is starting with."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eGenericSuperTypes eClassifier="#//KarmaGenerator">
       <eTypeArguments eClassifier="#//LifeModulesSystem"/>
     </eGenericSuperTypes>
@@ -1109,9 +1129,13 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MartialartStyle">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="When technique is null the style is learned as spec for the selected changeable."/>
+        <details key="documentation" value="When the changeable skill is not null the style is learned as spec for the selected skill."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="technique" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MartialartTechnique"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="technique" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//MartialartTechnique">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

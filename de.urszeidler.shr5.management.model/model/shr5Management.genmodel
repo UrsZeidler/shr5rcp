@@ -463,7 +463,7 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifeModulesGenerator">
-      <genFeatures notify="false" createChild="false" propertyDescription="The selected life module."
+      <genFeatures notify="false" createChild="false" propertyDescription="The selected nationality module, it is requiered."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/nationality"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The selected life module."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifeModulesGenerator/formativeYears"/>
@@ -499,19 +499,22 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTeachableChange/teachable"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleAttributeChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/attribute"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The attribute to change."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleAttributeChange/attribute"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleFeatureChange">
-      <genFeatures notify="false" createChild="false" propertyDescription="The feature of the character to set."
+      <genFeatures notify="false" createChild="false" propertyDescription="The feature of the character to set. Select first the feature to filter the chooseable objects."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/feature"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleFeatureChange/value"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ModuleSkillGroupChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillGroupChange/skillGroup"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The skill group gaint by the change."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleSkillGroupChange/skillGroup"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ModuleTypeChange">
       <genTypeParameters ecoreTypeParameter="shr5Management.ecore#//ModuleTypeChange/T"/>
-      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleTypeChange/grade"/>
+      <genFeatures createChild="false" propertyDescription="The number of points for the change."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//ModuleTypeChange/grade"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The selected value, can be empty when the list is set."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ModuleTypeChange/selected"/>
       <genFeatures notify="false" createChild="false" propertyDescription="A list of possible values to choose from."
@@ -542,8 +545,10 @@
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PersonaMartialArtChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/style"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/technique"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="When the changeable skill is not null the style is learned as spec for the selected skill."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/style"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/technique"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

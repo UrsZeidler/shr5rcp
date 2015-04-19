@@ -64,7 +64,7 @@ public class ModuleTypeChangeItemProvider extends ModuleChangeItemProvider {
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ModuleTypeChange_grade_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ModuleTypeChange_grade_feature", "_UI_ModuleTypeChange_type"),
+                 getString("_UI_ModuleTypeChange_grade_description"),
                  Shr5managementPackage.Literals.MODULE_TYPE_CHANGE__GRADE,
                  true,
                  false,

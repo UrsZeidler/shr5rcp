@@ -1026,16 +1026,48 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:KarmaGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="nationality" type="shr5mngt:LifeModule"/>
-          <xsd:element name="formativeYears" type="shr5mngt:LifeModule"/>
-          <xsd:element name="teenYears" type="shr5mngt:LifeModule"/>
-          <xsd:element name="furtherEducation" type="shr5mngt:LifeModule"/>
+          <xsd:element name="nationality" type="shr5mngt:LifeModule">
+            <xsd:annotation>
+              <xsd:documentation>The selected nationality module, it is requiered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="formativeYears" type="shr5mngt:LifeModule">
+            <xsd:annotation>
+              <xsd:documentation>The selected formative years module, it is requiered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="teenYears" type="shr5mngt:LifeModule">
+            <xsd:annotation>
+              <xsd:documentation>The selected teen years module, it is requiered.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="furtherEducation" type="shr5mngt:LifeModule">
+            <xsd:annotation>
+              <xsd:documentation/>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="realLife" type="shr5mngt:LifeModule"/>
         </xsd:choice>
-        <xsd:attribute name="nationality" type="xsd:string"/>
-        <xsd:attribute name="formativeYears" type="xsd:string"/>
-        <xsd:attribute name="teenYears" type="xsd:string"/>
-        <xsd:attribute name="furtherEducation" type="xsd:string"/>
+        <xsd:attribute name="nationality" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The selected nationality module, it is requiered.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="formativeYears" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The selected formative years module, it is requiered.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="teenYears" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The selected teen years module, it is requiered.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="furtherEducation" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation/>
+          </xsd:annotation>
+        </xsd:attribute>
         <xsd:attribute name="realLife" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1245,17 +1277,25 @@ For a style select the skill as changeabel and the style, for a technique the te
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="style" type="shr5:MartialartStyle">
             <xsd:annotation>
-              <xsd:documentation>When technique is null the style is learned as spec for the selected changeable.</xsd:documentation>
+              <xsd:documentation>When the changeable skill is not null the style is learned as spec for the selected skill.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="technique" type="shr5:MartialartTechnique"/>
+          <xsd:element name="technique" type="shr5:MartialartTechnique">
+            <xsd:annotation>
+              <xsd:documentation>When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="style" type="xsd:string">
           <xsd:annotation>
-            <xsd:documentation>When technique is null the style is learned as spec for the selected changeable.</xsd:documentation>
+            <xsd:documentation>When the changeable skill is not null the style is learned as spec for the selected skill.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="technique" type="xsd:string"/>
+        <xsd:attribute name="technique" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

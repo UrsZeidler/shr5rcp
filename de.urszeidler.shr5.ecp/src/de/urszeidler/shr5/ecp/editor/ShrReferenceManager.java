@@ -2,7 +2,6 @@ package de.urszeidler.shr5.ecp.editor;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.IObservable;
@@ -36,7 +35,6 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
-import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.MartialartStyle;
@@ -248,7 +246,8 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                     attributeChange.setTo(input.getStufe() + 1);
                     return attributeChange;
                 }
-            }).toList();//TODO
+            }).toList();
+            
 //            Collection<EObject> mss = ItemPropertyDescriptor.getReachableObjectsOfType(p, Shr5Package.Literals.MARTIALART_STYLE);
 //            HashMap<Fertigkeit, List<MartialartStyle>> map = new HashMap<Fertigkeit, List<MartialartStyle>>();
 //            for (EObject eObject : mss) {
@@ -270,7 +269,8 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             ArrayList<PersonaValueChange> a = new ArrayList<PersonaValueChange>();
             a.addAll(list);
             a.addAll(list2);
-            a.addAll(list3);
+            a.addAll(list3);            
+            a.add(Shr5managementFactory.eINSTANCE.createPersonaMartialArtChange());
 
             Object[] choises = NullObject.toChoises(a);
             OwnChooseDialog dialog = new OwnChooseDialog(this.shadowrunEditor.getEditorSite().getShell(), choises, "Select Training", "");

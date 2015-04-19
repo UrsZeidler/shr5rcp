@@ -25,7 +25,6 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -36,7 +35,6 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
      * Constructs a new Persona Martial Art Change test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PersonaMartialArtChangeTest(String name) {
@@ -47,7 +45,6 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
      * Returns the fixture for this Persona Martial Art Change test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -58,7 +55,6 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -70,7 +66,6 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
