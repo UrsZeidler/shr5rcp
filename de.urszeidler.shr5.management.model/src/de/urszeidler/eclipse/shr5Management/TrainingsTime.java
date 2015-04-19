@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +17,7 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysTrained <em>Days Trained</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains <em>Days Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#isTrainingComplete <em>Training Complete</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getTraining <em>Training</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,5 +92,21 @@ public interface TrainingsTime extends CharacterChange {
      * @generated
      */
     void setTrainingComplete(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Training</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.TrainingRange}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Training</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Training</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTrainingsTime_Training()
+     * @model containment="true"
+     * @generated
+     */
+    EList<TrainingRange> getTraining();
 
 } // TrainingsTime

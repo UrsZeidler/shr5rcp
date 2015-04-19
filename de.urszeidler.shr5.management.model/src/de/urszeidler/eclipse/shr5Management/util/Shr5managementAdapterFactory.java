@@ -74,6 +74,7 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
@@ -376,6 +377,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter casePersonaMartialArtChange(PersonaMartialArtChange object) {
                 return createPersonaMartialArtChangeAdapter();
+            }
+            @Override
+            public Adapter caseTrainingRange(TrainingRange object) {
+                return createTrainingRangeAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -1012,6 +1017,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createPersonaMartialArtChangeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.TrainingRange <em>Training Range</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingRange
+     * @generated
+     */
+    public Adapter createTrainingRangeAdapter() {
         return null;
     }
 

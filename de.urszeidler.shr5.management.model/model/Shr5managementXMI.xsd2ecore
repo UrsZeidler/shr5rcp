@@ -405,6 +405,7 @@
     <nested inputs="shr5Management.ecore#//TrainingsTime" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59">
       <nested inputs="shr5Management.ecore#//TrainingsTime/daysTrained" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDAttributeUse"/>
       <nested inputs="shr5Management.ecore#//TrainingsTime/trainingComplete" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//TrainingsTime/training" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDComplexTypeDefinition=59/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//TrainingsTime" outputs="Shr5managementXMI.xsd#//TrainingsTime;XSDElementDeclaration=59"/>
     <nested inputs="shr5Management.ecore#//PersonaMartialArtChange" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60">
@@ -414,6 +415,11 @@
       <nested inputs="shr5Management.ecore#//PersonaMartialArtChange/technique" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//PersonaMartialArtChange" outputs="Shr5managementXMI.xsd#//PersonaMartialArtChange;XSDElementDeclaration=60"/>
+    <nested inputs="shr5Management.ecore#//TrainingRange" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61">
+      <nested inputs="shr5Management.ecore#//TrainingRange/start" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//TrainingRange/end" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDComplexTypeDefinition=61/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//TrainingRange" outputs="Shr5managementXMI.xsd#//TrainingRange;XSDElementDeclaration=61"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

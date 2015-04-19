@@ -1261,6 +1261,9 @@ One entrie may be effective for a defined value.
   <xsd:complexType name="TrainingsTime">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="training" type="shr5mngt:TrainingRange"/>
+        </xsd:choice>
         <xsd:attribute name="daysTrained" type="xsd:int"/>
         <xsd:attribute name="trainingComplete" type="xsd:boolean"/>
       </xsd:extension>
@@ -1305,4 +1308,14 @@ For a style select the skill as changeabel and the style, for a technique the te
 For a style select the skill as changeabel and the style, for a technique the technique and the stlye. </xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="TrainingRange">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="start" type="xsd:string"/>
+    <xsd:attribute name="end" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="TrainingRange" type="shr5mngt:TrainingRange"/>
 </xsd:schema>

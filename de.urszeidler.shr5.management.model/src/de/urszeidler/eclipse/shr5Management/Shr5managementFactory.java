@@ -293,6 +293,15 @@ public interface Shr5managementFactory extends EFactory {
     PersonaMartialArtChange createPersonaMartialArtChange();
 
     /**
+     * Returns a new object of class '<em>Training Range</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Training Range</em>'.
+     * @generated
+     */
+    TrainingRange createTrainingRange();
+
+    /**
      * Returns a new object of class '<em>Quellen Constrain</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

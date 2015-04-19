@@ -75,6 +75,7 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
@@ -496,6 +497,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateTrainingsTime((TrainingsTime)value, diagnostics, context);
             case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE:
                 return validatePersonaMartialArtChange((PersonaMartialArtChange)value, diagnostics, context);
+            case Shr5managementPackage.TRAINING_RANGE:
+                return validateTrainingRange((TrainingRange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -1217,6 +1220,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validatePersonaMartialArtChange(PersonaMartialArtChange personaMartialArtChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(personaMartialArtChange, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateTrainingRange(TrainingRange trainingRange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(trainingRange, diagnostics, context);
     }
 
     /**

@@ -543,12 +543,21 @@
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/daysRemains"/>
       <genFeatures createChild="false" propertyDescription="Marker when the training is done."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//TrainingsTime/training"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PersonaMartialArtChange">
       <genFeatures notify="false" createChild="false" propertyDescription="When the changeable skill is not null the style is learned as spec for the selected skill."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/style"/>
       <genFeatures notify="false" createChild="false" propertyDescription="When the skill is not set the technique will be added to the selected style, when not it repesents the first technique learned."
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaMartialArtChange/technique"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//TrainingRange">
+      <genFeatures createChild="false" propertyDescription="The date the training start."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRange/start"/>
+      <genFeatures createChild="false" propertyDescription="The date the training ends."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRange/end"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The days trained, a training where start and end are the same cont as one."
+          ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingRange/daysTrained"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

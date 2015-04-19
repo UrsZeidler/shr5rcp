@@ -3,11 +3,18 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -21,6 +28,7 @@ import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
@@ -35,6 +43,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysTrained <em>Days Trained</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysRemains <em>Days Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#isTrainingComplete <em>Training Complete</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getTraining <em>Training</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,6 +99,16 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * @ordered
      */
     protected boolean trainingComplete = TRAINING_COMPLETE_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getTraining() <em>Training</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTraining()
+     * @generated
+     * @ordered
+     */
+    protected EList<TrainingRange> training;
 
     /**
      * <!-- begin-user-doc -->
@@ -213,6 +232,32 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<TrainingRange> getTraining() {
+        if (training == null) {
+            training = new EObjectContainmentEList<TrainingRange>(TrainingRange.class, this, Shr5managementPackage.TRAININGS_TIME__TRAINING);
+        }
+        return training;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                return ((InternalEList<?>)getTraining()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -222,6 +267,8 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                 return getDaysRemains();
             case Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE:
                 return isTrainingComplete();
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                return getTraining();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -231,6 +278,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -239,6 +287,10 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                 return;
             case Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE:
                 setTrainingComplete((Boolean)newValue);
+                return;
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                getTraining().clear();
+                getTraining().addAll((Collection<? extends TrainingRange>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -258,6 +310,9 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
             case Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE:
                 setTrainingComplete(TRAINING_COMPLETE_EDEFAULT);
                 return;
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                getTraining().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -276,6 +331,8 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                 return getDaysRemains() != DAYS_REMAINS_EDEFAULT;
             case Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE:
                 return trainingComplete != TRAINING_COMPLETE_EDEFAULT;
+            case Shr5managementPackage.TRAININGS_TIME__TRAINING:
+                return training != null && !training.isEmpty();
         }
         return super.eIsSet(featureID);
     }

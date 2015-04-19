@@ -61,6 +61,7 @@ import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
@@ -154,6 +155,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.TRAINING_RATE: return createTrainingRate();
             case Shr5managementPackage.TRAININGS_TIME: return createTrainingsTime();
             case Shr5managementPackage.PERSONA_MARTIAL_ART_CHANGE: return createPersonaMartialArtChange();
+            case Shr5managementPackage.TRAINING_RANGE: return createTrainingRange();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -509,6 +511,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public PersonaMartialArtChange createPersonaMartialArtChange() {
         PersonaMartialArtChangeImpl personaMartialArtChange = new PersonaMartialArtChangeImpl();
         return personaMartialArtChange;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public TrainingRange createTrainingRange() {
+        TrainingRangeImpl trainingRange = new TrainingRangeImpl();
+        return trainingRange;
     }
 
     /**

@@ -848,6 +848,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.TrainingRange} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected TrainingRangeItemProvider trainingRangeItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.TrainingRange}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createTrainingRangeAdapter() {
+        if (trainingRangeItemProvider == null) {
+            trainingRangeItemProvider = new TrainingRangeItemProvider(this);
+        }
+
+        return trainingRangeItemProvider;
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.QuellenConstrain} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1337,6 +1360,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (trainingRateItemProvider != null) trainingRateItemProvider.dispose();
         if (trainingsTimeItemProvider != null) trainingsTimeItemProvider.dispose();
         if (personaMartialArtChangeItemProvider != null) personaMartialArtChangeItemProvider.dispose();
+        if (trainingRangeItemProvider != null) trainingRangeItemProvider.dispose();
     }
 
 	/**
@@ -1615,6 +1639,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createPersonaMartialArtChange()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createTrainingRange()));
 
                 return null;
             }

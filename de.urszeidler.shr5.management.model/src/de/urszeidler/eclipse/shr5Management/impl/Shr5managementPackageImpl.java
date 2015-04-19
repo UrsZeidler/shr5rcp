@@ -81,6 +81,7 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.SumToTenGenerator;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
@@ -392,6 +393,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass personaMartialArtChangeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass trainingRangeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2488,6 +2496,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getTrainingsTime_Training() {
+        return (EReference)trainingsTimeEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getPersonaMartialArtChange() {
         return personaMartialArtChangeEClass;
     }
@@ -2508,6 +2525,42 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EReference getPersonaMartialArtChange_Technique() {
         return (EReference)personaMartialArtChangeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getTrainingRange() {
+        return trainingRangeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingRange_Start() {
+        return (EAttribute)trainingRangeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingRange_End() {
+        return (EAttribute)trainingRangeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTrainingRange_DaysTrained() {
+        return (EAttribute)trainingRangeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3460,10 +3513,16 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_TRAINED);
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_REMAINS);
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__TRAINING_COMPLETE);
+        createEReference(trainingsTimeEClass, TRAININGS_TIME__TRAINING);
 
         personaMartialArtChangeEClass = createEClass(PERSONA_MARTIAL_ART_CHANGE);
         createEReference(personaMartialArtChangeEClass, PERSONA_MARTIAL_ART_CHANGE__STYLE);
         createEReference(personaMartialArtChangeEClass, PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE);
+
+        trainingRangeEClass = createEClass(TRAINING_RANGE);
+        createEAttribute(trainingRangeEClass, TRAINING_RANGE__START);
+        createEAttribute(trainingRangeEClass, TRAINING_RANGE__END);
+        createEAttribute(trainingRangeEClass, TRAINING_RANGE__DAYS_TRAINED);
 
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
@@ -4191,10 +4250,16 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_DaysRemains(), ecorePackage.getEInt(), "daysRemains", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_TrainingComplete(), ecorePackage.getEBoolean(), "trainingComplete", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getTrainingsTime_Training(), this.getTrainingRange(), null, "training", null, 0, -1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaMartialArtChangeEClass, PersonaMartialArtChange.class, "PersonaMartialArtChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaMartialArtChange_Style(), theShr5Package.getMartialartStyle(), null, "style", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPersonaMartialArtChange_Technique(), theShr5Package.getMartialartTechnique(), null, "technique", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(trainingRangeEClass, TrainingRange.class, "TrainingRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTrainingRange_Start(), theShr5Package.getShrDate(), "start", null, 0, 1, TrainingRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingRange_End(), theShr5Package.getShrDate(), "end", null, 0, 1, TrainingRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingRange_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingRange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
