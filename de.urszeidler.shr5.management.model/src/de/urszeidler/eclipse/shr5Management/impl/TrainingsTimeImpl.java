@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
@@ -17,6 +18,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
@@ -153,6 +155,16 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
         if(change2!=null && character !=null){
             CharacterGenerator<?> chracterSource = character.getChracterSource();
             IncreaseCharacterPart part = null;
+            if (change2 instanceof PersonaMartialArtChange) {
+                PersonaMartialArtChange pmac = (PersonaMartialArtChange)change2;
+                if(pmac.getChangeable()!=null)
+                    part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
+                            .getCharacterAdvancements(), Shr5Package.Literals.PERSONA_MARTIALART_STYLE);
+                else
+                    part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
+                            .getCharacterAdvancements(), Shr5Package.Literals.PERSONA_MARTIALART_TECHNIQUE);
+            }else
+            
             if (change2 instanceof PersonaChange) {
                 PersonaChange pc = (PersonaChange)change2;
                 Erlernbar changeable = pc.getChangeable();

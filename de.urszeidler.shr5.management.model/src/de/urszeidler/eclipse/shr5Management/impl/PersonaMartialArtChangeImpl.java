@@ -262,7 +262,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
         if (getStyle() == null)
             return 0;
 
-        if (getTechnique() == null) {
+        if (getChangeable() != null) {
             return getKarmaCostAdd(Shr5Package.Literals.PERSONA_MARTIALART_STYLE);
         } else {
             return getKarmaCostAdd(Shr5Package.Literals.PERSONA_MARTIALART_TECHNIQUE);
@@ -275,13 +275,16 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
             return;
 
         internalApply();
-        if (getTechnique() == null) {
+        if (getChangeable() != null) {
             PersonaMartialartStyle style2 = Shr5Factory.eINSTANCE.createPersonaMartialartStyle();
             style2.setStyle(getStyle());
             if (getChangeable() instanceof PersonaFertigkeit) {
                 PersonaFertigkeit pf =(PersonaFertigkeit)getChangeable();
                 pf.getSpezialisierungen().add(style2);
                 getCharacter().getPersona().getMartialartStyles().add(style2);
+                PersonaMartialartTechnique personaMartialartTechnique = Shr5Factory.eINSTANCE.createPersonaMartialartTechnique();
+                personaMartialartTechnique.setTechnique(getTechnique());
+                style2.getTechniques().add(personaMartialartTechnique);
             }
         } else {
             final MartialartStyle style2 = getStyle();

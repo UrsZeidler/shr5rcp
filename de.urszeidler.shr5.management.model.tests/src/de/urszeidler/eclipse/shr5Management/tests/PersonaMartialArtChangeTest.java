@@ -137,10 +137,13 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
     public void testApplyChanges_MartialArtStyle_Add() {
         PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
         MartialartStyle style = Shr5Factory.eINSTANCE.createMartialartStyle();
+        MartialartTechnique technique2 = Shr5Factory.eINSTANCE.createMartialartTechnique();
+        style.getTechniques().add(technique2);
         style.getUsableWith().add(personaFertigkeit.getFertigkeit());
 
         getFixture().setChangeable(personaFertigkeit);
         getFixture().setStyle(style);
+        getFixture().setTechnique(technique2);
 
         playerCharacter.getChanges().add(getFixture());
         assertEquals(-7, getFixture().getKarmaCost());
@@ -151,6 +154,10 @@ public class PersonaMartialArtChangeTest extends PersonaValueChangeTest {
         assertEquals(true, personaFertigkeit.getSpezialisierungen().size()==1);
         PersonaMartialartStyle pmas = (PersonaMartialartStyle)personaFertigkeit.getSpezialisierungen().get(0);
         assertEquals(style, pmas.getStyle());
+        
+        assertEquals(1, pmas.getTechniques().size());
+        PersonaMartialartTechnique martialartTechnique = pmas.getTechniques().get(0);
+        assertEquals(martialartTechnique.getTechnique(), technique2);
 
         assertEquals(true, playerCharacter.getPersona().getMartialartStyles().size()==1);
         assertEquals(true, getFixture().isChangeApplied());
