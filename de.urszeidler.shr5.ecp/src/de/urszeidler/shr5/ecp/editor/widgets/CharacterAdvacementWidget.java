@@ -362,21 +362,10 @@ public class CharacterAdvacementWidget extends Composite {
         new Label(this, SWT.NONE);
         new Label(this, SWT.NONE);
 
-        // createComposite();
-
         m_bindingContext = initDataBindings();
-        // createPersonaValueChangeWidget(composite_form);
-        // createComposite();
-        // Composite composite_descr = createPersonaValueChangeWidget();
 
         updateToolbars();
         contentAdapter = new EContentAdapter() {
-
-            @Override
-            protected void addAdapter(Notifier notifier) {
-                // TODO Auto-generated method stub
-                super.addAdapter(notifier);
-            }
             
             @Override
             public void notifyChanged(Notification notification) {
@@ -660,7 +649,7 @@ public class CharacterAdvacementWidget extends Composite {
         EClass eClass = character.getPersona().eClass();
         EList<EReference> eAllContainments = eClass.getEAllContainments();
         for (EReference eReference : eAllContainments) {
-            if (!Shr5Package.Literals.PERSONA_EIGENSCHAFT.equals(eReference.getEReferenceType()))
+            if (!Shr5Package.Literals.PERSONA_EIGENSCHAFT.equals(eReference.getEReferenceType()) && !Shr5Package.Literals.PERSONA_MARTIALART_STYLE.equals(eReference.getEReferenceType()))
                 if (Shr5Package.Literals.ERLERNBAR.isSuperTypeOf(eReference.getEReferenceType())) {
                     op = new ChangeOperation();
                     op.type = Shr5managementPackage.Literals.PERSONA_CHANGE;
