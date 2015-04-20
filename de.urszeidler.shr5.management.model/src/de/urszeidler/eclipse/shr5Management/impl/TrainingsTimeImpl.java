@@ -13,11 +13,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.impl.CommlinkImpl;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
@@ -109,14 +111,34 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * @ordered
      */
     protected EList<TrainingRange> training;
+    private EContentAdapter eContentAdapter;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected TrainingsTimeImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE.equals(feature)
+                    || Shr5managementPackage.Literals.TRAINING_RANGE__DAYS_TRAINED.equals(feature)
+                    || Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE.equals(feature)   
+                    || Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE.equals(feature)    
+                        )
+                    TrainingsTimeImpl.this
+                            .eNotify(new ENotificationImpl(TrainingsTimeImpl.this, Notification.SET, Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, 1, 2));
+  
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**

@@ -373,11 +373,56 @@ public class TrainingsTimeTest extends CharacterChangeTest {
         assertEquals(9, getFixture().getDaysRemains());
         
         tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        calendar.add(Calendar.DAY_OF_YEAR, 1);
         tr.setStart(calendar.getTime());
         calendar.add(Calendar.DAY_OF_YEAR, 1);
         tr.setEnd(calendar.getTime());
         getFixture().getTraining().add(tr);
         assertEquals(7, getFixture().getDaysRemains());
+    }
+
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains() <em>Days Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysRemains()
+     * @generated not
+     */
+    public void testGetDaysRemains_Wrong_Range1() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        pf.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+        character.getPersona().getFertigkeiten().add(pf);
+
+        createAdvacementSystem(character);
+
+        PersonaChange attributeChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        attributeChange.setChangeable(pf);
+
+        attributeChange.setFrom(4);
+        attributeChange.setTo(5);
+
+        getFixture().setChange(attributeChange);
+        assertEquals(10, getFixture().getDaysRemains());
+        
+        Calendar calendar = Calendar.getInstance();
+        TrainingRange tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        tr.setStart(calendar.getTime());
+        getFixture().getTraining().add(tr);
+        
+        assertEquals(10, getFixture().getDaysRemains());
+        tr.setEnd(calendar.getTime());
+        assertEquals(9, getFixture().getDaysRemains());
+        
+        tr = Shr5managementFactory.eINSTANCE.createTrainingRange();
+        calendar.add(Calendar.DAY_OF_YEAR, -1);
+        tr.setStart(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -1);
+        tr.setEnd(calendar.getTime());
+        getFixture().getTraining().add(tr);
+        assertEquals(9, getFixture().getDaysRemains());
     }
 
 

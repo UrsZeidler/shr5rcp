@@ -189,11 +189,16 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
 //                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
                 TrainingsTime tt = (TrainingsTime)object;
                 if (tt.getChange() instanceof PersonaMartialArtChange) {
+//                    emfFormBuilder.addTextEntry(tt.getChange(),Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite);
+//                    emfFormBuilder.addTextEntry(tt.getChange(),Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE, composite);
+//                    emfFormBuilder.addTextEntry(tt.getChange(),Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE, composite);
+
+                    
                     PersonaMartialArtChange pmac = (PersonaMartialArtChange)tt.getChange();
                     compositedetail_1 = createChangeDetail(managedForm,pmac,compositedetail_1);
                 }
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING, composite, createControllGridData(80));
-                
+//                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING, composite, createControllGridData(80));
+                createTreeTableWidget(compositedetail_2, Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING, managedForm, tt);
             } else if (object instanceof CharacterChange) {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, dateEntryFactory);
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);

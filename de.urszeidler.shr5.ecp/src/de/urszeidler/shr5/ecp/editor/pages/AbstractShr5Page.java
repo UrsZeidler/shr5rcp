@@ -16,6 +16,7 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -59,6 +60,7 @@ import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.actions.DuplicateObjectAction;
 import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -332,6 +334,15 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         GridData controlGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 2, 3);
         controlGridData.heightHint = height;
         return controlGridData;
+    }
+    
+    protected void createTreeTableWidget(Composite composite, EReference ref,IManagedForm managedForm, EObject object){
+        TreeTableWidget treeTableWidget = new TreeTableWidget(composite, labelprovider.getText(ref), SWT.NONE, object, ref,  managedForm.getToolkit(), mananger, getEditingDomain(),
+                this,this);
+        treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+        managedForm.getToolkit().adapt(treeTableWidget);
+        managedForm.getToolkit().paintBordersFor(treeTableWidget);
+
     }
     
     /**

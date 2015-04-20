@@ -161,6 +161,19 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAINING_RANGE__DAYS_TRAINED, oldEnd, end));
      }
 
+    private Date getMaxDate(TrainingsTime tt) {
+        Date date= new Date();        
+        if(tt!=null){
+            date = tt.getDate();
+            for (TrainingRange tr : tt.getTraining()) {
+                if(tr!=this)
+                    if(tr.getEnd().after(date))
+                        date = tr.getEnd();
+            }
+        }
+        return date;
+    }
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -170,24 +183,43 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     public int getDaysTrained() {
         if (getStart() == null || getEnd() == null)
             return 0;
+//        if(getTrainingTime()!=null)
+//            for (TrainingRange tr : getTrainingTime().getTraining()) {
+//                if(tr==this)
+//                    continue;
+//                Calendar cstart = Calendar.getInstance();
+//                cstart.setTime(getStart());
+//                setCalendarToDateOnly(cstart);
+//
+//                Calendar cend = Calendar.getInstance();
+//                cend.setTime(tr.getEnd());
+//                setCalendarToDateOnly(cend);
+//               
+//                if(cend.after(cstart))
+//                    return 0;
+//            }
 
         Calendar cstart = Calendar.getInstance();
         cstart.setTime(getStart());
-        cstart.set(Calendar.MILLISECOND, 0);
-        cstart.set(Calendar.SECOND, 0);
-        cstart.set(Calendar.MINUTE, 0);
-        cstart.set(Calendar.HOUR, 0);
+        setCalendarToDateOnly(cstart);
 
         Calendar cend = Calendar.getInstance();
         cend.setTime(getEnd());
-        cend.set(Calendar.MILLISECOND, 0);
-        cend.set(Calendar.SECOND, 0);
-        cend.set(Calendar.MINUTE, 0);
-        cend.set(Calendar.HOUR, 0);
+        setCalendarToDateOnly(cend);
 
         long days = Math.max(1 + (cend.getTimeInMillis() - cstart.getTimeInMillis()) / (24 * 3600000), 0);
 
         return (int)days;
+    }
+
+    /**
+     * @param cstart
+     */
+    private void setCalendarToDateOnly(Calendar cstart) {
+        cstart.set(Calendar.MILLISECOND, 0);
+        cstart.set(Calendar.SECOND, 0);
+        cstart.set(Calendar.MINUTE, 0);
+        cstart.set(Calendar.HOUR, 0);
     }
 
     /**
@@ -213,10 +245,10 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
         
         if (newTrainingTime != null) {
             if(getStart()==null)
-                setStart(newTrainingTime.getDate());
+                setStart(getMaxDate(newTrainingTime));
             
             if(getEnd()==null)
-                setEnd(newTrainingTime.getDate());
+                setEnd(getMaxDate(newTrainingTime));
         }
 
         return msgs;
