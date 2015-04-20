@@ -388,7 +388,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    @SuppressWarnings("unchecked")
     public CharacterGenerator<?> getChracterSource() {
         if (chracterSource != null && chracterSource.eIsProxy()) {
             InternalEObject oldChracterSource = (InternalEObject)chracterSource;

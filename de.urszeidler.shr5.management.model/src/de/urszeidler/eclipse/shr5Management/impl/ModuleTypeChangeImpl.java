@@ -156,7 +156,6 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
-    @SuppressWarnings("unchecked")
     public EList<T> getSelectOne() {
         if (selectOne == null) {
             selectOne = new EObjectResolvingEList<T>(EObject.class, this, Shr5managementPackage.MODULE_TYPE_CHANGE__SELECT_ONE);

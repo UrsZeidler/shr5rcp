@@ -159,9 +159,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAINING_RANGE__END, oldEnd, end));
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAINING_RANGE__DAYS_TRAINED, oldEnd, end));
-        if (getTrainingTime()!=null && eNotificationRequired())
-            eNotify(new ENotificationImpl((InternalEObject)getTrainingTime(), Notification.SET, Shr5managementPackage.TRAININGS_TIME__DAYS_REMAINS, oldEnd, end));
-    }
+     }
 
     /**
      * <!-- begin-user-doc -->

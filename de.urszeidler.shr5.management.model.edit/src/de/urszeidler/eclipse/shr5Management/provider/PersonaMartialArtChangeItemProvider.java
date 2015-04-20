@@ -189,9 +189,9 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
         String fertigkeit = Shr5EditingTools.getLabelForEObject(factory, unset, mac.getChangeable());
 
         if (mac.getChangeable() == null)
-            return String.format("learn %s for %s", technique,style);
+            return String.format("Learn %s for %s", technique,style);
         else
-            return String.format("learn %s and %s for %s", style, technique, fertigkeit);
+            return String.format("Learn %s and %s for %s", style, technique, fertigkeit);
     }
 
     /**
