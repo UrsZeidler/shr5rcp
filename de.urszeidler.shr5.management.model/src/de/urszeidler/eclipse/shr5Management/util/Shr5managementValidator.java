@@ -330,12 +330,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SUM_TO_TEN_GENERATOR__HAS_SUM_TO_TEN = 28;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Valid Range' of 'Trainings Time'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int TRAININGS_TIME__HAS_VALID_RANGE = 29;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 28;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 29;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -1210,7 +1218,27 @@ public class Shr5managementValidator extends EObjectValidator {
      * @generated
      */
     public boolean validateTrainingsTime(TrainingsTime trainingsTime, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(trainingsTime, diagnostics, context);
+        if (!validate_NoCircularContainment(trainingsTime, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(trainingsTime, diagnostics, context);
+        if (result || diagnostics != null) result &= validateTrainingsTime_hasValidRange(trainingsTime, diagnostics, context);
+        return result;
+    }
+
+    /**
+     * Validates the hasValidRange constraint of '<em>Trainings Time</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateTrainingsTime_hasValidRange(TrainingsTime trainingsTime, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return trainingsTime.hasValidRange(diagnostics, context);
     }
 
     /**

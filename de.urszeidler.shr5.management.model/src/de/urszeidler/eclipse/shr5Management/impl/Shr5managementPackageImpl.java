@@ -2505,6 +2505,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getTrainingsTime__HasValidRange__DiagnosticChain_Map() {
+        return trainingsTimeEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getPersonaMartialArtChange() {
         return personaMartialArtChangeEClass;
     }
@@ -3523,6 +3532,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__DAYS_REMAINS);
         createEAttribute(trainingsTimeEClass, TRAININGS_TIME__TRAINING_COMPLETE);
         createEReference(trainingsTimeEClass, TRAININGS_TIME__TRAINING);
+        createEOperation(trainingsTimeEClass, TRAININGS_TIME___HAS_VALID_RANGE__DIAGNOSTICCHAIN_MAP);
 
         personaMartialArtChangeEClass = createEClass(PERSONA_MARTIAL_ART_CHANGE);
         createEReference(personaMartialArtChangeEClass, PERSONA_MARTIAL_ART_CHANGE__STYLE);
@@ -4257,10 +4267,19 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getRangeTable_RangeTableEntries(), g1, null, "rangeTableEntries", null, 0, -1, RangeTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(trainingsTimeEClass, TrainingsTime.class, "TrainingsTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTrainingsTime_DaysTrained(), ecorePackage.getEInt(), "daysTrained", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_DaysRemains(), ecorePackage.getEInt(), "daysRemains", null, 0, 1, TrainingsTime.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getTrainingsTime_TrainingComplete(), ecorePackage.getEBoolean(), "trainingComplete", null, 0, 1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getTrainingsTime_Training(), this.getTrainingRange(), this.getTrainingRange_TrainingTime(), "training", null, 0, -1, TrainingsTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        op = initEOperation(getTrainingsTime__HasValidRange__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasValidRange", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         initEClass(personaMartialArtChangeEClass, PersonaMartialArtChange.class, "PersonaMartialArtChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaMartialArtChange_Style(), theShr5Package.getMartialartStyle(), null, "style", null, 0, 1, PersonaMartialArtChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

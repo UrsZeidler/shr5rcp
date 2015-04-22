@@ -1264,7 +1264,6 @@ One entrie may be effective for a defined value.
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="training" type="shr5mngt:TrainingRange"/>
         </xsd:choice>
-        <xsd:attribute name="daysTrained" type="xsd:int"/>
         <xsd:attribute name="trainingComplete" type="xsd:boolean"/>
       </xsd:extension>
     </xsd:complexContent>

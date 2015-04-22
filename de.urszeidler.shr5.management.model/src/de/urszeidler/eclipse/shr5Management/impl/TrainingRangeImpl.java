@@ -25,10 +25,10 @@ import de.urszeidler.eclipse.shr5Management.TrainingsTime;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getStart <em>Start</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getEnd <em>End</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getDaysTrained <em>Days Trained</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getTrainingTime <em>Training Time</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getStart <em>Start</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getEnd <em>End</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getDaysTrained <em>Days Trained</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getTrainingTime <em>Training Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,7 +39,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStart()
      * @generated
      * @ordered
@@ -50,7 +49,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * The cached value of the '{@link #getStart() <em>Start</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStart()
      * @generated
      * @ordered
@@ -61,7 +59,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * The default value of the '{@link #getEnd() <em>End</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEnd()
      * @generated
      * @ordered
@@ -72,7 +69,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * The cached value of the '{@link #getEnd() <em>End</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEnd()
      * @generated
      * @ordered
@@ -83,7 +79,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * The default value of the '{@link #getDaysTrained() <em>Days Trained</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDaysTrained()
      * @generated
      * @ordered
@@ -93,7 +88,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected TrainingRangeImpl() {
@@ -103,7 +97,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -114,7 +107,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Date getStart() {
@@ -139,7 +131,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Date getEnd() {
@@ -162,12 +153,13 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      }
 
     private Date getMaxDate(TrainingsTime tt) {
-        Date date= new Date();        
+        Date date= null;// new Date();        
         if(tt!=null){
-            date = tt.getDate();
+//            if(tt.getDate()!=null)
+                date = tt.getDate();
             for (TrainingRange tr : tt.getTraining()) {
                 if(tr!=this)
-                    if(tr.getEnd().after(date))
+                    if(date!=null && tr.getEnd()!=null && tr.getEnd().after(date))
                         date = tr.getEnd();
             }
         }
@@ -225,12 +217,10 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public TrainingsTime getTrainingTime() {
-        if (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME)
-            return null;
+        if (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME) return null;
         return (TrainingsTime)eInternalContainer();
     }
 
@@ -257,33 +247,27 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated 
+     * @generated
      */
     public void setTrainingTime(TrainingsTime newTrainingTime) {
-        if (newTrainingTime != eInternalContainer()
-                || (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME && newTrainingTime != null)) {
+        if (newTrainingTime != eInternalContainer() || (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME && newTrainingTime != null)) {
             if (EcoreUtil.isAncestor(this, newTrainingTime))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
             NotificationChain msgs = null;
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newTrainingTime != null)
-                msgs = ((InternalEObject)newTrainingTime)
-                        .eInverseAdd(this, Shr5managementPackage.TRAININGS_TIME__TRAINING, TrainingsTime.class, msgs);
+                msgs = ((InternalEObject)newTrainingTime).eInverseAdd(this, Shr5managementPackage.TRAININGS_TIME__TRAINING, TrainingsTime.class, msgs);
             msgs = basicSetTrainingTime(newTrainingTime, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME, newTrainingTime,
-                    newTrainingTime));
-
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME, newTrainingTime, newTrainingTime));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -300,7 +284,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -315,7 +298,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -330,7 +312,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -351,7 +332,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -373,7 +353,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -395,7 +374,6 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -416,13 +394,11 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (start: ");

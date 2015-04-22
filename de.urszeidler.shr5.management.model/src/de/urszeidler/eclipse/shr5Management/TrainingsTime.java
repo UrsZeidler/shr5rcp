@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import java.util.Map;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 
@@ -35,22 +38,11 @@ public interface TrainingsTime extends CharacterChange {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Days Trained</em>' attribute.
-     * @see #setDaysTrained(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTrainingsTime_DaysTrained()
-     * @model
+     * @model transient="true" changeable="false" volatile="true" derived="true"
      * @generated
      */
     int getDaysTrained();
-
-    /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#getDaysTrained <em>Days Trained</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Days Trained</em>' attribute.
-     * @see #getDaysTrained()
-     * @generated
-     */
-    void setDaysTrained(int value);
 
     /**
      * Returns the value of the '<em><b>Days Remains</b></em>' attribute.
@@ -110,5 +102,16 @@ public interface TrainingsTime extends CharacterChange {
      * @generated
      */
     EList<TrainingRange> getTraining();
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The basic rule indicating not all is satified.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasValidRange(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // TrainingsTime

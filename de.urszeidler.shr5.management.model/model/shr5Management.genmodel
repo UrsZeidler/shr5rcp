@@ -544,6 +544,10 @@
       <genFeatures createChild="false" propertyDescription="Marker when the training is done."
           ecoreFeature="ecore:EAttribute shr5Management.ecore#//TrainingsTime/trainingComplete"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//TrainingsTime/training"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//TrainingsTime/hasValidRange">
+        <genParameters ecoreParameter="shr5Management.ecore#//TrainingsTime/hasValidRange/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//TrainingsTime/hasValidRange/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PersonaMartialArtChange">
       <genFeatures notify="false" createChild="false" propertyDescription="When the changeable skill is not null the style is learned as spec for the selected skill."

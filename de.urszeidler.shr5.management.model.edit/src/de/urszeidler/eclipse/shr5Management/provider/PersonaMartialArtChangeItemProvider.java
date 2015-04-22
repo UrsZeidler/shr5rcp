@@ -28,7 +28,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvider {
@@ -36,7 +35,6 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PersonaMartialArtChangeItemProvider(AdapterFactory adapterFactory) {
@@ -47,7 +45,6 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -160,7 +157,6 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * This returns PersonaMartialArtChange.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -199,7 +195,6 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -213,7 +208,6 @@ public class PersonaMartialArtChangeItemProvider extends PersonaChangeItemProvid
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

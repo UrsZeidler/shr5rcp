@@ -7117,13 +7117,22 @@ public interface Shr5managementPackage extends EPackage {
     int TRAININGS_TIME_FEATURE_COUNT = CHARACTER_CHANGE_FEATURE_COUNT + 4;
 
     /**
+     * The operation id for the '<em>Has Valid Range</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRAININGS_TIME___HAS_VALID_RANGE__DIAGNOSTICCHAIN_MAP = CHARACTER_CHANGE_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Trainings Time</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TRAININGS_TIME_OPERATION_COUNT = CHARACTER_CHANGE_OPERATION_COUNT + 0;
+    int TRAININGS_TIME_OPERATION_COUNT = CHARACTER_CHANGE_OPERATION_COUNT + 1;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl <em>Persona Martial Art Change</em>}' class.
@@ -9570,6 +9579,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getTrainingsTime_Training();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.TrainingsTime#hasValidRange(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Valid Range</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Valid Range</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.TrainingsTime#hasValidRange(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getTrainingsTime__HasValidRange__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PersonaMartialArtChange <em>Persona Martial Art Change</em>}'.
@@ -12128,6 +12147,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference TRAININGS_TIME__TRAINING = eINSTANCE.getTrainingsTime_Training();
+
+        /**
+         * The meta object literal for the '<em><b>Has Valid Range</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation TRAININGS_TIME___HAS_VALID_RANGE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTrainingsTime__HasValidRange__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl <em>Persona Martial Art Change</em>}' class.
