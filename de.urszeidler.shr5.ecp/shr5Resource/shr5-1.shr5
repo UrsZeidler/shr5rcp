@@ -14,6 +14,7 @@
       <entries xsi:type="shr5:SourceBook" xmi:id="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" name="Shadowrun Forum Post 1" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" beschreibung="" image="/shr5Resource/images/runFaster.jpg" name="Run Faster" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="abb9ec78-b430-4ea9-8531-95b004a1b9d9" beschreibung="" name="Shadow Spells" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="62b9ec78-b83f-4ea9-8531-95d074ceb9d8" beschreibung="" name="Nothing Personal" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsbF1N0CEeOvVYoRsPZlnA" name="Generators">
       <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6">
@@ -22146,11 +22147,11 @@
         <entries xsi:type="shr5:Zauber" xmi:id="f99ab85f-2cc7-4c09-8ea4-581f75e40487" name="Homunculus" page="298" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" schaden="0" entzug="Special" kategorie="Rituals" merkmale="Minion">
           <localizations xmi:id="_EVh1EDnTEeSe6_w6Jrbqxg" local="de" name="Homunkulus" page="298"/>
         </entries>
-        <entries xsi:type="shr5:Zauber" xmi:id="45d775c9-d12f-4416-a45a-88922ec3c2fd" name="Corrode [Object]" page="102" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" reichweite="Beruehrung" schaden="P" entzug="F-3" kategorie="Combat" merkmale="Indirect, Touch, Elemental">
-          <localizations xmi:id="_EVh1ETnTEeSe6_w6Jrbqxg" local="de" name="[Objekt] verätzen"/>
+        <entries xsi:type="shr5:Zauber" xmi:id="45d775c9-d12f-4416-a45a-88922ec3c2fd" name="Corrode [Object]" page="102" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" reichweite="Beruehrung" schaden="P" entzug="F-5" kategorie="Combat" merkmale="Indirect, Touch, Elemental">
+          <localizations xmi:id="_xAdOcOn1EeSMUpBm6__aaw" local="de" name="[Objekt] verätzen"/>
         </entries>
-        <entries xsi:type="shr5:Zauber" xmi:id="7a2101ff-6606-4b3e-b1c1-2f7ea74679dd" name="Melt [Object]" page="102" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="P" entzug="F-2" kategorie="Combat" merkmale="Indirect, Elemental">
-          <localizations xmi:id="_EVh1EjnTEeSe6_w6Jrbqxg" local="de" name="[Objekt] zersetzen"/>
+        <entries xsi:type="shr5:Zauber" xmi:id="7a2101ff-6606-4b3e-b1c1-2f7ea74679dd" name="Melt [Object]" page="102" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="P" entzug="F-3" kategorie="Combat" merkmale="Indirect, Elemental">
+          <localizations xmi:id="_xAdOcen1EeSMUpBm6__aaw" local="de" name="[Objekt] zersetzen"/>
         </entries>
         <entries xsi:type="shr5:Zauber" xmi:id="6b12c245-ab52-49df-93fe-670841cb9e3d" name="Sludge [Object]" page="102" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="P" entzug="F-1" kategorie="Combat" merkmale="Indirect, Area, Elemental">
           <localizations xmi:id="_EVh1EznTEeSe6_w6Jrbqxg" local="de" name="[Objekt] auflösen"/>
@@ -22161,8 +22162,8 @@
         <entries xsi:type="shr5:Zauber" xmi:id="a6f43dcf-c0cc-4da9-af25-1516f2564200" name="Destroy [Free Spirit]" page="103" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="P" entzug="F-3" kategorie="Combat" merkmale="Direct">
           <localizations xmi:id="_EVicIDnTEeSe6_w6Jrbqxg" local="de" name="[Freien Geist] Vernichten"/>
         </entries>
-        <entries xsi:type="shr5:Zauber" xmi:id="51f04999-1173-43da-94b6-af3749cb3156" name="Destroy [Vehicle]" page="103" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="P" entzug="F-3" kategorie="Combat" merkmale="Direct">
-          <localizations xmi:id="_EVicITnTEeSe6_w6Jrbqxg" local="de" name="Destroy [Vehicle]" page="103"/>
+        <entries xsi:type="shr5:Zauber" xmi:id="51f04999-1173-43da-94b6-af3749cb3156" name="Destroy [Vehicle]" page="103" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="P" entzug="F-3" kategorie="Combat" merkmale="Direct">
+          <localizations xmi:id="_xAdOden1EeSMUpBm6__aaw" local="de" name="Destroy [Vehicle]" page="103"/>
         </entries>
         <entries xsi:type="shr5:Zauber" xmi:id="d3bf1bfc-e104-4b22-a1fe-0aae0ef0b35b" name="Firewater" page="103" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="P" entzug="F-2" kategorie="Combat" merkmale="Indirect, Elemental">
           <localizations xmi:id="_EVicIjnTEeSe6_w6Jrbqxg" local="de" name="Griechisches Feuer"/>
@@ -22185,8 +22186,8 @@
         <entries xsi:type="shr5:Zauber" xmi:id="50f1bfce-a64d-4fac-b25d-d870e7ff312f" name="Slay [Metatype/Species]" page="104" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="P" entzug="F-4" kategorie="Combat" merkmale="Direct">
           <localizations xmi:id="_EVjDMznTEeSe6_w6Jrbqxg" local="de" name="[Metatyp/Spezies] erschlagen"/>
         </entries>
-        <entries xsi:type="shr5:Zauber" xmi:id="06d5a10b-b353-44bc-936a-4d6c08ebeaf8" name="Slaughter [Metatype/Species]" page="104" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="P" entzug="F-1" kategorie="Combat" merkmale="Direct, Area">
-          <localizations xmi:id="_EVjDNDnTEeSe6_w6Jrbqxg" local="de" name="[Metatyp/Spezies] metzeln"/>
+        <entries xsi:type="shr5:Zauber" xmi:id="06d5a10b-b353-44bc-936a-4d6c08ebeaf8" name="Slaughter [Metatype/Species]" page="104" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="P" entzug="F-2" kategorie="Combat" merkmale="Direct, Area">
+          <localizations xmi:id="_xAdOfen1EeSMUpBm6__aaw" local="de" name="[Metatyp/Spezies] metzeln"/>
         </entries>
         <entries xsi:type="shr5:Zauber" xmi:id="f883ce3d-a3a9-4021-b4f3-7812d6a5f7f1" name="Ram [Object]" page="104" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" reichweite="Beruehrung" schaden="P" entzug="F-5" kategorie="Combat" merkmale="Direct, Touch">
           <localizations xmi:id="_EVjqQDnTEeSe6_w6Jrbqxg" local="de" name="[Objekt] rammen"/>
@@ -22479,8 +22480,8 @@
         <entries xsi:type="shr5:Zauber" xmi:id="f1ed2b18-e50c-4c00-8fb5-ebf9bff9828a" name="Sterilize" page="119" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="0" entzug="F-3" kategorie="Manipulation" merkmale="Physical, Area">
           <localizations xmi:id="_EVupYznTEeSe6_w6Jrbqxg" local="de" name="Sterilisieren"/>
         </entries>
-        <entries xsi:type="shr5:Zauber" xmi:id="621b881e-5486-4dcb-a26e-2ad66bba09e8" name="Turn To Goo" page="119" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="0" dauer="Aufrechterhalten" entzug="F+1" kategorie="Manipulation" merkmale="Physical">
-          <localizations xmi:id="_EVupZDnTEeSe6_w6Jrbqxg" local="de" name="Turn To Goo" page="119"/>
+        <entries xsi:type="shr5:Zauber" xmi:id="621b881e-5486-4dcb-a26e-2ad66bba09e8" name="Turn To Goo" page="119" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" art="Physisch" schaden="0" dauer="Aufrechterhalten" entzug="F+3" kategorie="Manipulation" merkmale="Physical">
+          <localizations xmi:id="_xAgRw-n1EeSMUpBm6__aaw" local="de" name="Turn To Goo" page="119"/>
         </entries>
         <entries xsi:type="shr5:Zauber" xmi:id="ae2bddcc-9899-4549-b0ff-1dc7c1bb291a" name="Aspect Mana Line" page="122" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" schaden="0" entzug="Special" kategorie="Rituals" merkmale="Mana">
           <localizations xmi:id="_EVvQcDnTEeSe6_w6Jrbqxg" local="de" name="Aspect Mana Line" page="122"/>
