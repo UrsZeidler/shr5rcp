@@ -131,7 +131,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                 super.notifyChanged(notification);
                 Object feature = notification.getFeature();
                 if (Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE.equals(feature)
-//                        || Shr5managementPackage.Literals.TRAINING_RANGE__DAYS_TRAINED.equals(feature)
+                        || Shr5managementPackage.Literals.TRAINING_RANGE__END.equals(feature)
                        || Shr5managementPackage.Literals.TRAINING_RANGE__TRAINING_TIME.equals(feature)
                         || Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__STYLE.equals(feature)
                         || Shr5managementPackage.Literals.PERSONA_MARTIAL_ART_CHANGE__TECHNIQUE.equals(feature)){
@@ -139,6 +139,9 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
                             Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, 1, 2));
                     TrainingsTimeImpl.this.eNotify(new ENotificationImpl(TrainingsTimeImpl.this, Notification.SET,
                             Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, 1, 2));
+                    
+                    if(getDaysRemains()==0)
+                        setTrainingComplete(true);
                 }
             }
 
@@ -340,7 +343,9 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     private boolean checkRange(TrainingRange trainingRange) {
         if (trainingRange.getStart() == null || trainingRange.getEnd() == null)
             return false;
-        return !trainingRange.getEnd().after(trainingRange.getStart());  //trainingRange.getStart().before(trainingRange.getEnd());
+        
+        return  trainingRange.getEnd().getTime()-trainingRange.getStart().getTime() >= 0 ;
+//        return !trainingRange.getEnd().after(trainingRange.getStart());  //trainingRange.getStart().before(trainingRange.getEnd());
     }
 
     /**

@@ -121,13 +121,12 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
     protected void createFormContent(IManagedForm managedForm) {
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
-        form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
+        form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object.eClass()));
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
-        
         composite_1 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().adapt(composite_1);
@@ -157,8 +156,7 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
         composite_2.setLayout(new GridLayout(1, false));
         composite_2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite_2);
-        
- 
+
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
         DateEntryFactory dateEntryFactory = new DateEntryFactory(toolkit);
@@ -208,7 +206,7 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
             if (object instanceof TrainingsTime) {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_CHANGE__CHANGE, composite);
                 emfFormBuilder.addTextEntry("Training Start", Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, dateEntryFactory);
-                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, composite,labelEntryFactory);
+                emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED, composite, labelEntryFactory);
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS, composite, labelEntryFactory);
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite, labelEntryFactory);
                 // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING_COMPLETE, composite);
@@ -223,7 +221,7 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
                 }
                 // emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING, composite, createControllGridData(80));
                 createTreeTableWidget(compositedetail_2, Shr5managementPackage.Literals.TRAININGS_TIME__TRAINING, managedForm, tt);
-                validateText  = new Label(composite_2, SWT.WRAP);
+                validateText = new Label(composite_2, SWT.WRAP);
                 validateText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
                 managedForm.getToolkit().adapt(validateText, true, true);
                 validateText.setText("");
@@ -237,6 +235,7 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__CONTRACT_TO_PAY, composite, new ReadOnlyLinkEntry(
                         toolkit));
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CONTRACT_PAYMENT__PAYED, composite);
+                managedForm.getForm().setEnabled(!((ContractPayment)object).isPayed());
             } else {
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__DATE, composite, dateEntryFactory);
                 emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.DIARY_ENTRY__MESSAGE, composite, createControllGridData(300));
@@ -249,10 +248,13 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RANGE__DAYS_TRAINED, composite, labelEntryFactory);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RANGE__START, composite, dateEntryFactory);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.TRAINING_RANGE__END, composite, dateEntryFactory);
+
+            // emfFormBuilder.addTextEntry(((TrainingRange)object).getTrainingTime(), Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_REMAINS,
+            // composite);
+
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        
 
     }
 
@@ -303,14 +305,24 @@ public class EObjectBasicPage extends AbstractShr5Page<EObject> implements Adapt
                         compositedetail_1);
             else
                 compositedetail_1.dispose();
-        }else  if (Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED.equals(feature)) {
+        } else if (Shr5managementPackage.Literals.TRAININGS_TIME__DAYS_TRAINED.equals(feature)) {
             Diagnostic validate = Diagnostician.INSTANCE.validate(object, createValidationContext());
             if (!validate.getChildren().isEmpty()) {
                 final String message = Joiner.on("\n").join(
                         FluentIterable.from(validate.getChildren()).transform(ShadowrunEditingTools.diagnosticToStringTransformer()));
                 validateText.setText(message);
-            }else
+            } else
                 validateText.setText("");
+            if (object instanceof TrainingsTime) {
+                TrainingsTime tt = (TrainingsTime)object;
+                if (tt.getDaysRemains() == 0)
+                    getManagedForm().getForm().setEnabled(false);
+            }
+        } else if (Shr5managementPackage.Literals.CONTRACT_PAYMENT__PAYED.equals(feature)) {
+            if (object instanceof ContractPayment) {
+                ContractPayment cp = (ContractPayment)object;
+                getManagedForm().getForm().setEnabled(!cp.isPayed());
+            }
         }
 
     }
