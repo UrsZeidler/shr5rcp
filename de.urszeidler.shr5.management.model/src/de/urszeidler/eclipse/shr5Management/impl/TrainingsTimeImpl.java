@@ -322,7 +322,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
         Date baseDate = tr.getEnd();
         while (iterator.hasNext()) {
             tr = iterator.next();
-            if (checkRange(tr) && tr.getEnd() != null && baseDate.before(tr.getEnd()) ) {
+            if (checkRange(tr) && tr.getEnd() != null && baseDate.before(tr.getEnd()) && !tr.getStart().before(baseDate) ) {
                 baseDate = tr.getEnd();
             }else{
               overlappingSample = tr;
