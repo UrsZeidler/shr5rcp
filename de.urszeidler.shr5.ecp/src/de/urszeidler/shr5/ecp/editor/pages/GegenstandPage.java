@@ -165,7 +165,8 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         } else if (object instanceof Credstick) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand, new LabelMoneyEntry());
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, grpGegenstand);
+//            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, grpGegenstand);
+            createTreeTableWidget(composite_Additional, Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, managedForm, object);
         } else if (object instanceof Munition) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpGegenstand);
