@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
 
 import de.urszeidler.eclipse.shr5.provider.Shr5ItemProviderAdapterFactory;
 
@@ -59,9 +58,14 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
      */
     @Override
     public boolean isFactoryForType(Object object) {
-        if (object == EcorePackage.eINSTANCE) {
-            return true;
-        }
+//        if (object instanceof EClass) {
+//            EClass ec = (EClass)object;
+//            return Shr5Package.eINSTANCE.equals(ec.getEPackage());
+//        }
+        
+//        if (object == EcorePackage.eINSTANCE) {
+//            return true;
+//        }
 
         return super.isFactoryForType(object);
     }
@@ -87,7 +91,22 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
         if (target instanceof EClass) {
             return createModifikatorItemProvider();
         }
+//        if (target instanceof EAttribute) {
+//            if ( ((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
+//              return createModifikatorItemProvider();
+//          }
+//          if (target instanceof EReference) {
+//                if ( ((EReference)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
+//              return createModifikatorItemProvider();
+//          }
+//
+//          if (target instanceof EClass) {
+//              if ( ((EClass)target).getEPackage().equals(Shr5Package.eINSTANCE))
+//              return createModifikatorItemProvider();
+//          }
 
+        
+        
 //        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
 //        if (doLocalize)
 //            if (target instanceof Identifiable) {

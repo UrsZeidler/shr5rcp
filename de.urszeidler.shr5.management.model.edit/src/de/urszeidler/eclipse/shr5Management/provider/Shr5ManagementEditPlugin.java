@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.util.ExtendedShr5managementItemProviderAdapterFactory;
 
 /**
  * This is the central singleton for the Shr5Management edit plugin.
@@ -87,7 +88,7 @@ public final class Shr5ManagementEditPlugin extends EMFPlugin {
             // Remember the static instance.
             //
             plugin = this;
-            AdapterFactoryUtil.getInstance().insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
+            AdapterFactoryUtil.getInstance().insertAdapterFactory(new ExtendedShr5managementItemProviderAdapterFactory());
 
         }
 	}

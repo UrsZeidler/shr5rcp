@@ -24,7 +24,7 @@ import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
  */
 public class ModifikatorItemProvider extends ReflectiveItemProvider implements IItemLabelProvider {
 
-    protected ModifikatorItemProvider(AdapterFactory adapterFactory) {
+    public ModifikatorItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
 
     }
@@ -59,7 +59,7 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
             EStructuralFeature es = (EStructuralFeature)object;
             try {
             String key = "_UI_" +es.getEContainingClass().getName()+"_"+es.getName() + "_feature";
-                return getString(key);
+                return getResourceLocator().getString(key);
             } catch (Exception e) {
             }
             
@@ -95,7 +95,7 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
         EClass ec = (EClass)object;
         String key = "_UI_" + ec.getName() + "_type";
         try {
-            return getString(key);
+            return getResourceLocator().getString(key);
         } catch (Exception e) {
             return ec.getName();
         }

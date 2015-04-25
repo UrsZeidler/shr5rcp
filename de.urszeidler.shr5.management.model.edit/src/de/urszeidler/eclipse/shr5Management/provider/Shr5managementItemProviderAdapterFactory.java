@@ -1200,6 +1200,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
      */
     protected ModuleSkillGroupChangeItemProvider moduleSkillGroupChangeItemProvider;
 
+
     /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ModuleSkillGroupChange}.
      * <!-- begin-user-doc -->
@@ -1679,9 +1680,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         }
 	}
 
+
+	
 	   @Override
 	    public Adapter createAdapter(Notifier target) {
-
+	       
 	        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
 	        if (doLocalize)
 	            if (target instanceof Identifiable) {
