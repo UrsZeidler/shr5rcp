@@ -25,6 +25,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -73,7 +74,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.TrainingRange;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
+import de.urszeidler.eclipse.shr5Management.TrainingsTime;
 
 /**
  * @author urs
@@ -453,29 +456,57 @@ public class ShadowrunManagmentTools {
             date = diary.getCharacterDate();
 
             if (!diary.getEntries().isEmpty()) {
-                List<Date> sortedList = FluentIterable.from(diary.getEntries()).transform(new Function<DiaryEntry, Date>() {
+                Function<DiaryEntry, Date> function = new Function<DiaryEntry, Date>() {
                     @Override
                     public Date apply(DiaryEntry input) {
                         return input.getDate();
                     }
-                }).filter(Predicates.notNull()).toSortedList(comparator);
-                if (!sortedList.isEmpty()) {
-                    Date date2 = sortedList.get(0);
-                    if (date == null)
-                        date = date2;
-                    else
-                        date = date2.before(date) ? date : date2;
+                };
+                date = getMaxDate(comparator, date,function, diary.getEntries());
+            }
+            
+            Function<TrainingRange, Date> function = new Function<TrainingRange, Date>() {
+                @Override
+                public Date apply(TrainingRange input) {
+                    return input.getEnd();
                 }
+            };
+            ImmutableList<TrainingsTime> tts = FluentIterable.from(diary.getEntries()).filter(TrainingsTime.class).toList();
+            for (TrainingsTime trainingsTime : tts) {
+                date = getMaxDate(comparator, date,function, trainingsTime.getTraining());
             }
         }
-        EList<Changes> changes = character.getChanges();
+        Function<Changes, Date> function = new Function<Changes, Date>() {
+            @Override
+            public Date apply(Changes input) {
+                return input.getDate();
+            }
+        };
+        date = getMaxDate(comparator, date,function, character.getChanges());
+         
+        if (date != null)
+            return date;
+
+        try {
+            SourceBook srcBook = character.getChracterSource().getGenerator().getSrcBook();
+            return srcBook.getStartShrTime();
+        } catch (Exception e) {
+        }
+        return new Date(System.currentTimeMillis());
+    }
+
+    /**
+     * @param comparator
+     * @param date
+     * @param function
+     * @param changes
+     * @return
+     */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    private static Date getMaxDate(Comparator<Date> comparator, Date date,
+           Function function, EList<? extends EObject> changes) {
         if (!changes.isEmpty()) {
-            List<Date> sortedList = FluentIterable.from(changes).transform(new Function<Changes, Date>() {
-                @Override
-                public Date apply(Changes input) {
-                    return input.getDate();
-                }
-            }).filter(Predicates.notNull()).toSortedList(comparator);
+            List<Date> sortedList = FluentIterable.from(changes).transform(function).filter(Predicates.notNull()).toSortedList(comparator);
 
             if (!sortedList.isEmpty()) {
                 Date date2 = sortedList.get(0);
@@ -486,15 +517,7 @@ public class ShadowrunManagmentTools {
                     date = date2.before(date) ? date : date2;
             }
         }
-        if (date != null)
-            return date;
-
-        try {
-            SourceBook srcBook = character.getChracterSource().getGenerator().getSrcBook();
-            return srcBook.getStartShrTime();
-        } catch (Exception e) {
-        }
-        return new Date(System.currentTimeMillis());
+        return date;
     }
 
     /**
