@@ -6,7 +6,7 @@
     <relativePath>../de.urszeidler.shr5.master</relativePath>
     <groupId>de.urszeidler</groupId>
     <artifactId>shr5</artifactId>
-    <version>0.2.7-SNAPSHOT</version>
+    <version>0.2.8-SNAPSHOT</version>
   </parent>
 
   <artifactId>emf-client-platform-target</artifactId>

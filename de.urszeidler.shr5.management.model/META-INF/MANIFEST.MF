@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.urszeidler.shr5.management.model;singleton:=true
-Bundle-Version: 0.2.7.qualifier
+Bundle-Version: 0.2.8.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.urszeidler.eclipse.shr5Management.ModelPlugin$Implementation
 Bundle-Vendor: %providerName

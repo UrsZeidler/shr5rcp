@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.feature"
       label="shr5 plugins Feature"
-      version="0.2.7.qualifier"
+      version="0.2.8.qualifier"
       provider-name="Urs Zeidler">
 
    <description url="http://www.example.com/description">
@@ -16,6 +16,10 @@
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
+
+   <url>
+      <update url="http://opensource.urszeidler.de/shr5updatesite/"/>
+   </url>
 
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
@@ -91,118 +95,118 @@
          id="de.urszeidler.shr5.acceleo"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.ecp"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.management.model"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.management.model.edit"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.model"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.model.edit"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.gameplay"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.runtime"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.runtime.edit"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.scripting"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.scripting.edit"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.gameplay.model"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.gameplay.model.edit"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.product"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.help"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.webserver"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"/>
+         version="0.2.8.qualifier"/>
 
    <plugin
          id="de.urszeidler.shr5.scripting.ui"
          download-size="0"
          install-size="0"
-         version="0.2.7.qualifier"
+         version="0.2.8.qualifier"
          unpack="false"/>
 
 </feature>

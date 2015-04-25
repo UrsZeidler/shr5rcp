@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/de.urszeidler.shr5.feature_0.2.7.qualifier.jar" id="de.urszeidler.shr5.feature" version="0.2.7.qualifier">
+   <feature url="features/de.urszeidler.shr5.feature_0.2.8.qualifier.jar" id="de.urszeidler.shr5.feature" version="0.2.8.qualifier">
       <category name="shr5-all"/>
    </feature>
-   <feature url="features/de.urszeidler.shr5.model.feature_0.2.7.qualifier.jar" id="de.urszeidler.shr5.model.feature" version="0.2.7.qualifier">
+   <feature url="features/de.urszeidler.shr5.model.feature_0.2.8.qualifier.jar" id="de.urszeidler.shr5.model.feature" version="0.2.8.qualifier">
       <category name="shr5-all"/>
    </feature>
    <category-def name="shr5-all" label="shr5-all"/>
