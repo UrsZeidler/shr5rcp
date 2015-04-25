@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="all">
-  <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="resourcen">
+<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="All">
+  <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="Resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
       <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
       <entries xsi:type="shr5:SourceBook" xmi:id="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Gun Heaven 3" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
@@ -8624,6 +8624,179 @@
         </entries>
         <entries xsi:type="shr5:IntervallVertrag" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" name="DocWagon Contract, Super-Platinum" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" faelligkeitsIntervall="1" unit="year">
           <localizations xmi:id="_1A5EYkjbEeSQsOzYDQj8jg" local="de" name="DocWagon Vertrag, Superplatin"/>
+        </entries>
+      </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_N5FOQODwEeS53L70HY3q5Q" name="Sensors">
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" name="Ultrasound" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVuDvEeSEl6fXajKS9w" local="de" name="Ultraschall"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" name="Radio Signal Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVeDvEeSEl6fXajKS9w" local="de" name="Radiosignalscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" name="Omni-directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtVODvEeSEl6fXajKS9w" local="de" name="Mikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" name="Olfactory Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtU-DvEeSEl6fXajKS9w" local="de" name="Geruchsscanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" name="Motion Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUuDvEeSEl6fXajKS9w" local="de" name="Bewegungsmelder"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" name="MAD Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUeDvEeSEl6fXajKS9w" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" name="Laser Range Finder" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjtUODvEeSEl6fXajKS9w" local="de" name="Laser-Entfernungsmesser"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" name="Laser Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGRODvEeSEl6fXajKS9w" local="de" name="Lasermikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="d98f419f-7625-4228-9723-0217950d8155" name="Geiger Counter" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQ-DvEeSEl6fXajKS9w" local="de" name="Geigerzähler"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" name="Directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQuDvEeSEl6fXajKS9w" local="de" name="Richtmikrofon"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" name="Cyberware Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQeDvEeSEl6fXajKS9w" local="de" name="Cyberwarescanner"/>
+        </entries>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" name="Camera" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+        <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="2" capacityValue="1">
+          <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_AZrV8OEIEeSMM7_8sN0WSw" name="Sensor Array 2" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="2" capacityValue="6">
+          <localizations xmi:id="_thh4IODvEeSEl6fXajKS9w" local="de" name="Sensorarray 2"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_jmFZUOEIEeSMM7_8sN0WSw" name="Sensor Array 3" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="3" capacityValue="6">
+          <localizations xmi:id="_jmFZUeEIEeSMM7_8sN0WSw" local="de" name="Sensorarray 3"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_sPvWwOEIEeSMM7_8sN0WSw" name="Sensor Array 4" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="4" capacityValue="6">
+          <localizations xmi:id="_sPvWweEIEeSMM7_8sN0WSw" local="de" name="Sensorarray 4"/>
+        </entries>
+        <entries xsi:type="shr5:SensorArray" xmi:id="_e9znMOs7EeSPI_AbJRgUVg" name="Sensor Array 5" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="5" capacityValue="6">
+          <localizations xmi:id="_e9znMes7EeSPI_AbJRgUVg" local="de" name="Sensorarray 5"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" functions="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" rating="3" capacityValue="1">
+          <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor"/>
+        </entries>
+      </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_NmNAYL-EEeS9maZrSgWaVQ" name="Software">
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" name="" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
+        <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+        <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="bed1f6eb-ead9-49aa-bb24-266c21d7aeb4" wertValue="80" name="Browse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCLYTnTEeSe6_w6Jrbqxg" local="de" name="Schmöker"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="734f653b-35ca-4b26-b837-f64662878e8f" wertValue="80" name="Configurator" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCLYjnTEeSe6_w6Jrbqxg" local="de" name="Konfigurator" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="dd35285a-7506-4b7e-8d5a-1b6ea8577e19" wertValue="80" name="Edit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCLYznTEeSe6_w6Jrbqxg" local="de" name="Editieren"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a1dd8536-d2ca-41cd-be55-4adfdc52068b" wertValue="80" name="Encryption" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCLZDnTEeSe6_w6Jrbqxg" local="de" name="Verschlüsselung" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="3f2498d9-b575-474c-9b18-b959442011c5" wertValue="80" name="Signal Scrub" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCycDnTEeSe6_w6Jrbqxg" local="de" name="Signalreiniger" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="1861266c-9439-4816-9b1e-09ea9bbac9ec" wertValue="80" name="Toolbox" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCycTnTEeSe6_w6Jrbqxg" local="de" name="Toolbox" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="c56fd11b-f543-4c1f-8f97-6e7a82265885" wertValue="80" name="Virtual Machine" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCycjnTEeSe6_w6Jrbqxg" local="de" name="Virtuelle Maschine" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="6968d7e3-b58f-4199-af6f-5877097a51da" wertValue="80" name="Armor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCycznTEeSe6_w6Jrbqxg" local="de" name="Panzerung"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f5a1d20b-caa2-4a53-ab42-6e71ee519702" wertValue="80" name="Baby Monitor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWCydDnTEeSe6_w6Jrbqxg" local="de" name="Babymonitor" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="9bc73d88-bad2-4ae9-b9ea-fe004447e493" wertValue="80" name="Biofeedback" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWDZgDnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f05f35c3-1c35-4bac-9ecb-1a6ebf9f89dd" wertValue="80" name="Biofeedback Filter" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWDZgTnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback-Filter" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f1329065-8e71-41d8-8090-a5e8f91cf031" wertValue="80" name="Blackout" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWDZgjnTEeSe6_w6Jrbqxg" local="de" name="Blackout"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="de82aad2-da77-4478-a621-85ad02d70120" wertValue="80" name="Decrypt" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWDZgznTEeSe6_w6Jrbqxg" local="de" name="Entschlüsselung"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="6e6805d2-504d-422e-82d2-f782a912b2a7" wertValue="80" name="Defuse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWDZhDnTEeSe6_w6Jrbqxg" local="de" name="Entschärfen"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a52cc5e5-83f5-4bcd-9fea-4f9ff5f52765" wertValue="80" name="Demolition" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEAkDnTEeSe6_w6Jrbqxg" local="de" name="Superbombe" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="16b4bbc1-3a19-490c-90a8-0d102f18e709" wertValue="80" name="Exploit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEAkTnTEeSe6_w6Jrbqxg" local="de" name="Ausnutzen"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="b96ebe65-9bb5-49e7-8d23-a209eae7f9f3" wertValue="80" name="Fork" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEAkjnTEeSe6_w6Jrbqxg" local="de" name="Gabel" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="4a79b908-8239-4b3a-9c82-e2420be2a174" wertValue="80" name="Guard" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEAkznTEeSe6_w6Jrbqxg" local="de" name="Schild" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="d2f96d3a-9dcb-4b46-b5bd-b98a730bf1d7" wertValue="80" name="Hammer" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEAlDnTEeSe6_w6Jrbqxg" local="de" name="Hammer" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="01c5f885-d14f-478d-8e1d-612773035480" wertValue="80" name="Lockdown" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnoDnTEeSe6_w6Jrbqxg" local="de" name="Fessel" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="e3382b40-114e-456a-982a-f52d135527f5" wertValue="80" name="Mugger" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnoTnTEeSe6_w6Jrbqxg" local="de" name="Überfall" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="ff9378d1-b6bc-4adc-8651-a9689a1b92b9" wertValue="80" name="Shell" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnojnTEeSe6_w6Jrbqxg" local="de" name="Schutzschirm" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f7b5a9a3-c030-4647-b043-f968913867b4" wertValue="80" name="Sneak" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnoznTEeSe6_w6Jrbqxg" local="de" name="Irreführung" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a381db11-6e7f-4472-b4ef-79a16be65ba4" wertValue="80" name="Stealth" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnpDnTEeSe6_w6Jrbqxg" local="de" name="Schleicher"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWEnpTnTEeSe6_w6Jrbqxg" local="de" name="Aufspüren"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="1b78748c-9a1d-427f-8657-e3e2bc8fd5b5" wertValue="80" name="Wrapper" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOsDnTEeSe6_w6Jrbqxg" local="de" name="Verwandlung" page="245"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="9ebde6f6-a232-4af8-9e16-b553094160fa" wertValue="80" name="Agent" page="246" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOsTnTEeSe6_w6Jrbqxg" local="de" name="Agent" page="246"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="deb8de75-a07f-4d6d-8b1b-6c5aaa2e9110" wertValue="80" name="Activesoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOsjnTEeSe6_w6Jrbqxg" local="de" name="Aktionssoft"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="54df23dc-c60e-4e58-96ca-19ddb63e9c9d" wertValue="80" name="Knowsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOsznTEeSe6_w6Jrbqxg" local="de" name="Wissenssoft"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="c8916096-7a71-4351-97b4-d13c9e58391d" wertValue="80" name="Linguasoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOtDnTEeSe6_w6Jrbqxg" local="de" name="Linguasoft"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="ebf68c9c-6e17-4fb7-8dd3-7f245a91ca02" wertValue="80" name="Datasoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWFOtTnTEeSe6_w6Jrbqxg" local="de" name="Datensoft" page="441"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="64c971fb-f42c-4f76-88ac-ffe4870b5dd9" wertValue="80" name="Mapsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWF1wDnTEeSe6_w6Jrbqxg" local="de" name="Kartensoft" page="441"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="4762f25a-99bc-499f-a9d0-68e6aba542d3" wertValue="80" name="Shopsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWF1wTnTEeSe6_w6Jrbqxg" local="de" name="Shopsoft" page="441"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="5b08c062-4612-42f5-ae05-1209970db6bb" wertValue="80" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EWF1wjnTEeSe6_w6Jrbqxg" local="de" name="Lehrsoft" page="442"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a27dfba1-41ee-4e50-b7f4-70a62eef1d37" wertValue="80" name="PI-Tac Level I (Renraku Taka)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+          <localizations xmi:id="_EWF1wznTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level I (Renraku Taka)" page="105"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="b37e6137-69c2-48ef-9d52-5fe9ac731fef" wertValue="80" name="PI-Tac Level II (Novatech Tactician)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+          <localizations xmi:id="_EWF1xDnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level II (Novatech Tactician)" page="105"/>
+        </entries>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="7f490b43-639f-4692-a363-315844cd829e" wertValue="80" name="PI-Tac Level III (ComPac-Esprit General)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
+          <localizations xmi:id="_EWF1xTnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level III (ComPac-Esprit General)" page="105"/>
         </entries>
       </entries>
     </entries>
@@ -21046,42 +21219,42 @@
         <entries xsi:type="shr5:MartialartStyle" xmi:id="03c1ba09-e8b5-492d-8752-bb9fb2ab438d" name="Boxing (Brawler Style)" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf d98d277b-a727-4381-9512-e8f64ad275ff dbeae1ec-ebb5-4283-b80e-e66ab08c892d 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 335d2151-9137-4071-af91-3e0688ef67d9 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
         <entries xsi:type="shr5:MartialartStyle" xmi:id="5e02ce33-4cbd-4003-bc93-5d5971749eae" name="Boxing (Classic Style)" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 dbeae1ec-ebb5-4283-b80e-e66ab08c892d 1ff734f2-094f-482f-9b52-3583f8d589bb 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa d728ad1e-259a-4af3-ba52-383ffa3e90b4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
         <entries xsi:type="shr5:MartialartStyle" xmi:id="39b7d61b-b95e-4787-b3b0-df3c2a8bec5c" name="Boxing (Swarmer Style)" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf dbeae1ec-ebb5-4283-b80e-e66ab08c892d d728ad1e-259a-4af3-ba52-383ffa3e90b4 ea44f12a-0280-4d2b-8f1f-dc5006167872 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="5debcf68-304d-4ce6-97ee-9c00fc47f449" name="Capoeira" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="5debcf68-304d-4ce6-97ee-9c00fc47f449" name="Capoeira" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
         <entries xsi:type="shr5:MartialartStyle" xmi:id="6ff0927a-ba0c-44cf-abea-0d180768f73b" name="Carromeleg" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 a620e473-4127-4863-b9da-ac8e96c84535 a10cc1a4-c5cb-492d-aa87-448ace3d7f88 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
         <entries xsi:type="shr5:MartialartStyle" xmi:id="5170a688-54a0-4a71-899a-edfea5dec0a2" name="Chakram Fighting" page="129" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 05666129-d102-469f-a957-a6456027c9c9 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 bf72ba84-4301-486c-9c9e-f6179fd5f297 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="2327a330-3b9c-49a9-a392-8f34579e5bce" name="Drunken Boxing" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 1b1dc37d-daf1-430c-a352-50f9b2cbe68e d98d277b-a727-4381-9512-e8f64ad275ff 256bab6a-236d-4f76-93b1-d1dfe3b6df13 ea44f12a-0280-4d2b-8f1f-dc5006167872 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="15ea5191-d615-4320-84e5-bffa90f8873e" name="Fiore Dei Liberi" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 017a0f4c-6581-4f59-9c7d-52b11f51d365 a620e473-4127-4863-b9da-ac8e96c84535 db67e642-c74e-4780-a44b-b85524251240 8938ff95-3c3a-48f5-8a46-f6962e1b16cf e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="3a16d253-73cb-41e0-8c52-8f5b79d27a58" name="Firefight" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 44e0f0bb-2f30-4513-beab-1e0a6c033dd5 bf72ba84-4301-486c-9c9e-f6179fd5f297 1ff734f2-094f-482f-9b52-3583f8d589bb 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="23c0c9dc-da26-40ab-a578-7cd1a2231ba1" name="Gun Kata" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="44e0f0bb-2f30-4513-beab-1e0a6c033dd5 daa9edc5-d5dd-466a-8df9-7abb6a358db1 bf72ba84-4301-486c-9c9e-f6179fd5f297 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="8940f70e-e81d-4e64-b8e0-52256ee28cf9" name="Jeet Kune Do" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 11a90b83-af42-4972-a028-0ab4c60e1c33 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 2747d8d5-022d-4477-a7ce-43d88806bb35 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="fa11a3e1-a658-4353-8d74-71337e3e1f29" name="Jogo Du Pau" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c 971cac23-8ac2-4419-8d6b-f1de2641d7b3 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 1ff734f2-094f-482f-9b52-3583f8d589bb 017a0f4c-6581-4f59-9c7d-52b11f51d365 81b9073d-305e-4bcf-90a9-56855f4076f4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="7415286a-11b7-41b6-ad18-a4c72067cb71" name="Jujitsu" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 3d22777f-39c5-472f-b54a-703ed042d8b3 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 1ff5110c-6b10-453c-a05a-faf9410581e0 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="16391532-2476-4a9f-b5d8-ae058b7e0f27" name="Karate" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="922b9b42-6e88-4ab6-a255-00fe2b025f2a" name="Kenjutsu" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 3aba0ece-6ced-48ab-a873-3787c58df995 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 017a0f4c-6581-4f59-9c7d-52b11f51d365 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="57a1e6dd-a78c-4fb7-94e0-db4a7b8b7f63" name="Knight Errant Tactical" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c 8ba77379-ee89-49ab-a2a5-37194d9a992e eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="3b3c2299-5a76-4cf4-962f-160fecbdd38b" name="Krav Maga" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 53a18dd7-a2bd-46fd-a27e-eceafe406154 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="69097cfa-cfdd-49d9-b65a-e866d2296b7e" name="Kunst Des Fechtens" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="f79771b2-067e-4fa4-b295-b5e6a48fc5f0 a1ef3f0f-a36d-493b-b251-6385a15c51f7 017a0f4c-6581-4f59-9c7d-52b11f51d365 81b9073d-305e-4bcf-90a9-56855f4076f4 a620e473-4127-4863-b9da-ac8e96c84535 e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="7a2eb5f6-fbb5-4952-95dc-352570c00e52" name="Kyujutsu" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 0f324bd2-3fad-4721-9335-f82aaaee86cf 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 730318d1-9a03-4925-bd54-27d53dbb1769 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="21bc338f-7b28-49df-9d11-e4db076404be" name="La Verdadera Destreza" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 017a0f4c-6581-4f59-9c7d-52b11f51d365 a620e473-4127-4863-b9da-ac8e96c84535 e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="5366bd5d-ff0a-4277-b02d-24e10ac76319" name="Lone Star Tactical" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 971cac23-8ac2-4419-8d6b-f1de2641d7b3 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="af544c56-2c65-403a-a83b-e861e02c72bb" name="Muay Thai" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 3aba0ece-6ced-48ab-a873-3787c58df995 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 335d2151-9137-4071-af91-3e0688ef67d9 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="0b2aba07-cd8e-40b8-8bd5-a89b0c7d9699" name="Ninjutsu" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 cf776709-ffd2-4871-8a63-35efb5b73dbb 601d98dd-5897-4974-af2e-72b5053bde62 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 3abe5ad7-c735-4f7b-ae38-f7df1081c248 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="f8c89602-b72f-4613-81b8-72951dcad4c9" name="Okichitaw" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 11a90b83-af42-4972-a028-0ab4c60e1c33 017a0f4c-6581-4f59-9c7d-52b11f51d365 2747d8d5-022d-4477-a7ce-43d88806bb35 a10cc1a4-c5cb-492d-aa87-448ace3d7f88 5be9b72c-1de5-49ca-9e63-73c9c58c3cac c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="e613f285-bc8d-40a2-a968-da4aa567cbcc" name="Parkour" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 daa9edc5-d5dd-466a-8df9-7abb6a358db1 5d25f0c8-1bfe-476d-b7b5-672f4ea36c80 96191a29-30c4-4973-bb45-8e267f0e221a 5e00496f-5e91-4fb7-96d9-9c176ff8b80f a10cc1a4-c5cb-492d-aa87-448ace3d7f88 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="0b792f6c-c12e-4e93-b830-1f201e267bbc" name="Pentjak-Silat" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 56ec87e6-d962-4b97-88e8-947cd09ea161 cf776709-ffd2-4871-8a63-35efb5b73dbb 8a457d21-cc45-4f60-b9d3-0891f0c47c10 2747d8d5-022d-4477-a7ce-43d88806bb35 d728ad1e-259a-4af3-ba52-383ffa3e90b4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="36e8103e-a362-49d5-959b-689d06dac350" name="Quarterstaff Fighting" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="84036a28-53d6-426f-935f-1f176964fc8a a1ef3f0f-a36d-493b-b251-6385a15c51f7 017a0f4c-6581-4f59-9c7d-52b11f51d365 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 335d2151-9137-4071-af91-3e0688ef67d9 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="3771abcc-6307-4ddf-9ab5-df86bc591da6" name="Sangre Y Acero" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 3aba0ece-6ced-48ab-a873-3787c58df995 81b9073d-305e-4bcf-90a9-56855f4076f4 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="3e0d63a0-b784-4315-aa66-89b92818a267" name="Tae Kwon Do" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 601d98dd-5897-4974-af2e-72b5053bde62 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="f5829122-0973-4e27-98b4-f54c9343a57c" name="The Cowboy Way" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d9e3774b-4b68-4dff-8c0b-3234a6a3f878 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded dbeae1ec-ebb5-4283-b80e-e66ab08c892d 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="6b5ae017-9fb1-46df-839b-4548ad360534" name="Turkish Archery" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded d728ad1e-259a-4af3-ba52-383ffa3e90b4 730318d1-9a03-4925-bd54-27d53dbb1769 335d2151-9137-4071-af91-3e0688ef67d9 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="2327a330-3b9c-49a9-a392-8f34579e5bce" name="Drunken Boxing" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 1b1dc37d-daf1-430c-a352-50f9b2cbe68e d98d277b-a727-4381-9512-e8f64ad275ff 256bab6a-236d-4f76-93b1-d1dfe3b6df13 ea44f12a-0280-4d2b-8f1f-dc5006167872 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="15ea5191-d615-4320-84e5-bffa90f8873e" name="Fiore Dei Liberi" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 017a0f4c-6581-4f59-9c7d-52b11f51d365 a620e473-4127-4863-b9da-ac8e96c84535 db67e642-c74e-4780-a44b-b85524251240 8938ff95-3c3a-48f5-8a46-f6962e1b16cf e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="3a16d253-73cb-41e0-8c52-8f5b79d27a58" name="Firefight" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 44e0f0bb-2f30-4513-beab-1e0a6c033dd5 bf72ba84-4301-486c-9c9e-f6179fd5f297 1ff734f2-094f-482f-9b52-3583f8d589bb 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="adf31a50-b228-4e09-a09c-46ab9f5e59a1 788b387b-ee41-4e6a-bf22-481a8cc4cf9f 64088b25-de37-4d71-8800-4a430fde08af"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="23c0c9dc-da26-40ab-a578-7cd1a2231ba1" name="Gun Kata" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="44e0f0bb-2f30-4513-beab-1e0a6c033dd5 daa9edc5-d5dd-466a-8df9-7abb6a358db1 bf72ba84-4301-486c-9c9e-f6179fd5f297 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="adf31a50-b228-4e09-a09c-46ab9f5e59a1 788b387b-ee41-4e6a-bf22-481a8cc4cf9f 64088b25-de37-4d71-8800-4a430fde08af"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="8940f70e-e81d-4e64-b8e0-52256ee28cf9" name="Jeet Kune Do" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 11a90b83-af42-4972-a028-0ab4c60e1c33 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 2747d8d5-022d-4477-a7ce-43d88806bb35 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="fa11a3e1-a658-4353-8d74-71337e3e1f29" name="Jogo Du Pau" page="130" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c 971cac23-8ac2-4419-8d6b-f1de2641d7b3 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 1ff734f2-094f-482f-9b52-3583f8d589bb 017a0f4c-6581-4f59-9c7d-52b11f51d365 81b9073d-305e-4bcf-90a9-56855f4076f4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="7415286a-11b7-41b6-ad18-a4c72067cb71" name="Jujitsu" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 3d22777f-39c5-472f-b54a-703ed042d8b3 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 1ff5110c-6b10-453c-a05a-faf9410581e0 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="16391532-2476-4a9f-b5d8-ae058b7e0f27" name="Karate" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="922b9b42-6e88-4ab6-a255-00fe2b025f2a" name="Kenjutsu" page="131" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 3aba0ece-6ced-48ab-a873-3787c58df995 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 017a0f4c-6581-4f59-9c7d-52b11f51d365 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="57a1e6dd-a78c-4fb7-94e0-db4a7b8b7f63" name="Knight Errant Tactical" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c 8ba77379-ee89-49ab-a2a5-37194d9a992e eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="adf31a50-b228-4e09-a09c-46ab9f5e59a1 788b387b-ee41-4e6a-bf22-481a8cc4cf9f 64088b25-de37-4d71-8800-4a430fde08af"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="3b3c2299-5a76-4cf4-962f-160fecbdd38b" name="Krav Maga" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="56ec87e6-d962-4b97-88e8-947cd09ea161 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 53a18dd7-a2bd-46fd-a27e-eceafe406154 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="69097cfa-cfdd-49d9-b65a-e866d2296b7e" name="Kunst Des Fechtens" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="f79771b2-067e-4fa4-b295-b5e6a48fc5f0 a1ef3f0f-a36d-493b-b251-6385a15c51f7 017a0f4c-6581-4f59-9c7d-52b11f51d365 81b9073d-305e-4bcf-90a9-56855f4076f4 a620e473-4127-4863-b9da-ac8e96c84535 e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="7a2eb5f6-fbb5-4952-95dc-352570c00e52" name="Kyujutsu" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 0f324bd2-3fad-4721-9335-f82aaaee86cf 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 730318d1-9a03-4925-bd54-27d53dbb1769 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="1537ca5c-fa93-4c05-b073-a2a0eed91b8e"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="21bc338f-7b28-49df-9d11-e4db076404be" name="La Verdadera Destreza" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 017a0f4c-6581-4f59-9c7d-52b11f51d365 a620e473-4127-4863-b9da-ac8e96c84535 e714b868-49df-465f-8ae0-89b7d150341c c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="5366bd5d-ff0a-4277-b02d-24e10ac76319" name="Lone Star Tactical" page="132" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 971cac23-8ac2-4419-8d6b-f1de2641d7b3 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="adf31a50-b228-4e09-a09c-46ab9f5e59a1 788b387b-ee41-4e6a-bf22-481a8cc4cf9f 64088b25-de37-4d71-8800-4a430fde08af"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="af544c56-2c65-403a-a83b-e861e02c72bb" name="Muay Thai" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 3aba0ece-6ced-48ab-a873-3787c58df995 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 335d2151-9137-4071-af91-3e0688ef67d9 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="0b2aba07-cd8e-40b8-8bd5-a89b0c7d9699" name="Ninjutsu" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 cf776709-ffd2-4871-8a63-35efb5b73dbb 601d98dd-5897-4974-af2e-72b5053bde62 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 3abe5ad7-c735-4f7b-ae38-f7df1081c248 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="f8c89602-b72f-4613-81b8-72951dcad4c9" name="Okichitaw" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 11a90b83-af42-4972-a028-0ab4c60e1c33 017a0f4c-6581-4f59-9c7d-52b11f51d365 2747d8d5-022d-4477-a7ce-43d88806bb35 a10cc1a4-c5cb-492d-aa87-448ace3d7f88 5be9b72c-1de5-49ca-9e63-73c9c58c3cac c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="e613f285-bc8d-40a2-a968-da4aa567cbcc" name="Parkour" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 daa9edc5-d5dd-466a-8df9-7abb6a358db1 5d25f0c8-1bfe-476d-b7b5-672f4ea36c80 96191a29-30c4-4973-bb45-8e267f0e221a 5e00496f-5e91-4fb7-96d9-9c176ff8b80f a10cc1a4-c5cb-492d-aa87-448ace3d7f88 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="a9fa961d-07e5-46da-8edc-403ae3e6cc75"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="0b792f6c-c12e-4e93-b830-1f201e267bbc" name="Pentjak-Silat" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 56ec87e6-d962-4b97-88e8-947cd09ea161 cf776709-ffd2-4871-8a63-35efb5b73dbb 8a457d21-cc45-4f60-b9d3-0891f0c47c10 2747d8d5-022d-4477-a7ce-43d88806bb35 d728ad1e-259a-4af3-ba52-383ffa3e90b4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="36e8103e-a362-49d5-959b-689d06dac350" name="Quarterstaff Fighting" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="84036a28-53d6-426f-935f-1f176964fc8a a1ef3f0f-a36d-493b-b251-6385a15c51f7 017a0f4c-6581-4f59-9c7d-52b11f51d365 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 335d2151-9137-4071-af91-3e0688ef67d9 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="cd9f6bf7-fa48-464b-9a8f-c7ce26713a72"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="3771abcc-6307-4ddf-9ab5-df86bc591da6" name="Sangre Y Acero" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 3aba0ece-6ced-48ab-a873-3787c58df995 81b9073d-305e-4bcf-90a9-56855f4076f4 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="3e0d63a0-b784-4315-aa66-89b92818a267" name="Tae Kwon Do" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="11a90b83-af42-4972-a028-0ab4c60e1c33 601d98dd-5897-4974-af2e-72b5053bde62 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="f5829122-0973-4e27-98b4-f54c9343a57c" name="The Cowboy Way" page="133" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d9e3774b-4b68-4dff-8c0b-3234a6a3f878 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded dbeae1ec-ebb5-4283-b80e-e66ab08c892d 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="adf31a50-b228-4e09-a09c-46ab9f5e59a1 64088b25-de37-4d71-8800-4a430fde08af 788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="6b5ae017-9fb1-46df-839b-4548ad360534" name="Turkish Archery" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="a24a6c9f-6edd-4852-9d3d-785c51a40f25 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded d728ad1e-259a-4af3-ba52-383ffa3e90b4 730318d1-9a03-4925-bd54-27d53dbb1769 335d2151-9137-4071-af91-3e0688ef67d9 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="1537ca5c-fa93-4c05-b073-a2a0eed91b8e"/>
         <entries xsi:type="shr5:MartialartStyle" xmi:id="18c44152-1ca8-435c-a72d-e443d3f1e7c6" name="Whip Fighting" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="378a6f47-9375-4810-8324-4a6230cd6914 d9e3774b-4b68-4dff-8c0b-3234a6a3f878 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded 971cac23-8ac2-4419-8d6b-f1de2641d7b3 bf72ba84-4301-486c-9c9e-f6179fd5f297 a1ef3f0f-a36d-493b-b251-6385a15c51f7 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="df0b9bb0-bad9-4bb9-b543-eb73edfe34e8" name="Wildcat" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 11a90b83-af42-4972-a028-0ab4c60e1c33 cf776709-ffd2-4871-8a63-35efb5b73dbb 3aba0ece-6ced-48ab-a873-3787c58df995 a1ef3f0f-a36d-493b-b251-6385a15c51f7 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="24ee13d8-9b6d-4fc0-908c-d9904db364c7" name="Wrestling (Sport Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 84036a28-53d6-426f-935f-1f176964fc8a 256bab6a-236d-4f76-93b1-d1dfe3b6df13 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="03e7e806-2bf6-43d2-ae51-9a724aca67fc" name="Wrestling (Sumo Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 971cac23-8ac2-4419-8d6b-f1de2641d7b3 84036a28-53d6-426f-935f-1f176964fc8a 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="06d5eac3-1ec1-4164-8014-e8f6ae47de0f" name="Wrestling (Professional Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 8a457d21-cc45-4f60-b9d3-0891f0c47c10 256bab6a-236d-4f76-93b1-d1dfe3b6df13 845d010e-036b-488c-8ff6-5eec6c2b7c21 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 0dfdfe1c-a6ce-4233-a36a-d7856d655290 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="43aedfbf-c4ef-4682-a8a3-9f53363a3e60" name="Wrestling (MMA Style)" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 84036a28-53d6-426f-935f-1f176964fc8a 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 81b9073d-305e-4bcf-90a9-56855f4076f4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="bd876c27-26b0-4b37-a236-b5da99d5c503" name="Wudang Sword" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 3aba0ece-6ced-48ab-a873-3787c58df995 601d98dd-5897-4974-af2e-72b5053bde62 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 a620e473-4127-4863-b9da-ac8e96c84535 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9"/>
-        <entries xsi:type="shr5:MartialartStyle" xmi:id="0325b2c8-0a48-497f-92b1-2830a5ac467f" name="One Trick Pony" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 c46f550f-3148-4b91-a0fa-299a57e7879c 378a6f47-9375-4810-8324-4a6230cd6914 8ba77379-ee89-49ab-a2a5-37194d9a992e eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 56ec87e6-d962-4b97-88e8-947cd09ea161 d9e3774b-4b68-4dff-8c0b-3234a6a3f878 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 a24a6c9f-6edd-4852-9d3d-785c51a40f25 3d22777f-39c5-472f-b54a-703ed042d8b3 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 0f324bd2-3fad-4721-9335-f82aaaee86cf 05666129-d102-469f-a957-a6456027c9c9 c04ce0ed-32d8-4e00-9d50-7be7b5e250fc 8022a74f-547c-4b1e-82b2-e1ce42dbae62 34dcd6bd-dce4-43b9-bee8-ae18ab3a52b9 1d0afa0f-416a-4075-abbd-cc5112429639 44e0f0bb-2f30-4513-beab-1e0a6c033dd5 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 06a17020-5b3a-409b-b8bf-19c4365fd594 11a90b83-af42-4972-a028-0ab4c60e1c33 ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 1b1dc37d-daf1-430c-a352-50f9b2cbe68e cf776709-ffd2-4871-8a63-35efb5b73dbb 3aba0ece-6ced-48ab-a873-3787c58df995 601d98dd-5897-4974-af2e-72b5053bde62 d98d277b-a727-4381-9512-e8f64ad275ff 1df1bc89-a5d5-47e6-8685-7c09078ba17f f79771b2-067e-4fa4-b295-b5e6a48fc5f0 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded dbeae1ec-ebb5-4283-b80e-e66ab08c892d 971cac23-8ac2-4419-8d6b-f1de2641d7b3 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 8a457d21-cc45-4f60-b9d3-0891f0c47c10 84036a28-53d6-426f-935f-1f176964fc8a 256bab6a-236d-4f76-93b1-d1dfe3b6df13 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 d89b18bb-9146-4ad4-8aef-efcb25a537a2 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 5d25f0c8-1bfe-476d-b7b5-672f4ea36c80 96191a29-30c4-4973-bb45-8e267f0e221a a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 1ff734f2-094f-482f-9b52-3583f8d589bb 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 017a0f4c-6581-4f59-9c7d-52b11f51d365 53a18dd7-a2bd-46fd-a27e-eceafe406154 3abe5ad7-c735-4f7b-ae38-f7df1081c248 2747d8d5-022d-4477-a7ce-43d88806bb35 5d543914-9c0c-4245-a212-9d5383e7221a a620e473-4127-4863-b9da-ac8e96c84535 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 845d010e-036b-488c-8ff6-5eec6c2b7c21 a10cc1a4-c5cb-492d-aa87-448ace3d7f88 d728ad1e-259a-4af3-ba52-383ffa3e90b4 730318d1-9a03-4925-bd54-27d53dbb1769 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 81b9073d-305e-4bcf-90a9-56855f4076f4 5e00496f-5e91-4fb7-96d9-9c176ff8b80f 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f 335d2151-9137-4071-af91-3e0688ef67d9 43351aef-fbed-4a9e-a699-455a495ea2cb 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 ea44f12a-0280-4d2b-8f1f-dc5006167872 db67e642-c74e-4780-a44b-b85524251240 8938ff95-3c3a-48f5-8a46-f6962e1b16cf e714b868-49df-465f-8ae0-89b7d150341c 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 0dfdfe1c-a6ce-4233-a36a-d7856d655290"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="df0b9bb0-bad9-4bb9-b543-eb73edfe34e8" name="Wildcat" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 11a90b83-af42-4972-a028-0ab4c60e1c33 cf776709-ffd2-4871-8a63-35efb5b73dbb 3aba0ece-6ced-48ab-a873-3787c58df995 a1ef3f0f-a36d-493b-b251-6385a15c51f7 43351aef-fbed-4a9e-a699-455a495ea2cb c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="24ee13d8-9b6d-4fc0-908c-d9904db364c7" name="Wrestling (Sport Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 84036a28-53d6-426f-935f-1f176964fc8a 256bab6a-236d-4f76-93b1-d1dfe3b6df13 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="03e7e806-2bf6-43d2-ae51-9a724aca67fc" name="Wrestling (Sumo Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="c46f550f-3148-4b91-a0fa-299a57e7879c e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 971cac23-8ac2-4419-8d6b-f1de2641d7b3 84036a28-53d6-426f-935f-1f176964fc8a 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 9d355a11-5e68-4c03-9676-9a3f555f977f c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="06d5eac3-1ec1-4164-8014-e8f6ae47de0f" name="Wrestling (Professional Style)" page="134" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 8a457d21-cc45-4f60-b9d3-0891f0c47c10 256bab6a-236d-4f76-93b1-d1dfe3b6df13 845d010e-036b-488c-8ff6-5eec6c2b7c21 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 0dfdfe1c-a6ce-4233-a36a-d7856d655290 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="43aedfbf-c4ef-4682-a8a3-9f53363a3e60" name="Wrestling (MMA Style)" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 06a17020-5b3a-409b-b8bf-19c4365fd594 ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 84036a28-53d6-426f-935f-1f176964fc8a 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 81b9073d-305e-4bcf-90a9-56855f4076f4 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="bd876c27-26b0-4b37-a236-b5da99d5c503" name="Wudang Sword" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 3aba0ece-6ced-48ab-a873-3787c58df995 601d98dd-5897-4974-af2e-72b5053bde62 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 a620e473-4127-4863-b9da-ac8e96c84535 c512a3e7-5711-438e-b1e7-e02dbf996b85 1ff5100c-6b10-453c-a05a-9af9110581e9" usableWith="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
+        <entries xsi:type="shr5:MartialartStyle" xmi:id="0325b2c8-0a48-497f-92b1-2830a5ac467f" name="One Trick Pony" page="127" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" techniques="d2234863-297d-4a61-a939-ff263381e209 c46f550f-3148-4b91-a0fa-299a57e7879c 378a6f47-9375-4810-8324-4a6230cd6914 8ba77379-ee89-49ab-a2a5-37194d9a992e eb766a12-66c7-44f4-bdc8-a3ae6f8f6770 56ec87e6-d962-4b97-88e8-947cd09ea161 d9e3774b-4b68-4dff-8c0b-3234a6a3f878 57bc4b34-1f4d-4a19-8413-54f2ddafecd9 a24a6c9f-6edd-4852-9d3d-785c51a40f25 3d22777f-39c5-472f-b54a-703ed042d8b3 e2bedc2b-59c3-45a1-9e0f-2e4f0234a0cf 0f324bd2-3fad-4721-9335-f82aaaee86cf 05666129-d102-469f-a957-a6456027c9c9 c04ce0ed-32d8-4e00-9d50-7be7b5e250fc 8022a74f-547c-4b1e-82b2-e1ce42dbae62 34dcd6bd-dce4-43b9-bee8-ae18ab3a52b9 1d0afa0f-416a-4075-abbd-cc5112429639 44e0f0bb-2f30-4513-beab-1e0a6c033dd5 e6e3ef1e-9bbc-408a-b2c0-1ac1d4143e9c 06a17020-5b3a-409b-b8bf-19c4365fd594 11a90b83-af42-4972-a028-0ab4c60e1c33 ec74b517-5c0d-46e6-a61b-5ab1b7316d5d 1b1dc37d-daf1-430c-a352-50f9b2cbe68e cf776709-ffd2-4871-8a63-35efb5b73dbb 3aba0ece-6ced-48ab-a873-3787c58df995 601d98dd-5897-4974-af2e-72b5053bde62 d98d277b-a727-4381-9512-e8f64ad275ff 1df1bc89-a5d5-47e6-8685-7c09078ba17f f79771b2-067e-4fa4-b295-b5e6a48fc5f0 2a28146f-cbd9-4cdd-98ba-59bd6eb65ded dbeae1ec-ebb5-4283-b80e-e66ab08c892d 971cac23-8ac2-4419-8d6b-f1de2641d7b3 6de0cc4b-d9b5-485c-9b4a-c6e4abeaf7d4 e812caf9-7e6b-4963-bb9b-ea7ce8e46ea3 8a457d21-cc45-4f60-b9d3-0891f0c47c10 84036a28-53d6-426f-935f-1f176964fc8a 256bab6a-236d-4f76-93b1-d1dfe3b6df13 5a29bdb8-5233-44ab-b5e0-5cf892559fc1 daa9edc5-d5dd-466a-8df9-7abb6a358db1 d89b18bb-9146-4ad4-8aef-efcb25a537a2 4e3d4a86-d949-40dc-83c1-3358b42fc1f8 5d25f0c8-1bfe-476d-b7b5-672f4ea36c80 96191a29-30c4-4973-bb45-8e267f0e221a a1ef3f0f-a36d-493b-b251-6385a15c51f7 bf72ba84-4301-486c-9c9e-f6179fd5f297 d5ca554c-fb2b-480c-ab0c-ad6c05fa919b 1ff734f2-094f-482f-9b52-3583f8d589bb 371d0b75-f8a4-4fc8-90ee-9728d27eaca4 1f772fd3-7fd6-4c42-a17f-fd363f46f9fa 017a0f4c-6581-4f59-9c7d-52b11f51d365 53a18dd7-a2bd-46fd-a27e-eceafe406154 3abe5ad7-c735-4f7b-ae38-f7df1081c248 2747d8d5-022d-4477-a7ce-43d88806bb35 5d543914-9c0c-4245-a212-9d5383e7221a a620e473-4127-4863-b9da-ac8e96c84535 456dfdc7-d1e5-4ec2-86bd-85bf82d81e46 845d010e-036b-488c-8ff6-5eec6c2b7c21 a10cc1a4-c5cb-492d-aa87-448ace3d7f88 d728ad1e-259a-4af3-ba52-383ffa3e90b4 730318d1-9a03-4925-bd54-27d53dbb1769 693a1fb7-0c33-4959-87fc-a7f0d3bfd7bc 81b9073d-305e-4bcf-90a9-56855f4076f4 5e00496f-5e91-4fb7-96d9-9c176ff8b80f 5be9b72c-1de5-49ca-9e63-73c9c58c3cac 9d355a11-5e68-4c03-9676-9a3f555f977f 335d2151-9137-4071-af91-3e0688ef67d9 43351aef-fbed-4a9e-a699-455a495ea2cb 8d8e3afb-7538-47e1-91e7-fc1a8d50dbc7 ea44f12a-0280-4d2b-8f1f-dc5006167872 db67e642-c74e-4780-a44b-b85524251240 8938ff95-3c3a-48f5-8a46-f6962e1b16cf e714b868-49df-465f-8ae0-89b7d150341c 091f71eb-75d7-4a5c-8d4e-8ec5ff075ff2 0dfdfe1c-a6ce-4233-a36a-d7856d655290" usableWith="4fcd40cb-4b02-4b7e-afcb-f44d46cd5706 48763fa5-4b89-48c7-80ff-d0a2761de4c0 adf31a50-b228-4e09-a09c-46ab9f5e59a1 64088b25-de37-4d71-8800-4a430fde08af 788b387b-ee41-4e6a-bf22-481a8cc4cf9f"/>
         <entries xsi:type="shr5:MartialartTechnique" xmi:id="d2234863-297d-4a61-a939-ff263381e209" name="Ballestra" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
         <entries xsi:type="shr5:MartialartTechnique" xmi:id="c46f550f-3148-4b91-a0fa-299a57e7879c" name="Barbed Hooks" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
         <entries xsi:type="shr5:MartialartTechnique" xmi:id="378a6f47-9375-4810-8324-4a6230cd6914" name="Bending of the Reed" page="135" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f"/>
@@ -22997,8 +23170,8 @@
         </entries>
       </entries>
     </entries>
-    <entries xsi:type="shr5:ShrList" xmi:id="_EV_vIznTEeSe6_w6Jrbqxg" name="additional stuff">
-      <entries xsi:type="shr5:ShrList" xmi:id="_ahEy8JHzEeSAavuXEODnew" name="packs">
+    <entries xsi:type="shr5:ShrList" xmi:id="_EV_vIznTEeSe6_w6Jrbqxg" name="Additional stuff">
+      <entries xsi:type="shr5:ShrList" xmi:id="_ahEy8JHzEeSAavuXEODnew" name="Packs">
         <entries xsi:type="shr5mngt:Pack" xmi:id="_BssLkN0CEeOvVYoRsPZlnAC" beschreibung="From http://forums.shadowruntabletop.com/index.php?topic=17338.msg308992#msg308992" name="Bare Essentials (Low-end)" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="0">
           <items xsi:type="shr5:Kleidung" xmi:id="_VtLJoJH0EeSAavuXEODnew" parentId="4ad1eeab-daf3-4495-a73d-fbb0ce89be5b" page="437" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500" name="Armor Vest" ruestung="9">
             <localizations xmi:id="_VtLJoZH0EeSAavuXEODnew" local="de" name="Panzerweste"/>
@@ -23192,7 +23365,7 @@
           </items>
         </entries>
       </entries>
-      <entries xsi:type="shr5:ShrList" xmi:id="_SJsEkL-CEeS9maZrSgWaVQ" name="knowlege skills">
+      <entries xsi:type="shr5:ShrList" xmi:id="_SJsEkL-CEeS9maZrSgWaVQ" name="Knowlege skills">
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_IP5KYL-BEeS9maZrSgWaVQ" name="Corporate Rumors">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
         </entries>
@@ -23234,176 +23407,6 @@
         </entries>
         <entries xsi:type="shr5:Wissensfertigkeit" xmi:id="_zCkcUMAVEeSEwMMqEoWtPQ" name="Berliner Gerüchteküche">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
-        </entries>
-      </entries>
-      <entries xsi:type="shr5:ShrList" xmi:id="_NmNAYL-EEeS9maZrSgWaVQ" name="software">
-        <entries xsi:type="shr5:AutoSoft" xmi:id="_UkFd8HgGEeSv5bbPkjBOVw" wertValue="10" name="" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
-        <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
-        <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="bed1f6eb-ead9-49aa-bb24-266c21d7aeb4" wertValue="80" name="Browse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYTnTEeSe6_w6Jrbqxg" local="de" name="Schmöker"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="734f653b-35ca-4b26-b837-f64662878e8f" wertValue="80" name="Configurator" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYjnTEeSe6_w6Jrbqxg" local="de" name="Konfigurator" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="dd35285a-7506-4b7e-8d5a-1b6ea8577e19" wertValue="80" name="Edit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYznTEeSe6_w6Jrbqxg" local="de" name="Editieren"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a1dd8536-d2ca-41cd-be55-4adfdc52068b" wertValue="80" name="Encryption" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLZDnTEeSe6_w6Jrbqxg" local="de" name="Verschlüsselung" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="3f2498d9-b575-474c-9b18-b959442011c5" wertValue="80" name="Signal Scrub" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycDnTEeSe6_w6Jrbqxg" local="de" name="Signalreiniger" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="1861266c-9439-4816-9b1e-09ea9bbac9ec" wertValue="80" name="Toolbox" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycTnTEeSe6_w6Jrbqxg" local="de" name="Toolbox" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="c56fd11b-f543-4c1f-8f97-6e7a82265885" wertValue="80" name="Virtual Machine" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycjnTEeSe6_w6Jrbqxg" local="de" name="Virtuelle Maschine" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="6968d7e3-b58f-4199-af6f-5877097a51da" wertValue="80" name="Armor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycznTEeSe6_w6Jrbqxg" local="de" name="Panzerung"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f5a1d20b-caa2-4a53-ab42-6e71ee519702" wertValue="80" name="Baby Monitor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCydDnTEeSe6_w6Jrbqxg" local="de" name="Babymonitor" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="9bc73d88-bad2-4ae9-b9ea-fe004447e493" wertValue="80" name="Biofeedback" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgDnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f05f35c3-1c35-4bac-9ecb-1a6ebf9f89dd" wertValue="80" name="Biofeedback Filter" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgTnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback-Filter" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f1329065-8e71-41d8-8090-a5e8f91cf031" wertValue="80" name="Blackout" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgjnTEeSe6_w6Jrbqxg" local="de" name="Blackout"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="de82aad2-da77-4478-a621-85ad02d70120" wertValue="80" name="Decrypt" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgznTEeSe6_w6Jrbqxg" local="de" name="Entschlüsselung"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="6e6805d2-504d-422e-82d2-f782a912b2a7" wertValue="80" name="Defuse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZhDnTEeSe6_w6Jrbqxg" local="de" name="Entschärfen"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a52cc5e5-83f5-4bcd-9fea-4f9ff5f52765" wertValue="80" name="Demolition" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkDnTEeSe6_w6Jrbqxg" local="de" name="Superbombe" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="16b4bbc1-3a19-490c-90a8-0d102f18e709" wertValue="80" name="Exploit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkTnTEeSe6_w6Jrbqxg" local="de" name="Ausnutzen"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="b96ebe65-9bb5-49e7-8d23-a209eae7f9f3" wertValue="80" name="Fork" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkjnTEeSe6_w6Jrbqxg" local="de" name="Gabel" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="4a79b908-8239-4b3a-9c82-e2420be2a174" wertValue="80" name="Guard" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkznTEeSe6_w6Jrbqxg" local="de" name="Schild" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="d2f96d3a-9dcb-4b46-b5bd-b98a730bf1d7" wertValue="80" name="Hammer" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAlDnTEeSe6_w6Jrbqxg" local="de" name="Hammer" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="01c5f885-d14f-478d-8e1d-612773035480" wertValue="80" name="Lockdown" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoDnTEeSe6_w6Jrbqxg" local="de" name="Fessel" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="e3382b40-114e-456a-982a-f52d135527f5" wertValue="80" name="Mugger" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoTnTEeSe6_w6Jrbqxg" local="de" name="Überfall" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="ff9378d1-b6bc-4adc-8651-a9689a1b92b9" wertValue="80" name="Shell" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnojnTEeSe6_w6Jrbqxg" local="de" name="Schutzschirm" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f7b5a9a3-c030-4647-b043-f968913867b4" wertValue="80" name="Sneak" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoznTEeSe6_w6Jrbqxg" local="de" name="Irreführung" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a381db11-6e7f-4472-b4ef-79a16be65ba4" wertValue="80" name="Stealth" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnpDnTEeSe6_w6Jrbqxg" local="de" name="Schleicher"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnpTnTEeSe6_w6Jrbqxg" local="de" name="Aufspüren"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="1b78748c-9a1d-427f-8657-e3e2bc8fd5b5" wertValue="80" name="Wrapper" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOsDnTEeSe6_w6Jrbqxg" local="de" name="Verwandlung" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="9ebde6f6-a232-4af8-9e16-b553094160fa" wertValue="80" name="Agent" page="246" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOsTnTEeSe6_w6Jrbqxg" local="de" name="Agent" page="246"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="deb8de75-a07f-4d6d-8b1b-6c5aaa2e9110" wertValue="80" name="Activesoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOsjnTEeSe6_w6Jrbqxg" local="de" name="Aktionssoft"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="54df23dc-c60e-4e58-96ca-19ddb63e9c9d" wertValue="80" name="Knowsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOsznTEeSe6_w6Jrbqxg" local="de" name="Wissenssoft"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="c8916096-7a71-4351-97b4-d13c9e58391d" wertValue="80" name="Linguasoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOtDnTEeSe6_w6Jrbqxg" local="de" name="Linguasoft"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="ebf68c9c-6e17-4fb7-8dd3-7f245a91ca02" wertValue="80" name="Datasoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWFOtTnTEeSe6_w6Jrbqxg" local="de" name="Datensoft" page="441"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="64c971fb-f42c-4f76-88ac-ffe4870b5dd9" wertValue="80" name="Mapsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWF1wDnTEeSe6_w6Jrbqxg" local="de" name="Kartensoft" page="441"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="4762f25a-99bc-499f-a9d0-68e6aba542d3" wertValue="80" name="Shopsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWF1wTnTEeSe6_w6Jrbqxg" local="de" name="Shopsoft" page="441"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="5b08c062-4612-42f5-ae05-1209970db6bb" wertValue="80" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWF1wjnTEeSe6_w6Jrbqxg" local="de" name="Lehrsoft" page="442"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a27dfba1-41ee-4e50-b7f4-70a62eef1d37" wertValue="80" name="PI-Tac Level I (Renraku Taka)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_EWF1wznTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level I (Renraku Taka)" page="105"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="b37e6137-69c2-48ef-9d52-5fe9ac731fef" wertValue="80" name="PI-Tac Level II (Novatech Tactician)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_EWF1xDnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level II (Novatech Tactician)" page="105"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="7f490b43-639f-4692-a363-315844cd829e" wertValue="80" name="PI-Tac Level III (ComPac-Esprit General)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
-          <localizations xmi:id="_EWF1xTnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level III (ComPac-Esprit General)" page="105"/>
-        </entries>
-      </entries>
-      <entries xsi:type="shr5:ShrList" xmi:id="_N5FOQODwEeS53L70HY3q5Q" name="Sensors">
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" name="Ultrasound" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVuDvEeSEl6fXajKS9w" local="de" name="Ultraschall"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" name="Radio Signal Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVeDvEeSEl6fXajKS9w" local="de" name="Radiosignalscanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" name="Omni-directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtVODvEeSEl6fXajKS9w" local="de" name="Mikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" name="Olfactory Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtU-DvEeSEl6fXajKS9w" local="de" name="Geruchsscanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" name="Motion Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUuDvEeSEl6fXajKS9w" local="de" name="Bewegungsmelder"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" name="MAD Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUeDvEeSEl6fXajKS9w" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" name="Laser Range Finder" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjtUODvEeSEl6fXajKS9w" local="de" name="Laser-Entfernungsmesser"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" name="Laser Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGRODvEeSEl6fXajKS9w" local="de" name="Lasermikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="d98f419f-7625-4228-9723-0217950d8155" name="Geiger Counter" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQ-DvEeSEl6fXajKS9w" local="de" name="Geigerzähler"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" name="Directional Microphone" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQuDvEeSEl6fXajKS9w" local="de" name="Richtmikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" name="Cyberware Scanner" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQeDvEeSEl6fXajKS9w" local="de" name="Cyberwarescanner"/>
-        </entries>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" name="Camera" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-        <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
-        </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="2" capacityValue="1">
-          <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
-        </entries>
-        <entries xsi:type="shr5:SensorArray" xmi:id="_AZrV8OEIEeSMM7_8sN0WSw" name="Sensor Array 2" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="2" capacityValue="6">
-          <localizations xmi:id="_thh4IODvEeSEl6fXajKS9w" local="de" name="Sensorarray"/>
-        </entries>
-        <entries xsi:type="shr5:SensorArray" xmi:id="_jmFZUOEIEeSMM7_8sN0WSw" name="Sensor Array 3" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="3" capacityValue="6">
-          <localizations xmi:id="_jmFZUeEIEeSMM7_8sN0WSw" local="de" name="Sensorarray"/>
-        </entries>
-        <entries xsi:type="shr5:SensorArray" xmi:id="_sPvWwOEIEeSMM7_8sN0WSw" name="Sensor Array 4" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="4" capacityValue="6">
-          <localizations xmi:id="_sPvWweEIEeSMM7_8sN0WSw" local="de" name="Sensorarray"/>
-        </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" functions="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" rating="3" capacityValue="1">
-          <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:Cyberdeck" xmi:id="_EWAWMTnTEeSe6_w6Jrbqxg" page="227" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3R" wertValue="49500" name="Erika MCD-1" deviceRating="1" programSlots="1" attribute1="4" attribute2="3" attribute3="2" attribute4="1">
