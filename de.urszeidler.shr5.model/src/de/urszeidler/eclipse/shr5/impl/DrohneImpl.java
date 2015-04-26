@@ -442,7 +442,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     public BigDecimal getWert() {
         BigDecimal wert = super.getWert();
         BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getStoredPrograms());
-
+        
         if (wert == null)
             return calcListenWert;
 

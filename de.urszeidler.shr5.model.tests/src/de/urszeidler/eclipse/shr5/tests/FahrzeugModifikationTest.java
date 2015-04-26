@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 
@@ -65,7 +67,8 @@ public abstract class FahrzeugModifikationTest extends TestCase {
      * @generated not
      */
     public void testGetWert() {
-         fail();
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
     }
 
 } //FahrzeugModifikationTest

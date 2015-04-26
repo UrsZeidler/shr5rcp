@@ -701,6 +701,10 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             return null;
 
         BigDecimal listenWert = ShadowrunTools.calcListenWert(getModifizierungen());
+        if(getSensorArray()!=null)
+            listenWert = listenWert.add(getSensorArray().getWert());
+  
+        
         return getWertValue().add(listenWert);
     }
 

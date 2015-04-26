@@ -8,6 +8,7 @@ import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
+import de.urszeidler.eclipse.shr5.SensorArray;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.WeaponMount;
@@ -218,6 +219,24 @@ public abstract class FahrzeugTest extends TestCase {
         FahrzeugModifikation mod = Shr5Factory.eINSTANCE.createWeaponMount();
         mod.setWertValue(new BigDecimal(11));
         getFixture().getModifizierungen().add(mod);
+        assertEquals(21,getFixture().getWert().intValue());
+
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWert_SensorArray() {
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
+        
+        SensorArray mod = Shr5Factory.eINSTANCE.createSensorArray();
+        mod.setRating(1);
+        mod.setWertValue(new BigDecimal(11));
+        getFixture().setSensorArray(mod);
         assertEquals(21,getFixture().getWert().intValue());
 
     }
