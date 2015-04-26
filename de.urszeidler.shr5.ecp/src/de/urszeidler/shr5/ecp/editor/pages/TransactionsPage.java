@@ -705,6 +705,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         tableViewer_1.addFilter(sourceFilter);
     }
 
+    @SuppressWarnings("unchecked")
     private void addSelectedObjectsToList() {
         StructuredSelection selection = (StructuredSelection)tableViewer_1.getSelection();
         for (EObject eo : ShadowrunTools.toIterable(selection.iterator())) {

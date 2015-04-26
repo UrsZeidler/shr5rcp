@@ -2211,7 +2211,7 @@
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_EIqdwDnTEeSe6_w6Jrbqxg" name="Gear">
       <entries xsi:type="shr5:ShrList" xmi:id="_C-UMEEjdEeSs1LVnBuzujg" name="Weapons">
-        <entries xsi:type="shr5:ShrList" xmi:id="_nAINoK0bEeSEgt-_Sti6fg" name="accessories">
+        <entries xsi:type="shr5:ShrList" xmi:id="_nAINoK0bEeSEgt-_Sti6fg" name="Accessories">
           <entries xsi:type="shr5:FernkampfwaffeModifikator" xmi:id="d34a93a8-b695-4c46-8e34-0948df68d44f" name="Silencer, Ares Light Fire 70" parentId="d34a93a8-b695-4c46-8e34-0948df68d44f" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6F" wertValue="750">
             <localizations xmi:id="_nAZTYK0bEeSEgt-_Sti6fg" local="de" name="Schalldämpfer, Ares Light Fire 70"/>
           </entries>
@@ -2408,7 +2408,7 @@
             <localizations xmi:id="_nAgoIq0bEeSEgt-_Sti6fg" local="de" name="Personalized Grip" page="31"/>
           </entries>
         </entries>
-        <entries xsi:type="shr5:ShrList" xmi:id="_7-Hv8K7bEeSRJ8SOOpi5Lw" name="melee">
+        <entries xsi:type="shr5:ShrList" xmi:id="_7-Hv8K7bEeSRJ8SOOpi5Lw" name="Melee">
           <entries xsi:type="shr5:Nahkampfwaffe" xmi:id="ad4a06e3-7f8e-4f05-a42e-5be2c875bb72" page="19" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="950" name="Ares 'One' Monosword" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-3" reichweite="1">
             <localizations xmi:id="_7-JlIK7bEeSRJ8SOOpi5Lw" local="de" name="Ares 'One' Monosword" page="19"/>
           </entries>
@@ -2578,7 +2578,7 @@
             <localizations xmi:id="_7-gxgK7bEeSRJ8SOOpi5Lw" local="de" name="Vibroschwert"/>
           </entries>
         </entries>
-        <entries xsi:type="shr5:ShrList" xmi:id="_7-gxga7bEeSRJ8SOOpi5Lw" name="projectileweapon">
+        <entries xsi:type="shr5:ShrList" xmi:id="_7-gxga7bEeSRJ8SOOpi5Lw" name="Projectileweapon">
           <entries xsi:type="shr5:Projektilwaffe" xmi:id="2d4e1dae-eedd-426c-84c2-2aba387d98d0" page="423" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="100" name="Bow (Rating 1)" schadenscode="3P" praezision="6" reichweite="_ENGR1TnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_7-imsK7bEeSRJ8SOOpi5Lw" local="de" name="Bogen (Stufe 1)"/>
           </entries>
@@ -8664,7 +8664,7 @@
         <entries xsi:type="shr5:SensorFunction" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" name="Atmosphere Sensor" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_thjGQODvEeSEl6fXajKS9w" local="de" name="Atmosphärensensor"/>
         </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="2" capacityValue="1">
+        <entries xsi:type="shr5:Sensor" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" name="Single Sensor 2" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="2" capacityValue="1">
           <localizations xmi:id="_thh4IeDvEeSEl6fXajKS9w" local="de" name="Einzelensor"/>
         </entries>
         <entries xsi:type="shr5:SensorArray" xmi:id="_AZrV8OEIEeSMM7_8sN0WSw" name="Sensor Array 2" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="2" capacityValue="6">
@@ -8679,8 +8679,20 @@
         <entries xsi:type="shr5:SensorArray" xmi:id="_e9znMOs7EeSPI_AbJRgUVg" name="Sensor Array 5" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="5" capacityValue="6">
           <localizations xmi:id="_e9znMes7EeSPI_AbJRgUVg" local="de" name="Sensorarray 5"/>
         </entries>
-        <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" functions="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" rating="3" capacityValue="1">
+        <entries xsi:type="shr5:SensorArray" xmi:id="_-Dk5YOwMEeSYptVhF8ZBKA" name="Sensor Array 6" parentId="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" wertValue="1000" rating="6" capacityValue="6">
+          <localizations xmi:id="_-Dk5YewMEeSYptVhF8ZBKA" local="de" name="Sensorarray 5"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="3" capacityValue="1">
           <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_22_W4OwMEeSYptVhF8ZBKA" name="Single Sensor 4" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="4" capacityValue="1">
+          <localizations xmi:id="_22_W4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_56TW4OwMEeSYptVhF8ZBKA" name="Single Sensor 5" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="5" capacityValue="1">
+          <localizations xmi:id="_56TW4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
+        </entries>
+        <entries xsi:type="shr5:Sensor" xmi:id="_74kaYOwMEeSYptVhF8ZBKA" name="Single Sensor 6" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="6" capacityValue="1">
+          <localizations xmi:id="_74kaYewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_NmNAYL-EEeS9maZrSgWaVQ" name="Software">
@@ -8798,6 +8810,12 @@
         <entries xsi:type="shr5:CommonProgram" xmi:id="7f490b43-639f-4692-a363-315844cd829e" wertValue="80" name="PI-Tac Level III (ComPac-Esprit General)" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f">
           <localizations xmi:id="_EWF1xTnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level III (ComPac-Esprit General)" page="105"/>
         </entries>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_f-riYOwMEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="ae91a8a6-80e7-4f52-b9eb-21725a5528a4" model="3be36e78-0786-45e6-bc72-6269b75c3f29"/>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_tjoxoOwLEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Clearsight" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="04e1eb3e-e82d-485b-a7fd-1e677df2a070"/>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_nKDj8OwMEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Electronic Warfare" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="2c8e5f20-e52d-4844-89e9-51b92dba47df"/>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_HyDw4OwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Evasion" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_Nr2OwOwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Stealth" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
+        <entries xsi:type="shr5:AutoSoft" xmi:id="_nvU-wOwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Targeting" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_ELz4YjnTEeSe6_w6Jrbqxg" name="Skills">
