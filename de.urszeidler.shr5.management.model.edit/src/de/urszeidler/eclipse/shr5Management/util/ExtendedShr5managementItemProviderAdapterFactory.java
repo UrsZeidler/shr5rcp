@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5ManagementEditPlugin;
@@ -66,23 +65,23 @@ public class ExtendedShr5managementItemProviderAdapterFactory extends Shr5manage
     @Override
     public Adapter createAdapter(Notifier target) {
         if (target instanceof EAttribute) {
-            if (((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
-                return createShr5ModifikatorItemProvider();
             if (((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5managementPackage.eINSTANCE))
                 return createSr5ManagementItemProvider();
+//            if (((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
+                return createShr5ModifikatorItemProvider();
         }
         if (target instanceof EReference) {
-            if (((EReference)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
-                return createShr5ModifikatorItemProvider();
             if (((EReference)target).getEContainingClass().getEPackage().equals(Shr5managementPackage.eINSTANCE))
                 return createSr5ManagementItemProvider();
+//            if (((EReference)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
+                return createShr5ModifikatorItemProvider();
         }
 
         if (target instanceof EClass) {
-            if (((EClass)target).getEPackage().equals(Shr5Package.eINSTANCE))
-                return createShr5ModifikatorItemProvider();
             if (((EClass)target).getEPackage().equals(Shr5managementPackage.eINSTANCE))
                 return createSr5ManagementItemProvider();
+//            if (((EClass)target).getEPackage().equals(Shr5Package.eINSTANCE))
+                return createShr5ModifikatorItemProvider();
         }
 
         return super.createAdapter(target);

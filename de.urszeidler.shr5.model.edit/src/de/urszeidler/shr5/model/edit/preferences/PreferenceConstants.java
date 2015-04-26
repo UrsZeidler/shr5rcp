@@ -17,6 +17,8 @@ public class PreferenceConstants {
     public static final String CHOOSEN_LOCALISATION = "CHOOSEN_LOCALISATION";
     public static final String AVAILABLE_LOCALISATION = "AVAILABLE_LOCALISATION";
 
+    public static final String REDUCE_TREE_COMPLEXITY = "REDUCE_TREE_COMPLEXITY";
+
     
     
 }

@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -383,6 +384,15 @@ public class ManagedCharacterItemProvider
                  null));
     }
 
+    @Override
+    public Collection<?> getChildren(Object object) {
+        Shr5managementItemProviderAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory);
+        if(factory.isReduceComplexity())        
+            return Collections.emptyList();
+        
+        return super.getChildren(object);
+    }
+    
     /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or

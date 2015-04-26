@@ -84,6 +84,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     private String iso3Country;
 
     private boolean doLocalize;
+    protected boolean reduceComplexity;
 
 	/**
      * This constructs an instance.
@@ -118,7 +119,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     /**
      * Configures the factory by the preferences.
      */
-    private void configureFactory() {
+    protected void configureFactory() {
             IPreferenceStore store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
 
             if (store.getBoolean(PreferenceConstants.AUTOMATIC_CHOOSEN_LOCALISATION)) {
@@ -132,6 +133,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
             }
 
             doLocalize = store.getBoolean(PreferenceConstants.RESOURCE_LOCALIZAION_ENABLED);
+            reduceComplexity = store.getBoolean(PreferenceConstants.REDUCE_TREE_COMPLEXITY);
     }
 
 	/**
@@ -1724,5 +1726,9 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
 	        }
 	        
 	    }
+
+    public boolean isReduceComplexity() {
+        return reduceComplexity;
+    }
 
 }

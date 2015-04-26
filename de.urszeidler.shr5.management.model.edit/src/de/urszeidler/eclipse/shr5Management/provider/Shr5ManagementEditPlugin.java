@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.jface.preference.IPreferenceStore;
 
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -32,6 +33,7 @@ public final class Shr5ManagementEditPlugin extends EMFPlugin {
      * @generated
      */
 	private static Implementation plugin;
+    protected static IPreferenceStore shr5Store;
 
 	/**
      * Create the instance.
@@ -76,7 +78,8 @@ public final class Shr5ManagementEditPlugin extends EMFPlugin {
      * @generated not
      */
 	public static class Implementation extends EclipsePlugin {
-		/**
+
+        /**
          * Creates an instance.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -89,6 +92,7 @@ public final class Shr5ManagementEditPlugin extends EMFPlugin {
             //
             plugin = this;
             AdapterFactoryUtil.getInstance().insertAdapterFactory(new ExtendedShr5managementItemProviderAdapterFactory());
+//            shr5Store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
 
         }
 	}

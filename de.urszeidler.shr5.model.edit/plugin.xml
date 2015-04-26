@@ -10,7 +10,7 @@
       <!-- @generated shr5 -->
       <factory
             uri="http://urszeidler.de/shr5/1.0"
-            class="de.urszeidler.eclipse.shr5.provider.Shr5ItemProviderAdapterFactory"
+            class="de.urszeidler.eclipse.shr5.util.ExtendedShadowrunAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -31,6 +31,12 @@
             class="de.urszeidler.shr5.model.edit.preferences.LocalisationPreferencePage"
             id="de.urszeidler.shr5.model.edit.preferences.LocalisationPreferencePage"
             name="%localization.page.name">
+      </page>
+      <page
+            category="de.urszeidler.shr5.ecp.preferences.basic.page"
+            class="de.urszeidler.shr5.model.edit.preferences.AdapterPreferences"
+            id="de.urszeidler.shr5.model.edit.page2"
+            name="%adapter.page.name">
       </page>
    </extension>
 

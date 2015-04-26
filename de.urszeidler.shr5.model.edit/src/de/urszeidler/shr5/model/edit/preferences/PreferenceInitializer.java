@@ -28,6 +28,7 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
         
         Locale default1 = Locale.getDefault();
         store.setDefault(PreferenceConstants.CHOOSEN_LOCALISATION,  default1.getLanguage());
+        store.setDefault(PreferenceConstants.REDUCE_TREE_COMPLEXITY,  true);
 	}
 
 }
