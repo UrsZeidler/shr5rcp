@@ -65,20 +65,20 @@ public class ExtendedShr5managementItemProviderAdapterFactory extends Shr5manage
     @Override
     public Adapter createAdapter(Notifier target) {
         if (target instanceof EAttribute) {
-            if (((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5managementPackage.eINSTANCE))
+            if (Shr5managementPackage.eINSTANCE.equals(((EAttribute)target).getEContainingClass().getEPackage()))
                 return createSr5ManagementItemProvider();
 //            if (((EAttribute)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
                 return createShr5ModifikatorItemProvider();
         }
         if (target instanceof EReference) {
-            if (((EReference)target).getEContainingClass().getEPackage().equals(Shr5managementPackage.eINSTANCE))
+            if (Shr5managementPackage.eINSTANCE.equals(((EReference)target).getEContainingClass().getEPackage()))
                 return createSr5ManagementItemProvider();
 //            if (((EReference)target).getEContainingClass().getEPackage().equals(Shr5Package.eINSTANCE))
                 return createShr5ModifikatorItemProvider();
         }
 
         if (target instanceof EClass) {
-            if (((EClass)target).getEPackage().equals(Shr5managementPackage.eINSTANCE))
+            if (Shr5managementPackage.eINSTANCE.equals(((EClass)target).getEPackage()))
                 return createSr5ManagementItemProvider();
 //            if (((EClass)target).getEPackage().equals(Shr5Package.eINSTANCE))
                 return createShr5ModifikatorItemProvider();
