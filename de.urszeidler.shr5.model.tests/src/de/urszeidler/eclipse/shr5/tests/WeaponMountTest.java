@@ -3,7 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 
@@ -67,4 +70,24 @@ public class WeaponMountTest extends FahrzeugModifikationTest {
         setFixture(null);
     }
 
+    /**
+  * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+  * <!-- begin-user-doc -->
+  * <!-- end-user-doc -->
+  * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+  * @generated not
+  */
+ public void testGeldWert_Weapon() {
+     getFixture().setWertValue(new BigDecimal(10));        
+     assertEquals(10,getFixture().getWert().intValue());
+     
+     Feuerwaffe w = Shr5Factory.eINSTANCE.createFeuerwaffe();
+     w.setWertValue(new BigDecimal(11));
+     
+     getFixture().setWeapon(w);
+     assertEquals(21,getFixture().getWert().intValue());
+ }
+
+
+    
 } //WeaponMountTest

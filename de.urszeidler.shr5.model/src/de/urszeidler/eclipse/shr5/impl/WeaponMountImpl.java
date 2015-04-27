@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -65,6 +67,15 @@ public class WeaponMountImpl extends FahrzeugModifikationImpl implements WeaponM
         return weapon;
     }
 
+    @Override
+    public BigDecimal getWert() {
+        BigDecimal wert = super.getWert();
+        if(wert!=null && getWeapon()!=null && getWeapon().getWert()!=null)
+            wert = wert.add(getWeapon().getWert());
+        
+        return wert;
+    }
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
