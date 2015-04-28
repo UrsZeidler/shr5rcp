@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.AutoSoft} object.
@@ -419,14 +420,26 @@ public class AutoSoftItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((AutoSoft)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_AutoSoft_type") :
-            getString("_UI_AutoSoft_type") + " " + label;
+        AutoSoft autoSoft = (AutoSoft)object;
+        String label = autoSoft.getName();
+        final ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        final String unset = getString("_UI_Unset_text");      
+        String model = Shr5EditingTools.getLabelForEObject(factory, unset, autoSoft.getModel());
+        String weapon = Shr5EditingTools.getLabelForEObject(factory, unset, autoSoft.getWeapon());
+        String skill = Shr5EditingTools.getLabelForEObject(factory, unset, autoSoft.getSkill());
+        String text = label == null || label.length() == 0 ?
+                getString("_UI_AutoSoft_type") :
+                    getString("_UI_AutoSoft_type") + " " + label;
+
+        if(autoSoft.getModel()==null && autoSoft.getModel()==null)
+            return String.format("%s [%s]", text,skill);
+        
+        
+        return String.format("%s [%s,%s,%s]", text,skill,model,weapon);
     }
 
     /**

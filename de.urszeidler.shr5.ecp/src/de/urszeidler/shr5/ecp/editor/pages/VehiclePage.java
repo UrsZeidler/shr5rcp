@@ -125,7 +125,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN, grpGegenstand);
 
         if (object instanceof Drohne) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__PROGRAM_SLOT_COUNT, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__PROGRAM_SLOT_COUNT, grpGegenstand,labelEntryFactory);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__STORED_PROGRAMS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__RUNNING_PROGRAMS, grpGegenstand);
         } else if (object instanceof PassagierFahrzeug) {
