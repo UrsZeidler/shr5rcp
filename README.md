@@ -9,13 +9,27 @@ shr5rcp
 
 Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download the software.
 
-* [script runtime](https://github.com/UrsZeidler/shr5rcp/wiki/script-runtime) a script and combat view let you use all stuff, making probes, manages combat turns etc. 
-* [shadowrun 5 character generator](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application#shr5-core-rule-generator) after the core rule book 
-* [karma based](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application#the-shr5-karma-based-generator) character generator
-* [editors](https://github.com/UrsZeidler/shr5rcp/wiki/editing) for the resources objects
+For now it contains :
+* several character generators
+  * [shadowrun 5 character generator aka priority system](shr5-core-rule-generator) after the core rule book
+  * [karma based- aka buy points](karma-generator) character generator
+  * [sum to ten]()
+  * [life module system](lifemodule-generator) 
+  * [freestyle](freestyle)
+* [a runtime](script-runtime) a script and combat view let you use all stuff, making tests, manages combat turns etc. the players can now collaborate by impersonating their character instances, check out the [web-app](script-webapp).
+* [editors](editing) for the resources objects and [wizards](createItemWizard) to create new ones
 * a simple character sheet
-* [grunt editor](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application#grunts) and sheet
-* various [text exports](https://github.com/UrsZeidler/shr5rcp/wiki/m2t) like svg or phpB
+* [grunt editor](generators#grunts) and sheet
+* various [sheets](m2t) for player and game master
+
+A small german instruction : [kurz übersicht](kurz-übersicht)
+
+see the upcoming and past changes : [changelog](release-notes)
+
+|using the application | player |  runtime and game master|
+| --- | --- | ---|
+|<ul><li>[starting](Installation-and-starting)</li><li>[Using the application](Using the application)</li><li>[editors](editing)</li><li>[generator wizard](characterbuilding-perspective#character-generator-wizard)</li><li>[importing exporting.](importing-exporting) </li><li>[source book view](sourceBookView) </li><li>[update-site](update-site) </li></ul>	  |    <ul><li>[character generators](generators)</li><li>[character building](characterbuilding-perspective)</li><li> [character diary](character-diary)</li><li> [manage money](CredstickTransactions)</li><li> [web app player](script-webapp-player)</li></ul>	  |     <ul><li>[script editing](script-editing)</li><li>[runtime](script-runtime)</li><li>[web app](script-webapp)</li><li>[quick combat](script-quick-combat)</li></ul>  |
+or the [FAQ](faq)
  
  [![Build Status](https://buildhive.cloudbees.com/job/UrsZeidler/job/shr5rcp/badge/icon)](https://buildhive.cloudbees.com/job/UrsZeidler/job/shr5rcp/)
  
