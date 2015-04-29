@@ -129,7 +129,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__TYPE, composite_add);
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY, composite_add);
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, composite_add);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, composite_add,labelEntryFactory);
             }
 
 
