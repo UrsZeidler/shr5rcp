@@ -282,6 +282,12 @@ Current Date: [diary.characterDate/]
 [aDiaryEntry.date.formatDate()/]: [aDiaryEntry.message.italicText()/]
 [/template]
 
+[template public printDiaryEntry (aDiaryEntry : TrainingsTime) ]
+[aDiaryEntry.date.formatDate()/]: [aDiaryEntry.change.getText()/]
+[for (tr : TrainingRange | aDiaryEntry.training)]
+	[tr.start.formatDate()/] - [tr.end.formatDate()/] : [tr.daysTrained/] ['Days_Trained'.localizedString()/]
+[/for][/template]
+
 [template public printAllCredSticks(cs : OrderedSet(Credstick), empty :String)]
 ['Credsticks'.localizedString().titelText()/]
 [for (credstick : Credstick | cs)]

@@ -893,6 +893,27 @@
    </fo:table>
 [/template]
 
+[template public printDiaryEntry (tr : TrainingsTime) ]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="15%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCell(tr.date.formatDateTime())/]
+[printCellSpanned(tr.change.getText(),2)/]
+     </fo:table-row>
+[for (it : TrainingRange | tr.training)]
+     <fo:table-row>
+[printCell('')/]
+[printCellSpanned(it.start.formatDateTime()+' - '+ it.end.formatDateTime(),2)/]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
 [template public printContracts (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.contracts->select(not oclIsKindOf(Fakeable))->isEmpty())]
 [printSectionTitel('_UI_ManagedCharacter_contracts_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
