@@ -83,7 +83,7 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setPower(KiKraft newPower) {
         if (newPower != power) {
@@ -97,6 +97,13 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
         }
         else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__POWER, newPower, newPower));
+        
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__BINDUNGSKOSTEN, 1, 0));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__STUFE, 1, 0));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__WERT, 1, 0));
     }
 
     /**

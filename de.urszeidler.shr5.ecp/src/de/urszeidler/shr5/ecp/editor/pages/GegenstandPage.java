@@ -215,7 +215,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         } else if (object instanceof Fokus) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpGegenstand,labelEntryFactory);
             if (object instanceof QiFokus) {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpGegenstand);
             } else if (object instanceof MagieFokus) {
