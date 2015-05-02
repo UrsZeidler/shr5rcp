@@ -239,6 +239,8 @@
         <details key="documentation" value="The max style a character can choose at creatation."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sumToTenValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

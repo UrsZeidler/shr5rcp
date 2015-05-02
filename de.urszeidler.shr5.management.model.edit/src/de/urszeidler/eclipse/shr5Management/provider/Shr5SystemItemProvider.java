@@ -65,6 +65,7 @@ public class Shr5SystemItemProvider
             addMaxConnectionRatingPropertyDescriptor(object);
             addFreeMartialArtTechniquesPropertyDescriptor(object);
             addMaxMartialArtStylesPropertyDescriptor(object);
+            addSumToTenValuePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -422,6 +423,28 @@ public class Shr5SystemItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Sum To Ten Value feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSumToTenValuePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_sumToTenValue_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_sumToTenValue_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__SUM_TO_TEN_VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -480,6 +503,7 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__MAX_CONNECTION_RATING:
             case Shr5managementPackage.SHR5_SYSTEM__FREE_MARTIAL_ART_TECHNIQUES:
             case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
+            case Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

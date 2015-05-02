@@ -523,7 +523,9 @@
       <genFeatures createChild="false" propertyDescription="The start date of the contract."
           ecoreFeature="ecore:EAttribute shr5.ecore#//IntervallVertrag/begin"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//Sin"/>
+    <genClasses ecoreClass="shr5.ecore#//Sin">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Sin/licences"/>
+    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Lizenz">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Lizenz/lizenGegenstand"/>
       <genFeatures notify="false" createChild="false" propertyDescription="The sin the licence is bound to."

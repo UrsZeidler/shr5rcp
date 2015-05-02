@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated not shr5 -->
+      <!-- @generated NOT shr5 -->
       <factory
             uri="http://urszeidler.de/shr5/1.0"
             class="de.urszeidler.eclipse.shr5.util.ExtendedShadowrunAdapterFactory"

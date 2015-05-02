@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Lizenz;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -121,6 +122,10 @@ public class ContractPage extends AbstractShr5Page<Vertrag> {
         } else if (object instanceof Fakeable) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FAKEABLE__STUFE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FAKEABLE__GEFAELSCHT, grpGegenstand);
+        }
+        if (object instanceof Sin) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SIN__LICENCES, grpGegenstand);
+            
         }
 
         if (object instanceof Lifestyle) {

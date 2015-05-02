@@ -1406,7 +1406,12 @@
   </xsd:element>
   <xsd:complexType name="Sin">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Fakeable"/>
+      <xsd:extension base="shr5:Fakeable">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="licences" type="shr5:Lizenz"/>
+        </xsd:choice>
+        <xsd:attribute name="licences" type="xsd:string"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Sin" type="shr5:Sin"/>

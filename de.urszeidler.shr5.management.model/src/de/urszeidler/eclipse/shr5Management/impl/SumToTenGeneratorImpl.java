@@ -73,12 +73,16 @@ public class SumToTenGeneratorImpl extends Shr5GeneratorImpl implements SumToTen
             val = val + getSkills().getCost();
         if (getResourcen() != null)
             val = val + getResourcen().getCost();
-
-        if (val != 10) {
+        
+        int sumToTenValue = 10;
+        if(getGenerator()!=null)
+            sumToTenValue = getGenerator().getSumToTenValue();
+        
+        if (val != sumToTenValue) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SUM_TO_TEN_GENERATOR__HAS_SUM_TO_TEN, ModelPlugin.INSTANCE.getString("_UI_NoSumToTen", new Object[]{
-                                EObjectValidator.getObjectLabel(this, context), val }), new Object[]{ this }));
+                                EObjectValidator.getObjectLabel(this, context), val,sumToTenValue }), new Object[]{ this }));
             }
             return false;
         }

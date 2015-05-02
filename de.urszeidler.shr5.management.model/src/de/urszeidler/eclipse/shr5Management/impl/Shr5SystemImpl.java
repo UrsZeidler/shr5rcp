@@ -37,6 +37,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getFreeMartialArtTechniques <em>Free Martial Art Techniques</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getSumToTenValue <em>Sum To Ten Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -332,6 +333,25 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int maxMartialArtStyles = MAX_MARTIAL_ART_STYLES_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getSumToTenValue() <em>Sum To Ten Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSumToTenValue()
+     * @generated
+     * @ordered
+     */
+    protected static final int SUM_TO_TEN_VALUE_EDEFAULT = 10;
+    /**
+     * The cached value of the '{@link #getSumToTenValue() <em>Sum To Ten Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSumToTenValue()
+     * @generated
+     * @ordered
+     */
+    protected int sumToTenValue = SUM_TO_TEN_VALUE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -681,6 +701,27 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getSumToTenValue() {
+        return sumToTenValue;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSumToTenValue(int newSumToTenValue) {
+        int oldSumToTenValue = sumToTenValue;
+        sumToTenValue = newSumToTenValue;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE, oldSumToTenValue, sumToTenValue));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -719,6 +760,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getFreeMartialArtTechniques();
             case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
                 return getMaxMartialArtStyles();
+            case Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE:
+                return getSumToTenValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -781,6 +824,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
                 setMaxMartialArtStyles((Integer)newValue);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE:
+                setSumToTenValue((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -841,6 +887,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
                 setMaxMartialArtStyles(MAX_MARTIAL_ART_STYLES_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE:
+                setSumToTenValue(SUM_TO_TEN_VALUE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -885,6 +934,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return freeMartialArtTechniques != FREE_MARTIAL_ART_TECHNIQUES_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES:
                 return maxMartialArtStyles != MAX_MARTIAL_ART_STYLES_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__SUM_TO_TEN_VALUE:
+                return sumToTenValue != SUM_TO_TEN_VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -929,6 +980,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(freeMartialArtTechniques);
         result.append(", maxMartialArtStyles: ");
         result.append(maxMartialArtStyles);
+        result.append(", sumToTenValue: ");
+        result.append(sumToTenValue);
         result.append(')');
         return result.toString();
     }

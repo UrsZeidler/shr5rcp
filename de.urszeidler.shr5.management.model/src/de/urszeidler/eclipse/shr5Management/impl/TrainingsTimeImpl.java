@@ -51,10 +51,10 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysTrained <em>Days Trained</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysRemains <em>Days Remains</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#isTrainingComplete <em>Training Complete</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getTraining <em>Training</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysTrained <em>Days Trained</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysRemains <em>Days Remains</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#isTrainingComplete <em>Training Complete</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getTraining <em>Training</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,7 +65,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * The default value of the '{@link #getDaysTrained() <em>Days Trained</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDaysTrained()
      * @generated
      * @ordered
@@ -76,7 +75,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * The default value of the '{@link #getDaysRemains() <em>Days Remains</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDaysRemains()
      * @generated
      * @ordered
@@ -87,7 +85,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * The default value of the '{@link #isTrainingComplete() <em>Training Complete</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #isTrainingComplete()
      * @generated
      * @ordered
@@ -98,7 +95,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * The cached value of the '{@link #isTrainingComplete() <em>Training Complete</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #isTrainingComplete()
      * @generated
      * @ordered
@@ -109,7 +105,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * The cached value of the '{@link #getTraining() <em>Training</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getTraining()
      * @generated
      * @ordered
@@ -154,7 +149,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -266,7 +260,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public boolean isTrainingComplete() {
@@ -276,27 +269,23 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setTrainingComplete(boolean newTrainingComplete) {
         boolean oldTrainingComplete = trainingComplete;
         trainingComplete = newTrainingComplete;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE, oldTrainingComplete,
-                    trainingComplete));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TRAININGS_TIME__TRAINING_COMPLETE, oldTrainingComplete, trainingComplete));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<TrainingRange> getTraining() {
         if (training == null) {
-            training = new EObjectContainmentWithInverseEList<TrainingRange>(TrainingRange.class, this,
-                    Shr5managementPackage.TRAININGS_TIME__TRAINING, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME);
+            training = new EObjectContainmentWithInverseEList<TrainingRange>(TrainingRange.class, this, Shr5managementPackage.TRAININGS_TIME__TRAINING, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME);
         }
         return training;
     }
@@ -351,7 +340,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -367,7 +355,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -382,7 +369,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -403,7 +389,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -424,7 +409,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -443,7 +427,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -464,7 +447,6 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -480,13 +462,11 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (trainingComplete: ");

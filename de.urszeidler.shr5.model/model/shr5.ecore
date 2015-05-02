@@ -659,11 +659,14 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Sin" eSuperTypes="#//Fakeable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sin" eSuperTypes="#//Fakeable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="licences" upperBound="-1"
+        eType="#//Lizenz" eOpposite="#//Lizenz/lizenzTraeger"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lizenz" eSuperTypes="#//Fakeable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lizenGegenstand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lizenzTraeger" lowerBound="1"
-        eType="#//Sin"/>
+        eType="#//Sin" eOpposite="#//Sin/licences"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fakeable" abstract="true" eSuperTypes="#//Vertrag">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

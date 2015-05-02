@@ -50,6 +50,7 @@ public interface Lizenz extends Fakeable {
 
     /**
      * Returns the value of the '<em><b>Lizenz Traeger</b></em>' reference.
+     * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5.Sin#getLicences <em>Licences</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Lizenz Traeger</em>' reference isn't clear,
@@ -59,7 +60,8 @@ public interface Lizenz extends Fakeable {
      * @return the value of the '<em>Lizenz Traeger</em>' reference.
      * @see #setLizenzTraeger(Sin)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getLizenz_LizenzTraeger()
-     * @model required="true"
+     * @see de.urszeidler.eclipse.shr5.Sin#getLicences
+     * @model opposite="licences" required="true"
      * @generated
      */
     Sin getLizenzTraeger();

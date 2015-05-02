@@ -13572,13 +13572,22 @@ public interface Shr5Package extends EPackage {
     int SIN__GEFAELSCHT = FAKEABLE__GEFAELSCHT;
 
     /**
+     * The feature id for the '<em><b>Licences</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__LICENCES = FAKEABLE_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Sin</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SIN_FEATURE_COUNT = FAKEABLE_FEATURE_COUNT + 0;
+    int SIN_FEATURE_COUNT = FAKEABLE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Sin</em>' class.
@@ -25519,6 +25528,17 @@ public interface Shr5Package extends EPackage {
     EClass getSin();
 
     /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Sin#getLicences <em>Licences</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Licences</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sin#getLicences()
+     * @see #getSin()
+     * @generated
+     */
+    EReference getSin_Licences();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Lizenz <em>Lizenz</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -30496,6 +30516,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass SIN = eINSTANCE.getSin();
+
+        /**
+         * The meta object literal for the '<em><b>Licences</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SIN__LICENCES = eINSTANCE.getSin_Licences();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl <em>Lizenz</em>}' class.

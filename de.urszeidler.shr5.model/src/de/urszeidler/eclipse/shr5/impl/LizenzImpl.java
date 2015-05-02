@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -128,11 +129,63 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setLizenzTraeger(Sin newLizenzTraeger) {
+    public NotificationChain basicSetLizenzTraeger(Sin newLizenzTraeger, NotificationChain msgs) {
         Sin oldLizenzTraeger = lizenzTraeger;
         lizenzTraeger = newLizenzTraeger;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.LIZENZ__LIZENZ_TRAEGER, oldLizenzTraeger, lizenzTraeger));
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.LIZENZ__LIZENZ_TRAEGER, oldLizenzTraeger, newLizenzTraeger);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setLizenzTraeger(Sin newLizenzTraeger) {
+        if (newLizenzTraeger != lizenzTraeger) {
+            NotificationChain msgs = null;
+            if (lizenzTraeger != null)
+                msgs = ((InternalEObject)lizenzTraeger).eInverseRemove(this, Shr5Package.SIN__LICENCES, Sin.class, msgs);
+            if (newLizenzTraeger != null)
+                msgs = ((InternalEObject)newLizenzTraeger).eInverseAdd(this, Shr5Package.SIN__LICENCES, Sin.class, msgs);
+            msgs = basicSetLizenzTraeger(newLizenzTraeger, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.LIZENZ__LIZENZ_TRAEGER, newLizenzTraeger, newLizenzTraeger));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.LIZENZ__LIZENZ_TRAEGER:
+                if (lizenzTraeger != null)
+                    msgs = ((InternalEObject)lizenzTraeger).eInverseRemove(this, Shr5Package.SIN__LICENCES, Sin.class, msgs);
+                return basicSetLizenzTraeger((Sin)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.LIZENZ__LIZENZ_TRAEGER:
+                return basicSetLizenzTraeger(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**

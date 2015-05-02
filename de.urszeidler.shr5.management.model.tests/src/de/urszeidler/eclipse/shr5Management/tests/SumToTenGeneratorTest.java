@@ -109,7 +109,34 @@ public class SumToTenGeneratorTest extends Shr5GeneratorTest {
 
         resourcen.setCost(2);
         assertEquals("is true", false, getFixture().hasSumToTen(diagnostics, context));
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.SumToTenGenerator#hasSumToTen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Sum To Ten</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.SumToTenGenerator#hasSumToTen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasSumToTen__DiagnosticChain_Map_1() {
+        createBasicCategories();
+        attributes.setCost(4);
+        metaType.setCost(3);
+        mudan.setCost(2);
+        skill.setCost(1);
+        resourcen.setCost(0);
+        
 
+        Map<Object, Object> context = Collections.emptyMap();
+        DiagnosticChain diagnostics = new BasicDiagnostic();
+        assertEquals("is true", true, getFixture().hasSumToTen(diagnostics, context));
+
+        resourcen.setCost(2);
+        assertEquals("is false", false, getFixture().hasSumToTen(diagnostics, context));
+        shr5System.setSumToTenValue(12);
+        
+        assertEquals("is true", true, getFixture().hasSumToTen(diagnostics, context));
+        resourcen.setCost(3);
+        assertEquals("is false", false, getFixture().hasSumToTen(diagnostics, context));
     }
     @Override
     public void testHasCategoryOnlyOnce__DiagnosticChain_Map() {

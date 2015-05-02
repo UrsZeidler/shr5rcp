@@ -656,7 +656,10 @@
       <nested inputs="shr5.ecore#//IntervallVertrag/begin" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDElementDeclaration=74"/>
-    <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75"/>
+    <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75">
+      <nested inputs="shr5.ecore#//Sin/licences" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Sin/licences" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
     <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDElementDeclaration=75"/>
     <nested inputs="shr5.ecore#//Lizenz" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76">
       <nested inputs="shr5.ecore#//Lizenz/lizenGegenstand" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76/XSDAttributeUse"/>

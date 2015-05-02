@@ -104,7 +104,8 @@
       <nested inputs="shr5Management.ecore#//Shr5System/freeMartialArtTechniques"
           outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=13"/>
       <nested inputs="shr5Management.ecore#//Shr5System/maxMartialArtStyles" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=14"/>
-      <nested inputs="shr5Management.ecore#//Shr5System/applicableGenerators" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=15"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/sumToTenValue" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=15"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/applicableGenerators" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=16"/>
       <nested inputs="shr5Management.ecore#//Shr5System/applicableGenerators" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDElementDeclaration=8"/>

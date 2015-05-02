@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxConnectionRating <em>Max Connection Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getFreeMartialArtTechniques <em>Free Martial Art Techniques</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSumToTenValue <em>Sum To Ten Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -493,4 +494,31 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setMaxMartialArtStyles(int value);
+
+    /**
+     * Returns the value of the '<em><b>Sum To Ten Value</b></em>' attribute.
+     * The default value is <code>"10"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Sum To Ten Value</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Sum To Ten Value</em>' attribute.
+     * @see #setSumToTenValue(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_SumToTenValue()
+     * @model default="10"
+     * @generated
+     */
+    int getSumToTenValue();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSumToTenValue <em>Sum To Ten Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Sum To Ten Value</em>' attribute.
+     * @see #getSumToTenValue()
+     * @generated
+     */
+    void setSumToTenValue(int value);
 } // Shr5System

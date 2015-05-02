@@ -204,6 +204,7 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_KEEP, grpKarmapriority);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES, grpKarmapriority);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP, grpKarmapriority);
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__SUM_TO_TEN_VALUE, grpKarmapriority);
 
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES, grpConstraint);
             emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM, grpConstraint);

@@ -1367,13 +1367,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES = PRIORITY_SYSTEM_FEATURE_COUNT + 15;
 
     /**
+     * The feature id for the '<em><b>Sum To Ten Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__SUM_TO_TEN_VALUE = PRIORITY_SYSTEM_FEATURE_COUNT + 16;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 16;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 17;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -6159,6 +6168,15 @@ public interface Shr5managementPackage extends EPackage {
     int LIFE_MODULES_SYSTEM__MAX_MARTIAL_ART_STYLES = SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES;
 
     /**
+     * The feature id for the '<em><b>Sum To Ten Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFE_MODULES_SYSTEM__SUM_TO_TEN_VALUE = SHR5_SYSTEM__SUM_TO_TEN_VALUE;
+
+    /**
      * The feature id for the '<em><b>Modules</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8018,6 +8036,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getShr5System_MaxMartialArtStyles();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSumToTenValue <em>Sum To Ten Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Sum To Ten Value</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getSumToTenValue()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_SumToTenValue();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
@@ -10897,6 +10926,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_SYSTEM__MAX_MARTIAL_ART_STYLES = eINSTANCE.getShr5System_MaxMartialArtStyles();
+
+        /**
+         * The meta object literal for the '<em><b>Sum To Ten Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__SUM_TO_TEN_VALUE = eINSTANCE.getShr5System_SumToTenValue();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.

@@ -343,6 +343,7 @@ Used by the Shr5KarmaGenerator.</xsd:documentation>
             <xsd:documentation>The max style a character can choose at creatation.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="sumToTenValue" type="xsd:int"/>
         <xsd:attribute name="applicableGenerators" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
