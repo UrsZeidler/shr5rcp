@@ -57,6 +57,7 @@ public class CommlinkItemProvider
             addDatenverarbeitungPropertyDescriptor(object);
             addCurrentModusPropertyDescriptor(object);
             addDeviceRatingPropertyDescriptor(object);
+            addStoredSinsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -190,6 +191,28 @@ public class CommlinkItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Stored Sins feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addStoredSinsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Commlink_storedSins_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Commlink_storedSins_feature", "_UI_Commlink_type"),
+                 Shr5Package.Literals.COMMLINK__STORED_SINS,
+                 true,
+                 false,
+                 true,
+                 null,
                  null,
                  null));
     }

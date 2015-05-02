@@ -176,7 +176,6 @@ import de.urszeidler.eclipse.shr5.ZauberReichweite;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.armorModificationType;
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -185,8 +184,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import de.urszeidler.eclipse.shr5.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -5119,6 +5116,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getCommlink_StoredSins() {
+        return (EReference)commlinkEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getMatixConditionMonitor() {
         return matixConditionMonitorEClass;
     }
@@ -6647,6 +6653,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         commlinkEClass = createEClass(COMMLINK);
         createEReference(commlinkEClass, COMMLINK__STORED_PROGRAMS);
+        createEReference(commlinkEClass, COMMLINK__STORED_SINS);
 
         matixConditionMonitorEClass = createEClass(MATIX_CONDITION_MONITOR);
         createEAttribute(matixConditionMonitorEClass, MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX);
@@ -7565,6 +7572,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(commlinkEClass, Commlink.class, "Commlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCommlink_StoredPrograms(), this.getBasicProgram(), null, "storedPrograms", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCommlink_StoredSins(), this.getSin(), null, "storedSins", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(matixConditionMonitorEClass, MatixConditionMonitor.class, "MatixConditionMonitor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMatixConditionMonitor_MatrixZustandMax(), ecorePackage.getEInt(), "matrixZustandMax", null, 0, 1, MatixConditionMonitor.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

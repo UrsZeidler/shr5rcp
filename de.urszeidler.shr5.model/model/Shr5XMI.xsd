@@ -1723,7 +1723,9 @@
               <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="storedSins" type="shr5:Sin"/>
         </xsd:choice>
+        <xsd:attribute name="storedSins" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

@@ -15457,13 +15457,22 @@ public interface Shr5Package extends EPackage {
     int COMMLINK__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Stored Sins</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMLINK__STORED_SINS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Commlink</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMMLINK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
+    int COMMLINK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Commlink</em>' class.
@@ -26723,6 +26732,17 @@ public interface Shr5Package extends EPackage {
     EReference getCommlink_StoredPrograms();
 
     /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Commlink#getStoredSins <em>Stored Sins</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Stored Sins</em>'.
+     * @see de.urszeidler.eclipse.shr5.Commlink#getStoredSins()
+     * @see #getCommlink()
+     * @generated
+     */
+    EReference getCommlink_StoredSins();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -31468,6 +31488,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference COMMLINK__STORED_PROGRAMS = eINSTANCE.getCommlink_StoredPrograms();
+
+        /**
+         * The meta object literal for the '<em><b>Stored Sins</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference COMMLINK__STORED_SINS = eINSTANCE.getCommlink_StoredSins();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}' class.

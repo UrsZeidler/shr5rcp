@@ -203,7 +203,9 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         } else if (object instanceof Commlink) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional,createControllGridData(100));
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_SINS, composite_Additional,createControllGridData(100));
+            
             
             CommlinkWidget riggerCommandConsoleWidget = new CommlinkWidget(composite_runtime,SWT.NONE, (Commlink)object,getEditingDomain());
             riggerCommandConsoleWidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 6, 1));

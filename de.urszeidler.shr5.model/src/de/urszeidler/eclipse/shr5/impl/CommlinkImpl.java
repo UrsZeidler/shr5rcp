@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.BasicProgram;
@@ -24,6 +25,7 @@ import de.urszeidler.eclipse.shr5.MatrixAttributes;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
@@ -41,6 +43,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getDeviceRating <em>Device Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getStoredPrograms <em>Stored Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getStoredSins <em>Stored Sins</em>}</li>
  * </ul>
  * </p>
  *
@@ -137,6 +140,15 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @ordered
      */
     protected EList<BasicProgram> storedPrograms;
+    /**
+     * The cached value of the '{@link #getStoredSins() <em>Stored Sins</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStoredSins()
+     * @generated
+     * @ordered
+     */
+    protected EList<Sin> storedSins;
     private EContentAdapter eContentAdapter;
 
     /**
@@ -186,6 +198,18 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
             storedPrograms = new EObjectContainmentEList<BasicProgram>(BasicProgram.class, this, Shr5Package.COMMLINK__STORED_PROGRAMS);
         }
         return storedPrograms;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Sin> getStoredSins() {
+        if (storedSins == null) {
+            storedSins = new EObjectResolvingEList<Sin>(Sin.class, this, Shr5Package.COMMLINK__STORED_SINS);
+        }
+        return storedSins;
     }
 
     /**
@@ -369,6 +393,8 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return getDeviceRating();
             case Shr5Package.COMMLINK__STORED_PROGRAMS:
                 return getStoredPrograms();
+            case Shr5Package.COMMLINK__STORED_SINS:
+                return getStoredSins();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -395,6 +421,10 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 getStoredPrograms().clear();
                 getStoredPrograms().addAll((Collection<? extends BasicProgram>)newValue);
                 return;
+            case Shr5Package.COMMLINK__STORED_SINS:
+                getStoredSins().clear();
+                getStoredSins().addAll((Collection<? extends Sin>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -418,6 +448,9 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return;
             case Shr5Package.COMMLINK__STORED_PROGRAMS:
                 getStoredPrograms().clear();
+                return;
+            case Shr5Package.COMMLINK__STORED_SINS:
+                getStoredSins().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -447,6 +480,8 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return deviceRating != DEVICE_RATING_EDEFAULT;
             case Shr5Package.COMMLINK__STORED_PROGRAMS:
                 return storedPrograms != null && !storedPrograms.isEmpty();
+            case Shr5Package.COMMLINK__STORED_SINS:
+                return storedSins != null && !storedSins.isEmpty();
         }
         return super.eIsSet(featureID);
     }

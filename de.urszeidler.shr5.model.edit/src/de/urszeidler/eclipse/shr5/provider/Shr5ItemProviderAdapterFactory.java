@@ -5,13 +5,10 @@ package de.urszeidler.eclipse.shr5.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Locale;
-
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -28,12 +25,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
-import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
-import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.shr5.model.edit.preferences.PreferenceConstants;

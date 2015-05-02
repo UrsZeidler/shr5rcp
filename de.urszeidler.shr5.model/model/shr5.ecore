@@ -836,6 +836,8 @@
         <details key="documentation" value="The stored programs defines the programs to choose from when selecting the running programms."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storedSins" upperBound="-1"
+        eType="#//Sin"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MatixConditionMonitor" abstract="true"
       interface="true">

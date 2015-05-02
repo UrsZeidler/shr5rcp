@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getStoredPrograms <em>Stored Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getStoredSins <em>Stored Sins</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,4 +43,20 @@ public interface Commlink extends AbstractMatrixDevice {
      * @generated
      */
     EList<BasicProgram> getStoredPrograms();
+
+    /**
+     * Returns the value of the '<em><b>Stored Sins</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Sin}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Stored Sins</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Stored Sins</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_StoredSins()
+     * @model
+     * @generated
+     */
+    EList<Sin> getStoredSins();
 } // Comlink

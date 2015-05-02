@@ -756,6 +756,8 @@
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDElementDeclaration=91"/>
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92">
       <nested inputs="shr5.ecore#//Commlink/storedPrograms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Commlink/storedSins" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Commlink/storedSins" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDElementDeclaration=92"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDComplexTypeDefinition=93"/>

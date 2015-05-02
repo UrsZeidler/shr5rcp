@@ -608,6 +608,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Commlink">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/storedPrograms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/storedSins"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatixConditionMonitor">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatixConditionMonitor/matrixZustandMax"/>
