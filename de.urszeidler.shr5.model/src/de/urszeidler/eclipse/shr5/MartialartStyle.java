@@ -48,6 +48,9 @@ public interface MartialartStyle extends Beschreibbar, Quelle {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The skills the style can be used as spec.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Usable With</em>' reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMartialartStyle_UsableWith()
      * @model

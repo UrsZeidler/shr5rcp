@@ -173,7 +173,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Gegenstand">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/kategorie"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/stufe"/>
+      <genFeatures createChild="false" propertyDescription="A basic rating." ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/stufe"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//GeldWert">
       <genFeatures property="Readonly" createChild="false" propertyDescription="The basic money value."
@@ -193,7 +193,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/attribut"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AttributModifikatorWert/wert"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifiziertes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifyable"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The reference the value is for."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifyable"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Modifizierbar">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Modifizierbar/mods"/>
@@ -223,7 +224,8 @@
       <genFeatures createChild="false" propertyDescription="The damage code as nP/M, examples: 9P, 4M."
           ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadenscode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadesTyp"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/praezision"/>
+      <genFeatures createChild="false" propertyDescription="The accuracy of the weapon defines the limit."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/praezision"/>
       <genFeatures createChild="false" propertyDescription="The armor piering of the weapon. (AP)"
           ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
     </genClasses>
@@ -270,7 +272,8 @@
     <genClasses ecoreClass="shr5.ecore#//Cyberware">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/persona"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/einbau"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberware/cyberwareCapacity"/>
+      <genFeatures createChild="false" propertyDescription="The room for addons."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberware/cyberwareCapacity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberware/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/wifi"/>
     </genClasses>
@@ -429,7 +432,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Schutzgeist/nachteile"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Initation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Initation/erlernt"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The meta technique learnd in the initaiation."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Initation/erlernt"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//MetaMagie"/>
     <genClasses ecoreClass="shr5.ecore#//CritterKraft">
@@ -444,11 +448,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/beschleunigung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/rumpf"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/pilot"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/sensor"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/sensor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/fahrzeugTyp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/modifizierungen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/panzer"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/weaponMounts"/>
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The number of weapon mounts."
+          ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/weaponMounts"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/sensorArray"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
@@ -461,10 +466,13 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Drohne">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drohne/programSlotCount"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningPrograms"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The programms currently running on the drone."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningPrograms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/storedPrograms"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="shr5.ecore#//FahrzeugModifikation"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//FahrzeugModifikation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FahrzeugModifikation/capacityUsed"/>
+    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Technomancer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/complexForms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/echos"/>
@@ -518,10 +526,11 @@
     <genClasses ecoreClass="shr5.ecore#//Sin"/>
     <genClasses ecoreClass="shr5.ecore#//Lizenz">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Lizenz/lizenGegenstand"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Lizenz/lizenzTraeger"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The sin the licence is bound to."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Lizenz/lizenzTraeger"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Fakeable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fakeable/stufe"/>
+      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5.ecore#//Fakeable/stufe"/>
       <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute shr5.ecore#//Fakeable/gefaelscht"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Steigerbar">
@@ -532,7 +541,7 @@
       <genFeatures createChild="false" propertyDescription="The max value of money the credstick can store."
           ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/maxValue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Credstick/transactionlog"/>
-      <genFeatures property="Readonly" createChild="false" propertyDescription="The current balance is the summ of all transactions."
+      <genFeatures property="Readonly" createChild="false" propertyDescription="The current balance is the sum of all transactions."
           ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currentValue"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Menge">
@@ -644,7 +653,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AutoSoft/rating"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/skill"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/weapon"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/model"/>
+      <genFeatures notify="false" createChild="false" propertyDescription="The drone model for this autosoft."
+          propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/model"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Software"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatrixProgram"/>
@@ -802,5 +812,6 @@
     <genClasses ecoreClass="shr5.ecore#//PersonaMartialartTechnique">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaMartialartTechnique/technique"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//FahrzeugErweiterung"/>
   </genPackages>
 </genmodel:GenModel>

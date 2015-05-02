@@ -8597,6 +8597,10 @@
         <entries xsi:type="shr5:Drohne" xmi:id="a8c39fd9-d219-4772-9f8e-49b1d0975733" name="Steel Lynx Combat Drone (Large)" page="466" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10R" wertValue="25000" handling="5" geschwindigkeit="4" beschleunigung="2" rumpf="6" pilot="3" sensor="3" fahrzeugTyp="Drones: Large" panzer="12"/>
         <entries xsi:type="shr5:Drohne" xmi:id="8ac6c14d-22c2-4f5f-be53-774af78179ad" name="Aeroquip M.E.D.-1 'Dustoff' Medical Evacuation Drone (Large)" page="23" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="10R" wertValue="12000" handling="3" geschwindigkeit="4" beschleunigung="4" rumpf="4" pilot="4" sensor="3" fahrzeugTyp="Drones: Large" panzer="5"/>
         <entries xsi:type="shr5:Drohne" xmi:id="d186dbc2-52e6-4804-94ca-7db96c2afdde" name="Shiawase Caduceus 'CAD' 7 (Medium)" page="23" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="12R" wertValue="16500" handling="4" geschwindigkeit="2" beschleunigung="1" rumpf="5" pilot="2" sensor="1" fahrzeugTyp="Drones: Medium" panzer="3"/>
+        <entries xsi:type="shr5:WeaponMount" xmi:id="_8_1RIPCxEeSWV5xSb8Oz1w" name="Standard weapon mount" page="461" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="2500" capacityUsed="1"/>
+        <entries xsi:type="shr5:WeaponMount" xmi:id="_IiWSEPCyEeSWV5xSb8Oz1w" name="Heavy weapon mount" page="461" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="14F" wertValue="5000" capacityUsed="2"/>
+        <entries xsi:type="shr5:FahrzeugErweiterung" xmi:id="_R8wXAPCyEeSWV5xSb8Oz1w" name="Rigger interface" page="461" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="1000"/>
+        <entries xsi:type="shr5:FahrzeugErweiterung" xmi:id="_aCB1APCyEeSWV5xSb8Oz1w" name="Manual operation" page="461" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="500"/>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_ELyDMDnTEeSe6_w6Jrbqxg" name="Credsticks">
         <entries xsi:type="shr5:Credstick" xmi:id="_ELzRUDnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5" name="Standard" maxValue="5000"/>
@@ -23576,6 +23580,11 @@
         <changes xsi:type="shr5mngt:PersonaChange" xmi:id="_zoXVALO0EeSWXbZxnJbnlw" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-13T20:16:46.861+0100" from="2" to="3" changeable="_BzZ3lt0CEeOvVYoRsPZlnA"/>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_40LisLPtEeS1oJwC38P4RQ" date="2075-06-03T21:05:35.585+0200" changeApplied="true" dateApplied="2015-02-14T03:05:38.522+0100" karma="7"/>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_0rFvEM_IEeSkF8bO28Q_sw" date="2075-06-15T17:36:00.000+0200" changeApplied="true" dateApplied="2015-03-21T13:50:50.203+0100" karma="7"/>
+        <changes xsi:type="shr5mngt:AttributeChange" xmi:id="_QWlSoO9uEeSvgoopBS9psw" date="2075-07-20T17:36:00.000+0200" from="4" to="5">
+          <attibute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+        </changes>
+        <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_bSbEYO-KEeSvgoopBS9psw" date="2075-07-27T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-01T00:44:20.132+0200" karma="3"/>
+        <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_kngCwO-dEeSvgoopBS9psw" date="2075-07-27T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-01T03:01:44.243+0200" karma="2"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_Bz1VY90CEeOvVYoRsPZlnA" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X9DnTEeSe6_w6Jrbqxg" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" reichweite="1"/>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_JoEq4FDLEeSjN8rIya5QCA" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
           <localizations xmi:id="_JoEq4VDLEeSjN8rIya5QCA" local="de" name="Ares Predator V"/>
@@ -23599,7 +23608,7 @@
         </inventar>
         <inventar xsi:type="shr5:Magazin" xmi:id="_Jos9AFDLEeSjN8rIya5QCA" parentId="_C_YjEEjdEeSs1LVnBuzujg" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Predator V ammunition" type="971c711b-db32-4339-9203-865ef38f350e" bullets="_TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA _TEY0UFDLEeSjN8rIya5QCA"/>
         <inventar xsi:type="shr5:Magazin" xmi:id="_Jo-CwFDLEeSjN8rIya5QCA" parentId="_DAD4hUjdEeSs1LVnBuzujg" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Remington 950 ammunition" type="01d7b203-e57e-4cbd-9f68-a2134683e178"/>
-        <inventar xsi:type="shr5:Munition" xmi:id="_TEY0UFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="99" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
+        <inventar xsi:type="shr5:Munition" xmi:id="_TEY0UFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="89" proAnzahl="10" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_TEY0UVDLEeSjN8rIya5QCA" local="de" name="Munition: Standardmunition"/>
         </inventar>
         <inventar xsi:type="shr5:Munition" xmi:id="_lswdoFDLEeSjN8rIya5QCA" parentId="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_ENFqxjnTEeSe6_w6Jrbqxg">
@@ -23628,6 +23637,8 @@
           <transactionlog xsi:type="shr5:TransferAmount" xmi:id="_-w5PAMm1EeSjieQ47MGe8A" amount="5000" date="2075-06-03T21:05:35.585+0200" description="some cash" source="_Vh3_wK8YEeS769kjC9ygTA" dest="_evVfwK8WEeS3Wp9Q37-3Qw"/>
           <transactionlog xsi:type="shr5:ShoppingTransaction" xmi:id="_e0vlAMnBEeSjieQ47MGe8A" amount="-125" date="2075-06-04T21:05:35.585+0200" description="Some stuff." items="_q19FYMnHEeSjieQ47MGe8A _q2X8IMnHEeSjieQ47MGe8A _q2yy4MnHEeSjieQ47MGe8A"/>
           <transactionlog xmi:id="_XRtWwMnUEeSjieQ47MGe8A" amount="-100" date="2075-06-03T21:05:35.585+0200" description="trinken mit nowak"/>
+          <transactionlog xmi:id="_Kg5mwO9wEeSvgoopBS9psw" amount="-20" date="2075-06-26T17:36:00.000+0200" description="paar bier bei ralph"/>
+          <transactionlog xmi:id="_q3TXcO-eEeSvgoopBS9psw" amount="-2000" date="2075-07-01T09:01:12.185+0200" description="Pay for Lifestyle Low"/>
         </inventar>
         <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold -1" maxValue="100000">
           <transactionlog xmi:id="_jphFUK8XEeS3Wp9Q37-3Qw" amount="12400" date="9999-03-20T00:00:00.000+0100" description="Einnahmen"/>
@@ -23724,12 +23735,12 @@
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="2" loyality="3" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2" character="_g_xAoL-FEeSSYv7eFvElvA"/>
-        <connections xmi:id="_1rAMQMAXEeSK0tFwZsh0jA" influence="2" loyality="1" character="_7fDeQMAGEeSSE7G7aOAz9Q"/>
+        <connections xmi:id="_1rAMQMAXEeSK0tFwZsh0jA" influence="2" loyality="3" character="_7fDeQMAGEeSSE7G7aOAz9Q"/>
         <connections xmi:id="_-Xbw4MAXEeSK0tFwZsh0jA" influence="3" loyality="1" character="_572dwMAUEeSEwMMqEoWtPQ"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_N5AlwK9sEeS769kjC9ygTA" name="Yamaha Growler (Off-Road Bike)" parentId="2df83d3e-78bb-4b42-b19f-78df8588e981" page="462" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" handling="4" geschwindigkeit="3" beschleunigung="1" rumpf="5" pilot="1" sensor="1" fahrzeugTyp="Bikes" panzer="5" sitze="1" handlingGelaende="5"/>
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_QEHKoMmzEeSjieQ47MGe8A" name="Hyundai Shin-Hyung (Sport Sedan)" parentId="72a204fc-e4f7-4e00-9d14-7f338fb86817" page="463" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="28500" handling="5" geschwindigkeit="6" beschleunigung="3" rumpf="10" pilot="1" sensor="2" fahrzeugTyp="Cars" panzer="6" sitze="4" handlingGelaende="4"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0O-AN0CEeOvVYoRsPZlnA" character="_BzO4cN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Gu" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtDX8N0CEeOvVYoRsPZlnA" karmaToResource="3" startResources="650"/>
-        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-06-02T00:00:00.000+0200">
+        <diary xmi:id="_clae8K6fEeSSCscJt7LYfw" characterDate="2075-07-20T17:36:00.000+0200">
           <entries xsi:type="shr5mngt:ContractPayment" xmi:id="_03mMMK9qEeS769kjC9ygTA" date="2075-04-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
           <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_2oO_cLO0EeSWXbZxnJbnlw" date="2075-04-14T21:05:35.585+0200" message="Persona veränderungen Fertigkeit Schlosser 2 -> 3" change="_zoXVALO0EeSWXbZxnJbnlw"/>
           <entries xsi:type="shr5mngt:ContractPayment" xmi:id="__czMYLO0EeSWXbZxnJbnlw" date="2075-05-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
@@ -23740,6 +23751,13 @@
           <entries xmi:id="_IzhZcMnVEeSjieQ47MGe8A" date="2075-06-12T04:00:00.000+0200" message="Wir fahren ins light and dark, nach dem sich Savatichi bei mir gemeldet hat.&#xA;Wir trefen Jane Bond, sie einen Job:&#xA;&#xA;&#xA;Extraktion aus einen Schloss,  eine Wellness Oase von Atztec. Jagschloss Sonnenhof.&#xA;Die Zielperson ist vom 14/15. am Ort. Svetlana Barthava.&#xA;Critter als abschreckung für die Wildschweine. An dem doppelzaun sind Drohnenschienen&#xA;&#xA;Wir kundschaften Astral aus."/>
           <entries xmi:id="_QjTWUMnaEeSjieQ47MGe8A" date="2075-06-12T17:36:00.000+0200" message="Wir fahren zum Jagschloss Sonnenhof und kundschaften Astral aus.&#xA;Da sind Critter im Doppelzaun, vieleicht Höllenhunde (36), Geister bewohnen die  Umgebung.&#xA;&#xA;&#xA;"/>
           <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_5vVFAM_IEeSkF8bO28Q_sw" date="2075-06-15T17:36:00.000+0200" message="Karma Gained : 7" change="_0rFvEM_IEeSkF8bO28Q_sw"/>
+          <entries xsi:type="shr5mngt:TrainingsTime" xmi:id="_OL9OIO9uEeSvgoopBS9psw" date="2075-06-15T17:36:00.000+0200" change="_QWlSoO9uEeSvgoopBS9psw" trainingComplete="true">
+            <training xmi:id="_VGCrYO9uEeSvgoopBS9psw" start="2075-06-15T17:36:00.000+0200" end="2075-06-26T17:36:00.000+0200"/>
+            <training xmi:id="_8yVEgO-cEeSvgoopBS9psw" start="2075-06-28T17:36:00.000+0200" end="2075-07-20T17:36:00.000+0200"/>
+          </entries>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_cJaWwO-KEeSvgoopBS9psw" date="2075-06-27T17:36:00.000+0200" message="Karma Gained : 3" change="_bSbEYO-KEeSvgoopBS9psw"/>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_ondRMO-dEeSvgoopBS9psw" date="2075-06-27T17:36:00.000+0200" message="Karma Gained : 2" change="_kngCwO-dEeSvgoopBS9psw"/>
+          <entries xsi:type="shr5mngt:ContractPayment" xmi:id="_q3asMO-eEeSvgoopBS9psw" date="2075-07-01T09:01:12.185+0200" message="Pay for Lifestyle Low" contractToPay="_Bz2jgd0CEeOvVYoRsPZlnA" payed="true"/>
         </diary>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">

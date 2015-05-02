@@ -2219,6 +2219,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FahrzeugErweiterung} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected FahrzeugErweiterungItemProvider fahrzeugErweiterungItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FahrzeugErweiterung}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createFahrzeugErweiterungAdapter() {
+        if (fahrzeugErweiterungItemProvider == null) {
+            fahrzeugErweiterungItemProvider = new FahrzeugErweiterungItemProvider(this);
+        }
+
+        return fahrzeugErweiterungItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2408,6 +2431,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (martialartTechniqueItemProvider != null) martialartTechniqueItemProvider.dispose();
         if (personaMartialartStyleItemProvider != null) personaMartialartStyleItemProvider.dispose();
         if (personaMartialartTechniqueItemProvider != null) personaMartialartTechniqueItemProvider.dispose();
+        if (fahrzeugErweiterungItemProvider != null) fahrzeugErweiterungItemProvider.dispose();
     }
 
     @Override

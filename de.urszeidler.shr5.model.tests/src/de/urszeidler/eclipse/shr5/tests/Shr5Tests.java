@@ -78,7 +78,8 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(SensorArrayTest.class);
         suite.addTestSuite(SensorTest.class);
         suite.addTestSuite(WeaponMountTest.class);
-         
+        suite.addTestSuite(FahrzeugErweiterungTest.class);
+        
         // suite.addTestSuite(HostTest.class);
 
         return suite;

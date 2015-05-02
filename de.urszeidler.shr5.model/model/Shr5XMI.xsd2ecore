@@ -570,7 +570,9 @@
     </nested>
     <nested inputs="shr5.ecore#//MatrixAttributes/currentModus" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
-    <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61"/>
+    <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61">
+      <nested inputs="shr5.ecore#//FahrzeugModifikation/capacityUsed" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=5"/>
+    </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=1"/>
@@ -1094,5 +1096,7 @@
       <nested inputs="shr5.ecore#//PersonaMartialartTechnique/technique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDComplexTypeDefinition=145/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaMartialartTechnique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDElementDeclaration=145"/>
+    <nested inputs="shr5.ecore#//FahrzeugErweiterung" outputs="Shr5XMI.xsd#//FahrzeugErweiterung;XSDComplexTypeDefinition=146"/>
+    <nested inputs="shr5.ecore#//FahrzeugErweiterung" outputs="Shr5XMI.xsd#//FahrzeugErweiterung;XSDElementDeclaration=146"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

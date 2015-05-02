@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.SensorArray;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -140,6 +141,7 @@ public abstract class FahrzeugTest extends TestCase {
         
         
         WeaponMount wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
         AbstaktWaffe w = Shr5Factory.eINSTANCE.createFeuerwaffe();
         wm.setWeapon(w);
         
@@ -147,10 +149,41 @@ public abstract class FahrzeugTest extends TestCase {
         assertEquals(1,getFixture().getCapacityRemains());
         
         wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
         w = Shr5Factory.eINSTANCE.createFeuerwaffe();
         wm.setWeapon(w);
         
         getFixture().getModifizierungen().add(wm);
+        assertEquals(0,getFixture().getCapacityRemains());
+        
+    }
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains() <em>Capacity Remains</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Capacity#getCapacityRemains()
+     * @generated not
+     */
+    public void testGetCapacityRemains_1() {
+        getFixture().setRumpf(5);
+        assertEquals(1,getFixture().getCapacity());        
+        getFixture().setRumpf(6);
+        assertEquals(2,getFixture().getCapacity());        
+        
+        
+        WeaponMount wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
+        AbstaktWaffe w = Shr5Factory.eINSTANCE.createFeuerwaffe();
+        wm.setWeapon(w);
+        
+        getFixture().getModifizierungen().add(wm);
+        assertEquals(1,getFixture().getCapacityRemains());
+        
+        FahrzeugErweiterung fe = Shr5Factory.eINSTANCE.createFahrzeugErweiterung();
+        fe.setCapacityUsed(1);
+        
+        getFixture().getModifizierungen().add(fe);
         assertEquals(0,getFixture().getCapacityRemains());
         
     }
@@ -183,6 +216,7 @@ public abstract class FahrzeugTest extends TestCase {
         assertEquals(2,getFixture().getCapacity());        
         
         WeaponMount wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
         AbstaktWaffe w = Shr5Factory.eINSTANCE.createFeuerwaffe();
         wm.setWeapon(w);
         
@@ -191,6 +225,7 @@ public abstract class FahrzeugTest extends TestCase {
         assertEquals(1,getFixture().getCapacityRemains());
         
         wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
         w = Shr5Factory.eINSTANCE.createFeuerwaffe();
         wm.setWeapon(w);
         
@@ -199,6 +234,7 @@ public abstract class FahrzeugTest extends TestCase {
         assertEquals(0,getFixture().getCapacityRemains());
         
         wm = Shr5Factory.eINSTANCE.createWeaponMount();
+        wm.setCapacityUsed(1);
         w = Shr5Factory.eINSTANCE.createFeuerwaffe();
         wm.setWeapon(w);
         

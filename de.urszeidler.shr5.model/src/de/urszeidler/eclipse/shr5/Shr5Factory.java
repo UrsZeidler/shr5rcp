@@ -841,6 +841,15 @@ public interface Shr5Factory extends EFactory {
     PersonaMartialartTechnique createPersonaMartialartTechnique();
 
     /**
+     * Returns a new object of class '<em>Fahrzeug Erweiterung</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Fahrzeug Erweiterung</em>'.
+     * @generated
+     */
+    FahrzeugErweiterung createFahrzeugErweiterung();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

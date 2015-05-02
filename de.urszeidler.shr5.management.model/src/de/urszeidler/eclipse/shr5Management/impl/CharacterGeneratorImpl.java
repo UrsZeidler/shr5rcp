@@ -326,8 +326,10 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 		if(newState==GeneratorState.COMMITED){
 		    adapter.unsetTarget(this);
 		    this.eAdapters().remove(adapter);
-		    getCharacter().eAdapters().remove(adapter);
-		    getCharacter().getPersona().eAdapters().remove(adapter);
+		    if(getCharacter()!=null)
+		        getCharacter().eAdapters().remove(adapter);
+		    if(getCharacter()!=null && getCharacter().getPersona()!=null)
+		        getCharacter().getPersona().eAdapters().remove(adapter);
 		}
 //		else
 //		if(newState!= STATE_EDEFAULT){

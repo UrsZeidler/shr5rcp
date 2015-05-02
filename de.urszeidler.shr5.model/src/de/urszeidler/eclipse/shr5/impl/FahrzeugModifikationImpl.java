@@ -40,6 +40,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl#getCapacityUsed <em>Capacity Used</em>}</li>
  * </ul>
  * </p>
  *
@@ -215,6 +216,26 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
      * @ordered
      */
     protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getCapacityUsed() <em>Capacity Used</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityUsed()
+     * @generated
+     * @ordered
+     */
+    protected static final int CAPACITY_USED_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getCapacityUsed() <em>Capacity Used</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCapacityUsed()
+     * @generated
+     * @ordered
+     */
+    protected int capacityUsed = CAPACITY_USED_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -447,6 +468,27 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getCapacityUsed() {
+        return capacityUsed;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCapacityUsed(int newCapacityUsed) {
+        int oldCapacityUsed = capacityUsed;
+        capacityUsed = newCapacityUsed;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED, oldCapacityUsed, capacityUsed));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -485,6 +527,8 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
                 return getVerfuegbarkeit();
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE:
                 return getWertValue();
+            case Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED:
+                return getCapacityUsed();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -526,6 +570,9 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE:
                 setWertValue((BigDecimal)newValue);
                 return;
+            case Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED:
+                setCapacityUsed((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -565,6 +612,9 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE:
                 setWertValue(WERT_VALUE_EDEFAULT);
                 return;
+            case Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED:
+                setCapacityUsed(CAPACITY_USED_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -597,6 +647,8 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE:
                 return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
+            case Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED:
+                return capacityUsed != CAPACITY_USED_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -689,6 +741,8 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");
         result.append(wertValue);
+        result.append(", capacityUsed: ");
+        result.append(capacityUsed);
         result.append(')');
         return result.toString();
     }

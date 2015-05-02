@@ -886,7 +886,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      */
     public int getCapacityRemains() {
         int capacity = getCapacity();
-        return capacity-getModifizierungen().size();
+        for (FahrzeugModifikation fm : getModifizierungen()) {
+            capacity -= fm.getCapacityUsed();
+        }
+        
+        return capacity;
     }
 
     /**

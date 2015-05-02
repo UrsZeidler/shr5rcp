@@ -585,7 +585,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FahrzeugModifikation" abstract="true"
-      eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert"/>
+      eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityUsed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Technomancer" eSuperTypes="#//KoerperPersona #//ResonanzPersona">
     <eStructuralFeatures xsi:type="ecore:EReference" name="complexForms" upperBound="-1"
         eType="#//PersonaKomplexForm" containment="true"/>
@@ -1271,4 +1273,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="technique" lowerBound="1"
         eType="#//MartialartTechnique"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FahrzeugErweiterung" eSuperTypes="#//FahrzeugModifikation"/>
 </ecore:EPackage>

@@ -15,6 +15,7 @@ import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -387,6 +388,16 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return null;
             }
 
+            @Override
+            public Object caseFahrzeugErweiterung(FahrzeugErweiterung object) {
+                try {
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseKleindungsModifikator(KleindungsModifikator object) {
                 try {

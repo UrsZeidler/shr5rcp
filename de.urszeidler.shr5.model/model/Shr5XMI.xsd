@@ -1238,6 +1238,7 @@
             <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="capacityUsed" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2544,13 +2545,21 @@
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="techniques" type="shr5:MartialartTechnique"/>
-          <xsd:element name="usableWith" type="shr5:Fertigkeit"/>
+          <xsd:element name="usableWith" type="shr5:Fertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>The skills the style can be used as spec.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="techniques" type="xsd:string"/>
-        <xsd:attribute name="usableWith" type="xsd:string"/>
+        <xsd:attribute name="usableWith" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The skills the style can be used as spec.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2592,4 +2601,10 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PersonaMartialartTechnique" type="shr5:PersonaMartialartTechnique"/>
+  <xsd:complexType name="FahrzeugErweiterung">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:FahrzeugModifikation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FahrzeugErweiterung" type="shr5:FahrzeugErweiterung"/>
 </xsd:schema>

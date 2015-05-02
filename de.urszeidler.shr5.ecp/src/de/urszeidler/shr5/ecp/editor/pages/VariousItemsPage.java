@@ -16,6 +16,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
@@ -139,8 +140,12 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
         grpGegenstand.setText(labelProvider.getText(object.eClass()));
 
         if (object instanceof WeaponMount) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_MODIFIKATION__CAPACITY_USED, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.WEAPON_MOUNT__WEAPON, grpGegenstand);
 
+        }else if (object instanceof FahrzeugErweiterung) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_MODIFIKATION__CAPACITY_USED, grpGegenstand);
+            
         }else if (object instanceof PercentLifestyleOption) {
             
         }else if (object instanceof Pack) {

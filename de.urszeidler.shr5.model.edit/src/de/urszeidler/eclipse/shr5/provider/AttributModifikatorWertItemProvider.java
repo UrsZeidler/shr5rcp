@@ -215,7 +215,7 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AttributModifikatorWert_modifyable_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_AttributModifikatorWert_modifyable_feature", "_UI_AttributModifikatorWert_type"),
+                 getString("_UI_AttributModifikatorWert_modifyable_description"),
                  Shr5Package.Literals.ATTRIBUT_MODIFIKATOR_WERT__MODIFYABLE,
                  true,
                  false,

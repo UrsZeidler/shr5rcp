@@ -607,7 +607,7 @@ public class FahrzeugItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Fahrzeug_weaponMounts_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Fahrzeug_weaponMounts_feature", "_UI_Fahrzeug_type"),
+                 getString("_UI_Fahrzeug_weaponMounts_description"),
                  Shr5Package.Literals.FAHRZEUG__WEAPON_MOUNTS,
                  false,
                  false,
@@ -755,6 +755,11 @@ public class FahrzeugItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN,
                  Shr5Factory.eINSTANCE.createWeaponMount()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN,
+                 Shr5Factory.eINSTANCE.createFahrzeugErweiterung()));
 
         newChildDescriptors.add
             (createChildParameter

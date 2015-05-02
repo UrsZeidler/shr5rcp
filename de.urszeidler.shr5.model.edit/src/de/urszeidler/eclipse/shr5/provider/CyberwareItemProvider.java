@@ -228,7 +228,7 @@ public class CyberwareItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Cyberware_cyberwareCapacity_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberware_cyberwareCapacity_feature", "_UI_Cyberware_type"),
+                 getString("_UI_Cyberware_cyberwareCapacity_description"),
                  Shr5Package.Literals.CYBERWARE__CYBERWARE_CAPACITY,
                  true,
                  false,

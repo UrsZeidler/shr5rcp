@@ -358,7 +358,7 @@ public class AutoSoftItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AutoSoft_model_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_AutoSoft_model_feature", "_UI_AutoSoft_type"),
+                 getString("_UI_AutoSoft_model_description"),
                  Shr5Package.Literals.AUTO_SOFT__MODEL,
                  true,
                  false,

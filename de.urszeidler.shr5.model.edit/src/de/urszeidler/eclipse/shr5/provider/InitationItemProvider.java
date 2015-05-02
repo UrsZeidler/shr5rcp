@@ -98,7 +98,7 @@ public class InitationItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Initation_erlernt_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Initation_erlernt_feature", "_UI_Initation_type"),
+                 getString("_UI_Initation_erlernt_description"),
                  Shr5Package.Literals.INITATION__ERLERNT,
                  true,
                  false,

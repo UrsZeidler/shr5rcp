@@ -90,7 +90,7 @@ public class GegenstandItemProvider
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Gegenstand_stufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Gegenstand_stufe_feature", "_UI_Gegenstand_type"),
+                 getString("_UI_Gegenstand_stufe_description"),
                  Shr5Package.Literals.GEGENSTAND__STUFE,
                  true,
                  false,

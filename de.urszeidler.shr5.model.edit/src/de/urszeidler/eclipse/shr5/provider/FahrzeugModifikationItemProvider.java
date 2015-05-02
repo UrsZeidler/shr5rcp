@@ -72,6 +72,7 @@ public class FahrzeugModifikationItemProvider
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
+            addCapacityUsedPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -275,6 +276,28 @@ public class FahrzeugModifikationItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Capacity Used feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCapacityUsedPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FahrzeugModifikation_capacityUsed_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FahrzeugModifikation_capacityUsed_feature", "_UI_FahrzeugModifikation_type"),
+                 Shr5Package.Literals.FAHRZEUG_MODIFIKATION__CAPACITY_USED,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -356,6 +379,7 @@ public class FahrzeugModifikationItemProvider
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT:
             case Shr5Package.FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT:
             case Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE:
+            case Shr5Package.FAHRZEUG_MODIFIKATION__CAPACITY_USED:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.FAHRZEUG_MODIFIKATION__LOCALIZATIONS:
