@@ -29,11 +29,13 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
 import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.shr5.model.edit.preferences.PreferenceConstants;
 
 /**
@@ -2443,22 +2445,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
                 return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
                     @Override
                     public String getText(Object object) {
-                        if (object instanceof Identifiable) {
-                            Identifiable id = (Identifiable)object;
-
-                            EObject eObject = (EObject)object;
-                            EClass eClass = eObject.eClass();
-                            // EStructuralFeature feature = getLabelFeature(eClass);
-
-                            String className = ModifikatorItemProvider.getEClassName(eClass);
-                            EList<Localization> localizations = id.getLocalizations();
-                            for (Localization localization : localizations) {
-                                if (iso3Country.equals(localization.getLocal())) {
-                                    return className + " " + localization.getName();
-                                }
-                            }
-                        }
-                        return super.getText(object);
+                        return Shr5EditingTools.localizeText(object,super.getText(object),iso3Country);
                     }
                 };
             }

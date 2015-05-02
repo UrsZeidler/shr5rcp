@@ -35,12 +35,14 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -1693,22 +1695,31 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
 	                return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
 	                    @Override
 	                    public String getText(Object object) {
-	                        if (object instanceof Identifiable) {
-	                            Identifiable id = (Identifiable)object;
-
-	                            EObject eObject = (EObject)object;
-	                            EClass eClass = eObject.eClass();
-	                            // EStructuralFeature feature = getLabelFeature(eClass);
-
-	                            String className = getEClassName(eClass);
-	                            EList<Localization> localizations = id.getLocalizations();
-	                            for (Localization localization : localizations) {
-	                                if (iso3Country.equals(localization.getLocal())) {
-	                                    return className + " " + localization.getName();
-	                                }
-	                            }
-	                        }
-	                        return super.getText(object);
+	                        return Shr5EditingTools.localizeText(object,super.getText(object),iso3Country);
+//	                        
+//	                        if (object instanceof Identifiable) {
+//	                            Identifiable id = (Identifiable)object;
+//
+//	                            EObject eObject = (EObject)object;
+//	                            EClass eClass = eObject.eClass();
+//	                            // EStructuralFeature feature = getLabelFeature(eClass);
+//
+//	                            String className = getEClassName(eClass);
+//	                            EList<Localization> localizations = id.getLocalizations();
+//	                            for (Localization localization : localizations) {
+//	                                if (iso3Country.equals(localization.getLocal())) {
+//	                                    if (id instanceof Beschreibbar) {
+//                                            Beschreibbar b = (Beschreibbar)id;
+//                                            
+//                                            String text = super.getText(object);
+//                                            if(localization.getName()!=null)
+//                                                return text.replace(b.getName(), localization.getName());
+//                                        }
+//	                                    return className + " " + localization.getName();
+//	                                }
+//	                            }
+//	                        }
+//	                        return super.getText(object);
 	                    }
 	                };
 	            }

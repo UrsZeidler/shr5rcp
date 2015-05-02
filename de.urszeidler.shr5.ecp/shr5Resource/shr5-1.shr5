@@ -8687,16 +8687,16 @@
           <localizations xmi:id="_-Dk5YewMEeSYptVhF8ZBKA" local="de" name="Sensorarray 5"/>
         </entries>
         <entries xsi:type="shr5:Sensor" xmi:id="_YyOGwOELEeSMM7_8sN0WSw" name="Single Sensor 3" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="3" capacityValue="1">
-          <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor"/>
+          <localizations xmi:id="_YyOGweELEeSMM7_8sN0WSw" local="de" name="Einzelensor 3"/>
         </entries>
         <entries xsi:type="shr5:Sensor" xmi:id="_22_W4OwMEeSYptVhF8ZBKA" name="Single Sensor 4" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="4" capacityValue="1">
-          <localizations xmi:id="_22_W4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
+          <localizations xmi:id="_22_W4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor 4"/>
         </entries>
         <entries xsi:type="shr5:Sensor" xmi:id="_56TW4OwMEeSYptVhF8ZBKA" name="Single Sensor 5" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="5" capacityValue="1">
-          <localizations xmi:id="_56TW4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
+          <localizations xmi:id="_56TW4ewMEeSYptVhF8ZBKA" local="de" name="Einzelensor 5"/>
         </entries>
         <entries xsi:type="shr5:Sensor" xmi:id="_74kaYOwMEeSYptVhF8ZBKA" name="Single Sensor 6" parentId="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="100" rating="6" capacityValue="1">
-          <localizations xmi:id="_74kaYewMEeSYptVhF8ZBKA" local="de" name="Einzelensor"/>
+          <localizations xmi:id="_74kaYewMEeSYptVhF8ZBKA" local="de" name="Einzelensor 6"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_NmNAYL-EEeS9maZrSgWaVQ" name="Software">
@@ -10740,7 +10740,9 @@
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsDnTEeSe6_w6Jrbqxg" name="Tasers" kurz="5" mittel="10" weit="15" extrem="20"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsTnTEeSe6_w6Jrbqxg" name="Holdouts" kurz="5" mittel="15" weit="30" extrem="50"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsjnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/pistol.png" name="Light Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
-        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsznTEeSe6_w6Jrbqxg" image="/shr5Resource/images/pistol.png" name="Heavy Pistols" kurz="5" mittel="20" weit="40" extrem="60"/>
+        <entries xsi:type="shr5:Reichweite" xmi:id="_ENFDsznTEeSe6_w6Jrbqxg" image="/shr5Resource/images/pistol.png" name="Heavy Pistols" kurz="5" mittel="20" weit="40" extrem="60">
+          <localizations xmi:id="_7LwGkPDAEeSKd5qPZc50xQ" local="de" name="Schwere Pisolen"/>
+        </entries>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwDnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/mp.png" name="Machine Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwTnTEeSe6_w6Jrbqxg" name="Submachine Guns" kurz="10" mittel="40" weit="80" extrem="150"/>
         <entries xsi:type="shr5:Reichweite" xmi:id="_ENFqwjnTEeSe6_w6Jrbqxg" image="/shr5Resource/images/assault.png" name="Assault Rifles" kurz="25" mittel="150" weit="350" extrem="550"/>
@@ -23485,8 +23487,21 @@
       <entries xsi:type="shr5:Magazin" xmi:id="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip"/>
       <entries xsi:type="shr5:QiFokus" xmi:id="_ik5OoD_REeSRYrHAmMULWA" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="QiFocus"/>
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
-      <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt"/>
+      <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt" type="df19a07f-cc04-44b6-b9b2-6d4fe73062e4"/>
       <entries xsi:type="shr5:Gegenstand" xmi:id="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
+      <entries xsi:type="shr5:QiFokus" xmi:id="_OenC4PC3EeSNvoUz-Gvxtg" stufe="2" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Mystic Armor 1">
+        <power xmi:id="_DZzcMPC4EeSNvoUz-Gvxtg" name="Mystic Armor 1" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+          <mods xmi:id="_DZzcMfC4EeSNvoUz-Gvxtg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+          </mods>
+          <localizations xmi:id="_DZzcMvC4EeSNvoUz-Gvxtg" local="de" name="Mystischer Panzer 1"/>
+        </power>
+      </entries>
+      <entries xsi:type="shr5:QiFokus" xmi:id="_sH8CwPC4EeSNvoUz-Gvxtg" stufe="4" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Danger Sense 4">
+        <power xmi:id="_PJMmEPC5EeSNvoUz-Gvxtg" name="Danger Sense 4" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+          <localizations xmi:id="_PJMmEfC5EeSNvoUz-Gvxtg" local="de" name="Gefahrensinn 4"/>
+        </power>
+      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
