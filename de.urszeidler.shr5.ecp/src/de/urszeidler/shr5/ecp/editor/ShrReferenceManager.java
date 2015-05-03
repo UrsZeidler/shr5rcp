@@ -18,6 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -108,8 +109,18 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             return;
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
-                || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature()) || Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY.equals(e.getFeature())
+                || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature()) 
+                || Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY.equals(e.getFeature())
                 || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
+            
+            Object eGet = object.eGet(e.getFeature());
+                if(eGet!=null)
+                   if( MessageDialog.openQuestion(this.shadowrunEditor.getEditorSite().getShell(), "Open or change", String.format("Open %s for editing.",itemDelegator.getText(eGet)))){
+                       ShadowrunEditingTools.openEObject((EObject)eGet);
+                       return;
+                }
+
+            
             EObject copyAddToPersona = handleCopySingleAddToPersona((EReference)e.getFeature(), object);
             if (copyAddToPersona != null) {
                 IObservable observable = e.getObservable();
@@ -175,6 +186,15 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return;
             }
         }
+//        else if (Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY.equals(e.getFeature())) {
+//            if (object instanceof Fahrzeug) {
+//                Fahrzeug tt = (Fahrzeug)object;
+//                if(tt.getSensorArray()!=null){
+//                   if( MessageDialog.openQuestion(this.shadowrunEditor.getEditorSite().getShell(), "Open", "Open for editing"))
+//                       ShadowrunEditingTools.openEObject(tt.getSensorArray());
+//                }
+//            }
+//        }
         // else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
         // EObject defaultCreationDialog = defaultCreationDialog(e, object);
         // if(defaultCreationDialog!=null)
@@ -629,7 +649,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         if (theEObject instanceof CharacterGenerator) {
             CharacterGenerator<?> generatorSrc = (CharacterGenerator<?>)theEObject;
             if (generatorSrc instanceof Shr5RuleGenerator) {
-                Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+                Shr5RuleGenerator<?> srg = (Shr5RuleGenerator<?>)generatorSrc;
                 EList<SourceBook> allowedSources = srg.getAllowedSources();
                 if (!allowedSources.isEmpty())
                     fluentIterable = fluentIterable.filter(ShadowrunTools.allowedSourcePredicate(allowedSources));
