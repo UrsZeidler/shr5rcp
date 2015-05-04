@@ -62,6 +62,7 @@ import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.Activator;
 
@@ -77,6 +78,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     private EObject theEObject;
     private boolean activateFilter = true;
     private DialogType dialogType = DialogType.inventar;
+    private ViewerFilter inCharacterFilter;
 
     public enum DialogType {
         inventar, simple
@@ -304,6 +306,35 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                         dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
                     }
                 });
+            
+            final ManagedCharacter containedInCharacter = ShadowrunManagmentTools.getContainedInCharacter((EObject)object);
+            inCharacterFilter = new ViewerFilter() {
+                @Override
+                public boolean select(Viewer viewer, Object parentElement, Object element) {
+
+                    if (element instanceof EObject) {
+                        EObject eo = (EObject)element;
+                       
+                        if (containedInCharacter!=null ) {
+                            return ShadowrunManagmentTools.containedInCharaterPredicate(containedInCharacter).apply(eo);
+                        }
+                    }
+                    return true;
+                }
+            }; 
+
+            final ToolItem filterInCharacter = new ToolItem(toolBar, SWT.CHECK);
+            filterInCharacter.setToolTipText("show only item contained by character");
+            filterInCharacter.addSelectionListener(new SelectionAdapter() {
+                @Override
+                public void widgetSelected(SelectionEvent e) {
+                    if (filterInCharacter.getSelection()) {
+                        choiceTableViewer.addFilter(inCharacterFilter);
+                    } else {
+                        choiceTableViewer.removeFilter(inCharacterFilter);
+                    }
+                }
+            });
 
         }
 

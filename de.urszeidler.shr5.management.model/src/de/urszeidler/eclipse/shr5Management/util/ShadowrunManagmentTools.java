@@ -44,6 +44,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Steigerbar;
@@ -83,6 +84,43 @@ import de.urszeidler.eclipse.shr5Management.TrainingsTime;
  */
 public class ShadowrunManagmentTools {
 
+    /**
+     * Is the object a child of a managed character.
+     * @param object
+     * @return
+     */
+    public static boolean isContainedInCharacter(EObject object) {        
+        EObject eContainer = getBaseParent(object);
+        return eContainer instanceof ManagedCharacter;
+    }
+
+    /**
+     * Is the object a child of a managed characte, return this character or null.
+     * @param object
+     * @return
+     */
+    public static ManagedCharacter getContainedInCharacter(EObject object) {        
+        EObject eContainer = getBaseParent(object);
+        if( eContainer instanceof ManagedCharacter)
+            return (ManagedCharacter)eContainer;
+        return null;
+    }
+
+
+    /**
+     * Returns the first 'real' container managedcharacter or shrlist.
+     * @param object
+     * @return
+     */
+    public static EObject getBaseParent(EObject object) {
+        EObject eContainer = object.eContainer();
+        while (eContainer!=null && !(eContainer instanceof ManagedCharacter) && !(eContainer instanceof ShrList)) {
+            eContainer = eContainer.eContainer();
+        }
+        return eContainer;
+    }
+    
+    
     /**
      * @param managedCharacter
      * @return
@@ -1108,6 +1146,26 @@ public class ShadowrunManagmentTools {
             return findAdvancment(characterAdvancements, pf.getFertigkeit().eClass());
         }
         return null;
+    }
+
+    /**
+     * Create a predicate for checking id an object is in the manage character.
+     * @param character
+     * @return
+     */
+    public static Predicate<EObject> containedInCharaterPredicate(final ManagedCharacter character) {
+        return new Predicate<EObject>() {
+
+            @Override
+            public boolean apply(EObject input) {
+                if (input instanceof EObject) {
+                    EObject eo = (EObject)input;
+                    ManagedCharacter containedInCharacter2 = getContainedInCharacter(eo);
+                    return character.equals(containedInCharacter2);
+                }
+                return false;
+            }
+        };
     }
 
 }

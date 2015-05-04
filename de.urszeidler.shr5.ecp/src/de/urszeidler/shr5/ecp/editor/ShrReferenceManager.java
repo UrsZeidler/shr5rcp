@@ -158,18 +158,15 @@ public class ShrReferenceManager extends DefaultReferenceManager {
             setSingleRefernceFromDialog(e, dialog);
             return;
         } else if (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON.equals(e.getFeature())) {
+            Object eGet = object.eGet(e.getFeature());
+            if(eGet!=null)
+               if( MessageDialog.openQuestion(this.shadowrunEditor.getEditorSite().getShell(), "Open or change", String.format("Open %s for editing.",itemDelegator.getText(eGet)))){
+                   ShadowrunEditingTools.openEObject((EObject)eGet);
+                   return;
+            }
+            
             EObject newWeapon = defaultCreationDialog(e, object);
             setValue(e, newWeapon);
-            // } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILLGROUP.equals(e.getFeature())) {
-            // Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-            // PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-            // ReferenceValueDialog dialog = new ReferenceValueDialog(this.shadowrunEditor.getSite().getShell(), personaFertigkeit,
-            // Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
-            //
-            // if (dialog.open() == Dialog.OK)
-            // setValue(e, personaFertigkeit);
-            //
-            // return;
         } else if (Shr5managementPackage.Literals.MODULE_SKILL_CHANGE__SKILL.equals(e.getFeature())) {
             Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.FERTIGKEIT);
 
@@ -186,22 +183,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
                 return;
             }
         }
-//        else if (Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY.equals(e.getFeature())) {
-//            if (object instanceof Fahrzeug) {
-//                Fahrzeug tt = (Fahrzeug)object;
-//                if(tt.getSensorArray()!=null){
-//                   if( MessageDialog.openQuestion(this.shadowrunEditor.getEditorSite().getShell(), "Open", "Open for editing"))
-//                       ShadowrunEditingTools.openEObject(tt.getSensorArray());
-//                }
-//            }
-//        }
-        // else if (Shr5managementPackage.Literals.MODULE_CHARACTER_CHANGE__CHARACTER_CHANGE.equals(e.getFeature())){
-        // EObject defaultCreationDialog = defaultCreationDialog(e, object);
-        // if(defaultCreationDialog!=null)
-        // setValue(e, defaultCreationDialog);
-        // return;
-        // }
-        super.handleManage(e, object);
+        internHandleManage(e, object);
     }
 
     /**
@@ -679,4 +661,60 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         return ShadowrunEditingTools.copyWithParentId(eo);
     }
 
+    
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @seede.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager#
+     * handleManage(de.urszeidler.emf.commons.ui.util.EmfFormBuilder.Entry,
+     * org.eclipse.emf.ecore.EObject)
+     */
+    public void internHandleManage(FormbuilderEntry e, EObject object) {
+        IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, e.getFeature());
+        List<?> values = (List<?>) propertyDescriptor.getChoiceOfValues(object);
+//        ManagedCharacter containedInCharacter = ShadowrunManagmentTools.getContainedInCharacter(object);
+//        if(containedInCharacter!=null)
+//            values = FluentIterable.from(values).filter(EObject.class).filter(ShadowrunManagmentTools.containedInCharaterPredicate(containedInCharacter)).toList();
+        
+        Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+
+        if (e.getFeature() instanceof EReference) {
+            EReference ref = (EReference) e.getFeature();
+            if (ref.isContainment()) {
+            } else {
+                if (ref.isMany()) {
+                    handleManyFeature(e, object, values, shell);
+                } else {
+                    handleSingleReference(e, values, shell);
+                }
+            }
+        } else if (e.getFeature() instanceof EAttribute) {
+            EAttribute att = (EAttribute) e.getFeature();
+            if (att.isMany())
+                handleManyFeature(e, object, values, shell);
+            else
+                handleSingleReference(e, values, shell);
+        }
+    }
+
+
+    private void handleManyFeature(FormbuilderEntry e, EObject object, List<?> values, Shell shell) {
+        FeatureEditorDialog featureEditorDialog = new FeatureEditorDialogWert(
+                shell, AdapterFactoryUtil.getInstance().getLabelProvider(), object, e.getFeature(), "", values,object);
+        int result = featureEditorDialog.open();
+        if (result == Window.OK) {
+            EList<?> eList = featureEditorDialog.getResult();
+            IObservable observable = e.getObservable();
+            if (observable instanceof IObservableList) {
+                IObservableList ol = (IObservableList) observable;
+                ol.clear();
+                ol.addAll(eList);
+            } else if (observable instanceof IObservableValue) {
+                IObservableValue ov = (IObservableValue) observable;
+
+            }
+        }
+    }
+  
 }
