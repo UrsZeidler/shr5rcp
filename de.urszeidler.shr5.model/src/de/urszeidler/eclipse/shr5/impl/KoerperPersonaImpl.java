@@ -213,7 +213,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      */
     public int getZustandKoerperlichMax() {
         int konstitution = (int)Math.ceil(getKonstitution() / 2.0D);
-        return 8 + konstitution;
+        return 8 + konstitution + getModManager().getmodWert(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX);
     }
 
     /**
@@ -224,7 +224,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      */
     public int getZustandGeistigMax() {
         int willenskraft = (int)Math.ceil(getWillenskraft() / 2.0D);
-        return 8 + willenskraft;
+        return 8 + willenskraft +getModManager().getmodWert(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX);
     }
 
     /**
@@ -234,7 +234,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * @generated not
      */
     public int getZustandGrenze() {
-        return getKonstitutionBasis();
+        return getKonstitutionBasis()+ +getModManager().getmodWert(Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GRENZE);
     }
 
     /**
