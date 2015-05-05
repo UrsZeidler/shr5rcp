@@ -122,7 +122,8 @@ public class ShadowrunEditor extends AbstractShr5Editor {
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
-    @Override
+    
+     @Override
     protected void addPages() {
 
         // the switch creates all the pages

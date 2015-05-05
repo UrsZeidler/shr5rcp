@@ -1,5 +1,7 @@
 package de.urszeidler.shr5.ecp.preferences;
 
+import org.eclipse.jface.preference.BooleanFieldEditor;
+import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.StringFieldEditor;
@@ -25,7 +27,7 @@ public class Sr5MainPreferences extends FieldEditorPreferencePage implements IWo
     @Override
     protected void createFieldEditors() {
         {
-            // Create the field editors
+             // Create the field editors
             StringFieldEditor stringFieldEditor = new StringFieldEditor(PreferenceConstants.DEFAUL_PROJECT_NAME, "main project name", -1,
                     StringFieldEditor.VALIDATE_ON_KEY_STROKE, getFieldEditorParent());
             stringFieldEditor.setEmptyStringAllowed(false);
@@ -36,6 +38,9 @@ public class Sr5MainPreferences extends FieldEditorPreferencePage implements IWo
 
             // stringFieldEditor.setEnabled(false, getFieldEditorParent());
         }
+        addField(new BooleanFieldEditor(PreferenceConstants.NO_DEFAULT_SKILL_GROUP_BCK_COLOR, "Higlight Skillgroup", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
+        addField(new ColorFieldEditor(PreferenceConstants.SKILL_GROUP_BCK_COLOR, "Skillgroup background", getFieldEditorParent()));
+        addField(new BooleanFieldEditor(PreferenceConstants.SKILL_GROUP_BOLT, "display the skillgroup bold", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
     }
 
     /**

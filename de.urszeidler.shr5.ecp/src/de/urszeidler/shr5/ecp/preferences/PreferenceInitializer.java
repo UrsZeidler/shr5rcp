@@ -75,9 +75,9 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
         PreferenceConverter.setDefault(store, PreferenceConstants.SCRIPT_GRAPH_COLOR_FG+PlacementOptions.HOME_GROUND,
                 ColorConstants.black.getRGB() );
         
-        
-//        store.setDefault(PreferenceConstants.SCRIPT_GRAPH_COLOR_BG+"", );
- 
+        PreferenceConverter.setDefault(store,PreferenceConstants.SKILL_GROUP_BCK_COLOR, ColorConstants.buttonDarker.getRGB());
+        store.setDefault(PreferenceConstants.NO_DEFAULT_SKILL_GROUP_BCK_COLOR,false);
+        store.setDefault(PreferenceConstants.SKILL_GROUP_BOLT,true); 
         
     }
 

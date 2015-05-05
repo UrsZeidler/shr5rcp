@@ -23,5 +23,8 @@ public class PreferenceConstants {
     public static final String LINKED_SOURCEBOOKS = "LINKED_SOURCEBOOKS";
     public static final String LINKED_SOURCEBOOKS_OFFSET = "LINKED_SOURCEBOOKS_OFFSET";
     
+    public static final String NO_DEFAULT_SKILL_GROUP_BCK_COLOR = "NO_DEFAULT_SKILL_GROUP_BCK_COLOR";
+    public static final String SKILL_GROUP_BCK_COLOR = "SKILL_GROUP_BCK_COLOR";
+    public static final String SKILL_GROUP_BOLT = "SKILL_GROUP_BCK_COLOR";
     
 }

@@ -22,6 +22,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.layout.TreeColumnLayout;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ColumnPixelData;
@@ -37,7 +41,11 @@ import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -46,6 +54,7 @@ import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
@@ -70,13 +79,15 @@ import de.urszeidler.eclipse.shr5Management.KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.LifeModulesGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * 
  */
-public class PersonaFertigkeitenWidget extends Composite {
+public class PersonaFertigkeitenWidget extends Composite implements IPropertyChangeListener {
 
     private static final String EMPTY = ""; //$NON-NLS-1$
 
@@ -199,6 +210,16 @@ public class PersonaFertigkeitenWidget extends Composite {
     private boolean readOnly = false;
     private boolean skillsFixedByGroup = true;
 
+    private IPreferenceStore store;
+
+    private RGB backColor;
+
+    private boolean changeDefaultColor;
+
+    private Font boldFont;
+
+    private boolean useBold;
+
     /**
      * Create the composite.
      * 
@@ -244,6 +265,13 @@ public class PersonaFertigkeitenWidget extends Composite {
         createWidgets();
     }
 
+    @Override
+    public void dispose() {
+        store.removePropertyChangeListener(this);
+        boldFont.dispose();
+        super.dispose();
+    }
+    
     public static List<Object> createFertigkeitGroupsRoot(AbstraktPersona persona) {
         Collection<EObject> groups = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
         Collection<EObject> skill = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEIT);
@@ -280,6 +308,18 @@ public class PersonaFertigkeitenWidget extends Composite {
     }
 
     private void createWidgets() {
+        store = Activator.getDefault().getPreferenceStore();
+        store.addPropertyChangeListener(this);
+        propertyChange(null);
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                store.removePropertyChangeListener(PersonaFertigkeitenWidget.this);
+                boldFont.dispose();
+
+            }
+        });
+
+        
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -350,6 +390,25 @@ public class PersonaFertigkeitenWidget extends Composite {
 
         TreeViewerColumn treeViewerNameColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerNameColumn.setLabelProvider(new ColumnLabelProvider() {
+            @Override
+            public Font getFont(Object element) {
+                if (!(element instanceof Fertigkeit))
+                   return boldFont;
+                    
+                return super.getFont(element);
+            }
+            
+            @Override
+            public Color getBackground(Object element) {
+                if(changeDefaultColor)
+                if (!(element instanceof Fertigkeit))
+                   return SWTResourceManager.getColor(backColor);
+               
+               return super.getBackground(element);
+                
+//                return super.getBackground(element);
+            }
+            
             public Image getImage(Object object) {
                 return ExtendedImageRegistry.getInstance().getImage(AdapterFactoryUtil.getInstance().getItemDelegator().getImage(object));
             }
@@ -702,4 +761,17 @@ public class PersonaFertigkeitenWidget extends Composite {
     public void setReadOnly(boolean readOnly) {
         this.readOnly = readOnly;
     }
+    
+    @Override
+    public void propertyChange(PropertyChangeEvent event) {
+        backColor = PreferenceConverter.getColor(store, PreferenceConstants.SKILL_GROUP_BCK_COLOR);
+        changeDefaultColor = store.getBoolean(PreferenceConstants.NO_DEFAULT_SKILL_GROUP_BCK_COLOR);
+
+        FontData[] fontData = getFont().getFontData();
+        FontData boldFontData = new FontData(fontData[0].getName(), fontData[0].getHeight(), SWT.BOLD);
+        boldFont = new Font(getDisplay(), boldFontData);
+        useBold = store.getBoolean(PreferenceConstants.SKILL_GROUP_BOLT);
+
+    }
+
 }
