@@ -176,7 +176,7 @@
 								(for joint repositories; default) -->
 						</repository>
 						<repository>
-							<url>https://urszeidler.ci.cloudbees.com/job/shr5-maven/updatesite/</url>
+							<url>http://opensource.urszeidler.de/shr5updatesite/</url>
 							<layout>p2</layout>
 							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" 
 								(for joint repositories; default) -->
