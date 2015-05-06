@@ -26,7 +26,9 @@ import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
@@ -52,6 +54,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.wb.swt.ResourceManager;
 
@@ -82,6 +85,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     private ViewerFilter shrListFilter;
     // private EStructuralFeature feature;
     // private ViewerFilter allowedSourceFilter;
+
     private EObject theEObject;
     private boolean activateFilter = true;
     private DialogType dialogType = DialogType.inventar;
@@ -120,13 +124,14 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         values.addListener(listner);
         dialogSettings = Activator.getDefault().getDialogSettings();
         theEObject = orgObject;
-
     }
 
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
             String displayName, List<?> choiceOfValues, EObject orgObject, boolean activateFilter) {
         this(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues, orgObject);
         this.activateFilter = activateFilter;
+        dialogSettings = Activator.getDefault().getDialogSettings();
+        theEObject = orgObject;
     }
 
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
@@ -141,7 +146,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             default:
                 break;
         }
-
+        dialogSettings = Activator.getDefault().getDialogSettings();
+        theEObject = orgObject;
     }
 
     @SuppressWarnings("unchecked")
@@ -484,6 +490,18 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             }
 
             choiceTableViewer.setInput(new ItemProvider(choiceOfValues));
+            choiceTableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+
+                @Override
+                public void selectionChanged(SelectionChangedEvent event) {
+                    try {
+                        PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getSite().getSelectionProvider()
+                                .setSelection(event.getSelection());
+
+                    } catch (Exception e) {
+                    }
+                }
+            });
         }
 
         // We use multi even for a single line because we want to respond to the enter key.
@@ -744,6 +762,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
                 choiceTableViewer.addFilter(shrListFilter);
 
+       
+        
         composite.pack();
         return composite;
     }
