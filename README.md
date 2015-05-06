@@ -11,24 +11,24 @@ Refer to [releases](https://github.com/UrsZeidler/shr5rcp/releases) to download 
 
 For now it contains :
 * several character generators
-  * [shadowrun 5 character generator aka priority system](shr5-core-rule-generator) after the core rule book
-  * [karma based- aka buy points](karma-generator) character generator
+  * [shadowrun 5 character generator aka priority system](https://github.com/UrsZeidler/shr5rcp/wiki/shr5-core-rule-generator) after the core rule book
+  * [karma based- aka buy points](https://github.com/UrsZeidler/shr5rcp/wiki/karma-generator) character generator
   * [sum to ten]()
-  * [life module system](lifemodule-generator) 
-  * [freestyle](freestyle)
-* [a runtime](script-runtime) a script and combat view let you use all stuff, making tests, manages combat turns etc. the players can now collaborate by impersonating their character instances, check out the [web-app](script-webapp).
-* [editors](editing) for the resources objects and [wizards](createItemWizard) to create new ones
+  * [life module system](https://github.com/UrsZeidler/shr5rcp/wiki/lifemodule-generator) 
+  * [freestyle](https://github.com/UrsZeidler/shr5rcp/wiki/freestyle)
+* [a runtime](https://github.com/UrsZeidler/shr5rcp/wiki/script-runtime) a script and combat view let you use all stuff, making tests, manages combat turns etc. the players can now collaborate by impersonating their character instances, check out the [web-app](https://github.com/UrsZeidler/shr5rcp/wiki/script-webapp).
+* [editors](https://github.com/UrsZeidler/shr5rcp/wiki/editing) for the resources objects and [wizards](https://github.com/UrsZeidler/shr5rcp/wiki/createItemWizard) to create new ones
 * a simple character sheet
-* [grunt editor](generators#grunts) and sheet
-* various [sheets](m2t) for player and game master
+* [grunt editor](https://github.com/UrsZeidler/shr5rcp/wiki/generators#grunts) and sheet
+* various [sheets](https://github.com/UrsZeidler/shr5rcp/wiki/m2t) for player and game master
 
-A small german instruction : [kurz übersicht](kurz-übersicht)
+A small german instruction : [kurz übersicht](https://github.com/UrsZeidler/shr5rcp/wiki/kurz-%C3%BCbersicht)
 
-see the upcoming and past changes : [changelog](release-notes)
+see the upcoming and past changes : [changelog](https://github.com/UrsZeidler/shr5rcp/wiki/release-notes)
 
 |using the application | player |  runtime and game master|
 | --- | --- | ---|
-|<ul><li>[starting](Installation-and-starting)</li><li>[Using the application](Using the application)</li><li>[editors](editing)</li><li>[generator wizard](characterbuilding-perspective#character-generator-wizard)</li><li>[importing exporting.](importing-exporting) </li><li>[source book view](sourceBookView) </li><li>[update-site](update-site) </li></ul>	  |    <ul><li>[character generators](generators)</li><li>[character building](characterbuilding-perspective)</li><li> [character diary](character-diary)</li><li> [manage money](CredstickTransactions)</li><li> [web app player](script-webapp-player)</li></ul>	  |     <ul><li>[script editing](script-editing)</li><li>[runtime](script-runtime)</li><li>[web app](script-webapp)</li><li>[quick combat](script-quick-combat)</li></ul>  |
+|<ul><li>[starting](https://github.com/UrsZeidler/shr5rcp/wiki/Installation-and-starting)</li><li>[Using the application](https://github.com/UrsZeidler/shr5rcp/wiki/Using%20the%20application)</li><li>[editors](https://github.com/UrsZeidler/shr5rcp/wiki/editing)</li><li>[generator wizard](characterbuilding-perspective#character-generator-wizard)</li><li>[importing exporting.](importing-exporting) </li><li>[source book view](sourceBookView) </li><li>[update-site](update-site) </li></ul>	  |    <ul><li>[character generators](generators)</li><li>[character building](characterbuilding-perspective)</li><li> [character diary](character-diary)</li><li> [manage money](CredstickTransactions)</li><li> [web app player](script-webapp-player)</li></ul>	  |     <ul><li>[script editing](script-editing)</li><li>[runtime](script-runtime)</li><li>[web app](script-webapp)</li><li>[quick combat](script-quick-combat)</li></ul>  |
 or the [FAQ](faq)
  
  [![Build Status](https://buildhive.cloudbees.com/job/UrsZeidler/job/shr5rcp/badge/icon)](https://buildhive.cloudbees.com/job/UrsZeidler/job/shr5rcp/)
