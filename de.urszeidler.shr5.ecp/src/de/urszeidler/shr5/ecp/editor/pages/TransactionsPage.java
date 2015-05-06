@@ -2,9 +2,7 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.util.EList;
@@ -33,8 +31,6 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
@@ -47,6 +43,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
+
+import com.google.common.collect.FluentIterable;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -70,10 +68,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.ShrReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.widgets.FilterDropdownSelectionListener;
 import de.urszeidler.shr5.ecp.editor.widgets.SimpleTreeTableWidget;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
-import de.urszeidler.shr5.ecp.util.DropdownSelectionListener;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
 
@@ -88,209 +86,297 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     private PatternFilter nameFilter;
     private ViewerFilter shrListFilter;
     private ViewerFilter typeFilter;
-    private Set<SourceBook> sourceFilterValueList = new HashSet<SourceBook>();
-    private Set<EClass> typeFilterValueList = new HashSet<EClass>();
     private ViewerFilter sourceFilter;
     private SimpleTreeTableWidget treeTableWidgetEigenschaften;
+    private SourceDropdownSelectionListener sourceFilterDropdown;
+    private TypeDropdownSelectionListener typeFilterDropdown;
 
-    private class SourceDropdownSelectionListener extends DropdownSelectionListener<SourceBook> {
-        private static final String ENTRY = "entry";
-        private boolean filterActive = true;
+    private class SourceDropdownSelectionListener extends FilterDropdownSelectionListener<SourceBook> {
 
         public SourceDropdownSelectionListener(ToolItem dropdown) {
             super(dropdown);
-            Collection<EObject> sourceBooks = getSourceBooks();
-            for (EObject sourceBook : sourceBooks) {
-                add(labelprovider.getText(sourceBook), (SourceBook)sourceBook);
-                sourceFilterValueList.add((SourceBook)sourceBook);
-            }
-
-            MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
-            menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("filter none");
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    MenuItem[] items = menu.getItems();
-                    for (int i = 0; i < items.length; i++) {
-                        MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData(ENTRY);
-                        if (data != null) {
-                            sourceFilterValueList.remove((SourceBook)data);
-                            menuItem1.notifyListeners(SWT.Selection, new Event());
-                        }
-                    }
-                }
-            });
-            menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("filter all");
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    MenuItem[] items = menu.getItems();
-                    for (int i = 0; i < items.length; i++) {
-                        MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData(ENTRY);
-                        if (data != null) {
-                            sourceFilterValueList.add((SourceBook)data);
-                            menuItem1.notifyListeners(SWT.Selection, new Event());
-                        }
-                    }
-                }
-            });
         }
 
-        private Collection<EObject> getSourceBooks() {
-            Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.SOURCE_BOOK);
-            return collection;
+        @SuppressWarnings("unchecked")
+        @Override
+        protected Collection<SourceBook> getFilterItems() {
+            Collection<?> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.SOURCE_BOOK);
+            return (Collection<SourceBook>)collection;
         }
 
         @Override
-        protected void buttonPushed() {
-            if (filterActive) {
-                if (tableViewer_1 != null) {
-                    tableViewer_1.removeFilter(sourceFilter);
-                    tableViewer_1.refresh();
-                }
-                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
-                filterActive = false;
-            } else {
-                if (tableViewer_1 != null) {
-                    tableViewer_1.addFilter(sourceFilter);
-                    tableViewer_1.refresh();
-                }
-                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
-                filterActive = true;
+        protected void addFilterToWidget() {
+            if (tableViewer_1 != null) {
+                tableViewer_1.addFilter(sourceFilter);
+                tableViewer_1.refresh();
             }
         }
 
         @Override
-        public void add(String item, final SourceBook action) {
-            final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText(item);
-            menuItem.setData(ENTRY, action);
-            sourceFilterValueList.add(action);
-            menuItem.setImage(labelprovider.getImage(action));
+        protected void removeFilterFromWidget() {
+            if (tableViewer_1 != null) {
+                tableViewer_1.removeFilter(sourceFilter);
+                tableViewer_1.refresh();
+            }
+        }
 
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    if (sourceFilterValueList.contains(action)) {
-                        menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
-                        sourceFilterValueList.remove(action);
-                    } else {
-                        menuItem.setImage(labelprovider.getImage(action));
-                        sourceFilterValueList.add(action);
-                    }
-                    if (tableViewer_1 != null)
-                        tableViewer_1.refresh();
-                }
-            });
+        @Override
+        protected void refreshViewer() {
+            if (tableViewer_1 != null)
+                tableViewer_1.refresh();
         }
 
     }
 
-    private class TypeDropdownSelectionListener extends DropdownSelectionListener<EClass> {
-        private boolean filterActive = true;
+    //
+    // private class SourceDropdownSelectionListener extends DropdownSelectionListener<SourceBook> {
+    // private static final String ENTRY = "entry";
+    // private boolean filterActive = true;
+    // private ILabelProvider labelprovider = new DefaultLabelProvider();
+    // private Set<SourceBook> sourceFilterValueList = new HashSet<SourceBook>();
+    //
+    // public SourceDropdownSelectionListener(ToolItem dropdown) {
+    // super(dropdown);
+    // Collection<EObject> sourceBooks = getSourceBooks();
+    // for (EObject sourceBook : sourceBooks) {
+    // add(labelprovider.getText(sourceBook), (SourceBook)sourceBook);
+    // sourceFilterValueList.add((SourceBook)sourceBook);
+    // }
+    //
+    // MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
+    // menuItem = new MenuItem(menu, SWT.NONE);
+    // menuItem.setText("filter none");
+    // menuItem.addSelectionListener(new SelectionAdapter() {
+    // public void widgetSelected(SelectionEvent event) {
+    // MenuItem[] items = menu.getItems();
+    // for (int i = 0; i < items.length; i++) {
+    // MenuItem menuItem1 = items[i];
+    // Object data = menuItem1.getData(ENTRY);
+    // if (data != null) {
+    // sourceFilterValueList.remove((SourceBook)data);
+    // menuItem1.notifyListeners(SWT.Selection, new Event());
+    // }
+    // }
+    // }
+    // });
+    // menuItem = new MenuItem(menu, SWT.NONE);
+    // menuItem.setText("filter all");
+    // menuItem.addSelectionListener(new SelectionAdapter() {
+    // public void widgetSelected(SelectionEvent event) {
+    // MenuItem[] items = menu.getItems();
+    // for (int i = 0; i < items.length; i++) {
+    // MenuItem menuItem1 = items[i];
+    // Object data = menuItem1.getData(ENTRY);
+    // if (data != null) {
+    // sourceFilterValueList.add((SourceBook)data);
+    // menuItem1.notifyListeners(SWT.Selection, new Event());
+    // }
+    // }
+    // }
+    // });
+    // }
+    //
+    // private Collection<EObject> getSourceBooks() {
+    // Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.SOURCE_BOOK);
+    // return collection;
+    // }
+    //
+    // @Override
+    // protected void buttonPushed() {
+    // if (filterActive) {
+    // if (tableViewer_1 != null) {
+    // tableViewer_1.removeFilter(sourceFilter);
+    // tableViewer_1.refresh();
+    // }
+    // dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
+    // filterActive = false;
+    // } else {
+    // if (tableViewer_1 != null) {
+    // tableViewer_1.addFilter(sourceFilter);
+    // tableViewer_1.refresh();
+    // }
+    // dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
+    // filterActive = true;
+    // }
+    // }
+    //
+    // @Override
+    // public void add(String item, final SourceBook action) {
+    // final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
+    // menuItem.setText(item);
+    // menuItem.setData(ENTRY, action);
+    // sourceFilterValueList.add(action);
+    // menuItem.setImage(labelprovider.getImage(action));
+    //
+    // menuItem.addSelectionListener(new SelectionAdapter() {
+    // public void widgetSelected(SelectionEvent event) {
+    // if (sourceFilterValueList.contains(action)) {
+    // menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
+    // ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
+    // sourceFilterValueList.remove(action);
+    // } else {
+    // menuItem.setImage(labelprovider.getImage(action));
+    // sourceFilterValueList.add(action);
+    // }
+    // if (tableViewer_1 != null)
+    // tableViewer_1.refresh();
+    // }
+    // });
+    // }
+    //
+    // public Set<SourceBook> getSourceFilterValueList() {
+    // return sourceFilterValueList;
+    // }
+    //
+    // }
+    //
+    private class TypeDropdownSelectionListener extends FilterDropdownSelectionListener<EClass> {
 
         public TypeDropdownSelectionListener(ToolItem dropdown) {
             super(dropdown);
+        }
+
+        @Override
+        protected Collection<EClass> getFilterItems() {
             EList<EClassifier> eClassifiers = Shr5Package.Literals.GELD_WERT.getEPackage().getEClassifiers();
-            for (EClassifier eClassifier : eClassifiers) {
-                if (eClassifier instanceof EClass) {
-                    EClass ec = (EClass)eClassifier;
-                    if (!ec.isAbstract() && !ec.isInterface())
-                        // if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
-                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.ABSTRAKT_GEGENSTAND)
-                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
-                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG))
-                            // if (!ec.getEAllSuperTypes().contains(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS))
-                            add(ec);
-                }
-            }
+           return FluentIterable.from(eClassifiers).filter(EClass.class).filter(new com.google.common.base.Predicate<EClass>() {
 
-            MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
-            menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("filter none");
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    MenuItem[] items = menu.getItems();
-                    for (int i = 0; i < items.length; i++) {
-                        MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData("entry");
-                        if (data != null) {
-                            typeFilterValueList.remove((EClass)data);
-                            menuItem1.notifyListeners(SWT.Selection, new Event());
-                        }
-                    }
+                @Override
+                public boolean apply(EClass ec) {
+                    return (!ec.isAbstract() && !ec.isInterface()) && (ec.getEAllSuperTypes().contains(Shr5Package.Literals.ABSTRAKT_GEGENSTAND)
+                            || ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
+                            || ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG));
                 }
-            });
-            menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText("filter all");
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    MenuItem[] items = menu.getItems();
-                    for (int i = 0; i < items.length; i++) {
-                        MenuItem menuItem1 = items[i];
-                        Object data = menuItem1.getData("entry");
-                        if (data != null) {
-                            typeFilterValueList.add((EClass)data);
-                            menuItem1.notifyListeners(SWT.Selection, new Event());
-                        }
-                    }
-                }
-            });
-
+            }).toList();
         }
 
         @Override
-        protected void buttonPushed() {
-            if (filterActive) {
-                if (tableViewer_1 != null) {
-                    tableViewer_1.removeFilter(typeFilter);
-                    tableViewer_1.refresh();
-                }
-                filterActive = false;
-                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
-            } else {
-                if (tableViewer_1 != null) {
-                    tableViewer_1.addFilter(typeFilter);
-                    tableViewer_1.refresh();
-                }
-                filterActive = true;
-                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
+        protected void addFilterToWidget() {
+            if (tableViewer_1 != null) {
+                tableViewer_1.addFilter(typeFilter);
+                tableViewer_1.refresh();
             }
         }
 
-        private void add(EClass eObject) {
-            add(labelprovider.getText(eObject), eObject);
-            typeFilterValueList.add(eObject);
+        @Override
+        protected void removeFilterFromWidget() {
+            if (tableViewer_1 != null) {
+                tableViewer_1.removeFilter(typeFilter);
+                tableViewer_1.refresh();
+            }
         }
 
         @Override
-        public void add(String item, final EClass action) {
-            final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
-            menuItem.setText(item);
-            menuItem.setData("entry", action);
-            menuItem.setImage(labelprovider.getImage(action));
-
-            menuItem.addSelectionListener(new SelectionAdapter() {
-                public void widgetSelected(SelectionEvent event) {
-                    if (typeFilterValueList.contains(action)) {
-                        menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
-                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
-                        typeFilterValueList.remove(action);
-                    } else {
-                        menuItem.setImage(labelprovider.getImage(action));
-                        typeFilterValueList.add(action);
-                    }
-
-                    if (tableViewer_1 != null)
-                        tableViewer_1.refresh();
-                }
-            });
+        protected void refreshViewer() {
+            if (tableViewer_1 != null)
+                tableViewer_1.refresh();
         }
 
     }
-
+//
+//    private class TypeDropdownSelectionListener extends DropdownSelectionListener<EClass> {
+//        private boolean filterActive = true;
+//
+//        public TypeDropdownSelectionListener(ToolItem dropdown) {
+//            super(dropdown);
+//            EList<EClassifier> eClassifiers = Shr5Package.Literals.GELD_WERT.getEPackage().getEClassifiers();
+//            for (EClassifier eClassifier : eClassifiers) {
+//                if (eClassifier instanceof EClass) {
+//                    EClass ec = (EClass)eClassifier;
+//                    if (!ec.isAbstract() && !ec.isInterface())
+//                        // if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.GELD_WERT))
+//                        if (ec.getEAllSuperTypes().contains(Shr5Package.Literals.ABSTRAKT_GEGENSTAND)
+//                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.FAHRZEUG)
+//                                || ec.getEAllSuperTypes().contains(Shr5Package.Literals.VERTRAG))
+//                            // if (!ec.getEAllSuperTypes().contains(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS))
+//                            add(ec);
+//                }
+//            }
+//
+//            MenuItem menuItem = new MenuItem(menu, SWT.SEPARATOR);
+//            menuItem = new MenuItem(menu, SWT.NONE);
+//            menuItem.setText("filter none");
+//            menuItem.addSelectionListener(new SelectionAdapter() {
+//                public void widgetSelected(SelectionEvent event) {
+//                    MenuItem[] items = menu.getItems();
+//                    for (int i = 0; i < items.length; i++) {
+//                        MenuItem menuItem1 = items[i];
+//                        Object data = menuItem1.getData("entry");
+//                        if (data != null) {
+//                            typeFilterValueList.remove((EClass)data);
+//                            menuItem1.notifyListeners(SWT.Selection, new Event());
+//                        }
+//                    }
+//                }
+//            });
+//            menuItem = new MenuItem(menu, SWT.NONE);
+//            menuItem.setText("filter all");
+//            menuItem.addSelectionListener(new SelectionAdapter() {
+//                public void widgetSelected(SelectionEvent event) {
+//                    MenuItem[] items = menu.getItems();
+//                    for (int i = 0; i < items.length; i++) {
+//                        MenuItem menuItem1 = items[i];
+//                        Object data = menuItem1.getData("entry");
+//                        if (data != null) {
+//                            typeFilterValueList.add((EClass)data);
+//                            menuItem1.notifyListeners(SWT.Selection, new Event());
+//                        }
+//                    }
+//                }
+//            });
+//
+//        }
+//
+//        @Override
+//        protected void buttonPushed() {
+//            if (filterActive) {
+//                if (tableViewer_1 != null) {
+//                    tableViewer_1.removeFilter(typeFilter);
+//                    tableViewer_1.refresh();
+//                }
+//                filterActive = false;
+//                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_off.gif"));
+//            } else {
+//                if (tableViewer_1 != null) {
+//                    tableViewer_1.addFilter(typeFilter);
+//                    tableViewer_1.refresh();
+//                }
+//                filterActive = true;
+//                dropdown.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
+//            }
+//        }
+//
+//        private void add(EClass eObject) {
+//            add(labelprovider.getText(eObject), eObject);
+//            typeFilterValueList.add(eObject);
+//        }
+//
+//        @Override
+//        public void add(String item, final EClass action) {
+//            final MenuItem menuItem = new MenuItem(menu, SWT.NONE);
+//            menuItem.setText(item);
+//            menuItem.setData("entry", action);
+//            menuItem.setImage(labelprovider.getImage(action));
+//
+//            menuItem.addSelectionListener(new SelectionAdapter() {
+//                public void widgetSelected(SelectionEvent event) {
+//                    if (typeFilterValueList.contains(action)) {
+//                        menuItem.setImage(ResourceManager.decorateImage(labelprovider.getImage(action),
+//                                ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/overlay-critical.gif")));
+//                        typeFilterValueList.remove(action);
+//                    } else {
+//                        menuItem.setImage(labelprovider.getImage(action));
+//                        typeFilterValueList.add(action);
+//                    }
+//
+//                    if (tableViewer_1 != null)
+//                        tableViewer_1.refresh();
+//                }
+//            });
+//        }
+//
+//    }
+//
     private class ItemLabelProvider extends DefaultLabelProvider implements ITableLabelProvider {
 
         @Override
@@ -537,7 +623,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             public boolean select(Viewer viewer, Object parentElement, Object element) {
                 if (element instanceof EObject) {
                     EObject eo = (EObject)element;
-                    return typeFilterValueList.contains(eo.eClass());
+                    return typeFilterDropdown.getFilterValues().contains(eo.eClass());
                 }
                 return true;
             }
@@ -549,7 +635,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             public boolean select(Viewer viewer, Object parentElement, Object element) {
                 if (element instanceof Quelle) {
                     Quelle q = (Quelle)element;
-                    return sourceFilterValueList.contains(q.getSrcBook());
+                    return sourceFilterDropdown.getFilterValues().contains(q.getSrcBook());
                 }
                 return true;
             }
@@ -582,13 +668,13 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
         ToolItem tltmType = new ToolItem(toolBar, SWT.DROP_DOWN);
         tltmType.setText("type");
         tltmType.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
-        TypeDropdownSelectionListener listenerType = new TypeDropdownSelectionListener(tltmType);
-        tltmType.addSelectionListener(listenerType);
+        typeFilterDropdown = new TypeDropdownSelectionListener(tltmType);
+        tltmType.addSelectionListener(typeFilterDropdown);
 
         ToolItem tltmSource = new ToolItem(toolBar, SWT.DROP_DOWN);
         tltmSource.setText("source");
         tltmSource.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
-        SourceDropdownSelectionListener listenerOne = new SourceDropdownSelectionListener(tltmSource);
+        sourceFilterDropdown = new SourceDropdownSelectionListener(tltmSource);
 
         ToolItem tltmAdd = new ToolItem(toolBar, SWT.NONE);
         tltmAdd.addSelectionListener(new SelectionAdapter() {
@@ -660,7 +746,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
             }
         });
 
-        tltmSource.addSelectionListener(listenerOne);
+        tltmSource.addSelectionListener(sourceFilterDropdown);
 
         tableViewer_1 = new TableViewer(composite_3, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
         getSite().setSelectionProvider(tableViewer_1);

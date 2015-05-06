@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.ecp.dialogs;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProvider;
 import org.eclipse.emf.edit.ui.EMFEditUIPlugin;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
@@ -60,11 +62,16 @@ import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.editor.widgets.FilterDropdownSelectionListener;
+import de.urszeidler.shr5.ecp.util.MoneyLabelProvider;
 
 public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
@@ -79,6 +86,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
     private boolean activateFilter = true;
     private DialogType dialogType = DialogType.inventar;
     private ViewerFilter inCharacterFilter;
+    private ViewerFilter sourceFilter;
+    private FilterDropdownSelectionListener<SourceBook> sourceFilterDropdown;
 
     public enum DialogType {
         inventar, simple
@@ -307,6 +316,60 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     }
                 });
             
+            
+            final ToolItem tltmSource = new ToolItem(toolBar, SWT.DROP_DOWN);
+            tltmSource.setToolTipText("Filter by source book.");
+            tltmSource.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
+            sourceFilterDropdown = new FilterDropdownSelectionListener<SourceBook>(tltmSource){
+
+                @SuppressWarnings("unchecked")
+                @Override
+                protected Collection<SourceBook> getFilterItems() {
+                    Collection<?> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)theEObject, Shr5Package.Literals.SOURCE_BOOK);
+                    return (Collection<SourceBook>)collection;
+                }
+
+                @Override
+                protected void addFilterToWidget() {
+                    if (choiceTableViewer != null) {
+                        choiceTableViewer.addFilter(sourceFilter);
+                        choiceTableViewer.refresh();
+                    }
+                }
+
+                @Override
+                protected void removeFilterFromWidget() {
+                    if (choiceTableViewer != null) {
+                        choiceTableViewer.removeFilter(sourceFilter);
+                        choiceTableViewer.refresh();
+                    }
+                }
+
+                @Override
+                protected void refreshViewer() {
+                    if (choiceTableViewer != null)
+                        choiceTableViewer.refresh();
+                }
+
+            };
+            tltmSource.addSelectionListener(sourceFilterDropdown);
+            sourceFilterDropdown.buttonPushed();
+            tltmSource.setSelection(true);
+            
+            sourceFilter = new ViewerFilter() {
+
+                @Override
+                public boolean select(Viewer viewer, Object parentElement, Object element) {
+                    if (element instanceof Quelle) {
+                        Quelle q = (Quelle)element;
+                        return sourceFilterDropdown.getFilterValues().contains(q.getSrcBook());
+                    }
+                    return true;
+                }
+            };
+
+            
+            
             final ManagedCharacter containedInCharacter = ShadowrunManagmentTools.getContainedInCharacter((EObject)object);
             inCharacterFilter = new ViewerFilter() {
                 @Override
@@ -325,6 +388,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
             final ToolItem filterInCharacter = new ToolItem(toolBar, SWT.CHECK);
             filterInCharacter.setToolTipText("show only item contained by character");
+            filterInCharacter.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/person-me.gif")); //$NON-NLS-1$ //$NON-NLS-2$
             filterInCharacter.addSelectionListener(new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
@@ -333,6 +397,21 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                     } else {
                         choiceTableViewer.removeFilter(inCharacterFilter);
                     }
+                }
+            });
+
+            final ToolItem labelProviderMoney = new ToolItem(toolBar, SWT.CHECK);
+            labelProviderMoney.setToolTipText("display the money value");
+            labelProviderMoney.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/newyen.png")); //$NON-NLS-1$ //$NON-NLS-2$
+            labelProviderMoney.addSelectionListener(new SelectionAdapter() {
+                @Override
+                public void widgetSelected(SelectionEvent e) {
+                    if (!labelProviderMoney.getSelection()) {
+                        choiceTableViewer.setLabelProvider(labelProvider);
+                    } else {
+                        choiceTableViewer.setLabelProvider(new MoneyLabelProvider());
+                    }
+                    choiceTableViewer.refresh(true);
                 }
             });
 
