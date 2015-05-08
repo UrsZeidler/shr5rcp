@@ -130,8 +130,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             String displayName, List<?> choiceOfValues, EObject orgObject, boolean activateFilter) {
         this(parent, labelProvider, object, structuralFeature, displayName, choiceOfValues, orgObject);
         this.activateFilter = activateFilter;
-        dialogSettings = Activator.getDefault().getDialogSettings();
-        theEObject = orgObject;
+//        dialogSettings = Activator.getDefault().getDialogSettings();
+//        theEObject = orgObject;
     }
 
     public FeatureEditorDialogWert(Shell parent, ILabelProvider labelProvider, EObject object, EStructuralFeature structuralFeature,
@@ -146,8 +146,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             default:
                 break;
         }
-        dialogSettings = Activator.getDefault().getDialogSettings();
-        theEObject = orgObject;
+//        dialogSettings = Activator.getDefault().getDialogSettings();
+//        theEObject = orgObject;
     }
 
     @SuppressWarnings("unchecked")
@@ -175,44 +175,25 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         }
         switch (currentTypes) {
             case 1:
-                label = String.format("%s¥ %.2f essence (%d items) ", ShadowrunTools.calcListenWertToString(values.getChildren()),
+                label = String.format(Messages.FeatureEditorDialogWert_money_essence_label, ShadowrunTools.calcListenWertToString(values.getChildren()),
                         ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1) / 100f, values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                 break;
             case 2:
             case 3:
-                label = String.format("%s¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
+                label = String.format(Messages.FeatureEditorDialogWert_money_label, ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                 break;
             case 4:
-                label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
+                label = String.format(Messages.FeatureEditorDialogWert_karma_label, ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
                         values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                 break;
             case 8:
-                label = String.format("%.2f powerpoints (%d selected)", ShadowrunTools.calcKiPowerSum((List<KiKraft>)children1)/100f,
+                label = String.format(Messages.FeatureEditorDialogWert_powerpoint_label, ShadowrunTools.calcKiPowerSum((List<KiKraft>)children1)/100f,
                         values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
                 break;
             default:
-                label = String.format("%d selected", values.getChildren().size());
+                label = String.format(Messages.FeatureEditorDialogWert_simple_label, values.getChildren().size());
                 break;
         }
-
-        // Object type = null;
-        // if (!children.isEmpty())
-        // type = children.get(0);
-        //
-        // if (type instanceof Cyberware || type instanceof BioWare) {
-        // List<?> children1 = children;
-        // label = String.format("%s¥ %.2f essence (%d items) ", ShadowrunTools.calcListenWertToString(values.getChildren()),
-        // ShadowrunTools.calcEssenceSum((List<Koerpermods>)children1) / 100f, values.getChildren().size());//
-        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        // } else if (type instanceof GeldWert) {
-        // label = String.format("%s¥ (%d items)", ShadowrunTools.calcListenWertToString(values.getChildren()), values.getChildren().size());//
-        // gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        // } else if (type instanceof PersonaEigenschaft) {
-        // List<?> children1 = children;
-        // label = String.format("%d Karma (%d selected)", ShadowrunManagmentTools.calcQuallityKarmaCost((List<PersonaEigenschaft>)children1),
-        // values.getChildren().size());// gesamtPreisLabel.setText(ShadowrunTools.calcListenWertToString(values.getChildren())
-        // } else
-        // label = String.format("%d selected", values.getChildren().size());
         gesamtPreisLabel.setText(label);
     }
 
@@ -243,183 +224,19 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
 
         if (choiceOfValues != null) {
             Group filterGroupComposite = new Group(contents, SWT.NONE);
-            filterGroupComposite.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_group"));
+            filterGroupComposite.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_group"));//$NON-NLS-1$ 
             filterGroupComposite.setLayout(new GridLayout(3, false));
             filterGroupComposite.setLayoutData(new GridData(SWT.FILL, SWT.DEFAULT, false, false, 3, 1));
 
             Label label = new Label(filterGroupComposite, SWT.NONE);
-            label.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_label"));
+            label.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Choices_pattern_label"));//$NON-NLS-1$ 
 
             patternText = new Text(filterGroupComposite, SWT.BORDER);
             patternText.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
             // here we add the filter buttons
-
-            Composite btnComposite = new Composite(filterGroupComposite, SWT.NONE);
-            {
-                GridData data = new GridData(SWT.FILL, SWT.FILL, false, false);
-                data.horizontalAlignment = SWT.END;
-                btnComposite.setLayoutData(data);
-
-                GridLayout layout = new GridLayout();
-                data.horizontalAlignment = SWT.FILL;
-                layout.marginHeight = 0;
-                layout.marginWidth = 0;
-                layout.numColumns = 1;
-                btnComposite.setLayout(layout);
-            }
-            shrListFilter = new ViewerFilter() {
-
-                @Override
-                public boolean select(Viewer viewer, Object parentElement, Object element) {
-
-                    if (element instanceof EObject) {
-                        EObject eo = (EObject)element;
-                        EObject eContainer = eo.eContainer();
-                        if (!(eContainer instanceof ShrList)) {
-                            return false;
-                        }
-                    }
-                    return true;
-                }
-            };
-            // allowedSourceFilter = new ViewerFilter() {
-            // @Override
-            // public boolean select(Viewer viewer, Object parentElement, Object element) {
-            // // if (theEObject instanceof ManagedCharacter) {
-            // // ManagedCharacter mc = (ManagedCharacter)theEObject;
-            // // CharacterGenerator<?> generatorSrc = mc.getChracterSource();
-            // // if (generatorSrc instanceof Shr5RuleGenerator) {
-            // // Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
-            // // EList<SourceBook> allowedSources = srg.getAllowedSources();
-            // // if (!allowedSources.isEmpty())
-            // // if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
-            // // return false;
-            // // }
-            // // }
-            // return true;
-            // }
-            // };
-
-            ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
-            final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
-            filterShrList.setToolTipText("show only list items");
-            if (activateFilter)
-                filterShrList.setSelection(dialogSettings.getBoolean("Featuredialog.shrListFilter"));
-            filterShrList.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
-
-            if (activateFilter)
-                filterShrList.addSelectionListener(new SelectionAdapter() {
-                    @Override
-                    public void widgetSelected(SelectionEvent e) {
-                        if (filterShrList.getSelection()) {
-                            choiceTableViewer.addFilter(shrListFilter);
-                            // choiceTableViewer.addFilter(allowedSourceFilter);
-                        } else {
-                            choiceTableViewer.removeFilter(shrListFilter);
-                            // choiceTableViewer.removeFilter(allowedSourceFilter);
-                        }
-                        dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
-                    }
-                });
             
-            
-            final ToolItem tltmSource = new ToolItem(toolBar, SWT.DROP_DOWN);
-            tltmSource.setToolTipText("Filter by source book.");
-            tltmSource.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif"));
-            sourceFilterDropdown = new FilterDropdownSelectionListener<SourceBook>(tltmSource){
-
-                @SuppressWarnings("unchecked")
-                @Override
-                protected Collection<SourceBook> getFilterItems() {
-                    Collection<?> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)theEObject, Shr5Package.Literals.SOURCE_BOOK);
-                    return (Collection<SourceBook>)collection;
-                }
-
-                @Override
-                protected void addFilterToWidget() {
-                    if (choiceTableViewer != null) {
-                        choiceTableViewer.addFilter(sourceFilter);
-                        choiceTableViewer.refresh();
-                    }
-                }
-
-                @Override
-                protected void removeFilterFromWidget() {
-                    if (choiceTableViewer != null) {
-                        choiceTableViewer.removeFilter(sourceFilter);
-                        choiceTableViewer.refresh();
-                    }
-                }
-
-                @Override
-                protected void refreshViewer() {
-                    if (choiceTableViewer != null)
-                        choiceTableViewer.refresh();
-                }
-
-            };
-            tltmSource.addSelectionListener(sourceFilterDropdown);
-            sourceFilterDropdown.buttonPushed();
-            tltmSource.setSelection(true);
-            
-            sourceFilter = new ViewerFilter() {
-
-                @Override
-                public boolean select(Viewer viewer, Object parentElement, Object element) {
-                    if (element instanceof Quelle) {
-                        Quelle q = (Quelle)element;
-                        return sourceFilterDropdown.getFilterValues().contains(q.getSrcBook());
-                    }
-                    return true;
-                }
-            };
-
-            
-            
-            final ManagedCharacter containedInCharacter = ShadowrunManagmentTools.getContainedInCharacter((EObject)object);
-            inCharacterFilter = new ViewerFilter() {
-                @Override
-                public boolean select(Viewer viewer, Object parentElement, Object element) {
-
-                    if (element instanceof EObject) {
-                        EObject eo = (EObject)element;
-                       
-                        if (containedInCharacter!=null ) {
-                            return ShadowrunManagmentTools.containedInCharaterPredicate(containedInCharacter).apply(eo);
-                        }
-                    }
-                    return true;
-                }
-            }; 
-
-            final ToolItem filterInCharacter = new ToolItem(toolBar, SWT.CHECK);
-            filterInCharacter.setToolTipText("show only item contained by character");
-            filterInCharacter.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/person-me.gif")); //$NON-NLS-1$ //$NON-NLS-2$
-            filterInCharacter.addSelectionListener(new SelectionAdapter() {
-                @Override
-                public void widgetSelected(SelectionEvent e) {
-                    if (filterInCharacter.getSelection()) {
-                        choiceTableViewer.addFilter(inCharacterFilter);
-                    } else {
-                        choiceTableViewer.removeFilter(inCharacterFilter);
-                    }
-                }
-            });
-
-            final ToolItem labelProviderMoney = new ToolItem(toolBar, SWT.CHECK);
-            labelProviderMoney.setToolTipText("display the money value");
-            labelProviderMoney.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/newyen.png")); //$NON-NLS-1$ //$NON-NLS-2$
-            labelProviderMoney.addSelectionListener(new SelectionAdapter() {
-                @Override
-                public void widgetSelected(SelectionEvent e) {
-                    if (!labelProviderMoney.getSelection()) {
-                        choiceTableViewer.setLabelProvider(labelProvider);
-                    } else {
-                        choiceTableViewer.setLabelProvider(new MoneyLabelProvider());
-                    }
-                    choiceTableViewer.refresh(true);
-                }
-            });
+            if(dialogType!=DialogType.simple)
+                buildFilterToolbar(filterGroupComposite);
 
         }
 
@@ -438,8 +255,8 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         }
 
         Label choiceLabel = new Label(choiceComposite, SWT.NONE);
-        choiceLabel.setText(choiceOfValues == null ? EMFEditUIPlugin.INSTANCE.getString("_UI_Value_label") : EMFEditUIPlugin.INSTANCE
-                .getString("_UI_Choices_label"));
+        choiceLabel.setText(choiceOfValues == null ? EMFEditUIPlugin.INSTANCE.getString("_UI_Value_label") : EMFEditUIPlugin.INSTANCE//$NON-NLS-1$ 
+                .getString("_UI_Choices_label"));//$NON-NLS-1$ 
         GridData choiceLabelGridData = new GridData();
         choiceLabelGridData.verticalAlignment = SWT.FILL;
         choiceLabelGridData.horizontalAlignment = SWT.FILL;
@@ -533,14 +350,14 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         new Label(controlButtons, SWT.NONE);
 
         final Button addButton = new Button(controlButtons, SWT.PUSH);
-        addButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Add_label"));
+        addButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Add_label"));//$NON-NLS-1$ 
         GridData addButtonGridData = new GridData();
         addButtonGridData.verticalAlignment = SWT.FILL;
         addButtonGridData.horizontalAlignment = SWT.FILL;
         addButton.setLayoutData(addButtonGridData);
 
         final Button removeButton = new Button(controlButtons, SWT.PUSH);
-        removeButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Remove_label"));
+        removeButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Remove_label"));//$NON-NLS-1$ 
         GridData removeButtonGridData = new GridData();
         removeButtonGridData.verticalAlignment = SWT.FILL;
         removeButtonGridData.horizontalAlignment = SWT.FILL;
@@ -552,14 +369,14 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         spaceLabel.setLayoutData(spaceLabelGridData);
 
         final Button upButton = new Button(controlButtons, SWT.PUSH);
-        upButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Up_label"));
+        upButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Up_label"));//$NON-NLS-1$ 
         GridData upButtonGridData = new GridData();
         upButtonGridData.verticalAlignment = SWT.FILL;
         upButtonGridData.horizontalAlignment = SWT.FILL;
         upButton.setLayoutData(upButtonGridData);
 
         final Button downButton = new Button(controlButtons, SWT.PUSH);
-        downButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Down_label"));
+        downButton.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Down_label"));//$NON-NLS-1$ 
         GridData downButtonGridData = new GridData();
         downButtonGridData.verticalAlignment = SWT.FILL;
         downButtonGridData.horizontalAlignment = SWT.FILL;
@@ -582,7 +399,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         }
 
         Label featureLabel = new Label(featureComposite, SWT.NONE);
-        featureLabel.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Feature_label"));
+        featureLabel.setText(EMFEditUIPlugin.INSTANCE.getString("_UI_Feature_label"));//$NON-NLS-1$ 
         GridData featureLabelGridData = new GridData();
         featureLabelGridData.horizontalSpan = 2;
         featureLabelGridData.horizontalAlignment = SWT.FILL;
@@ -630,11 +447,11 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
             choiceText.addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyPressed(KeyEvent event) {
-                    if (!multiLine && (event.character == '\r' || event.character == '\n')) {
+                    if (!multiLine && (event.character == '\r' || event.character == '\n')) {//$NON-NLS-1$ //$NON-NLS-2$ 
                         try {
                             Object value = EcoreUtil.createFromString((EDataType)eClassifier, choiceText.getText());
                             children.add(value);
-                            choiceText.setText("");
+                            choiceText.setText(""); //$NON-NLS-1$
                             featureTableViewer.refresh();
                             featureTableViewer.setSelection(new StructuredSelection(value));
                             event.doit = false;
@@ -642,7 +459,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                             // Ignore
                         }
                     } else if (event.character == '\33') {
-                        choiceText.setText("");
+                        choiceText.setText(""); //$NON-NLS-1$
                         event.doit = false;
                     }
                 }
@@ -698,7 +515,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                         Object value = EcoreUtil.createFromString((EDataType)eClassifier, choiceText.getText());
                         if (!unique || !children.contains(value)) {
                             children.add(value);
-                            choiceText.setText("");
+                            choiceText.setText("");//$NON-NLS-1$ 
                         }
                         featureTableViewer.refresh();
                         featureTableViewer.setSelection(new StructuredSelection(value));
@@ -759,13 +576,183 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         gesamtPreisLabel.setLayoutData(gridData);
         updateLabel();
         if (activateFilter)
-            if (dialogSettings.getBoolean("Featuredialog.shrListFilter"))
+            if (dialogSettings.getBoolean("Featuredialog.shrListFilter")) //$NON-NLS-1$
                 choiceTableViewer.addFilter(shrListFilter);
 
        
         
         composite.pack();
         return composite;
+    }
+
+    /**
+     * @param filterGroupComposite
+     */
+    private void buildFilterToolbar(Group filterGroupComposite) {
+        Composite btnComposite = new Composite(filterGroupComposite, SWT.NONE);
+        {
+            GridData data = new GridData(SWT.FILL, SWT.FILL, false, false);
+            data.horizontalAlignment = SWT.END;
+            btnComposite.setLayoutData(data);
+
+            GridLayout layout = new GridLayout();
+            data.horizontalAlignment = SWT.FILL;
+            layout.marginHeight = 0;
+            layout.marginWidth = 0;
+            layout.numColumns = 1;
+            btnComposite.setLayout(layout);
+        }
+        shrListFilter = new ViewerFilter() {
+
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+
+                if (element instanceof EObject) {
+                    EObject eo = (EObject)element;
+                    EObject eContainer = eo.eContainer();
+                    if (!(eContainer instanceof ShrList)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        };
+        // allowedSourceFilter = new ViewerFilter() {
+        // @Override
+        // public boolean select(Viewer viewer, Object parentElement, Object element) {
+        // // if (theEObject instanceof ManagedCharacter) {
+        // // ManagedCharacter mc = (ManagedCharacter)theEObject;
+        // // CharacterGenerator<?> generatorSrc = mc.getChracterSource();
+        // // if (generatorSrc instanceof Shr5RuleGenerator) {
+        // // Shr5RuleGenerator srg = (Shr5RuleGenerator)generatorSrc;
+        // // EList<SourceBook> allowedSources = srg.getAllowedSources();
+        // // if (!allowedSources.isEmpty())
+        // // if (ShadowrunTools.allowedSourcePredicate(allowedSources).apply((EObject)element))
+        // // return false;
+        // // }
+        // // }
+        // return true;
+        // }
+        // };
+
+        ToolBar toolBar = new ToolBar(btnComposite, SWT.FLAT | SWT.RIGHT);
+        final ToolItem filterShrList = new ToolItem(toolBar, SWT.CHECK);
+        filterShrList.setToolTipText(Messages.FeatureEditorDialogWert_filter_list_item_tooltip);
+        if (activateFilter)
+            filterShrList.setSelection(dialogSettings.getBoolean("Featuredialog.shrListFilter"));//$NON-NLS-1$
+        filterShrList.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
+
+        if (activateFilter)
+            filterShrList.addSelectionListener(new SelectionAdapter() {
+                @Override
+                public void widgetSelected(SelectionEvent e) {
+                    if (filterShrList.getSelection()) {
+                        choiceTableViewer.addFilter(shrListFilter);
+                    } else {
+                        choiceTableViewer.removeFilter(shrListFilter);
+                    }
+                    dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection()); //$NON-NLS-1$
+                }
+            });
+        
+        
+        final ToolItem tltmSource = new ToolItem(toolBar, SWT.DROP_DOWN);
+        tltmSource.setToolTipText(Messages.FeatureEditorDialogWert_filter_source_book_tooltip);
+        tltmSource.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/filter_on.gif")); //$NON-NLS-1$ //$NON-NLS-2$
+        sourceFilterDropdown = new FilterDropdownSelectionListener<SourceBook>(tltmSource){
+
+            @SuppressWarnings("unchecked")
+            @Override
+            protected Collection<SourceBook> getFilterItems() {
+                Collection<?> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)theEObject, Shr5Package.Literals.SOURCE_BOOK);
+                return (Collection<SourceBook>)collection;
+            }
+
+            @Override
+            protected void addFilterToWidget() {
+                if (choiceTableViewer != null) {
+                    choiceTableViewer.addFilter(sourceFilter);
+                    choiceTableViewer.refresh();
+                }
+            }
+
+            @Override
+            protected void removeFilterFromWidget() {
+                if (choiceTableViewer != null) {
+                    choiceTableViewer.removeFilter(sourceFilter);
+                    choiceTableViewer.refresh();
+                }
+            }
+
+            @Override
+            protected void refreshViewer() {
+                if (choiceTableViewer != null)
+                    choiceTableViewer.refresh();
+            }
+
+        };
+        tltmSource.addSelectionListener(sourceFilterDropdown);
+        sourceFilterDropdown.buttonPushed();
+        tltmSource.setSelection(true);
+        
+        sourceFilter = new ViewerFilter() {
+
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+                if (element instanceof Quelle) {
+                    Quelle q = (Quelle)element;
+                    return sourceFilterDropdown.getFilterValues().contains(q.getSrcBook());
+                }
+                return true;
+            }
+        };
+
+        
+        
+        final ManagedCharacter containedInCharacter = ShadowrunManagmentTools.getContainedInCharacter((EObject)object);
+        inCharacterFilter = new ViewerFilter() {
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+
+                if (element instanceof EObject) {
+                    EObject eo = (EObject)element;
+                   
+                    if (containedInCharacter!=null ) {
+                        return ShadowrunManagmentTools.containedInCharaterPredicate(containedInCharacter).apply(eo);
+                    }
+                }
+                return true;
+            }
+        }; 
+
+        final ToolItem filterInCharacter = new ToolItem(toolBar, SWT.CHECK);
+        filterInCharacter.setToolTipText(Messages.FeatureEditorDialogWert_filter_character_contained_tooltip);
+        filterInCharacter.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/person-me.gif")); //$NON-NLS-1$ //$NON-NLS-2$
+        filterInCharacter.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (filterInCharacter.getSelection()) {
+                    choiceTableViewer.addFilter(inCharacterFilter);
+                } else {
+                    choiceTableViewer.removeFilter(inCharacterFilter);
+                }
+            }
+        });
+
+        final ToolItem labelProviderMoney = new ToolItem(toolBar, SWT.CHECK);
+        labelProviderMoney.setToolTipText(Messages.FeatureEditorDialogWert_display_money_tooltip);
+        labelProviderMoney.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/newyen.png")); //$NON-NLS-1$ //$NON-NLS-2$
+        labelProviderMoney.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (!labelProviderMoney.getSelection()) {
+                    choiceTableViewer.setLabelProvider(labelProvider);
+                } else {
+                    choiceTableViewer.setLabelProvider(new MoneyLabelProvider());
+                }
+                choiceTableViewer.refresh(true);
+            }
+        });
     }
 
     protected boolean capacityReached(Object value) {
