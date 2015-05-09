@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -21,8 +23,8 @@ import de.urszeidler.eclipse.shr5.Substance;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getBlast <em>Blast</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getChemical <em>Chemical</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getBlast <em>Blast</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getChemical <em>Chemical</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,6 +35,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * The default value of the '{@link #getBlast() <em>Blast</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBlast()
      * @generated
      * @ordered
@@ -43,6 +46,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * The cached value of the '{@link #getBlast() <em>Blast</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getBlast()
      * @generated
      * @ordered
@@ -53,6 +57,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * The cached value of the '{@link #getChemical() <em>Chemical</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getChemical()
      * @generated
      * @ordered
@@ -62,6 +67,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected GranateImpl() {
@@ -71,6 +77,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -81,6 +88,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getBlast() {
@@ -90,6 +98,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setBlast(String newBlast) {
@@ -102,6 +111,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Substance getChemical() {
@@ -111,6 +121,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NotificationChain basicSetChemical(Substance newChemical, NotificationChain msgs) {
@@ -118,7 +129,10 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
         chemical = newChemical;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.GRANATE__CHEMICAL, oldChemical, newChemical);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
@@ -126,6 +140,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setChemical(Substance newChemical) {
@@ -136,15 +151,16 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
             if (newChemical != null)
                 msgs = ((InternalEObject)newChemical).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.GRANATE__CHEMICAL, null, msgs);
             msgs = basicSetChemical(newChemical, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GRANATE__CHEMICAL, newChemical, newChemical));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -159,6 +175,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -175,6 +192,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -193,6 +211,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -211,6 +230,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -227,15 +247,19 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == AbtraktGranate.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GRANATE__BLAST: return Shr5Package.ABTRAKT_GRANATE__BLAST;
-                case Shr5Package.GRANATE__CHEMICAL: return Shr5Package.ABTRAKT_GRANATE__CHEMICAL;
-                default: return -1;
+                case Shr5Package.GRANATE__BLAST:
+                    return Shr5Package.ABTRAKT_GRANATE__BLAST;
+                case Shr5Package.GRANATE__CHEMICAL:
+                    return Shr5Package.ABTRAKT_GRANATE__CHEMICAL;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -244,15 +268,19 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == AbtraktGranate.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ABTRAKT_GRANATE__BLAST: return Shr5Package.GRANATE__BLAST;
-                case Shr5Package.ABTRAKT_GRANATE__CHEMICAL: return Shr5Package.GRANATE__CHEMICAL;
-                default: return -1;
+                case Shr5Package.ABTRAKT_GRANATE__BLAST:
+                    return Shr5Package.GRANATE__BLAST;
+                case Shr5Package.ABTRAKT_GRANATE__CHEMICAL:
+                    return Shr5Package.GRANATE__CHEMICAL;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -261,11 +289,13 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (blast: ");
@@ -274,4 +304,17 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
         return result.toString();
     }
 
-} //GranateImpl
+    @Override
+    public BigDecimal getWert() {
+
+        BigDecimal w = super.getWert();
+        if (getChemical() != null && getChemical().getWert()!=null)
+            if (w != null)
+                return w.add(getChemical().getWert());
+            else
+                return getChemical().getWert();
+
+        return w;
+    }
+
+} // GranateImpl

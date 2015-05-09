@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -243,4 +245,24 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
         return result.toString();
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        if (getProAnzahl() == 0)
+            return new BigDecimal(0);
+
+        if (getWertValue() == null)
+            return null;
+
+        BigDecimal bigDecimal = new BigDecimal(getAnzahl());
+        BigDecimal factor = bigDecimal.divide(new BigDecimal(getProAnzahl()),BigDecimal.ROUND_HALF_EVEN);
+
+        return getWertValue().multiply(factor).setScale(1);
+    }
+
+    
 } //WurfwaffeImpl

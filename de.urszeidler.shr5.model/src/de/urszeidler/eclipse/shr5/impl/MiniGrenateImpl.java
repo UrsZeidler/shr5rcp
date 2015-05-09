@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -272,6 +274,19 @@ public class MiniGrenateImpl extends MunitionImpl implements MiniGrenate {
         result.append(blast);
         result.append(')');
         return result.toString();
+    }
+
+    @Override
+    public BigDecimal getWert() {
+
+        BigDecimal w = super.getWert();
+        if (getChemical() != null && getChemical().getWert()!=null)
+            if (w != null)
+                return w.add(getChemical().getWert());
+            else
+                return getChemical().getWert();
+
+        return w;
     }
 
 } //MiniGrenateImpl

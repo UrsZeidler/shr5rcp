@@ -78,6 +78,7 @@ public class MunitionTest extends AbstraktGegenstandTest {
      * @generated not
      */
     public void testGetWertNoFactor() {
+        getFixture().setProAnzahl(0);
         getFixture().setWertValue(new BigDecimal(10));
         assertEquals(0, getFixture().getWert().intValue());
     }

@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
@@ -48,11 +50,13 @@ public class WurfwaffeTest extends AbstaktFernKampfwaffeTest {
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
 	@Override
 	protected void setUp() throws Exception {
         setFixture(Shr5Factory.eINSTANCE.createWurfwaffe());
+        getFixture().setAnzahl(1);
+        getFixture().setProAnzahl(1);
     }
 
 	/**
@@ -66,4 +70,20 @@ public class WurfwaffeTest extends AbstaktFernKampfwaffeTest {
         setFixture(null);
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWert_Anzahl() {
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
+        
+        getFixture().setAnzahl(2);
+        assertEquals(20,getFixture().getWert().intValue());
+    }
+
+  
 } //WurfwaffeTest
