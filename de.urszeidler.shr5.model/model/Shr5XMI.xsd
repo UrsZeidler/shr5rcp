@@ -478,7 +478,18 @@
   <xsd:element name="Feuerwaffe" type="shr5:Feuerwaffe"/>
   <xsd:complexType name="Wurfwaffe">
     <xsd:complexContent>
-      <xsd:extension base="shr5:AbstaktFernKampfwaffe"/>
+      <xsd:extension base="shr5:AbstaktFernKampfwaffe">
+        <xsd:attribute name="anzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The current quantity of items.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="proAnzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>Defines the number of items for the cost, if the element is a GeldWert.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Wurfwaffe" type="shr5:Wurfwaffe"/>
@@ -2614,4 +2625,43 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="FahrzeugErweiterung" type="shr5:FahrzeugErweiterung"/>
+  <xsd:complexType abstract="true" name="AbtraktGranate">
+    <xsd:annotation>
+      <xsd:documentation>Defines the basic properties of a grenate, can optional hold a substance as gas genate for example.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="chemical" type="shr5:Substance"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="blast" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="AbtraktGranate" type="shr5:AbtraktGranate">
+    <xsd:annotation>
+      <xsd:documentation>Defines the basic properties of a grenate, can optional hold a substance as gas genate for example.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MiniGrenate">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Munition">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="chemical" type="shr5:Substance"/>
+        </xsd:choice>
+        <xsd:attribute name="blast" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MiniGrenate" type="shr5:MiniGrenate"/>
+  <xsd:complexType name="Granate">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Wurfwaffe">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="chemical" type="shr5:Substance"/>
+        </xsd:choice>
+        <xsd:attribute name="blast" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Granate" type="shr5:Granate"/>
 </xsd:schema>

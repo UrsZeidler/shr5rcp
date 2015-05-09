@@ -816,5 +816,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaMartialartTechnique/technique"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FahrzeugErweiterung"/>
+    <genClasses ecoreClass="shr5.ecore#//AbtraktGranate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbtraktGranate/blast"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbtraktGranate/chemical"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MiniGrenate"/>
+    <genClasses ecoreClass="shr5.ecore#//Granate"/>
   </genPackages>
 </genmodel:GenModel>

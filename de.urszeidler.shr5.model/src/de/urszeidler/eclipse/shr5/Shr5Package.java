@@ -3136,13 +3136,31 @@ public interface Shr5Package extends EPackage {
 	int WURFWAFFE__REICHWEITE = ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE;
 
     /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__ANZAHL = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__PRO_ANZAHL = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Wurfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int WURFWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 0;
+	int WURFWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Wurfwaffe</em>' class.
@@ -20757,7 +20775,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 147;
+	int FEUER_MODUS = 150;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -20767,7 +20785,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 148;
+	int SCHADENS_TYP = 151;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -20777,7 +20795,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 149;
+	int MAGAZIN_TYP = 152;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -20787,7 +20805,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 150;
+	int FEUWERWAFFEN_ERWEITERUNG = 153;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -20797,7 +20815,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 151;
+	int MODIFIKATOR_TYPE = 154;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -20807,7 +20825,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 152;
+	int SMARTGUN_TYPE = 155;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -20817,7 +20835,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 153;
+	int ZAUBER_ART = 156;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -20827,7 +20845,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 154;
+	int ZAUBER_REICHWEITE = 157;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -20837,7 +20855,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 155;
+	int ZAUBER_DAUER = 158;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeTraditionImpl <em>Magische Tradition</em>}' class.
@@ -22230,6 +22248,513 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG_ERWEITERUNG_OPERATION_COUNT = FAHRZEUG_MODIFIKATION_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AbtraktGranate <em>Abtrakt Granate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.AbtraktGranate
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbtraktGranate()
+     * @generated
+     */
+    int ABTRAKT_GRANATE = 147;
+
+    /**
+     * The feature id for the '<em><b>Blast</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABTRAKT_GRANATE__BLAST = 0;
+
+    /**
+     * The feature id for the '<em><b>Chemical</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABTRAKT_GRANATE__CHEMICAL = 1;
+
+    /**
+     * The number of structural features of the '<em>Abtrakt Granate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABTRAKT_GRANATE_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Abtrakt Granate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABTRAKT_GRANATE_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MiniGrenateImpl <em>Mini Grenate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MiniGrenateImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMiniGrenate()
+     * @generated
+     */
+    int MINI_GRENATE = 148;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__PARENT_ID = MUNITION__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__LOCALIZATIONS = MUNITION__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__PAGE = MUNITION__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__SRC_BOOK = MUNITION__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__WERT = MUNITION__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__VERFUEGBARKEIT = MUNITION__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__WERT_VALUE = MUNITION__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__BESCHREIBUNG = MUNITION__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__IMAGE = MUNITION__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__NAME = MUNITION__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__MODS = MUNITION__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__FERTIGKEIT = MUNITION__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__SPEZIALISIERUNG = MUNITION__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__WIFI = MUNITION__WIFI;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__ANZAHL = MUNITION__ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__PRO_ANZAHL = MUNITION__PRO_ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Damage Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__DAMAGE_TYPE = MUNITION__DAMAGE_TYPE;
+
+    /**
+     * The feature id for the '<em><b>Damage Mod</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__DAMAGE_MOD = MUNITION__DAMAGE_MOD;
+
+    /**
+     * The feature id for the '<em><b>Armor Mod</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__ARMOR_MOD = MUNITION__ARMOR_MOD;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__TYPE = MUNITION__TYPE;
+
+    /**
+     * The feature id for the '<em><b>Blast</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__BLAST = MUNITION_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Chemical</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE__CHEMICAL = MUNITION_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Mini Grenate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE_FEATURE_COUNT = MUNITION_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Mini Grenate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MINI_GRENATE_OPERATION_COUNT = MUNITION_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GranateImpl <em>Granate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GranateImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGranate()
+     * @generated
+     */
+    int GRANATE = 149;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__PARENT_ID = WURFWAFFE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__LOCALIZATIONS = WURFWAFFE__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__PAGE = WURFWAFFE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__SRC_BOOK = WURFWAFFE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__WERT = WURFWAFFE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__VERFUEGBARKEIT = WURFWAFFE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__WERT_VALUE = WURFWAFFE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__BESCHREIBUNG = WURFWAFFE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__IMAGE = WURFWAFFE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__NAME = WURFWAFFE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__MODS = WURFWAFFE__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__FERTIGKEIT = WURFWAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Spezialisierung</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__SPEZIALISIERUNG = WURFWAFFE__SPEZIALISIERUNG;
+
+    /**
+     * The feature id for the '<em><b>Wifi</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__WIFI = WURFWAFFE__WIFI;
+
+    /**
+     * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__SCHADENSCODE = WURFWAFFE__SCHADENSCODE;
+
+    /**
+     * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__SCHADES_TYP = WURFWAFFE__SCHADES_TYP;
+
+    /**
+     * The feature id for the '<em><b>Praezision</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__PRAEZISION = WURFWAFFE__PRAEZISION;
+
+    /**
+     * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__DURCHSCHLAGS_KRAFT = WURFWAFFE__DURCHSCHLAGS_KRAFT;
+
+    /**
+     * The feature id for the '<em><b>Reichweite</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__REICHWEITE = WURFWAFFE__REICHWEITE;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__ANZAHL = WURFWAFFE__ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__PRO_ANZAHL = WURFWAFFE__PRO_ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Blast</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__BLAST = WURFWAFFE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Chemical</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE__CHEMICAL = WURFWAFFE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Granate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE_FEATURE_COUNT = WURFWAFFE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Granate</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRANATE_OPERATION_COUNT = WURFWAFFE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22237,7 +22762,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 156;
+	int CRITTER_HANDLUNG = 159;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -22247,7 +22772,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 157;
+	int CRITTER_REICHWEITE = 160;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -22257,7 +22782,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 158;
+	int CRITTER_DAUER = 161;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -22267,7 +22792,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 159;
+	int RESONANZ_ZIEL = 162;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -22277,7 +22802,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 160;
+    int INTERFACE_MODUS = 163;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -22287,7 +22812,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 161;
+    int PROGRAM_TYPE = 164;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -22297,7 +22822,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 162;
+    int MATRIX_PROGRAM_TYPE = 165;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
@@ -22307,7 +22832,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
      * @generated
      */
-    int SUBSTANCE_VECTOR = 163;
+    int SUBSTANCE_VECTOR = 166;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
@@ -22317,7 +22842,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
      * @generated
      */
-    int SUBSTANCE_EFFECT = 164;
+    int SUBSTANCE_EFFECT = 167;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
@@ -22327,7 +22852,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
      * @generated
      */
-    int ADDICTION_TYPE = 165;
+    int ADDICTION_TYPE = 168;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.TimeUnits <em>Time Units</em>}' enum.
@@ -22337,7 +22862,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTimeUnits()
      * @generated
      */
-    int TIME_UNITS = 166;
+    int TIME_UNITS = 169;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareType <em>Cyberware Type</em>}' enum.
@@ -22347,7 +22872,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareType()
      * @generated
      */
-    int CYBERWARE_TYPE = 167;
+    int CYBERWARE_TYPE = 170;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Enzug <em>Enzug</em>}' enum.
@@ -22357,7 +22882,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEnzug()
      * @generated
      */
-    int ENZUG = 168;
+    int ENZUG = 171;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.armorModificationType <em>armor Modification Type</em>}' enum.
@@ -22367,7 +22892,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getarmorModificationType()
      * @generated
      */
-    int ARMOR_MODIFICATION_TYPE = 169;
+    int ARMOR_MODIFICATION_TYPE = 172;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -22377,7 +22902,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 170;
+	int SHR_DATE = 173;
 
 
 	/**
@@ -22388,7 +22913,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 171;
+	int MODIFICATION_MANAGER = 174;
 
 
 	/**
@@ -27845,6 +28370,58 @@ public interface Shr5Package extends EPackage {
     EClass getFahrzeugErweiterung();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AbtraktGranate <em>Abtrakt Granate</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Abtrakt Granate</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbtraktGranate
+     * @generated
+     */
+    EClass getAbtraktGranate();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.AbtraktGranate#getBlast <em>Blast</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Blast</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbtraktGranate#getBlast()
+     * @see #getAbtraktGranate()
+     * @generated
+     */
+    EAttribute getAbtraktGranate_Blast();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.AbtraktGranate#getChemical <em>Chemical</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Chemical</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbtraktGranate#getChemical()
+     * @see #getAbtraktGranate()
+     * @generated
+     */
+    EReference getAbtraktGranate_Chemical();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MiniGrenate <em>Mini Grenate</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Mini Grenate</em>'.
+     * @see de.urszeidler.eclipse.shr5.MiniGrenate
+     * @generated
+     */
+    EClass getMiniGrenate();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Granate <em>Granate</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Granate</em>'.
+     * @see de.urszeidler.eclipse.shr5.Granate
+     * @generated
+     */
+    EClass getGranate();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32420,6 +32997,52 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass FAHRZEUG_ERWEITERUNG = eINSTANCE.getFahrzeugErweiterung();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.AbtraktGranate <em>Abtrakt Granate</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.AbtraktGranate
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbtraktGranate()
+         * @generated
+         */
+        EClass ABTRAKT_GRANATE = eINSTANCE.getAbtraktGranate();
+
+        /**
+         * The meta object literal for the '<em><b>Blast</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ABTRAKT_GRANATE__BLAST = eINSTANCE.getAbtraktGranate_Blast();
+
+        /**
+         * The meta object literal for the '<em><b>Chemical</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ABTRAKT_GRANATE__CHEMICAL = eINSTANCE.getAbtraktGranate_Chemical();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MiniGrenateImpl <em>Mini Grenate</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MiniGrenateImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMiniGrenate()
+         * @generated
+         */
+        EClass MINI_GRENATE = eINSTANCE.getMiniGrenate();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.GranateImpl <em>Granate</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.GranateImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGranate()
+         * @generated
+         */
+        EClass GRANATE = eINSTANCE.getGranate();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.

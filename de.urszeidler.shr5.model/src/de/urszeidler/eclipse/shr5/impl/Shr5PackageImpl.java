@@ -916,6 +916,27 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass abtraktGranateEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass miniGrenateEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass granateEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -5879,6 +5900,51 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getAbtraktGranate() {
+        return abtraktGranateEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getAbtraktGranate_Blast() {
+        return (EAttribute)abtraktGranateEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAbtraktGranate_Chemical() {
+        return (EReference)abtraktGranateEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMiniGrenate() {
+        return miniGrenateEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGranate() {
+        return granateEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -6697,6 +6763,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         fahrzeugErweiterungEClass = createEClass(FAHRZEUG_ERWEITERUNG);
 
+        abtraktGranateEClass = createEClass(ABTRAKT_GRANATE);
+        createEAttribute(abtraktGranateEClass, ABTRAKT_GRANATE__BLAST);
+        createEReference(abtraktGranateEClass, ABTRAKT_GRANATE__CHEMICAL);
+
+        miniGrenateEClass = createEClass(MINI_GRENATE);
+
+        granateEClass = createEClass(GRANATE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -6778,6 +6852,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         nahkampfwaffeEClass.getESuperTypes().add(this.getAbstaktWaffe());
         feuerwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
         wurfwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
+        wurfwaffeEClass.getESuperTypes().add(this.getMenge());
         shrListEClass.getESuperTypes().add(this.getBeschreibbar());
         shrListEClass.getESuperTypes().add(this.getIdentifiable());
         projektilwaffeEClass.getESuperTypes().add(this.getAbstaktFernKampfwaffe());
@@ -6967,6 +7042,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         personaMartialartStyleEClass.getESuperTypes().add(this.getSpezialisierung());
         personaMartialartTechniqueEClass.getESuperTypes().add(this.getErlernbar());
         fahrzeugErweiterungEClass.getESuperTypes().add(this.getFahrzeugModifikation());
+        miniGrenateEClass.getESuperTypes().add(this.getMunition());
+        miniGrenateEClass.getESuperTypes().add(this.getAbtraktGranate());
+        granateEClass.getESuperTypes().add(this.getWurfwaffe());
+        granateEClass.getESuperTypes().add(this.getAbtraktGranate());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7618,6 +7697,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getPersonaMartialartTechnique_Technique(), this.getMartialartTechnique(), null, "technique", null, 1, 1, PersonaMartialartTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(fahrzeugErweiterungEClass, FahrzeugErweiterung.class, "FahrzeugErweiterung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(abtraktGranateEClass, AbtraktGranate.class, "AbtraktGranate", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getAbtraktGranate_Blast(), ecorePackage.getEString(), "blast", null, 0, 1, AbtraktGranate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAbtraktGranate_Chemical(), this.getSubstance(), null, "chemical", null, 0, 1, AbtraktGranate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(miniGrenateEClass, MiniGrenate.class, "MiniGrenate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(granateEClass, Granate.class, "Granate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

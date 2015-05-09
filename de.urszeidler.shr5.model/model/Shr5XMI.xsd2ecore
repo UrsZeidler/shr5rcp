@@ -251,6 +251,8 @@
     </nested>
     <nested inputs="shr5.ecore#//Feuerwaffe" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDElementDeclaration=15"/>
     <nested inputs="shr5.ecore#//Wurfwaffe" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDComplexTypeDefinition=16"/>
+    <nested inputs="shr5.ecore#//Menge/anzahl" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDComplexTypeDefinition=16/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Menge/proAnzahl" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDComplexTypeDefinition=16/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Wurfwaffe" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDElementDeclaration=16"/>
     <nested inputs="shr5.ecore#//ShrList" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17">
       <nested inputs="shr5.ecore#//ShrList/entries" outputs="Shr5XMI.xsd#//ShrList;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"/>
@@ -1103,5 +1105,18 @@
     <nested inputs="shr5.ecore#//PersonaMartialartTechnique" outputs="Shr5XMI.xsd#//PersonaMartialartTechnique;XSDElementDeclaration=145"/>
     <nested inputs="shr5.ecore#//FahrzeugErweiterung" outputs="Shr5XMI.xsd#//FahrzeugErweiterung;XSDComplexTypeDefinition=146"/>
     <nested inputs="shr5.ecore#//FahrzeugErweiterung" outputs="Shr5XMI.xsd#//FahrzeugErweiterung;XSDElementDeclaration=146"/>
+    <nested inputs="shr5.ecore#//AbtraktGranate" outputs="Shr5XMI.xsd#//AbtraktGranate;XSDComplexTypeDefinition=147">
+      <nested inputs="shr5.ecore#//AbtraktGranate/blast" outputs="Shr5XMI.xsd#//AbtraktGranate;XSDComplexTypeDefinition=147/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//AbtraktGranate/chemical" outputs="Shr5XMI.xsd#//AbtraktGranate;XSDComplexTypeDefinition=147/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//AbtraktGranate" outputs="Shr5XMI.xsd#//AbtraktGranate;XSDElementDeclaration=147"/>
+    <nested inputs="shr5.ecore#//MiniGrenate" outputs="Shr5XMI.xsd#//MiniGrenate;XSDComplexTypeDefinition=148"/>
+    <nested inputs="shr5.ecore#//AbtraktGranate/blast" outputs="Shr5XMI.xsd#//MiniGrenate;XSDComplexTypeDefinition=148/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//AbtraktGranate/chemical" outputs="Shr5XMI.xsd#//MiniGrenate;XSDComplexTypeDefinition=148/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//MiniGrenate" outputs="Shr5XMI.xsd#//MiniGrenate;XSDElementDeclaration=148"/>
+    <nested inputs="shr5.ecore#//Granate" outputs="Shr5XMI.xsd#//Granate;XSDComplexTypeDefinition=149"/>
+    <nested inputs="shr5.ecore#//AbtraktGranate/blast" outputs="Shr5XMI.xsd#//Granate;XSDComplexTypeDefinition=149/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//AbtraktGranate/chemical" outputs="Shr5XMI.xsd#//Granate;XSDComplexTypeDefinition=149/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Granate" outputs="Shr5XMI.xsd#//Granate;XSDElementDeclaration=149"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

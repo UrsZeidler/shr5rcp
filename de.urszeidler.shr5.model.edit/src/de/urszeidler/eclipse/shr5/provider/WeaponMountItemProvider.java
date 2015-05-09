@@ -167,6 +167,11 @@ public class WeaponMountItemProvider
             (createChildParameter
                 (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
                  Shr5Factory.eINSTANCE.createWaffenFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
+                 Shr5Factory.eINSTANCE.createGranate()));
     }
 
 }

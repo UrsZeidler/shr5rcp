@@ -13,5 +13,5 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Wurfwaffe extends AbstaktFernKampfwaffe {
+public interface Wurfwaffe extends AbstaktFernKampfwaffe, Menge {
 } // Wurfwaffe

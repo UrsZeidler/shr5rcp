@@ -159,6 +159,11 @@ public class CyberImplantWeaponItemProvider extends CyberwareEnhancementItemProv
             (createChildParameter
                 (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON,
                  Shr5Factory.eINSTANCE.createWaffenFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBER_IMPLANT_WEAPON__WEAPON,
+                 Shr5Factory.eINSTANCE.createGranate()));
     }
 
 }

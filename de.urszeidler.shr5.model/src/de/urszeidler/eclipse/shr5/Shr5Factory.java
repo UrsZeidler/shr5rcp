@@ -850,6 +850,24 @@ public interface Shr5Factory extends EFactory {
     FahrzeugErweiterung createFahrzeugErweiterung();
 
     /**
+     * Returns a new object of class '<em>Mini Grenate</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Mini Grenate</em>'.
+     * @generated
+     */
+    MiniGrenate createMiniGrenate();
+
+    /**
+     * Returns a new object of class '<em>Granate</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Granate</em>'.
+     * @generated
+     */
+    Granate createGranate();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

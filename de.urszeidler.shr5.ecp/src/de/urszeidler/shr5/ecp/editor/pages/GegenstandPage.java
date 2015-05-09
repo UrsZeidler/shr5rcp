@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Magazin;
 import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
+import de.urszeidler.eclipse.shr5.MiniGrenate;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
@@ -174,6 +175,11 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__DAMAGE_MOD, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__DAMAGE_TYPE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__ARMOR_MOD, grpGegenstand);
+            if (object instanceof MiniGrenate) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.ABTRAKT_GRANATE__BLAST, grpGegenstand);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.ABTRAKT_GRANATE__CHEMICAL, grpGegenstand);
+            }
+            
         } else if (object instanceof Cyberdeck) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE1, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2, grpGegenstand);

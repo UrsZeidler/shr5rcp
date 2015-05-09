@@ -190,7 +190,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Wurfwaffe" eSuperTypes="#//AbstaktFernKampfwaffe"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Wurfwaffe" eSuperTypes="#//AbstaktFernKampfwaffe #//Menge"/>
   <eClassifiers xsi:type="ecore:EEnum" name="MagazinTyp">
     <eLiterals name="Clip"/>
     <eLiterals name="Trommel" value="1"/>
@@ -1279,4 +1279,14 @@
         eType="#//MartialartTechnique"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FahrzeugErweiterung" eSuperTypes="#//FahrzeugModifikation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbtraktGranate" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the basic properties of a grenate, can optional hold a substance as gas genate for example."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="blast" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chemical" eType="#//Substance"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MiniGrenate" eSuperTypes="#//Munition #//AbtraktGranate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Granate" eSuperTypes="#//Wurfwaffe #//AbtraktGranate"/>
 </ecore:EPackage>

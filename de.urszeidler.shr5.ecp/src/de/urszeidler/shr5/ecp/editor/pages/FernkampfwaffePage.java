@@ -17,6 +17,8 @@ import org.eclipse.ui.forms.widgets.Section;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import de.urszeidler.eclipse.shr5.Fokus;
+import de.urszeidler.eclipse.shr5.Granate;
+import de.urszeidler.eclipse.shr5.Menge;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -157,6 +159,15 @@ public class FernkampfwaffePage extends AbstractShr5Page<AbstaktWaffe> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
         }
+        if (object instanceof Menge) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpFernkampfwaffe);
+        }
+        if (object instanceof Granate) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABTRAKT_GRANATE__BLAST, grpFernkampfwaffe);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABTRAKT_GRANATE__CHEMICAL, grpFernkampfwaffe);
+        }
+        
         // could be also a focus
         if (object instanceof Fokus) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe);

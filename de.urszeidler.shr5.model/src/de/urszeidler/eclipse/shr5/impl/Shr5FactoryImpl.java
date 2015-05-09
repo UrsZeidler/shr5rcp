@@ -149,6 +149,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.PERSONA_MARTIALART_STYLE: return createPersonaMartialartStyle();
             case Shr5Package.PERSONA_MARTIALART_TECHNIQUE: return createPersonaMartialartTechnique();
             case Shr5Package.FAHRZEUG_ERWEITERUNG: return createFahrzeugErweiterung();
+            case Shr5Package.MINI_GRENATE: return createMiniGrenate();
+            case Shr5Package.GRANATE: return createGranate();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1194,6 +1196,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public FahrzeugErweiterung createFahrzeugErweiterung() {
         FahrzeugErweiterungImpl fahrzeugErweiterung = new FahrzeugErweiterungImpl();
         return fahrzeugErweiterung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MiniGrenate createMiniGrenate() {
+        MiniGrenateImpl miniGrenate = new MiniGrenateImpl();
+        return miniGrenate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Granate createGranate() {
+        GranateImpl granate = new GranateImpl();
+        return granate;
     }
 
     /**

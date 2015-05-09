@@ -654,6 +654,18 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createFahrzeugErweiterungAdapter();
             }
             @Override
+            public Adapter caseAbtraktGranate(AbtraktGranate object) {
+                return createAbtraktGranateAdapter();
+            }
+            @Override
+            public Adapter caseMiniGrenate(MiniGrenate object) {
+                return createMiniGrenateAdapter();
+            }
+            @Override
+            public Adapter caseGranate(Granate object) {
+                return createGranateAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2448,6 +2460,48 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createFahrzeugErweiterungAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.AbtraktGranate <em>Abtrakt Granate</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.AbtraktGranate
+     * @generated
+     */
+    public Adapter createAbtraktGranateAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MiniGrenate <em>Mini Grenate</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MiniGrenate
+     * @generated
+     */
+    public Adapter createMiniGrenateAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Granate <em>Granate</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Granate
+     * @generated
+     */
+    public Adapter createGranateAdapter() {
         return null;
     }
 

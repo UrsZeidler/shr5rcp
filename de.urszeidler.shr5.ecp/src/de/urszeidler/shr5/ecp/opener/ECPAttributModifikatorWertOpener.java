@@ -40,7 +40,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
-import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.editor.ShrEditorInput;

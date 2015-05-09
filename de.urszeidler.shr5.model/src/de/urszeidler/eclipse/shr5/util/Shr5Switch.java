@@ -223,6 +223,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 Wurfwaffe wurfwaffe = (Wurfwaffe)theEObject;
                 T result = caseWurfwaffe(wurfwaffe);
                 if (result == null) result = caseAbstaktFernKampfwaffe(wurfwaffe);
+                if (result == null) result = caseMenge(wurfwaffe);
                 if (result == null) result = caseAbstaktWaffe(wurfwaffe);
                 if (result == null) result = caseAbstraktGegenstand(wurfwaffe);
                 if (result == null) result = caseQuelle(wurfwaffe);
@@ -1650,6 +1651,46 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(fahrzeugErweiterung);
                 if (result == null) result = caseGeldWert(fahrzeugErweiterung);
                 if (result == null) result = caseIdentifiable(fahrzeugErweiterung);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABTRAKT_GRANATE: {
+                AbtraktGranate abtraktGranate = (AbtraktGranate)theEObject;
+                T result = caseAbtraktGranate(abtraktGranate);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MINI_GRENATE: {
+                MiniGrenate miniGrenate = (MiniGrenate)theEObject;
+                T result = caseMiniGrenate(miniGrenate);
+                if (result == null) result = caseMunition(miniGrenate);
+                if (result == null) result = caseAbtraktGranate(miniGrenate);
+                if (result == null) result = caseAbstraktGegenstand(miniGrenate);
+                if (result == null) result = caseMenge(miniGrenate);
+                if (result == null) result = caseQuelle(miniGrenate);
+                if (result == null) result = caseGeldWert(miniGrenate);
+                if (result == null) result = caseBeschreibbar(miniGrenate);
+                if (result == null) result = caseModifizierbar(miniGrenate);
+                if (result == null) result = caseAnwendbar(miniGrenate);
+                if (result == null) result = caseIdentifiable(miniGrenate);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GRANATE: {
+                Granate granate = (Granate)theEObject;
+                T result = caseGranate(granate);
+                if (result == null) result = caseWurfwaffe(granate);
+                if (result == null) result = caseAbtraktGranate(granate);
+                if (result == null) result = caseAbstaktFernKampfwaffe(granate);
+                if (result == null) result = caseMenge(granate);
+                if (result == null) result = caseAbstaktWaffe(granate);
+                if (result == null) result = caseAbstraktGegenstand(granate);
+                if (result == null) result = caseQuelle(granate);
+                if (result == null) result = caseGeldWert(granate);
+                if (result == null) result = caseBeschreibbar(granate);
+                if (result == null) result = caseModifizierbar(granate);
+                if (result == null) result = caseAnwendbar(granate);
+                if (result == null) result = caseIdentifiable(granate);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -3559,6 +3600,51 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseFahrzeugErweiterung(FahrzeugErweiterung object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Abtrakt Granate</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abtrakt Granate</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseAbtraktGranate(AbtraktGranate object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Mini Grenate</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Mini Grenate</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMiniGrenate(MiniGrenate object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Granate</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Granate</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGranate(Granate object) {
         return null;
     }
 
