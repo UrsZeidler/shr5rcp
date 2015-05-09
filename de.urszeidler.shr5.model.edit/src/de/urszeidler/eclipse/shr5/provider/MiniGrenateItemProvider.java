@@ -119,14 +119,19 @@ public class MiniGrenateItemProvider extends MunitionItemProvider {
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((MiniGrenate)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_MiniGrenate_type") :
-            getString("_UI_MiniGrenate_type") + " " + label;
+        MiniGrenate o = (MiniGrenate)object;
+        String label = o.getName();
+        int anzahl = o.getAnzahl();
+
+        String format = String.format("%s %s [%d]", getString("_UI_MiniGrenate_type"),label == null || label.length() == 0 ? "" : label,anzahl);
+        return format;
+//        return label == null || label.length() == 0 ?
+//            getString("_UI_MiniGrenate_type") :
+//            getString("_UI_MiniGrenate_type") + " " + label;
     }
     
 

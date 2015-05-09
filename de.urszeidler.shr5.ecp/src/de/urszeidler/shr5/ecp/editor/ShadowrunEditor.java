@@ -13,7 +13,6 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
-import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
@@ -44,8 +43,8 @@ import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Substance;
 import de.urszeidler.eclipse.shr5.SubstanceContainer;
-import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
@@ -95,7 +94,6 @@ import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
 import de.urszeidler.shr5.ecp.editor.pages.SourceBookPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
-import de.urszeidler.shr5.ecp.editor.pages.SubstancePage;
 import de.urszeidler.shr5.ecp.editor.pages.TransactionsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VariousItemsPage;
 import de.urszeidler.shr5.ecp.editor.pages.VariousObjectsPage;
@@ -125,7 +123,9 @@ public class ShadowrunEditor extends AbstractShr5Editor {
     
      @Override
     protected void addPages() {
-
+         if(theEObject==null)
+             return;
+             
         // the switch creates all the pages
         Shr5Switch<Object> shadowrunSwitch = new Shr5Switch<Object>() {
             @Override
@@ -270,25 +270,26 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 return null;
             }
 
-            @Override
-            public Object caseDrug(Drug object) {
-                try {
-                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
-                } catch (PartInitException e) {
-                    logError("error creating SubstancePage", e);//$NON-NLS-1$
-                }
-                return null;
-            }
-
-            @Override
-            public Object caseToxin(Toxin object) {
-                try {
-                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
-                } catch (PartInitException e) {
-                    logError("error creating SubstancePage", e);//$NON-NLS-1$
-                }
-                return null;
-            }
+//            
+//            @Override
+//            public Object caseDrug(Drug object) {
+//                try {
+//                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+//                } catch (PartInitException e) {
+//                    logError("error creating SubstancePage", e);//$NON-NLS-1$
+//                }
+//                return null;
+//            }
+//
+//            @Override
+//            public Object caseToxin(Toxin object) {
+//                try {
+//                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+//                } catch (PartInitException e) {
+//                    logError("error creating SubstancePage", e);//$NON-NLS-1$
+//                }
+//                return null;
+//            }
 
             // @Override
             // public Object caseCyberdeck(Cyberdeck object) {
@@ -369,6 +370,17 @@ public class ShadowrunEditor extends AbstractShr5Editor {
                 }
                 return null;
             }
+            
+            @Override
+            public Object caseSubstance(Substance object) {
+                try {
+                    addPage(new VariousItemsPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VariousItemsPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseFernkampfwaffeModifikator(FernkampfwaffeModifikator object) {
                 try {

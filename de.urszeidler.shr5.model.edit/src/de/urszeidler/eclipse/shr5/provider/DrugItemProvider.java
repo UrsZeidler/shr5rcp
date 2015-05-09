@@ -143,14 +143,16 @@ public class DrugItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((Drug)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_Drug_type") :
-            getString("_UI_Drug_type") + " " + label;
+        Drug o = (Drug)object;
+        String label = o.getName();
+        int anzahl = o.getAnzahl();
+
+        String format = String.format("%s %s [%d]", getString("_UI_Drug_type"),label == null || label.length() == 0 ? "" : label,anzahl);
+        return format;
     }
 
     /**

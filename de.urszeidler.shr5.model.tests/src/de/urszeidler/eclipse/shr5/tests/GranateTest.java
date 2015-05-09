@@ -92,7 +92,7 @@ public class GranateTest extends WurfwaffeTest {
         substance.setWertValue(new BigDecimal(5));
         getFixture().setChemical(substance);
         
-        assertEquals(25,getFixture().getWert().intValue());
+        assertEquals(30,getFixture().getWert().intValue());
     }
 
     

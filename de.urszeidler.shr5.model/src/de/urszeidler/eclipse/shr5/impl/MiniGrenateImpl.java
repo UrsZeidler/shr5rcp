@@ -113,7 +113,7 @@ public class MiniGrenateImpl extends MunitionImpl implements MiniGrenate {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public NotificationChain basicSetChemical(Substance newChemical, NotificationChain msgs) {
         Substance oldChemical = chemical;
@@ -121,6 +121,9 @@ public class MiniGrenateImpl extends MunitionImpl implements MiniGrenate {
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.MINI_GRENATE__CHEMICAL, oldChemical, newChemical);
             if (msgs == null) msgs = notification; else msgs.add(notification);
+ 
+            notification = new ENotificationImpl(this, Notification.SET, Shr5Package.MINI_GRENATE__WERT_VALUE, oldChemical, newChemical);
+            msgs.add(notification);
         }
         return msgs;
     }
@@ -282,7 +285,7 @@ public class MiniGrenateImpl extends MunitionImpl implements MiniGrenate {
         BigDecimal w = super.getWert();
         if (getChemical() != null && getChemical().getWert()!=null)
             if (w != null)
-                return w.add(getChemical().getWert());
+                return w.add(getChemical().getWert().multiply(new BigDecimal(getAnzahl())));
             else
                 return getChemical().getWert();
 

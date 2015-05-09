@@ -119,14 +119,16 @@ public class GranateItemProvider extends WurfwaffeItemProvider {
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not 
      */
     @Override
     public String getText(Object object) {
-        String label = ((Granate)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_Granate_type") :
-            getString("_UI_Granate_type") + " " + label;
+        Granate o = (Granate)object;
+        String label = o.getName();
+        int anzahl = o.getAnzahl();
+
+        String format = String.format("%s %s [%d]", getString("_UI_Granate_type"),label == null || label.length() == 0 ? "" : label,anzahl);
+        return format;
     }
     
 

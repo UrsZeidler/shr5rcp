@@ -110,6 +110,7 @@ public class ShrReferenceManager extends DefaultReferenceManager {
         } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())
                 || Shr5Package.Literals.SUBSTANCE_CONTAINER__SUBSTANCE.equals(e.getFeature())
                 || Shr5Package.Literals.QI_FOKUS__POWER.equals(e.getFeature()) 
+                || Shr5Package.Literals.ABTRAKT_GRANATE__CHEMICAL.equals(e.getFeature()) 
                 || Shr5Package.Literals.FAHRZEUG__SENSOR_ARRAY.equals(e.getFeature())
                 || Shr5Package.Literals.WEAPON_MOUNT__WEAPON.equals(e.getFeature())) {
             

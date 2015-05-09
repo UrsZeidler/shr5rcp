@@ -16,6 +16,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.KleindungsModifikator;
@@ -23,6 +24,8 @@ import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Sensor;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Substance;
+import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Pack;
@@ -161,6 +164,20 @@ public class VariousItemsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR__CAPACITY_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SENSOR__FUNCTIONS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CAPACITY__CAPACITY_REMAINS, grpGegenstand, labelEntryFactory);
+        }else if (object instanceof Substance) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE__VECTOR, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SUBSTANCE__SPEED, grpGegenstand);
+            if (object instanceof Toxin) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.TOXIN__POWER, grpGegenstand);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.TOXIN__PENETRATION, grpGegenstand);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.TOXIN__EFFECT, grpGegenstand);
+            } else if (object instanceof Drug) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.DRUG__ADDICTION_TYPE, grpGegenstand);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.DRUG__DURATION, grpGegenstand);
+            }
+            
         }
         
         
