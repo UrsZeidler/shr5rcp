@@ -151,6 +151,9 @@
 					<xsl:for-each select="$vehicles">
 						<xsl:apply-templates select="node()" />
 					</xsl:for-each>
+					<xsl:for-each select="$software">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
 					<entries xsi:type="shr5:ShrList" name="Credsticks">
 						<entries xsi:type="shr5:Credstick" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"
 							verfuegbarkeit="0" wertValue="5" page="443" name="Standard"
@@ -364,7 +367,7 @@
 	<xsl:template
 		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers
 		|skillgroups|metatypes|spells|qualities|biowares|vehicles|complexforms|mentors
-		|metamagics|accessories|traditions">
+		|metamagics|accessories|traditions|programs">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
@@ -1411,7 +1414,7 @@
 	<xsl:template match="//program">
 		<entries xsi:type="shr5:CommonProgram">
 			<xsl:choose>
-				<xsl:when test="category/text()='Hacking'">
+				<xsl:when test="category/text()='Hacking Programs'">
 					<xsl:attribute name="programType">
 					<xsl:value-of select="'hackingProgram'" />
 									</xsl:attribute>

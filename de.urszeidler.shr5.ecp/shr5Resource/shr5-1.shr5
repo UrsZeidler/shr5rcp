@@ -2850,7 +2850,7 @@
             </einbau>
             <magazin xmi:id="__GpRAK7kEeSMS49n3AFG_A" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="HK XM30 LMG ammunition" type="1bdda305-3448-4419-871d-42bcd971751b"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="146d58e4-d705-41a0-bd92-c1901b71ffc0" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Shotgun" schadenscode="10P" praezision="3" durchschlagsKraft="-1" munitionstyp="Streifen" kapazitaet="10">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="146d58e4-d705-41a0-bd92-c1901b71ffc0" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Shotgun" schadenscode="10P" praezision="3" durchschlagsKraft="-1" reichweite="_ENFqwznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="10">
             <localizations xmi:id="__Gp4FK7kEeSMS49n3AFG_A" local="de" name="HK XM30 Unterlauf-Schrotflinte"/>
             <modie>HM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -3010,7 +3010,7 @@
             </einbau>
             <magazin xmi:id="__GxM0q7kEeSMS49n3AFG_A" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Antioch-2 ammunition" type="504cba24-2141-4879-8062-782332e83386"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="5b98b55d-c87c-453a-ad87-9b34c8cbf04b" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10F" wertValue="5000" name="ArmTech MGL-12" schadenscode="Grenade" praezision="4" munitionstyp="Streifen" kapazitaet="12">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="5b98b55d-c87c-453a-ad87-9b34c8cbf04b" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10F" wertValue="5000" name="ArmTech MGL-12" schadenscode="Grenade" praezision="4" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="12">
             <localizations xmi:id="__Gxz4a7kEeSMS49n3AFG_A" local="de" name="ArmTech MGL-12"/>
             <modie>HM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -3018,7 +3018,7 @@
             <erweiterung>Unten</erweiterung>
             <magazin xmi:id="__Gxz4K7kEeSMS49n3AFG_A" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="ArmTech MGL-12 ammunition" type="5b98b55d-c87c-453a-ad87-9b34c8cbf04b"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="5fe3a884-8213-4fe3-a538-750eba3bda27" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Cyber Microgrenade Launcher" schadenscode="As Grenade" praezision="4" kapazitaet="2">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="5fe3a884-8213-4fe3-a538-750eba3bda27" page="458" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Cyber Microgrenade Launcher" schadenscode="As Grenade" praezision="4" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" kapazitaet="2">
             <localizations xmi:id="__Gxz5a7kEeSMS49n3AFG_A" local="de" name="Cyber Granatwerfer"/>
             <modie>EM</modie>
             <einbau xmi:id="__Gxz4q7kEeSMS49n3AFG_A" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
@@ -3202,7 +3202,7 @@
             <modie>SM</modie>
             <magazin xmi:id="__HK1cK7kEeSMS49n3AFG_A" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Walther Palm Pistol ammunition" type="0b4c00be-d7bb-4480-b9f4-6300abde27c4"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="df5d5c83-ddf8-4ec2-8a6f-28c61ec7325a" page="49" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="24F" wertValue="35000" name="Ares Archon Heavy MP Laser" schadenscode="10P" praezision="7" durchschlagsKraft="-10">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="df5d5c83-ddf8-4ec2-8a6f-28c61ec7325a" page="49" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="24F" wertValue="35000" name="Ares Archon Heavy MP Laser" schadenscode="10P" praezision="7" durchschlagsKraft="-10" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="__HLcg67kEeSMS49n3AFG_A" local="de" name="Ares Archon Heavy MP Laser" page="49"/>
             <modie>HM</modie>
             <erweiterung>Oben</erweiterung>
@@ -3577,7 +3577,7 @@
             <modie>EM</modie>
             <magazin xmi:id="__H4nIK7kEeSMS49n3AFG_A" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Onotari Arms Ballista MML ammunition" type="b4e80557-89cc-40ef-ab2d-8970b818fae9"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="6753f5f1-72c5-41fb-beb6-6c1a37b82f5e" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="18F" wertValue="14000" name="Onotari Interceptor" schadenscode="Missile" praezision="4" kapazitaet="2">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="6753f5f1-72c5-41fb-beb6-6c1a37b82f5e" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="18F" wertValue="14000" name="Onotari Interceptor" schadenscode="Missile" praezision="4" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg" kapazitaet="2">
             <localizations xmi:id="__H5OMq7kEeSMS49n3AFG_A" local="de" name="Onotari Interceptor"/>
             <modie>EM</modie>
             <einbau xmi:id="__H4nIq7kEeSMS49n3AFG_A" name="Smartgun System, Internal" parentId="d57d2c64-1f61-4f5f-a465-8ce0dfacec6a" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
@@ -4294,7 +4294,7 @@
             <erweiterung>Oben</erweiterung>
             <magazin xmi:id="__JUKgK7kEeSMS49n3AFG_A" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Yamaha Pulsar ammunition" type="21628e04-95d0-4ba4-bc66-fcbed5a1bf8e"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="ae58f859-37ee-4fac-befa-365acd3c7da7" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="AK-98 Grenade Launcher" schadenscode="Grenade" praezision="3" kapazitaet="6">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="ae58f859-37ee-4fac-befa-365acd3c7da7" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="AK-98 Grenade Launcher" schadenscode="Grenade" praezision="3" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" kapazitaet="6">
             <localizations xmi:id="__JUKg67kEeSMS49n3AFG_A" local="de" name="AK-98 Unterlauf-Granatwerfer"/>
             <modie>EM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -4302,7 +4302,7 @@
             <erweiterung>Unten</erweiterung>
             <magazin xmi:id="__JUKgq7kEeSMS49n3AFG_A" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="AK-98 Grenade Launcher ammunition" type="ae58f859-37ee-4fac-befa-365acd3c7da7"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" schadenscode="Grenade" praezision="6" munitionstyp="Streifen" kapazitaet="6">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="e9bea546-f35d-4ecc-9d15-8b30df9bdb28" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" schadenscode="Grenade" praezision="6" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
             <localizations xmi:id="__JUxka7kEeSMS49n3AFG_A" local="de" name="Ares Alpha Unterlauf-Granatwerfer"/>
             <modie>EM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -4310,7 +4310,7 @@
             <erweiterung>Unten</erweiterung>
             <magazin xmi:id="__JUxkK7kEeSMS49n3AFG_A" page="428" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ares Alpha Grenade Launcher ammunition" type="e9bea546-f35d-4ecc-9d15-8b30df9bdb28"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Grenade Launcher" schadenscode="Grenade" praezision="4" munitionstyp="Streifen" kapazitaet="6">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="74e0b1e5-2449-4075-9b0d-eb0d8383033b" page="37" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="0" name="HK XM30 Grenade Launcher" schadenscode="Grenade" praezision="4" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="6">
             <localizations xmi:id="__JVYp67kEeSMS49n3AFG_A" local="de" name="HK XM30 Unterlauf-Granatwerfer"/>
             <modie>EM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -8704,78 +8704,78 @@
         <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
         <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="822b059f-c132-45ee-8c0b-df6912d5c862"/>
         <entries xsi:type="shr5:CommonProgram" xmi:id="bed1f6eb-ead9-49aa-bb24-266c21d7aeb4" wertValue="80" name="Browse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYTnTEeSe6_w6Jrbqxg" local="de" name="Schmöker"/>
+          <localizations xmi:id="_vnvnIPW-EeSoPMErllLLPw" local="de" name="Schmöker"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="734f653b-35ca-4b26-b837-f64662878e8f" wertValue="80" name="Configurator" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYjnTEeSe6_w6Jrbqxg" local="de" name="Konfigurator" page="245"/>
+          <localizations xmi:id="_vnvnIfW-EeSoPMErllLLPw" local="de" name="Konfigurator" page="245"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="dd35285a-7506-4b7e-8d5a-1b6ea8577e19" wertValue="80" name="Edit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLYznTEeSe6_w6Jrbqxg" local="de" name="Editieren"/>
+          <localizations xmi:id="_vnvnIvW-EeSoPMErllLLPw" local="de" name="Editieren"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="a1dd8536-d2ca-41cd-be55-4adfdc52068b" wertValue="80" name="Encryption" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCLZDnTEeSe6_w6Jrbqxg" local="de" name="Verschlüsselung" page="245"/>
+          <localizations xmi:id="_vnvnI_W-EeSoPMErllLLPw" local="de" name="Verschlüsselung" page="245"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="3f2498d9-b575-474c-9b18-b959442011c5" wertValue="80" name="Signal Scrub" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycDnTEeSe6_w6Jrbqxg" local="de" name="Signalreiniger" page="245"/>
+          <localizations xmi:id="_vnvnJPW-EeSoPMErllLLPw" local="de" name="Signalreiniger" page="245"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="1861266c-9439-4816-9b1e-09ea9bbac9ec" wertValue="80" name="Toolbox" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycTnTEeSe6_w6Jrbqxg" local="de" name="Toolbox" page="245"/>
+          <localizations xmi:id="_vnvnJfW-EeSoPMErllLLPw" local="de" name="Toolbox" page="245"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="c56fd11b-f543-4c1f-8f97-6e7a82265885" wertValue="80" name="Virtual Machine" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycjnTEeSe6_w6Jrbqxg" local="de" name="Virtuelle Maschine" page="245"/>
+          <localizations xmi:id="_vnvnJvW-EeSoPMErllLLPw" local="de" name="Virtuelle Maschine" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="6968d7e3-b58f-4199-af6f-5877097a51da" wertValue="80" name="Armor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCycznTEeSe6_w6Jrbqxg" local="de" name="Panzerung"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="6968d7e3-b58f-4199-af6f-5877097a51da" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnvnJ_W-EeSoPMErllLLPw" local="de" name="Panzerung"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f5a1d20b-caa2-4a53-ab42-6e71ee519702" wertValue="80" name="Baby Monitor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWCydDnTEeSe6_w6Jrbqxg" local="de" name="Babymonitor" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f5a1d20b-caa2-4a53-ab42-6e71ee519702" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnvnKPW-EeSoPMErllLLPw" local="de" name="Babymonitor" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="9bc73d88-bad2-4ae9-b9ea-fe004447e493" wertValue="80" name="Biofeedback" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgDnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="9bc73d88-bad2-4ae9-b9ea-fe004447e493" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOMPW-EeSoPMErllLLPw" local="de" name="Biofeedback" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f05f35c3-1c35-4bac-9ecb-1a6ebf9f89dd" wertValue="80" name="Biofeedback Filter" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgTnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback-Filter" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f05f35c3-1c35-4bac-9ecb-1a6ebf9f89dd" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOMfW-EeSoPMErllLLPw" local="de" name="Biofeedback-Filter" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f1329065-8e71-41d8-8090-a5e8f91cf031" wertValue="80" name="Blackout" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgjnTEeSe6_w6Jrbqxg" local="de" name="Blackout"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f1329065-8e71-41d8-8090-a5e8f91cf031" verfuegbarkeit="6R" wertValue="250" name="Blackout" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOMvW-EeSoPMErllLLPw" local="de" name="Blackout"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="de82aad2-da77-4478-a621-85ad02d70120" wertValue="80" name="Decrypt" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZgznTEeSe6_w6Jrbqxg" local="de" name="Entschlüsselung"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="de82aad2-da77-4478-a621-85ad02d70120" verfuegbarkeit="6R" wertValue="250" name="Decrypt" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOM_W-EeSoPMErllLLPw" local="de" name="Entschlüsselung"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="6e6805d2-504d-422e-82d2-f782a912b2a7" wertValue="80" name="Defuse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWDZhDnTEeSe6_w6Jrbqxg" local="de" name="Entschärfen"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="6e6805d2-504d-422e-82d2-f782a912b2a7" verfuegbarkeit="6R" wertValue="250" name="Defuse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwONPW-EeSoPMErllLLPw" local="de" name="Entschärfen"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a52cc5e5-83f5-4bcd-9fea-4f9ff5f52765" wertValue="80" name="Demolition" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkDnTEeSe6_w6Jrbqxg" local="de" name="Superbombe" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a52cc5e5-83f5-4bcd-9fea-4f9ff5f52765" verfuegbarkeit="6R" wertValue="250" name="Demolition" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwONfW-EeSoPMErllLLPw" local="de" name="Superbombe" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="16b4bbc1-3a19-490c-90a8-0d102f18e709" wertValue="80" name="Exploit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkTnTEeSe6_w6Jrbqxg" local="de" name="Ausnutzen"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="16b4bbc1-3a19-490c-90a8-0d102f18e709" verfuegbarkeit="6R" wertValue="250" name="Exploit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwONvW-EeSoPMErllLLPw" local="de" name="Ausnutzen"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="b96ebe65-9bb5-49e7-8d23-a209eae7f9f3" wertValue="80" name="Fork" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkjnTEeSe6_w6Jrbqxg" local="de" name="Gabel" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="b96ebe65-9bb5-49e7-8d23-a209eae7f9f3" verfuegbarkeit="6R" wertValue="250" name="Fork" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwON_W-EeSoPMErllLLPw" local="de" name="Gabel" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="4a79b908-8239-4b3a-9c82-e2420be2a174" wertValue="80" name="Guard" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAkznTEeSe6_w6Jrbqxg" local="de" name="Schild" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="4a79b908-8239-4b3a-9c82-e2420be2a174" verfuegbarkeit="6R" wertValue="250" name="Guard" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOOPW-EeSoPMErllLLPw" local="de" name="Schild" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="d2f96d3a-9dcb-4b46-b5bd-b98a730bf1d7" wertValue="80" name="Hammer" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEAlDnTEeSe6_w6Jrbqxg" local="de" name="Hammer" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="d2f96d3a-9dcb-4b46-b5bd-b98a730bf1d7" verfuegbarkeit="6R" wertValue="250" name="Hammer" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOOfW-EeSoPMErllLLPw" local="de" name="Hammer" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="01c5f885-d14f-478d-8e1d-612773035480" wertValue="80" name="Lockdown" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoDnTEeSe6_w6Jrbqxg" local="de" name="Fessel" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="01c5f885-d14f-478d-8e1d-612773035480" verfuegbarkeit="6R" wertValue="250" name="Lockdown" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnwOOvW-EeSoPMErllLLPw" local="de" name="Fessel" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="e3382b40-114e-456a-982a-f52d135527f5" wertValue="80" name="Mugger" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoTnTEeSe6_w6Jrbqxg" local="de" name="Überfall" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="e3382b40-114e-456a-982a-f52d135527f5" verfuegbarkeit="6R" wertValue="250" name="Mugger" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnw1QPW-EeSoPMErllLLPw" local="de" name="Überfall" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="ff9378d1-b6bc-4adc-8651-a9689a1b92b9" wertValue="80" name="Shell" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnojnTEeSe6_w6Jrbqxg" local="de" name="Schutzschirm" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="ff9378d1-b6bc-4adc-8651-a9689a1b92b9" verfuegbarkeit="6R" wertValue="250" name="Shell" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnw1QfW-EeSoPMErllLLPw" local="de" name="Schutzschirm" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="f7b5a9a3-c030-4647-b043-f968913867b4" wertValue="80" name="Sneak" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnoznTEeSe6_w6Jrbqxg" local="de" name="Irreführung" page="245"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="f7b5a9a3-c030-4647-b043-f968913867b4" verfuegbarkeit="6R" wertValue="250" name="Sneak" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnw1QvW-EeSoPMErllLLPw" local="de" name="Irreführung" page="245"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="a381db11-6e7f-4472-b4ef-79a16be65ba4" wertValue="80" name="Stealth" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EWEnpDnTEeSe6_w6Jrbqxg" local="de" name="Schleicher"/>
+        <entries xsi:type="shr5:CommonProgram" xmi:id="a381db11-6e7f-4472-b4ef-79a16be65ba4" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
+          <localizations xmi:id="_vnw1Q_W-EeSoPMErllLLPw" local="de" name="Schleicher"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"  programType="hackingProgram">
           <localizations xmi:id="_EWEnpTnTEeSe6_w6Jrbqxg" local="de" name="Aufspüren"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="1b78748c-9a1d-427f-8657-e3e2bc8fd5b5" wertValue="80" name="Wrapper" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">

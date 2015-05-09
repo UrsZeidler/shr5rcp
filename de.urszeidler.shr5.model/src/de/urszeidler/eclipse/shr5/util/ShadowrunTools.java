@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
 import com.google.common.base.Function;
@@ -889,6 +890,14 @@ public class ShadowrunTools {
         try {
             XMLResource xmlRes = (XMLResource)eo.eResource();
             return xmlRes.getID(eo);
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public static EObject getEObjectFromId(String id,Resource resource) {
+        try {
+            return resource.getEObject(id);
         } catch (Exception e) {
         }
         return null;

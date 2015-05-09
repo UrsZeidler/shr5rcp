@@ -43,6 +43,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
+import de.urszeidler.shr5.ecp.editor.ShrEditorInput;
 import de.urszeidler.shr5.runtime.ui.editor.RuntimeEditor;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
@@ -79,7 +80,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
     public static void openEditor(Object element, ECPProject ecpProject) {
         EObject eObject = (EObject)element;
         String name = eObject.eClass().getEPackage().getName();
-        EObjectEditorInput eObjectEditorInput = new EObjectEditorInput(eObject, ecpProject.getEditingDomain());
+        ShrEditorInput eObjectEditorInput = new ShrEditorInput(eObject, ecpProject.getEditingDomain());
         try {
             if ("runtime".equals(name) || "scripting".equals(name)) {
                 IEditorPart openEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()

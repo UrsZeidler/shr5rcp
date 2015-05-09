@@ -75,7 +75,7 @@ public class Activator extends AbstractUIPlugin {
         plugin = this;
         store = getPreferenceStore();
 
-        cleanOldEditors();
+//        cleanOldEditors();
     }
 
     /**

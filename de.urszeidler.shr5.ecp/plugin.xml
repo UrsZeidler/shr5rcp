@@ -530,6 +530,13 @@
            commandId="de.urszeidler.shr5.ecp.commands.createItemWizard">
      </handler>
   </extension>
+  <extension
+        point="org.eclipse.ui.elementFactories">
+     <factory
+           class="de.urszeidler.shr5.ecp.editor.ShrEditorInputFactory"
+           id="de.urszeidler.shr5.ecp.editor.ShrEditorInputFactory">
+     </factory>
+  </extension>
 
 
 </plugin>
