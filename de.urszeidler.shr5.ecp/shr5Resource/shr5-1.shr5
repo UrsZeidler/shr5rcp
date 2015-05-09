@@ -4349,59 +4349,113 @@
             <magazin xmi:id="__JX04K7kEeSMS49n3AFG_A" page="31" srcBook="7c37e671-9d0c-48f6-aa61-891a38be18d8" name="Ares Predator III ammunition" type="3a91672e-0588-45a6-b225-149624e813ac"/>
           </entries>
         </entries>
+        <entries xsi:type="shr5:ShrList" xmi:id="_ron5MPZNEeSE-8O8mkkcFA" name="Amunition">
+          <entries xsi:type="shr5:Munition" xmi:id="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+            <localizations xmi:id="_EJ3XoDnTEeSe6_w6Jrbqxg" local="de" name="Munition: APDS"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="0bf4113c-dedb-411d-8981-7b6af169f056" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="400" name="Ammo: Assault Cannon" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ3XoTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Sturmkanone"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
+            <localizations xmi:id="_EJ3XojnTEeSe6_w6Jrbqxg" local="de" name="Munition: Explosivgeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="95bff6e2-d788-407b-9069-093250f89fcb" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="65" name="Ammo: Flechette Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="5">
+            <localizations xmi:id="_EJ3-sDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Flechettegeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
+            <localizations xmi:id="_EJ3-sTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Gelgeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
+            <localizations xmi:id="_EJ3-sjnTEeSe6_w6Jrbqxg" local="de" name="Hohlspitzmunition"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="638c81a2-328b-4e22-8fb0-ee37c5e2f6c9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="75" name="Ammo: Injection Darts" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ3-sznTEeSe6_w6Jrbqxg" local="de" name="Munition: Injektionspfeile"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ4lwDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Standardmunition"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="d9f69780-93eb-41ff-9a9c-893f8c52794e" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="80" name="Ammo: Stick-n-Shock" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="-5">
+            <localizations xmi:id="_EJ4lwTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Schocker"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="e0d7aea7-52ac-4670-bac3-b13ce144257c" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Ammo: Tracer" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ4lwjnTEeSe6_w6Jrbqxg" local="de" name="Munition: Tracer"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="8afe5065-5815-4a98-b047-2a7fed85db55" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3" wertValue="50" name="Ammo: Taser Dart" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ4lwznTEeSe6_w6Jrbqxg" local="de" name="Munition: Taserpfeil"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="96eb3f57-26e0-40c5-8dac-62cf8a0bc52f" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14F" wertValue="120" name="Ammo: EX-Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="-1">
+            <localizations xmi:id="_EJ4lxDnTEeSe6_w6Jrbqxg" local="de" name="Munition: EX-Explosivgeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="ecc8aafc-f8a3-408b-9b47-6f85a473de13" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2R" wertValue="10" name="Ammo: Frangible Rounds" anzahl="10" proAnzahl="10" damageMod="-1" armorMod="4">
+            <localizations xmi:id="_EJ5M0DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Splittergeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="506dd9c6-ea57-4ae2-8887-81ce93e5a7b2" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6R" wertValue="20" name="Ammo: Flare Rounds" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="2">
+            <localizations xmi:id="_EJ5M0TnTEeSe6_w6Jrbqxg" local="de" name="Munition: Leuchtgeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="f29f0642-65a5-4461-bca1-396907dbf82e" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="150" name="Ammo: Tracker Rounds, Security Tag" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ5M0jnTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Sicherheitsmarker"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="4b844ac3-20e8-4982-8711-20579b5295a8" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="75" name="Ammo: Tracker Rounds, Stealth Tag" anzahl="10" proAnzahl="10">
+            <localizations xmi:id="_EJ5M0znTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Spionagemarker"/>
+          </entries>
+          <entries xsi:type="shr5:Munition" xmi:id="4257a39e-41eb-45ee-976e-41c3c0bf960c" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="5" name="Ammo: Capsule Rounds" anzahl="10" proAnzahl="10" damageMod="-4" armorMod="4">
+            <localizations xmi:id="_EJ5z4DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Kapselgeschosse"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Grenade: Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omMzkPZZEeSsLt2jgpjbkA" local="de" name="Granate: Betäubung"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Grenade: Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNaoPZZEeSsLt2jgpjbkA" local="de" name="Granate: Flash-Pack"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNaofZZEeSsLt2jgpjbkA" local="de" name="Granate: Splitter"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: High Explosive" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNaovZZEeSsLt2jgpjbkA" local="de" name="Granate: Spreng"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNao_ZZEeSsLt2jgpjbkA" local="de" name="Granate: Gas"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNapPZZEeSsLt2jgpjbkA" local="de" name="Granate: Rauch"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Grenade: Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omNapfZZEeSsLt2jgpjbkA" local="de" name="Granate: IR-Rauch"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="f092fca8-46a9-4351-a06a-362846e6546a" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Minigrenade: Flash-Bang" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omThQPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Betäubung"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="7c00891f-6554-497d-9726-058d7c4a598e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Minigrenade: Flash-Pak" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omThQfZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Flash-Pack"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="8e1583bf-4cc5-4498-a800-36cb61d3fb27" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: Fragmentation" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omUIUPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Splitter"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="daecdfc8-15d5-4864-9e20-13e4a0dca88e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: High Explosive" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omUIUfZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Spreng"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="74284124-57a0-479b-9ab1-3433bdb9e3b7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Gas" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omUIUvZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Gas"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="b6381691-1a96-4299-b9df-129ffee64c45" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omUIU_ZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Rauch"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Minigrenade: Thermal Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <localizations xmi:id="_omUIVPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: IR-Rauch"/>
+          </entries>
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="_OSuP0PZFEeSk2Z4iXCLh5g" wertValue="2" anzahl="1" proAnzahl="1" type="_ENGR0znTEeSe6_w6Jrbqxg">
+            <chemical xsi:type="shr5:Toxin" xmi:id="_P9_e0PZFEeSk2Z4iXCLh5g" name="Neuro-Stun X" parentId="4ad3f9ea-4ee0-45f8-a57b-ed40c660d0b0" page="410" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="14R" wertValue="100" anzahl="10" proAnzahl="10">
+              <localizations xmi:id="_P9_e0fZFEeSk2Z4iXCLh5g" local="de" name="Neuro-Stun X"/>
+            </chemical>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="_NLxEQPZEEeSk2Z4iXCLh5g" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" wertValue="1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <chemical xsi:type="shr5:Toxin" xmi:id="_QIyPAPZEEeSk2Z4iXCLh5g" name="Neuro-Stun IX" parentId="f81d9a2e-5c2d-49ad-93b4-1a7a71439bf3" page="410" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="13R" wertValue="60" anzahl="10" proAnzahl="10">
+              <localizations xmi:id="_QIyPAfZEEeSk2Z4iXCLh5g" local="de" name="Neuro-Stun IX"/>
+            </chemical>
+          </entries>
+        </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EJ2wkTnTEeSe6_w6Jrbqxg" name="Gears">
-        <entries xsi:type="shr5:Munition" xmi:id="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
-          <localizations xmi:id="_EJ3XoDnTEeSe6_w6Jrbqxg" local="de" name="Munition: APDS"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="0bf4113c-dedb-411d-8981-7b6af169f056" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="400" name="Ammo: Assault Cannon" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ3XoTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Sturmkanone"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
-          <localizations xmi:id="_EJ3XojnTEeSe6_w6Jrbqxg" local="de" name="Munition: Explosivgeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="95bff6e2-d788-407b-9069-093250f89fcb" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="65" name="Ammo: Flechette Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="5">
-          <localizations xmi:id="_EJ3-sDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Flechettegeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
-          <localizations xmi:id="_EJ3-sTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Gelgeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
-          <localizations xmi:id="_EJ3-sjnTEeSe6_w6Jrbqxg" local="de" name="Hohlspitzmunition"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="638c81a2-328b-4e22-8fb0-ee37c5e2f6c9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="75" name="Ammo: Injection Darts" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ3-sznTEeSe6_w6Jrbqxg" local="de" name="Munition: Injektionspfeile"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ4lwDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Standardmunition"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="d9f69780-93eb-41ff-9a9c-893f8c52794e" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="80" name="Ammo: Stick-n-Shock" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="-5">
-          <localizations xmi:id="_EJ4lwTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Schocker"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="e0d7aea7-52ac-4670-bac3-b13ce144257c" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Ammo: Tracer" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ4lwjnTEeSe6_w6Jrbqxg" local="de" name="Munition: Tracer"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="8afe5065-5815-4a98-b047-2a7fed85db55" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3" wertValue="50" name="Ammo: Taser Dart" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ4lwznTEeSe6_w6Jrbqxg" local="de" name="Munition: Taserpfeil"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="96eb3f57-26e0-40c5-8dac-62cf8a0bc52f" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14F" wertValue="120" name="Ammo: EX-Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="-1">
-          <localizations xmi:id="_EJ4lxDnTEeSe6_w6Jrbqxg" local="de" name="Munition: EX-Explosivgeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="ecc8aafc-f8a3-408b-9b47-6f85a473de13" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2R" wertValue="10" name="Ammo: Frangible Rounds" anzahl="10" proAnzahl="10" damageMod="-1" armorMod="4">
-          <localizations xmi:id="_EJ5M0DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Splittergeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="506dd9c6-ea57-4ae2-8887-81ce93e5a7b2" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6R" wertValue="20" name="Ammo: Flare Rounds" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="2">
-          <localizations xmi:id="_EJ5M0TnTEeSe6_w6Jrbqxg" local="de" name="Munition: Leuchtgeschosse"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="f29f0642-65a5-4461-bca1-396907dbf82e" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="150" name="Ammo: Tracker Rounds, Security Tag" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ5M0jnTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Sicherheitsmarker"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="4b844ac3-20e8-4982-8711-20579b5295a8" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="75" name="Ammo: Tracker Rounds, Stealth Tag" anzahl="10" proAnzahl="10">
-          <localizations xmi:id="_EJ5M0znTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Spionagemarker"/>
-        </entries>
-        <entries xsi:type="shr5:Munition" xmi:id="4257a39e-41eb-45ee-976e-41c3c0bf960c" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="5" name="Ammo: Capsule Rounds" anzahl="10" proAnzahl="10" damageMod="-4" armorMod="4">
-          <localizations xmi:id="_EJ5z4DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Kapselgeschosse"/>
-        </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="9e7a685f-e612-4b6b-955c-a7bc42b23682" page="423" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" name="Arrow: Standard" kategorie="Ammunition">
           <localizations xmi:id="_EJ6a8DnTEeSe6_w6Jrbqxg" local="de" name="Pfeil" page="423"/>
         </entries>

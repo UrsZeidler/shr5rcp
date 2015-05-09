@@ -1466,6 +1466,56 @@
 					<xsl:call-template name="localization" />
 				</entries>
 			</xsl:when>
+			<xsl:when
+				test="category/text()='Ammunition' and  starts-with(name/text(),'Grenade:' )">
+				<entries xsi:type="shr5:Granate">
+					<xsl:if test="number(costfor/text())">
+						<xsl:attribute name="proAnzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
+						<xsl:attribute name="anzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/damage/text())">
+						<xsl:attribute name="damageMod">
+					<xsl:value-of select="weaponbonus/damage/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/ap/text())">
+						<xsl:attribute name="armorMod">
+					<xsl:value-of select="weaponbonus/ap/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
+			<xsl:when
+				test="category/text()='Ammunition' and  starts-with(name/text(),'Minigrenade:' )">
+				<entries xsi:type="shr5:MiniGrenate">
+					<xsl:if test="number(costfor/text())">
+						<xsl:attribute name="proAnzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
+						<xsl:attribute name="anzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/damage/text())">
+						<xsl:attribute name="damageMod">
+					<xsl:value-of select="weaponbonus/damage/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/ap/text())">
+						<xsl:attribute name="armorMod">
+					<xsl:value-of select="weaponbonus/ap/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
+			</xsl:when>
 			<xsl:when test="category/text()='Rigger Command Consoles'">
 				<entries xsi:type="shr5:RiggerCommandConsole">
 					<xsl:if test="number(devicerating/text())">
