@@ -181,6 +181,10 @@ public class Messages extends NLS {
     public static String RuntimeCharacterPage_over_monitor;
     public static String RuntimeCharacterPage_physical_monitor;
     public static String RuntimeCharacterPage_state;
+    public static String BeschreibbarWidget_textBeschreibung_toolTipText;
+    public static String BeschreibbarWidget_btnClear_text;
+    public static String BeschreibbarWidget_link_text;
+    public static String BeschreibbarWidget_link_clear_text;
 
     static {
         // initialize resource bundle

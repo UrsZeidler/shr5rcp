@@ -7,13 +7,16 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -22,10 +25,10 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Link;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ResourceListSelectionDialog;
 import org.eclipse.ui.dialogs.SelectionDialog;
@@ -42,12 +45,14 @@ public class BeschreibbarWidget extends Composite {
     private final FormToolkit toolkit;
     private Text textName;
     private Label imageLabel;
-    private Text textBeschreibung;
-    private Button btnChange;
+    private StyledText textBeschreibung;
     private DataBindingContext m_bindingContext;
     private EditingDomain editingDomain;
     private Beschreibbar beschreibbar;
     private Section sctnNewSection;
+    private Composite composite;
+    private Link link;
+    private Link link_clear;
 
     /**
      * Create the composite.
@@ -67,6 +72,7 @@ public class BeschreibbarWidget extends Composite {
         toolkit.paintBordersFor(this);
 
         createWidgets(parent1, style);
+        this.pack();
     }
 
     /**
@@ -85,6 +91,7 @@ public class BeschreibbarWidget extends Composite {
         toolkit.paintBordersFor(this);
 
         createWidgets(parent, style);
+        this.pack();
     }
 
     private void createWidgets(Composite parent1, int style) {
@@ -109,7 +116,7 @@ public class BeschreibbarWidget extends Composite {
         lblName.setText(Messages.BeschreibbarWidget_name);
 
         textName =    new Text(parent, SWT.BORDER);//toolkit.createText(parent, "");//
-        textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         textName.setMessage(Messages.BeschreibbarWidget_name);
         toolkit.adapt(textName, true, true);
 
@@ -128,39 +135,62 @@ public class BeschreibbarWidget extends Composite {
         toolkit.adapt(lblBeschreibbar, true, true);
         lblBeschreibbar.setText(Messages.BeschreibbarWidget_description);
 
-        textBeschreibung = new Text(parent, SWT.MULTI|SWT.BORDER);//toolkit.createText(parent, "", SWT.MULTI|SWT.BORDER);
-        textBeschreibung.setMessage(Messages.BeschreibbarWidget_description);
-        GridData gd_textBeschreibung = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 2);
+        textBeschreibung = new StyledText(parent, SWT.BORDER | SWT.WRAP | SWT.MULTI);//toolkit.createText(parent, "", SWT.MULTI|SWT.BORDER);
+        textBeschreibung.setToolTipText(Messages.BeschreibbarWidget_textBeschreibung_toolTipText);
+//        textBeschreibung.setMessage(Messages.BeschreibbarWidget_description);
+        GridData gd_textBeschreibung = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 2);
+        gd_textBeschreibung.widthHint = 50;
         gd_textBeschreibung.heightHint = 74;
         textBeschreibung.setLayoutData(gd_textBeschreibung);
         toolkit.adapt(textBeschreibung, true, true);
         new Label(parent, SWT.NONE);
+        
+        composite = new Composite(parent, SWT.NONE);
+        composite.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+        toolkit.adapt(composite);
+        toolkit.paintBordersFor(composite);
+        GridLayout gl_composite = new GridLayout(2, true);
+        gl_composite.marginHeight = 0;
+        composite.setLayout(gl_composite);
+                
+                link = new Link(composite, SWT.NONE);
+                link.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+                link.addSelectionListener(new SelectionAdapter() {
+                         @Override
+                        public void widgetSelected(SelectionEvent e) {
+                            IWorkspace workspace = ResourcesPlugin.getWorkspace();
+            
+                            SelectionDialog dlg;
+                            dlg = new ResourceListSelectionDialog(getShell(), workspace.getRoot(), 1);
+                            dlg.setTitle(Messages.BeschreibbarWidget_select_image);
+            
+                            int open = dlg.open();
+                            if (open == Window.OK) {
+                                Object[] result = dlg.getResult();
+                                if (result != null){
+                                    Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, ((IFile)result[0]).getFullPath().toString());
+                                    editingDomain.getCommandStack().execute(create);
+                                }
+                            }
+            
+                        }
 
-        btnChange = new Button(parent, SWT.NONE);
-        btnChange.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        toolkit.adapt(btnChange, true, true);
-        btnChange.setText(Messages.BeschreibbarWidget_change_image);
 
-        btnChange.addSelectionListener(new SelectionAdapter() {
-
-            @Override
-            public void widgetSelected(SelectionEvent e) {
-                IWorkspace workspace = ResourcesPlugin.getWorkspace();
-
-                SelectionDialog dlg;
-                dlg = new ResourceListSelectionDialog(getShell(), workspace.getRoot(), 1);
-                dlg.setTitle(Messages.BeschreibbarWidget_select_image);
-
-                int open = dlg.open();
-                if (open == Window.OK) {
-                    Object[] result = dlg.getResult();
-                    if (result != null)
-                        beschreibbar.setImage(((IFile)result[0]).getFullPath().toString());
-
-                }
-
-            }
-        });
+                });
+                toolkit.adapt(link, true, true);
+                link.setText(Messages.BeschreibbarWidget_link_text);
+                
+                link_clear = new Link(composite, SWT.NONE);
+                link_clear.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+                link_clear.addSelectionListener(new SelectionAdapter() {
+                    @Override
+                    public void widgetSelected(SelectionEvent e) {
+                        Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, null);
+                        editingDomain.getCommandStack().execute(create);
+                   }
+                });
+                toolkit.adapt(link_clear, true, true);
+                link_clear.setText(Messages.BeschreibbarWidget_link_clear_text);
         m_bindingContext = initDataBindings();
     }
 
