@@ -38,6 +38,7 @@ import org.eclipse.ui.forms.widgets.Section;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.ecp.dialogs.ImageChooseDialog;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class BeschreibbarWidget extends Composite {
@@ -115,7 +116,7 @@ public class BeschreibbarWidget extends Composite {
         toolkit.adapt(lblName, true, true);
         lblName.setText(Messages.BeschreibbarWidget_name);
 
-        textName =    new Text(parent, SWT.BORDER);//toolkit.createText(parent, "");//
+        textName = new Text(parent, SWT.BORDER);// toolkit.createText(parent, "");//
         textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         textName.setMessage(Messages.BeschreibbarWidget_name);
         toolkit.adapt(textName, true, true);
@@ -135,16 +136,16 @@ public class BeschreibbarWidget extends Composite {
         toolkit.adapt(lblBeschreibbar, true, true);
         lblBeschreibbar.setText(Messages.BeschreibbarWidget_description);
 
-        textBeschreibung = new StyledText(parent, SWT.BORDER | SWT.WRAP | SWT.MULTI);//toolkit.createText(parent, "", SWT.MULTI|SWT.BORDER);
+        textBeschreibung = new StyledText(parent, SWT.BORDER | SWT.WRAP | SWT.MULTI);// toolkit.createText(parent, "", SWT.MULTI|SWT.BORDER);
         textBeschreibung.setToolTipText(Messages.BeschreibbarWidget_textBeschreibung_toolTipText);
-//        textBeschreibung.setMessage(Messages.BeschreibbarWidget_description);
+        // textBeschreibung.setMessage(Messages.BeschreibbarWidget_description);
         GridData gd_textBeschreibung = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 2);
         gd_textBeschreibung.widthHint = 50;
         gd_textBeschreibung.heightHint = 74;
         textBeschreibung.setLayoutData(gd_textBeschreibung);
         toolkit.adapt(textBeschreibung, true, true);
         new Label(parent, SWT.NONE);
-        
+
         composite = new Composite(parent, SWT.NONE);
         composite.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
         toolkit.adapt(composite);
@@ -152,45 +153,54 @@ public class BeschreibbarWidget extends Composite {
         GridLayout gl_composite = new GridLayout(2, true);
         gl_composite.marginHeight = 0;
         composite.setLayout(gl_composite);
-                
-                link = new Link(composite, SWT.NONE);
-                link.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
-                link.addSelectionListener(new SelectionAdapter() {
-                         @Override
-                        public void widgetSelected(SelectionEvent e) {
-                            IWorkspace workspace = ResourcesPlugin.getWorkspace();
-            
-                            SelectionDialog dlg;
-                            dlg = new ResourceListSelectionDialog(getShell(), workspace.getRoot(), 1);
-                            dlg.setTitle(Messages.BeschreibbarWidget_select_image);
-            
-                            int open = dlg.open();
-                            if (open == Window.OK) {
-                                Object[] result = dlg.getResult();
-                                if (result != null){
-                                    Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, ((IFile)result[0]).getFullPath().toString());
-                                    editingDomain.getCommandStack().execute(create);
-                                }
-                            }
-            
-                        }
 
-
-                });
-                toolkit.adapt(link, true, true);
-                link.setText(Messages.BeschreibbarWidget_link_text);
-                
-                link_clear = new Link(composite, SWT.NONE);
-                link_clear.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
-                link_clear.addSelectionListener(new SelectionAdapter() {
-                    @Override
-                    public void widgetSelected(SelectionEvent e) {
-                        Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, null);
+        link = new Link(composite, SWT.NONE);
+        link.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+        link.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                ImageChooseDialog imageChooseDialog = new ImageChooseDialog(getShell());
+                if (imageChooseDialog.open() == Window.OK) {
+                    if (imageChooseDialog.getValue() != null) {
+                        Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, imageChooseDialog.getValue()
+                                );
                         editingDomain.getCommandStack().execute(create);
-                   }
-                });
-                toolkit.adapt(link_clear, true, true);
-                link_clear.setText(Messages.BeschreibbarWidget_link_clear_text);
+                    }
+                }
+                // SelectionDialog dlg;
+                // dlg = new ResourceListSelectionDialog(getShell(), workspace.getRoot(), 1);
+                //
+                // // super.updateOKState(state);
+                //
+                // dlg.setTitle(Messages.BeschreibbarWidget_select_image);
+                //
+                // int open = dlg.open();
+                // if (open == Window.OK) {
+                // Object[] result = dlg.getResult();
+                // if (result != null) {
+                // Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, ((IFile)result[0])
+                // .getFullPath().toString());
+                // editingDomain.getCommandStack().execute(create);
+                // }
+                // }
+                //
+            }
+
+        });
+        toolkit.adapt(link, true, true);
+        link.setText(Messages.BeschreibbarWidget_link_text);
+
+        link_clear = new Link(composite, SWT.NONE);
+        link_clear.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+        link_clear.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, null);
+                editingDomain.getCommandStack().execute(create);
+            }
+        });
+        toolkit.adapt(link_clear, true, true);
+        link_clear.setText(Messages.BeschreibbarWidget_link_clear_text);
         m_bindingContext = initDataBindings();
     }
 
