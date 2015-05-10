@@ -311,6 +311,7 @@ public class CommonProgramItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
+            childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
         }
         return childrenFeatures;
     }
@@ -384,6 +385,7 @@ public class CommonProgramItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.COMMON_PROGRAM__LOCALIZATIONS:
+            case Shr5Package.COMMON_PROGRAM__MODS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -405,6 +407,11 @@ public class CommonProgramItemProvider
             (createChildParameter
                 (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
                  Shr5Factory.eINSTANCE.createLocalization()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.MODIFIZIERBAR__MODS,
+                 Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
     }
 
     /**

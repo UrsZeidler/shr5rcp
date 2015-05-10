@@ -15,7 +15,6 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
-import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;

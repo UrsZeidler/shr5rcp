@@ -14,13 +14,16 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.CommonProgram;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.MatrixProgramType;
+import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.RiggerProgram;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -43,6 +46,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl#getProgramType <em>Program Type</em>}</li>
  * </ul>
  * </p>
@@ -219,6 +223,16 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
      * @ordered
      */
     protected SourceBook srcBook;
+
+    /**
+     * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMods()
+     * @generated
+     * @ordered
+     */
+    protected EList<AttributModifikatorWert> mods;
 
     /**
      * The default value of the '{@link #getProgramType() <em>Program Type</em>}' attribute.
@@ -471,6 +485,18 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<AttributModifikatorWert> getMods() {
+        if (mods == null) {
+            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.COMMON_PROGRAM__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+        }
+        return mods;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public MatrixProgramType getProgramType() {
         return programType;
     }
@@ -492,11 +518,28 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getMods()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.COMMON_PROGRAM__LOCALIZATIONS:
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -530,6 +573,8 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
             case Shr5Package.COMMON_PROGRAM__SRC_BOOK:
                 if (resolve) return getSrcBook();
                 return basicGetSrcBook();
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                return getMods();
             case Shr5Package.COMMON_PROGRAM__PROGRAM_TYPE:
                 return getProgramType();
         }
@@ -573,6 +618,10 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
             case Shr5Package.COMMON_PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                getMods().clear();
+                getMods().addAll((Collection<? extends AttributModifikatorWert>)newValue);
+                return;
             case Shr5Package.COMMON_PROGRAM__PROGRAM_TYPE:
                 setProgramType((MatrixProgramType)newValue);
                 return;
@@ -615,6 +664,9 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
             case Shr5Package.COMMON_PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                getMods().clear();
+                return;
             case Shr5Package.COMMON_PROGRAM__PROGRAM_TYPE:
                 setProgramType(PROGRAM_TYPE_EDEFAULT);
                 return;
@@ -650,6 +702,8 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.COMMON_PROGRAM__SRC_BOOK:
                 return srcBook != null;
+            case Shr5Package.COMMON_PROGRAM__MODS:
+                return mods != null && !mods.isEmpty();
             case Shr5Package.COMMON_PROGRAM__PROGRAM_TYPE:
                 return programType != PROGRAM_TYPE_EDEFAULT;
         }
@@ -682,6 +736,12 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
             switch (derivedFeatureID) {
                 case Shr5Package.COMMON_PROGRAM__PAGE: return Shr5Package.QUELLE__PAGE;
                 case Shr5Package.COMMON_PROGRAM__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifizierbar.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.COMMON_PROGRAM__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
                 default: return -1;
             }
         }
@@ -719,6 +779,12 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.COMMON_PROGRAM__PAGE;
                 case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.COMMON_PROGRAM__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifizierbar.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.COMMON_PROGRAM__MODS;
                 default: return -1;
             }
         }

@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface MatrixProgram extends Software {
+public interface MatrixProgram extends Software, Modifizierbar {
 } // MatrixProgram

@@ -4350,97 +4350,97 @@
           </entries>
         </entries>
         <entries xsi:type="shr5:ShrList" xmi:id="_ron5MPZNEeSE-8O8mkkcFA" name="Amunition">
-          <entries xsi:type="shr5:Munition" xmi:id="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+          <entries xsi:type="shr5:Munition" xmi:id="ef9c8aae-26df-4fe6-88b3-79fbb5eb77c5" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="120" name="APDS" anzahl="10" proAnzahl="10" armorMod="-4">
             <localizations xmi:id="_EJ3XoDnTEeSe6_w6Jrbqxg" local="de" name="Munition: APDS"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="0bf4113c-dedb-411d-8981-7b6af169f056" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="400" name="Ammo: Assault Cannon" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="0bf4113c-dedb-411d-8981-7b6af169f056" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="12F" wertValue="400" name="Assault Cannon" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ3XoTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Sturmkanone"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
+          <entries xsi:type="shr5:Munition" xmi:id="1315cecd-1c13-4d69-9828-a3ea535675da" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9F" wertValue="80" name="Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
             <localizations xmi:id="_EJ3XojnTEeSe6_w6Jrbqxg" local="de" name="Munition: Explosivgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="95bff6e2-d788-407b-9069-093250f89fcb" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="65" name="Ammo: Flechette Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="5">
+          <entries xsi:type="shr5:Munition" xmi:id="95bff6e2-d788-407b-9069-093250f89fcb" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="65" name="Flechette Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="5">
             <localizations xmi:id="_EJ3-sDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Flechettegeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
+          <entries xsi:type="shr5:Munition" xmi:id="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Gel Rounds" anzahl="10" proAnzahl="10" armorMod="1">
             <localizations xmi:id="_EJ3-sTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Gelgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Ammo: Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
+          <entries xsi:type="shr5:Munition" xmi:id="f486f414-ee2c-46db-92ea-c682861d8fe0" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4F" wertValue="70" name="Hollow Points" anzahl="10" proAnzahl="10" damageMod="1" armorMod="2">
             <localizations xmi:id="_EJ3-sjnTEeSe6_w6Jrbqxg" local="de" name="Hohlspitzmunition"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="638c81a2-328b-4e22-8fb0-ee37c5e2f6c9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="75" name="Ammo: Injection Darts" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="638c81a2-328b-4e22-8fb0-ee37c5e2f6c9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="75" name="Injection Darts" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ3-sznTEeSe6_w6Jrbqxg" local="de" name="Munition: Injektionspfeile"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="b2a0b340-c793-4322-8422-8b03d18a6fae" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="20" name="Regular Ammo" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ4lwDnTEeSe6_w6Jrbqxg" local="de" name="Munition: Standardmunition"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="d9f69780-93eb-41ff-9a9c-893f8c52794e" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="80" name="Ammo: Stick-n-Shock" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="-5">
+          <entries xsi:type="shr5:Munition" xmi:id="d9f69780-93eb-41ff-9a9c-893f8c52794e" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="80" name="Stick-n-Shock" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="-5">
             <localizations xmi:id="_EJ4lwTnTEeSe6_w6Jrbqxg" local="de" name="Munition: Schocker"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="e0d7aea7-52ac-4670-bac3-b13ce144257c" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Ammo: Tracer" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="e0d7aea7-52ac-4670-bac3-b13ce144257c" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Tracer" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ4lwjnTEeSe6_w6Jrbqxg" local="de" name="Munition: Tracer"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="8afe5065-5815-4a98-b047-2a7fed85db55" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3" wertValue="50" name="Ammo: Taser Dart" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="8afe5065-5815-4a98-b047-2a7fed85db55" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="3" wertValue="50" name="Taser Dart" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ4lwznTEeSe6_w6Jrbqxg" local="de" name="Munition: Taserpfeil"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="96eb3f57-26e0-40c5-8dac-62cf8a0bc52f" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14F" wertValue="120" name="Ammo: EX-Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="-1">
+          <entries xsi:type="shr5:Munition" xmi:id="96eb3f57-26e0-40c5-8dac-62cf8a0bc52f" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="14F" wertValue="120" name="EX-Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="2" armorMod="-1">
             <localizations xmi:id="_EJ4lxDnTEeSe6_w6Jrbqxg" local="de" name="Munition: EX-Explosivgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="ecc8aafc-f8a3-408b-9b47-6f85a473de13" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2R" wertValue="10" name="Ammo: Frangible Rounds" anzahl="10" proAnzahl="10" damageMod="-1" armorMod="4">
+          <entries xsi:type="shr5:Munition" xmi:id="ecc8aafc-f8a3-408b-9b47-6f85a473de13" page="54" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2R" wertValue="10" name="Frangible Rounds" anzahl="10" proAnzahl="10" damageMod="-1" armorMod="4">
             <localizations xmi:id="_EJ5M0DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Splittergeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="506dd9c6-ea57-4ae2-8887-81ce93e5a7b2" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6R" wertValue="20" name="Ammo: Flare Rounds" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="2">
+          <entries xsi:type="shr5:Munition" xmi:id="506dd9c6-ea57-4ae2-8887-81ce93e5a7b2" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="6R" wertValue="20" name="Flare Rounds" anzahl="10" proAnzahl="10" damageMod="-2" armorMod="2">
             <localizations xmi:id="_EJ5M0TnTEeSe6_w6Jrbqxg" local="de" name="Munition: Leuchtgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="f29f0642-65a5-4461-bca1-396907dbf82e" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="150" name="Ammo: Tracker Rounds, Security Tag" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="f29f0642-65a5-4461-bca1-396907dbf82e" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="150" name="Tracker Rounds, Security Tag" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ5M0jnTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Sicherheitsmarker"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="4b844ac3-20e8-4982-8711-20579b5295a8" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="75" name="Ammo: Tracker Rounds, Stealth Tag" anzahl="10" proAnzahl="10">
+          <entries xsi:type="shr5:Munition" xmi:id="4b844ac3-20e8-4982-8711-20579b5295a8" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="8R" wertValue="75" name="Tracker Rounds, Stealth Tag" anzahl="10" proAnzahl="10">
             <localizations xmi:id="_EJ5M0znTEeSe6_w6Jrbqxg" local="de" name="Munition: Ortergeschosse , Spionagemarker"/>
           </entries>
-          <entries xsi:type="shr5:Munition" xmi:id="4257a39e-41eb-45ee-976e-41c3c0bf960c" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="5" name="Ammo: Capsule Rounds" anzahl="10" proAnzahl="10" damageMod="-4" armorMod="4">
+          <entries xsi:type="shr5:Munition" xmi:id="4257a39e-41eb-45ee-976e-41c3c0bf960c" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="5" name="Capsule Rounds" anzahl="10" proAnzahl="10" damageMod="-4" armorMod="4">
             <localizations xmi:id="_EJ5z4DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Kapselgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Grenade: Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
             <localizations xmi:id="_omMzkPZZEeSsLt2jgpjbkA" local="de" name="Granate: Betäubung"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Grenade: Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNaoPZZEeSsLt2jgpjbkA" local="de" name="Granate: Flash-Pack"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNaofZZEeSsLt2jgpjbkA" local="de" name="Granate: Splitter"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: High Explosive" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNaovZZEeSsLt2jgpjbkA" local="de" name="Granate: Spreng"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNao_ZZEeSsLt2jgpjbkA" local="de" name="Granate: Gas"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNapPZZEeSsLt2jgpjbkA" local="de" name="Granate: Rauch"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Grenade: Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNapfZZEeSsLt2jgpjbkA" local="de" name="Granate: IR-Rauch"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="f092fca8-46a9-4351-a06a-362846e6546a" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Minigrenade: Flash-Bang" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="f092fca8-46a9-4351-a06a-362846e6546a" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omThQPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Betäubung"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="7c00891f-6554-497d-9726-058d7c4a598e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Minigrenade: Flash-Pak" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="7c00891f-6554-497d-9726-058d7c4a598e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omThQfZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Flash-Pack"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="8e1583bf-4cc5-4498-a800-36cb61d3fb27" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: Fragmentation" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="8e1583bf-4cc5-4498-a800-36cb61d3fb27" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIUPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Splitter"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="daecdfc8-15d5-4864-9e20-13e4a0dca88e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: High Explosive" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="daecdfc8-15d5-4864-9e20-13e4a0dca88e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIUfZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Spreng"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="74284124-57a0-479b-9ab1-3433bdb9e3b7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Gas" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="74284124-57a0-479b-9ab1-3433bdb9e3b7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIUvZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Gas"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="b6381691-1a96-4299-b9df-129ffee64c45" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="b6381691-1a96-4299-b9df-129ffee64c45" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIU_ZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Rauch"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Minigrenade: Thermal Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIVPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: IR-Rauch"/>
           </entries>
           <entries xsi:type="shr5:MiniGrenate" xmi:id="_OSuP0PZFEeSk2Z4iXCLh5g" wertValue="2" anzahl="1" proAnzahl="1" type="_ENGR0znTEeSe6_w6Jrbqxg">
@@ -4548,48 +4548,6 @@
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="f7b819d7-9f6a-446e-b916-82b5973883d6" page="26" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="18F" wertValue="4000" name="Bola: Monofilament" kategorie="Ammunition">
           <localizations xmi:id="_EJ_TcDnTEeSe6_w6Jrbqxg" local="de" name="Bola: Monofilament"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Grenade: Flash-Bang" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_TcTnTEeSe6_w6Jrbqxg" local="de" name="Granate: Betäubung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Grenade: Flash-Pak" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_TcjnTEeSe6_w6Jrbqxg" local="de" name="Granate: Flash-Pack"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: Fragmentation" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_6gDnTEeSe6_w6Jrbqxg" local="de" name="Granate: Splitter"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Grenade: High Explosive" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_6gTnTEeSe6_w6Jrbqxg" local="de" name="Granate: Spreng"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Gas" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_6gjnTEeSe6_w6Jrbqxg" local="de" name="Granate: Gas"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Grenade: Smoke" kategorie="Ammunition">
-          <localizations xmi:id="_EJ_6gznTEeSe6_w6Jrbqxg" local="de" name="Granate: Rauch"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Grenade: Thermal Smoke" kategorie="Ammunition">
-          <localizations xmi:id="_EKAhkDnTEeSe6_w6Jrbqxg" local="de" name="Granate: IR-Rauch"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="f092fca8-46a9-4351-a06a-362846e6546a" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Minigrenade: Flash-Bang" kategorie="Ammunition">
-          <localizations xmi:id="_EKAhkTnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Betäubung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="7c00891f-6554-497d-9726-058d7c4a598e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Minigrenade: Flash-Pak" kategorie="Ammunition">
-          <localizations xmi:id="_EKAhkjnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Flash-Pack"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="8e1583bf-4cc5-4498-a800-36cb61d3fb27" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: Fragmentation" kategorie="Ammunition">
-          <localizations xmi:id="_EKBIoDnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Splitter"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="daecdfc8-15d5-4864-9e20-13e4a0dca88e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Minigrenade: High Explosive" kategorie="Ammunition">
-          <localizations xmi:id="_EKBIoTnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Spreng"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="74284124-57a0-479b-9ab1-3433bdb9e3b7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Gas" kategorie="Ammunition">
-          <localizations xmi:id="_EKBIojnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Gas"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="b6381691-1a96-4299-b9df-129ffee64c45" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Minigrenade: Smoke" kategorie="Ammunition">
-          <localizations xmi:id="_EKBIoznTEeSe6_w6Jrbqxg" local="de" name="Minigranate: Rauch"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Minigrenade: Thermal Smoke" kategorie="Ammunition">
-          <localizations xmi:id="_EKBvsDnTEeSe6_w6Jrbqxg" local="de" name="Minigranate: IR-Rauch"/>
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="60d28c15-42dd-4837-bc5f-8d8a15393655" page="436" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="18F" wertValue="2800" name="Rocket: Anti-Vehicle" kategorie="Ammunition">
           <localizations xmi:id="_EKBvsTnTEeSe6_w6Jrbqxg" local="de" name="Rakete: Anti-Fahrzeug"/>
@@ -4915,102 +4873,6 @@
             <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
           </mods>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="b3c0a6bd-e086-4971-be77-dc9a9cb2e174" verfuegbarkeit="0" wertValue="80" name="Browse" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKTcgDnTEeSe6_w6Jrbqxg" local="de" name="Schmöker"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="0e9a4de8-c78e-498e-8f3b-8e581bc73e43" verfuegbarkeit="0" wertValue="80" name="Configurator" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUDkDnTEeSe6_w6Jrbqxg" local="de" name="Konfigurator"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="fe598c15-fe7a-46f9-bc84-751cb32735e2" verfuegbarkeit="0" wertValue="80" name="Edit" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUDkTnTEeSe6_w6Jrbqxg" local="de" name="Editieren"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="d3bb1242-73b0-4b8a-89ab-27c272ebc900" verfuegbarkeit="0" wertValue="80" name="Encryption" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUDkjnTEeSe6_w6Jrbqxg" local="de" name="Verschlüsselung"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="1662e26b-7370-4ade-9d9d-c9b92b0d145b" verfuegbarkeit="0" wertValue="80" name="Signal Scrub" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUDkznTEeSe6_w6Jrbqxg" local="de" name="Signalreiniger"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="cffae49c-30d1-42df-b47c-a407f3a86e7a" verfuegbarkeit="0" wertValue="80" name="Toolbox" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUDlDnTEeSe6_w6Jrbqxg" local="de" name="Kiste"/>
-        </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="7b8f4a4e-0bdb-4e05-ade4-bf558daf60a6" verfuegbarkeit="0" wertValue="80" name="Virtual Machine" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKUqoDnTEeSe6_w6Jrbqxg" local="de" name="Virtuelle Machine"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="a1e4b783-0751-43eb-b5bd-ee00f84b7bb3" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Armor" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKUqoTnTEeSe6_w6Jrbqxg" local="de" name="Panzerung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="a37b8000-495b-4ab8-a73b-16a36a6a410e" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Baby Monitor" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKUqojnTEeSe6_w6Jrbqxg" local="de" name="Babymonitor"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="e631585a-0cce-4c95-873d-74b278a661df" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Biofeedback" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKUqoznTEeSe6_w6Jrbqxg" local="de" name="Biofeedback"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="7bc33fe3-96b0-4f3c-a459-7c85ede9f8c1" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Biofeedback Filter" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKUqpDnTEeSe6_w6Jrbqxg" local="de" name="Biofeedback-Filter"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="f3134808-861c-41df-8bdf-2d2c855e78a4" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Blackout" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKUqpTnTEeSe6_w6Jrbqxg" local="de" name="Blackout"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="5217388a-e2ce-4add-bcc0-b0b1672f156c" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Decrypt" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKVRsDnTEeSe6_w6Jrbqxg" local="de" name="Entschlüsselung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="168b8c61-9ea4-4816-8cf4-cb996067b6d6" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Defuse" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKVRsTnTEeSe6_w6Jrbqxg" local="de" name="Entschärfen" page="245"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="3da01b93-3830-4211-b563-f41c7fcf4ab0" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Demolition" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKVRsjnTEeSe6_w6Jrbqxg" local="de" name="Superbombe"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="67ea7c0c-1703-412b-80d3-9c23cc6d8291" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Exploit" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKVRsznTEeSe6_w6Jrbqxg" local="de" name="Ausnutzen"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="69a87be8-6f05-453d-a344-b02d9fab055c" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Fork" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKVRtDnTEeSe6_w6Jrbqxg" local="de" name="Gabel"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="ea3178a2-535f-43b7-8555-deca95ac837d" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Guard" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKV4wDnTEeSe6_w6Jrbqxg" local="de" name="Schild"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="a3851f14-3fdc-47d6-82b4-07caf00202ce" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Hammer" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKV4wTnTEeSe6_w6Jrbqxg" local="de" name="Hammer"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="70be200d-5b83-4842-83b5-725839330808" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Lockdown" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKV4wjnTEeSe6_w6Jrbqxg" local="de" name="Fessel"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="62d165f6-bc3f-4204-afb7-47b3485e25ad" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Mugger" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKV4wznTEeSe6_w6Jrbqxg" local="de" name="Überfall"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="84a3e0d5-ed40-4706-9b96-7f07567bcbef" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Shell" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKV4xDnTEeSe6_w6Jrbqxg" local="de" name="Schutzschirm"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="8920c83c-f4f2-4dfa-81a4-b150ba6ae1c0" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Sneak" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKWf0DnTEeSe6_w6Jrbqxg" local="de" name="Irreführung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="d5877f46-03e0-4603-b77a-f27e278202ab" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Stealth" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKWf0TnTEeSe6_w6Jrbqxg" local="de" name="Schleicher"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="9bfce6cb-99ea-4b63-ad9f-e1bceb87bbd6" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Track" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKWf0jnTEeSe6_w6Jrbqxg" local="de" name="Aufspüren"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="4a33f713-566b-4233-bdd2-985000097648" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="250" name="Wrapper" kategorie="Hacking Programs">
-          <localizations xmi:id="_EKWf0znTEeSe6_w6Jrbqxg" local="de" name="Verwandlung"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="c4da5448-0069-447c-b3e4-4147e6bf4ca7" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" name="Activesoft" kategorie="Skillsofts">
-          <localizations xmi:id="_EKWf1DnTEeSe6_w6Jrbqxg" local="de" name="Aktionssoft"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="d9d017c4-b3b5-4d28-9c41-870d69287cfb" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" name="Knowsoft" kategorie="Skillsofts">
-          <localizations xmi:id="_EKWf1TnTEeSe6_w6Jrbqxg" local="de" name="Wissenssoft"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="c4599705-6b8c-45d0-8687-63a720043f7d" page="442" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" name="Linguasoft" kategorie="Skillsofts">
-          <localizations xmi:id="_EKXG4DnTEeSe6_w6Jrbqxg" local="de" name="Linguasoft"/>
-        </entries>
-        <entries xsi:type="shr5:Datasoft" xmi:id="1a55fbe3-b3c1-4568-882f-abe4dedb8572" verfuegbarkeit="4" wertValue="120" name="Datasoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKXt8DnTEeSe6_w6Jrbqxg" local="de" name="Datensoft"/>
-        </entries>
-        <entries xsi:type="shr5:ConsumerSoft" xmi:id="2f30c3cc-a62e-4ac1-8e1f-5fa217cadae4" verfuegbarkeit="4" wertValue="150" name="Mapsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-          <localizations xmi:id="_EKYVADnTEeSe6_w6Jrbqxg" local="de" name="Kartensoft"/>
-        </entries>
-        <entries xsi:type="shr5:ConsumerSoft" xmi:id="fc8da0ad-bbfd-4961-a311-71db32f86130" verfuegbarkeit="4" wertValue="150" name="Shopsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="shopSoft">
-          <localizations xmi:id="_EKYVATnTEeSe6_w6Jrbqxg" local="de" name="Shopsoft"/>
-        </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="b77b4cf8-8bdc-40bf-acca-f2afcca4965c" page="105" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="18F" wertValue="517500" name="PI-Tac Level I (Renraku Taka)" kategorie="PI-Tac">
           <localizations xmi:id="_EKYVAjnTEeSe6_w6Jrbqxg" local="de" name="PI-Tac Level I (Renraku Taka)"/>
         </entries>
@@ -5185,48 +5047,8 @@
         <entries xsi:type="shr5:Gegenstand" xmi:id="acbff7a4-5382-45de-ab00-880ac6b82276" page="103" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="10R" name="Periscope Cam" kategorie="Tools of the Trade">
           <localizations xmi:id="_EKfpwjnTEeSe6_w6Jrbqxg" local="de" name="Periscope Cam"/>
         </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="7" name="Sensor Array" kategorie="Sensors">
-          <localizations xmi:id="_EKfpwznTEeSe6_w6Jrbqxg" local="de" name="Sensorarray"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="2d4edef2-2891-4383-83f6-81f05cfbd046" page="445" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" name="Single Sensor" kategorie="Sensors">
-          <localizations xmi:id="_EKfpxDnTEeSe6_w6Jrbqxg" local="de" name="Einzelensor"/>
-        </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="5c3b9966-ad7e-42e3-b0e0-f656021784cf" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Atmosphere Sensor" kategorie="Sensor Functions">
           <localizations xmi:id="_EKfpxTnTEeSe6_w6Jrbqxg" local="de" name="Atmosphärensensor"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="ffc069af-d3ec-4201-887c-0178dcdfeef9" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Camera" kategorie="Sensor Functions"/>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="c6f60201-524f-4e3f-adc7-727eace4c7bd" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Cyberware Scanner" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKgQ0DnTEeSe6_w6Jrbqxg" local="de" name="Cyberwarescanner"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="1345a189-50d2-44e0-aeea-73ce0f28390b" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Directional Microphone" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKgQ0TnTEeSe6_w6Jrbqxg" local="de" name="Richtmikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="d98f419f-7625-4228-9723-0217950d8155" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Geiger Counter" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKgQ0jnTEeSe6_w6Jrbqxg" local="de" name="Geigerzähler"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="f25e4819-209c-4cbf-b24f-668359a7a2ad" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Laser Microphone" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKgQ0znTEeSe6_w6Jrbqxg" local="de" name="Lasermikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="3a79e046-8106-4089-a1ab-895eee956b86" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Laser Range Finder" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKgQ1DnTEeSe6_w6Jrbqxg" local="de" name="Laser-Entfernungsmesser"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="ff0f7ab6-ee55-47aa-bdec-0646acca4bff" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="MAD Scanner" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg34DnTEeSe6_w6Jrbqxg" local="de" name="MAD-Scanner (Magnetanomaliedetektor)"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="e853967a-a2b8-4d89-9a97-773034489a16" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Motion Sensor" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg34TnTEeSe6_w6Jrbqxg" local="de" name="Bewegungsmelder"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="c763fac2-8b08-4c61-8dc2-6291d905a2df" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Olfactory Sensor" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg34jnTEeSe6_w6Jrbqxg" local="de" name="Geruchsscanner"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="0f13599a-2a4e-4b75-80e2-fab4405a7a87" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Omni-directional Microphone" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg34znTEeSe6_w6Jrbqxg" local="de" name="Mikrofon"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="4d12e4a1-edd3-4abf-830f-aa95874b7531" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Radio Signal Scanner" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg35DnTEeSe6_w6Jrbqxg" local="de" name="Radiosignalscanner"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="ce63e6c6-409a-49dd-bdcc-f8efb2f9dadf" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" name="Ultrasound" kategorie="Sensor Functions">
-          <localizations xmi:id="_EKg35TnTEeSe6_w6Jrbqxg" local="de" name="Ultraschall"/>
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="2bcc17b8-33bb-4567-887d-8be9593f7899" page="446" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="Rating" name="Key Lock" kategorie="Security Devices">
           <localizations xmi:id="_EKhe8DnTEeSe6_w6Jrbqxg" local="de" name="Schloss"/>
@@ -5397,15 +5219,6 @@
         <entries xsi:type="shr5:Gegenstand" xmi:id="2efb1c56-4100-4dd5-83e0-d0cbbf5e7854" page="17" srcBook="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" verfuegbarkeit="6" name="Advanced Medkit" kategorie="Biotech">
           <localizations xmi:id="_EKnlkTnTEeSe6_w6Jrbqxg" local="de" name="Advanced Medkit"/>
         </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="6b28b36a-416a-4041-9561-558083158d7c" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="5000" name="DocWagon Contract, Basic" kategorie="DocWagon Contract">
-          <localizations xmi:id="_EKnlkjnTEeSe6_w6Jrbqxg" local="de" name="DocWagon Vertrag, Standard"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="c985f952-df28-4b69-a7b7-b24a291cd651" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="25000" name="DocWagon Contract, Gold" kategorie="DocWagon Contract">
-          <localizations xmi:id="_EKnlkznTEeSe6_w6Jrbqxg" local="de" name="DocWagon Vertrag, Gold"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="aabed898-177f-413b-aeb6-5b862da67c6b" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="50000" name="DocWagon Contract, Platinum" kategorie="DocWagon Contract">
-          <localizations xmi:id="_EKnllDnTEeSe6_w6Jrbqxg" local="de" name="DocWagon Vertrag, Platin"/>
-        </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="7c8251b6-b195-4c8f-90f0-c036f8a9146f" page="450" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="100000" name="DocWagon Contract, Super-Platinum" kategorie="DocWagon Contract">
           <localizations xmi:id="_EKnllTnTEeSe6_w6Jrbqxg" local="de" name="DocWagon Vertrag, Superplatin"/>
         </entries>
@@ -5444,9 +5257,6 @@
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="62bfb38d-5515-440b-83ed-289ed926d27e" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" name="Power Focus" kategorie="Foci">
           <localizations xmi:id="_EKpawDnTEeSe6_w6Jrbqxg" local="de" name="Kraftfokus"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="a64c073c-8aa9-4383-b885-267f8ce1ea99" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" name="Qi Focus" kategorie="Foci">
-          <localizations xmi:id="_EKpawTnTEeSe6_w6Jrbqxg" local="de" name="Qi-Fokus"/>
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="30bdbf30-929a-4221-9982-f9de8574f87b" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" name="Counterspelling Focus, Combat" kategorie="Foci">
           <localizations xmi:id="_EKpawjnTEeSe6_w6Jrbqxg" local="de" name="Antimagiefokus, Kampf"/>
@@ -5978,12 +5788,6 @@
           <localizations xmi:id="_EK-K5DnTEeSe6_w6Jrbqxg" local="de" name="Schnellziehholster"/>
         </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="f77fc093-d5cf-4be6-bfeb-311653ecd64e" page="449" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="175" name="Micro Flare Launcher" kategorie="Armor Enhancements"/>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="75ccb148-e774-429c-b854-a27816439626" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" kategorie="Ammunition">
-          <localizations xmi:id="_EK-x8DnTEeSe6_w6Jrbqxg" local="de" name="Ersatzladestreifen"/>
-        </entries>
-        <entries xsi:type="shr5:Gegenstand" xmi:id="18ad29eb-33d2-4032-9520-47b69979ebf3" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt" kategorie="Ammunition">
-          <localizations xmi:id="_EK-x8TnTEeSe6_w6Jrbqxg" local="de" name="Vindicator 200-Round Belt"/>
-        </entries>
         <entries xsi:type="shr5:Gegenstand" xmi:id="f87701a0-4ea2-47db-bcac-f5b8396c369e" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="25" name="Speed Loader" kategorie="Ammunition">
           <localizations xmi:id="_EK-x8jnTEeSe6_w6Jrbqxg" local="de" name="Schnelllader"/>
         </entries>
@@ -8768,15 +8572,27 @@
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="a1dd8536-d2ca-41cd-be55-4adfdc52068b" wertValue="80" name="Encryption" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_vnvnI_W-EeSoPMErllLLPw" local="de" name="Verschlüsselung" page="245"/>
+          <mods xmi:id="_5z4NAPcIEeSXk_Hn2P67WQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//MatrixAttributes/firewall"/>
+          </mods>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="3f2498d9-b575-474c-9b18-b959442011c5" wertValue="80" name="Signal Scrub" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_vnvnJPW-EeSoPMErllLLPw" local="de" name="Signalreiniger" page="245"/>
+          <mods xmi:id="_A0fJAPcJEeSXk_Hn2P67WQ" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//RiggerCommandConsole/rauschunterdrueckung"/>
+          </mods>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="1861266c-9439-4816-9b1e-09ea9bbac9ec" wertValue="80" name="Toolbox" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_vnvnJfW-EeSoPMErllLLPw" local="de" name="Toolbox" page="245"/>
+          <mods xmi:id="_Fh7IgPcJEeSXk_Hn2P67WQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//MatrixAttributes/datenverarbeitung"/>
+          </mods>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="c56fd11b-f543-4c1f-8f97-6e7a82265885" wertValue="80" name="Virtual Machine" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_vnvnJvW-EeSoPMErllLLPw" local="de" name="Virtuelle Maschine" page="245"/>
+          <mods xmi:id="_M9_RcPcJEeSXk_Hn2P67WQ" wert="2">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Drohne/programSlotCount"/>
+          </mods>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="6968d7e3-b58f-4199-af6f-5877097a51da" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
           <localizations xmi:id="_vnvnJ_W-EeSoPMErllLLPw" local="de" name="Panzerung"/>
@@ -8829,7 +8645,7 @@
         <entries xsi:type="shr5:CommonProgram" xmi:id="a381db11-6e7f-4472-b4ef-79a16be65ba4" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
           <localizations xmi:id="_vnw1Q_W-EeSoPMErllLLPw" local="de" name="Schleicher"/>
         </entries>
-        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"  programType="hackingProgram">
+        <entries xsi:type="shr5:CommonProgram" xmi:id="7306594f-5e07-440e-a2db-a6dfbe0b90cb" wertValue="80" name="Track" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" programType="hackingProgram">
           <localizations xmi:id="_EWEnpTnTEeSe6_w6Jrbqxg" local="de" name="Aufspüren"/>
         </entries>
         <entries xsi:type="shr5:CommonProgram" xmi:id="1b78748c-9a1d-427f-8657-e3e2bc8fd5b5" wertValue="80" name="Wrapper" page="245" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
@@ -8874,6 +8690,15 @@
         <entries xsi:type="shr5:AutoSoft" xmi:id="_HyDw4OwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Evasion" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
         <entries xsi:type="shr5:AutoSoft" xmi:id="_Nr2OwOwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Stealth" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1" skill="9cff9aa7-d092-4f89-8b7b-3ab835818874"/>
         <entries xsi:type="shr5:AutoSoft" xmi:id="_nvU-wOwNEeSYptVhF8ZBKA" verfuegbarkeit="2*rating" wertValue="500" name="Targeting" page="269" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" rating="1"/>
+        <entries xsi:type="shr5:Datasoft" xmi:id="1a55fbe3-b3c1-4568-882f-abe4dedb8572" verfuegbarkeit="4" wertValue="120" name="Datasoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EKXt8DnTEeSe6_w6Jrbqxg" local="de" name="Datensoft"/>
+        </entries>
+        <entries xsi:type="shr5:ConsumerSoft" xmi:id="2f30c3cc-a62e-4ac1-8e1f-5fa217cadae4" verfuegbarkeit="4" wertValue="150" name="Mapsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_EKYVADnTEeSe6_w6Jrbqxg" local="de" name="Kartensoft"/>
+        </entries>
+        <entries xsi:type="shr5:ConsumerSoft" xmi:id="fc8da0ad-bbfd-4961-a311-71db32f86130" verfuegbarkeit="4" wertValue="150" name="Shopsoft" page="441" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" type="shopSoft">
+          <localizations xmi:id="_EKYVATnTEeSe6_w6Jrbqxg" local="de" name="Shopsoft"/>
+        </entries>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_ELz4YjnTEeSe6_w6Jrbqxg" name="Skills">

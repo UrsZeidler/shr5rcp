@@ -52,7 +52,7 @@ public class MiniGrenateTest extends MunitionTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
     @Override
     protected void setUp() throws Exception {

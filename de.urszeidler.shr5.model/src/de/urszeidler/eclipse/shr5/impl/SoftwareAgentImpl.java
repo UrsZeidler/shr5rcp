@@ -14,11 +14,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SoftwareAgent;
@@ -41,6 +44,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getRating <em>Rating</em>}</li>
  * </ul>
  * </p>
@@ -217,6 +221,16 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * @ordered
      */
     protected SourceBook srcBook;
+
+    /**
+     * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMods()
+     * @generated
+     * @ordered
+     */
+    protected EList<AttributModifikatorWert> mods;
 
     /**
      * The default value of the '{@link #getRating() <em>Rating</em>}' attribute.
@@ -472,6 +486,18 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<AttributModifikatorWert> getMods() {
+        if (mods == null) {
+            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.SOFTWARE_AGENT__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+        }
+        return mods;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getRating() {
         return rating;
     }
@@ -494,11 +520,28 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getMods()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -532,6 +575,8 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
                 if (resolve) return getSrcBook();
                 return basicGetSrcBook();
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                return getMods();
             case Shr5Package.SOFTWARE_AGENT__RATING:
                 return getRating();
         }
@@ -575,6 +620,10 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                getMods().clear();
+                getMods().addAll((Collection<? extends AttributModifikatorWert>)newValue);
+                return;
             case Shr5Package.SOFTWARE_AGENT__RATING:
                 setRating((Integer)newValue);
                 return;
@@ -617,6 +666,9 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                getMods().clear();
+                return;
             case Shr5Package.SOFTWARE_AGENT__RATING:
                 setRating(RATING_EDEFAULT);
                 return;
@@ -652,6 +704,8 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
                 return srcBook != null;
+            case Shr5Package.SOFTWARE_AGENT__MODS:
+                return mods != null && !mods.isEmpty();
             case Shr5Package.SOFTWARE_AGENT__RATING:
                 return rating != RATING_EDEFAULT;
         }
@@ -687,6 +741,12 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
                 default: return -1;
             }
         }
+        if (baseClass == Modifizierbar.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.SOFTWARE_AGENT__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -716,6 +776,12 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.SOFTWARE_AGENT__PAGE;
                 case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.SOFTWARE_AGENT__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifizierbar.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.SOFTWARE_AGENT__MODS;
                 default: return -1;
             }
         }

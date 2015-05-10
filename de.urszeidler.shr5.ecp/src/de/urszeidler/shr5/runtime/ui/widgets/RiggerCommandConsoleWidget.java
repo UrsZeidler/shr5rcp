@@ -24,6 +24,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
+import de.urszeidler.shr5.ecp.editor.widgets.WidgetTools;
 
 public class RiggerCommandConsoleWidget extends Composite {
 
@@ -32,10 +34,9 @@ public class RiggerCommandConsoleWidget extends Composite {
     private RiggerCommandConsole object;
     private Label lblZugriffbasis;
     private Scale scale;
-    private Label label;
-    private EditingDomain editingDomain;
     private Label lblZugriffbasis1;
-    private StateMonitorWidget stateMonitorWidget;
+    private EmfFormBuilder emfFormBuilder;
+    private EmfFormBuilder emfFormBuilder1;
     
     /**
      * Create the composite.
@@ -46,19 +47,23 @@ public class RiggerCommandConsoleWidget extends Composite {
     public RiggerCommandConsoleWidget(Composite parent, int style,RiggerCommandConsole object, EditingDomain editingDomain) {
         super(parent, style);
         this.object = object;
-        this.editingDomain = editingDomain;
         addDisposeListener(new DisposeListener() {
             public void widgetDisposed(DisposeEvent e) {
                 toolkit.dispose();
+                emfFormBuilder.dispose();
+                emfFormBuilder1.dispose();
             }
         });
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
-        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+        EntryFactory labelFactory = WidgetTools.createLabelExtreyFactory(editingDomain);
+
+        
+        emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
                 .getInstance().getLabelProvider(), editingDomain);
         emfFormBuilder.setBorderStyle(SWT.NONE);
 
-        EmfFormBuilder emfFormBuilder1 = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+        emfFormBuilder1 = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
                 .getInstance().getLabelProvider(), editingDomain);
 //        emfFormBuilder1.setManager(mananger);
         emfFormBuilder1.setBorderStyle(SWT.NONE);
@@ -81,19 +86,19 @@ public class RiggerCommandConsoleWidget extends Composite {
         scale.setLayoutData(gd_scale);
         toolkit.adapt(scale, true, true);
         
-        label = toolkit.createLabel(this, " ", SWT.NONE);
+        toolkit.createLabel(this, " ", SWT.NONE);
         
         m_bindingContext = initDataBindings();
         
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF,this);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG,this);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,this);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,this);        
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF,this,labelFactory);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG,this,labelFactory);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,this,labelFactory);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,this,labelFactory);        
         emfFormBuilder.addTextEntry(Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,this);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, this);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, this, WidgetTools.createControllGridData(80));
 
-        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVES, this);
-        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVE_MAX, this);
+        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVES, this, WidgetTools.createControllGridData(80));
+        emfFormBuilder1.addTextEntry(Shr5Package.Literals.PERSONAL_AREA_NETWORK__SLAVE_MAX, this,labelFactory);
 
         emfFormBuilder.buildinComposite(m_bindingContext, this, object);
         emfFormBuilder1.buildinComposite(m_bindingContext, this,object.getPan());
@@ -102,8 +107,7 @@ public class RiggerCommandConsoleWidget extends Composite {
         toolkit.adapt(lblZugriffbasis1, true, true);
         lblZugriffbasis1.setText("Matrix Zustand");
 
-        stateMonitorWidget = new StateMonitorWidget(this, SWT.NONE, object.getMatrixZustandMax(), false);
-
+        new StateMonitorWidget(this, SWT.NONE, object.getMatrixZustandMax(), false);
     }
     
     protected DataBindingContext initDataBindings() {

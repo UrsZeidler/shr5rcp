@@ -385,5 +385,4 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         });
     }
 
-    
 }

@@ -15827,13 +15827,22 @@ public interface Shr5Package extends EPackage {
     int CYBERDECK__RUNNING_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 12;
 
     /**
+     * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__MOD_MANAGER = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 13;
+
+    /**
      * The number of structural features of the '<em>Cyberdeck</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 13;
+    int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 14;
 
     /**
      * The operation id for the '<em>Can Add</em>' operation.
@@ -16082,13 +16091,22 @@ public interface Shr5Package extends EPackage {
     int MATRIX_PROGRAM__SRC_BOOK = SOFTWARE__SRC_BOOK;
 
     /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAM__MODS = SOFTWARE_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Matrix Program</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAM_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
+    int MATRIX_PROGRAM_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Matrix Program</em>' class.
@@ -16198,6 +16216,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SOFTWARE_AGENT__SRC_BOOK = MATRIX_PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__MODS = MATRIX_PROGRAM__MODS;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -17910,6 +17937,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int COMMON_PROGRAM__SRC_BOOK = MATRIX_PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__MODS = MATRIX_PROGRAM__MODS;
 
     /**
      * The feature id for the '<em><b>Program Type</b></em>' attribute.
@@ -27407,6 +27443,17 @@ public interface Shr5Package extends EPackage {
     EReference getCyberdeck_RunningPrograms();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getModManager <em>Mod Manager</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Mod Manager</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getModManager()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_ModManager();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SoftwareAgent <em>Software Agent</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -32193,6 +32240,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference CYBERDECK__RUNNING_PROGRAMS = eINSTANCE.getCyberdeck_RunningPrograms();
+
+        /**
+         * The meta object literal for the '<em><b>Mod Manager</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__MOD_MANAGER = eINSTANCE.getCyberdeck_ModManager();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.

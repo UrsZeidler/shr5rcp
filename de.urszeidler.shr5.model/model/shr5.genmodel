@@ -625,6 +625,7 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/configuration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/storedPrograms"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/runningPrograms"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/modManager"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//SoftwareAgent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SoftwareAgent/rating"/>

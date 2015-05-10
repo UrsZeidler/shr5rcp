@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 import de.urszeidler.eclipse.shr5.MatrixAttributes;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.MatrixProgram;
+import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
@@ -60,6 +61,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getStoredPrograms <em>Stored Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getRunningPrograms <em>Running Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getModManager <em>Mod Manager</em>}</li>
  * </ul>
  * </p>
  *
@@ -326,6 +328,26 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      */
     protected EList<MatrixProgram> runningPrograms;
 
+    /**
+     * The default value of the '{@link #getModManager() <em>Mod Manager</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getModManager()
+     * @generated
+     * @ordered
+     */
+    protected static final ModSetter MOD_MANAGER_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getModManager() <em>Mod Manager</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getModManager()
+     * @generated not
+     * @ordered
+     */
+    protected ModSetter modManager = new ModSetter();
+
     private EContentAdapter eContentAdapter;
 
     /**
@@ -359,6 +381,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         };
         eContentAdapter.setTarget(this);
         this.eAdapters().add(eContentAdapter);
+        modManager.setPersona(this);
 
     }
 
@@ -379,7 +402,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      */
     public int getMatrixZustandMax() {
         int value = (int)Math.ceil(getDeviceRating() / 2.0D);
-        return 8 + value;
+        return 8 + value + ShadowrunTools.getModificatorsValue(Shr5Package.Literals.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX, getRunningPrograms());
     }
 
     /**
@@ -405,7 +428,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         Object eGet = eGet(eAttribute);
         if (eGet instanceof Integer) {
             Integer value = (Integer)eGet;
-            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF, getMods());            
+            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF, getMods())
+                    + ShadowrunTools.getModificatorsValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF, getRunningPrograms());            
         }
         return -1;
     }
@@ -423,7 +447,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         Object eGet = eGet(eAttribute);
         if (eGet instanceof Integer) {
             Integer value = (Integer)eGet;
-            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER, getMods());            
+            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER, getMods())
+                   + ShadowrunTools.getModificatorsValue(Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER, getRunningPrograms());            
         }
         return -1;
     }
@@ -479,7 +504,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         Object eGet = eGet(eAttribute);
         if (eGet instanceof Integer) {
             Integer value = (Integer)eGet;
-            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, getMods());            
+            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, getMods())
+                    + ShadowrunTools.getModificatorsValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, getRunningPrograms());            
         }
         return -1;
     }
@@ -499,7 +525,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         Object eGet = eGet(eAttribute);
         if (eGet instanceof Integer) {
             Integer value = (Integer)eGet;
-            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, getMods());            
+            return value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, getMods())
+                    + ShadowrunTools.getModificatorsValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, getRunningPrograms());            
         }
         return -1;
     }
@@ -740,6 +767,15 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated
+     */
+    public ModSetter getModManager() {
+        return modManager;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated not
      */
     public boolean canAdd(EObject object) {
@@ -830,6 +866,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return getStoredPrograms();
             case Shr5Package.CYBERDECK__RUNNING_PROGRAMS:
                 return getRunningPrograms();
+            case Shr5Package.CYBERDECK__MOD_MANAGER:
+                return getModManager();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -976,6 +1014,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
                 return storedPrograms != null && !storedPrograms.isEmpty();
             case Shr5Package.CYBERDECK__RUNNING_PROGRAMS:
                 return runningPrograms != null && !runningPrograms.isEmpty();
+            case Shr5Package.CYBERDECK__MOD_MANAGER:
+                return MOD_MANAGER_EDEFAULT == null ? modManager != null : !MOD_MANAGER_EDEFAULT.equals(modManager);
         }
         return super.eIsSet(featureID);
     }
@@ -1160,6 +1200,8 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         result.append(attribute3);
         result.append(", attribute4: ");
         result.append(attribute4);
+        result.append(", modManager: ");
+        result.append(modManager);
         result.append(')');
         return result.toString();
     }

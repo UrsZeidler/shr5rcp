@@ -69,6 +69,7 @@ public class CyberdeckItemProvider
             addAttribute4PropertyDescriptor(object);
             addConfigurationPropertyDescriptor(object);
             addRunningProgramsPropertyDescriptor(object);
+            addModManagerPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -476,6 +477,28 @@ public class CyberdeckItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Mod Manager feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addModManagerPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_modManager_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_modManager_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__MOD_MANAGER,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -565,6 +588,7 @@ public class CyberdeckItemProvider
             case Shr5Package.CYBERDECK__ATTRIBUTE2:
             case Shr5Package.CYBERDECK__ATTRIBUTE3:
             case Shr5Package.CYBERDECK__ATTRIBUTE4:
+            case Shr5Package.CYBERDECK__MOD_MANAGER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.CYBERDECK__PAN:

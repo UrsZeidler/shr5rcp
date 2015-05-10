@@ -5084,6 +5084,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCyberdeck_ModManager() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSoftwareAgent() {
         return softwareAgentEClass;
     }
@@ -6573,6 +6582,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(cyberdeckEClass, CYBERDECK__CONFIGURATION);
         createEReference(cyberdeckEClass, CYBERDECK__STORED_PROGRAMS);
         createEReference(cyberdeckEClass, CYBERDECK__RUNNING_PROGRAMS);
+        createEAttribute(cyberdeckEClass, CYBERDECK__MOD_MANAGER);
 
         softwareAgentEClass = createEClass(SOFTWARE_AGENT);
         createEAttribute(softwareAgentEClass, SOFTWARE_AGENT__RATING);
@@ -6983,6 +6993,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         softwareEClass.getESuperTypes().add(this.getBeschreibbar());
         softwareEClass.getESuperTypes().add(this.getQuelle());
         matrixProgramEClass.getESuperTypes().add(this.getSoftware());
+        matrixProgramEClass.getESuperTypes().add(this.getModifizierbar());
         tutorsoftEClass.getESuperTypes().add(this.getBasicProgram());
         skillSoftEClass.getESuperTypes().add(this.getSoftware());
         basicProgramEClass.getESuperTypes().add(this.getSoftware());
@@ -7506,6 +7517,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getCyberdeck_Configuration(), ecorePackage.getEAttribute(), null, "configuration", null, 4, 4, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCyberdeck_StoredPrograms(), this.getMatrixProgram(), null, "storedPrograms", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCyberdeck_RunningPrograms(), this.getMatrixProgram(), null, "runningPrograms", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_ModManager(), this.getModificationManager(), "modManager", null, 1, 1, Cyberdeck.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(softwareAgentEClass, SoftwareAgent.class, "SoftwareAgent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSoftwareAgent_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SoftwareAgent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

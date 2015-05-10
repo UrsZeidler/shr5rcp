@@ -1099,6 +1099,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseSoftwareAgent(softwareAgent);
                 if (result == null) result = caseMatrixProgram(softwareAgent);
                 if (result == null) result = caseSoftware(softwareAgent);
+                if (result == null) result = caseModifizierbar(softwareAgent);
                 if (result == null) result = caseGeldWert(softwareAgent);
                 if (result == null) result = caseBeschreibbar(softwareAgent);
                 if (result == null) result = caseQuelle(softwareAgent);
@@ -1167,6 +1168,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 MatrixProgram matrixProgram = (MatrixProgram)theEObject;
                 T result = caseMatrixProgram(matrixProgram);
                 if (result == null) result = caseSoftware(matrixProgram);
+                if (result == null) result = caseModifizierbar(matrixProgram);
                 if (result == null) result = caseGeldWert(matrixProgram);
                 if (result == null) result = caseBeschreibbar(matrixProgram);
                 if (result == null) result = caseQuelle(matrixProgram);
@@ -1285,6 +1287,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseMatrixProgram(commonProgram);
                 if (result == null) result = caseRiggerProgram(commonProgram);
                 if (result == null) result = caseSoftware(commonProgram);
+                if (result == null) result = caseModifizierbar(commonProgram);
                 if (result == null) result = caseGeldWert(commonProgram);
                 if (result == null) result = caseBeschreibbar(commonProgram);
                 if (result == null) result = caseQuelle(commonProgram);

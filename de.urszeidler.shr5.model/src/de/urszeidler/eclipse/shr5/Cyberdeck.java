@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EAttribute;
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getStoredPrograms <em>Stored Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningPrograms <em>Running Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getModManager <em>Mod Manager</em>}</li>
  * </ul>
  * </p>
  *
@@ -213,5 +214,19 @@ public interface Cyberdeck extends AbstractMatrixDevice, MatrixDevice, ActiveMat
      * @generated
      */
     EList<MatrixProgram> getRunningPrograms();
+
+    /**
+     * Returns the value of the '<em><b>Mod Manager</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Keeps track of the modicators.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Mod Manager</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_ModManager()
+     * @model dataType="de.urszeidler.eclipse.shr5.ModificationManager" required="true" transient="true" changeable="false"
+     * @generated
+     */
+    ModSetter getModManager();
 
 } // Cyberdeck

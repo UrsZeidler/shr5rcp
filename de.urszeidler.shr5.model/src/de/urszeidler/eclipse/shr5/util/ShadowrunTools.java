@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -321,7 +322,7 @@ public class ShadowrunTools {
      * @param eattribute the attribute to get the value for
      * @return the sum
      */
-    public static int getModificatorValue(AbstraktModifikatoren mod, EAttribute eattribute) {
+    public static int getModificatorValue(Modifizierbar mod, EAttribute eattribute) {
         if (eattribute == null)
             return 0;
         List<AttributModifikatorWert> mods = mod.getMods();
@@ -1032,5 +1033,19 @@ public class ShadowrunTools {
                 return ShadowrunTools.isASameB(input, source);
             }
         };
+    }
+
+    /**
+     * Get the mod for the list of {@link Modifizierbar}.
+     * @param eAttribute
+     * @param list
+     * @return
+     */
+    public static Integer getModificatorsValue(EAttribute eAttribute, EList<? extends Modifizierbar> list) {
+        int sum = 0;
+        for (Modifizierbar modifizierbar : list) {
+            sum += getModificatorValue(modifizierbar, eAttribute);
+        }
+        return sum;
     }
 }

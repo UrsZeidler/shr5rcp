@@ -1926,7 +1926,11 @@
   <xsd:element name="Software" type="shr5:Software"/>
   <xsd:complexType abstract="true" name="MatrixProgram">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Software"/>
+      <xsd:extension base="shr5:Software">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+        </xsd:choice>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="MatrixProgram" type="shr5:MatrixProgram"/>

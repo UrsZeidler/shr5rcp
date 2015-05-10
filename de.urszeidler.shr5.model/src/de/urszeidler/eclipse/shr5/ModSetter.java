@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ModSetter implements Adapter {
     private Map<EObject, Integer> fMap = new HashMap<EObject, Integer>();
-    private AbstraktPersona persona;
+    private EObject persona;
     private boolean dirty = true;
 
     @SuppressWarnings({ "unchecked" })
@@ -118,11 +118,11 @@ public class ModSetter implements Adapter {
         return ret;
     }
 
-    public AbstraktPersona getPersona() {
+    public EObject getPersona() {
         return persona;
     }
 
-    public void setPersona(AbstraktPersona persona) {
+    public void setPersona(EObject persona) {
         this.persona = persona;
         this.persona.eAdapters().add(this);
     }

@@ -874,6 +874,12 @@
         eType="#//MatrixProgram" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="runningPrograms" upperBound="-1"
         eType="#//MatrixProgram"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modManager" lowerBound="1"
+        eType="#//ModificationManager" changeable="false" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Keeps track of the modicators."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InterfaceModus">
     <eLiterals name="augmentedReality"/>
@@ -960,7 +966,7 @@
     <eLiterals name="shopSoft" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MatrixProgram" abstract="true" interface="true"
-      eSuperTypes="#//Software"/>
+      eSuperTypes="#//Software #//Modifizierbar"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tutorsoft" eSuperTypes="#//BasicProgram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

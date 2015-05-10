@@ -834,6 +834,7 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Software" outputs="Shr5XMI.xsd#//Software;XSDElementDeclaration=100"/>
     <nested inputs="shr5.ecore#//MatrixProgram" outputs="Shr5XMI.xsd#//MatrixProgram;XSDComplexTypeDefinition=101"/>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//MatrixProgram;XSDComplexTypeDefinition=101/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//MatrixProgram" outputs="Shr5XMI.xsd#//MatrixProgram;XSDElementDeclaration=101"/>
     <nested inputs="shr5.ecore#//Tutorsoft" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=102">
       <nested inputs="shr5.ecore#//Tutorsoft/rating" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=102/XSDAttributeUse"/>
