@@ -40,6 +40,8 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry.EntryFactory;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
@@ -103,9 +105,9 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
-//        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
-//        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
-//        addValidationResult(form.getToolBarManager(), object);
+        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        form.getToolBarManager().add(new ExportObjectAction(form.getShell(), object));
+        addValidationResult(form.getToolBarManager(), object);
         form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
