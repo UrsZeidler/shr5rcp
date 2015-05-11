@@ -1659,6 +1659,7 @@
 						</entries>
 					</xsl:when>
 
+
 					<xsl:otherwise>
 						<!-- <xsl:attribute name="type"> -->
 						<!-- <xsl:value-of select="'defaultSoft'" /> -->
@@ -1671,6 +1672,16 @@
 				</xsl:choose>
 
 
+			</xsl:when>
+			<xsl:when test="category/text()='Foci'">
+				<entries xsi:type="shr5:MagieFokus" stufe="1" >
+					<!-- <xsl:attribute name="programType"> -->
+					<!-- <xsl:value-of select="category/text()" /> -->
+					<!-- </xsl:attribute> -->
+					<xsl:attribute name="wertValue"><xsl:value-of select="number(substring-after(cost/text(),'Rating * ' ))" /></xsl:attribute>
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:call-template name="localization" />
+				</entries>
 			</xsl:when>
 			<xsl:when test="category/text()='Drugs'">
 				<entries xsi:type="shr5:Drug">

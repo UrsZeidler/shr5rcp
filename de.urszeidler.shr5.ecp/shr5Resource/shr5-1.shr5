@@ -22989,6 +22989,116 @@
           <localizations xmi:id="_EV7dsznTEeSe6_w6Jrbqxg" local="de" name="Große Mutter"/>
         </entries>
       </entries>
+      <entries xsi:type="shr5:ShrList" xmi:id="_NKAJ8PgWEeSNsY3-g6GFiw" name="Foci">
+        <entries xsi:type="shr5:MagieFokus" xmi:id="93d81bd8-52bf-4461-b2da-394aca4ce262" stufe="1" page="318" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="5000" name="Alchemical Focus">
+          <localizations xmi:id="_Dw5y8PgeEeSlD9B06lGLoA" local="de" name="Alchemiefokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="1efc3ad3-c5d7-4534-ab97-a059f08f1b74" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="5000" name="Disenchanting Focus">
+          <localizations xmi:id="_Dw5y8fgeEeSlD9B06lGLoA" local="de" name="Entzauberungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="12e54f08-070f-421c-a523-c0088cbafcfc" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="9000" name="Centering Focus" bindungsFaktor="3">
+          <localizations xmi:id="_Dw5y8vgeEeSlD9B06lGLoA" local="de" name="Zentrierungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="e946041a-0c16-49a5-811f-dfd2fba0ae8f" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="9000" name="Flexible Signature Focus">
+          <localizations xmi:id="_Dw5y8_geEeSlD9B06lGLoA" local="de" name="Signaturschleier"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="62df3c6c-d080-4db9-98c0-24fc5e9a0604" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="9000" name="Masking Focus">
+          <localizations xmi:id="_Dw5y9PgeEeSlD9B06lGLoA" local="de" name="Maskierungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="ff779a68-a360-4a68-9e57-9a363b5de0d0" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="9000" name="Spell Shaping Focus">
+          <localizations xmi:id="_Dw5y9fgeEeSlD9B06lGLoA" local="de" name="Formungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="62bfb38d-5515-440b-83ed-289ed926d27e" stufe="1" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 4)R" wertValue="18000" name="Power Focus 1" bindungsFaktor="6">
+          <localizations xmi:id="_Dw5y9vgeEeSlD9B06lGLoA" local="de" name="Kraftfokus"/>
+          <mods xmi:id="_p6_S8PgfEeSlD9B06lGLoA" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magieBasis"/>
+          </mods>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="30bdbf30-929a-4221-9982-f9de8574f87b" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Counterspelling Focus, Combat">
+          <localizations xmi:id="_Dw5y-PgeEeSlD9B06lGLoA" local="de" name="Antimagiefokus, Kampf"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="e1b66500-1c39-4747-87a6-071b8b1966cc" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Ritual Spellcasting Focus, Combat">
+          <localizations xmi:id="_Dw5y-fgeEeSlD9B06lGLoA" local="de" name="Ritualfokus, Kampf"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="2f485376-54c1-41be-8678-79cc98e04ebc" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Spellcasting Focus, Combat" bindungsFaktor="2">
+          <localizations xmi:id="_Dw5y-vgeEeSlD9B06lGLoA" local="de" name="Zauberspruchfokus, Kampf"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="39f2f34b-14e2-47f3-8e24-a401015a645a" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Sustaining Focus, Combat">
+          <localizations xmi:id="_Dw5y-_geEeSlD9B06lGLoA" local="de" name="Zauberspeicher, Kampf"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="a56807b8-e430-479d-847d-e0e294b5e937" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Counterspelling Focus, Detection">
+          <localizations xmi:id="_Dw6aAPgeEeSlD9B06lGLoA" local="de" name="Antimagiefokus, Wahrnehmung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="2c465730-38cb-41d4-9d19-366435fb71bb" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Ritual Spellcasting Focus, Detection">
+          <localizations xmi:id="_Dw6aAfgeEeSlD9B06lGLoA" local="de" name="Ritualfokus, Wahrnehmung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="90885434-a40c-416d-8eb3-2d93b96414c2" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Spellcasting Focus, Detection">
+          <localizations xmi:id="_Dw6aAvgeEeSlD9B06lGLoA" local="de" name="Zauberspruchfokus, Wahrnehmung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="724d1b39-72e9-4df3-aba1-b4ccbe56f32c" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Sustaining Focus, Detection">
+          <localizations xmi:id="_Dw6aA_geEeSlD9B06lGLoA" local="de" name="Zauberspeicher, Wahrnehmung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="49e7fc11-d3c6-4021-9162-cdf217a4579a" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Counterspelling Focus, Health">
+          <localizations xmi:id="_Dw6aBPgeEeSlD9B06lGLoA" local="de" name="Antimagiefokus, Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="41842bc7-e48b-446c-b5ce-73f8399f64c0" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Ritual Spellcasting Focus, Health">
+          <localizations xmi:id="_Dw6aBfgeEeSlD9B06lGLoA" local="de" name="Ritualfokus, Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="630114f3-b538-4a4f-ad02-36df0e577d9c" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Spellcasting Focus, Health">
+          <localizations xmi:id="_Dw6aBvgeEeSlD9B06lGLoA" local="de" name="Zauberspruchfokus, Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="1e024c0b-d43b-49b1-87e0-c4e4474645fe" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Sustaining Focus, Health">
+          <localizations xmi:id="_Dw6aB_geEeSlD9B06lGLoA" local="de" name="Zauberspeicher, Heilung"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="8f69fd55-e5ff-404f-99ec-45a9c8498657" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Counterspelling Focus, Illusion">
+          <localizations xmi:id="_Dw6aCPgeEeSlD9B06lGLoA" local="de" name="Antimagiefokus,  Illusion"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="db0e5016-8ae3-4190-ad94-fe3f318f3f3f" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Ritual Spellcasting Focus, Illusion">
+          <localizations xmi:id="_Dw6aCfgeEeSlD9B06lGLoA" local="de" name="Ritualfokus, Illusion"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="aa849313-adf9-4134-b86b-1f6a15f6620f" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Spellcasting Focus, Illusion">
+          <localizations xmi:id="_Dw6aCvgeEeSlD9B06lGLoA" local="de" name="Zauberspruchfokus, Illusion"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="e491973f-0bb0-4297-9c32-f02a483ecc8e" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Sustaining Focus, Illusion">
+          <localizations xmi:id="_Dw6aC_geEeSlD9B06lGLoA" local="de" name="Zauberspeicher, Illusion"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="2f4f52bb-a198-4d7a-ab4c-d82de4f80cbf" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Counterspelling Focus, Manipulation">
+          <localizations xmi:id="_Dw6aDPgeEeSlD9B06lGLoA" local="de" name="Antimagiefokus, Manipulation"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="7057c240-d998-4b45-a119-de8a3ffaa717" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Ritual Spellcasting Focus, Manipulation">
+          <localizations xmi:id="_Dw6aDfgeEeSlD9B06lGLoA" local="de" name="Ritualfokus, Manipulation"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="8783e50c-f80b-4efe-b440-d2963b55c54e" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Spellcasting Focus, Manipulation">
+          <localizations xmi:id="_Dw6aDvgeEeSlD9B06lGLoA" local="de" name="Zauberspruchfokus, Manipulation"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="d6cae23b-0d69-4505-a98c-a75876b457ed" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Sustaining Focus, Manipulation">
+          <localizations xmi:id="_Dw6aD_geEeSlD9B06lGLoA" local="de" name="Zauberspeicher, Manipulation"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="469f16ea-fe25-4f01-b663-166442850018" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Summoning Focus" bindungsFaktor="2">
+          <localizations xmi:id="_Dw6aEPgeEeSlD9B06lGLoA" local="de" name="Herbeirufungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="5fae16cf-c68c-46e8-91b2-ca5220824ba5" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Banishing Focus 1" bindungsFaktor="2">
+          <localizations xmi:id="_Dw6aEfgeEeSlD9B06lGLoA" local="de" name="Verbannungsfokus"/>
+          <mods xmi:id="_SW_nsPggEeSlD9B06lGLoA" wert="1" modifyable="9a2d9175-d445-45ca-842d-90223ad13f05"/>
+        </entries>
+        <entries xsi:type="shr5:MagieFokus" xmi:id="082b52f1-9109-40aa-bf0e-8cb364fa2f8c" stufe="1" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="(Rating * 3)R" wertValue="4000" name="Binding Focus" bindungsFaktor="2">
+          <localizations xmi:id="_Dw6aEvgeEeSlD9B06lGLoA" local="de" name="Bindungsfokus"/>
+        </entries>
+        <entries xsi:type="shr5:QiFokus" xmi:id="_OenC4PC3EeSNvoUz-Gvxtg" stufe="2" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Mystic Armor 1">
+          <power xmi:id="_DZzcMPC4EeSNvoUz-Gvxtg" name="Mystic Armor 1" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
+            <mods xmi:id="_DZzcMfC4EeSNvoUz-Gvxtg" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <localizations xmi:id="_DZzcMvC4EeSNvoUz-Gvxtg" local="de" name="Mystischer Panzer 1"/>
+          </power>
+        </entries>
+        <entries xsi:type="shr5:QiFokus" xmi:id="_sH8CwPC4EeSNvoUz-Gvxtg" stufe="4" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Danger Sense 4">
+          <power xmi:id="_PJMmEPC5EeSNvoUz-Gvxtg" name="Danger Sense 4" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
+            <localizations xmi:id="_PJMmEfC5EeSNvoUz-Gvxtg" local="de" name="Gefahrensinn 4"/>
+          </power>
+        </entries>
+        <entries xsi:type="shr5:QiFokus" xmi:id="_c-8TQPgfEeSlD9B06lGLoA"/>
+      </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EV7dtDnTEeSe6_w6Jrbqxg" name="Metamagics">
         <entries xsi:type="shr5:MetaMagie" xmi:id="03bdecec-6142-4b24-8aaa-0a0827c3eb78" name="Adept Centering" page="325" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <localizations xmi:id="_EV8r0DnTEeSe6_w6Jrbqxg" local="de" name="Adeptenzentrierung"/>
@@ -23395,19 +23505,6 @@
       <entries xsi:type="shr5:MagieFokus" xmi:id="_zeyj8D_REeSRYrHAmMULWA" page="320" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="4000" name="Counterspelling Focus, Combat"/>
       <entries xsi:type="shr5:Magazin" xmi:id="_aPiQwD_SEeSRYrHAmMULWA" page="42" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="4" wertValue="100" name="Vindicator 200-Round Belt" type="df19a07f-cc04-44b6-b9b2-6d4fe73062e4"/>
       <entries xsi:type="shr5:Gegenstand" xmi:id="_p9NacJKbEeSgSKX46bDaQA" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100" name="Micro-transceiver"/>
-      <entries xsi:type="shr5:QiFokus" xmi:id="_OenC4PC3EeSNvoUz-Gvxtg" stufe="2" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Mystic Armor 1">
-        <power xmi:id="_DZzcMPC4EeSNvoUz-Gvxtg" name="Mystic Armor 1" parentId="da5f9389-a5fd-48ed-8825-8852ff5c56a8" page="310" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-50">
-          <mods xmi:id="_DZzcMfC4EeSNvoUz-Gvxtg" wert="1">
-            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-          </mods>
-          <localizations xmi:id="_DZzcMvC4EeSNvoUz-Gvxtg" local="de" name="Mystischer Panzer 1"/>
-        </power>
-      </entries>
-      <entries xsi:type="shr5:QiFokus" xmi:id="_sH8CwPC4EeSNvoUz-Gvxtg" stufe="4" page="319" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="3000" name="Danger Sense 4">
-        <power xmi:id="_PJMmEPC5EeSNvoUz-Gvxtg" name="Danger Sense 4" parentId="980d6575-c28f-4076-9b36-881cea018335" page="309" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" kraftpunkte="-100">
-          <localizations xmi:id="_PJMmEfC5EeSNvoUz-Gvxtg" local="de" name="Gefahrensinn 4"/>
-        </power>
-      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
