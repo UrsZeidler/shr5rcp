@@ -14,8 +14,10 @@ import org.eclipse.ui.intro.IIntroSite;
 import org.eclipse.ui.intro.config.IIntroAction;
 
 import de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard;
+import de.urszeidler.shr5.ecp.wizards.NewLifeModuleGeneratorWizard;
 import de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard;
 import de.urszeidler.shr5.ecp.wizards.NewShr5KarmaGeneratorWizard;
+import de.urszeidler.shr5.ecp.wizards.NewSumToTenGeneratorWizard;
 
 /**
  * @author urs
@@ -39,6 +41,10 @@ public class CreateGenerator implements IIntroAction {
             generatorWizard = new NewShr5KarmaGeneratorWizard();
         else if ("3".equals(pID))
             generatorWizard = new NewFreeStyleGeneratorWizard();
+        else if ("4".equals(pID))
+            generatorWizard = new NewLifeModuleGeneratorWizard();
+        else if ("5".equals(pID))
+            generatorWizard = new NewSumToTenGeneratorWizard();
         else
             return;
 
