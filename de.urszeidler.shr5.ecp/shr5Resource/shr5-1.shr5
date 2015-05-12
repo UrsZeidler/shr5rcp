@@ -2999,7 +2999,7 @@
             <erweiterung>Unten</erweiterung>
             <magazin xmi:id="__GwlwK7kEeSMS49n3AFG_A" page="50" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Shiawase Blazer ammunition" type="a9a07174-a498-4e91-95c9-b6604e03a02c"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="504cba24-2141-4879-8062-782332e83386" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="3200" name="Ares Antioch-2" schadenscode="Grenade" praezision="4" kapazitaet="8">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="504cba24-2141-4879-8062-782332e83386" page="430" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8F" wertValue="3200" name="Ares Antioch-2" schadenscode="Grenade" praezision="4" reichweite="_ENGR0znTEeSe6_w6Jrbqxg" kapazitaet="8">
             <localizations xmi:id="__GxM067kEeSMS49n3AFG_A" local="de" name="Ares Antioch-2"/>
             <modie>EM</modie>
             <erweiterung>Lauf</erweiterung>
@@ -3202,7 +3202,7 @@
             <modie>SM</modie>
             <magazin xmi:id="__HK1cK7kEeSMS49n3AFG_A" page="425" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Walther Palm Pistol ammunition" type="0b4c00be-d7bb-4480-b9f4-6300abde27c4"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="df5d5c83-ddf8-4ec2-8a6f-28c61ec7325a" page="49" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="24F" wertValue="35000" name="Ares Archon Heavy MP Laser" schadenscode="10P" praezision="7" durchschlagsKraft="-10" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="df5d5c83-ddf8-4ec2-8a6f-28c61ec7325a" page="49" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="24F" wertValue="35000" name="Ares Archon Heavy MP Laser" schadenscode="10P" praezision="7" durchschlagsKraft="-10" reichweite="_ENFqxTnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="__HLcg67kEeSMS49n3AFG_A" local="de" name="Ares Archon Heavy MP Laser" page="49"/>
             <modie>HM</modie>
             <erweiterung>Oben</erweiterung>
@@ -3561,18 +3561,18 @@
             </einbau>
             <magazin xmi:id="__H3ZAa7kEeSMS49n3AFG_A" page="44" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Ultimax MMG ammunition" type="08e04ae5-ee6f-451d-8dc9-7873b6f9d3a5"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="c6410d5f-def3-4dc6-b5d6-68fff704f7f2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10F" wertValue="1200" name="Aztechnology Striker" schadenscode="Missile" praezision="5" kapazitaet="1">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="c6410d5f-def3-4dc6-b5d6-68fff704f7f2" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="10F" wertValue="1200" name="Aztechnology Striker" schadenscode="Missile" praezision="5" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg" kapazitaet="1">
             <localizations xmi:id="__H4AEK7kEeSMS49n3AFG_A" local="de" name="Aztechnology Striker"/>
             <modie>EM</modie>
             <magazin xmi:id="__H3ZA67kEeSMS49n3AFG_A" page="431" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Aztechnology Striker ammunition" type="c6410d5f-def3-4dc6-b5d6-68fff704f7f2"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="41eb651e-3efc-4978-9318-7ece7f151eef" page="47" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="20F" wertValue="14000" name="Mitsubishi Yakusoku MRL" schadenscode="Missile">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="41eb651e-3efc-4978-9318-7ece7f151eef" page="47" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="20F" wertValue="14000" name="Mitsubishi Yakusoku MRL" schadenscode="Missile" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="__H4AEq7kEeSMS49n3AFG_A" local="de" name="Mitsubishi Yakusoku MRL"/>
             <modie>HM</modie>
             <modie>SM</modie>
             <magazin xmi:id="__H4AEa7kEeSMS49n3AFG_A" page="47" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Mitsubishi Yakusoku MRL ammunition" type="41eb651e-3efc-4978-9318-7ece7f151eef"/>
           </entries>
-          <entries xsi:type="shr5:Feuerwaffe" xmi:id="b4e80557-89cc-40ef-ab2d-8970b818fae9" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="19F" wertValue="7500" name="Onotari Arms Ballista MML" schadenscode="Missile" kapazitaet="4">
+          <entries xsi:type="shr5:Feuerwaffe" xmi:id="b4e80557-89cc-40ef-ab2d-8970b818fae9" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="19F" wertValue="7500" name="Onotari Arms Ballista MML" schadenscode="Missile" reichweite="_ENGR1DnTEeSe6_w6Jrbqxg" kapazitaet="4">
             <localizations xmi:id="__H4nIa7kEeSMS49n3AFG_A" local="de" name="Onotari Arms Ballista MML" page="46"/>
             <modie>EM</modie>
             <magazin xmi:id="__H4nIK7kEeSMS49n3AFG_A" page="46" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" name="Onotari Arms Ballista MML ammunition" type="b4e80557-89cc-40ef-ab2d-8970b818fae9"/>
