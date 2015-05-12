@@ -651,6 +651,9 @@ LifeModulesSystem shr5System = object.getGenerator();
             return;
         changeSet = newChangeset;
 
+        if (object.getGenerator() != null)
+            spinner.setMaximum(object.getGenerator().getMaxKarmaToResources());
+        
         if ((object.getCharacterConcept() == null || object.getMetaType() == null || object.getNationality() == null || object.getFormativeYears() == null)
                 || object.getTeenYears() == null || object.getRealLife().isEmpty())
             object.setState(GeneratorState.NEW);

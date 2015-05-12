@@ -212,13 +212,12 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         compositePrio.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(compositePrio);
         managedForm.getToolkit().paintBordersFor(compositePrio);
-        
+
         Composite compositeAllowedSource = new Composite(grpAuswahl, SWT.NONE);
         compositeAllowedSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         compositeAllowedSource.setLayout(new GridLayout(1, false));
         managedForm.getToolkit().adapt(compositeAllowedSource);
         managedForm.getToolkit().paintBordersFor(compositeAllowedSource);
-
 
         Composite composite_group = new Composite(grpAuswahl, SWT.NONE);
         composite_group.setLayout(new GridLayout(3, false));
@@ -298,7 +297,6 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         controlGridData.heightHint = 150;
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__ALLOWED_SOURCES, compositeAllowedSource, controlGridData);
 
-        
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
@@ -316,8 +314,8 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     protected void commitCharacter() {
         final int calcResourcesLeft = ShadowrunManagmentTools.calcResourcesLeft(object);
         int startMoney = calcResourcesLeft;
-        startMoney = lifeStyleToStartMoneyDialog(calcResourcesLeft, startMoney,object);
-        if(startMoney==-1)
+        startMoney = lifeStyleToStartMoneyDialog(calcResourcesLeft, startMoney, object);
+        if (startMoney == -1)
             return;
 
         moveGeneratorToCharacterCommit(object);
@@ -328,7 +326,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         createManagedCharacter(object.getCharacterConcept().getSelectableTypes(), object.getMetaType().getChoosableTypes(),
                 btnPlayerButton.getSelection(), object);
         addPersonaPage(object.getCharacter());
-//        createOptionWidgets();
+        // createOptionWidgets();
         validateChange();
     }
 
@@ -359,6 +357,9 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
             return;
         changeSet = newChangeset;
 
+        if (object.getGenerator() != null)
+            spinner.setMaximum(object.getGenerator().getMaxKarmaToResources());
+
         if ((object.getCharacterConcept() == null || object.getMetaType() == null))
             object.setState(GeneratorState.NEW);
 
@@ -371,7 +372,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
-        restItem.setEnabled(object.getCharacter()!=null);
+        restItem.setEnabled(object.getCharacter() != null);
 
         validationService.updateValidation(object, validate);
     }
@@ -438,8 +439,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
     private void ownBinding(DataBindingContext bindingContext) {
         IObservableValue observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
-        IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.KARMA_GENERATOR__KARMA_SPEND);
+        IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.KARMA_GENERATOR__KARMA_SPEND);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
