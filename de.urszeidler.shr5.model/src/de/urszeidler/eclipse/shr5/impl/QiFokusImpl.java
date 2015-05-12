@@ -201,4 +201,12 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
         return stufe;
     }
 
+    public void setStufe(int newStufe){
+        super.setStufe(newStufe);
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__BINDUNGSKOSTEN, 0, 1));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__WERT_VALUE, 0, 1));
+    }
+
 } // QiFokusImpl

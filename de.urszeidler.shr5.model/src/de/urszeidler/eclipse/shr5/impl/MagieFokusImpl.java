@@ -74,13 +74,15 @@ public class MagieFokusImpl extends AbstraktFokusImpl implements MagieFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setBindungsFaktor(int newBindungsFaktor) {
         int oldBindungsFaktor = bindungsFaktor;
         bindungsFaktor = newBindungsFaktor;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIE_FOKUS__BINDUNGS_FAKTOR, oldBindungsFaktor, bindungsFaktor));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIE_FOKUS__BINDUNGSKOSTEN, oldBindungsFaktor, bindungsFaktor));
     }
 
     /**
@@ -166,4 +168,12 @@ public class MagieFokusImpl extends AbstraktFokusImpl implements MagieFokus {
         return getStufe()*getBindungsFaktor();
     }
 
+    public void setStufe(int newStufe){
+        super.setStufe(newStufe);
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIE_FOKUS__BINDUNGSKOSTEN, 0, 1));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIE_FOKUS__WERT_VALUE, 0, 1));
+    }
+    
 } //MagieFokusImpl

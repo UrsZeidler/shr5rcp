@@ -334,13 +334,15 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__STUFE, oldStufe, stufe));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__WERT, oldStufe, stufe));
     }
 
     /**
@@ -543,13 +545,15 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__WERT_VALUE, oldWertValue, wertValue));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_FOKUS__WERT, oldWertValue, wertValue));
     }
 
     /**
